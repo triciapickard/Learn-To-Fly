@@ -65,6 +65,19 @@ MERN with TypeScript on both sides (plan.md Section 26):
 | `npm run typecheck`                   | TypeScript checks for client, server and tooling                     |
 | `npm test` / `test:watch` / `test:ci` | Vitest (client + node projects; `test:ci` adds coverage)             |
 
+## Deployment
+
+Production runs as one Render web service (Express serves the API and the built React
+app) with MongoDB Atlas — plan.md Section 38. The [`render.yaml`](./render.yaml)
+blueprint holds the service settings; `MONGODB_URI` and `PUBLIC_SITE_URL` are entered in
+the Render dashboard.
+
+- **Production URL:** not deployed yet (plan.md step 4.19).
+- Health check: `GET /api/v1/health`.
+- Session cookies are `Secure` in production. To try a production build locally over
+  plain HTTP, set `PUBLIC_SITE_URL=http://localhost:3000` and run
+  `npm run build && npm start`.
+
 ## Project structure
 
 See [`CLAUDE.md`](./CLAUDE.md) for the folder tree and plan.md Section 25 for details.

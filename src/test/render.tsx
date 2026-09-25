@@ -4,6 +4,7 @@ import type { ReactElement, ReactNode } from 'react';
 import { createMemoryRouter, RouterProvider, type RouteObject } from 'react-router';
 import { ToastProvider } from '@/components/Toast';
 import { TooltipProvider } from '@/components/Tooltip';
+import { AuthBootstrap } from '@/features/auth/AuthBootstrap';
 import { ThemeProvider } from '@/features/theme/ThemeProvider';
 import { createQueryClient } from '@/lib/queryClient';
 import { routes } from '@/router';
@@ -14,6 +15,7 @@ export function TestProviders({ children }: { children: ReactNode }) {
   return (
     <QueryClientProvider client={client}>
       <ThemeProvider>
+        <AuthBootstrap />
         <TooltipProvider>
           <ToastProvider>{children}</ToastProvider>
         </TooltipProvider>

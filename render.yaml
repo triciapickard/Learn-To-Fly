@@ -1,0 +1,32 @@
+# Render blueprint (plan.md Section 38.2). Apply it from the Render dashboard:
+# New + → Blueprint → pick this repository. Secrets marked `sync: false` are entered
+# in the dashboard and never committed.
+services:
+  - type: web
+    name: learn-to-fly
+    runtime: node
+    plan: starter # no sleeping (D-11); use "free" for early testing
+    region: oregon # keep close to the Atlas cluster region
+    branch: main
+    autoDeploy: true
+    # --include=dev: the build needs Vite and TypeScript even though NODE_ENV=production.
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: '24'
+      - key: MONGODB_URI
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PUBLIC_SITE_URL
+        sync: false
+      - key: TRUST_PROXY
+        value: '1'
+      - key: LOG_LEVEL
+        value: info
+      - key: RATE_LIMIT_ENABLED
+        value: 'true'

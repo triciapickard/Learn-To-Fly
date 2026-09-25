@@ -3,6 +3,7 @@ import { lazy, Suspense, type ReactNode } from 'react';
 import { RouterProvider } from 'react-router';
 import { ToastProvider } from '@/components/Toast';
 import { TooltipProvider } from '@/components/Tooltip';
+import { AuthBootstrap } from '@/features/auth/AuthBootstrap';
 import { ThemeProvider } from '@/features/theme/ThemeProvider';
 import { queryClient } from '@/lib/queryClient';
 import { createRouter } from './router';
@@ -20,6 +21,7 @@ export function AppProviders({ children }: { children: ReactNode }) {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
+        <AuthBootstrap />
         <TooltipProvider>
           <ToastProvider>{children}</ToastProvider>
         </TooltipProvider>

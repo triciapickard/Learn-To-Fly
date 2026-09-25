@@ -1,6 +1,8 @@
 import { screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
+import { signedIn } from '@/test/handlers';
 import { renderRoute } from '@/test/render';
+import { server } from '@/test/server';
 
 const ROUTES: [string, string | RegExp][] = [
   ['/', /Learn to fly the Cessna 172/],
@@ -18,9 +20,7 @@ const ROUTES: [string, string | RegExp][] = [
   ['/reference/airports/KLVK', 'Airport'],
   ['/reference/glossary', 'Glossary'],
   ['/reference/resources', 'Resources'],
-  ['/dashboard', 'Dashboard'],
-  ['/account', 'Account'],
-  ['/account/attempts', 'Your challenge attempts'],
+  ['/account-deleted', 'Your account has been deleted'],
   ['/login', 'Log in'],
   ['/signup', 'Sign up'],
   ['/about', 'About Learn-To-Fly'],
@@ -36,6 +36,16 @@ describe('routes', () => {
     renderRoute(url);
     expect(await screen.findByRole('heading', { level: 1, name: heading })).toBeInTheDocument();
     expect(screen.getAllByRole('heading', { level: 1 })).toHaveLength(1);
+  });
+
+  it.each([
+    ['/dashboard', 'Dashboard'],
+    ['/account', 'Account'],
+    ['/account/attempts', 'Your challenge attempts'],
+  ])('%s requires sign-in and renders for a signed-in user', async (url, heading) => {
+    server.use(signedIn());
+    renderRoute(url);
+    expect(await screen.findByRole('heading', { level: 1, name: heading })).toBeInTheDocument();
   });
 
   it('sets a unique document title', async () => {
