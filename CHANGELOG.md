@@ -75,3 +75,6 @@ All notable changes to this project are documented here. The format is based on
   badge; E2E flows 2 and 3.
 - Phase 9 · Module 0 content (drafts, D-21): L0.1 Welcome, L0.2 Setting up MSFS 2024 for
   training, L0.3 Your first flight, and challenge C0.1 First flight over Livermore.
+- Phase 9 · Module 1 content (drafts): L1.1 The airframe and flight controls, L1.2 The
+  cockpit: G1000 PFD and MFD, L1.3 Engine, fuel and electrical systems, and challenge C1.1
+  Cockpit scavenger hunt (L1.4 now links it).

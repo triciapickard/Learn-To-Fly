@@ -7,12 +7,12 @@ priority: P0
 title: Speeds, limits and checklists
 summary: Learn the Skyhawk's key speeds, read the airspeed color bands and use checklists like a professional.
 estimatedMinutes: 20
-prerequisites: []
+prerequisites: [l1-3-engine-fuel-and-electrical-systems]
 objectives:
   - State the key V-speeds (Vr, Vx, Vy, Vg, Vfe, Vno, Vne, Vso, Vs1) and what each one means.
   - Identify the airspeed color bands and what each band allows.
   - Explain why pilots use checklists and the difference between read-do and do-verify.
-challenges: []
+challenges: [c1-1-cockpit-scavenger-hunt]
 resources: [phak-ch9, afh-ch1, msfs-checklist]
 published: false
 lastVerifiedAt: null

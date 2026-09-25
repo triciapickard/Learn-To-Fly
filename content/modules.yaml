@@ -26,8 +26,12 @@ modules:
       the engine, fuel and electrical systems, the V-speeds and how professional pilots use
       checklists.
     icon: plane
-    lessons: [l1-4-speeds-limits-and-checklists]
-    challenges: []
+    lessons:
+      - l1-1-the-airframe-and-flight-controls
+      - l1-2-the-cockpit-g1000-pfd-and-mfd
+      - l1-3-engine-fuel-and-electrical-systems
+      - l1-4-speeds-limits-and-checklists
+    challenges: [c1-1-cockpit-scavenger-hunt]
     estimatedMinutes: 90
   - slug: m2-fundamentals
     code: M2
