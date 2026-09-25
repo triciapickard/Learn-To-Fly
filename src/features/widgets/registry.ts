@@ -12,6 +12,8 @@ export const widgetRegistry: Partial<Record<WidgetName, WidgetComponent>> = {
   'control-surfaces': lazy(() => import('./control-surfaces/ControlSurfaces')),
   'airspeed-indicator': lazy(() => import('./airspeed-indicator/AirspeedIndicator')),
   'checklist-runner': lazy(() => import('./checklist-runner/ChecklistRunnerWidget')),
+  'pitch-power': lazy(() => import('./pitch-power/PitchPower')),
+  'angle-of-attack': lazy(() => import('./angle-of-attack/AngleOfAttack')),
   'turn-coordinator': lazy(() => import('./turn-coordinator/TurnCoordinator')),
   'load-factor': lazy(() => import('./load-factor/LoadFactor')),
 };

@@ -40,3 +40,7 @@ All notable changes to this project are documented here. The format is based on
 - Phase 6 (part 2): W1 Control Surfaces Explorer, W6 Turn Coordinator & Slip Ball, W14
   Bank Angle, Load Factor and Stall Speed; turn and load-factor maths in
   `shared/aviation/` (Appendix G.5–G.6); development-only `/dev/widgets` gallery.
+- Phase 6 (part 3): W4 Angle of Attack & Lift (NACA 2412 section, streamlines with
+  trailing-edge separation, lift curve, flaps, stall warning) and W5 Pitch & Power Trainer
+  (attitude indicator, airspeed tape, vertical speed, trim and stick force, scenarios) with
+  a provisional `performanceModel` table (Decision D-18) and table-shape validation.

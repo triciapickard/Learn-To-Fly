@@ -542,6 +542,20 @@ revisited, but should not be changed silently.
 - **Also:** module files list only lessons/challenges that exist, and published lesson
   orders must be contiguous (drafts may leave gaps while authoring).
 
+### D-18 — W5 ships with a provisional pitch/power table (Phase 6)
+
+- **Problem:** step 6.24 builds W5 after the author collects steady-state pitch/power data
+  in the sim (Section 7.2), which only the author can do. With `performanceModel: null` the
+  widget could not be built or tested.
+- **Decision:** `content/aircraft.yaml` → `performanceModel` holds a **provisional** 6 × 5
+  table (pitch −10…15°, 1,500–2,700 RPM) generated from a simplified point-mass model and
+  anchored on this plan's scenarios (cruise 2,300 RPM / 0° ≈ 105 kt level; Vy +8° ≈ 74 kt,
+  +700 fpm). `verification.performanceModel.verified` is `false`, and while it is, W5 shows
+  a "Provisional numbers" notice. The schema checks the table's shape.
+- **To finish:** fly each pitch/RPM pair to a steady state in the sim, record IAS and VS,
+  replace the cells (keep the axes or change them; the widget reads whatever is there) and
+  set `verified: true`.
+
 ---
 
 # Part II — Learning the Cessna 172 (for you, the author)
@@ -3591,7 +3605,7 @@ Every widget must:
   ~+700 fpm), "Cruise descent", "Slow flight". Values ⚠ from your own flight tests.
 - **Quiz mode:** "Set up a 500 fpm descent at 90 kt."
 - **Model:** 2D interpolation over a table of (pitch, RPM) → (IAS, VS). Table lives in
-  `content/aircraft.yaml` under `performanceModel`.
+  `content/aircraft.yaml` under `performanceModel` (provisional until flown — D-18).
 - **Est. build:** 3 days (+1 day data collection in sim).
 
 ### 16.7 W6 — Turn Coordinator & Slip Ball (P0) · L2.4
@@ -6039,9 +6053,10 @@ keyboard/ARIA → quiz mode → text alternative → embed in its lesson → rev
 - [x] 6.20 W1 Control Surfaces Explorer.
 - [x] 6.21 W6 Turn Coordinator & Slip Ball.
 - [x] 6.22 W14 Bank vs Load Factor.
-- [ ] 6.23 W4 Angle of Attack & Lift.
-- [ ] 6.24 W5 Pitch & Power Trainer (after collecting pitch/power data in the sim during
-      the Week 2 study flights in Section 7.2).
+- [x] 6.23 W4 Angle of Attack & Lift.
+- [x] 6.24 W5 Pitch & Power Trainer (after collecting pitch/power data in the sim during
+      the Week 2 study flights in Section 7.2). Built with a provisional table until those
+      flights are done (D-18).
 - [ ] 6.25 W2 G1000 PFD Explorer (explore + navigation modes).
 - [ ] 6.26 W7 Traffic Pattern Animator (+ radio calls and go-around toggles).
 - [ ] 6.27 W12 Wind Triangle (model shared with tools and W20).

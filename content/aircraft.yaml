@@ -238,8 +238,29 @@ powerSettings:
     flaps: 0°
     targetSpeed: '68'
     pitch: About level to slightly nose down
-# W5 Pitch & Power table — collected from your own sim test flights (Section 7.2, step 6.24).
-performanceModel: null
+# W5 Pitch & Power table (Section 16.6). PROVISIONAL: generated from a simplified model
+# anchored on the plan's scenarios (cruise 2,300 RPM / 0° ≈ 105 kt level; Vy +8° ≈ 74 kt,
+# +700 fpm) — see Decision D-18. Replace every cell with numbers from your own steady-state
+# test flights in the sim (Section 7.2, step 6.24), then set verification.performanceModel.
+# Rows follow pitchDeg, columns follow rpm.
+performanceModel:
+  pitchDeg: [-10, -5, 0, 5, 10, 15]
+  rpm: [1500, 1800, 2100, 2400, 2700]
+  ias:
+    - [132, 141, 148, 155, 163]
+    - [100, 112, 122, 130, 137]
+    - [69, 84, 96, 105, 114]
+    - [48, 61, 73, 83, 93]
+    - [48, 48, 56, 66, 75]
+    - [48, 48, 48, 53, 61]
+  vs:
+    - [-1900, -1960, -2020, -2070, -2120]
+    - [-850, -800, -770, -750, -730]
+    - [-480, -210, -30, 110, 220]
+    - [-610, -140, 230, 520, 750]
+    - [-620, -260, 190, 600, 940]
+    - [-620, -260, 100, 520, 940]
+  source: Provisional model (Decision D-18), not yet flown in the sim
 verification:
   specs:
     verified: false
@@ -255,6 +276,9 @@ verification:
   powerSettings:
     verified: false
     note: Fly each setting in the sim and adjust (Section 8.5).
+  performanceModel:
+    verified: false
+    note: Provisional numbers. Fly each pitch/RPM pair to a steady state and record IAS and VS.
   variants:
     verified: false
     note: Record the exact variant names from the aircraft selection screen.

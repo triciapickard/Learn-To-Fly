@@ -88,6 +88,27 @@ export const AircraftSchema = z.strictObject({
       vs: z.array(z.array(z.number())),
       source: z.string(),
     })
+    .superRefine((model, ctx) => {
+      // One row per pitch and one column per RPM, with both axes in increasing order.
+      for (const key of ['pitchDeg', 'rpm'] as const) {
+        if (model[key].some((v, i) => i > 0 && v <= model[key][i - 1]!)) {
+          ctx.addIssue({ code: 'custom', path: [key], message: `${key} must increase` });
+        }
+      }
+      for (const key of ['ias', 'vs'] as const) {
+        const table = model[key];
+        if (
+          table.length !== model.pitchDeg.length ||
+          table.some((row) => row.length !== model.rpm.length)
+        ) {
+          ctx.addIssue({
+            code: 'custom',
+            path: [key],
+            message: `${key} needs ${model.pitchDeg.length} rows (one per pitch) of ${model.rpm.length} values (one per RPM)`,
+          });
+        }
+      }
+    })
     .nullable()
     .default(null),
   /** Per-field verification status; every number starts unverified (step 5.4). */

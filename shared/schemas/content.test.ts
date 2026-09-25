@@ -343,5 +343,39 @@ describe('reference data schemas', () => {
         }),
       ),
     ).toContain('Give either `kias` or both `min` and `max`');
+
+    const vspeeds = { vy: { label: 'Vy', meaning: 'Best rate', kias: 74 } };
+    const performanceModel = {
+      pitchDeg: [0, 5],
+      rpm: [2000, 2400],
+      ias: [
+        [90, 105],
+        [70, 80],
+      ],
+      vs: [
+        [-200, 100],
+        [100, 500],
+      ],
+      source: 'test',
+    };
+    expect(AircraftSchema.safeParse({ ...base, vspeeds, performanceModel }).success).toBe(true);
+    expect(
+      messages(
+        AircraftSchema.safeParse({
+          ...base,
+          vspeeds,
+          performanceModel: { ...performanceModel, vs: [[-200, 100]] },
+        }),
+      ),
+    ).toContain('vs needs 2 rows (one per pitch) of 2 values (one per RPM)');
+    expect(
+      messages(
+        AircraftSchema.safeParse({
+          ...base,
+          vspeeds,
+          performanceModel: { ...performanceModel, rpm: [2400, 2000] },
+        }),
+      ),
+    ).toContain('rpm must increase');
   });
 });
