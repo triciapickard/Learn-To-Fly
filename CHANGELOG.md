@@ -12,3 +12,8 @@ All notable changes to this project are documented here. The format is based on
   TypeScript server, `shared/` folder, Tailwind CSS v4, ESLint, Prettier, Husky +
   lint-staged, Vitest (client and node projects), GitHub Actions CI, Dependabot, PR
   template.
+- Phase 2: backend foundation — Zod-validated environment, MongoDB connection with retry
+  and health ping, request IDs, pino logging with redaction, helmet (report-only CSP),
+  JSON-only mutating routes with a 100 kb limit, compression, rate limits, Zod
+  `validate` middleware, `HttpError` + single error shape, graceful shutdown, production
+  static serving with SPA fallback, `toJSON` model plugin, mongodb-memory-server tests.
