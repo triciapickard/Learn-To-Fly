@@ -507,6 +507,25 @@ revisited, but should not be changed silently.
 - **Reason:** Avoids cookie banners and privacy complexity. Learning-signal metrics
   (Section 4.3) come from our own database.
 
+### D-15 — Accessible primitives: Radix UI (proposed in Phase 3)
+
+- **Alternatives:** React Aria Components; hand-rolled ARIA patterns.
+- **Reason:** Radix primitives are unstyled, small, per-component packages that fit
+  Tailwind, and cover the hard patterns (Tabs, Dialog/Drawer, Popover, Tooltip,
+  RadioGroup) with focus management built in. Native `<select>` and checkboxes are used
+  where they are the most accessible option. Proposed by the assistant while building
+  Phase 3 (2026-09-25); revisit if it gets in the way.
+
+### D-16 — Colour tokens adjusted for contrast; self-hosted fonts (Phase 3)
+
+- **Change:** Light-theme `success`, `warning`, `gold`, `silver`, `bronze` and `accent`
+  were darkened from the Section 21.2 starting values so every text token passes WCAG AA
+  on `bg`, `surface` and `surface-2`. Added `border-strong` (≥ 3:1) for form-control
+  borders, `*-soft` tints for callouts/badges and dark instrument tokens for widgets.
+  `--color-text-muted` is exposed as `--color-muted` (Tailwind utility `text-muted`).
+- **Fonts:** Inter and JetBrains Mono are self-hosted via Fontsource (the Section 32.1
+  privacy recommendation), so no Google Fonts requests are made.
+
 ---
 
 # Part II — Learning the Cessna 172 (for you, the author)
@@ -5770,61 +5789,61 @@ pages for every route.
 - [ ] 3.1 Low-fidelity wireframes (Section 21.8) for Landing, Learn, Lesson, Challenge
       (4 tabs), Dashboard, Fly mode. Keep them in Figma/Excalidraw rather than the repo,
       and link them in the Phase 3 PR description.
-- [ ] 3.2 Logo mark and wordmark (SVG); favicon set; OG image (1200×630).
-- [ ] 3.3 Choose Radix UI vs React Aria (Section 21.5); record in the Decision Log.
+- [x] 3.2 Logo mark and wordmark (SVG); favicon set; OG image (1200×630).
+- [x] 3.3 Choose Radix UI vs React Aria (Section 21.5); record in the Decision Log.
 
 ### 43.2 Tokens and theming
 
-- [ ] 3.4 `src/styles/tokens.css` with the colour tokens (Section 21.2) for light and dark
+- [x] 3.4 `src/styles/tokens.css` with the colour tokens (Section 21.2) for light and dark
       (`[data-theme="dark"]`), typography, radius.
-- [ ] 3.5 Map tokens into Tailwind's theme (`@theme` in Tailwind v4).
-- [ ] 3.6 Fonts: Inter + a monospace font; `preconnect` or self-host.
-- [ ] 3.7 `ThemeProvider` + `ThemeToggle`; inline pre-paint theme script in `index.html`.
-- [ ] 3.8 Contrast check every text/background pair in both themes (WebAIM checker);
+- [x] 3.5 Map tokens into Tailwind's theme (`@theme` in Tailwind v4).
+- [x] 3.6 Fonts: Inter + a monospace font; `preconnect` or self-host.
+- [x] 3.7 `ThemeProvider` + `ThemeToggle`; inline pre-paint theme script in `index.html`.
+- [x] 3.8 Contrast check every text/background pair in both themes (WebAIM checker);
       adjust tokens until all pass AA.
 - **AC:** toggling theme switches all tokens with no flash on reload.
 
 ### 43.3 Routing and layouts
 
-- [ ] 3.9 Install React Router 7; create `src/router.tsx` with every route from Section
+- [x] 3.9 Install React Router 7; create `src/router.tsx` with every route from Section
       31.2 pointing to lazy placeholder pages (each shows its title).
-- [ ] 3.10 `RootLayout` (header, footer, skip link, `<main id="main">`), `LessonLayout`,
+- [x] 3.10 `RootLayout` (header, footer, skip link, `<main id="main">`), `LessonLayout`,
       `FlyModeLayout`, `AuthLayout`.
-- [ ] 3.11 Header with desktop nav and mobile drawer; footer with legal links.
-- [ ] 3.12 Route change focus management and document titles.
-- [ ] 3.13 `NotFoundPage` and root error boundary page.
+- [x] 3.11 Header with desktop nav and mobile drawer; footer with legal links.
+- [x] 3.12 Route change focus management and document titles.
+- [x] 3.13 `NotFoundPage` and root error boundary page.
 - **AC:** every route renders; keyboard can reach all nav items; mobile drawer traps focus
   and closes on Esc.
 
 ### 43.4 Data layer
 
-- [ ] 3.14 Install TanStack Query; `src/lib/queryClient.ts` with defaults; devtools in dev.
-- [ ] 3.15 `src/lib/apiClient.ts` (Section 31.3) with `ApiError`.
-- [ ] 3.16 MSW set up for client tests (`src/test/handlers.ts`).
+- [x] 3.14 Install TanStack Query; `src/lib/queryClient.ts` with defaults; devtools in dev.
+- [x] 3.15 `src/lib/apiClient.ts` (Section 31.3) with `ApiError`.
+- [x] 3.16 MSW set up for client tests (`src/test/handlers.ts`).
 
 ### 43.5 Component library
 
-- [ ] 3.17 Build components from Section 21.5 in this order: Button, Link, Card, Badge,
+- [x] 3.17 Build components from Section 21.5 in this order: Button, Link, Card, Badge,
       Callout, FormField/Input/PasswordInput/Textarea/Checkbox/RadioGroup/Select, Tabs,
       Dialog, Drawer, Tooltip/Popover, ProgressBar/Ring, Skeleton, EmptyState/ErrorState,
       Toast, Table, Breadcrumbs, DifficultyDots, TierBadge, TypeIcon, Stopwatch, KeyNumbers.
-- [ ] 3.18 Each component: typed props, both themes, focus styles, tests for behaviour and
+- [x] 3.18 Each component: typed props, both themes, focus styles, tests for behaviour and
       accessibility (role/name), no console warnings.
-- [ ] 3.19 `/dev/components` route (only in development builds) showcasing every component
+- [x] 3.19 `/dev/components` route (only in development builds) showcasing every component
       and state.
 - **AC:** all components render correctly in both themes; tests pass; axe shows no
   violations on `/dev/components`.
 
 ### 43.6 Static pages
 
-- [ ] 3.20 Landing page with real copy (Section 20.1) — widget demo slot left as a
+- [x] 3.20 Landing page with real copy (Section 20.1) — widget demo slot left as a
       placeholder until Phase 6.
-- [ ] 3.21 About, Disclaimer, Privacy, Terms (drafts from Section 57), Roadmap.
+- [x] 3.21 About, Disclaimer, Privacy, Terms (drafts from Section 57), Roadmap.
 - **AC:** landing page passes Lighthouse accessibility ≥ 95 locally.
 
 ### 43.7 Phase wrap-up
 
-- [ ] 3.22 PR "Phase 3: Frontend foundation"; screenshots of landing (light/dark,
+- [x] 3.22 PR "Phase 3: Frontend foundation"; screenshots of landing (light/dark,
       mobile/desktop) in the PR.
 
 ---

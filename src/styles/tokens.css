@@ -1,1 +1,103 @@
-/* Design tokens (Section 21.2). Filled in during Phase 3. */
+/*
+ * Design tokens (plan.md Section 21). Light values live in @theme so Tailwind generates
+ * utilities (bg-surface, text-muted, border-strong, …); [data-theme='dark'] overrides the
+ * same custom properties at runtime.
+ *
+ * Contrast (step 3.8): every text token passes WCAG AA (≥ 4.5:1) on bg, surface and
+ * surface-2 in both themes; border-strong passes 3:1 for form controls. Light success,
+ * warning, gold, silver and accent were darkened from the Section 21.2 starting points.
+ */
+@theme {
+  /* Reset Tailwind's default palette so only design tokens are used. */
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --color-bg: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-surface-2: #eef2f8;
+  --color-border: #d5ddea;
+  --color-border-strong: #7a869a;
+  --color-text: #0f172a;
+  --color-muted: #475569;
+  --color-primary: #1d4ed8;
+  --color-primary-hover: #1e40af;
+  --color-primary-contrast: #ffffff;
+  --color-accent: #a34a06;
+  --color-success: #166534;
+  --color-warning: #92400e;
+  --color-danger: #b91c1c;
+  --color-magenta: #a21caf;
+  --color-cyan: #0e7490;
+  --color-gold: #8a5a00;
+  --color-silver: #5b6472;
+  --color-bronze: #8c5229;
+
+  /* Tinted backgrounds for callouts and badges */
+  --color-primary-soft: #e0e9fb;
+  --color-success-soft: #e3f4e8;
+  --color-warning-soft: #fdf1dc;
+  --color-danger-soft: #fbe5e5;
+  --color-magenta-soft: #f7e3f9;
+  --color-cyan-soft: #ddf1f5;
+
+  /* Instruments are dark in both themes, like the real panel. */
+  --color-instrument: #0b1220;
+  --color-instrument-text: #e6ecf5;
+  --color-arc-white: #f1f5f9;
+  --color-arc-green: #22c55e;
+  --color-arc-yellow: #facc15;
+  --color-arc-red: #ef4444;
+
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-control: 6px;
+  --radius-card: 12px;
+
+  --shadow-1: 0 1px 2px rgb(15 23 42 / 0.06), 0 1px 3px rgb(15 23 42 / 0.1);
+  --shadow-2: 0 4px 6px rgb(15 23 42 / 0.07), 0 10px 20px rgb(15 23 42 / 0.12);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #0b1220;
+  --color-surface: #111a2e;
+  --color-surface-2: #18233a;
+  --color-border: #26324d;
+  --color-border-strong: #6b7c9e;
+  --color-text: #e6ecf5;
+  --color-muted: #9aa8bf;
+  --color-primary: #60a5fa;
+  --color-primary-hover: #93c5fd;
+  --color-primary-contrast: #0b1220;
+  --color-accent: #fbbf24;
+  --color-success: #4ade80;
+  --color-warning: #fcd34d;
+  --color-danger: #f87171;
+  --color-magenta: #e879f9;
+  --color-cyan: #22d3ee;
+  --color-gold: #f6c453;
+  --color-silver: #cbd5e1;
+  --color-bronze: #d69e6b;
+
+  --color-primary-soft: #16264a;
+  --color-success-soft: #10291e;
+  --color-warning-soft: #2c230f;
+  --color-danger-soft: #331618;
+  --color-magenta-soft: #2d1633;
+  --color-cyan-soft: #0f2a33;
+
+  /* Dark mode uses borders rather than heavy shadows (Section 21.4). */
+  --shadow-1: 0 0 0 1px var(--color-border);
+  --shadow-2: 0 0 0 1px var(--color-border), 0 8px 24px rgb(0 0 0 / 0.4);
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+}
