@@ -1,13 +1,9 @@
 import { Outlet } from 'react-router';
 
 /**
- * Lesson layout: sidebar sections, main column and right rail on xl (Section 20.4).
- * The lesson player fills the regions in Phase 6.
+ * Route wrapper for lessons. The lesson page lays out its sidebar, main column and
+ * right rail itself because they all depend on the lesson's data (Section 20.4).
  */
 export default function LessonLayout() {
-  return (
-    <div className="mx-auto w-full max-w-7xl px-4 py-8">
-      <Outlet />
-    </div>
-  );
+  return <Outlet />;
 }

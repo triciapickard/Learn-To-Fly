@@ -33,3 +33,7 @@ All notable changes to this project are documented here. The format is based on
   directives/tokens/links, validator with cross-reference rules, idempotent seeder with
   content releases and draft previews, public content API with ETag caching, CI content
   job, `content/README.md` authoring guide.
+- Phase 6 (part 1): curriculum map and module pages, lesson player (Markdown, callouts,
+  images, click-to-load video, quizzes of four types, scroll-spy sections, key-number
+  rail, Go deeper, Fly it, previous/next), widget framework, W3 Airspeed Indicator and
+  W16 Checklist Runner (Milestone M-B).

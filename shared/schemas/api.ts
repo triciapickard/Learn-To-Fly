@@ -30,6 +30,7 @@ export interface LessonSummary extends Seeded {
   title: string;
   summary: string;
   estimatedMinutes: number | null;
+  objectives: string[];
 }
 
 export interface ChallengeSummary extends Seeded {
@@ -65,7 +66,6 @@ export interface GlossaryTermRef {
 }
 
 export interface LessonDetail extends LessonSummary {
-  objectives: string[];
   blocks: LessonBlock[];
   sections: Section[];
   widgets: string[];

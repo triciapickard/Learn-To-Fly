@@ -254,7 +254,7 @@ terms:
     definition: Garmin integrated glass cockpit with a PFD and MFD.
   - slug: glide-ratio
     term: Glide ratio
-    definition: Horizontal distance travelled per unit of height lost in a glide.
+    definition: Horizontal distance traveled per unit of height lost in a glide.
   - slug: go-around
     term: Go-around
     definition: Discontinuing an approach and climbing away.

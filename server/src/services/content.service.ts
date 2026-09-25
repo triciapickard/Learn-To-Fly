@@ -70,6 +70,7 @@ const LESSON_SUMMARY = {
   title: 1,
   summary: 1,
   estimatedMinutes: 1,
+  objectives: 1,
   draft: 1,
   version: 1,
 };
@@ -99,6 +100,7 @@ function toLessonSummary(doc: Raw): LessonSummary {
     title: d.title,
     summary: d.summary,
     estimatedMinutes: d.estimatedMinutes ?? null,
+    objectives: d.objectives ?? [],
     draft: Boolean(d.draft),
     version: d.version,
   };
@@ -219,7 +221,6 @@ export async function getLesson(slug: string): Promise<LessonDetail> {
   const resourceBySlug = new Map(resources.map((r) => [r.slug as string, clean<ResourceDto>(r)]));
   return {
     ...toLessonSummary(doc),
-    objectives: l.objectives,
     blocks: l.blocks,
     sections: l.sections,
     widgets: l.widgets,
