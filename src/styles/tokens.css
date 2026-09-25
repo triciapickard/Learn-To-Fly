@@ -53,6 +53,12 @@
   /* Attitude indicator sky and ground (G1000 style). */
   --color-sky: #2563c9;
   --color-ground: #7a4d24;
+  /* Glass-cockpit display colours and the bezel (W2); fixed in both themes. */
+  --color-bezel: #2b3342;
+  --color-bezel-key: #465267;
+  --color-display-magenta: #f472f6;
+  --color-display-cyan: #22d3ee;
+  --color-display-green: #4ade80;
 
   --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
