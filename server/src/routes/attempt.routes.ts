@@ -8,7 +8,7 @@ import { validate } from '../middleware/validate.js';
 
 const SlugParams = z.object({ slug: ChallengeSlugSchema });
 
-/** Challenge attempts and progress (Section 29.4). Every route needs a session. */
+/** Challenge attempts (Section 29.4). Every route needs a session. */
 export function attemptRouter(): Router {
   const router = Router();
   router.post(
@@ -24,6 +24,5 @@ export function attemptRouter(): Router {
     c.listChallengeAttempts,
   );
   router.get('/me/attempts', requireAuth, validate({ query: AttemptsQuerySchema }), c.listAttempts);
-  router.get('/me/progress', requireAuth, c.getProgress);
   return router;
 }

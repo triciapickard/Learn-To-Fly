@@ -181,7 +181,10 @@ describe('attempt history', () => {
     const own = await alex.get(`/api/v1/me/challenges/${SLUG}/attempts`).expect(200);
     expect(own.body).toEqual({ attempts: [], nextBefore: null, progress: null });
     expect((await alex.get('/api/v1/me/attempts').expect(200)).body.attempts).toEqual([]);
-    expect((await alex.get('/api/v1/me/progress').expect(200)).body).toEqual({ challenges: {} });
+    expect((await alex.get('/api/v1/me/progress').expect(200)).body).toMatchObject({
+      lessons: {},
+      challenges: {},
+    });
     const mine = await sam.get(`/api/v1/me/challenges/${SLUG}/attempts`).expect(200);
     expect(mine.body.attempts).toHaveLength(1);
     expect(mine.body.progress.bestTier).toBe('gold');

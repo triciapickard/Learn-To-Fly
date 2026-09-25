@@ -1,8 +1,10 @@
 import { ChevronDown } from 'lucide-react';
 import { Link } from '@/components/Link';
+import { ProgressRing } from '@/components/Progress';
+import { ChallengeStatusIcon, LessonStatusIcon } from '@/features/progress/StatusIcons';
 import { cn } from '@/lib/cn';
 import { plural } from '@/lib/format';
-import type { ModuleSummary } from '@shared/schemas/api';
+import type { ModuleSummary, ProgressResponse } from '@shared/schemas/api';
 import { ChallengeRow, LessonRow } from './LessonListItem';
 
 function formatHours(minutes: number) {
@@ -13,11 +15,11 @@ function formatHours(minutes: number) {
 /** Vertical "flight path" of modules; each expands to its lessons and challenges (Section 20.2). */
 export function CurriculumMap({
   modules,
-  renderProgress,
+  progress,
 }: {
   modules: ModuleSummary[];
-  /** Progress ring per module (signed in, Phase 8). */
-  renderProgress?: (module: ModuleSummary) => React.ReactNode;
+  /** The signed-in learner's progress: rings per module and status per item (step 8.6). */
+  progress?: ProgressResponse;
 }) {
   return (
     <ol className="relative flex flex-col gap-4 border-l-2 border-dashed border-border-strong pl-6 sm:pl-8">
@@ -44,7 +46,17 @@ export function CurriculumMap({
                   {formatHours(module.estimatedMinutes)}
                 </p>
               </div>
-              {renderProgress?.(module)}
+              {progress?.modules[module.slug] && (
+                <ProgressRing
+                  value={progress.modules[module.slug]!.percent}
+                  label={`Module ${module.order} progress`}
+                  valueText={
+                    progress.modules[module.slug]!.complete
+                      ? 'Complete'
+                      : `${progress.modules[module.slug]!.percent}% complete`
+                  }
+                />
+              )}
               <ChevronDown
                 aria-hidden
                 className="mt-1 size-5 shrink-0 text-muted transition-transform group-open:rotate-180"
@@ -63,7 +75,14 @@ export function CurriculumMap({
                       <ul>
                         {module.lessons.map((lesson) => (
                           <li key={lesson.slug}>
-                            <LessonRow lesson={lesson} />
+                            <LessonRow
+                              lesson={lesson}
+                              status={
+                                progress && (
+                                  <LessonStatusIcon progress={progress.lessons[lesson.slug]} />
+                                )
+                              }
+                            />
                           </li>
                         ))}
                       </ul>
@@ -82,7 +101,16 @@ export function CurriculumMap({
                       <ul>
                         {module.challenges.map((challenge) => (
                           <li key={challenge.slug}>
-                            <ChallengeRow challenge={challenge} />
+                            <ChallengeRow
+                              challenge={challenge}
+                              status={
+                                progress && (
+                                  <ChallengeStatusIcon
+                                    progress={progress.challenges[challenge.slug]}
+                                  />
+                                )
+                              }
+                            />
                           </li>
                         ))}
                       </ul>

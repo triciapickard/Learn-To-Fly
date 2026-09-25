@@ -287,15 +287,101 @@ export interface ChallengeAttemptsResponse extends AttemptsResponse {
   progress: ChallengeProgressDto | null;
 }
 
-/** `GET /me/progress` (Section 29.4). Phase 8 adds lessons and modules. */
-export interface ProgressResponse {
-  challenges: Record<string, ChallengeProgressDto>;
-}
-
 export const AttemptsQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(50).default(20),
   before: Timestamp.optional(),
 });
+
+// ---------------------------------------------------------------------------------------
+// Lesson progress and the dashboard (Sections 27.6, 29.4, 20.9)
+
+export const LESSON_STATUSES = ['in_progress', 'completed'] as const;
+export type LessonStatus = (typeof LESSON_STATUSES)[number];
+
+export const LessonProgressUpdateSchema = z
+  .strictObject({
+    status: z.enum(LESSON_STATUSES).optional(),
+    lastSectionId: z
+      .string()
+      .regex(/^[a-z0-9-]{1,100}$/, 'Section ids are lowercase kebab-case')
+      .optional(),
+  })
+  .refine((v) => v.status !== undefined || v.lastSectionId !== undefined, {
+    message: 'Send a status or a lastSectionId.',
+  });
+export type LessonProgressUpdate = z.infer<typeof LessonProgressUpdateSchema>;
+
+export const QuizAnswerSchema = z.strictObject({
+  questionId: SlugSchema,
+  answer: z.union([z.string().max(100), z.array(z.string().max(100)).max(20), z.number().finite()]),
+});
+export type QuizAnswerInput = z.infer<typeof QuizAnswerSchema>;
+
+export interface QuizAnswerResponse {
+  correct: boolean;
+  explanation: string;
+}
+
+export interface LessonProgressDto {
+  lessonSlug: string;
+  status: LessonStatus;
+  lastSectionId: string | null;
+  startedAt: string;
+  completedAt: string | null;
+}
+
+export interface ModuleProgressDto {
+  slug: string;
+  lessonsCompleted: number;
+  lessonsTotal: number;
+  challengesPassed: number;
+  challengesTotal: number;
+  percent: number;
+  complete: boolean;
+}
+
+/** `GET /me/progress` (Section 29.4). */
+export interface ProgressResponse {
+  lessons: Record<string, LessonProgressDto>;
+  challenges: Record<string, ChallengeProgressDto>;
+  modules: Record<string, ModuleProgressDto>;
+}
+
+export interface DashboardItem {
+  type: 'lesson' | 'challenge';
+  slug: string;
+  code: string;
+  title: string;
+  href: string;
+  moduleTitle: string;
+  estimatedMinutes: number | null;
+}
+
+export interface DashboardResponse {
+  displayName: string;
+  /** Last activity if unfinished, else the next core item; null when all done. */
+  continue: (DashboardItem & { started: boolean }) | null;
+  course: {
+    lessonsCompleted: number;
+    lessonsTotal: number;
+    challengesPassed: number;
+    challengesTotal: number;
+    percent: number;
+    complete: boolean;
+  };
+  modules: (ModuleProgressDto & { code: string; order: number; title: string })[];
+  nextUp: DashboardItem[];
+  recentAttempts: {
+    id: string;
+    challengeSlug: string;
+    code: string;
+    title: string;
+    tier: Tier;
+    percentage: number;
+    submittedAt: string;
+  }[];
+  stats: { totalAttempts: number; goldCount: number; estimatedSimMinutes: number };
+}
 
 export function lessonHref(lesson: { moduleSlug: string; slug: string }): string {
   return `/learn/${lesson.moduleSlug}/${lesson.slug}`;

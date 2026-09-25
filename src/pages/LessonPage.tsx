@@ -1,8 +1,10 @@
-import { Clock } from 'lucide-react';
-import { useState } from 'react';
+import { CheckCircle2, Clock } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 import { Navigate, useLocation, useParams } from 'react-router';
+import { Badge } from '@/components/Badge';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Callout } from '@/components/Callout';
+import { useToast } from '@/components/Toast';
 import { useAuth } from '@/features/auth/api';
 import { AircraftKeyNumbers } from '@/features/content/AircraftKeyNumbers';
 import { useLesson } from '@/features/content/api';
@@ -21,6 +23,11 @@ import {
   SignupBanner,
 } from '@/features/lessons/LessonParts';
 import { LessonRenderer } from '@/features/lessons/LessonRenderer';
+import {
+  useMyProgress,
+  useRecordQuizAnswer,
+  useUpdateLessonProgress,
+} from '@/features/progress/api';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useScrollSpy } from '@/hooks/useScrollSpy';
 import { lessonHref } from '@shared/schemas/api';
@@ -32,9 +39,27 @@ export default function LessonPage() {
   const { data, isPending, error, refetch } = useLesson(lessonSlug);
   const { user } = useAuth();
   const lesson = data?.lesson;
-  const [completed, setCompleted] = useState(false);
+  const { toast } = useToast();
+  const { data: progress } = useMyProgress();
+  const saved = progress?.lessons[lessonSlug];
+  const completed = saved?.status === 'completed';
+  const complete = useUpdateLessonProgress(lessonSlug);
+  const saveSection = useUpdateLessonProgress(lessonSlug);
+  const recordAnswer = useRecordQuizAnswer(lessonSlug);
   usePageTitle(lesson ? `${lesson.code} ${lesson.title}` : 'Lesson');
   const active = useScrollSpy(lesson?.sections.map((s) => s.id) ?? []);
+
+  // Auto-save the resume point (step 8.7), debounced so scrolling doesn't send a burst.
+  const lastSaved = useRef<string | null>(null);
+  const { mutate: saveSectionMutate } = saveSection;
+  useEffect(() => {
+    if (!user || !lesson || !active || lastSaved.current === active) return;
+    const timer = setTimeout(() => {
+      lastSaved.current = active;
+      saveSectionMutate({ lastSectionId: active });
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [user, lesson, active, saveSectionMutate]);
 
   if (lesson && lesson.moduleSlug !== moduleSlug) {
     return <Navigate to={lessonHref(lesson)} replace />;
@@ -73,6 +98,11 @@ export default function LessonPage() {
                     </span>
                   )}
                   {l.draft && <DraftBadge />}
+                  {completed && (
+                    <Badge variant="complete">
+                      <CheckCircle2 aria-hidden className="size-3.5" /> Completed
+                    </Badge>
+                  )}
                 </div>
               </header>
 
@@ -85,11 +115,22 @@ export default function LessonPage() {
                 </Callout>
               )}
               {!user && <SignupBanner returnTo={location.pathname} />}
+              {saved && !completed && saved.lastSectionId && !location.hash && (
+                <ResumeLink sections={l.sections} sectionId={saved.lastSectionId} />
+              )}
               <ObjectivesBox objectives={l.objectives} />
               <MobileSectionSelect sections={l.sections} active={active} />
 
               <div className="mt-6">
-                <LessonRenderer blocks={l.blocks} checklists={l.checklists} />
+                <LessonRenderer
+                  blocks={l.blocks}
+                  checklists={l.checklists}
+                  onQuizAnswer={
+                    user
+                      ? ({ questionId, answer }) => recordAnswer.mutate({ questionId, answer })
+                      : undefined
+                  }
+                />
               </div>
 
               <FlyIt challenges={l.challenges} />
@@ -103,7 +144,17 @@ export default function LessonPage() {
                 <MarkComplete
                   signedIn={Boolean(user)}
                   completed={completed}
-                  onComplete={() => setCompleted(true)}
+                  onComplete={() =>
+                    complete.mutate(
+                      { status: 'completed' },
+                      {
+                        onSuccess: () => toast('Lesson complete. Nice work!', 'success'),
+                        onError: () =>
+                          toast('Could not save your progress. Please try again.', 'error'),
+                      },
+                    )
+                  }
+                  pending={complete.isPending}
                   returnTo={location.pathname}
                 />
               </div>
@@ -121,5 +172,25 @@ export default function LessonPage() {
         );
       }}
     </QueryStates>
+  );
+}
+
+/** "Pick up where you left off" (step 8.7) when a saved section isn't the first one. */
+function ResumeLink({
+  sections,
+  sectionId,
+}: {
+  sections: { id: string; title: string }[];
+  sectionId: string;
+}) {
+  const index = sections.findIndex((s) => s.id === sectionId);
+  if (index <= 0) return null;
+  return (
+    <p className="mt-4 rounded-card border border-primary/40 bg-primary-soft px-4 py-3">
+      Pick up where you left off:{' '}
+      <a href={`#${sectionId}`} className="font-semibold text-primary underline">
+        {index + 1}. {sections[index]!.title}
+      </a>
+    </p>
   );
 }

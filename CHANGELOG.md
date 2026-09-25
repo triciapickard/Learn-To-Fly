@@ -64,3 +64,12 @@ All notable changes to this project are documented here. The format is based on
   events with beep and flash, wake lock), Debrief (rubric, reflections, planning, live score
   preview, sessionStorage draft that survives log-in) and History tabs; result view; fly
   mode (dark, large type); account attempts page; Playwright E2E setup and CI job.
+- Phase 8: progress and dashboard — `shared/progress.ts` (module/course completion,
+  "next up" and "continue") with tests; `lessonProgress` model; `PUT
+/me/lessons/:slug/progress` (idempotent completion, resume point),
+  `POST /me/lessons/:slug/quiz-answers` (checked server-side), `GET /me/progress` with
+  lessons and modules, `GET /me/dashboard` in one call; last activity on lessons; progress
+  rings and status icons on /learn and module pages; optimistic "Mark complete", debounced
+  resume point and "pick up where you left off"; dashboard with continue, progress, next up,
+  recent attempts, stats, "all caught up" and the course-complete "Skyhawk Pilot (Sim)"
+  badge; E2E flows 2 and 3.

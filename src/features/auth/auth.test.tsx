@@ -42,6 +42,8 @@ describe('Sign up', () => {
     server.use(
       http.post('/api/v1/auth/register', async ({ request }) => {
         body = await request.json();
+        // From now on the session is signed in, as it would be on the real server.
+        server.use(signedIn());
         return HttpResponse.json({ user: testUser, csrfToken: 'new-token' }, { status: 201 });
       }),
     );

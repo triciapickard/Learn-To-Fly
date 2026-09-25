@@ -1,11 +1,10 @@
-import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useInfiniteQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useAuth } from '@/features/auth/api';
 import { api } from '@/lib/apiClient';
 import type {
   AttemptCreateInput,
   AttemptCreateResponse,
   ChallengeAttemptsResponse,
-  ProgressResponse,
 } from '@shared/schemas/api';
 
 export const attemptKeys = {
@@ -29,16 +28,6 @@ export function useChallengeAttempts(slug: string) {
   });
 }
 
-/** Best result per challenge for the signed-in user (null when signed out). */
-export function useMyProgress() {
-  const { isAuthenticated } = useAuth();
-  return useQuery({
-    queryKey: attemptKeys.progress,
-    queryFn: () => api.get<ProgressResponse>('/me/progress'),
-    enabled: isAuthenticated,
-  });
-}
-
 export function useSubmitAttempt(slug: string) {
   const queryClient = useQueryClient();
   return useMutation({
@@ -51,3 +40,5 @@ export function useSubmitAttempt(slug: string) {
     },
   });
 }
+
+export { useMyProgress } from '@/features/progress/api';

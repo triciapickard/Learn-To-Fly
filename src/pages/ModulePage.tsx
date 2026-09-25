@@ -5,10 +5,13 @@ import { Button } from '@/components/Button';
 import { Card, CardBody } from '@/components/Card';
 import { Link } from '@/components/Link';
 import { PageContainer, PageHeader } from '@/components/PageHeader';
+import { ProgressBar } from '@/components/Progress';
 import { EmptyState } from '@/components/States';
 import { useModule } from '@/features/content/api';
 import { QueryStates } from '@/features/content/queryState';
 import { ChallengeRow, LessonRow } from '@/features/curriculum/LessonListItem';
+import { useMyProgress } from '@/features/progress/api';
+import { ChallengeStatusIcon, LessonStatusIcon } from '@/features/progress/StatusIcons';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { plural } from '@/lib/format';
 
@@ -16,6 +19,7 @@ export default function ModulePage() {
   const { moduleSlug = '' } = useParams();
   const { data, isPending, error, refetch } = useModule(moduleSlug);
   const module = data?.module;
+  const { data: progress } = useMyProgress();
   usePageTitle(module ? `Module ${module.order}: ${module.title}` : 'Module');
 
   return (
@@ -42,6 +46,19 @@ export default function ModulePage() {
                 About {Math.round(m.estimatedMinutes / 6) / 10} hours of lessons and sim time ·{' '}
                 {plural(m.lessons.length, 'lesson')} · {plural(m.challenges.length, 'challenge')}
               </p>
+              {progress?.modules[m.slug] && (
+                <ProgressBar
+                  className="max-w-md"
+                  label={`Module ${m.order} progress`}
+                  value={progress.modules[m.slug]!.percent}
+                  showValue
+                  valueText={
+                    progress.modules[m.slug]!.complete
+                      ? 'Module complete'
+                      : `${progress.modules[m.slug]!.lessonsCompleted} of ${progress.modules[m.slug]!.lessonsTotal} core lessons, ${progress.modules[m.slug]!.challengesPassed} of ${progress.modules[m.slug]!.challengesTotal} core challenges`
+                  }
+                />
+              )}
               {first && (
                 <div>
                   <Button asChild size="lg">
@@ -77,7 +94,12 @@ export default function ModulePage() {
                 <ol className="rounded-card border border-border bg-surface p-2">
                   {m.lessons.map((lesson) => (
                     <li key={lesson.slug}>
-                      <LessonRow lesson={lesson} />
+                      <LessonRow
+                        lesson={lesson}
+                        status={
+                          progress && <LessonStatusIcon progress={progress.lessons[lesson.slug]} />
+                        }
+                      />
                     </li>
                   ))}
                 </ol>
@@ -94,7 +116,14 @@ export default function ModulePage() {
                 <ol className="rounded-card border border-border bg-surface p-2">
                   {m.challenges.map((challenge) => (
                     <li key={challenge.slug}>
-                      <ChallengeRow challenge={challenge} />
+                      <ChallengeRow
+                        challenge={challenge}
+                        status={
+                          progress && (
+                            <ChallengeStatusIcon progress={progress.challenges[challenge.slug]} />
+                          )
+                        }
+                      />
                     </li>
                   ))}
                 </ol>

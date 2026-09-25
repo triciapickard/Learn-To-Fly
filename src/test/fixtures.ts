@@ -5,6 +5,8 @@ import type {
   ChallengeDetail,
   ChallengeSummary,
   ChecklistDto,
+  DashboardResponse,
+  ProgressResponse,
   LessonDetail,
   LessonSummary,
   ModuleSummary,
@@ -330,8 +332,77 @@ export const airspaceProfileFixture: AirspaceProfileDto = {
   version: 1,
 };
 
+/** A new learner's dashboard; pass overrides for other states. */
+export function dashboardFixture(overrides: Partial<DashboardResponse> = {}): DashboardResponse {
+  return {
+    displayName: 'Sam Simmer',
+    continue: {
+      type: 'lesson',
+      slug: 'l1-4-speeds-limits-and-checklists',
+      code: 'L1.4',
+      title: 'Speeds, limits and checklists',
+      href: '/learn/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists',
+      moduleTitle: 'Meet the Skyhawk',
+      estimatedMinutes: 20,
+      started: false,
+    },
+    course: {
+      lessonsCompleted: 0,
+      lessonsTotal: 1,
+      challengesPassed: 0,
+      challengesTotal: 1,
+      percent: 0,
+      complete: false,
+    },
+    modules: [
+      {
+        slug: 'm1-meet-the-skyhawk',
+        code: 'M1',
+        order: 1,
+        title: 'Meet the Skyhawk',
+        lessonsCompleted: 0,
+        lessonsTotal: 1,
+        challengesPassed: 0,
+        challengesTotal: 0,
+        percent: 0,
+        complete: false,
+      },
+      {
+        slug: 'm2-fundamentals',
+        code: 'M2',
+        order: 2,
+        title: 'Fundamentals',
+        lessonsCompleted: 0,
+        lessonsTotal: 0,
+        challengesPassed: 0,
+        challengesTotal: 1,
+        percent: 0,
+        complete: false,
+      },
+    ],
+    nextUp: [
+      {
+        type: 'challenge',
+        slug: 'c2-1-straight-and-level',
+        code: 'C2.1',
+        title: 'Straight and level',
+        href: '/challenges/c2-1-straight-and-level',
+        moduleTitle: 'Fundamentals',
+        estimatedMinutes: 15,
+      },
+    ],
+    recentAttempts: [],
+    stats: { totalAttempts: 0, goldCount: 0, estimatedSimMinutes: 0 },
+    ...overrides,
+  };
+}
+
+export const emptyProgress: ProgressResponse = { lessons: {}, challenges: {}, modules: {} };
+
 /** MSW handlers serving the fixtures above. */
 export const contentHandlers = [
+  http.get('/api/v1/me/progress', () => HttpResponse.json(emptyProgress)),
+  http.get('/api/v1/me/dashboard', () => HttpResponse.json(dashboardFixture())),
   http.get('/api/v1/airspace-profiles/bay-area', () =>
     HttpResponse.json({ profile: airspaceProfileFixture }),
   ),
