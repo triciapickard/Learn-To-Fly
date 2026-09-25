@@ -64,5 +64,3 @@ export const CURRICULUM_PREVIEW = [
     summary: 'Decision making, a local checkride and a cross-country flight.',
   },
 ] as const;
-
-export const FIRST_LESSON_PATH = '/learn/m0-getting-started/l0-1-welcome';

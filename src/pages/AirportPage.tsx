@@ -21,7 +21,12 @@ const orUnverified = (value: string | null) => value ?? 'Not yet verified';
 export default function AirportPage() {
   const { icao = '' } = useParams();
   const { data, isPending, error, refetch } = useAirport(icao.toUpperCase());
-  usePageTitle(data ? `${data.airport.icao} ${data.airport.name}` : 'Airport');
+  usePageTitle(
+    data ? `${data.airport.icao} ${data.airport.name}` : 'Airport',
+    data
+      ? `${data.airport.name} (${data.airport.icao}), ${data.airport.city}: runways, airspace and the Learn-To-Fly challenges that start there.`
+      : undefined,
+  );
 
   return (
     <QueryStates isPending={isPending} error={error} refetch={refetch} label="Loading the airport">

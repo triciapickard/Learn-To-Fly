@@ -79,6 +79,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      # Initial JS ≤ 250 KB gzipped (Section 33.1).
+      - run: npm run size
 
   e2e:
     name: End-to-end tests

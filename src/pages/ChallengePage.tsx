@@ -31,7 +31,10 @@ export default function ChallengePage() {
   const [params, setParams] = useSearchParams();
   const [result, setResult] = useState<AttemptCreateResponse | null>(null);
   const challenge = data?.challenge;
-  usePageTitle(challenge ? `${challenge.code} ${challenge.title}` : 'Challenge');
+  usePageTitle(
+    challenge ? `${challenge.code} ${challenge.title}` : 'Challenge',
+    challenge?.goal.trim(),
+  );
 
   const requested = params.get('tab') as Tab | null;
   const tab: Tab =

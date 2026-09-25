@@ -11,11 +11,12 @@ import { Button } from '@/components/Button';
 import { Card, CardBody, CardHeader } from '@/components/Card';
 import { DifficultyDots, TierBadge, TypeIcon } from '@/components/ChallengeMeta';
 import { Link } from '@/components/Link';
-import { CURRICULUM_PREVIEW, FIRST_LESSON_PATH } from '@/features/landing/curriculumPreview';
+import { CURRICULUM_PREVIEW } from '@/features/landing/curriculumPreview';
 import { HeroIllustration } from '@/features/landing/HeroIllustration';
 import { WidgetBlock } from '@/features/lessons/blocks/WidgetBlock';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { plural } from '@/lib/format';
+import { FIRST_LESSON_PATH } from '@shared/constants';
 
 const STEPS = [
   {
