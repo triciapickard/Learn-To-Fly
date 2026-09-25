@@ -13,11 +13,13 @@ export function KeyNumbers({
   items,
   className,
   large,
+  columns = large ? 1 : 2,
 }: {
   title?: string;
   items: KeyNumber[];
   className?: string;
   large?: boolean;
+  columns?: 1 | 2;
 }) {
   return (
     <section
@@ -25,7 +27,9 @@ export function KeyNumbers({
       className={cn('rounded-card border border-border bg-surface p-4', className)}
     >
       <h2 className={cn('font-semibold', large ? 'text-xl' : 'text-base')}>{title}</h2>
-      <dl className={cn('mt-3 grid gap-x-4 gap-y-2', large ? 'grid-cols-1' : 'grid-cols-2')}>
+      <dl
+        className={cn('mt-3 grid gap-x-4 gap-y-2', columns === 1 ? 'grid-cols-1' : 'grid-cols-2')}
+      >
         {items.map((item) => (
           <div
             key={item.label}

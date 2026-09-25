@@ -7,8 +7,8 @@ import { server } from '@/test/server';
 const ROUTES: [string, string | RegExp][] = [
   ['/', /Learn to fly the Cessna 172/],
   ['/learn', 'Learn'],
-  ['/learn/m0-getting-started', 'Module'],
-  ['/learn/m0-getting-started/l0-1-welcome', 'Lesson'],
+  ['/learn/m1-meet-the-skyhawk', 'Meet the Skyhawk'],
+  ['/learn/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists', 'Speeds, limits and checklists'],
   ['/challenges', 'Challenges'],
   ['/challenges/c2-1-straight-and-level', 'Challenge'],
   ['/challenges/c2-1-straight-and-level/fly', 'Fly mode'],

@@ -1,5 +1,6 @@
 import { http, HttpResponse, type RequestHandler } from 'msw';
 import type { UserDto } from '@shared/schemas/auth';
+import { contentHandlers } from './fixtures';
 
 export const testUser: UserDto = {
   id: '64b000000000000000000001',
@@ -14,6 +15,7 @@ export const testUser: UserDto = {
 export const handlers: RequestHandler[] = [
   http.get('/api/v1/auth/me', () => HttpResponse.json({ user: null })),
   http.get('/api/v1/auth/csrf', () => HttpResponse.json({ csrfToken: 'test-csrf' })),
+  ...contentHandlers,
 ];
 
 /** Handler that makes the visitor signed in as `user`. */

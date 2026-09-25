@@ -5995,38 +5995,38 @@ widgets built.
 
 ### 46.1 Curriculum pages
 
-- [ ] 6.1 `/learn` curriculum map using `GET /modules` (progress overlay added in Phase 8).
-- [ ] 6.2 `/learn/:moduleSlug` module page.
-- [ ] 6.3 Loading skeletons, error and not-found states.
+- [x] 6.1 `/learn` curriculum map using `GET /modules` (progress overlay added in Phase 8).
+- [x] 6.2 `/learn/:moduleSlug` module page.
+- [x] 6.3 Loading skeletons, error and not-found states.
 
 ### 46.2 Lesson player
 
-- [ ] 6.4 `LessonPage` + `LessonLayout` (sidebar sections, breadcrumb, objectives box,
+- [x] 6.4 `LessonPage` + `LessonLayout` (sidebar sections, breadcrumb, objectives box,
       right rail on xl).
-- [ ] 6.5 `LessonRenderer` with block registry (Section 31.4).
-- [ ] 6.6 Block components: `MarkdownBlock` (react-markdown + remark-gfm, no raw HTML,
+- [x] 6.5 `LessonRenderer` with block registry (Section 31.4).
+- [x] 6.6 Block components: `MarkdownBlock` (react-markdown + remark-gfm, no raw HTML,
       custom renderers for links/tables/code), `CalloutBlock`, `ImageBlock` (responsive,
       caption, click to zoom (P1)), `VideoBlock` (click-to-load youtube-nocookie with
       title and thumbnail), `ChecklistBlock` (renders W16).
-- [ ] 6.7 `QuizBlock` for `single`, `multi`, `numeric`, `order` types with feedback and
+- [x] 6.7 `QuizBlock` for `single`, `multi`, `numeric`, `order` types with feedback and
       explanation; keyboard accessible; answers stored in sessionStorage for visitors.
-- [ ] 6.8 Scroll-spy section tracking; "Section X of Y" on mobile.
-- [ ] 6.9 "Go deeper" resource cards; "Fly it" challenge cards; prev/next lesson.
-- [ ] 6.10 "Mark complete" button (visitor → sign-up prompt; wired to API in Phase 8).
-- [ ] 6.11 Lesson footer disclaimer.
-- [ ] 6.12 Tests: renderer renders each block type; unknown block safe; quiz behaviour.
+- [x] 6.8 Scroll-spy section tracking; "Section X of Y" on mobile.
+- [x] 6.9 "Go deeper" resource cards; "Fly it" challenge cards; prev/next lesson.
+- [x] 6.10 "Mark complete" button (visitor → sign-up prompt; wired to API in Phase 8).
+- [x] 6.11 Lesson footer disclaimer.
+- [x] 6.12 Tests: renderer renders each block type; unknown block safe; quiz behaviour.
 - **AC:** Milestone M-B: L1.4 renders with W3 and W16 (built next) and quizzes.
 
 ### 46.3 Widget framework
 
-- [ ] 6.13 `src/features/widgets/registry.ts` mapping names to lazy components.
-- [ ] 6.14 `WidgetFrame` component: title, "Simplified model" badge, reset button,
+- [x] 6.13 `src/features/widgets/registry.ts` mapping names to lazy components.
+- [x] 6.14 `WidgetFrame` component: title, "Simplified model" badge, reset button,
       mode switch (explore/quiz), "Describe this diagram" disclosure, error boundary.
-- [ ] 6.15 Shared hooks: `useReducedMotion`, `useElementSize` (responsive SVG),
+- [x] 6.15 Shared hooks: `useReducedMotion`, `useElementSize` (responsive SVG),
       `useDrag` (pointer events with keyboard fallback), `useAnnouncer` (live region).
-- [ ] 6.16 Shared SVG primitives: `Gauge` (round dial with arcs/needle), `Tape` (vertical
+- [x] 6.16 Shared SVG primitives: `Gauge` (round dial with arcs/needle), `Tape` (vertical
       tape), `Arrow`, `Label`, `Compass`.
-- [ ] 6.17 Quiz-mode contract: widget emits `{ questionId, correct }` events that
+- [x] 6.17 Quiz-mode contract: widget emits `{ questionId, correct }` events that
       `QuizBlock`/lesson progress can record.
 
 ### 46.4 P0 widgets (build order from Section 16.22)
@@ -6034,8 +6034,8 @@ widgets built.
 For each widget: model in `model.ts` with unit tests → SVG component → interactions →
 keyboard/ARIA → quiz mode → text alternative → embed in its lesson → review on phone.
 
-- [ ] 6.18 W3 Airspeed Indicator (uses `aircraft.yaml` arcs).
-- [ ] 6.19 W16 Checklist Runner (uses `checklists.yaml`).
+- [x] 6.18 W3 Airspeed Indicator (uses `aircraft.yaml` arcs).
+- [x] 6.19 W16 Checklist Runner (uses `checklists.yaml`).
 - [ ] 6.20 W1 Control Surfaces Explorer.
 - [ ] 6.21 W6 Turn Coordinator & Slip Ball.
 - [ ] 6.22 W14 Bank vs Load Factor.
