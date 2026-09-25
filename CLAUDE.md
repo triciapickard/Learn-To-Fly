@@ -10,16 +10,48 @@ This is a web app using the React, MongoDB, NodeJS, Express (MERN) Stack.
 
 ## Folder Structure
 
-Only includes `src` folder. Adjust if needed:
+The client keeps the original `src/` structure. Server, shared code and content live beside
+it at the repo root (plan.md Section 25):
 
 ```
 Learn-To-Fly/
-  src/
-    components/
+  .github/                 # CI workflow, PR template, Dependabot
+  content/                 # Authoring source of truth: YAML + Markdown lessons
+    lessons/<module>/      # one Markdown file per lesson
+    challenges/            # one YAML file per challenge
+  public/                  # static files copied as-is (favicons, robots.txt)
+  scripts/                 # content-validate, content-seed, check-links
+  server/
+    src/
+      app.ts               # builds the Express app (no listen) — testable
+      index.ts             # connects DB, starts server, graceful shutdown
+      config/              # env.ts (Zod-validated), db.ts
+      middleware/
+      models/              # Mongoose schemas
+      routes/              # <resource>.routes.ts
+      controllers/         # <resource>.controller.ts
+      services/            # <resource>.service.ts — business logic, no req/res
+      utils/
+      types/
+    tests/                 # Vitest + Supertest + mongodb-memory-server
+  shared/                  # imported by client, server and scripts (@shared/)
+    schemas/               # Zod schemas: content and API I/O
+    aviation/              # pure maths: wind triangle, crosswind, load factor, VOR
+    scoring.ts
+    progress.ts
+    constants.ts
+  src/                     # React client (@/)
     assets/
-    features/
+    components/            # reusable UI
+    features/              # feature modules (auth, lessons, challenges, widgets, …)
     layouts/
-    pages/
+    pages/                 # route-level components (thin)
+    lib/                   # apiClient, queryClient, utils
+    hooks/
+    styles/                # Tailwind entry, tokens.css
+    test/                  # test setup, MSW handlers
+  e2e/                     # Playwright tests
+  plan.md                  # v1 master plan — single source of truth
 ```
 
 ## Preferences

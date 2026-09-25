@@ -5624,74 +5624,76 @@ with content authoring finishing by week ~18.
 
 ### 41.1 Branching and basics
 
-- [ ] 1.1 Create branch `phase-1-tooling` from `main`.
-- [ ] 1.2 Add `.gitignore` (node*modules, dist, dist-server, coverage, .env, .env.*,
+- [x] 1.1 Create branch `phase-1-tooling` from `main`. (Built on `claude/compassionate-meitner-jm2j58`.)
+- [x] 1.2 Add `.gitignore` (node*modules, dist, dist-server, coverage, .env, .env.*,
       playwright-report, test-results, .DS*Store, *.log). Add `!.env.example` so the
       example file is still committed.
-- [ ] 1.3 Add `.editorconfig` (2 spaces, LF, UTF-8, final newline).
-- [ ] 1.4 Add `.nvmrc` with `24` and `"engines": { "node": ">=24 <25" }` in package.json.
-- [ ] 1.5 `npm init -y`; set `"type": "module"`, `"private": true`, name, description.
+- [x] 1.3 Add `.editorconfig` (2 spaces, LF, UTF-8, final newline).
+- [x] 1.4 Add `.nvmrc` with `24` and `"engines": { "node": ">=24 <25" }` in package.json.
+- [x] 1.5 `npm init -y`; set `"type": "module"`, `"private": true`, name, description.
 
 ### 41.2 Client scaffold (Vite + React + TS)
 
-- [ ] 1.6 Scaffold with Vite's React + TypeScript template **into the repo root**, keeping
+- [x] 1.6 Scaffold with Vite's React + TypeScript template **into the repo root**, keeping
       the CLAUDE.md `src/` structure (create `src/components`, `src/assets`, `src/features`,
       `src/layouts`, `src/pages`, plus `src/lib`, `src/hooks`, `src/styles`, `src/test`).
-- [ ] 1.7 Replace the template's demo content with a minimal `App` that renders
+- [x] 1.7 Replace the template's demo content with a minimal `App` that renders
       "Learn-To-Fly".
-- [ ] 1.8 Install and configure Tailwind CSS v4 with the Vite plugin; create
+- [x] 1.8 Install and configure Tailwind CSS v4 with the Vite plugin; create
       `src/styles/index.css` importing Tailwind and `tokens.css` (empty for now).
-- [ ] 1.9 Configure path aliases `@/` and `@shared/` in `vite.config.ts` and tsconfig.
-- [ ] 1.10 Configure the Vite dev server proxy: `/api` → `http://localhost:3000`.
+- [x] 1.9 Configure path aliases `@/` and `@shared/` in `vite.config.ts` and tsconfig.
+- [x] 1.10 Configure the Vite dev server proxy: `/api` → `http://localhost:3000`.
 - **AC:** `npm run dev:client` shows the page with a Tailwind class applied.
 
 ### 41.3 Server scaffold (Express + TS)
 
-- [ ] 1.11 Install `express`, `tsx`, `typescript`, `@types/express`, `@types/node`.
-- [ ] 1.12 Create `server/src/app.ts` exporting `createApp()` with one route
+- [x] 1.11 Install `express`, `tsx`, `typescript`, `@types/express`, `@types/node`.
+- [x] 1.12 Create `server/src/app.ts` exporting `createApp()` with one route
       `GET /api/v1/health` returning `{ status: "ok" }`.
-- [ ] 1.13 Create `server/src/index.ts` that reads `PORT` and listens.
-- [ ] 1.14 Create `tsconfig.server.json` (Node module resolution `NodeNext`, outDir
+- [x] 1.13 Create `server/src/index.ts` that reads `PORT` and listens.
+- [x] 1.14 Create `tsconfig.server.json` (Node module resolution `NodeNext`, outDir
       `dist-server`, includes `server/src` and `shared`).
-- [ ] 1.15 Add `dev:server`, `build:server`, `start` scripts.
+- [x] 1.15 Add `dev:server`, `build:server`, `start` scripts.
 - **AC:** `npm run dev:server` → `curl localhost:3000/api/v1/health` returns ok; visiting
   `localhost:5173/api/v1/health` through the proxy also works.
 
 ### 41.4 Shared folder
 
-- [ ] 1.16 Create `shared/` with `constants.ts` and a placeholder `scoring.ts` exporting a
+- [x] 1.16 Create `shared/` with `constants.ts` and a placeholder `scoring.ts` exporting a
       stub (tests come in Phase 7).
-- [ ] 1.17 Verify both client and server can import from `@shared/`.
+- [x] 1.17 Verify both client and server can import from `@shared/`.
 
 ### 41.5 Quality tooling
 
-- [ ] 1.18 ESLint flat config with typescript-eslint, react-hooks, jsx-a11y, import rules;
+- [x] 1.18 ESLint flat config with typescript-eslint, react-hooks, jsx-a11y, import rules;
       separate globs for client (browser), server (node), scripts.
-- [ ] 1.19 Prettier config (`.prettierrc`: singleQuote, trailingComma all, printWidth 100);
+- [x] 1.19 Prettier config (`.prettierrc`: singleQuote, trailingComma all, printWidth 100);
       `eslint-config-prettier` to avoid conflicts.
-- [ ] 1.20 `npm run lint`, `format`, `format:check`, `typecheck` scripts.
-- [ ] 1.21 Husky + lint-staged: on commit, run ESLint --fix and Prettier on staged files.
-- [ ] 1.22 Vitest workspace with two projects: `client` (jsdom, `src/**/*.test.tsx`) and
+- [x] 1.20 `npm run lint`, `format`, `format:check`, `typecheck` scripts.
+- [x] 1.21 Husky + lint-staged: on commit, run ESLint --fix and Prettier on staged files.
+- [x] 1.22 Vitest workspace with two projects: `client` (jsdom, `src/**/*.test.tsx`) and
       `node` (`server/**/*.test.ts`, `shared/**/*.test.ts`, `scripts/**/*.test.ts`).
-- [ ] 1.23 One sample test in each project (e.g. `App` renders the title; health route
+      (Vitest 4+ removed workspace files; the two projects live in `test.projects` in
+      `vite.config.ts`.)
+- [x] 1.23 One sample test in each project (e.g. `App` renders the title; health route
       returns ok with Supertest).
-- [ ] 1.24 Install `concurrently`; `npm run dev` runs client and server.
+- [x] 1.24 Install `concurrently`; `npm run dev` runs client and server.
 - **AC:** `npm run lint && npm run typecheck && npm test` pass; committing a badly
   formatted file auto-fixes it.
 
 ### 41.6 CI and repository hygiene
 
-- [ ] 1.25 `.github/workflows/ci.yml` with install, lint, typecheck, test, build jobs
+- [x] 1.25 `.github/workflows/ci.yml` with install, lint, typecheck, test, build jobs
       (content and e2e jobs added in later phases).
-- [ ] 1.26 `.github/pull_request_template.md` (Section 36.2).
+- [x] 1.26 `.github/pull_request_template.md` (Section 36.2).
 - [ ] 1.27 Enable branch protection on `main` (GitHub settings — see "What you need from
       me" at the end of the phase).
-- [ ] 1.28 Enable Dependabot (`.github/dependabot.yml`: npm weekly, GitHub Actions monthly).
-- [ ] 1.29 Create `CHANGELOG.md` with an "Unreleased" section.
-- [ ] 1.30 Create `.env.example` (Appendix E variables with placeholder values).
-- [ ] 1.31 Update `README.md`: project description, stack, local setup steps (Section
+- [x] 1.28 Enable Dependabot (`.github/dependabot.yml`: npm weekly, GitHub Actions monthly).
+- [x] 1.29 Create `CHANGELOG.md` with an "Unreleased" section.
+- [x] 1.30 Create `.env.example` (Appendix E variables with placeholder values).
+- [x] 1.31 Update `README.md`: project description, stack, local setup steps (Section
       37.3), scripts table, link to `plan.md`.
-- [ ] 1.32 Update `CLAUDE.md` "Folder Structure" with the full tree from Section 25.
+- [x] 1.32 Update `CLAUDE.md` "Folder Structure" with the full tree from Section 25.
 - [ ] 1.33 Open PR "Phase 1: Repository and tooling"; CI green; merge.
 - **AC:** CI runs on the PR and passes; README instructions work from a fresh clone.
 
