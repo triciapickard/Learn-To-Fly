@@ -146,8 +146,13 @@ modules:
       Talk like a pilot: the phonetic alphabet, self-announcing at non-towered airports and
       working with the tower and the sim's ATC.
     icon: radio
-    lessons: []
-    challenges: []
+    lessons:
+      - l7-1-radio-basics-and-the-phonetic-alphabet
+      - l7-2-non-towered-airports-ctaf
+      - l7-3-towered-airports-and-sim-atc
+    challenges:
+      - c7-1-ctaf-pattern-at-tracy
+      - c7-2-towered-departure-and-return-at-livermore
     estimatedMinutes: 120
   - slug: m8-capstone
     code: M8

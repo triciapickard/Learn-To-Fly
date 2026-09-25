@@ -92,6 +92,9 @@ All notable changes to this project are documented here. The format is based on
 - Phase 9 · Module 6 content (drafts): L6.1 Reading a sectional chart, L6.2 Airspace, L6.3
   Pilotage and dead reckoning, L6.4 VOR navigation, L6.5 GPS navigation with the G1000, L6.6
   Planning a cross-country flight, and challenges C6.1–C6.5.
+- Phase 9 · Module 7 content (drafts): L7.1 Radio basics and the phonetic alphabet, L7.2
+  Non-towered airports (CTAF), L7.3 Towered airports and sim ATC, and challenges C7.1 CTAF
+  pattern at Tracy and C7.2 Towered departure and return at Livermore.
 
 ### Fixed
 

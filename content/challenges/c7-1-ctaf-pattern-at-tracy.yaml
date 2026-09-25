@@ -1,0 +1,97 @@
+slug: c7-1-ctaf-pattern-at-tracy
+code: C7.1
+title: CTAF pattern at Tracy
+module: m7-radio-airport-operations
+lessons: [l7-2-non-towered-airports-ctaf]
+priority: P0
+type: communication
+difficulty: 3
+estimatedMinutes: 25
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Arrive at Tracy from 10 nm out, make every CTAF call, fly the pattern and land.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KTCY
+  startState: AIR_START
+  startDetails:
+    position: 10 nm west of KTCY, over the Altamont Pass
+    altitudeFt: 3500
+    headingDeg: 90
+    speedKias: 100
+    fallback: Start on the runway at KLVK, take off and fly east over the Altamont Pass at 3,500 ft MSL. Start when you're 10 nm from Tracy.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: true
+  atc: true
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Tune the Tracy CTAF (⚠ verify the frequency on the sectional) and listen for traffic.
+  - At 10 nm — "Tracy traffic, Skyhawk One Two Three, one zero miles west, inbound for landing, Tracy."
+  - Entering the pattern — "Tracy traffic, Skyhawk One Two Three, entering forty-five for left downwind, runway two six, Tracy."
+  - On downwind — "Tracy traffic, Skyhawk One Two Three, left downwind, runway two six, Tracy."
+  - On base — "Tracy traffic, Skyhawk One Two Three, left base, runway two six, Tracy."
+  - On final — "Tracy traffic, Skyhawk One Two Three, final, runway two six, Tracy."
+  - Clear of the runway — "Tracy traffic, Skyhawk One Two Three, clear of runway two six, Tracy."
+  - Say each call out loud, or choose the closest option in the sim's ATC window. Use the runway in use if it isn't 26.
+
+criteria:
+  - id: all-calls
+    label: All six calls made at the right positions
+    kind: tiered
+    tiers:
+      gold: 6 of 6
+      silver: 5 of 6
+      bronze: 4 of 6
+    required: true
+    weight: 3
+    reviewLink: { lesson: l7-2-non-towered-airports-ctaf, section: the-standard-calls }
+  - id: format
+    label: Calls in the right format (airport, call sign, position, intentions, airport)
+    kind: tiered
+    tiers:
+      gold: All of them
+      silver: Most of them
+      bronze: Some of them
+    required: true
+    weight: 2
+    reviewLink: { lesson: l7-2-non-towered-airports-ctaf, section: the-format }
+  - id: pattern-entry
+    label: Correct pattern entry
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l7-2-non-towered-airports-ctaf, section: joining-and-leaving }
+  - id: traffic
+    label: Saw the AI traffic and fitted in with it
+    kind: binary
+    required: false
+    weight: 2
+    reviewLink: { lesson: l7-2-non-towered-airports-ctaf, section: keep-talking-keep-looking }
+  - id: landing
+    label: Safe landing
+    kind: binary
+    required: true
+    weight: 2
+
+randomEvents: []
+
+commonMistakes:
+  - Forgetting to say the airport name at the end of the call.
+  - Making the downwind call and then forgetting base.
+
+tips:
+  - Write the six calls on a card and keep it next to you.
+
+debriefQuestions:
+  - id: forgot
+    prompt: Which call did you forget or mix up?
