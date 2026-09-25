@@ -38,6 +38,10 @@ Stop and ask only when you can't continue without me, or before anything
 destructive: deleting data, force-pushing, or changing anything outside
 this repository.
 
+---
+
+Don't update me on every step you take, It is better to start with your intentions and what you're going to do first like normal, then do the task or phase, once done, only _then_ should you report back with the previously stated 3 W's (What I changed, What I couldn't do, What I need from you).
+
 ## Required Actions
 
 Always briefly read the plan.md before making any changes to code to get a better understanding of the project and the current status.
