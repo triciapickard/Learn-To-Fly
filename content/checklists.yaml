@@ -25,7 +25,7 @@ checklists:
       - id: oil
         item: Oil
         action: CHECK
-        note: If modelled.
+        note: If modeled.
     verifiedAt: null
 
   - slug: before-starting-engine
@@ -47,7 +47,7 @@ checklists:
       - id: circuit-breakers
         item: Circuit breakers
         action: CHECK IN
-        note: If modelled.
+        note: If modeled.
       - id: avionics-master
         item: Electrical equipment and avionics master
         action: 'OFF'
@@ -57,7 +57,7 @@ checklists:
       - id: fuel-shutoff
         item: Fuel shutoff valve
         action: ON (pushed in)
-        note: If modelled.
+        note: If modeled.
       - id: master-switch
         item: Master switch (ALT and BAT)
         action: 'ON'
@@ -461,7 +461,7 @@ checklists:
       - id: control-lock
         item: Control lock and tie-downs
         action: INSTALL
-        note: If modelled.
+        note: If modeled.
     verifiedAt: null
 
   - slug: engine-failure-in-flight
