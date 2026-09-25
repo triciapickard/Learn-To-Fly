@@ -582,6 +582,22 @@ revisited, but should not be changed silently.
   images instead (the lesson renderer shows nothing for an unbuilt widget in production).
   The P1 widgets move to the post-MVP backlog (Section 59).
 
+### D-21 — Phase 9 content is written as drafts, one PR per module (Phase 9)
+
+- **Problem:** Section 49 asks for every P0 lesson and challenge to be written, verified in
+  the sim, illustrated with screenshots and published. Only the author can fly the sim,
+  take screenshots and verify ⚠ items.
+- **Decision:** every P0 lesson and challenge is written from its spec (Sections 14–15)
+  as a **draft** (`published: false`, D-17), one PR per module. Anything that depends on
+  the sim (menu names, runway designations, landmark positions, frequencies, exact
+  numbers) is marked with a `verify` callout in lessons or a `⚠ verify` comment in
+  challenge YAML. Lessons use text, tables and the built widgets instead of screenshots.
+  The Section 49.4 boxes stay unticked because they mean *published*; the PRs list what
+  was drafted.
+- **To finish:** for each module, work through the verify items in the sim, add
+  screenshots (Section 49.5), set `published: true`, `lastVerifiedAt` and `simVersion`,
+  and tick Section 49.4.
+
 ---
 
 # Part II — Learning the Cessna 172 (for you, the author)
@@ -6234,6 +6250,8 @@ P1 as time allows.
 | 10                | Glossary complete (≥ 150 terms), resources verified, buffer / P1 content |
 
 ### 49.4 Checklist of content items (tick as published)
+
+All P0 items below are drafted (D-21); tick each one when it is verified and published.
 
 **Lessons (P0)**
 

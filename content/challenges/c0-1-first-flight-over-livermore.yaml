@@ -1,0 +1,81 @@
+slug: c0-1-first-flight-over-livermore
+code: C0.1
+title: First flight over Livermore
+module: m0-getting-started
+lessons: [l0-3-your-first-flight]
+priority: P0
+type: setup
+difficulty: 1
+estimatedMinutes: 20
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Take off, fly a relaxed loop around the Livermore valley and feel how the Skyhawk
+  responds. This challenge passes on completion.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RUNWAY
+  startDetails:
+    runway: 25R # ⚠ verify the runway name in the sim
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training # auto-rudder on for everyone in this challenge
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Turn auto-rudder on for this flight. Unpause and add full throttle smoothly. Keep the nose on the centerline with small rudder inputs.
+  - At 55 KIAS, gently raise the nose; climb at about 75 KIAS.
+  - Climb to 3,000 ft MSL. Lower the nose to level and reduce power to about 2,300 RPM.
+  - Make a gentle left turn (about 15–20° of bank) toward Lake Del Valle, then a right turn toward Mt Diablo.
+  - Fly anywhere you like for 5–10 minutes. Try a small climb and a small descent.
+  - End the flight from the pause menu, or try a landing back at KLVK.
+
+criteria:
+  - id: reached-3000
+    label: Took off and reached 3,000 ft MSL
+    kind: binary
+    required: true
+    weight: 1
+  - id: turns
+    label: Made at least one left and one right turn
+    kind: binary
+    required: true
+    weight: 1
+    reviewLink: { lesson: l0-3-your-first-flight, section: step-by-step }
+  - id: landmarks
+    label: Found Mt Diablo and Lake Del Valle
+    kind: binary
+    required: false
+    weight: 1
+  - id: paused
+    label: Used pause at least once to look around or read the brief
+    kind: binary
+    required: false
+    weight: 1
+
+randomEvents: []
+
+commonMistakes:
+  - Big stick movements. The airplane responds to small inputs; wait for it.
+  - Forgetting to reduce power after leveling off, so the speed keeps increasing.
+
+tips:
+  - Hold the controls lightly, with your fingertips.
+  - Look outside more than inside.
+
+debriefQuestions:
+  - id: surprised
+    prompt: What surprised you?
+  - id: hardest
+    prompt: What felt hardest?
+  - id: confidence
+    prompt: On a scale of 1–5, how confident do you feel?
