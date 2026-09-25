@@ -73,3 +73,5 @@ All notable changes to this project are documented here. The format is based on
   resume point and "pick up where you left off"; dashboard with continue, progress, next up,
   recent attempts, stats, "all caught up" and the course-complete "Skyhawk Pilot (Sim)"
   badge; E2E flows 2 and 3.
+- Phase 9 · Module 0 content (drafts, D-21): L0.1 Welcome, L0.2 Setting up MSFS 2024 for
+  training, L0.3 Your first flight, and challenge C0.1 First flight over Livermore.

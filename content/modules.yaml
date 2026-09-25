@@ -10,8 +10,11 @@ modules:
       How Learn-To-Fly works, how to set up controls and assistance options so the sim
       teaches you instead of flying for you, and a first gentle flight over Livermore.
     icon: play
-    lessons: []
-    challenges: []
+    lessons:
+      - l0-1-welcome-how-learn-to-fly-works
+      - l0-2-setting-up-msfs-2024-for-training
+      - l0-3-your-first-flight
+    challenges: [c0-1-first-flight-over-livermore]
     estimatedMinutes: 60
   - slug: m1-meet-the-skyhawk
     code: M1
