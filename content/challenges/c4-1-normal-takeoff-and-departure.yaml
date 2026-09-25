@@ -1,0 +1,106 @@
+slug: c4-1-normal-takeoff-and-departure
+code: C4.1
+title: Normal takeoff and departure
+module: m4-takeoffs-patterns-landings
+lessons: [l4-1-normal-takeoff-and-climb]
+priority: P0
+type: manoeuvre
+difficulty: 2
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Take off on the centerline, rotate at 55 KIAS, climb at Vy and depart the pattern.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RUNWAY
+  startDetails:
+    runway: 25R # ⚠ verify the runway name in the sim
+    fallback: If the sim starts you on a different runway, use it and depart with a 45° turn in the direction of that runway's pattern.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Quick re-check of the before-takeoff checklist.
+  - Full power smoothly. Call "airspeed alive" and check the engine gauges are green.
+  - Rotate at 55 KIAS and climb at 74 KIAS. Use right rudder as needed.
+  - Climb straight out to pattern altitude (⚠ verify the KLVK pattern altitude), then make a 45° left turn to depart. Continue the climb to 3,000 ft MSL at 80 KIAS.
+
+criteria:
+  - id: centerline-roll
+    label: Centerline tracking on the takeoff roll
+    kind: tiered
+    tiers:
+      gold: Within ½ wingspan
+      silver: Within 1 wingspan
+      bronze: Stayed on the runway
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-1-normal-takeoff-and-climb, section: right-rudder }
+  - id: rotation-speed
+    label: Rotation speed
+    kind: tiered
+    tiers:
+      gold: 55 ±3 KIAS
+      silver: 55 ±5 KIAS
+      bronze: 55 ±10 KIAS
+    required: true
+    weight: 2
+    reviewLink: { lesson: l4-1-normal-takeoff-and-climb, section: rotate-and-climb }
+  - id: climb-speed
+    label: Climb airspeed (Vy)
+    kind: tiered
+    tiers:
+      gold: 74 ±5 KIAS
+      silver: 74 ±10 KIAS
+      bronze: 74 ±15 KIAS
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-1-normal-takeoff-and-climb, section: rotate-and-climb }
+  - id: runway-heading
+    label: Runway heading held on the initial climb (wind corrected)
+    kind: tiered
+    tiers:
+      gold: ±5°
+      silver: ±10°
+      bronze: ±15°
+    required: false
+    weight: 1
+  - id: departure-turn
+    label: Departure turn at the correct altitude and point
+    kind: binary
+    required: false
+    weight: 1
+    reviewLink: { lesson: l4-1-normal-takeoff-and-climb, section: leaving-the-pattern }
+  - id: callouts
+    label: Callouts spoken ("airspeed alive", "55, rotate")
+    kind: binary
+    required: false
+    weight: 1
+
+randomEvents: []
+
+commonMistakes:
+  - Yanking the nose up at rotation.
+  - Drifting left on the takeoff roll.
+  - Forgetting to trim in the climb.
+
+tips:
+  - Say the callouts out loud. It keeps your eyes moving between the runway and the airspeed tape.
+
+debriefQuestions:
+  - id: nose-at-rotation
+    prompt: Where was the nose pointing at rotation?
+  - id: right-rudder
+    prompt: Did you need right rudder? How much?

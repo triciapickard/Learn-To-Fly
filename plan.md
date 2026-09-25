@@ -507,6 +507,124 @@ revisited, but should not be changed silently.
 - **Reason:** Avoids cookie banners and privacy complexity. Learning-signal metrics
   (Section 4.3) come from our own database.
 
+### D-15 — Accessible primitives: Radix UI (proposed in Phase 3)
+
+- **Alternatives:** React Aria Components; hand-rolled ARIA patterns.
+- **Reason:** Radix primitives are unstyled, small, per-component packages that fit
+  Tailwind, and cover the hard patterns (Tabs, Dialog/Drawer, Popover, Tooltip,
+  RadioGroup) with focus management built in. Native `<select>` and checkboxes are used
+  where they are the most accessible option. Proposed by the assistant while building
+  Phase 3 (2026-09-25); revisit if it gets in the way.
+
+### D-16 — Colour tokens adjusted for contrast; self-hosted fonts (Phase 3)
+
+- **Change:** Light-theme `success`, `warning`, `gold`, `silver`, `bronze` and `accent`
+  were darkened from the Section 21.2 starting values so every text token passes WCAG AA
+  on `bg`, `surface` and `surface-2`. Added `border-strong` (≥ 3:1) for form-control
+  borders, `*-soft` tints for callouts/badges and dark instrument tokens for widgets.
+  `--color-text-muted` is exposed as `--color-muted` (Tailwind utility `text-muted`).
+- **Fonts:** Inter and JetBrains Mono are self-hosted via Fontsource (the Section 32.1
+  privacy recommendation), so no Google Fonts requests are made.
+
+
+### D-17 — Unverified content is seeded as drafts (Phase 5)
+
+- **Problem:** Section 28.5 requires published lessons and challenges to have
+  `lastVerifiedAt` and no `verify` callouts, but in-sim verification (Section 54) can only
+  be done by the author. Without a workaround, nothing written before Phase 12 could be
+  seen in the app, reviewed, or used by the E2E tests.
+- **Decision:** content that has not been verified in the sim keeps `published: false`
+  (a draft). `npm run content:seed -- --include-drafts` (or
+  `CONTENT_INCLUDE_DRAFTS=true`) publishes drafts in the database with `draft: true`, and
+  the UI labels them "Draft — not yet verified in the sim". Local development, CI and
+  preview services use it; **production does not**, so only verified content goes live.
+  The validator rules for published content are unchanged.
+- **Also:** module files list only lessons/challenges that exist, and published lesson
+  orders must be contiguous (drafts may leave gaps while authoring).
+
+### D-18 — W5 ships with a provisional pitch/power table (Phase 6)
+
+- **Problem:** step 6.24 builds W5 after the author collects steady-state pitch/power data
+  in the sim (Section 7.2), which only the author can do. With `performanceModel: null` the
+  widget could not be built or tested.
+- **Decision:** `content/aircraft.yaml` → `performanceModel` holds a **provisional** 6 × 5
+  table (pitch −10…15°, 1,500–2,700 RPM) generated from a simplified point-mass model and
+  anchored on this plan's scenarios (cruise 2,300 RPM / 0° ≈ 105 kt level; Vy +8° ≈ 74 kt,
+  +700 fpm). `verification.performanceModel.verified` is `false`, and while it is, W5 shows
+  a "Provisional numbers" notice. The schema checks the table's shape.
+- **To finish:** fly each pitch/RPM pair to a steady state in the sim, record IAS and VS,
+  replace the cells (keep the axes or change them; the widget reads whatever is there) and
+  set `verified: true`.
+
+### D-19 — W10 is an original redraw; W11 ships with unverified airspace data (Phase 6)
+
+- **Problem:** Section 16.11 allows an FAA sectional crop *or* a simplified redraw; a crop
+  needs downloading, cropping and optimizing a current chart, and hotspot coordinates tied
+  to that image. Section 16.12 takes W11's floors and ceilings from the TAC, which only the
+  author can check.
+- **Decision:** W10 draws an **original, simplified redraw** of the Livermore area as SVG
+  (fixed "chart paper" colour tokens, "Not for navigation" watermark), with its hotspots in
+  `src/features/widgets/sectional-legend/hotspots.json`. Frequencies and numbers are
+  labelled illustrative. W11 reads `content/airspace-profile.yaml` through the content
+  pipeline (schema → seed → `GET /api/v1/airspace-profiles/:slug`); the file has
+  `verified: false` and the widget shows an "Unverified data" notice until it is checked.
+- **To finish:** check every floor, ceiling and position in `airspace-profile.yaml`
+  against the current San Francisco TAC and set `verified: true` and `verifiedAt`. A crop
+  of the real sectional can replace the redraw later by swapping `Chart.tsx` for an image
+  and updating the rectangles in `hotspots.json`.
+
+### D-20 — P1 widgets are deferred (Phase 6)
+
+- **Problem:** step 6.32 (W13, W15, W18, W8, W17, W19, W20) is marked "only if on
+  schedule"; building seven more widgets would delay the challenge, progress and content
+  phases the MVP depends on.
+- **Decision:** v1 ships the P0 widgets only. Lessons that list a P1 widget use text and
+  images instead (the lesson renderer shows nothing for an unbuilt widget in production).
+  The P1 widgets move to the post-MVP backlog (Section 59).
+
+### D-21 — Phase 9 content is written as drafts, one PR per module (Phase 9)
+
+- **Problem:** Section 49 asks for every P0 lesson and challenge to be written, verified in
+  the sim, illustrated with screenshots and published. Only the author can fly the sim,
+  take screenshots and verify ⚠ items.
+- **Decision:** every P0 lesson and challenge is written from its spec (Sections 14–15)
+  as a **draft** (`published: false`, D-17), one PR per module. Anything that depends on
+  the sim (menu names, runway designations, landmark positions, frequencies, exact
+  numbers) is marked with a `verify` callout in lessons or a `⚠ verify` comment in
+  challenge YAML. Lessons use text, tables and the built widgets instead of screenshots.
+  The Section 49.4 boxes stay unticked because they mean *published*; the PRs list what
+  was drafted.
+- **To finish:** for each module, work through the verify items in the sim, add
+  screenshots (Section 49.5), set `published: true`, `lastVerifiedAt` and `simVersion`,
+  and tick Section 49.4.
+
+### D-22 — Small challenge spec changes made while drafting (Phase 9)
+
+- **Problem:** A few Section 15 specs didn't fit the schema, the airspace or their own
+  intent once written out.
+- **Decision:**
+  - **C8.1** lists 10 criteria, but challenges have 3–8 (Section 27.5). The start, taxi and
+    run-up, and shutdown steps are merged into one optional "Ground operations" criterion,
+    giving 8. The required set (takeoff, steep turns, power-off stall, engine failure,
+    landing) and weights are unchanged. The engine failure and the 50% go-around are
+    random events, and the Fly tab's step ticks record the time of each step.
+  - **C6.4** starts 10 nm **south** of Manteca VOR (ECA) instead of north, because north of
+    ECA is inside the Stockton Class C.
+  - **C6.5** flies KLVK → KTCY → C83 → KLVK so that "Direct-To C83" skips a waypoint; on
+    the spec's KLVK → C83 → KLVK it would repeat the active leg. Direct-To and NRST
+    prompts are random events.
+  - **C5.5**'s "Fail engine in 30–180 s" button is the existing random-event timer.
+  - Crash damage is **on** for every challenge from Module 4 onward (Section 15.1).
+- **To finish:** confirm each change when the challenge is flown in the sim.
+
+### D-23 — P1 reference extras are deferred (Phase 10)
+
+- **Problem:** steps 10.7 (glossary hover-cards) and 10.8 (`/tools`) are P1. The tools hub
+  depends on W13 and W20, which D-20 already deferred.
+- **Decision:** Phase 10 ships the P0 reference pages. Lessons keep their existing "Terms
+  in this lesson" list, which links to `/reference/glossary#slug`. Both steps move to the
+  parking lot (Section 59.5).
+
 ---
 
 # Part II — Learning the Cessna 172 (for you, the author)
@@ -3556,7 +3674,7 @@ Every widget must:
   ~+700 fpm), "Cruise descent", "Slow flight". Values ⚠ from your own flight tests.
 - **Quiz mode:** "Set up a 500 fpm descent at 90 kt."
 - **Model:** 2D interpolation over a table of (pitch, RPM) → (IAS, VS). Table lives in
-  `content/aircraft.yaml` under `performanceModel`.
+  `content/aircraft.yaml` under `performanceModel` (provisional until flown — D-18).
 - **Est. build:** 3 days (+1 day data collection in sim).
 
 ### 16.7 W6 — Turn Coordinator & Slip Ball (P0) · L2.4
@@ -5624,74 +5742,76 @@ with content authoring finishing by week ~18.
 
 ### 41.1 Branching and basics
 
-- [ ] 1.1 Create branch `phase-1-tooling` from `main`.
-- [ ] 1.2 Add `.gitignore` (node*modules, dist, dist-server, coverage, .env, .env.*,
+- [x] 1.1 Create branch `phase-1-tooling` from `main`. (Built on `claude/compassionate-meitner-jm2j58`.)
+- [x] 1.2 Add `.gitignore` (node*modules, dist, dist-server, coverage, .env, .env.*,
       playwright-report, test-results, .DS*Store, *.log). Add `!.env.example` so the
       example file is still committed.
-- [ ] 1.3 Add `.editorconfig` (2 spaces, LF, UTF-8, final newline).
-- [ ] 1.4 Add `.nvmrc` with `24` and `"engines": { "node": ">=24 <25" }` in package.json.
-- [ ] 1.5 `npm init -y`; set `"type": "module"`, `"private": true`, name, description.
+- [x] 1.3 Add `.editorconfig` (2 spaces, LF, UTF-8, final newline).
+- [x] 1.4 Add `.nvmrc` with `24` and `"engines": { "node": ">=24 <25" }` in package.json.
+- [x] 1.5 `npm init -y`; set `"type": "module"`, `"private": true`, name, description.
 
 ### 41.2 Client scaffold (Vite + React + TS)
 
-- [ ] 1.6 Scaffold with Vite's React + TypeScript template **into the repo root**, keeping
+- [x] 1.6 Scaffold with Vite's React + TypeScript template **into the repo root**, keeping
       the CLAUDE.md `src/` structure (create `src/components`, `src/assets`, `src/features`,
       `src/layouts`, `src/pages`, plus `src/lib`, `src/hooks`, `src/styles`, `src/test`).
-- [ ] 1.7 Replace the template's demo content with a minimal `App` that renders
+- [x] 1.7 Replace the template's demo content with a minimal `App` that renders
       "Learn-To-Fly".
-- [ ] 1.8 Install and configure Tailwind CSS v4 with the Vite plugin; create
+- [x] 1.8 Install and configure Tailwind CSS v4 with the Vite plugin; create
       `src/styles/index.css` importing Tailwind and `tokens.css` (empty for now).
-- [ ] 1.9 Configure path aliases `@/` and `@shared/` in `vite.config.ts` and tsconfig.
-- [ ] 1.10 Configure the Vite dev server proxy: `/api` → `http://localhost:3000`.
+- [x] 1.9 Configure path aliases `@/` and `@shared/` in `vite.config.ts` and tsconfig.
+- [x] 1.10 Configure the Vite dev server proxy: `/api` → `http://localhost:3000`.
 - **AC:** `npm run dev:client` shows the page with a Tailwind class applied.
 
 ### 41.3 Server scaffold (Express + TS)
 
-- [ ] 1.11 Install `express`, `tsx`, `typescript`, `@types/express`, `@types/node`.
-- [ ] 1.12 Create `server/src/app.ts` exporting `createApp()` with one route
+- [x] 1.11 Install `express`, `tsx`, `typescript`, `@types/express`, `@types/node`.
+- [x] 1.12 Create `server/src/app.ts` exporting `createApp()` with one route
       `GET /api/v1/health` returning `{ status: "ok" }`.
-- [ ] 1.13 Create `server/src/index.ts` that reads `PORT` and listens.
-- [ ] 1.14 Create `tsconfig.server.json` (Node module resolution `NodeNext`, outDir
+- [x] 1.13 Create `server/src/index.ts` that reads `PORT` and listens.
+- [x] 1.14 Create `tsconfig.server.json` (Node module resolution `NodeNext`, outDir
       `dist-server`, includes `server/src` and `shared`).
-- [ ] 1.15 Add `dev:server`, `build:server`, `start` scripts.
+- [x] 1.15 Add `dev:server`, `build:server`, `start` scripts.
 - **AC:** `npm run dev:server` → `curl localhost:3000/api/v1/health` returns ok; visiting
   `localhost:5173/api/v1/health` through the proxy also works.
 
 ### 41.4 Shared folder
 
-- [ ] 1.16 Create `shared/` with `constants.ts` and a placeholder `scoring.ts` exporting a
+- [x] 1.16 Create `shared/` with `constants.ts` and a placeholder `scoring.ts` exporting a
       stub (tests come in Phase 7).
-- [ ] 1.17 Verify both client and server can import from `@shared/`.
+- [x] 1.17 Verify both client and server can import from `@shared/`.
 
 ### 41.5 Quality tooling
 
-- [ ] 1.18 ESLint flat config with typescript-eslint, react-hooks, jsx-a11y, import rules;
+- [x] 1.18 ESLint flat config with typescript-eslint, react-hooks, jsx-a11y, import rules;
       separate globs for client (browser), server (node), scripts.
-- [ ] 1.19 Prettier config (`.prettierrc`: singleQuote, trailingComma all, printWidth 100);
+- [x] 1.19 Prettier config (`.prettierrc`: singleQuote, trailingComma all, printWidth 100);
       `eslint-config-prettier` to avoid conflicts.
-- [ ] 1.20 `npm run lint`, `format`, `format:check`, `typecheck` scripts.
-- [ ] 1.21 Husky + lint-staged: on commit, run ESLint --fix and Prettier on staged files.
-- [ ] 1.22 Vitest workspace with two projects: `client` (jsdom, `src/**/*.test.tsx`) and
+- [x] 1.20 `npm run lint`, `format`, `format:check`, `typecheck` scripts.
+- [x] 1.21 Husky + lint-staged: on commit, run ESLint --fix and Prettier on staged files.
+- [x] 1.22 Vitest workspace with two projects: `client` (jsdom, `src/**/*.test.tsx`) and
       `node` (`server/**/*.test.ts`, `shared/**/*.test.ts`, `scripts/**/*.test.ts`).
-- [ ] 1.23 One sample test in each project (e.g. `App` renders the title; health route
+      (Vitest 4+ removed workspace files; the two projects live in `test.projects` in
+      `vite.config.ts`.)
+- [x] 1.23 One sample test in each project (e.g. `App` renders the title; health route
       returns ok with Supertest).
-- [ ] 1.24 Install `concurrently`; `npm run dev` runs client and server.
+- [x] 1.24 Install `concurrently`; `npm run dev` runs client and server.
 - **AC:** `npm run lint && npm run typecheck && npm test` pass; committing a badly
   formatted file auto-fixes it.
 
 ### 41.6 CI and repository hygiene
 
-- [ ] 1.25 `.github/workflows/ci.yml` with install, lint, typecheck, test, build jobs
+- [x] 1.25 `.github/workflows/ci.yml` with install, lint, typecheck, test, build jobs
       (content and e2e jobs added in later phases).
-- [ ] 1.26 `.github/pull_request_template.md` (Section 36.2).
+- [x] 1.26 `.github/pull_request_template.md` (Section 36.2).
 - [ ] 1.27 Enable branch protection on `main` (GitHub settings — see "What you need from
       me" at the end of the phase).
-- [ ] 1.28 Enable Dependabot (`.github/dependabot.yml`: npm weekly, GitHub Actions monthly).
-- [ ] 1.29 Create `CHANGELOG.md` with an "Unreleased" section.
-- [ ] 1.30 Create `.env.example` (Appendix E variables with placeholder values).
-- [ ] 1.31 Update `README.md`: project description, stack, local setup steps (Section
+- [x] 1.28 Enable Dependabot (`.github/dependabot.yml`: npm weekly, GitHub Actions monthly).
+- [x] 1.29 Create `CHANGELOG.md` with an "Unreleased" section.
+- [x] 1.30 Create `.env.example` (Appendix E variables with placeholder values).
+- [x] 1.31 Update `README.md`: project description, stack, local setup steps (Section
       37.3), scripts table, link to `plan.md`.
-- [ ] 1.32 Update `CLAUDE.md` "Folder Structure" with the full tree from Section 25.
+- [x] 1.32 Update `CLAUDE.md` "Folder Structure" with the full tree from Section 25.
 - [ ] 1.33 Open PR "Phase 1: Repository and tooling"; CI green; merge.
 - **AC:** CI runs on the PR and passes; README instructions work from a fresh clone.
 
@@ -5705,55 +5825,55 @@ logging and security middleware — no features yet.
 
 ### 42.1 Configuration
 
-- [ ] 2.1 `server/src/config/env.ts`: Zod schema for env (NODE_ENV, PORT, MONGODB_URI,
+- [x] 2.1 `server/src/config/env.ts`: Zod schema for env (NODE_ENV, PORT, MONGODB_URI,
       SESSION_SECRET (min 32 chars), PUBLIC_SITE_URL, LOG_LEVEL, TRUST_PROXY, etc.);
       load `.env` in development via `dotenv`; exit with a readable error if invalid.
-- [ ] 2.2 Unit test: missing `MONGODB_URI` produces a clear error.
+- [x] 2.2 Unit test: missing `MONGODB_URI` produces a clear error.
 
 ### 42.2 Database
 
-- [ ] 2.3 Install Mongoose. `server/src/config/db.ts`: `connectDb()` with retry/backoff
+- [x] 2.3 Install Mongoose. `server/src/config/db.ts`: `connectDb()` with retry/backoff
       (3 attempts), `mongoose.set('strictQuery', true)`, `sanitizeFilter: true`.
-- [ ] 2.4 Health endpoint reports `db: "ok" | "down"` using `mongoose.connection.readyState`
+- [x] 2.4 Health endpoint reports `db: "ok" | "down"` using `mongoose.connection.readyState`
       and a `ping` command (with a 1 s timeout).
-- [ ] 2.5 Local MongoDB running (Docker command in README) and `.env` pointing to it.
-- [ ] 2.6 Test setup: `server/tests/setup.ts` starts `mongodb-memory-server`, connects,
+- [x] 2.5 Local MongoDB running (Docker command in README) and `.env` pointing to it.
+- [x] 2.6 Test setup: `server/tests/setup.ts` starts `mongodb-memory-server`, connects,
       clears collections between tests, disconnects after.
 - **AC:** health shows db ok locally; tests run against the in-memory DB.
 
 ### 42.3 Middleware
 
-- [ ] 2.7 `requestId` middleware (accept incoming header or `crypto.randomUUID()`).
-- [ ] 2.8 `pino` logger + `pino-http` with redaction of `req.headers.cookie`,
+- [x] 2.7 `requestId` middleware (accept incoming header or `crypto.randomUUID()`).
+- [x] 2.8 `pino` logger + `pino-http` with redaction of `req.headers.cookie`,
       `req.body.password`, `req.body.newPassword`, `req.body.currentPassword`.
-- [ ] 2.9 `helmet` with a CSP placeholder (finalised in Phase 11); `app.disable('x-powered-by')`.
-- [ ] 2.10 `express.json({ limit: '100kb' })`; reject non-JSON on mutating API routes.
-- [ ] 2.11 `compression`.
-- [ ] 2.12 `rateLimit` factory (Section 30.7) — apply the general API limits now.
-- [ ] 2.13 `validate({ body, query, params })` middleware using Zod; attaches parsed values.
-- [ ] 2.14 `HttpError` class, `notFound` (API only) and `errorHandler` (Section 34.1).
-- [ ] 2.15 Graceful shutdown in `index.ts` (Section 34.5).
+- [x] 2.9 `helmet` with a CSP placeholder (finalised in Phase 11); `app.disable('x-powered-by')`.
+- [x] 2.10 `express.json({ limit: '100kb' })`; reject non-JSON on mutating API routes.
+- [x] 2.11 `compression`.
+- [x] 2.12 `rateLimit` factory (Section 30.7) — apply the general API limits now.
+- [x] 2.13 `validate({ body, query, params })` middleware using Zod; attaches parsed values.
+- [x] 2.14 `HttpError` class, `notFound` (API only) and `errorHandler` (Section 34.1).
+- [x] 2.15 Graceful shutdown in `index.ts` (Section 34.5).
 - **AC:** unit/integration tests for: validation error shape, 404 JSON for unknown API
   routes, 500 hides stack in production mode, request ID echoed.
 
 ### 42.4 Project conventions
 
-- [ ] 2.16 Folder conventions: `routes/<resource>.routes.ts`, `controllers/<resource>.controller.ts`,
+- [x] 2.16 Folder conventions: `routes/<resource>.routes.ts`, `controllers/<resource>.controller.ts`,
       `services/<resource>.service.ts`, `models/<Model>.ts`; write a short
       `server/README.md` describing them.
-- [ ] 2.17 `asyncHandler` not needed with Express 5 (document this in the README to avoid
+- [x] 2.17 `asyncHandler` not needed with Express 5 (document this in the README to avoid
       confusion from older tutorials).
-- [ ] 2.18 A base "toJSON" transform for models: `_id` → `id`, remove `__v`.
+- [x] 2.18 A base "toJSON" transform for models: `_id` → `id`, remove `__v`.
 
 ### 42.5 Static serving (production mode)
 
-- [ ] 2.19 In production, serve `dist/` statically and fall back to `index.html` for non-API
+- [x] 2.19 In production, serve `dist/` statically and fall back to `index.html` for non-API
       GET requests (Section 38.3). Test with `npm run build && npm start`.
 - **AC:** built app serves the client at `localhost:3000` and the API at `/api/v1/health`.
 
 ### 42.6 Phase wrap-up
 
-- [ ] 2.20 PR "Phase 2: Backend foundation"; update CHANGELOG; phase summary.
+- [x] 2.20 PR "Phase 2: Backend foundation"; update CHANGELOG; phase summary.
 
 ---
 
@@ -5768,61 +5888,61 @@ pages for every route.
 - [ ] 3.1 Low-fidelity wireframes (Section 21.8) for Landing, Learn, Lesson, Challenge
       (4 tabs), Dashboard, Fly mode. Keep them in Figma/Excalidraw rather than the repo,
       and link them in the Phase 3 PR description.
-- [ ] 3.2 Logo mark and wordmark (SVG); favicon set; OG image (1200×630).
-- [ ] 3.3 Choose Radix UI vs React Aria (Section 21.5); record in the Decision Log.
+- [x] 3.2 Logo mark and wordmark (SVG); favicon set; OG image (1200×630).
+- [x] 3.3 Choose Radix UI vs React Aria (Section 21.5); record in the Decision Log.
 
 ### 43.2 Tokens and theming
 
-- [ ] 3.4 `src/styles/tokens.css` with the colour tokens (Section 21.2) for light and dark
+- [x] 3.4 `src/styles/tokens.css` with the colour tokens (Section 21.2) for light and dark
       (`[data-theme="dark"]`), typography, radius.
-- [ ] 3.5 Map tokens into Tailwind's theme (`@theme` in Tailwind v4).
-- [ ] 3.6 Fonts: Inter + a monospace font; `preconnect` or self-host.
-- [ ] 3.7 `ThemeProvider` + `ThemeToggle`; inline pre-paint theme script in `index.html`.
-- [ ] 3.8 Contrast check every text/background pair in both themes (WebAIM checker);
+- [x] 3.5 Map tokens into Tailwind's theme (`@theme` in Tailwind v4).
+- [x] 3.6 Fonts: Inter + a monospace font; `preconnect` or self-host.
+- [x] 3.7 `ThemeProvider` + `ThemeToggle`; inline pre-paint theme script in `index.html`.
+- [x] 3.8 Contrast check every text/background pair in both themes (WebAIM checker);
       adjust tokens until all pass AA.
 - **AC:** toggling theme switches all tokens with no flash on reload.
 
 ### 43.3 Routing and layouts
 
-- [ ] 3.9 Install React Router 7; create `src/router.tsx` with every route from Section
+- [x] 3.9 Install React Router 7; create `src/router.tsx` with every route from Section
       31.2 pointing to lazy placeholder pages (each shows its title).
-- [ ] 3.10 `RootLayout` (header, footer, skip link, `<main id="main">`), `LessonLayout`,
+- [x] 3.10 `RootLayout` (header, footer, skip link, `<main id="main">`), `LessonLayout`,
       `FlyModeLayout`, `AuthLayout`.
-- [ ] 3.11 Header with desktop nav and mobile drawer; footer with legal links.
-- [ ] 3.12 Route change focus management and document titles.
-- [ ] 3.13 `NotFoundPage` and root error boundary page.
+- [x] 3.11 Header with desktop nav and mobile drawer; footer with legal links.
+- [x] 3.12 Route change focus management and document titles.
+- [x] 3.13 `NotFoundPage` and root error boundary page.
 - **AC:** every route renders; keyboard can reach all nav items; mobile drawer traps focus
   and closes on Esc.
 
 ### 43.4 Data layer
 
-- [ ] 3.14 Install TanStack Query; `src/lib/queryClient.ts` with defaults; devtools in dev.
-- [ ] 3.15 `src/lib/apiClient.ts` (Section 31.3) with `ApiError`.
-- [ ] 3.16 MSW set up for client tests (`src/test/handlers.ts`).
+- [x] 3.14 Install TanStack Query; `src/lib/queryClient.ts` with defaults; devtools in dev.
+- [x] 3.15 `src/lib/apiClient.ts` (Section 31.3) with `ApiError`.
+- [x] 3.16 MSW set up for client tests (`src/test/handlers.ts`).
 
 ### 43.5 Component library
 
-- [ ] 3.17 Build components from Section 21.5 in this order: Button, Link, Card, Badge,
+- [x] 3.17 Build components from Section 21.5 in this order: Button, Link, Card, Badge,
       Callout, FormField/Input/PasswordInput/Textarea/Checkbox/RadioGroup/Select, Tabs,
       Dialog, Drawer, Tooltip/Popover, ProgressBar/Ring, Skeleton, EmptyState/ErrorState,
       Toast, Table, Breadcrumbs, DifficultyDots, TierBadge, TypeIcon, Stopwatch, KeyNumbers.
-- [ ] 3.18 Each component: typed props, both themes, focus styles, tests for behaviour and
+- [x] 3.18 Each component: typed props, both themes, focus styles, tests for behaviour and
       accessibility (role/name), no console warnings.
-- [ ] 3.19 `/dev/components` route (only in development builds) showcasing every component
+- [x] 3.19 `/dev/components` route (only in development builds) showcasing every component
       and state.
 - **AC:** all components render correctly in both themes; tests pass; axe shows no
   violations on `/dev/components`.
 
 ### 43.6 Static pages
 
-- [ ] 3.20 Landing page with real copy (Section 20.1) — widget demo slot left as a
+- [x] 3.20 Landing page with real copy (Section 20.1) — widget demo slot left as a
       placeholder until Phase 6.
-- [ ] 3.21 About, Disclaimer, Privacy, Terms (drafts from Section 57), Roadmap.
+- [x] 3.21 About, Disclaimer, Privacy, Terms (drafts from Section 57), Roadmap.
 - **AC:** landing page passes Lighthouse accessibility ≥ 95 locally.
 
 ### 43.7 Phase wrap-up
 
-- [ ] 3.22 PR "Phase 3: Frontend foundation"; screenshots of landing (light/dark,
+- [x] 3.22 PR "Phase 3: Frontend foundation"; screenshots of landing (light/dark,
       mobile/desktop) in the PR.
 
 ---
@@ -5835,35 +5955,35 @@ the app is deployed as a walking skeleton (Milestone M-A).
 
 ### 44.1 Server
 
-- [ ] 4.1 `User` model (Section 27.1) with unique email index and `toJSON` hiding the hash.
-- [ ] 4.2 `express-session` + `connect-mongo` configured (Section 30.1); `trust proxy` in
+- [x] 4.1 `User` model (Section 27.1) with unique email index and `toJSON` hiding the hash.
+- [x] 4.2 `express-session` + `connect-mongo` configured (Section 30.1); `trust proxy` in
       production.
-- [ ] 4.3 Shared Zod schemas: `RegisterSchema`, `LoginSchema`, `ChangePasswordSchema`,
+- [x] 4.3 Shared Zod schemas: `RegisterSchema`, `LoginSchema`, `ChangePasswordSchema`,
       `DeleteAccountSchema`, `UserDto`.
-- [ ] 4.4 `authService`: `register`, `login`, `logout`, `changePassword`, `deleteAccount`
+- [x] 4.4 `authService`: `register`, `login`, `logout`, `changePassword`, `deleteAccount`
       using argon2id (Section 30.2–30.4).
-- [ ] 4.5 CSRF middleware and `GET /auth/csrf` (Section 30.5).
-- [ ] 4.6 Routes in Section 29.2 (P0 ones) + `PATCH /me`, `DELETE /me`, `GET /me/export`
+- [x] 4.5 CSRF middleware and `GET /auth/csrf` (Section 30.5).
+- [x] 4.6 Routes in Section 29.2 (P0 ones) + `PATCH /me`, `DELETE /me`, `GET /me/export`
       (export returns user + empty progress for now).
-- [ ] 4.7 `requireAuth` middleware (Section 30.6).
-- [ ] 4.8 Auth rate limits (Section 30.7).
-- [ ] 4.9 Common-password list (top ~10k, small text file in `server/src/data/`) check.
-- [ ] 4.10 Integration tests: all API auth cases in Section 35.2.
+- [x] 4.7 `requireAuth` middleware (Section 30.6).
+- [x] 4.8 Auth rate limits (Section 30.7).
+- [x] 4.9 Common-password list (top ~10k, small text file in `server/src/data/`) check.
+- [x] 4.10 Integration tests: all API auth cases in Section 35.2.
 - **AC:** all tests pass; sessions appear in the `sessions` collection; logout removes
   them.
 
 ### 44.2 Client
 
-- [ ] 4.11 `useAuth`, `useCsrf` hooks; fetch on app start.
-- [ ] 4.12 Sign up page with react-hook-form + Zod; password strength meter (simple
+- [x] 4.11 `useAuth`, `useCsrf` hooks; fetch on app start.
+- [x] 4.12 Sign up page with react-hook-form + Zod; password strength meter (simple
       length/variety heuristic — don't ship a large library); terms checkbox.
-- [ ] 4.13 Log in page with "Remember me"; `returnTo` handling (only allow same-site
+- [x] 4.13 Log in page with "Remember me"; `returnTo` handling (only allow same-site
       relative paths — prevent open redirects).
-- [ ] 4.14 Header avatar menu (Dashboard, Account, Log out).
-- [ ] 4.15 `ProtectedRoute`.
-- [ ] 4.16 Account page: display name edit, theme preference (saved to server), change
+- [x] 4.14 Header avatar menu (Dashboard, Account, Log out).
+- [x] 4.15 `ProtectedRoute`.
+- [x] 4.16 Account page: display name edit, theme preference (saved to server), change
       password form, export data button, delete account modal (Section 20.10).
-- [ ] 4.17 Tests: form validation messages, submit success/failure with MSW, protected
+- [x] 4.17 Tests: form validation messages, submit success/failure with MSW, protected
       route redirect.
 - **AC:** US-03, US-04, US-16, US-21 pass manually and in component tests.
 
@@ -5878,7 +5998,7 @@ the app is deployed as a walking skeleton (Milestone M-A).
 
 ### 44.4 Phase wrap-up
 
-- [ ] 4.22 PR "Phase 4: Authentication + first deploy"; phase summary including anything
+- [x] 4.22 PR "Phase 4: Authentication + first deploy"; phase summary including anything
       that needed your action in dashboards.
 
 ---
@@ -5891,61 +6011,61 @@ API endpoints work.
 
 ### 45.1 Schemas
 
-- [ ] 5.1 `shared/schemas/content.ts`: Zod schemas for Aircraft, Module, LessonFrontmatter,
+- [x] 5.1 `shared/schemas/content.ts`: Zod schemas for Aircraft, Module, LessonFrontmatter,
       LessonBlock (discriminated union), Quiz, Challenge (with Criterion, Setup, presets),
       Checklist, Airport, GlossaryTerm, Resource, Presets.
-- [ ] 5.2 `shared/schemas/api.ts`: DTOs for list/detail responses (lesson summary vs full).
-- [ ] 5.3 Unit tests with valid and invalid examples for each schema.
+- [x] 5.2 `shared/schemas/api.ts`: DTOs for list/detail responses (lesson summary vs full).
+- [x] 5.3 Unit tests with valid and invalid examples for each schema.
 
 ### 45.2 Seed data files (skeletons)
 
-- [ ] 5.4 `content/aircraft.yaml` with Section 8 data (all numbers flagged in a
+- [x] 5.4 `content/aircraft.yaml` with Section 8 data (all numbers flagged in a
       `verification` map until verified).
-- [ ] 5.5 `content/modules.yaml` — all 9 modules with titles/summaries/orders.
-- [ ] 5.6 `content/presets.yaml` — start states, weather, loads (Section 15.1).
-- [ ] 5.7 `content/resources.yaml` — every resource from Section 6 with slugs used by the
+- [x] 5.5 `content/modules.yaml` — all 9 modules with titles/summaries/orders.
+- [x] 5.6 `content/presets.yaml` — start states, weather, loads (Section 15.1).
+- [x] 5.7 `content/resources.yaml` — every resource from Section 6 with slugs used by the
       lesson specs (e.g. `phak-ch5`, `afh-ch9`, `aim-4-3`, `skyvector`, …).
-- [ ] 5.8 `content/airports.yaml` — the 13 airports (Section 11.1) with `verifiedAt: null`.
-- [ ] 5.9 `content/glossary.yaml` — seed with Appendix A terms.
-- [ ] 5.10 `content/checklists.yaml` — Appendix B phases in our own words.
-- [ ] 5.11 One complete lesson (`l1-4-speeds-limits-and-checklists.md`) and one complete
+- [x] 5.8 `content/airports.yaml` — the 13 airports (Section 11.1) with `verifiedAt: null`.
+- [x] 5.9 `content/glossary.yaml` — seed with Appendix A terms.
+- [x] 5.10 `content/checklists.yaml` — Appendix B phases in our own words.
+- [x] 5.11 One complete lesson (`l1-4-speeds-limits-and-checklists.md`) and one complete
       challenge (`c2-1-straight-and-level.yaml`) as reference examples.
 
 ### 45.3 Parsing and validation
 
-- [ ] 5.12 `scripts/lib/parseLesson.ts`: gray-matter frontmatter → unified/remark pipeline
+- [x] 5.12 `scripts/lib/parseLesson.ts`: gray-matter frontmatter → unified/remark pipeline
       with `remark-gfm` + `remark-directive` → walk the tree, emit `blocks[]` and
       `sections[]`; replace `{{vspeed.*}}` tokens; resolve `[[slug]]` links.
-- [ ] 5.13 Unit tests for the parser: each directive type, tokens, internal links, headings
+- [x] 5.13 Unit tests for the parser: each directive type, tokens, internal links, headings
       → sections, malformed directive errors with file/line numbers.
-- [ ] 5.14 `scripts/content-validate.ts`: load everything, validate schemas, run
+- [x] 5.14 `scripts/content-validate.ts`: load everything, validate schemas, run
       cross-reference rules (Section 28.5), print a readable report, exit code.
-- [ ] 5.15 Add `content` job to CI.
+- [x] 5.15 Add `content` job to CI.
 - **AC:** validator passes on the skeleton content and fails with clear messages on a
   deliberately broken fixture.
 
 ### 45.4 Seeding
 
-- [ ] 5.16 Mongoose models for Module, Lesson, Challenge, Aircraft, Checklist, Airport,
+- [x] 5.16 Mongoose models for Module, Lesson, Challenge, Aircraft, Checklist, Airport,
       GlossaryTerm, Resource, ContentRelease.
-- [ ] 5.17 `scripts/content-seed.ts`: validate first (abort on errors), compute hashes,
+- [x] 5.17 `scripts/content-seed.ts`: validate first (abort on errors), compute hashes,
       bulk upsert by slug, bump versions on change, unpublish removed items, write
       `contentReleases`. Support `--dry-run`.
-- [ ] 5.18 Tests: seeding twice is idempotent (no version bumps); changing a lesson bumps
+- [x] 5.18 Tests: seeding twice is idempotent (no version bumps); changing a lesson bumps
       only that lesson; removing a lesson unpublishes it.
 - **AC:** `npm run content:seed` populates the local DB; Compass shows documents.
 
 ### 45.5 Content API
 
-- [ ] 5.19 Routes in Section 29.3 with services using `.lean()` and projections.
-- [ ] 5.20 Caching headers + ETag based on latest content release.
-- [ ] 5.21 Integration tests: only published returned; 404 for unknown slug; list endpoints
+- [x] 5.19 Routes in Section 29.3 with services using `.lean()` and projections.
+- [x] 5.20 Caching headers + ETag based on latest content release.
+- [x] 5.21 Integration tests: only published returned; 404 for unknown slug; list endpoints
       exclude `blocks`; filters on `/challenges`.
 - **AC:** `curl /api/v1/lessons/l1-4-speeds-limits-and-checklists` returns blocks.
 
 ### 45.6 Phase wrap-up
 
-- [ ] 5.22 PR "Phase 5: Content pipeline"; document the authoring workflow in
+- [x] 5.22 PR "Phase 5: Content pipeline"; document the authoring workflow in
       `content/README.md` (how to add a lesson/challenge, directives, validation).
 
 ---
@@ -5958,38 +6078,38 @@ widgets built.
 
 ### 46.1 Curriculum pages
 
-- [ ] 6.1 `/learn` curriculum map using `GET /modules` (progress overlay added in Phase 8).
-- [ ] 6.2 `/learn/:moduleSlug` module page.
-- [ ] 6.3 Loading skeletons, error and not-found states.
+- [x] 6.1 `/learn` curriculum map using `GET /modules` (progress overlay added in Phase 8).
+- [x] 6.2 `/learn/:moduleSlug` module page.
+- [x] 6.3 Loading skeletons, error and not-found states.
 
 ### 46.2 Lesson player
 
-- [ ] 6.4 `LessonPage` + `LessonLayout` (sidebar sections, breadcrumb, objectives box,
+- [x] 6.4 `LessonPage` + `LessonLayout` (sidebar sections, breadcrumb, objectives box,
       right rail on xl).
-- [ ] 6.5 `LessonRenderer` with block registry (Section 31.4).
-- [ ] 6.6 Block components: `MarkdownBlock` (react-markdown + remark-gfm, no raw HTML,
+- [x] 6.5 `LessonRenderer` with block registry (Section 31.4).
+- [x] 6.6 Block components: `MarkdownBlock` (react-markdown + remark-gfm, no raw HTML,
       custom renderers for links/tables/code), `CalloutBlock`, `ImageBlock` (responsive,
       caption, click to zoom (P1)), `VideoBlock` (click-to-load youtube-nocookie with
       title and thumbnail), `ChecklistBlock` (renders W16).
-- [ ] 6.7 `QuizBlock` for `single`, `multi`, `numeric`, `order` types with feedback and
+- [x] 6.7 `QuizBlock` for `single`, `multi`, `numeric`, `order` types with feedback and
       explanation; keyboard accessible; answers stored in sessionStorage for visitors.
-- [ ] 6.8 Scroll-spy section tracking; "Section X of Y" on mobile.
-- [ ] 6.9 "Go deeper" resource cards; "Fly it" challenge cards; prev/next lesson.
-- [ ] 6.10 "Mark complete" button (visitor → sign-up prompt; wired to API in Phase 8).
-- [ ] 6.11 Lesson footer disclaimer.
-- [ ] 6.12 Tests: renderer renders each block type; unknown block safe; quiz behaviour.
+- [x] 6.8 Scroll-spy section tracking; "Section X of Y" on mobile.
+- [x] 6.9 "Go deeper" resource cards; "Fly it" challenge cards; prev/next lesson.
+- [x] 6.10 "Mark complete" button (visitor → sign-up prompt; wired to API in Phase 8).
+- [x] 6.11 Lesson footer disclaimer.
+- [x] 6.12 Tests: renderer renders each block type; unknown block safe; quiz behaviour.
 - **AC:** Milestone M-B: L1.4 renders with W3 and W16 (built next) and quizzes.
 
 ### 46.3 Widget framework
 
-- [ ] 6.13 `src/features/widgets/registry.ts` mapping names to lazy components.
-- [ ] 6.14 `WidgetFrame` component: title, "Simplified model" badge, reset button,
+- [x] 6.13 `src/features/widgets/registry.ts` mapping names to lazy components.
+- [x] 6.14 `WidgetFrame` component: title, "Simplified model" badge, reset button,
       mode switch (explore/quiz), "Describe this diagram" disclosure, error boundary.
-- [ ] 6.15 Shared hooks: `useReducedMotion`, `useElementSize` (responsive SVG),
+- [x] 6.15 Shared hooks: `useReducedMotion`, `useElementSize` (responsive SVG),
       `useDrag` (pointer events with keyboard fallback), `useAnnouncer` (live region).
-- [ ] 6.16 Shared SVG primitives: `Gauge` (round dial with arcs/needle), `Tape` (vertical
+- [x] 6.16 Shared SVG primitives: `Gauge` (round dial with arcs/needle), `Tape` (vertical
       tape), `Arrow`, `Label`, `Compass`.
-- [ ] 6.17 Quiz-mode contract: widget emits `{ questionId, correct }` events that
+- [x] 6.17 Quiz-mode contract: widget emits `{ questionId, correct }` events that
       `QuizBlock`/lesson progress can record.
 
 ### 46.4 P0 widgets (build order from Section 16.22)
@@ -5997,32 +6117,35 @@ widgets built.
 For each widget: model in `model.ts` with unit tests → SVG component → interactions →
 keyboard/ARIA → quiz mode → text alternative → embed in its lesson → review on phone.
 
-- [ ] 6.18 W3 Airspeed Indicator (uses `aircraft.yaml` arcs).
-- [ ] 6.19 W16 Checklist Runner (uses `checklists.yaml`).
-- [ ] 6.20 W1 Control Surfaces Explorer.
-- [ ] 6.21 W6 Turn Coordinator & Slip Ball.
-- [ ] 6.22 W14 Bank vs Load Factor.
-- [ ] 6.23 W4 Angle of Attack & Lift.
-- [ ] 6.24 W5 Pitch & Power Trainer (after collecting pitch/power data in the sim during
-      the Week 2 study flights in Section 7.2).
-- [ ] 6.25 W2 G1000 PFD Explorer (explore + navigation modes).
-- [ ] 6.26 W7 Traffic Pattern Animator (+ radio calls and go-around toggles).
-- [ ] 6.27 W12 Wind Triangle (model shared with tools and W20).
-- [ ] 6.28 W9 VOR/CDI Simulator.
-- [ ] 6.29 W10 Sectional Legend Explorer (image + hotspot JSON).
-- [ ] 6.30 W11 Airspace Cross-section (data file + component).
-- [ ] 6.31 Landing page live widget demo (W3 or W7).
+- [x] 6.18 W3 Airspeed Indicator (uses `aircraft.yaml` arcs).
+- [x] 6.19 W16 Checklist Runner (uses `checklists.yaml`).
+- [x] 6.20 W1 Control Surfaces Explorer.
+- [x] 6.21 W6 Turn Coordinator & Slip Ball.
+- [x] 6.22 W14 Bank vs Load Factor.
+- [x] 6.23 W4 Angle of Attack & Lift.
+- [x] 6.24 W5 Pitch & Power Trainer (after collecting pitch/power data in the sim during
+      the Week 2 study flights in Section 7.2). Built with a provisional table until those
+      flights are done (D-18).
+- [x] 6.25 W2 G1000 PFD Explorer (explore + navigation modes). The screenshot-based
+      "Real view" tab (Section 16.4) waits for your MSFS screenshots.
+- [x] 6.26 W7 Traffic Pattern Animator (+ radio calls and go-around toggles).
+- [x] 6.27 W12 Wind Triangle (model shared with tools and W20).
+- [x] 6.28 W9 VOR/CDI Simulator.
+- [x] 6.29 W10 Sectional Legend Explorer (image + hotspot JSON). An original SVG redraw
+      instead of a chart crop (D-19).
+- [x] 6.30 W11 Airspace Cross-section (data file + component). Data unverified (D-19).
+- [x] 6.31 Landing page live widget demo (W3 or W7). W7.
 - **AC (each widget):** unit tests for the model; mouse/touch/keyboard operable;
   screen-reader announcements; no axe violations; works at 320 px; ≤ 60 KB gzipped
   per widget chunk (guideline).
 
 ### 46.5 P1 widgets (only if on schedule)
 
-- [ ] 6.32 W13, W15, W18, W8, W17, W19, W20 (Section 16).
+- [ ] 6.32 W13, W15, W18, W8, W17, W19, W20 (Section 16). Deferred (D-20).
 
 ### 46.6 Phase wrap-up
 
-- [ ] 6.33 PR(s): one PR per 2–3 widgets to keep reviews small; final PR "Phase 6
+- [x] 6.33 PR(s): one PR per 2–3 widgets to keep reviews small; final PR "Phase 6
       complete" with a GIF of each widget.
 
 ---
@@ -6034,44 +6157,47 @@ keyboard/ARIA → quiz mode → text alternative → embed in its lesson → rev
 
 ### 47.1 Scoring and schemas
 
-- [ ] 7.1 Implement `shared/scoring.ts` (Section 15.2) with exhaustive unit tests
+- [x] 7.1 Implement `shared/scoring.ts` (Section 15.2) with exhaustive unit tests
       (Section 35.2).
-- [ ] 7.2 `AttemptCreateSchema` and `AttemptDto` in `shared/schemas/api.ts`.
+- [x] 7.2 `AttemptCreateSchema` and `AttemptDto` in `shared/schemas/api.ts`.
 
 ### 47.2 Server
 
-- [ ] 7.3 Models `ChallengeAttempt` and `ChallengeProgress` with indexes.
-- [ ] 7.4 `attemptService.create` (Section 24.2): verify challenge published; verify
+- [x] 7.3 Models `ChallengeAttempt` and `ChallengeProgress` with indexes.
+- [x] 7.4 `attemptService.create` (Section 24.2): verify challenge published; verify
       criteria set matches current version; compute score; insert attempt; upsert progress
       with best-attempt logic (tier > percentage > recency).
-- [ ] 7.5 Routes: `POST /challenges/:slug/attempts`, `GET /me/challenges/:slug/attempts`,
+- [x] 7.5 Routes: `POST /challenges/:slug/attempts`, `GET /me/challenges/:slug/attempts`,
       `GET /me/attempts` (paginated).
-- [ ] 7.6 Integration tests: tampered score ignored, version mismatch 400, ownership,
+- [x] 7.6 Integration tests: tampered score ignored, version mismatch 400, ownership,
       best-attempt update logic, pagination.
 
 ### 47.3 Client
 
-- [ ] 7.7 `/challenges` list with filters in the URL (Section 20.5).
-- [ ] 7.8 `ChallengePage` with Tabs (Brief, Fly, Debrief, History).
-- [ ] 7.9 Brief: setup table with resolved presets, copy-to-clipboard for ICAO/frequencies,
+- [x] 7.7 `/challenges` list with filters in the URL (Section 20.5).
+- [x] 7.8 `ChallengePage` with Tabs (Brief, Fly, Debrief, History).
+- [x] 7.9 Brief: setup table with resolved presets, copy-to-clipboard for ICAO/frequencies,
       links to airport cards and lessons, criteria preview.
-- [ ] 7.10 Fly tab and `/challenges/:slug/fly` page: step checklist (sessionStorage),
+- [x] 7.10 Fly tab and `/challenges/:slug/fly` page: step checklist (sessionStorage),
       key numbers, stopwatch, random events (C5.5, C6.6, C8.1) with sound (Web Audio beep) + visual flash (reduced-motion alternative), Screen Wake Lock (P1).
-- [ ] 7.11 Debrief form: tiered radio groups with tier descriptions; binary toggles;
+- [x] 7.11 Debrief form: tiered radio groups with tier descriptions; binary toggles;
       notes; reflections; planning fields (C8.2); paused checkbox; live score preview using
       `shared/scoring.ts`; draft autosave to sessionStorage; restore after login.
-- [ ] 7.12 Result view: tier badge, percentage, per-criterion feedback with "Review"
+- [x] 7.12 Result view: tier badge, percentage, per-criterion feedback with "Review"
       links to lesson sections, fly again, next challenge.
-- [ ] 7.13 History tab: attempts table with expandable details.
-- [ ] 7.14 Visitor flow: debrief prompts sign-in; draft preserved.
-- [ ] 7.15 Component tests for debrief validation and score preview; E2E flow 4 and 5
-      (Section 35.2).
+- [x] 7.13 History tab: attempts table with expandable details.
+- [x] 7.14 Visitor flow: debrief prompts sign-in; draft preserved.
+- [x] 7.15 Component tests for debrief validation and score preview; E2E flow 4 and 5
+      (Section 35.2). Playwright is set up here: `e2e/server.ts` starts an in-memory MongoDB
+      seeded with the real `content/` (drafts included, D-17) and serves the built client;
+      CI runs it in the `e2e` job.
 - **AC:** Milestone M-C: C2.1 can be completed end-to-end in production; US-09 to US-12
   pass.
 
 ### 47.4 Phase wrap-up
 
-- [ ] 7.16 PR "Phase 7: Challenges"; screen recording of the flow.
+- [x] 7.16 PR "Phase 7: Challenges"; screen recording of the flow
+      (`docs/screenshots/phase-7/c2-1-challenge-flow.webm`).
 
 ---
 
@@ -6082,30 +6208,30 @@ keyboard/ARIA → quiz mode → text alternative → embed in its lesson → rev
 
 ### 48.1 Server
 
-- [ ] 8.1 `LessonProgress` model; `PUT /me/lessons/:slug/progress`,
+- [x] 8.1 `LessonProgress` model; `PUT /me/lessons/:slug/progress`,
       `POST /me/lessons/:slug/quiz-answers` (validates the answer against the lesson's quiz
       block server-side and returns correctness + explanation).
-- [ ] 8.2 `shared/progress.ts`: completion rules (Section 13.3) with unit tests.
-- [ ] 8.3 `GET /me/progress` and `GET /me/dashboard` (single aggregation; Section 20.9).
-- [ ] 8.4 Update `user.lastActivity` on lesson progress and attempt submission.
-- [ ] 8.5 Extend `GET /me/export` to include progress and attempts; extend `DELETE /me` to
+- [x] 8.2 `shared/progress.ts`: completion rules (Section 13.3) with unit tests.
+- [x] 8.3 `GET /me/progress` and `GET /me/dashboard` (single aggregation; Section 20.9).
+- [x] 8.4 Update `user.lastActivity` on lesson progress and attempt submission.
+- [x] 8.5 Extend `GET /me/export` to include progress and attempts; extend `DELETE /me` to
       remove them (tests).
 
 ### 48.2 Client
 
-- [ ] 8.6 Progress overlays on `/learn`, module pages, lesson sidebar, challenge cards.
-- [ ] 8.7 "Mark complete" with optimistic update; auto-save `lastSectionId` (debounced).
-- [ ] 8.8 Dashboard page (Section 20.9) including empty and course-complete states.
-- [ ] 8.9 "Continue" logic: last activity if incomplete, else next item in curriculum order.
-- [ ] 8.10 Course-complete badge ("Skyhawk Pilot (Sim)") — an SVG badge on the dashboard,
+- [x] 8.6 Progress overlays on `/learn`, module pages, lesson sidebar, challenge cards.
+- [x] 8.7 "Mark complete" with optimistic update; auto-save `lastSectionId` (debounced).
+- [x] 8.8 Dashboard page (Section 20.9) including empty and course-complete states.
+- [x] 8.9 "Continue" logic: last activity if incomplete, else next item in curriculum order.
+- [x] 8.10 Course-complete badge ("Skyhawk Pilot (Sim)") — an SVG badge on the dashboard,
       with clear "not a real certificate" wording.
-- [ ] 8.11 `/account/attempts` page.
-- [ ] 8.12 Tests: dashboard states with MSW; E2E flows 2 and 3.
+- [x] 8.11 `/account/attempts` page (built in Phase 7).
+- [x] 8.12 Tests: dashboard states with MSW; E2E flows 2 and 3.
 - **AC:** US-05, US-08, US-13 pass; progress consistent across pages and devices.
 
 ### 48.3 Phase wrap-up
 
-- [ ] 8.13 PR "Phase 8: Progress and dashboard".
+- [x] 8.13 PR "Phase 8: Progress and dashboard".
 
 ---
 
@@ -6151,6 +6277,8 @@ P1 as time allows.
 | 10                | Glossary complete (≥ 150 terms), resources verified, buffer / P1 content |
 
 ### 49.4 Checklist of content items (tick as published)
+
+All P0 items below are drafted (D-21); tick each one when it is verified and published.
 
 **Lessons (P0)**
 
@@ -6219,22 +6347,22 @@ P1 as time allows.
 **Goal:** quick-lookup pages that learners use mid-flight.
 **Est.** 1 week (P1 tools extra).
 
-- [ ] 10.1 `/reference` hub with cards.
-- [ ] 10.2 `/reference/speeds`: V-speed table from `GET /aircraft/c172`, W3, power settings,
+- [x] 10.1 `/reference` hub with cards.
+- [x] 10.2 `/reference/speeds`: V-speed table from `GET /aircraft/c172`, W3, power settings,
       "last verified" line. Large-type print/phone friendly.
-- [ ] 10.3 `/reference/checklists` and `/reference/checklists/:slug` with W16 in full-screen
+- [x] 10.3 `/reference/checklists` and `/reference/checklists/:slug` with W16 in full-screen
       mode.
-- [ ] 10.4 `/reference/airports` and `/reference/airports/:icao` (Section 20.8), with
+- [x] 10.4 `/reference/airports` and `/reference/airports/:icao` (Section 20.8), with
       "Challenges at this airport".
-- [ ] 10.5 `/reference/glossary`: client-side search (simple normalised substring + alias
+- [x] 10.5 `/reference/glossary`: client-side search (simple normalised substring + alias
       match; no library needed for ~200 terms), A–Z jump links, deep links.
-- [ ] 10.6 `/reference/resources` with filters.
+- [x] 10.6 `/reference/resources` with filters.
 - [ ] 10.7 Glossary hover-cards in lessons (P1): seed script marks first occurrence of each
       glossary term per lesson; client renders a Popover.
 - [ ] 10.8 (P1) `/tools` hub, crosswind (W13), wind triangle (W12), nav log (W20).
-- [ ] 10.9 Tests: glossary search, airport page 404, speeds page renders data.
+- [x] 10.9 Tests: glossary search, airport page 404, speeds page renders data.
 - **AC:** US-14, US-15 pass; all reference pages readable on a phone at arm's length.
-- [ ] 10.10 PR "Phase 10: Reference".
+- [x] 10.10 PR "Phase 10: Reference".
 
 ---
 
@@ -6684,6 +6812,10 @@ milestone.
 - Native mobile app for fly mode.
 - Instructor/classroom mode (a teacher tracks several students).
 - Integration with Little Navmap or Navigraph for chart overlays.
+- P1 widgets deferred from step 6.32 (D-20): W8 airport signs, W13 crosswind, W15 glide
+  range, W17 METAR decoder, W18 landing sight picture, W19 phonetic alphabet, W20 nav log.
+- P1 reference extras deferred from Phase 10 (D-23): glossary hover-cards in lessons (step
+  10.7) and the `/tools` hub (step 10.8).
 
 ---
 

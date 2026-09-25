@@ -1,0 +1,87 @@
+slug: c6-1-landmark-hunt
+code: C6.1
+title: Landmark hunt
+module: m6-vfr-navigation
+lessons: [l6-1-reading-a-sectional-chart]
+priority: P0
+type: navigation
+difficulty: 2
+estimatedMinutes: 25
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Find six charted landmarks from the air and match each one to the sectional.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RUNWAY
+  startDetails:
+    runway: 25R # ⚠ verify the runway name in the sim
+    fallback: If the sim starts you on a different runway, use it.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Before the flight, find these on the San Francisco sectional — Lake Del Valle, the Altamont Pass wind farms, the I-580/I-680 interchange, Mount Diablo, Calaveras Reservoir and San Antonio Reservoir (⚠ verify each is charted and visible in the sim).
+  - Turn the sim's VFR map off, and set the MFD to its widest map range or to the engine page, so the map doesn't do the work for you.
+  - Take off and fly a loop at 3,500 ft MSL that passes each landmark. Stay clear of the Oakland Class C and the San Francisco Class B.
+  - For each landmark, note the time you passed it and its bearing from you.
+  - Return to Livermore and land.
+
+criteria:
+  - id: landmarks
+    label: Landmarks correctly identified
+    kind: tiered
+    tiers:
+      gold: 6 of 6
+      silver: 5 of 6
+      bronze: 4 of 6
+    required: true
+    weight: 3
+    reviewLink: { lesson: l6-1-reading-a-sectional-chart, section: landmarks }
+  - id: airspace
+    label: Stayed clear of Class B and Class C airspace
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l6-2-airspace, section: the-classes }
+  - id: altitude
+    label: Altitude held on the straight legs
+    kind: tiered
+    tiers:
+      gold: ±100 ft
+      silver: ±150 ft
+      bronze: ±200 ft
+    required: false
+    weight: 1
+  - id: return-no-gps
+    label: Returned to Livermore without the GPS map
+    kind: binary
+    required: false
+    weight: 2
+
+randomEvents: []
+
+planningFields:
+  - { id: landmark-times, label: Landmarks and the time you passed each one, type: text }
+
+commonMistakes:
+  - Mistaking a smaller lake or road for the charted one.
+  - Drifting toward the Class C while looking for landmarks.
+
+tips:
+  - Look for two landmarks together. A lake next to a highway is much easier to confirm than either on its own.
+
+debriefQuestions:
+  - id: easiest-hardest
+    prompt: Which landmark was easiest to spot, and which was hardest? Why?

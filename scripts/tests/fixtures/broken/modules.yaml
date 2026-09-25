@@ -1,0 +1,20 @@
+# Deliberately broken fixture for the validator tests.
+modules:
+  - slug: m1-test
+    code: M1
+    order: 1
+    title: Test module
+    summary: Test.
+    description: Test.
+    icon: plane
+    lessons: [l1-1-published-draft, l1-9-missing-lesson]
+    challenges: [c1-1-bad-refs]
+    estimatedMinutes: 10
+  - slug: m2-duplicate-order
+    code: M2
+    order: 1
+    title: Duplicate order
+    summary: Test.
+    description: Test.
+    icon: plane
+    estimatedMinutes: 10

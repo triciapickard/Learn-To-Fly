@@ -1,0 +1,106 @@
+slug: c4-2-fly-the-pattern
+code: C4.2
+title: Fly the pattern
+module: m4-takeoffs-patterns-landings
+lessons: [l4-2-the-traffic-pattern]
+priority: P0
+type: pattern
+difficulty: 3
+estimatedMinutes: 20
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Fly a complete rectangular pattern at Tracy with the correct altitudes, speeds and
+  configuration, ending in a low approach. No landing required.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KTCY
+  startState: RUNWAY
+  startDetails:
+    runway: '26' # ⚠ verify the active runway for the wind
+    fallback: If the sim starts you on a different runway, fly the pattern for that runway instead.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Take off and climb on the upwind leg to about 300 ft below pattern altitude, then turn crosswind.
+  - Level off at pattern altitude on downwind (⚠ verify the KTCY pattern altitude). Set about 2,000–2,100 RPM for 85–90 KIAS and run the before-landing checklist.
+  - Abeam the numbers, reduce to about 1,500 RPM, set flaps 10, slow to 80 KIAS and start down.
+  - On base, flaps 20 and 70 KIAS. On final, flaps 30 and 65 KIAS, stabilized by 300 ft AGL.
+  - At about 100 ft above the runway, go around (a low approach) — full power, flaps 20, climb.
+
+criteria:
+  - id: pattern-altitude
+    label: Pattern altitude on downwind
+    kind: tiered
+    tiers:
+      gold: ±100 ft
+      silver: ±150 ft
+      bronze: ±200 ft
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-2-the-traffic-pattern, section: direction-and-altitude }
+  - id: downwind-spacing
+    label: Downwind spacing (runway about ½–1 nm off the wingtip)
+    kind: tiered
+    tiers:
+      gold: Good spacing
+      silver: Slightly wide or tight
+      bronze: Very wide or tight
+    required: false
+    weight: 2
+    reviewLink: { lesson: l4-2-the-traffic-pattern, section: key-points }
+  - id: config-speed
+    label: Configuration and speed on each leg
+    kind: tiered
+    tiers:
+      gold: All legs ±5 kt
+      silver: All legs ±10 kt
+      bronze: All legs ±15 kt
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-2-the-traffic-pattern, section: configuration-and-speed-on-each-leg }
+  - id: stabilized
+    label: Final approach stabilized by 300 ft AGL
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-3-normal-approach-and-landing, section: the-stabilized-approach }
+  - id: lined-up
+    label: Lined up with the centerline on final (no S-turns)
+    kind: tiered
+    tiers:
+      gold: No overshoot
+      silver: Small overshoot
+      bronze: Large overshoot, corrected
+    required: false
+    weight: 2
+  - id: before-landing-checklist
+    label: Before-landing checklist done on downwind
+    kind: binary
+    required: false
+    weight: 1
+
+randomEvents: []
+
+commonMistakes:
+  - Flying downwind too close to the runway.
+  - Turning base too late.
+  - Overshooting the turn to final.
+
+tips:
+  - Use ground references, such as roads and field edges, to mark your turns.
+
+debriefQuestions:
+  - id: base-turn
+    prompt: Where did you turn base? Would you change it next time?

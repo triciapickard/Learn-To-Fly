@@ -1,0 +1,81 @@
+slug: c3-4-after-landing-and-shutdown
+code: C3.4
+title: After landing and shutdown
+module: m3-ground-operations
+lessons: [l3-3-run-up-before-takeoff-and-after-landing]
+priority: P0
+type: procedure
+difficulty: 1
+estimatedMinutes: 10
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Clear the runway, run the after-landing checklist, taxi to parking and shut down
+  properly.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RUNWAY
+  startDetails:
+    runway: 25R # ⚠ verify the runway name in the sim
+    fallback: The sim can't start you just after landing. Either take off, fly a quick unscored pattern and land, or fly this straight after C4.3.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Take off, fly a quick unscored pattern and land (or continue straight after C4.3).
+  - Slow to taxi speed and turn off at a taxiway. Keep going until the whole airplane is past the hold short line, then stop.
+  - After-landing items — flaps up, transponder to standby (⚠ verify the G1000 mode name), lights as needed.
+  - Taxi to parking and set the parking brake.
+  - Shut down — avionics master off, mixture to idle cut-off, magnetos off, master off.
+
+criteria:
+  - id: cleared-runway
+    label: Cleared the runway completely before stopping
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l3-3-run-up-before-takeoff-and-after-landing, section: after-landing }
+  - id: after-landing-items
+    label: After-landing items completed
+    kind: tiered
+    tiers:
+      gold: All done
+      silver: 1 missed
+      bronze: 2 missed
+    required: true
+    weight: 2
+  - id: mixture-shutdown
+    label: Shut down with the mixture (not the magnetos)
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l3-3-run-up-before-takeoff-and-after-landing, section: shutdown }
+  - id: final-switches
+    label: Final switches — magnetos off, master off, parking brake set
+    kind: binary
+    required: true
+    weight: 2
+
+randomEvents: []
+
+commonMistakes:
+  - Stopping with the tail still over the hold short line.
+  - Shutting down with the magnetos instead of the mixture.
+
+tips:
+  - Don't start the after-landing checklist until you're clear of the runway and stopped.
+
+debriefQuestions:
+  - id: why-clear
+    prompt: Why do you stop only after the whole airplane has crossed the hold short line?

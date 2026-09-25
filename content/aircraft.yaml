@@ -1,0 +1,286 @@
+# Cessna 172S reference data (plan.md Section 8). One source of truth for V-speeds,
+# arcs, limits and power settings: lessons use tokens such as {{vspeed.vy}} and the
+# widgets read this file through the API.
+#
+# ⚠ Every number is the widely published 172S value and is UNVERIFIED until checked
+# against the MSFS 2024 in-sim checklist (and the POH if available). Tick each entry in
+# `verification` as you check it, then set `verifiedAt` and `simVersion`.
+slug: c172
+name: Cessna 172S Skyhawk
+variants:
+  - id: c172-g1000
+    simName: Cessna 172 Skyhawk (G1000 NXi) # verify the exact name in the sim's aircraft list
+    avionics: Garmin G1000 NXi PFD and MFD
+    gps: true
+    autopilot: GFC 700
+    notes: The variant v1 lessons target (D-02).
+  - id: c172-classic
+    simName: Cessna 172 Skyhawk (classic) # verify the exact name and whether it has a GPS
+    avionics: Analog six-pack with NAV/COM radios
+    gps: false
+    autopilot: null
+    notes: Covered by "Classic panel" callouts where the flying differs.
+specs:
+  engine:
+    label: Engine
+    value: Lycoming IO-360-L2A, 4-cylinder, fuel-injected
+  horsepower:
+    label: Power
+    value: 180 hp at 2,700 RPM
+  propeller:
+    label: Propeller
+    value: Fixed-pitch, 2-blade
+  mtow:
+    label: Maximum takeoff weight
+    value: 2,550 lb (normal category)
+  wingspan:
+    label: Wingspan
+    value: 36 ft 1 in
+  length:
+    label: Length
+    value: 27 ft 2 in
+  height:
+    label: Height
+    value: 8 ft 11 in
+  seats:
+    label: Seats
+    value: '4'
+  fuelCapacity:
+    label: Fuel capacity
+    value: 56 US gal total, 53 US gal usable
+  fuelType:
+    label: Fuel type
+    value: 100LL avgas (blue)
+  oilCapacity:
+    label: Oil capacity
+    value: 8 US qt
+  cruiseTas:
+    label: Cruise speed (75% power)
+    value: 120–124 KTAS
+  fuelBurn:
+    label: Fuel burn (about 75% power)
+    value: 8.5–10 GPH (use 10 GPH for simple planning)
+  range:
+    label: Range with reserve
+    value: 500–640 nm depending on power and altitude
+  serviceCeiling:
+    label: Service ceiling
+    value: 14,000 ft
+  maxCrosswind:
+    label: Maximum demonstrated crosswind
+    value: 15 kt (demonstrated, not a limit)
+  flaps:
+    label: Flaps
+    value: 'Electric: 0°, 10°, 20°, 30°'
+  gear:
+    label: Landing gear
+    value: Fixed tricycle, nose wheel steered with the rudder pedals
+  glideRatio:
+    label: Glide ratio
+    value: About 9:1 (roughly 1.5 nm per 1,000 ft)
+vspeeds:
+  vso:
+    label: V_SO
+    meaning: Stall speed in the landing configuration (flaps 30°)
+    kias: 40
+    notes: Bottom of the white arc
+  vs1:
+    label: V_S1
+    meaning: Stall speed clean (flaps up)
+    kias: 48
+    notes: Bottom of the green arc
+  vr:
+    label: V_R
+    meaning: Rotation speed
+    kias: 55
+    notes: Normal takeoff
+  vx:
+    label: V_X
+    meaning: Best angle of climb
+    kias: 62
+    notes: Obstacle clearance, sea level
+  vy:
+    label: V_Y
+    meaning: Best rate of climb
+    kias: 74
+    notes: Normal climb, sea level
+  cruiseClimb:
+    label: Cruise climb
+    meaning: Better visibility and engine cooling
+    min: 75
+    max: 85
+  vg:
+    label: V_G
+    meaning: Best glide
+    kias: 68
+    notes: At maximum weight, flaps up
+  va:
+    label: V_A
+    meaning: Maneuvering speed at maximum weight
+    kias: 105
+    notes: 'Decreases with weight: 98 at 2,200 lb, 90 at 1,900 lb'
+  vfe10:
+    label: V_FE (10°)
+    meaning: Maximum speed with 10° flaps
+    kias: 110
+  vfe:
+    label: V_FE (10°–30°)
+    meaning: Maximum speed with more than 10° flaps
+    kias: 85
+    notes: Top of the white arc
+  vno:
+    label: V_NO
+    meaning: Maximum structural cruising speed
+    kias: 129
+    notes: Top of the green arc
+  vne:
+    label: V_NE
+    meaning: Never exceed speed
+    kias: 163
+    notes: Red line
+  approachFlapsUp:
+    label: Normal approach (flaps up)
+    meaning: Final approach speed without flaps
+    min: 65
+    max: 75
+  approachFlaps30:
+    label: Normal approach (flaps 30°)
+    meaning: Final approach speed with full flaps
+    min: 60
+    max: 70
+  approach:
+    label: Final approach target
+    meaning: Learn-To-Fly target speed on final with flaps 30°
+    kias: 65
+  shortFieldApproach:
+    label: Short-field approach (flaps 30°)
+    meaning: Final approach speed for a short-field landing
+    kias: 61
+  shortFieldLiftoff:
+    label: Short-field lift-off (flaps 10°)
+    meaning: Lift-off speed for a short-field takeoff
+    kias: 51
+  shortFieldObstacle:
+    label: Short-field obstacle climb (flaps 10°)
+    meaning: Climb speed until clear of obstacles
+    kias: 56
+  goAround:
+    label: Go-around (flaps 20°)
+    meaning: Balked-landing climb speed with full power
+    kias: 60
+arcs:
+  white:
+    - 40
+    - 85
+  green:
+    - 48
+    - 129
+  yellow:
+    - 129
+    - 163
+  redline: 163
+limits:
+  maneuveringSpeed:
+    - weightLb: 2550
+      kias: 105
+    - weightLb: 2200
+      kias: 98
+    - weightLb: 1900
+      kias: 90
+  maxDemonstratedCrosswindKt: 15
+# Rule-of-thumb training settings (Section 8.5) — not POH values. Adjust to hold the target.
+powerSettings:
+  - phase: Takeoff
+    rpm: Full (about 2,300–2,400 static)
+    flaps: 0°
+    targetSpeed: Rotate 55
+    pitch: About 10° nose up
+  - phase: Climb
+    rpm: Full
+    flaps: 0°
+    targetSpeed: 74 (Vy) or 75–85 cruise climb
+    pitch: About 7–10° up
+  - phase: Cruise
+    rpm: 2,300–2,400
+    flaps: 0°
+    targetSpeed: About 100–110 KIAS
+    pitch: About 0–2°
+  - phase: Cruise descent
+    rpm: 2,100–2,300
+    flaps: 0°
+    targetSpeed: 100–110
+    pitch: About −3°
+  - phase: Pattern downwind
+    rpm: About 2,000–2,100
+    flaps: 0°
+    targetSpeed: 85–90
+    pitch: Level
+  - phase: Abeam the touchdown point
+    rpm: About 1,500
+    flaps: 10° (below 110)
+    targetSpeed: '80'
+    pitch: Slightly nose down
+  - phase: Base
+    rpm: About 1,500
+    flaps: 20°
+    targetSpeed: '70'
+  - phase: Final
+    rpm: As needed
+    flaps: 30°
+    targetSpeed: 65 (60 on short final)
+  - phase: Slow flight
+    rpm: About 1,500–1,700
+    flaps: 30°
+    targetSpeed: About 50–55
+    pitch: High
+  - phase: Best glide
+    rpm: Idle
+    flaps: 0°
+    targetSpeed: '68'
+    pitch: About level to slightly nose down
+# W5 Pitch & Power table (Section 16.6). PROVISIONAL: generated from a simplified model
+# anchored on the plan's scenarios (cruise 2,300 RPM / 0° ≈ 105 kt level; Vy +8° ≈ 74 kt,
+# +700 fpm) — see Decision D-18. Replace every cell with numbers from your own steady-state
+# test flights in the sim (Section 7.2, step 6.24), then set verification.performanceModel.
+# Rows follow pitchDeg, columns follow rpm.
+performanceModel:
+  pitchDeg: [-10, -5, 0, 5, 10, 15]
+  rpm: [1500, 1800, 2100, 2400, 2700]
+  ias:
+    - [132, 141, 148, 155, 163]
+    - [100, 112, 122, 130, 137]
+    - [69, 84, 96, 105, 114]
+    - [48, 61, 73, 83, 93]
+    - [48, 48, 56, 66, 75]
+    - [48, 48, 48, 53, 61]
+  vs:
+    - [-1900, -1960, -2020, -2070, -2120]
+    - [-850, -800, -770, -750, -730]
+    - [-480, -210, -30, 110, 220]
+    - [-610, -140, 230, 520, 750]
+    - [-620, -260, 190, 600, 940]
+    - [-620, -260, 100, 520, 940]
+  source: Provisional model (Decision D-18), not yet flown in the sim
+verification:
+  specs:
+    verified: false
+    note: Check against the in-sim aircraft information and the POH.
+  vspeeds:
+    verified: false
+    note: Check every speed against the in-sim checklist.
+  arcs:
+    verified: false
+    note: Check the airspeed tape color bands in the sim.
+  limits:
+    verified: false
+  powerSettings:
+    verified: false
+    note: Fly each setting in the sim and adjust (Section 8.5).
+  performanceModel:
+    verified: false
+    note: Provisional numbers. Fly each pitch/RPM pair to a steady state and record IAS and VS.
+  variants:
+    verified: false
+    note: Record the exact variant names from the aircraft selection screen.
+verifiedAt: null
+simVersion: null

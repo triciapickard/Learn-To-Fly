@@ -1,0 +1,102 @@
+slug: c2-3-turns-to-headings
+code: C2.3
+title: Turns to headings
+module: m2-fundamentals
+lessons: [l2-4-turns-and-coordination]
+priority: P0
+type: manoeuvre
+difficulty: 2
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Fly coordinated turns to exact headings while holding a constant altitude.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: AIR_START
+  startDetails:
+    position: Over the Livermore valley, 3 nm north of KLVK
+    altitudeFt: 3500
+    headingDeg: 360
+    speedKias: 100
+    fallback: Start on the runway at KLVK, take off and climb to 3,500 ft MSL. Start the challenge when you are level on heading 360.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Before each turn, look in the direction of the turn. Hold 3,500 ft MSL throughout.
+  - Standard-rate left turn (about 17° of bank) to heading 270.
+  - Standard-rate right turn to heading 360.
+  - 30° bank right turn to heading 180.
+  - 30° bank left turn to heading 090.
+  - Start each rollout about half your bank angle before the target heading.
+
+criteria:
+  - id: rollout-heading
+    label: Rollout heading accuracy (worst of the four)
+    kind: tiered
+    tiers:
+      gold: Within ±10°
+      silver: Within ±15°
+      bronze: Within ±20°
+    required: true
+    weight: 3
+    reviewLink: { lesson: l2-4-turns-and-coordination, section: rolling-out-on-a-heading }
+  - id: altitude
+    label: Altitude during the turns
+    kind: tiered
+    tiers:
+      gold: Within ±100 ft
+      silver: Within ±150 ft
+      bronze: Within ±200 ft
+    required: true
+    weight: 3
+    reviewLink: { lesson: l2-4-turns-and-coordination, section: back-pressure-in-a-turn }
+  - id: bank-angle
+    label: Bank angle accuracy
+    kind: tiered
+    tiers:
+      gold: Within ±5°
+      silver: Within ±10°
+      bronze: Within ±15°
+    required: false
+    weight: 2
+  - id: coordination
+    label: Coordination (slip/skid bar centered)
+    kind: tiered
+    tiers:
+      gold: Mostly centered
+      silver: Occasional slips or skids
+      bronze: Often uncoordinated
+    required: false
+    weight: 1
+    reviewLink: { lesson: l2-4-turns-and-coordination, section: adverse-yaw-and-the-rudder }
+  - id: look-first
+    label: Looked in the direction of the turn before turning
+    kind: binary
+    required: false
+    weight: 1
+
+randomEvents: []
+
+commonMistakes:
+  - Losing altitude in the turns because of too little back pressure.
+  - Overshooting headings by rolling out too late.
+
+tips:
+  - Rollout lead is half the bank angle. In a 30° bank, start 15° early.
+
+debriefQuestions:
+  - id: altitude-in-turns
+    prompt: Did you lose or gain altitude in the turns? Why?

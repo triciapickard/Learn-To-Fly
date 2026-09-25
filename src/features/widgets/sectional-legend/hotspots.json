@@ -1,0 +1,151 @@
+{
+  "chart": {
+    "width": 720,
+    "height": 480,
+    "note": "Original simplified redraw of the area around Livermore, not the FAA chart. Frequencies and numbers are illustrative: check the current sectional and Chart Supplement."
+  },
+  "hotspots": [
+    {
+      "id": "lvk-airport",
+      "name": "Towered airport",
+      "legend": "Blue airport symbol with runways drawn inside",
+      "explanation": "Blue means the airport has a control tower. The runway layout is drawn inside the circle for hard-surfaced runways between 1,500 and 8,069 ft. The small ticks around the edge mean fuel and services are available.",
+      "rect": { "x": 282, "y": 197, "width": 36, "height": 36 }
+    },
+    {
+      "id": "lvk-data-block",
+      "name": "Airport data block",
+      "legend": "LIVERMORE (LVK) · CT – 118.1 ★ ATIS 119.65 · 400 L 53 122.95",
+      "explanation": "Name and identifier; CT is the control tower frequency (the star means it is part-time) and ATIS is the recorded weather. The last line gives the field elevation (400 ft), L for runway lighting, the longest runway in hundreds of feet (5,300 ft) and the UNICOM frequency.",
+      "rect": { "x": 192, "y": 108, "width": 104, "height": 56 }
+    },
+    {
+      "id": "class-d",
+      "name": "Class D boundary",
+      "legend": "Dashed blue line",
+      "explanation": "The Class D airspace around a towered airport. Establish two-way radio contact with the tower before you cross this line.",
+      "rect": { "x": 228, "y": 196, "width": 20, "height": 40 }
+    },
+    {
+      "id": "class-d-ceiling",
+      "name": "Class D ceiling",
+      "legend": "Number in a dashed blue box",
+      "explanation": "The top of the Class D in hundreds of feet MSL: 29 means 2,900 ft. A minus sign in front (−29) would mean up to but not including 2,900 ft.",
+      "rect": { "x": 334, "y": 252, "width": 30, "height": 24 }
+    },
+    {
+      "id": "class-b-label",
+      "name": "Class B floor and ceiling",
+      "legend": "100 over 40, in blue",
+      "explanation": "In this part of the Class B the airspace starts at 4,000 ft MSL and goes up to 10,000 ft MSL (hundreds of feet). Below 4,000 ft you are outside Class B.",
+      "rect": { "x": 164, "y": 58, "width": 40, "height": 44 }
+    },
+    {
+      "id": "class-b-boundary",
+      "name": "Class B boundary",
+      "legend": "Solid blue line",
+      "explanation": "The edge of a Class B shelf. Inside it, between the floor and ceiling, you need an ATC clearance.",
+      "rect": { "x": 138, "y": 318, "width": 26, "height": 54 }
+    },
+    {
+      "id": "class-e-vignette",
+      "name": "Class E from 700 ft",
+      "legend": "Faded magenta band",
+      "explanation": "Inside the fuzzy side of the band, Class E starts 700 ft above the ground instead of 1,200 ft. It marks airports with instrument approaches.",
+      "rect": { "x": 578, "y": 98, "width": 22, "height": 44 }
+    },
+    {
+      "id": "tcy-airport",
+      "name": "Non-towered airport",
+      "legend": "Magenta airport symbol",
+      "explanation": "Magenta means there is no control tower. Announce your position and intentions on the CTAF shown in the data block.",
+      "kind": "nontowered-airport",
+      "rect": { "x": 634, "y": 104, "width": 32, "height": 32 }
+    },
+    {
+      "id": "tcy-data-block",
+      "name": "CTAF",
+      "legend": "TRACY (TCY) · 193 L 40 122.8 Ⓒ",
+      "explanation": "At a non-towered airport the frequency marked with a C in a circle is the Common Traffic Advisory Frequency (CTAF): use it for your position reports.",
+      "rect": { "x": 606, "y": 36, "width": 104, "height": 42 }
+    },
+    {
+      "id": "private-airport",
+      "name": "Private airport",
+      "legend": "Magenta symbol with an R",
+      "explanation": "A private (restricted) airport: use only in an emergency or with the owner's permission.",
+      "kind": "nontowered-airport",
+      "rect": { "x": 450, "y": 408, "width": 30, "height": 30 }
+    },
+    {
+      "id": "mef",
+      "name": "Maximum elevation figure (MEF)",
+      "legend": "Large blue number with a smaller one: 3⁶",
+      "explanation": "The highest terrain or obstacle in this latitude-longitude box, rounded up: 3⁶ means 3,600 ft MSL. Stay above it and you clear everything in the box.",
+      "rect": { "x": 398, "y": 30, "width": 54, "height": 46 }
+    },
+    {
+      "id": "obstacle",
+      "name": "Obstacle",
+      "legend": "Tower symbol with 1520 and (620)",
+      "explanation": "The top of the obstacle is 1,520 ft MSL (bold) and 620 ft above the ground (in brackets). Towers can have guy wires spreading far from the tower.",
+      "rect": { "x": 506, "y": 222, "width": 50, "height": 60 }
+    },
+    {
+      "id": "vor",
+      "name": "VORTAC",
+      "legend": "Compass rose around a VORTAC symbol",
+      "explanation": "A VOR navigation station (a VORTAC also has military TACAN). The compass rose shows magnetic directions from the station, so you can read radials straight off the chart.",
+      "rect": { "x": 640, "y": 398, "width": 80, "height": 82 }
+    },
+    {
+      "id": "vor-box",
+      "name": "VOR information box",
+      "legend": "MANTECA 116.0 ECA",
+      "explanation": "The station's name, frequency and three-letter identifier. Tune the frequency and check the Morse code identifier before you use it.",
+      "rect": { "x": 528, "y": 438, "width": 108, "height": 32 }
+    },
+    {
+      "id": "victor-airway",
+      "name": "Victor airway",
+      "legend": "Faded blue line with V195",
+      "explanation": "A low-altitude airway between VORs, from 1,200 ft above the ground up to 17,999 ft. It is Class E airspace.",
+      "rect": { "x": 440, "y": 214, "width": 46, "height": 30 }
+    },
+    {
+      "id": "isogonic",
+      "name": "Isogonic line",
+      "legend": "Dashed magenta line with 14°E",
+      "explanation": "Magnetic variation along this line is 14° east. Subtract east variation to turn a true course into a magnetic course (east is least).",
+      "rect": { "x": 104, "y": 150, "width": 30, "height": 58 }
+    },
+    {
+      "id": "highway",
+      "name": "Highway",
+      "legend": "Double line with a route shield",
+      "explanation": "A good landmark for pilotage: big roads are easy to see from the air and easy to match to the chart.",
+      "rect": { "x": 468, "y": 150, "width": 34, "height": 28 }
+    },
+    {
+      "id": "railroad",
+      "name": "Railroad",
+      "legend": "Line with cross ticks",
+      "explanation": "Another landmark. Railroads run in long straight lines and gentle curves.",
+      "rect": { "x": 40, "y": 306, "width": 70, "height": 26 }
+    },
+    {
+      "id": "city",
+      "name": "Built-up area",
+      "legend": "Yellow shape",
+      "explanation": "The shape of a town or city as it looks from the air, especially at night. Keep at least 1,000 ft above the highest obstacle over congested areas.",
+      "rect": { "x": 346, "y": 196, "width": 90, "height": 48 }
+    },
+    {
+      "id": "lake",
+      "name": "Lake",
+      "legend": "Blue shape with a name",
+      "explanation": "Open water is one of the best landmarks: its shape is easy to recognize.",
+      "rect": { "x": 322, "y": 360, "width": 90, "height": 44 }
+    }
+  ]
+}

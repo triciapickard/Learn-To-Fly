@@ -1,0 +1,99 @@
+slug: c2-1-straight-and-level
+code: C2.1
+title: Straight and level
+module: m2-fundamentals
+lessons: [l2-2-attitude-flying-and-trim]
+priority: P0
+type: manoeuvre
+difficulty: 1
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Hold altitude and heading for three minutes, with light hands and the airplane trimmed.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: AIR_START
+  startDetails:
+    position: 5 nm east of KLVK, over the valley toward the Altamont Pass
+    altitudeFt: 3500
+    headingDeg: 90
+    speedKias: 100
+    fallback: Start on the runway at KLVK, take off and climb east to 3,500 ft MSL. Start the timer when you are level at 3,500 ft on heading 090.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Set about 2,300 RPM. Put the horizon in the cruise position on the glare shield.
+  - Trim until the airplane holds altitude with little or no pressure on the controls.
+  - Pick a landmark on the horizon at heading 090, such as the Altamont Pass wind farms.
+  - Hold 3,500 ft MSL and heading 090 for 3 minutes. Use the sim clock or a timer.
+  - Make a gentle turn to heading 270, re-trim, and hold 3,500 ft and heading 270 for another 2 minutes.
+
+criteria:
+  - id: altitude
+    label: Altitude held at 3,500 ft MSL
+    kind: tiered
+    tiers:
+      gold: Within ±100 ft
+      silver: Within ±150 ft
+      bronze: Within ±200 ft
+    required: true
+    weight: 3
+    reviewLink: { lesson: l2-2-attitude-flying-and-trim, section: trim-technique }
+  - id: heading
+    label: Heading held
+    kind: tiered
+    tiers:
+      gold: Within ±10°
+      silver: Within ±15°
+      bronze: Within ±20°
+    required: true
+    weight: 2
+  - id: airspeed
+    label: Airspeed stable
+    kind: tiered
+    tiers:
+      gold: Within ±10 kt
+      silver: Within ±15 kt
+      bronze: Within ±20 kt
+    required: false
+    weight: 1
+  - id: hands-off
+    label: Flew hands-off for 30 seconds after trimming, with altitude within ±100 ft
+    kind: binary
+    required: false
+    weight: 2
+  - id: lookout
+    label: Looked outside for traffic at least every 30 seconds
+    kind: binary
+    required: false
+    weight: 1
+
+randomEvents: []
+
+commonMistakes:
+  - Chasing the vertical speed indicator instead of holding a pitch attitude.
+  - Forgetting to set power after leveling off.
+  - Staring at the PFD instead of looking outside.
+
+tips:
+  - If you are constantly pushing forward, trim nose down.
+  - Make a small correction, then wait 3 seconds to see what it does.
+
+debriefQuestions:
+  - id: eyes
+    prompt: Where did you look most of the time?
+  - id: altitude-wander
+    prompt: What made your altitude wander, and what fixed it?

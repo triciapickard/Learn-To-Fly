@@ -1,0 +1,89 @@
+slug: c7-2-towered-departure-and-return-at-livermore
+code: C7.2
+title: Towered departure and return at Livermore
+module: m7-radio-airport-operations
+lessons: [l7-3-towered-airports-and-sim-atc]
+priority: P0
+type: communication
+difficulty: 4
+estimatedMinutes: 35
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Fly a full towered-airport sequence at Livermore with the sim's ATC — ATIS, ground,
+  tower, a departure to the practice area, the return, landing and taxi to parking.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RAMP_RUNNING
+  startDetails:
+    parking: Any ramp parking spot
+    fallback: If the sim starts you on the runway, taxi clear, then start from the call to ground.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: true
+  atc: true
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Listen to the ATIS and note the letter.
+  - Call ground, ask to taxi for an eastbound VFR departure, and read back the runway and any hold short instruction.
+  - Taxi, do the run-up, then call the tower ready for departure.
+  - Take off, depart to the east and fly for about 5 minutes.
+  - Turn back and call the tower about 10 nm out, with the ATIS letter.
+  - Follow the tower's instructions for the pattern, and land only once you're cleared.
+  - Clear the runway, contact ground and taxi to parking.
+
+criteria:
+  - id: atis
+    label: Had the current ATIS before the first call
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l7-3-towered-airports-and-sim-atc, section: the-sequence }
+  - id: readbacks
+    label: Correct read-backs of taxi, hold short and runway instructions
+    kind: tiered
+    tiers:
+      gold: All of them
+      silver: 1 missed
+      bronze: 2 missed
+    required: true
+    weight: 3
+    reviewLink: { lesson: l7-3-towered-airports-and-sim-atc, section: read-backs }
+  - id: followed
+    label: Followed every ATC instruction
+    kind: binary
+    required: true
+    weight: 3
+  - id: frequency-changes
+    label: Changed frequency promptly
+    kind: binary
+    required: false
+    weight: 1
+  - id: landing
+    label: Pattern and landing (C4.3 Bronze or better)
+    kind: binary
+    required: true
+    weight: 2
+
+randomEvents: []
+
+commonMistakes:
+  - Calling ground before listening to the ATIS.
+  - Crossing a hold short line without clearance.
+  - Entering the Class D before the tower has answered with your call sign.
+
+tips:
+  - Before each call, say it once in your head.
+
+debriefQuestions:
+  - id: sim-vs-real
+    prompt: Where did the sim's ATC differ from what you learned in Lesson 7.3?

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn-To-Fly — Learn to fly the Cessna 172 in MSFS 2024</title>
+    <meta
+      name="description"
+      content="Learn to fly the Cessna 172 in Microsoft Flight Simulator 2024 the way real pilots do, with short interactive lessons and in-sim challenges."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#f7f9fc" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)" />
+    <meta property="og:image" content="/og-image.png" />
+    <!-- Apply the saved theme before first paint to avoid a flash (Section 31.5). -->
+    <script>
+      (function () {
+        var theme = 'light';
+        try {
+          var p = localStorage.getItem('ltf-theme');
+          var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          theme = p === 'dark' || ((!p || p === 'system') && dark) ? 'dark' : 'light';
+        } catch (e) {}
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

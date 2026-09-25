@@ -1,0 +1,492 @@
+# Normal procedure checklists for the Cessna 172S in MSFS 2024 (plan.md Appendix B).
+# A simplified training summary written in our own words for the simulator — NOT a copy
+# of the POH. Every item must be verified against the MSFS 2024 in-sim checklist for the
+# G1000 NXi variant before `verifiedAt` is set (Section 54). Items with a `note` starting
+# "Verify" are known uncertainties.
+checklists:
+  - slug: preflight
+    title: Preflight (simplified for the sim)
+    phase: Preflight inspection
+    order: 1
+    mode: read-do
+    aircraftSlug: c172
+    items:
+      - id: parking-brake
+        item: Parking brake
+        action: SET
+      - id: walkaround
+        item: Walkaround
+        action: COMPLETE
+        note: Control surfaces free, no damage, tie-downs, chocks and pitot cover removed (if the sim models them), tires OK. Use the sim's walkaround mode if available.
+      - id: fuel-quantity
+        item: Fuel quantity
+        action: CHECK both tanks
+        note: Visually in the sim, or on the EIS after the master switch is on.
+      - id: oil
+        item: Oil
+        action: CHECK
+        note: If modeled.
+    verifiedAt: null
+
+  - slug: before-starting-engine
+    title: Before starting engine
+    phase: Before starting engine
+    order: 2
+    mode: read-do
+    aircraftSlug: c172
+    items:
+      - id: preflight
+        item: Preflight
+        action: COMPLETE
+      - id: seat-belts
+        item: Seat and belts
+        action: ADJUSTED and FASTENED
+      - id: parking-brake
+        item: Parking brake
+        action: SET
+      - id: circuit-breakers
+        item: Circuit breakers
+        action: CHECK IN
+        note: If modeled.
+      - id: avionics-master
+        item: Electrical equipment and avionics master
+        action: 'OFF'
+      - id: fuel-selector
+        item: Fuel selector
+        action: BOTH
+      - id: fuel-shutoff
+        item: Fuel shutoff valve
+        action: ON (pushed in)
+        note: If modeled.
+      - id: master-switch
+        item: Master switch (ALT and BAT)
+        action: 'ON'
+        note: Check fuel quantity and annunciators.
+    verifiedAt: null
+
+  - slug: starting-engine
+    title: Starting engine
+    phase: Starting engine
+    order: 3
+    mode: read-do
+    aircraftSlug: c172
+    items:
+      - id: throttle-open
+        item: Throttle
+        action: OPEN about ¼ inch
+        note: Or as the in-sim checklist says.
+      - id: mixture-start
+        item: Mixture
+        action: AS PER CHECKLIST
+        note: Verify — often IDLE CUT-OFF until the engine fires on the fuel-injected 172S, then RICH. Follow the sim's expected sequence.
+      - id: fuel-pump
+        item: Auxiliary fuel pump
+        action: 'ON briefly to prime, then OFF'
+        note: Verify against the in-sim checklist.
+      - id: beacon
+        item: Beacon light
+        action: 'ON'
+      - id: prop-clear
+        item: Propeller area
+        action: CLEAR
+        note: Say "Clear!"
+      - id: ignition-start
+        item: Ignition switch
+        action: START
+        note: Release to BOTH when the engine starts.
+      - id: mixture-rich
+        item: Mixture
+        action: RICH
+        note: 'Smoothly, as the engine starts, if started from cut-off.'
+      - id: oil-pressure
+        item: Oil pressure
+        action: CHECK rising within about 30 seconds
+      - id: throttle-1000
+        item: Throttle
+        action: 'About 1,000 RPM'
+    verifiedAt: null
+
+  - slug: before-taxi
+    title: Before taxi
+    phase: Before taxi
+    order: 4
+    mode: read-do
+    aircraftSlug: c172
+    items:
+      - id: avionics-master
+        item: Avionics master
+        action: 'ON'
+      - id: flaps
+        item: Flaps
+        action: RETRACT
+        note: And check they operate.
+      - id: lights
+        item: Navigation and taxi lights
+        action: ON as required
+      - id: altimeter
+        item: Altimeter
+        action: SET
+      - id: atis
+        item: ATIS or weather
+        action: OBTAIN
+      - id: transponder
+        item: Transponder
+        action: STANDBY or ON as appropriate, code 1200 (VFR)
+        note: Verify the G1000 transponder mode names in the sim.
+      - id: frequencies
+        item: COM and NAV frequencies
+        action: SET
+      - id: taxi-clearance
+        item: Taxi clearance (towered airports)
+        action: OBTAIN
+      - id: brakes
+        item: Brakes
+        action: CHECK as soon as the airplane moves
+    verifiedAt: null
+
+  - slug: before-takeoff
+    title: Before takeoff (run-up)
+    phase: Before takeoff
+    order: 5
+    mode: read-do
+    aircraftSlug: c172
+    items:
+      - id: parking-brake
+        item: Parking brake
+        action: SET
+        note: 'Position into wind, clear of other aircraft.'
+      - id: doors
+        item: Cabin doors
+        action: CLOSED and LATCHED
+      - id: flight-controls
+        item: Flight controls
+        action: FREE and CORRECT
+      - id: instruments
+        item: Flight instruments
+        action: CHECK
+        note: 'PFD, standby instruments, no red flags.'
+      - id: fuel-selector
+        item: Fuel selector
+        action: BOTH
+      - id: mixture
+        item: Mixture
+        action: RICH
+        note: Lean for smoothness only at high-elevation airports.
+      - id: trim
+        item: Elevator trim
+        action: SET for takeoff
+      - id: throttle-1800
+        item: Throttle
+        action: '1,800 RPM'
+        note: Verify the run-up RPM in the in-sim checklist.
+      - id: magnetos
+        item: Magnetos
+        action: CHECK L, BOTH, R, BOTH
+        note: Verify limits — typically no more than 150 RPM drop on each and 50 RPM difference between them.
+      - id: engine-instruments
+        item: Engine instruments and ammeter or voltage
+        action: CHECK in the green
+      - id: idle
+        item: Throttle
+        action: IDLE
+        note: 'Check the engine idles smoothly, then about 1,000 RPM.'
+      - id: flaps
+        item: Flaps
+        action: SET 0°–10°
+      - id: lights
+        item: Strobe and landing lights
+        action: 'ON'
+      - id: transponder
+        item: Transponder
+        action: ALT
+        note: Or as required for the sim's ATC.
+      - id: briefing
+        item: Takeoff briefing
+        action: COMPLETE
+    verifiedAt: null
+
+  - slug: normal-takeoff
+    title: Normal takeoff
+    phase: Takeoff
+    order: 6
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: flaps
+        item: Flaps
+        action: '0°–10°'
+      - id: throttle-full
+        item: Throttle
+        action: FULL smoothly
+        note: Mixture RICH.
+      - id: gauges
+        item: Engine gauges and airspeed
+        action: CHECK
+        note: Call "airspeed alive".
+      - id: rotate
+        item: Rotate
+        action: Lift the nose wheel at 55 KIAS
+      - id: climb-speed
+        item: Climb speed
+        action: 70–80 KIAS initially, then Vy 74 KIAS
+        note: Verify the phrasing against the in-sim checklist.
+      - id: flaps-up
+        item: Flaps
+        action: RETRACT if extended
+        note: At a safe altitude and speed.
+    verifiedAt: null
+
+  - slug: climb
+    title: Climb
+    phase: Climb
+    order: 7
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: airspeed
+        item: Airspeed
+        action: '75–85 KIAS cruise climb, or Vy 74 KIAS'
+      - id: throttle
+        item: Throttle
+        action: FULL
+      - id: mixture
+        item: Mixture
+        action: RICH
+        note: 'Verify — lean above about 3,000 ft for smooth running if appropriate.'
+    verifiedAt: null
+
+  - slug: cruise
+    title: Cruise
+    phase: Cruise
+    order: 8
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: power
+        item: Power
+        action: '2,100–2,700 RPM'
+        note: Verify — no more than 75% power is recommended.
+      - id: trim
+        item: Elevator trim
+        action: ADJUST
+      - id: mixture
+        item: Mixture
+        action: LEAN
+        note: 'Lean to peak EGT, then enrich slightly (simplified in v1).'
+    verifiedAt: null
+
+  - slug: descent
+    title: Descent
+    phase: Descent
+    order: 9
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: power
+        item: Power
+        action: AS DESIRED
+      - id: mixture
+        item: Mixture
+        action: ENRICH progressively as you descend
+      - id: altimeter
+        item: Altimeter
+        action: SET to the local setting
+      - id: fuel-selector
+        item: Fuel selector
+        action: BOTH
+    verifiedAt: null
+
+  - slug: before-landing
+    title: Before landing
+    phase: Before landing
+    order: 10
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: seat-belts
+        item: Seat and belts
+        action: SECURE
+      - id: fuel-selector
+        item: Fuel selector
+        action: BOTH
+      - id: mixture
+        item: Mixture
+        action: RICH
+      - id: lights
+        item: Landing and taxi lights
+        action: 'ON'
+      - id: autopilot
+        item: Autopilot
+        action: 'OFF'
+    verifiedAt: null
+
+  - slug: normal-landing
+    title: Normal landing
+    phase: Landing
+    order: 11
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: airspeed
+        item: Airspeed
+        action: '65–75 KIAS flaps up, 60–70 KIAS flaps 30°'
+      - id: flaps
+        item: Flaps
+        action: AS REQUIRED
+        note: '10° below 110 KIAS; more than 10° only below 85 KIAS.'
+      - id: stabilized
+        item: Stabilized approach
+        action: BY 300 ft AGL
+        note: 'The Learn-To-Fly standard. If not stabilized, go around.'
+      - id: touchdown
+        item: Touchdown
+        action: Main wheels first
+      - id: landing-roll
+        item: Landing roll
+        action: Lower the nose wheel gently
+      - id: braking
+        item: Braking
+        action: AS REQUIRED
+    verifiedAt: null
+
+  - slug: short-field-landing
+    title: Short-field landing (bonus)
+    phase: Landing
+    order: 12
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: airspeed-initial
+        item: Airspeed
+        action: '65–75 KIAS flaps up'
+      - id: flaps
+        item: Flaps
+        action: FULL (30°)
+      - id: airspeed-final
+        item: Airspeed
+        action: '61 KIAS until the flare'
+        note: Verify against the in-sim checklist.
+      - id: power
+        item: Power
+        action: IDLE as the obstacle is cleared
+      - id: touchdown
+        item: Touchdown
+        action: Main wheels first
+      - id: brakes
+        item: Brakes
+        action: APPLY heavily
+      - id: flaps-up
+        item: Flaps
+        action: RETRACT
+        note: Verify — for braking effectiveness.
+    verifiedAt: null
+
+  - slug: go-around
+    title: Balked landing (go-around)
+    phase: Go-around
+    order: 13
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: throttle
+        item: Throttle
+        action: FULL
+      - id: flaps-20
+        item: Flaps
+        action: RETRACT to 20° immediately
+      - id: climb-speed
+        item: Climb speed
+        action: '60 KIAS'
+        note: Verify against the in-sim checklist.
+      - id: flaps-up
+        item: Flaps
+        action: 'RETRACT to 10°, then 0°'
+        note: 'Slowly, at a safe altitude with a positive climb.'
+    verifiedAt: null
+
+  - slug: after-landing
+    title: After landing
+    phase: After landing
+    order: 14
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: clear-runway
+        item: Runway
+        action: CLEAR completely
+        note: Past the hold short line.
+      - id: flaps
+        item: Flaps
+        action: UP
+      - id: transponder
+        item: Transponder
+        action: STANDBY or ground mode
+        note: Verify the G1000 mode name.
+      - id: lights
+        item: Landing and strobe lights
+        action: 'OFF'
+        note: Taxi light on as required.
+    verifiedAt: null
+
+  - slug: securing-airplane
+    title: Securing the airplane (shutdown)
+    phase: Shutdown
+    order: 15
+    mode: read-do
+    aircraftSlug: c172
+    items:
+      - id: parking-brake
+        item: Parking brake
+        action: SET
+      - id: throttle
+        item: Throttle
+        action: 'IDLE (about 1,000 RPM)'
+      - id: avionics-master
+        item: Electrical equipment and avionics master
+        action: 'OFF'
+      - id: mixture
+        item: Mixture
+        action: IDLE CUT-OFF (pulled fully out)
+      - id: ignition
+        item: Ignition switch
+        action: 'OFF'
+        note: After the engine stops.
+      - id: master-switch
+        item: Master switch
+        action: 'OFF'
+      - id: fuel-selector
+        item: Fuel selector
+        action: LEFT or RIGHT
+        note: Verify — to prevent cross-feeding.
+      - id: control-lock
+        item: Control lock and tie-downs
+        action: INSTALL
+        note: If modeled.
+    verifiedAt: null
+
+  - slug: engine-failure-in-flight
+    title: Engine failure in flight (memory items)
+    phase: Emergency
+    order: 16
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: airspeed
+        item: Airspeed
+        action: '68 KIAS best glide, TRIM'
+      - id: best-field
+        item: Best field
+        action: CHOOSE
+        note: 'Within glide range, into wind.'
+      - id: restart
+        item: Restart checklist
+        action: Fuel selector BOTH, mixture RICH, fuel pump ON, ignition BOTH
+        note: Verify — use START if the propeller has stopped.
+      - id: declare
+        item: Declare the emergency
+        action: '121.5 MHz or current frequency, squawk 7700'
+      - id: secure-engine
+        item: If no restart, secure the engine
+        action: Mixture cut-off, fuel OFF, ignition OFF, master OFF
+        note: Verify — master off only after the flaps are set.
+    verifiedAt: null

@@ -1,0 +1,13 @@
+airports:
+  - icao: KLVK
+    name: Livermore
+    city: Livermore
+    elevationFt: 400
+    airspaceClass: D
+    towered: yes-please
+    role: training
+    runways:
+      - designator: 7L/25R
+    links:
+      skyvector: https://skyvector.com/airport/KLVK
+      airnav: https://www.airnav.com/airport/KLVK

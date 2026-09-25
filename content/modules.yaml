@@ -1,0 +1,172 @@
+# The nine v1 modules (plan.md Section 13). `lessons` and `challenges` list slugs in
+# curriculum order; add each slug here when its file is written (Phase 9).
+modules:
+  - slug: m0-getting-started
+    code: M0
+    order: 0
+    title: Getting started
+    summary: Set up MSFS 2024 for training and take your first flight.
+    description: >
+      How Learn-To-Fly works, how to set up controls and assistance options so the sim
+      teaches you instead of flying for you, and a first gentle flight over Livermore.
+    icon: play
+    lessons:
+      - l0-1-welcome-how-learn-to-fly-works
+      - l0-2-setting-up-msfs-2024-for-training
+      - l0-3-your-first-flight
+    challenges: [c0-1-first-flight-over-livermore]
+    estimatedMinutes: 60
+  - slug: m1-meet-the-skyhawk
+    code: M1
+    order: 1
+    title: Meet the Skyhawk
+    summary: Controls, the G1000 cockpit, engine, fuel, speeds and checklists.
+    description: >
+      Get to know the airplane before you fly it: the flight controls, the G1000 displays,
+      the engine, fuel and electrical systems, the V-speeds and how professional pilots use
+      checklists.
+    icon: plane
+    lessons:
+      - l1-1-the-airframe-and-flight-controls
+      - l1-2-the-cockpit-g1000-pfd-and-mfd
+      - l1-3-engine-fuel-and-electrical-systems
+      - l1-4-speeds-limits-and-checklists
+    challenges: [c1-1-cockpit-scavenger-hunt]
+    estimatedMinutes: 90
+  - slug: m2-fundamentals
+    code: M2
+    order: 2
+    title: Fundamentals of flight
+    summary: Straight and level, climbs, descents and coordinated turns.
+    description: >
+      The four fundamentals every maneuver is built from. Learn how a wing works, fly by
+      attitude and trim, and turn with the ball centered.
+    icon: gauge
+    lessons:
+      - l2-1-four-forces-and-how-a-wing-works
+      - l2-2-attitude-flying-and-trim
+      - l2-3-climbs-and-descents
+      - l2-4-turns-and-coordination
+    challenges:
+      - c2-1-straight-and-level
+      - c2-2-climbs-and-descents
+      - c2-3-turns-to-headings
+      - c2-4-the-box
+    estimatedMinutes: 180
+  - slug: m3-ground-operations
+    code: M3
+    order: 3
+    title: Ground operations
+    summary: Preflight, engine start, taxiing and the run-up.
+    description: >
+      Everything between cold and dark and lining up on the runway: preflight, engine start,
+      reading airport signs and markings, taxiing and the run-up.
+    icon: clipboard-list
+    lessons:
+      - l3-1-preflight-and-engine-start
+      - l3-2-taxiing-signs-and-markings
+      - l3-3-run-up-before-takeoff-and-after-landing
+    challenges:
+      - c3-1-cold-and-dark-to-running
+      - c3-2-taxi-to-the-runway-at-klvk
+      - c3-3-run-up
+      - c3-4-after-landing-and-shutdown
+    estimatedMinutes: 120
+  - slug: m4-takeoffs-patterns-landings
+    code: M4
+    order: 4
+    title: Takeoffs, patterns and landings
+    summary: Take off, fly the traffic pattern, land and go around.
+    description: >
+      Get into the air and back down again: normal takeoffs, the rectangular traffic
+      pattern, stabilized approaches, landings and go-arounds.
+    icon: plane-landing
+    lessons:
+      - l4-1-normal-takeoff-and-climb
+      - l4-2-the-traffic-pattern
+      - l4-3-normal-approach-and-landing
+      - l4-4-go-arounds
+    challenges:
+      - c4-1-normal-takeoff-and-departure
+      - c4-2-fly-the-pattern
+      - c4-3-full-stop-landing
+      - c4-4-go-around
+      - c4-7-three-circuit-session
+    estimatedMinutes: 270
+  - slug: m5-slow-flight-stalls-emergencies
+    code: M5
+    order: 5
+    title: Slow flight, stalls and emergencies
+    summary: Handle the edges of the envelope and an engine failure.
+    description: >
+      Fly slowly and precisely, recognize and recover from stalls, understand load factor in
+      steep turns and handle an engine failure calmly.
+    icon: triangle-alert
+    lessons:
+      - l5-1-slow-flight
+      - l5-2-stalls-power-off-and-power-on
+      - l5-3-steep-turns-and-load-factor
+      - l5-4-engine-failure-and-forced-landings
+    challenges:
+      - c5-1-slow-flight
+      - c5-2-power-off-stall
+      - c5-3-power-on-stall
+      - c5-4-steep-turns
+      - c5-5-engine-failure
+    estimatedMinutes: 210
+  - slug: m6-vfr-navigation
+    code: M6
+    order: 6
+    title: VFR navigation
+    summary: Charts, airspace, pilotage, dead reckoning, VOR and GPS.
+    description: >
+      Read a sectional chart, understand the airspace around the Bay Area and navigate with
+      landmarks, calculations, a VOR and the G1000 GPS — then plan a cross-country flight.
+    icon: compass
+    lessons:
+      - l6-1-reading-a-sectional-chart
+      - l6-2-airspace
+      - l6-3-pilotage-and-dead-reckoning
+      - l6-4-vor-navigation
+      - l6-5-gps-navigation-with-the-g1000
+      - l6-6-planning-a-cross-country-flight
+    challenges:
+      - c6-1-landmark-hunt
+      - c6-2-pilotage-to-tracy
+      - c6-3-dead-reckoning-to-half-moon-bay
+      - c6-4-vor-tracking
+      - c6-5-g1000-flight-plan
+    estimatedMinutes: 300
+  - slug: m7-radio-airport-operations
+    code: M7
+    order: 7
+    title: Radio and airport operations
+    summary: Radio calls at non-towered and towered airports.
+    description: >
+      Talk like a pilot: the phonetic alphabet, self-announcing at non-towered airports and
+      working with the tower and the sim's ATC.
+    icon: radio
+    lessons:
+      - l7-1-radio-basics-and-the-phonetic-alphabet
+      - l7-2-non-towered-airports-ctaf
+      - l7-3-towered-airports-and-sim-atc
+    challenges:
+      - c7-1-ctaf-pattern-at-tracy
+      - c7-2-towered-departure-and-return-at-livermore
+    estimatedMinutes: 120
+  - slug: m8-capstone
+    code: M8
+    order: 8
+    title: Capstone
+    summary: Decision making, a local checkride and a cross-country flight.
+    description: >
+      Put it all together: make good go/no-go decisions, fly a local checkride and plan and
+      fly a cross-country capstone flight.
+    icon: award
+    lessons:
+      - l8-1-decision-making-and-personal-minimums
+      - l8-2-preparing-for-your-checkride
+    challenges:
+      - c8-1-local-checkride
+      - c8-2-cross-country-capstone
+    estimatedMinutes: 150

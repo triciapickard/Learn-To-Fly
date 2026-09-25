@@ -1,0 +1,9 @@
+terms:
+  - slug: vy
+    term: Vy
+    definition: Best rate of climb.
+  - slug: best-rate
+    term: Best rate of climb
+    aliases: [VY]
+    definition: Same as Vy.
+    related: [nonexistent-term]
