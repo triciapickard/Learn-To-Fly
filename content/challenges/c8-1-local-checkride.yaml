@@ -1,0 +1,154 @@
+slug: c8-1-local-checkride
+code: C8.1
+title: Local checkride
+module: m8-capstone
+lessons: [l8-2-preparing-for-your-checkride]
+priority: P0
+type: capstone
+difficulty: 4
+estimatedMinutes: 60
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  A "checkride" around Livermore — the core maneuvers, in order, in one continuous flight
+  from a cold-and-dark start to shutdown.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: COLD_DARK
+  startDetails:
+    parking: Any ramp parking spot
+    fallback: If the sim can't start cold and dark, start with the engine running and do the shutdown checklist first.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: true
+  atc: true
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Start the timer. Cold-and-dark start, using the checklists.
+  - Taxi, run-up and takeoff briefing.
+  - Normal takeoff and departure to the practice area east of Livermore.
+  - Steep turns — 360° left, then 360° right, at 45° of bank.
+  - Slow flight, including a gentle turn, then recover.
+  - Power-off stall and recovery.
+  - Engine failure — when the page beeps, set the mixture to idle cut-off, fly the ABCDE flow and glide toward a field. At 500 ft above the ground, set the mixture rich, add power and climb away. If the beep comes during another maneuver, finish that maneuver first.
+  - Return to Livermore with ATC and join the pattern as instructed.
+  - Normal landing. If the page has told you to go around, go around once from short final and land from the second approach.
+  - Taxi to parking and shut down.
+
+criteria:
+  - id: ground-ops
+    label: Ground operations — cold-and-dark start, taxi, run-up, briefing and shutdown, with the checklists
+    kind: tiered
+    tiers:
+      gold: Every item, in order
+      silver: 1 item missed
+      bronze: 2 items missed
+    required: false
+    weight: 2
+    reviewLink: { lesson: l3-3-run-up-before-takeoff-and-after-landing, section: the-engine-run-up }
+  - id: takeoff
+    label: Normal takeoff and departure (C4.1 tolerances)
+    kind: tiered
+    tiers:
+      gold: C4.1 Gold
+      silver: C4.1 Silver
+      bronze: C4.1 Bronze
+    required: true
+    weight: 2
+    reviewLink: { lesson: l4-1-normal-takeoff-and-climb, section: rotate-and-climb }
+  - id: steep-turns
+    label: Steep turns (C5.4 tolerances)
+    kind: tiered
+    tiers:
+      gold: C5.4 Gold
+      silver: C5.4 Silver
+      bronze: C5.4 Bronze
+    required: true
+    weight: 2
+    reviewLink: { lesson: l5-3-steep-turns-and-load-factor, section: flying-a-steep-turn }
+  - id: slow-flight
+    label: Slow flight (C5.1 tolerances)
+    kind: tiered
+    tiers:
+      gold: C5.1 Gold
+      silver: C5.1 Silver
+      bronze: C5.1 Bronze
+    required: false
+    weight: 2
+    reviewLink: { lesson: l5-1-slow-flight, section: getting-into-slow-flight }
+  - id: stall
+    label: Power-off stall (C5.2 tolerances)
+    kind: tiered
+    tiers:
+      gold: C5.2 Gold
+      silver: C5.2 Silver
+      bronze: C5.2 Bronze
+    required: true
+    weight: 2
+    reviewLink: { lesson: l5-2-stalls-power-off-and-power-on, section: the-recovery-sequence }
+  - id: engine-failure
+    label: Engine failure (C5.5 tolerances)
+    kind: tiered
+    tiers:
+      gold: C5.5 Gold
+      silver: C5.5 Silver
+      bronze: C5.5 Bronze
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-4-engine-failure-and-forced-landings, section: a-airspeed }
+  - id: return
+    label: Return with ATC and pattern entry (C7.2 read-backs)
+    kind: tiered
+    tiers:
+      gold: All calls and read-backs correct
+      silver: 1 missed
+      bronze: 2 missed
+    required: false
+    weight: 2
+    reviewLink: { lesson: l7-3-towered-airports-and-sim-atc, section: coming-back }
+  - id: landing
+    label: Landing, with a go-around if asked (C4.3 and C4.4 tolerances)
+    kind: tiered
+    tiers:
+      gold: C4.3 Gold
+      silver: C4.3 Silver
+      bronze: C4.3 Bronze
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-3-normal-approach-and-landing, section: the-stabilized-approach }
+
+randomEvents:
+  - id: engine-failure
+    label: Engine failure
+    minSeconds: 1200
+    maxSeconds: 1800
+    message: Examiner — "Simulated engine failure." Finish the maneuver you're on if you're mid-maneuver, then set the mixture to idle cut-off and fly the ABCDE flow. Recover at 500 ft above the ground.
+  - id: go-around
+    label: Go-around
+    minSeconds: 2100
+    maxSeconds: 2700
+    chance: 0.5
+    message: Examiner — "On your approach to Livermore, go around once from short final, then land from the second approach."
+
+commonMistakes:
+  - Rushing the checklists at the start because the flight feels long.
+  - Starting a maneuver without a clearing turn.
+  - Forgetting the ATIS before calling the tower on the return.
+
+tips:
+  - Tick each step on the page as you finish it. The page records the time, which helps you debrief.
+
+debriefQuestions:
+  - id: examiner-fail
+    prompt: Which step would an examiner have failed you on, and why?
+  - id: practice-next
+    prompt: What will you practice next?

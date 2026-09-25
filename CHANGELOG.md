@@ -95,6 +95,9 @@ All notable changes to this project are documented here. The format is based on
 - Phase 9 · Module 7 content (drafts): L7.1 Radio basics and the phonetic alphabet, L7.2
   Non-towered airports (CTAF), L7.3 Towered airports and sim ATC, and challenges C7.1 CTAF
   pattern at Tracy and C7.2 Towered departure and return at Livermore.
+- Phase 9 · Module 8 content (drafts): L8.1 Decision making and personal minimums, L8.2
+  Preparing for your checkride, and challenges C8.1 Local checkride and C8.2 Cross-country
+  capstone. Every P0 lesson and challenge is now drafted (D-21, D-22).
 
 ### Fixed
 

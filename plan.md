@@ -598,6 +598,25 @@ revisited, but should not be changed silently.
   screenshots (Section 49.5), set `published: true`, `lastVerifiedAt` and `simVersion`,
   and tick Section 49.4.
 
+### D-22 — Small challenge spec changes made while drafting (Phase 9)
+
+- **Problem:** A few Section 15 specs didn't fit the schema, the airspace or their own
+  intent once written out.
+- **Decision:**
+  - **C8.1** lists 10 criteria, but challenges have 3–8 (Section 27.5). The start, taxi and
+    run-up, and shutdown steps are merged into one optional "Ground operations" criterion,
+    giving 8. The required set (takeoff, steep turns, power-off stall, engine failure,
+    landing) and weights are unchanged. The engine failure and the 50% go-around are
+    random events, and the Fly tab's step ticks record the time of each step.
+  - **C6.4** starts 10 nm **south** of Manteca VOR (ECA) instead of north, because north of
+    ECA is inside the Stockton Class C.
+  - **C6.5** flies KLVK → KTCY → C83 → KLVK so that "Direct-To C83" skips a waypoint; on
+    the spec's KLVK → C83 → KLVK it would repeat the active leg. Direct-To and NRST
+    prompts are random events.
+  - **C5.5**'s "Fail engine in 30–180 s" button is the existing random-event timer.
+  - Crash damage is **on** for every challenge from Module 4 onward (Section 15.1).
+- **To finish:** confirm each change when the challenge is flown in the sim.
+
 ---
 
 # Part II — Learning the Cessna 172 (for you, the author)
