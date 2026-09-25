@@ -9,8 +9,11 @@ type WidgetComponent = LazyExoticComponent<ComponentType<WidgetProps>>;
  * lessons without widgets don't download them (Section 16.1).
  */
 export const widgetRegistry: Partial<Record<WidgetName, WidgetComponent>> = {
+  'control-surfaces': lazy(() => import('./control-surfaces/ControlSurfaces')),
   'airspeed-indicator': lazy(() => import('./airspeed-indicator/AirspeedIndicator')),
   'checklist-runner': lazy(() => import('./checklist-runner/ChecklistRunnerWidget')),
+  'turn-coordinator': lazy(() => import('./turn-coordinator/TurnCoordinator')),
+  'load-factor': lazy(() => import('./load-factor/LoadFactor')),
 };
 
 export const WIDGET_TITLES: Record<WidgetName, string> = {

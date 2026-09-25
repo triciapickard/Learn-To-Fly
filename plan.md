@@ -6036,9 +6036,9 @@ keyboard/ARIA → quiz mode → text alternative → embed in its lesson → rev
 
 - [x] 6.18 W3 Airspeed Indicator (uses `aircraft.yaml` arcs).
 - [x] 6.19 W16 Checklist Runner (uses `checklists.yaml`).
-- [ ] 6.20 W1 Control Surfaces Explorer.
-- [ ] 6.21 W6 Turn Coordinator & Slip Ball.
-- [ ] 6.22 W14 Bank vs Load Factor.
+- [x] 6.20 W1 Control Surfaces Explorer.
+- [x] 6.21 W6 Turn Coordinator & Slip Ball.
+- [x] 6.22 W14 Bank vs Load Factor.
 - [ ] 6.23 W4 Angle of Attack & Lift.
 - [ ] 6.24 W5 Pitch & Power Trainer (after collecting pitch/power data in the sim during
       the Week 2 study flights in Section 7.2).

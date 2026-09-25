@@ -11,7 +11,10 @@ function page(load: () => Promise<PageModule>): Pick<RouteObject, 'lazy'> {
 }
 
 const devRoutes: RouteObject[] = import.meta.env.DEV
-  ? [{ path: 'dev/components', ...page(() => import('./pages/DevComponentsPage')) }]
+  ? [
+      { path: 'dev/components', ...page(() => import('./pages/DevComponentsPage')) },
+      { path: 'dev/widgets', ...page(() => import('./pages/DevWidgetsPage')) },
+    ]
   : [];
 
 export const routes: RouteObject[] = [
