@@ -93,6 +93,17 @@
       transform: scale(1);
     }
   }
+
+  /* Warnings pulse a ring, never the text, so contrast holds throughout (Section 17). */
+  --animate-warning-pulse: warning-pulse 1.2s ease-in-out infinite;
+  @keyframes warning-pulse {
+    0% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-danger) 70%, transparent);
+    }
+    100% {
+      box-shadow: 0 0 0 8px transparent;
+    }
+  }
 }
 
 [data-theme='dark'] {

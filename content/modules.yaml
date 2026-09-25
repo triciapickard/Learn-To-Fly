@@ -102,8 +102,17 @@ modules:
       Fly slowly and precisely, recognize and recover from stalls, understand load factor in
       steep turns and handle an engine failure calmly.
     icon: triangle-alert
-    lessons: []
-    challenges: []
+    lessons:
+      - l5-1-slow-flight
+      - l5-2-stalls-power-off-and-power-on
+      - l5-3-steep-turns-and-load-factor
+      - l5-4-engine-failure-and-forced-landings
+    challenges:
+      - c5-1-slow-flight
+      - c5-2-power-off-stall
+      - c5-3-power-on-stall
+      - c5-4-steep-turns
+      - c5-5-engine-failure
     estimatedMinutes: 210
   - slug: m6-vfr-navigation
     code: M6

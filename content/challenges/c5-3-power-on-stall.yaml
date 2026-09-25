@@ -1,0 +1,87 @@
+slug: c5-3-power-on-stall
+code: C5.3
+title: Power-on stall
+module: m5-slow-flight-stalls-emergencies
+lessons: [l5-2-stalls-power-off-and-power-on]
+priority: P0
+type: manoeuvre
+difficulty: 4
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Recover from a departure-configuration stall while keeping the airplane coordinated.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: AIR_START
+  startDetails:
+    position: Over open valley, 5 nm east of KLVK
+    altitudeFt: 4000
+    headingDeg: 90
+    speedKias: 100
+    fallback: Start on the runway at KLVK, take off and climb east to 4,000 ft MSL before you begin.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Clearing turns, looking for traffic below you.
+  - Slow to about liftoff speed (55–60 KIAS) with flaps up or at 10.
+  - Set high power — full power for this challenge.
+  - Raise the nose to a climb attitude steeper than for Vy and hold it until the stall. Keep the ball centered with plenty of right rudder.
+  - Recover — nose down to reduce the angle of attack, wings level, then climb away at Vy.
+
+criteria:
+  - id: aoa-first
+    label: First action was reducing the angle of attack
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-2-stalls-power-off-and-power-on, section: the-recovery-sequence }
+  - id: coordination
+    label: Coordination at the stall (no significant wing drop)
+    kind: tiered
+    tiers:
+      gold: No wing drop
+      silver: Wing drop under 15°
+      bronze: Wing drop under 30°
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-2-stalls-power-off-and-power-on, section: power-on-stalls }
+  - id: heading
+    label: Heading held
+    kind: tiered
+    tiers:
+      gold: ±10°
+      silver: ±20°
+      bronze: ±30°
+    required: false
+    weight: 1
+  - id: vy-climb
+    label: No secondary stall, and back to a Vy climb
+    kind: binary
+    required: true
+    weight: 2
+
+randomEvents: []
+
+commonMistakes:
+  - Not enough right rudder, so the left wing drops at the stall.
+  - Using big aileron inputs to pick up a dropped wing.
+
+tips:
+  - Watch the ball, not only the horizon, as the speed decays.
+
+debriefQuestions:
+  - id: right-rudder
+    prompt: How much right rudder did you need?

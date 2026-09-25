@@ -86,3 +86,12 @@ All notable changes to this project are documented here. The format is based on
 - Phase 9 · Module 4 content (drafts): L4.1 Normal takeoff and climb, L4.2 The traffic
   pattern, L4.3 Normal approach and landing, L4.4 Go-arounds, and challenges C4.1–C4.4 and
   C4.7 Three-circuit session.
+- Phase 9 · Module 5 content (drafts): L5.1 Slow flight, L5.2 Stalls: power-off and
+  power-on, L5.3 Steep turns and load factor, L5.4 Engine failure and forced landings, and
+  challenges C5.1–C5.5 (C5.5 uses a random engine-failure timer).
+
+### Fixed
+
+- Warning badges (W4 stall warning, challenge random-event alert) pulse a ring instead of
+  fading their text, and danger-filled elements use dark text in dark mode, so both keep
+  AA contrast.
