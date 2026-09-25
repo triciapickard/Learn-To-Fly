@@ -7,6 +7,14 @@ import {
   standardRateBankRuleOfThumb,
   turnRadiusFt,
 } from './turns.js';
+import {
+  fuelGallons,
+  normalize180,
+  timeMinutes,
+  trueToMagnetic,
+  windComponents,
+  windTriangle,
+} from './wind.js';
 
 describe('load factor (Appendix G.6)', () => {
   it.each([
@@ -56,5 +64,59 @@ describe('turns (Appendix G.5)', () => {
     expect(turnRadiusFt(100, 0)).toBe(Infinity);
     expect(rolloutLead(30)).toBe(15);
     expect(rolloutLead(-20)).toBe(10);
+  });
+});
+
+describe('wind triangle (Appendix G.1)', () => {
+  // Reference cases: the plan's worked example, then cases checked by adding the air and
+  // wind vectors by hand (the ground vector must come out on the true course).
+  it.each([
+    // tc, tas, wd, ws → wca, th, gs
+    [90, 100, 360, 20, -11.5, 78.5, 98.0],
+    [360, 120, 270, 30, -14.5, 345.5, 116.2],
+    [180, 100, 180, 20, 0, 180, 80],
+    [90, 110, 270, 15, 0, 90, 125],
+    [45, 100, 90, 25, 10.2, 55.2, 80.7],
+  ])('TC %i TAS %i wind %i/%i → WCA %f, TH %f, GS %f', (tc, tas, wd, ws, wca, th, gs) => {
+    const s = windTriangle(tc, tas, wd, ws)!;
+    expect(s.wca).toBeCloseTo(wca, 1);
+    expect(s.th).toBeCloseTo(th, 1);
+    expect(s.gs).toBeCloseTo(gs, 1);
+    // Air vector + wind vector = ground vector along the true course.
+    const air = [Math.sin((s.th * Math.PI) / 180) * tas, Math.cos((s.th * Math.PI) / 180) * tas];
+    const toward = ((wd + 180) * Math.PI) / 180;
+    const ground = [air[0]! + Math.sin(toward) * ws, air[1]! + Math.cos(toward) * ws];
+    expect(Math.hypot(ground[0]!, ground[1]!)).toBeCloseTo(s.gs, 6);
+    expect(normalize180((Math.atan2(ground[0]!, ground[1]!) * 180) / Math.PI - tc)).toBeCloseTo(
+      0,
+      6,
+    );
+  });
+
+  it('has no solution when the wind is stronger than the airspeed across the course', () => {
+    expect(windTriangle(90, 20, 360, 30)).toBeNull();
+    expect(windTriangle(90, 20, 90, 30)).toBeNull();
+    expect(windTriangle(90, 0, 90, 10)).toBeNull();
+  });
+});
+
+describe('magnetic, components, time and fuel (Appendix G.2–G.4)', () => {
+  it('converts true to magnetic: east is least, west is best', () => {
+    expect(trueToMagnetic(85, 13)).toBe(72);
+    expect(trueToMagnetic(350, -15)).toBe(5);
+  });
+
+  it('splits wind into crosswind and headwind', () => {
+    // Runway 25 (250°), wind 200/10 → crosswind ≈ 7.7 kt from the left, headwind ≈ 6.4 kt.
+    const c = windComponents(250, 200, 10);
+    expect(c.crosswind).toBeCloseTo(-7.66, 2);
+    expect(c.headwind).toBeCloseTo(6.43, 2);
+    expect(windComponents(270, 90, 10).headwind).toBeCloseTo(-10, 9);
+  });
+
+  it('computes time and fuel', () => {
+    expect(timeMinutes(50, 100)).toBe(30);
+    expect(timeMinutes(10, 0)).toBe(Infinity);
+    expect(fuelGallons(8.5, 30)).toBe(4.25);
   });
 });

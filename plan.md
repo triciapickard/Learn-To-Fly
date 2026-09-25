@@ -6057,9 +6057,10 @@ keyboard/ARIA → quiz mode → text alternative → embed in its lesson → rev
 - [x] 6.24 W5 Pitch & Power Trainer (after collecting pitch/power data in the sim during
       the Week 2 study flights in Section 7.2). Built with a provisional table until those
       flights are done (D-18).
-- [ ] 6.25 W2 G1000 PFD Explorer (explore + navigation modes).
-- [ ] 6.26 W7 Traffic Pattern Animator (+ radio calls and go-around toggles).
-- [ ] 6.27 W12 Wind Triangle (model shared with tools and W20).
+- [x] 6.25 W2 G1000 PFD Explorer (explore + navigation modes). The screenshot-based
+      "Real view" tab (Section 16.4) waits for your MSFS screenshots.
+- [x] 6.26 W7 Traffic Pattern Animator (+ radio calls and go-around toggles).
+- [x] 6.27 W12 Wind Triangle (model shared with tools and W20).
 - [ ] 6.28 W9 VOR/CDI Simulator.
 - [ ] 6.29 W10 Sectional Legend Explorer (image + hotspot JSON).
 - [ ] 6.30 W11 Airspace Cross-section (data file + component).

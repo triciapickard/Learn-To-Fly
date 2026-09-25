@@ -44,3 +44,8 @@ All notable changes to this project are documented here. The format is based on
   trailing-edge separation, lift curve, flaps, stall warning) and W5 Pitch & Power Trainer
   (attitude indicator, airspeed tape, vertical speed, trim and stick force, scenarios) with
   a provisional `performanceModel` table (Decision D-18) and table-shape validation.
+- Phase 6 (part 4): W2 G1000 PFD Explorer (original PFD drawing in its bezel, region
+  cards, tour, GPS navigation mode with a Direct-To walkthrough, click-the-display quiz),
+  W7 Traffic Pattern Animator (left/right traffic, wind and crab, configuration, radio
+  calls, go-around) and W12 Wind Triangle (draggable wind vector, WCA, headings,
+  groundspeed and time en route); wind-triangle maths in `shared/aviation/wind.ts`.

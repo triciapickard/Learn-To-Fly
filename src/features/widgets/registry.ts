@@ -10,8 +10,11 @@ type WidgetComponent = LazyExoticComponent<ComponentType<WidgetProps>>;
  */
 export const widgetRegistry: Partial<Record<WidgetName, WidgetComponent>> = {
   'control-surfaces': lazy(() => import('./control-surfaces/ControlSurfaces')),
+  'g1000-pfd': lazy(() => import('./g1000-pfd/G1000Pfd')),
   'airspeed-indicator': lazy(() => import('./airspeed-indicator/AirspeedIndicator')),
   'checklist-runner': lazy(() => import('./checklist-runner/ChecklistRunnerWidget')),
+  'traffic-pattern': lazy(() => import('./traffic-pattern/TrafficPattern')),
+  'wind-triangle': lazy(() => import('./wind-triangle/WindTriangle')),
   'pitch-power': lazy(() => import('./pitch-power/PitchPower')),
   'angle-of-attack': lazy(() => import('./angle-of-attack/AngleOfAttack')),
   'turn-coordinator': lazy(() => import('./turn-coordinator/TurnCoordinator')),

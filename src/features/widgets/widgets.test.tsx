@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 import { seriousViolations } from '@/test/axe';
@@ -8,9 +8,12 @@ import AirspeedIndicator from './airspeed-indicator/AirspeedIndicator';
 import AngleOfAttack from './angle-of-attack/AngleOfAttack';
 import { ChecklistRunner } from './checklist-runner/ChecklistRunner';
 import ControlSurfaces from './control-surfaces/ControlSurfaces';
+import G1000Pfd from './g1000-pfd/G1000Pfd';
 import LoadFactor from './load-factor/LoadFactor';
 import PitchPower from './pitch-power/PitchPower';
+import TrafficPattern from './traffic-pattern/TrafficPattern';
 import TurnCoordinator from './turn-coordinator/TurnCoordinator';
+import WindTriangle from './wind-triangle/WindTriangle';
 
 describe('W3 Airspeed indicator', () => {
   it('is operable with the keyboard and describes the band', async () => {
@@ -352,6 +355,151 @@ describe('W5 Pitch and power trainer', () => {
       </TestProviders>,
     );
     await screen.findByRole('slider', { name: 'Pitch attitude' });
+    expect(await seriousViolations(container)).toEqual([]);
+  });
+});
+
+describe('W2 G1000 PFD explorer', () => {
+  it('explains a region chosen from the list and runs the tour', async () => {
+    render(
+      <TestProviders>
+        <G1000Pfd props={{}} />
+      </TestProviders>,
+    );
+    await userEvent.click(screen.getByRole('button', { name: 'Altimeter setting (BARO)' }));
+    expect(screen.getByText('The Kollsman window on the altimeter.')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Altimeter setting (BARO)' })).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+
+    await userEvent.click(screen.getByRole('button', { name: 'Start tour' }));
+    expect(screen.getByText('Stop 1 of 16')).toBeInTheDocument();
+    expect(screen.getByText('Attitude indicator (artificial horizon).')).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Next' }));
+    expect(screen.getByText('Stop 2 of 16')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Airspeed tape' })).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+    await userEvent.click(screen.getByRole('button', { name: 'End tour' }));
+    expect(screen.getByRole('button', { name: 'Start tour' })).toBeInTheDocument();
+  });
+
+  it('shows a region card on hover', async () => {
+    const { container } = render(
+      <TestProviders>
+        <G1000Pfd props={{}} />
+      </TestProviders>,
+    );
+    fireEvent.pointerEnter(container.querySelector('[data-region="vsi"]')!);
+    expect(screen.getByText('Vertical speed indicator (VSI).')).toBeInTheDocument();
+  });
+
+  it('walks through Direct-To in navigation mode', async () => {
+    render(
+      <TestProviders>
+        <G1000Pfd props={{ view: 'navigation' }} />
+      </TestProviders>,
+    );
+    const steps = screen.getByRole('list', { name: 'Direct-To steps' });
+    expect(within(steps).getAllByRole('listitem')[0]).toHaveAttribute('aria-current', 'step');
+    expect(screen.getByRole('button', { name: 'Previous step' })).toBeDisabled();
+    await userEvent.click(screen.getByRole('button', { name: /Next step/ }));
+    expect(within(steps).getAllByRole('listitem')[1]).toHaveAttribute('aria-current', 'step');
+    // The step's key is explained in the card.
+    expect(screen.getByText(/Opens the Direct-To window/, { selector: 'dd' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'D→ (Direct-To) key' })).toBeInTheDocument();
+  });
+
+  it('runs the quiz with the mouse and the keyboard', async () => {
+    const onQuizAnswer = vi.fn();
+    render(
+      <TestProviders>
+        <G1000Pfd props={{ mode: 'quiz' }} onQuizAnswer={onQuizAnswer} />
+      </TestProviders>,
+    );
+    expect(screen.getByText('Click the vertical speed indicator.')).toBeInTheDocument();
+    // Area 1 is the attitude indicator: a wrong answer, chosen with the keyboard.
+    screen.getByRole('button', { name: 'Display area 1' }).focus();
+    await userEvent.keyboard('{Enter}');
+    await userEvent.click(screen.getByRole('button', { name: 'Check' }));
+    expect(onQuizAnswer).toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        questionId: 'find-vsi',
+        correct: false,
+        answer: 'Attitude indicator',
+      }),
+    );
+    await userEvent.click(screen.getByRole('button', { name: 'Display area 5' }));
+    await userEvent.click(screen.getByRole('button', { name: 'Check' }));
+    expect(screen.getByText(/narrow scale just right of the altitude tape/)).toBeInTheDocument();
+  });
+
+  it('has no serious axe violations', async () => {
+    const { container } = render(
+      <TestProviders>
+        <G1000Pfd props={{}} />
+      </TestProviders>,
+    );
+    expect(await seriousViolations(container)).toEqual([]);
+  });
+});
+
+describe('W7 Traffic pattern animator', () => {
+  const legs = () =>
+    within(screen.getByRole('list', { name: 'Pattern legs' })).getAllByRole('listitem');
+
+  it('steps through the legs with radio calls and shows a go-around', async () => {
+    render(<TrafficPattern props={{ calls: 'true' }} />);
+    expect(legs()[0]).toHaveAttribute('aria-current', 'step');
+    expect(legs()[0]).toHaveTextContent('45° entry');
+    await userEvent.click(screen.getByRole('button', { name: 'Next leg' }));
+    expect(legs()[1]).toHaveAttribute('aria-current', 'step');
+    expect(legs()[1]).toHaveTextContent(
+      'Tracy traffic, Skyhawk 123, left downwind runway 26, touch-and-go, Tracy.',
+    );
+    await userEvent.click(screen.getByRole('button', { name: 'Right traffic' }));
+    expect(screen.getByRole('img', { name: /right traffic/ })).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Go around' }));
+    const current = legs().find((li) => li.getAttribute('aria-current') === 'step');
+    expect(current).toHaveTextContent('Go-around');
+  });
+
+  it('has no serious axe violations', async () => {
+    const { container } = render(<TrafficPattern props={{ calls: 'true', config: 'true' }} />);
+    expect(await seriousViolations(container)).toEqual([]);
+  });
+});
+
+describe('W12 Wind triangle', () => {
+  const result = (label: string) => screen.getByText(label, { selector: 'dt' }).nextElementSibling;
+
+  it('solves the default example', () => {
+    render(<WindTriangle props={{}} />);
+    expect(result('WCA')).toHaveTextContent('12° left');
+    expect(result('True heading')).toHaveTextContent('078');
+    expect(result('Groundspeed')).toHaveTextContent('98 kt');
+    expect(screen.getByRole('img', { name: /Wind from 360° at 20 knots/ })).toBeInTheDocument();
+  });
+
+  it('validates fields and flags a wind too strong to hold the course', async () => {
+    render(<WindTriangle props={{}} />);
+    const tas = screen.getByLabelText('True airspeed (kt)');
+    await userEvent.clear(tas);
+    await userEvent.type(tas, 'abc');
+    expect(screen.getByText('Enter a number.')).toBeInTheDocument();
+    expect(tas).toHaveAttribute('aria-invalid', 'true');
+    await userEvent.clear(tas);
+    await userEvent.type(tas, '40');
+    const ws = screen.getByLabelText('Wind speed (kt)');
+    await userEvent.clear(ws);
+    await userEvent.type(ws, '60');
+    expect(screen.getByRole('alert')).toHaveTextContent('The wind is too strong');
+  });
+
+  it('has no serious axe violations', async () => {
+    const { container } = render(<WindTriangle props={{}} />);
     expect(await seriousViolations(container)).toEqual([]);
   });
 });
