@@ -1,0 +1,93 @@
+slug: c4-7-three-circuit-session
+code: C4.7
+title: Three-circuit session
+module: m4-takeoffs-patterns-landings
+lessons:
+  - l4-2-the-traffic-pattern
+  - l4-3-normal-approach-and-landing
+  - l4-4-go-arounds
+priority: P0
+type: pattern
+difficulty: 3
+estimatedMinutes: 30
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Fly three patterns in a row — touch-and-go, touch-and-go, full stop — with consistent
+  quality.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KTCY
+  startState: RUNWAY
+  startDetails:
+    runway: '26' # ⚠ verify the active runway for the wind
+    fallback: If the sim starts you on a different runway, fly the pattern for that runway instead.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Take off and fly the pattern for runway 26.
+  - Land. For a touch-and-go, keep rolling on the centerline — flaps up, full power, take off again.
+  - Fly the second pattern and do another touch-and-go.
+  - Fly the third pattern and make a full-stop landing.
+  - Some instructors prefer a full stop and taxi back instead of a touch-and-go. Either is fine here; the touch-and-go criterion is optional.
+
+criteria:
+  - id: pattern-altitude
+    label: Pattern altitude on each downwind
+    kind: tiered
+    tiers:
+      gold: ±100 ft
+      silver: ±150 ft
+      bronze: ±200 ft
+    required: true
+    weight: 2
+    reviewLink: { lesson: l4-2-the-traffic-pattern, section: direction-and-altitude }
+  - id: stabilized
+    label: Stabilized on each final
+    kind: tiered
+    tiers:
+      gold: 3 of 3
+      silver: 2 of 3
+      bronze: 1 of 3 (went around on the others)
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-3-normal-approach-and-landing, section: the-stabilized-approach }
+  - id: landing-quality
+    label: Landing quality on each landing (C4.3 touchdown point, centerline and no bounce)
+    kind: tiered
+    tiers:
+      gold: All three Gold
+      silver: All Silver or better
+      bronze: All Bronze or better
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-3-normal-approach-and-landing, section: the-round-out-and-flare }
+  - id: touch-and-go
+    label: Touch-and-go sequence correct
+    kind: binary
+    required: false
+    weight: 2
+
+randomEvents: []
+
+commonMistakes:
+  - Adding power before the flaps are up on a touch-and-go.
+  - Letting the pattern get bigger with each circuit.
+
+tips:
+  - Use the same ground references for your turns on every circuit.
+
+debriefQuestions:
+  - id: best-circuit
+    prompt: Which circuit was best, and what was different about it?

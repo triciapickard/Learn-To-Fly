@@ -1,0 +1,86 @@
+slug: c4-4-go-around
+code: C4.4
+title: Go-around
+module: m4-takeoffs-patterns-landings
+lessons: [l4-4-go-arounds]
+priority: P0
+type: landing
+difficulty: 3
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Go around from short final, rejoin the pattern and land from a second approach.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RUNWAY
+  startDetails:
+    runway: 25R # ⚠ verify the runway name in the sim
+    fallback: If the sim starts you on a different runway, fly the pattern for that runway.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Take off and fly the left pattern for runway 25R.
+  - On short final, at about 200 ft AGL, go around as if the runway were blocked.
+  - Full power, pitch for the climb, flaps 20. With a positive climb, flaps 10, then flaps up at a safe altitude and speed.
+  - Side-step to the right of the runway, rejoin the pattern on crosswind and fly a second pattern.
+  - Land from the second approach.
+
+criteria:
+  - id: immediate
+    label: Go-around started immediately at the decision point
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l4-4-go-arounds, section: when-to-go-around }
+  - id: sequence
+    label: Sequence correct (power, attitude, flaps 20, climb, flaps up in stages)
+    kind: tiered
+    tiers:
+      gold: Perfect
+      silver: One item out of order
+      bronze: Two items out of order
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-4-go-arounds, section: the-sequence-power-attitude-clean-up }
+  - id: min-airspeed
+    label: Airspeed never below 55 KIAS during the go-around
+    kind: binary
+    required: true
+    weight: 3
+  - id: positive-climb
+    label: Positive climb within 5 seconds
+    kind: binary
+    required: false
+    weight: 1
+  - id: second-landing
+    label: Second approach and landing at C4.3 Bronze or better
+    kind: binary
+    required: false
+    weight: 2
+    reviewLink: { lesson: l4-3-normal-approach-and-landing, section: the-round-out-and-flare }
+
+randomEvents: []
+
+commonMistakes:
+  - Retracting all the flaps at once.
+  - Pitching too high, so the stall horn sounds.
+
+tips:
+  - Say the sequence out loud as you fly it — "power, attitude, flaps 20".
+
+debriefQuestions:
+  - id: altitude-lost
+    prompt: How much altitude did you lose before you started climbing?
