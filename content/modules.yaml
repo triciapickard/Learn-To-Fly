@@ -163,6 +163,10 @@ modules:
       Put it all together: make good go/no-go decisions, fly a local checkride and plan and
       fly a cross-country capstone flight.
     icon: award
-    lessons: []
-    challenges: []
+    lessons:
+      - l8-1-decision-making-and-personal-minimums
+      - l8-2-preparing-for-your-checkride
+    challenges:
+      - c8-1-local-checkride
+      - c8-2-cross-country-capstone
     estimatedMinutes: 150

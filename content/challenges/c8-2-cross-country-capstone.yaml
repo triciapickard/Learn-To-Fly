@@ -1,0 +1,138 @@
+slug: c8-2-cross-country-capstone
+code: C8.2
+title: Cross-country capstone
+module: m8-capstone
+lessons:
+  - l8-2-preparing-for-your-checkride
+  - l6-6-planning-a-cross-country-flight
+priority: P0
+type: capstone
+difficulty: 5
+estimatedMinutes: 90
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Plan and fly a cross-country flight from Livermore to Watsonville, land, and return by a
+  different route using a VOR and the GPS.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RAMP_RUNNING
+  startDetails:
+    parking: Any ramp parking spot
+    fallback: If the sim starts you on the runway, taxi clear and start from the call to ground.
+  weatherPreset: WX_SCATTERED
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: true
+  atc: true
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Plan the flight on the page before you open the sim (about 30 minutes). Suggested route — Livermore, Calaveras Reservoir, Morgan Hill, Gilroy, Watsonville (KWVI). This route passes close to the San Jose Class C — plan to stay clear of it or to call San Jose Approach (⚠ verify the airspace on the current TAC).
+  - If the long route is too much, fly the shorter alternative instead — Livermore, Buchanan Field (KCCR), Byron (C83), Livermore.
+  - Choose altitudes using the hemispheric rule, clear of terrain and below the scattered clouds at 5,500 ft.
+  - Enter the route in the G1000 as a backup, and turn the sim's VFR map off.
+  - Depart Livermore with ATC and fly the route by pilotage and dead reckoning. Note the time at each checkpoint.
+  - Join the pattern at Watsonville on the CTAF and land.
+  - Return to Livermore by a different route. Use a VOR radial for at least one leg, with the GPS as a backup.
+  - Land at Livermore with ATC, taxi to parking and check the fuel remaining.
+
+criteria:
+  - id: plan
+    label: Complete plan and nav log before the flight
+    kind: tiered
+    tiers:
+      gold: Complete
+      silver: Minor gaps
+      bronze: Major gaps
+    required: true
+    weight: 3
+    reviewLink: { lesson: l6-6-planning-a-cross-country-flight, section: the-planning-workflow }
+  - id: route
+    label: Route flown as planned (checkpoints within 1 nm)
+    kind: tiered
+    tiers:
+      gold: All checkpoints
+      silver: Most checkpoints
+      bronze: Some, but found the way
+    required: true
+    weight: 3
+    reviewLink: { lesson: l6-3-pilotage-and-dead-reckoning, section: pilotage }
+  - id: airspace
+    label: Airspace compliance
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l6-2-airspace, section: the-classes }
+  - id: altitude
+    label: Altitude en route
+    kind: tiered
+    tiers:
+      gold: ±100 ft
+      silver: ±150 ft
+      bronze: ±200 ft
+    required: false
+    weight: 2
+  - id: eta
+    label: Arrival time at the destination
+    kind: tiered
+    tiers:
+      gold: ±3 min
+      silver: ±5 min
+      bronze: ±8 min
+    required: false
+    weight: 1
+  - id: radio
+    label: Radio calls correct (CTAF and tower)
+    kind: tiered
+    tiers:
+      gold: All of them
+      silver: Most of them
+      bronze: Some of them
+    required: true
+    weight: 2
+    reviewLink: { lesson: l7-2-non-towered-airports-ctaf, section: the-standard-calls }
+  - id: landings
+    label: Two safe landings
+    kind: binary
+    required: true
+    weight: 3
+  - id: fuel
+    label: Fuel remaining at least the planned reserve
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l6-6-planning-a-cross-country-flight, section: fuel }
+
+randomEvents: []
+
+planningFields:
+  - { id: route, label: 'Route and checkpoints', type: text }
+  - { id: altitudes, label: 'Cruising altitudes for each leg', type: text }
+  - { id: nav-log, label: 'Nav log — headings, times and fuel for each leg', type: text }
+  - { id: airspace-notes, label: 'Airspace along the route', type: text }
+  - { id: frequencies, label: 'Frequencies', type: text }
+  - { id: alternates, label: 'Alternate airports', type: text }
+  - { id: pave, label: 'PAVE check', type: text }
+  - { id: fuel-planned, label: 'Planned fuel at landing (gal)', type: number }
+
+commonMistakes:
+  - Planning a route that clips the Class C.
+  - Forgetting the fuel reserve when adding up the fuel.
+  - Staring at the GPS instead of finding the checkpoints outside.
+
+tips:
+  - Brief the arrival at Watsonville before you leave Livermore, so there's less to do when you get there.
+
+debriefQuestions:
+  - id: change-plan
+    prompt: What would you change in your plan?
+  - id: confidence
+    prompt: How confident are you, from 1 to 5, that you could fly this route without a GPS?
