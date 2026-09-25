@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 import request from 'supertest';
 import { describe, expect, it } from 'vitest';
 import { z } from 'zod';
@@ -57,6 +58,9 @@ describe('createApp', () => {
   });
 
   it('reports 503 degraded when the database is down', async () => {
+    // Let every model finish building its indexes first, or closing the connection
+    // interrupts them and leaves unhandled rejections.
+    await Promise.all(Object.values(mongoose.models).map((model) => model.init()));
     await disconnectDb();
     const res = await request(app).get('/api/v1/health');
     expect(res.status).toBe(503);
