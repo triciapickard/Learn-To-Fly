@@ -15,6 +15,7 @@ import { requestId } from './middleware/requestId.js';
 import { requireJson } from './middleware/requireJson.js';
 import { securityHeaders } from './middleware/security.js';
 import { staticClient } from './middleware/staticClient.js';
+import { attemptRouter } from './routes/attempt.routes.js';
 import { authRouter } from './routes/auth.routes.js';
 import { contentRouter } from './routes/content.routes.js';
 import { healthRouter } from './routes/health.routes.js';
@@ -64,6 +65,7 @@ export function createApp({
   api.use(csrfProtection);
   api.use(authRouter(env));
   api.use(meRouter());
+  api.use(attemptRouter());
   api.use(notFound);
   app.use(API_BASE_PATH, api);
   app.use('/api', notFound);

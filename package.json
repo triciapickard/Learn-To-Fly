@@ -27,7 +27,9 @@
     "prepare": "husky",
     "content:validate": "tsx scripts/content-validate.ts",
     "content:seed": "tsx scripts/content-seed.ts",
-    "content:stats": "tsx scripts/content-stats.ts"
+    "content:stats": "tsx scripts/content-stats.ts",
+    "e2e": "npm run build:client && playwright test",
+    "e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@fontsource-variable/inter": "5.3.0",

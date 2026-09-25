@@ -79,6 +79,20 @@
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+
+  /* Challenge result: the tier badge pops in (skipped with prefers-reduced-motion). */
+  --animate-tier-pop: tier-pop 500ms var(--ease-out) both;
+  @keyframes tier-pop {
+    0% {
+      transform: scale(0.6);
+    }
+    70% {
+      transform: scale(1.08);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 }
 
 [data-theme='dark'] {

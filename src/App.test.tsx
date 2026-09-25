@@ -10,8 +10,8 @@ const ROUTES: [string, string | RegExp][] = [
   ['/learn/m1-meet-the-skyhawk', 'Meet the Skyhawk'],
   ['/learn/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists', 'Speeds, limits and checklists'],
   ['/challenges', 'Challenges'],
-  ['/challenges/c2-1-straight-and-level', 'Challenge'],
-  ['/challenges/c2-1-straight-and-level/fly', 'Fly mode'],
+  ['/challenges/c2-1-straight-and-level', 'Straight and level'],
+  ['/challenges/c2-1-straight-and-level/fly', 'Straight and level'],
   ['/reference', 'Reference'],
   ['/reference/speeds', 'V-speeds and limits'],
   ['/reference/checklists', 'Checklists'],
@@ -56,7 +56,7 @@ describe('routes', () => {
 
   it('renders fly mode without the site header and footer', async () => {
     renderRoute('/challenges/c2-1-straight-and-level/fly');
-    await screen.findByRole('heading', { level: 1, name: 'Fly mode' });
+    await screen.findByRole('heading', { level: 1, name: 'Straight and level' });
     expect(screen.queryByRole('banner')).not.toBeInTheDocument();
     expect(screen.queryByRole('contentinfo')).not.toBeInTheDocument();
   });

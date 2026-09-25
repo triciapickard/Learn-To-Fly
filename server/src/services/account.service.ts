@@ -39,7 +39,7 @@ export async function updateMe(
   const user = await User.findByIdAndUpdate(
     userId,
     { $set },
-    { new: true, runValidators: true },
+    { returnDocument: 'after', runValidators: true },
   ).lean<UserDoc>();
   if (!user) throw HttpError.unauthenticated();
   return user;

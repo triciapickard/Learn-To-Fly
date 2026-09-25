@@ -6114,44 +6114,47 @@ keyboard/ARIA → quiz mode → text alternative → embed in its lesson → rev
 
 ### 47.1 Scoring and schemas
 
-- [ ] 7.1 Implement `shared/scoring.ts` (Section 15.2) with exhaustive unit tests
+- [x] 7.1 Implement `shared/scoring.ts` (Section 15.2) with exhaustive unit tests
       (Section 35.2).
-- [ ] 7.2 `AttemptCreateSchema` and `AttemptDto` in `shared/schemas/api.ts`.
+- [x] 7.2 `AttemptCreateSchema` and `AttemptDto` in `shared/schemas/api.ts`.
 
 ### 47.2 Server
 
-- [ ] 7.3 Models `ChallengeAttempt` and `ChallengeProgress` with indexes.
-- [ ] 7.4 `attemptService.create` (Section 24.2): verify challenge published; verify
+- [x] 7.3 Models `ChallengeAttempt` and `ChallengeProgress` with indexes.
+- [x] 7.4 `attemptService.create` (Section 24.2): verify challenge published; verify
       criteria set matches current version; compute score; insert attempt; upsert progress
       with best-attempt logic (tier > percentage > recency).
-- [ ] 7.5 Routes: `POST /challenges/:slug/attempts`, `GET /me/challenges/:slug/attempts`,
+- [x] 7.5 Routes: `POST /challenges/:slug/attempts`, `GET /me/challenges/:slug/attempts`,
       `GET /me/attempts` (paginated).
-- [ ] 7.6 Integration tests: tampered score ignored, version mismatch 400, ownership,
+- [x] 7.6 Integration tests: tampered score ignored, version mismatch 400, ownership,
       best-attempt update logic, pagination.
 
 ### 47.3 Client
 
-- [ ] 7.7 `/challenges` list with filters in the URL (Section 20.5).
-- [ ] 7.8 `ChallengePage` with Tabs (Brief, Fly, Debrief, History).
-- [ ] 7.9 Brief: setup table with resolved presets, copy-to-clipboard for ICAO/frequencies,
+- [x] 7.7 `/challenges` list with filters in the URL (Section 20.5).
+- [x] 7.8 `ChallengePage` with Tabs (Brief, Fly, Debrief, History).
+- [x] 7.9 Brief: setup table with resolved presets, copy-to-clipboard for ICAO/frequencies,
       links to airport cards and lessons, criteria preview.
-- [ ] 7.10 Fly tab and `/challenges/:slug/fly` page: step checklist (sessionStorage),
+- [x] 7.10 Fly tab and `/challenges/:slug/fly` page: step checklist (sessionStorage),
       key numbers, stopwatch, random events (C5.5, C6.6, C8.1) with sound (Web Audio beep) + visual flash (reduced-motion alternative), Screen Wake Lock (P1).
-- [ ] 7.11 Debrief form: tiered radio groups with tier descriptions; binary toggles;
+- [x] 7.11 Debrief form: tiered radio groups with tier descriptions; binary toggles;
       notes; reflections; planning fields (C8.2); paused checkbox; live score preview using
       `shared/scoring.ts`; draft autosave to sessionStorage; restore after login.
-- [ ] 7.12 Result view: tier badge, percentage, per-criterion feedback with "Review"
+- [x] 7.12 Result view: tier badge, percentage, per-criterion feedback with "Review"
       links to lesson sections, fly again, next challenge.
-- [ ] 7.13 History tab: attempts table with expandable details.
-- [ ] 7.14 Visitor flow: debrief prompts sign-in; draft preserved.
-- [ ] 7.15 Component tests for debrief validation and score preview; E2E flow 4 and 5
-      (Section 35.2).
+- [x] 7.13 History tab: attempts table with expandable details.
+- [x] 7.14 Visitor flow: debrief prompts sign-in; draft preserved.
+- [x] 7.15 Component tests for debrief validation and score preview; E2E flow 4 and 5
+      (Section 35.2). Playwright is set up here: `e2e/server.ts` starts an in-memory MongoDB
+      seeded with the real `content/` (drafts included, D-17) and serves the built client;
+      CI runs it in the `e2e` job.
 - **AC:** Milestone M-C: C2.1 can be completed end-to-end in production; US-09 to US-12
   pass.
 
 ### 47.4 Phase wrap-up
 
-- [ ] 7.16 PR "Phase 7: Challenges"; screen recording of the flow.
+- [x] 7.16 PR "Phase 7: Challenges"; screen recording of the flow
+      (`docs/screenshots/phase-7/c2-1-challenge-flow.webm`).
 
 ---
 

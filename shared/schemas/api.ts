@@ -1,3 +1,6 @@
+import { z } from 'zod';
+import { CRITERION_RESULTS, type CriterionResultValue, type Tier } from '../scoring.js';
+import { SlugSchema } from './content.js';
 import type {
   Aircraft,
   AirspaceProfile,
@@ -182,6 +185,117 @@ export interface GlossaryResponse {
 export interface ResourcesResponse {
   resources: ResourceDto[];
 }
+
+// ---------------------------------------------------------------------------------------
+// Challenge attempts (Sections 27.7, 29.4, 29.7)
+
+export const NOTES_MAX = 2000;
+export const REFLECTION_MAX = 1000;
+const Timestamp = z.iso.datetime({ offset: true });
+
+/**
+ * Body of `POST /challenges/:slug/attempts`. Unknown keys (e.g. a client-sent `points` or
+ * `tier`) are stripped: the server always computes the score itself.
+ */
+export const AttemptCreateSchema = z.object({
+  /** The challenge version the form was built from; a mismatch means the rubric changed. */
+  challengeVersion: z.number().int().positive(),
+  criteriaResults: z
+    .array(z.strictObject({ criterionId: SlugSchema, result: z.enum(CRITERION_RESULTS) }))
+    .min(1, 'Answer the criteria before submitting.')
+    .max(8),
+  notes: z
+    .string()
+    .trim()
+    .max(NOTES_MAX, `Notes can be at most ${NOTES_MAX.toLocaleString('en-US')} characters.`)
+    .default(''),
+  reflections: z
+    .array(
+      z.strictObject({
+        questionId: SlugSchema,
+        answer: z
+          .string()
+          .trim()
+          .max(
+            REFLECTION_MAX,
+            `Answers can be at most ${REFLECTION_MAX.toLocaleString('en-US')} characters.`,
+          ),
+      }),
+    )
+    .max(10)
+    .default([]),
+  paused: z.boolean().default(false),
+  startedAt: Timestamp.nullable().default(null),
+  checklistTicks: z
+    .array(z.strictObject({ itemId: z.string().min(1).max(100), at: Timestamp }))
+    .max(100)
+    .default([]),
+  randomEventsFired: z
+    .array(z.strictObject({ id: SlugSchema, at: Timestamp }))
+    .max(20)
+    .default([]),
+  planning: z
+    .record(SlugSchema, z.union([z.string().trim().max(200), z.number().finite()]))
+    .refine((p) => Object.keys(p).length <= 20, 'At most 20 planning fields.')
+    .default({}),
+});
+export type AttemptCreateInput = z.input<typeof AttemptCreateSchema>;
+export type AttemptCreate = z.output<typeof AttemptCreateSchema>;
+
+export interface AttemptDto {
+  id: string;
+  challengeSlug: string;
+  challengeVersion: number;
+  startedAt: string | null;
+  submittedAt: string;
+  criteriaResults: { criterionId: string; result: CriterionResultValue }[];
+  notes: string;
+  reflections: { questionId: string; answer: string }[];
+  paused: boolean;
+  planning: Record<string, string | number>;
+  checklistTicks: { itemId: string; at: string }[];
+  randomEventsFired: { id: string; at: string }[];
+  points: number;
+  maxPoints: number;
+  percentage: number;
+  passed: boolean;
+  tier: Tier;
+}
+
+export interface ChallengeProgressDto {
+  challengeSlug: string;
+  bestAttemptId: string;
+  bestTier: Tier;
+  bestPercentage: number;
+  passed: boolean;
+  attemptsCount: number;
+  lastAttemptAt: string;
+}
+
+export interface AttemptCreateResponse {
+  attempt: AttemptDto;
+  progress: ChallengeProgressDto;
+}
+
+/** Paginated attempt lists: pass `nextBefore` as `?before=` for the next page. */
+export interface AttemptsResponse {
+  attempts: AttemptDto[];
+  nextBefore: string | null;
+}
+
+export interface ChallengeAttemptsResponse extends AttemptsResponse {
+  progress: ChallengeProgressDto | null;
+}
+
+/** `GET /me/progress` (Section 29.4). Phase 8 adds lessons and modules. */
+export interface ProgressResponse {
+  challenges: Record<string, ChallengeProgressDto>;
+}
+
+export const AttemptsQuerySchema = z.object({
+  limit: z.coerce.number().int().min(1).max(50).default(20),
+  before: Timestamp.optional(),
+});
 
 export function lessonHref(lesson: { moduleSlug: string; slug: string }): string {
   return `/learn/${lesson.moduleSlug}/${lesson.slug}`;
