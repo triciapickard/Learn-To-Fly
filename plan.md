@@ -5707,55 +5707,55 @@ logging and security middleware — no features yet.
 
 ### 42.1 Configuration
 
-- [ ] 2.1 `server/src/config/env.ts`: Zod schema for env (NODE_ENV, PORT, MONGODB_URI,
+- [x] 2.1 `server/src/config/env.ts`: Zod schema for env (NODE_ENV, PORT, MONGODB_URI,
       SESSION_SECRET (min 32 chars), PUBLIC_SITE_URL, LOG_LEVEL, TRUST_PROXY, etc.);
       load `.env` in development via `dotenv`; exit with a readable error if invalid.
-- [ ] 2.2 Unit test: missing `MONGODB_URI` produces a clear error.
+- [x] 2.2 Unit test: missing `MONGODB_URI` produces a clear error.
 
 ### 42.2 Database
 
-- [ ] 2.3 Install Mongoose. `server/src/config/db.ts`: `connectDb()` with retry/backoff
+- [x] 2.3 Install Mongoose. `server/src/config/db.ts`: `connectDb()` with retry/backoff
       (3 attempts), `mongoose.set('strictQuery', true)`, `sanitizeFilter: true`.
-- [ ] 2.4 Health endpoint reports `db: "ok" | "down"` using `mongoose.connection.readyState`
+- [x] 2.4 Health endpoint reports `db: "ok" | "down"` using `mongoose.connection.readyState`
       and a `ping` command (with a 1 s timeout).
-- [ ] 2.5 Local MongoDB running (Docker command in README) and `.env` pointing to it.
-- [ ] 2.6 Test setup: `server/tests/setup.ts` starts `mongodb-memory-server`, connects,
+- [x] 2.5 Local MongoDB running (Docker command in README) and `.env` pointing to it.
+- [x] 2.6 Test setup: `server/tests/setup.ts` starts `mongodb-memory-server`, connects,
       clears collections between tests, disconnects after.
 - **AC:** health shows db ok locally; tests run against the in-memory DB.
 
 ### 42.3 Middleware
 
-- [ ] 2.7 `requestId` middleware (accept incoming header or `crypto.randomUUID()`).
-- [ ] 2.8 `pino` logger + `pino-http` with redaction of `req.headers.cookie`,
+- [x] 2.7 `requestId` middleware (accept incoming header or `crypto.randomUUID()`).
+- [x] 2.8 `pino` logger + `pino-http` with redaction of `req.headers.cookie`,
       `req.body.password`, `req.body.newPassword`, `req.body.currentPassword`.
-- [ ] 2.9 `helmet` with a CSP placeholder (finalised in Phase 11); `app.disable('x-powered-by')`.
-- [ ] 2.10 `express.json({ limit: '100kb' })`; reject non-JSON on mutating API routes.
-- [ ] 2.11 `compression`.
-- [ ] 2.12 `rateLimit` factory (Section 30.7) — apply the general API limits now.
-- [ ] 2.13 `validate({ body, query, params })` middleware using Zod; attaches parsed values.
-- [ ] 2.14 `HttpError` class, `notFound` (API only) and `errorHandler` (Section 34.1).
-- [ ] 2.15 Graceful shutdown in `index.ts` (Section 34.5).
+- [x] 2.9 `helmet` with a CSP placeholder (finalised in Phase 11); `app.disable('x-powered-by')`.
+- [x] 2.10 `express.json({ limit: '100kb' })`; reject non-JSON on mutating API routes.
+- [x] 2.11 `compression`.
+- [x] 2.12 `rateLimit` factory (Section 30.7) — apply the general API limits now.
+- [x] 2.13 `validate({ body, query, params })` middleware using Zod; attaches parsed values.
+- [x] 2.14 `HttpError` class, `notFound` (API only) and `errorHandler` (Section 34.1).
+- [x] 2.15 Graceful shutdown in `index.ts` (Section 34.5).
 - **AC:** unit/integration tests for: validation error shape, 404 JSON for unknown API
   routes, 500 hides stack in production mode, request ID echoed.
 
 ### 42.4 Project conventions
 
-- [ ] 2.16 Folder conventions: `routes/<resource>.routes.ts`, `controllers/<resource>.controller.ts`,
+- [x] 2.16 Folder conventions: `routes/<resource>.routes.ts`, `controllers/<resource>.controller.ts`,
       `services/<resource>.service.ts`, `models/<Model>.ts`; write a short
       `server/README.md` describing them.
-- [ ] 2.17 `asyncHandler` not needed with Express 5 (document this in the README to avoid
+- [x] 2.17 `asyncHandler` not needed with Express 5 (document this in the README to avoid
       confusion from older tutorials).
-- [ ] 2.18 A base "toJSON" transform for models: `_id` → `id`, remove `__v`.
+- [x] 2.18 A base "toJSON" transform for models: `_id` → `id`, remove `__v`.
 
 ### 42.5 Static serving (production mode)
 
-- [ ] 2.19 In production, serve `dist/` statically and fall back to `index.html` for non-API
+- [x] 2.19 In production, serve `dist/` statically and fall back to `index.html` for non-API
       GET requests (Section 38.3). Test with `npm run build && npm start`.
 - **AC:** built app serves the client at `localhost:3000` and the API at `/api/v1/health`.
 
 ### 42.6 Phase wrap-up
 
-- [ ] 2.20 PR "Phase 2: Backend foundation"; update CHANGELOG; phase summary.
+- [x] 2.20 PR "Phase 2: Backend foundation"; update CHANGELOG; phase summary.
 
 ---
 
