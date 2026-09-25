@@ -6165,30 +6165,30 @@ keyboard/ARIA → quiz mode → text alternative → embed in its lesson → rev
 
 ### 48.1 Server
 
-- [ ] 8.1 `LessonProgress` model; `PUT /me/lessons/:slug/progress`,
+- [x] 8.1 `LessonProgress` model; `PUT /me/lessons/:slug/progress`,
       `POST /me/lessons/:slug/quiz-answers` (validates the answer against the lesson's quiz
       block server-side and returns correctness + explanation).
-- [ ] 8.2 `shared/progress.ts`: completion rules (Section 13.3) with unit tests.
-- [ ] 8.3 `GET /me/progress` and `GET /me/dashboard` (single aggregation; Section 20.9).
-- [ ] 8.4 Update `user.lastActivity` on lesson progress and attempt submission.
-- [ ] 8.5 Extend `GET /me/export` to include progress and attempts; extend `DELETE /me` to
+- [x] 8.2 `shared/progress.ts`: completion rules (Section 13.3) with unit tests.
+- [x] 8.3 `GET /me/progress` and `GET /me/dashboard` (single aggregation; Section 20.9).
+- [x] 8.4 Update `user.lastActivity` on lesson progress and attempt submission.
+- [x] 8.5 Extend `GET /me/export` to include progress and attempts; extend `DELETE /me` to
       remove them (tests).
 
 ### 48.2 Client
 
-- [ ] 8.6 Progress overlays on `/learn`, module pages, lesson sidebar, challenge cards.
-- [ ] 8.7 "Mark complete" with optimistic update; auto-save `lastSectionId` (debounced).
-- [ ] 8.8 Dashboard page (Section 20.9) including empty and course-complete states.
-- [ ] 8.9 "Continue" logic: last activity if incomplete, else next item in curriculum order.
-- [ ] 8.10 Course-complete badge ("Skyhawk Pilot (Sim)") — an SVG badge on the dashboard,
+- [x] 8.6 Progress overlays on `/learn`, module pages, lesson sidebar, challenge cards.
+- [x] 8.7 "Mark complete" with optimistic update; auto-save `lastSectionId` (debounced).
+- [x] 8.8 Dashboard page (Section 20.9) including empty and course-complete states.
+- [x] 8.9 "Continue" logic: last activity if incomplete, else next item in curriculum order.
+- [x] 8.10 Course-complete badge ("Skyhawk Pilot (Sim)") — an SVG badge on the dashboard,
       with clear "not a real certificate" wording.
-- [ ] 8.11 `/account/attempts` page.
-- [ ] 8.12 Tests: dashboard states with MSW; E2E flows 2 and 3.
+- [x] 8.11 `/account/attempts` page (built in Phase 7).
+- [x] 8.12 Tests: dashboard states with MSW; E2E flows 2 and 3.
 - **AC:** US-05, US-08, US-13 pass; progress consistent across pages and devices.
 
 ### 48.3 Phase wrap-up
 
-- [ ] 8.13 PR "Phase 8: Progress and dashboard".
+- [x] 8.13 PR "Phase 8: Progress and dashboard".
 
 ---
 

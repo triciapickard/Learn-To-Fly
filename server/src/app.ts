@@ -20,6 +20,7 @@ import { authRouter } from './routes/auth.routes.js';
 import { contentRouter } from './routes/content.routes.js';
 import { healthRouter } from './routes/health.routes.js';
 import { meRouter } from './routes/me.routes.js';
+import { progressRouter } from './routes/progress.routes.js';
 
 export interface AppOptions {
   env: Env;
@@ -66,6 +67,7 @@ export function createApp({
   api.use(authRouter(env));
   api.use(meRouter());
   api.use(attemptRouter());
+  api.use(progressRouter());
   api.use(notFound);
   app.use(API_BASE_PATH, api);
   app.use('/api', notFound);

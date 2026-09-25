@@ -35,9 +35,3 @@ export const listAttempts: RequestHandler = async (req, res) => {
     .set('Cache-Control', 'no-store')
     .json(await attempts.listAttempts(userId(req), limit, before));
 };
-
-export const getProgress: RequestHandler = async (req, res) => {
-  res
-    .set('Cache-Control', 'no-store')
-    .json({ challenges: await attempts.challengeProgressBySlug(userId(req)) });
-};

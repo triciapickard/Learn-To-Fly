@@ -39,7 +39,7 @@ describe('routes', () => {
   });
 
   it.each([
-    ['/dashboard', 'Dashboard'],
+    ['/dashboard', 'Welcome aboard, Sam Simmer!'],
     ['/account', 'Account'],
     ['/account/attempts', 'Your challenge attempts'],
   ])('%s requires sign-in and renders for a signed-in user', async (url, heading) => {
