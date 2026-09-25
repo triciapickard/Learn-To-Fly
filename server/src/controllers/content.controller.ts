@@ -25,6 +25,9 @@ export const getChallenge: RequestHandler = async (req, res) => {
 export const getAircraft: RequestHandler = async (req, res) => {
   res.json({ aircraft: await content.getAircraft(param(req, 'slug')) });
 };
+export const getAirspaceProfile: RequestHandler = async (req, res) => {
+  res.json({ profile: await content.getAirspaceProfile(param(req, 'slug')) });
+};
 export const listChecklists: RequestHandler = async (_req, res) => {
   res.json({ checklists: await content.listChecklists() });
 };

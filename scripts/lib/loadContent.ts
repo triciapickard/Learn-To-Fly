@@ -4,6 +4,7 @@ import { LineCounter, parseDocument } from 'yaml';
 import type { z } from 'zod';
 import {
   AircraftSchema,
+  AirspaceProfileSchema,
   AirportsFileSchema,
   ChallengeSchema,
   ChecklistsFileSchema,
@@ -12,6 +13,7 @@ import {
   PresetsSchema,
   ResourcesFileSchema,
   type Aircraft,
+  type AirspaceProfile,
   type Airport,
   type Challenge,
   type Checklist,
@@ -25,6 +27,8 @@ import { parseLessonSource, type LinkTarget, type ParsedLesson } from './parseLe
 
 export interface ContentBundle {
   aircraft: Aircraft | null;
+  /** W11 data; optional so content fixtures without it still load. */
+  airspaceProfiles: AirspaceProfile[];
   modules: Module[];
   presets: Presets | null;
   resources: Resource[];
@@ -102,6 +106,10 @@ export function loadContent({
   const airports = loadYaml(f('airports.yaml'), AirportsFileSchema, issues)?.airports ?? [];
   const glossary = loadYaml(f('glossary.yaml'), GlossaryFileSchema, issues)?.terms ?? [];
   const checklists = loadYaml(f('checklists.yaml'), ChecklistsFileSchema, issues)?.checklists ?? [];
+  const profileFile = f('airspace-profile.yaml');
+  const profile = existsSync(profileFile)
+    ? loadYaml(profileFile, AirspaceProfileSchema, issues)
+    : null;
 
   const challenges: ContentBundle['challenges'] = [];
   for (const file of listFiles(f('challenges'), '.yaml')) {
@@ -151,6 +159,7 @@ export function loadContent({
   void moduleBySlug;
   return {
     aircraft,
+    airspaceProfiles: profile ? [profile] : [],
     modules,
     presets,
     resources,

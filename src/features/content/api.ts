@@ -3,6 +3,7 @@ import { api } from '@/lib/apiClient';
 import { CONTENT_STALE_TIME } from '@/lib/queryClient';
 import type {
   AircraftResponse,
+  AirspaceProfileResponse,
   AirportResponse,
   AirportsResponse,
   ChallengeResponse,
@@ -25,6 +26,7 @@ export const contentKeys = {
     ['challenges', filters] as const,
   challenge: (slug: string) => ['challenge', slug] as const,
   aircraft: ['aircraft', 'c172'] as const,
+  airspaceProfile: (slug: string) => ['airspace-profile', slug] as const,
   checklists: ['checklists'] as const,
   checklist: (slug: string) => ['checklist', slug] as const,
   airports: ['airports'] as const,
@@ -74,6 +76,13 @@ export const useAircraft = () =>
   useQuery({
     queryKey: contentKeys.aircraft,
     queryFn: () => api.get<AircraftResponse>('/aircraft/c172'),
+    ...content,
+  });
+
+export const useAirspaceProfile = (slug: string) =>
+  useQuery({
+    queryKey: contentKeys.airspaceProfile(slug),
+    queryFn: () => api.get<AirspaceProfileResponse>(`/airspace-profiles/${slug}`),
     ...content,
   });
 

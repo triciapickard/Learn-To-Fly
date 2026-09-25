@@ -4,6 +4,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { seriousViolations } from '@/test/axe';
 import { checklistFixture } from '@/test/fixtures';
 import { TestProviders } from '@/test/render';
+import AirspaceProfile from './airspace-profile/AirspaceProfile';
 import AirspeedIndicator from './airspeed-indicator/AirspeedIndicator';
 import AngleOfAttack from './angle-of-attack/AngleOfAttack';
 import { ChecklistRunner } from './checklist-runner/ChecklistRunner';
@@ -11,8 +12,10 @@ import ControlSurfaces from './control-surfaces/ControlSurfaces';
 import G1000Pfd from './g1000-pfd/G1000Pfd';
 import LoadFactor from './load-factor/LoadFactor';
 import PitchPower from './pitch-power/PitchPower';
+import SectionalLegend from './sectional-legend/SectionalLegend';
 import TrafficPattern from './traffic-pattern/TrafficPattern';
 import TurnCoordinator from './turn-coordinator/TurnCoordinator';
+import VorCdi from './vor-cdi/VorCdi';
 import WindTriangle from './wind-triangle/WindTriangle';
 
 describe('W3 Airspeed indicator', () => {
@@ -500,6 +503,144 @@ describe('W12 Wind triangle', () => {
 
   it('has no serious axe violations', async () => {
     const { container } = render(<WindTriangle props={{}} />);
+    expect(await seriousViolations(container)).toEqual([]);
+  });
+});
+
+describe('W9 VOR and CDI simulator', () => {
+  const value = (label: string) =>
+    screen.getByText(label, { selector: 'dt' }).nextElementSibling?.textContent;
+
+  it('updates the flag and needle as the OBS turns, and warns about reverse sensing', () => {
+    render(<VorCdi props={{}} />);
+    // Start: 10 nm out on the 307 radial with OBS 090: a TO flag, full scale right.
+    expect(value('Flag')).toBe('TO');
+    expect(value('Needle')).toBe('full scale right');
+    const obs = screen.getByRole('slider', { name: 'OBS (course)' });
+    fireEvent.change(obs, { target: { value: '127' } });
+    expect(value('Needle')).toBe('centered');
+    expect(value('Flag')).toBe('TO');
+    fireEvent.change(obs, { target: { value: '307' } });
+    expect(value('Flag')).toBe('FROM');
+    expect(screen.getByText('Reverse sensing')).toBeInTheDocument();
+    fireEvent.change(screen.getByRole('slider', { name: 'Heading' }), { target: { value: '300' } });
+    expect(screen.queryByText('Reverse sensing')).not.toBeInTheDocument();
+  });
+
+  it('moves the airplane with the position sliders and shows the HSI', async () => {
+    render(<VorCdi props={{}} />);
+    fireEvent.change(screen.getByRole('slider', { name: "Airplane's radial" }), {
+      target: { value: '90' },
+    });
+    expect(value('Radial')).toBe('090°');
+    await userEvent.click(screen.getByLabelText('Show HSI'));
+    expect(screen.getByText('HSI')).toBeInTheDocument();
+  });
+
+  it('runs the quiz', async () => {
+    const onQuizAnswer = vi.fn();
+    render(<VorCdi props={{ mode: 'quiz' }} onQuizAnswer={onQuizAnswer} />);
+    fireEvent.change(screen.getByRole('slider', { name: 'OBS (course)' }), {
+      target: { value: '45' },
+    });
+    await userEvent.click(screen.getByRole('button', { name: 'Check' }));
+    expect(onQuizAnswer).toHaveBeenCalledWith(
+      expect.objectContaining({ questionId: 'w9-which-radial', correct: true }),
+    );
+  });
+
+  it('has no serious axe violations', async () => {
+    const { container } = render(<VorCdi props={{ hsi: 'true' }} />);
+    expect(await seriousViolations(container)).toEqual([]);
+  });
+});
+
+describe('W10 Sectional legend explorer', () => {
+  it('explains a symbol chosen from the list or by hovering', async () => {
+    const { container } = render(<SectionalLegend props={{}} />);
+    await userEvent.click(screen.getByRole('button', { name: 'Maximum elevation figure (MEF)' }));
+    expect(screen.getByText(/3⁶ means 3,600 ft MSL/, { selector: 'dd' })).toBeInTheDocument();
+    fireEvent.pointerEnter(container.querySelector('[data-hotspot="obstacle"]')!);
+    expect(screen.getByText(/620 ft above the ground/, { selector: 'dd' })).toBeInTheDocument();
+  });
+
+  it('runs the find-it quiz by click and keyboard', async () => {
+    const onQuizAnswer = vi.fn();
+    const { container } = render(
+      <SectionalLegend props={{ mode: 'quiz' }} onQuizAnswer={onQuizAnswer} />,
+    );
+    // Chart area 1 is the towered airport: wrong for "non-towered".
+    screen.getByRole('button', { name: 'Chart area 1' }).focus();
+    await userEvent.keyboard('{Enter}');
+    await userEvent.click(screen.getByRole('button', { name: 'Check' }));
+    expect(onQuizAnswer).toHaveBeenLastCalledWith(
+      expect.objectContaining({ questionId: 'w10-nontowered', correct: false }),
+    );
+    await userEvent.click(container.querySelector('[data-hotspot="tcy-airport"]')!);
+    await userEvent.click(screen.getByRole('button', { name: 'Check' }));
+    expect(screen.getByText(/Magenta airport symbols have no control tower/)).toBeInTheDocument();
+  });
+
+  it('has no serious axe violations', async () => {
+    const { container } = render(<SectionalLegend props={{}} />);
+    expect(await seriousViolations(container)).toEqual([]);
+  });
+});
+
+describe('W11 Airspace cross-section', () => {
+  it('loads the profile and says which class the airplane is in', async () => {
+    render(
+      <TestProviders>
+        <AirspaceProfile props={{}} />
+      </TestProviders>,
+    );
+    const position = await screen.findByRole('slider', { name: 'Position along the line' });
+    expect(screen.getByText('Unverified data')).toBeInTheDocument();
+    fireEvent.change(position, { target: { value: '10' } });
+    fireEvent.change(screen.getByRole('slider', { name: 'Altitude' }), {
+      target: { value: '2000' },
+    });
+    expect(
+      screen.getByText(/You are in Class B/, { selector: 'p.font-semibold' }),
+    ).toBeInTheDocument();
+    expect(screen.getByText('An ATC clearance.')).toBeInTheDocument();
+    fireEvent.change(position, { target: { value: '2' } });
+    fireEvent.change(screen.getByRole('slider', { name: 'Altitude' }), {
+      target: { value: '300' },
+    });
+    expect(
+      screen.getByText(/You are in Class G/, { selector: 'p.font-semibold' }),
+    ).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Plan view' }));
+    expect(screen.getByRole('img', { name: /Plan view/ })).toBeInTheDocument();
+  });
+
+  it('runs the quiz', async () => {
+    const onQuizAnswer = vi.fn();
+    render(
+      <TestProviders>
+        <AirspaceProfile props={{ mode: 'quiz' }} onQuizAnswer={onQuizAnswer} />
+      </TestProviders>,
+    );
+    fireEvent.change(await screen.findByRole('slider', { name: 'Position along the line' }), {
+      target: { value: '2' },
+    });
+    fireEvent.change(screen.getByRole('slider', { name: 'Altitude' }), {
+      target: { value: '300' },
+    });
+    await userEvent.click(screen.getByRole('button', { name: 'Check' }));
+    expect(onQuizAnswer).toHaveBeenCalledWith(
+      expect.objectContaining({ questionId: 'w11-class-g', correct: true }),
+    );
+  });
+
+  it('has no serious axe violations', async () => {
+    const { container } = render(
+      <TestProviders>
+        <AirspaceProfile props={{}} />
+      </TestProviders>,
+    );
+    await screen.findByRole('slider', { name: 'Altitude' });
     expect(await seriousViolations(container)).toEqual([]);
   });
 });

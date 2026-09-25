@@ -1,0 +1,212 @@
+# W11 Airspace Cross-section data (plan.md Section 16.12).
+#
+# A simplified side view along a line from Half Moon Bay to Tracy. Distances along the line
+# are approximate and the shelves are simplified: this teaches the shape of the airspace,
+# not where its edges are. Never use it for navigation.
+#
+# ⚠ UNVERIFIED: every floor, ceiling and position comes from memory of the San Francisco
+# Terminal Area Chart (TAC) and must be checked against the current TAC and sectional
+# before `verified` is set to true (plan.md step 5.4 / Phase 10 checklist).
+slug: bay-area
+title: Half Moon Bay to Tracy
+summary: >-
+  A line from the coast at Half Moon Bay, over San Francisco International, Oakland,
+  Hayward and Livermore to Tracy, showing the San Francisco Class B shelves, the Oakland
+  Class C, the Hayward and Livermore Class D and the Class E and G around them.
+lengthNm: 66
+topFt: 12000
+points:
+  - { id: KHAF, name: Half Moon Bay, x: 0, elevationFt: 66, towered: false }
+  - { id: KSFO, name: San Francisco Intl, x: 15, elevationFt: 13, towered: true }
+  - { id: KOAK, name: Oakland Intl, x: 26, elevationFt: 9, towered: true }
+  - { id: KHWD, name: Hayward Executive, x: 32.5, elevationFt: 52, towered: true }
+  - { id: KLVK, name: Livermore Municipal, x: 48, elevationFt: 400, towered: true }
+  - { id: KTCY, name: Tracy Municipal, x: 63, elevationFt: 193, towered: false }
+terrain:
+  - [0, 66]
+  - [2, 300]
+  - [5, 1200]
+  - [8, 1300]
+  - [11, 600]
+  - [13, 50]
+  - [15, 13]
+  - [18, 5]
+  - [26, 9]
+  - [30, 20]
+  - [32.5, 52]
+  - [35, 600]
+  - [38, 1600]
+  - [41, 1200]
+  - [44, 700]
+  - [48, 400]
+  - [51, 500]
+  - [54, 1300]
+  - [57, 1100]
+  - [60, 400]
+  - [63, 193]
+  - [66, 150]
+modeCVeil: { center: KSFO, radiusNm: 30 }
+volumes:
+  - {
+      id: b-west-6000,
+      class: B,
+      name: San Francisco Class B,
+      fromNm: 0,
+      toNm: 5,
+      floorFt: 6000,
+      ceilingFt: 10000,
+      center: KSFO,
+    }
+  - {
+      id: b-west-4000,
+      class: B,
+      name: San Francisco Class B,
+      fromNm: 5,
+      toNm: 8,
+      floorFt: 4000,
+      ceilingFt: 10000,
+      center: KSFO,
+    }
+  - {
+      id: b-west-3000,
+      class: B,
+      name: San Francisco Class B,
+      fromNm: 8,
+      toNm: 10,
+      floorFt: 3000,
+      ceilingFt: 10000,
+      center: KSFO,
+    }
+  - id: b-surface
+    class: B
+    name: San Francisco Class B (surface area)
+    fromNm: 10
+    toNm: 20
+    floorFt: 0
+    ceilingFt: 10000
+    center: KSFO
+    notes: Around San Francisco International the Class B starts at the surface.
+  - {
+      id: b-east-1500,
+      class: B,
+      name: San Francisco Class B,
+      fromNm: 20,
+      toNm: 23,
+      floorFt: 1500,
+      ceilingFt: 10000,
+      center: KSFO,
+    }
+  - {
+      id: b-east-2100,
+      class: B,
+      name: San Francisco Class B,
+      fromNm: 23,
+      toNm: 30,
+      floorFt: 2100,
+      ceilingFt: 10000,
+      center: KSFO,
+    }
+  - {
+      id: b-east-3000,
+      class: B,
+      name: San Francisco Class B,
+      fromNm: 30,
+      toNm: 36,
+      floorFt: 3000,
+      ceilingFt: 10000,
+      center: KSFO,
+    }
+  - {
+      id: b-east-4000,
+      class: B,
+      name: San Francisco Class B,
+      fromNm: 36,
+      toNm: 42,
+      floorFt: 4000,
+      ceilingFt: 10000,
+      center: KSFO,
+    }
+  - {
+      id: b-east-6000,
+      class: B,
+      name: San Francisco Class B,
+      fromNm: 42,
+      toNm: 46,
+      floorFt: 6000,
+      ceilingFt: 10000,
+      center: KSFO,
+    }
+  - {
+      id: b-east-8000,
+      class: B,
+      name: San Francisco Class B,
+      fromNm: 46,
+      toNm: 50,
+      floorFt: 8000,
+      ceilingFt: 10000,
+      center: KSFO,
+    }
+  - id: c-oak
+    class: C
+    name: Oakland Class C
+    fromNm: 23
+    toNm: 29
+    floorFt: 0
+    ceilingFt: 2100
+    center: KOAK
+    notes: ⚠ verify. Tucked under the Class B shelf, so its top is the shelf's floor.
+  - {
+      id: d-hwd,
+      class: D,
+      name: Hayward Class D,
+      fromNm: 31,
+      toNm: 34,
+      floorFt: 0,
+      ceilingFt: 1500,
+      center: KHWD,
+    }
+  - {
+      id: d-lvk,
+      class: D,
+      name: Livermore Class D,
+      fromNm: 45,
+      toNm: 51,
+      floorFt: 0,
+      ceilingFt: 2900,
+      center: KLVK,
+    }
+  - id: e-700
+    class: E
+    name: Class E from 700 ft above the ground
+    fromNm: 0
+    toNm: 66
+    floorFt: 700
+    floorRef: AGL
+    ceilingFt: 17999
+    notes: Shown on sectionals by the faded magenta band; below it is Class G.
+requirements:
+  B:
+    entry: >-
+      An ATC clearance ("cleared into the Class Bravo"), two-way radio, and a transponder
+      with altitude reporting (Mode C) plus ADS-B Out. Student pilots also need a logbook
+      endorsement.
+    vfrMinimums: 3 statute miles visibility, clear of clouds.
+  C:
+    entry: >-
+      Two-way radio contact established before entering (ATC replies with your call sign),
+      and a transponder with altitude reporting plus ADS-B Out.
+    vfrMinimums: 3 statute miles; 500 ft below, 1,000 ft above and 2,000 ft horizontally from clouds.
+  D:
+    entry: Two-way radio contact established with the tower before entering.
+    vfrMinimums: 3 statute miles; 500 ft below, 1,000 ft above and 2,000 ft horizontally from clouds.
+  E:
+    entry: None for VFR flights.
+    vfrMinimums: >-
+      Below 10,000 ft MSL: 3 statute miles; 500 ft below, 1,000 ft above and 2,000 ft
+      horizontally from clouds.
+  G:
+    entry: None.
+    vfrMinimums: Below 1,200 ft above the ground by day, 1 statute mile and clear of clouds.
+source: FAA San Francisco Terminal Area Chart (TAC), simplified.
+verified: false
+verifiedAt: null

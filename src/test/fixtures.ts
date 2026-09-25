@@ -1,5 +1,6 @@
 import { http, HttpResponse } from 'msw';
 import type {
+  AirspaceProfileDto,
   AircraftDto,
   ChallengeSummary,
   ChecklistDto,
@@ -184,8 +185,89 @@ export function moduleSummary(overrides: Partial<ModuleSummary> = {}): ModuleSum
   };
 }
 
+/** A small W11 profile: a Class B surface area and shelf, a Class D, Class E and G. */
+export const airspaceProfileFixture: AirspaceProfileDto = {
+  slug: 'bay-area',
+  title: 'Test line',
+  summary: 'A test line from A to C.',
+  lengthNm: 40,
+  topFt: 12000,
+  points: [
+    { id: 'KAAA', name: 'Alpha', x: 0, elevationFt: 0, towered: false },
+    { id: 'KBBB', name: 'Bravo Intl', x: 10, elevationFt: 10, towered: true },
+    { id: 'KCCC', name: 'Charlie', x: 34, elevationFt: 400, towered: true },
+  ],
+  terrain: [
+    [0, 0],
+    [10, 10],
+    [25, 1500],
+    [34, 400],
+    [40, 300],
+  ],
+  modeCVeil: { center: 'KBBB', radiusNm: 30 },
+  volumes: [
+    {
+      id: 'b-surface',
+      class: 'B',
+      name: 'Bravo Class B',
+      fromNm: 5,
+      toNm: 15,
+      floorFt: 0,
+      floorRef: 'MSL',
+      ceilingFt: 10000,
+      center: 'KBBB',
+    },
+    {
+      id: 'b-shelf',
+      class: 'B',
+      name: 'Bravo Class B',
+      fromNm: 15,
+      toNm: 25,
+      floorFt: 3000,
+      floorRef: 'MSL',
+      ceilingFt: 10000,
+      center: 'KBBB',
+    },
+    {
+      id: 'd-ccc',
+      class: 'D',
+      name: 'Charlie Class D',
+      fromNm: 31,
+      toNm: 37,
+      floorFt: 0,
+      floorRef: 'MSL',
+      ceilingFt: 2900,
+      center: 'KCCC',
+    },
+    {
+      id: 'e-700',
+      class: 'E',
+      name: 'Class E from 700 ft above the ground',
+      fromNm: 0,
+      toNm: 40,
+      floorFt: 700,
+      floorRef: 'AGL',
+      ceilingFt: 17999,
+    },
+  ],
+  requirements: {
+    B: { entry: 'An ATC clearance.', vfrMinimums: '3 SM, clear of clouds.' },
+    C: { entry: 'Two-way radio contact.', vfrMinimums: '3 SM, 500/1,000/2,000.' },
+    D: { entry: 'Two-way radio contact with the tower.', vfrMinimums: '3 SM, 500/1,000/2,000.' },
+    E: { entry: 'None for VFR flights.', vfrMinimums: '3 SM, 500/1,000/2,000.' },
+    G: { entry: 'None.', vfrMinimums: '1 SM, clear of clouds.' },
+  },
+  source: 'Test',
+  verified: false,
+  verifiedAt: null,
+  version: 1,
+};
+
 /** MSW handlers serving the fixtures above. */
 export const contentHandlers = [
+  http.get('/api/v1/airspace-profiles/bay-area', () =>
+    HttpResponse.json({ profile: airspaceProfileFixture }),
+  ),
   http.get('/api/v1/aircraft/c172', () => HttpResponse.json({ aircraft: aircraftFixture })),
   http.get('/api/v1/modules', () =>
     HttpResponse.json({
