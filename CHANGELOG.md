@@ -83,3 +83,6 @@ All notable changes to this project are documented here. The format is based on
   C2.2 Climbs and descents, C2.3 Turns to headings and C2.4 The box (C2.1 now links L2.2).
 - Phase 9 · Module 3 content (drafts): L3.1 Preflight and engine start, L3.2 Taxiing, signs
   and markings, L3.3 Run-up, before takeoff, and after landing, and challenges C3.1–C3.4.
+- Phase 9 · Module 4 content (drafts): L4.1 Normal takeoff and climb, L4.2 The traffic
+  pattern, L4.3 Normal approach and landing, L4.4 Go-arounds, and challenges C4.1–C4.4 and
+  C4.7 Three-circuit session.

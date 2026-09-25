@@ -81,8 +81,17 @@ modules:
       Get into the air and back down again: normal takeoffs, the rectangular traffic
       pattern, stabilized approaches, landings and go-arounds.
     icon: plane-landing
-    lessons: []
-    challenges: []
+    lessons:
+      - l4-1-normal-takeoff-and-climb
+      - l4-2-the-traffic-pattern
+      - l4-3-normal-approach-and-landing
+      - l4-4-go-arounds
+    challenges:
+      - c4-1-normal-takeoff-and-departure
+      - c4-2-fly-the-pattern
+      - c4-3-full-stop-landing
+      - c4-4-go-around
+      - c4-7-three-circuit-session
     estimatedMinutes: 270
   - slug: m5-slow-flight-stalls-emergencies
     code: M5

@@ -1,0 +1,107 @@
+slug: c4-3-full-stop-landing
+code: C4.3
+title: Full-stop landing
+module: m4-takeoffs-patterns-landings
+lessons: [l4-3-normal-approach-and-landing]
+priority: P0
+type: landing
+difficulty: 3
+estimatedMinutes: 20
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Fly a pattern and land in the first third of the runway, on the centerline, without
+  bouncing.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RUNWAY
+  startDetails:
+    runway: 25R # ⚠ verify the runway name in the sim
+    fallback: If the sim starts you on a different runway, fly the pattern for that runway.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Take off and fly the left pattern for runway 25R.
+  - Fly a stabilized approach — flaps 30, 65 KIAS, on the glide path and on the centerline by 300 ft AGL. If not, go around and try again.
+  - Round out, flare and touch down on the main wheels.
+  - Keep straight on the rollout and stop on the runway or turn off. Continue with C3.4 if you like.
+
+criteria:
+  - id: stabilized
+    label: Stabilized by 300 ft AGL (speed, path, centerline, configured)
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-3-normal-approach-and-landing, section: the-stabilized-approach }
+  - id: final-speed
+    label: Final approach speed
+    kind: tiered
+    tiers:
+      gold: 65 −5/+10 KIAS
+      silver: 65 ±10 KIAS
+      bronze: 65 ±15 KIAS
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-3-normal-approach-and-landing, section: pitch-and-power-on-final }
+  - id: touchdown-point
+    label: Touchdown point
+    kind: tiered
+    tiers:
+      gold: Within 400 ft beyond the aiming point
+      silver: Within the first third of the runway
+      bronze: On the runway and stopped safely
+    required: true
+    weight: 3
+    reviewLink: { lesson: l4-3-normal-approach-and-landing, section: the-aiming-point }
+  - id: centerline
+    label: Touchdown on the centerline
+    kind: tiered
+    tiers:
+      gold: Within ½ wingspan
+      silver: Within 1 wingspan
+      bronze: On the runway
+    required: true
+    weight: 2
+  - id: no-bounce
+    label: No bounce, main wheels first
+    kind: tiered
+    tiers:
+      gold: Smooth
+      silver: One small bounce, corrected
+      bronze: Bounced but safe
+    required: true
+    weight: 2
+    reviewLink: { lesson: l4-3-normal-approach-and-landing, section: the-round-out-and-flare }
+  - id: rollout
+    label: Directional control on the rollout
+    kind: binary
+    required: false
+    weight: 1
+
+randomEvents: []
+
+commonMistakes:
+  - A fast final, so the airplane floats down the runway.
+  - Flaring too high.
+  - Pushing the nose forward after a bounce.
+
+tips:
+  - If you're not stabilized, go around. It counts as a good decision, not a fail — fly the pattern again and you can still pass.
+
+debriefQuestions:
+  - id: eyes-in-flare
+    prompt: Where were your eyes during the flare?
+  - id: threshold-speed
+    prompt: What was your speed as you crossed the threshold?
