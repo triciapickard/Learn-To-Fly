@@ -1,0 +1,41 @@
+slug: c1-1-bad-refs
+code: C1.1
+title: Bad references
+module: m1-test
+lessons: [l1-7-not-a-lesson]
+priority: P0
+type: landing
+difficulty: 2
+estimatedMinutes: 10
+published: true
+goal: Land.
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KXYZ
+  startState: RUNWAY
+  weatherPreset: WX_TORNADO
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: true
+procedure: [Land.]
+criteria:
+  - id: a
+    label: A
+    kind: binary
+    required: true
+    weight: 3
+  - id: b
+    label: B
+    kind: binary
+    required: false
+    weight: 1
+  - id: c
+    label: C
+    kind: binary
+    required: false
+    weight: 1
+    reviewLink: { lesson: l1-1-published-draft, section: no-such-section }

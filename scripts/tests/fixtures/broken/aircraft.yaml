@@ -1,0 +1,30 @@
+slug: c172
+name: Test aircraft
+variants:
+  - id: c172-g1000
+    simName: Test
+    avionics: G1000
+    gps: true
+    autopilot: null
+specs: {}
+vspeeds:
+  vy:
+    label: V_Y
+    meaning: Best rate of climb
+    kias: 74
+arcs:
+  white: [40, 85]
+  green: [48, 129]
+  yellow: [129, 163]
+  redline: 163
+limits:
+  maneuveringSpeed:
+    - weightLb: 2550
+      kias: 105
+  maxDemonstratedCrosswindKt: 15
+powerSettings:
+  - phase: Cruise
+    rpm: '2,300'
+    flaps: 0°
+    targetSpeed: '100'
+verification: {}

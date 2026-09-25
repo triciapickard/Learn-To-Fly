@@ -23,7 +23,7 @@ export default function AboutPage() {
         </p>
         <p>
           Learn-To-Fly brings that structure to the sim. Short lessons with interactive diagrams
-          explain each idea, and in-sim challenges let you practise it with an exact setup and an
+          explain each idea, and in-sim challenges let you practice it with an exact setup and an
           honest, scored debrief.
         </p>
         <h2>Who builds it</h2>

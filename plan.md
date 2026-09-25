@@ -526,6 +526,22 @@ revisited, but should not be changed silently.
 - **Fonts:** Inter and JetBrains Mono are self-hosted via Fontsource (the Section 32.1
   privacy recommendation), so no Google Fonts requests are made.
 
+
+### D-17 — Unverified content is seeded as drafts (Phase 5)
+
+- **Problem:** Section 28.5 requires published lessons and challenges to have
+  `lastVerifiedAt` and no `verify` callouts, but in-sim verification (Section 54) can only
+  be done by the author. Without a workaround, nothing written before Phase 12 could be
+  seen in the app, reviewed, or used by the E2E tests.
+- **Decision:** content that has not been verified in the sim keeps `published: false`
+  (a draft). `npm run content:seed -- --include-drafts` (or
+  `CONTENT_INCLUDE_DRAFTS=true`) publishes drafts in the database with `draft: true`, and
+  the UI labels them "Draft — not yet verified in the sim". Local development, CI and
+  preview services use it; **production does not**, so only verified content goes live.
+  The validator rules for published content are unchanged.
+- **Also:** module files list only lessons/challenges that exist, and published lesson
+  orders must be contiguous (drafts may leave gaps while authoring).
+
 ---
 
 # Part II — Learning the Cessna 172 (for you, the author)
@@ -5912,61 +5928,61 @@ API endpoints work.
 
 ### 45.1 Schemas
 
-- [ ] 5.1 `shared/schemas/content.ts`: Zod schemas for Aircraft, Module, LessonFrontmatter,
+- [x] 5.1 `shared/schemas/content.ts`: Zod schemas for Aircraft, Module, LessonFrontmatter,
       LessonBlock (discriminated union), Quiz, Challenge (with Criterion, Setup, presets),
       Checklist, Airport, GlossaryTerm, Resource, Presets.
-- [ ] 5.2 `shared/schemas/api.ts`: DTOs for list/detail responses (lesson summary vs full).
-- [ ] 5.3 Unit tests with valid and invalid examples for each schema.
+- [x] 5.2 `shared/schemas/api.ts`: DTOs for list/detail responses (lesson summary vs full).
+- [x] 5.3 Unit tests with valid and invalid examples for each schema.
 
 ### 45.2 Seed data files (skeletons)
 
-- [ ] 5.4 `content/aircraft.yaml` with Section 8 data (all numbers flagged in a
+- [x] 5.4 `content/aircraft.yaml` with Section 8 data (all numbers flagged in a
       `verification` map until verified).
-- [ ] 5.5 `content/modules.yaml` — all 9 modules with titles/summaries/orders.
-- [ ] 5.6 `content/presets.yaml` — start states, weather, loads (Section 15.1).
-- [ ] 5.7 `content/resources.yaml` — every resource from Section 6 with slugs used by the
+- [x] 5.5 `content/modules.yaml` — all 9 modules with titles/summaries/orders.
+- [x] 5.6 `content/presets.yaml` — start states, weather, loads (Section 15.1).
+- [x] 5.7 `content/resources.yaml` — every resource from Section 6 with slugs used by the
       lesson specs (e.g. `phak-ch5`, `afh-ch9`, `aim-4-3`, `skyvector`, …).
-- [ ] 5.8 `content/airports.yaml` — the 13 airports (Section 11.1) with `verifiedAt: null`.
-- [ ] 5.9 `content/glossary.yaml` — seed with Appendix A terms.
-- [ ] 5.10 `content/checklists.yaml` — Appendix B phases in our own words.
-- [ ] 5.11 One complete lesson (`l1-4-speeds-limits-and-checklists.md`) and one complete
+- [x] 5.8 `content/airports.yaml` — the 13 airports (Section 11.1) with `verifiedAt: null`.
+- [x] 5.9 `content/glossary.yaml` — seed with Appendix A terms.
+- [x] 5.10 `content/checklists.yaml` — Appendix B phases in our own words.
+- [x] 5.11 One complete lesson (`l1-4-speeds-limits-and-checklists.md`) and one complete
       challenge (`c2-1-straight-and-level.yaml`) as reference examples.
 
 ### 45.3 Parsing and validation
 
-- [ ] 5.12 `scripts/lib/parseLesson.ts`: gray-matter frontmatter → unified/remark pipeline
+- [x] 5.12 `scripts/lib/parseLesson.ts`: gray-matter frontmatter → unified/remark pipeline
       with `remark-gfm` + `remark-directive` → walk the tree, emit `blocks[]` and
       `sections[]`; replace `{{vspeed.*}}` tokens; resolve `[[slug]]` links.
-- [ ] 5.13 Unit tests for the parser: each directive type, tokens, internal links, headings
+- [x] 5.13 Unit tests for the parser: each directive type, tokens, internal links, headings
       → sections, malformed directive errors with file/line numbers.
-- [ ] 5.14 `scripts/content-validate.ts`: load everything, validate schemas, run
+- [x] 5.14 `scripts/content-validate.ts`: load everything, validate schemas, run
       cross-reference rules (Section 28.5), print a readable report, exit code.
-- [ ] 5.15 Add `content` job to CI.
+- [x] 5.15 Add `content` job to CI.
 - **AC:** validator passes on the skeleton content and fails with clear messages on a
   deliberately broken fixture.
 
 ### 45.4 Seeding
 
-- [ ] 5.16 Mongoose models for Module, Lesson, Challenge, Aircraft, Checklist, Airport,
+- [x] 5.16 Mongoose models for Module, Lesson, Challenge, Aircraft, Checklist, Airport,
       GlossaryTerm, Resource, ContentRelease.
-- [ ] 5.17 `scripts/content-seed.ts`: validate first (abort on errors), compute hashes,
+- [x] 5.17 `scripts/content-seed.ts`: validate first (abort on errors), compute hashes,
       bulk upsert by slug, bump versions on change, unpublish removed items, write
       `contentReleases`. Support `--dry-run`.
-- [ ] 5.18 Tests: seeding twice is idempotent (no version bumps); changing a lesson bumps
+- [x] 5.18 Tests: seeding twice is idempotent (no version bumps); changing a lesson bumps
       only that lesson; removing a lesson unpublishes it.
 - **AC:** `npm run content:seed` populates the local DB; Compass shows documents.
 
 ### 45.5 Content API
 
-- [ ] 5.19 Routes in Section 29.3 with services using `.lean()` and projections.
-- [ ] 5.20 Caching headers + ETag based on latest content release.
-- [ ] 5.21 Integration tests: only published returned; 404 for unknown slug; list endpoints
+- [x] 5.19 Routes in Section 29.3 with services using `.lean()` and projections.
+- [x] 5.20 Caching headers + ETag based on latest content release.
+- [x] 5.21 Integration tests: only published returned; 404 for unknown slug; list endpoints
       exclude `blocks`; filters on `/challenges`.
 - **AC:** `curl /api/v1/lessons/l1-4-speeds-limits-and-checklists` returns blocks.
 
 ### 45.6 Phase wrap-up
 
-- [ ] 5.22 PR "Phase 5: Content pipeline"; document the authoring workflow in
+- [x] 5.22 PR "Phase 5: Content pipeline"; document the authoring workflow in
       `content/README.md` (how to add a lesson/challenge, directives, validation).
 
 ---

@@ -10,12 +10,13 @@ import { csrfProtection } from './middleware/csrf.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import { createLogger, httpLogger } from './middleware/logger.js';
 import { notFound } from './middleware/notFound.js';
-import { generalApiLimits } from './middleware/rateLimit.js';
+import { readLimit, writeLimit } from './middleware/rateLimit.js';
 import { requestId } from './middleware/requestId.js';
 import { requireJson } from './middleware/requireJson.js';
 import { securityHeaders } from './middleware/security.js';
 import { staticClient } from './middleware/staticClient.js';
 import { authRouter } from './routes/auth.routes.js';
+import { contentRouter } from './routes/content.routes.js';
 import { healthRouter } from './routes/health.routes.js';
 import { meRouter } from './routes/me.routes.js';
 
@@ -52,10 +53,14 @@ export function createApp({
 
   const api = express.Router();
   api.use(healthRouter(env.GIT_SHA));
+  api.use(readLimit(env.RATE_LIMIT_ENABLED));
+  // Public content is mounted before the session so cacheable responses never carry a
+  // Set-Cookie header.
+  api.use(contentRouter());
   api.use(requireJson);
   api.use(express.json({ limit: '100kb' }));
   api.use(sessionMiddleware(env, sessionStore));
-  api.use(...generalApiLimits(env.RATE_LIMIT_ENABLED));
+  api.use(...writeLimit(env.RATE_LIMIT_ENABLED));
   api.use(csrfProtection);
   api.use(authRouter(env));
   api.use(meRouter());

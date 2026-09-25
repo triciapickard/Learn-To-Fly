@@ -6,3 +6,4 @@ test-results
 package-lock.json
 plan.md
 server/src/data/common-passwords.txt
+scripts/tests/fixtures
