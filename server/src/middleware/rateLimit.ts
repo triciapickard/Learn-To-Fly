@@ -42,15 +42,19 @@ export function createRateLimiter({
 
 const MUTATING = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
 
-/** General API limits: 300/min per IP for reads, 120/min per user (or IP) for writes. */
-export function generalApiLimits(enabled: boolean): RequestHandler[] {
+/** Public GET limit: 300/min per IP (Section 30.7). */
+export function readLimit(enabled: boolean): RequestHandler {
+  return createRateLimiter({
+    enabled,
+    windowMs: 60_000,
+    limit: 300,
+    skip: (req) => MUTATING.has(req.method),
+  });
+}
+
+/** Mutating requests: 120/min per signed-in user (or IP). Mount after the session. */
+export function writeLimit(enabled: boolean): RequestHandler[] {
   return [
-    createRateLimiter({
-      enabled,
-      windowMs: 60_000,
-      limit: 300,
-      skip: (req) => MUTATING.has(req.method),
-    }),
     createRateLimiter({
       enabled,
       windowMs: 60_000,

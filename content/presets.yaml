@@ -1,0 +1,84 @@
+# Standard challenge setups (plan.md Section 15.1) so briefs stay short.
+# ⚠ Verify menu names and whether each option exists in MSFS 2024 (Section 9).
+startStates:
+  COLD_DARK:
+    label: Cold and dark
+    description: At a parking spot with all systems off. Choose a cold-and-dark start in the flight setup (verify the menu option name).
+  RAMP_RUNNING:
+    label: Parked, engine running
+    description: At a parking spot with the engine running and the avionics on.
+  RUNWAY:
+    label: On the runway
+    description: Lined up on the named runway, engine running, ready for takeoff.
+  AIR_START:
+    label: In the air
+    description: In flight at the stated position, altitude, heading and speed. If your sim cannot start in the air, start on the runway at KLVK and fly to the start point; the timer starts there.
+
+weather:
+  WX_CALM:
+    label: Calm and clear
+    summary: Clear skies, calm wind, unlimited visibility.
+    clouds: Clear
+    surfaceWind: Calm
+    visibility: 10 sm or more
+    temperatureC: 15
+    altimeterInHg: 29.92
+  WX_LIGHT_W:
+    label: Light westerly
+    summary: Clear skies with a light westerly wind.
+    clouds: Clear
+    surfaceWind: 250° at 8 kt
+    windsAloft: 270° at 15 kt (3,000 ft), 280° at 20 kt (6,000 ft)
+    visibility: 10 sm or more
+    temperatureC: 18
+    altimeterInHg: 30.00
+  WX_XWIND_10:
+    label: 10 kt crosswind
+    summary: Clear skies with a southerly wind across the Livermore runways.
+    clouds: Clear
+    surfaceWind: 200° at 10 kt (about 8 kt crosswind on runway 25 — verify the runway heading)
+    visibility: 10 sm or more
+    temperatureC: 18
+    altimeterInHg: 30.00
+  WX_XWIND_15G:
+    label: Gusty crosswind
+    summary: Clear skies with a gusty southerly wind.
+    clouds: Clear
+    surfaceWind: 200° at 12 kt gusting 18 kt
+    visibility: 10 sm or more
+    temperatureC: 18
+    altimeterInHg: 30.00
+  WX_SCATTERED:
+    label: Scattered clouds
+    summary: Scattered clouds at 5,500 ft with a westerly wind.
+    clouds: Scattered at 5,500 ft
+    surfaceWind: 270° at 10 kt
+    visibility: 10 sm
+    temperatureC: 15
+    altimeterInHg: 30.02
+
+loads:
+  LOAD_SOLO:
+    label: Solo
+    description: Pilot 170 lb, no passengers, 75% fuel (about 40 gal).
+    priority: P0
+  LOAD_FULL:
+    label: Full
+    description: Pilot 170 lb, passenger 170 lb and 20 lb baggage, 100% fuel.
+    priority: P1
+
+dates:
+  late-spring:
+    label: Late spring
+    date: 15 May
+
+assistance:
+  training:
+    label: Learn-To-Fly Training profile
+    description: Assisted flying, landing, trim and checklist auto-complete off; auto-rudder on only without rudder pedals or a twist stick (Lesson 0.2, Section 9.3).
+
+defaults:
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training

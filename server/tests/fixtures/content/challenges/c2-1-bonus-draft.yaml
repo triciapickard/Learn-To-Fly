@@ -1,0 +1,48 @@
+slug: c2-1-bonus-draft
+code: C2.1
+title: Bonus draft
+module: m2-next
+lessons: []
+priority: P1
+type: manoeuvre
+difficulty: 1
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null
+goal: Do the thing.
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RUNWAY
+  startDetails:
+    runway: 25R
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: true
+procedure: [Take off., Land.]
+criteria:
+  - id: stabilized
+    label: Stabilized by 300 ft AGL
+    kind: binary
+    required: true
+    weight: 3
+  - id: final-speed
+    label: Final approach speed
+    kind: tiered
+    tiers: { gold: 65 KIAS −5/+10, silver: 65 KIAS ±10, bronze: 65 KIAS ±15 }
+    required: true
+    weight: 3
+    reviewLink: { lesson: l1-1-first-lesson, section: getting-started }
+  - id: rollout
+    label: Rollout
+    kind: binary
+    required: false
+    weight: 1
+debriefQuestions:
+  - id: eyes
+    prompt: Where were your eyes?

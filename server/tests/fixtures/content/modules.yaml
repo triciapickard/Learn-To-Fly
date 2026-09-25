@@ -1,0 +1,22 @@
+# Test fixture (plan.md Section 35.3): 2 modules, 3 lessons, 2 challenges.
+modules:
+  - slug: m1-basics
+    code: M1
+    order: 1
+    title: Basics
+    summary: The basics.
+    description: The basics module.
+    icon: plane
+    lessons: [l1-1-first-lesson, l1-2-second-lesson]
+    challenges: [c1-1-first-challenge]
+    estimatedMinutes: 30
+  - slug: m2-next
+    code: M2
+    order: 2
+    title: Next steps
+    summary: What comes next.
+    description: The next module.
+    icon: gauge
+    lessons: [l2-1-draft-lesson]
+    challenges: [c2-1-bonus-draft]
+    estimatedMinutes: 30

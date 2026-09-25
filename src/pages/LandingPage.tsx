@@ -209,7 +209,7 @@ export default function LandingPage() {
             </CardHeader>
             <CardBody className="flex flex-col gap-4">
               <p>
-                Fly a pattern and land in the first third of the runway, on the centreline, without
+                Fly a pattern and land in the first third of the runway, on the centerline, without
                 bouncing.
               </p>
               <dl className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">

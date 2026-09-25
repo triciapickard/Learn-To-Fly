@@ -75,7 +75,7 @@ export type ChallengeType = (typeof CHALLENGE_TYPES)[number];
 export const challengeTypeMeta: Record<ChallengeType, { label: string; icon: LucideIcon }> = {
   setup: { label: 'Setup', icon: Settings2 },
   procedure: { label: 'Procedure', icon: ClipboardList },
-  manoeuvre: { label: 'Manoeuvre', icon: Repeat2 },
+  manoeuvre: { label: 'Maneuver', icon: Repeat2 },
   pattern: { label: 'Pattern', icon: Route },
   landing: { label: 'Landing', icon: PlaneLanding },
   emergency: { label: 'Emergency', icon: TriangleAlert },

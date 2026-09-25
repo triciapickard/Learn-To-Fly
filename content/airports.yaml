@@ -1,0 +1,260 @@
+# Home-region airports (plan.md Section 11). ⚠ Verify runways, elevations, pattern
+# direction and altitude, frequencies and airspace against (1) the current Chart
+# Supplement, (2) SkyVector and (3) the sim, then set verifiedAt and verifiedAgainst.
+# Frequencies are deliberately left empty until verified.
+airports:
+  - icao: KLVK
+    name: Livermore Municipal
+    city: Livermore, CA
+    elevationFt: 400
+    airspaceClass: D
+    towered: true
+    role: training
+    runways:
+      - designator: 7L/25R
+      - designator: 7R/25L
+    frequencies: []
+    notes:
+      - 'Primary Learn-To-Fly training base: a wide, flat valley with parallel runways.'
+      - Good practice area for maneuvers to the east, toward the Altamont Pass.
+    links:
+      skyvector: https://skyvector.com/airport/KLVK
+      airnav: https://www.airnav.com/airport/KLVK
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KTCY
+    name: Tracy Municipal
+    city: Tracy, CA
+    elevationFt: 193
+    airspaceClass: G
+    towered: false
+    role: training
+    runways:
+      - designator: 8/26
+      - designator: 12/30
+    frequencies: []
+    notes:
+      - 'Non-towered: self-announce on the CTAF.'
+      - East of Livermore over the Altamont Pass wind farms, a great landmark.
+    links:
+      skyvector: https://skyvector.com/airport/KTCY
+      airnav: https://www.airnav.com/airport/KTCY
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: C83
+    name: Byron
+    city: Byron, CA
+    elevationFt: 79
+    airspaceClass: G
+    towered: false
+    role: training
+    runways:
+      - designator: 5/23
+      - designator: 12/30
+    frequencies: []
+    notes:
+      - Second non-towered airport, a short cross-country from Livermore.
+    links:
+      skyvector: https://skyvector.com/airport/C83
+      airnav: https://www.airnav.com/airport/C83
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KPAO
+    name: Palo Alto
+    city: Palo Alto, CA
+    elevationFt: 7
+    airspaceClass: D
+    towered: true
+    role: training
+    runways:
+      - designator: 13/31
+    frequencies: []
+    notes:
+      - Short runway (about 2,400 ft) under the San Francisco Class B shelves.
+      - Used for towered radio work and precision landings.
+    links:
+      skyvector: https://skyvector.com/airport/KPAO
+      airnav: https://www.airnav.com/airport/KPAO
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KSQL
+    name: San Carlos
+    city: San Carlos, CA
+    elevationFt: 5
+    airspaceClass: D
+    towered: true
+    role: destination
+    runways:
+      - designator: 12/30
+    frequencies: []
+    notes:
+      - Neighbor of Palo Alto, also under the Class B shelves.
+      - Landmark-rich bay shoreline.
+    links:
+      skyvector: https://skyvector.com/airport/KSQL
+      airnav: https://www.airnav.com/airport/KSQL
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KHAF
+    name: Half Moon Bay
+    city: Half Moon Bay, CA
+    elevationFt: 66
+    airspaceClass: G
+    towered: false
+    role: destination
+    runways:
+      - designator: 12/30
+    frequencies: []
+    notes:
+      - Coastal non-towered airport over the hills from Palo Alto and San Carlos.
+      - Watch for the marine layer and fog along the coast.
+    links:
+      skyvector: https://skyvector.com/airport/KHAF
+      airnav: https://www.airnav.com/airport/KHAF
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KHWD
+    name: Hayward Executive
+    city: Hayward, CA
+    elevationFt: 52
+    airspaceClass: D
+    towered: true
+    role: destination
+    runways:
+      - designator: 10L/28R
+      - designator: 10R/28L
+    frequencies: []
+    notes:
+      - East Bay alternative and diversion option.
+    links:
+      skyvector: https://skyvector.com/airport/KHWD
+      airnav: https://www.airnav.com/airport/KHWD
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KCCR
+    name: Buchanan Field
+    city: Concord, CA
+    elevationFt: 26
+    airspaceClass: D
+    towered: true
+    role: destination
+    runways:
+      - designator: 1L/19R
+      - designator: 1R/19L
+      - designator: 14L/32R
+      - designator: 14R/32L
+    frequencies: []
+    notes:
+      - Capstone destination option, near Mount Diablo.
+    links:
+      skyvector: https://skyvector.com/airport/KCCR
+      airnav: https://www.airnav.com/airport/KCCR
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KWVI
+    name: Watsonville Municipal
+    city: Watsonville, CA
+    elevationFt: 163
+    airspaceClass: G
+    towered: false
+    role: destination
+    runways:
+      - designator: 2/20
+      - designator: 9/27
+    frequencies: []
+    notes:
+      - Non-towered capstone option to the south along the coast.
+    links:
+      skyvector: https://skyvector.com/airport/KWVI
+      airnav: https://www.airnav.com/airport/KWVI
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KSNS
+    name: Salinas Municipal
+    city: Salinas, CA
+    elevationFt: 85
+    airspaceClass: D
+    towered: true
+    role: destination
+    runways:
+      - designator: 8/26
+      - designator: 13/31
+    frequencies: []
+    notes:
+      - Bonus capstone option in the Salinas valley.
+    links:
+      skyvector: https://skyvector.com/airport/KSNS
+      airnav: https://www.airnav.com/airport/KSNS
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KOAK
+    name: Oakland International
+    city: Oakland, CA
+    elevationFt: 9
+    airspaceClass: C
+    towered: true
+    role: awareness
+    runways:
+      - designator: 10L/28R
+      - designator: 10R/28L
+      - designator: 12/30
+      - designator: 15/33
+    frequencies: []
+    notes:
+      - Class C airspace awareness only — Learn-To-Fly challenges never land here.
+    links:
+      skyvector: https://skyvector.com/airport/KOAK
+      airnav: https://www.airnav.com/airport/KOAK
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KSJC
+    name: San Jose International
+    city: San Jose, CA
+    elevationFt: 62
+    airspaceClass: C
+    towered: true
+    role: awareness
+    runways:
+      - designator: 12L/30R
+      - designator: 12R/30L
+    frequencies: []
+    notes:
+      - Class C airspace awareness only.
+    links:
+      skyvector: https://skyvector.com/airport/KSJC
+      airnav: https://www.airnav.com/airport/KSJC
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true
+  - icao: KSFO
+    name: San Francisco International
+    city: San Francisco, CA
+    elevationFt: 13
+    airspaceClass: B
+    towered: true
+    role: awareness
+    runways:
+      - designator: 10L/28R
+      - designator: 10R/28L
+      - designator: 1L/19R
+      - designator: 1R/19L
+    frequencies: []
+    notes:
+      - Class B airspace awareness only — the upside-down wedding cake.
+    links:
+      skyvector: https://skyvector.com/airport/KSFO
+      airnav: https://www.airnav.com/airport/KSFO
+    verifiedAt: null
+    verifiedAgainst: []
+    published: true

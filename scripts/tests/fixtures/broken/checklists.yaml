@@ -1,0 +1,14 @@
+checklists:
+  - slug: before-landing
+    title: Before landing
+    phase: Landing
+    order: 1
+    mode: do-verify
+    aircraftSlug: c172
+    items:
+      - id: mixture
+        item: Mixture
+        action: RICH
+      - id: mixture
+        item: Mixture again
+        action: RICH

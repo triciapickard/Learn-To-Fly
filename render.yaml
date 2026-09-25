@@ -11,6 +11,9 @@ services:
     autoDeploy: true
     # --include=dev: the build needs Vite and TypeScript even though NODE_ENV=production.
     buildCommand: npm ci --include=dev && npm run build
+    # Seeds validated content into Atlas before the new version goes live (Section 38.2).
+    # Only verified (published) content is shown unless CONTENT_INCLUDE_DRAFTS is "true".
+    preDeployCommand: npm run content:seed
     startCommand: npm start
     healthCheckPath: /api/v1/health
     envVars:
@@ -30,3 +33,6 @@ services:
         value: info
       - key: RATE_LIMIT_ENABLED
         value: 'true'
+      # Set to "true" only on a preview/staging service to show unverified drafts.
+      - key: CONTENT_INCLUDE_DRAFTS
+        value: 'false'

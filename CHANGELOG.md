@@ -27,3 +27,9 @@ All notable changes to this project are documented here. The format is based on
   common-password check, change password (revokes other sessions), profile and
   preference updates, data export and account deletion; sign-up and log-in pages,
   header account menu, protected routes, account page; Render blueprint.
+- Phase 5: content pipeline — Zod content schemas, `content/` seed data (aircraft,
+  9 modules, presets, 96 resources, 13 airports, 179 glossary terms, 16 checklists),
+  reference lesson L1.4 and challenge C2.1 (drafts), Markdown lesson parser with
+  directives/tokens/links, validator with cross-reference rules, idempotent seeder with
+  content releases and draft previews, public content API with ETag caching, CI content
+  job, `content/README.md` authoring guide.
