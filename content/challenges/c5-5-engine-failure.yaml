@@ -1,0 +1,113 @@
+slug: c5-5-engine-failure
+code: C5.5
+title: Engine failure
+module: m5-slow-flight-stalls-emergencies
+lessons: [l5-4-engine-failure-and-forced-landings]
+priority: P0
+type: emergency
+difficulty: 4
+estimatedMinutes: 20
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  After a simulated engine failure, set up best glide, choose somewhere to land within
+  reach, run the restart flow, declare the emergency and fly to a position where a safe
+  landing is assured.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: AIR_START
+  startDetails:
+    position: 8 nm east of KLVK # ⚠ adjust so KLVK is within about 5 nm glide at 3,500 ft
+    altitudeFt: 3500
+    headingDeg: 90
+    speedKias: 110
+    fallback: Start on the runway at KLVK, take off and climb east to 3,500 ft MSL. Start the timer when you're level in cruise.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Fly level in cruise and start the timer. When it beeps, set the mixture to idle cut-off — that's your engine failure.
+  - A — pitch for 68 KIAS and trim.
+  - B — choose KLVK or a field within glide range, and turn toward it.
+  - C — run the restart flow. For this challenge the restart fails, so leave the mixture at cut-off.
+  - D — make the radio call on the current frequency and squawk 7700.
+  - E — fly a key-point approach to your chosen spot. Land if the sim allows it, or at 200 ft above the field set the mixture rich, add power and climb away (a practice recovery).
+
+criteria:
+  - id: glide-quick
+    label: Best glide set up quickly
+    kind: tiered
+    tiers:
+      gold: Within 5 s
+      silver: Within 10 s
+      bronze: Within 20 s
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-4-engine-failure-and-forced-landings, section: a-airspeed }
+  - id: glide-speed
+    label: Best glide speed held
+    kind: tiered
+    tiers:
+      gold: 68 ±5 KIAS
+      silver: 68 ±10 KIAS
+      bronze: 68 ±15 KIAS
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-4-engine-failure-and-forced-landings, section: a-airspeed }
+  - id: site-chosen
+    label: Suitable landing site chosen within glide range
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-4-engine-failure-and-forced-landings, section: b-best-field }
+  - id: restart-flow
+    label: Restart flow performed
+    kind: binary
+    required: false
+    weight: 2
+    reviewLink: { lesson: l5-4-engine-failure-and-forced-landings, section: c-checklist }
+  - id: declared
+    label: Declared the emergency and squawked 7700
+    kind: binary
+    required: false
+    weight: 1
+  - id: key-point
+    label: Arrived at the key point with enough altitude, landing assured
+    kind: tiered
+    tiers:
+      gold: Ideal
+      silver: Slightly high or low, corrected
+      bronze: Made it, barely
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-4-engine-failure-and-forced-landings, section: e-execute }
+
+randomEvents:
+  - id: engine-failure
+    label: Engine failure
+    minSeconds: 30
+    maxSeconds: 180
+    message: Engine failure! Set the mixture to idle cut-off now, then fly the ABCDE flow.
+
+commonMistakes:
+  - Holding altitude instead of pitching for best glide, and losing speed.
+  - Picking a field that's too far away.
+  - Putting the flaps out before the field is made.
+
+tips:
+  - Keep your field in sight. Turn toward it first, then run the checklist.
+
+debriefQuestions:
+  - id: commit
+    prompt: When did you commit to your landing site?

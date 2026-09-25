@@ -1,0 +1,100 @@
+slug: c5-2-power-off-stall
+code: C5.2
+title: Power-off stall
+module: m5-slow-flight-stalls-emergencies
+lessons: [l5-2-stalls-power-off-and-power-on]
+priority: P0
+type: manoeuvre
+difficulty: 3
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Recognize an approach-configuration stall and recover with as little altitude loss as
+  possible.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: AIR_START
+  startDetails:
+    position: Over open valley, 5 nm east of KLVK
+    altitudeFt: 4000
+    headingDeg: 90
+    speedKias: 100
+    fallback: Start on the runway at KLVK, take off and climb east to 4,000 ft MSL before you begin.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Clearing turns, looking for traffic below you.
+  - Configure as if on final — flaps 30, about 65 KIAS, descending.
+  - Reduce power to idle and smoothly raise the nose to hold altitude.
+  - This challenge uses the full stall — hold the nose up until the nose drops or the buffet is clear (⚠ verify the current ACS wording for when to recover).
+  - Recover — nose down to reduce the angle of attack, wings level, full power, flaps 20, climb, then flaps up in stages.
+
+criteria:
+  - id: recognized
+    label: Recognized the stall promptly
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l5-2-stalls-power-off-and-power-on, section: recognizing-a-stall }
+  - id: aoa-first
+    label: First action was reducing the angle of attack
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-2-stalls-power-off-and-power-on, section: the-recovery-sequence }
+  - id: wings-level
+    label: Wings level and heading held during the recovery
+    kind: tiered
+    tiers:
+      gold: ±10°
+      silver: ±20°
+      bronze: ±30°
+    required: false
+    weight: 2
+  - id: altitude-lost
+    label: Altitude lost
+    kind: tiered
+    tiers:
+      gold: 200 ft or less
+      silver: 300 ft or less
+      bronze: 500 ft or less
+    required: false
+    weight: 2
+  - id: no-secondary
+    label: No secondary stall
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-2-stalls-power-off-and-power-on, section: common-errors }
+  - id: flaps-staged
+    label: Flaps raised in stages, not all at once
+    kind: binary
+    required: false
+    weight: 1
+
+randomEvents: []
+
+commonMistakes:
+  - Pulling back as the nose drops.
+  - Adding power without lowering the nose.
+  - Pulling up too hard after the recovery and stalling again.
+
+tips:
+  - Say the sequence out loud — "nose down, wings level, power".
+
+debriefQuestions:
+  - id: first-cue
+    prompt: What was the first sign of the stall you noticed?

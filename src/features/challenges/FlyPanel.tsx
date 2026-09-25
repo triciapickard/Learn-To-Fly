@@ -120,7 +120,7 @@ export function FlyPanel({
       {alert && (
         <div
           role="alert"
-          className="rounded-card border-4 border-danger bg-danger-soft p-4 motion-safe:animate-pulse"
+          className="rounded-card border-4 border-danger bg-danger-soft p-4 motion-safe:animate-warning-pulse"
         >
           <p className={cn('flex items-center gap-2 font-bold', large ? 'text-3xl' : 'text-2xl')}>
             <BellRing aria-hidden className="size-7 shrink-0 text-danger" /> {alert.label}

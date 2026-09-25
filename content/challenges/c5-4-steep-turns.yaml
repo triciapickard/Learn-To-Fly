@@ -1,0 +1,103 @@
+slug: c5-4-steep-turns
+code: C5.4
+title: Steep turns
+module: m5-slow-flight-stalls-emergencies
+lessons: [l5-3-steep-turns-and-load-factor]
+priority: P0
+type: manoeuvre
+difficulty: 4
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Fly two 360° steep turns at 45° of bank, first left and then right.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: AIR_START
+  startDetails:
+    position: Over open valley, 5 nm east of KLVK
+    altitudeFt: 4000
+    headingDeg: 320 # ⚠ verify the heading that points at Mt Diablo from here
+    speedKias: 95
+    fallback: Start on the runway at KLVK, take off and climb east to 4,000 ft MSL, then turn toward Mt Diablo.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Clearing turn, then settle at 95 KIAS.
+  - Note your heading and use Mt Diablo as your reference landmark.
+  - Roll into a 45° left turn, adding back pressure and about 100–200 RPM.
+  - Roll out about 20° before the entry heading.
+  - Roll straight into a 45° right turn, and roll out on the entry heading.
+
+criteria:
+  - id: altitude
+    label: Altitude held
+    kind: tiered
+    tiers:
+      gold: ±100 ft
+      silver: ±150 ft
+      bronze: ±200 ft
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-3-steep-turns-and-load-factor, section: flying-a-steep-turn }
+  - id: airspeed
+    label: Airspeed held
+    kind: tiered
+    tiers:
+      gold: ±10 kt
+      silver: ±15 kt
+      bronze: ±20 kt
+    required: true
+    weight: 2
+  - id: bank
+    label: Bank angle
+    kind: tiered
+    tiers:
+      gold: 45° ±5°
+      silver: 45° ±10°
+      bronze: 45° ±15°
+    required: true
+    weight: 2
+    reviewLink: { lesson: l5-3-steep-turns-and-load-factor, section: the-overbanking-tendency }
+  - id: rollout
+    label: Rollout heading
+    kind: tiered
+    tiers:
+      gold: ±10°
+      silver: ±15°
+      bronze: ±20°
+    required: true
+    weight: 2
+    reviewLink: { lesson: l5-3-steep-turns-and-load-factor, section: flying-a-steep-turn }
+  - id: entry-speed
+    label: Entered at or below maneuvering speed
+    kind: binary
+    required: true
+    weight: 1
+    reviewLink: { lesson: l5-3-steep-turns-and-load-factor, section: maneuvering-speed }
+
+randomEvents: []
+
+commonMistakes:
+  - Losing altitude in the first 90° of the turn.
+  - Ballooning on the rollout.
+  - Letting the bank increase past 45°.
+
+tips:
+  - Keep most of your attention outside on the horizon. Glance at the altimeter, then look back out.
+
+debriefQuestions:
+  - id: altitude-change
+    prompt: Where in the turn did you gain or lose altitude?

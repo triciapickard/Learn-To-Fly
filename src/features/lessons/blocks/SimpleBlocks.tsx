@@ -72,7 +72,7 @@ export function VideoBlock({ block }: { block: Block<'video'> }) {
             onClick={() => setPlaying(true)}
             className="group absolute inset-0 flex flex-col items-center justify-center gap-3 p-4 text-center text-instrument-text"
           >
-            <span className="flex size-16 items-center justify-center rounded-full bg-danger text-white group-hover:scale-105">
+            <span className="flex size-16 items-center justify-center rounded-full bg-danger text-white group-hover:scale-105 dark:text-bg">
               <Play aria-hidden className="size-8 fill-current" />
             </span>
             <span className="text-lg font-semibold">Play video: {block.title}</span>

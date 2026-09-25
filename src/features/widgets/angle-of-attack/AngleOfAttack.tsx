@@ -106,7 +106,7 @@ export default function AngleOfAttack({ props, onQuizAnswer }: WidgetProps) {
           className={cn(
             'rounded-control border px-2 py-0.5 font-mono text-sm font-bold tracking-wider',
             warning
-              ? 'border-danger bg-danger text-white motion-safe:animate-pulse'
+              ? 'border-danger bg-danger text-white motion-safe:animate-warning-pulse dark:text-bg'
               : 'border-border text-muted',
           )}
         >

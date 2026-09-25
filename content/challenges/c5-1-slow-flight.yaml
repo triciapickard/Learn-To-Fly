@@ -1,0 +1,105 @@
+slug: c5-1-slow-flight
+code: C5.1
+title: Slow flight
+module: m5-slow-flight-stalls-emergencies
+lessons: [l5-1-slow-flight]
+priority: P0
+type: manoeuvre
+difficulty: 3
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Hold slow flight at about 55 KIAS with full flaps at a constant altitude, make gentle
+  turns, then recover.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: AIR_START
+  startDetails:
+    position: Over open valley, 5 nm east of KLVK
+    altitudeFt: 4000
+    headingDeg: 90
+    speedKias: 100
+    fallback: Start on the runway at KLVK, take off and climb east to 4,000 ft MSL before you begin.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Clearing turns, looking for traffic below you.
+  - Reduce power to about 1,500 RPM and raise the nose to hold altitude.
+  - Set flaps 10, 20 and 30 in stages, each below its flap speed limit.
+  - Settle at about 55 KIAS, adding power to hold altitude (about 1,900–2,100 RPM; ⚠ verify).
+  - Fly straight for 30 seconds, then turn 90° left and 90° right at no more than 15° of bank.
+  - Recover — full power, lower the nose, flaps up in stages, accelerate to cruise.
+
+criteria:
+  - id: altitude
+    label: Altitude held
+    kind: tiered
+    tiers:
+      gold: ±100 ft
+      silver: ±150 ft
+      bronze: ±200 ft
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-1-slow-flight, section: pitch-for-speed-power-for-altitude }
+  - id: airspeed
+    label: Airspeed held
+    kind: tiered
+    tiers:
+      gold: Target +10/−0 kt
+      silver: Target ±10 kt
+      bronze: Target ±15 kt
+    required: true
+    weight: 3
+    reviewLink: { lesson: l5-1-slow-flight, section: getting-into-slow-flight }
+  - id: no-stall-warning
+    label: No stall warning (horn) during slow flight
+    kind: tiered
+    tiers:
+      gold: None
+      silver: A brief chirp
+      bronze: Repeated, but no stall
+    required: false
+    weight: 2
+    reviewLink: { lesson: l5-1-slow-flight, section: the-stall-warning }
+  - id: heading
+    label: Heading and turn accuracy
+    kind: tiered
+    tiers:
+      gold: ±10°
+      silver: ±15°
+      bronze: ±20°
+    required: false
+    weight: 1
+  - id: recovery
+    label: 'Recovery: power first, flaps in stages, no more than 100 ft lost'
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l5-1-slow-flight, section: recovery }
+
+randomEvents: []
+
+commonMistakes:
+  - Chasing altitude with pitch instead of power.
+  - Not enough right rudder at high power.
+  - Raising all the flaps at once during the recovery.
+
+tips:
+  - Make small power changes and wait for the result before changing again.
+
+debriefQuestions:
+  - id: control-feel
+    prompt: What did the controls feel like at 55 knots?
