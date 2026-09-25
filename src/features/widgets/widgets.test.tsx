@@ -5,9 +5,11 @@ import { seriousViolations } from '@/test/axe';
 import { checklistFixture } from '@/test/fixtures';
 import { TestProviders } from '@/test/render';
 import AirspeedIndicator from './airspeed-indicator/AirspeedIndicator';
+import AngleOfAttack from './angle-of-attack/AngleOfAttack';
 import { ChecklistRunner } from './checklist-runner/ChecklistRunner';
 import ControlSurfaces from './control-surfaces/ControlSurfaces';
 import LoadFactor from './load-factor/LoadFactor';
+import PitchPower from './pitch-power/PitchPower';
 import TurnCoordinator from './turn-coordinator/TurnCoordinator';
 
 describe('W3 Airspeed indicator', () => {
@@ -255,6 +257,101 @@ describe('W14 Load factor', () => {
       </TestProviders>,
     );
     await screen.findByRole('slider', { name: 'Bank angle in degrees' });
+    expect(await seriousViolations(container)).toEqual([]);
+  });
+});
+
+describe('W4 Angle of attack', () => {
+  it('shows attached flow, then the stall warning and the stall', async () => {
+    const { container } = render(<AngleOfAttack props={{}} />);
+    const slider = screen.getByRole('slider', { name: 'Angle of attack in degrees' });
+    expect(slider).toHaveAttribute(
+      'aria-valuetext',
+      'Angle of attack 4 degrees, lift coefficient 0.60, airflow attached',
+    );
+    fireEvent.change(slider, { target: { value: '13' } });
+    expect(slider.getAttribute('aria-valuetext')).toMatch(/stall warning sounding$/);
+    fireEvent.change(slider, { target: { value: '18' } });
+    expect(screen.getByText('Airflow: Stalled')).toBeInTheDocument();
+    expect(
+      screen.getByRole('img', { name: /airflow is breaking away from the upper surface/ }),
+    ).toBeInTheDocument();
+    await userEvent.click(
+      screen.getByRole('button', { name: 'Decrease angle of attack by 1 degree' }),
+    );
+    expect(slider).toHaveValue('17');
+    expect(container.querySelectorAll('path').length).toBeGreaterThan(8);
+  });
+
+  it('lowers the critical angle with flaps and runs the quiz', async () => {
+    const onQuizAnswer = vi.fn();
+    render(<AngleOfAttack props={{ mode: 'quiz' }} onQuizAnswer={onQuizAnswer} />);
+    await userEvent.click(screen.getByLabelText('Flaps down'));
+    fireEvent.change(screen.getByRole('slider', { name: 'Angle of attack in degrees' }), {
+      target: { value: '16' },
+    });
+    await userEvent.click(screen.getByRole('button', { name: 'Check' }));
+    expect(onQuizAnswer).toHaveBeenCalledWith({
+      questionId: 'w4-critical',
+      correct: false,
+      answer: '16° angle of attack, flaps down',
+    });
+  });
+
+  it('has no serious axe violations', async () => {
+    const { container } = render(<AngleOfAttack props={{}} />);
+    expect(await seriousViolations(container)).toEqual([]);
+  });
+});
+
+describe('W5 Pitch and power trainer', () => {
+  it('interpolates the table, trims and flags provisional numbers', async () => {
+    render(
+      <TestProviders>
+        <PitchPower props={{}} />
+      </TestProviders>,
+    );
+    expect(await screen.findByText(/Provisional numbers/)).toBeInTheDocument();
+    const pitch = screen.getByRole('slider', { name: 'Pitch attitude' });
+    // Start: cruise, 2,300 RPM with the nose level.
+    expect(pitch).toHaveAttribute(
+      'aria-valuetext',
+      'pitch level, 2,300 RPM: 102 knots, climbing 50 feet per minute',
+    );
+    expect(screen.getByText('Trimmed: no force needed')).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Vy climb' }));
+    expect(screen.getByRole('img', { name: 'Airspeed 76 knots' })).toBeInTheDocument();
+    expect(screen.getByText('Strong back pressure (pull)')).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Trim for 76 knots' }));
+    expect(screen.getByText('Trimmed: no force needed')).toBeInTheDocument();
+    await userEvent.click(screen.getByRole('button', { name: 'Increase power by 100 RPM' }));
+    expect(screen.getByRole('slider', { name: 'Power' })).toHaveValue('2600');
+  });
+
+  it('runs the quiz', async () => {
+    const onQuizAnswer = vi.fn();
+    render(
+      <TestProviders>
+        <PitchPower props={{ mode: 'quiz' }} onQuizAnswer={onQuizAnswer} />
+      </TestProviders>,
+    );
+    fireEvent.change(await screen.findByRole('slider', { name: 'Pitch attitude' }), {
+      target: { value: '-2.5' },
+    });
+    fireEvent.change(screen.getByRole('slider', { name: 'Power' }), { target: { value: '1700' } });
+    await userEvent.click(screen.getByRole('button', { name: 'Check' }));
+    expect(onQuizAnswer).toHaveBeenCalledWith(
+      expect.objectContaining({ questionId: 'w5-descent', correct: true }),
+    );
+  });
+
+  it('has no serious axe violations', async () => {
+    const { container } = render(
+      <TestProviders>
+        <PitchPower props={{}} />
+      </TestProviders>,
+    );
+    await screen.findByRole('slider', { name: 'Pitch attitude' });
     expect(await seriousViolations(container)).toEqual([]);
   });
 });
