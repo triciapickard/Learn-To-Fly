@@ -26,9 +26,9 @@ Learn-To-Fly/
 
 At the end of a task or phase completion, always include the following:
 
-- **What you changed**: A brief list of the changes you made.
-- **What you couldn't do** A list of things you where unable to do.
-- **What you need from me** Optional, any things that are absolutely necessary that you can't do but I can. Give me step by step instructions on how to do it.
+- **What I changed**: A brief list of the changes you made.
+- **What I couldn't do** A list of things you where unable to do.
+- **What I need from you** Optional, any things that are absolutely necessary that you can't do but I can. Give me step by step instructions on how to do it.
 
 ---
 
