@@ -55,3 +55,12 @@ All notable changes to this project are documented here. The format is based on
   Cross-section (side and plan views, requirements, Mode C veil) with
   `content/airspace-profile.yaml` served at `GET /api/v1/airspace-profiles/:slug`, and the
   live W7 demo on the landing page. Decisions D-19 and D-20.
+- Phase 7: challenges end to end — `shared/scoring.ts` (rounding half up, best-attempt
+  ordering) with boundary tests; `AttemptCreateSchema`; `challengeAttempts` and
+  `challengeProgress` models; `POST /challenges/:slug/attempts` (server-side scoring,
+  rubric-version check), `GET /me/challenges/:slug/attempts`, `GET /me/attempts`
+  (paginated) and `GET /me/progress` (challenges); challenges list with URL filters;
+  challenge page with Brief (setup table, copy buttons), Fly (step checklist, timer, random
+  events with beep and flash, wake lock), Debrief (rubric, reflections, planning, live score
+  preview, sessionStorage draft that survives log-in) and History tabs; result view; fly
+  mode (dark, large type); account attempts page; Playwright E2E setup and CI job.

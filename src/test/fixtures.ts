@@ -2,6 +2,7 @@ import { http, HttpResponse } from 'msw';
 import type {
   AirspaceProfileDto,
   AircraftDto,
+  ChallengeDetail,
   ChallengeSummary,
   ChecklistDto,
   LessonDetail,
@@ -101,6 +102,72 @@ export function challengeSummary(overrides: Partial<ChallengeSummary> = {}): Cha
     lessonSlugs: [],
     draft: false,
     version: 1,
+    ...overrides,
+  };
+}
+
+export function challengeDetail(overrides: Partial<ChallengeDetail> = {}): ChallengeDetail {
+  return {
+    ...challengeSummary(),
+    lessonSlugs: ['l2-2-attitude-flying-and-trim'],
+    goal: 'Hold altitude and heading for three minutes.',
+    setup: {
+      aircraft: { variant: 'c172-g1000', simName: 'Cessna 172 Skyhawk (G1000 NXi)' },
+      airport: { icao: 'KLVK', name: 'Livermore Municipal' },
+      startState: { id: 'AIR_START', label: 'In the air', description: 'In flight.' },
+      startDetails: { altitudeFt: 3500, headingDeg: 90, speedKias: 100 },
+      weather: {
+        preset: 'WX_CALM',
+        label: 'Calm and clear',
+        summary: 'Clear, calm.',
+        surfaceWind: 'Calm',
+        altimeterInHg: 29.92,
+      },
+      time: { local: '10:00', date: '15 May' },
+      load: { id: 'LOAD_SOLO', label: 'Solo', description: 'Pilot only.' },
+      assistance: { id: 'training', label: 'Training profile', description: 'Mostly off.' },
+      aiTraffic: false,
+      atc: false,
+      crashDamage: false,
+      flightPlan: null,
+    },
+    procedure: ['Set 2,300 RPM.', 'Trim.', 'Hold 3,500 ft and heading 090 for 3 minutes.'],
+    criteria: [
+      {
+        id: 'altitude',
+        label: 'Altitude held',
+        kind: 'tiered',
+        tiers: { gold: '±100 ft', silver: '±150 ft', bronze: '±200 ft' },
+        required: true,
+        weight: 3,
+        reviewLink: { lesson: 'l2-2-attitude-flying-and-trim', section: 'trim' },
+      },
+      {
+        id: 'heading',
+        label: 'Heading held',
+        kind: 'tiered',
+        tiers: { gold: '±10°', silver: '±15°', bronze: '±20°' },
+        required: true,
+        weight: 2,
+      },
+      { id: 'lookout', label: 'Looked outside', kind: 'binary', required: false, weight: 1 },
+    ],
+    randomEvents: [],
+    planningFields: [],
+    commonMistakes: ['Chasing the VSI.'],
+    tips: ['Trim, then wait.'],
+    debriefQuestions: [{ id: 'eyes', prompt: 'Where did you look most of the time?' }],
+    module: { slug: 'm2-fundamentals', code: 'M2', title: 'Fundamentals' },
+    lessons: [
+      lessonSummary({
+        slug: 'l2-2-attitude-flying-and-trim',
+        code: 'L2.2',
+        moduleSlug: 'm2-fundamentals',
+        title: 'Attitude flying and trim',
+      }),
+    ],
+    lastVerifiedAt: null,
+    simVersion: null,
     ...overrides,
   };
 }
@@ -300,4 +367,25 @@ export const contentHandlers = [
         ),
   ),
   http.get('/api/v1/checklists/:slug', () => HttpResponse.json({ checklist: checklistFixture })),
+  http.get('/api/v1/challenges', () =>
+    HttpResponse.json({
+      challenges: [
+        challengeSummary(),
+        challengeSummary({
+          slug: 'c2-2-climbs',
+          code: 'C2.2',
+          title: 'Climbs and descents',
+          difficulty: 2,
+        }),
+      ],
+    }),
+  ),
+  http.get('/api/v1/challenges/:slug', ({ params }) =>
+    params.slug === challengeSummary().slug
+      ? HttpResponse.json({ challenge: challengeDetail() })
+      : HttpResponse.json(
+          { error: { code: 'NOT_FOUND', message: 'Challenge not found.' } },
+          { status: 404 },
+        ),
+  ),
 ];
