@@ -38,6 +38,6 @@ Stop and ask only when you can't continue without me, or before anything
 destructive: deleting data, force-pushing, or changing anything outside
 this repository.
 
-## Required
+## Required Actions
 
-- Always briefly read the plan.md before making any changes to code to get a better understanding of the project and the current status.
+Always briefly read the plan.md before making any changes to code to get a better understanding of the project and the current status.
