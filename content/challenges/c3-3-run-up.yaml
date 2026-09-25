@@ -1,0 +1,90 @@
+slug: c3-3-run-up
+code: C3.3
+title: Run-up
+module: m3-ground-operations
+lessons: [l3-3-run-up-before-takeoff-and-after-landing]
+priority: P0
+type: procedure
+difficulty: 2
+estimatedMinutes: 10
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Complete a full run-up and the before-takeoff checklist, and give a takeoff briefing out
+  loud.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RAMP_RUNNING
+  startDetails:
+    parking: Run-up area for runway 25R, or continue from C3.2 # ⚠ verify that the sim offers this spot
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Stop in the run-up area, into the wind if you can, and set the parking brake.
+  - Throttle to the checklist run-up RPM (about 1,800).
+  - Magneto check — L, BOTH, R, BOTH. Note each RPM drop.
+  - Engine instruments in the green, then throttle to idle and back to about 1,000 RPM.
+  - Controls free and correct. Trim for takeoff. Flaps set. Fuel on BOTH. Mixture rich.
+  - Transponder ALT, lights on, doors closed.
+  - Say your takeoff briefing out loud, including what you'll do if the engine fails.
+
+criteria:
+  - id: parking-brake
+    label: Parking brake set before the run-up
+    kind: binary
+    required: true
+    weight: 2
+  - id: mag-check
+    label: Magneto check done correctly (each magneto, back to BOTH)
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l3-3-run-up-before-takeoff-and-after-landing, section: the-engine-run-up }
+  - id: before-takeoff-items
+    label: All before-takeoff items completed
+    kind: tiered
+    tiers:
+      gold: All done
+      silver: 1 missed
+      bronze: 2 missed
+    required: true
+    weight: 3
+    reviewLink:
+      { lesson: l3-3-run-up-before-takeoff-and-after-landing, section: before-takeoff-items }
+  - id: trim
+    label: Trim set for takeoff
+    kind: binary
+    required: true
+    weight: 2
+  - id: briefing
+    label: Takeoff briefing spoken, including the engine failure plan
+    kind: binary
+    required: false
+    weight: 2
+    reviewLink:
+      { lesson: l3-3-run-up-before-takeoff-and-after-landing, section: the-takeoff-briefing }
+
+randomEvents: []
+
+commonMistakes:
+  - Leaving the key on L or R after the magneto check.
+  - Leaving the trim wherever it happened to be.
+
+tips:
+  - Read the takeoff briefing from the lesson the first few times, then say it from memory.
+
+debriefQuestions:
+  - id: engine-failure-300
+    prompt: What would you do if the engine failed at 300 ft after takeoff?

@@ -1,0 +1,95 @@
+slug: c3-1-cold-and-dark-to-running
+code: C3.1
+title: Cold and dark to running
+module: m3-ground-operations
+lessons: [l3-1-preflight-and-engine-start]
+priority: P0
+type: procedure
+difficulty: 2
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Start the engine from cold and dark using the checklists, with checklist assistance off.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: COLD_DARK
+  startDetails:
+    parking: Main ramp # ⚠ verify the parking spot name in the sim
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Make sure checklist assistance (auto-complete) is off in the sim.
+  - Open the Learn-To-Fly checklists on a second screen (Reference → Checklists) or the in-sim checklist.
+  - Complete "Before starting engine" with a left-to-right flow, then verify with the checklist.
+  - Complete "Starting engine". Look outside and say "CLEAR!" before turning the key.
+  - Check oil pressure rises into the green within 30 seconds and set about 1,000 RPM.
+  - Complete the after-start items — avionics master on, flaps checked, lights, altimeter set.
+
+criteria:
+  - id: running
+    label: Engine started and running at about 1,000 RPM
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l3-1-preflight-and-engine-start, section: starting-the-engine }
+  - id: checklist-order
+    label: Checklists followed in order, no items skipped
+    kind: tiered
+    tiers:
+      gold: 0 skipped
+      silver: 1–2 skipped
+      bronze: 3–4 skipped
+    required: true
+    weight: 3
+  - id: avionics-off
+    label: Avionics master off during the start
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l1-3-engine-fuel-and-electrical-systems, section: the-electrical-system }
+  - id: clear
+    label: Said "CLEAR!" before the start
+    kind: binary
+    required: false
+    weight: 1
+  - id: oil-pressure
+    label: Oil pressure checked within 30 seconds
+    kind: binary
+    required: true
+    weight: 2
+  - id: time
+    label: Time from cold and dark to running
+    kind: tiered
+    tiers:
+      gold: 5 minutes or less
+      silver: 8 minutes or less
+      bronze: 12 minutes or less
+    required: false
+    weight: 1
+
+randomEvents: []
+
+commonMistakes:
+  - Fuel selector not on BOTH.
+  - Mixture left in idle cut-off.
+  - Holding the key on START for too long after the engine fires.
+
+tips:
+  - Do a flow left to right across the panel, then verify with the checklist.
+
+debriefQuestions:
+  - id: almost-missed
+    prompt: Which item did you almost miss?
