@@ -29,7 +29,7 @@ setup:
   assistance: training
   aiTraffic: true
   atc: true
-  crashDamage: false
+  crashDamage: true
   flightPlan: null
 
 procedure:
