@@ -42,8 +42,16 @@ modules:
       The four fundamentals every maneuver is built from. Learn how a wing works, fly by
       attitude and trim, and turn with the ball centered.
     icon: gauge
-    lessons: []
-    challenges: [c2-1-straight-and-level]
+    lessons:
+      - l2-1-four-forces-and-how-a-wing-works
+      - l2-2-attitude-flying-and-trim
+      - l2-3-climbs-and-descents
+      - l2-4-turns-and-coordination
+    challenges:
+      - c2-1-straight-and-level
+      - c2-2-climbs-and-descents
+      - c2-3-turns-to-headings
+      - c2-4-the-box
     estimatedMinutes: 180
   - slug: m3-ground-operations
     code: M3

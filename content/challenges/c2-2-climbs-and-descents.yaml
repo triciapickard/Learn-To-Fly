@@ -1,0 +1,102 @@
+slug: c2-2-climbs-and-descents
+code: C2.2
+title: Climbs and descents
+module: m2-fundamentals
+lessons: [l2-3-climbs-and-descents]
+priority: P0
+type: manoeuvre
+difficulty: 2
+estimatedMinutes: 20
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Climb at Vy and at cruise climb, descend at a target speed, and level off exactly on
+  each target altitude.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: AIR_START
+  startDetails:
+    position: Over the Livermore valley, 3 nm east of KLVK
+    altitudeFt: 3000
+    headingDeg: 90
+    speedKias: 100
+    fallback: Start on the runway at KLVK, take off and climb east to 3,000 ft MSL. Start the challenge when you are level at 3,000 ft on heading 090.
+  weatherPreset: WX_CALM
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Make a clearing turn and look for traffic.
+  - Climb at 74 KIAS with full power to 4,500 ft MSL. Start the level-off 10% of your vertical speed early.
+  - Stabilize and trim. Hold 4,500 ft for 30 seconds.
+  - Descend at 90 KIAS with about 1,700–2,000 RPM to 3,000 ft. Level off.
+  - Climb at a cruise climb of 80 KIAS to 4,000 ft. Level off and trim.
+
+criteria:
+  - id: climb-speed
+    label: Climb airspeed held (74 KIAS, then 80 KIAS)
+    kind: tiered
+    tiers:
+      gold: Within ±5 kt
+      silver: Within ±10 kt
+      bronze: Within ±15 kt
+    required: true
+    weight: 3
+    reviewLink: { lesson: l2-3-climbs-and-descents, section: entering-a-climb }
+  - id: descent-speed
+    label: Descent airspeed held (90 KIAS)
+    kind: tiered
+    tiers:
+      gold: Within ±5 kt
+      silver: Within ±10 kt
+      bronze: Within ±15 kt
+    required: true
+    weight: 2
+    reviewLink: { lesson: l2-3-climbs-and-descents, section: descents }
+  - id: level-off
+    label: Level-off overshoot or undershoot (worst of the three)
+    kind: tiered
+    tiers:
+      gold: 50 ft or less
+      silver: 100 ft or less
+      bronze: 150 ft or less
+    required: true
+    weight: 3
+    reviewLink: { lesson: l2-3-climbs-and-descents, section: leveling-off-from-a-climb }
+  - id: heading
+    label: Heading held during climbs and descents
+    kind: tiered
+    tiers:
+      gold: Within ±10°
+      silver: Within ±15°
+      bronze: Within ±20°
+    required: false
+    weight: 1
+  - id: clearing-turn
+    label: Made a clearing turn before the first climb
+    kind: binary
+    required: false
+    weight: 1
+
+randomEvents: []
+
+commonMistakes:
+  - Leaving climb power in after the level-off, so the airplane overspeeds.
+  - Starting the level-off too late and overshooting the altitude.
+
+tips:
+  - Say "Attitude, power, trim" out loud at every change.
+
+debriefQuestions:
+  - id: hardest-level-off
+    prompt: Which level-off was hardest, and why?
