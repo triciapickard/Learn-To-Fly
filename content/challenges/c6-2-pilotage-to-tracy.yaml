@@ -1,0 +1,104 @@
+slug: c6-2-pilotage-to-tracy
+code: C6.2
+title: Pilotage to Tracy
+module: m6-vfr-navigation
+lessons: [l6-3-pilotage-and-dead-reckoning]
+priority: P0
+type: navigation
+difficulty: 3
+estimatedMinutes: 30
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Fly from Livermore to Tracy by pilotage alone, arriving within 2 minutes of your
+  planned time and joining the pattern correctly.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RUNWAY
+  startDetails:
+    runway: 25R # ⚠ verify the runway name in the sim
+    fallback: If the sim starts you on a different runway, use it.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Plan the route with checkpoints — Altamont Pass, I-580, the California Aqueduct (⚠ verify) and the town of Tracy. Fill in the heading, time and fuel on your nav log.
+  - Turn off the GPS maps — set the MFD to the engine page, turn off the PFD inset map and turn off the sim's VFR map.
+  - Take off and fly the route at 3,500 ft MSL. Note the time at each checkpoint.
+  - Descend to Tracy's pattern altitude, join on the 45° to downwind and land.
+
+criteria:
+  - id: nav-log
+    label: Nav log completed before the flight
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l6-3-pilotage-and-dead-reckoning, section: dead-reckoning }
+  - id: checkpoints
+    label: Checkpoints identified in sequence
+    kind: tiered
+    tiers:
+      gold: All of them
+      silver: Missed 1
+      bronze: Missed 2
+    required: true
+    weight: 3
+    reviewLink: { lesson: l6-3-pilotage-and-dead-reckoning, section: pilotage }
+  - id: eta
+    label: Arrival time accuracy
+    kind: tiered
+    tiers:
+      gold: ±2 min
+      silver: ±4 min
+      bronze: ±6 min
+    required: false
+    weight: 2
+  - id: altitude
+    label: Altitude en route
+    kind: tiered
+    tiers:
+      gold: ±100 ft
+      silver: ±150 ft
+      bronze: ±200 ft
+    required: false
+    weight: 1
+  - id: pattern-entry
+    label: Correct pattern entry at Tracy
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l4-2-the-traffic-pattern, section: entering-and-leaving }
+  - id: landing
+    label: Safe landing (C4.3 Bronze or better)
+    kind: binary
+    required: true
+    weight: 2
+
+randomEvents: []
+
+planningFields:
+  - { id: planned-heading, label: Planned magnetic heading (°), type: number }
+  - { id: planned-ete, label: Planned time en route (minutes), type: number }
+  - { id: actual-ete, label: Actual time en route (minutes), type: number }
+
+commonMistakes:
+  - Following a road that looks like the charted one but isn't.
+  - Letting the heading wander between checkpoints.
+
+tips:
+  - Chart to ground, then ground to chart. Confirm each checkpoint with something next to it.
+
+debriefQuestions:
+  - id: drift
+    prompt: How far off course did you drift, and why?

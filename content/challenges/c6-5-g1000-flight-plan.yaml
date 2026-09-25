@@ -1,0 +1,103 @@
+slug: c6-5-g1000-flight-plan
+code: C6.5
+title: G1000 flight plan
+module: m6-vfr-navigation
+lessons: [l6-5-gps-navigation-with-the-g1000]
+priority: P0
+type: navigation
+difficulty: 3
+estimatedMinutes: 35
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Build a flight plan in the G1000, fly it by hand along the magenta line, and use
+  Direct-To and the Nearest page when asked.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RAMP_RUNNING
+  startDetails:
+    parking: Any ramp parking spot
+    fallback: If the sim starts you on the runway, taxi clear and build the flight plan before takeoff.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Make sure the sim's world-map flight plan is empty — you'll enter the route in the G1000 yourself.
+  - On the ground, open the FPL page and enter KLVK, KTCY, C83, KLVK. Activate the flight plan.
+  - Take off and fly the legs by hand, following the magenta line.
+  - When the timer tells you, use Direct-To to go straight to C83, skipping Tracy. Then continue the flight plan from C83.
+  - When the timer asks, use the NRST page to find the nearest airport, and note it.
+  - Return to Livermore and land.
+
+criteria:
+  - id: fpl-entered
+    label: Flight plan entered correctly before takeoff
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l6-5-gps-navigation-with-the-g1000, section: flight-plans }
+  - id: cross-track
+    label: Tracked the magenta line (cross-track error)
+    kind: tiered
+    tiers:
+      gold: 0.5 nm or less
+      silver: 1 nm or less
+      bronze: 2 nm or less
+    required: true
+    weight: 2
+    reviewLink:
+      { lesson: l6-5-gps-navigation-with-the-g1000, section: the-magenta-line-and-the-hsi }
+  - id: direct-to
+    label: Direct-To done correctly when asked
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l6-5-gps-navigation-with-the-g1000, section: direct-to }
+  - id: nearest
+    label: Used NRST to name the nearest airport when asked
+    kind: binary
+    required: false
+    weight: 1
+    reviewLink: { lesson: l6-5-gps-navigation-with-the-g1000, section: nearest-airports }
+  - id: landing
+    label: Landing at the destination (C4.3 Bronze or better)
+    kind: binary
+    required: false
+    weight: 2
+
+randomEvents:
+  - id: direct-to-c83
+    label: Direct-To
+    minSeconds: 300
+    maxSeconds: 480
+    message: Proceed direct to C83 now. Use the D→ key, then resume the flight plan from C83.
+  - id: nearest-airport
+    label: Nearest airport
+    minSeconds: 600
+    maxSeconds: 900
+    message: What's the nearest airport right now? Use the NRST page and note it.
+
+planningFields:
+  - { id: nearest-airport, label: The nearest airport when asked, type: text }
+
+commonMistakes:
+  - Leaving the CDI on VOR, so the needle doesn't follow the flight plan.
+  - Spending so long on the G1000 that you stop looking outside.
+
+tips:
+  - Do all the typing on the ground. In the air, keep button presses short and look outside between them.
+
+debriefQuestions:
+  - id: eyes-outside
+    prompt: Did the GPS make you look outside less? What will you do about that?

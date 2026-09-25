@@ -123,8 +123,19 @@ modules:
       Read a sectional chart, understand the airspace around the Bay Area and navigate with
       landmarks, calculations, a VOR and the G1000 GPS — then plan a cross-country flight.
     icon: compass
-    lessons: []
-    challenges: []
+    lessons:
+      - l6-1-reading-a-sectional-chart
+      - l6-2-airspace
+      - l6-3-pilotage-and-dead-reckoning
+      - l6-4-vor-navigation
+      - l6-5-gps-navigation-with-the-g1000
+      - l6-6-planning-a-cross-country-flight
+    challenges:
+      - c6-1-landmark-hunt
+      - c6-2-pilotage-to-tracy
+      - c6-3-dead-reckoning-to-half-moon-bay
+      - c6-4-vor-tracking
+      - c6-5-g1000-flight-plan
     estimatedMinutes: 300
   - slug: m7-radio-airport-operations
     code: M7

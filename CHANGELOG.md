@@ -89,6 +89,9 @@ All notable changes to this project are documented here. The format is based on
 - Phase 9 · Module 5 content (drafts): L5.1 Slow flight, L5.2 Stalls: power-off and
   power-on, L5.3 Steep turns and load factor, L5.4 Engine failure and forced landings, and
   challenges C5.1–C5.5 (C5.5 uses a random engine-failure timer).
+- Phase 9 · Module 6 content (drafts): L6.1 Reading a sectional chart, L6.2 Airspace, L6.3
+  Pilotage and dead reckoning, L6.4 VOR navigation, L6.5 GPS navigation with the G1000, L6.6
+  Planning a cross-country flight, and challenges C6.1–C6.5.
 
 ### Fixed
 

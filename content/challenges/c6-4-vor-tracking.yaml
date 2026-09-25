@@ -1,0 +1,108 @@
+slug: c6-4-vor-tracking
+code: C6.4
+title: VOR tracking
+module: m6-vfr-navigation
+lessons: [l6-4-vor-navigation]
+priority: P0
+type: navigation
+difficulty: 3
+estimatedMinutes: 25
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Work out which radial of the Manteca VOR you're on, then intercept the 090 radial and
+  track it outbound, correcting for the wind.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KTCY
+  startState: AIR_START
+  startDetails:
+    position: 10 nm south of the Manteca VOR (ECA), over the Central Valley # ⚠ verify ECA is in the sim; south keeps you clear of the Stockton Class C
+    altitudeFt: 3500
+    headingDeg: 360
+    speedKias: 100
+    fallback: Start on the runway at Tracy, take off and climb to 3,500 ft MSL. The Manteca VOR is about 12 nm east — start from wherever you are.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: true
+  flightPlan: null
+
+procedure:
+  - Tune the Manteca VOR (⚠ verify the frequency on the sectional) into NAV1 and identify it.
+  - Press the CDI softkey until the needle is green (VOR1).
+  - Turn the course knob until the needle centers with a FROM flag. That's the radial you're on.
+  - Set 090 and turn to an intercept heading 30–45° toward the needle.
+  - As the needle centers, turn onto the course. Track the 090 radial outbound for 10 nm, correcting for the wind.
+  - Note the heading that kept the needle centered.
+
+criteria:
+  - id: identified
+    label: Identified the station
+    kind: binary
+    required: true
+    weight: 2
+    reviewLink: { lesson: l6-4-vor-navigation, section: tune-and-identify }
+  - id: initial-radial
+    label: Worked out the initial radial correctly
+    kind: tiered
+    tiers:
+      gold: ±5°
+      silver: ±10°
+      bronze: ±15°
+    required: true
+    weight: 2
+    reviewLink: { lesson: l6-4-vor-navigation, section: the-cdi-and-the-tofrom-flag }
+  - id: intercept
+    label: Intercepted without overshooting
+    kind: tiered
+    tiers:
+      gold: No overshoot
+      silver: Small overshoot
+      bronze: Large overshoot, corrected
+    required: false
+    weight: 2
+    reviewLink: { lesson: l6-4-vor-navigation, section: intercepting-and-tracking }
+  - id: tracking
+    label: Tracking accuracy on the CDI
+    kind: tiered
+    tiers:
+      gold: Within ½ scale
+      silver: Within ¾ scale
+      bronze: Less than full scale
+    required: true
+    weight: 3
+    reviewLink: { lesson: l6-4-vor-navigation, section: intercepting-and-tracking }
+  - id: altitude
+    label: Altitude held
+    kind: tiered
+    tiers:
+      gold: ±100 ft
+      silver: ±150 ft
+      bronze: ±200 ft
+    required: false
+    weight: 1
+
+randomEvents: []
+
+planningFields:
+  - { id: initial-radial, label: The radial you started on (°), type: number }
+  - { id: tracking-heading, label: The heading that kept the needle centered (°), type: number }
+
+commonMistakes:
+  - Forgetting to switch the CDI from GPS to VOR1.
+  - Chasing the needle with big heading changes.
+
+tips:
+  - Make a correction, then wait. The needle takes a while to show the result.
+
+debriefQuestions:
+  - id: wind-correction
+    prompt: What wind correction did you end up with?
