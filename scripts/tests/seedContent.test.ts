@@ -52,7 +52,9 @@ describe('seedContent', () => {
   it('bumps only the lesson that changed', async () => {
     await seedContent(bundle(), { includeDrafts: true });
     const changed = bundle();
-    const lesson = changed.lessons[0]!;
+    const lesson = changed.lessons.find(
+      (l) => l.frontmatter.slug === 'l1-4-speeds-limits-and-checklists',
+    )!;
     lesson.frontmatter = { ...lesson.frontmatter, summary: 'A new summary.' };
     const summary = await seedContent(changed, { includeDrafts: true });
     expect(summary.updated).toEqual(['lessons:l1-4-speeds-limits-and-checklists']);
@@ -63,11 +65,15 @@ describe('seedContent', () => {
   });
 
   it('unpublishes lessons removed from the repo instead of deleting them', async () => {
-    await seedContent(bundle(), { includeDrafts: true });
+    const full = bundle();
+    await seedContent(full, { includeDrafts: true });
     const without = bundle();
     without.lessons = [];
     const summary = await seedContent(without, { includeDrafts: true });
-    expect(summary.unpublished).toEqual(['lessons:l1-4-speeds-limits-and-checklists']);
+    expect([...summary.unpublished].sort()).toEqual(
+      full.lessons.map((l) => `lessons:${l.frontmatter.slug}`).sort(),
+    );
+    expect(summary.unpublished).toContain('lessons:l1-4-speeds-limits-and-checklists');
     expect(await lessonDoc('l1-4-speeds-limits-and-checklists')).toMatchObject({
       published: false,
       version: 1,
