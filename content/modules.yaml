@@ -62,8 +62,15 @@ modules:
       Everything between cold and dark and lining up on the runway: preflight, engine start,
       reading airport signs and markings, taxiing and the run-up.
     icon: clipboard-list
-    lessons: []
-    challenges: []
+    lessons:
+      - l3-1-preflight-and-engine-start
+      - l3-2-taxiing-signs-and-markings
+      - l3-3-run-up-before-takeoff-and-after-landing
+    challenges:
+      - c3-1-cold-and-dark-to-running
+      - c3-2-taxi-to-the-runway-at-klvk
+      - c3-3-run-up
+      - c3-4-after-landing-and-shutdown
     estimatedMinutes: 120
   - slug: m4-takeoffs-patterns-landings
     code: M4

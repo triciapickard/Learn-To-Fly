@@ -1,0 +1,96 @@
+slug: c3-2-taxi-to-the-runway-at-klvk
+code: C3.2
+title: Taxi to the runway at KLVK
+module: m3-ground-operations
+lessons: [l3-2-taxiing-signs-and-markings]
+priority: P0
+type: procedure
+difficulty: 2
+estimatedMinutes: 15
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Taxi from the main ramp to the run-up area for runway 25R using the airport diagram,
+  with the taxi ribbon off.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: RAMP_RUNNING
+  startDetails:
+    parking: Main ramp # ⚠ verify the parking spot name in the sim
+    runway: 25R # ⚠ verify the runway name in the sim
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Turn the sim's taxi ribbon off.
+  - Open the KLVK airport diagram (FAA Terminal Procedures, see Go deeper in Lesson 3.2). Plan your route from the main ramp to the run-up area for runway 25R. ⚠ The expected taxiway sequence will be added after checking the current diagram and the sim.
+  - Release the parking brake. Taxi at a brisk walking pace — 10 kt or less, 5 kt or less in turns.
+  - Hold the yoke for the wind (wind from 250° at 8 kt).
+  - Stop in the run-up area, short of the hold short line for 25R. Set the parking brake.
+
+criteria:
+  - id: route
+    label: Correct route, no wrong turns
+    kind: tiered
+    tiers:
+      gold: No wrong turns
+      silver: 1 wrong turn
+      bronze: 2 wrong turns
+    required: true
+    weight: 3
+    reviewLink: { lesson: l3-2-taxiing-signs-and-markings, section: the-livermore-airport-diagram }
+  - id: speed
+    label: Taxi speed
+    kind: tiered
+    tiers:
+      gold: 10 kt GS or less, 5 kt or less in turns
+      silver: 15 kt or less
+      bronze: 20 kt or less
+    required: true
+    weight: 2
+    reviewLink: { lesson: l3-2-taxiing-signs-and-markings, section: how-fast }
+  - id: centerline
+    label: Stayed on the centerline
+    kind: tiered
+    tiers:
+      gold: Always
+      silver: Minor deviations
+      bronze: Crossed the taxiway edge line
+    required: false
+    weight: 1
+  - id: hold-short
+    label: Did not cross any hold short line
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l3-2-taxiing-signs-and-markings, section: markings }
+  - id: wind-controls
+    label: Held the correct control position for the wind
+    kind: binary
+    required: false
+    weight: 1
+
+randomEvents: []
+
+commonMistakes:
+  - Riding the brakes instead of reducing power.
+  - Turning too fast.
+  - Rolling past the hold short line.
+
+tips:
+  - Stop and look at the diagram whenever you're unsure — stopping is always OK.
+
+debriefQuestions:
+  - id: where-am-i
+    prompt: How did you know where you were on the airport?

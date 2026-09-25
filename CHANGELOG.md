@@ -81,3 +81,5 @@ All notable changes to this project are documented here. The format is based on
 - Phase 9 · Module 2 content (drafts): L2.1 Four forces and how a wing works, L2.2 Attitude
   flying and trim, L2.3 Climbs and descents, L2.4 Turns and coordination, and challenges
   C2.2 Climbs and descents, C2.3 Turns to headings and C2.4 The box (C2.1 now links L2.2).
+- Phase 9 · Module 3 content (drafts): L3.1 Preflight and engine start, L3.2 Taxiing, signs
+  and markings, L3.3 Run-up, before takeoff, and after landing, and challenges C3.1–C3.4.
