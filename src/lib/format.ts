@@ -21,3 +21,13 @@ export function excerpt(text: string, max = 80): string {
   const cut = clean.slice(0, max);
   return `${cut.slice(0, cut.lastIndexOf(' ') > max / 2 ? cut.lastIndexOf(' ') : max)}…`;
 }
+
+/** "Sep 25, 2026" for a date or date-time. Read as UTC so a date-only value doesn't shift. */
+export function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}

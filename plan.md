@@ -617,6 +617,14 @@ revisited, but should not be changed silently.
   - Crash damage is **on** for every challenge from Module 4 onward (Section 15.1).
 - **To finish:** confirm each change when the challenge is flown in the sim.
 
+### D-23 — P1 reference extras are deferred (Phase 10)
+
+- **Problem:** steps 10.7 (glossary hover-cards) and 10.8 (`/tools`) are P1. The tools hub
+  depends on W13 and W20, which D-20 already deferred.
+- **Decision:** Phase 10 ships the P0 reference pages. Lessons keep their existing "Terms
+  in this lesson" list, which links to `/reference/glossary#slug`. Both steps move to the
+  parking lot (Section 59.5).
+
 ---
 
 # Part II — Learning the Cessna 172 (for you, the author)
@@ -6339,22 +6347,22 @@ All P0 items below are drafted (D-21); tick each one when it is verified and pub
 **Goal:** quick-lookup pages that learners use mid-flight.
 **Est.** 1 week (P1 tools extra).
 
-- [ ] 10.1 `/reference` hub with cards.
-- [ ] 10.2 `/reference/speeds`: V-speed table from `GET /aircraft/c172`, W3, power settings,
+- [x] 10.1 `/reference` hub with cards.
+- [x] 10.2 `/reference/speeds`: V-speed table from `GET /aircraft/c172`, W3, power settings,
       "last verified" line. Large-type print/phone friendly.
-- [ ] 10.3 `/reference/checklists` and `/reference/checklists/:slug` with W16 in full-screen
+- [x] 10.3 `/reference/checklists` and `/reference/checklists/:slug` with W16 in full-screen
       mode.
-- [ ] 10.4 `/reference/airports` and `/reference/airports/:icao` (Section 20.8), with
+- [x] 10.4 `/reference/airports` and `/reference/airports/:icao` (Section 20.8), with
       "Challenges at this airport".
-- [ ] 10.5 `/reference/glossary`: client-side search (simple normalised substring + alias
+- [x] 10.5 `/reference/glossary`: client-side search (simple normalised substring + alias
       match; no library needed for ~200 terms), A–Z jump links, deep links.
-- [ ] 10.6 `/reference/resources` with filters.
+- [x] 10.6 `/reference/resources` with filters.
 - [ ] 10.7 Glossary hover-cards in lessons (P1): seed script marks first occurrence of each
       glossary term per lesson; client renders a Popover.
 - [ ] 10.8 (P1) `/tools` hub, crosswind (W13), wind triangle (W12), nav log (W20).
-- [ ] 10.9 Tests: glossary search, airport page 404, speeds page renders data.
+- [x] 10.9 Tests: glossary search, airport page 404, speeds page renders data.
 - **AC:** US-14, US-15 pass; all reference pages readable on a phone at arm's length.
-- [ ] 10.10 PR "Phase 10: Reference".
+- [x] 10.10 PR "Phase 10: Reference".
 
 ---
 
@@ -6806,6 +6814,8 @@ milestone.
 - Integration with Little Navmap or Navigraph for chart overlays.
 - P1 widgets deferred from step 6.32 (D-20): W8 airport signs, W13 crosswind, W15 glide
   range, W17 METAR decoder, W18 landing sight picture, W19 phonetic alphabet, W20 nav log.
+- P1 reference extras deferred from Phase 10 (D-23): glossary hover-cards in lessons (step
+  10.7) and the `/tools` hub (step 10.8).
 
 ---
 

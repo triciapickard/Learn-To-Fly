@@ -43,7 +43,7 @@ export function Header() {
   const saveTheme = useSaveThemePreference();
   const account = isLoading ? null : user ? <UserMenu user={user} /> : <AccountLinks />;
   return (
-    <header className="sticky top-0 z-30 border-b border-border bg-surface/95 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-border bg-surface/95 backdrop-blur print:hidden">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4">
         <Link to="/" unstyled className="rounded-control" aria-label="Learn to Fly home">
           <Logo />
