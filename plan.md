@@ -14,7 +14,7 @@
 
 ## How to use this document
 
-1. **Read Part I first.** It defines what v1 *is* and, just as importantly, what it is *not*.
+1. **Read Part I first.** It defines what v1 _is_ and, just as importantly, what it is _not_.
    Every later decision traces back to it.
 2. **Use Part II to learn the aircraft yourself.** You cannot teach the Skyhawk well until you
    can fly it well in the sim. Part II has every resource and a self-study schedule.
@@ -29,8 +29,9 @@
 ### Conventions used in this plan
 
 - `- [ ]` marks an actionable step. Tick it (`- [x]`) in a PR when it is done.
-- **P0** = required for v1 launch. **P1** = nice-to-have for v1; can slip to v1.1.
-  **P2** = explicitly post-v1.
+- **P0** = required for v1 launch.
+- **P1** = nice-to-have for v1; consider it but okay if it ends up in v1.1.
+- **P2** = explicitly post-v1.
 - **AC** = Acceptance Criteria. A step is not done until every AC is met.
 - **Est.** = rough time estimate for one person working part-time. Estimates assume you
   are comfortable with JavaScript and are still learning some of the stack.
@@ -44,10 +45,9 @@
 ### Document maintenance rules
 
 - This file is the single source of truth for v1 planning.
-- If a decision changes, update the **Decision Log** (Section 5) *and* the affected section.
+- If a decision changes, update the **Decision Log** (Section 5) _and_ the affected section.
 - Do not delete completed steps. Tick them, so the plan also becomes a build log.
-- Keep one PR per phase (or per sub-phase if a phase is large), and reference the
-  phase/step numbers in the PR title, e.g. `Phase 2.4: Add Mongoose connection`.
+- Every task = one PR (except if the task is e.g a phase), this makes it easy to find exactly which line caused the issue instead of having to search through a 10,000 line PR just to find it's in another one.
 
 ---
 
@@ -155,7 +155,7 @@
 
 ### 1.1 Vision
 
-Learn-To-Fly teaches complete beginners to fly *professionally* in Microsoft Flight
+Learn-To-Fly teaches complete beginners to fly _professionally_ in Microsoft Flight
 Simulator 2024. "Professionally" means the way a real pilot flies: using checklists,
 flying precise speeds and altitudes, following traffic patterns, navigating with charts
 and instruments, talking on the radio correctly, and making safe decisions. The long-term
@@ -319,30 +319,30 @@ When a new idea comes up during the build, ask these questions in order:
 
 Each story has an ID so tests and PRs can reference it.
 
-| ID | As a… | I want to… | So that… | Priority |
-|----|-------|-----------|----------|----------|
-| US-01 | visitor | see what Learn-To-Fly is on the landing page | I can decide if it is for me | P0 |
-| US-02 | visitor | open a sample lesson without an account | I can try before signing up | P0 |
-| US-03 | visitor | create an account with email and password | my progress is saved | P0 |
-| US-04 | learner | log in and out | I can use it on multiple devices | P0 |
-| US-05 | learner | see the whole curriculum and my progress | I know what to do next | P0 |
-| US-06 | learner | read a lesson with visuals and widgets | I understand concepts quickly | P0 |
-| US-07 | learner | answer quick questions inside a lesson | I can check my understanding | P0 |
-| US-08 | learner | mark a lesson complete | my progress updates | P0 |
-| US-09 | learner | open a challenge brief with exact sim setup | I can set up the sim correctly | P0 |
-| US-10 | learner | keep the challenge brief open while flying | I can refer to it mid-flight | P0 |
-| US-11 | learner | debrief a challenge with a scored rubric | I know how well I did | P0 |
-| US-12 | learner | see my past attempts at a challenge | I can see improvement | P0 |
-| US-13 | learner | continue where I left off from the dashboard | I don't lose my place | P0 |
-| US-14 | learner | look up V-speeds and checklists quickly | I don't have to search mid-flight | P0 |
-| US-15 | learner | look up an unfamiliar term | I can keep learning without leaving | P0 |
-| US-16 | learner | choose dark or light mode | the site is comfortable next to the sim | P0 |
-| US-17 | learner | set my cockpit variant and controller type | tips match my setup | P1 |
-| US-18 | learner | reset my password by email | I can recover my account | P1 |
-| US-19 | learner | use calculators for wind and fuel | I can plan flights | P1 |
-| US-20 | learner | print a kneeboard version of a brief | I can use it offline | P1 |
-| US-21 | learner | delete my account and data | I control my data | P0 |
-| US-22 | learner | use the site with a keyboard or screen reader | the site is accessible | P0 |
+| ID    | As a…   | I want to…                                    | So that…                                | Priority |
+| ----- | ------- | --------------------------------------------- | --------------------------------------- | -------- |
+| US-01 | visitor | see what Learn-To-Fly is on the landing page  | I can decide if it is for me            | P0       |
+| US-02 | visitor | open a sample lesson without an account       | I can try before signing up             | P0       |
+| US-03 | visitor | create an account with email and password     | my progress is saved                    | P0       |
+| US-04 | learner | log in and out                                | I can use it on multiple devices        | P0       |
+| US-05 | learner | see the whole curriculum and my progress      | I know what to do next                  | P0       |
+| US-06 | learner | read a lesson with visuals and widgets        | I understand concepts quickly           | P0       |
+| US-07 | learner | answer quick questions inside a lesson        | I can check my understanding            | P0       |
+| US-08 | learner | mark a lesson complete                        | my progress updates                     | P0       |
+| US-09 | learner | open a challenge brief with exact sim setup   | I can set up the sim correctly          | P0       |
+| US-10 | learner | keep the challenge brief open while flying    | I can refer to it mid-flight            | P0       |
+| US-11 | learner | debrief a challenge with a scored rubric      | I know how well I did                   | P0       |
+| US-12 | learner | see my past attempts at a challenge           | I can see improvement                   | P0       |
+| US-13 | learner | continue where I left off from the dashboard  | I don't lose my place                   | P0       |
+| US-14 | learner | look up V-speeds and checklists quickly       | I don't have to search mid-flight       | P0       |
+| US-15 | learner | look up an unfamiliar term                    | I can keep learning without leaving     | P0       |
+| US-16 | learner | choose dark or light mode                     | the site is comfortable next to the sim | P0       |
+| US-17 | learner | set my cockpit variant and controller type    | tips match my setup                     | P1       |
+| US-18 | learner | reset my password by email                    | I can recover my account                | P1       |
+| US-19 | learner | use calculators for wind and fuel             | I can plan flights                      | P1       |
+| US-20 | learner | print a kneeboard version of a brief          | I can use it offline                    | P1       |
+| US-21 | learner | delete my account and data                    | I control my data                       | P0       |
+| US-22 | learner | use the site with a keyboard or screen reader | the site is accessible                  | P0       |
 
 ---
 
@@ -363,19 +363,19 @@ v1 is done when **all** of the following are true:
 
 ### 4.2 Quality bars
 
-| Area | Target |
-|------|--------|
-| Lighthouse Performance (landing, mobile) | ≥ 85 |
-| Lighthouse Accessibility (all main pages) | ≥ 95 |
-| Lighthouse Best Practices | ≥ 95 |
-| Lighthouse SEO (public pages) | ≥ 90 |
-| Largest Contentful Paint (landing, 4G) | < 2.5 s |
-| API p95 latency (warm) | < 300 ms |
-| JavaScript bundle (initial, gzipped) | < 250 KB |
-| Server test coverage (lines) | ≥ 80% |
-| Client test coverage (lines, `src/features` and `src/components`) | ≥ 70% |
-| Content validation | 0 errors, 0 warnings |
-| Broken external links | 0 (checked by script before release) |
+| Area                                                              | Target                               |
+| ----------------------------------------------------------------- | ------------------------------------ |
+| Lighthouse Performance (landing, mobile)                          | ≥ 85                                 |
+| Lighthouse Accessibility (all main pages)                         | ≥ 95                                 |
+| Lighthouse Best Practices                                         | ≥ 95                                 |
+| Lighthouse SEO (public pages)                                     | ≥ 90                                 |
+| Largest Contentful Paint (landing, 4G)                            | < 2.5 s                              |
+| API p95 latency (warm)                                            | < 300 ms                             |
+| JavaScript bundle (initial, gzipped)                              | < 250 KB                             |
+| Server test coverage (lines)                                      | ≥ 80%                                |
+| Client test coverage (lines, `src/features` and `src/components`) | ≥ 70%                                |
+| Content validation                                                | 0 errors, 0 warnings                 |
+| Broken external links                                             | 0 (checked by script before release) |
 
 ### 4.3 Learning success signals (to watch after launch)
 
@@ -443,7 +443,7 @@ revisited, but should not be changed silently.
 - **Fallback:** If TypeScript slows you down too much in Phase 1–2, switch to JavaScript
   with JSDoc types and keep Zod. Record the change here.
 
-### D-06 — One deployable: Express serves the API *and* the built React app
+### D-06 — One deployable: Express serves the API _and_ the built React app
 
 - **Alternatives:** Frontend on Vercel/Netlify, API on Render/Railway.
 - **Reason:** Same origin means no CORS configuration and first-party cookies (third-party
@@ -527,7 +527,7 @@ This Part serves two purposes:
   You may quote them and adapt diagrams (with attribution as good practice). This makes the
   FAA handbooks the backbone of our content.
 - **The Cessna Pilot's Operating Handbook (POH) is copyrighted by Textron Aviation.** Do
-  not copy text, tables or diagrams from it. Use it (or the in-sim checklist) to *check*
+  not copy text, tables or diagrams from it. Use it (or the in-sim checklist) to _check_
   numbers, then write procedures in our own words and label numbers "⚠ Verify against your
   POH / in-sim checklist".
 - **Garmin manuals are copyrighted by Garmin.** Link to them; do not reproduce them.
@@ -549,220 +549,220 @@ This Part serves two purposes:
 All are listed on the FAA Aviation Handbooks & Manuals page:
 <https://www.faa.gov/regulations_policies/handbooks_manuals/aviation>
 
-| Resource | ID | What it is good for | Link |
-|----------|----|---------------------|------|
-| Pilot's Handbook of Aeronautical Knowledge (PHAK) | FAA-H-8083-25C | Aerodynamics, flight controls, instruments, systems, weather, airspace, navigation, charts. **The #1 theory reference for v1.** | <https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak> |
-| Airplane Flying Handbook (AFH) | FAA-H-8083-3C | How to *fly* each manoeuvre: ground ops, basic manoeuvres, takeoffs, patterns, landings, slow flight, stalls, emergencies. **The #1 flying reference for v1.** | <https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook> |
-| Aviation Weather Handbook | FAA-H-8083-28 | METARs, TAFs, weather theory; used in Module 6 weather basics. | <https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-28-aviation-weather-handbook> |
-| Risk Management Handbook | FAA-H-8083-2A | PAVE, IMSAFE, decision making; used in capstone lessons. | <https://www.faa.gov/regulationspolicies/handbooksmanuals/risk-management-handbook-faa-h-8083-2a> |
-| Weight & Balance Handbook | FAA-H-8083-1B | Weight and balance theory for the P1 W&B widget. | <https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-1.pdf> |
-| Instrument Flying Handbook | FAA-H-8083-15B | Attitude instrument flying, the G1000 (glass cockpit) chapter, VOR theory. Only selected chapters for v1. | <https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf> |
-| Instrument Procedures Handbook | FAA-H-8083-16 | Not needed for v1 (post-v1 IFR). | <https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook> |
-| Aviation Instructor's Handbook | FAA-H-8083-9 | How people learn; useful for *designing* lessons (Section 12). | <https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook> |
-| Plane Sense | FAA-H-8083-19A | General aviation overview; light background reading. | <https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/faa-h-8083-19A.pdf> |
+| Resource                                          | ID             | What it is good for                                                                                                                                            | Link                                                                                                         |
+| ------------------------------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Pilot's Handbook of Aeronautical Knowledge (PHAK) | FAA-H-8083-25C | Aerodynamics, flight controls, instruments, systems, weather, airspace, navigation, charts. **The #1 theory reference for v1.**                                | <https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak>                                   |
+| Airplane Flying Handbook (AFH)                    | FAA-H-8083-3C  | How to _fly_ each manoeuvre: ground ops, basic manoeuvres, takeoffs, patterns, landings, slow flight, stalls, emergencies. **The #1 flying reference for v1.** | <https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/airplane_handbook>                      |
+| Aviation Weather Handbook                         | FAA-H-8083-28  | METARs, TAFs, weather theory; used in Module 6 weather basics.                                                                                                 | <https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-28-aviation-weather-handbook>  |
+| Risk Management Handbook                          | FAA-H-8083-2A  | PAVE, IMSAFE, decision making; used in capstone lessons.                                                                                                       | <https://www.faa.gov/regulationspolicies/handbooksmanuals/risk-management-handbook-faa-h-8083-2a>            |
+| Weight & Balance Handbook                         | FAA-H-8083-1B  | Weight and balance theory for the P1 W&B widget.                                                                                                               | <https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-1.pdf>   |
+| Instrument Flying Handbook                        | FAA-H-8083-15B | Attitude instrument flying, the G1000 (glass cockpit) chapter, VOR theory. Only selected chapters for v1.                                                      | <https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf> |
+| Instrument Procedures Handbook                    | FAA-H-8083-16  | Not needed for v1 (post-v1 IFR).                                                                                                                               | <https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook>         |
+| Aviation Instructor's Handbook                    | FAA-H-8083-9   | How people learn; useful for _designing_ lessons (Section 12).                                                                                                 | <https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook>          |
+| Plane Sense                                       | FAA-H-8083-19A | General aviation overview; light background reading.                                                                                                           | <https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/faa-h-8083-19A.pdf> |
 
 **Also check the "MOSAIC" addenda** listed on the same page for the PHAK, AFH and W&B
 handbook. They update sport-pilot-related content and may change some wording.
 
 #### 6.2.1 PHAK chapter map for v1 lessons
 
-| PHAK chapter | Topic | Used in |
-|--------------|-------|---------|
-| Ch. 1 | Introduction to flying | Module 0 background |
-| Ch. 2 | Aeronautical decision-making | Module 8 |
-| Ch. 3 | Aircraft construction | Module 1 (airframe tour) |
-| Ch. 5 | Aerodynamics of flight | Module 2 (forces, stalls, left-turning tendencies) |
-| Ch. 6 | Flight controls | Module 1 (controls), Module 2 (trim) |
-| Ch. 7 | Aircraft systems | Module 1 (engine, fuel, electrical) |
-| Ch. 8 | Flight instruments | Module 1 (instruments, G1000 PFD) |
-| Ch. 9 | Flight manuals and other documents | Module 1 (POH, checklists) |
-| Ch. 10 | Weight and balance | P1 W&B lesson |
-| Ch. 11 | Aircraft performance | Module 4 (density altitude, takeoff distance) |
-| Ch. 12 | Weather theory | Module 6 weather basics |
-| Ch. 13 | Aviation weather services | Module 6 (METAR/TAF) |
-| Ch. 14 | Airport operations | Module 3, Module 4, Module 7 |
-| Ch. 15 | Airspace | Module 6 |
-| Ch. 16 | Navigation | Module 6 |
-| Ch. 17 | Aeromedical factors | Module 8 (IMSAFE) |
+| PHAK chapter | Topic                              | Used in                                            |
+| ------------ | ---------------------------------- | -------------------------------------------------- |
+| Ch. 1        | Introduction to flying             | Module 0 background                                |
+| Ch. 2        | Aeronautical decision-making       | Module 8                                           |
+| Ch. 3        | Aircraft construction              | Module 1 (airframe tour)                           |
+| Ch. 5        | Aerodynamics of flight             | Module 2 (forces, stalls, left-turning tendencies) |
+| Ch. 6        | Flight controls                    | Module 1 (controls), Module 2 (trim)               |
+| Ch. 7        | Aircraft systems                   | Module 1 (engine, fuel, electrical)                |
+| Ch. 8        | Flight instruments                 | Module 1 (instruments, G1000 PFD)                  |
+| Ch. 9        | Flight manuals and other documents | Module 1 (POH, checklists)                         |
+| Ch. 10       | Weight and balance                 | P1 W&B lesson                                      |
+| Ch. 11       | Aircraft performance               | Module 4 (density altitude, takeoff distance)      |
+| Ch. 12       | Weather theory                     | Module 6 weather basics                            |
+| Ch. 13       | Aviation weather services          | Module 6 (METAR/TAF)                               |
+| Ch. 14       | Airport operations                 | Module 3, Module 4, Module 7                       |
+| Ch. 15       | Airspace                           | Module 6                                           |
+| Ch. 16       | Navigation                         | Module 6                                           |
+| Ch. 17       | Aeromedical factors                | Module 8 (IMSAFE)                                  |
 
 > ⚠ Verify chapter numbers against the current PHAK edition (25C) when you download it;
 > chapter order occasionally changes between editions.
 
 #### 6.2.2 Airplane Flying Handbook chapter map for v1 lessons
 
-| AFH chapter | Topic | Used in |
-|-------------|-------|---------|
-| Ch. 1 | Introduction to flight training | Module 0 |
-| Ch. 2 | Ground operations (preflight, taxi, run-up) | Module 3 |
-| Ch. 3 | Basic flight manoeuvres (four fundamentals) | Module 2 |
-| Ch. 4 | Energy management | Module 4, Module 5 |
-| Ch. 5 | Maintaining aircraft control: upset prevention and recovery (slow flight, stalls, spins awareness) | Module 5 |
-| Ch. 6 | Takeoffs and departure climbs | Module 4 |
-| Ch. 7 | Ground reference manoeuvres | Module 5 (P1) |
-| Ch. 8 | Airport traffic patterns | Module 4 |
-| Ch. 9 | Approaches and landings | Module 4 |
-| Ch. 10 | Performance manoeuvres (steep turns) | Module 5 |
-| Ch. 11 | Night operations | Post-v1 |
-| Ch. 18 | Emergency procedures | Module 5 |
+| AFH chapter | Topic                                                                                              | Used in            |
+| ----------- | -------------------------------------------------------------------------------------------------- | ------------------ |
+| Ch. 1       | Introduction to flight training                                                                    | Module 0           |
+| Ch. 2       | Ground operations (preflight, taxi, run-up)                                                        | Module 3           |
+| Ch. 3       | Basic flight manoeuvres (four fundamentals)                                                        | Module 2           |
+| Ch. 4       | Energy management                                                                                  | Module 4, Module 5 |
+| Ch. 5       | Maintaining aircraft control: upset prevention and recovery (slow flight, stalls, spins awareness) | Module 5           |
+| Ch. 6       | Takeoffs and departure climbs                                                                      | Module 4           |
+| Ch. 7       | Ground reference manoeuvres                                                                        | Module 5 (P1)      |
+| Ch. 8       | Airport traffic patterns                                                                           | Module 4           |
+| Ch. 9       | Approaches and landings                                                                            | Module 4           |
+| Ch. 10      | Performance manoeuvres (steep turns)                                                               | Module 5           |
+| Ch. 11      | Night operations                                                                                   | Post-v1            |
+| Ch. 18      | Emergency procedures                                                                               | Module 5           |
 
 > ⚠ Verify chapter numbers against the current AFH (3C).
 
 ### 6.3 FAA regulations, procedures and standards
 
-| Resource | Why | Link |
-|----------|-----|------|
-| Aeronautical Information Manual (AIM) | Official procedures: traffic patterns (Ch. 4-3), radio phraseology (Ch. 4-2), airspace (Ch. 3), airport signs and markings (Ch. 2-3). Readable HTML. | <https://www.faa.gov/air_traffic/publications/atpubs/aim_html/> |
-| Pilot/Controller Glossary | Official definitions; feeds our glossary (Appendix A). | <https://www.faa.gov/air_traffic/publications/atpubs/pcg_html/> |
-| FAA Air Traffic Publications index | AIM, P/CG, Chart Supplement and more. | <https://www.faa.gov/air_traffic/publications> |
-| Private Pilot – Airplane ACS (FAA-S-ACS-6) | Official tolerances (e.g. ±100 ft altitude, ±10 kt airspeed in some tasks). **Basis of our challenge rubrics.** | <https://www.faa.gov/training_testing/testing/acs> and the PDF <https://www.faa.gov/training_testing/testing/acs/private_airplane_acs_6.pdf> |
-| 14 CFR (Federal Aviation Regulations) | Part 91 (general operating rules), Part 61 (pilot certification). Used lightly: VFR weather minimums (91.155), right-of-way (91.113), fuel requirements (91.151). | <https://www.ecfr.gov/current/title-14> |
-| FAA pilot training page | Links to training resources and airman education topics. | <https://www.faa.gov/pilots/training> |
-| FAA airman education topics of interest | Safety topics, runway safety, etc. | <https://www.faa.gov/pilots/training/airman_education/topics_of_interest> |
+| Resource                                   | Why                                                                                                                                                               | Link                                                                                                                                         |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aeronautical Information Manual (AIM)      | Official procedures: traffic patterns (Ch. 4-3), radio phraseology (Ch. 4-2), airspace (Ch. 3), airport signs and markings (Ch. 2-3). Readable HTML.              | <https://www.faa.gov/air_traffic/publications/atpubs/aim_html/>                                                                              |
+| Pilot/Controller Glossary                  | Official definitions; feeds our glossary (Appendix A).                                                                                                            | <https://www.faa.gov/air_traffic/publications/atpubs/pcg_html/>                                                                              |
+| FAA Air Traffic Publications index         | AIM, P/CG, Chart Supplement and more.                                                                                                                             | <https://www.faa.gov/air_traffic/publications>                                                                                               |
+| Private Pilot – Airplane ACS (FAA-S-ACS-6) | Official tolerances (e.g. ±100 ft altitude, ±10 kt airspeed in some tasks). **Basis of our challenge rubrics.**                                                   | <https://www.faa.gov/training_testing/testing/acs> and the PDF <https://www.faa.gov/training_testing/testing/acs/private_airplane_acs_6.pdf> |
+| 14 CFR (Federal Aviation Regulations)      | Part 91 (general operating rules), Part 61 (pilot certification). Used lightly: VFR weather minimums (91.155), right-of-way (91.113), fuel requirements (91.151). | <https://www.ecfr.gov/current/title-14>                                                                                                      |
+| FAA pilot training page                    | Links to training resources and airman education topics.                                                                                                          | <https://www.faa.gov/pilots/training>                                                                                                        |
+| FAA airman education topics of interest    | Safety topics, runway safety, etc.                                                                                                                                | <https://www.faa.gov/pilots/training/airman_education/topics_of_interest>                                                                    |
 
 #### 6.3.1 ACS tasks that map to v1 challenges
 
 Use the ACS as the "standard" each challenge rubric is loosely modelled on. Always say
 "inspired by the Private Pilot ACS" rather than implying official standards.
 
-| ACS Area / Task (Private Pilot Airplane) | v1 challenge(s) |
-|------------------------------------------|-----------------|
+| ACS Area / Task (Private Pilot Airplane)                                                  | v1 challenge(s)  |
+| ----------------------------------------------------------------------------------------- | ---------------- |
 | Preflight Procedures — Cockpit management, engine starting, taxiing, before-takeoff check | C3.1, C3.2, C3.3 |
-| Airport Operations — Communications, traffic patterns | C4.2, C7.1, C7.2 |
-| Takeoffs, Landings and Go-Arounds — Normal takeoff and climb | C4.1 |
-| Takeoffs, Landings and Go-Arounds — Normal approach and landing | C4.3 |
-| Takeoffs, Landings and Go-Arounds — Crosswind (within normal tasks) | C4.5 (P1) |
-| Takeoffs, Landings and Go-Arounds — Short-field takeoff/landing | C4.6 (P1) |
-| Takeoffs, Landings and Go-Arounds — Go-around/rejected landing | C4.4 |
-| Performance and Ground Reference Manoeuvres — Steep turns | C5.4 |
-| Performance and Ground Reference Manoeuvres — Ground reference manoeuvres | C5.6 (P1) |
-| Navigation — Pilotage and dead reckoning | C6.2, C6.3 |
-| Navigation — Navigation systems and radar services | C6.4, C6.5 |
-| Navigation — Diversion; lost procedures | C6.6 |
-| Slow Flight and Stalls — Manoeuvring during slow flight | C5.1 |
-| Slow Flight and Stalls — Power-off stalls | C5.2 |
-| Slow Flight and Stalls — Power-on stalls | C5.3 |
-| Emergency Operations — Emergency descent (P1), emergency approach and landing | C5.5 |
-| Basic Instrument Manoeuvres — Recovery from unusual attitudes (awareness only) | P1 |
-| Postflight Procedures | C3.4 |
+| Airport Operations — Communications, traffic patterns                                     | C4.2, C7.1, C7.2 |
+| Takeoffs, Landings and Go-Arounds — Normal takeoff and climb                              | C4.1             |
+| Takeoffs, Landings and Go-Arounds — Normal approach and landing                           | C4.3             |
+| Takeoffs, Landings and Go-Arounds — Crosswind (within normal tasks)                       | C4.5 (P1)        |
+| Takeoffs, Landings and Go-Arounds — Short-field takeoff/landing                           | C4.6 (P1)        |
+| Takeoffs, Landings and Go-Arounds — Go-around/rejected landing                            | C4.4             |
+| Performance and Ground Reference Manoeuvres — Steep turns                                 | C5.4             |
+| Performance and Ground Reference Manoeuvres — Ground reference manoeuvres                 | C5.6 (P1)        |
+| Navigation — Pilotage and dead reckoning                                                  | C6.2, C6.3       |
+| Navigation — Navigation systems and radar services                                        | C6.4, C6.5       |
+| Navigation — Diversion; lost procedures                                                   | C6.6             |
+| Slow Flight and Stalls — Manoeuvring during slow flight                                   | C5.1             |
+| Slow Flight and Stalls — Power-off stalls                                                 | C5.2             |
+| Slow Flight and Stalls — Power-on stalls                                                  | C5.3             |
+| Emergency Operations — Emergency descent (P1), emergency approach and landing             | C5.5             |
+| Basic Instrument Manoeuvres — Recovery from unusual attitudes (awareness only)            | P1               |
+| Postflight Procedures                                                                     | C3.4             |
 
 > ⚠ Verify task names against the current ACS PDF. Area and task lettering (e.g. "IV.A")
 > changes between revisions, so the plan intentionally uses names instead of letters.
 
 ### 6.4 The Cessna 172 itself
 
-| Resource | Notes | Link |
-|----------|-------|------|
-| Textron Aviation — Cessna Skyhawk product page | Official specs and performance summary for the current 172S. Good for "fun facts" and specs. | <https://cessna.txtav.com/en/piston/cessna-skyhawk> |
-| Cessna 172S Pilot's Operating Handbook / Information Manual | The authoritative source for V-speeds, procedures, limitations and performance tables. **Copyrighted.** Legitimate sources: a copy bought from a pilot shop (e.g. Sporty's, Aircraft Spruce) or Textron's publications store, or a flight school's copy. Many sim users rely on the in-sim checklist (below) instead. | Search "Cessna 172S Information Manual" at a pilot shop |
-| MSFS 2024 in-sim checklist for the C172 | Available inside the sim for each aircraft. Use it to confirm which procedures and speeds *the sim's* Skyhawk expects. **Primary cross-check source for all numbers in v1.** | In the sim: toolbar → Checklist (location may change by sim update) |
-| Garmin G1000 NXi Pilot's Guide for the Cessna 172/182/206 | The real Garmin manual for the avionics. Search Garmin support for "G1000 NXi Pilot's Guide Cessna" (part number family 190-02177). The Working Title G1000 NXi in MSFS follows it closely but not perfectly. | <https://support.garmin.com> (search) |
-| Garmin G1000 NXi Cockpit Reference Guide | A shorter quick-reference version of the pilot's guide. | Garmin support (search "G1000 NXi Cockpit Reference Guide") |
-| Garmin G1000 PC Trainer | Garmin's official desktop trainer (paid); optional. | Search "Garmin G1000 NXi PC Trainer" |
-| FAA Advanced Avionics Handbook / IFH glass cockpit chapter | Explains PFD/MFD concepts in a vendor-neutral way. | IFH link in 6.2 |
-| Type Certificate Data Sheet 3A12 | The FAA's certification data for all 172 models. Only for the curious. | Search "TCDS 3A12" on <https://drs.faa.gov> |
+| Resource                                                    | Notes                                                                                                                                                                                                                                                                                                                 | Link                                                                |
+| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| Textron Aviation — Cessna Skyhawk product page              | Official specs and performance summary for the current 172S. Good for "fun facts" and specs.                                                                                                                                                                                                                          | <https://cessna.txtav.com/en/piston/cessna-skyhawk>                 |
+| Cessna 172S Pilot's Operating Handbook / Information Manual | The authoritative source for V-speeds, procedures, limitations and performance tables. **Copyrighted.** Legitimate sources: a copy bought from a pilot shop (e.g. Sporty's, Aircraft Spruce) or Textron's publications store, or a flight school's copy. Many sim users rely on the in-sim checklist (below) instead. | Search "Cessna 172S Information Manual" at a pilot shop             |
+| MSFS 2024 in-sim checklist for the C172                     | Available inside the sim for each aircraft. Use it to confirm which procedures and speeds _the sim's_ Skyhawk expects. **Primary cross-check source for all numbers in v1.**                                                                                                                                          | In the sim: toolbar → Checklist (location may change by sim update) |
+| Garmin G1000 NXi Pilot's Guide for the Cessna 172/182/206   | The real Garmin manual for the avionics. Search Garmin support for "G1000 NXi Pilot's Guide Cessna" (part number family 190-02177). The Working Title G1000 NXi in MSFS follows it closely but not perfectly.                                                                                                         | <https://support.garmin.com> (search)                               |
+| Garmin G1000 NXi Cockpit Reference Guide                    | A shorter quick-reference version of the pilot's guide.                                                                                                                                                                                                                                                               | Garmin support (search "G1000 NXi Cockpit Reference Guide")         |
+| Garmin G1000 PC Trainer                                     | Garmin's official desktop trainer (paid); optional.                                                                                                                                                                                                                                                                   | Search "Garmin G1000 NXi PC Trainer"                                |
+| FAA Advanced Avionics Handbook / IFH glass cockpit chapter  | Explains PFD/MFD concepts in a vendor-neutral way.                                                                                                                                                                                                                                                                    | IFH link in 6.2                                                     |
+| Type Certificate Data Sheet 3A12                            | The FAA's certification data for all 172 models. Only for the curious.                                                                                                                                                                                                                                                | Search "TCDS 3A12" on <https://drs.faa.gov>                         |
 
 ### 6.5 Charts and airport information
 
-| Resource | Notes | Link |
-|----------|-------|------|
-| FAA VFR Raster Charts (free sectionals, TACs, flyways) | Download the **San Francisco Sectional** and the **San Francisco Terminal Area Chart (TAC)** for Module 6. Updated every 56 days. | <https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/vfr/> |
-| FAA Aeronautical Chart User's Guide | **Essential.** Explains every symbol on a sectional; our Sectional Legend widget is based on it. | <https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/aero_guide/> |
-| FAA Digital Products index | All FAA chart products. | <https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/> |
-| FAA VFR charts product catalogue | Chart coverage maps and edition dates. | <https://www.faa.gov/air_traffic/flight_info/aeronav/productcatalog/vfrcharts/> |
-| Chart Supplement (formerly A/FD) | Airport details: runways, frequencies, pattern direction, pattern altitude remarks. Use the **Southwest US** volume for Bay Area airports. | <https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dafd/> |
-| Digital Terminal Procedures (d-TPP) | Airport diagrams (taxiway layouts) for towered airports like KLVK, KPAO, KOAK. | <https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dtpp/> |
-| SkyVector | Free online sectional viewer with flight-plan drawing. **Best tool for learners to plan Module 6 flights.** | <https://skyvector.com> |
-| AirNav | Quick airport info pages (runways, frequencies, pattern info, fuel). | <https://www.airnav.com> |
-| FlightAware | Real-world traffic, useful to show real C172 flights in the Bay Area. | <https://www.flightaware.com> |
+| Resource                                               | Notes                                                                                                                                      | Link                                                                               |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| FAA VFR Raster Charts (free sectionals, TACs, flyways) | Download the **San Francisco Sectional** and the **San Francisco Terminal Area Chart (TAC)** for Module 6. Updated every 56 days.          | <https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/vfr/>        |
+| FAA Aeronautical Chart User's Guide                    | **Essential.** Explains every symbol on a sectional; our Sectional Legend widget is based on it.                                           | <https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/aero_guide/> |
+| FAA Digital Products index                             | All FAA chart products.                                                                                                                    | <https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/>            |
+| FAA VFR charts product catalogue                       | Chart coverage maps and edition dates.                                                                                                     | <https://www.faa.gov/air_traffic/flight_info/aeronav/productcatalog/vfrcharts/>    |
+| Chart Supplement (formerly A/FD)                       | Airport details: runways, frequencies, pattern direction, pattern altitude remarks. Use the **Southwest US** volume for Bay Area airports. | <https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dafd/>       |
+| Digital Terminal Procedures (d-TPP)                    | Airport diagrams (taxiway layouts) for towered airports like KLVK, KPAO, KOAK.                                                             | <https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dtpp/>       |
+| SkyVector                                              | Free online sectional viewer with flight-plan drawing. **Best tool for learners to plan Module 6 flights.**                                | <https://skyvector.com>                                                            |
+| AirNav                                                 | Quick airport info pages (runways, frequencies, pattern info, fuel).                                                                       | <https://www.airnav.com>                                                           |
+| FlightAware                                            | Real-world traffic, useful to show real C172 flights in the Bay Area.                                                                      | <https://www.flightaware.com>                                                      |
 
 ### 6.6 Weather
 
-| Resource | Notes | Link |
-|----------|-------|------|
-| Aviation Weather Center | Official METARs, TAFs, graphical forecasts. | <https://aviationweather.gov> |
-| 1800wxBrief (Leidos Flight Service) | Official US pilot weather briefings; free account. Good to show "how real pilots brief". | <https://www.1800wxbrief.com> |
-| Aviation Weather Handbook | Theory and product decoding. | See 6.2 |
-| MSFS 2024 weather panel | Presets (Clear Skies, Few Clouds, etc.), custom wind layers, and live weather. Challenges specify either a preset or custom winds so everyone flies the same conditions. | In the sim |
+| Resource                            | Notes                                                                                                                                                                    | Link                          |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
+| Aviation Weather Center             | Official METARs, TAFs, graphical forecasts.                                                                                                                              | <https://aviationweather.gov> |
+| 1800wxBrief (Leidos Flight Service) | Official US pilot weather briefings; free account. Good to show "how real pilots brief".                                                                                 | <https://www.1800wxbrief.com> |
+| Aviation Weather Handbook           | Theory and product decoding.                                                                                                                                             | See 6.2                       |
+| MSFS 2024 weather panel             | Presets (Clear Skies, Few Clouds, etc.), custom wind layers, and live weather. Challenges specify either a preset or custom winds so everyone flies the same conditions. | In the sim                    |
 
 ### 6.7 Radio communications
 
-| Resource | Notes | Link |
-|----------|-------|------|
-| AIM Chapter 4, Section 2 (Radio communications phraseology and techniques) | Official phraseology. | <https://www.faa.gov/air_traffic/publications/atpubs/aim_html/> |
-| AIM Chapter 4, Section 1 (Services available: CTAF, UNICOM, ATIS) | Non-towered procedures. | Same |
-| AOPA Air Safety Institute — radio and communications courses | Free interactive courses (free account). | <https://www.aopa.org/training-and-safety/air-safety-institute> |
-| LiveATC | Real ATC audio feeds (e.g. KPAO tower, NorCal Approach). May block automated checks; open in a browser. Great homework: listen for 20 minutes. | <https://www.liveatc.net> |
-| VATSIM | Free online network with human controllers. Post-v1 track, but link as "next step". | <https://vatsim.net> and getting-started docs <https://vatsim.net/docs/basics/getting-started> |
-| PilotEdge | Paid, professional-grade simulated ATC (US West Coast origins — covers the Bay Area). | <https://www.pilotedge.net> |
+| Resource                                                                   | Notes                                                                                                                                          | Link                                                                                           |
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| AIM Chapter 4, Section 2 (Radio communications phraseology and techniques) | Official phraseology.                                                                                                                          | <https://www.faa.gov/air_traffic/publications/atpubs/aim_html/>                                |
+| AIM Chapter 4, Section 1 (Services available: CTAF, UNICOM, ATIS)          | Non-towered procedures.                                                                                                                        | Same                                                                                           |
+| AOPA Air Safety Institute — radio and communications courses               | Free interactive courses (free account).                                                                                                       | <https://www.aopa.org/training-and-safety/air-safety-institute>                                |
+| LiveATC                                                                    | Real ATC audio feeds (e.g. KPAO tower, NorCal Approach). May block automated checks; open in a browser. Great homework: listen for 20 minutes. | <https://www.liveatc.net>                                                                      |
+| VATSIM                                                                     | Free online network with human controllers. Post-v1 track, but link as "next step".                                                            | <https://vatsim.net> and getting-started docs <https://vatsim.net/docs/basics/getting-started> |
+| PilotEdge                                                                  | Paid, professional-grade simulated ATC (US West Coast origins — covers the Bay Area).                                                          | <https://www.pilotedge.net>                                                                    |
 
 ### 6.8 Safety and training organisations
 
-| Resource | Notes | Link |
-|----------|-------|------|
-| AOPA Air Safety Institute | Free courses, videos, quizzes on nearly every v1 topic. | <https://www.aopa.org/training-and-safety/air-safety-institute> |
-| AOPA student pilot resources | Plain-language articles for beginners. | <https://www.aopa.org/training-and-safety/students> |
-| FAASTeam / WINGS | FAA Safety Team courses (free account). | <https://www.faasafety.gov> |
-| Boldmethod | Excellent short visual articles on aerodynamics, stalls, patterns and charts; inspiration for our visual style. | <https://www.boldmethod.com> |
-| Sporty's Learn to Fly | Beginner-friendly articles and videos. | <https://www.sportys.com/learn-to-fly> |
-| UK CAA General Aviation | Useful non-US perspective (post-v1 for European learners). | <https://www.caa.co.uk/general-aviation/> |
+| Resource                     | Notes                                                                                                           | Link                                                            |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| AOPA Air Safety Institute    | Free courses, videos, quizzes on nearly every v1 topic.                                                         | <https://www.aopa.org/training-and-safety/air-safety-institute> |
+| AOPA student pilot resources | Plain-language articles for beginners.                                                                          | <https://www.aopa.org/training-and-safety/students>             |
+| FAASTeam / WINGS             | FAA Safety Team courses (free account).                                                                         | <https://www.faasafety.gov>                                     |
+| Boldmethod                   | Excellent short visual articles on aerodynamics, stalls, patterns and charts; inspiration for our visual style. | <https://www.boldmethod.com>                                    |
+| Sporty's Learn to Fly        | Beginner-friendly articles and videos.                                                                          | <https://www.sportys.com/learn-to-fly>                          |
+| UK CAA General Aviation      | Useful non-US perspective (post-v1 for European learners).                                                      | <https://www.caa.co.uk/general-aviation/>                       |
 
 ### 6.9 Video channels (link to specific videos per lesson)
 
 Verify each channel and each specific video before linking; prefer short, focused videos.
 
-| Channel | Good for | Link |
-|---------|----------|------|
-| FAA (official) | Safety videos, runway safety, weather. | <https://www.youtube.com/@FAAnews> |
-| Boldmethod | Short animated explainers. | <https://www.youtube.com/@boldmethod> |
-| Flight Insight | Real-world pilot explaining procedures and navigation in plain language. | <https://www.youtube.com/@FlightInsight> |
-| AOPA / AOPA Air Safety Institute | Search YouTube for "AOPA Air Safety Institute"; many free safety videos. | Search on YouTube |
-| MSFS community tutorial creators | Search "MSFS 2024 C172 tutorial G1000" and "MSFS 2024 traffic pattern"; vet for accuracy against the AFH before linking. | Search on YouTube |
+| Channel                          | Good for                                                                                                                 | Link                                     |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| FAA (official)                   | Safety videos, runway safety, weather.                                                                                   | <https://www.youtube.com/@FAAnews>       |
+| Boldmethod                       | Short animated explainers.                                                                                               | <https://www.youtube.com/@boldmethod>    |
+| Flight Insight                   | Real-world pilot explaining procedures and navigation in plain language.                                                 | <https://www.youtube.com/@FlightInsight> |
+| AOPA / AOPA Air Safety Institute | Search YouTube for "AOPA Air Safety Institute"; many free safety videos.                                                 | Search on YouTube                        |
+| MSFS community tutorial creators | Search "MSFS 2024 C172 tutorial G1000" and "MSFS 2024 traffic pattern"; vet for accuracy against the AFH before linking. | Search on YouTube                        |
 
 Rule: **every linked video must be watched in full by you** and marked with a
 `verifiedAt` date. Never link a video that teaches something contradicting the AFH.
 
 ### 6.10 Microsoft Flight Simulator 2024
 
-| Resource | Notes | Link |
-|----------|-------|------|
-| Official site | News, sim updates, patch notes (important: sim updates can change aircraft behaviour or menus). | <https://www.flightsimulator.com> |
-| Official forums | Bug reports, aircraft-specific threads (search "C172"), control setup help. | <https://forums.flightsimulator.com> |
-| MSFS SDK documentation | For post-v1 SimConnect work; also documents simulation variables (SimVars) useful for understanding what the sim can measure. | <https://docs.flightsimulator.com/> and SimConnect: <https://docs.flightsimulator.com/msfs2024/html/6_Programming_APIs/SimConnect/SimConnect_SDK.htm> |
-| In-sim flight training / tutorials | MSFS includes basic training lessons; mention them in Module 0 as a warm-up, and explain what Learn-To-Fly adds. | In the sim |
-| Little Navmap (free) | Flight planning and moving-map tool that connects to the sim. Great post-v1, optional in v1 for learners who want a moving map. | <https://albar965.github.io/littlenavmap.html> |
-| Navigraph (paid) | Current charts and navigation data for the sim. Not required for v1. | <https://www.navigraph.com> |
+| Resource                           | Notes                                                                                                                           | Link                                                                                                                                                  |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Official site                      | News, sim updates, patch notes (important: sim updates can change aircraft behaviour or menus).                                 | <https://www.flightsimulator.com>                                                                                                                     |
+| Official forums                    | Bug reports, aircraft-specific threads (search "C172"), control setup help.                                                     | <https://forums.flightsimulator.com>                                                                                                                  |
+| MSFS SDK documentation             | For post-v1 SimConnect work; also documents simulation variables (SimVars) useful for understanding what the sim can measure.   | <https://docs.flightsimulator.com/> and SimConnect: <https://docs.flightsimulator.com/msfs2024/html/6_Programming_APIs/SimConnect/SimConnect_SDK.htm> |
+| In-sim flight training / tutorials | MSFS includes basic training lessons; mention them in Module 0 as a warm-up, and explain what Learn-To-Fly adds.                | In the sim                                                                                                                                            |
+| Little Navmap (free)               | Flight planning and moving-map tool that connects to the sim. Great post-v1, optional in v1 for learners who want a moving map. | <https://albar965.github.io/littlenavmap.html>                                                                                                        |
+| Navigraph (paid)                   | Current charts and navigation data for the sim. Not required for v1.                                                            | <https://www.navigraph.com>                                                                                                                           |
 
 ### 6.11 Books (optional, paid)
 
 These are well-known in real-world training. Recommend them as optional further reading
 only; do not copy from them.
 
-- *Stick and Rudder* by Wolfgang Langewiesche — classic on how airplanes really fly.
-- *Rod Machado's Private Pilot Handbook* — friendly, humorous theory.
-- *The Pilot's Manual: Flight School* (ASA) — structured manoeuvre descriptions.
-- *Say It Right* / radio phraseology guides (various authors) — for Module 7.
+- _Stick and Rudder_ by Wolfgang Langewiesche — classic on how airplanes really fly.
+- _Rod Machado's Private Pilot Handbook_ — friendly, humorous theory.
+- _The Pilot's Manual: Flight School_ (ASA) — structured manoeuvre descriptions.
+- _Say It Right_ / radio phraseology guides (various authors) — for Module 7.
 
 ### 6.12 Engineering documentation (for building the app)
 
-| Topic | Link |
-|-------|------|
-| React | <https://react.dev> |
-| Vite | <https://vite.dev> |
-| React Router | <https://reactrouter.com> |
-| TanStack Query | <https://tanstack.com/query/latest> |
-| Tailwind CSS | <https://tailwindcss.com/docs> |
-| Zod | <https://zod.dev> |
-| Express | <https://expressjs.com> |
-| Mongoose | <https://mongoosejs.com/docs/> |
-| MongoDB manual | <https://www.mongodb.com/docs/manual/> |
-| MongoDB Atlas | <https://www.mongodb.com/docs/atlas/> |
+| Topic                    | Link                                            |
+| ------------------------ | ----------------------------------------------- |
+| React                    | <https://react.dev>                             |
+| Vite                     | <https://vite.dev>                              |
+| React Router             | <https://reactrouter.com>                       |
+| TanStack Query           | <https://tanstack.com/query/latest>             |
+| Tailwind CSS             | <https://tailwindcss.com/docs>                  |
+| Zod                      | <https://zod.dev>                               |
+| Express                  | <https://expressjs.com>                         |
+| Mongoose                 | <https://mongoosejs.com/docs/>                  |
+| MongoDB manual           | <https://www.mongodb.com/docs/manual/>          |
+| MongoDB Atlas            | <https://www.mongodb.com/docs/atlas/>           |
 | Node.js release schedule | <https://nodejs.org/en/about/previous-releases> |
-| Vitest | <https://vitest.dev> |
-| Playwright | <https://playwright.dev> |
-| GitHub Actions | <https://docs.github.com/en/actions> |
-| Render | <https://render.com/docs> |
-| WCAG 2.2 quick reference | <https://www.w3.org/WAI/WCAG22/quickref/> |
-| OWASP Top Ten | <https://owasp.org/www-project-top-ten/> |
+| Vitest                   | <https://vitest.dev>                            |
+| Playwright               | <https://playwright.dev>                        |
+| GitHub Actions           | <https://docs.github.com/en/actions>            |
+| Render                   | <https://render.com/docs>                       |
+| WCAG 2.2 quick reference | <https://www.w3.org/WAI/WCAG22/quickref/>       |
+| OWASP Top Ten            | <https://owasp.org/www-project-top-ten/>        |
 
 ---
 
@@ -866,90 +866,90 @@ duration, what you practised, what went wrong, lesson ideas. This becomes raw ma
 
 ### 8.1 General specifications (172S)
 
-| Item | Value |
-|------|-------|
-| Engine | Lycoming IO-360-L2A, 4-cylinder, fuel-injected, 180 hp at 2,700 RPM |
-| Propeller | Fixed-pitch, 2-blade (McCauley) |
-| Maximum takeoff weight (normal category) | 2,550 lb |
-| Maximum weight (utility category) | 2,200 lb |
-| Wingspan | 36 ft 1 in |
-| Length | 27 ft 2 in |
-| Height | 8 ft 11 in |
-| Seats | 4 |
-| Fuel capacity | 56 US gal total, 53 US gal usable |
-| Fuel type | 100LL avgas (blue) |
-| Oil capacity | 8 US qt (sump) — ⚠ verify |
-| Cruise speed (75% power, standard conditions) | ~120–124 KTAS |
-| Fuel burn at ~75% power | roughly 8.5–10 GPH (use 10 GPH for simple planning) |
-| Range (with reserve) | ~500–640 nm depending on power and altitude |
-| Service ceiling | 14,000 ft |
-| Maximum demonstrated crosswind | 15 kt (a demonstrated value, not a limitation) |
-| Flaps | Electric, 0°, 10°, 20°, 30° |
-| Landing gear | Fixed tricycle, steerable nose wheel via rudder pedals |
-| Avionics (MSFS default) | Garmin G1000 NXi PFD + MFD, GFC 700 autopilot |
-| Avionics (classic variant) | Analogue "six-pack", NAV/COM radios, (GPS depends on variant) |
+| Item                                          | Value                                                               |
+| --------------------------------------------- | ------------------------------------------------------------------- |
+| Engine                                        | Lycoming IO-360-L2A, 4-cylinder, fuel-injected, 180 hp at 2,700 RPM |
+| Propeller                                     | Fixed-pitch, 2-blade (McCauley)                                     |
+| Maximum takeoff weight (normal category)      | 2,550 lb                                                            |
+| Maximum weight (utility category)             | 2,200 lb                                                            |
+| Wingspan                                      | 36 ft 1 in                                                          |
+| Length                                        | 27 ft 2 in                                                          |
+| Height                                        | 8 ft 11 in                                                          |
+| Seats                                         | 4                                                                   |
+| Fuel capacity                                 | 56 US gal total, 53 US gal usable                                   |
+| Fuel type                                     | 100LL avgas (blue)                                                  |
+| Oil capacity                                  | 8 US qt (sump) — ⚠ verify                                           |
+| Cruise speed (75% power, standard conditions) | ~120–124 KTAS                                                       |
+| Fuel burn at ~75% power                       | roughly 8.5–10 GPH (use 10 GPH for simple planning)                 |
+| Range (with reserve)                          | ~500–640 nm depending on power and altitude                         |
+| Service ceiling                               | 14,000 ft                                                           |
+| Maximum demonstrated crosswind                | 15 kt (a demonstrated value, not a limitation)                      |
+| Flaps                                         | Electric, 0°, 10°, 20°, 30°                                         |
+| Landing gear                                  | Fixed tricycle, steerable nose wheel via rudder pedals              |
+| Avionics (MSFS default)                       | Garmin G1000 NXi PFD + MFD, GFC 700 autopilot                       |
+| Avionics (classic variant)                    | Analogue "six-pack", NAV/COM radios, (GPS depends on variant)       |
 
 ### 8.2 V-speeds (KIAS)
 
-| Speed | Meaning | Value | Notes |
-|-------|---------|-------|-------|
-| V_SO | Stall speed, landing configuration (flaps 30°) | 40 | Bottom of white arc |
-| V_S1 | Stall speed, clean | 48 | Bottom of green arc |
-| V_R | Rotation | 55 | Normal takeoff |
-| V_X | Best angle of climb | 62 | Obstacle clearance, sea level |
-| V_Y | Best rate of climb | 74 | Normal climb, sea level |
-| Cruise climb | Better visibility and engine cooling | 75–85 | Used after pattern departure |
-| V_G | Best glide | 68 | At max weight, flaps up |
-| V_A | Manoeuvring speed | 105 at 2,550 lb; 98 at 2,200 lb; 90 at 1,900 lb | Decreases with weight |
-| V_FE (10°) | Max flap extended speed, 10° | 110 | Top of white arc is 85 |
-| V_FE (10°–30°) | Max flap extended speed, >10° | 85 | Top of white arc |
-| V_NO | Max structural cruising speed | 129 | Top of green arc |
-| V_NE | Never exceed | 163 | Red line |
-| Normal approach (flaps up) | | 65–75 | |
-| Normal approach (flaps 30°) | | 60–70 | |
-| Short-field approach (flaps 30°) | | 61 | ⚠ verify |
-| Short-field takeoff: lift-off / obstacle climb | Flaps 10° | ~51 / 56 | ⚠ verify |
-| Go-around (balked landing) | Full power, flaps 20° | 60 | Then retract flaps as speed increases |
+| Speed                                          | Meaning                                        | Value                                           | Notes                                 |
+| ---------------------------------------------- | ---------------------------------------------- | ----------------------------------------------- | ------------------------------------- |
+| V_SO                                           | Stall speed, landing configuration (flaps 30°) | 40                                              | Bottom of white arc                   |
+| V_S1                                           | Stall speed, clean                             | 48                                              | Bottom of green arc                   |
+| V_R                                            | Rotation                                       | 55                                              | Normal takeoff                        |
+| V_X                                            | Best angle of climb                            | 62                                              | Obstacle clearance, sea level         |
+| V_Y                                            | Best rate of climb                             | 74                                              | Normal climb, sea level               |
+| Cruise climb                                   | Better visibility and engine cooling           | 75–85                                           | Used after pattern departure          |
+| V_G                                            | Best glide                                     | 68                                              | At max weight, flaps up               |
+| V_A                                            | Manoeuvring speed                              | 105 at 2,550 lb; 98 at 2,200 lb; 90 at 1,900 lb | Decreases with weight                 |
+| V_FE (10°)                                     | Max flap extended speed, 10°                   | 110                                             | Top of white arc is 85                |
+| V_FE (10°–30°)                                 | Max flap extended speed, >10°                  | 85                                              | Top of white arc                      |
+| V_NO                                           | Max structural cruising speed                  | 129                                             | Top of green arc                      |
+| V_NE                                           | Never exceed                                   | 163                                             | Red line                              |
+| Normal approach (flaps up)                     |                                                | 65–75                                           |                                       |
+| Normal approach (flaps 30°)                    |                                                | 60–70                                           |                                       |
+| Short-field approach (flaps 30°)               |                                                | 61                                              | ⚠ verify                              |
+| Short-field takeoff: lift-off / obstacle climb | Flaps 10°                                      | ~51 / 56                                        | ⚠ verify                              |
+| Go-around (balked landing)                     | Full power, flaps 20°                          | 60                                              | Then retract flaps as speed increases |
 
 ### 8.3 Airspeed indicator colour markings
 
-| Marking | Range (KIAS) | Meaning |
-|---------|--------------|---------|
-| White arc | 40–85 | Flap operating range |
-| Green arc | 48–129 | Normal operating range |
-| Yellow arc | 129–163 | Caution range (smooth air only) |
-| Red line | 163 | Never exceed |
+| Marking    | Range (KIAS) | Meaning                         |
+| ---------- | ------------ | ------------------------------- |
+| White arc  | 40–85        | Flap operating range            |
+| Green arc  | 48–129       | Normal operating range          |
+| Yellow arc | 129–163      | Caution range (smooth air only) |
+| Red line   | 163          | Never exceed                    |
 
 On the G1000 PFD these appear as coloured bands on the airspeed tape. The
 **Airspeed Indicator widget** (Section 16.3) uses these values.
 
 ### 8.4 Engine instrument ranges (approximate)
 
-| Instrument | Normal | Notes |
-|------------|--------|-------|
-| Tachometer | Green arc 2,100–2,700 RPM; red line 2,700 | ⚠ verify arcs in sim |
-| Oil pressure | Green 50–90 psi | ⚠ verify |
-| Oil temperature | Green 100–245 °F | ⚠ verify |
-| Fuel flow | Displayed in GPH on the G1000 EIS strip | |
-| EGT | Used for leaning (lean to peak, then enrich) | Simplified in v1 |
+| Instrument      | Normal                                       | Notes                |
+| --------------- | -------------------------------------------- | -------------------- |
+| Tachometer      | Green arc 2,100–2,700 RPM; red line 2,700    | ⚠ verify arcs in sim |
+| Oil pressure    | Green 50–90 psi                              | ⚠ verify             |
+| Oil temperature | Green 100–245 °F                             | ⚠ verify             |
+| Fuel flow       | Displayed in GPH on the G1000 EIS strip      |                      |
+| EGT             | Used for leaning (lean to peak, then enrich) | Simplified in v1     |
 
 ### 8.5 Typical training power settings (sim-friendly, flight-school style)
 
 These are "rule-of-thumb" settings used by many flight schools. They are **not** POH
 values. Present them as starting points, then teach "adjust to hold the target".
 
-| Phase | RPM | Flaps | Target speed | Pitch (approx.) |
-|-------|-----|-------|--------------|-----------------|
-| Takeoff | Full (≈2,300–2,400 static, rising in climb) | 0° | Rotate 55 | ~10° nose up |
-| Climb | Full | 0° | 74 (Vy) or 75–85 cruise climb | ~7–10° up |
-| Cruise | 2,300–2,400 | 0° | ~100–110 KIAS | ~0–2° |
-| Cruise descent | 2,100–2,300 | 0° | 100–110 | ~−3° |
-| Pattern downwind | ~2,000–2,100 | 0° | 85–90 | level |
-| Abeam touchdown point | ~1,500 | 10° (below 110) | 80 | slight nose down |
-| Base | ~1,500 | 20° | 70 | |
-| Final | as needed | 30° | 65 (60 short final) | |
-| Slow flight | ~1,500–1,700 | 30° | ~50–55 | high |
-| Best glide | idle | 0° | 68 | ~level to slightly nose down |
+| Phase                 | RPM                                         | Flaps           | Target speed                  | Pitch (approx.)              |
+| --------------------- | ------------------------------------------- | --------------- | ----------------------------- | ---------------------------- |
+| Takeoff               | Full (≈2,300–2,400 static, rising in climb) | 0°              | Rotate 55                     | ~10° nose up                 |
+| Climb                 | Full                                        | 0°              | 74 (Vy) or 75–85 cruise climb | ~7–10° up                    |
+| Cruise                | 2,300–2,400                                 | 0°              | ~100–110 KIAS                 | ~0–2°                        |
+| Cruise descent        | 2,100–2,300                                 | 0°              | 100–110                       | ~−3°                         |
+| Pattern downwind      | ~2,000–2,100                                | 0°              | 85–90                         | level                        |
+| Abeam touchdown point | ~1,500                                      | 10° (below 110) | 80                            | slight nose down             |
+| Base                  | ~1,500                                      | 20°             | 70                            |                              |
+| Final                 | as needed                                   | 30°             | 65 (60 short final)           |                              |
+| Slow flight           | ~1,500–1,700                                | 30°             | ~50–55                        | high                         |
+| Best glide            | idle                                        | 0°              | 68                            | ~level to slightly nose down |
 
 > ⚠ Fly each setting in the sim at the challenge's weight/fuel and adjust the table so it
 > matches the sim's aircraft. Record changes in the Decision Log.
@@ -979,16 +979,16 @@ values. Present them as starting points, then teach "adjust to hold the target".
 
 ### 8.8 Flight controls and surfaces
 
-| Control in cockpit | Surface | Axis | Effect |
-|--------------------|---------|------|--------|
-| Yoke left/right | Ailerons | Longitudinal (roll) | Bank |
-| Yoke fore/aft | Elevator | Lateral (pitch) | Pitch / angle of attack |
-| Rudder pedals | Rudder | Vertical (yaw) | Yaw, coordination; nose-wheel steering on ground |
-| Toe brakes | Wheel brakes | — | Braking; differential braking for tight turns |
-| Trim wheel | Elevator trim tab | Pitch | Relieves control pressure |
-| Flap switch | Flaps | — | More lift and drag at low speed |
-| Throttle (black) | Engine power | — | Power → RPM |
-| Mixture (red) | Fuel/air ratio | — | Lean in cruise, cut-off to stop engine |
+| Control in cockpit | Surface           | Axis                | Effect                                           |
+| ------------------ | ----------------- | ------------------- | ------------------------------------------------ |
+| Yoke left/right    | Ailerons          | Longitudinal (roll) | Bank                                             |
+| Yoke fore/aft      | Elevator          | Lateral (pitch)     | Pitch / angle of attack                          |
+| Rudder pedals      | Rudder            | Vertical (yaw)      | Yaw, coordination; nose-wheel steering on ground |
+| Toe brakes         | Wheel brakes      | —                   | Braking; differential braking for tight turns    |
+| Trim wheel         | Elevator trim tab | Pitch               | Relieves control pressure                        |
+| Flap switch        | Flaps             | —                   | More lift and drag at low speed                  |
+| Throttle (black)   | Engine power      | —                   | Power → RPM                                      |
+| Mixture (red)      | Fuel/air ratio    | —                   | Lean in cruise, cut-off to stop engine           |
 
 ### 8.9 Normal procedure flow (overview)
 
@@ -1037,7 +1037,7 @@ Every challenge brief specifies these fields (the data model is in Section 27.5)
 3. **Start state** — cold and dark / engine running at parking / on runway / in the air
    (MSFS allows starting in the air by choosing an in-flight start or by pausing after a
    flight setup; ⚠ verify the current method in MSFS 2024's free flight menus).
-4. **Weather** — preset name *or* custom: wind direction/speed per layer, visibility,
+4. **Weather** — preset name _or_ custom: wind direction/speed per layer, visibility,
    clouds, temperature, pressure (QNH/altimeter setting).
 5. **Time** — date and local time (daytime for all v1 challenges).
 6. **Fuel & payload** — fuel percentage and pilot/passenger weights.
@@ -1053,26 +1053,26 @@ MSFS 2024 exposes many assistance options (piloting, aircraft systems, user expe
 failure and damage). Menu names change between sim updates, so the lesson explains the
 **intent** of each setting and gives the current menu path with a "last verified" date.
 
-| Setting (intent) | Recommended | Why |
-|------------------|-------------|-----|
-| Assisted yoke / AI-controlled flight | Off | You must fly the airplane. |
-| Auto-rudder | **Off** if you have rudder pedals or a twist-stick; **On** if using a gamepad or plain stick without twist | Coordination is taught, but without a rudder axis auto-rudder is the kinder option. Challenges note where this matters. |
-| Assisted landing / takeoff | Off | |
-| Auto-mixture | Off (after Module 1) | You manage mixture per checklist. On for Module 0 warm-up only. |
-| Auto-trim / assisted trim | Off | Trimming is a core skill. |
-| Checklist assistance (auto-complete) | Off | Use the checklist, don't let it do the work. |
-| Unlimited fuel | Off | Fuel management matters. |
-| Crash damage / stress damage | On (from Module 4 onward) | Honest consequences. |
-| Flight model | Most realistic available | |
-| Ground-handling assists / taxi ribbon | Off after Module 3 | Learn to read airport diagrams. |
-| Landing guidance / approach path aids | Off | Use the runway picture and PAPI/VASI. |
-| Navigation aids on the map (VFR map, route line) | On in Modules 0–5, Off for pilotage challenges | |
-| Pause on crash | On | Encourages retrying. |
-| Tooltips (cockpit interaction) | On in Modules 0–2, optional later | Helps learn controls. |
+| Setting (intent)                                 | Recommended                                                                                                | Why                                                                                                                     |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Assisted yoke / AI-controlled flight             | Off                                                                                                        | You must fly the airplane.                                                                                              |
+| Auto-rudder                                      | **Off** if you have rudder pedals or a twist-stick; **On** if using a gamepad or plain stick without twist | Coordination is taught, but without a rudder axis auto-rudder is the kinder option. Challenges note where this matters. |
+| Assisted landing / takeoff                       | Off                                                                                                        |                                                                                                                         |
+| Auto-mixture                                     | Off (after Module 1)                                                                                       | You manage mixture per checklist. On for Module 0 warm-up only.                                                         |
+| Auto-trim / assisted trim                        | Off                                                                                                        | Trimming is a core skill.                                                                                               |
+| Checklist assistance (auto-complete)             | Off                                                                                                        | Use the checklist, don't let it do the work.                                                                            |
+| Unlimited fuel                                   | Off                                                                                                        | Fuel management matters.                                                                                                |
+| Crash damage / stress damage                     | On (from Module 4 onward)                                                                                  | Honest consequences.                                                                                                    |
+| Flight model                                     | Most realistic available                                                                                   |                                                                                                                         |
+| Ground-handling assists / taxi ribbon            | Off after Module 3                                                                                         | Learn to read airport diagrams.                                                                                         |
+| Landing guidance / approach path aids            | Off                                                                                                        | Use the runway picture and PAPI/VASI.                                                                                   |
+| Navigation aids on the map (VFR map, route line) | On in Modules 0–5, Off for pilotage challenges                                                             |                                                                                                                         |
+| Pause on crash                                   | On                                                                                                         | Encourages retrying.                                                                                                    |
+| Tooltips (cockpit interaction)                   | On in Modules 0–2, optional later                                                                          | Helps learn controls.                                                                                                   |
 
 ### 9.4 Control binding recommendations
 
-Explain *what* to bind, not specific button numbers (hardware varies).
+Explain _what_ to bind, not specific button numbers (hardware varies).
 
 **Must have on the stick/yoke/controller (no mouse):**
 
@@ -1166,14 +1166,14 @@ This section is the knowledge base for Module 6. Each subsection maps to a lesso
 
 ### 10.2 Airspace classes (US) — v1 depth
 
-| Class | Chart depiction | Typical vertical limits | Entry requirement (VFR) | Bay Area example |
-|-------|-----------------|------------------------|-------------------------|------------------|
-| A | Not charted on sectionals | 18,000 ft MSL – FL600 | IFR only | Overhead everything |
-| B | Solid blue lines, "upside-down wedding cake" shelves with altitudes like 100/SFC | Surface to ~10,000 ft | **Explicit clearance** ("cleared into the Class Bravo") | San Francisco (SFO) |
-| C | Solid magenta lines, inner core and outer shelf | Surface to ~4,000 ft AGL | Two-way radio communication established | Oakland (OAK), San Jose (SJC) |
-| D | Dashed blue lines | Surface to ~2,500 ft AGL (value in brackets, e.g. [25]) | Two-way radio communication | Palo Alto (PAO), San Carlos (SQL), Livermore (LVK), Hayward (HWD) |
-| E | Faded magenta vignette (starts 700 ft AGL) or blue vignette (1,200 ft AGL); dashed magenta for surface E | Varies | No clearance required | Around Tracy, Half Moon Bay |
-| G | Beneath Class E, uncontrolled | Surface to 700/1,200 ft AGL | None | Near the surface at non-towered fields |
+| Class | Chart depiction                                                                                          | Typical vertical limits                                 | Entry requirement (VFR)                                 | Bay Area example                                                  |
+| ----- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------- |
+| A     | Not charted on sectionals                                                                                | 18,000 ft MSL – FL600                                   | IFR only                                                | Overhead everything                                               |
+| B     | Solid blue lines, "upside-down wedding cake" shelves with altitudes like 100/SFC                         | Surface to ~10,000 ft                                   | **Explicit clearance** ("cleared into the Class Bravo") | San Francisco (SFO)                                               |
+| C     | Solid magenta lines, inner core and outer shelf                                                          | Surface to ~4,000 ft AGL                                | Two-way radio communication established                 | Oakland (OAK), San Jose (SJC)                                     |
+| D     | Dashed blue lines                                                                                        | Surface to ~2,500 ft AGL (value in brackets, e.g. [25]) | Two-way radio communication                             | Palo Alto (PAO), San Carlos (SQL), Livermore (LVK), Hayward (HWD) |
+| E     | Faded magenta vignette (starts 700 ft AGL) or blue vignette (1,200 ft AGL); dashed magenta for surface E | Varies                                                  | No clearance required                                   | Around Tracy, Half Moon Bay                                       |
+| G     | Beneath Class E, uncontrolled                                                                            | Surface to 700/1,200 ft AGL                             | None                                                    | Near the surface at non-towered fields                            |
 
 Special use airspace (restricted, MOAs, TFRs): awareness only in v1.
 
@@ -1214,14 +1214,14 @@ Navigating by computing heading, speed and time.
 
 Columns in our nav log (the P1 printable nav log uses the same):
 
-| Checkpoint | Altitude | TC | Wind (dir/kt) | WCA | TH | Var | MH | Dist (nm) | GS (kt) | ETE | ETA | ATE | ATA | Fuel |
-|------------|----------|----|---------------|-----|----|-----|----|-----------|---------|-----|-----|-----|-----|------|
+| Checkpoint | Altitude | TC  | Wind (dir/kt) | WCA | TH  | Var | MH  | Dist (nm) | GS (kt) | ETE | ETA | ATE | ATA | Fuel |
+| ---------- | -------- | --- | ------------- | --- | --- | --- | --- | --------- | ------- | --- | --- | --- | --- | ---- |
 
 (ETE/ETA = estimated time enroute/arrival; ATE/ATA = actual.)
 
 ### 10.6 VOR navigation
 
-- A VOR transmits 360 **radials** (magnetic courses *from* the station).
+- A VOR transmits 360 **radials** (magnetic courses _from_ the station).
 - Tune and **identify** (Morse code) the station — always.
 - Set the **OBS/course** to the desired course; the **CDI** needle shows whether the course
   is left or right; the **TO/FROM** flag shows whether the course takes you to or from the
@@ -1229,7 +1229,7 @@ Columns in our nav log (the P1 printable nav log uses the same):
 - Intercepting a radial: turn to an intercept heading (course ± 30°–45°), wait for the
   needle to centre, turn onto the course, then correct for wind ("bracket").
 - Reverse sensing: if the heading is roughly opposite the selected course, the needle
-  "lies". Teach: *keep heading roughly aligned with the selected course*.
+  "lies". Teach: _keep heading roughly aligned with the selected course_.
 - On the G1000: press the **CDI softkey** to cycle GPS → VOR1 → VOR2. The HSI needle colour
   changes (magenta for GPS, green for VOR). Tune NAV frequencies with the NAV knob.
 - Classic panel: VOR indicator (OBS knob, CDI needle, TO/FROM flag) — the widget in
@@ -1284,33 +1284,33 @@ All v1 challenges use a small set of airports so learners get to know them. Char
 
 ### 11.1 Airports used in v1
 
-| ICAO | Name | Type | Runways (verify) | Why it is in v1 |
-|------|------|------|------------------|-----------------|
-| KLVK | Livermore Municipal | Class D, towered | 7L/25R, 7R/25L | **Primary training base.** Wide valley, flat terrain, parallel runways, good for patterns and manoeuvres to the east. |
-| KTCY | Tracy Municipal | Non-towered (CTAF) | 8/26, 12/30 | Non-towered pattern practice; close to KLVK over the Altamont Pass (wind farms = great landmark). |
-| C83 | Byron | Non-towered (CTAF) | 5/23, 12/30 | Second non-towered field; short cross-country from KLVK. |
-| KPAO | Palo Alto | Class D, towered | 13/31 (short: ~2,400 ft) | Short runway, under SFO Class B shelves; Module 7 towered comms and precision landing. |
-| KSQL | San Carlos | Class D, towered | 12/30 | Neighbour of KPAO; under Class B; landmark-rich bay shoreline. |
-| KHAF | Half Moon Bay | Non-towered (CTAF) | 12/30 | Coastal airport over the hills from KPAO/KSQL; great pilotage route (Crystal Springs reservoir, coastline). |
-| KHWD | Hayward Executive | Class D, towered | 10L/28R, 10R/28L | East Bay alternative; diversion option. |
-| KCCR | Buchanan Field (Concord) | Class D, towered | Multiple | Capstone destination option; Mt Diablo landmark. |
-| KWVI | Watsonville Municipal | Non-towered (CTAF) | 2/20, 9/27 | Capstone option to the south along the coast. |
-| KSNS | Salinas Municipal | Class D, towered | Multiple | P1 capstone option; Salinas valley. |
-| KOAK | Oakland International | Class C | Multiple | Airspace awareness only (do not land in v1 challenges). |
-| KSJC | San Jose International | Class C | Multiple | Airspace awareness only. |
-| KSFO | San Francisco International | Class B | Multiple | Airspace awareness only; the upside-down wedding cake. |
+| ICAO | Name                        | Type               | Runways (verify)         | Why it is in v1                                                                                                       |
+| ---- | --------------------------- | ------------------ | ------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| KLVK | Livermore Municipal         | Class D, towered   | 7L/25R, 7R/25L           | **Primary training base.** Wide valley, flat terrain, parallel runways, good for patterns and manoeuvres to the east. |
+| KTCY | Tracy Municipal             | Non-towered (CTAF) | 8/26, 12/30              | Non-towered pattern practice; close to KLVK over the Altamont Pass (wind farms = great landmark).                     |
+| C83  | Byron                       | Non-towered (CTAF) | 5/23, 12/30              | Second non-towered field; short cross-country from KLVK.                                                              |
+| KPAO | Palo Alto                   | Class D, towered   | 13/31 (short: ~2,400 ft) | Short runway, under SFO Class B shelves; Module 7 towered comms and precision landing.                                |
+| KSQL | San Carlos                  | Class D, towered   | 12/30                    | Neighbour of KPAO; under Class B; landmark-rich bay shoreline.                                                        |
+| KHAF | Half Moon Bay               | Non-towered (CTAF) | 12/30                    | Coastal airport over the hills from KPAO/KSQL; great pilotage route (Crystal Springs reservoir, coastline).           |
+| KHWD | Hayward Executive           | Class D, towered   | 10L/28R, 10R/28L         | East Bay alternative; diversion option.                                                                               |
+| KCCR | Buchanan Field (Concord)    | Class D, towered   | Multiple                 | Capstone destination option; Mt Diablo landmark.                                                                      |
+| KWVI | Watsonville Municipal       | Non-towered (CTAF) | 2/20, 9/27               | Capstone option to the south along the coast.                                                                         |
+| KSNS | Salinas Municipal           | Class D, towered   | Multiple                 | P1 capstone option; Salinas valley.                                                                                   |
+| KOAK | Oakland International       | Class C            | Multiple                 | Airspace awareness only (do not land in v1 challenges).                                                               |
+| KSJC | San Jose International      | Class C            | Multiple                 | Airspace awareness only.                                                                                              |
+| KSFO | San Francisco International | Class B            | Multiple                 | Airspace awareness only; the upside-down wedding cake.                                                                |
 
 ### 11.2 VORs to use in navigation lessons (verify all)
 
-| ID | Name | Use in v1 |
-|----|------|-----------|
-| OAK | Oakland VORTAC | Radial intercept/tracking from KLVK area |
-| SJC | San Jose VOR/DME | Radial tracking south bay |
-| OSI | Woodside VORTAC | Near KPAO/KHAF; route to the coast |
-| ECA | Manteca VORTAC | East valley; near KTCY |
-| SAU | Sausalito VORTAC | Awareness |
-| CCR | Concord VOR/DME | Near KCCR; capstone |
-| SNS | Salinas VORTAC | P1 capstone south |
+| ID  | Name             | Use in v1                                |
+| --- | ---------------- | ---------------------------------------- |
+| OAK | Oakland VORTAC   | Radial intercept/tracking from KLVK area |
+| SJC | San Jose VOR/DME | Radial tracking south bay                |
+| OSI | Woodside VORTAC  | Near KPAO/KHAF; route to the coast       |
+| ECA | Manteca VORTAC   | East valley; near KTCY                   |
+| SAU | Sausalito VORTAC | Awareness                                |
+| CCR | Concord VOR/DME  | Near KCCR; capstone                      |
+| SNS | Salinas VORTAC   | P1 capstone south                        |
 
 > ⚠ Check each against the **VOR MON programme** and the sim's navigation database. If a
 > VOR is decommissioned in reality but present in the sim (or vice versa), prefer VORs that
@@ -1430,13 +1430,13 @@ correct radio phraseology.
 
 Challenges use three tiers so beginners are not discouraged but still aim high:
 
-| Tier | Meaning | Typical altitude | Typical airspeed | Typical heading |
-|------|---------|------------------|------------------|-----------------|
-| ⭐ Bronze | "You did it safely" | ±200 ft | ±15 kt | ±20° |
-| ⭐⭐ Silver | "Good student pilot" | ±150 ft | ±10 kt | ±15° |
-| ⭐⭐⭐ Gold | "Checkride-ready (ACS-inspired)" | ±100 ft | ±10 kt (−5/+10 on approach) | ±10° |
+| Tier        | Meaning                          | Typical altitude | Typical airspeed            | Typical heading |
+| ----------- | -------------------------------- | ---------------- | --------------------------- | --------------- |
+| ⭐ Bronze   | "You did it safely"              | ±200 ft          | ±15 kt                      | ±20°            |
+| ⭐⭐ Silver | "Good student pilot"             | ±150 ft          | ±10 kt                      | ±15°            |
+| ⭐⭐⭐ Gold | "Checkride-ready (ACS-inspired)" | ±100 ft          | ±10 kt (−5/+10 on approach) | ±10°            |
 
-A challenge is **passed** at Bronze or better, provided all *required* criteria are met.
+A challenge is **passed** at Bronze or better, provided all _required_ criteria are met.
 The rubric and scoring algorithm are in Section 15.2.
 
 ---
@@ -1445,18 +1445,18 @@ The rubric and scoring algorithm are in Section 15.2.
 
 ### 13.1 Summary
 
-| Module | Title | P0 lessons | P1 lessons | P0 challenges | P1 challenges | Est. time (lessons + sim) |
-|--------|-------|-----------|-----------|---------------|---------------|---------------------------|
-| 0 | Getting started | 3 | 0 | 1 | 0 | 1.0 h |
-| 1 | Meet the Skyhawk | 4 | 0 | 1 | 0 | 1.5 h |
-| 2 | Fundamentals of flight | 4 | 1 | 4 | 0 | 3.0 h |
-| 3 | Ground operations | 3 | 0 | 4 | 0 | 2.0 h |
-| 4 | Takeoffs, patterns and landings | 4 | 2 | 5 | 2 | 4.5 h |
-| 5 | Slow flight, stalls and emergencies | 4 | 1 | 5 | 1 | 3.5 h |
-| 6 | VFR navigation | 6 | 2 | 5 | 2 | 5.0 h |
-| 7 | Radio and airport operations | 3 | 1 | 2 | 1 | 2.0 h |
-| 8 | Capstone | 2 | 0 | 2 | 0 | 2.5 h |
-| **Total** | | **33** | **7** | **29** | **6** | **~25 h** |
+| Module    | Title                               | P0 lessons | P1 lessons | P0 challenges | P1 challenges | Est. time (lessons + sim) |
+| --------- | ----------------------------------- | ---------- | ---------- | ------------- | ------------- | ------------------------- |
+| 0         | Getting started                     | 3          | 0          | 1             | 0             | 1.0 h                     |
+| 1         | Meet the Skyhawk                    | 4          | 0          | 1             | 0             | 1.5 h                     |
+| 2         | Fundamentals of flight              | 4          | 1          | 4             | 0             | 3.0 h                     |
+| 3         | Ground operations                   | 3          | 0          | 4             | 0             | 2.0 h                     |
+| 4         | Takeoffs, patterns and landings     | 4          | 2          | 5             | 2             | 4.5 h                     |
+| 5         | Slow flight, stalls and emergencies | 4          | 1          | 5             | 1             | 3.5 h                     |
+| 6         | VFR navigation                      | 6          | 2          | 5             | 2             | 5.0 h                     |
+| 7         | Radio and airport operations        | 3          | 1          | 2             | 1             | 2.0 h                     |
+| 8         | Capstone                            | 2          | 0          | 2             | 0             | 2.5 h                     |
+| **Total** |                                     | **33**     | **7**      | **29**        | **6**         | **~25 h**                 |
 
 ### 13.2 Full map
 
@@ -1464,88 +1464,88 @@ Legend: **L** = lesson, **C** = challenge, **W** = widget (Section 16).
 
 **Module 0 — Getting started**
 
-| ID | Title | Pri | Widgets | Challenges |
-|----|-------|-----|---------|------------|
-| L0.1 | Welcome: how Learn-To-Fly works | P0 | — | — |
-| L0.2 | Setting up MSFS 2024 for training | P0 | — | — |
-| L0.3 | Your first flight | P0 | — | C0.1 First flight over Livermore (P0) |
+| ID   | Title                             | Pri | Widgets | Challenges                            |
+| ---- | --------------------------------- | --- | ------- | ------------------------------------- |
+| L0.1 | Welcome: how Learn-To-Fly works   | P0  | —       | —                                     |
+| L0.2 | Setting up MSFS 2024 for training | P0  | —       | —                                     |
+| L0.3 | Your first flight                 | P0  | —       | C0.1 First flight over Livermore (P0) |
 
 **Module 1 — Meet the Skyhawk**
 
-| ID | Title | Pri | Widgets | Challenges |
-|----|-------|-----|---------|------------|
-| L1.1 | The airframe and flight controls | P0 | W1 | — |
-| L1.2 | The cockpit: G1000 PFD and MFD | P0 | W2 | — |
-| L1.3 | Engine, fuel and electrical systems | P0 | — | — |
-| L1.4 | Speeds, limits and checklists | P0 | W3, W16 | C1.1 Cockpit scavenger hunt (P0) |
+| ID   | Title                               | Pri | Widgets | Challenges                       |
+| ---- | ----------------------------------- | --- | ------- | -------------------------------- |
+| L1.1 | The airframe and flight controls    | P0  | W1      | —                                |
+| L1.2 | The cockpit: G1000 PFD and MFD      | P0  | W2      | —                                |
+| L1.3 | Engine, fuel and electrical systems | P0  | —       | —                                |
+| L1.4 | Speeds, limits and checklists       | P0  | W3, W16 | C1.1 Cockpit scavenger hunt (P0) |
 
 **Module 2 — Fundamentals of flight**
 
-| ID | Title | Pri | Widgets | Challenges |
-|----|-------|-----|---------|------------|
-| L2.1 | Four forces and how a wing works | P0 | W4 | — |
-| L2.2 | Attitude flying and trim | P0 | W5 | C2.1 Straight and level (P0) |
-| L2.3 | Climbs and descents | P0 | W5 | C2.2 Climbs and descents (P0) |
-| L2.4 | Turns and coordination | P0 | W6 | C2.3 Turns to headings (P0), C2.4 The box (P0) |
-| L2.5 | Left-turning tendencies | P1 | — | — |
+| ID   | Title                            | Pri | Widgets | Challenges                                     |
+| ---- | -------------------------------- | --- | ------- | ---------------------------------------------- |
+| L2.1 | Four forces and how a wing works | P0  | W4      | —                                              |
+| L2.2 | Attitude flying and trim         | P0  | W5      | C2.1 Straight and level (P0)                   |
+| L2.3 | Climbs and descents              | P0  | W5      | C2.2 Climbs and descents (P0)                  |
+| L2.4 | Turns and coordination           | P0  | W6      | C2.3 Turns to headings (P0), C2.4 The box (P0) |
+| L2.5 | Left-turning tendencies          | P1  | —       | —                                              |
 
 **Module 3 — Ground operations**
 
-| ID | Title | Pri | Widgets | Challenges |
-|----|-------|-----|---------|------------|
-| L3.1 | Preflight and engine start | P0 | W16 | C3.1 Cold and dark to running (P0) |
-| L3.2 | Taxiing, signs and markings | P0 | W8 (P1) | C3.2 Taxi to the runway at KLVK (P0) |
-| L3.3 | Run-up, before takeoff, and after landing | P0 | W16 | C3.3 Run-up (P0), C3.4 After landing and shutdown (P0) |
+| ID   | Title                                     | Pri | Widgets | Challenges                                             |
+| ---- | ----------------------------------------- | --- | ------- | ------------------------------------------------------ |
+| L3.1 | Preflight and engine start                | P0  | W16     | C3.1 Cold and dark to running (P0)                     |
+| L3.2 | Taxiing, signs and markings               | P0  | W8 (P1) | C3.2 Taxi to the runway at KLVK (P0)                   |
+| L3.3 | Run-up, before takeoff, and after landing | P0  | W16     | C3.3 Run-up (P0), C3.4 After landing and shutdown (P0) |
 
 **Module 4 — Takeoffs, patterns and landings**
 
-| ID | Title | Pri | Widgets | Challenges |
-|----|-------|-----|---------|------------|
-| L4.1 | Normal takeoff and climb | P0 | — | C4.1 Normal takeoff and departure (P0) |
-| L4.2 | The traffic pattern | P0 | W7 | C4.2 Fly the pattern (P0) |
-| L4.3 | Normal approach and landing | P0 | W18 (P1) | C4.3 Full-stop landing (P0), C4.7 Three-circuit session (P0) |
-| L4.4 | Go-arounds | P0 | W7 | C4.4 Go-around (P0) |
-| L4.5 | Crosswind takeoffs and landings | P1 | W13 | C4.5 Crosswind landing (P1) |
-| L4.6 | Short-field takeoffs and landings | P1 | — | C4.6 Short field at Palo Alto (P1) |
+| ID   | Title                             | Pri | Widgets  | Challenges                                                   |
+| ---- | --------------------------------- | --- | -------- | ------------------------------------------------------------ |
+| L4.1 | Normal takeoff and climb          | P0  | —        | C4.1 Normal takeoff and departure (P0)                       |
+| L4.2 | The traffic pattern               | P0  | W7       | C4.2 Fly the pattern (P0)                                    |
+| L4.3 | Normal approach and landing       | P0  | W18 (P1) | C4.3 Full-stop landing (P0), C4.7 Three-circuit session (P0) |
+| L4.4 | Go-arounds                        | P0  | W7       | C4.4 Go-around (P0)                                          |
+| L4.5 | Crosswind takeoffs and landings   | P1  | W13      | C4.5 Crosswind landing (P1)                                  |
+| L4.6 | Short-field takeoffs and landings | P1  | —        | C4.6 Short field at Palo Alto (P1)                           |
 
 **Module 5 — Slow flight, stalls and emergencies**
 
-| ID | Title | Pri | Widgets | Challenges |
-|----|-------|-----|---------|------------|
-| L5.1 | Slow flight | P0 | W4 | C5.1 Slow flight (P0) |
-| L5.2 | Stalls: power-off and power-on | P0 | W4 | C5.2 Power-off stall (P0), C5.3 Power-on stall (P0) |
-| L5.3 | Steep turns and load factor | P0 | W14 | C5.4 Steep turns (P0) |
-| L5.4 | Engine failure and forced landings | P0 | W15 (P1) | C5.5 Engine failure (P0) |
-| L5.5 | Ground reference manoeuvres | P1 | — | C5.6 Turns around a point (P1) |
+| ID   | Title                              | Pri | Widgets  | Challenges                                          |
+| ---- | ---------------------------------- | --- | -------- | --------------------------------------------------- |
+| L5.1 | Slow flight                        | P0  | W4       | C5.1 Slow flight (P0)                               |
+| L5.2 | Stalls: power-off and power-on     | P0  | W4       | C5.2 Power-off stall (P0), C5.3 Power-on stall (P0) |
+| L5.3 | Steep turns and load factor        | P0  | W14      | C5.4 Steep turns (P0)                               |
+| L5.4 | Engine failure and forced landings | P0  | W15 (P1) | C5.5 Engine failure (P0)                            |
+| L5.5 | Ground reference manoeuvres        | P1  | —        | C5.6 Turns around a point (P1)                      |
 
 **Module 6 — VFR navigation**
 
-| ID | Title | Pri | Widgets | Challenges |
-|----|-------|-----|---------|------------|
-| L6.1 | Reading a sectional chart | P0 | W10 | C6.1 Landmark hunt (P0) |
-| L6.2 | Airspace | P0 | W11 | — |
-| L6.3 | Pilotage and dead reckoning | P0 | W12 | C6.2 Pilotage to Tracy (P0), C6.3 Dead reckoning to Half Moon Bay (P0) |
-| L6.4 | VOR navigation | P0 | W9 | C6.4 VOR tracking (P0) |
-| L6.5 | GPS navigation with the G1000 | P0 | W2 | C6.5 G1000 flight plan (P0) |
-| L6.6 | Planning a cross-country flight | P0 | W12, W20 (P1) | C6.6 Diversion (P1) |
-| L6.7 | Weather basics: METARs and TAFs | P1 | W17 | — |
-| L6.8 | The autopilot as a workload tool | P1 | — | C6.7 Autopilot basics (P1) |
+| ID   | Title                            | Pri | Widgets       | Challenges                                                             |
+| ---- | -------------------------------- | --- | ------------- | ---------------------------------------------------------------------- |
+| L6.1 | Reading a sectional chart        | P0  | W10           | C6.1 Landmark hunt (P0)                                                |
+| L6.2 | Airspace                         | P0  | W11           | —                                                                      |
+| L6.3 | Pilotage and dead reckoning      | P0  | W12           | C6.2 Pilotage to Tracy (P0), C6.3 Dead reckoning to Half Moon Bay (P0) |
+| L6.4 | VOR navigation                   | P0  | W9            | C6.4 VOR tracking (P0)                                                 |
+| L6.5 | GPS navigation with the G1000    | P0  | W2            | C6.5 G1000 flight plan (P0)                                            |
+| L6.6 | Planning a cross-country flight  | P0  | W12, W20 (P1) | C6.6 Diversion (P1)                                                    |
+| L6.7 | Weather basics: METARs and TAFs  | P1  | W17           | —                                                                      |
+| L6.8 | The autopilot as a workload tool | P1  | —             | C6.7 Autopilot basics (P1)                                             |
 
 **Module 7 — Radio and airport operations**
 
-| ID | Title | Pri | Widgets | Challenges |
-|----|-------|-----|---------|------------|
-| L7.1 | Radio basics and the phonetic alphabet | P0 | W19 (P1) | — |
-| L7.2 | Non-towered airports (CTAF) | P0 | W7 | C7.1 CTAF pattern at Tracy (P0) |
-| L7.3 | Towered airports and sim ATC | P0 | — | C7.2 Towered departure and return at Livermore (P0) |
-| L7.4 | Transponder and VFR flight following | P1 | — | C7.3 Palo Alto arrival (P1) |
+| ID   | Title                                  | Pri | Widgets  | Challenges                                          |
+| ---- | -------------------------------------- | --- | -------- | --------------------------------------------------- |
+| L7.1 | Radio basics and the phonetic alphabet | P0  | W19 (P1) | —                                                   |
+| L7.2 | Non-towered airports (CTAF)            | P0  | W7       | C7.1 CTAF pattern at Tracy (P0)                     |
+| L7.3 | Towered airports and sim ATC           | P0  | —        | C7.2 Towered departure and return at Livermore (P0) |
+| L7.4 | Transponder and VFR flight following   | P1  | —        | C7.3 Palo Alto arrival (P1)                         |
 
 **Module 8 — Capstone**
 
-| ID | Title | Pri | Widgets | Challenges |
-|----|-------|-----|---------|------------|
-| L8.1 | Decision making and personal minimums | P0 | — | — |
-| L8.2 | Preparing for your checkride | P0 | — | C8.1 Local checkride (P0), C8.2 Cross-country capstone (P0) |
+| ID   | Title                                 | Pri | Widgets | Challenges                                                  |
+| ---- | ------------------------------------- | --- | ------- | ----------------------------------------------------------- |
+| L8.1 | Decision making and personal minimums | P0  | —       | —                                                           |
+| L8.2 | Preparing for your checkride          | P0  | —       | C8.1 Local checkride (P0), C8.2 Cross-country capstone (P0) |
 
 ### 13.3 Unlocking rules
 
@@ -2538,22 +2538,22 @@ Appendix D). Fields:
 
 **Standard start states** (referenced by name in each challenge):
 
-| Name | Meaning in MSFS 2024 |
-|------|----------------------|
-| `COLD_DARK` | At a parking spot, all systems off (choose cold-and-dark start in the flight setup; ⚠ verify the menu option name). |
-| `RAMP_RUNNING` | At a parking spot, engine running, avionics on. |
-| `RUNWAY` | Lined up on the named runway, engine running, ready for takeoff. |
-| `AIR_START` | In flight at a specified position, altitude, heading and speed. **⚠ Verify the MSFS 2024 method** (e.g. choosing an in-flight starting point on the world map, or a flight plan with a cruise start). **Fallback:** start on `RUNWAY` at KLVK and fly to the start point; the brief then includes a "getting there" step and the timer starts at the start point. |
+| Name           | Meaning in MSFS 2024                                                                                                                                                                                                                                                                                                                                              |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `COLD_DARK`    | At a parking spot, all systems off (choose cold-and-dark start in the flight setup; ⚠ verify the menu option name).                                                                                                                                                                                                                                               |
+| `RAMP_RUNNING` | At a parking spot, engine running, avionics on.                                                                                                                                                                                                                                                                                                                   |
+| `RUNWAY`       | Lined up on the named runway, engine running, ready for takeoff.                                                                                                                                                                                                                                                                                                  |
+| `AIR_START`    | In flight at a specified position, altitude, heading and speed. **⚠ Verify the MSFS 2024 method** (e.g. choosing an in-flight starting point on the world map, or a flight plan with a cruise start). **Fallback:** start on `RUNWAY` at KLVK and fly to the start point; the brief then includes a "getting there" step and the timer starts at the start point. |
 
 **Standard weather presets** (so briefs stay short):
 
-| Name | Settings |
-|------|----------|
-| `WX_CALM` | Clear skies, wind calm, visibility unlimited (≥ 10 sm), 15 °C at sea level, altimeter 29.92 inHg. |
-| `WX_LIGHT_W` | Clear skies, surface wind 250° at 8 kt, winds aloft 270° at 15 kt (3,000 ft) and 280° at 20 kt (6,000 ft), 18 °C, altimeter 30.00. |
-| `WX_XWIND_10` | Clear skies, surface wind 200° at 10 kt (≈ 50° to runway 25 → ~8 kt crosswind at KLVK; ⚠ verify runway heading), 18 °C, altimeter 30.00. |
-| `WX_XWIND_15G` | Clear skies, surface wind 200° at 12 kt gusting 18, 18 °C, altimeter 30.00. |
-| `WX_SCATTERED` | Scattered clouds at 5,500 ft, wind 270° at 10 kt, visibility 10 sm, altimeter 30.02. |
+| Name           | Settings                                                                                                                                 |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `WX_CALM`      | Clear skies, wind calm, visibility unlimited (≥ 10 sm), 15 °C at sea level, altimeter 29.92 inHg.                                        |
+| `WX_LIGHT_W`   | Clear skies, surface wind 250° at 8 kt, winds aloft 270° at 15 kt (3,000 ft) and 280° at 20 kt (6,000 ft), 18 °C, altimeter 30.00.       |
+| `WX_XWIND_10`  | Clear skies, surface wind 200° at 10 kt (≈ 50° to runway 25 → ~8 kt crosswind at KLVK; ⚠ verify runway heading), 18 °C, altimeter 30.00. |
+| `WX_XWIND_15G` | Clear skies, surface wind 200° at 12 kt gusting 18, 18 °C, altimeter 30.00.                                                              |
+| `WX_SCATTERED` | Scattered clouds at 5,500 ft, wind 270° at 10 kt, visibility 10 sm, altimeter 30.02.                                                     |
 
 **Standard loadout:** `LOAD_SOLO` = pilot 170 lb, no passengers, 75% fuel (~40 gal).
 `LOAD_FULL` = pilot 170 lb + passenger 170 lb + 20 lb baggage, 100% fuel (P1 only).
@@ -2629,12 +2629,12 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   6. End the flight (return to menu) or try a landing back at KLVK.
 - **Criteria**
 
-| # | Criterion | Kind | Required | Weight |
-|---|-----------|------|----------|--------|
-| 1 | Took off and reached 3,000 ft | Binary | Yes | 1 |
-| 2 | Made at least one left and one right turn | Binary | Yes | 1 |
-| 3 | Found Mt Diablo and Lake Del Valle | Binary | No | 1 |
-| 4 | Used pause at least once to look around or read the brief | Binary | No | 1 |
+| #   | Criterion                                                 | Kind   | Required | Weight |
+| --- | --------------------------------------------------------- | ------ | -------- | ------ |
+| 1   | Took off and reached 3,000 ft                             | Binary | Yes      | 1      |
+| 2   | Made at least one left and one right turn                 | Binary | Yes      | 1      |
+| 3   | Found Mt Diablo and Lake Del Valle                        | Binary | No       | 1      |
+| 4   | Used pause at least once to look around or read the brief | Binary | No       | 1      |
 
 - **Common mistakes:** big stick movements; forgetting to reduce power when level (speed
   keeps increasing).
@@ -2670,11 +2670,11 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   16. Standby instruments and the magnetic compass
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Items found and operated | Tiered | 16/16 | 14–15 | 12–13 | Yes | 3 |
-| 2 | Time taken | Tiered | ≤ 8 min | ≤ 12 min | ≤ 20 min | No | 1 |
-| 3 | Returned all switches to cold-and-dark at the end | Binary | — | — | — | Yes | 1 |
+| #   | Criterion                                         | Kind   | Gold    | Silver   | Bronze   | Req | W   |
+| --- | ------------------------------------------------- | ------ | ------- | -------- | -------- | --- | --- |
+| 1   | Items found and operated                          | Tiered | 16/16   | 14–15    | 12–13    | Yes | 3   |
+| 2   | Time taken                                        | Tiered | ≤ 8 min | ≤ 12 min | ≤ 20 min | No  | 1   |
+| 3   | Returned all switches to cold-and-dark at the end | Binary | —       | —        | —        | Yes | 1   |
 
 - **Common mistakes:** confusing avionics master with master; moving the mixture out of
   cut-off (this may start fuel flow on some sim setups — harmless on the ground).
@@ -2699,13 +2699,13 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   5. Then turn to heading 270 (gentle turn), re-trim and hold for another two minutes.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Altitude held | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 3 |
-| 2 | Heading held | Tiered | ±10° | ±15° | ±20° | Yes | 2 |
-| 3 | Airspeed stable | Tiered | ±10 kt | ±15 kt | ±20 kt | No | 1 |
-| 4 | Flew hands-off for 30 s after trimming (altitude within ±100 ft) | Binary | | | | No | 2 |
-| 5 | Looked outside for traffic at least every 30 s | Binary | | | | No | 1 |
+| #   | Criterion                                                        | Kind   | Gold    | Silver  | Bronze  | Req | W   |
+| --- | ---------------------------------------------------------------- | ------ | ------- | ------- | ------- | --- | --- |
+| 1   | Altitude held                                                    | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 3   |
+| 2   | Heading held                                                     | Tiered | ±10°    | ±15°    | ±20°    | Yes | 2   |
+| 3   | Airspeed stable                                                  | Tiered | ±10 kt  | ±15 kt  | ±20 kt  | No  | 1   |
+| 4   | Flew hands-off for 30 s after trimming (altitude within ±100 ft) | Binary |         |         |         | No  | 2   |
+| 5   | Looked outside for traffic at least every 30 s                   | Binary |         |         |         | No  | 1   |
 
 - **Common mistakes:** chasing the VSI; forgetting power after levelling; staring at the PFD.
 - **Tips:** if you're constantly pushing, trim nose down; small corrections, then wait
@@ -2725,13 +2725,13 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   4. Climb at cruise climb (80 KIAS) to 4,000 ft. Level off.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Climb airspeed held (74 / 80) | Tiered | ±5 kt | ±10 kt | ±15 kt | Yes | 3 |
-| 2 | Descent airspeed held (90) | Tiered | ±5 kt | ±10 kt | ±15 kt | Yes | 2 |
-| 3 | Level-off overshoot/undershoot | Tiered | ≤50 ft | ≤100 ft | ≤150 ft | Yes | 3 |
-| 4 | Heading held during climbs/descents | Tiered | ±10° | ±15° | ±20° | No | 1 |
-| 5 | Clearing turn before the first climb | Binary | | | | No | 1 |
+| #   | Criterion                            | Kind   | Gold   | Silver  | Bronze  | Req | W   |
+| --- | ------------------------------------ | ------ | ------ | ------- | ------- | --- | --- |
+| 1   | Climb airspeed held (74 / 80)        | Tiered | ±5 kt  | ±10 kt  | ±15 kt  | Yes | 3   |
+| 2   | Descent airspeed held (90)           | Tiered | ±5 kt  | ±10 kt  | ±15 kt  | Yes | 2   |
+| 3   | Level-off overshoot/undershoot       | Tiered | ≤50 ft | ≤100 ft | ≤150 ft | Yes | 3   |
+| 4   | Heading held during climbs/descents  | Tiered | ±10°   | ±15°    | ±20°    | No  | 1   |
+| 5   | Clearing turn before the first climb | Binary |        |         |         | No  | 1   |
 
 - **Common mistakes:** leaving climb power on after level-off (overspeeding); levelling off
   late.
@@ -2745,17 +2745,17 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
 - **Setup:** `AIR_START` 3,500 ft MSL, heading 360, 100 KIAS near KLVK · `WX_CALM` · `LOAD_SOLO`.
 - **Procedure**
   1. Standard-rate left turn to 270. 2. Standard-rate right turn to 360.
-  3. 30° bank right turn to 180. 4. 30° bank left turn to 090.
-  Clear before each turn; hold 3,500 ft throughout.
+  2. 30° bank right turn to 180. 4. 30° bank left turn to 090.
+     Clear before each turn; hold 3,500 ft throughout.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Rollout heading accuracy | Tiered | ±10° | ±15° | ±20° | Yes | 3 |
-| 2 | Altitude during turns | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 3 |
-| 3 | Bank angle accuracy | Tiered | ±5° | ±10° | ±15° | No | 2 |
-| 4 | Coordination (ball/trapezoid centred) | Tiered | mostly centred | occasional slips | often uncoordinated | No | 1 |
-| 5 | Looked in the direction of turn before turning | Binary | | | | No | 1 |
+| #   | Criterion                                      | Kind   | Gold           | Silver           | Bronze              | Req | W   |
+| --- | ---------------------------------------------- | ------ | -------------- | ---------------- | ------------------- | --- | --- |
+| 1   | Rollout heading accuracy                       | Tiered | ±10°           | ±15°             | ±20°                | Yes | 3   |
+| 2   | Altitude during turns                          | Tiered | ±100 ft        | ±150 ft          | ±200 ft             | Yes | 3   |
+| 3   | Bank angle accuracy                            | Tiered | ±5°            | ±10°             | ±15°                | No  | 2   |
+| 4   | Coordination (ball/trapezoid centred)          | Tiered | mostly centred | occasional slips | often uncoordinated | No  | 1   |
+| 5   | Looked in the direction of turn before turning | Binary |                |                  |                     | No  | 1   |
 
 - **Common mistakes:** losing altitude in turns (not enough back pressure); overshooting
   headings.
@@ -2774,13 +2774,13 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   4. Standard-rate left turn to 180, level 3,000 ft; then turn to 090 to close the box.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Target altitudes held | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 3 |
-| 2 | Headings held/rolled out | Tiered | ±10° | ±15° | ±20° | Yes | 2 |
-| 3 | Climb/descent airspeeds | Tiered | ±5 kt | ±10 kt | ±15 kt | Yes | 2 |
-| 4 | Leg timing | Tiered | ±10 s | ±20 s | ±30 s | No | 1 |
-| 5 | Trimmed after each change | Binary | | | | No | 1 |
+| #   | Criterion                 | Kind   | Gold    | Silver  | Bronze  | Req | W   |
+| --- | ------------------------- | ------ | ------- | ------- | ------- | --- | --- |
+| 1   | Target altitudes held     | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 3   |
+| 2   | Headings held/rolled out  | Tiered | ±10°    | ±15°    | ±20°    | Yes | 2   |
+| 3   | Climb/descent airspeeds   | Tiered | ±5 kt   | ±10 kt  | ±15 kt  | Yes | 2   |
+| 4   | Leg timing                | Tiered | ±10 s   | ±20 s   | ±30 s   | No  | 1   |
+| 5   | Trimmed after each change | Binary |         |         |         | No  | 1   |
 
 - **Common mistakes:** doing too many things at once; forgetting to trim.
 - **Tips:** plan the next leg while stable; use pause at the end of each leg if needed
@@ -2799,14 +2799,14 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   "After start".
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Engine started and running at ~1,000 RPM | Binary | | | | Yes | 3 |
-| 2 | Checklist followed in order, no items skipped | Tiered | 0 skipped | 1–2 skipped | 3–4 skipped | Yes | 3 |
-| 3 | Avionics master OFF during start | Binary | | | | Yes | 2 |
-| 4 | Said "CLEAR!" before start | Binary | | | | No | 1 |
-| 5 | Oil pressure checked within 30 s | Binary | | | | Yes | 2 |
-| 6 | Time from cold-dark to running | Tiered | ≤ 5 min | ≤ 8 min | ≤ 12 min | No | 1 |
+| #   | Criterion                                     | Kind   | Gold      | Silver      | Bronze      | Req | W   |
+| --- | --------------------------------------------- | ------ | --------- | ----------- | ----------- | --- | --- |
+| 1   | Engine started and running at ~1,000 RPM      | Binary |           |             |             | Yes | 3   |
+| 2   | Checklist followed in order, no items skipped | Tiered | 0 skipped | 1–2 skipped | 3–4 skipped | Yes | 3   |
+| 3   | Avionics master OFF during start              | Binary |           |             |             | Yes | 2   |
+| 4   | Said "CLEAR!" before start                    | Binary |           |             |             | No  | 1   |
+| 5   | Oil pressure checked within 30 s              | Binary |           |             |             | Yes | 2   |
+| 6   | Time from cold-dark to running                | Tiered | ≤ 5 min   | ≤ 8 min     | ≤ 12 min    | No  | 1   |
 
 - **Common mistakes:** fuel selector not on BOTH; mixture in cut-off; holding the key too long.
 - **Tips:** do a "flow" left-to-right, then verify with the checklist.
@@ -2826,13 +2826,13 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   3. Stop at the run-up area short of the hold short line for 25R.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Correct route, no wrong turns | Tiered | 0 wrong turns | 1 | 2 | Yes | 3 |
-| 2 | Taxi speed | Tiered | ≤ 10 kt GS, ≤ 5 in turns | ≤ 15 kt | ≤ 20 kt | Yes | 2 |
-| 3 | Stayed on centreline | Tiered | always | minor deviations | left pavement edge line | No | 1 |
-| 4 | Did not cross any hold short line | Binary | | | | Yes | 3 |
-| 5 | Correct wind control position | Binary | | | | No | 1 |
+| #   | Criterion                         | Kind   | Gold                     | Silver           | Bronze                  | Req | W   |
+| --- | --------------------------------- | ------ | ------------------------ | ---------------- | ----------------------- | --- | --- |
+| 1   | Correct route, no wrong turns     | Tiered | 0 wrong turns            | 1                | 2                       | Yes | 3   |
+| 2   | Taxi speed                        | Tiered | ≤ 10 kt GS, ≤ 5 in turns | ≤ 15 kt          | ≤ 20 kt                 | Yes | 2   |
+| 3   | Stayed on centreline              | Tiered | always                   | minor deviations | left pavement edge line | No  | 1   |
+| 4   | Did not cross any hold short line | Binary |                          |                  |                         | Yes | 3   |
+| 5   | Correct wind control position     | Binary |                          |                  |                         | No  | 1   |
 
 - **Common mistakes:** riding brakes; turning too fast; crossing the hold short line.
 - **Tips:** stop and look at the diagram whenever unsure — stopping is always OK.
@@ -2849,13 +2849,13 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   controls, trim, flaps, fuel, transponder, lights; speak the takeoff briefing.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Parking brake set before run-up | Binary | | | | Yes | 2 |
-| 2 | Magneto check done correctly (each mag, back to BOTH) | Binary | | | | Yes | 3 |
-| 3 | All before-takeoff items completed | Tiered | all | 1 missed | 2 missed | Yes | 3 |
-| 4 | Trim set for takeoff | Binary | | | | Yes | 2 |
-| 5 | Takeoff briefing spoken, including engine failure plan | Binary | | | | No | 2 |
+| #   | Criterion                                              | Kind   | Gold | Silver   | Bronze   | Req | W   |
+| --- | ------------------------------------------------------ | ------ | ---- | -------- | -------- | --- | --- |
+| 1   | Parking brake set before run-up                        | Binary |      |          |          | Yes | 2   |
+| 2   | Magneto check done correctly (each mag, back to BOTH)  | Binary |      |          |          | Yes | 3   |
+| 3   | All before-takeoff items completed                     | Tiered | all  | 1 missed | 2 missed | Yes | 3   |
+| 4   | Trim set for takeoff                                   | Binary |      |          |          | Yes | 2   |
+| 5   | Takeoff briefing spoken, including engine failure plan | Binary |      |          |          | No  | 2   |
 
 - **Common mistakes:** leaving mags on L or R; trim left in a random position.
 - **Debrief questions:** What would you do if the engine failed at 300 ft?
@@ -2871,12 +2871,12 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   standby (⚠ verify G1000 modes), lights as required, taxi to parking, shutdown checklist.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Cleared the runway completely before stopping | Binary | | | | Yes | 3 |
-| 2 | After-landing items completed | Tiered | all | 1 missed | 2 missed | Yes | 2 |
-| 3 | Shutdown via mixture cut-off (not magnetos) | Binary | | | | Yes | 2 |
-| 4 | Final switches: mags off, master off, parking brake set | Binary | | | | Yes | 2 |
+| #   | Criterion                                               | Kind   | Gold | Silver   | Bronze   | Req | W   |
+| --- | ------------------------------------------------------- | ------ | ---- | -------- | -------- | --- | --- |
+| 1   | Cleared the runway completely before stopping           | Binary |      |          |          | Yes | 3   |
+| 2   | After-landing items completed                           | Tiered | all  | 1 missed | 2 missed | Yes | 2   |
+| 3   | Shutdown via mixture cut-off (not magnetos)             | Binary |      |          |          | Yes | 2   |
+| 4   | Final switches: mags off, master off, parking brake set | Binary |      |          |          | Yes | 2   |
 
 - **Debrief questions:** Why stop only after the whole airplane crosses the hold short line?
 
@@ -2895,14 +2895,14 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
      left turn for departure, continuing the climb to 3,000 ft at 80 KIAS.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Centreline tracking on the takeoff roll | Tiered | within ½ wingspan | within 1 wingspan | stayed on runway | Yes | 3 |
-| 2 | Rotation speed | Tiered | 55 ±3 | ±5 | ±10 | Yes | 2 |
-| 3 | Climb airspeed (Vy) | Tiered | 74 ±5 | ±10 | ±15 | Yes | 3 |
-| 4 | Runway heading held on initial climb (wind corrected) | Tiered | ±5° | ±10° | ±15° | No | 1 |
-| 5 | Departure turn at the correct altitude/point | Binary | | | | No | 1 |
-| 6 | Callouts spoken ("airspeed alive", "55 rotate") | Binary | | | | No | 1 |
+| #   | Criterion                                             | Kind   | Gold              | Silver            | Bronze           | Req | W   |
+| --- | ----------------------------------------------------- | ------ | ----------------- | ----------------- | ---------------- | --- | --- |
+| 1   | Centreline tracking on the takeoff roll               | Tiered | within ½ wingspan | within 1 wingspan | stayed on runway | Yes | 3   |
+| 2   | Rotation speed                                        | Tiered | 55 ±3             | ±5                | ±10              | Yes | 2   |
+| 3   | Climb airspeed (Vy)                                   | Tiered | 74 ±5             | ±10               | ±15              | Yes | 3   |
+| 4   | Runway heading held on initial climb (wind corrected) | Tiered | ±5°               | ±10°              | ±15°             | No  | 1   |
+| 5   | Departure turn at the correct altitude/point          | Binary |                   |                   |                  | No  | 1   |
+| 6   | Callouts spoken ("airspeed alive", "55 rotate")       | Binary |                   |                   |                  | No  | 1   |
 
 - **Common mistakes:** yanking the nose up; left drift; forgetting to trim in the climb.
 - **Debrief questions:** Where was the nose pointing at rotation? Did you need right rudder?
@@ -2923,14 +2923,14 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   5. At ~100 ft AGL over the runway: go around (low approach) — full power, flaps 20, climb.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Pattern altitude on downwind | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 3 |
-| 2 | Downwind spacing (runway ~½–1 nm off the wingtip) | Tiered | good | slightly wide/tight | very wide/tight | No | 2 |
-| 3 | Configuration and speed per leg (Section 8.5) | Tiered | all legs ±5 kt | ±10 kt | ±15 kt | Yes | 3 |
-| 4 | Final approach stabilised by 300 ft AGL | Binary | | | | Yes | 3 |
-| 5 | Lined up with centreline on final (no S-turns) | Tiered | no overshoot | small overshoot | large overshoot corrected | No | 2 |
-| 6 | Before-landing checklist on downwind | Binary | | | | No | 1 |
+| #   | Criterion                                         | Kind   | Gold           | Silver              | Bronze                    | Req | W   |
+| --- | ------------------------------------------------- | ------ | -------------- | ------------------- | ------------------------- | --- | --- |
+| 1   | Pattern altitude on downwind                      | Tiered | ±100 ft        | ±150 ft             | ±200 ft                   | Yes | 3   |
+| 2   | Downwind spacing (runway ~½–1 nm off the wingtip) | Tiered | good           | slightly wide/tight | very wide/tight           | No  | 2   |
+| 3   | Configuration and speed per leg (Section 8.5)     | Tiered | all legs ±5 kt | ±10 kt              | ±15 kt                    | Yes | 3   |
+| 4   | Final approach stabilised by 300 ft AGL           | Binary |                |                     |                           | Yes | 3   |
+| 5   | Lined up with centreline on final (no S-turns)    | Tiered | no overshoot   | small overshoot     | large overshoot corrected | No  | 2   |
+| 6   | Before-landing checklist on downwind              | Binary |                |                     |                           | No  | 1   |
 
 - **Common mistakes:** downwind too close; turning base too late; overshooting final.
 - **Tips:** use ground references (roads, fields) for turns.
@@ -2947,14 +2947,14 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   (or exit), then complete C3.4 if desired.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Stabilised by 300 ft AGL (speed, path, centreline, configured) | Binary | | | | Yes | 3 |
-| 2 | Final approach speed | Tiered | 65 −5/+10 | ±10 | ±15 | Yes | 3 |
-| 3 | Touchdown point | Tiered | within 400 ft beyond aiming point | within first third | on runway, stopped safely | Yes | 3 |
-| 4 | Touchdown on centreline | Tiered | within ½ wingspan | within 1 wingspan | on runway | Yes | 2 |
-| 5 | No bounce; mains first | Tiered | smooth | one small bounce, corrected | bounced but safe | Yes | 2 |
-| 6 | Directional control on rollout | Binary | | | | No | 1 |
+| #   | Criterion                                                      | Kind   | Gold                              | Silver                      | Bronze                    | Req | W   |
+| --- | -------------------------------------------------------------- | ------ | --------------------------------- | --------------------------- | ------------------------- | --- | --- |
+| 1   | Stabilised by 300 ft AGL (speed, path, centreline, configured) | Binary |                                   |                             |                           | Yes | 3   |
+| 2   | Final approach speed                                           | Tiered | 65 −5/+10                         | ±10                         | ±15                       | Yes | 3   |
+| 3   | Touchdown point                                                | Tiered | within 400 ft beyond aiming point | within first third          | on runway, stopped safely | Yes | 3   |
+| 4   | Touchdown on centreline                                        | Tiered | within ½ wingspan                 | within 1 wingspan           | on runway                 | Yes | 2   |
+| 5   | No bounce; mains first                                         | Tiered | smooth                            | one small bounce, corrected | bounced but safe          | Yes | 2   |
+| 6   | Directional control on rollout                                 | Binary |                                   |                             |                           | No  | 1   |
 
 - **Common mistakes:** fast final → float; flaring too high; pushing forward after a bounce.
 - **Tips:** if not stabilised, go around — it counts as a successful decision, not a fail
@@ -2974,13 +2974,13 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   pattern and land.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Go-around initiated immediately at the decision point | Binary | | | | Yes | 2 |
-| 2 | Sequence correct (power → attitude → flaps 20 → climb → flaps up in stages) | Tiered | perfect | one item out of order | two items out of order | Yes | 3 |
-| 3 | Airspeed never below 55 KIAS during the go-around | Binary | | | | Yes | 3 |
-| 4 | Positive climb within 5 s | Binary | | | | No | 1 |
-| 5 | Second approach and landing to C4.3 Bronze or better | Binary | | | | No | 2 |
+| #   | Criterion                                                                   | Kind   | Gold    | Silver                | Bronze                 | Req | W   |
+| --- | --------------------------------------------------------------------------- | ------ | ------- | --------------------- | ---------------------- | --- | --- |
+| 1   | Go-around initiated immediately at the decision point                       | Binary |         |                       |                        | Yes | 2   |
+| 2   | Sequence correct (power → attitude → flaps 20 → climb → flaps up in stages) | Tiered | perfect | one item out of order | two items out of order | Yes | 3   |
+| 3   | Airspeed never below 55 KIAS during the go-around                           | Binary |         |                       |                        | Yes | 3   |
+| 4   | Positive climb within 5 s                                                   | Binary |         |                       |                        | No  | 1   |
+| 5   | Second approach and landing to C4.3 Bronze or better                        | Binary |         |                       |                        | No  | 2   |
 
 - **Common mistakes:** retracting all flaps at once; pitching too high (stall horn).
 - **Debrief questions:** How much altitude did you lose before climbing?
@@ -2994,13 +2994,13 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   brief for gamepad users).
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Crosswind component calculated before flight (W13) | Binary | | | | No | 1 |
-| 2 | Tracked extended centreline on final | Tiered | ±½ wingspan | ±1 wingspan | ±2 wingspans | Yes | 3 |
-| 3 | No drift at touchdown; longitudinal axis aligned | Tiered | none | slight | noticeable but safe | Yes | 3 |
-| 4 | Upwind wheel first | Binary | | | | No | 2 |
-| 5 | Aileron into wind on rollout | Binary | | | | No | 1 |
+| #   | Criterion                                          | Kind   | Gold        | Silver      | Bronze              | Req | W   |
+| --- | -------------------------------------------------- | ------ | ----------- | ----------- | ------------------- | --- | --- |
+| 1   | Crosswind component calculated before flight (W13) | Binary |             |             |                     | No  | 1   |
+| 2   | Tracked extended centreline on final               | Tiered | ±½ wingspan | ±1 wingspan | ±2 wingspans        | Yes | 3   |
+| 3   | No drift at touchdown; longitudinal axis aligned   | Tiered | none        | slight      | noticeable but safe | Yes | 3   |
+| 4   | Upwind wheel first                                 | Binary |             |             |                     | No  | 2   |
+| 5   | Aileron into wind on rollout                       | Binary |             |             |                     | No  | 1   |
 
 - **Debrief questions:** Which technique did you use: crab-then-kick, wing-low, or a mix?
 
@@ -3014,12 +3014,12 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   ⚠ verify the pattern side for the active runway) · `WX_CALM` · `LOAD_SOLO`.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Short-field approach speed | Tiered | 61 −0/+5 | ±5 | ±10 | Yes | 3 |
-| 2 | Touchdown within X ft of aiming point | Tiered | 0–200 ft | 0–400 ft | stopped on runway | Yes | 3 |
-| 3 | Short-field takeoff: flaps 10, brakes held, full power, lift-off and obstacle speed | Tiered | all | 1 error | 2 errors | Yes | 2 |
-| 4 | Remained below Class B floor | Binary | | | | Yes | 3 |
+| #   | Criterion                                                                           | Kind   | Gold     | Silver   | Bronze            | Req | W   |
+| --- | ----------------------------------------------------------------------------------- | ------ | -------- | -------- | ----------------- | --- | --- |
+| 1   | Short-field approach speed                                                          | Tiered | 61 −0/+5 | ±5       | ±10               | Yes | 3   |
+| 2   | Touchdown within X ft of aiming point                                               | Tiered | 0–200 ft | 0–400 ft | stopped on runway | Yes | 3   |
+| 3   | Short-field takeoff: flaps 10, brakes held, full power, lift-off and obstacle speed | Tiered | all      | 1 error  | 2 errors          | Yes | 2   |
+| 4   | Remained below Class B floor                                                        | Binary |          |          |                   | Yes | 3   |
 
 - **Debrief questions:** How much runway remained when you stopped?
 
@@ -3033,12 +3033,12 @@ Tolerances follow Section 12.9 unless the criterion says otherwise.
   take off again. (⚠ Some instructors prefer full-stop taxi-backs; explain both.)
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Pattern altitude on each downwind | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 2 |
-| 2 | Stabilised on each final | Tiered | 3/3 | 2/3 | 1/3 (others went around) | Yes | 3 |
-| 3 | Landing quality (C4.3 criteria 3–5) on each | Tiered | 3 Gold | all ≥ Silver | all ≥ Bronze | Yes | 3 |
-| 4 | Touch-and-go sequence correct | Binary | | | | No | 2 |
+| #   | Criterion                                   | Kind   | Gold    | Silver       | Bronze                   | Req | W   |
+| --- | ------------------------------------------- | ------ | ------- | ------------ | ------------------------ | --- | --- |
+| 1   | Pattern altitude on each downwind           | Tiered | ±100 ft | ±150 ft      | ±200 ft                  | Yes | 2   |
+| 2   | Stabilised on each final                    | Tiered | 3/3     | 2/3          | 1/3 (others went around) | Yes | 3   |
+| 3   | Landing quality (C4.3 criteria 3–5) on each | Tiered | 3 Gold  | all ≥ Silver | all ≥ Bronze             | Yes | 3   |
+| 4   | Touch-and-go sequence correct               | Binary |         |              |                          | No  | 2   |
 
 - **Debrief questions:** Which circuit was best, and what was different?
 
@@ -3058,13 +3058,13 @@ All Module 5 manoeuvres are flown at **3,000 ft AGL or higher** with a clearing 
   left and right at ≤ 15° bank → recover.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Altitude | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 3 |
-| 2 | Airspeed | Tiered | +10/−0 of target | ±10 | ±15 | Yes | 3 |
-| 3 | No stall warning (horn) during slow flight | Tiered | none | brief chirp | repeated but no stall | No | 2 |
-| 4 | Heading/turn accuracy | Tiered | ±10° | ±15° | ±20° | No | 1 |
-| 5 | Recovery: power first, flaps in stages, no altitude loss > 100 ft | Binary | | | | Yes | 2 |
+| #   | Criterion                                                         | Kind   | Gold             | Silver      | Bronze                | Req | W   |
+| --- | ----------------------------------------------------------------- | ------ | ---------------- | ----------- | --------------------- | --- | --- |
+| 1   | Altitude                                                          | Tiered | ±100 ft          | ±150 ft     | ±200 ft               | Yes | 3   |
+| 2   | Airspeed                                                          | Tiered | +10/−0 of target | ±10         | ±15                   | Yes | 3   |
+| 3   | No stall warning (horn) during slow flight                        | Tiered | none             | brief chirp | repeated but no stall | No  | 2   |
+| 4   | Heading/turn accuracy                                             | Tiered | ±10°             | ±15°        | ±20°                  | No  | 1   |
+| 5   | Recovery: power first, flaps in stages, no altitude loss > 100 ft | Binary |                  |             |                       | Yes | 2   |
 
 - **Debrief questions:** What did the controls feel like at 55 kt?
 
@@ -3082,14 +3082,14 @@ All Module 5 manoeuvres are flown at **3,000 ft AGL or higher** with a clearing 
   flaps 20, climb, flaps up in stages.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Recognised the stall promptly | Binary | | | | Yes | 2 |
-| 2 | First action was reducing AoA | Binary | | | | Yes | 3 |
-| 3 | Wings level, heading ±10° during recovery | Tiered | ±10° | ±20° | ±30° | No | 2 |
-| 4 | Altitude lost | Tiered | ≤ 200 ft | ≤ 300 ft | ≤ 500 ft | No | 2 |
-| 5 | No secondary stall | Binary | | | | Yes | 3 |
-| 6 | Flaps retracted in stages (not all at once) | Binary | | | | No | 1 |
+| #   | Criterion                                   | Kind   | Gold     | Silver   | Bronze   | Req | W   |
+| --- | ------------------------------------------- | ------ | -------- | -------- | -------- | --- | --- |
+| 1   | Recognised the stall promptly               | Binary |          |          |          | Yes | 2   |
+| 2   | First action was reducing AoA               | Binary |          |          |          | Yes | 3   |
+| 3   | Wings level, heading ±10° during recovery   | Tiered | ±10°     | ±20°     | ±30°     | No  | 2   |
+| 4   | Altitude lost                               | Tiered | ≤ 200 ft | ≤ 300 ft | ≤ 500 ft | No  | 2   |
+| 5   | No secondary stall                          | Binary |          |          |          | Yes | 3   |
+| 6   | Flaps retracted in stages (not all at once) | Binary |          |          |          | No  | 1   |
 
 - **Debrief questions:** What was the first cue you noticed?
 
@@ -3103,12 +3103,12 @@ All Module 5 manoeuvres are flown at **3,000 ft AGL or higher** with a clearing 
   Keep the ball centred (a lot of right rudder).
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | First action was reducing AoA | Binary | | | | Yes | 3 |
-| 2 | Coordination at the stall (no significant wing drop) | Tiered | none | < 15° | < 30° | Yes | 3 |
-| 3 | Heading within ±20° | Tiered | ±10° | ±20° | ±30° | No | 1 |
-| 4 | No secondary stall; returned to Vy climb | Binary | | | | Yes | 2 |
+| #   | Criterion                                            | Kind   | Gold | Silver | Bronze | Req | W   |
+| --- | ---------------------------------------------------- | ------ | ---- | ------ | ------ | --- | --- |
+| 1   | First action was reducing AoA                        | Binary |      |        |        | Yes | 3   |
+| 2   | Coordination at the stall (no significant wing drop) | Tiered | none | < 15°  | < 30°  | Yes | 3   |
+| 3   | Heading within ±20°                                  | Tiered | ±10° | ±20°   | ±30°   | No  | 1   |
+| 4   | No secondary stall; returned to Vy climb             | Binary |      |        |        | Yes | 2   |
 
 - **Debrief questions:** How much right rudder did you need?
 
@@ -3123,13 +3123,13 @@ All Module 5 manoeuvres are flown at **3,000 ft AGL or higher** with a clearing 
   roll out on entry heading.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Altitude | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 3 |
-| 2 | Airspeed | Tiered | ±10 kt | ±15 kt | ±20 kt | Yes | 2 |
-| 3 | Bank | Tiered | 45° ±5° | ±10° | ±15° | Yes | 2 |
-| 4 | Rollout heading | Tiered | ±10° | ±15° | ±20° | Yes | 2 |
-| 5 | Entry at or below manoeuvring speed | Binary | | | | Yes | 1 |
+| #   | Criterion                           | Kind   | Gold    | Silver  | Bronze  | Req | W   |
+| --- | ----------------------------------- | ------ | ------- | ------- | ------- | --- | --- |
+| 1   | Altitude                            | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 3   |
+| 2   | Airspeed                            | Tiered | ±10 kt  | ±15 kt  | ±20 kt  | Yes | 2   |
+| 3   | Bank                                | Tiered | 45° ±5° | ±10°    | ±15°    | Yes | 2   |
+| 4   | Rollout heading                     | Tiered | ±10°    | ±15°    | ±20°    | Yes | 2   |
+| 5   | Entry at or below manoeuvring speed | Binary |         |         |         | Yes | 1   |
 
 - **Debrief questions:** Where did you lose/gain altitude?
 
@@ -3151,14 +3151,14 @@ All Module 5 manoeuvres are flown at **3,000 ft AGL or higher** with a clearing 
   the field (mixture back to rich — clearly marked as "practice recovery").
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Best glide established within 5 s | Tiered | ≤ 5 s | ≤ 10 s | ≤ 20 s | Yes | 3 |
-| 2 | Best glide speed held | Tiered | 68 ±5 | ±10 | ±15 | Yes | 3 |
-| 3 | Suitable landing site chosen within glide range | Binary | | | | Yes | 3 |
-| 4 | Restart flow performed | Binary | | | | No | 2 |
-| 5 | Declared emergency / squawk 7700 | Binary | | | | No | 1 |
-| 6 | Arrived at key point with enough altitude; landing assured | Tiered | ideal | slightly high/low, corrected | made it, barely | Yes | 3 |
+| #   | Criterion                                                  | Kind   | Gold  | Silver                       | Bronze          | Req | W   |
+| --- | ---------------------------------------------------------- | ------ | ----- | ---------------------------- | --------------- | --- | --- |
+| 1   | Best glide established within 5 s                          | Tiered | ≤ 5 s | ≤ 10 s                       | ≤ 20 s          | Yes | 3   |
+| 2   | Best glide speed held                                      | Tiered | 68 ±5 | ±10                          | ±15             | Yes | 3   |
+| 3   | Suitable landing site chosen within glide range            | Binary |       |                              |                 | Yes | 3   |
+| 4   | Restart flow performed                                     | Binary |       |                              |                 | No  | 2   |
+| 5   | Declared emergency / squawk 7700                           | Binary |       |                              |                 | No  | 1   |
+| 6   | Arrived at key point with enough altitude; landing assured | Tiered | ideal | slightly high/low, corrected | made it, barely | Yes | 3   |
 
 - **Debrief questions:** When did you commit to your landing site?
 
@@ -3170,12 +3170,12 @@ All Module 5 manoeuvres are flown at **3,000 ft AGL or higher** with a clearing 
   isolated landmark (e.g. a distinctive building/reservoir) · `WX_LIGHT_W`.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Altitude | Tiered | ±100 ft | ±150 ft | ±200 ft | Yes | 3 |
-| 2 | Constant radius (bank adjusted for wind) | Tiered | consistent | somewhat | drifted but corrected | Yes | 3 |
-| 3 | Airspeed | Tiered | ±10 | ±15 | ±20 | No | 1 |
-| 4 | Max bank ≤ 45° | Binary | | | | Yes | 2 |
+| #   | Criterion                                | Kind   | Gold       | Silver   | Bronze                | Req | W   |
+| --- | ---------------------------------------- | ------ | ---------- | -------- | --------------------- | --- | --- |
+| 1   | Altitude                                 | Tiered | ±100 ft    | ±150 ft  | ±200 ft               | Yes | 3   |
+| 2   | Constant radius (bank adjusted for wind) | Tiered | consistent | somewhat | drifted but corrected | Yes | 3   |
+| 3   | Airspeed                                 | Tiered | ±10        | ±15      | ±20                   | No  | 1   |
+| 4   | Max bank ≤ 45°                           | Binary |            |          |                       | Yes | 2   |
 
 - **Debrief questions:** Where was your bank steepest?
 
@@ -3197,12 +3197,12 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
   Return and land at KLVK.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Landmarks correctly identified | Tiered | 6/6 | 5/6 | 4/6 | Yes | 3 |
-| 2 | Stayed clear of Class C/B airspace | Binary | | | | Yes | 3 |
-| 3 | Altitude held on straight legs | Tiered | ±100 ft | ±150 ft | ±200 ft | No | 1 |
-| 4 | Returned to KLVK without GPS map | Binary | | | | No | 2 |
+| #   | Criterion                          | Kind   | Gold    | Silver  | Bronze  | Req | W   |
+| --- | ---------------------------------- | ------ | ------- | ------- | ------- | --- | --- |
+| 1   | Landmarks correctly identified     | Tiered | 6/6     | 5/6     | 4/6     | Yes | 3   |
+| 2   | Stayed clear of Class C/B airspace | Binary |         |         |         | Yes | 3   |
+| 3   | Altitude held on straight legs     | Tiered | ±100 ft | ±150 ft | ±200 ft | No  | 1   |
+| 4   | Returned to KLVK without GPS map   | Binary |         |         |         | No  | 2   |
 
 - **Debrief questions:** Which landmark was easiest to spot? Hardest? Why?
 
@@ -3219,14 +3219,14 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
   altitude, enter 45° to downwind at KTCY, land.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Nav log completed before flight | Binary | | | | Yes | 2 |
-| 2 | Checkpoints identified in sequence | Tiered | all | missed 1 | missed 2 | Yes | 3 |
-| 3 | Arrival ETA accuracy | Tiered | ±2 min | ±4 min | ±6 min | No | 2 |
-| 4 | Altitude en route | Tiered | ±100 ft | ±150 ft | ±200 ft | No | 1 |
-| 5 | Correct pattern entry at KTCY | Binary | | | | Yes | 2 |
-| 6 | Safe landing (C4.3 Bronze or better) | Binary | | | | Yes | 2 |
+| #   | Criterion                            | Kind   | Gold    | Silver   | Bronze   | Req | W   |
+| --- | ------------------------------------ | ------ | ------- | -------- | -------- | --- | --- |
+| 1   | Nav log completed before flight      | Binary |         |          |          | Yes | 2   |
+| 2   | Checkpoints identified in sequence   | Tiered | all     | missed 1 | missed 2 | Yes | 3   |
+| 3   | Arrival ETA accuracy                 | Tiered | ±2 min  | ±4 min   | ±6 min   | No  | 2   |
+| 4   | Altitude en route                    | Tiered | ±100 ft | ±150 ft  | ±200 ft  | No  | 1   |
+| 5   | Correct pattern entry at KTCY        | Binary |         |          |          | Yes | 2   |
+| 6   | Safe landing (C4.3 Bronze or better) | Binary |         |          |          | Yes | 2   |
 
 - **Debrief questions:** How far off course did you drift and why?
 
@@ -3243,14 +3243,14 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
   Reservoir as a check, cross the ridge, descend to KHAF pattern altitude, land.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Computed MH within ±5° of the reference answer | Tiered | ±3° | ±5° | ±8° | Yes | 2 |
-| 2 | Flew the computed heading ±5° | Tiered | ±5° | ±10° | ±15° | Yes | 2 |
-| 3 | Remained clear of Class B | Binary | | | | Yes | 3 |
-| 4 | ETA accuracy | Tiered | ±2 min | ±4 min | ±6 min | No | 2 |
-| 5 | Safe terrain clearance crossing the ridge (≥ 1,000 ft) | Binary | | | | Yes | 3 |
-| 6 | Correct CTAF pattern entry and landing at KHAF | Binary | | | | No | 2 |
+| #   | Criterion                                              | Kind   | Gold   | Silver | Bronze | Req | W   |
+| --- | ------------------------------------------------------ | ------ | ------ | ------ | ------ | --- | --- |
+| 1   | Computed MH within ±5° of the reference answer         | Tiered | ±3°    | ±5°    | ±8°    | Yes | 2   |
+| 2   | Flew the computed heading ±5°                          | Tiered | ±5°    | ±10°   | ±15°   | Yes | 2   |
+| 3   | Remained clear of Class B                              | Binary |        |        |        | Yes | 3   |
+| 4   | ETA accuracy                                           | Tiered | ±2 min | ±4 min | ±6 min | No  | 2   |
+| 5   | Safe terrain clearance crossing the ridge (≥ 1,000 ft) | Binary |        |        |        | Yes | 3   |
+| 6   | Correct CTAF pattern entry and landing at KHAF         | Binary |        |        |        | No  | 2   |
 
 - **Debrief questions:** Compare your planned and actual groundspeed. Why the difference?
 
@@ -3267,13 +3267,13 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
   correction. Report (on the page) the heading that kept the needle centred.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Identified the station (Morse/ID) | Binary | | | | Yes | 2 |
-| 2 | Correctly determined initial radial | Tiered | ±5° | ±10° | ±15° | Yes | 2 |
-| 3 | Intercept without overshooting | Tiered | none | small | large, corrected | No | 2 |
-| 4 | Tracking accuracy (CDI) | Tiered | ≤ ½ scale | ≤ ¾ scale | < full scale | Yes | 3 |
-| 5 | Altitude | Tiered | ±100 ft | ±150 ft | ±200 ft | No | 1 |
+| #   | Criterion                           | Kind   | Gold      | Silver    | Bronze           | Req | W   |
+| --- | ----------------------------------- | ------ | --------- | --------- | ---------------- | --- | --- |
+| 1   | Identified the station (Morse/ID)   | Binary |           |           |                  | Yes | 2   |
+| 2   | Correctly determined initial radial | Tiered | ±5°       | ±10°      | ±15°             | Yes | 2   |
+| 3   | Intercept without overshooting      | Tiered | none      | small     | large, corrected | No  | 2   |
+| 4   | Tracking accuracy (CDI)             | Tiered | ≤ ½ scale | ≤ ¾ scale | < full scale     | Yes | 3   |
+| 5   | Altitude                            | Tiered | ±100 ft   | ±150 ft   | ±200 ft          | No  | 1   |
 
 - **Debrief questions:** What wind correction did you end up with?
 
@@ -3290,13 +3290,13 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
   flight plan. Land.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Flight plan entered correctly before takeoff | Binary | | | | Yes | 3 |
-| 2 | Tracked the magenta line (cross-track error) | Tiered | ≤ 0.5 nm | ≤ 1 nm | ≤ 2 nm | Yes | 2 |
-| 3 | Direct-To performed correctly when asked | Binary | | | | Yes | 2 |
-| 4 | Used NRST to name the nearest airport at a random moment | Binary | | | | No | 1 |
-| 5 | Landing at destination (C4.3 Bronze or better) | Binary | | | | No | 2 |
+| #   | Criterion                                                | Kind   | Gold     | Silver | Bronze | Req | W   |
+| --- | -------------------------------------------------------- | ------ | -------- | ------ | ------ | --- | --- |
+| 1   | Flight plan entered correctly before takeoff             | Binary |          |        |        | Yes | 3   |
+| 2   | Tracked the magenta line (cross-track error)             | Tiered | ≤ 0.5 nm | ≤ 1 nm | ≤ 2 nm | Yes | 2   |
+| 3   | Direct-To performed correctly when asked                 | Binary |          |        |        | Yes | 2   |
+| 4   | Used NRST to name the nearest airport at a random moment | Binary |          |        |        | No  | 1   |
+| 5   | Landing at destination (C4.3 Bronze or better)           | Binary |          |        |        | No  | 2   |
 
 - **Debrief questions:** Did the GPS make you look outside less? What will you do about that?
 
@@ -3309,12 +3309,12 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
   has closed — divert to C83" (or another verified airport).
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Turned toward alternate within 1 minute | Tiered | ≤ 1 min | ≤ 2 min | ≤ 3 min | Yes | 2 |
-| 2 | Estimated heading accuracy | Tiered | ±10° | ±15° | ±20° | Yes | 2 |
-| 3 | Estimated ETE accuracy | Tiered | ±2 min | ±4 min | ±6 min | No | 2 |
-| 4 | Arrived and entered pattern correctly | Binary | | | | Yes | 2 |
+| #   | Criterion                               | Kind   | Gold    | Silver  | Bronze  | Req | W   |
+| --- | --------------------------------------- | ------ | ------- | ------- | ------- | --- | --- |
+| 1   | Turned toward alternate within 1 minute | Tiered | ≤ 1 min | ≤ 2 min | ≤ 3 min | Yes | 2   |
+| 2   | Estimated heading accuracy              | Tiered | ±10°    | ±15°    | ±20°    | Yes | 2   |
+| 3   | Estimated ETE accuracy                  | Tiered | ±2 min  | ±4 min  | ±6 min  | No  | 2   |
+| 4   | Arrived and entered pattern correctly   | Binary |         |         |         | Yes | 2   |
 
 - **Debrief questions:** What did you use to estimate the heading?
 
@@ -3326,13 +3326,13 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
 - **Setup:** `AIR_START` 3,500 ft, flight plan loaded KLVK → C83 · `WX_LIGHT_W`.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Engaged AP with correct initial modes (HDG + ALT) | Binary | | | | Yes | 2 |
-| 2 | VS climb/descent to target altitudes with ALT capture armed | Binary | | | | Yes | 2 |
-| 3 | NAV mode following GPS | Binary | | | | Yes | 2 |
-| 4 | Verbalised/verified each mode change ("HDG, ALT, armed…") | Binary | | | | No | 1 |
-| 5 | Disconnected and hand-flew the pattern | Binary | | | | No | 2 |
+| #   | Criterion                                                   | Kind   | Gold | Silver | Bronze | Req | W   |
+| --- | ----------------------------------------------------------- | ------ | ---- | ------ | ------ | --- | --- |
+| 1   | Engaged AP with correct initial modes (HDG + ALT)           | Binary |      |        |        | Yes | 2   |
+| 2   | VS climb/descent to target altitudes with ALT capture armed | Binary |      |        |        | Yes | 2   |
+| 3   | NAV mode following GPS                                      | Binary |      |        |        | Yes | 2   |
+| 4   | Verbalised/verified each mode change ("HDG, ALT, armed…")   | Binary |      |        |        | No  | 1   |
+| 5   | Disconnected and hand-flew the pattern                      | Binary |      |        |        | No  | 2   |
 
 ### Module 7 challenges
 
@@ -3348,13 +3348,13 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
   clear of the runway. The learner speaks them (or selects the closest sim option).
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | All six calls made at the correct positions | Tiered | 6/6 | 5/6 | 4/6 | Yes | 3 |
-| 2 | Calls used correct format (airport, callsign, position, intentions, airport) | Tiered | all | most | some | Yes | 2 |
-| 3 | Correct pattern entry | Binary | | | | Yes | 2 |
-| 4 | Traffic awareness (saw and sequenced with AI traffic) | Binary | | | | No | 2 |
-| 5 | Safe landing | Binary | | | | Yes | 2 |
+| #   | Criterion                                                                    | Kind   | Gold | Silver | Bronze | Req | W   |
+| --- | ---------------------------------------------------------------------------- | ------ | ---- | ------ | ------ | --- | --- |
+| 1   | All six calls made at the correct positions                                  | Tiered | 6/6  | 5/6    | 4/6    | Yes | 3   |
+| 2   | Calls used correct format (airport, callsign, position, intentions, airport) | Tiered | all  | most   | some   | Yes | 2   |
+| 3   | Correct pattern entry                                                        | Binary |      |        |        | Yes | 2   |
+| 4   | Traffic awareness (saw and sequenced with AI traffic)                        | Binary |      |        |        | No  | 2   |
+| 5   | Safe landing                                                                 | Binary |      |        |        | Yes | 2   |
 
 - **Debrief questions:** Which call did you forget or mix up?
 
@@ -3369,13 +3369,13 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
   contact ground → taxi to parking.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Had current ATIS before first call | Binary | | | | Yes | 2 |
-| 2 | Correct read-backs of taxi/hold short and runway assignments | Tiered | all | 1 missed | 2 missed | Yes | 3 |
-| 3 | Followed all ATC instructions | Binary | | | | Yes | 3 |
-| 4 | Frequency changes done promptly | Binary | | | | No | 1 |
-| 5 | Pattern and landing (C4.3 Bronze or better) | Binary | | | | Yes | 2 |
+| #   | Criterion                                                    | Kind   | Gold | Silver   | Bronze   | Req | W   |
+| --- | ------------------------------------------------------------ | ------ | ---- | -------- | -------- | --- | --- |
+| 1   | Had current ATIS before first call                           | Binary |      |          |          | Yes | 2   |
+| 2   | Correct read-backs of taxi/hold short and runway assignments | Tiered | all  | 1 missed | 2 missed | Yes | 3   |
+| 3   | Followed all ATC instructions                                | Binary |      |          |          | Yes | 3   |
+| 4   | Frequency changes done promptly                              | Binary |      |          |          | No  | 1   |
+| 5   | Pattern and landing (C4.3 Bronze or better)                  | Binary |      |          |          | Yes | 2   |
 
 - **Debrief questions:** Where did the sim's ATC differ from what you learned in L7.3?
 
@@ -3388,12 +3388,12 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
   local VFR reporting points on the TAC) · `WX_CALM` · ATC on · AI traffic on.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Remained below Class B | Binary | | | | Yes | 3 |
-| 2 | Correct initial call with ATIS and position | Binary | | | | Yes | 2 |
-| 3 | Followed tower instructions | Binary | | | | Yes | 2 |
-| 4 | Landed within first 1/3 of runway | Tiered | first 500 ft | first 1/3 | on runway | Yes | 3 |
+| #   | Criterion                                   | Kind   | Gold         | Silver    | Bronze    | Req | W   |
+| --- | ------------------------------------------- | ------ | ------------ | --------- | --------- | --- | --- |
+| 1   | Remained below Class B                      | Binary |              |           |           | Yes | 3   |
+| 2   | Correct initial call with ATIS and position | Binary |              |           |           | Yes | 2   |
+| 3   | Followed tower instructions                 | Binary |              |           |           | Yes | 2   |
+| 4   | Landed within first 1/3 of runway           | Tiered | first 500 ft | first 1/3 | on runway | Yes | 3   |
 
 ### Module 8 challenges
 
@@ -3434,16 +3434,16 @@ site, a pre-drawn SkyVector route, and the airport cards in the Reference sectio
   frequencies; alternates; PAVE check.
 - **Criteria**
 
-| # | Criterion | Kind | Gold | Silver | Bronze | Req | W |
-|---|-----------|------|------|--------|--------|-----|---|
-| 1 | Complete plan and nav log before flight | Tiered | complete | minor gaps | major gaps | Yes | 3 |
-| 2 | Route flown as planned (checkpoints within 1 nm) | Tiered | all | most | some, but found way | Yes | 3 |
-| 3 | Airspace compliance | Binary | | | | Yes | 3 |
-| 4 | Altitude en route | Tiered | ±100 ft | ±150 ft | ±200 ft | No | 2 |
-| 5 | ETA at destination | Tiered | ±3 min | ±5 min | ±8 min | No | 1 |
-| 6 | Radio calls correct (CTAF/tower) | Tiered | all | most | some | Yes | 2 |
-| 7 | Two safe landings | Binary | | | | Yes | 3 |
-| 8 | Fuel remaining ≥ planned reserve | Binary | | | | Yes | 2 |
+| #   | Criterion                                        | Kind   | Gold     | Silver     | Bronze              | Req | W   |
+| --- | ------------------------------------------------ | ------ | -------- | ---------- | ------------------- | --- | --- |
+| 1   | Complete plan and nav log before flight          | Tiered | complete | minor gaps | major gaps          | Yes | 3   |
+| 2   | Route flown as planned (checkpoints within 1 nm) | Tiered | all      | most       | some, but found way | Yes | 3   |
+| 3   | Airspace compliance                              | Binary |          |            |                     | Yes | 3   |
+| 4   | Altitude en route                                | Tiered | ±100 ft  | ±150 ft    | ±200 ft             | No  | 2   |
+| 5   | ETA at destination                               | Tiered | ±3 min   | ±5 min     | ±8 min              | No  | 1   |
+| 6   | Radio calls correct (CTAF/tower)                 | Tiered | all      | most       | some                | Yes | 2   |
+| 7   | Two safe landings                                | Binary |          |            |                     | Yes | 3   |
+| 8   | Fuel remaining ≥ planned reserve                 | Binary |          |            |                     | Yes | 2   |
 
 - **Debrief questions:** What would you change in your plan? Rate your confidence 1–5 to
   fly this route without a GPS.
@@ -3509,7 +3509,7 @@ Every widget must:
 
 ### 16.3 W3 — Airspeed Indicator (P0) · L1.4, reference page
 
-- **Shows:** Classic round airspeed indicator *and* a G1000-style vertical tape side by
+- **Shows:** Classic round airspeed indicator _and_ a G1000-style vertical tape side by
   side (toggle), with the C172S colour arcs and V-speed markers (Section 8.3).
 - **Interactions:** Drag the needle or use a slider (0–180 KIAS). A readout names the band
   and nearest V-speed ("74 KIAS — green arc — Vy, best rate of climb").
@@ -3561,7 +3561,7 @@ Every widget must:
 
 ### 16.7 W6 — Turn Coordinator & Slip Ball (P0) · L2.4
 
-- **Shows:** Turn coordinator (miniature airplane + ball) *and* G1000 slip/skid trapezoid,
+- **Shows:** Turn coordinator (miniature airplane + ball) _and_ G1000 slip/skid trapezoid,
   plus a top-down view of the aircraft's nose relative to its flight path.
 - **Interactions:** Bank slider (−45° to 45°) and rudder slider. The ball displaces when
   rudder doesn't match bank; the top-down view shows the nose yawing. Readout: "Slipping —
@@ -3698,23 +3698,23 @@ Every widget must:
 
 ### 16.22 Widget priority summary
 
-| Widget | Priority | Est. days |
-|--------|----------|-----------|
-| W1 Control Surfaces | P0 | 2–3 |
-| W2 G1000 PFD Explorer | P0 | 3–4 |
-| W3 Airspeed Indicator | P0 | 1–2 |
-| W4 Angle of Attack | P0 | 2–3 |
-| W5 Pitch & Power | P0 | 3–4 |
-| W6 Turn Coordinator | P0 | 2 |
-| W7 Traffic Pattern | P0 | 4–5 |
-| W9 VOR/CDI | P0 | 3–4 |
-| W10 Sectional Legend | P0 | 3 |
-| W11 Airspace Cross-section | P0 | 4 |
-| W12 Wind Triangle | P0 | 2–3 |
-| W14 Load Factor | P0 | 1–2 |
-| W16 Checklist Runner | P0 | 2 |
-| **P0 total** | | **~32–41 days** |
-| W8, W13, W15, W17, W18, W19, W20 | P1 | ~14–17 |
+| Widget                           | Priority | Est. days       |
+| -------------------------------- | -------- | --------------- |
+| W1 Control Surfaces              | P0       | 2–3             |
+| W2 G1000 PFD Explorer            | P0       | 3–4             |
+| W3 Airspeed Indicator            | P0       | 1–2             |
+| W4 Angle of Attack               | P0       | 2–3             |
+| W5 Pitch & Power                 | P0       | 3–4             |
+| W6 Turn Coordinator              | P0       | 2               |
+| W7 Traffic Pattern               | P0       | 4–5             |
+| W9 VOR/CDI                       | P0       | 3–4             |
+| W10 Sectional Legend             | P0       | 3               |
+| W11 Airspace Cross-section       | P0       | 4               |
+| W12 Wind Triangle                | P0       | 2–3             |
+| W14 Load Factor                  | P0       | 1–2             |
+| W16 Checklist Runner             | P0       | 2               |
+| **P0 total**                     |          | **~32–41 days** |
+| W8, W13, W15, W17, W18, W19, W20 | P1       | ~14–17          |
 
 Build order: W3 (simplest; establishes the widget framework) → W16 → W1 → W6 → W14 →
 W4 → W5 → W2 → W7 → W12 → W9 → W10 → W11.
@@ -3725,13 +3725,13 @@ W4 → W5 → W2 → W7 → W12 → W9 → W10 → W11.
 
 ### 17.1 Question types (v1)
 
-| Type | Description | Example |
-|------|-------------|---------|
-| `single` | Multiple choice, one correct answer | "What is Vy?" |
-| `multi` | Multiple choice, several correct | "Which are left-turning tendencies?" |
-| `numeric` | Number with tolerance | "Crosswind component?" (answer 10 ±1) |
-| `order` | Put steps in order (drag or up/down buttons) | "Order the go-around steps" |
-| `hotspot` | Click a region of an image/widget | "Click the VSI" (provided by widgets) |
+| Type      | Description                                  | Example                               |
+| --------- | -------------------------------------------- | ------------------------------------- |
+| `single`  | Multiple choice, one correct answer          | "What is Vy?"                         |
+| `multi`   | Multiple choice, several correct             | "Which are left-turning tendencies?"  |
+| `numeric` | Number with tolerance                        | "Crosswind component?" (answer 10 ±1) |
+| `order`   | Put steps in order (drag or up/down buttons) | "Order the go-around steps"           |
+| `hotspot` | Click a region of an image/widget            | "Click the VSI" (provided by widgets) |
 
 ### 17.2 Authoring rules
 
@@ -3757,11 +3757,14 @@ Questions live inside the lesson Markdown via a directive:
 ```markdown
 :::quiz{id="l2-3-q1" type="single"}
 Climbing at 600 fpm, when should you begin the level-off for 3,000 ft?
+
 - [ ] 2,900 ft
 - [x] About 2,940 ft
 - [ ] 3,000 ft
 - [ ] 3,060 ft
+
 ---
+
 Lead the level-off by about 10% of your vertical speed: 10% of 600 is 60 ft.
 :::
 ```
@@ -3776,7 +3779,7 @@ The parser (Section 28.4) converts it to a structured `quiz` block validated by 
 
 - Friendly, direct, encouraging, never condescending. Second person ("you").
 - Short sentences. One idea per sentence where possible.
-- Explain *why* before *how* when the why is short.
+- Explain _why_ before _how_ when the why is short.
 - Celebrate go-arounds and good decisions, not just good landings.
 - Avoid jargon until it is defined; then use it consistently (link to glossary).
 - UK vs US spelling: **choose US English** for content (the aviation sources are US).
@@ -3801,14 +3804,14 @@ The parser (Section 28.4) converts it to a structured `quiz` block validated by 
 
 ### 18.4 Callout types (and their Markdown directive)
 
-| Callout | Directive | Use for |
-|---------|-----------|---------|
-| Safety | `:::callout{type="safety"}` | Anything that would be dangerous in a real airplane |
-| Sim vs reality | `:::callout{type="sim"}` | Differences between MSFS and the real world |
-| Classic panel | `:::callout{type="classic"}` | Steam-gauge variant differences |
-| Pro tip | `:::callout{type="tip"}` | Technique that helps |
-| Verify | `:::callout{type="verify"}` | Author-only, **fails validation if present in a published lesson** |
-| Note | `:::callout{type="note"}` | Everything else (use sparingly) |
+| Callout        | Directive                    | Use for                                                            |
+| -------------- | ---------------------------- | ------------------------------------------------------------------ |
+| Safety         | `:::callout{type="safety"}`  | Anything that would be dangerous in a real airplane                |
+| Sim vs reality | `:::callout{type="sim"}`     | Differences between MSFS and the real world                        |
+| Classic panel  | `:::callout{type="classic"}` | Steam-gauge variant differences                                    |
+| Pro tip        | `:::callout{type="tip"}`     | Technique that helps                                               |
+| Verify         | `:::callout{type="verify"}`  | Author-only, **fails validation if present in a published lesson** |
+| Note           | `:::callout{type="note"}`    | Everything else (use sparingly)                                    |
 
 ### 18.5 Headings and structure
 
@@ -4117,26 +4120,26 @@ For each page: purpose, content, states (loading, empty, error), and acceptance 
 Defined as CSS custom properties and mapped into Tailwind's theme. Values are starting
 points; check contrast with a tool (e.g. WebAIM contrast checker) before finalising.
 
-| Token | Light | Dark | Use |
-|-------|-------|------|-----|
-| `--color-bg` | #F7F9FC | #0B1220 | Page background |
-| `--color-surface` | #FFFFFF | #111A2E | Cards, panels |
-| `--color-surface-2` | #EEF2F8 | #18233A | Nested surfaces |
-| `--color-border` | #D5DDEA | #26324D | Borders, dividers |
-| `--color-text` | #0F172A | #E6ECF5 | Primary text |
-| `--color-text-muted` | #475569 | #9AA8BF | Secondary text |
-| `--color-primary` | #1D4ED8 | #60A5FA | Links, primary buttons ("sky blue") |
-| `--color-primary-contrast` | #FFFFFF | #0B1220 | Text on primary |
-| `--color-accent` | #D97706 | #FBBF24 | Highlights ("amber annunciator") |
-| `--color-success` | #15803D | #4ADE80 | Complete, pass |
-| `--color-warning` | #B45309 | #FCD34D | Caution callouts |
-| `--color-danger` | #B91C1C | #F87171 | Errors, safety callouts |
-| `--color-magenta` | #A21CAF | #E879F9 | GPS course lines, non-towered airports (aviation convention) |
-| `--color-cyan` | #0E7490 | #22D3EE | Selected/bug values (G1000 convention) |
-| `--color-gold` | #B7791F | #F6C453 | Gold tier |
-| `--color-silver` | #6B7280 | #CBD5E1 | Silver tier |
-| `--color-bronze` | #9A5B2E | #D69E6B | Bronze tier |
-| Arc tokens | white/green/yellow/red | same hues adjusted | Airspeed arcs in W3 |
+| Token                      | Light                  | Dark               | Use                                                          |
+| -------------------------- | ---------------------- | ------------------ | ------------------------------------------------------------ |
+| `--color-bg`               | #F7F9FC                | #0B1220            | Page background                                              |
+| `--color-surface`          | #FFFFFF                | #111A2E            | Cards, panels                                                |
+| `--color-surface-2`        | #EEF2F8                | #18233A            | Nested surfaces                                              |
+| `--color-border`           | #D5DDEA                | #26324D            | Borders, dividers                                            |
+| `--color-text`             | #0F172A                | #E6ECF5            | Primary text                                                 |
+| `--color-text-muted`       | #475569                | #9AA8BF            | Secondary text                                               |
+| `--color-primary`          | #1D4ED8                | #60A5FA            | Links, primary buttons ("sky blue")                          |
+| `--color-primary-contrast` | #FFFFFF                | #0B1220            | Text on primary                                              |
+| `--color-accent`           | #D97706                | #FBBF24            | Highlights ("amber annunciator")                             |
+| `--color-success`          | #15803D                | #4ADE80            | Complete, pass                                               |
+| `--color-warning`          | #B45309                | #FCD34D            | Caution callouts                                             |
+| `--color-danger`           | #B91C1C                | #F87171            | Errors, safety callouts                                      |
+| `--color-magenta`          | #A21CAF                | #E879F9            | GPS course lines, non-towered airports (aviation convention) |
+| `--color-cyan`             | #0E7490                | #22D3EE            | Selected/bug values (G1000 convention)                       |
+| `--color-gold`             | #B7791F                | #F6C453            | Gold tier                                                    |
+| `--color-silver`           | #6B7280                | #CBD5E1            | Silver tier                                                  |
+| `--color-bronze`           | #9A5B2E                | #D69E6B            | Bronze tier                                                  |
+| Arc tokens                 | white/green/yellow/red | same hues adjusted | Airspeed arcs in W3                                          |
 
 ### 21.3 Typography
 
@@ -4155,28 +4158,28 @@ points; check contrast with a tool (e.g. WebAIM contrast checker) before finalis
 
 ### 21.5 Core components (in `src/components/`)
 
-| Component | Notes |
-|-----------|-------|
-| `Button` | variants: primary, secondary, ghost, danger; sizes sm/md/lg; loading state; `asChild` for links |
-| `Link` | wraps router link; external variant with icon |
-| `Card` | header/body/footer slots |
-| `Badge` | status (complete, in progress), tier (gold/silver/bronze), priority (Bonus) |
-| `ProgressBar`, `ProgressRing` | accessible (`role="progressbar"`) |
-| `Tabs` | roving tabindex, ARIA tabs pattern |
-| `Modal` / `Dialog` | focus trap, Esc to close, returns focus |
-| `Drawer` | mobile nav |
-| `Tooltip` / `Popover` | glossary hover-cards (P1) |
-| `Callout` | types from Section 18.4 with icons |
-| `Table` | responsive (stacks on mobile) |
-| `FormField`, `Input`, `PasswordInput`, `Textarea`, `Select`, `Checkbox`, `RadioGroup` | labels, hints, errors wired with `aria-describedby` |
-| `Skeleton` | loading placeholders |
-| `EmptyState`, `ErrorState` | icon, message, action |
-| `Toast` | polite live region notifications |
-| `DifficultyDots`, `TierBadge`, `TypeIcon` | challenge metadata |
-| `Stopwatch` | challenge fly mode |
-| `KeyNumbers` | V-speed quick panel |
-| `ThemeToggle` | system/light/dark |
-| `Breadcrumbs` | nav landmark |
+| Component                                                                             | Notes                                                                                           |
+| ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `Button`                                                                              | variants: primary, secondary, ghost, danger; sizes sm/md/lg; loading state; `asChild` for links |
+| `Link`                                                                                | wraps router link; external variant with icon                                                   |
+| `Card`                                                                                | header/body/footer slots                                                                        |
+| `Badge`                                                                               | status (complete, in progress), tier (gold/silver/bronze), priority (Bonus)                     |
+| `ProgressBar`, `ProgressRing`                                                         | accessible (`role="progressbar"`)                                                               |
+| `Tabs`                                                                                | roving tabindex, ARIA tabs pattern                                                              |
+| `Modal` / `Dialog`                                                                    | focus trap, Esc to close, returns focus                                                         |
+| `Drawer`                                                                              | mobile nav                                                                                      |
+| `Tooltip` / `Popover`                                                                 | glossary hover-cards (P1)                                                                       |
+| `Callout`                                                                             | types from Section 18.4 with icons                                                              |
+| `Table`                                                                               | responsive (stacks on mobile)                                                                   |
+| `FormField`, `Input`, `PasswordInput`, `Textarea`, `Select`, `Checkbox`, `RadioGroup` | labels, hints, errors wired with `aria-describedby`                                             |
+| `Skeleton`                                                                            | loading placeholders                                                                            |
+| `EmptyState`, `ErrorState`                                                            | icon, message, action                                                                           |
+| `Toast`                                                                               | polite live region notifications                                                                |
+| `DifficultyDots`, `TierBadge`, `TypeIcon`                                             | challenge metadata                                                                              |
+| `Stopwatch`                                                                           | challenge fly mode                                                                              |
+| `KeyNumbers`                                                                          | V-speed quick panel                                                                             |
+| `ThemeToggle`                                                                         | system/light/dark                                                                               |
+| `Breadcrumbs`                                                                         | nav landmark                                                                                    |
 
 Consider using **Radix UI primitives** (or React Aria) for Tabs, Dialog, Popover,
 RadioGroup to get accessibility right with less effort — they are unstyled, so they
@@ -4240,14 +4243,14 @@ Target: **WCAG 2.2 Level AA** for all P0 pages and widgets.
 
 ### 23.1 Breakpoints (Tailwind defaults)
 
-| Name | Min width | Typical device |
-|------|-----------|----------------|
-| base | 0 | Phones (375 px design reference) |
-| `sm` | 640 px | Large phones landscape |
-| `md` | 768 px | Tablets portrait |
-| `lg` | 1024 px | Tablets landscape, small laptops |
-| `xl` | 1280 px | Laptops/desktops (right rail appears) |
-| `2xl` | 1536 px | Large monitors |
+| Name  | Min width | Typical device                        |
+| ----- | --------- | ------------------------------------- |
+| base  | 0         | Phones (375 px design reference)      |
+| `sm`  | 640 px    | Large phones landscape                |
+| `md`  | 768 px    | Tablets portrait                      |
+| `lg`  | 1024 px   | Tablets landscape, small laptops      |
+| `xl`  | 1280 px   | Laptops/desktops (right rail appears) |
+| `2xl` | 1536 px   | Large monitors                        |
 
 ### 23.2 Specific behaviours
 
@@ -4458,76 +4461,76 @@ at that time; avoid release candidates). Versions below are the expected majors.
 
 ### 26.1 Runtime and tooling
 
-| Tool | Version | Notes |
-|------|---------|-------|
-| Node.js | 24.x LTS | Check the release schedule; use the Active LTS line at setup time. Pin via `.nvmrc` and `engines`. |
-| npm | bundled with Node | Use `npm ci` in CI. |
-| TypeScript | 5.x (latest) | `strict: true`. |
-| Git | latest | |
-| MongoDB | Atlas (8.x) | Local: MongoDB Community via Docker **or** Atlas dev cluster. |
+| Tool       | Version           | Notes                                                                                              |
+| ---------- | ----------------- | -------------------------------------------------------------------------------------------------- |
+| Node.js    | 24.x LTS          | Check the release schedule; use the Active LTS line at setup time. Pin via `.nvmrc` and `engines`. |
+| npm        | bundled with Node | Use `npm ci` in CI.                                                                                |
+| TypeScript | 5.x (latest)      | `strict: true`.                                                                                    |
+| Git        | latest            |                                                                                                    |
+| MongoDB    | Atlas (8.x)       | Local: MongoDB Community via Docker **or** Atlas dev cluster.                                      |
 
 ### 26.2 Client
 
-| Package | Purpose |
-|---------|---------|
-| `react`, `react-dom` (19.x) | UI |
-| `vite` + `@vitejs/plugin-react` | Build/dev server |
-| `react-router` (7.x) | Routing (data/library mode, not framework mode) |
-| `@tanstack/react-query` (5.x) | Server state, caching |
-| `tailwindcss` (4.x) + `@tailwindcss/vite` | Styling |
-| `zod` (latest major) | Validation (shared) |
-| `react-hook-form` + `@hookform/resolvers` | Forms |
+| Package                                                           | Purpose                                              |
+| ----------------------------------------------------------------- | ---------------------------------------------------- |
+| `react`, `react-dom` (19.x)                                       | UI                                                   |
+| `vite` + `@vitejs/plugin-react`                                   | Build/dev server                                     |
+| `react-router` (7.x)                                              | Routing (data/library mode, not framework mode)      |
+| `@tanstack/react-query` (5.x)                                     | Server state, caching                                |
+| `tailwindcss` (4.x) + `@tailwindcss/vite`                         | Styling                                              |
+| `zod` (latest major)                                              | Validation (shared)                                  |
+| `react-hook-form` + `@hookform/resolvers`                         | Forms                                                |
 | `react-markdown`, `remark-gfm`, `remark-directive`, `rehype-slug` | Lesson rendering (or pre-parse on server — see 28.4) |
-| `@radix-ui/*` (selected) or `react-aria-components` | Accessible primitives |
-| `lucide-react` | Icons |
-| `clsx`, `tailwind-merge` | Class helpers |
-| `motion` (optional) | Widget animations (respect reduced motion) |
+| `@radix-ui/*` (selected) or `react-aria-components`               | Accessible primitives                                |
+| `lucide-react`                                                    | Icons                                                |
+| `clsx`, `tailwind-merge`                                          | Class helpers                                        |
+| `motion` (optional)                                               | Widget animations (respect reduced motion)           |
 
 ### 26.3 Server
 
-| Package | Purpose |
-|---------|---------|
-| `express` (5.x) | HTTP server (async error handling built in) |
-| `mongoose` (latest major) | ODM |
-| `express-session` + `connect-mongo` | Sessions in MongoDB |
-| `argon2` (or `bcrypt`) | Password hashing — prefer argon2id |
-| `helmet` | Security headers |
-| `express-rate-limit` (+ `rate-limit-mongo` store P1) | Rate limiting |
-| `compression` | Gzip/Brotli for API responses (static assets are pre-compressed at build, P1) |
-| `pino` + `pino-http` | Structured logging |
-| `cors` | Only for local dev if not proxying (prefer Vite proxy → not needed) |
-| `dotenv` | Local env loading |
-| `gray-matter`, `yaml`, `unified`/`remark-*` | Content scripts |
+| Package                                              | Purpose                                                                       |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `express` (5.x)                                      | HTTP server (async error handling built in)                                   |
+| `mongoose` (latest major)                            | ODM                                                                           |
+| `express-session` + `connect-mongo`                  | Sessions in MongoDB                                                           |
+| `argon2` (or `bcrypt`)                               | Password hashing — prefer argon2id                                            |
+| `helmet`                                             | Security headers                                                              |
+| `express-rate-limit` (+ `rate-limit-mongo` store P1) | Rate limiting                                                                 |
+| `compression`                                        | Gzip/Brotli for API responses (static assets are pre-compressed at build, P1) |
+| `pino` + `pino-http`                                 | Structured logging                                                            |
+| `cors`                                               | Only for local dev if not proxying (prefer Vite proxy → not needed)           |
+| `dotenv`                                             | Local env loading                                                             |
+| `gray-matter`, `yaml`, `unified`/`remark-*`          | Content scripts                                                               |
 
 ### 26.4 Testing and quality
 
-| Package | Purpose |
-|---------|---------|
-| `vitest` + `@vitest/coverage-v8` | Unit and integration tests |
-| `@testing-library/react`, `@testing-library/user-event`, `@testing-library/jest-dom` | Component tests |
-| `jsdom` | Client test environment |
-| `msw` | Mock API in client tests |
-| `supertest` | API tests |
-| `mongodb-memory-server` | In-memory MongoDB for server tests |
-| `@playwright/test` + `@axe-core/playwright` | E2E and accessibility |
-| `eslint` (flat config), `typescript-eslint`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y`, `eslint-plugin-import` (or `import-x`) | Linting |
-| `prettier` | Formatting |
-| `husky` + `lint-staged` | Pre-commit checks |
-| `tsx` | Run TS scripts/server in dev |
-| `concurrently` | Run client and server together |
+| Package                                                                                                                                    | Purpose                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| `vitest` + `@vitest/coverage-v8`                                                                                                           | Unit and integration tests         |
+| `@testing-library/react`, `@testing-library/user-event`, `@testing-library/jest-dom`                                                       | Component tests                    |
+| `jsdom`                                                                                                                                    | Client test environment            |
+| `msw`                                                                                                                                      | Mock API in client tests           |
+| `supertest`                                                                                                                                | API tests                          |
+| `mongodb-memory-server`                                                                                                                    | In-memory MongoDB for server tests |
+| `@playwright/test` + `@axe-core/playwright`                                                                                                | E2E and accessibility              |
+| `eslint` (flat config), `typescript-eslint`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y`, `eslint-plugin-import` (or `import-x`) | Linting                            |
+| `prettier`                                                                                                                                 | Formatting                         |
+| `husky` + `lint-staged`                                                                                                                    | Pre-commit checks                  |
+| `tsx`                                                                                                                                      | Run TS scripts/server in dev       |
+| `concurrently`                                                                                                                             | Run client and server together     |
 
 ### 26.5 Services and accounts
 
-| Service | Plan | Purpose |
-|---------|------|---------|
-| GitHub | Free | Repo, Actions CI |
-| MongoDB Atlas | M0 free (dev), M0/M10 (prod) | Database |
-| Render | Starter web service (~$7/mo) for prod; free for previews | Hosting |
-| Domain registrar (optional) | ~$10–15/yr | Custom domain |
-| Resend or Postmark (P1) | Free tier | Password reset emails |
-| Sentry (optional) | Free tier | Error monitoring |
-| Plausible/Umami (optional) | Self-host or paid | Cookieless analytics (D-14) |
-| UptimeRobot / Better Stack (optional) | Free tier | Uptime monitoring |
+| Service                               | Plan                                                     | Purpose                     |
+| ------------------------------------- | -------------------------------------------------------- | --------------------------- |
+| GitHub                                | Free                                                     | Repo, Actions CI            |
+| MongoDB Atlas                         | M0 free (dev), M0/M10 (prod)                             | Database                    |
+| Render                                | Starter web service (~$7/mo) for prod; free for previews | Hosting                     |
+| Domain registrar (optional)           | ~$10–15/yr                                               | Custom domain               |
+| Resend or Postmark (P1)               | Free tier                                                | Password reset emails       |
+| Sentry (optional)                     | Free tier                                                | Error monitoring            |
+| Plausible/Umami (optional)            | Self-host or paid                                        | Cookieless analytics (D-14) |
+| UptimeRobot / Better Stack (optional) | Free tier                                                | Uptime monitoring           |
 
 ---
 
@@ -4538,63 +4541,63 @@ noted. Content collections are written **only** by the seed script.
 
 ### 27.1 `users`
 
-| Field | Type | Notes |
-|-------|------|-------|
-| `_id` | ObjectId | |
-| `email` | string | unique, lowercase, trimmed; index unique |
-| `emailVerifiedAt` | Date \| null | P1 (verification email) |
-| `passwordHash` | string | argon2id; `select: false` |
-| `displayName` | string | 2–40 chars |
-| `role` | enum `learner` \| `admin` | default `learner` |
-| `preferences.theme` | enum `system` \| `light` \| `dark` | default `system` |
-| `preferences.cockpitVariant` | enum `g1000` \| `classic` | default `g1000` (P1 effect) |
-| `preferences.controller` | enum `gamepad` \| `stick` \| `yoke` \| `unknown` | default `unknown` |
-| `preferences.showBonus` | boolean | default true |
-| `lastLoginAt` | Date | |
-| `lastActivity` | object `{ type: 'lesson'\|'challenge', slug, at }` | powers "Continue" |
-| `passwordChangedAt` | Date | invalidate older sessions |
-| `deletedAt` | Date \| null | not used — deletes are hard deletes (Section 32) |
+| Field                        | Type                                               | Notes                                            |
+| ---------------------------- | -------------------------------------------------- | ------------------------------------------------ |
+| `_id`                        | ObjectId                                           |                                                  |
+| `email`                      | string                                             | unique, lowercase, trimmed; index unique         |
+| `emailVerifiedAt`            | Date \| null                                       | P1 (verification email)                          |
+| `passwordHash`               | string                                             | argon2id; `select: false`                        |
+| `displayName`                | string                                             | 2–40 chars                                       |
+| `role`                       | enum `learner` \| `admin`                          | default `learner`                                |
+| `preferences.theme`          | enum `system` \| `light` \| `dark`                 | default `system`                                 |
+| `preferences.cockpitVariant` | enum `g1000` \| `classic`                          | default `g1000` (P1 effect)                      |
+| `preferences.controller`     | enum `gamepad` \| `stick` \| `yoke` \| `unknown`   | default `unknown`                                |
+| `preferences.showBonus`      | boolean                                            | default true                                     |
+| `lastLoginAt`                | Date                                               |                                                  |
+| `lastActivity`               | object `{ type: 'lesson'\|'challenge', slug, at }` | powers "Continue"                                |
+| `passwordChangedAt`          | Date                                               | invalidate older sessions                        |
+| `deletedAt`                  | Date \| null                                       | not used — deletes are hard deletes (Section 32) |
 
 Indexes: `{ email: 1 }` unique.
 
 ### 27.2 `modules`
 
-| Field | Type | Notes |
-|-------|------|-------|
-| `slug` | string | unique |
-| `code` | string | "M4" |
-| `order` | number | 0–8 |
-| `title`, `summary`, `description` | string | |
-| `icon` | string | icon key |
-| `lessonSlugs` | string[] | ordered |
-| `challengeSlugs` | string[] | ordered |
-| `estimatedMinutes` | number | |
-| `published` | boolean | |
-| `contentHash` | string | SHA-256 of source file for change detection |
-| `version` | number | increments when `contentHash` changes |
+| Field                             | Type     | Notes                                       |
+| --------------------------------- | -------- | ------------------------------------------- |
+| `slug`                            | string   | unique                                      |
+| `code`                            | string   | "M4"                                        |
+| `order`                           | number   | 0–8                                         |
+| `title`, `summary`, `description` | string   |                                             |
+| `icon`                            | string   | icon key                                    |
+| `lessonSlugs`                     | string[] | ordered                                     |
+| `challengeSlugs`                  | string[] | ordered                                     |
+| `estimatedMinutes`                | number   |                                             |
+| `published`                       | boolean  |                                             |
+| `contentHash`                     | string   | SHA-256 of source file for change detection |
+| `version`                         | number   | increments when `contentHash` changes       |
 
 ### 27.3 `lessons`
 
-| Field | Type | Notes |
-|-------|------|-------|
-| `slug` | string | unique |
-| `code` | string | "L4.3" |
-| `moduleSlug` | string | index |
-| `order` | number | within module |
-| `priority` | enum `P0` \| `P1` | |
-| `title`, `summary` | string | |
-| `objectives` | string[] | |
-| `estimatedMinutes` | number | |
-| `prerequisites` | string[] | lesson slugs |
-| `widgets` | string[] | widget names used (for lazy preloading) |
-| `challengeSlugs` | string[] | |
-| `resources` | string[] | resource slugs ("Go deeper") |
-| `glossaryTerms` | string[] | term slugs used (auto-extracted) |
-| `blocks` | LessonBlock[] | pre-parsed content (28.4) |
-| `sections` | `{ id, title }[]` | from `##` headings |
-| `published` | boolean | |
-| `contentHash`, `version` | | |
-| `lastVerifiedAt`, `simVersion` | Date, string | from frontmatter |
+| Field                          | Type              | Notes                                   |
+| ------------------------------ | ----------------- | --------------------------------------- |
+| `slug`                         | string            | unique                                  |
+| `code`                         | string            | "L4.3"                                  |
+| `moduleSlug`                   | string            | index                                   |
+| `order`                        | number            | within module                           |
+| `priority`                     | enum `P0` \| `P1` |                                         |
+| `title`, `summary`             | string            |                                         |
+| `objectives`                   | string[]          |                                         |
+| `estimatedMinutes`             | number            |                                         |
+| `prerequisites`                | string[]          | lesson slugs                            |
+| `widgets`                      | string[]          | widget names used (for lazy preloading) |
+| `challengeSlugs`               | string[]          |                                         |
+| `resources`                    | string[]          | resource slugs ("Go deeper")            |
+| `glossaryTerms`                | string[]          | term slugs used (auto-extracted)        |
+| `blocks`                       | LessonBlock[]     | pre-parsed content (28.4)               |
+| `sections`                     | `{ id, title }[]` | from `##` headings                      |
+| `published`                    | boolean           |                                         |
+| `contentHash`, `version`       |                   |                                         |
+| `lastVerifiedAt`, `simVersion` | Date, string      | from frontmatter                        |
 
 `LessonBlock` is a discriminated union: `markdown` (sanitised Markdown/HTML AST or
 Markdown string), `heading`, `image` (src, alt, caption, width, height), `callout`
@@ -4611,37 +4614,37 @@ Single document for v1 (`slug: "c172"`): `name`, `variants[]` (`id`, `simName`,
 
 ### 27.5 `challenges`
 
-| Field | Type | Notes |
-|-------|------|-------|
-| `slug`, `code`, `title` | string | |
-| `moduleSlug`, `lessonSlugs` | string, string[] | |
-| `priority` | `P0` \| `P1` | |
-| `type` | enum (Section 15.1) | |
-| `difficulty` | 1–5 | |
-| `estimatedMinutes` | number | |
-| `goal` | string (Markdown) | |
-| `setup` | object | `aircraftVariant`, `airportIcao`, `startState`, `startDetails` (runway, parking, air-start position/alt/hdg/speed), `weatherPreset` or `weather` {layers, visibility, temperatureC, altimeterInHg}, `timeLocal`, `datePreset`, `loadPreset`, `assistance` overrides, `aiTraffic`, `atc`, `crashDamage`, `flightPlan` |
-| `procedure` | string[] (Markdown) | steps |
-| `criteria` | Criterion[] | `id`, `label`, `kind` (`tiered`\|`binary`), `tiers` {gold, silver, bronze} descriptions, `required`, `weight`, `reviewLink` (lesson slug + section id) |
-| `randomEvents` | `{ id, label, minSeconds, maxSeconds, message, chance? }[]` | C5.5, C6.6, C8.1 |
-| `planningFields` | `{ id, label, type }[]` | C8.2 planning inputs |
-| `commonMistakes`, `tips` | string[] | |
-| `debriefQuestions` | `{ id, prompt }[]` | |
-| `published`, `contentHash`, `version` | | |
+| Field                                 | Type                                                        | Notes                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `slug`, `code`, `title`               | string                                                      |                                                                                                                                                                                                                                                                                                                      |
+| `moduleSlug`, `lessonSlugs`           | string, string[]                                            |                                                                                                                                                                                                                                                                                                                      |
+| `priority`                            | `P0` \| `P1`                                                |                                                                                                                                                                                                                                                                                                                      |
+| `type`                                | enum (Section 15.1)                                         |                                                                                                                                                                                                                                                                                                                      |
+| `difficulty`                          | 1–5                                                         |                                                                                                                                                                                                                                                                                                                      |
+| `estimatedMinutes`                    | number                                                      |                                                                                                                                                                                                                                                                                                                      |
+| `goal`                                | string (Markdown)                                           |                                                                                                                                                                                                                                                                                                                      |
+| `setup`                               | object                                                      | `aircraftVariant`, `airportIcao`, `startState`, `startDetails` (runway, parking, air-start position/alt/hdg/speed), `weatherPreset` or `weather` {layers, visibility, temperatureC, altimeterInHg}, `timeLocal`, `datePreset`, `loadPreset`, `assistance` overrides, `aiTraffic`, `atc`, `crashDamage`, `flightPlan` |
+| `procedure`                           | string[] (Markdown)                                         | steps                                                                                                                                                                                                                                                                                                                |
+| `criteria`                            | Criterion[]                                                 | `id`, `label`, `kind` (`tiered`\|`binary`), `tiers` {gold, silver, bronze} descriptions, `required`, `weight`, `reviewLink` (lesson slug + section id)                                                                                                                                                               |
+| `randomEvents`                        | `{ id, label, minSeconds, maxSeconds, message, chance? }[]` | C5.5, C6.6, C8.1                                                                                                                                                                                                                                                                                                     |
+| `planningFields`                      | `{ id, label, type }[]`                                     | C8.2 planning inputs                                                                                                                                                                                                                                                                                                 |
+| `commonMistakes`, `tips`              | string[]                                                    |                                                                                                                                                                                                                                                                                                                      |
+| `debriefQuestions`                    | `{ id, prompt }[]`                                          |                                                                                                                                                                                                                                                                                                                      |
+| `published`, `contentHash`, `version` |                                                             |                                                                                                                                                                                                                                                                                                                      |
 
 Indexes: `{ slug: 1 }` unique, `{ moduleSlug: 1 }`, `{ 'setup.airportIcao': 1 }`.
 
 ### 27.6 `lessonProgress`
 
-| Field | Type | Notes |
-|-------|------|-------|
-| `userId` | ObjectId | ref users |
-| `lessonSlug` | string | |
-| `status` | `in_progress` \| `completed` | (absence = not started) |
-| `lastSectionId` | string | resume point |
-| `quizAnswers` | `{ questionId, firstAnswer, correctFirstTry, lastAnswer, answeredAt }[]` | |
-| `startedAt`, `completedAt` | Date | |
-| `lessonVersionCompleted` | number | to flag "lesson updated since you completed it" (P1) |
+| Field                      | Type                                                                     | Notes                                                |
+| -------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------- |
+| `userId`                   | ObjectId                                                                 | ref users                                            |
+| `lessonSlug`               | string                                                                   |                                                      |
+| `status`                   | `in_progress` \| `completed`                                             | (absence = not started)                              |
+| `lastSectionId`            | string                                                                   | resume point                                         |
+| `quizAnswers`              | `{ questionId, firstAnswer, correctFirstTry, lastAnswer, answeredAt }[]` |                                                      |
+| `startedAt`, `completedAt` | Date                                                                     |                                                      |
+| `lessonVersionCompleted`   | number                                                                   | to flag "lesson updated since you completed it" (P1) |
 
 Indexes: `{ userId: 1, lessonSlug: 1 }` unique; `{ userId: 1, updatedAt: -1 }`.
 
@@ -4649,23 +4652,23 @@ Indexes: `{ userId: 1, lessonSlug: 1 }` unique; `{ userId: 1, updatedAt: -1 }`.
 
 **`challengeAttempts`** (append-only):
 
-| Field | Type | Notes |
-|-------|------|-------|
-| `userId` | ObjectId | |
-| `challengeSlug` | string | |
-| `challengeVersion` | number | rubric version used |
-| `startedAt` | Date \| null | when "Start" was pressed (client-provided, informational) |
-| `submittedAt` | Date | server time |
-| `criteriaResults` | `{ criterionId, result: 'gold'\|'silver'\|'bronze'\|'not_met'\|'met' }[]` | |
-| `planning` | object | C8.2 planning inputs |
-| `checklistTicks` | `{ itemId, at }[]` | C1.1/C3.1 |
-| `randomEventsFired` | `{ id, at }[]` | |
-| `paused` | boolean | |
-| `notes` | string ≤ 2,000 | |
-| `reflections` | `{ questionId, answer ≤ 1,000 }[]` | |
-| `points`, `maxPoints`, `percentage` | number | computed server-side |
-| `passed` | boolean | |
-| `tier` | `gold`\|`silver`\|`bronze`\|`none` | |
+| Field                               | Type                                                                      | Notes                                                     |
+| ----------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------- |
+| `userId`                            | ObjectId                                                                  |                                                           |
+| `challengeSlug`                     | string                                                                    |                                                           |
+| `challengeVersion`                  | number                                                                    | rubric version used                                       |
+| `startedAt`                         | Date \| null                                                              | when "Start" was pressed (client-provided, informational) |
+| `submittedAt`                       | Date                                                                      | server time                                               |
+| `criteriaResults`                   | `{ criterionId, result: 'gold'\|'silver'\|'bronze'\|'not_met'\|'met' }[]` |                                                           |
+| `planning`                          | object                                                                    | C8.2 planning inputs                                      |
+| `checklistTicks`                    | `{ itemId, at }[]`                                                        | C1.1/C3.1                                                 |
+| `randomEventsFired`                 | `{ id, at }[]`                                                            |                                                           |
+| `paused`                            | boolean                                                                   |                                                           |
+| `notes`                             | string ≤ 2,000                                                            |                                                           |
+| `reflections`                       | `{ questionId, answer ≤ 1,000 }[]`                                        |                                                           |
+| `points`, `maxPoints`, `percentage` | number                                                                    | computed server-side                                      |
+| `passed`                            | boolean                                                                   |                                                           |
+| `tier`                              | `gold`\|`silver`\|`bronze`\|`none`                                        |                                                           |
 
 Indexes: `{ userId: 1, challengeSlug: 1, submittedAt: -1 }`, `{ userId: 1, submittedAt: -1 }`.
 
@@ -4754,6 +4757,7 @@ simVersion: "SU x"
 ---
 
 ## Stabilised approach
+
 ...
 ```
 
@@ -4767,16 +4771,16 @@ Parsed with `remark-directive` in the **seed script**, converting each lesson in
 `blocks[]` (pre-parsed on the server so the client doesn't need the remark toolchain,
 which keeps the bundle small).
 
-| Directive | Example | Block |
-|-----------|---------|-------|
-| Widget (leaf) | `::widget{name="traffic-pattern" mode="explore" pattern="left"}` | `widget` |
-| Callout (container) | `:::callout{type="sim"} … :::` | `callout` |
-| Quiz (container) | see Section 17.4 | `quiz` |
-| Image (standard Markdown) | `![Alt text](m4-l3-flare.webp "Caption")` | `image` (width/height read from file at seed time) |
-| Video (leaf) | `::video{provider="youtube" id="abc123" title="…"}` | `video` |
-| Checklist (leaf) | `::checklist{slug="before-landing"}` | `checklist` |
-| Internal link | `[[c4-3-full-stop-landing]]` | converted to a link with the title |
-| Aviation token | `{{vspeed.vy}}` → "74 KIAS" | replaced at seed time |
+| Directive                 | Example                                                          | Block                                              |
+| ------------------------- | ---------------------------------------------------------------- | -------------------------------------------------- |
+| Widget (leaf)             | `::widget{name="traffic-pattern" mode="explore" pattern="left"}` | `widget`                                           |
+| Callout (container)       | `:::callout{type="sim"} … :::`                                   | `callout`                                          |
+| Quiz (container)          | see Section 17.4                                                 | `quiz`                                             |
+| Image (standard Markdown) | `![Alt text](m4-l3-flare.webp "Caption")`                        | `image` (width/height read from file at seed time) |
+| Video (leaf)              | `::video{provider="youtube" id="abc123" title="…"}`              | `video`                                            |
+| Checklist (leaf)          | `::checklist{slug="before-landing"}`                             | `checklist`                                        |
+| Internal link             | `[[c4-3-full-stop-landing]]`                                     | converted to a link with the title                 |
+| Aviation token            | `{{vspeed.vy}}` → "74 KIAS"                                      | replaced at seed time                              |
 
 Plain Markdown between directives becomes `markdown` blocks. The client renders
 `markdown` blocks with a light renderer (`react-markdown` + `remark-gfm`, no raw HTML
@@ -4799,12 +4803,12 @@ allowed → no XSS risk from content).
 
 ### 28.6 Scripts
 
-| Script | Command | Notes |
-|--------|---------|-------|
-| Validate | `npm run content:validate` | Exit code 1 on errors; `--strict` treats warnings as errors |
-| Seed | `npm run content:seed` | Uses `MONGODB_URI`; `--dry-run` prints the diff |
-| Link check | `npm run content:links` | HEAD/GET every external URL; report non-2xx (P0 before release) |
-| Stats | `npm run content:stats` | Word counts, lessons per module, reading time |
+| Script     | Command                    | Notes                                                           |
+| ---------- | -------------------------- | --------------------------------------------------------------- |
+| Validate   | `npm run content:validate` | Exit code 1 on errors; `--strict` treats warnings as errors     |
+| Seed       | `npm run content:seed`     | Uses `MONGODB_URI`; `--dry-run` prints the diff                 |
+| Link check | `npm run content:links`    | HEAD/GET every external URL; report non-2xx (P0 before release) |
+| Stats      | `npm run content:stats`    | Word counts, lessons per module, reading time                   |
 
 ### 28.7 Publishing workflow
 
@@ -4831,37 +4835,37 @@ Error codes: `VALIDATION_ERROR` (400), `UNAUTHENTICATED` (401), `FORBIDDEN` (403
 
 ### 29.1 Health
 
-| Method | Path | Auth | Description |
-|--------|------|------|-------------|
-| GET | `/api/v1/health` | none | `{ status: "ok", db: "ok", version, gitSha }` — used by Render health check |
+| Method | Path             | Auth | Description                                                                 |
+| ------ | ---------------- | ---- | --------------------------------------------------------------------------- |
+| GET    | `/api/v1/health` | none | `{ status: "ok", db: "ok", version, gitSha }` — used by Render health check |
 
 ### 29.2 Auth
 
-| Method | Path | Auth | Body | Response |
-|--------|------|------|------|----------|
-| GET | `/auth/csrf` | none | — | `{ csrfToken }` (also sets up session if needed) |
-| POST | `/auth/register` | none | `{ email, password, displayName, acceptTerms: true }` | 201 `{ user }`; session created |
-| POST | `/auth/login` | none | `{ email, password, remember }` | 200 `{ user }`; session regenerated |
-| POST | `/auth/logout` | user | — | 204; session destroyed |
-| GET | `/auth/me` | optional | — | 200 `{ user }` or 200 `{ user: null }` |
-| POST | `/auth/change-password` | user | `{ currentPassword, newPassword }` | 204; other sessions revoked |
-| POST | `/auth/forgot-password` (P1) | none | `{ email }` | 202 always |
-| POST | `/auth/reset-password` (P1) | none | `{ token, newPassword }` | 204 |
+| Method | Path                         | Auth     | Body                                                  | Response                                         |
+| ------ | ---------------------------- | -------- | ----------------------------------------------------- | ------------------------------------------------ |
+| GET    | `/auth/csrf`                 | none     | —                                                     | `{ csrfToken }` (also sets up session if needed) |
+| POST   | `/auth/register`             | none     | `{ email, password, displayName, acceptTerms: true }` | 201 `{ user }`; session created                  |
+| POST   | `/auth/login`                | none     | `{ email, password, remember }`                       | 200 `{ user }`; session regenerated              |
+| POST   | `/auth/logout`               | user     | —                                                     | 204; session destroyed                           |
+| GET    | `/auth/me`                   | optional | —                                                     | 200 `{ user }` or 200 `{ user: null }`           |
+| POST   | `/auth/change-password`      | user     | `{ currentPassword, newPassword }`                    | 204; other sessions revoked                      |
+| POST   | `/auth/forgot-password` (P1) | none     | `{ email }`                                           | 202 always                                       |
+| POST   | `/auth/reset-password` (P1)  | none     | `{ token, newPassword }`                              | 204                                              |
 
 ### 29.3 Content (public, cacheable)
 
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/modules` | All published modules with lesson/challenge summaries (no blocks) |
-| GET | `/modules/:slug` | One module with ordered lesson and challenge summaries |
-| GET | `/lessons/:slug` | Full lesson with blocks, resources expanded, glossary terms expanded |
-| GET | `/challenges` | Summaries; query: `module`, `type`, `difficulty`, `priority` |
-| GET | `/challenges/:slug` | Full challenge with setup resolved (presets expanded) |
-| GET | `/aircraft/c172` | Aircraft reference data |
-| GET | `/checklists` / `/checklists/:slug` | Checklists |
-| GET | `/airports` / `/airports/:icao` | Airport cards |
-| GET | `/glossary` | All terms (small; client-side search) |
-| GET | `/resources` | All resources; query: `topic`, `type` |
+| Method | Path                                | Description                                                          |
+| ------ | ----------------------------------- | -------------------------------------------------------------------- |
+| GET    | `/modules`                          | All published modules with lesson/challenge summaries (no blocks)    |
+| GET    | `/modules/:slug`                    | One module with ordered lesson and challenge summaries               |
+| GET    | `/lessons/:slug`                    | Full lesson with blocks, resources expanded, glossary terms expanded |
+| GET    | `/challenges`                       | Summaries; query: `module`, `type`, `difficulty`, `priority`         |
+| GET    | `/challenges/:slug`                 | Full challenge with setup resolved (presets expanded)                |
+| GET    | `/aircraft/c172`                    | Aircraft reference data                                              |
+| GET    | `/checklists` / `/checklists/:slug` | Checklists                                                           |
+| GET    | `/airports` / `/airports/:icao`     | Airport cards                                                        |
+| GET    | `/glossary`                         | All terms (small; client-side search)                                |
+| GET    | `/resources`                        | All resources; query: `topic`, `type`                                |
 
 Caching: `Cache-Control: public, max-age=300, stale-while-revalidate=86400` and an `ETag`
 based on the latest `contentReleases` id. Personalised data is **never** mixed into these
@@ -4869,30 +4873,30 @@ responses (progress is fetched separately), so they stay cacheable.
 
 ### 29.4 Progress (auth)
 
-| Method | Path | Body | Description |
-|--------|------|------|-------------|
-| GET | `/me/progress` | — | `{ lessons: {slug: status…}, challenges: {slug: {bestTier, passed, attempts}} , modules: {slug: {percent, complete}} }` |
-| GET | `/me/dashboard` | — | Everything the dashboard needs in one call (Section 20.9) |
-| PUT | `/me/lessons/:slug/progress` | `{ status?, lastSectionId? }` | Upsert; `completed` sets `completedAt` (idempotent) |
-| POST | `/me/lessons/:slug/quiz-answers` | `{ questionId, answer }` | Records answer; returns `{ correct, explanation }` |
-| GET | `/me/challenges/:slug/attempts` | — | Attempt history (paginated: `?limit=20&before=`) |
-| POST | `/challenges/:slug/attempts` | `{ criteriaResults, notes, reflections, paused, startedAt?, checklistTicks?, randomEventsFired?, planning? }` | Creates attempt; returns `{ attempt, progress }` |
-| GET | `/me/attempts` | — | All attempts, paginated |
+| Method | Path                             | Body                                                                                                          | Description                                                                                                             |
+| ------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/me/progress`                   | —                                                                                                             | `{ lessons: {slug: status…}, challenges: {slug: {bestTier, passed, attempts}} , modules: {slug: {percent, complete}} }` |
+| GET    | `/me/dashboard`                  | —                                                                                                             | Everything the dashboard needs in one call (Section 20.9)                                                               |
+| PUT    | `/me/lessons/:slug/progress`     | `{ status?, lastSectionId? }`                                                                                 | Upsert; `completed` sets `completedAt` (idempotent)                                                                     |
+| POST   | `/me/lessons/:slug/quiz-answers` | `{ questionId, answer }`                                                                                      | Records answer; returns `{ correct, explanation }`                                                                      |
+| GET    | `/me/challenges/:slug/attempts`  | —                                                                                                             | Attempt history (paginated: `?limit=20&before=`)                                                                        |
+| POST   | `/challenges/:slug/attempts`     | `{ criteriaResults, notes, reflections, paused, startedAt?, checklistTicks?, randomEventsFired?, planning? }` | Creates attempt; returns `{ attempt, progress }`                                                                        |
+| GET    | `/me/attempts`                   | —                                                                                                             | All attempts, paginated                                                                                                 |
 
 ### 29.5 Account (auth)
 
-| Method | Path | Body | Description |
-|--------|------|------|-------------|
-| PATCH | `/me` | `{ displayName?, preferences? }` | Update profile/preferences |
-| GET | `/me/export` | — | JSON download of all user data |
-| DELETE | `/me` | `{ confirm: "DELETE", password }` | Hard delete user + progress + attempts + sessions |
+| Method | Path         | Body                              | Description                                       |
+| ------ | ------------ | --------------------------------- | ------------------------------------------------- |
+| PATCH  | `/me`        | `{ displayName?, preferences? }`  | Update profile/preferences                        |
+| GET    | `/me/export` | —                                 | JSON download of all user data                    |
+| DELETE | `/me`        | `{ confirm: "DELETE", password }` | Hard delete user + progress + attempts + sessions |
 
 ### 29.6 Admin (P1, role `admin`)
 
-| Method | Path | Description |
-|--------|------|-------------|
-| GET | `/admin/content-releases` | Recent seed runs |
-| GET | `/admin/stats` | Learning signals (Section 4.3): completions per lesson, pass rates, median attempts |
+| Method | Path                      | Description                                                                         |
+| ------ | ------------------------- | ----------------------------------------------------------------------------------- |
+| GET    | `/admin/content-releases` | Recent seed runs                                                                    |
+| GET    | `/admin/stats`            | Learning signals (Section 4.3): completions per lesson, pass rates, median attempts |
 
 ### 29.7 Example: submit attempt
 
@@ -4920,25 +4924,36 @@ Response `201`:
 ```json
 {
   "attempt": {
-    "id": "…", "challengeSlug": "c4-3-full-stop-landing", "challengeVersion": 3,
-    "points": 37, "maxPoints": 42, "percentage": 88,
-    "passed": true, "tier": "silver", "submittedAt": "2026-11-20T18:04:11.000Z"
+    "id": "…",
+    "challengeSlug": "c4-3-full-stop-landing",
+    "challengeVersion": 3,
+    "points": 37,
+    "maxPoints": 42,
+    "percentage": 88,
+    "passed": true,
+    "tier": "silver",
+    "submittedAt": "2026-11-20T18:04:11.000Z"
   },
-  "progress": { "bestTier": "silver", "bestPercentage": 88, "passed": true, "attemptsCount": 4 }
+  "progress": {
+    "bestTier": "silver",
+    "bestPercentage": 88,
+    "passed": true,
+    "attemptsCount": 4
+  }
 }
 ```
 
 How the score is computed (C4.3 weights from Section 15, criteria 1–6 = 3, 3, 3, 2, 2, 1):
 
-| Criterion | Result | Points | Weight | Weighted |
-|-----------|--------|--------|--------|----------|
-| stabilised (required) | met | 3 | 3 | 9 |
-| final-speed (required) | silver | 2 | 3 | 6 |
-| touchdown-point (required) | gold | 3 | 3 | 9 |
-| centreline (required) | gold | 3 | 2 | 6 |
-| no-bounce (required) | silver | 2 | 2 | 4 |
-| rollout | met | 3 | 1 | 3 |
-| **Total** | | | | **37 / 42 = 88%** |
+| Criterion                  | Result | Points | Weight | Weighted          |
+| -------------------------- | ------ | ------ | ------ | ----------------- |
+| stabilised (required)      | met    | 3      | 3      | 9                 |
+| final-speed (required)     | silver | 2      | 3      | 6                 |
+| touchdown-point (required) | gold   | 3      | 3      | 9                 |
+| centreline (required)      | gold   | 3      | 2      | 6                 |
+| no-bounce (required)       | silver | 2      | 2      | 4                 |
+| rollout                    | met    | 3      | 1      | 3                 |
+| **Total**                  |        |        |        | **37 / 42 = 88%** |
 
 All required criteria are at least Bronze, so the attempt is passed. 88% is below 90%, so
 the tier is **silver**, even though every required criterion is Silver or better. Turn
@@ -5006,13 +5021,13 @@ boundary conditions like these are where scoring bugs hide.
 
 ### 30.7 Rate limits
 
-| Route | Limit |
-|-------|-------|
-| `POST /auth/login` | 10 per 15 min per IP + 5 per 15 min per email |
-| `POST /auth/register` | 5 per hour per IP |
-| `POST /auth/forgot-password` (P1) | 3 per hour per IP and per email |
-| Other mutating `/api` routes | 120 per minute per user |
-| Public GET `/api` | 300 per minute per IP |
+| Route                             | Limit                                         |
+| --------------------------------- | --------------------------------------------- |
+| `POST /auth/login`                | 10 per 15 min per IP + 5 per 15 min per email |
+| `POST /auth/register`             | 5 per hour per IP                             |
+| `POST /auth/forgot-password` (P1) | 3 per hour per IP and per email               |
+| Other mutating `/api` routes      | 120 per minute per user                       |
+| Public GET `/api`                 | 300 per minute per IP                         |
 
 In-memory store is fine for a single instance; switch to a MongoDB-backed store if
 scaling to multiple instances.
@@ -5123,24 +5138,24 @@ scaling to multiple instances.
 
 Checklist based on the OWASP Top Ten. Each item has a Phase in which it is implemented.
 
-| Risk | Mitigation | Phase |
-|------|------------|-------|
-| Broken access control | `requireAuth`; ownership by session user only; admin role check; tests for cross-user access | 4, 8 |
-| Cryptographic failures | HTTPS only (Render); `Secure` cookies; argon2id; HSTS via helmet | 4, 13 |
-| Injection (NoSQL) | Zod validation of all input; `mongoose.set('sanitizeFilter', true)`; never pass raw objects into queries; strict schemas | 2 |
-| XSS | React escaping; Markdown rendered without raw HTML; strict CSP via helmet (`default-src 'self'`, allow YouTube frame, fonts) | 3, 6, 11 |
-| Insecure design | Rate limiting; generic auth errors; server-side scoring | 4, 7 |
-| Security misconfiguration | helmet defaults; disable `x-powered-by`; error handler hides stack traces in prod; env validation | 2 |
-| Vulnerable components | `npm audit` in CI (fail on high/critical in prod deps); Dependabot/Renovate weekly | 1, 36 |
-| Identification/auth failures | session regeneration on login; idle timeout; revoke on password change; password rules | 4 |
-| Integrity failures | lockfile committed; `npm ci`; GitHub branch protection; no CDN scripts except YouTube embed | 1, 13 |
-| Logging/monitoring failures | structured logs with request IDs; auth events logged (no passwords); Sentry optional | 2, 13 |
-| SSRF | Server never fetches user-supplied URLs (link checker runs in CI/scripts only) | — |
-| CSRF | SameSite=Lax + synchroniser token + JSON-only | 4 |
-| Clickjacking | `frame-ancestors 'none'` in CSP | 11 |
-| Data exposure | `passwordHash` `select: false`; response DTOs whitelist fields | 2, 4 |
-| DoS | body size limit 100 kb; rate limits; pagination caps (max 50) | 2 |
-| Secrets | `.env` git-ignored; Render/Atlas secrets in dashboards; secret scanning on GitHub | 1, 13 |
+| Risk                         | Mitigation                                                                                                                   | Phase    |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Broken access control        | `requireAuth`; ownership by session user only; admin role check; tests for cross-user access                                 | 4, 8     |
+| Cryptographic failures       | HTTPS only (Render); `Secure` cookies; argon2id; HSTS via helmet                                                             | 4, 13    |
+| Injection (NoSQL)            | Zod validation of all input; `mongoose.set('sanitizeFilter', true)`; never pass raw objects into queries; strict schemas     | 2        |
+| XSS                          | React escaping; Markdown rendered without raw HTML; strict CSP via helmet (`default-src 'self'`, allow YouTube frame, fonts) | 3, 6, 11 |
+| Insecure design              | Rate limiting; generic auth errors; server-side scoring                                                                      | 4, 7     |
+| Security misconfiguration    | helmet defaults; disable `x-powered-by`; error handler hides stack traces in prod; env validation                            | 2        |
+| Vulnerable components        | `npm audit` in CI (fail on high/critical in prod deps); Dependabot/Renovate weekly                                           | 1, 36    |
+| Identification/auth failures | session regeneration on login; idle timeout; revoke on password change; password rules                                       | 4        |
+| Integrity failures           | lockfile committed; `npm ci`; GitHub branch protection; no CDN scripts except YouTube embed                                  | 1, 13    |
+| Logging/monitoring failures  | structured logs with request IDs; auth events logged (no passwords); Sentry optional                                         | 2, 13    |
+| SSRF                         | Server never fetches user-supplied URLs (link checker runs in CI/scripts only)                                               | —        |
+| CSRF                         | SameSite=Lax + synchroniser token + JSON-only                                                                                | 4        |
+| Clickjacking                 | `frame-ancestors 'none'` in CSP                                                                                              | 11       |
+| Data exposure                | `passwordHash` `select: false`; response DTOs whitelist fields                                                               | 2, 4     |
+| DoS                          | body size limit 100 kb; rate limits; pagination caps (max 50)                                                                | 2        |
+| Secrets                      | `.env` git-ignored; Render/Atlas secrets in dashboards; secret scanning on GitHub                                            | 1, 13    |
 
 ### 32.1 Content Security Policy (starting point)
 
@@ -5256,14 +5271,14 @@ script that fails if `dist/assets/index-*.js` gzipped > 250 KB).
 
 ### 35.1 Test pyramid
 
-| Level | Tool | What | Target count (v1) |
-|-------|------|------|-------------------|
-| Unit (shared) | Vitest | scoring, progress rules, aviation maths (wind triangle, crosswind, load factor, VOR geometry), content schema validators | 100+ |
-| Unit (client) | Vitest + RTL | components (Button, Tabs, RadioGroup…), widget models and widget components, hooks | 80+ |
-| Integration (server) | Vitest + Supertest + mongodb-memory-server | every API route: happy path, validation, auth, ownership | 80+ |
-| Content | Vitest + validator | the real `content/` folder validates; snapshot counts | 10 |
-| E2E | Playwright | Flows A–D, account deletion, a11y scans | 15–20 |
-| Manual | Checklists | In-sim verification (Section 54), release QA (Section 55) | — |
+| Level                | Tool                                       | What                                                                                                                     | Target count (v1) |
+| -------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ----------------- |
+| Unit (shared)        | Vitest                                     | scoring, progress rules, aviation maths (wind triangle, crosswind, load factor, VOR geometry), content schema validators | 100+              |
+| Unit (client)        | Vitest + RTL                               | components (Button, Tabs, RadioGroup…), widget models and widget components, hooks                                       | 80+               |
+| Integration (server) | Vitest + Supertest + mongodb-memory-server | every API route: happy path, validation, auth, ownership                                                                 | 80+               |
+| Content              | Vitest + validator                         | the real `content/` folder validates; snapshot counts                                                                    | 10                |
+| E2E                  | Playwright                                 | Flows A–D, account deletion, a11y scans                                                                                  | 15–20             |
+| Manual               | Checklists                                 | In-sim verification (Section 54), release QA (Section 55)                                                                | —                 |
 
 ### 35.2 Key test cases (must exist)
 
@@ -5375,11 +5390,11 @@ Jobs (run in parallel where possible):
 
 ### 37.1 Environments
 
-| Env | URL | Database | Deploy trigger |
-|-----|-----|----------|----------------|
-| Local | http://localhost:5173 (Vite) + :3000 (API) | Local Docker MongoDB or Atlas `learntofly-dev` | `npm run dev` |
-| Preview (P1) | Render PR preview URL | Atlas `learntofly-preview` | PR opened |
-| Production | https://<your-domain> or `<name>.onrender.com` | Atlas `learntofly` (separate project/cluster recommended) | Merge to `main` |
+| Env          | URL                                            | Database                                                  | Deploy trigger  |
+| ------------ | ---------------------------------------------- | --------------------------------------------------------- | --------------- |
+| Local        | http://localhost:5173 (Vite) + :3000 (API)     | Local Docker MongoDB or Atlas `learntofly-dev`            | `npm run dev`   |
+| Preview (P1) | Render PR preview URL                          | Atlas `learntofly-preview`                                | PR opened       |
+| Production   | https://<your-domain> or `<name>.onrender.com` | Atlas `learntofly` (separate project/cluster recommended) | Merge to `main` |
 
 ### 37.2 Environment variables
 
@@ -5397,19 +5412,19 @@ clear message if something is missing.
 
 ### 37.4 npm scripts (planned)
 
-| Script | Does |
-|--------|------|
-| `dev` | `concurrently` runs `dev:client` and `dev:server` |
-| `dev:client` | `vite` |
-| `dev:server` | `tsx watch server/src/index.ts` |
-| `build` | `build:client` (`vite build`) then `build:server` (`tsc -p tsconfig.server.json`) |
-| `start` | `node dist-server/server/src/index.js` (serves API + `dist/`) |
-| `lint` / `lint:fix` | ESLint |
-| `format` / `format:check` | Prettier |
-| `typecheck` | `tsc --noEmit` for each tsconfig |
-| `test` / `test:watch` / `test:ci` | Vitest |
-| `e2e` / `e2e:ui` | Playwright |
-| `content:validate` / `content:seed` / `content:links` / `content:stats` | Section 28.6 |
+| Script                                                                  | Does                                                                              |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `dev`                                                                   | `concurrently` runs `dev:client` and `dev:server`                                 |
+| `dev:client`                                                            | `vite`                                                                            |
+| `dev:server`                                                            | `tsx watch server/src/index.ts`                                                   |
+| `build`                                                                 | `build:client` (`vite build`) then `build:server` (`tsc -p tsconfig.server.json`) |
+| `start`                                                                 | `node dist-server/server/src/index.js` (serves API + `dist/`)                     |
+| `lint` / `lint:fix`                                                     | ESLint                                                                            |
+| `format` / `format:check`                                               | Prettier                                                                          |
+| `typecheck`                                                             | `tsc --noEmit` for each tsconfig                                                  |
+| `test` / `test:watch` / `test:ci`                                       | Vitest                                                                            |
+| `e2e` / `e2e:ui`                                                        | Playwright                                                                        |
+| `content:validate` / `content:seed` / `content:links` / `content:stats` | Section 28.6                                                                      |
 
 ---
 
@@ -5472,14 +5487,14 @@ clear message if something is missing.
 
 ### 38.6 Cost estimate (monthly, v1)
 
-| Item | Cost |
-|------|------|
-| Render Starter web service | ~$7 |
-| MongoDB Atlas M0 | $0 |
-| Domain | ~$1 (annual ÷ 12) |
-| Email (P1) | $0 (free tier) |
-| Monitoring | $0 (free tiers) |
-| **Total** | **~$8/month** |
+| Item                       | Cost              |
+| -------------------------- | ----------------- |
+| Render Starter web service | ~$7               |
+| MongoDB Atlas M0           | $0                |
+| Domain                     | ~$1 (annual ÷ 12) |
+| Email (P1)                 | $0 (free tier)    |
+| Monitoring                 | $0 (free tiers)   |
+| **Total**                  | **~$8/month**     |
 
 (Prices change — check the providers' pricing pages at setup.)
 
@@ -5497,36 +5512,36 @@ clear message if something is missing.
 
 ### 39.2 Phases
 
-| Phase | Name | Depends on | Est. (weeks) | Parallel track |
-|-------|------|------------|--------------|----------------|
-| 0 | Accounts, tools and learning the aircraft | — | 1 (setup) + 6 (study, parallel) | Study continues through Phase 4 |
-| 1 | Repository and tooling | 0 | 1 | |
-| 2 | Backend foundation | 1 | 1.5 | |
-| 3 | Frontend foundation and design system | 1 | 2 | Can overlap with Phase 2 |
-| 4 | Authentication | 2, 3 | 1.5 | |
-| 5 | Content model and pipeline | 2 | 1.5 | Start writing pilot content (M0–M1) |
-| 6 | Lesson player and interactive widgets | 3, 5 | 5 | Widgets are the longest item |
-| 7 | Challenges | 4, 5 | 2 | |
-| 8 | Progress tracking and dashboard | 4, 6, 7 | 1.5 | |
-| 9 | Content authoring | 5 (+ study) | 8–10 (parallel from week ~6) | Runs alongside 6–8 |
-| 10 | Reference section and tools | 5, 6 | 1 | |
-| 11 | Polish, accessibility and performance | 6–10 | 1.5 | |
-| 12 | QA and in-sim verification | 9, 11 | 1.5 | |
-| 13 | Deployment and launch | 12 | 1 | Deploy a preview earlier (end of Phase 4) |
+| Phase | Name                                      | Depends on  | Est. (weeks)                    | Parallel track                            |
+| ----- | ----------------------------------------- | ----------- | ------------------------------- | ----------------------------------------- |
+| 0     | Accounts, tools and learning the aircraft | —           | 1 (setup) + 6 (study, parallel) | Study continues through Phase 4           |
+| 1     | Repository and tooling                    | 0           | 1                               |                                           |
+| 2     | Backend foundation                        | 1           | 1.5                             |                                           |
+| 3     | Frontend foundation and design system     | 1           | 2                               | Can overlap with Phase 2                  |
+| 4     | Authentication                            | 2, 3        | 1.5                             |                                           |
+| 5     | Content model and pipeline                | 2           | 1.5                             | Start writing pilot content (M0–M1)       |
+| 6     | Lesson player and interactive widgets     | 3, 5        | 5                               | Widgets are the longest item              |
+| 7     | Challenges                                | 4, 5        | 2                               |                                           |
+| 8     | Progress tracking and dashboard           | 4, 6, 7     | 1.5                             |                                           |
+| 9     | Content authoring                         | 5 (+ study) | 8–10 (parallel from week ~6)    | Runs alongside 6–8                        |
+| 10    | Reference section and tools               | 5, 6        | 1                               |                                           |
+| 11    | Polish, accessibility and performance     | 6–10        | 1.5                             |                                           |
+| 12    | QA and in-sim verification                | 9, 11       | 1.5                             |                                           |
+| 13    | Deployment and launch                     | 12          | 1                               | Deploy a preview earlier (end of Phase 4) |
 
 **Critical path:** 0 → 1 → 2 → 4 → 5 → 6 → 7 → 8 → 11 → 12 → 13 ≈ **19–21 weeks**,
 with content authoring finishing by week ~18.
 
 ### 39.3 Milestones
 
-| Milestone | When | What is demonstrable |
-|-----------|------|---------------------|
-| M-A "Walking skeleton" | End of Phase 4 (~week 6) | Deployed app: sign up, log in, placeholder pages, health check |
-| M-B "First lesson" | Mid Phase 6 (~week 9) | Lesson 1.4 with W3 and W16, quiz, mark complete |
-| M-C "First challenge" | End of Phase 7 (~week 13) | C2.1 brief → debrief → score saved |
-| M-D "Module 0–4 complete" | ~week 16 | Half the course usable end to end |
-| M-E "Content complete" | ~week 18 | All P0 content published |
-| M-F "v1.0 launch" | ~week 21 | Release checklist passed, demo ready |
+| Milestone                 | When                      | What is demonstrable                                           |
+| ------------------------- | ------------------------- | -------------------------------------------------------------- |
+| M-A "Walking skeleton"    | End of Phase 4 (~week 6)  | Deployed app: sign up, log in, placeholder pages, health check |
+| M-B "First lesson"        | Mid Phase 6 (~week 9)     | Lesson 1.4 with W3 and W16, quiz, mark complete                |
+| M-C "First challenge"     | End of Phase 7 (~week 13) | C2.1 brief → debrief → score saved                             |
+| M-D "Module 0–4 complete" | ~week 16                  | Half the course usable end to end                              |
+| M-E "Content complete"    | ~week 18                  | All P0 content published                                       |
+| M-F "v1.0 launch"         | ~week 21                  | Release checklist passed, demo ready                           |
 
 ### 39.4 Working rhythm
 
@@ -5610,8 +5625,8 @@ with content authoring finishing by week ~18.
 ### 41.1 Branching and basics
 
 - [ ] 1.1 Create branch `phase-1-tooling` from `main`.
-- [ ] 1.2 Add `.gitignore` (node_modules, dist, dist-server, coverage, .env, .env.*,
-      playwright-report, test-results, .DS_Store, *.log). Add `!.env.example` so the
+- [ ] 1.2 Add `.gitignore` (node*modules, dist, dist-server, coverage, .env, .env.*,
+      playwright-report, test-results, .DS*Store, *.log). Add `!.env.example` so the
       example file is still committed.
 - [ ] 1.3 Add `.editorconfig` (2 spaces, LF, UTF-8, final newline).
 - [ ] 1.4 Add `.nvmrc` with `24` and `"engines": { "node": ">=24 <25" }` in package.json.
@@ -6041,8 +6056,7 @@ keyboard/ARIA → quiz mode → text alternative → embed in its lesson → rev
 - [ ] 7.9 Brief: setup table with resolved presets, copy-to-clipboard for ICAO/frequencies,
       links to airport cards and lessons, criteria preview.
 - [ ] 7.10 Fly tab and `/challenges/:slug/fly` page: step checklist (sessionStorage),
-      key numbers, stopwatch, random events (C5.5, C6.6, C8.1) with sound (Web Audio beep)
-      + visual flash (reduced-motion alternative), Screen Wake Lock (P1).
+      key numbers, stopwatch, random events (C5.5, C6.6, C8.1) with sound (Web Audio beep) + visual flash (reduced-motion alternative), Screen Wake Lock (P1).
 - [ ] 7.11 Debrief form: tiered radio groups with tier descriptions; binary toggles;
       notes; reflections; planning fields (C8.2); paused checkbox; live score preview using
       `shared/scoring.ts`; draft autosave to sessionStorage; restore after login.
@@ -6123,18 +6137,18 @@ P1 as time allows.
 
 ### 49.3 Authoring schedule (suggested)
 
-| Week (of Phase 9) | Content |
-|-------------------|---------|
-| 1 | M0: L0.1–L0.3, C0.1 · reference data: `aircraft.yaml` verified |
-| 2 | M1: L1.1–L1.4, C1.1 · `checklists.yaml` verified |
-| 3 | M2: L2.1–L2.4, C2.1–C2.4 · W5 performance data collected |
-| 4 | M3: L3.1–L3.3, C3.1–C3.4 · KLVK/KTCY airport cards verified |
-| 5 | M4: L4.1–L4.4, C4.1–C4.4, C4.7 |
-| 6 | M5: L5.1–L5.4, C5.1–C5.5 |
-| 7 | M6 part 1: L6.1–L6.3, C6.1–C6.3 · all airports and VORs verified |
-| 8 | M6 part 2: L6.4–L6.6, C6.4–C6.5 |
-| 9 | M7: L7.1–L7.3, C7.1–C7.2 · M8: L8.1–L8.2, C8.1–C8.2 |
-| 10 | Glossary complete (≥ 150 terms), resources verified, buffer / P1 content |
+| Week (of Phase 9) | Content                                                                  |
+| ----------------- | ------------------------------------------------------------------------ |
+| 1                 | M0: L0.1–L0.3, C0.1 · reference data: `aircraft.yaml` verified           |
+| 2                 | M1: L1.1–L1.4, C1.1 · `checklists.yaml` verified                         |
+| 3                 | M2: L2.1–L2.4, C2.1–C2.4 · W5 performance data collected                 |
+| 4                 | M3: L3.1–L3.3, C3.1–C3.4 · KLVK/KTCY airport cards verified              |
+| 5                 | M4: L4.1–L4.4, C4.1–C4.4, C4.7                                           |
+| 6                 | M5: L5.1–L5.4, C5.1–C5.5                                                 |
+| 7                 | M6 part 1: L6.1–L6.3, C6.1–C6.3 · all airports and VORs verified         |
+| 8                 | M6 part 2: L6.4–L6.6, C6.4–C6.5                                          |
+| 9                 | M7: L7.1–L7.3, C7.1–C7.2 · M8: L8.1–L8.2, C8.1–C8.2                      |
+| 10                | Glossary complete (≥ 150 terms), resources verified, buffer / P1 content |
 
 ### 49.4 Checklist of content items (tick as published)
 
@@ -6345,6 +6359,7 @@ after every major sim update (post-launch).
 6. **Garmin G1000 NXi documentation** — for avionics operation.
 
 When sources conflict:
+
 - Sim vs POH on a **number**: teach the POH number, add a "Sim vs reality" callout if the
   sim behaves differently, and set challenge tolerances around what the sim can achieve.
 - Sim vs reality on **airport data** (e.g. a frequency changed in reality but not in the
@@ -6456,24 +6471,24 @@ Run against the production (or production-like preview) URL before tagging v1.0.
 
 ## 56. Risks and mitigations
 
-| # | Risk | Likelihood | Impact | Mitigation |
-|---|------|-----------|--------|------------|
-| R1 | **Scope creep** (more aircraft, auto-grading, social features) | High | High | Scope guardrails (Section 2.4); parking lot list; P0/P1 discipline |
-| R2 | **Content takes longer than code** | High | High | Start content in Phase 5; templates; weekly schedule (49.3); cut P1 content first |
-| R3 | **Aviation inaccuracies** damage credibility | Medium | High | Verification protocol (54); ⚠ markers; validator blocks `verify` callouts; beta test with a real pilot if possible |
-| R4 | **Sim updates change menus/behaviour** | High | Medium | Describe intent not just menu paths; `simVersion` tracking; post-update routine (54.5) |
-| R5 | **Air-start not easily available** in MSFS 2024 | Medium | Medium | Fallback start from KLVK runway (15.1); adjust briefs |
-| R6 | **Self-assessment feels unmotivating or "cheatable"** | Medium | Medium | Specific, measurable criteria; honesty messaging; reflections; roadmap to auto-grading |
-| R7 | **Widget complexity** (W7, W9, W11) blows the schedule | Medium | Medium | Build simple widgets first; timebox each (Section 16.22); fall back to annotated static images for P0 if needed |
-| R8 | **Learning curve** for TypeScript/Tailwind/Mongoose | Medium | Medium | D-05 fallback; follow official docs; small PRs; tests as learning aids |
-| R9 | **Hosting cold starts** on free tiers ruin the demo | High (free) | Medium | Paid Render instance for launch; uptime monitor keeps warm |
-| R10 | **Security incident** (account takeover, data leak) | Low | High | Section 32 checklist; minimal data; argon2; rate limits; CSRF; dependency updates |
-| R11 | **Copyright/trademark** complaints | Low | High | Section 57: own illustrations; no POH/Garmin copying; nominative trademark use; clear disclaimers |
-| R12 | **Learners treat content as real flight training** | Medium | High | Prominent disclaimers; "Sim vs reality" callouts; encourage real instruction for real flying |
-| R13 | **Nav data/VOR decommissioning** mismatch sim vs reality | Medium | Low | Choose VORs present in both; note differences |
-| R14 | **Burnout** on a long solo project | Medium | High | Milestones with visible progress (39.3); celebrate each; realistic weekly hours; it's OK to ship v1 with fewer P1 items |
-| R15 | **Atlas M0 limits** (connections, storage, no backups) | Low | Medium | Monitor; manual backups; upgrade to M10 if needed (~cost) |
-| R16 | **Xbox users** can't easily use a second screen | Medium | Low | Phone/tablet fly mode; printable briefs (P1) |
+| #   | Risk                                                           | Likelihood  | Impact | Mitigation                                                                                                              |
+| --- | -------------------------------------------------------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| R1  | **Scope creep** (more aircraft, auto-grading, social features) | High        | High   | Scope guardrails (Section 2.4); parking lot list; P0/P1 discipline                                                      |
+| R2  | **Content takes longer than code**                             | High        | High   | Start content in Phase 5; templates; weekly schedule (49.3); cut P1 content first                                       |
+| R3  | **Aviation inaccuracies** damage credibility                   | Medium      | High   | Verification protocol (54); ⚠ markers; validator blocks `verify` callouts; beta test with a real pilot if possible      |
+| R4  | **Sim updates change menus/behaviour**                         | High        | Medium | Describe intent not just menu paths; `simVersion` tracking; post-update routine (54.5)                                  |
+| R5  | **Air-start not easily available** in MSFS 2024                | Medium      | Medium | Fallback start from KLVK runway (15.1); adjust briefs                                                                   |
+| R6  | **Self-assessment feels unmotivating or "cheatable"**          | Medium      | Medium | Specific, measurable criteria; honesty messaging; reflections; roadmap to auto-grading                                  |
+| R7  | **Widget complexity** (W7, W9, W11) blows the schedule         | Medium      | Medium | Build simple widgets first; timebox each (Section 16.22); fall back to annotated static images for P0 if needed         |
+| R8  | **Learning curve** for TypeScript/Tailwind/Mongoose            | Medium      | Medium | D-05 fallback; follow official docs; small PRs; tests as learning aids                                                  |
+| R9  | **Hosting cold starts** on free tiers ruin the demo            | High (free) | Medium | Paid Render instance for launch; uptime monitor keeps warm                                                              |
+| R10 | **Security incident** (account takeover, data leak)            | Low         | High   | Section 32 checklist; minimal data; argon2; rate limits; CSRF; dependency updates                                       |
+| R11 | **Copyright/trademark** complaints                             | Low         | High   | Section 57: own illustrations; no POH/Garmin copying; nominative trademark use; clear disclaimers                       |
+| R12 | **Learners treat content as real flight training**             | Medium      | High   | Prominent disclaimers; "Sim vs reality" callouts; encourage real instruction for real flying                            |
+| R13 | **Nav data/VOR decommissioning** mismatch sim vs reality       | Medium      | Low    | Choose VORs present in both; note differences                                                                           |
+| R14 | **Burnout** on a long solo project                             | Medium      | High   | Milestones with visible progress (39.3); celebrate each; realistic weekly hours; it's OK to ship v1 with fewer P1 items |
+| R15 | **Atlas M0 limits** (connections, storage, no backups)         | Low         | Medium | Monitor; manual backups; upgrade to M10 if needed (~cost)                                                               |
+| R16 | **Xbox users** can't easily use a second screen                | Medium      | Low    | Phone/tablet fly mode; printable briefs (P1)                                                                            |
 
 ---
 
@@ -6641,16 +6656,16 @@ before any real demo.
 A proposed progression (final list depends on which aircraft MSFS 2024 includes and
 which have good documentation):
 
-| Step | Aircraft class | Example in MSFS 2024 (verify availability) | New skills |
-|------|----------------|---------------------------------------------|------------|
-| 1 | Single-engine piston trainer | Cessna 172 (v1) | Fundamentals, VFR |
-| 2 | High-performance / complex single | e.g. a constant-speed prop, retractable-gear single | Prop control, gear, higher speeds |
-| 3 | Twin piston | e.g. a light twin | Multi-engine, engine-out |
-| 4 | Turboprop | e.g. King Air-class | Turbine engine management, pressurisation |
-| 5 | Light jet | e.g. CJ4-class | Jet handling, FMS, high altitude |
-| 6 | Narrow-body airliner | e.g. A320-family / 737-class | Airline procedures, SOPs, CRM |
-| 7 | Wide-body airliner | e.g. 787-class | Long-haul ops |
-| 8 | **Airbus A380** | A380 (if available in the sim or as a quality add-on) | Very large aircraft ops — the final goal |
+| Step | Aircraft class                    | Example in MSFS 2024 (verify availability)            | New skills                                |
+| ---- | --------------------------------- | ----------------------------------------------------- | ----------------------------------------- |
+| 1    | Single-engine piston trainer      | Cessna 172 (v1)                                       | Fundamentals, VFR                         |
+| 2    | High-performance / complex single | e.g. a constant-speed prop, retractable-gear single   | Prop control, gear, higher speeds         |
+| 3    | Twin piston                       | e.g. a light twin                                     | Multi-engine, engine-out                  |
+| 4    | Turboprop                         | e.g. King Air-class                                   | Turbine engine management, pressurisation |
+| 5    | Light jet                         | e.g. CJ4-class                                        | Jet handling, FMS, high altitude          |
+| 6    | Narrow-body airliner              | e.g. A320-family / 737-class                          | Airline procedures, SOPs, CRM             |
+| 7    | Wide-body airliner                | e.g. 787-class                                        | Long-haul ops                             |
+| 8    | **Airbus A380**                   | A380 (if available in the sim or as a quality add-on) | Very large aircraft ops — the final goal  |
 
 Architecture already supports this: `aircraft` collection, `aircraftSlug` on checklists,
 modules/lessons/challenges can be grouped into **courses** (add a `courses` collection and
@@ -7135,7 +7150,7 @@ type: landing
 difficulty: 3
 estimatedMinutes: 20
 published: true
-lastVerifiedAt: null          # set when verified (Section 54)
+lastVerifiedAt: null # set when verified (Section 54)
 simVersion: null
 
 goal: >
@@ -7152,7 +7167,7 @@ setup:
   timeLocal: "10:00"
   datePreset: late-spring
   loadPreset: LOAD_SOLO
-  assistance: training        # Section 9.3 profile
+  assistance: training # Section 9.3 profile
   aiTraffic: false
   atc: false
   crashDamage: true
@@ -7174,7 +7189,8 @@ criteria:
     kind: binary
     required: true
     weight: 3
-    reviewLink: { lesson: l4-3-normal-approach-and-landing, section: stabilised-approach }
+    reviewLink:
+      { lesson: l4-3-normal-approach-and-landing, section: stabilised-approach }
   - id: final-speed
     label: Final approach speed
     kind: tiered
@@ -7282,10 +7298,13 @@ If auto-rudder is on, the sim keeps the ball centred for you. …
 
 :::quiz{id="l2-4-q1" type="single"}
 The ball is to the right in a right turn. Which rudder do you press?
+
 - [ ] Left rudder
 - [x] Right rudder
 - [ ] No rudder — use aileron
+
 ---
+
 "Step on the ball": press the rudder on the side the ball has moved to.
 :::
 
@@ -7310,25 +7329,25 @@ Ready? Try [[c2-3-turns-to-headings]], then [[c2-4-the-box]].
 
 ## Appendix E — Environment variable reference
 
-| Variable | Where | Required | Example | Notes |
-|----------|-------|----------|---------|-------|
-| `NODE_ENV` | server | yes | `production` | `development` \| `test` \| `production` |
-| `PORT` | server | no | `3000` | Render sets `PORT` automatically |
-| `MONGODB_URI` | server, scripts | yes | `mongodb+srv://ltf-app:<password>@cluster0.xxxxx.mongodb.net/learntofly?retryWrites=true&w=majority` | Never commit |
-| `SESSION_SECRET` | server | yes | 64+ random chars | Generate with `node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"`; rotate by supporting an array of secrets |
-| `SESSION_NAME` | server | no | `ltf.sid` | |
-| `PUBLIC_SITE_URL` | server | yes (prod) | `https://learntofly.example` | Used for links in emails, canonical URLs, CSRF origin checks |
-| `TRUST_PROXY` | server | no | `1` | Set in production behind Render's proxy |
-| `LOG_LEVEL` | server | no | `info` | `debug` in dev |
-| `RATE_LIMIT_ENABLED` | server | no | `true` | Disable in tests |
-| `EMAIL_PROVIDER_API_KEY` | server | P1 | `re_…` | Resend/Postmark |
-| `EMAIL_FROM` | server | P1 | `Learn-To-Fly <noreply@…>` | |
-| `SENTRY_DSN` | server | optional | | |
-| `GIT_SHA` | server | no | set by Render (`RENDER_GIT_COMMIT`) | Shown in `/health` |
-| `VITE_APP_NAME` | client (build) | no | `Learn-To-Fly` | |
-| `VITE_PUBLIC_SITE_URL` | client (build) | no | same as above | |
-| `VITE_SENTRY_DSN` | client (build) | optional | | Public by nature |
-| `VITE_ANALYTICS_DOMAIN` | client (build) | optional | | Cookieless analytics |
+| Variable                 | Where           | Required   | Example                                                                                              | Notes                                                                                                                                    |
+| ------------------------ | --------------- | ---------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `NODE_ENV`               | server          | yes        | `production`                                                                                         | `development` \| `test` \| `production`                                                                                                  |
+| `PORT`                   | server          | no         | `3000`                                                                                               | Render sets `PORT` automatically                                                                                                         |
+| `MONGODB_URI`            | server, scripts | yes        | `mongodb+srv://ltf-app:<password>@cluster0.xxxxx.mongodb.net/learntofly?retryWrites=true&w=majority` | Never commit                                                                                                                             |
+| `SESSION_SECRET`         | server          | yes        | 64+ random chars                                                                                     | Generate with `node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"`; rotate by supporting an array of secrets |
+| `SESSION_NAME`           | server          | no         | `ltf.sid`                                                                                            |                                                                                                                                          |
+| `PUBLIC_SITE_URL`        | server          | yes (prod) | `https://learntofly.example`                                                                         | Used for links in emails, canonical URLs, CSRF origin checks                                                                             |
+| `TRUST_PROXY`            | server          | no         | `1`                                                                                                  | Set in production behind Render's proxy                                                                                                  |
+| `LOG_LEVEL`              | server          | no         | `info`                                                                                               | `debug` in dev                                                                                                                           |
+| `RATE_LIMIT_ENABLED`     | server          | no         | `true`                                                                                               | Disable in tests                                                                                                                         |
+| `EMAIL_PROVIDER_API_KEY` | server          | P1         | `re_…`                                                                                               | Resend/Postmark                                                                                                                          |
+| `EMAIL_FROM`             | server          | P1         | `Learn-To-Fly <noreply@…>`                                                                           |                                                                                                                                          |
+| `SENTRY_DSN`             | server          | optional   |                                                                                                      |                                                                                                                                          |
+| `GIT_SHA`                | server          | no         | set by Render (`RENDER_GIT_COMMIT`)                                                                  | Shown in `/health`                                                                                                                       |
+| `VITE_APP_NAME`          | client (build)  | no         | `Learn-To-Fly`                                                                                       |                                                                                                                                          |
+| `VITE_PUBLIC_SITE_URL`   | client (build)  | no         | same as above                                                                                        |                                                                                                                                          |
+| `VITE_SENTRY_DSN`        | client (build)  | optional   |                                                                                                      | Public by nature                                                                                                                         |
+| `VITE_ANALYTICS_DOMAIN`  | client (build)  | optional   |                                                                                                      | Cookieless analytics                                                                                                                     |
 
 Rules: anything prefixed `VITE_` is **public** (bundled into client JS). Never put secrets
 in `VITE_` variables.
@@ -7449,13 +7468,13 @@ load factor n     = 1 ÷ cos(bank)                   (level, coordinated turn)
 stall speed in turn = Vs × √n
 ```
 
-| Bank | n | Vs1 48 KIAS becomes |
-|------|---|---------------------|
-| 0° | 1.00 | 48 |
-| 30° | 1.15 | 52 |
-| 45° | 1.41 | 57 |
-| 60° | 2.00 | 68 |
-| 75° | 3.86 | 94 |
+| Bank | n    | Vs1 48 KIAS becomes |
+| ---- | ---- | ------------------- |
+| 0°   | 1.00 | 48                  |
+| 30°  | 1.15 | 52                  |
+| 45°  | 1.41 | 57                  |
+| 60°  | 2.00 | 68                  |
+| 75°  | 3.86 | 94                  |
 
 ### G.7 Glide distance
 
@@ -7569,4 +7588,4 @@ Some steps can't be done by an assistant or automation and need you:
 
 ---
 
-*End of plan. Last updated: 2026-09-25. Next review: end of Phase 1.*
+_End of plan. Last updated: 2026-09-25. Next review: end of Phase 1._
