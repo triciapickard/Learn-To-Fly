@@ -43,10 +43,15 @@ export const routes: RouteObject[] = [
       { path: 'privacy', ...page(() => import('./pages/PrivacyPage')) },
       { path: 'terms', ...page(() => import('./pages/TermsPage')) },
       { path: 'roadmap', ...page(() => import('./pages/RoadmapPage')) },
-      // Protected routes (ProtectedRoute wrapper added in Phase 4)
-      { path: 'dashboard', ...page(() => import('./pages/DashboardPage')) },
-      { path: 'account', ...page(() => import('./pages/AccountPage')) },
-      { path: 'account/attempts', ...page(() => import('./pages/AccountAttemptsPage')) },
+      { path: 'account-deleted', ...page(() => import('./pages/AccountDeletedPage')) },
+      {
+        ...page(() => import('./features/auth/ProtectedRoute')),
+        children: [
+          { path: 'dashboard', ...page(() => import('./pages/DashboardPage')) },
+          { path: 'account', ...page(() => import('./pages/AccountPage')) },
+          { path: 'account/attempts', ...page(() => import('./pages/AccountAttemptsPage')) },
+        ],
+      },
       {
         ...page(() => import('./layouts/AuthLayout')),
         children: [

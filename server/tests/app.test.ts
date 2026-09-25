@@ -110,8 +110,11 @@ describe('createApp', () => {
 
   it('applies general API rate limits when enabled', async () => {
     const limited = createApp({ env: testEnv({ RATE_LIMIT_ENABLED: 'true' }), logger: silent });
-    const res = await request(limited).get('/api/v1/health');
+    const res = await request(limited).get('/api/v1/auth/me');
     expect(res.headers['ratelimit-policy']).toContain('300');
+    // The health check is never rate limited (Render polls it).
+    const health = await request(limited).get('/api/v1/health');
+    expect(health.headers['ratelimit-policy']).toBeUndefined();
   });
 });
 

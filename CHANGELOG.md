@@ -22,3 +22,8 @@ All notable changes to this project are documented here. The format is based on
   with skip link and focus management, TanStack Query + API client + MSW, 30 core
   components with tests, `/dev/components` showcase, landing page, About, Disclaimer,
   Privacy, Terms and Roadmap pages, logo, favicons and Open Graph image.
+- Phase 4: authentication — email/password accounts with argon2id, MongoDB-backed
+  sessions (30-day "remember me"), CSRF synchroniser tokens, auth rate limits,
+  common-password check, change password (revokes other sessions), profile and
+  preference updates, data export and account deletion; sign-up and log-in pages,
+  header account menu, protected routes, account page; Render blueprint.

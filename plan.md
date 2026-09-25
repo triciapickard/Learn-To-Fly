@@ -5856,35 +5856,35 @@ the app is deployed as a walking skeleton (Milestone M-A).
 
 ### 44.1 Server
 
-- [ ] 4.1 `User` model (Section 27.1) with unique email index and `toJSON` hiding the hash.
-- [ ] 4.2 `express-session` + `connect-mongo` configured (Section 30.1); `trust proxy` in
+- [x] 4.1 `User` model (Section 27.1) with unique email index and `toJSON` hiding the hash.
+- [x] 4.2 `express-session` + `connect-mongo` configured (Section 30.1); `trust proxy` in
       production.
-- [ ] 4.3 Shared Zod schemas: `RegisterSchema`, `LoginSchema`, `ChangePasswordSchema`,
+- [x] 4.3 Shared Zod schemas: `RegisterSchema`, `LoginSchema`, `ChangePasswordSchema`,
       `DeleteAccountSchema`, `UserDto`.
-- [ ] 4.4 `authService`: `register`, `login`, `logout`, `changePassword`, `deleteAccount`
+- [x] 4.4 `authService`: `register`, `login`, `logout`, `changePassword`, `deleteAccount`
       using argon2id (Section 30.2–30.4).
-- [ ] 4.5 CSRF middleware and `GET /auth/csrf` (Section 30.5).
-- [ ] 4.6 Routes in Section 29.2 (P0 ones) + `PATCH /me`, `DELETE /me`, `GET /me/export`
+- [x] 4.5 CSRF middleware and `GET /auth/csrf` (Section 30.5).
+- [x] 4.6 Routes in Section 29.2 (P0 ones) + `PATCH /me`, `DELETE /me`, `GET /me/export`
       (export returns user + empty progress for now).
-- [ ] 4.7 `requireAuth` middleware (Section 30.6).
-- [ ] 4.8 Auth rate limits (Section 30.7).
-- [ ] 4.9 Common-password list (top ~10k, small text file in `server/src/data/`) check.
-- [ ] 4.10 Integration tests: all API auth cases in Section 35.2.
+- [x] 4.7 `requireAuth` middleware (Section 30.6).
+- [x] 4.8 Auth rate limits (Section 30.7).
+- [x] 4.9 Common-password list (top ~10k, small text file in `server/src/data/`) check.
+- [x] 4.10 Integration tests: all API auth cases in Section 35.2.
 - **AC:** all tests pass; sessions appear in the `sessions` collection; logout removes
   them.
 
 ### 44.2 Client
 
-- [ ] 4.11 `useAuth`, `useCsrf` hooks; fetch on app start.
-- [ ] 4.12 Sign up page with react-hook-form + Zod; password strength meter (simple
+- [x] 4.11 `useAuth`, `useCsrf` hooks; fetch on app start.
+- [x] 4.12 Sign up page with react-hook-form + Zod; password strength meter (simple
       length/variety heuristic — don't ship a large library); terms checkbox.
-- [ ] 4.13 Log in page with "Remember me"; `returnTo` handling (only allow same-site
+- [x] 4.13 Log in page with "Remember me"; `returnTo` handling (only allow same-site
       relative paths — prevent open redirects).
-- [ ] 4.14 Header avatar menu (Dashboard, Account, Log out).
-- [ ] 4.15 `ProtectedRoute`.
-- [ ] 4.16 Account page: display name edit, theme preference (saved to server), change
+- [x] 4.14 Header avatar menu (Dashboard, Account, Log out).
+- [x] 4.15 `ProtectedRoute`.
+- [x] 4.16 Account page: display name edit, theme preference (saved to server), change
       password form, export data button, delete account modal (Section 20.10).
-- [ ] 4.17 Tests: form validation messages, submit success/failure with MSW, protected
+- [x] 4.17 Tests: form validation messages, submit success/failure with MSW, protected
       route redirect.
 - **AC:** US-03, US-04, US-16, US-21 pass manually and in component tests.
 
@@ -5899,7 +5899,7 @@ the app is deployed as a walking skeleton (Milestone M-A).
 
 ### 44.4 Phase wrap-up
 
-- [ ] 4.22 PR "Phase 4: Authentication + first deploy"; phase summary including anything
+- [x] 4.22 PR "Phase 4: Authentication + first deploy"; phase summary including anything
       that needed your action in dashboards.
 
 ---

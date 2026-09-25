@@ -7,8 +7,14 @@ import { RadioGroup } from './RadioGroup';
 const labels: Record<ThemePreference, string> = { system: 'System', light: 'Light', dark: 'Dark' };
 
 /** Theme picker: system / light / dark (US-16). */
-export function ThemeToggle() {
+export function ThemeToggle({
+  onChange,
+}: {
+  /** Called instead of the default local-only update (e.g. to also save to the account). */
+  onChange?: (preference: ThemePreference) => void;
+}) {
   const { preference, resolvedTheme, setPreference } = useTheme();
+  const change = onChange ?? setPreference;
   const Icon = preference === 'system' ? Monitor : resolvedTheme === 'dark' ? Moon : Sun;
   return (
     <Popover>
@@ -22,7 +28,7 @@ export function ThemeToggle() {
         <RadioGroup
           label="Theme"
           value={preference}
-          onValueChange={(value) => setPreference(value as ThemePreference)}
+          onValueChange={(value) => change(value as ThemePreference)}
           options={[
             { value: 'system', label: 'System', description: 'Match your device' },
             { value: 'light', label: 'Light' },

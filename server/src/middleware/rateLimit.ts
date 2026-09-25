@@ -11,6 +11,8 @@ export interface RateLimitOptions {
   skip?: (req: Request) => boolean;
   message?: string;
   enabled?: boolean;
+  /** Don't count requests that end with a status below 400. */
+  skipSuccessfulRequests?: boolean;
 }
 
 export const clientIpKey = (req: Request) => ipKeyGenerator(req.ip ?? 'unknown');
@@ -23,6 +25,7 @@ export function createRateLimiter({
   skip,
   message = 'Too many requests. Please wait a moment and try again.',
   enabled = true,
+  skipSuccessfulRequests = false,
 }: RateLimitOptions): RequestHandler {
   if (!enabled) return (_req, _res, next) => next();
   return rateLimit({
@@ -32,6 +35,7 @@ export function createRateLimiter({
     legacyHeaders: false,
     keyGenerator,
     skip,
+    skipSuccessfulRequests,
     handler: (_req, _res, next) => next(new HttpError('RATE_LIMITED', message)),
   });
 }
@@ -58,4 +62,44 @@ export function generalApiLimits(enabled: boolean): RequestHandler[] {
       },
     }),
   ];
+}
+
+const FIFTEEN_MINUTES = 15 * 60_000;
+const ONE_HOUR = 60 * 60_000;
+
+/** Auth route limits (Section 30.7). Only failed logins count toward the login limits. */
+export function authLimits(enabled: boolean) {
+  const loginMessage = 'Too many login attempts. Please wait 15 minutes and try again.';
+  return {
+    login: [
+      createRateLimiter({
+        enabled,
+        windowMs: FIFTEEN_MINUTES,
+        limit: 10,
+        message: loginMessage,
+        skipSuccessfulRequests: true,
+      }),
+      createRateLimiter({
+        enabled,
+        windowMs: FIFTEEN_MINUTES,
+        limit: 5,
+        message: loginMessage,
+        skipSuccessfulRequests: true,
+        keyGenerator: (req) => {
+          const email = (req.body as { email?: unknown } | undefined)?.email;
+          return typeof email === 'string'
+            ? `email:${email.trim().toLowerCase()}`
+            : clientIpKey(req);
+        },
+      }),
+    ],
+    register: [
+      createRateLimiter({
+        enabled,
+        windowMs: ONE_HOUR,
+        limit: 5,
+        message: 'Too many sign-ups from this network. Please try again later.',
+      }),
+    ],
+  };
 }

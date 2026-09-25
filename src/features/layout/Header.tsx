@@ -6,6 +6,9 @@ import { Drawer, DrawerContent, DrawerTrigger } from '@/components/Drawer';
 import { Link } from '@/components/Link';
 import { Logo } from '@/components/Logo';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { useAuth } from '@/features/auth/api';
+import { UserMenu } from '@/features/auth/UserMenu';
+import { useSaveThemePreference } from '@/features/auth/useSaveThemePreference';
 import { cn } from '@/lib/cn';
 import { PRIMARY_NAV } from './navigation';
 
@@ -33,9 +36,12 @@ export function AccountLinks({ onNavigate }: { onNavigate?: () => void }) {
 }
 
 /** Global header (Section 19.2): desktop nav, mobile drawer, theme toggle, account. */
-export function Header({ accountSlot }: { accountSlot?: React.ReactNode }) {
+export function Header() {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
+  const { user, isLoading } = useAuth();
+  const saveTheme = useSaveThemePreference();
+  const account = isLoading ? null : user ? <UserMenu user={user} /> : <AccountLinks />;
   return (
     <header className="sticky top-0 z-30 border-b border-border bg-surface/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4">
@@ -54,8 +60,8 @@ export function Header({ accountSlot }: { accountSlot?: React.ReactNode }) {
           </ul>
         </nav>
         <div className="ml-auto flex items-center gap-2">
-          <ThemeToggle />
-          <div className="hidden items-center gap-2 md:flex">{accountSlot ?? <AccountLinks />}</div>
+          <ThemeToggle onChange={saveTheme} />
+          <div className="hidden items-center gap-2 md:flex">{account}</div>
           <Drawer open={open} onOpenChange={setOpen}>
             <DrawerTrigger
               aria-label="Open menu"
@@ -76,7 +82,22 @@ export function Header({ accountSlot }: { accountSlot?: React.ReactNode }) {
                 </ul>
               </nav>
               <div className="mt-6 flex flex-wrap gap-2 border-t border-border pt-6">
-                {accountSlot ?? <AccountLinks onNavigate={close} />}
+                {isLoading ? null : user ? (
+                  <ul className="flex w-full flex-col gap-1">
+                    <li>
+                      <NavLink to="/dashboard" className={navLinkClasses} onClick={close}>
+                        Dashboard
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/account" className={navLinkClasses} onClick={close}>
+                        Account
+                      </NavLink>
+                    </li>
+                  </ul>
+                ) : (
+                  <AccountLinks onNavigate={close} />
+                )}
               </div>
             </DrawerContent>
           </Drawer>
