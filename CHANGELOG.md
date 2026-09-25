@@ -78,3 +78,6 @@ All notable changes to this project are documented here. The format is based on
 - Phase 9 · Module 1 content (drafts): L1.1 The airframe and flight controls, L1.2 The
   cockpit: G1000 PFD and MFD, L1.3 Engine, fuel and electrical systems, and challenge C1.1
   Cockpit scavenger hunt (L1.4 now links it).
+- Phase 9 · Module 2 content (drafts): L2.1 Four forces and how a wing works, L2.2 Attitude
+  flying and trim, L2.3 Climbs and descents, L2.4 Turns and coordination, and challenges
+  C2.2 Climbs and descents, C2.3 Turns to headings and C2.4 The box (C2.1 now links L2.2).

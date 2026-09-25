@@ -1,0 +1,107 @@
+slug: c2-4-the-box
+code: C2.4
+title: The box
+module: m2-fundamentals
+lessons:
+  - l2-2-attitude-flying-and-trim
+  - l2-3-climbs-and-descents
+  - l2-4-turns-and-coordination
+priority: P0
+type: manoeuvre
+difficulty: 3
+estimatedMinutes: 20
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Combine climbs, descents and turns in a timed box pattern of four 2-minute legs.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KLVK
+  startState: AIR_START
+  startDetails:
+    position: Over the Livermore valley, 3 nm east of KLVK
+    altitudeFt: 3000
+    headingDeg: 90
+    speedKias: 100
+    fallback: Start on the runway at KLVK, take off and climb to 3,000 ft MSL. Start the timer when you are level on heading 090.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Start the timer. Leg 1 (2 minutes) — heading 090, climb at 80 KIAS to 3,500 ft MSL, then level off.
+  - Leg 2 (2 minutes) — standard-rate left turn to heading 360, hold 3,500 ft.
+  - Leg 3 (2 minutes) — standard-rate left turn to heading 270, descend at 90 KIAS to 3,000 ft, then level off.
+  - Leg 4 (2 minutes) — standard-rate left turn to heading 180, hold 3,000 ft. Then turn left to 090 to close the box.
+  - Trim after every change. Plan the next leg while the airplane is stable.
+
+criteria:
+  - id: altitudes
+    label: Target altitudes held
+    kind: tiered
+    tiers:
+      gold: Within ±100 ft
+      silver: Within ±150 ft
+      bronze: Within ±200 ft
+    required: true
+    weight: 3
+  - id: headings
+    label: Headings held and rolled out on
+    kind: tiered
+    tiers:
+      gold: Within ±10°
+      silver: Within ±15°
+      bronze: Within ±20°
+    required: true
+    weight: 2
+    reviewLink: { lesson: l2-4-turns-and-coordination, section: rolling-out-on-a-heading }
+  - id: speeds
+    label: Climb and descent airspeeds
+    kind: tiered
+    tiers:
+      gold: Within ±5 kt
+      silver: Within ±10 kt
+      bronze: Within ±15 kt
+    required: true
+    weight: 2
+    reviewLink: { lesson: l2-3-climbs-and-descents, section: entering-a-climb }
+  - id: timing
+    label: Leg timing
+    kind: tiered
+    tiers:
+      gold: Within ±10 s
+      silver: Within ±20 s
+      bronze: Within ±30 s
+    required: false
+    weight: 1
+  - id: trimmed
+    label: Trimmed after each change
+    kind: binary
+    required: false
+    weight: 1
+    reviewLink: { lesson: l2-2-attitude-flying-and-trim, section: trim-technique }
+
+randomEvents: []
+
+commonMistakes:
+  - Doing too many things at once. Finish one change, trim, then start the next.
+  - Forgetting to trim, then fighting the airplane for the whole leg.
+
+tips:
+  - Plan the next leg while you are stable.
+  - Pausing at the end of a leg is fine for Bronze or Silver. For Gold, fly it without pausing (tick "I paused" in the debrief if you did).
+
+debriefQuestions:
+  - id: paused
+    prompt: Did you pause? Where, and why?
+  - id: busiest-leg
+    prompt: Which leg felt busiest?

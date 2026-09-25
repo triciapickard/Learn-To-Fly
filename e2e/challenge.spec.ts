@@ -72,7 +72,8 @@ test('the debrief draft survives a refresh and a detour through sign-up', async 
 });
 
 test('challenges list filters live in the URL', async ({ page }) => {
-  await page.goto('/challenges?type=landing');
+  // Setup challenges are all difficulty 1, so this combination is always empty.
+  await page.goto('/challenges?type=setup&difficulty=5');
   await expect(page.getByText('No challenges match these filters')).toBeVisible();
   await page.getByRole('button', { name: 'Clear filters' }).click();
   await expect(page).toHaveURL(/\/challenges$/);

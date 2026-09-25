@@ -2,7 +2,7 @@ slug: c2-1-straight-and-level
 code: C2.1
 title: Straight and level
 module: m2-fundamentals
-lessons: [] # add l2-2-attitude-flying-and-trim when it is written (Phase 9)
+lessons: [l2-2-attitude-flying-and-trim]
 priority: P0
 type: manoeuvre
 difficulty: 1
@@ -51,6 +51,7 @@ criteria:
       bronze: Within ±200 ft
     required: true
     weight: 3
+    reviewLink: { lesson: l2-2-attitude-flying-and-trim, section: trim-technique }
   - id: heading
     label: Heading held
     kind: tiered
