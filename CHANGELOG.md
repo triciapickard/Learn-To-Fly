@@ -37,3 +37,6 @@ All notable changes to this project are documented here. The format is based on
   images, click-to-load video, quizzes of four types, scroll-spy sections, key-number
   rail, Go deeper, Fly it, previous/next), widget framework, W3 Airspeed Indicator and
   W16 Checklist Runner (Milestone M-B).
+- Phase 6 (part 2): W1 Control Surfaces Explorer, W6 Turn Coordinator & Slip Ball, W14
+  Bank Angle, Load Factor and Stall Speed; turn and load-factor maths in
+  `shared/aviation/` (Appendix G.5–G.6); development-only `/dev/widgets` gallery.

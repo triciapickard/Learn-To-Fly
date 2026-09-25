@@ -6,6 +6,7 @@ import {
   type PointerEvent as ReactPointerEvent,
   type RefObject,
 } from 'react';
+import { useReducedMotion } from '@/hooks/useMediaQuery';
 
 /** Width/height of an element, updated on resize (responsive SVG, step 6.15). */
 export function useElementSize<T extends HTMLElement>(): [
@@ -98,4 +99,37 @@ export function useAnnouncer(delayMs = 500): [string, (text: string) => void] {
   );
   useEffect(() => () => clearTimeout(timer.current), []);
   return [message, announce];
+}
+
+/**
+ * Eases a set of numbers towards their targets (about 350 ms), or jumps straight there when
+ * the user prefers reduced motion (Section 16.1 rule 5).
+ */
+export function useTween(target: number[], durationMs = 350): number[] {
+  const reduced = useReducedMotion();
+  const key = target.join(',');
+  const [value, setValue] = useState(target);
+  const current = useRef(target);
+  useEffect(() => {
+    const goal = key.split(',').map(Number);
+    const origin = current.current;
+    if (reduced || typeof requestAnimationFrame === 'undefined') {
+      current.current = goal;
+      const frame = setTimeout(() => setValue(goal));
+      return () => clearTimeout(frame);
+    }
+    const start = performance.now();
+    let frame = 0;
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - start) / durationMs);
+      const eased = 1 - (1 - t) ** 3;
+      const next = goal.map((g, i) => (origin[i] ?? g) + (g - (origin[i] ?? g)) * eased);
+      current.current = next;
+      setValue(next);
+      if (t < 1) frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [key, reduced, durationMs]);
+  return value;
 }
