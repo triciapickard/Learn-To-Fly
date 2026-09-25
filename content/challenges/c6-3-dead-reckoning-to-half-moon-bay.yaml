@@ -1,0 +1,104 @@
+slug: c6-3-dead-reckoning-to-half-moon-bay
+code: C6.3
+title: Dead reckoning to Half Moon Bay
+module: m6-vfr-navigation
+lessons: [l6-3-pilotage-and-dead-reckoning]
+priority: P0
+type: navigation
+difficulty: 4
+estimatedMinutes: 35
+published: false
+lastVerifiedAt: null # set when verified in the sim (Section 54)
+simVersion: null
+
+goal: >
+  Fly from Palo Alto to Half Moon Bay on a magnetic heading and time you worked out
+  yourself, confirm your position with landmarks, and stay below the Class B.
+
+setup:
+  aircraftVariant: c172-g1000
+  airportIcao: KPAO
+  startState: RUNWAY
+  startDetails:
+    runway: '31' # ⚠ verify the runway in use
+    fallback: If the sim starts you on runway 13, use it and turn west after departure.
+  weatherPreset: WX_LIGHT_W
+  timeLocal: '10:00'
+  datePreset: late-spring
+  loadPreset: LOAD_SOLO
+  assistance: training
+  aiTraffic: false
+  atc: false
+  crashDamage: false
+  flightPlan: null
+
+procedure:
+  - Plan the flight. Measure the true course and distance, then use the wind triangle with the winds aloft in the brief (270° at 15 kt at 3,000 ft) and a cruise of 110 KTAS to work out the WCA, magnetic heading, groundspeed and time.
+  - Turn off the GPS maps and the sim's VFR map.
+  - Depart Palo Alto (⚠ verify the published departure procedure) and climb to 2,500–3,500 ft, staying below the Class B floor (⚠ check the floors and terrain on the TAC).
+  - Fly your computed heading. Use Crystal Springs Reservoir to check your position.
+  - Cross the ridge, descend to Half Moon Bay's pattern altitude, and join the pattern on the CTAF.
+
+criteria:
+  - id: computed-mh
+    label: Computed magnetic heading close to the reference answer
+    kind: tiered
+    tiers:
+      gold: Within 3°
+      silver: Within 5°
+      bronze: Within 8°
+    required: true
+    weight: 2
+    reviewLink: { lesson: l6-3-pilotage-and-dead-reckoning, section: true-to-magnetic }
+  - id: flew-heading
+    label: Flew the computed heading
+    kind: tiered
+    tiers:
+      gold: ±5°
+      silver: ±10°
+      bronze: ±15°
+    required: true
+    weight: 2
+  - id: class-b
+    label: Stayed clear of the Class B
+    kind: binary
+    required: true
+    weight: 3
+    reviewLink: { lesson: l6-2-airspace, section: reading-class-b-shelves }
+  - id: eta
+    label: Arrival time accuracy
+    kind: tiered
+    tiers:
+      gold: ±2 min
+      silver: ±4 min
+      bronze: ±6 min
+    required: false
+    weight: 2
+  - id: terrain
+    label: At least 1,000 ft above the ridge when crossing it
+    kind: binary
+    required: true
+    weight: 3
+  - id: ctaf-landing
+    label: Correct pattern entry on the CTAF and landing at Half Moon Bay
+    kind: binary
+    required: false
+    weight: 2
+
+randomEvents: []
+
+planningFields:
+  - { id: computed-mh, label: Computed magnetic heading (°), type: number }
+  - { id: planned-gs, label: Planned groundspeed (kt), type: number }
+  - { id: planned-ete, label: Planned time en route (minutes), type: number }
+
+commonMistakes:
+  - Forgetting to subtract the easterly variation.
+  - Climbing into the Class B shelf over the hills.
+
+tips:
+  - Work out the answer before you open the sim, and write it down.
+
+debriefQuestions:
+  - id: groundspeed
+    prompt: With the brief's wind, the reference answer is a magnetic heading of about 266° at a groundspeed of about 95 kt (⚠ verify). How did your plan and your actual groundspeed compare, and why?
