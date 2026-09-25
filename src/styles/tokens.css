@@ -59,6 +59,14 @@
   --color-display-magenta: #f472f6;
   --color-display-cyan: #22d3ee;
   --color-display-green: #4ade80;
+  /* Sectional chart paper colours (W10); a printed chart looks the same in both themes. */
+  --color-chart-land: #eef2dc;
+  --color-chart-hills: #e4d8b4;
+  --color-chart-water: #b9dcf0;
+  --color-chart-city: #f5e07a;
+  --color-chart-blue: #1f58a8;
+  --color-chart-magenta: #a3166f;
+  --color-chart-ink: #1d2733;
 
   --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;

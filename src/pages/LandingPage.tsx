@@ -13,6 +13,7 @@ import { DifficultyDots, TierBadge, TypeIcon } from '@/components/ChallengeMeta'
 import { Link } from '@/components/Link';
 import { CURRICULUM_PREVIEW, FIRST_LESSON_PATH } from '@/features/landing/curriculumPreview';
 import { HeroIllustration } from '@/features/landing/HeroIllustration';
+import { WidgetBlock } from '@/features/lessons/blocks/WidgetBlock';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { plural } from '@/lib/format';
 
@@ -135,17 +136,19 @@ export default function LandingPage() {
         </ol>
       </section>
 
-      {/* Live widget demo — the interactive widget is embedded in Phase 6 (step 6.31). */}
+      {/* Live widget demo (step 6.31): W7 needs no API data, so it works for every visitor. */}
       <section aria-labelledby="demo-heading" className="bg-surface-2 py-14">
         <div className="mx-auto max-w-7xl px-4">
           <h2 id="demo-heading" className="text-3xl font-bold">
             Try it right here
           </h2>
           <p className="mt-2 max-w-2xl text-muted">
-            Lessons are built around interactive diagrams: drag a slider and watch the airspeed
-            indicator, the traffic pattern or the wind triangle respond.
+            Lessons are built around interactive diagrams. Press Play to fly a traffic pattern,
+            change the wind and watch the airplane crab, or turn on the radio calls.
           </p>
-          <div id="landing-widget-demo" className="mt-8" />
+          <div id="landing-widget-demo" className="mt-8 max-w-5xl">
+            <WidgetBlock name="traffic-pattern" props={{ calls: 'true' }} />
+          </div>
         </div>
       </section>
 

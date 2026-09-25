@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import type {
   AircraftDto,
+  AirspaceProfileDto,
   AirportDto,
   ChallengeDetail,
   ChallengeSummary,
@@ -14,6 +15,7 @@ import type {
 import { lessonHref } from '@shared/schemas/api.js';
 import {
   AircraftModel,
+  AirspaceProfileModel,
   AirportModel,
   ChallengeModel,
   ChecklistModel,
@@ -299,6 +301,14 @@ export async function getAircraft(slug: string): Promise<AircraftDto> {
   const doc = await AircraftModel.findOne({ slug, published: true }).lean<Raw>();
   if (!doc) throw HttpError.notFound('Aircraft not found.');
   const { draft, ...rest } = clean<AircraftDto & { draft: boolean }>(doc);
+  void draft;
+  return rest;
+}
+
+export async function getAirspaceProfile(slug: string): Promise<AirspaceProfileDto> {
+  const doc = await AirspaceProfileModel.findOne({ slug, published: true }).lean<Raw>();
+  if (!doc) throw HttpError.notFound('Airspace profile not found.');
+  const { draft, ...rest } = clean<AirspaceProfileDto & { draft: boolean }>(doc);
   void draft;
   return rest;
 }

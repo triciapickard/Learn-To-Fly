@@ -1,5 +1,6 @@
 import type {
   Aircraft,
+  AirspaceProfile,
   Airport,
   ChallengeType,
   Checklist,
@@ -129,6 +130,7 @@ export interface ChallengeDetail extends ChallengeSummary {
 }
 
 export type AircraftDto = Aircraft & { version: number };
+export type AirspaceProfileDto = AirspaceProfile & { version: number };
 export type ChecklistDto = Checklist & { version: number };
 export type AirportDto = Airport & { version: number };
 export type ResourceDto = Resource;
@@ -157,6 +159,9 @@ export interface ChallengeResponse {
 }
 export interface AircraftResponse {
   aircraft: AircraftDto;
+}
+export interface AirspaceProfileResponse {
+  profile: AirspaceProfileDto;
 }
 export interface ChecklistsResponse {
   checklists: ChecklistDto[];

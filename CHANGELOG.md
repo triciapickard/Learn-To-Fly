@@ -49,3 +49,9 @@ All notable changes to this project are documented here. The format is based on
   W7 Traffic Pattern Animator (left/right traffic, wind and crab, configuration, radio
   calls, go-around) and W12 Wind Triangle (draggable wind vector, WCA, headings,
   groundspeed and time en route); wind-triangle maths in `shared/aviation/wind.ts`.
+- Phase 6 (part 5): W9 VOR/CDI Simulator (map, VOR indicator and HSI, reverse sensing,
+  fly mode with wind drift; VOR maths in `shared/aviation/vor.ts`), W10 Sectional Legend
+  Explorer (original chart redraw with hotspot JSON, find-it quiz), W11 Airspace
+  Cross-section (side and plan views, requirements, Mode C veil) with
+  `content/airspace-profile.yaml` served at `GET /api/v1/airspace-profiles/:slug`, and the
+  live W7 demo on the landing page. Decisions D-19 and D-20.

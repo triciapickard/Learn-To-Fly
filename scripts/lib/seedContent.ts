@@ -3,6 +3,7 @@ import type { Model } from 'mongoose';
 import {
   AircraftModel,
   AirportModel,
+  AirspaceProfileModel,
   ChallengeModel,
   ChecklistModel,
   ContentReleaseModel,
@@ -186,6 +187,12 @@ export function buildDocuments(bundle: ContentBundle, includeDrafts = false): Co
       model: AircraftModel,
       key: 'slug',
       docs: bundle.aircraft ? [{ ...bundle.aircraft, ...v(true) }] : [],
+    },
+    {
+      name: 'airspaceProfiles',
+      model: AirspaceProfileModel,
+      key: 'slug',
+      docs: bundle.airspaceProfiles.map((p) => ({ ...p, ...v(true) })),
     },
     {
       name: 'checklists',

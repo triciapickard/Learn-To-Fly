@@ -143,6 +143,15 @@ describe('reference endpoints', () => {
     await request(app).get('/api/v1/aircraft/a380').expect(404);
   });
 
+  it('returns the W11 airspace profile', async () => {
+    const res = await request(app).get('/api/v1/airspace-profiles/bay-area').expect(200);
+    expect(res.body.profile).toMatchObject({ slug: 'bay-area', verified: false, version: 1 });
+    expect(res.body.profile.volumes.some((v: { class: string }) => v.class === 'B')).toBe(true);
+    expect(res.body.profile.requirements.G.entry).toBe('None.');
+    expect(JSON.stringify(res.body)).not.toContain('contentHash');
+    await request(app).get('/api/v1/airspace-profiles/nowhere').expect(404);
+  });
+
   it('returns checklists', async () => {
     const list = await request(app).get('/api/v1/checklists').expect(200);
     expect(list.body.checklists[0].slug).toBe('preflight');

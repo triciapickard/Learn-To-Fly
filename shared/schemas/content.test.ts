@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   AircraftSchema,
+  AirspaceProfileSchema,
   AirportSchema,
   ChallengeSchema,
   ChecklistSchema,
@@ -377,5 +378,70 @@ describe('reference data schemas', () => {
         }),
       ),
     ).toContain('rpm must increase');
+  });
+});
+
+describe('AirspaceProfileSchema', () => {
+  const base = {
+    slug: 'test-line',
+    title: 'Test',
+    summary: 'A test line.',
+    lengthNm: 20,
+    topFt: 12000,
+    points: [
+      { id: 'KAAA', name: 'A', x: 0, elevationFt: 0, towered: false },
+      { id: 'KBBB', name: 'B', x: 20, elevationFt: 100, towered: true },
+    ],
+    terrain: [
+      [0, 0],
+      [20, 100],
+    ],
+    volumes: [
+      {
+        id: 'd-b',
+        class: 'D',
+        name: 'B Class D',
+        fromNm: 16,
+        toNm: 20,
+        floorFt: 0,
+        ceilingFt: 2600,
+        center: 'KBBB',
+      },
+    ],
+    requirements: Object.fromEntries(
+      ['B', 'C', 'D', 'E', 'G'].map((c) => [c, { entry: 'x', vfrMinimums: 'y' }]),
+    ),
+    source: 'Test',
+  };
+
+  it('accepts a valid profile and defaults to unverified', () => {
+    const parsed = AirspaceProfileSchema.parse(base);
+    expect(parsed.verified).toBe(false);
+    expect(parsed.volumes[0]!.floorRef).toBe('MSL');
+  });
+
+  it('rejects bad geometry and references', () => {
+    const bad = (patch: object) => AirspaceProfileSchema.safeParse({ ...base, ...patch }).success;
+    expect(
+      bad({
+        terrain: [
+          [0, 0],
+          [0, 10],
+        ],
+      }),
+    ).toBe(false);
+    expect(
+      bad({
+        terrain: [
+          [0, 0],
+          [30, 10],
+        ],
+      }),
+    ).toBe(false);
+    expect(bad({ volumes: [{ ...base.volumes[0], toNm: 25 }] })).toBe(false);
+    expect(bad({ volumes: [{ ...base.volumes[0], center: 'KZZZ' }] })).toBe(false);
+    expect(bad({ volumes: [{ ...base.volumes[0], ceilingFt: 0.5, floorFt: 1000 }] })).toBe(false);
+    expect(bad({ volumes: [base.volumes[0], base.volumes[0]] })).toBe(false);
+    expect(bad({ requirements: { B: { entry: 'x', vfrMinimums: 'y' } } })).toBe(false);
   });
 });

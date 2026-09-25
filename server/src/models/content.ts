@@ -109,6 +109,22 @@ const AircraftSchema = contentModel('Aircraft', 'aircraft', {
   simVersion: { type: String, default: null },
 });
 
+const AirspaceProfileSchema = contentModel('AirspaceProfile', 'airspaceProfiles', {
+  slug: { type: String, required: true },
+  title: String,
+  summary: String,
+  lengthNm: Number,
+  topFt: Number,
+  points: [Mixed],
+  terrain: [Mixed],
+  modeCVeil: Mixed,
+  volumes: [Mixed],
+  requirements: Mixed,
+  source: String,
+  verified: Boolean,
+  verifiedAt: { type: String, default: null },
+});
+
 const ChecklistSchema = contentModel('Checklist', 'checklists', {
   slug: { type: String, required: true },
   title: String,
@@ -190,6 +206,7 @@ export const LessonModel = model('Lesson', LessonSchema);
 export const ChallengeModel = model('Challenge', ChallengeSchema);
 export const AircraftModel = model('Aircraft', AircraftSchema);
 export const ChecklistModel = model('Checklist', ChecklistSchema);
+export const AirspaceProfileModel = model('AirspaceProfile', AirspaceProfileSchema);
 export const AirportModel = model('Airport', AirportSchema);
 export const GlossaryTermModel = model('GlossaryTerm', GlossaryTermSchema);
 export const ResourceModel = model('Resource', ResourceSchema);

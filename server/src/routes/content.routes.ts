@@ -48,6 +48,7 @@ export function contentRouter(): Router {
   router.get('/challenges', validate({ query: ChallengeQuerySchema }), c.listChallenges);
   router.get('/challenges/:slug', validate({ params: SlugParams }), c.getChallenge);
   router.get('/aircraft/:slug', validate({ params: SlugParams }), c.getAircraft);
+  router.get('/airspace-profiles/:slug', validate({ params: SlugParams }), c.getAirspaceProfile);
   router.get('/checklists', c.listChecklists);
   router.get('/checklists/:slug', validate({ params: SlugParams }), c.getChecklist);
   router.get('/airports', c.listAirports);

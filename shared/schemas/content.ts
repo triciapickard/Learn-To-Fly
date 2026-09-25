@@ -528,3 +528,91 @@ export const ResourceSchema = z.strictObject({
 });
 export type Resource = z.infer<typeof ResourceSchema>;
 export const ResourcesFileSchema = z.strictObject({ resources: z.array(ResourceSchema).min(1) });
+
+// ---------------------------------------------------------------------------------------
+// Airspace profile (W11, Section 16.12)
+
+export const PROFILE_CLASSES = ['B', 'C', 'D', 'E'] as const;
+
+export const AirspaceVolumeSchema = z
+  .strictObject({
+    id: SlugSchema,
+    class: z.enum(PROFILE_CLASSES),
+    name: z.string().min(1),
+    /** Where the volume starts and ends along the profile line, in nm from its start. */
+    fromNm: z.number().min(0),
+    toNm: z.number().positive(),
+    /** Floor in feet. With `floorRef: MSL`, 0 means the surface. */
+    floorFt: z.number().min(0),
+    floorRef: z.enum(['MSL', 'AGL']).default('MSL'),
+    /** Ceiling in feet MSL, up to and including. */
+    ceilingFt: z.number().positive(),
+    /** The airport (a `points` id) the volume surrounds, for the plan view. */
+    center: IcaoSchema.optional(),
+    notes: z.string().optional(),
+  })
+  .refine((v) => v.toNm > v.fromNm, { message: '`toNm` must be greater than `fromNm`' })
+  .refine((v) => v.floorRef === 'AGL' || v.ceilingFt > v.floorFt, {
+    message: '`ceilingFt` must be above `floorFt`',
+  });
+export type AirspaceVolume = z.infer<typeof AirspaceVolumeSchema>;
+
+export const AirspaceProfileSchema = z
+  .strictObject({
+    slug: SlugSchema,
+    title: z.string().min(1),
+    summary: z.string().min(1),
+    lengthNm: z.number().positive(),
+    topFt: z.number().positive(),
+    points: z
+      .array(
+        z.strictObject({
+          id: IcaoSchema,
+          name: z.string().min(1),
+          x: z.number().min(0),
+          elevationFt: z.number(),
+          towered: z.boolean(),
+        }),
+      )
+      .min(2),
+    /** Terrain silhouette as [nm along the line, feet MSL] pairs. */
+    terrain: z.array(z.tuple([z.number().min(0), z.number()])).min(2),
+    modeCVeil: z.strictObject({ center: IcaoSchema, radiusNm: z.number().positive() }).optional(),
+    volumes: z.array(AirspaceVolumeSchema).min(1),
+    requirements: z.record(
+      z.enum(AIRSPACE_CLASSES),
+      z.strictObject({ entry: z.string().min(1), vfrMinimums: z.string().min(1) }),
+    ),
+    source: z.string().min(1),
+    verified: z.boolean().default(false),
+    verifiedAt: NullableDateSchema,
+  })
+  .superRefine((p, ctx) => {
+    const issue = (message: string, path: (string | number)[]) =>
+      ctx.addIssue({ code: 'custom', message, path });
+    p.terrain.forEach(([x], i) => {
+      if (x > p.lengthNm) issue('Terrain point beyond `lengthNm`', ['terrain', i]);
+      if (i > 0 && x <= p.terrain[i - 1]![0]) issue('Terrain x must increase', ['terrain', i]);
+    });
+    const ids = new Set(p.points.map((pt) => pt.id));
+    if (ids.size !== p.points.length) issue('Point ids must be unique', ['points']);
+    p.points.forEach((pt, i) => {
+      if (pt.x > p.lengthNm) issue('Point beyond `lengthNm`', ['points', i, 'x']);
+    });
+    const volumeIds = new Set<string>();
+    p.volumes.forEach((v, i) => {
+      if (volumeIds.has(v.id)) issue(`Duplicate volume id "${v.id}"`, ['volumes', i, 'id']);
+      volumeIds.add(v.id);
+      if (v.toNm > p.lengthNm) issue('Volume beyond `lengthNm`', ['volumes', i, 'toNm']);
+      if (v.center && !ids.has(v.center)) {
+        issue(`Unknown center "${v.center}"`, ['volumes', i, 'center']);
+      }
+    });
+    if (p.modeCVeil && !ids.has(p.modeCVeil.center)) {
+      issue(`Unknown center "${p.modeCVeil.center}"`, ['modeCVeil', 'center']);
+    }
+    for (const c of AIRSPACE_CLASSES) {
+      if (!p.requirements[c]) issue(`Missing requirements for Class ${c}`, ['requirements']);
+    }
+  });
+export type AirspaceProfile = z.infer<typeof AirspaceProfileSchema>;

@@ -556,6 +556,32 @@ revisited, but should not be changed silently.
   replace the cells (keep the axes or change them; the widget reads whatever is there) and
   set `verified: true`.
 
+### D-19 — W10 is an original redraw; W11 ships with unverified airspace data (Phase 6)
+
+- **Problem:** Section 16.11 allows an FAA sectional crop *or* a simplified redraw; a crop
+  needs downloading, cropping and optimizing a current chart, and hotspot coordinates tied
+  to that image. Section 16.12 takes W11's floors and ceilings from the TAC, which only the
+  author can check.
+- **Decision:** W10 draws an **original, simplified redraw** of the Livermore area as SVG
+  (fixed "chart paper" colour tokens, "Not for navigation" watermark), with its hotspots in
+  `src/features/widgets/sectional-legend/hotspots.json`. Frequencies and numbers are
+  labelled illustrative. W11 reads `content/airspace-profile.yaml` through the content
+  pipeline (schema → seed → `GET /api/v1/airspace-profiles/:slug`); the file has
+  `verified: false` and the widget shows an "Unverified data" notice until it is checked.
+- **To finish:** check every floor, ceiling and position in `airspace-profile.yaml`
+  against the current San Francisco TAC and set `verified: true` and `verifiedAt`. A crop
+  of the real sectional can replace the redraw later by swapping `Chart.tsx` for an image
+  and updating the rectangles in `hotspots.json`.
+
+### D-20 — P1 widgets are deferred (Phase 6)
+
+- **Problem:** step 6.32 (W13, W15, W18, W8, W17, W19, W20) is marked "only if on
+  schedule"; building seven more widgets would delay the challenge, progress and content
+  phases the MVP depends on.
+- **Decision:** v1 ships the P0 widgets only. Lessons that list a P1 widget use text and
+  images instead (the lesson renderer shows nothing for an unbuilt widget in production).
+  The P1 widgets move to the post-MVP backlog (Section 59).
+
 ---
 
 # Part II — Learning the Cessna 172 (for you, the author)
@@ -6061,21 +6087,22 @@ keyboard/ARIA → quiz mode → text alternative → embed in its lesson → rev
       "Real view" tab (Section 16.4) waits for your MSFS screenshots.
 - [x] 6.26 W7 Traffic Pattern Animator (+ radio calls and go-around toggles).
 - [x] 6.27 W12 Wind Triangle (model shared with tools and W20).
-- [ ] 6.28 W9 VOR/CDI Simulator.
-- [ ] 6.29 W10 Sectional Legend Explorer (image + hotspot JSON).
-- [ ] 6.30 W11 Airspace Cross-section (data file + component).
-- [ ] 6.31 Landing page live widget demo (W3 or W7).
+- [x] 6.28 W9 VOR/CDI Simulator.
+- [x] 6.29 W10 Sectional Legend Explorer (image + hotspot JSON). An original SVG redraw
+      instead of a chart crop (D-19).
+- [x] 6.30 W11 Airspace Cross-section (data file + component). Data unverified (D-19).
+- [x] 6.31 Landing page live widget demo (W3 or W7). W7.
 - **AC (each widget):** unit tests for the model; mouse/touch/keyboard operable;
   screen-reader announcements; no axe violations; works at 320 px; ≤ 60 KB gzipped
   per widget chunk (guideline).
 
 ### 46.5 P1 widgets (only if on schedule)
 
-- [ ] 6.32 W13, W15, W18, W8, W17, W19, W20 (Section 16).
+- [ ] 6.32 W13, W15, W18, W8, W17, W19, W20 (Section 16). Deferred (D-20).
 
 ### 46.6 Phase wrap-up
 
-- [ ] 6.33 PR(s): one PR per 2–3 widgets to keep reviews small; final PR "Phase 6
+- [x] 6.33 PR(s): one PR per 2–3 widgets to keep reviews small; final PR "Phase 6
       complete" with a GIF of each widget.
 
 ---
@@ -6737,6 +6764,8 @@ milestone.
 - Native mobile app for fly mode.
 - Instructor/classroom mode (a teacher tracks several students).
 - Integration with Little Navmap or Navigraph for chart overlays.
+- P1 widgets deferred from step 6.32 (D-20): W8 airport signs, W13 crosswind, W15 glide
+  range, W17 METAR decoder, W18 landing sight picture, W19 phonetic alphabet, W20 nav log.
 
 ---
 
