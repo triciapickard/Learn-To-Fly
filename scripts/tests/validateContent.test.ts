@@ -1,5 +1,6 @@
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
+import { FIRST_LESSON_PATH } from '@shared/constants.js';
 import { formatIssue } from '../lib/issues.js';
 import { loadContent } from '../lib/loadContent.js';
 import { validateContent } from '../lib/validateContent.js';
@@ -12,6 +13,12 @@ describe('the real content/ folder', () => {
     expect(bundle.modules).toHaveLength(9);
     expect(bundle.glossary.length).toBeGreaterThanOrEqual(150);
     expect(bundle.lessons.length).toBeGreaterThanOrEqual(1);
+  });
+
+  it('has the lesson the landing page links to', () => {
+    const bundle = loadContent();
+    const paths = bundle.lessons.map((l) => `/learn/${l.frontmatter.module}/${l.frontmatter.slug}`);
+    expect(paths).toContain(FIRST_LESSON_PATH);
   });
 });
 

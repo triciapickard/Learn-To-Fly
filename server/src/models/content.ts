@@ -92,7 +92,7 @@ const ChallengeSchema = contentModel('Challenge', 'challenges', {
   simVersion: { type: String, default: null },
 });
 ChallengeSchema.index({ moduleSlug: 1 });
-ChallengeSchema.index({ 'setup.airportIcao': 1 });
+ChallengeSchema.index({ 'setup.airport.icao': 1 });
 
 const AircraftSchema = contentModel('Aircraft', 'aircraft', {
   slug: { type: String, required: true },

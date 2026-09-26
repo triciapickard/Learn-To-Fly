@@ -266,6 +266,9 @@ describe('images', () => {
       { assetsDir },
     );
     expect(issues.errors).toEqual([]);
+    expect(issues.warnings.map((w) => w.message)).toEqual([
+      'Image "lift.png" should be WebP or AVIF (or SVG)',
+    ]);
     expect(lesson?.blocks[1]).toEqual({
       type: 'image',
       src: 'm2-fundamentals/lift.png',

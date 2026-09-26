@@ -46,7 +46,7 @@ export default function LessonPage() {
   const complete = useUpdateLessonProgress(lessonSlug);
   const saveSection = useUpdateLessonProgress(lessonSlug);
   const recordAnswer = useRecordQuizAnswer(lessonSlug);
-  usePageTitle(lesson ? `${lesson.code} ${lesson.title}` : 'Lesson');
+  usePageTitle(lesson ? `${lesson.code} ${lesson.title}` : 'Lesson', lesson?.summary);
   const active = useScrollSpy(lesson?.sections.map((s) => s.id) ?? []);
 
   // Auto-save the resume point (step 8.7), debounced so scrolling doesn't send a burst.

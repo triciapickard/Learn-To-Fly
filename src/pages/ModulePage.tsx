@@ -20,7 +20,7 @@ export default function ModulePage() {
   const { data, isPending, error, refetch } = useModule(moduleSlug);
   const module = data?.module;
   const { data: progress } = useMyProgress();
-  usePageTitle(module ? `Module ${module.order}: ${module.title}` : 'Module');
+  usePageTitle(module ? `Module ${module.order}: ${module.title}` : 'Module', module?.summary);
 
   return (
     <QueryStates isPending={isPending} error={error} refetch={refetch} label="Loading the module">

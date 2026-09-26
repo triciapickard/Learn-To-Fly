@@ -98,9 +98,24 @@ All notable changes to this project are documented here. The format is based on
 - Phase 9 · Module 8 content (drafts): L8.1 Decision making and personal minimums, L8.2
   Preparing for your checkride, and challenges C8.1 Local checkride and C8.2 Cross-country
   capstone. Every P0 lesson and challenge is now drafted (D-21, D-22).
+- Phase 10: reference section — `/reference` hub, V-speeds and limits (large type, W3,
+  power settings, print-friendly), checklists with a full-screen runner and next/previous
+  links, airport cards and pages with "Challenges at this airport", a searchable A–Z
+  glossary with `#slug` deep links, and filterable resources. P1 hover-cards and `/tools`
+  are deferred (D-23).
+- Phase 11: polish, accessibility and performance — enforced CSP with a hashed theme
+  script, HSTS in production; axe, CSP, 320 px reflow and reduced-motion E2E checks on every
+  main page; keyboard-only E2E walkthroughs of flows A–D; `npm run size` (initial JS budget,
+  in CI) and `npm run analyze`; per-page titles, descriptions, canonical URLs, Open Graph and
+  Twitter tags, robots.txt, web manifest and theme-color; the landing page is prerendered and
+  hydrated (D-24).
 
 ### Fixed
 
 - Warning badges (W4 stall warning, challenge random-event alert) pulse a ring instead of
   fading their text, and danger-filled elements use dark text in dark mode, so both keep
   AA contrast.
+- The challenge airport index now matches the field the airport page queries.
+- The landing page's "Start lesson 1" button pointed at a lesson slug that doesn't exist.
+- Zod's `new Function` probe and fonts inlined as `data:` URLs were CSP violations.
+- The footer jumped when page content loaded (CLS up to 0.30, now 0).

@@ -1,5 +1,8 @@
 import { http, HttpResponse } from 'msw';
 import type {
+  AirportDto,
+  GlossaryTermDto,
+  ResourceDto,
   AirspaceProfileDto,
   AircraftDto,
   ChallengeDetail,
@@ -397,6 +400,94 @@ export function dashboardFixture(overrides: Partial<DashboardResponse> = {}): Da
   };
 }
 
+export const airportFixture: AirportDto = {
+  icao: 'KLVK',
+  name: 'Livermore Municipal',
+  city: 'Livermore, CA',
+  elevationFt: 400,
+  airspaceClass: 'D',
+  towered: true,
+  role: 'training',
+  runways: [
+    {
+      designator: '7L/25R',
+      lengthFt: null,
+      widthFt: null,
+      trafficPattern: null,
+      patternAltitudeFt: null,
+    },
+  ],
+  frequencies: [],
+  notes: ['Primary training base.'],
+  links: {
+    skyvector: 'https://skyvector.com/airport/KLVK',
+    airnav: 'https://www.airnav.com/airport/KLVK',
+  },
+  verifiedAt: null,
+  verifiedAgainst: [],
+  published: true,
+  version: 1,
+};
+
+export const glossaryFixture: GlossaryTermDto[] = [
+  {
+    slug: 'vy',
+    term: 'Vy',
+    aliases: ['Best rate of climb speed'],
+    definition: 'The speed that gives the most altitude in the least time.',
+    related: ['vx'],
+    lessons: [
+      {
+        slug: 'l1-4-speeds-limits-and-checklists',
+        code: 'L1.4',
+        title: 'Speeds, limits and checklists',
+        href: '/learn/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists',
+      },
+    ],
+  },
+  {
+    slug: 'vx',
+    term: 'Vx',
+    aliases: ['Best angle of climb speed'],
+    definition: 'The speed that gives the most altitude over the shortest distance.',
+    related: ['vy'],
+    lessons: [],
+  },
+  {
+    slug: 'ctaf',
+    term: 'CTAF',
+    aliases: ['Common Traffic Advisory Frequency'],
+    definition: 'The radio frequency pilots use to self-announce at a non-towered airport.',
+    related: [],
+    lessons: [],
+  },
+];
+
+export const resourcesFixture: ResourceDto[] = [
+  {
+    slug: 'phak',
+    title: "Pilot's Handbook of Aeronautical Knowledge",
+    publisher: 'FAA',
+    url: 'https://www.faa.gov/phak',
+    type: 'handbook',
+    topics: ['aerodynamics'],
+    free: true,
+    description: 'The FAA ground-school textbook.',
+    verifiedAt: null,
+  },
+  {
+    slug: 'pilotedge',
+    title: 'PilotEdge',
+    publisher: 'PilotEdge',
+    url: 'https://www.pilotedge.net',
+    type: 'community',
+    topics: ['radio'],
+    free: false,
+    description: 'Paid online ATC with professional-style controllers.',
+    verifiedAt: '2026-09-01',
+  },
+];
+
 export const emptyProgress: ProgressResponse = { lessons: {}, challenges: {}, modules: {} };
 
 /** MSW handlers serving the fixtures above. */
@@ -438,6 +529,25 @@ export const contentHandlers = [
         ),
   ),
   http.get('/api/v1/checklists/:slug', () => HttpResponse.json({ checklist: checklistFixture })),
+  http.get('/api/v1/checklists', () =>
+    HttpResponse.json({
+      checklists: [
+        { ...checklistFixture, slug: 'before-takeoff', title: 'Before takeoff', order: 5 },
+        checklistFixture,
+      ],
+    }),
+  ),
+  http.get('/api/v1/airports', () => HttpResponse.json({ airports: [airportFixture] })),
+  http.get('/api/v1/airports/:icao', ({ params }) =>
+    params.icao === 'KLVK'
+      ? HttpResponse.json({ airport: airportFixture, challenges: [challengeSummary()] })
+      : HttpResponse.json(
+          { error: { code: 'NOT_FOUND', message: 'Airport not found.' } },
+          { status: 404 },
+        ),
+  ),
+  http.get('/api/v1/glossary', () => HttpResponse.json({ terms: glossaryFixture })),
+  http.get('/api/v1/resources', () => HttpResponse.json({ resources: resourcesFixture })),
   http.get('/api/v1/challenges', () =>
     HttpResponse.json({
       challenges: [

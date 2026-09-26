@@ -391,6 +391,14 @@ export function parseLessonSource(
       if (statSync(filePath).size > MAX_IMAGE_BYTES) {
         ctx.issues.error(file, `Image "${image.url}" is larger than 400 KB`, lineOf(node));
       }
+      // Modern formats only (step 11.7): screenshots should be WebP or AVIF.
+      if (!/\.(webp|avif|svg)$/i.test(image.url)) {
+        ctx.issues.warning(
+          file,
+          `Image "${image.url}" should be WebP or AVIF (or SVG)`,
+          lineOf(node),
+        );
+      }
       const { width, height } = imageSize(readFileSync(filePath));
       blocks.push({
         type: 'image',
