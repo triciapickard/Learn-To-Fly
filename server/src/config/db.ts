@@ -6,18 +6,24 @@ mongoose.set('sanitizeFilter', true);
 export interface ConnectOptions {
   attempts?: number;
   baseDelayMs?: number;
+  /** Upper bound for the backoff between attempts. */
+  maxDelayMs?: number;
   serverSelectionTimeoutMS?: number;
   onRetry?: (attempt: number, error: unknown) => void;
 }
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-/** Connects Mongoose with retry and exponential backoff (default 3 attempts). */
+/**
+ * Connects Mongoose with retry and exponential backoff (default 3 attempts). Pass
+ * `attempts: Infinity` to keep trying until MongoDB is reachable.
+ */
 export async function connectDb(
   uri: string,
   {
     attempts = 3,
     baseDelayMs = 1000,
+    maxDelayMs = 30_000,
     serverSelectionTimeoutMS = 5000,
     onRetry,
   }: ConnectOptions = {},
@@ -30,11 +36,16 @@ export async function connectDb(
       lastError = error;
       if (attempt < attempts) {
         onRetry?.(attempt, error);
-        await wait(baseDelayMs * 2 ** (attempt - 1));
+        await wait(Math.min(baseDelayMs * 2 ** (attempt - 1), maxDelayMs));
       }
     }
   }
   throw lastError;
+}
+
+/** The connection string without credentials, safe to print in logs. */
+export function redactMongoUri(uri: string): string {
+  return uri.replace(/^(mongodb(?:\+srv)?:\/\/)[^@/]*@/, '$1***@');
 }
 
 export async function disconnectDb(): Promise<void> {

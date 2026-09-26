@@ -67,8 +67,35 @@ describe('apiClient', () => {
   });
 
   it('throws a generic ApiError for non-JSON failures', async () => {
-    server.use(http.get('/api/v1/things', () => new HttpResponse('oops', { status: 502 })));
-    await expect(api.get('/things')).rejects.toMatchObject({ status: 502, code: 'INTERNAL' });
+    server.use(http.get('/api/v1/things', () => new HttpResponse('oops', { status: 500 })));
+    await expect(api.get('/things')).rejects.toMatchObject({ status: 500, code: 'INTERNAL' });
+  });
+
+  it.each([502, 503, 504])(
+    'throws SERVICE_UNAVAILABLE when a gateway returns %i without an API error',
+    async (status) => {
+      server.use(http.post('/api/v1/things', () => new HttpResponse(null, { status })));
+      await expect(api.post('/things', {})).rejects.toMatchObject({
+        status,
+        code: 'SERVICE_UNAVAILABLE',
+        message: expect.stringContaining("Couldn't reach the Learn-To-Fly server") as unknown,
+      });
+    },
+  );
+
+  it('keeps the server error when a 503 carries an API error body', async () => {
+    server.use(
+      http.get('/api/v1/things', () =>
+        HttpResponse.json(
+          { error: { code: 'SERVICE_UNAVAILABLE', message: 'Database unavailable.' } },
+          { status: 503 },
+        ),
+      ),
+    );
+    await expect(api.get('/things')).rejects.toMatchObject({
+      code: 'SERVICE_UNAVAILABLE',
+      message: 'Database unavailable.',
+    });
   });
 
   it('throws NETWORK_ERROR when the request fails', async () => {

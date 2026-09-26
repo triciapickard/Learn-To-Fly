@@ -51,6 +51,18 @@ MERN with TypeScript on both sides (plan.md Section 26):
 6. Start everything: `npm run dev` → client on <http://localhost:5173> with `/api`
    proxied to the API on <http://localhost:3000>.
 
+### Troubleshooting: `http proxy error … ECONNREFUSED`
+
+The client is running but the API on port 3000 isn't, almost always because MongoDB
+isn't running (for example after a restart, or when Docker Desktop is closed). Look for
+`[server] … Cannot reach MongoDB` in the `npm run dev` output, then start the database:
+
+```sh
+docker start ltf-mongo
+```
+
+In development the server keeps retrying and starts by itself once MongoDB is reachable.
+
 ## Scripts
 
 | Script                                | What it does                                                         |
