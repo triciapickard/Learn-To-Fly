@@ -65,9 +65,8 @@ export function HeroIllustration({ className }: { className?: string }) {
           d="M6 30 C8 26 14 25 22 25 L52 24 L76 8 L124 8 L152 22 L224 29 C230 30 232 36 228 38 L150 50 C120 57 60 59 28 57 C14 56 6 50 6 44Z"
           fill="#f8fafc"
         />
-        {/* vertical fin with swept leading edge and rudder */}
+        {/* vertical fin with swept leading edge */}
         <path d="M168 26 L210 -8 L228 -8 L230 31Z" fill="#f8fafc" />
-        <path d="M220 -8 L221 31" stroke="#cbd5e1" strokeWidth="1.5" />
         <circle cx="219" cy="-9" r="2.5" fill="#ef4444" />
         {/* cowling seam */}
         <path d="M50 25 L48 56" stroke="#cbd5e1" strokeWidth="1.5" />
