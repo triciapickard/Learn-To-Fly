@@ -26,6 +26,8 @@ export function getCsrfToken(): string | null {
   return csrfToken;
 }
 
+const GATEWAY_STATUSES = new Set([502, 503, 504]);
+
 type Method = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface RequestOptions {
@@ -83,6 +85,15 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
     if (isApiErrorBody(data)) {
       const { code, message, details, requestId } = data.error;
       throw new ApiError(response.status, code, message, details, requestId);
+    }
+    // A gateway error without our error body means the API itself never answered (e.g. the
+    // dev proxy or the host couldn't reach it), not that the request was wrong.
+    if (GATEWAY_STATUSES.has(response.status)) {
+      throw new ApiError(
+        response.status,
+        'SERVICE_UNAVAILABLE',
+        "Couldn't reach the Learn-To-Fly server. Please try again in a moment.",
+      );
     }
     throw new ApiError(response.status, 'INTERNAL', 'Something went wrong. Please try again.');
   }

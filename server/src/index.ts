@@ -1,19 +1,41 @@
 import type { Server } from 'node:http';
 import { createApp } from './app.js';
-import { connectDb, disconnectDb } from './config/db.js';
+import { connectDb, disconnectDb, redactMongoUri } from './config/db.js';
 import { loadEnv } from './config/env.js';
 import { createLogger } from './middleware/logger.js';
 
 const SHUTDOWN_TIMEOUT_MS = 10_000;
+/** In development, keep retrying MongoDB at most this far apart until it comes up. */
+const DEV_DB_RETRY_MAX_DELAY_MS = 5_000;
+
+const errorMessage = (error: unknown) => (error instanceof Error ? error.message : String(error));
 
 async function main() {
   const env = loadEnv();
   const logger = createLogger(env);
 
-  await connectDb(env.MONGODB_URI, {
-    onRetry: (attempt, error) =>
-      logger.warn({ err: error, attempt }, 'MongoDB connection failed, retrying'),
-  });
+  const mongoTarget = redactMongoUri(env.MONGODB_URI);
+  const isDevelopment = env.NODE_ENV === 'development';
+  // Without MongoDB the API can't start, and the Vite proxy reports ECONNREFUSED for every
+  // /api request. In development, wait for MongoDB (e.g. Docker still starting) instead of
+  // exiting, so the server comes up on its own once the database is reachable.
+  try {
+    await connectDb(env.MONGODB_URI, {
+      ...(isDevelopment && { attempts: Infinity, maxDelayMs: DEV_DB_RETRY_MAX_DELAY_MS }),
+      onRetry: (attempt, error) =>
+        logger.warn(
+          { attempt, reason: errorMessage(error) },
+          `Cannot reach MongoDB at ${mongoTarget}. Is it running? Retrying…`,
+        ),
+    });
+  } catch (error) {
+    logger.fatal(
+      { reason: errorMessage(error) },
+      `Could not connect to MongoDB at ${mongoTarget}. Check that MongoDB is running and ` +
+        'MONGODB_URI in .env is correct.',
+    );
+    process.exit(1);
+  }
   logger.info('Connected to MongoDB');
 
   const app = createApp({ env, logger });

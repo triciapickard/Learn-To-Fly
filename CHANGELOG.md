@@ -110,3 +110,8 @@ All notable changes to this project are documented here. The format is based on
   fading their text, and danger-filled elements use dark text in dark mode, so both keep
   AA contrast.
 - The challenge airport index now matches the field the airport page queries.
+- Local log-in failing with `http proxy error … ECONNREFUSED`: the API exited when
+  MongoDB wasn't running. In development it now waits for MongoDB and starts once it's
+  reachable, with a short "Cannot reach MongoDB" log line instead of a driver dump; the
+  client shows "Couldn't reach the Learn-To-Fly server" for 502/503/504 gateway errors
+  instead of "Something went wrong".
