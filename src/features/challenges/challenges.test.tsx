@@ -133,7 +133,8 @@ describe('score preview and debrief validation (step 7.15)', () => {
           {
             error: {
               code: 'VALIDATION_ERROR',
-              message: 'This challenge was updated; please refresh.',
+              message:
+                'This challenge was updated while you were flying. Reload the page to see the new rubric.',
             },
           },
           { status: 400 },

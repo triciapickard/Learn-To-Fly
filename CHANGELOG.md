@@ -103,6 +103,12 @@ All notable changes to this project are documented here. The format is based on
   links, airport cards and pages with "Challenges at this airport", a searchable A–Z
   glossary with `#slug` deep links, and filterable resources. P1 hover-cards and `/tools`
   are deferred (D-23).
+- Phase 11: polish, accessibility and performance — enforced CSP with a hashed theme
+  script, HSTS in production; axe, CSP, 320 px reflow and reduced-motion E2E checks on every
+  main page; keyboard-only E2E walkthroughs of flows A–D; `npm run size` (initial JS budget,
+  in CI) and `npm run analyze`; per-page titles, descriptions, canonical URLs, Open Graph and
+  Twitter tags, robots.txt, web manifest and theme-color; the landing page is prerendered and
+  hydrated (D-24).
 
 ### Fixed
 
@@ -110,3 +116,6 @@ All notable changes to this project are documented here. The format is based on
   fading their text, and danger-filled elements use dark text in dark mode, so both keep
   AA contrast.
 - The challenge airport index now matches the field the airport page queries.
+- The landing page's "Start lesson 1" button pointed at a lesson slug that doesn't exist.
+- Zod's `new Function` probe and fonts inlined as `data:` URLs were CSP violations.
+- The footer jumped when page content loaded (CLS up to 0.30, now 0).

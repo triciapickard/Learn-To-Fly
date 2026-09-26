@@ -18,8 +18,12 @@ export default function RootErrorPage() {
         An unexpected error stopped this page from loading. Reloading usually fixes it. If it keeps
         happening, please try again later.
       </p>
-      <div>
+      <div className="flex flex-wrap justify-center gap-3">
         <Button onClick={() => window.location.reload()}>Reload the page</Button>
+        {/* A plain link: the router itself may be what failed. */}
+        <Button variant="secondary" asChild>
+          <a href="/">Go to the home page</a>
+        </Button>
       </div>
       {import.meta.env.DEV && error instanceof Error && (
         <pre className="mt-4 overflow-auto rounded-control bg-surface-2 p-4 text-left text-sm">

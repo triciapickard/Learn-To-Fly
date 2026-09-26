@@ -21,6 +21,7 @@ import { contentRouter } from './routes/content.routes.js';
 import { healthRouter } from './routes/health.routes.js';
 import { meRouter } from './routes/me.routes.js';
 import { progressRouter } from './routes/progress.routes.js';
+import { scriptHashesFor } from './utils/csp.js';
 
 export interface AppOptions {
   env: Env;
@@ -50,7 +51,14 @@ export function createApp({
 
   app.use(requestId);
   app.use(httpLogger(logger));
-  app.use(securityHeaders());
+  app.use(
+    securityHeaders({
+      isProduction,
+      scriptHashes: scriptHashesFor(
+        path.join(serveClient ? clientDistDir : process.cwd(), 'index.html'),
+      ),
+    }),
+  );
   app.use(compression());
 
   const api = express.Router();
@@ -72,7 +80,7 @@ export function createApp({
   app.use(API_BASE_PATH, api);
   app.use('/api', notFound);
 
-  if (serveClient) app.use(staticClient(clientDistDir));
+  if (serveClient) app.use(staticClient(clientDistDir, env.PUBLIC_SITE_URL));
 
   app.use(errorHandler(logger, isProduction));
   return app;

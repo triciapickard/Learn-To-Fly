@@ -91,7 +91,13 @@ describe('createApp', () => {
     const res = await request(app).get('/api/v1/health');
     expect(res.headers['x-powered-by']).toBeUndefined();
     expect(res.headers['x-content-type-options']).toBe('nosniff');
-    expect(res.headers['content-security-policy-report-only']).toContain("default-src 'self'");
+    expect(res.headers['content-security-policy']).toContain("default-src 'self'");
+    expect(res.headers['content-security-policy']).toMatch(
+      /script-src 'self' 'sha256-[A-Za-z0-9+/=]+'/,
+    );
+    expect(res.headers['content-security-policy-report-only']).toBeUndefined();
+    // HSTS only in production, where the app is served over HTTPS.
+    expect(res.headers['strict-transport-security']).toBeUndefined();
   });
 
   it('rejects non-JSON bodies on mutating API routes', async () => {

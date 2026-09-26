@@ -35,7 +35,12 @@ export default function ChecklistPage() {
   const { data: all } = useChecklists();
   const panel = useRef<HTMLDivElement>(null);
   const fullscreen = useFullscreen(panel);
-  usePageTitle(data?.checklist.title ?? 'Checklist');
+  usePageTitle(
+    data?.checklist.title ?? 'Checklist',
+    data
+      ? `The Cessna 172 ${data.checklist.title.toLowerCase()} checklist, item by item.`
+      : undefined,
+  );
 
   return (
     <QueryStates

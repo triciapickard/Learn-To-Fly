@@ -22,7 +22,8 @@ interface PublishedChallenge {
   planningFields: { id: string }[];
 }
 
-export const RUBRIC_CHANGED = 'This challenge was updated; please refresh.';
+export const RUBRIC_CHANGED =
+  'This challenge was updated while you were flying. Reload the page to see the new rubric.';
 
 /**
  * Creates an attempt (Section 24.2): checks the challenge is published and the rubric is

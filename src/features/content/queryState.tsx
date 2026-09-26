@@ -13,7 +13,8 @@ export function isNotFound(error: unknown): boolean {
 export function PageSkeleton({ label = 'Loading' }: { label?: string }) {
   return (
     <PageContainer>
-      <LoadingRegion label={label} className="flex flex-col gap-4">
+      {/* Full height so the footer stays below the fold until content arrives (no layout shift). */}
+      <LoadingRegion label={label} className="flex min-h-dvh flex-col gap-4">
         <Skeleton className="h-4 w-48" />
         <Skeleton className="h-10 w-2/3" />
         <Skeleton className="h-5 w-full max-w-2xl" />
