@@ -1,6 +1,6 @@
 # Learn-To-Fly — v1 Master Plan
 
-> **Status:** Draft 1 · Planning document · Nothing in this plan has been built yet.
+> **Status:** Phases 0–11 complete · Next up: Phase 12 (QA and in-sim verification), then Phase 13 (Deployment and launch).
 >
 > **Scope of this document:** Every step from an empty repository to a deployed, demo-ready
 > **v1** of Learn-To-Fly: a MERN web app that teaches a complete beginner to fly the
