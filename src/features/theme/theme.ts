@@ -36,3 +36,44 @@ export function resolveTheme(preference: ThemePreference, prefersDark: boolean):
 export function applyTheme(theme: ResolvedTheme): void {
   document.documentElement.dataset.theme = theme;
 }
+
+// A tiny external store for the preference, read with useSyncExternalStore so a prerendered
+// page can hydrate with the server's value ('system') and then switch (step 11.9).
+const listeners = new Set<() => void>();
+let unstoredPreference: ThemePreference = 'system';
+
+/** The saved preference, or the in-memory one when storage is unavailable. */
+export function getPreference(): ThemePreference {
+  try {
+    const stored = localStorage.getItem(THEME_STORAGE_KEY);
+    return isThemePreference(stored) ? stored : 'system';
+  } catch {
+    return unstoredPreference;
+  }
+}
+
+export function setStoredPreference(preference: ThemePreference): void {
+  unstoredPreference = preference;
+  storePreference(preference);
+  listeners.forEach((listener) => listener());
+}
+
+export function subscribePreference(listener: () => void): () => void {
+  listeners.add(listener);
+  // Another tab changed the theme.
+  const onStorage = (event: StorageEvent) => {
+    if (event.key === THEME_STORAGE_KEY) listener();
+  };
+  window.addEventListener('storage', onStorage);
+  return () => {
+    listeners.delete(listener);
+    window.removeEventListener('storage', onStorage);
+  };
+}
+
+export function subscribeSystemTheme(listener: () => void): () => void {
+  if (typeof matchMedia !== 'function') return () => {};
+  const query = matchMedia('(prefers-color-scheme: dark)');
+  query.addEventListener('change', listener);
+  return () => query.removeEventListener('change', listener);
+}

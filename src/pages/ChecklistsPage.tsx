@@ -3,6 +3,7 @@ import { Badge } from '@/components/Badge';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Link } from '@/components/Link';
 import { PageContainer, PageHeader } from '@/components/PageHeader';
+import { EmptyState } from '@/components/States';
 import { useChecklists } from '@/features/content/api';
 import { QueryStates } from '@/features/content/queryState';
 import { MODE_LABELS } from '@/features/reference/checklists';
@@ -25,6 +26,12 @@ export default function ChecklistsPage() {
             title="Checklists"
             description="In flight order, from preflight to securing the airplane. Open one to run it item by item, in large type."
           />
+          {data!.checklists.length === 0 && (
+            <EmptyState
+              title="No checklists yet"
+              message="Checklists appear here once they're published."
+            />
+          )}
           <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {data!.checklists.map((c) => {
               const emergency = c.phase.toLowerCase() === 'emergency';

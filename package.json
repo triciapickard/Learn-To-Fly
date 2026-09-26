@@ -12,7 +12,7 @@
     "dev:client": "vite",
     "dev:server": "tsx watch --tsconfig tsconfig.server.json server/src/index.ts",
     "build": "npm run build:client && npm run build:server",
-    "build:client": "vite build",
+    "build:client": "vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && tsx scripts/prerender.ts",
     "size": "tsx scripts/check-bundle-size.ts",
     "analyze": "ANALYZE=1 vite build",
     "build:server": "tsc -p tsconfig.server.json && tsc-alias -p tsconfig.server.json",

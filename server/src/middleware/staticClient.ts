@@ -24,13 +24,20 @@ export function staticClient(distDir: string, siteUrl?: string): Router {
   );
   router.use(express.static(distDir, { index: false, maxAge: '1h' }));
 
-  let template: string | null = null;
+  // Templates are read once: index.html (the empty shell) and, for `/`, the prerendered
+  // landing page from scripts/prerender.ts (step 11.9).
+  const templates = new Map<string, string | null>();
+  const load = (file: string) => {
+    if (!templates.has(file))
+      templates.set(file, existsSync(file) ? readFileSync(file, 'utf8') : null);
+    return templates.get(file) ?? null;
+  };
+  const landingHtml = path.join(distDir, '.prerender', 'landing.html');
+
   router.get('/{*splat}', (req, res, next) => {
     if (req.path === '/api' || req.path.startsWith('/api/')) return next();
-    if (template === null) {
-      if (!existsSync(indexHtml)) return next();
-      template = readFileSync(indexHtml, 'utf8');
-    }
+    const template = (req.path === '/' && load(landingHtml)) || load(indexHtml);
+    if (template === null) return next();
     const html = renderHead(template, {
       siteUrl: siteUrl ?? `${req.protocol}://${req.get('host')}`,
       pathname: req.path,

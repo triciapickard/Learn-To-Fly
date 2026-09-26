@@ -11,6 +11,7 @@ export default tseslint.config(
     ignores: [
       'dist',
       'dist-server',
+      'dist-ssr',
       'coverage',
       'playwright-report',
       'test-results',

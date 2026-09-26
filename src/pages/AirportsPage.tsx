@@ -1,6 +1,7 @@
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Link } from '@/components/Link';
 import { PageContainer, PageHeader } from '@/components/PageHeader';
+import { EmptyState } from '@/components/States';
 import { useAirports, useChallenges } from '@/features/content/api';
 import { QueryStates } from '@/features/content/queryState';
 import { AirportBadges, ROLE_LABELS, runwayList } from '@/features/reference/airports';
@@ -23,6 +24,12 @@ export default function AirportsPage() {
             title="Airports"
             description="The San Francisco Bay Area airports used in the course. Always check the current Chart Supplement before you fly."
           />
+          {data!.airports.length === 0 && (
+            <EmptyState
+              title="No airports yet"
+              message="Airports appear here once they're published."
+            />
+          )}
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {data!.airports.map((a) => {
               const count = challenges.filter((c) => c.airportIcao === a.icao).length;

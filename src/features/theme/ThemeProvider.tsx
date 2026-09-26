@@ -1,44 +1,45 @@
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useSyncExternalStore, type ReactNode } from 'react';
 import {
   applyTheme,
-  readStoredPreference,
+  getPreference,
   resolveTheme,
-  storePreference,
+  setStoredPreference,
+  subscribePreference,
+  subscribeSystemTheme,
   systemPrefersDark,
   type ThemePreference,
 } from './theme';
 import { ThemeContext } from './ThemeContext';
 
+const noSubscribe = () => () => {};
+
 /**
  * Theme state (Section 31.5). The inline script in index.html applies the stored theme
- * before first paint; this provider keeps it in sync afterwards.
+ * before first paint; this provider keeps it in sync afterwards. While hydrating a
+ * prerendered page it reports the server's values ('system', light) so the markup matches,
+ * and it doesn't touch the page's theme until the real values are in.
  */
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [preference, setPreferenceState] = useState<ThemePreference>(readStoredPreference);
-  const [prefersDark, setPrefersDark] = useState(systemPrefersDark);
-
-  useEffect(() => {
-    if (typeof matchMedia !== 'function') return;
-    const query = matchMedia('(prefers-color-scheme: dark)');
-    const onChange = (event: MediaQueryListEvent) => setPrefersDark(event.matches);
-    query.addEventListener('change', onChange);
-    return () => query.removeEventListener('change', onChange);
-  }, []);
-
+  const preference = useSyncExternalStore<ThemePreference>(
+    subscribePreference,
+    getPreference,
+    () => 'system',
+  );
+  const prefersDark = useSyncExternalStore(subscribeSystemTheme, systemPrefersDark, () => false);
+  const hydrated = useSyncExternalStore(
+    noSubscribe,
+    () => true,
+    () => false,
+  );
   const resolvedTheme = resolveTheme(preference, prefersDark);
 
   useEffect(() => {
-    applyTheme(resolvedTheme);
-  }, [resolvedTheme]);
-
-  const setPreference = useCallback((next: ThemePreference) => {
-    storePreference(next);
-    setPreferenceState(next);
-  }, []);
+    if (hydrated) applyTheme(resolvedTheme);
+  }, [hydrated, resolvedTheme]);
 
   const value = useMemo(
-    () => ({ preference, resolvedTheme, setPreference }),
-    [preference, resolvedTheme, setPreference],
+    () => ({ preference, resolvedTheme, setPreference: setStoredPreference }),
+    [preference, resolvedTheme],
   );
 
   return <ThemeContext value={value}>{children}</ThemeContext>;

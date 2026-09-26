@@ -14,6 +14,11 @@ writeFileSync(
   '<!doctype html><html><head><title>Learn-To-Fly</title><meta name="description" content="x" /></head><body></body></html>',
 );
 writeFileSync(path.join(dist, 'assets', 'index-abc123.js'), 'console.log(1)');
+mkdirSync(path.join(dist, '.prerender'));
+writeFileSync(
+  path.join(dist, '.prerender', 'landing.html'),
+  '<!doctype html><html><head><title>x</title></head><body><div id="root"><h1>Prerendered</h1></div></body></html>',
+);
 writeFileSync(path.join(dist, 'robots.txt'), 'User-agent: *');
 
 const app = createApp({
@@ -66,6 +71,13 @@ describe('production static serving', () => {
     expect(res.text).not.toContain('noindex');
     const account = await request(app).get('/account');
     expect(account.text).toContain('<meta name="robots" content="noindex" />');
+  });
+
+  it('sends the prerendered landing page for / only, and never serves it directly', async () => {
+    expect((await request(app).get('/')).text).toContain('<h1>Prerendered</h1>');
+    expect((await request(app).get('/learn')).text).not.toContain('Prerendered');
+    const direct = await request(app).get('/.prerender/landing.html');
+    expect(direct.text).not.toContain('Prerendered');
   });
 
   it('keeps JSON 404s for unknown API routes', async () => {
