@@ -11,7 +11,7 @@ This is a web app using the React, MongoDB, NodeJS, Express (MERN) Stack.
 ## Folder Structure
 
 The client keeps the original `src/` structure. Server, shared code and content live beside
-it at the repo root (plan.md Section 25):
+it at the repo root (v1.md Section 25):
 
 ```
 Learn-To-Fly/
@@ -51,7 +51,8 @@ Learn-To-Fly/
     styles/                # Tailwind entry, tokens.css
     test/                  # test setup, MSW handlers
   e2e/                     # Playwright tests
-  plan.md                  # v1 master plan — single source of truth
+  v1.md                    # v1 master plan — single source of truth for v1
+  v2.md                    # v2 master plan — builds on v1.md
 ```
 
 ## Preferences
@@ -76,4 +77,4 @@ Don't update me on every step you take, It is better to start with your intentio
 
 ## Required Actions
 
-Always briefly read the plan.md before making any changes to code to get a better understanding of the project and the current status.
+Always briefly read the plans (v1.md, and v2.md once v2 work starts) before making any changes to code to get a better understanding of the project and the current status.
