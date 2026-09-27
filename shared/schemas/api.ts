@@ -15,7 +15,7 @@ import type {
 } from './content.js';
 
 /**
- * Response shapes of the public content API (plan.md Section 29.3). Personalised data
+ * Response shapes of the public content API (v1.md Section 29.3). Personalised data
  * (progress) is never mixed in, so these responses stay cacheable.
  */
 

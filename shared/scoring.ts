@@ -1,5 +1,5 @@
 /**
- * Challenge scoring (plan.md Section 15.2). The client uses it for the live preview in the
+ * Challenge scoring (v1.md Section 15.2). The client uses it for the live preview in the
  * debrief form; the server recomputes every attempt with it and never trusts the client.
  */
 

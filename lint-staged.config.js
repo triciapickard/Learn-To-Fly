@@ -1,4 +1,4 @@
-/** Pre-commit checks on staged files (plan.md step 1.21). */
+/** Pre-commit checks on staged files (v1.md step 1.21). */
 export default {
   '*.{ts,tsx,js,mjs,cjs}': ['eslint --fix', 'prettier --write'],
   '*.{json,md,yml,yaml,css,html}': ['prettier --write'],

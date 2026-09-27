@@ -13,7 +13,7 @@ const QuizAnswerSchema = new Schema(
   { _id: false },
 );
 
-/** `lessonProgress` (plan.md Section 27.6): one per user × lesson; absence = not started. */
+/** `lessonProgress` (v1.md Section 27.6): one per user × lesson; absence = not started. */
 const LessonProgressSchema = new Schema(
   {
     userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },

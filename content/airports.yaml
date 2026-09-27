@@ -1,4 +1,4 @@
-# Home-region airports (plan.md Section 11). ⚠ Verify runways, elevations, pattern
+# Home-region airports (v1.md Section 11). ⚠ Verify runways, elevations, pattern
 # direction and altitude, frequencies and airspace against (1) the current Chart
 # Supplement, (2) SkyVector and (3) the sim, then set verifiedAt and verifiedAgainst.
 # Frequencies are deliberately left empty until verified.

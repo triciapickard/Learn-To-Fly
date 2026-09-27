@@ -1,5 +1,5 @@
 /*
- * Design tokens (plan.md Section 21). Light values live in @theme so Tailwind generates
+ * Design tokens (v1.md Section 21). Light values live in @theme so Tailwind generates
  * utilities (bg-surface, text-muted, border-strong, …); [data-theme='dark'] overrides the
  * same custom properties at runtime.
  *

@@ -2,7 +2,7 @@ import mongoose, { Schema, type Model } from 'mongoose';
 import { toJSONPlugin } from './plugins/toJSON.js';
 
 /**
- * Content collections (plan.md Section 27). Written only by the seed script
+ * Content collections (v1.md Section 27). Written only by the seed script
  * (`npm run content:seed`); the API reads them. Nested structures (blocks, setup,
  * criteria…) are validated by the shared Zod schemas before seeding, so they are stored
  * as Mixed here.

@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 const PORT = Number(process.env.E2E_PORT ?? 4173);
 
-/** End-to-end tests (plan.md Section 35.2). `npm run e2e` builds the client first. */
+/** End-to-end tests (v1.md Section 35.2). `npm run e2e` builds the client first. */
 export default defineConfig({
   testDir: 'e2e',
   fullyParallel: true,

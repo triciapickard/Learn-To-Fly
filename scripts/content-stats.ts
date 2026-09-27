@@ -1,5 +1,5 @@
 /**
- * Content statistics (plan.md Section 28.6): word counts, lessons per module, reading time.
+ * Content statistics (v1.md Section 28.6): word counts, lessons per module, reading time.
  * Usage: npm run content:stats
  */
 import { loadContent } from './lib/loadContent.js';

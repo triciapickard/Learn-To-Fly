@@ -1,5 +1,5 @@
 /**
- * Validates content/ and seeds it into MongoDB (plan.md Section 28.1).
+ * Validates content/ and seeds it into MongoDB (v1.md Section 28.1).
  * Usage: npm run content:seed [-- --dry-run] [-- --include-drafts]
  * CONTENT_INCLUDE_DRAFTS=true also publishes unverified drafts (never use in production).
  */

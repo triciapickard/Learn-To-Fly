@@ -1,5 +1,5 @@
 /**
- * Completion rules (plan.md Section 13.3) and "continue" logic (step 8.9). Shared so the
+ * Completion rules (v1.md Section 13.3) and "continue" logic (step 8.9). Shared so the
  * dashboard API and any client-side overlay agree.
  *
  * - A module is complete when all its published P0 lessons are completed and all its

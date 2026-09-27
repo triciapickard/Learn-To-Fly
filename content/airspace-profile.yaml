@@ -1,4 +1,4 @@
-# W11 Airspace Cross-section data (plan.md Section 16.12).
+# W11 Airspace Cross-section data (v1.md Section 16.12).
 #
 # A simplified side view along a line from Half Moon Bay to Tracy. Distances along the line
 # are approximate and the shelves are simplified: this teaches the shape of the airspace,
@@ -6,7 +6,7 @@
 #
 # ⚠ UNVERIFIED: every floor, ceiling and position comes from memory of the San Francisco
 # Terminal Area Chart (TAC) and must be checked against the current TAC and sectional
-# before `verified` is set to true (plan.md step 5.4 / Phase 10 checklist).
+# before `verified` is set to true (v1.md step 5.4 / Phase 10 checklist).
 slug: bay-area
 title: Half Moon Bay to Tracy
 summary: >-

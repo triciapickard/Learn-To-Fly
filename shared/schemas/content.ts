@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { WIDGET_NAMES } from '../widgets.js';
 
 /**
- * Content schemas (plan.md Sections 27–28). The files in `content/` are validated against
+ * Content schemas (v1.md Sections 27–28). The files in `content/` are validated against
  * these by `npm run content:validate`; the seeder stores the parsed result in MongoDB.
  */
 

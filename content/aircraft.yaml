@@ -1,4 +1,4 @@
-# Cessna 172S reference data (plan.md Section 8). One source of truth for V-speeds,
+# Cessna 172S reference data (v1.md Section 8). One source of truth for V-speeds,
 # arcs, limits and power settings: lessons use tokens such as {{vspeed.vy}} and the
 # widgets read this file through the API.
 #

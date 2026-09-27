@@ -1,4 +1,4 @@
-# Test fixture (plan.md Section 35.3): 2 modules, 3 lessons, 2 challenges.
+# Test fixture (v1.md Section 35.3): 2 modules, 3 lessons, 2 challenges.
 modules:
   - slug: m1-basics
     code: M1

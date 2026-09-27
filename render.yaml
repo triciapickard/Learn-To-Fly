@@ -1,4 +1,4 @@
-# Render blueprint (plan.md Section 38.2). Apply it from the Render dashboard:
+# Render blueprint (v1.md Section 38.2). Apply it from the Render dashboard:
 # New + → Blueprint → pick this repository. Secrets marked `sync: false` are entered
 # in the dashboard and never committed.
 services:

@@ -1,4 +1,4 @@
-/** API error codes (plan.md Section 29). Shared so the client can branch on them. */
+/** API error codes (v1.md Section 29). Shared so the client can branch on them. */
 export const ERROR_CODES = {
   VALIDATION_ERROR: 400,
   UNAUTHENTICATED: 401,

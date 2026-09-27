@@ -8,7 +8,7 @@ function duplicates(values: string[]): string[] {
 }
 
 /**
- * Cross-reference rules (plan.md Section 28.5). Adds issues to `bundle.issues`.
+ * Cross-reference rules (v1.md Section 28.5). Adds issues to `bundle.issues`.
  * Draft items (`published: false`) may still contain `verify` callouts and have no
  * `lastVerifiedAt`; published items may not.
  */

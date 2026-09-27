@@ -3,7 +3,7 @@ import type { AttemptDto, ChallengeProgressDto } from '@shared/schemas/api.js';
 import { CRITERION_RESULTS, TIERS } from '@shared/scoring.js';
 import { toJSONPlugin } from './plugins/toJSON.js';
 
-/** `challengeAttempts` (plan.md Section 27.7): append-only; scores computed server-side. */
+/** `challengeAttempts` (v1.md Section 27.7): append-only; scores computed server-side. */
 const ChallengeAttemptSchema = new Schema(
   {
     userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },

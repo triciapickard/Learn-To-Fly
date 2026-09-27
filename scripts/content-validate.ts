@@ -1,5 +1,5 @@
 /**
- * Validates everything in content/ (plan.md Section 28.5).
+ * Validates everything in content/ (v1.md Section 28.5).
  * Usage: npm run content:validate [-- --strict] [-- --dir path/to/content]
  * Exit code 1 on errors (and on warnings with --strict).
  */

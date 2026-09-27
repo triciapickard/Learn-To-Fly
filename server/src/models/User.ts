@@ -11,7 +11,7 @@ const LastActivitySchema = new Schema(
   { _id: false },
 );
 
-/** `users` collection (plan.md Section 27.1). */
+/** `users` collection (v1.md Section 27.1). */
 const UserSchema = new Schema(
   {
     email: { type: String, required: true, lowercase: true, trim: true, maxlength: 254 },

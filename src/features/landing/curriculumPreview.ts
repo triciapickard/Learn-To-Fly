@@ -1,4 +1,4 @@
-/** Module overview for the landing page (plan.md Section 13.1). */
+/** Module overview for the landing page (v1.md Section 13.1). */
 export const CURRICULUM_PREVIEW = [
   {
     code: 'M0',

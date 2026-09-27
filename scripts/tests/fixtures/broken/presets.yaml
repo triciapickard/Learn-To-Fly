@@ -1,4 +1,4 @@
-# Standard challenge setups (plan.md Section 15.1) so briefs stay short.
+# Standard challenge setups (v1.md Section 15.1) so briefs stay short.
 # ⚠ Verify menu names and whether each option exists in MSFS 2024 (Section 9).
 startStates:
   COLD_DARK:

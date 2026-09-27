@@ -1,5 +1,5 @@
 /**
- * The app as Playwright sees it (plan.md Section 35.3): an in-memory MongoDB (or
+ * The app as Playwright sees it (v1.md Section 35.3): an in-memory MongoDB (or
  * E2E_MONGODB_URI) seeded with the real `content/` folder, drafts included (D-17), and the
  * Express app serving the built client from `dist/`. Run `npm run build:client` first.
  */

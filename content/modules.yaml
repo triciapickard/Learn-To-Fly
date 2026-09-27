@@ -1,4 +1,4 @@
-# The nine v1 modules (plan.md Section 13). `lessons` and `challenges` list slugs in
+# The nine v1 modules (v1.md Section 13). `lessons` and `challenges` list slugs in
 # curriculum order; add each slug here when its file is written (Phase 9).
 modules:
   - slug: m0-getting-started
