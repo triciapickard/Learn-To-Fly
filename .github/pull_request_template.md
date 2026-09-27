@@ -4,7 +4,7 @@
 
 ## Plan reference
 
-<!-- Phase and step IDs from plan.md, e.g. "Phase 6 · 6.26" -->
+<!-- Phase and step IDs from v1.md or v2.md, e.g. "Phase 6 · 6.26" -->
 
 ## Screenshots / GIFs
 
@@ -20,7 +20,7 @@
 - [ ] `npm run lint`, `npm run typecheck` pass
 - [ ] Content validated (`npm run content:validate`) if content changed
 - [ ] Accessibility checked (keyboard, labels, contrast) for UI changes
-- [ ] Relevant plan.md steps ticked
+- [ ] Relevant v1.md / v2.md steps ticked
 
 ## What I changed
 

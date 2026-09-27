@@ -1,6 +1,6 @@
 # Content authoring guide
 
-Everything learners read lives in this folder as Markdown and YAML (plan.md D-08, D-09).
+Everything learners read lives in this folder as Markdown and YAML (v1.md D-08, D-09).
 The repository is the source of truth; `npm run content:seed` validates it and copies it
 into MongoDB.
 
@@ -22,7 +22,7 @@ characters) and are referenced by file name only: `![Alt text](m2-l4-lift.webp "
 
 ## Add a lesson
 
-1. Copy the template in plan.md Appendix D to
+1. Copy the template in v1.md Appendix D to
    `content/lessons/<module-slug>/<lesson-slug>.md`. Slugs are the ID plus the title in
    kebab-case, e.g. `l2-3-climbs-and-descents`. Never change a slug after launch.
 2. Add the slug to the module's `lessons` list in `modules.yaml`, in order.
@@ -35,7 +35,7 @@ characters) and are referenced by file name only: `![Alt text](m2-l4-lift.webp "
 
 ## Add a challenge
 
-1. Copy the template in plan.md Appendix C to `content/challenges/<challenge-slug>.yaml`.
+1. Copy the template in v1.md Appendix C to `content/challenges/<challenge-slug>.yaml`.
 2. Add the slug to the module's `challenges` list.
 3. Use presets by name (`WX_CALM`, `LOAD_SOLO`, `late-spring`, `training`) — see
    `presets.yaml`. Criteria: 3–8, weights 1–3, at least one required; tiered criteria
@@ -78,7 +78,7 @@ Lead the level-off by about 10% of your vertical speed: 10% of 600 is 60 ft.
 
 ## Style
 
-US English, second person, short sentences (plan.md Section 18). Speeds in KIAS,
+US English, second person, short sentences (v1.md Section 18). Speeds in KIAS,
 altitudes with MSL/AGL, headings as three digits ("heading 090"), thousands separators
 ("3,500 ft"), en dashes for ranges ("60–70 KIAS"). Never copy POH or Garmin text.
 

@@ -2,7 +2,7 @@
 
 All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
-[Semantic Versioning](https://semver.org/) (plan.md Appendix F.4).
+[Semantic Versioning](https://semver.org/) (v1.md Appendix F.4).
 
 ## [Unreleased]
 
@@ -103,6 +103,15 @@ All notable changes to this project are documented here. The format is based on
   links, airport cards and pages with "Challenges at this airport", a searchable A–Z
   glossary with `#slug` deep links, and filterable resources. P1 hover-cards and `/tools`
   are deferred (D-23).
+- `v2.md`: the v2 master plan — Course 2 (Skyhawk Advanced VFR: performance, crosswinds,
+  weather, night, mountains, failures, Class B and VATSIM) and Course 3 (Skyhawk
+  Instrument Foundations), the v1.1 carry-over, courses and regions, challenge engine v2,
+  logbook and sim currency, practice hub, W21–W39, and Phases 14–26.
+
+### Changed
+
+- Renamed `plan.md` to `v1.md` and updated every Markdown reference to it (and the
+  `.prettierignore` entry).
 
 ### Fixed
 

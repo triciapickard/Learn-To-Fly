@@ -8,13 +8,14 @@ beginners how to fly virtually in MSFS 2024.
 v1 teaches a complete beginner to fly the **Cessna 172 Skyhawk** in Microsoft Flight
 Simulator 2024 the way real pilots do: short interactive lessons, visual widgets and
 in-sim challenges with a self-assessed, scored debrief. The full plan lives in
-[`plan.md`](./plan.md).
+[`v1.md`](./v1.md). v2 (advanced VFR, night, mountains, failures and instrument
+foundations in the same Skyhawk) is planned in [`v2.md`](./v2.md).
 
 > For simulation use only. Learn-To-Fly is not real-world flight training.
 
 ## Stack
 
-MERN with TypeScript on both sides (plan.md Section 26):
+MERN with TypeScript on both sides (v1.md Section 26):
 
 - **Client:** React 19, Vite, React Router 7, TanStack Query, Tailwind CSS v4
 - **Server:** Node.js 24 LTS, Express 5, Mongoose, express-session + connect-mongo
@@ -80,11 +81,11 @@ In development the server keeps retrying and starts by itself once MongoDB is re
 ## Deployment
 
 Production runs as one Render web service (Express serves the API and the built React
-app) with MongoDB Atlas — plan.md Section 38. The [`render.yaml`](./render.yaml)
+app) with MongoDB Atlas — v1.md Section 38. The [`render.yaml`](./render.yaml)
 blueprint holds the service settings; `MONGODB_URI` and `PUBLIC_SITE_URL` are entered in
 the Render dashboard.
 
-- **Production URL:** not deployed yet (plan.md step 4.19).
+- **Production URL:** not deployed yet (v1.md step 4.19).
 - Health check: `GET /api/v1/health`.
 - Session cookies are `Secure` in production. To try a production build locally over
   plain HTTP, set `PUBLIC_SITE_URL=http://localhost:3000` and run
@@ -92,10 +93,10 @@ the Render dashboard.
 
 ## Project structure
 
-See [`CLAUDE.md`](./CLAUDE.md) for the folder tree and plan.md Section 25 for details.
+See [`CLAUDE.md`](./CLAUDE.md) for the folder tree and v1.md Section 25 for details.
 
 ## Contributing
 
-Work follows the phases in `plan.md` Part VI. Branches are named `phase-<n>-<name>`,
-commits follow Conventional Commits (plan.md Appendix F) and every PR uses the template
+Work follows the phases in `v1.md` Part VI (and `v2.md` Part VI for v2). Branches are named `phase-<n>-<name>`,
+commits follow Conventional Commits (v1.md Appendix F) and every PR uses the template
 in `.github/pull_request_template.md`.

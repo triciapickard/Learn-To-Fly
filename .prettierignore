@@ -4,6 +4,6 @@ coverage
 playwright-report
 test-results
 package-lock.json
-plan.md
+v1.md
 server/src/data/common-passwords.txt
 scripts/tests/fixtures

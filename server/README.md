@@ -4,7 +4,7 @@ Express 5 + TypeScript API. Built by `createApp()` in `src/app.ts` (no `listen`,
 drive it with Supertest); `src/index.ts` validates the environment, connects MongoDB,
 starts listening and handles graceful shutdown.
 
-## Folder conventions (plan.md step 2.16)
+## Folder conventions (v1.md step 2.16)
 
 | Folder                                     | Contains                                                              |
 | ------------------------------------------ | --------------------------------------------------------------------- |
