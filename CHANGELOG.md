@@ -8,6 +8,10 @@ All notable changes to this project are documented here. The format is based on
 
 ### Added
 
+- Phase 12 tooling: `npm run content:verify-report` writes a verification tracker
+  (`docs/verification/tracker.csv`) and a checklist of every open verify marker by module;
+  `npm run content:links` checks every external URL in `content/` (step 12.4).
+
 - Phase 1: repository and tooling — Vite + React + TypeScript client, Express 5 +
   TypeScript server, `shared/` folder, Tailwind CSS v4, ESLint, Prettier, Husky +
   lint-staged, Vitest (client and node projects), GitHub Actions CI, Dependabot, PR

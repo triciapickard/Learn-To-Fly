@@ -99,6 +99,19 @@ Errors name the file and line, e.g.
 `--include-drafts` (or `CONTENT_INCLUDE_DRAFTS=true`) shows drafts, labelled as
 unverified — use it locally and on preview services, never in production.
 
+## Verification (Phase 12)
+
+```sh
+npm run content:verify-report       # docs/verification/tracker.csv + checklist.md
+npm run content:links -- --report   # docs/verification/links.md; exits 1 on broken links
+```
+
+`checklist.md` lists every open `verify` callout, `⚠ verify` comment, "Verify —" note and
+unverified data file, grouped by module. Fix the content and re-run: resolved markers drop
+off. `tracker.csv` opens in any spreadsheet app; re-running refreshes the generated columns
+and keeps what you typed in the others (checked in sim, tier flown, issues, fix PR). Behind
+an HTTP proxy, run the link check with `NODE_USE_ENV_PROXY=1`.
+
 The seeder bumps an item's `version` only when its content changes, unpublishes items you
 delete (it never deletes, because attempts reference them) and records every run in the
 `contentReleases` collection.

@@ -330,9 +330,9 @@ resources:
     description: Chapter 18 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
     verifiedAt: null
   - slug: faa-weather-handbook
-    title: Aviation Weather Handbook (FAA-H-8083-28)
+    title: Aviation Weather Handbook (FAA-H-8083-28B)
     publisher: FAA
-    url: https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-28-aviation-weather-handbook
+    url: https://www.faa.gov/regulationspolicies/handbooksmanuals/aviation/faa-h-8083-28b-aviation-weather-handbook
     type: handbook
     topics:
       - weather
