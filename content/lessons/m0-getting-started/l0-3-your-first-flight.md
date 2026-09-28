@@ -13,9 +13,9 @@ objectives:
   - Use pause and the brief during a flight.
 challenges: [c0-1-first-flight-over-livermore]
 resources: [afh-ch1, boldmethod-home]
-published: false
-lastVerifiedAt: null
-simVersion: null
+published: true
+lastVerifiedAt: 2026-09-28
+simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
 ## What to expect

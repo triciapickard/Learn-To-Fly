@@ -14,9 +14,9 @@ objectives:
   - Set up views and a free flight with a chosen airport, weather and time of day.
 challenges: []
 resources: [msfs-official-site, msfs-forums]
-published: false
-lastVerifiedAt: null
-simVersion: null
+published: true
+lastVerifiedAt: 2026-09-28
+simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
 ## Choose your controller profile
@@ -72,7 +72,7 @@ Start gently and adjust after a few flights. If turns feel sluggish, add sensiti
 
 ## The Learn-To-Fly Training assistance profile
 
-MSFS 2024 can help with almost everything. To learn real skills, turn most helpers off. The names below are the ones the sim uses (checked in MSFS 2024 version 1.8.16.0); they can change between sim updates.
+MSFS 2024 can help with almost everything. To learn real skills, turn most helpers off. From the main menu, open **Settings → General → Assistances**. The names below are the ones the sim uses (checked in MSFS 2024 version 1.8.16.0); they can change between sim updates.
 
 | Setting                                                                            | Section             | Recommended                              | Why                                            |
 | ---------------------------------------------------------------------------------- | ------------------- | ---------------------------------------- | ---------------------------------------------- |
@@ -90,13 +90,9 @@ MSFS 2024 can help with almost everything. To learn real skills, turn most helpe
 The three damage settings are worded backwards: switching **Disable Crash Damage** _on_ turns crash damage _off_. From Module 4, switch all three off so the airplane can be damaged.
 :::
 
-:::callout{type="verify"}
-Author note: add the menu path to the assistance settings screen shown below.
-:::
+![The Piloting Assistance section of the MSFS 2024 assistance settings, with Auto-Rudder, AI Auto-Trim and Assisted Controller Sensitivity all switched off](m0-l2-assistance-piloting.webp 'Piloting Assistance, set as the table recommends (MSFS 2024 1.8.16.0). Automixture and the glider, helicopter and balloon assists are left out of this picture.')
 
-![The Piloting Assistance section of the MSFS 2024 assistance settings, listing Auto-Rudder, AI Auto-Trim, Automixture and helicopter, glider and balloon assists](m0-l2-assistance-piloting.webp "Piloting Assistance (MSFS 2024 1.8.16.0). The switches show one pilot's choices; set yours from the table.")
-
-![The Visual Assistance and Realism sections of the MSFS 2024 assistance settings, including Flight Path, Taxi Ribbon, the three Disable Damage switches and Unlimited Fuel](m0-l2-assistance-visual-realism.webp 'Visual Assistance and Realism (MSFS 2024 1.8.16.0).')
+![The Visual Assistance and Realism sections of the MSFS 2024 assistance settings, with Taxi Ribbon and Piloting and Controls Notifications on, the three Disable Damage switches on and Unlimited Fuel off](m0-l2-assistance-visual-realism.webp 'Visual Assistance and Realism, set for Module 0 (MSFS 2024 1.8.16.0).')
 
 ![More MSFS 2024 assistance switches: G-Suit, AI Radio Communications (ATC), ATC enforce flight plan, Airport Services Motion and Start flight without walkaround](m0-l2-assistance-other.webp 'The rest of the page. Leave these as they are for now; each challenge says when it needs ATC.')
 
@@ -164,7 +160,7 @@ Custom weather makes a challenge repeatable: everyone who flies it gets the same
 
 MSFS 2024 gives you an **EFB** (electronic flight bag): a tablet in the cockpit, like the ones real pilots carry. Its **map** shows your airplane on a moving map. It's a great safety net while you learn. In Module 6 you'll put it away for pilotage challenges and navigate with a chart instead.
 
-For checklists, use Learn-To-Fly's own (**Reference → Checklists**). Lesson 1.4 explains how to use them.
+The EFB also has a **checklist** section for the Skyhawk. Learn-To-Fly has its own simplified checklists too (**Reference → Checklists**); Lesson 1.4 explains how the two fit together.
 
 ## Keeping this site open while you fly
 

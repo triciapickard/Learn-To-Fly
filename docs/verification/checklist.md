@@ -8,9 +8,9 @@
 
 | Group | Items | Published / verified | Open markers |
 | --- | --- | --- | --- |
-| Lessons | 33 | 1 | 33 |
-| Challenges | 29 | 0 | 30 |
-| Reference data | 6 | 0 | 64 |
+| Lessons | 33 | 3 | 32 |
+| Challenges | 29 | 1 | 30 |
+| Reference data | 6 | 0 | 63 |
 
 Every item still needs the full protocol from v1.md Section 54 even when it has no open
 markers: lessons follow 54.4 (numbers, sim instructions, screenshots, links, sim-vs-reality
@@ -28,21 +28,21 @@ file (Section 54.2).
 
 ### L0.2 — Setting up MSFS 2024 for training
 
-[content/lessons/m0-getting-started/l0-2-setting-up-msfs-2024-for-training.md](../../content/lessons/m0-getting-started/l0-2-setting-up-msfs-2024-for-training.md) · P0 · draft
+[content/lessons/m0-getting-started/l0-2-setting-up-msfs-2024-for-training.md](../../content/lessons/m0-getting-started/l0-2-setting-up-msfs-2024-for-training.md) · P0 · published, verified 2026-09-28
 
-- [line 93](../../content/lessons/m0-getting-started/l0-2-setting-up-msfs-2024-for-training.md#L93): add the menu path to the assistance settings screen shown below.
+- Verified.
 
 ### L0.3 — Your first flight
 
-[content/lessons/m0-getting-started/l0-3-your-first-flight.md](../../content/lessons/m0-getting-started/l0-3-your-first-flight.md) · P0 · draft
+[content/lessons/m0-getting-started/l0-3-your-first-flight.md](../../content/lessons/m0-getting-started/l0-3-your-first-flight.md) · P0 · published, verified 2026-09-28
 
-- No open markers. Run the Section 54 protocol for this item.
+- Verified.
 
 ### C0.1 — First flight over Livermore
 
-[content/challenges/c0-1-first-flight-over-livermore.yaml](../../content/challenges/c0-1-first-flight-over-livermore.yaml) · P0 · draft
+[content/challenges/c0-1-first-flight-over-livermore.yaml](../../content/challenges/c0-1-first-flight-over-livermore.yaml) · P0 · published, verified 2026-09-28
 
-- No open markers. Run the Section 54 protocol for this item.
+- Verified.
 
 ## M1 — Meet the Skyhawk
 
@@ -69,7 +69,7 @@ file (Section 54.2).
 [content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md) · P0 · draft
 
 - [line 30](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L30): check every speed in this lesson against the MSFS 2024 in-sim checklist for the G1000 Skyhawk before publishing (Section 54).
-- [line 154](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L154): in MSFS 2024 1.8.16.0 there is no checklist on the toolbar (found while verifying Module 0). Find where the in-sim checklist lives now (the EFB?) and whether it can auto-complete items, then rewrite this section. Lesson 0.2 no longer mentions the checklist.
+- [line 154](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L154): the in-sim checklist is in the EFB (checked in 1.8.16.0). Check whether it can auto-complete items or highlight controls, and where that option is set, then update this section and its callout. Lesson 0.2 doesn't cover it.
 
 ### C1.1 — Cockpit scavenger hunt
 
@@ -519,7 +519,6 @@ file (Section 54.2).
 [content/resources.yaml](../../content/resources.yaml) · P0 · unverified
 
 - [line 4](../../content/resources.yaml#L4): 96 resources have no verifiedAt — run npm run content:links, then check each still says what we claim
-- [line 628](../../content/resources.yaml#L628): location: 'In the sim: toolbar → Checklist (the location can change between sim updates).' — ⚠ verify: not on the toolbar in 1.8.16.0; check the EFB
 - [line 966](../../content/resources.yaml#L966): Video "FAA on YouTube" — watch in full before setting verifiedAt
 - [line 976](../../content/resources.yaml#L976): Video "Boldmethod on YouTube" — watch in full before setting verifiedAt
 - [line 986](../../content/resources.yaml#L986): Video "Flight Insight on YouTube" — watch in full before setting verifiedAt
