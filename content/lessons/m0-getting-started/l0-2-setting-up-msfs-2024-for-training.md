@@ -167,5 +167,3 @@ The Fly tab of each challenge is designed for a second screen:
 :::callout{type="verify"}
 Author note: check whether MSFS 2024 has an in-sim browser or toolbar panel that can show a web page, and describe it here if it does.
 :::
-
-You're set up. Time for [[l0-3-your-first-flight]].

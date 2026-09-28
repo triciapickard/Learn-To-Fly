@@ -109,5 +109,3 @@ Add them together and total drag is lowest somewhere in the middle. Slower than 
 ## Stall speed changes
 
 The stall speeds on the airspeed indicator, {{vspeed.vs1}} flaps up and {{vspeed.vso}} with full flaps, are for straight-and-level flight at maximum weight, at **1 G**.
-
-In a turn, the wing has to make more lift to hold altitude, so it works at a higher angle of attack and reaches the critical angle at a **higher** speed. In a 60° bank, stall speed rises by about 40%. You'll explore that in [[l2-4-turns-and-coordination]] and in Module 5.
