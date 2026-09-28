@@ -170,4 +170,3 @@ MSFS 2024 has no built-in web browser. The toolbar (move the mouse to the top of
 - **A tablet or phone** works well. Open the challenge, then choose "Open fly mode". Fly mode uses large type and a dark theme that's easy to read in a dim room.
 - **Pause** the sim whenever you need to read. Nobody is timing you unless you start the timer.
 
-You're set up. Time for [[l0-3-your-first-flight]].

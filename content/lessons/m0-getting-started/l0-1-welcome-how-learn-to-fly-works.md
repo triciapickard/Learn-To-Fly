@@ -105,5 +105,3 @@ No. Learn-To-Fly is for simulation only. Real flight training needs a certificat
 - **Fly each challenge more than once.** The second attempt is where you learn the most.
 - **Use pause.** Pausing to look around or read the brief is not cheating; it is how you learn.
 - **Celebrate good decisions.** A go-around when things don't look right is a win, not a failure.
-
-Next, set up the sim in [[l0-2-setting-up-msfs-2024-for-training]].
