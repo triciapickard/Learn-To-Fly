@@ -28,7 +28,7 @@ A **sectional chart** is the standard map for VFR flying in the US. It shows eve
 - Around busy airports, a **Terminal Area Chart (TAC)** shows the same area at twice the scale.
 
 :::callout{type="sim"}
-MSFS has its own VFR map, but it doesn't show everything a sectional does. Plan with the real chart, just as a real pilot would.
+MSFS 2024 has a moving map in the EFB (electronic flight bag), but it doesn't show everything a sectional does. Plan with the real chart, just as a real pilot would.
 :::
 
 ## Scale and position

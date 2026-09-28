@@ -8,7 +8,8 @@ const KEYS: [string, string][] = [
   ['vy', 'Best rate (Vy)'],
   ['vg', 'Best glide (Vg)'],
   ['approachFlaps30', 'Approach, flaps 30°'],
-  ['vfe', 'Max flaps >10° (Vfe)'],
+  ['vfe10', 'Max with flaps 10° (Vfe)'],
+  ['vfe', 'Max with flaps 20–30° (Vfe)'],
   ['vno', 'Max cruise (Vno)'],
   ['vne', 'Never exceed (Vne)'],
 ];

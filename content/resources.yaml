@@ -625,7 +625,7 @@ resources:
   - slug: msfs-checklist
     title: MSFS 2024 in-sim checklist for the Cessna 172
     publisher: Microsoft / Asobo Studio
-    location: 'In the sim: toolbar → Checklist (the location can change between sim updates).'
+    location: 'In the sim: the checklist section of the EFB (electronic flight bag). The location can change between sim updates.'
     type: sim
     topics:
       - checklists

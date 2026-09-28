@@ -7,9 +7,9 @@ priority: P0
 type: setup
 difficulty: 1
 estimatedMinutes: 20
-published: false
-lastVerifiedAt: null # set when verified in the sim (Section 54)
-simVersion: null
+published: true
+lastVerifiedAt: 2026-09-28
+simVersion: 'MSFS 2024 (1.8.16.0)'
 
 goal: >
   Take off, fly a relaxed loop around the Livermore valley and feel how the Skyhawk
@@ -20,20 +20,21 @@ setup:
   airportIcao: KLVK
   startState: RUNWAY
   startDetails:
-    runway: 25R # ⚠ verify the runway name in the sim
+    runway: 25R
   weatherPreset: WX_CALM
   timeLocal: '10:00'
   datePreset: late-spring
   loadPreset: LOAD_SOLO
-  assistance: training # auto-rudder on for everyone in this challenge
+  assistance: training
   aiTraffic: false
   atc: false
   crashDamage: false
   flightPlan: null
 
 procedure:
-  - Turn auto-rudder on for this flight. Unpause and add full throttle smoothly. Keep the nose on the centerline with small rudder inputs.
+  - Set the flaps to 10°. Unpause and add full throttle smoothly. Keep the nose on the centerline with small rudder inputs (on a gamepad, the LT and RT triggers).
   - At 55 KIAS, gently raise the nose; climb at about 75 KIAS.
+  - Once you're climbing steadily, a few hundred feet above the ground, raise the flaps to 0°.
   - Climb to 3,000 ft MSL. Lower the nose to level and reduce power to about 2,300 RPM.
   - Make a gentle left turn (about 15–20° of bank) toward Lake Del Valle, then a right turn toward Mt Diablo.
   - Fly anywhere you like for 5–10 minutes. Try a small climb and a small descent.

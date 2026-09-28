@@ -13,9 +13,9 @@ objectives:
   - Use pause and the brief during a flight.
 challenges: [c0-1-first-flight-over-livermore]
 resources: [afh-ch1, boldmethod-home]
-published: false
-lastVerifiedAt: null
-simVersion: null
+published: true
+lastVerifiedAt: 2026-09-28
+simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
 ## What to expect
@@ -42,14 +42,20 @@ Look outside most of the time. Glance at the instruments, then look back outside
 
 Start on runway 25R at Livermore with the engine running. Pause the sim and read these steps first.
 
-1. **Unpause and add full power smoothly.** The airplane starts to roll. Keep the nose pointed down the centerline with small rudder inputs (or let auto-rudder help).
-2. **At {{vspeed.vr}}, gently raise the nose.** The airplane lifts off. Hold the nose a little above the horizon and let it climb at about {{vspeed.vy}}.
-3. **Climb to 3,000 ft MSL.** Then lower the nose to the level-flight picture and reduce power to about 2,300 RPM. The airspeed settles around 100 knots.
-4. **Make gentle turns.** Roll to about 15–20° of bank, hold it, then roll level. Try a turn left toward Lake Del Valle, south of the airport, and a turn right toward Mt Diablo, the big mountain to the north.
-5. **Look around.** Find Interstate 580 running east–west through the valley, the town of Livermore, and the wind turbines on the Altamont Pass hills to the east.
+1. **Set the flaps to 10°.** A little flap helps the airplane lift off sooner.
+2. **Unpause and add full power smoothly.** The airplane starts to roll. Keep the nose pointed down the centerline with small rudder inputs: pedals, a twist of the stick, or the LT and RT triggers on a gamepad.
+3. **At {{vspeed.vr}}, gently raise the nose.** The airplane lifts off. Hold the nose a little above the horizon and let it climb at about {{vspeed.vy}}.
+4. **Raise the flaps to 0°** once you're climbing steadily, a few hundred feet above the ground. Raising them right after lift-off, while you're still slow and low, can make the airplane sink.
+5. **Climb to 3,000 ft MSL.** Then lower the nose to the level-flight picture and reduce power to about 2,300 RPM. The airspeed settles around 100 knots.
+6. **Make gentle turns.** Roll to about 15–20° of bank, hold it, then roll level. Try a turn left toward Lake Del Valle, southeast of the airport, and a turn right toward Mt Diablo, the big mountain to the north.
+7. **Look around.** Find Interstate 580 running east–west through the valley, the town of Livermore, and the Altamont Pass: the low gap in the hills to the east where I-580 heads over toward Tracy.
 
-:::callout{type="verify"}
-Author note: fly this route in MSFS 2024 and check the runway designation, the landmarks' positions and the level-flight speed at 2,300 RPM.
+:::callout{type="tip"}
+**Attitude and power work together.** The level-flight picture only holds your altitude at the right power. Leave the throttle at full (2,700 RPM) and the airplane keeps climbing slowly, even with the nose on the level picture; pull the power too far back and it sinks. At about 2,300 RPM, the level picture gives level flight. Module 2 explains why.
+:::
+
+:::callout{type="sim"}
+In real life the Altamont Pass hills are lined with wind turbines. The sim's scenery may not show them, so use the gap in the hills and the freeway instead.
 :::
 
 :::quiz{id="l0-3-q1" type="single"}
