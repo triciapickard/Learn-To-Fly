@@ -75,7 +75,7 @@ dates:
 assistance:
   training:
     label: Learn-To-Fly Training profile
-    description: Assisted flying, landing, trim and checklist auto-complete off; auto-rudder on only without rudder pedals or a twist stick (Lesson 0.2, Section 9.3).
+    description: Auto-Rudder, AI Auto-Trim and path aids off, whatever your controller (gamepads use the LT and RT triggers for rudder). Lesson 0.2 lists every setting.
 
 defaults:
   timeLocal: '10:00'

@@ -151,6 +151,10 @@ Learn-To-Fly's checklists are a **simplified summary in our own words**, written
 The in-sim checklist can auto-complete items for you. Turn that assistance off (Lesson 0.2): the point is that you check each item yourself.
 :::
 
+:::callout{type="verify"}
+Author note: in MSFS 2024 1.8.16.0 there is no checklist on the toolbar (found while verifying Module 0). Find where the in-sim checklist lives now (the EFB?) and whether it can auto-complete items, then rewrite this section. Lesson 0.2 no longer mentions the checklist.
+:::
+
 ## Try a checklist
 
 Run the before-starting-engine checklist below. Press Space or tap an item to tick it; Backspace unticks. Try it once now, then keep it open next to the sim the first time you start the engine.

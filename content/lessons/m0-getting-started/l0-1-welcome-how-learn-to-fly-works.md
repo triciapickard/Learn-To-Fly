@@ -14,9 +14,9 @@ objectives:
   - State that Learn-To-Fly is not real-world flight training.
 challenges: []
 resources: [faa-plane-sense, aopa-students]
-published: false
-lastVerifiedAt: null
-simVersion: null
+published: true
+lastVerifiedAt: 2026-09-28
+simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
 ## Where this course takes you

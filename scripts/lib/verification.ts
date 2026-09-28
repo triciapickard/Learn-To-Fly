@@ -403,7 +403,11 @@ export function buildChecklist(
       item.type === 'Data' ? `\`${item.id}\` — ${item.title}` : `${item.id} — ${item.title}`;
     out.push(`### ${heading}`, '', `${link(item.file)} · ${item.priority} · ${status}`, '');
     if (item.markers.length === 0) {
-      out.push('- No open markers. Run the Section 54 protocol for this item.', '');
+      const done = item.type === 'Data' ? Boolean(item.lastVerifiedAt) : item.published;
+      out.push(
+        done ? '- Verified.' : '- No open markers. Run the Section 54 protocol for this item.',
+        '',
+      );
     } else {
       for (const m of item.markers) out.push(`- ${link(item.file, m.line)}: ${m.text}`);
       out.push('');

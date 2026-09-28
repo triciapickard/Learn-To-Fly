@@ -42,7 +42,7 @@ Both are scored like every other challenge: Gold, Silver or Bronze on each crite
 
 1. **Re-fly your weak challenges.** Check your history for any challenge you only got Bronze on.
 2. **Prepare the C8.2 plan**: a route with checkpoints, altitudes, a nav log with headings, times and fuel, airspace notes, frequencies and an alternate. Lesson 6.6 shows how.
-3. **Set up the sim**: the right weather, time and aircraft, with the VFR map off.
+3. **Set up the sim**: the right weather, time and aircraft, with the EFB map put away.
 4. **Run PAVE** on yourself and the flight.
 
 :::quiz{id="l8-2-q1" type="single"}

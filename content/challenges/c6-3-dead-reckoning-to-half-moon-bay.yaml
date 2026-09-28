@@ -34,7 +34,7 @@ setup:
 
 procedure:
   - Plan the flight. Measure the true course and distance, then use the wind triangle with the winds aloft in the brief (270° at 15 kt at 3,000 ft) and a cruise of 110 KTAS to work out the WCA, magnetic heading, groundspeed and time.
-  - Turn off the GPS maps and the sim's VFR map.
+  - Turn off the GPS maps and put the EFB map away.
   - Depart Palo Alto (⚠ verify the published departure procedure) and climb to 2,500–3,500 ft, staying below the Class B floor (⚠ check the floors and terrain on the TAC).
   - Fly your computed heading. Use Crystal Springs Reservoir to check your position.
   - Cross the ridge, descend to Half Moon Bay's pattern altitude, and join the pattern on the CTAF.

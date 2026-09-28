@@ -13,7 +13,7 @@ objectives:
   - Apply the Learn-To-Fly Training assistance profile.
   - Set up views and a free flight with a chosen airport, weather and time of day.
 challenges: []
-resources: [msfs-official-site, msfs-forums, msfs-checklist]
+resources: [msfs-official-site, msfs-forums]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -21,22 +21,22 @@ simVersion: null
 
 ## Choose your controller profile
 
-You can learn to fly with any controller, but some make certain skills easier. Find your setup below. The key difference is **rudder**: the pedals (or a twist grip) that keep the airplane's nose lined up with where it is going.
+You can learn to fly with any controller, but some make certain skills easier. Find your setup below. The key difference is **rudder**: the pedals (or a twist grip) that keep the airplane's nose lined up with where it is going. Every setup below has a way to use the rudder, so leave **Auto-Rudder off** whichever one you fly with.
 
 ### Gamepad only
 
-A gamepad works for the whole course. The sticks are small, so use gentle movements and a softer sensitivity curve. Turn **auto-rudder on**: without a rudder axis, the sim keeps the airplane coordinated for you.
+A gamepad works for the whole course. By default the **triggers** control the rudder: **LT** for left rudder and **RT** for right rudder. Squeeze them gently; a light touch is all most turns and takeoffs need. The sticks are small, so use gentle movements and a softer sensitivity curve.
 
 ### Joystick with a twist grip
 
-Twisting the stick controls the rudder. Most joysticks also have a throttle lever. Leave **auto-rudder off** so you learn to use the rudder, but add a little dead zone to the twist axis so you don't press rudder by accident.
+Twisting the stick controls the rudder. Most joysticks also have a throttle lever. Add a little dead zone to the twist axis so you don't press rudder by accident.
 
 ### Yoke, throttle quadrant and rudder pedals
 
-The closest to a real cockpit. Leave **auto-rudder off**. Bind the toe brakes on the pedals if they have them.
+The closest to a real cockpit. Bind the toe brakes on the pedals if they have them.
 
 :::callout{type="sim"}
-Auto-rudder is an assist the real airplane doesn't have. In the real Skyhawk you use rudder in every turn and on every takeoff. If you fly with auto-rudder on, the lessons still explain what your feet would be doing, and challenges tell you where it matters.
+Auto-Rudder is an assist the real airplane doesn't have. In the real Skyhawk you use rudder in every turn and on every takeoff, so learn it from the first flight. If you ever fly with Auto-Rudder on, the lessons still explain what your feet would be doing.
 :::
 
 ## Essential bindings
@@ -72,48 +72,58 @@ Start gently and adjust after a few flights. If turns feel sluggish, add sensiti
 
 ## The Learn-To-Fly Training assistance profile
 
-MSFS 2024 can help with almost everything. To learn real skills, turn most helpers off. The menu names change between sim updates, so this table lists what each setting **does**.
+MSFS 2024 can help with almost everything. To learn real skills, turn most helpers off. The names below are the ones the sim uses (checked in MSFS 2024 version 1.8.16.0); they can change between sim updates.
 
-| Setting (what it does)                | Recommended                                        | Why                                     |
-| ------------------------------------- | -------------------------------------------------- | --------------------------------------- |
-| Assisted yoke or AI-controlled flight | Off                                                | You fly the airplane.                   |
-| Auto-rudder                           | Off with pedals or a twist grip; on with a gamepad | See your controller profile.            |
-| Assisted takeoff and landing          | Off                                                |                                         |
-| Auto-mixture                          | On for Module 0 only, then off                     | You'll learn mixture in Module 1.       |
-| Auto-trim or assisted trim            | Off                                                | Trimming is a core skill.               |
-| Checklist auto-complete               | Off                                                | Use the checklist; don't let it work.   |
-| Unlimited fuel                        | Off                                                | Fuel management matters.                |
-| Crash and stress damage               | Off until Module 4, then on                        | Honest consequences, when you're ready. |
-| Flight model                          | The most realistic one available                   |                                         |
-| Landing guidance and path aids        | Off                                                | Learn the runway picture.               |
-| Tooltips in the cockpit               | On for Modules 0–2                                 | Helps you learn the controls.           |
+| Setting                                                                            | Section             | Recommended                              | Why                                            |
+| ---------------------------------------------------------------------------------- | ------------------- | ---------------------------------------- | ---------------------------------------------- |
+| Auto-Rudder                                                                        | Piloting Assistance | Off                                      | Every controller can use rudder (see above).   |
+| AI Auto-Trim                                                                       | Piloting Assistance | Off                                      | Trimming is a core skill.                      |
+| Automixture                                                                        | Piloting Assistance | On for Module 0 only, then off           | You'll learn mixture in Module 1.              |
+| Assisted Controller Sensitivity                                                    | Piloting Assistance | Off                                      | You set your own curves (above).               |
+| Display active Waypoint Marker, Flight Path                                        | Visual Assistance   | Off                                      | Learn the runway picture and find your way.    |
+| Taxi Ribbon                                                                        | Visual Assistance   | On for Modules 0–2, then off             | Lesson 3.2 teaches airport signs and markings. |
+| Piloting and Controls Notifications                                                | Visual Assistance   | On for Modules 0–2                       | Helps you learn the controls.                  |
+| Disable Crash Damage, Disable Aircraft Stress Damage, Disable Engine Stress Damage | Realism             | On (damage off) until Module 4, then off | Honest consequences, when you're ready.        |
+| Unlimited Fuel                                                                     | Realism             | Off                                      | Fuel management matters.                       |
+
+:::callout{type="tip"}
+The three damage settings are worded backwards: switching **Disable Crash Damage** _on_ turns crash damage _off_. From Module 4, switch all three off so the airplane can be damaged.
+:::
 
 :::callout{type="verify"}
-Author note: add the current MSFS 2024 menu path for each setting, with a dated screenshot, after checking them in the sim (Section 9.3).
+Author note: add the menu path to the assistance settings screen shown below.
 :::
+
+![The Piloting Assistance section of the MSFS 2024 assistance settings, listing Auto-Rudder, AI Auto-Trim, Automixture and helicopter, glider and balloon assists](m0-l2-assistance-piloting.webp "Piloting Assistance (MSFS 2024 1.8.16.0). The switches show one pilot's choices; set yours from the table.")
+
+![The Visual Assistance and Realism sections of the MSFS 2024 assistance settings, including Flight Path, Taxi Ribbon, the three Disable Damage switches and Unlimited Fuel](m0-l2-assistance-visual-realism.webp 'Visual Assistance and Realism (MSFS 2024 1.8.16.0).')
+
+![More MSFS 2024 assistance switches: G-Suit, AI Radio Communications (ATC), ATC enforce flight plan, Airport Services Motion and Start flight without walkaround](m0-l2-assistance-other.webp 'The rest of the page. Leave these as they are for now; each challenge says when it needs ATC.')
 
 :::quiz{id="l0-2-q1" type="single"}
 Which assistance should be off so that you learn to trim?
 
-- [ ] Auto-rudder
-- [x] Auto-trim (assisted trim)
-- [ ] Tooltips
-- [ ] Unlimited fuel
+- [ ] Auto-Rudder
+- [x] AI Auto-Trim
+- [ ] Piloting and Controls Notifications
+- [ ] Unlimited Fuel
 
 ---
 
-Auto-trim does the trimming for you. Turn it off: trimming the airplane so it holds its attitude by itself is one of the most important skills in Module 2.
+AI Auto-Trim does the trimming for you. Turn it off: trimming the airplane so it holds its attitude by itself is one of the most important skills in Module 2.
 :::
 
 :::quiz{id="l0-2-q2" type="single"}
-You fly with a gamepad and have no rudder axis. Should auto-rudder be on or off?
+You fly with a gamepad. How do you use the rudder?
 
-- [x] On
-- [ ] Off
+- [x] Squeeze the triggers: LT for left rudder, RT for right
+- [ ] You can't, so turn Auto-Rudder on
+- [ ] Push the right stick left or right
+- [ ] Only with rudder pedals
 
 ---
 
-On. Without a rudder axis you can't coordinate turns yourself, so let the sim keep the ball centered. With pedals or a twist grip, turn it off and learn to use the rudder.
+The gamepad triggers control the rudder by default, so leave Auto-Rudder off and learn to use it from the first flight, just as you would in the real airplane.
 :::
 
 ## Views
@@ -150,22 +160,18 @@ Why do challenges specify custom weather instead of live weather?
 Custom weather makes a challenge repeatable: everyone who flies it gets the same wind, clouds and visibility, and you can fly it again in the same conditions to see if you improved.
 :::
 
-## The in-sim checklist and the VFR map
+## The EFB and its map
 
-MSFS 2024 has a checklist panel for the Skyhawk. Open it from the toolbar and step through each phase of flight. You'll learn to use it properly in Lesson 1.4.
+MSFS 2024 gives you an **EFB** (electronic flight bag): a tablet in the cockpit, like the ones real pilots carry. Its **map** shows your airplane on a moving map. It's a great safety net while you learn. In Module 6 you'll put it away for pilotage challenges and navigate with a chart instead.
 
-The **VFR map** shows your airplane on a moving map. It's a great safety net while you learn. In Module 6 you'll turn it off for pilotage challenges and navigate with a chart instead.
+For checklists, use Learn-To-Fly's own (**Reference → Checklists**). Lesson 1.4 explains how to use them.
 
 ## Keeping this site open while you fly
 
-The Fly tab of each challenge is designed for a second screen:
+MSFS 2024 has no built-in web browser. The toolbar (move the mouse to the top of the screen) holds the sim's own panels, but it can't show this site. The Fly tab of each challenge is designed for a second screen instead:
 
 - **A second monitor** next to your main one is ideal.
 - **A tablet or phone** works well. Open the challenge, then choose "Open fly mode". Fly mode uses large type and a dark theme that's easy to read in a dim room.
 - **Pause** the sim whenever you need to read. Nobody is timing you unless you start the timer.
-
-:::callout{type="verify"}
-Author note: check whether MSFS 2024 has an in-sim browser or toolbar panel that can show a web page, and describe it here if it does.
-:::
 
 You're set up. Time for [[l0-3-your-first-flight]].

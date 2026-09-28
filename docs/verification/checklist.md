@@ -8,9 +8,9 @@
 
 | Group | Items | Published / verified | Open markers |
 | --- | --- | --- | --- |
-| Lessons | 33 | 0 | 34 |
-| Challenges | 29 | 0 | 31 |
-| Reference data | 6 | 0 | 63 |
+| Lessons | 33 | 1 | 33 |
+| Challenges | 29 | 0 | 30 |
+| Reference data | 6 | 0 | 64 |
 
 Every item still needs the full protocol from v1.md Section 54 even when it has no open
 markers: lessons follow 54.4 (numbers, sim instructions, screenshots, links, sim-vs-reality
@@ -22,28 +22,27 @@ file (Section 54.2).
 
 ### L0.1 — Welcome: how Learn-To-Fly works
 
-[content/lessons/m0-getting-started/l0-1-welcome-how-learn-to-fly-works.md](../../content/lessons/m0-getting-started/l0-1-welcome-how-learn-to-fly-works.md) · P0 · draft
+[content/lessons/m0-getting-started/l0-1-welcome-how-learn-to-fly-works.md](../../content/lessons/m0-getting-started/l0-1-welcome-how-learn-to-fly-works.md) · P0 · published, verified 2026-09-28
 
-- No open markers. Run the Section 54 protocol for this item.
+- Verified.
 
 ### L0.2 — Setting up MSFS 2024 for training
 
 [content/lessons/m0-getting-started/l0-2-setting-up-msfs-2024-for-training.md](../../content/lessons/m0-getting-started/l0-2-setting-up-msfs-2024-for-training.md) · P0 · draft
 
-- [line 91](../../content/lessons/m0-getting-started/l0-2-setting-up-msfs-2024-for-training.md#L91): add the current MSFS 2024 menu path for each setting, with a dated screenshot, after checking them in the sim (Section 9.3).
-- [line 167](../../content/lessons/m0-getting-started/l0-2-setting-up-msfs-2024-for-training.md#L167): check whether MSFS 2024 has an in-sim browser or toolbar panel that can show a web page, and describe it here if it does.
+- [line 93](../../content/lessons/m0-getting-started/l0-2-setting-up-msfs-2024-for-training.md#L93): add the menu path to the assistance settings screen shown below.
 
 ### L0.3 — Your first flight
 
 [content/lessons/m0-getting-started/l0-3-your-first-flight.md](../../content/lessons/m0-getting-started/l0-3-your-first-flight.md) · P0 · draft
 
-- [line 51](../../content/lessons/m0-getting-started/l0-3-your-first-flight.md#L51): fly this route in MSFS 2024 and check the runway designation, the landmarks' positions and the level-flight speed at 2,300 RPM.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C0.1 — First flight over Livermore
 
 [content/challenges/c0-1-first-flight-over-livermore.yaml](../../content/challenges/c0-1-first-flight-over-livermore.yaml) · P0 · draft
 
-- [line 23](../../content/challenges/c0-1-first-flight-over-livermore.yaml#L23): runway: 25R — ⚠ verify the runway name in the sim
+- No open markers. Run the Section 54 protocol for this item.
 
 ## M1 — Meet the Skyhawk
 
@@ -70,6 +69,7 @@ file (Section 54.2).
 [content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md) · P0 · draft
 
 - [line 30](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L30): check every speed in this lesson against the MSFS 2024 in-sim checklist for the G1000 Skyhawk before publishing (Section 54).
+- [line 154](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L154): in MSFS 2024 1.8.16.0 there is no checklist on the toolbar (found while verifying Module 0). Find where the in-sim checklist lives now (the EFB?) and whether it can auto-complete items, then rewrite this section. Lesson 0.2 no longer mentions the checklist.
 
 ### C1.1 — Cockpit scavenger hunt
 
@@ -519,6 +519,7 @@ file (Section 54.2).
 [content/resources.yaml](../../content/resources.yaml) · P0 · unverified
 
 - [line 4](../../content/resources.yaml#L4): 96 resources have no verifiedAt — run npm run content:links, then check each still says what we claim
+- [line 628](../../content/resources.yaml#L628): location: 'In the sim: toolbar → Checklist (the location can change between sim updates).' — ⚠ verify: not on the toolbar in 1.8.16.0; check the EFB
 - [line 966](../../content/resources.yaml#L966): Video "FAA on YouTube" — watch in full before setting verifiedAt
 - [line 976](../../content/resources.yaml#L976): Video "Boldmethod on YouTube" — watch in full before setting verifiedAt
 - [line 986](../../content/resources.yaml#L986): Video "Flight Insight on YouTube" — watch in full before setting verifiedAt

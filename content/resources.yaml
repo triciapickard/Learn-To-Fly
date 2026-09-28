@@ -625,7 +625,7 @@ resources:
   - slug: msfs-checklist
     title: MSFS 2024 in-sim checklist for the Cessna 172
     publisher: Microsoft / Asobo Studio
-    location: 'In the sim: toolbar → Checklist (the location can change between sim updates).'
+    location: 'In the sim: toolbar → Checklist (the location can change between sim updates).' # ⚠ verify: not on the toolbar in 1.8.16.0; check the EFB
     type: sim
     topics:
       - checklists
