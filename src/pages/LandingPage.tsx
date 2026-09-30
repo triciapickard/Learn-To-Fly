@@ -283,7 +283,7 @@ export default function LandingPage() {
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-14 text-center">
           <h2 className="text-3xl font-bold">Ready for your first flight?</h2>
           <p className="max-w-xl text-muted">
-            Lesson 0.1 takes about ten minutes and needs no account.
+            Lesson 0.1 takes about five minutes and needs no account.
           </p>
           <Button size="lg" asChild>
             <Link unstyled to={FIRST_LESSON_PATH}>

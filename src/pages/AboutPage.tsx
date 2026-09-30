@@ -28,9 +28,10 @@ export default function AboutPage() {
         </p>
         <h2>Who builds it</h2>
         <p>
-          Learn-To-Fly is an independent personal project built by a flight-sim enthusiast who is
-          learning the Cessna 172 alongside writing the lessons. Every procedure and number is
-          checked against FAA handbooks and flown in the sim before it is published.
+          Learn-To-Fly is an independent personal project built by a flight-sim enthusiast who
+          struggled to find in-depth tutorials that actually teach you how to fly the aircraft, not
+          just which buttons to press. Every procedure and number is checked against FAA handbooks
+          and flown in the sim before it is published.
         </p>
         <h2>Where it is going</h2>
         <p>
