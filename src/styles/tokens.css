@@ -67,8 +67,25 @@
   --color-chart-blue: #1f58a8;
   --color-chart-magenta: #a3166f;
   --color-chart-ink: #1d2733;
+  /* Landing page livery (redesign direction C): navy bands, white text, a gold tier word. */
+  --color-band: #0c1a3a;
+  --color-band-text: #ffffff;
+  --color-band-muted: #c9d0de;
+  --color-band-gold: #e8b931;
+  /* Landing calls to action (livery red), the thin hero stripe and section rules. */
+  --color-cta: #d0262d;
+  --color-cta-hover: #a81e24;
+  --color-cta-text: #ffffff;
+  --color-cta-band: #d0262d;
+  --color-cta-band-text: #ffffff;
+  --color-cta-band-button: #d0262d;
+  /* Livery paint: the brand red on the airplane, hero stripe and logo, fixed in both themes. */
+  --color-paint: #d0262d;
+  --color-stripe: #0c1a3a;
+  --color-rule: #0c1a3a;
 
   --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Big Shoulders Display Variable', 'Arial Narrow', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --radius-control: 6px;
@@ -135,9 +152,58 @@
   --color-magenta-soft: #2d1633;
   --color-cyan-soft: #0f2a33;
 
+  --color-band: #16213b;
+  --color-band-text: #e6ecf5;
+  --color-band-muted: #aab6cb;
+  --color-band-gold: #f6c453;
+
   /* Dark mode uses borders rather than heavy shadows (Section 21.4). */
   --shadow-1: 0 0 0 1px var(--color-border);
   --shadow-2: 0 0 0 1px var(--color-border), 0 8px 24px rgb(0 0 0 / 0.4);
+}
+
+/*
+ * Landing page livery: the homepage's accent is livery red rather than the site's sky blue.
+ * White on #d0262d is 5.2:1; #d0262d text on bg is 4.9:1.
+ */
+.livery {
+  --color-primary: #d0262d;
+  --color-primary-hover: #a81e24;
+  --color-primary-contrast: #ffffff;
+  --color-primary-soft: #fbe5e6;
+}
+
+/*
+ * Landing page "night livery" (dark mode for redesign direction C): a livery-navy page with
+ * midnight bands, white pill buttons and a red final band, so the homepage does not look like
+ * the generic dark theme. Contrast: text ≥ 4.5:1 on bg, surfaces and bands; primary text
+ * 6.1:1 on bg; white on cta-band 5.2:1.
+ */
+[data-theme='dark'] .livery {
+  --color-bg: #0c1a3a;
+  --color-surface: #13244b;
+  --color-surface-2: #182b57;
+  --color-border: #2b3f6e;
+  --color-border-strong: #7f8fb5;
+  --color-text: #f5f7fb;
+  --color-muted: #b4bed3;
+  --color-primary: #ff6b70;
+  --color-primary-hover: #ff9a9d;
+  --color-primary-contrast: #0c1a3a;
+  --color-primary-soft: #3b1a2c;
+
+  --color-band: #050b1c;
+  --color-band-text: #ffffff;
+  --color-band-muted: #b4bed3;
+
+  --color-cta: #ffffff;
+  --color-cta-hover: #ffd9da;
+  --color-cta-text: #0c1a3a;
+  --color-cta-band: #d0262d;
+  --color-cta-band-text: #ffffff;
+  --color-cta-band-button: #0c1a3a;
+  --color-stripe: #ffffff;
+  --color-rule: #7f8fb5;
 }
 
 [data-theme='light'] {
