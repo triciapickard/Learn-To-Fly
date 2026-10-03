@@ -1,3 +1,4 @@
+import '@fontsource-variable/big-shoulders-display';
 import '@fontsource-variable/inter';
 import '@fontsource-variable/jetbrains-mono';
 import { StrictMode } from 'react';
