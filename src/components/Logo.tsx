@@ -1,22 +1,42 @@
+import { useId } from 'react';
 import { cn } from '@/lib/cn';
 
-/** Logo mark: a horizon line with a small airplane in a circle (Section 21.1). */
+const FIN = 'M3 37 C13 35 18 27 22 17 L28.5 4 L35.5 4 C37 4 38 5 38 6.5 L38 37 Z';
+
+/**
+ * Logo mark: the Skyhawk's swept tail fin with the livery stripe across it (homepage
+ * redesign, direction C; replaces the Section 21.1 horizon mark). The fin takes the text
+ * colour so it reads in both themes; the stripe is the fixed livery red.
+ */
 export function LogoMark({ className }: { className?: string }) {
+  const clipId = `${useId()}-fin`;
   return (
-    <svg viewBox="0 0 32 32" aria-hidden className={cn('size-8', className)}>
-      <circle cx="16" cy="16" r="15" className="fill-primary" />
-      <path d="M1.5 18.5h29" className="stroke-primary-contrast" strokeWidth="1.6" />
-      <path
-        d="M16 7.5c.7 0 1.1.6 1.1 1.4v4.4l6.4 3.2v1.7l-6.4-1.6v3.3l1.8 1.3v1.3L16 21.8l-2.9.7v-1.3l1.8-1.3v-3.3l-6.4 1.6v-1.7l6.4-3.2V8.9c0-.8.4-1.4 1.1-1.4Z"
-        className="fill-primary-contrast"
-      />
+    <svg viewBox="0 0 40 40" aria-hidden className={cn('size-8', className)}>
+      <defs>
+        <clipPath id={clipId}>
+          <path d={FIN} />
+        </clipPath>
+      </defs>
+      <path d={FIN} className="fill-text" />
+      <g clipPath={`url(#${clipId})`}>
+        <path d="M8 42 C18 30 29 22 44 16 L44 24.5 C31 29 23 35 17.5 42 Z" className="fill-paint" />
+        <path
+          d="M6 32 C17 23 29 15.5 44 10.5 L44 12 C29 17 18 24.5 7.5 33.5 Z"
+          className="fill-surface"
+        />
+      </g>
     </svg>
   );
 }
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <span className={cn('inline-flex items-center gap-2 text-lg font-bold', className)}>
+    <span
+      className={cn(
+        'inline-flex items-center gap-2.5 font-display text-2xl font-black tracking-wide uppercase',
+        className,
+      )}
+    >
       <LogoMark />
       <span>Learn to Fly</span>
     </span>
