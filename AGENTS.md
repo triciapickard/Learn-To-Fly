@@ -75,4 +75,4 @@ this repository.
 
 ## Required Actions
 
-Always briefly read the plans (v1.md, and v2.md once v2 work starts) before making any changes to code to get a better understanding of the project and the current status.
+Before changing code, read the Status line and 'How to use this document' in v1.md (and v2.md once v2 work starts), then the sections the task touches.
