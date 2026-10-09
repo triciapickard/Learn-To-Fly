@@ -5,7 +5,7 @@ module: m8-capstone
 order: 1
 priority: P0
 title: Decision making and personal minimums
-summary: Good pilots make good decisions before they fly — PAVE, IMSAFE and your own personal minimums.
+summary: 'Good pilots make good decisions before they fly: PAVE, IMSAFE and your own personal minimums.'
 estimatedMinutes: 15
 prerequisites: [l7-3-towered-airports-and-sim-atc]
 objectives:
@@ -40,10 +40,10 @@ The FAA lists five attitudes that lead to bad decisions, each with an antidote:
 
 Use **PAVE** to check the four areas of risk:
 
-- **P — Pilot.** Are you current, rested and ready? Use IMSAFE, below.
-- **A — Aircraft.** Is it airworthy, fueled and right for this flight?
-- **V — enVironment.** Weather, terrain, airspace, runway length, daylight.
-- **E — External pressures.** Anything pushing you to go: an appointment, passengers, wanting to get home.
+- **P: Pilot.** Are you current, rested and ready? Use IMSAFE, below.
+- **A: Aircraft.** Is it airworthy, fueled and right for this flight?
+- **V: enVironment.** Weather, terrain, airspace, runway length, daylight.
+- **E: External pressures.** Anything pushing you to go: an appointment, passengers, wanting to get home.
 
 External pressures are the sneakiest. Make a plan B before you go, so you never feel you _have_ to continue.
 
