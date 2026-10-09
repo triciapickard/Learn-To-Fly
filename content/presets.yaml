@@ -36,7 +36,7 @@ weather:
     label: 10 kt crosswind
     summary: Clear skies with a southerly wind across the Livermore runways.
     clouds: Clear
-    surfaceWind: 200° at 10 kt (about 8 kt crosswind on runway 25 — verify the runway heading)
+    surfaceWind: 200° at 10 kt (about 8 kt crosswind on runway 25, which points 254° magnetic)
     visibility: 10 sm or more
     temperatureC: 18
     altimeterInHg: 30.00
