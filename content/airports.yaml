@@ -1,7 +1,14 @@
-# Home-region airports (plan.md Section 11). ⚠ Verify runways, elevations, pattern
-# direction and altitude, frequencies and airspace against (1) the current Chart
-# Supplement, (2) SkyVector and (3) the sim, then set verifiedAt and verifiedAgainst.
-# Frequencies are deliberately left empty until verified.
+# Home-region airports (plan.md Section 11).
+#
+# Elevations, runways, traffic patterns, pattern altitudes, frequencies and airspace were
+# checked on 2026-10-09 against the FAA Chart Supplement SW data effective 2026-10-01 (as
+# published on AirNav), the FAA airport diagrams (01 Oct 2026 cycle) and the FAA Class
+# Airspace dataset (NASR). Pattern altitudes are the published figures; where none is
+# published, `patternNotes` says so and gives the standard 1,000 ft above the field.
+#
+# ⚠ Verify each runway name, frequency and pattern direction in the sim (Section 54.1:
+# if the sim differs, tell learners to use the sim's value), then set verifiedAt and
+# verifiedAgainst.
 airports:
   - icao: KLVK
     name: Livermore Municipal
@@ -12,11 +19,32 @@ airports:
     role: training
     runways:
       - designator: 7L/25R
+        lengthFt: 5253
+        widthFt: 100
+        trafficPattern: varies
+        patternAltitudeFt: 1400
       - designator: 7R/25L
-    frequencies: []
+        lengthFt: 2699
+        widthFt: 75
+        trafficPattern: varies
+        patternAltitudeFt: 1400
+    frequencies:
+      - { type: ATIS, mhz: '119.65' }
+      - { type: Ground, mhz: '121.6', notes: '0700–2100 local' }
+      - { type: Tower, mhz: '118.1', notes: '0700–2100 local; CTAF when the tower is closed' }
+      - { type: UNICOM, mhz: '122.95' }
+      - { type: NorCal Approach, mhz: '123.85' }
+    patternNotes: >-
+      The pattern for runway 7L/25R is on the north side of the field (left traffic on 7L,
+      right traffic on 25R) and the pattern for 7R/25L is on the south side (right traffic
+      on 7R, left traffic on 25L). No pattern altitude is published, so the standard 1,000 ft
+      above the field applies: about 1,400 ft MSL.
     notes:
       - 'Primary Learn-To-Fly training base: a wide, flat valley with parallel runways.'
       - Good practice area for maneuvers to the east, toward the Altamont Pass.
+      - Class D from the surface to 2,900 ft MSL while the tower is open.
+      - The FBO and terminal are on the northwest apron, north of runway 7L/25R. Taxiway A runs along the north side of 7L/25R to the runway 25R end, so taxiing from the northwest apron to 25R crosses no runway.
+      - PAPI on runways 7L and 25R only. Do not mistake the parallel taxiway north of 25R/7L for the runway.
     links:
       skyvector: https://skyvector.com/airport/LVK/Livermore-Municipal-Airport
       airnav: https://www.airnav.com/airport/KLVK
@@ -26,17 +54,32 @@ airports:
   - icao: KTCY
     name: Tracy Municipal
     city: Tracy, CA
-    elevationFt: 193
+    elevationFt: 194
     airspaceClass: G
     towered: false
     role: training
     runways:
       - designator: 8/26
+        lengthFt: 3438
+        widthFt: 75
+        trafficPattern: left
+        patternAltitudeFt: 994
       - designator: 12/30
-    frequencies: []
+        lengthFt: 4001
+        widthFt: 75
+        trafficPattern: left
+        patternAltitudeFt: 994
+    frequencies:
+      - { type: CTAF/UNICOM, mhz: '123.075' }
+      - { type: AWOS-3, mhz: '118.375' }
+      - { type: NorCal Approach, mhz: '123.85' }
+    patternNotes: >-
+      Left traffic on every runway. The published pattern altitude is 994 ft MSL (800 ft
+      above the field); fly about 1,000 ft MSL. All four runway ends have a PAPI.
     notes:
       - 'Non-towered: self-announce on the CTAF.'
       - East of Livermore over the Altamont Pass wind farms, a great landmark.
+      - Balloon, paraplane and aerobatic activity near the airport. Two 150 ft power plant stacks about 3 nm northwest.
     links:
       skyvector: https://skyvector.com/airport/TCY/Tracy-Municipal-Airport
       airnav: https://www.airnav.com/airport/KTCY
@@ -52,10 +95,26 @@ airports:
     role: training
     runways:
       - designator: 5/23
+        lengthFt: 3000
+        widthFt: 75
+        trafficPattern: varies
+        patternAltitudeFt: null
       - designator: 12/30
-    frequencies: []
+        lengthFt: 4500
+        widthFt: 100
+        trafficPattern: varies
+        patternAltitudeFt: null
+    frequencies:
+      - { type: CTAF/UNICOM, mhz: '123.05' }
+      - { type: AWOS-3, mhz: '123.775' }
+      - { type: NorCal Approach, mhz: '123.85' }
+    patternNotes: >-
+      Right traffic on runways 5 and 30, left traffic on 23 and 12. Runway 30 is the
+      calm-wind runway. No pattern altitude is published, so the standard 1,000 ft above the
+      field applies: about 1,100 ft MSL.
     notes:
       - Second non-towered airport, a short cross-country from Livermore.
+      - Sailplane, ultralight and parachute activity on and near the airport, and wind turbines on the ridges to the west.
     links:
       skyvector: https://skyvector.com/airport/C83/Byron-Airport
       airnav: https://www.airnav.com/airport/C83
@@ -71,10 +130,24 @@ airports:
     role: training
     runways:
       - designator: 13/31
-    frequencies: []
+        lengthFt: 2441
+        widthFt: 70
+        trafficPattern: varies
+        patternAltitudeFt: 800
+    frequencies:
+      - { type: ATIS, mhz: '135.275' }
+      - { type: Ground, mhz: '125.0', notes: '0700–2100 local' }
+      - { type: Tower, mhz: '118.6', notes: '0700–2100 local; CTAF when the tower is closed' }
+      - { type: NorCal Approach, mhz: '121.3' }
+    patternNotes: >-
+      Left traffic on runway 13 and right traffic on 31, so the pattern is over the bay on
+      the east side of the airport. The Chart Supplement gives a pattern altitude of 800 ft
+      on the east side and 1,000 ft on the west side. Aircraft departing runway 31 are asked
+      to turn 10° right after takeoff until the Dumbarton Bridge.
     notes:
       - Short runway (about 2,400 ft) under the San Francisco Class B shelves.
       - Used for towered radio work and precision landings.
+      - Class D from the surface to 1,500 ft MSL while the tower is open.
     links:
       skyvector: https://skyvector.com/airport/PAO/Palo-Alto-Airport
       airnav: https://www.airnav.com/airport/KPAO
@@ -84,16 +157,29 @@ airports:
   - icao: KSQL
     name: San Carlos
     city: San Carlos, CA
-    elevationFt: 5
+    elevationFt: 6
     airspaceClass: D
     towered: true
     role: destination
     runways:
       - designator: 12/30
-    frequencies: []
+        lengthFt: 2621
+        widthFt: 75
+        trafficPattern: varies
+        patternAltitudeFt: 806
+    frequencies:
+      - { type: ATIS, mhz: '125.9' }
+      - { type: Ground, mhz: '118.025', notes: '0700–2100 local' }
+      - { type: Tower, mhz: '119.0', notes: '0700–2100 local; CTAF when the tower is closed' }
+      - { type: NorCal Approach, mhz: '135.65' }
+    patternNotes: >-
+      Left traffic on runway 12 and right traffic on 30 (the pattern is over the bay).
+      Published pattern altitude 806 ft MSL (800 ft above the field). Calm wind favors
+      runway 12.
     notes:
       - Neighbor of Palo Alto, also under the Class B shelves.
       - Landmark-rich bay shoreline.
+      - Class D from the surface to 2,000 ft MSL while the tower is open.
     links:
       skyvector: https://skyvector.com/airport/SQL/San-Carlos-Airport
       airnav: https://www.airnav.com/airport/KSQL
@@ -109,10 +195,22 @@ airports:
     role: destination
     runways:
       - designator: 12/30
-    frequencies: []
+        lengthFt: 5000
+        widthFt: 150
+        trafficPattern: varies
+        patternAltitudeFt: 1000
+    frequencies:
+      - { type: CTAF/UNICOM, mhz: '122.8' }
+      - { type: AWOS-3, mhz: '127.275' }
+      - { type: NorCal Approach, mhz: '135.1' }
+    patternNotes: >-
+      Left traffic on runway 12 and right traffic on 30, so the pattern is over the water.
+      Published pattern altitude about 1,000 ft MSL. Both runway ends have a PAPI, and
+      expect turbulence on final to runway 12.
     notes:
       - Coastal non-towered airport over the hills from Palo Alto and San Carlos.
       - Watch for the marine layer and fog along the coast.
+      - Avoid flying directly over Pillar Point Air Force Station.
     links:
       skyvector: https://skyvector.com/airport/HAF/Half-Moon-Bay-Airport
       airnav: https://www.airnav.com/airport/KHAF
@@ -128,10 +226,27 @@ airports:
     role: destination
     runways:
       - designator: 10L/28R
+        lengthFt: 3108
+        widthFt: 75
+        trafficPattern: varies
+        patternAltitudeFt: 852
       - designator: 10R/28L
-    frequencies: []
+        lengthFt: 5694
+        widthFt: 150
+        trafficPattern: varies
+        patternAltitudeFt: 652
+    frequencies:
+      - { type: ATIS, mhz: '126.7' }
+      - { type: Ground, mhz: '121.4', notes: '0700–2100 local' }
+      - { type: Tower, mhz: '120.2', notes: '0700–2100 local; CTAF when the tower is closed' }
+      - { type: NorCal Approach, mhz: '124.4' }
+    patternNotes: >-
+      Left traffic on 10L and 28L, right traffic on 10R and 28R. The published pattern
+      altitude is 600 ft above the field (about 650 ft MSL), except 800 ft above the field
+      (about 850 ft MSL) for runway 10L/28R. Runway 10L/28R closes when the tower is closed.
     notes:
       - East Bay alternative and diversion option.
+      - Class D from the surface to 1,500 ft MSL while the tower is open, under the Oakland Class C shelf.
     links:
       skyvector: https://skyvector.com/airport/HWD/Hayward-Exec-Airport
       airnav: https://www.airnav.com/airport/KHWD
@@ -147,12 +262,37 @@ airports:
     role: destination
     runways:
       - designator: 1L/19R
+        lengthFt: 5001
+        widthFt: 150
+        trafficPattern: varies
+        patternAltitudeFt: null
       - designator: 1R/19L
+        lengthFt: 2770
+        widthFt: 75
+        trafficPattern: varies
+        patternAltitudeFt: null
       - designator: 14L/32R
+        lengthFt: 4602
+        widthFt: 150
+        trafficPattern: varies
+        patternAltitudeFt: null
       - designator: 14R/32L
-    frequencies: []
+        lengthFt: 2798
+        widthFt: 75
+        trafficPattern: varies
+        patternAltitudeFt: null
+    frequencies:
+      - { type: ATIS, mhz: '124.7' }
+      - { type: Ground, mhz: '121.9', notes: '0700–2200 local' }
+      - { type: Tower, mhz: '119.7', notes: '0700–2200 local; CTAF when the tower is closed' }
+      - { type: Travis Approach, mhz: '119.9' }
+    patternNotes: >-
+      Left traffic on 1L, 14L, 19L and 32L; right traffic on 1R, 14R, 19R and 32R. No
+      pattern altitude is published, so the standard 1,000 ft above the field applies:
+      about 1,000 ft MSL. Only runway 14L/32R is open when the tower is closed.
     notes:
       - Capstone destination option, near Mount Diablo.
+      - Class D from the surface to 2,500 ft MSL while the tower is open.
     links:
       skyvector: https://skyvector.com/airport/CCR/Buchanan-Field-Airport
       airnav: https://www.airnav.com/airport/KCCR
@@ -168,10 +308,27 @@ airports:
     role: destination
     runways:
       - designator: 2/20
+        lengthFt: 4502
+        widthFt: 149
+        trafficPattern: left
+        patternAltitudeFt: null
       - designator: 9/27
-    frequencies: []
+        lengthFt: 3998
+        widthFt: 98
+        trafficPattern: left
+        patternAltitudeFt: null
+    frequencies:
+      - { type: CTAF/UNICOM, mhz: '122.8' }
+      - { type: ASOS, mhz: '132.275' }
+      - { type: NorCal Approach, mhz: '127.15' }
+    patternNotes: >-
+      Left traffic on every runway. No pattern altitude is published, so the standard
+      1,000 ft above the field applies: about 1,200 ft MSL. Runway 20 is the calm-wind
+      runway, straight-in approaches are not recommended, and no departures are allowed
+      from runway 27.
     notes:
       - Non-towered capstone option to the south along the coast.
+      - Coastal fog in the summer months, and seagulls on and near the airport.
     links:
       skyvector: https://skyvector.com/airport/WVI/Watsonville-Municipal-Airport
       airnav: https://www.airnav.com/airport/KWVI
@@ -181,14 +338,29 @@ airports:
   - icao: KSNS
     name: Salinas Municipal
     city: Salinas, CA
-    elevationFt: 85
+    elevationFt: 84
     airspaceClass: D
     towered: true
     role: destination
     runways:
       - designator: 8/26
+        lengthFt: 6004
+        widthFt: 150
+        trafficPattern: varies
+        patternAltitudeFt: 884
       - designator: 13/31
-    frequencies: []
+        lengthFt: 4825
+        widthFt: 150
+        trafficPattern: varies
+        patternAltitudeFt: 884
+    frequencies:
+      - { type: ATIS, mhz: '124.85' }
+      - { type: Ground, mhz: '121.7' }
+      - { type: Tower, mhz: '119.525', notes: 'CTAF when the tower is closed' }
+      - { type: NorCal Approach, mhz: '133.0' }
+    patternNotes: >-
+      Right traffic on runways 8 and 31, left traffic on 26 and 13. Published pattern
+      altitude 884 ft MSL (800 ft above the field).
     notes:
       - Bonus capstone option in the Salinas valley.
     links:
@@ -206,12 +378,24 @@ airports:
     role: awareness
     runways:
       - designator: 10L/28R
+        lengthFt: 5457
+        widthFt: 150
       - designator: 10R/28L
+        lengthFt: 6213
+        widthFt: 150
       - designator: 12/30
+        lengthFt: 10520
+        widthFt: 150
       - designator: 15/33
-    frequencies: []
+        lengthFt: 3376
+        widthFt: 75
+    frequencies:
+      - { type: ATIS, mhz: '133.775' }
+      - { type: Tower, mhz: '118.3', notes: 'North field: runways 10L/28R, 10R/28L and 15/33' }
+      - { type: Tower, mhz: '127.2', notes: 'Runway 12/30' }
     notes:
-      - Class C airspace awareness only — Learn-To-Fly challenges never land here.
+      - Class C airspace awareness only. Learn-To-Fly challenges never land here.
+      - Class C from the surface to 4,000 ft MSL, with the San Francisco Class B above it (floor 2,100 ft MSL over the airport).
     links:
       skyvector: https://skyvector.com/airport/OAK/Oakland-San-Francisco-Bay-Airport
       airnav: https://www.airnav.com/airport/KOAK
@@ -227,8 +411,14 @@ airports:
     role: awareness
     runways:
       - designator: 12L/30R
+        lengthFt: 11000
+        widthFt: 150
       - designator: 12R/30L
-    frequencies: []
+        lengthFt: 11000
+        widthFt: 150
+    frequencies:
+      - { type: ATIS, mhz: '126.95' }
+      - { type: Tower, mhz: '124.0' }
     notes:
       - Class C airspace awareness only.
     links:
@@ -246,12 +436,22 @@ airports:
     role: awareness
     runways:
       - designator: 10L/28R
+        lengthFt: 11870
+        widthFt: 200
       - designator: 10R/28L
+        lengthFt: 11381
+        widthFt: 200
       - designator: 1L/19R
+        lengthFt: 7650
+        widthFt: 200
       - designator: 1R/19L
-    frequencies: []
+        lengthFt: 8650
+        widthFt: 200
+    frequencies:
+      - { type: ATIS, mhz: '118.85' }
+      - { type: Tower, mhz: '120.5' }
     notes:
-      - Class B airspace awareness only — the upside-down wedding cake.
+      - Class B airspace awareness only. The upside-down wedding cake, from the surface to 10,000 ft MSL.
     links:
       skyvector: https://skyvector.com/airport/SFO/San-Francisco-International-Airport
       airnav: https://www.airnav.com/airport/KSFO

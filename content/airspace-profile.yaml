@@ -1,68 +1,60 @@
 # W11 Airspace Cross-section data (plan.md Section 16.12).
 #
-# A simplified side view along a line from Half Moon Bay to Tracy. Distances along the line
-# are approximate and the shelves are simplified: this teaches the shape of the airspace,
-# not where its edges are. Never use it for navigation.
+# A simplified side view along a line from Half Moon Bay to San Francisco International,
+# Oakland, Hayward, Livermore and Tracy. Distances are along that bent line (great-circle
+# legs between the six airports), the shelf edges are rounded to the nearest half mile
+# and small steps are merged: this teaches the shape of the airspace, not where its edges
+# are. Never use it for navigation.
 #
-# ⚠ UNVERIFIED: every floor, ceiling and position comes from memory of the San Francisco
-# Terminal Area Chart (TAC) and must be checked against the current TAC and sectional
-# before `verified` is set to true (plan.md step 5.4 / Phase 10 checklist).
+# Floors, ceilings and positions were checked on 2026-10-09 against the FAA Class Airspace
+# dataset (NASR, the data the San Francisco TAC and sectional are drawn from), sampled
+# every nautical mile along the line. The terrain silhouette is approximate.
 slug: bay-area
 title: Half Moon Bay to Tracy
 summary: >-
   A line from the coast at Half Moon Bay, over San Francisco International, Oakland,
   Hayward and Livermore to Tracy, showing the San Francisco Class B shelves, the Oakland
   Class C, the Hayward and Livermore Class D and the Class E and G around them.
-lengthNm: 66
+lengthNm: 57
 topFt: 12000
 points:
   - { id: KHAF, name: Half Moon Bay, x: 0, elevationFt: 66, towered: false }
-  - { id: KSFO, name: San Francisco Intl, x: 15, elevationFt: 13, towered: true }
-  - { id: KOAK, name: Oakland Intl, x: 26, elevationFt: 9, towered: true }
-  - { id: KHWD, name: Hayward Executive, x: 32.5, elevationFt: 52, towered: true }
-  - { id: KLVK, name: Livermore Municipal, x: 48, elevationFt: 400, towered: true }
-  - { id: KTCY, name: Tracy Municipal, x: 63, elevationFt: 193, towered: false }
+  - { id: KSFO, name: San Francisco Intl, x: 8.7, elevationFt: 13, towered: true }
+  - { id: KOAK, name: Oakland Intl, x: 18.3, elevationFt: 9, towered: true }
+  - { id: KHWD, name: Hayward Executive, x: 24.3, elevationFt: 52, towered: true }
+  - { id: KLVK, name: Livermore Municipal, x: 38.7, elevationFt: 400, towered: true }
+  - { id: KTCY, name: Tracy Municipal, x: 56.7, elevationFt: 194, towered: false }
 terrain:
   - [0, 66]
-  - [2, 300]
-  - [5, 1200]
-  - [8, 1300]
-  - [11, 600]
-  - [13, 50]
-  - [15, 13]
-  - [18, 5]
-  - [26, 9]
-  - [30, 20]
-  - [32.5, 52]
-  - [35, 600]
-  - [38, 1600]
-  - [41, 1200]
-  - [44, 700]
-  - [48, 400]
-  - [51, 500]
-  - [54, 1300]
-  - [57, 1100]
-  - [60, 400]
-  - [63, 193]
-  - [66, 150]
+  - [1.2, 300]
+  - [2.9, 1200]
+  - [4.6, 1300]
+  - [6.4, 600]
+  - [7.5, 50]
+  - [8.7, 13]
+  - [11.3, 5]
+  - [18.3, 9]
+  - [22, 20]
+  - [24.3, 52]
+  - [26.6, 600]
+  - [29.4, 1600]
+  - [32.2, 1200]
+  - [35, 700]
+  - [38.7, 400]
+  - [41.7, 500]
+  - [44.7, 1300]
+  - [47.7, 1100]
+  - [50.7, 400]
+  - [53.7, 250]
+  - [56.7, 194]
 modeCVeil: { center: KSFO, radiusNm: 30 }
 volumes:
-  - {
-      id: b-west-6000,
-      class: B,
-      name: San Francisco Class B,
-      fromNm: 0,
-      toNm: 5,
-      floorFt: 6000,
-      ceilingFt: 10000,
-      center: KSFO,
-    }
   - {
       id: b-west-4000,
       class: B,
       name: San Francisco Class B,
-      fromNm: 5,
-      toNm: 8,
+      fromNm: 0,
+      toNm: 5.5,
       floorFt: 4000,
       ceilingFt: 10000,
       center: KSFO,
@@ -71,8 +63,8 @@ volumes:
       id: b-west-3000,
       class: B,
       name: San Francisco Class B,
-      fromNm: 8,
-      toNm: 10,
+      fromNm: 5.5,
+      toNm: 6.5,
       floorFt: 3000,
       ceilingFt: 10000,
       center: KSFO,
@@ -80,39 +72,19 @@ volumes:
   - id: b-surface
     class: B
     name: San Francisco Class B (surface area)
-    fromNm: 10
-    toNm: 20
+    fromNm: 6.5
+    toNm: 16
     floorFt: 0
     ceilingFt: 10000
     center: KSFO
     notes: Around San Francisco International the Class B starts at the surface.
   - {
-      id: b-east-1500,
-      class: B,
-      name: San Francisco Class B,
-      fromNm: 20,
-      toNm: 23,
-      floorFt: 1500,
-      ceilingFt: 10000,
-      center: KSFO,
-    }
-  - {
       id: b-east-2100,
       class: B,
       name: San Francisco Class B,
-      fromNm: 23,
-      toNm: 30,
+      fromNm: 16,
+      toNm: 19.8,
       floorFt: 2100,
-      ceilingFt: 10000,
-      center: KSFO,
-    }
-  - {
-      id: b-east-3000,
-      class: B,
-      name: San Francisco Class B,
-      fromNm: 30,
-      toNm: 36,
-      floorFt: 3000,
       ceilingFt: 10000,
       center: KSFO,
     }
@@ -120,19 +92,9 @@ volumes:
       id: b-east-4000,
       class: B,
       name: San Francisco Class B,
-      fromNm: 36,
-      toNm: 42,
+      fromNm: 19.8,
+      toNm: 31.8,
       floorFt: 4000,
-      ceilingFt: 10000,
-      center: KSFO,
-    }
-  - {
-      id: b-east-6000,
-      class: B,
-      name: San Francisco Class B,
-      fromNm: 42,
-      toNm: 46,
-      floorFt: 6000,
       ceilingFt: 10000,
       center: KSFO,
     }
@@ -140,27 +102,45 @@ volumes:
       id: b-east-8000,
       class: B,
       name: San Francisco Class B,
-      fromNm: 46,
-      toNm: 50,
+      fromNm: 31.8,
+      toNm: 37.8,
       floorFt: 8000,
       ceilingFt: 10000,
       center: KSFO,
     }
-  - id: c-oak
+  - id: c-oak-under-b
     class: C
     name: Oakland Class C
-    fromNm: 23
-    toNm: 29
+    fromNm: 16
+    toNm: 19.8
     floorFt: 0
     ceilingFt: 2100
     center: KOAK
-    notes: ⚠ verify. Tucked under the Class B shelf, so its top is the shelf's floor.
+    notes: Over the airport the Class C is tucked under the Class B shelf, so its top is the shelf's floor, 2,100 ft MSL.
+  - id: c-oak
+    class: C
+    name: Oakland Class C
+    fromNm: 19.8
+    toNm: 22.8
+    floorFt: 0
+    ceilingFt: 4000
+    center: KOAK
+    notes: East of the 2,100 ft shelf the Class C core runs from the surface to 4,000 ft MSL.
+  - id: c-oak-shelf
+    class: C
+    name: Oakland Class C (outer shelf)
+    fromNm: 22.8
+    toNm: 26.8
+    floorFt: 1500
+    ceilingFt: 4000
+    center: KOAK
+    notes: The outer shelf sits above the Hayward Class D, from 1,500 ft to 4,000 ft MSL.
   - {
       id: d-hwd,
       class: D,
       name: Hayward Class D,
-      fromNm: 31,
-      toNm: 34,
+      fromNm: 22.8,
+      toNm: 27.8,
       floorFt: 0,
       ceilingFt: 1500,
       center: KHWD,
@@ -169,8 +149,8 @@ volumes:
       id: d-lvk,
       class: D,
       name: Livermore Class D,
-      fromNm: 45,
-      toNm: 51,
+      fromNm: 34.8,
+      toNm: 42.2,
       floorFt: 0,
       ceilingFt: 2900,
       center: KLVK,
@@ -179,7 +159,7 @@ volumes:
     class: E
     name: Class E from 700 ft above the ground
     fromNm: 0
-    toNm: 66
+    toNm: 57
     floorFt: 700
     floorRef: AGL
     ceilingFt: 17999
@@ -207,6 +187,6 @@ requirements:
   G:
     entry: None.
     vfrMinimums: Below 1,200 ft above the ground by day, 1 statute mile and clear of clouds.
-source: FAA San Francisco Terminal Area Chart (TAC), simplified.
-verified: false
-verifiedAt: null
+source: FAA Class Airspace data (NASR), as drawn on the San Francisco TAC, simplified. Checked 2026-10-09.
+verified: true
+verifiedAt: 2026-10-09

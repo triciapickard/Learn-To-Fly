@@ -145,7 +145,7 @@ describe('reference endpoints', () => {
 
   it('returns the W11 airspace profile', async () => {
     const res = await request(app).get('/api/v1/airspace-profiles/bay-area').expect(200);
-    expect(res.body.profile).toMatchObject({ slug: 'bay-area', verified: false, version: 1 });
+    expect(res.body.profile).toMatchObject({ slug: 'bay-area', verified: true, version: 1 });
     expect(res.body.profile.volumes.some((v: { class: string }) => v.class === 'B')).toBe(true);
     expect(res.body.profile.requirements.G.entry).toBe('None.');
     expect(JSON.stringify(res.body)).not.toContain('contentHash');

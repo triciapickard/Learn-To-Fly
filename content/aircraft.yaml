@@ -2,9 +2,13 @@
 # arcs, limits and power settings: lessons use tokens such as {{vspeed.vy}} and the
 # widgets read this file through the API.
 #
-# ⚠ Every number is the widely published 172S value and is UNVERIFIED until checked
-# against the MSFS 2024 in-sim checklist (and the POH if available). Tick each entry in
-# `verification` as you check it, then set `verifiedAt` and `simVersion`.
+# Every V-speed, arc, limit and spec below was checked on 2026-10-09 against the Cessna
+# 172S NAV III (GFC 700) Pilot's Operating Handbook, 172SPHBUS-00: Section 1 (descriptive
+# data), Section 2 (airspeed limitations, Figures 2-1 and 2-2), Section 3 (maximum glide)
+# and Section 4 (airspeeds for normal operation). ⚠ They stay UNVERIFIED against the sim:
+# compare each with the MSFS 2024 in-sim checklist, tick each entry in `verification`,
+# then set `verifiedAt` and `simVersion` (Section 54.1: the POH number is taught if the
+# two differ).
 slug: c172
 name: Cessna 172S Skyhawk
 variants:
@@ -56,13 +60,13 @@ specs:
     value: 8 US qt
   cruiseTas:
     label: Cruise speed (75% power)
-    value: 120–124 KTAS
+    value: About 124 KTAS at 8,500 ft (120–124 KTAS at typical cruise altitudes)
   fuelBurn:
     label: Fuel burn (about 75% power)
     value: 8.5–10 GPH (use 10 GPH for simple planning)
   range:
     label: Range with reserve
-    value: 500–640 nm depending on power and altitude
+    value: About 520 nm at 75% power, up to 640 nm at 45% power (45-minute reserve)
   serviceCeiling:
     label: Service ceiling
     value: 14,000 ft
@@ -192,7 +196,7 @@ limits:
 powerSettings:
   - phase: Takeoff
     rpm: Full (about 2,300–2,400 static)
-    flaps: 0°
+    flaps: 0°–10° (10° preferred)
     targetSpeed: Rotate 55
     pitch: About 10° nose up
   - phase: Climb
@@ -264,15 +268,16 @@ performanceModel:
 verification:
   specs:
     verified: false
-    note: Check against the in-sim aircraft information and the POH.
+    note: Checked against POH Section 1 (2026-10-09). Compare with the sim's aircraft information page.
   vspeeds:
     verified: false
-    note: Check every speed against the in-sim checklist.
+    note: Checked against POH Sections 2, 3 and 4 (2026-10-09). Compare every speed with the in-sim checklist; teach the POH number if they differ.
   arcs:
     verified: false
-    note: Check the airspeed tape color bands in the sim.
+    note: Checked against POH Figure 2-2 (2026-10-09). Check the airspeed tape color bands in the sim match 40–85 white, 48–129 green, 129–163 yellow, 163 red.
   limits:
     verified: false
+    note: Checked against POH Figure 2-1 and Section 4 (2026-10-09).
   powerSettings:
     verified: false
     note: Fly each setting in the sim and adjust (Section 8.5).
