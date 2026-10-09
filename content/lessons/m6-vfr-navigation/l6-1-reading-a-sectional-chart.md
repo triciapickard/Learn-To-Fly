@@ -5,7 +5,7 @@ module: m6-vfr-navigation
 order: 1
 priority: P0
 title: Reading a sectional chart
-summary: The VFR pilot's map — airports, terrain, obstacles, navaids and the landmarks you'll navigate by.
+summary: "The VFR pilot's map: airports, terrain, obstacles, navaids and the landmarks you'll navigate by."
 estimatedMinutes: 25
 prerequisites: [l1-4-speeds-limits-and-checklists]
 objectives:
@@ -51,10 +51,6 @@ Click each symbol on this simplified chart of the Livermore area to find out wha
 
 Next to each airport is a **data block**: the name, identifier, tower frequency (a ★ means part-time), ATIS, field elevation, lighting, the **longest runway in hundreds of feet**, and the CTAF, marked with a Ⓒ. "RP" means right traffic for the runways listed.
 
-:::callout{type="verify"}
-Author note: check each airport symbol against the current Aeronautical Chart User's Guide.
-:::
-
 :::quiz{id="l6-1-q1" type="single"}
 What does a magenta airport symbol mean?
 
@@ -85,7 +81,7 @@ In the **airport data block**, in hundreds of feet. "52" means 5,200 ft.
 
 - **Color tints** show terrain elevation, from green in the lowlands to tan and brown higher up.
 - Each quadrangle of latitude and longitude has a **Maximum Elevation Figure** (MEF), the height of the highest terrain or obstacle in it, rounded up. A large 3 with a small 5 means **3,500 ft MSL**.
-- **Obstacles**, like towers, show two heights: the top in feet MSL (in bold) and the height above the ground in brackets.
+- **Obstacles**, like towers, show two heights: the top in feet MSL (in bold) and the height above the ground in parentheses.
 
 :::quiz{id="l6-1-q3" type="single"}
 An MEF shows a large 3 and a small 5. What does it mean?
@@ -124,4 +120,4 @@ Open SkyVector, choose the San Francisco sectional and find:
 1. **Livermore (KLVK)**. What color is the symbol, and what's the tower frequency?
 2. **Tracy (KTCY)**, to the east. Is it towered?
 3. **Altamont Pass**, between them.
-4. **Lake Del Valle**, south of Livermore.
+4. **Lake Del Valle**, southeast of Livermore.

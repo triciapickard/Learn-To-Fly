@@ -5,7 +5,7 @@ module: m6-vfr-navigation
 order: 3
 priority: P0
 title: Pilotage and dead reckoning
-summary: Navigate by landmarks and by calculation — true course, wind correction, magnetic heading, groundspeed and time.
+summary: 'Navigate by landmarks and by calculation: true course, wind correction, magnetic heading, groundspeed and time.'
 estimatedMinutes: 30
 prerequisites: [l6-2-airspace]
 objectives:
@@ -56,10 +56,6 @@ Charts are drawn to **true** north, but your compass points to **magnetic** nort
 > **East is least, West is best.**
 
 Subtract easterly variation; add westerly variation. In the Bay Area the variation is about **13° east**, so subtract 13°.
-
-:::callout{type="verify"}
-Author note: read the isogonic line on the current San Francisco sectional and update the 13° figure if it has changed.
-:::
 
 The compass itself has small errors, called **deviation**, listed on a card in the cockpit. The sim models little or none, so we'll ignore it here.
 
@@ -112,10 +108,10 @@ The wind at 3,000 ft is **270° at 15 kt**, and we'll cruise at **110 KTAS**.
 | Time en route    | About 9 minutes                          |
 | Fuel (at 10 GPH) | About 1.5 gal                            |
 
-Checkpoints by pilotage: Interstate 580, the **Altamont Pass** wind farms, then the town of **Tracy**, with the airport just south-west of it.
+Checkpoints by pilotage: Interstate 580, the **Altamont Pass** wind farms, then the town of **Tracy**, with the airport just southwest of it.
 
 :::callout{type="verify"}
-Author note: measure the course and distance on SkyVector and check that the checkpoints are charted and visible in the sim.
+Author note: the true course (091°) and distance (18 nm) were recomputed from the FAA airport coordinates on 2026-10-09 and stand. Check that I-580, the Altamont Pass wind farms and the town of Tracy are recognizable from 3,500 ft in the sim (L0.3 found the turbines may be missing from the scenery).
 :::
 
 On the way back, the same wind is a headwind: the groundspeed drops to about 95 kt, and the trip takes 11 minutes.

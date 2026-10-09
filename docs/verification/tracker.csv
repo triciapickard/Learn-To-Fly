@@ -41,17 +41,17 @@ C5.2,Challenge,M5,P0,Power-off stall,0,Draft,,content/challenges/c5-2-power-off-
 C5.3,Challenge,M5,P0,Power-on stall,0,Draft,,content/challenges/c5-3-power-on-stall.yaml,,,,,,,,Sim: air start; wing-drop behaviour at full power; time it.
 C5.4,Challenge,M5,P0,Steep turns,0,Draft,,content/challenges/c5-4-steep-turns.yaml,,,,,,,,Sim: air start 5 nm east of KLVK; confirm heading 310 points at Mt Diablo from there; time it.
 C5.5,Challenge,M5,P0,Engine failure,0,Draft,,content/challenges/c5-5-engine-failure.yaml,,,,,,,,Sim: air start 8 nm east heading 270 at 110 KIAS (changed from 090 so KLVK can be in glide range when the failure comes late; D-22 style change to confirm); mixture cut-off kills the engine and a late restart works; time it.
-L6.1,Lesson,M6,P0,Reading a sectional chart,1,Draft,,content/lessons/m6-vfr-navigation/l6-1-reading-a-sectional-chart.md,,,,,,,,
-L6.2,Lesson,M6,P0,Airspace,2,Draft,,content/lessons/m6-vfr-navigation/l6-2-airspace.md,,,,,,,,
-L6.3,Lesson,M6,P0,Pilotage and dead reckoning,2,Draft,,content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md,,,,,,,,
-L6.4,Lesson,M6,P0,VOR navigation,1,Draft,,content/lessons/m6-vfr-navigation/l6-4-vor-navigation.md,,,,,,,,
-L6.5,Lesson,M6,P0,GPS navigation with the G1000,1,Draft,,content/lessons/m6-vfr-navigation/l6-5-gps-navigation-with-the-g1000.md,,,,,,,,
-L6.6,Lesson,M6,P0,Planning a cross-country flight,1,Draft,,content/lessons/m6-vfr-navigation/l6-6-planning-a-cross-country-flight.md,,,,,,,,
-C6.1,Challenge,M6,P0,Landmark hunt,2,Draft,,content/challenges/c6-1-landmark-hunt.yaml,,,,,,,,
-C6.2,Challenge,M6,P0,Pilotage to Tracy,2,Draft,,content/challenges/c6-2-pilotage-to-tracy.yaml,,,,,,,,
-C6.3,Challenge,M6,P0,Dead reckoning to Half Moon Bay,3,Draft,,content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml,,,,,,,,
-C6.4,Challenge,M6,P0,VOR tracking,2,Draft,,content/challenges/c6-4-vor-tracking.yaml,,,,,,,,
-C6.5,Challenge,M6,P0,G1000 flight plan,0,Draft,,content/challenges/c6-5-g1000-flight-plan.yaml,,,,,,,,
+L6.1,Lesson,M6,P0,Reading a sectional chart,0,Draft,,content/lessons/m6-vfr-navigation/l6-1-reading-a-sectional-chart.md,,,,,,,,Sim: check the EFB map statement (it shows less than a sectional); no other sim items.
+L6.2,Lesson,M6,P0,Airspace,0,Draft,,content/lessons/m6-vfr-navigation/l6-2-airspace.md,,,,,,,,No sim items. The cross-section data was rebuilt from FAA airspace data (PR #42) and the VFR minimums match 14 CFR 91.155.
+L6.3,Lesson,M6,P0,Pilotage and dead reckoning,1,Draft,,content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md,,,,,,,,"Sim: check I-580, the Altamont wind farms (may be missing) and the town of Tracy are recognisable from 3,500 ft."
+L6.4,Lesson,M6,P0,VOR navigation,1,Draft,,content/lessons/m6-vfr-navigation/l6-4-vor-navigation.md,,,,,,,,Sim: how the G1000 shows the decoded VOR identifier and how to hear the Morse ID (audio panel NAV1); confirm the Manteca VOR (ECA 116.0) is in the sim's database.
+L6.5,Lesson,M6,P0,GPS navigation with the G1000,1,Draft,,content/lessons/m6-vfr-navigation/l6-5-gps-navigation-with-the-g1000.md,,,,,,,,Sim: FPL page steps and the Activate Flight Plan menu wording; how a world-map flight plan syncs into the G1000; where NRST is.
+L6.6,Lesson,M6,P0,Planning a cross-country flight,0,Draft,,content/lessons/m6-vfr-navigation/l6-6-planning-a-cross-country-flight.md,,,,,,,,"No sim items. The nav log was recomputed from the FAA airport coordinates (KLVK-C83 049/12, C83-KTCY 134/12, KTCY-KLVK 271/18)."
+C6.1,Challenge,M6,P0,Landmark hunt,2,Draft,,content/challenges/c6-1-landmark-hunt.yaml,,,,,,,,Sim: runway name; visibility of the six landmarks; time it.
+C6.2,Challenge,M6,P0,Pilotage to Tracy,2,Draft,,content/challenges/c6-2-pilotage-to-tracy.yaml,,,,,,,,Sim: runway name; the California Aqueduct is visible; time it.
+C6.3,Challenge,M6,P0,Dead reckoning to Half Moon Bay,1,Draft,,content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml,,,,,,,,"Sim: runway in use at KPAO; the 2,500 then 3,500 ft plan works with the sim scenery (ridge height); Crystal Springs Reservoir visible; KHAF CTAF 122.8; time it."
+C6.4,Challenge,M6,P0,VOR tracking,1,Draft,,content/challenges/c6-4-vor-tracking.yaml,,,,,,,,"Sim: ECA at 116.0 exists; air start 10 nm south of it at 3,500 ft; time it."
+C6.5,Challenge,M6,P0,G1000 flight plan,0,Draft,,content/challenges/c6-5-g1000-flight-plan.yaml,,,,,,,,"Sim: FPL entry steps, D-> and NRST behaviour match the lesson; time it."
 L7.1,Lesson,M7,P0,Radio basics and the phonetic alphabet,0,Draft,,content/lessons/m7-radio-airport-operations/l7-1-radio-basics-and-the-phonetic-alphabet.md,,,,,,,,
 L7.2,Lesson,M7,P0,Non-towered airports (CTAF),2,Draft,,content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md,,,,,,,,
 L7.3,Lesson,M7,P0,Towered airports and sim ATC,2,Draft,,content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md,,,,,,,,
