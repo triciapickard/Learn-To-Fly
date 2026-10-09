@@ -9,7 +9,7 @@
 | Group | Items | Published / verified | Open markers |
 | --- | --- | --- | --- |
 | Lessons | 33 | 3 | 22 |
-| Challenges | 29 | 1 | 21 |
+| Challenges | 29 | 1 | 20 |
 | Reference data | 6 | 1 | 49 |
 
 Every item still needs the full protocol from v1.md Section 54 even when it has no open
@@ -415,7 +415,7 @@ file (Section 54.2).
 
 [content/challenges/c8-2-cross-country-capstone.yaml](../../content/challenges/c8-2-cross-country-capstone.yaml) · P0 · draft
 
-- [line 38](../../content/challenges/c8-2-cross-country-capstone.yaml#L38): Plan the flight on the page before you open the sim (about 30 minutes). Suggested route — Livermore, Calaveras Reservoir, Morgan Hill, Gilroy, Watsonville (KWVI). This route passes close to the San Jose Class C — plan to stay clear of it or to call San Jose Approach (⚠ verify the airspace on the current TAC).
+- No open markers. Run the Section 54 protocol for this item.
 
 ## Reference data
 
