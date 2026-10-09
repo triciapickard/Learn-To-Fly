@@ -33,8 +33,8 @@ setup:
 
 procedure:
   - Stop in the run-up area, into the wind if you can, and set the parking brake.
-  - Throttle to the checklist run-up RPM (about 1,800).
-  - Magneto check — L, BOTH, R, BOTH. Note each RPM drop.
+  - Throttle to 1,800 RPM.
+  - Magneto check, L, BOTH, R, BOTH. Note each RPM drop (no more than 150 RPM on either magneto, and no more than 50 RPM between them).
   - Engine instruments in the green, then throttle to idle and back to about 1,000 RPM.
   - Controls free and correct. Trim for takeoff. Flaps set. Fuel on BOTH. Mixture rich.
   - Transponder ALT, lights on, doors closed.

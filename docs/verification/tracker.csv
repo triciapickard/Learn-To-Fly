@@ -16,13 +16,13 @@ C2.1,Challenge,M2,P0,Straight and level,0,Draft,,content/challenges/c2-1-straigh
 C2.2,Challenge,M2,P0,Climbs and descents,0,Draft,,content/challenges/c2-2-climbs-and-descents.yaml,,,,,,,,"Sim: confirm the air start; check 1,700-2,000 RPM gives the 90 KIAS descent; time it."
 C2.3,Challenge,M2,P0,Turns to headings,0,Draft,,content/challenges/c2-3-turns-to-headings.yaml,,,,,,,,"Sim: confirm the air start 3 nm north of KLVK (just inside the Class D, ATC off); time it."
 C2.4,Challenge,M2,P0,The box,0,Draft,,content/challenges/c2-4-the-box.yaml,,,,,,,,Sim: confirm the air start and the WX_LIGHT_W winds aloft; check four 2-minute legs fit the valley; time it.
-L3.1,Lesson,M3,P0,Preflight and engine start,2,Draft,,content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md,,,,,,,,
-L3.2,Lesson,M3,P0,"Taxiing, signs and markings",1,Draft,,content/lessons/m3-ground-operations/l3-2-taxiing-signs-and-markings.md,,,,,,,,
-L3.3,Lesson,M3,P0,"Run-up, before takeoff, and after landing",1,Draft,,content/lessons/m3-ground-operations/l3-3-run-up-before-takeoff-and-after-landing.md,,,,,,,,
-C3.1,Challenge,M3,P0,Cold and dark to running,3,Draft,,content/challenges/c3-1-cold-and-dark-to-running.yaml,,,,,,,,
-C3.2,Challenge,M3,P0,Taxi to the runway at KLVK,2,Draft,,content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml,,,,,,,,
-C3.3,Challenge,M3,P0,Run-up,1,Draft,,content/challenges/c3-3-run-up.yaml,,,,,,,,
-C3.4,Challenge,M3,P0,After landing and shutdown,2,Draft,,content/challenges/c3-4-after-landing-and-shutdown.yaml,,,,,,,,
+L3.1,Lesson,M3,P0,Preflight and engine start,2,Draft,,content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md,,,,,,,,"Sim: describe the walkaround mode (which items are modeled: pitot cover, chocks, tie-downs, fuel sampling); confirm the POH start sequence works (mixture idle cut-off, prime with the aux pump, START, mixture rich) and whether priming does anything; confirm oil pressure rises within 30-60 s."
+L3.2,Lesson,M3,P0,"Taxiing, signs and markings",1,Draft,,content/lessons/m3-ground-operations/l3-2-taxiing-signs-and-markings.md,,,,,,,,Sim: taxi from the FBO parking spot to the 25R run-up area via taxiway A and confirm the signs and markings match the FAA diagram (Oct 2026); then write the exact taxiway sequence into the lesson and C3.2. Confirm the taxi ribbon option name and the groundspeed readout.
+L3.3,Lesson,M3,P0,"Run-up, before takeoff, and after landing",0,Draft,,content/lessons/m3-ground-operations/l3-3-run-up-before-takeoff-and-after-landing.md,,,,,,,,"Sim: run-up at 1,800 RPM shows a magneto drop within POH limits (150/50); confirm the XPDR softkey mode names after landing (real NXi: GND, STBY, ON, ALT)."
+C3.1,Challenge,M3,P0,Cold and dark to running,1,Draft,,content/challenges/c3-1-cold-and-dark-to-running.yaml,,,,,,,,Sim: parking spot name for the northwest apron; name of the checklist auto-complete setting; the engine starts with the POH sequence; time it.
+C3.2,Challenge,M3,P0,Taxi to the runway at KLVK,3,Draft,,content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml,,,,,,,,Sim: parking spot and runway names; the route A to the 25R run-up pad matches the diagram; time it.
+C3.3,Challenge,M3,P0,Run-up,1,Draft,,content/challenges/c3-3-run-up.yaml,,,,,,,,Sim: whether a run-up area start spot exists for 25R (otherwise continue from C3.2); time it.
+C3.4,Challenge,M3,P0,After landing and shutdown,2,Draft,,content/challenges/c3-4-after-landing-and-shutdown.yaml,,,,,,,,Sim: runway name; XPDR softkey mode names; time it.
 L4.1,Lesson,M4,P0,Normal takeoff and climb,1,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-1-normal-takeoff-and-climb.md,,,,,,,,
 L4.2,Lesson,M4,P0,The traffic pattern,2,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md,,,,,,,,
 L4.3,Lesson,M4,P0,Normal approach and landing,1,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md,,,,,,,,

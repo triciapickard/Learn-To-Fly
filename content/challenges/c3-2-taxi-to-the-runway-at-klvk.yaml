@@ -12,15 +12,15 @@ lastVerifiedAt: null # set when verified in the sim (Section 54)
 simVersion: null
 
 goal: >
-  Taxi from the main ramp to the run-up area for runway 25R using the airport diagram,
-  with the taxi ribbon off.
+  Taxi from the main ramp (the northwest apron) to the run-up area for runway 25R using
+  the airport diagram, with the taxi ribbon off.
 
 setup:
   aircraftVariant: c172-g1000
   airportIcao: KLVK
   startState: RAMP_RUNNING
   startDetails:
-    parking: Main ramp # ⚠ verify the parking spot name in the sim
+    parking: Main ramp (the northwest apron, by the FBO) # ⚠ verify the parking spot name in the sim
     runway: 25R # ⚠ verify the runway name in the sim
   weatherPreset: WX_LIGHT_W
   timeLocal: '10:00'
@@ -34,8 +34,8 @@ setup:
 
 procedure:
   - Turn the sim's taxi ribbon off.
-  - Open the KLVK airport diagram (FAA Terminal Procedures, see Go deeper in Lesson 3.2). Plan your route from the main ramp to the run-up area for runway 25R. ⚠ The expected taxiway sequence will be added after checking the current diagram and the sim.
-  - Release the parking brake. Taxi at a brisk walking pace — 10 kt or less, 5 kt or less in turns.
+  - Open the KLVK airport diagram (FAA Terminal Procedures, see Go deeper in Lesson 3.2). Plan your route from the northwest apron to the run-up area for runway 25R. On the FAA diagram it is taxiway Alfa east along the north side of runway 7L/25R, with no runway to cross. ⚠ verify the sim's parking spot and taxiway signs match the diagram, then write the exact sequence here.
+  - Release the parking brake. Taxi at a brisk walking pace (10 kt or less, 5 kt or less in turns).
   - Hold the yoke for the wind (wind from 250° at 8 kt).
   - Stop in the run-up area, short of the hold short line for 25R. Set the parking brake.
 
@@ -89,7 +89,7 @@ commonMistakes:
   - Rolling past the hold short line.
 
 tips:
-  - Stop and look at the diagram whenever you're unsure — stopping is always OK.
+  - Stop and look at the diagram whenever you're unsure. Stopping is always OK.
 
 debriefQuestions:
   - id: where-am-i

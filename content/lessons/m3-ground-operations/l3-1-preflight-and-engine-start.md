@@ -52,13 +52,13 @@ Run the before-starting-engine checklist below. In this summary, each item has t
 The starting sequence for the fuel-injected Skyhawk:
 
 1. **Throttle** open about a quarter inch.
-2. **Mixture** as the checklist says, then rich as the engine starts.
-3. **Auxiliary fuel pump** on briefly to prime, then off, if the checklist calls for it.
+2. **Mixture** at idle cut-off (pulled fully out).
+3. **Prime.** Auxiliary fuel pump on and mixture pushed to rich for a few seconds, until the fuel flow shows, then mixture back to idle cut-off and pump off. Skip this if the engine is warm.
 4. **Beacon light** on, so people outside know the engine is about to start.
 5. **Look outside and shout "CLEAR!"**
-6. **Key to START.** Release it to BOTH as soon as the engine fires.
+6. **Key to START.** Release it to BOTH as soon as the engine fires, and push the **mixture** smoothly to rich.
 7. **Throttle** to about **1,000 RPM**.
-8. **Oil pressure.** Check that it rises into the green within about **30 seconds**. If it doesn't, shut the engine down.
+8. **Oil pressure.** Check that it rises into the green within **30 to 60 seconds**. If it doesn't, shut the engine down.
 
 :::callout{type="safety"}
 Always shout "CLEAR!" before starting, even in the sim. A spinning propeller is almost invisible, and habits you build here transfer to the real airplane.
@@ -67,11 +67,11 @@ Always shout "CLEAR!" before starting, even in the sim. A spinning propeller is 
 ::checklist{slug="starting-engine"}
 
 :::callout{type="verify"}
-Author note: check the exact start sequence (mixture position, auxiliary pump use, throttle setting) against the MSFS 2024 in-sim checklist for the G1000 Skyhawk, and the 30-second oil pressure rule.
+Author note: the sequence above is the POH's (Section 4, Starting Engine: throttle ¼ inch, mixture idle cut-off, prime with the pump, START, mixture to rich; oil pressure in the green within 30 to 60 seconds). Check the sim's EFB checklist against it, and check the sim engine actually starts this way: does priming with the pump do anything, and does it fire with the mixture at idle cut-off?
 :::
 
 :::quiz{id="l3-1-q1" type="single"}
-What must rise into the green within about 30 seconds after the engine starts?
+What must rise into the green within 30 to 60 seconds after the engine starts?
 
 - [ ] Fuel flow
 - [x] Oil pressure
@@ -80,7 +80,7 @@ What must rise into the green within about 30 seconds after the engine starts?
 
 ---
 
-**Oil pressure.** Without it the engine isn't being lubricated. If it doesn't rise within about 30 seconds, shut down. Oil temperature takes much longer to rise.
+**Oil pressure.** Without it the engine isn't being lubricated. If it doesn't rise within 60 seconds, shut down. Oil temperature takes much longer to rise.
 :::
 
 :::quiz{id="l3-1-q2" type="single"}
@@ -110,7 +110,7 @@ Once the engine is running smoothly:
 
 In the sim, a failed start is almost always one of three things:
 
-- **Fuel selector** not on BOTH (or OFF).
+- **Fuel selector** not on BOTH, or the fuel shutoff valve pulled out.
 - **Mixture** left at idle cut-off.
 - **Parking brake** off, so the airplane starts rolling as soon as the engine runs.
 
