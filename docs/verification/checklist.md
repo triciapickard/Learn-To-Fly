@@ -8,8 +8,8 @@
 
 | Group | Items | Published / verified | Open markers |
 | --- | --- | --- | --- |
-| Lessons | 33 | 3 | 30 |
-| Challenges | 29 | 1 | 27 |
+| Lessons | 33 | 3 | 28 |
+| Challenges | 29 | 1 | 25 |
 | Reference data | 6 | 1 | 49 |
 
 Every item still needs the full protocol from v1.md Section 54 even when it has no open
@@ -238,13 +238,12 @@ file (Section 54.2).
 [content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md) · P0 · draft
 
 - [line 40](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md#L40): check the RPM that holds 55 KIAS with full flaps at C5.1's weight and altitude in the sim.
-- [line 100](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md#L100): check the current ACS wording for the stall warning in slow flight.
 
 ### L5.2 — Stalls: power-off and power-on
 
 [content/lessons/m5-slow-flight-stalls-emergencies/l5-2-stalls-power-off-and-power-on.md](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-2-stalls-power-off-and-power-on.md) · P0 · draft
 
-- [line 56](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-2-stalls-power-off-and-power-on.md#L56): check this sequence against the current wording in the Airplane Flying Handbook, chapter 5.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### L5.3 — Steep turns and load factor
 
@@ -256,20 +255,20 @@ file (Section 54.2).
 
 [content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md) · P0 · draft
 
-- [line 59](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md#L59): check the glide figure against the POH glide ratio ({{aircraft.glideRatio}}) and in the sim.
+- [line 59](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md#L59): the POH maximum glide chart (Figure 3-1: 68 KIAS, flaps up, propeller windmilling, zero wind) gives about 1.5 nm per 1,000 ft, so the figure stands ({{aircraft.glideRatio}}). Check the sim's Skyhawk glides about that far: from 3,000 ft above the ground at 68 KIAS it should cover roughly 4.5 nm in still air.
 - [line 123](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md#L123): check the MSFS 2024 failure menu options for engine failures.
 
 ### C5.1 — Slow flight
 
 [content/challenges/c5-1-slow-flight.yaml](../../content/challenges/c5-1-slow-flight.yaml) · P0 · draft
 
-- [line 42](../../content/challenges/c5-1-slow-flight.yaml#L42): Settle at about 55 KIAS, adding power to hold altitude (about 1,900–2,100 RPM; ⚠ verify).
+- [line 42](../../content/challenges/c5-1-slow-flight.yaml#L42): Settle at about 55 KIAS, adding power to hold altitude (about 1,900–2,100 RPM; ⚠ verify the RPM in the sim).
 
 ### C5.2 — Power-off stall
 
 [content/challenges/c5-2-power-off-stall.yaml](../../content/challenges/c5-2-power-off-stall.yaml) · P0 · draft
 
-- [line 42](../../content/challenges/c5-2-power-off-stall.yaml#L42): This challenge uses the full stall — hold the nose up until the nose drops or the buffet is clear (⚠ verify the current ACS wording for when to recover).
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C5.3 — Power-on stall
 
@@ -281,7 +280,7 @@ file (Section 54.2).
 
 [content/challenges/c5-4-steep-turns.yaml](../../content/challenges/c5-4-steep-turns.yaml) · P0 · draft
 
-- [line 24](../../content/challenges/c5-4-steep-turns.yaml#L24): headingDeg: 320 — ⚠ verify the heading that points at Mt Diablo from here
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C5.5 — Engine failure
 
