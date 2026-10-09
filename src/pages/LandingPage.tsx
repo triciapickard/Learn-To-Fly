@@ -203,7 +203,7 @@ const band = 'mx-auto w-full max-w-page px-4';
 const bandPad = 'py-16 sm:py-24';
 
 function Eyebrow({ children, className }: { children: React.ReactNode; className?: string }) {
-  return <p className={cn('overline text-ink-2', className)}>{children}</p>;
+  return <p className={cn('eyebrow text-ink-2', className)}>{children}</p>;
 }
 
 export default function LandingPage() {
@@ -272,6 +272,7 @@ export default function LandingPage() {
             stops={stops}
             startLabel="Start"
             aria-label="Module 0 lesson path"
+            underlineTitles={false}
             className="mt-4"
           />
         </Card>

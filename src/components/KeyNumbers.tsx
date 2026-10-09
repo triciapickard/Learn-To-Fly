@@ -10,7 +10,7 @@ export interface KeyNumber {
 }
 
 /**
- * The V-speed quick panel: a surface-sunken well with overline labels and readout-lg values.
+ * The V-speed quick panel: a surface-sunken well with eyebrow labels and readout-lg values.
  * Page UI, not a gauge: never painted with the instrument tokens.
  */
 export function KeyNumbers({
@@ -43,7 +43,7 @@ export function KeyNumbers({
       >
         {items.map((item) => (
           <div key={item.label} className="min-w-0">
-            <dt className="overline text-ink-2">{item.label}</dt>
+            <dt className="eyebrow text-ink-2">{item.label}</dt>
             <dd
               className={cn(
                 'readout-lg mt-0.5 text-ink',
