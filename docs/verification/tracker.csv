@@ -23,15 +23,15 @@ C3.1,Challenge,M3,P0,Cold and dark to running,1,Draft,,content/challenges/c3-1-c
 C3.2,Challenge,M3,P0,Taxi to the runway at KLVK,3,Draft,,content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml,,,,,,,,Sim: parking spot and runway names; the route A to the 25R run-up pad matches the diagram; time it.
 C3.3,Challenge,M3,P0,Run-up,1,Draft,,content/challenges/c3-3-run-up.yaml,,,,,,,,Sim: whether a run-up area start spot exists for 25R (otherwise continue from C3.2); time it.
 C3.4,Challenge,M3,P0,After landing and shutdown,2,Draft,,content/challenges/c3-4-after-landing-and-shutdown.yaml,,,,,,,,Sim: runway name; XPDR softkey mode names; time it.
-L4.1,Lesson,M4,P0,Normal takeoff and climb,1,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-1-normal-takeoff-and-climb.md,,,,,,,,
-L4.2,Lesson,M4,P0,The traffic pattern,2,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md,,,,,,,,
-L4.3,Lesson,M4,P0,Normal approach and landing,1,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md,,,,,,,,
-L4.4,Lesson,M4,P0,Go-arounds,1,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-4-go-arounds.md,,,,,,,,
-C4.1,Challenge,M4,P0,Normal takeoff and departure,2,Draft,,content/challenges/c4-1-normal-takeoff-and-departure.yaml,,,,,,,,
-C4.2,Challenge,M4,P0,Fly the pattern,2,Draft,,content/challenges/c4-2-fly-the-pattern.yaml,,,,,,,,
-C4.3,Challenge,M4,P0,Full-stop landing,1,Draft,,content/challenges/c4-3-full-stop-landing.yaml,,,,,,,,
-C4.4,Challenge,M4,P0,Go-around,1,Draft,,content/challenges/c4-4-go-around.yaml,,,,,,,,
-C4.7,Challenge,M4,P0,Three-circuit session,1,Draft,,content/challenges/c4-7-three-circuit-session.yaml,,,,,,,,
+L4.1,Lesson,M4,P0,Normal takeoff and climb,1,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-1-normal-takeoff-and-climb.md,,,,,,,,Sim: lined-up sight picture screenshot from the default cockpit camera (49.5); confirm the takeoff roll needs right rudder with auto-rudder off.
+L4.2,Lesson,M4,P0,The traffic pattern,1,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md,,,,,,,,Sim: fly the downwind/base/final table settings at C4.2's weight and adjust (8.5); confirm the sim's ATC and AI traffic use right traffic for KLVK 25R and left traffic at Tracy; check the traffic-pattern widget.
+L4.3,Lesson,M4,P0,Normal approach and landing,1,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md,,,,,,,,Sim: check PAPIs are shown at KLVK 7L and 25R and all four Tracy ends and read correctly on a 3 degree path; check the flare camera advice; add a screenshot if useful.
+L4.4,Lesson,M4,P0,Go-arounds,1,Draft,,content/lessons/m4-takeoffs-patterns-landings/l4-4-go-arounds.md,,,,,,,,Sim: compare the EFB balked-landing checklist with the POH sequence in the lesson; check the sim climbs at 60 KIAS with flaps 20.
+C4.1,Challenge,M4,P0,Normal takeoff and departure,1,Draft,,content/challenges/c4-1-normal-takeoff-and-departure.yaml,,,,,,,,"Sim: runway name; with ATC off, confirm a 45 degree right turn from the 25R upwind at 1,400 ft is sensible; time it."
+C4.2,Challenge,M4,P0,Fly the pattern,1,Draft,,content/challenges/c4-2-fly-the-pattern.yaml,,,,,,,,"Sim: runway in use for the WX_LIGHT_W wind; pattern altitude about 1,000 ft MSL; time it."
+C4.3,Challenge,M4,P0,Full-stop landing,1,Draft,,content/challenges/c4-3-full-stop-landing.yaml,,,,,,,,Sim: runway name; right pattern for 25R; time it; fly it fast once to check the tiers.
+C4.4,Challenge,M4,P0,Go-around,1,Draft,,content/challenges/c4-4-go-around.yaml,,,,,,,,Sim: runway name; check the side-step direction works for a right-hand pattern; time it.
+C4.7,Challenge,M4,P0,Three-circuit session,1,Draft,,content/challenges/c4-7-three-circuit-session.yaml,,,,,,,,Sim: runway in use; touch-and-go sequence (flaps up before full power); time three circuits.
 L5.1,Lesson,M5,P0,Slow flight,2,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md,,,,,,,,
 L5.2,Lesson,M5,P0,Stalls: power-off and power-on,1,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-2-stalls-power-off-and-power-on.md,,,,,,,,
 L5.3,Lesson,M5,P0,Steep turns and load factor,0,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-3-steep-turns-and-load-factor.md,,,,,,,,

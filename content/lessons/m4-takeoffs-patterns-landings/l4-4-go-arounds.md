@@ -5,7 +5,7 @@ module: m4-takeoffs-patterns-landings
 order: 4
 priority: P0
 title: Go-arounds
-summary: When a landing isn't working, go around — early, confidently and in the right order.
+summary: "When a landing isn't working, go around: early, confidently and in the right order."
 estimatedMinutes: 10
 prerequisites: [l4-3-normal-approach-and-landing]
 objectives:
@@ -38,12 +38,12 @@ Decide **early**. The later you decide, the less room you have.
 2. **Attitude.** Raise the nose to the climb attitude. Speed should be around {{vspeed.goAround}} to begin with.
 3. **Flaps to 20°** right away, to reduce drag.
 4. **Positive climb.** Once you're climbing and the speed is increasing, **flaps to 10°**.
-5. **Flaps up** once you're clear of obstacles at a safe altitude and speed.
+5. **Flaps up** once you're clear of obstacles, at a safe altitude and at least 65 KIAS.
 
 ::checklist{slug="go-around"}
 
 :::callout{type="verify"}
-Author note: check this sequence against the in-sim balked-landing checklist for the G1000 Skyhawk.
+Author note: the sequence matches the POH balked-landing checklist (full throttle, flaps 20°, climb at 60 KIAS, flaps 10° when clear of obstacles, up after a safe altitude and 65 KIAS). Check the sim's EFB checklist says the same, and that the sim Skyhawk climbs at 60 KIAS with flaps 20°.
 :::
 
 :::quiz{id="l4-4-q1" type="single"}

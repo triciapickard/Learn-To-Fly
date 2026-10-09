@@ -33,8 +33,8 @@ setup:
   flightPlan: null
 
 procedure:
-  - Take off and fly the left pattern for runway 25R.
-  - Fly a stabilized approach — flaps 30, 65 KIAS, on the glide path and on the centerline by 300 ft AGL. If not, go around and try again.
+  - Take off and fly the right pattern for runway 25R (its pattern is on the north side of the field).
+  - Fly a stabilized approach (flaps 30, 65 KIAS, on the glide path and on the centerline by 300 ft AGL). If not, go around and try again.
   - Round out, flare and touch down on the main wheels.
   - Keep straight on the rollout and stop on the runway or turn off. Continue with C3.4 if you like.
 
@@ -98,7 +98,7 @@ commonMistakes:
   - Pushing the nose forward after a bounce.
 
 tips:
-  - If you're not stabilized, go around. It counts as a good decision, not a fail — fly the pattern again and you can still pass.
+  - If you're not stabilized, go around. It counts as a good decision, not a fail. Fly the pattern again and you can still pass.
 
 debriefQuestions:
   - id: eyes-in-flare

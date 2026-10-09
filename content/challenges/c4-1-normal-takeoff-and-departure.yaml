@@ -35,7 +35,7 @@ procedure:
   - Quick re-check of the before-takeoff checklist.
   - Full power smoothly. Call "airspeed alive" and check the engine gauges are green.
   - Rotate at 55 KIAS and climb at 74 KIAS. Use right rudder as needed.
-  - Climb straight out to pattern altitude (⚠ verify the KLVK pattern altitude), then make a 45° left turn to depart. Continue the climb to 3,000 ft MSL at 80 KIAS.
+  - Climb straight out to pattern altitude (about 1,400 ft MSL at Livermore), then make a 45° right turn to depart, because runway 25R has right traffic. Continue the climb to 3,000 ft MSL at 80 KIAS.
 
 criteria:
   - id: centerline-roll
