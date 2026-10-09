@@ -39,9 +39,9 @@ procedure:
   - Clearing turns, looking for traffic below you.
   - Reduce power to about 1,500 RPM and raise the nose to hold altitude.
   - Set flaps 10, 20 and 30 in stages, each below its flap speed limit.
-  - Settle at about 55 KIAS, adding power to hold altitude (about 1,900–2,100 RPM; ⚠ verify).
+  - Settle at about 55 KIAS, adding power to hold altitude (about 1,900–2,100 RPM; ⚠ verify the RPM in the sim).
   - Fly straight for 30 seconds, then turn 90° left and 90° right at no more than 15° of bank.
-  - Recover — full power, lower the nose, flaps up in stages, accelerate to cruise.
+  - Recover. Full power, lower the nose, flaps up in stages, accelerate to cruise.
 
 criteria:
   - id: altitude

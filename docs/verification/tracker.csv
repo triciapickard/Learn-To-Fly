@@ -32,15 +32,15 @@ C4.2,Challenge,M4,P0,Fly the pattern,1,Draft,,content/challenges/c4-2-fly-the-pa
 C4.3,Challenge,M4,P0,Full-stop landing,1,Draft,,content/challenges/c4-3-full-stop-landing.yaml,,,,,,,,Sim: runway name; right pattern for 25R; time it; fly it fast once to check the tiers.
 C4.4,Challenge,M4,P0,Go-around,1,Draft,,content/challenges/c4-4-go-around.yaml,,,,,,,,Sim: runway name; check the side-step direction works for a right-hand pattern; time it.
 C4.7,Challenge,M4,P0,Three-circuit session,1,Draft,,content/challenges/c4-7-three-circuit-session.yaml,,,,,,,,Sim: runway in use; touch-and-go sequence (flaps up before full power); time three circuits.
-L5.1,Lesson,M5,P0,Slow flight,2,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md,,,,,,,,
-L5.2,Lesson,M5,P0,Stalls: power-off and power-on,1,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-2-stalls-power-off-and-power-on.md,,,,,,,,
-L5.3,Lesson,M5,P0,Steep turns and load factor,0,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-3-steep-turns-and-load-factor.md,,,,,,,,
-L5.4,Lesson,M5,P0,Engine failure and forced landings,2,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md,,,,,,,,
-C5.1,Challenge,M5,P0,Slow flight,1,Draft,,content/challenges/c5-1-slow-flight.yaml,,,,,,,,
-C5.2,Challenge,M5,P0,Power-off stall,1,Draft,,content/challenges/c5-2-power-off-stall.yaml,,,,,,,,
-C5.3,Challenge,M5,P0,Power-on stall,0,Draft,,content/challenges/c5-3-power-on-stall.yaml,,,,,,,,
-C5.4,Challenge,M5,P0,Steep turns,1,Draft,,content/challenges/c5-4-steep-turns.yaml,,,,,,,,
-C5.5,Challenge,M5,P0,Engine failure,0,Draft,,content/challenges/c5-5-engine-failure.yaml,,,,,,,,
+L5.1,Lesson,M5,P0,Slow flight,1,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md,,,,,,,,"Sim: RPM that holds 55 KIAS with full flaps at C5.1's weight and altitude (lesson says about 1,900-2,100); check when the sim's stall horn sounds in that configuration."
+L5.2,Lesson,M5,P0,Stalls: power-off and power-on,0,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-2-stalls-power-off-and-power-on.md,,,,,,,,"Sim: check the stall cues (horn, camera shake, nose drop) in both configurations and adjust the sim callout; check full power with flaps 10 gives a clean power-on stall with the ball centered."
+L5.3,Lesson,M5,P0,Steep turns and load factor,0,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-3-steep-turns-and-load-factor.md,,,,,,,,Sim: check about 100-200 RPM extra holds 95 KIAS in a 45 degree turn and whether the sim shows an overbanking tendency.
+L5.4,Lesson,M5,P0,Engine failure and forced landings,2,Draft,,content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md,,,,,,,,"Sim: glide about 4.5 nm from 3,000 ft AGL at 68 KIAS; the failure menu's engine-failure options (menu names); mixture cut-off stops the engine and mixture rich plus power restarts it."
+C5.1,Challenge,M5,P0,Slow flight,1,Draft,,content/challenges/c5-1-slow-flight.yaml,,,,,,,,Sim: air start; slow-flight RPM; stall horn tiers; time it.
+C5.2,Challenge,M5,P0,Power-off stall,0,Draft,,content/challenges/c5-2-power-off-stall.yaml,,,,,,,,Sim: air start; full-stall behaviour and altitude lost; time it.
+C5.3,Challenge,M5,P0,Power-on stall,0,Draft,,content/challenges/c5-3-power-on-stall.yaml,,,,,,,,Sim: air start; wing-drop behaviour at full power; time it.
+C5.4,Challenge,M5,P0,Steep turns,0,Draft,,content/challenges/c5-4-steep-turns.yaml,,,,,,,,Sim: air start 5 nm east of KLVK; confirm heading 310 points at Mt Diablo from there; time it.
+C5.5,Challenge,M5,P0,Engine failure,0,Draft,,content/challenges/c5-5-engine-failure.yaml,,,,,,,,Sim: air start 8 nm east heading 270 at 110 KIAS (changed from 090 so KLVK can be in glide range when the failure comes late; D-22 style change to confirm); mixture cut-off kills the engine and a late restart works; time it.
 L6.1,Lesson,M6,P0,Reading a sectional chart,1,Draft,,content/lessons/m6-vfr-navigation/l6-1-reading-a-sectional-chart.md,,,,,,,,
 L6.2,Lesson,M6,P0,Airspace,2,Draft,,content/lessons/m6-vfr-navigation/l6-2-airspace.md,,,,,,,,
 L6.3,Lesson,M6,P0,Pilotage and dead reckoning,2,Draft,,content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md,,,,,,,,

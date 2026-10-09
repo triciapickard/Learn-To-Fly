@@ -21,11 +21,11 @@ setup:
   airportIcao: KLVK
   startState: AIR_START
   startDetails:
-    position: 8 nm east of KLVK # ⚠ adjust so KLVK is within about 5 nm glide at 3,500 ft
+    position: 8 nm east of KLVK, heading back toward Livermore # at 3,500 ft the glide is about 4.5 nm (1.5 nm per 1,000 ft), so KLVK is only in reach if the failure comes late; a valley field is fine
     altitudeFt: 3500
-    headingDeg: 90
+    headingDeg: 270
     speedKias: 110
-    fallback: Start on the runway at KLVK, take off and climb east to 3,500 ft MSL. Start the timer when you're level in cruise.
+    fallback: Start on the runway at KLVK, take off and climb east to 3,500 ft MSL. Turn back toward Livermore (heading 270) about 8 nm out and start the timer when you're level in cruise.
   weatherPreset: WX_CALM
   timeLocal: '10:00'
   datePreset: late-spring
@@ -37,12 +37,12 @@ setup:
   flightPlan: null
 
 procedure:
-  - Fly level in cruise and start the timer. When it beeps, set the mixture to idle cut-off — that's your engine failure.
-  - A — pitch for 68 KIAS and trim.
-  - B — choose KLVK or a field within glide range, and turn toward it.
-  - C — run the restart flow. For this challenge the restart fails, so leave the mixture at cut-off.
-  - D — make the radio call on the current frequency and squawk 7700.
-  - E — fly a key-point approach to your chosen spot. Land if the sim allows it, or at 200 ft above the field set the mixture rich, add power and climb away (a practice recovery).
+  - Fly level in cruise and start the timer. When it beeps, set the mixture to idle cut-off. That's your engine failure.
+  - A. Pitch for 68 KIAS and trim.
+  - B. Choose KLVK or a field within glide range, and turn toward it.
+  - C. Run the restart flow. For this challenge the restart fails, so leave the mixture at cut-off.
+  - D. Make the radio call on the current frequency and squawk 7700.
+  - E. Fly a key-point approach to your chosen spot. Land if the sim allows it, or at 200 ft above the field set the mixture rich, add power and climb away (a practice recovery).
 
 criteria:
   - id: glide-quick
