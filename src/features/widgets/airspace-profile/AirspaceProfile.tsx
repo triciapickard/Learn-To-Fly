@@ -30,11 +30,11 @@ const H = 360;
 const PLOT = { left: 56, right: 704, top: 34, bottom: 318 };
 
 const CLASS_STYLE: Record<AirspaceClass, { shape: string; dash?: string; text: string }> = {
-  B: { shape: 'fill-primary/15 stroke-primary', text: 'fill-primary' },
-  C: { shape: 'fill-magenta/20 stroke-magenta', text: 'fill-magenta' },
-  D: { shape: 'fill-primary/5 stroke-primary', dash: '6 4', text: 'fill-primary' },
-  E: { shape: 'fill-magenta/5 stroke-magenta/60', dash: '2 4', text: 'fill-magenta' },
-  G: { shape: 'fill-transparent stroke-none', text: 'fill-muted' },
+  B: { shape: 'fill-chart-blue/15 stroke-chart-blue', text: 'fill-ink' },
+  C: { shape: 'fill-chart-magenta/20 stroke-chart-magenta', text: 'fill-ink' },
+  D: { shape: 'fill-chart-blue/5 stroke-chart-blue', dash: '6 4', text: 'fill-ink' },
+  E: { shape: 'fill-chart-magenta/5 stroke-chart-magenta/60', dash: '2 4', text: 'fill-ink' },
+  G: { shape: 'fill-transparent stroke-none', text: 'fill-ink-2' },
 };
 
 /** W11 — Airspace cross-section (Section 16.12). Data from content/airspace-profile.yaml. */
@@ -49,7 +49,7 @@ export default function AirspaceProfile(widget: WidgetProps) {
   }
   if (isError || !data) {
     return (
-      <p className="my-8 text-muted">
+      <p className="my-8 text-ink-2">
         The airspace cross-section could not load. The airspace classes are described in the lesson
         text.
       </p>
@@ -140,7 +140,7 @@ function Profile({ profile, props, onQuizAnswer }: WidgetProps & { profile: Airs
     >
       {!profile.verified && (
         <p className="mb-3 flex flex-wrap items-center gap-2 text-sm">
-          <Badge variant="warning">Unverified data</Badge>
+          <Badge variant="caution">Unverified data</Badge>
           Simplified and not to scale. The floors and ceilings still have to be checked against the
           current chart. Never use this for navigation.
         </p>
@@ -152,7 +152,7 @@ function Profile({ profile, props, onQuizAnswer }: WidgetProps & { profile: Airs
         <div
           role="group"
           aria-labelledby={viewLabel}
-          className="flex rounded-control border border-border-strong p-0.5"
+          className="flex rounded-pill bg-surface-sunken p-[3px]"
         >
           {(
             [
@@ -166,15 +166,15 @@ function Profile({ profile, props, onQuizAnswer }: WidgetProps & { profile: Airs
               aria-pressed={view === v}
               onClick={() => setView(v)}
               className={cn(
-                'min-h-9 rounded-[4px] px-3 text-sm font-semibold',
-                view === v ? 'bg-primary text-primary-contrast' : 'text-muted hover:text-text',
+                'min-h-9 rounded-pill px-3 text-sm font-semibold',
+                view === v ? 'bg-ink text-on-ink' : 'text-ink-2 hover:text-ink',
               )}
             >
               {text}
             </button>
           ))}
         </div>
-        <p className="text-sm text-muted">{profile.title}</p>
+        <p className="text-sm text-ink-2">{profile.title}</p>
       </div>
 
       {view === 'side' ? (
@@ -228,11 +228,11 @@ function Profile({ profile, props, onQuizAnswer }: WidgetProps & { profile: Airs
             valueText={`${feet(altitude)} MSL, Class ${here.cls}`}
             onChange={(v) => move(x, v)}
           />
-          <p className="text-xs text-muted">Or drag on the side view to move the airplane.</p>
+          <p className="text-xs text-ink-2">Or drag on the side view to move the airplane.</p>
         </div>
-        <div className="rounded-control bg-surface-2 p-4" aria-hidden={mode === 'quiz'}>
+        <div className="rounded-md bg-surface-sunken p-4" aria-hidden={mode === 'quiz'}>
           {mode === 'quiz' && !hovered ? (
-            <p className="text-sm text-muted">
+            <p className="text-sm text-ink-2">
               Move the airplane, then press Check. Hover over a layer to learn about it.
             </p>
           ) : (
@@ -244,7 +244,7 @@ function Profile({ profile, props, onQuizAnswer }: WidgetProps & { profile: Airs
               <dl className="mt-2 space-y-2 text-sm">
                 {card.volume && (
                   <div>
-                    <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
+                    <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">
                       Floor and ceiling
                     </dt>
                     <dd>
@@ -253,20 +253,20 @@ function Profile({ profile, props, onQuizAnswer }: WidgetProps & { profile: Airs
                   </div>
                 )}
                 <div>
-                  <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
+                  <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">
                     To enter
                   </dt>
                   <dd>{requirement.entry}</dd>
                 </div>
                 <div>
-                  <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
+                  <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">
                     VFR weather minimums
                   </dt>
                   <dd>{requirement.vfrMinimums}</dd>
                 </div>
                 {!hovered && inModeCVeil(profile, x) && (
                   <div>
-                    <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
+                    <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">
                       Mode C veil
                     </dt>
                     <dd>
@@ -367,7 +367,7 @@ function SideView({
             x2={PLOT.right}
             y1={sy(ft)}
             y2={sy(ft)}
-            className="stroke-border"
+            className="stroke-line"
             strokeDasharray="2 6"
           />
           <text
@@ -375,7 +375,7 @@ function SideView({
             y={sy(ft)}
             textAnchor="end"
             dominantBaseline="central"
-            className="fill-muted text-[11px]"
+            className="fill-ink-2 text-[11px]"
           >
             {ft === 0 ? 'MSL' : ft.toLocaleString('en-US')}
           </text>
@@ -421,14 +421,16 @@ function SideView({
             cx={sx(p.x)}
             cy={sy(terrainAt(profile, p.x))}
             r={4}
-            className={p.towered ? 'fill-primary stroke-surface' : 'fill-magenta stroke-surface'}
+            className={
+              p.towered ? 'fill-chart-blue stroke-surface' : 'fill-chart-magenta stroke-surface'
+            }
             strokeWidth={1.5}
           />
           <text
             x={sx(p.x)}
             y={PLOT.bottom + 16}
             textAnchor="middle"
-            className="fill-text text-[11px] font-semibold"
+            className="fill-ink text-[11px] font-semibold"
           >
             {p.id}
           </text>
@@ -441,7 +443,7 @@ function SideView({
             x2={sx(Math.min(profile.lengthNm, veilCenter.x + veil.radiusNm))}
             y1={20}
             y2={20}
-            className="stroke-muted"
+            className="stroke-ink-2"
             strokeWidth={1.5}
             strokeDasharray="4 3"
           />
@@ -449,7 +451,7 @@ function SideView({
             x={sx(veilCenter.x)}
             y={14}
             textAnchor="middle"
-            className="fill-muted text-[11px] font-semibold"
+            className="fill-ink-2 text-[11px] font-semibold"
           >
             Mode C veil ({veil.radiusNm} nm of {veilCenter.id})
           </text>
@@ -460,13 +462,13 @@ function SideView({
         x2={plane.x}
         y1={plane.y}
         y2={sy(terrainAt(profile, x))}
-        className="pointer-events-none stroke-text"
+        className="pointer-events-none stroke-ink"
         strokeDasharray="3 3"
       />
       <g transform={`translate(${plane.x} ${plane.y})`} className="pointer-events-none">
         <path
           d="M -16 -1 L -12 -9 L -9 -9 L -6 -2 L 8 -2 Q 16 -1 16 1 Q 16 3 8 3 L -14 3 Z M -3 1 L 3 1 L -2 7 L -6 7 Z"
-          className="fill-accent stroke-surface"
+          className="fill-ink stroke-surface"
           strokeWidth={1.5}
         />
       </g>
@@ -522,7 +524,7 @@ function PlanView({
         x2={sx(profile.lengthNm)}
         y1={cy}
         y2={cy}
-        className="stroke-text"
+        className="stroke-ink"
         strokeWidth={2}
         strokeDasharray="8 4"
       />
@@ -532,14 +534,16 @@ function PlanView({
             cx={sx(p.x)}
             cy={cy}
             r={5}
-            className={p.towered ? 'fill-primary stroke-surface' : 'fill-magenta stroke-surface'}
+            className={
+              p.towered ? 'fill-chart-blue stroke-surface' : 'fill-chart-magenta stroke-surface'
+            }
             strokeWidth={1.5}
           />
           <text
             x={sx(p.x)}
             y={i % 2 ? cy + 22 : cy - 14}
             textAnchor="middle"
-            className="fill-text text-[11px] font-semibold"
+            className="fill-ink text-[11px] font-semibold"
             paintOrder="stroke"
             stroke="var(--color-surface)"
             strokeWidth={3}
@@ -548,8 +552,8 @@ function PlanView({
           </text>
         </g>
       ))}
-      <circle cx={sx(x)} cy={cy} r={7} className="fill-accent stroke-surface" strokeWidth={2} />
-      <text x={W / 2} y={H - 8} textAnchor="middle" className="fill-muted text-[11px]">
+      <circle cx={sx(x)} cy={cy} r={7} className="fill-ink stroke-surface" strokeWidth={2} />
+      <text x={W / 2} y={H - 8} textAnchor="middle" className="fill-ink-2 text-[11px]">
         Schematic: the line drawn straight, airspace as simple circles. Numbers are floors in
         hundreds of feet. Not to scale.
       </text>

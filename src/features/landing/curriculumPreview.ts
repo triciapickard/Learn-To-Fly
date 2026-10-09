@@ -1,7 +1,8 @@
-/** Module overview for the landing page (plan.md Section 13.1). */
+/** Module overview for the landing page (v1.md Section 13.1). */
 export const CURRICULUM_PREVIEW = [
   {
     code: 'M0',
+    slug: 'm0-getting-started',
     title: 'Getting started',
     lessons: 3,
     challenges: 1,
@@ -9,6 +10,7 @@ export const CURRICULUM_PREVIEW = [
   },
   {
     code: 'M1',
+    slug: 'm1-meet-the-skyhawk',
     title: 'Meet the Skyhawk',
     lessons: 4,
     challenges: 1,
@@ -16,6 +18,7 @@ export const CURRICULUM_PREVIEW = [
   },
   {
     code: 'M2',
+    slug: 'm2-fundamentals',
     title: 'Fundamentals of flight',
     lessons: 5,
     challenges: 4,
@@ -23,6 +26,7 @@ export const CURRICULUM_PREVIEW = [
   },
   {
     code: 'M3',
+    slug: 'm3-ground-operations',
     title: 'Ground operations',
     lessons: 3,
     challenges: 4,
@@ -30,6 +34,7 @@ export const CURRICULUM_PREVIEW = [
   },
   {
     code: 'M4',
+    slug: 'm4-takeoffs-patterns-landings',
     title: 'Takeoffs, patterns and landings',
     lessons: 6,
     challenges: 7,
@@ -37,6 +42,7 @@ export const CURRICULUM_PREVIEW = [
   },
   {
     code: 'M5',
+    slug: 'm5-slow-flight-stalls-emergencies',
     title: 'Slow flight, stalls and emergencies',
     lessons: 5,
     challenges: 6,
@@ -44,6 +50,7 @@ export const CURRICULUM_PREVIEW = [
   },
   {
     code: 'M6',
+    slug: 'm6-vfr-navigation',
     title: 'VFR navigation',
     lessons: 8,
     challenges: 7,
@@ -51,6 +58,7 @@ export const CURRICULUM_PREVIEW = [
   },
   {
     code: 'M7',
+    slug: 'm7-radio-airport-operations',
     title: 'Radio and airport operations',
     lessons: 4,
     challenges: 3,
@@ -58,9 +66,49 @@ export const CURRICULUM_PREVIEW = [
   },
   {
     code: 'M8',
+    slug: 'm8-capstone',
     title: 'Capstone',
     lessons: 2,
     challenges: 2,
     summary: 'Decision making, a local checkride and a cross-country flight.',
+  },
+] as const;
+
+/** The first stops on the lesson path, shown on the landing page. */
+export const FIRST_STOPS = [
+  {
+    slug: 'l0-1-welcome-how-learn-to-fly-works',
+    module: 'm0-getting-started',
+    code: 'Lesson 0.1',
+    title: 'Welcome: how Learn-To-Fly works',
+    minutes: 5,
+  },
+  {
+    slug: 'l0-2-setting-up-msfs-2024-for-training',
+    module: 'm0-getting-started',
+    code: 'Lesson 0.2',
+    title: 'Setting up MSFS 2024 for training',
+    minutes: 20,
+  },
+  {
+    slug: 'l0-3-your-first-flight',
+    module: 'm0-getting-started',
+    code: 'Lesson 0.3',
+    title: 'Your first flight',
+    minutes: 10,
+  },
+  {
+    slug: 'l1-1-the-airframe-and-flight-controls',
+    module: 'm1-meet-the-skyhawk',
+    code: 'Lesson 1.1',
+    title: 'The airframe and flight controls',
+    minutes: 20,
+  },
+  {
+    slug: 'l1-2-the-cockpit-g1000-pfd-and-mfd',
+    module: 'm1-meet-the-skyhawk',
+    code: 'Lesson 1.2',
+    title: 'The cockpit: G1000 PFD and MFD',
+    minutes: 15,
   },
 ] as const;

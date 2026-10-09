@@ -31,7 +31,7 @@ describe('Button', () => {
 
   it('applies variant classes', () => {
     render(<Button variant="danger">Delete</Button>);
-    expect(screen.getByRole('button')).toHaveClass('bg-danger');
+    expect(screen.getByRole('button')).toHaveClass('bg-warn');
   });
 
   it('renders its child with button styles when asChild', () => {
@@ -44,7 +44,7 @@ describe('Button', () => {
     );
     const link = screen.getByRole('link', { name: 'Start' });
     expect(link).toHaveAttribute('href', '/learn');
-    expect(link).toHaveClass('bg-primary');
+    expect(link).toHaveClass('bg-ink');
   });
 });
 

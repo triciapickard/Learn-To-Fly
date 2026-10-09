@@ -81,7 +81,7 @@ export default function ChallengesPage() {
             <form
               role="search"
               aria-label="Filter challenges"
-              className="mb-6 grid gap-3 rounded-card border border-border bg-surface p-4 sm:grid-cols-2 lg:grid-cols-5"
+              className="mb-6 grid gap-3 rounded-lg border border-line bg-surface p-4 sm:grid-cols-2 lg:grid-cols-5"
               onSubmit={(e) => e.preventDefault()}
             >
               <FormField label="Module">
@@ -150,7 +150,7 @@ export default function ChallengesPage() {
               </FormField>
             </form>
 
-            <p className="mb-3 text-sm text-muted" role="status">
+            <p className="mb-3 text-sm text-ink-2" role="status">
               Showing {plural(shown.length, 'challenge')}
               {shown.length !== all.length && ` of ${all.length}`}
             </p>
@@ -164,14 +164,14 @@ export default function ChallengesPage() {
                       <Link
                         unstyled
                         to={`/challenges/${c.slug}`}
-                        className="group flex h-full flex-col gap-3 rounded-card border border-border bg-surface p-4 shadow-1 hover:border-primary"
+                        className="group flex h-full flex-col gap-3 rounded-lg border border-line bg-surface p-4 shadow-1 hover:border-accent"
                       >
                         <div className="flex items-center justify-between gap-2">
-                          <span className="font-mono text-sm text-muted">{c.code}</span>
+                          <span className="font-mono text-sm text-ink-2">{c.code}</span>
                           <TypeIcon type={c.type} />
                         </div>
                         <h2 className="text-lg font-semibold group-hover:underline">{c.title}</h2>
-                        <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted">
+                        <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-ink-2">
                           <DifficultyDots value={c.difficulty} />
                           <span className="inline-flex items-center gap-1">
                             <Clock aria-hidden className="size-4" /> {c.estimatedMinutes} min
@@ -179,7 +179,7 @@ export default function ChallengesPage() {
                           <span className="inline-flex items-center gap-1">
                             <MapPin aria-hidden className="size-4" /> {c.airportIcao}
                           </span>
-                          {c.priority === 'P1' && <Badge variant="bonus">Bonus</Badge>}
+                          {c.priority === 'P1' && <Badge variant="outline">Bonus</Badge>}
                           {c.draft && <DraftBadge />}
                           {best && <TierBadge tier={best.bestTier} />}
                         </div>

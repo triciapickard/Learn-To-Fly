@@ -120,10 +120,10 @@ export function FlyPanel({
       {alert && (
         <div
           role="alert"
-          className="rounded-card border-4 border-danger bg-danger-soft p-4 motion-safe:animate-warning-pulse"
+          className="rounded-lg border-4 border-warn bg-warn-tint p-4 motion-safe:animate-warning-pulse"
         >
           <p className={cn('flex items-center gap-2 font-bold', large ? 'text-3xl' : 'text-2xl')}>
-            <BellRing aria-hidden className="size-7 shrink-0 text-danger" /> {alert.label}
+            <BellRing aria-hidden className="size-7 shrink-0 text-warn" /> {alert.label}
           </p>
           <p className={cn('mt-2', text)}>{alert.message}</p>
           <Button variant="secondary" className="mt-3" onClick={() => setAlert(null)}>
@@ -143,8 +143,8 @@ export function FlyPanel({
               <li
                 key={id}
                 className={cn(
-                  'rounded-card border border-border bg-surface p-3',
-                  flight.ticks[id] && 'border-success bg-success-soft',
+                  'rounded-lg border border-line bg-surface p-3',
+                  flight.ticks[id] && 'border-go bg-go-tint',
                 )}
               >
                 <Checkbox
@@ -180,7 +180,7 @@ export function FlyPanel({
             onTick={challenge.randomEvents.length ? onTick : undefined}
           />
           {challenge.randomEvents.length > 0 && (
-            <p className="text-muted">
+            <p className="text-ink-2">
               Start the timer when you unpause: something may happen during the flight. You will
               hear a beep and see an alert.
             </p>

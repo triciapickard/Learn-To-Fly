@@ -87,7 +87,7 @@ export function ChecklistRunner({
         <h3 className={cn('mr-auto font-semibold', large ? 'text-2xl' : 'text-lg')}>
           {checklist.title}
         </h3>
-        <Badge variant={checklist.mode === 'read-do' ? 'info' : 'in-progress'}>
+        <Badge variant={checklist.mode === 'read-do' ? 'accent' : 'neutral'}>
           {checklist.mode === 'read-do' ? 'Read-do' : 'Do-verify'}
         </Badge>
         <Button variant="ghost" size="sm" aria-pressed={large} onClick={() => setLarge((v) => !v)}>
@@ -97,7 +97,7 @@ export function ChecklistRunner({
           <RotateCcw aria-hidden className="size-4" /> Reset
         </Button>
       </div>
-      <p className="mt-1 text-sm text-muted">
+      <p className="mt-1 text-sm text-ink-2">
         {MODE_HELP[checklist.mode]} Space ticks an item, Backspace unticks the last one.
       </p>
       <ProgressBar
@@ -125,21 +125,21 @@ export function ChecklistRunner({
                 onClick={() => update(toggle(state, item.id))}
                 onKeyDown={(e) => onKeyDown(e, index)}
                 className={cn(
-                  'flex w-full items-start gap-3 rounded-control border-2 px-3 text-left transition-colors',
+                  'flex w-full items-start gap-3 rounded-md border-2 px-3 text-left transition-colors',
                   large ? 'min-h-16 py-3 text-xl' : 'min-h-12 py-2',
                   ticked
-                    ? 'border-success/50 bg-success-soft'
+                    ? 'border-go/50 bg-go-tint'
                     : isCurrent
-                      ? 'border-primary bg-primary-soft'
-                      : 'border-border bg-surface',
+                      ? 'border-accent-line bg-accent-tint'
+                      : 'border-line bg-surface',
                 )}
               >
                 <span
                   aria-hidden
                   className={cn(
-                    'mt-0.5 flex shrink-0 items-center justify-center rounded border-2',
+                    'mt-0.5 flex shrink-0 items-center justify-center rounded-sm border-2',
                     large ? 'size-7' : 'size-5',
-                    ticked ? 'border-success bg-success text-surface' : 'border-border-strong',
+                    ticked ? 'border-go bg-go text-surface' : 'border-line-strong',
                   )}
                 >
                   {ticked && <Check className="size-4" strokeWidth={3} />}
@@ -149,19 +149,19 @@ export function ChecklistRunner({
                     <span
                       className={cn(
                         'font-medium',
-                        ticked && 'text-muted line-through decoration-1',
+                        ticked && 'text-ink-2 line-through decoration-1',
                       )}
                     >
                       {item.item}
                     </span>
                     <span
                       aria-hidden
-                      className="hidden flex-1 border-b border-dotted border-border-strong sm:block"
+                      className="hidden flex-1 border-b border-dotted border-line-strong sm:block"
                     />
                     <span className="font-mono font-semibold">{item.action}</span>
                   </span>
                   {item.note && (
-                    <span className={cn('text-muted', large ? 'text-base' : 'text-sm')}>
+                    <span className={cn('text-ink-2', large ? 'text-base' : 'text-sm')}>
                       {item.note}
                     </span>
                   )}
@@ -172,7 +172,7 @@ export function ChecklistRunner({
         })}
       </ol>
       {complete && (
-        <p className="mt-3 flex items-center gap-2 font-semibold text-success">
+        <p className="mt-3 flex items-center gap-2 font-semibold text-go">
           <Check aria-hidden className="size-5" /> Checklist complete
         </p>
       )}

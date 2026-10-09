@@ -103,7 +103,7 @@ export function Gauge({
         cx={cx}
         cy={cy}
         r={r + 6}
-        className="fill-instrument stroke-border-strong"
+        className="fill-instrument stroke-line-strong"
         strokeWidth={2}
       />
       {arcs.map((arc) => (
@@ -215,7 +215,7 @@ export function Tape({
         width={width}
         height={height}
         rx={4}
-        className="fill-instrument stroke-border-strong"
+        className="fill-instrument stroke-line-strong"
         strokeWidth={2}
       />
       <g clipPath={`url(#${clipId})`}>
@@ -257,7 +257,7 @@ export function Tape({
           x={x + width / 2}
           y={y + height + 18}
           textAnchor="middle"
-          className="fill-muted text-[12px]"
+          className="fill-ink-2 text-[12px]"
         >
           {unit}
         </text>
@@ -270,7 +270,7 @@ export function Tape({
 export function Arrow({
   from,
   to,
-  className = 'stroke-primary fill-primary',
+  className = 'stroke-accent fill-accent',
   width = 3,
   headSize = 10,
 }: {
@@ -313,7 +313,7 @@ export function Label({
   x,
   y,
   children,
-  className = 'fill-text',
+  className = 'fill-ink',
   anchor = 'middle',
 }: {
   x: number;
@@ -363,7 +363,7 @@ export function Compass({
         y1={outer.y}
         x2={inner.x}
         y2={inner.y}
-        className="stroke-text"
+        className="stroke-ink"
         strokeWidth={major ? 2 : 1}
       />,
     );
@@ -377,7 +377,7 @@ export function Compass({
           y={p.y}
           textAnchor="middle"
           dominantBaseline="central"
-          className="fill-text text-[12px] font-semibold"
+          className="fill-ink text-[12px] font-semibold"
           transform={`rotate(${a} ${p.x} ${p.y})`}
         >
           {text}
@@ -387,13 +387,7 @@ export function Compass({
   }
   return (
     <g>
-      <circle
-        cx={cx}
-        cy={cy}
-        r={r}
-        className="fill-surface stroke-border-strong"
-        strokeWidth={1.5}
-      />
+      <circle cx={cx} cy={cy} r={r} className="fill-surface stroke-line-strong" strokeWidth={1.5} />
       {items}
     </g>
   );

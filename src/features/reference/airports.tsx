@@ -11,11 +11,11 @@ export const ROLE_LABELS: Record<AirportDto['role'], string> = {
 export function AirportBadges({ airport }: { airport: AirportDto }) {
   return (
     <div className="flex flex-wrap gap-2">
-      <Badge variant="info">Class {airport.airspaceClass}</Badge>
-      <Badge variant={airport.towered ? 'info' : 'bonus'}>
+      <Badge variant="accent">Class {airport.airspaceClass}</Badge>
+      <Badge variant={airport.towered ? 'accent' : 'outline'}>
         {airport.towered ? 'Towered' : 'Non-towered'}
       </Badge>
-      {airport.role === 'awareness' && <Badge variant="warning">No landings</Badge>}
+      {airport.role === 'awareness' && <Badge variant="caution">No landings</Badge>}
     </div>
   );
 }

@@ -55,7 +55,7 @@ export default function ResourcesPage() {
             <form
               role="search"
               aria-label="Filter resources"
-              className="mb-6 grid gap-3 rounded-card border border-border bg-surface p-4 sm:grid-cols-3"
+              className="mb-6 grid gap-3 rounded-lg border border-line bg-surface p-4 sm:grid-cols-3"
               onSubmit={(e) => e.preventDefault()}
             >
               <FormField label="Topic">
@@ -95,7 +95,7 @@ export default function ResourcesPage() {
               </FormField>
             </form>
 
-            <p className="mb-3 text-sm text-muted" role="status">
+            <p className="mb-3 text-sm text-ink-2" role="status">
               Showing {plural(shown.length, 'resource')}
               {shown.length !== all.length && ` of ${all.length}`}
             </p>
@@ -105,18 +105,16 @@ export default function ResourcesPage() {
                 {shown.map((r) => (
                   <li
                     key={r.slug}
-                    className="flex flex-col gap-2 rounded-card border border-border bg-surface p-4 shadow-1"
+                    className="flex flex-col gap-2 rounded-lg border border-line bg-surface p-4 shadow-1"
                   >
                     <div className="flex flex-wrap items-center gap-2">
                       <Badge>{humanize(r.type)}</Badge>
-                      <Badge variant={r.free ? 'complete' : 'neutral'}>
-                        {r.free ? 'Free' : 'Paid'}
-                      </Badge>
+                      <Badge variant={r.free ? 'go' : 'neutral'}>{r.free ? 'Free' : 'Paid'}</Badge>
                     </div>
                     <h2 className="text-lg font-semibold">
                       {r.url ? <ExternalLink href={r.url}>{r.title}</ExternalLink> : r.title}
                     </h2>
-                    <p className="text-sm text-muted">{r.publisher}</p>
+                    <p className="text-sm text-ink-2">{r.publisher}</p>
                     <p>{r.description}</p>
                     {!r.url && r.location && (
                       <p className="text-sm">
@@ -124,7 +122,7 @@ export default function ResourcesPage() {
                         {r.location}
                       </p>
                     )}
-                    <p className="mt-auto pt-2 text-xs text-muted">
+                    <p className="mt-auto pt-2 text-xs text-ink-2">
                       {r.topics.map(humanize).join(' · ')}
                       {' · '}
                       {r.verifiedAt

@@ -49,7 +49,7 @@ export default function LoadFactor({ props, onQuizAnswer }: WidgetProps) {
   }
   if (isError || !vs1) {
     return (
-      <p className="my-8 text-muted">
+      <p className="my-8 text-ink-2">
         The load factor diagram could not load. In a level turn the load factor is 1 ÷ cos(bank):
         1.41 G at 45° and 2 G at 60°.
       </p>
@@ -141,8 +141,8 @@ export default function LoadFactor({ props, onQuizAnswer }: WidgetProps) {
       </dl>
 
       {load.overLimit && (
-        <p className="mt-3 flex items-start gap-2 rounded-control bg-danger-soft p-3 text-sm">
-          <AlertTriangle aria-hidden className="mt-0.5 size-4 shrink-0 text-danger" />
+        <p className="mt-3 flex items-start gap-2 rounded-md bg-warn-tint p-3 text-sm">
+          <AlertTriangle aria-hidden className="mt-0.5 size-4 shrink-0 text-warn" />
           <span>
             Over the {LIMIT_LOAD} G limit load of the normal category: the airframe could be
             damaged.
@@ -173,7 +173,7 @@ export default function LoadFactor({ props, onQuizAnswer }: WidgetProps) {
           value={bank}
           aria-valuetext={speech}
           onChange={(e) => setBank(Number(e.target.value))}
-          className="h-11 flex-1 cursor-pointer accent-primary"
+          className="h-11 flex-1 cursor-pointer accent-accent"
         />
         <Button
           variant="secondary"
@@ -217,13 +217,13 @@ function Readout({
   bar?: number;
 }) {
   return (
-    <div className="rounded-control bg-surface-2 p-3">
-      <dt className="text-xs font-semibold tracking-wide text-muted uppercase">{label}</dt>
+    <div className="rounded-md bg-surface-sunken p-3">
+      <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">{label}</dt>
       <dd className="font-mono text-lg font-semibold">{value}</dd>
-      {note && <dd className="text-xs text-muted">{note}</dd>}
+      {note && <dd className="text-xs text-ink-2">{note}</dd>}
       {bar !== undefined && (
-        <dd aria-hidden className="mt-1 h-2 overflow-hidden rounded-full bg-border">
-          <div className="h-full bg-primary" style={{ width: `${bar * 100}%` }} />
+        <dd aria-hidden className="mt-1 h-2 overflow-hidden rounded-full bg-surface-sunken">
+          <div className="h-full bg-accent-line" style={{ width: `${bar * 100}%` }} />
         </dd>
       )}
     </div>
@@ -252,7 +252,7 @@ function RearView({ load }: { load: TurnLoad }) {
         x2={320}
         y1={C.y}
         y2={C.y}
-        className="stroke-border-strong"
+        className="stroke-line-strong"
         strokeDasharray="4 6"
       />
       <g
@@ -260,22 +260,29 @@ function RearView({ load }: { load: TurnLoad }) {
         className="motion-safe:transition-transform"
       >
         <g transform={`translate(${C.x} ${C.y})`} strokeWidth={2} strokeLinejoin="round">
-          <path d="M -3 -18 L 0 -62 L 3 -18 Z" className="fill-surface-2 stroke-text" />
-          <rect x={-45} y={2} width={90} height={4} rx={2} className="fill-surface-2 stroke-text" />
-          <line x1={-12} y1={14} x2={-30} y2={27} className="stroke-text" />
-          <line x1={12} y1={14} x2={30} y2={27} className="stroke-text" />
-          <circle cx={-30} cy={32} r={6} className="fill-text" />
-          <circle cx={30} cy={32} r={6} className="fill-text" />
-          <line x1={-13} y1={6} x2={-62} y2={-18} className="stroke-text" />
-          <line x1={13} y1={6} x2={62} y2={-18} className="stroke-text" />
-          <ellipse cx={0} cy={0} rx={16} ry={20} className="fill-surface-2 stroke-text" />
+          <path d="M -3 -18 L 0 -62 L 3 -18 Z" className="fill-surface-sunken stroke-ink" />
+          <rect
+            x={-45}
+            y={2}
+            width={90}
+            height={4}
+            rx={2}
+            className="fill-surface-sunken stroke-ink"
+          />
+          <line x1={-12} y1={14} x2={-30} y2={27} className="stroke-ink" />
+          <line x1={12} y1={14} x2={30} y2={27} className="stroke-ink" />
+          <circle cx={-30} cy={32} r={6} className="fill-ink" />
+          <circle cx={30} cy={32} r={6} className="fill-ink" />
+          <line x1={-13} y1={6} x2={-62} y2={-18} className="stroke-ink" />
+          <line x1={13} y1={6} x2={62} y2={-18} className="stroke-ink" />
+          <ellipse cx={0} cy={0} rx={16} ry={20} className="fill-surface-sunken stroke-ink" />
           <rect
             x={-120}
             y={-24}
             width={240}
             height={7}
             rx={3}
-            className="fill-surface-2 stroke-text"
+            className="fill-surface-sunken stroke-ink"
           />
         </g>
       </g>
@@ -284,7 +291,7 @@ function RearView({ load }: { load: TurnLoad }) {
         y1={vertTip.y}
         x2={liftTip.x}
         y2={liftTip.y}
-        className="stroke-muted"
+        className="stroke-ink-2"
         strokeDasharray="3 4"
       />
       <line
@@ -292,27 +299,27 @@ function RearView({ load }: { load: TurnLoad }) {
         y1={horizTip.y}
         x2={liftTip.x}
         y2={liftTip.y}
-        className="stroke-muted"
+        className="stroke-ink-2"
         strokeDasharray="3 4"
       />
-      <Arrow from={C} to={weightTip} className="stroke-muted fill-muted" />
-      <Arrow from={C} to={vertTip} className="stroke-success fill-success" />
+      <Arrow from={C} to={weightTip} className="stroke-ink-2 fill-ink-2" />
+      <Arrow from={C} to={vertTip} className="stroke-go fill-go" />
       {load.horizontal * s > 12 && (
-        <Arrow from={C} to={horizTip} className="stroke-magenta fill-magenta" />
+        <Arrow from={C} to={horizTip} className="stroke-caution fill-caution" />
       )}
-      <Arrow from={C} to={liftTip} className="stroke-primary fill-primary" width={4} />
-      <Label x={liftTip.x + (load.bank > 20 ? 0 : 26)} y={liftTip.y - 12} className="fill-primary">
+      <Arrow from={C} to={liftTip} className="stroke-accent fill-accent" width={4} />
+      <Label x={liftTip.x + (load.bank > 20 ? 0 : 26)} y={liftTip.y - 12} className="fill-accent">
         Lift
       </Label>
-      <Label x={C.x - 8} y={vertTip.y + 10} anchor="end" className="fill-success">
+      <Label x={C.x - 8} y={vertTip.y + 10} anchor="end" className="fill-go">
         Vertical
       </Label>
       {load.horizontal * s > 40 && (
-        <Label x={(C.x + horizTip.x) / 2} y={C.y + 14} className="fill-magenta">
+        <Label x={(C.x + horizTip.x) / 2} y={C.y + 14} className="fill-caution">
           Horizontal
         </Label>
       )}
-      <Label x={C.x + 8} y={weightTip.y + 10} anchor="start" className="fill-muted">
+      <Label x={C.x + 8} y={weightTip.y + 10} anchor="start" className="fill-ink-2">
         Weight
       </Label>
     </svg>
@@ -343,7 +350,7 @@ function Graph({ load }: { load: TurnLoad }) {
             x2={G.right}
             y1={gy(n)}
             y2={gy(n)}
-            className="stroke-border"
+            className="stroke-line"
             strokeWidth={1}
           />
           <text
@@ -351,7 +358,7 @@ function Graph({ load }: { load: TurnLoad }) {
             y={gy(n)}
             textAnchor="end"
             dominantBaseline="central"
-            className="fill-muted font-mono text-[12px]"
+            className="fill-ink-2 font-mono text-[12px]"
           >
             {n}
           </text>
@@ -363,19 +370,19 @@ function Graph({ load }: { load: TurnLoad }) {
           x={gx(b)}
           y={G.bottom + 14}
           textAnchor="middle"
-          className="fill-muted font-mono text-[12px]"
+          className="fill-ink-2 font-mono text-[12px]"
         >
           {b}°
         </text>
       ))}
-      <text x={G.left - 30} y={G.top - 4} className="fill-muted text-[12px] font-semibold">
+      <text x={G.left - 30} y={G.top - 4} className="fill-ink-2 text-[12px] font-semibold">
         G
       </text>
       <text
         x={(G.left + G.right) / 2}
         y={G.bottom + 32}
         textAnchor="middle"
-        className="fill-muted text-[12px] font-semibold"
+        className="fill-ink-2 text-[12px] font-semibold"
       >
         Bank angle
       </text>
@@ -384,27 +391,27 @@ function Graph({ load }: { load: TurnLoad }) {
         x2={G.right}
         y1={gy(LIMIT_LOAD)}
         y2={gy(LIMIT_LOAD)}
-        className="stroke-danger"
+        className="stroke-warn"
         strokeDasharray="5 4"
         strokeWidth={1.5}
       />
-      <Label x={G.left + 6} y={gy(LIMIT_LOAD) - 10} anchor="start" className="fill-danger">
+      <Label x={G.left + 6} y={gy(LIMIT_LOAD) - 10} anchor="start" className="fill-warn">
         {LIMIT_LOAD} G limit load
       </Label>
-      <polyline points={points} fill="none" className="stroke-primary" strokeWidth={3} />
+      <polyline points={points} fill="none" className="stroke-accent" strokeWidth={3} />
       <line
         x1={gx(load.bank)}
         x2={gx(load.bank)}
         y1={G.bottom}
         y2={gy(Math.min(load.n, 6))}
-        className="stroke-primary"
+        className="stroke-accent"
         strokeDasharray="2 3"
       />
       <circle
         cx={gx(load.bank)}
         cy={gy(Math.min(load.n, 6))}
         r={7}
-        className="fill-primary stroke-surface"
+        className="fill-accent stroke-surface"
         strokeWidth={2}
       />
     </svg>

@@ -30,7 +30,7 @@ export function QuizPanel<Q extends WidgetQuestion>({
 
   if (done) {
     return (
-      <div role="status" className="rounded-control bg-surface-2 p-4">
+      <div role="status" className="rounded-md bg-surface-sunken p-4">
         <p className="font-semibold">
           Quiz complete: {score} of {questions.length} correct.
         </p>
@@ -52,8 +52,8 @@ export function QuizPanel<Q extends WidgetQuestion>({
   if (!question) return null;
 
   return (
-    <div className="rounded-control border border-primary bg-primary-soft p-4">
-      <p className="text-sm font-semibold text-primary">
+    <div className="rounded-md border border-accent-line bg-accent-tint p-4">
+      <p className="text-sm font-semibold text-accent">
         Question {index + 1} of {questions.length}
       </p>
       <p className="mt-1 font-medium">{question.prompt}</p>
@@ -88,9 +88,9 @@ export function QuizPanel<Q extends WidgetQuestion>({
         {result && (
           <p className="mt-3 flex items-start gap-2">
             {result.correct ? (
-              <CheckCircle2 aria-hidden className="mt-0.5 size-5 shrink-0 text-success" />
+              <CheckCircle2 aria-hidden className="mt-0.5 size-5 shrink-0 text-go" />
             ) : (
-              <XCircle aria-hidden className="mt-0.5 size-5 shrink-0 text-danger" />
+              <XCircle aria-hidden className="mt-0.5 size-5 shrink-0 text-warn" />
             )}
             <span>
               <strong>{result.correct ? 'Correct. ' : 'Not quite — try again. '}</strong>

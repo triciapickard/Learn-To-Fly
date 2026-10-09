@@ -1,3 +1,4 @@
+import { OctagonAlert } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
 export interface SummaryError {
@@ -8,7 +9,7 @@ export interface SummaryError {
 
 /**
  * Error summary shown above a form after a failed submit. Receives focus so screen reader
- * and keyboard users land on it (Section 20.11, 22.1).
+ * and keyboard users land on it (Section 20.11, 22.1). Warn-tint fill, warn icon and title.
  */
 export function ErrorSummary({
   errors,
@@ -31,24 +32,30 @@ export function ErrorSummary({
       tabIndex={-1}
       role="alert"
       aria-labelledby="error-summary-title"
-      className="rounded-card border-2 border-danger bg-danger-soft p-4"
+      className="grid grid-cols-[20px_1fr] gap-3 rounded-md bg-warn-tint px-5 py-4"
     >
-      <h2 id="error-summary-title" className="font-semibold">
-        {title}
-      </h2>
-      <ul className="mt-2 flex list-disc flex-col gap-1 pl-5">
-        {errors.map((error) => (
-          <li key={`${error.fieldId ?? 'form'}-${error.message}`}>
-            {error.fieldId ? (
-              <a href={`#${error.fieldId}`} className="font-medium text-danger underline">
-                {error.message}
-              </a>
-            ) : (
-              <span className="text-danger">{error.message}</span>
-            )}
-          </li>
-        ))}
-      </ul>
+      <OctagonAlert aria-hidden className="mt-[3px] size-5 text-warn" strokeWidth={1.75} />
+      <div>
+        <h2 id="error-summary-title" className="font-semibold text-warn">
+          {title}
+        </h2>
+        <ul className="mt-1 flex list-disc flex-col gap-1 pl-5 text-ink">
+          {errors.map((error) => (
+            <li key={`${error.fieldId ?? 'form'}-${error.message}`}>
+              {error.fieldId ? (
+                <a
+                  href={`#${error.fieldId}`}
+                  className="rounded-[2px] font-medium text-warn underline decoration-[1.5px] underline-offset-[3px]"
+                >
+                  {error.message}
+                </a>
+              ) : (
+                <span>{error.message}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

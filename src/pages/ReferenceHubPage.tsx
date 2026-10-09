@@ -51,16 +51,16 @@ export default function ReferenceHubPage() {
           {SECTIONS.map(({ to, title, description, icon: Icon }) => (
             <li
               key={to}
-              className="relative flex gap-4 rounded-card border border-border bg-surface p-5 shadow-1 hover:border-primary"
+              className="relative flex gap-4 rounded-lg border border-line bg-surface p-5 shadow-1 hover:border-accent"
             >
-              <Icon aria-hidden className="size-8 shrink-0 text-primary" />
+              <Icon aria-hidden className="size-8 shrink-0 text-accent" />
               <div>
                 <h2 className="text-xl font-semibold">
                   <Link to={to} unstyled className="after:absolute after:inset-0">
                     {title}
                   </Link>
                 </h2>
-                <p className="mt-1 text-muted">{description}</p>
+                <p className="mt-1 text-ink-2">{description}</p>
               </div>
             </li>
           ))}

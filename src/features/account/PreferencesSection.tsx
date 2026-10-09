@@ -1,12 +1,11 @@
 import { Card, CardBody, CardHeader } from '@/components/Card';
 import { Checkbox } from '@/components/Checkbox';
 import { FormField } from '@/components/FormField';
-import { RadioGroup } from '@/components/RadioGroup';
 import { Select } from '@/components/Select';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { useToast } from '@/components/Toast';
 import { useUpdateMe } from '@/features/auth/api';
 import { useSaveThemePreference } from '@/features/auth/useSaveThemePreference';
-import type { ThemePreference } from '@/features/theme/theme';
 import type { Preferences, UserDto } from '@shared/schemas/auth';
 
 /** Preferences save as soon as they change (US-16, US-17). */
@@ -27,20 +26,18 @@ export function PreferencesSection({ user }: { user: UserDto }) {
   return (
     <Card>
       <CardHeader>
-        <h2 className="text-xl font-semibold">Preferences</h2>
+        <h2 className="heading-md">Preferences</h2>
       </CardHeader>
       <CardBody className="flex flex-col gap-6">
-        <RadioGroup
-          label="Theme"
-          orientation="horizontal"
-          value={user.preferences.theme}
-          onValueChange={(value) => saveTheme(value as ThemePreference)}
-          options={[
-            { value: 'system', label: 'System' },
-            { value: 'light', label: 'Light' },
-            { value: 'dark', label: 'Dark' },
-          ]}
-        />
+        <div className="flex flex-col gap-1.5">
+          <p className="label text-ink" aria-hidden>
+            Theme
+          </p>
+          <ThemeToggle label="Theme preference" onChange={saveTheme} />
+          <p className="text-sm leading-5 text-ink-2">
+            Day, Night, or follow your device. Saved to your account.
+          </p>
+        </div>
         <FormField
           id="account-cockpit"
           label="Cockpit variant"

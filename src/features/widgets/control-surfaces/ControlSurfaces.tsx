@@ -25,11 +25,11 @@ import {
 } from './model';
 
 const SURFACE_COLOR: Record<SurfaceId, string> = {
-  ailerons: 'var(--color-cyan)',
-  elevator: 'var(--color-magenta)',
-  rudder: 'var(--color-accent)',
-  flaps: 'var(--color-success)',
-  'trim-tab': 'var(--color-gold)',
+  ailerons: 'var(--color-accent)',
+  elevator: 'var(--color-caution)',
+  rudder: 'var(--color-tier-bronze)',
+  flaps: 'var(--color-go)',
+  'trim-tab': 'var(--color-tier-gold)',
 };
 
 function partColor(part: Part): string {
@@ -122,7 +122,7 @@ export default function ControlSurfaces({ props, onQuizAnswer }: WidgetProps) {
                 fill: `color-mix(in srgb, ${partColor(p.part)} ${Math.round(p.light * 100)}%, black)`,
               }}
               fillOpacity={p.part === 'prop' ? 0.18 : 1}
-              stroke={isSelected ? 'var(--color-primary)' : 'var(--color-instrument)'}
+              stroke={isSelected ? 'var(--color-ink)' : 'var(--color-instrument)'}
               strokeWidth={isSelected ? 2.5 : 0.6}
               strokeLinejoin="round"
               className={surface ? 'cursor-pointer' : undefined}
@@ -137,14 +137,14 @@ export default function ControlSurfaces({ props, onQuizAnswer }: WidgetProps) {
               y1={line.from.y}
               x2={line.to.x}
               y2={line.to.y}
-              className="stroke-danger"
+              className="stroke-warn"
               strokeWidth={2}
               strokeDasharray="6 4"
             />
             <Label
               x={line.to.x}
               y={line.to.y + (line.id === 'yaw' ? -10 : 12)}
-              className="fill-danger"
+              className="fill-warn"
             >
               {line.label}
             </Label>
@@ -164,10 +164,10 @@ export default function ControlSurfaces({ props, onQuizAnswer }: WidgetProps) {
             aria-pressed={selected === s.id}
             onClick={() => select(s.id)}
             className={cn(
-              'flex min-h-11 items-center gap-2 rounded-control border px-3 text-sm font-semibold',
+              'flex min-h-11 items-center gap-2 rounded-md border px-3 text-sm font-semibold',
               selected === s.id
-                ? 'border-primary bg-primary-soft text-text'
-                : 'border-border-strong text-text hover:bg-surface-2',
+                ? 'border-ink bg-surface text-ink shadow-[0_0_0_1px_var(--color-ink)]'
+                : 'border-line-strong text-ink hover:bg-surface-sunken',
             )}
           >
             <span
@@ -181,12 +181,12 @@ export default function ControlSurfaces({ props, onQuizAnswer }: WidgetProps) {
       </div>
 
       {info && mode === 'explore' && (
-        <div className="mx-auto mt-3 max-w-xl rounded-control bg-surface-2 p-3 text-sm">
+        <div className="mx-auto mt-3 max-w-xl rounded-md bg-surface-sunken p-3 text-sm">
           <p className="font-semibold">{info.name}</p>
           <dl className="mt-1 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
-            <dt className="text-muted">Moved by</dt>
+            <dt className="text-ink-2">Moved by</dt>
             <dd>{info.control}</dd>
-            <dt className="text-muted">Axis</dt>
+            <dt className="text-ink-2">Axis</dt>
             <dd>{info.axis}</dd>
           </dl>
           <p className="mt-2">{info.effect}</p>
@@ -237,10 +237,10 @@ export default function ControlSurfaces({ props, onQuizAnswer }: WidgetProps) {
                 aria-pressed={inputs.flaps === f}
                 onClick={() => change('flaps', { ...inputs, flaps: f })}
                 className={cn(
-                  'min-h-11 min-w-14 rounded-control border px-3 font-mono font-semibold',
+                  'min-h-11 min-w-14 rounded-md border px-3 font-mono font-semibold',
                   inputs.flaps === f
-                    ? 'border-primary bg-primary text-primary-contrast'
-                    : 'border-border-strong hover:bg-surface-2',
+                    ? 'border-ink bg-ink text-on-ink'
+                    : 'border-line-strong hover:bg-surface-sunken',
                 )}
               >
                 {f}°
@@ -304,7 +304,7 @@ export default function ControlSurfaces({ props, onQuizAnswer }: WidgetProps) {
 
 function ControlCard({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <fieldset className="rounded-control border border-border p-3">
+    <fieldset className="rounded-md border border-line p-3">
       <legend className="px-1 font-semibold">{title}</legend>
       {children}
     </fieldset>
@@ -323,7 +323,7 @@ function StepButton({
   return (
     <Button variant="secondary" size="sm" onClick={onClick}>
       {label}
-      {hint && <span className="font-normal text-muted"> ({hint})</span>}
+      {hint && <span className="font-normal text-ink-2"> ({hint})</span>}
     </Button>
   );
 }
@@ -356,11 +356,18 @@ function YokePad({
       aria-hidden
       {...drag}
     >
-      <rect x={1} y={1} width={198} height={118} rx={8} className="fill-surface-2 stroke-border" />
-      <text x={100} y={14} textAnchor="middle" className="fill-muted text-[10px] font-semibold">
+      <rect
+        x={1}
+        y={1}
+        width={198}
+        height={118}
+        rx={8}
+        className="fill-surface-sunken stroke-line"
+      />
+      <text x={100} y={14} textAnchor="middle" className="fill-ink-2 text-[10px] font-semibold">
         PUSH
       </text>
-      <text x={100} y={114} textAnchor="middle" className="fill-muted text-[10px] font-semibold">
+      <text x={100} y={114} textAnchor="middle" className="fill-ink-2 text-[10px] font-semibold">
         PULL
       </text>
       <g
@@ -368,9 +375,9 @@ function YokePad({
       >
         <path
           d="M -46 -14 Q -50 10 -30 12 L 30 12 Q 50 10 46 -14 L 36 -14 Q 38 2 28 2 L -28 2 Q -38 2 -36 -14 Z"
-          className="fill-text"
+          className="fill-ink"
         />
-        <circle r={7} className="fill-primary" />
+        <circle r={7} className="fill-accent" />
       </g>
     </svg>
   );
@@ -395,7 +402,7 @@ function Pedals({
   );
   const pedal = (x: number, forward: number, label: string) => (
     <g transform={`translate(${x} ${50 - forward * 16})`}>
-      <rect x={-22} y={-22} width={44} height={44} rx={8} className="fill-text" />
+      <rect x={-22} y={-22} width={44} height={44} rx={8} className="fill-ink" />
       <text y={4} textAnchor="middle" className="fill-surface text-[12px] font-bold">
         {label}
       </text>
@@ -408,7 +415,14 @@ function Pedals({
       aria-hidden
       {...drag}
     >
-      <rect x={1} y={1} width={198} height={98} rx={8} className="fill-surface-2 stroke-border" />
+      <rect
+        x={1}
+        y={1}
+        width={198}
+        height={98}
+        rx={8}
+        className="fill-surface-sunken stroke-line"
+      />
       {pedal(60, Math.max(0, -inputs.yaw) - Math.max(0, inputs.yaw), 'L')}
       {pedal(140, Math.max(0, inputs.yaw) - Math.max(0, -inputs.yaw), 'R')}
     </svg>

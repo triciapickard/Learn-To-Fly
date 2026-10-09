@@ -117,34 +117,29 @@ export default function WindTriangle({ props }: WidgetProps) {
               <Arrow
                 from={v.wind}
                 to={v.ground}
-                className="stroke-magenta fill-magenta"
+                className="stroke-caution fill-caution"
                 width={3}
               />
-              <Arrow
-                from={v.origin}
-                to={v.ground}
-                className="stroke-success fill-success"
-                width={4}
-              />
-              <Label {...labels!.heading} className="fill-magenta">
+              <Arrow from={v.origin} to={v.ground} className="stroke-go fill-go" width={4} />
+              <Label {...labels!.heading} className="fill-caution">
                 Heading {heading(r!.th)}
               </Label>
-              <Label {...labels!.course} className="fill-success">
+              <Label {...labels!.course} className="fill-go">
                 Course {heading(inputs.tc)}
               </Label>
             </>
           )}
           {inputs.ws > 0 && (
-            <Arrow from={v.origin} to={v.wind} className="stroke-primary fill-primary" width={3} />
+            <Arrow from={v.origin} to={v.wind} className="stroke-accent fill-accent" width={3} />
           )}
           <circle
             cx={v.wind.x}
             cy={v.wind.y}
             r={11}
-            className="cursor-grab fill-primary/25 stroke-primary"
+            className="cursor-grab fill-accent/25 stroke-accent"
             strokeWidth={2}
           />
-          <circle cx={ORIGIN.x} cy={ORIGIN.y} r={3} className="fill-text" />
+          <circle cx={ORIGIN.x} cy={ORIGIN.y} r={3} className="fill-ink" />
         </svg>
 
         <div>
@@ -164,7 +159,7 @@ export default function WindTriangle({ props }: WidgetProps) {
               </FormField>
             ))}
           </div>
-          <p className="mt-2 text-xs text-muted">
+          <p className="mt-2 text-xs text-ink-2">
             Or drag the wind arrow&apos;s tip on the diagram.
           </p>
         </div>
@@ -179,14 +174,14 @@ export default function WindTriangle({ props }: WidgetProps) {
             ['Groundspeed', `${Math.round(r.gs)} kt`],
             ['Time en route', eteText(r.ete)],
           ].map(([label, value]) => (
-            <div key={label} className="rounded-control bg-surface-2 p-3">
-              <dt className="text-xs font-semibold tracking-wide text-muted uppercase">{label}</dt>
+            <div key={label} className="rounded-md bg-surface-sunken p-3">
+              <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">{label}</dt>
               <dd className="font-mono text-lg font-semibold">{value}</dd>
             </div>
           ))}
         </dl>
       ) : (
-        <p role="alert" className="mt-4 rounded-control bg-danger-soft p-3 text-sm font-medium">
+        <p role="alert" className="mt-4 rounded-md bg-warn-tint p-3 text-sm font-medium">
           The wind is too strong for this airspeed: no heading can hold the course.
         </p>
       )}

@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
   <style>
-    .fin{fill:#0c1a3a}.gap{fill:#fff}
-    @media (prefers-color-scheme:dark){.fin{fill:#fff}.gap{fill:#0c1a3a}}
+    .fin{fill:#171614}.stripe{fill:#009ca5}
+    @media (prefers-color-scheme:dark){.fin{fill:#ecebe9}.stripe{fill:#00c3cb}}
   </style>
   <clipPath id="fin"><path d="M3 37 C13 35 18 27 22 17 L28.5 4 L35.5 4 C37 4 38 5 38 6.5 L38 37 Z"/></clipPath>
-  <path class="fin" d="M3 37 C13 35 18 27 22 17 L28.5 4 L35.5 4 C37 4 38 5 38 6.5 L38 37 Z"/>
-  <g clip-path="url(#fin)">
-    <path d="M8 42 C18 30 29 22 44 16 L44 24.5 C31 29 23 35 17.5 42 Z" fill="#d0262d"/>
-    <path class="gap" d="M6 32 C17 23 29 15.5 44 10.5 L44 12 C29 17 18 24.5 7.5 33.5 Z"/>
+  <mask id="gap"><rect width="40" height="40" fill="#fff"/><path d="M6 32 C17 23 29 15.5 44 10.5 L44 12 C29 17 18 24.5 7.5 33.5 Z" fill="#000"/></mask>
+  <g mask="url(#gap)">
+    <path class="fin" d="M3 37 C13 35 18 27 22 17 L28.5 4 L35.5 4 C37 4 38 5 38 6.5 L38 37 Z"/>
+    <path class="stripe" clip-path="url(#fin)" d="M8 42 C18 30 29 22 44 16 L44 24.5 C31 29 23 35 17.5 42 Z"/>
   </g>
 </svg>

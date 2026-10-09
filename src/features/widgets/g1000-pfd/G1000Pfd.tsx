@@ -159,7 +159,7 @@ export default function G1000Pfd({ props, onQuizAnswer }: WidgetProps) {
         <div
           role="group"
           aria-label="View"
-          className="mb-3 flex w-fit rounded-control border border-border-strong p-0.5"
+          className="mb-3 flex w-fit rounded-pill bg-surface-sunken p-[3px]"
         >
           {(
             [
@@ -173,8 +173,8 @@ export default function G1000Pfd({ props, onQuizAnswer }: WidgetProps) {
               aria-pressed={view === v}
               onClick={() => setView(v)}
               className={cn(
-                'min-h-9 rounded-[4px] px-3 text-sm font-semibold',
-                view === v ? 'bg-primary text-primary-contrast' : 'text-muted hover:text-text',
+                'min-h-9 rounded-pill px-3 text-sm font-semibold',
+                view === v ? 'bg-ink text-on-ink' : 'text-ink-2 hover:text-ink',
               )}
             >
               {text}
@@ -195,7 +195,7 @@ export default function G1000Pfd({ props, onQuizAnswer }: WidgetProps) {
         onSelect={select}
         label={label}
       />
-      <p className="mt-1 text-xs text-muted">
+      <p className="mt-1 text-xs text-ink-2">
         Simplified original drawing. Labels follow the G1000 NXi; the sim may differ slightly.
       </p>
       {!quiz && !navigation && (
@@ -224,7 +224,7 @@ export default function G1000Pfd({ props, onQuizAnswer }: WidgetProps) {
               <Button variant="ghost" size="sm" onClick={() => goToTourStop(null)}>
                 <Square aria-hidden className="size-4" /> End tour
               </Button>
-              <span className="text-sm text-muted">
+              <span className="text-sm text-ink-2">
                 Stop {tour + 1} of {PFD_REGIONS.length}
               </span>
             </>
@@ -233,10 +233,7 @@ export default function G1000Pfd({ props, onQuizAnswer }: WidgetProps) {
       )}
 
       {navigation && (
-        <section
-          aria-labelledby={stepsLabel}
-          className="mt-4 rounded-control border border-border p-4"
-        >
+        <section aria-labelledby={stepsLabel} className="mt-4 rounded-md border border-line p-4">
           <p id={stepsLabel} className="font-semibold">
             Direct-To, step by step
           </p>
@@ -246,14 +243,14 @@ export default function G1000Pfd({ props, onQuizAnswer }: WidgetProps) {
                 key={s.id}
                 aria-current={i === step ? 'step' : undefined}
                 className={cn(
-                  'rounded-control px-3 py-2 text-sm',
-                  i === step ? 'bg-primary-soft' : 'text-muted',
+                  'rounded-md px-3 py-2 text-sm',
+                  i === step ? 'bg-accent-tint' : 'text-ink-2',
                 )}
               >
                 <span className="font-semibold">
                   {i + 1}. {s.title}
                 </span>
-                {i === step && <p className="mt-1 text-text">{s.instruction}</p>}
+                {i === step && <p className="mt-1 text-ink">{s.instruction}</p>}
               </li>
             ))}
           </ol>
@@ -296,10 +293,10 @@ export default function G1000Pfd({ props, onQuizAnswer }: WidgetProps) {
                   aria-pressed={selected === r.id}
                   onClick={() => select(r.id)}
                   className={cn(
-                    'min-h-9 rounded-control border px-3 text-left text-sm font-medium',
+                    'min-h-9 rounded-md border px-3 text-left text-sm font-medium',
                     selected === r.id
-                      ? 'border-primary bg-primary-soft text-text'
-                      : 'border-border-strong text-text hover:bg-surface-2',
+                      ? 'border-ink bg-surface text-ink shadow-[0_0_0_1px_var(--color-ink)]'
+                      : 'border-line-strong text-ink hover:bg-surface-sunken',
                   )}
                 >
                   {r.name}
@@ -312,7 +309,7 @@ export default function G1000Pfd({ props, onQuizAnswer }: WidgetProps) {
 
       {quiz && (
         <div className="mt-4">
-          <p className="mb-2 text-sm text-muted">
+          <p className="mb-2 text-sm text-ink-2">
             Click or tap the display, or use Tab to move between display areas and Enter to choose
             one.
           </p>
@@ -334,29 +331,29 @@ export default function G1000Pfd({ props, onQuizAnswer }: WidgetProps) {
 function RegionCard({ region }: { region: Region | null }) {
   if (!region) {
     return (
-      <div className="rounded-control bg-surface-2 p-4 text-sm text-muted">
+      <div className="rounded-md bg-surface-sunken p-4 text-sm text-ink-2">
         Hover over or tap part of the display, choose from the list, or start the tour.
       </div>
     );
   }
   return (
-    <div className="rounded-control bg-surface-2 p-4">
+    <div className="rounded-md bg-surface-sunken p-4">
       <p className="font-semibold">{region.name}</p>
       <dl className="mt-2 space-y-2 text-sm">
         <div>
-          <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
+          <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">
             What it shows
           </dt>
           <dd>{region.shows}</dd>
         </div>
         <div>
-          <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
+          <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">
             Classic equivalent
           </dt>
           <dd>{region.classic}</dd>
         </div>
         <div>
-          <dt className="text-xs font-semibold tracking-wide text-muted uppercase">Tip</dt>
+          <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">Tip</dt>
           <dd>{region.tip}</dd>
         </div>
       </dl>

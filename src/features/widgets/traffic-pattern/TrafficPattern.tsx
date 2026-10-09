@@ -197,10 +197,10 @@ export default function TrafficPattern({ props }: WidgetProps) {
           role="img"
           aria-label={`Traffic pattern for runway ${runway}, ${side} traffic. The airplane is on the ${LEGS[leg].name.toLowerCase()} leg, heading ${Math.round(acHeading)} degrees at ${Math.round(gs)} knots groundspeed.`}
         >
-          <rect x={0} y={0} width={460} height={350} rx={10} className="fill-surface-2" />
+          <rect x={0} y={0} width={460} height={350} rx={10} className="fill-surface-sunken" />
           <polygon
             points={runwayCorners.map((p) => `${p.x},${p.y}`).join(' ')}
-            className="fill-instrument stroke-border-strong"
+            className="fill-instrument stroke-line-strong"
           />
           <line
             x1={screen({ u: 30, v: 0 }).x}
@@ -217,21 +217,21 @@ export default function TrafficPattern({ props }: WidgetProps) {
           <polyline
             points={polyline(geom.intro)}
             fill="none"
-            className="stroke-primary"
+            className="stroke-accent"
             strokeWidth={2}
             strokeDasharray="6 5"
           />
           <polyline
             points={polyline(geom.lap)}
             fill="none"
-            className="stroke-primary"
+            className="stroke-accent"
             strokeWidth={2.5}
           />
           {pos.phase === 'goAround' && (
             <polyline
               points={polyline(geom.goAround)}
               fill="none"
-              className="stroke-accent"
+              className="stroke-caution"
               strokeWidth={2.5}
               strokeDasharray="7 4"
             />
@@ -239,7 +239,7 @@ export default function TrafficPattern({ props }: WidgetProps) {
 
           {labels.map((l) => (
             <g key={l.leg}>
-              <Label x={l.x} y={l.y} anchor={l.textAnchor} className="fill-text">
+              <Label x={l.x} y={l.y} anchor={l.textAnchor} className="fill-ink">
                 {LEGS[l.leg].name.replace(' (upwind)', '')}
               </Label>
               {showConfig && (
@@ -248,9 +248,9 @@ export default function TrafficPattern({ props }: WidgetProps) {
                   y={l.y + (l.push === 'out' && l.y < l.anchor.y ? -15 : 15)}
                   textAnchor={l.textAnchor}
                   dominantBaseline="central"
-                  className="fill-muted text-[11px]"
+                  className="fill-ink-2 text-[11px]"
                   paintOrder="stroke"
-                  stroke="var(--color-surface-2)"
+                  stroke="var(--color-surface-sunken)"
                   strokeWidth={3}
                 >
                   {LEGS[l.leg].short}
@@ -265,7 +265,7 @@ export default function TrafficPattern({ props }: WidgetProps) {
           <g transform={`translate(${ac.x} ${ac.y}) rotate(${acHeading + viewTurn})`}>
             <path
               d="M 0 -11 L 2 -4 L 11 1 L 11 3 L 2 1 L 1.5 7 L 4.5 9.5 L 4.5 11 L 0 10 L -4.5 11 L -4.5 9.5 L -1.5 7 L -2 1 L -11 3 L -11 1 L -2 -4 Z"
-              className="fill-primary stroke-surface"
+              className="fill-accent stroke-surface"
               strokeWidth={1.5}
             />
           </g>
@@ -274,10 +274,10 @@ export default function TrafficPattern({ props }: WidgetProps) {
             <Arrow
               from={{ x: 0, y: 14 }}
               to={{ x: 0, y: -12 }}
-              className="stroke-text fill-text"
+              className="stroke-ink fill-ink"
               width={2}
             />
-            <text y={30} textAnchor="middle" className="fill-text text-[12px] font-bold">
+            <text y={30} textAnchor="middle" className="fill-ink text-[12px] font-bold">
               N
             </text>
           </g>
@@ -319,7 +319,7 @@ export default function TrafficPattern({ props }: WidgetProps) {
           <div
             role="group"
             aria-label="Traffic direction"
-            className="flex w-fit rounded-control border border-border-strong p-0.5 text-sm"
+            className="flex w-fit rounded-pill bg-surface-sunken p-[3px] text-sm"
           >
             {(['left', 'right'] as const).map((s) => (
               <button
@@ -331,8 +331,8 @@ export default function TrafficPattern({ props }: WidgetProps) {
                   setPos(START);
                 }}
                 className={cn(
-                  'min-h-9 rounded-[4px] px-3 font-semibold',
-                  side === s ? 'bg-primary text-primary-contrast' : 'text-muted hover:text-text',
+                  'min-h-9 rounded-pill px-3 font-semibold',
+                  side === s ? 'bg-ink text-on-ink' : 'text-ink-2 hover:text-ink',
                 )}
               >
                 {s === 'left' ? 'Left traffic' : 'Right traffic'}
@@ -358,7 +358,7 @@ export default function TrafficPattern({ props }: WidgetProps) {
               value={wind.direction}
               aria-valuetext={`${wind.direction} degrees`}
               onChange={(e) => setWind((w) => ({ ...w, direction: Number(e.target.value) }))}
-              className="h-11 w-full cursor-pointer accent-primary"
+              className="h-11 w-full cursor-pointer accent-accent"
             />
             <div className="flex items-baseline justify-between">
               <label htmlFor={`${uid}-wind-speed`} className="font-semibold">
@@ -377,7 +377,7 @@ export default function TrafficPattern({ props }: WidgetProps) {
               value={wind.speed}
               aria-valuetext={wind.speed === 0 ? 'calm' : `${wind.speed} knots`}
               onChange={(e) => setWind((w) => ({ ...w, speed: Number(e.target.value) }))}
-              className="h-11 w-full cursor-pointer accent-primary"
+              className="h-11 w-full cursor-pointer accent-accent"
             />
           </div>
 
@@ -392,7 +392,7 @@ export default function TrafficPattern({ props }: WidgetProps) {
             onChange={(e) => setShowCalls(e.target.checked)}
           />
 
-          <p className="text-sm text-muted" aria-hidden>
+          <p className="text-sm text-ink-2" aria-hidden>
             Heading{' '}
             <span className="font-mono">
               {String(Math.round(acHeading) % 360 || 360).padStart(3, '0')}°
@@ -404,7 +404,7 @@ export default function TrafficPattern({ props }: WidgetProps) {
 
       {showCalls && LEGS[leg].call && (
         <p
-          className="mt-3 rounded-control border border-primary bg-primary-soft p-3 text-sm"
+          className="mt-3 rounded-md border border-accent-line bg-accent-tint p-3 text-sm"
           aria-hidden
         >
           <span className="font-semibold">Radio: </span>
@@ -421,8 +421,8 @@ export default function TrafficPattern({ props }: WidgetProps) {
               key={id}
               aria-current={current ? 'step' : undefined}
               className={cn(
-                'rounded-control border p-3 text-sm',
-                current ? 'border-primary bg-primary-soft' : 'border-border',
+                'rounded-md border p-3 text-sm',
+                current ? 'border-accent-line bg-accent-tint' : 'border-line',
               )}
             >
               <p className="font-semibold">
@@ -468,14 +468,14 @@ function CallMarker({ at, active, n }: { at: Pt; active: boolean; n: number }) {
     <g transform={`translate(${at.x} ${at.y})`}>
       <path
         d="M -10 -22 h 20 a 4 4 0 0 1 4 4 v 10 a 4 4 0 0 1 -4 4 h -6 l -4 6 l -4 -6 h -6 a 4 4 0 0 1 -4 -4 v -10 a 4 4 0 0 1 4 -4 Z"
-        className={active ? 'fill-accent' : 'fill-surface stroke-accent'}
+        className={active ? 'fill-ink' : 'fill-surface stroke-line-strong'}
         strokeWidth={1.5}
       />
       <text
         y={-13}
         textAnchor="middle"
         dominantBaseline="central"
-        className={cn('text-[11px] font-bold', active ? 'fill-white' : 'fill-accent')}
+        className={cn('text-[11px] font-bold', active ? 'fill-on-ink' : 'fill-ink')}
       >
         {n}
       </text>
@@ -493,15 +493,15 @@ function WindIndicator({ wind, turn }: { wind: Wind; turn: number }) {
   return (
     <g>
       {wind.speed > 0 ? (
-        <Arrow from={from} to={tip} className="stroke-magenta fill-magenta" width={3} />
+        <Arrow from={from} to={tip} className="stroke-caution fill-caution" width={3} />
       ) : (
-        <circle cx={cx} cy={cy} r={6} className="fill-none stroke-magenta" strokeWidth={2} />
+        <circle cx={cx} cy={cy} r={6} className="fill-none stroke-caution" strokeWidth={2} />
       )}
       <text
         x={cx}
         y={cy + 32}
         textAnchor="middle"
-        className="fill-magenta text-[11px] font-semibold"
+        className="fill-caution text-[11px] font-semibold"
       >
         {wind.speed > 0 ? `${String(wind.direction).padStart(3, '0')}° ${wind.speed} kt` : 'Calm'}
       </text>

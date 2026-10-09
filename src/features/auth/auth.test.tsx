@@ -224,8 +224,8 @@ describe('Header and account', () => {
     );
     renderRoute('/account');
     await screen.findByRole('heading', { level: 1, name: 'Account' });
-    const group = screen.getByRole('radiogroup', { name: 'Theme' });
-    await userEvent.click(within(group).getByRole('radio', { name: 'Dark' }));
+    const group = screen.getByRole('radiogroup', { name: 'Theme preference' });
+    await userEvent.click(within(group).getByRole('radio', { name: 'Night' }));
     await waitFor(() => expect(patched).toEqual({ preferences: { theme: 'dark' } }));
     expect(document.documentElement.dataset.theme).toBe('dark');
   });

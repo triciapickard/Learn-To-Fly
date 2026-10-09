@@ -65,7 +65,7 @@ export function LessonRenderer({
             return import.meta.env.DEV ? (
               <p
                 key={key}
-                className="my-4 rounded-card border-2 border-dashed border-warning p-3 text-warning"
+                className="my-4 rounded-lg border-2 border-dashed border-caution p-3 text-caution"
               >
                 Development only: unknown block type “{unknown.type}”.
               </p>

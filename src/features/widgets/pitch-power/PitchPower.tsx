@@ -38,7 +38,7 @@ export default function PitchPower({ props, onQuizAnswer }: WidgetProps) {
   }
   if (isError || !data || !table) {
     return (
-      <p className="my-8 text-muted">
+      <p className="my-8 text-ink-2">
         The pitch and power trainer could not load. Remember the rule it teaches: pitch sets your
         airspeed, power sets whether you climb or descend.
       </p>
@@ -144,7 +144,7 @@ function Trainer({
       description={description}
     >
       {!verified && (
-        <p className="mb-3 rounded-control bg-warning-soft p-2 text-sm">
+        <p className="mb-3 rounded-md bg-caution-tint p-2 text-sm">
           Provisional numbers: this trainer&apos;s table hasn&apos;t been checked against flights in
           the sim yet, so treat the exact speeds as approximate.
         </p>
@@ -182,12 +182,12 @@ function Trainer({
         {ias} KIAS · {vs > 0 ? '+' : ''}
         {vs.toLocaleString('en-US')} fpm
       </p>
-      <p className="text-center text-sm text-muted" aria-hidden>
+      <p className="text-center text-sm text-ink-2" aria-hidden>
         Altitude in one minute: {vs > 0 ? '+' : ''}
         {vs.toLocaleString('en-US')} ft
       </p>
       {(warn.stall || warn.overspeed) && (
-        <p className="mx-auto mt-2 flex max-w-md items-center justify-center gap-2 rounded-control bg-danger-soft p-2 text-sm font-semibold text-danger">
+        <p className="mx-auto mt-2 flex max-w-md items-center justify-center gap-2 rounded-md bg-warn-tint p-2 text-sm font-semibold text-warn">
           <AlertTriangle aria-hidden className="size-4" />
           {warn.stall ? 'Stall warning: too slow' : 'Over the never-exceed speed'}
         </p>
@@ -195,16 +195,16 @@ function Trainer({
 
       <div className="mx-auto mt-4 max-w-xl">
         <div className="flex items-center justify-between text-sm">
-          <span className="text-muted">Push</span>
+          <span className="text-ink-2">Push</span>
           <span className="font-semibold">{forceText(force)}</span>
-          <span className="text-muted">Pull</span>
+          <span className="text-ink-2">Pull</span>
         </div>
-        <div aria-hidden className="relative mt-1 h-3 rounded-full bg-surface-2">
-          <div className="absolute top-0 left-1/2 h-3 w-0.5 -translate-x-1/2 bg-border-strong" />
+        <div aria-hidden className="relative mt-1 h-3 rounded-full bg-surface-sunken">
+          <div className="absolute top-0 left-1/2 h-3 w-0.5 -translate-x-1/2 bg-line-strong" />
           <div
             className={cn(
               'absolute top-0 h-3 rounded-full',
-              Math.abs(force) < 0.04 ? 'bg-success' : 'bg-warning',
+              Math.abs(force) < 0.04 ? 'bg-go' : 'bg-caution',
             )}
             style={
               force >= 0
@@ -344,7 +344,7 @@ function StepSlider({
           value={value}
           aria-valuetext={valueText}
           onChange={(e) => onChange(Number(e.target.value))}
-          className="h-11 flex-1 cursor-pointer accent-primary"
+          className="h-11 flex-1 cursor-pointer accent-accent"
         />
         <Button
           variant="secondary"
@@ -428,7 +428,7 @@ function AttitudeIndicator({ pitch }: { pitch: number }) {
         height={196}
         rx={10}
         fill="none"
-        className="stroke-border-strong"
+        className="stroke-line-strong"
         strokeWidth={2}
       />
     </svg>
@@ -452,7 +452,7 @@ function VerticalSpeed({ vs }: { vs: number }) {
         width={60}
         height={196}
         rx={4}
-        className="fill-instrument stroke-border-strong"
+        className="fill-instrument stroke-line-strong"
         strokeWidth={2}
       />
       {[-2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000].map((v) => (

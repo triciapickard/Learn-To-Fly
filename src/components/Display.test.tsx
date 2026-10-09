@@ -16,8 +16,8 @@ import { useToast } from './Toast';
 
 describe('Badge and Callout', () => {
   it('renders badge text', () => {
-    render(<Badge variant="complete">Complete</Badge>);
-    expect(screen.getByText('Complete')).toHaveClass('text-success');
+    render(<Badge variant="go">Complete</Badge>);
+    expect(screen.getByText('Complete')).toHaveClass('text-go');
   });
 
   it('labels a callout by its type', () => {

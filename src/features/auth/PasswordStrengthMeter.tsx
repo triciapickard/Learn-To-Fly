@@ -1,7 +1,7 @@
 import { cn } from '@/lib/cn';
 import { passwordStrength } from './passwordStrength';
 
-const colours = ['bg-danger', 'bg-danger', 'bg-warning', 'bg-success', 'bg-success'];
+const colours = ['bg-warn', 'bg-warn', 'bg-caution', 'bg-go', 'bg-go'];
 
 export function PasswordStrengthMeter({ password, id }: { password: string; id: string }) {
   const { score, label } = passwordStrength(password);
@@ -13,12 +13,12 @@ export function PasswordStrengthMeter({ password, id }: { password: string; id: 
             key={i}
             className={cn(
               'h-1.5 flex-1 rounded-full',
-              label && i <= Math.max(score, 1) ? colours[score] : 'bg-surface-2',
+              label && i <= Math.max(score, 1) ? colours[score] : 'bg-surface-sunken',
             )}
           />
         ))}
       </div>
-      <p id={id} className="min-w-20 text-right text-sm text-muted" aria-live="polite">
+      <p id={id} className="min-w-20 text-right text-sm text-ink-2" aria-live="polite">
         {label && <>Strength: {label}</>}
       </p>
     </div>

@@ -99,7 +99,7 @@ export function SignupForm() {
       <Button type="submit" size="lg" loading={registerUser.isPending}>
         Create account
       </Button>
-      <p className="text-center text-muted">
+      <p className="text-center text-ink-2">
         Already have an account? <Link to={loginHref}>Log in</Link>
       </p>
     </form>

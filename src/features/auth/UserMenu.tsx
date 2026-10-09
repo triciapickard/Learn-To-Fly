@@ -34,13 +34,13 @@ export function UserMenu({ user }: { user: UserDto }) {
         aria-label={`Account menu for ${user.displayName}`}
         className="flex size-11 items-center justify-center rounded-full"
       >
-        <span className="flex size-9 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-contrast">
+        <span className="flex size-9 items-center justify-center rounded-full bg-ink text-sm font-bold text-on-ink">
           {initials(user.displayName) || '?'}
         </span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>
-          Signed in as <span className="font-semibold text-text">{user.displayName}</span>
+          Signed in as <span className="font-semibold text-ink">{user.displayName}</span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
