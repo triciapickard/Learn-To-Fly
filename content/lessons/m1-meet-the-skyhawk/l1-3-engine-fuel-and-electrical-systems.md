@@ -43,7 +43,7 @@ Shut the engine down with the mixture: pull it to idle cut-off. Never shut down 
 Fuel flows like this:
 
 1. Two **wing tanks**, one in each wing. Total capacity {{aircraft.fuelCapacity}}.
-2. The **fuel selector** on the floor between the seats: **LEFT**, **RIGHT**, **BOTH** or **OFF**.
+2. The **fuel selector** on the floor between the seats: **LEFT**, **BOTH** or **RIGHT**. A separate red **fuel shutoff valve** next to it cuts the fuel off completely; it stays pushed in (on) for flying.
 3. The engine-driven **fuel pump**, with an electric **auxiliary pump** for starting and as a backup.
 4. The **fuel injection** system, which sprays fuel into each cylinder.
 
@@ -57,7 +57,7 @@ Where should the fuel selector be for takeoff?
 - [ ] LEFT
 - [ ] RIGHT
 - [x] BOTH
-- [ ] OFF
+- [ ] It doesn't matter
 
 ---
 

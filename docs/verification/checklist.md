@@ -56,7 +56,7 @@ file (Section 54.2).
 
 [content/lessons/m1-meet-the-skyhawk/l1-2-the-cockpit-g1000-pfd-and-mfd.md](../../content/lessons/m1-meet-the-skyhawk/l1-2-the-cockpit-g1000-pfd-and-mfd.md) · P0 · draft
 
-- [line 98](../../content/lessons/m1-meet-the-skyhawk/l1-2-the-cockpit-g1000-pfd-and-mfd.md#L98): check which knob sets the altimeter setting in the MSFS 2024 G1000 NXi (on the real NXi it's on the CRS/BARO knob) and update this table.
+- [line 98](../../content/lessons/m1-meet-the-skyhawk/l1-2-the-cockpit-g1000-pfd-and-mfd.md#L98): on the real G1000 NXi the altimeter setting is on the large outer ring of the CRS/BARO dual knob on the PFD bezel (Garmin G1000 NXi Pilot's Guide, PFD section). Check the sim's bezel labels the same knob CRS/BARO and that turning the outer ring changes the BARO box.
 
 ### L1.3 — Engine, fuel and electrical systems
 
@@ -68,7 +68,7 @@ file (Section 54.2).
 
 [content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md) · P0 · draft
 
-- [line 30](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L30): check every speed in this lesson against the MSFS 2024 in-sim checklist for the G1000 Skyhawk before publishing (Section 54).
+- [line 30](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L30): every speed here comes from `aircraft.yaml`, checked against the 172S POH on 2026-10-09. Compare them with the speeds in the sim's EFB checklist (rotate 55, climb 70–80 then 74, approach 65–75 flaps up and 60–70 full flaps, go-around 60). If the sim's checklist differs, keep the POH number and add a "Sim vs reality" callout (Section 54.1).
 - [line 154](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L154): the in-sim checklist is in the EFB (checked in 1.8.16.0). Check whether it can auto-complete items or highlight controls, and where that option is set, then update this section and its callout. Lesson 0.2 doesn't cover it.
 
 ### C1.1 — Cockpit scavenger hunt
