@@ -45,4 +45,4 @@ blocked in [`links.md`](./links.md). Check them by hand in a browser before each
 | `.../part-91/section-91.151`             | 2026-10-09 | As above                                                                                                    |
 | `.../part-91/section-91.155`             | 2026-10-09 | As above                                                                                                    |
 | `.../part-91/section-91.159`             | 2026-10-09 | As above                                                                                                    |
-| `https://www.liveatc.net`                | Not yet    | Cloudflare bot check. Needs a person to open it                                                             |
+| `https://www.liveatc.net`                | 2026-10-09 | OK in a browser (Cloudflare bot check blocks the script) |
