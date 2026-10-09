@@ -89,7 +89,7 @@ file (Section 54.2).
 
 [content/lessons/m2-fundamentals/l2-2-attitude-flying-and-trim.md](../../content/lessons/m2-fundamentals/l2-2-attitude-flying-and-trim.md) · P0 · draft
 
-- [line 36](../../content/lessons/m2-fundamentals/l2-2-attitude-flying-and-trim.md#L36): add a screenshot of the level-cruise sight picture from the default cockpit view (Section 49.5), and check that 2,300 RPM gives about 100–105 KIAS in level flight.
+- [line 36](../../content/lessons/m2-fundamentals/l2-2-attitude-flying-and-trim.md#L36): add a screenshot of the level-cruise sight picture from the default cockpit view (Section 49.5). L0.3 (verified in 1.8.16.0) found about 100 knots at 2,300 RPM; confirm 100–105 KIAS at C2.1's weight and 3,500 ft and adjust the numbers here and in C2.1 if needed.
 
 ### L2.3 — Climbs and descents
 
