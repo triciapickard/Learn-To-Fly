@@ -12,7 +12,7 @@ lastVerifiedAt: null # set when verified in the sim (Section 54)
 simVersion: null
 
 goal: >
-  Fly a full towered-airport sequence at Livermore with the sim's ATC — ATIS, ground,
+  Fly a full towered-airport sequence at Livermore with the sim's ATC: ATIS, ground,
   tower, a departure to the practice area, the return, landing and taxi to parking.
 
 setup:

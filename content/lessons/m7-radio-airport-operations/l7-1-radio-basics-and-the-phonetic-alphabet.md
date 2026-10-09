@@ -5,12 +5,12 @@ module: m7-radio-airport-operations
 order: 1
 priority: P0
 title: Radio basics and the phonetic alphabet
-summary: Speak the language of the radio — the phonetic alphabet, aviation numbers, call signs and how to put a call together.
+summary: 'Speak the language of the radio: the phonetic alphabet, aviation numbers, call signs and how to put a call together.'
 estimatedMinutes: 15
 prerequisites: [l1-2-the-cockpit-g1000-pfd-and-mfd]
 objectives:
   - Use the phonetic alphabet and aviation number pronunciation.
-  - Put a radio call together — who you're calling, who you are, where you are and what you want.
+  - Put a radio call together (who you're calling, who you are, where you are and what you want).
 challenges: []
 resources: [aim-4-2, liveatc, pilot-controller-glossary]
 published: false
@@ -77,10 +77,10 @@ A first call to someone has four parts:
 
 1. **Who you're calling**: "Livermore Ground"
 2. **Who you are**: "Skyhawk One Two Three"
-3. **Where you are**: "at the south ramp"
+3. **Where you are**: "on the northwest apron"
 4. **What you want**: "request taxi for departure, with information Alfa"
 
-> "Livermore Ground, Skyhawk One Two Three, at the south ramp, request taxi for departure with information Alfa."
+> "Livermore Ground, Skyhawk One Two Three, on the northwest apron, request taxi for departure with information Alfa."
 
 :::quiz{id="l7-1-q2" type="order"}
 Put the parts of a first radio call in order.

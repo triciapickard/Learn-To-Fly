@@ -52,11 +52,11 @@ C6.2,Challenge,M6,P0,Pilotage to Tracy,2,Draft,,content/challenges/c6-2-pilotage
 C6.3,Challenge,M6,P0,Dead reckoning to Half Moon Bay,1,Draft,,content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml,,,,,,,,"Sim: runway in use at KPAO; the 2,500 then 3,500 ft plan works with the sim scenery (ridge height); Crystal Springs Reservoir visible; KHAF CTAF 122.8; time it."
 C6.4,Challenge,M6,P0,VOR tracking,1,Draft,,content/challenges/c6-4-vor-tracking.yaml,,,,,,,,"Sim: ECA at 116.0 exists; air start 10 nm south of it at 3,500 ft; time it."
 C6.5,Challenge,M6,P0,G1000 flight plan,0,Draft,,content/challenges/c6-5-g1000-flight-plan.yaml,,,,,,,,"Sim: FPL entry steps, D-> and NRST behaviour match the lesson; time it."
-L7.1,Lesson,M7,P0,Radio basics and the phonetic alphabet,0,Draft,,content/lessons/m7-radio-airport-operations/l7-1-radio-basics-and-the-phonetic-alphabet.md,,,,,,,,
-L7.2,Lesson,M7,P0,Non-towered airports (CTAF),2,Draft,,content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md,,,,,,,,
-L7.3,Lesson,M7,P0,Towered airports and sim ATC,2,Draft,,content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md,,,,,,,,
-C7.1,Challenge,M7,P0,CTAF pattern at Tracy,1,Draft,,content/challenges/c7-1-ctaf-pattern-at-tracy.yaml,,,,,,,,
-C7.2,Challenge,M7,P0,Towered departure and return at Livermore,0,Draft,,content/challenges/c7-2-towered-departure-and-return-at-livermore.yaml,,,,,,,,
+L7.1,Lesson,M7,P0,Radio basics and the phonetic alphabet,0,Draft,,content/lessons/m7-radio-airport-operations/l7-1-radio-basics-and-the-phonetic-alphabet.md,,,,,,,,Sim: check the ATC menu reads your calls aloud as described and the COM flip-flop key swaps frequencies.
+L7.2,Lesson,M7,P0,Non-towered airports (CTAF),1,Draft,,content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md,,,,,,,,Sim: which CTAF calls the ATC window offers at Tracy; whether AI traffic announces its position; Tracy CTAF shows 123.075 in the sim.
+L7.3,Lesson,M7,P0,Towered airports and sim ATC,2,Draft,,content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md,,,,,,,,Sim: ATC window options for a VFR departure and arrival at Livermore; the frequencies and runway names sim ATC uses; what it calls the parking area; note differences from the scripts.
+C7.1,Challenge,M7,P0,CTAF pattern at Tracy,0,Draft,,content/challenges/c7-1-ctaf-pattern-at-tracy.yaml,,,,,,,,Sim: Tracy CTAF 123.075 in the sim; AI traffic appears; time it.
+C7.2,Challenge,M7,P0,Towered departure and return at Livermore,0,Draft,,content/challenges/c7-2-towered-departure-and-return-at-livermore.yaml,,,,,,,,Sim: the full ATC sequence works with sim ATC and AI traffic on; time it.
 L8.1,Lesson,M8,P0,Decision making and personal minimums,0,Draft,,content/lessons/m8-capstone/l8-1-decision-making-and-personal-minimums.md,,,,,,,,
 L8.2,Lesson,M8,P0,Preparing for your checkride,0,Draft,,content/lessons/m8-capstone/l8-2-preparing-for-your-checkride.md,,,,,,,,
 C8.1,Challenge,M8,P0,Local checkride,0,Draft,,content/challenges/c8-1-local-checkride.yaml,,,,,,,,

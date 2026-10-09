@@ -5,7 +5,7 @@ module: m7-radio-airport-operations
 order: 3
 priority: P0
 title: Towered airports and sim ATC
-summary: ATIS, ground, tower and back again — the full sequence at a towered airport, what to read back, and how MSFS ATC differs.
+summary: 'ATIS, ground, tower and back again: the full sequence at a towered airport, what to read back, and how MSFS ATC differs.'
 estimatedMinutes: 25
 prerequisites: [l7-2-non-towered-airports-ctaf]
 objectives:
@@ -32,19 +32,21 @@ At a towered airport, you talk to different controllers at each stage:
 
 ## Departing Livermore
 
-The frequencies are on the sectional and in the Chart Supplement.
+The frequencies are on the sectional and in the Chart Supplement: at Livermore, ATIS 119.65, ground 121.6 and tower 118.1. The FBO ramp is the **northwest apron**, north of runway 7L/25R.
 
 :::callout{type="verify"}
-Author note: check the Livermore runway numbers, ATIS, ground and tower frequencies, and the parking area names in the Chart Supplement and in the sim.
+Author note: the runway numbers, frequencies and apron name come from the Chart Supplement (effective 2026-10-01) and the FAA airport diagram, and are on the KLVK airport card. Check the sim's ATC uses the same frequencies and runway names, and what the sim calls the parking area.
 :::
 
 **Ground:**
 
-> **You:** "Livermore Ground, Skyhawk One Two Three, at the south ramp, VFR departure to the east, with information Alfa."
+> **You:** "Livermore Ground, Skyhawk One Two Three, on the northwest apron, VFR departure to the east, with information Alfa."
 >
-> **Ground:** "Skyhawk One Two Three, Livermore Ground, runway two five right, taxi via Alfa, hold short of runway two five left."
+> **Ground:** "Skyhawk One Two Three, Livermore Ground, runway two five right, taxi via Alfa."
 >
-> **You:** "Runway two five right, taxi via Alfa, hold short of two five left, Skyhawk One Two Three."
+> **You:** "Runway two five right, taxi via Alfa, Skyhawk One Two Three."
+
+From the northwest apron, taxiway Alfa leads to runway 25R without crossing a runway. When a route does cross one, ground adds a hold-short instruction, such as "hold short of runway two five left", and you read it back word for word.
 
 After the run-up, switch to the tower:
 
