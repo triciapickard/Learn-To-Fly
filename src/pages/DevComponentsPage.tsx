@@ -179,7 +179,7 @@ export default function DevComponentsPage() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <Card interactive>
             <CardHeader>
-              <span className="overline text-ink-2">Lesson 2.0</span>
+              <span className="eyebrow text-ink-2">Lesson 2.0</span>
             </CardHeader>
             <CardBody>
               <h3 className="heading-md">Interactive card</h3>
@@ -188,7 +188,7 @@ export default function DevComponentsPage() {
           </Card>
           <Card state="done">
             <CardHeader>
-              <span className="overline text-ink-2">Lesson 2.1</span>
+              <span className="eyebrow text-ink-2">Lesson 2.1</span>
               <Badge variant="go">Done</Badge>
             </CardHeader>
             <CardBody>
@@ -206,7 +206,7 @@ export default function DevComponentsPage() {
           </Card>
           <Card state="current">
             <CardHeader>
-              <span className="overline text-accent">Lesson 2.2 · Up next</span>
+              <span className="eyebrow text-accent">Lesson 2.2 · Up next</span>
             </CardHeader>
             <CardBody>
               <h3 className="heading-md">Climbs and descents</h3>
@@ -222,7 +222,7 @@ export default function DevComponentsPage() {
           </Card>
           <Card state="locked">
             <CardHeader>
-              <span className="overline">Lesson 2.3</span>
+              <span className="eyebrow">Lesson 2.3</span>
               <Lock aria-hidden className="size-4" strokeWidth={1.75} />
             </CardHeader>
             <CardBody>

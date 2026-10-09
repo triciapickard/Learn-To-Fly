@@ -56,7 +56,7 @@ export function CurriculumMap({
         >
           <summary className="flex cursor-pointer list-none items-start gap-4 rounded-lg p-5">
             <div className="min-w-0 flex-1">
-              <p className={cn('overline', current ? 'text-accent' : 'text-ink-2')}>
+              <p className={cn('eyebrow', current ? 'text-accent' : 'text-ink-2')}>
                 Module {module.order}
                 {state === 'done' && ' · Done'}
                 {current && ' · Up next'}
@@ -96,7 +96,7 @@ export function CurriculumMap({
               <>
                 {module.lessons.length > 0 && (
                   <>
-                    <h3 className="overline px-3 pt-1 text-ink-2">Lessons</h3>
+                    <h3 className="eyebrow px-3 pt-1 text-ink-2">Lessons</h3>
                     <ul>
                       {module.lessons.map((lesson) => (
                         <li key={lesson.slug}>
@@ -115,7 +115,7 @@ export function CurriculumMap({
                 )}
                 {module.challenges.length > 0 && (
                   <>
-                    <h3 className={cn('overline px-3 text-ink-2', module.lessons.length && 'mt-3')}>
+                    <h3 className={cn('eyebrow px-3 text-ink-2', module.lessons.length && 'mt-3')}>
                       Challenges
                     </h3>
                     <ul>

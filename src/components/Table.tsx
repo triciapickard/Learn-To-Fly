@@ -52,7 +52,7 @@ export function Table<Row>({
                 key={col.key}
                 scope="col"
                 className={cn(
-                  'overline border-b border-line-strong bg-surface px-4 py-3 text-ink-2',
+                  'eyebrow border-b border-line-strong bg-surface px-4 py-3 text-ink-2',
                   'border-t border-t-line first:rounded-tl-lg first:border-l first:border-l-line last:rounded-tr-lg last:border-r last:border-r-line',
                   col.numeric && 'text-right',
                   index === 0 && 'pl-4',
