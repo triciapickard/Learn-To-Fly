@@ -18,7 +18,7 @@ airports:
       - 'Primary Learn-To-Fly training base: a wide, flat valley with parallel runways.'
       - Good practice area for maneuvers to the east, toward the Altamont Pass.
     links:
-      skyvector: https://skyvector.com/airport/KLVK
+      skyvector: https://skyvector.com/airport/LVK/Livermore-Municipal-Airport
       airnav: https://www.airnav.com/airport/KLVK
     verifiedAt: null
     verifiedAgainst: []
@@ -38,7 +38,7 @@ airports:
       - 'Non-towered: self-announce on the CTAF.'
       - East of Livermore over the Altamont Pass wind farms, a great landmark.
     links:
-      skyvector: https://skyvector.com/airport/KTCY
+      skyvector: https://skyvector.com/airport/TCY/Tracy-Municipal-Airport
       airnav: https://www.airnav.com/airport/KTCY
     verifiedAt: null
     verifiedAgainst: []
@@ -57,7 +57,7 @@ airports:
     notes:
       - Second non-towered airport, a short cross-country from Livermore.
     links:
-      skyvector: https://skyvector.com/airport/C83
+      skyvector: https://skyvector.com/airport/C83/Byron-Airport
       airnav: https://www.airnav.com/airport/C83
     verifiedAt: null
     verifiedAgainst: []
@@ -76,7 +76,7 @@ airports:
       - Short runway (about 2,400 ft) under the San Francisco Class B shelves.
       - Used for towered radio work and precision landings.
     links:
-      skyvector: https://skyvector.com/airport/KPAO
+      skyvector: https://skyvector.com/airport/PAO/Palo-Alto-Airport
       airnav: https://www.airnav.com/airport/KPAO
     verifiedAt: null
     verifiedAgainst: []
@@ -95,7 +95,7 @@ airports:
       - Neighbor of Palo Alto, also under the Class B shelves.
       - Landmark-rich bay shoreline.
     links:
-      skyvector: https://skyvector.com/airport/KSQL
+      skyvector: https://skyvector.com/airport/SQL/San-Carlos-Airport
       airnav: https://www.airnav.com/airport/KSQL
     verifiedAt: null
     verifiedAgainst: []
@@ -114,7 +114,7 @@ airports:
       - Coastal non-towered airport over the hills from Palo Alto and San Carlos.
       - Watch for the marine layer and fog along the coast.
     links:
-      skyvector: https://skyvector.com/airport/KHAF
+      skyvector: https://skyvector.com/airport/HAF/Half-Moon-Bay-Airport
       airnav: https://www.airnav.com/airport/KHAF
     verifiedAt: null
     verifiedAgainst: []
@@ -133,7 +133,7 @@ airports:
     notes:
       - East Bay alternative and diversion option.
     links:
-      skyvector: https://skyvector.com/airport/KHWD
+      skyvector: https://skyvector.com/airport/HWD/Hayward-Exec-Airport
       airnav: https://www.airnav.com/airport/KHWD
     verifiedAt: null
     verifiedAgainst: []
@@ -154,7 +154,7 @@ airports:
     notes:
       - Capstone destination option, near Mount Diablo.
     links:
-      skyvector: https://skyvector.com/airport/KCCR
+      skyvector: https://skyvector.com/airport/CCR/Buchanan-Field-Airport
       airnav: https://www.airnav.com/airport/KCCR
     verifiedAt: null
     verifiedAgainst: []
@@ -173,7 +173,7 @@ airports:
     notes:
       - Non-towered capstone option to the south along the coast.
     links:
-      skyvector: https://skyvector.com/airport/KWVI
+      skyvector: https://skyvector.com/airport/WVI/Watsonville-Municipal-Airport
       airnav: https://www.airnav.com/airport/KWVI
     verifiedAt: null
     verifiedAgainst: []
@@ -192,7 +192,7 @@ airports:
     notes:
       - Bonus capstone option in the Salinas valley.
     links:
-      skyvector: https://skyvector.com/airport/KSNS
+      skyvector: https://skyvector.com/airport/SNS/Salinas-Municipal-Airport
       airnav: https://www.airnav.com/airport/KSNS
     verifiedAt: null
     verifiedAgainst: []
@@ -213,7 +213,7 @@ airports:
     notes:
       - Class C airspace awareness only — Learn-To-Fly challenges never land here.
     links:
-      skyvector: https://skyvector.com/airport/KOAK
+      skyvector: https://skyvector.com/airport/OAK/Oakland-San-Francisco-Bay-Airport
       airnav: https://www.airnav.com/airport/KOAK
     verifiedAt: null
     verifiedAgainst: []
@@ -232,7 +232,7 @@ airports:
     notes:
       - Class C airspace awareness only.
     links:
-      skyvector: https://skyvector.com/airport/KSJC
+      skyvector: https://skyvector.com/airport/SJC/Mineta-San-Jose-International-Airport
       airnav: https://www.airnav.com/airport/KSJC
     verifiedAt: null
     verifiedAgainst: []
@@ -253,7 +253,7 @@ airports:
     notes:
       - Class B airspace awareness only — the upside-down wedding cake.
     links:
-      skyvector: https://skyvector.com/airport/KSFO
+      skyvector: https://skyvector.com/airport/SFO/San-Francisco-International-Airport
       airnav: https://www.airnav.com/airport/KSFO
     verifiedAt: null
     verifiedAgainst: []

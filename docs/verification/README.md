@@ -32,3 +32,17 @@ published: true
 lastVerifiedAt: 2026-09-28
 simVersion: 'MSFS 2024 (1.8.16.0)'
 ```
+
+## Manual link checks (step 12.4)
+
+`npm run content:links` cannot get past bot protection, so these links always show as
+blocked in [`links.md`](./links.md). Check them by hand in a browser before each release.
+
+| URL                                      | Checked    | Result                                                                                                      |
+| ---------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------- |
+| `https://support.garmin.com/`            | 2026-10-09 | OK in a browser (sends you to your regional support page)                                                   |
+| `https://www.ecfr.gov/current/title-14`  | 2026-10-09 | eCFR shows browsers a CAPTCHA. URL and sections 91.151, 91.155 and 91.159 confirmed through the eCFR search API |
+| `.../part-91/section-91.151`             | 2026-10-09 | As above                                                                                                    |
+| `.../part-91/section-91.155`             | 2026-10-09 | As above                                                                                                    |
+| `.../part-91/section-91.159`             | 2026-10-09 | As above                                                                                                    |
+| `https://www.liveatc.net`                | 2026-10-09 | OK in a browser (Cloudflare bot check blocks the script) |
