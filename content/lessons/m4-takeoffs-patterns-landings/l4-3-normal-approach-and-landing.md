@@ -69,7 +69,7 @@ Many runways have a **PAPI**: four lights beside the runway that show your glide
 Some airports have an older two-bar **VASI** instead: red over white means on path. A memory aid: "red over white, you're all right".
 
 :::callout{type="verify"}
-Author note: check which KLVK and KTCY runways have a PAPI or VASI, in reality and in the sim.
+Author note: in reality (Chart Supplement, effective 2026-10-01) Livermore has a PAPI on runways 7L and 25R only, and Tracy has a PAPI on all four runway ends (8, 26, 12 and 30). Check the sim shows them in the same places and that the lights read correctly on a 3° path.
 :::
 
 :::quiz{id="l4-3-q2" type="single"}

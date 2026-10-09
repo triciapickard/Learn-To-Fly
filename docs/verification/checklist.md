@@ -8,8 +8,8 @@
 
 | Group | Items | Published / verified | Open markers |
 | --- | --- | --- | --- |
-| Lessons | 33 | 3 | 31 |
-| Challenges | 29 | 1 | 29 |
+| Lessons | 33 | 3 | 30 |
+| Challenges | 29 | 1 | 27 |
 | Reference data | 6 | 1 | 49 |
 
 Every item still needs the full protocol from v1.md Section 54 even when it has no open
@@ -187,34 +187,31 @@ file (Section 54.2).
 
 [content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md](../../content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md) · P0 · draft
 
-- [line 45](../../content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md#L45): check the pattern altitude and traffic direction for each KLVK and KTCY runway in the current Chart Supplement, and add them to `airports.yaml`.
-- [line 75](../../content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md#L75): fly these settings in the sim at C4.2's weight and adjust (Section 8.5).
+- [line 72](../../content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md#L72): fly these settings in the sim at C4.2's weight and adjust (Section 8.5).
 
 ### L4.3 — Normal approach and landing
 
 [content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md](../../content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md) · P0 · draft
 
-- [line 71](../../content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md#L71): check which KLVK and KTCY runways have a PAPI or VASI, in reality and in the sim.
+- [line 71](../../content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md#L71): in reality (Chart Supplement, effective 2026-10-01) Livermore has a PAPI on runways 7L and 25R only, and Tracy has a PAPI on all four runway ends (8, 26, 12 and 30). Check the sim shows them in the same places and that the lights read correctly on a 3° path.
 
 ### L4.4 — Go-arounds
 
 [content/lessons/m4-takeoffs-patterns-landings/l4-4-go-arounds.md](../../content/lessons/m4-takeoffs-patterns-landings/l4-4-go-arounds.md) · P0 · draft
 
-- [line 45](../../content/lessons/m4-takeoffs-patterns-landings/l4-4-go-arounds.md#L45): check this sequence against the in-sim balked-landing checklist for the G1000 Skyhawk.
+- [line 45](../../content/lessons/m4-takeoffs-patterns-landings/l4-4-go-arounds.md#L45): the sequence matches the POH balked-landing checklist (full throttle, flaps 20°, climb at 60 KIAS, flaps 10° when clear of obstacles, up after a safe altitude and 65 KIAS). Check the sim's EFB checklist says the same, and that the sim Skyhawk climbs at 60 KIAS with flaps 20°.
 
 ### C4.1 — Normal takeoff and departure
 
 [content/challenges/c4-1-normal-takeoff-and-departure.yaml](../../content/challenges/c4-1-normal-takeoff-and-departure.yaml) · P0 · draft
 
 - [line 22](../../content/challenges/c4-1-normal-takeoff-and-departure.yaml#L22): runway: 25R — ⚠ verify the runway name in the sim
-- [line 38](../../content/challenges/c4-1-normal-takeoff-and-departure.yaml#L38): Climb straight out to pattern altitude (⚠ verify the KLVK pattern altitude), then make a 45° left turn to depart. Continue the climb to 3,000 ft MSL at 80 KIAS.
 
 ### C4.2 — Fly the pattern
 
 [content/challenges/c4-2-fly-the-pattern.yaml](../../content/challenges/c4-2-fly-the-pattern.yaml) · P0 · draft
 
 - [line 23](../../content/challenges/c4-2-fly-the-pattern.yaml#L23): runway: '26' — ⚠ verify the active runway for the wind
-- [line 37](../../content/challenges/c4-2-fly-the-pattern.yaml#L37): Level off at pattern altitude on downwind (⚠ verify the KTCY pattern altitude). Set about 2,000–2,100 RPM for 85–90 KIAS and run the before-landing checklist.
 
 ### C4.3 — Full-stop landing
 

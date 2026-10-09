@@ -5,7 +5,7 @@ module: m4-takeoffs-patterns-landings
 order: 2
 priority: P0
 title: The traffic pattern
-summary: The rectangular circuit around every airport — the legs, speeds, configuration and how to join and leave it.
+summary: 'The rectangular circuit around every airport: the legs, speeds, configuration and how to join and leave it.'
 estimatedMinutes: 20
 prerequisites: [l4-1-normal-takeoff-and-climb]
 objectives:
@@ -40,11 +40,8 @@ Play the animation below. Turn on the configuration and radio calls, change the 
 ## Direction and altitude
 
 - **Left turns** are standard. Every turn in the pattern is to the left, so the runway stays on your side of the airplane (you sit on the left). Some runways use **right traffic** instead; the sectional chart and the Chart Supplement show it as "RP" for that runway.
-- **Pattern altitude** is typically **1,000 ft above the airport**. Livermore's field elevation is about 400 ft, so its pattern is around 1,400 ft MSL; check the Chart Supplement for each airport.
-
-:::callout{type="verify"}
-Author note: check the pattern altitude and traffic direction for each KLVK and KTCY runway in the current Chart Supplement, and add them to `airports.yaml`.
-:::
+- **Pattern altitude** is typically **1,000 ft above the airport**, unless the Chart Supplement publishes a different one. Livermore has no published pattern altitude, and its field elevation is about 400 ft, so its pattern is around **1,400 ft MSL**. Tracy publishes 800 ft above the field, so fly about **1,000 ft MSL** there.
+- **Livermore's patterns.** The long runway, 7L/25R, keeps its pattern on the north side of the field: left traffic on 7L, right traffic on 25R. The short runway, 7R/25L, uses the south side. The Reference section's airport cards list the pattern for every runway.
 
 :::quiz{id="l4-2-q1" type="single"}
 What is the standard traffic pattern direction?
