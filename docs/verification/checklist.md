@@ -8,8 +8,8 @@
 
 | Group | Items | Published / verified | Open markers |
 | --- | --- | --- | --- |
-| Lessons | 33 | 3 | 32 |
-| Challenges | 29 | 1 | 30 |
+| Lessons | 33 | 3 | 31 |
+| Challenges | 29 | 1 | 29 |
 | Reference data | 6 | 1 | 49 |
 
 Every item still needs the full protocol from v1.md Section 54 even when it has no open
@@ -134,34 +134,33 @@ file (Section 54.2).
 [content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md](../../content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md) · P0 · draft
 
 - [line 34](../../content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md#L34): describe MSFS 2024's walkaround features for the Skyhawk (which items it models, such as the pitot cover, chocks and fuel sampling) after checking them in the sim.
-- [line 69](../../content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md#L69): check the exact start sequence (mixture position, auxiliary pump use, throttle setting) against the MSFS 2024 in-sim checklist for the G1000 Skyhawk, and the 30-second oil pressure rule.
+- [line 69](../../content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md#L69): the sequence above is the POH's (Section 4, Starting Engine: throttle ¼ inch, mixture idle cut-off, prime with the pump, START, mixture to rich; oil pressure in the green within 30 to 60 seconds). Check the sim's EFB checklist against it, and check the sim engine actually starts this way: does priming with the pump do anything, and does it fire with the mixture at idle cut-off?
 
 ### L3.2 — Taxiing, signs and markings
 
 [content/lessons/m3-ground-operations/l3-2-taxiing-signs-and-markings.md](../../content/lessons/m3-ground-operations/l3-2-taxiing-signs-and-markings.md) · P0 · draft
 
-- [line 117](../../content/lessons/m3-ground-operations/l3-2-taxiing-signs-and-markings.md#L117): check the current KLVK airport diagram against the MSFS 2024 layout and add the expected taxiway sequence from the main ramp to the 25R run-up area.
+- [line 119](../../content/lessons/m3-ground-operations/l3-2-taxiing-signs-and-markings.md#L119): the apron and taxiway names above come from the FAA airport diagram for LVK (01 Oct 2026 cycle). Check the sim's KLVK layout matches it (parking on the northwest apron, taxiway A along the north side, a run-up pad at the 25R end), note the sim's parking spot name, and then write the exact taxiway sequence from that spot into this section and C3.2.
 
 ### L3.3 — Run-up, before takeoff, and after landing
 
 [content/lessons/m3-ground-operations/l3-3-run-up-before-takeoff-and-after-landing.md](../../content/lessons/m3-ground-operations/l3-3-run-up-before-takeoff-and-after-landing.md) · P0 · draft
 
-- [line 39](../../content/lessons/m3-ground-operations/l3-3-run-up-before-takeoff-and-after-landing.md#L39): check the run-up RPM and magneto drop limits against the MSFS 2024 in-sim checklist (commonly 1,800 RPM, a drop of no more than 150 RPM on each magneto, and no more than 50 RPM difference between them).
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C3.1 — Cold and dark to running
 
 [content/challenges/c3-1-cold-and-dark-to-running.yaml](../../content/challenges/c3-1-cold-and-dark-to-running.yaml) · P0 · draft
 
 - [line 22](../../content/challenges/c3-1-cold-and-dark-to-running.yaml#L22): parking: Main ramp — ⚠ verify the parking spot name in the sim
-- [line 36](../../content/challenges/c3-1-cold-and-dark-to-running.yaml#L36): Complete "Before starting engine" with a left-to-right flow, then verify with the checklist.
-- [line 91](../../content/challenges/c3-1-cold-and-dark-to-running.yaml#L91): Do a flow left to right across the panel, then verify with the checklist.
 
 ### C3.2 — Taxi to the runway at KLVK
 
 [content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml](../../content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml) · P0 · draft
 
-- [line 23](../../content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml#L23): parking: Main ramp — ⚠ verify the parking spot name in the sim
+- [line 23](../../content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml#L23): parking: Main ramp (the northwest apron, by the FBO) — ⚠ verify the parking spot name in the sim
 - [line 24](../../content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml#L24): runway: 25R — ⚠ verify the runway name in the sim
+- [line 37](../../content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml#L37): Open the KLVK airport diagram (FAA Terminal Procedures, see Go deeper in Lesson 3.2). Plan your route from the northwest apron to the run-up area for runway 25R. On the FAA diagram it is taxiway Alfa east along the north side of runway 7L/25R, with no runway to cross. ⚠ verify the sim's parking spot and taxiway signs match the diagram, then write the exact sequence here.
 
 ### C3.3 — Run-up
 
@@ -174,7 +173,7 @@ file (Section 54.2).
 [content/challenges/c3-4-after-landing-and-shutdown.yaml](../../content/challenges/c3-4-after-landing-and-shutdown.yaml) · P0 · draft
 
 - [line 23](../../content/challenges/c3-4-after-landing-and-shutdown.yaml#L23): runway: 25R — ⚠ verify the runway name in the sim
-- [line 38](../../content/challenges/c3-4-after-landing-and-shutdown.yaml#L38): After-landing items — flaps up, transponder to standby (⚠ verify the G1000 mode name), lights as needed.
+- [line 38](../../content/challenges/c3-4-after-landing-and-shutdown.yaml#L38): After-landing items. Flaps up, transponder to GND or standby (⚠ verify which modes the sim's XPDR softkeys offer), lights as needed.
 
 ## M4 — Takeoffs, patterns and landings
 

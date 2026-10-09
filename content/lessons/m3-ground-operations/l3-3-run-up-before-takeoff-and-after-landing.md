@@ -32,13 +32,9 @@ Stop in the **run-up area** near the end of the runway:
 With the parking brake set and your feet on the brakes:
 
 1. **Throttle to about 1,800 RPM.**
-2. **Magneto check.** Turn the key from BOTH to **L**: RPM drops slightly. Back to **BOTH**. Then **R**, and back to **BOTH**. A small drop on each is normal; a large drop, or a big difference between the two, means a problem.
+2. **Magneto check.** Turn the key from BOTH to **L**: RPM drops slightly. Back to **BOTH**. Then **R**, and back to **BOTH**. A drop of up to 150 RPM on each magneto is normal, with no more than 50 RPM difference between the two. A bigger drop, no drop at all, or a big difference between them means a problem.
 3. **Engine instruments.** Oil pressure and temperature, and the electrical system, all in the green.
 4. **Throttle to idle.** Check the engine keeps running smoothly, then set about 1,000 RPM.
-
-:::callout{type="verify"}
-Author note: check the run-up RPM and magneto drop limits against the MSFS 2024 in-sim checklist (commonly 1,800 RPM, a drop of no more than 150 RPM on each magneto, and no more than 50 RPM difference between them).
-:::
 
 :::callout{type="safety"}
 Always finish the magneto check with the key back on BOTH. Taking off on one magneto costs power and removes your backup.

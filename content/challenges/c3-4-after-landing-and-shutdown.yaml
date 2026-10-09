@@ -35,9 +35,9 @@ setup:
 procedure:
   - Take off, fly a quick unscored pattern and land (or continue straight after C4.3).
   - Slow to taxi speed and turn off at a taxiway. Keep going until the whole airplane is past the hold short line, then stop.
-  - After-landing items — flaps up, transponder to standby (⚠ verify the G1000 mode name), lights as needed.
+  - After-landing items. Flaps up, transponder to GND or standby (⚠ verify which modes the sim's XPDR softkeys offer), lights as needed.
   - Taxi to parking and set the parking brake.
-  - Shut down — avionics master off, mixture to idle cut-off, magnetos off, master off.
+  - Shut down. Avionics master off, mixture to idle cut-off, magnetos off, master off.
 
 criteria:
   - id: cleared-runway
@@ -62,7 +62,7 @@ criteria:
     weight: 2
     reviewLink: { lesson: l3-3-run-up-before-takeoff-and-after-landing, section: shutdown }
   - id: final-switches
-    label: Final switches — magnetos off, master off, parking brake set
+    label: Final switches (magnetos off, master off, parking brake set)
     kind: binary
     required: true
     weight: 2

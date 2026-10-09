@@ -112,10 +112,12 @@ Before you taxi at Livermore (KLVK), open the diagram and find:
 - The **taxiway** that leads from the ramp to the end of runway 25R.
 - The **run-up area** near that end.
 
+On the current diagram, the FBO and terminal are on the **northwest apron**, and **taxiway A** runs along the north side of runway 7L/25R all the way to the run-up area at the 25R end. From there you never have to cross a runway.
+
 Trace your route with your finger before you release the brake.
 
 :::callout{type="verify"}
-Author note: check the current KLVK airport diagram against the MSFS 2024 layout and add the expected taxiway sequence from the main ramp to the 25R run-up area.
+Author note: the apron and taxiway names above come from the FAA airport diagram for LVK (01 Oct 2026 cycle). Check the sim's KLVK layout matches it (parking on the northwest apron, taxiway A along the north side, a run-up pad at the 25R end), note the sim's parking spot name, and then write the exact taxiway sequence from that spot into this section and C3.2.
 :::
 
 ## Runway incursions
