@@ -6,7 +6,6 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Callout } from '@/components/Callout';
 import { useToast } from '@/components/Toast';
 import { useAuth } from '@/features/auth/api';
-import { AircraftKeyNumbers } from '@/features/content/AircraftKeyNumbers';
 import { useLesson } from '@/features/content/api';
 import { DraftBadge } from '@/features/content/DraftBadge';
 import { QueryStates } from '@/features/content/queryState';
@@ -164,7 +163,6 @@ export default function LessonPage() {
 
             <aside className="hidden xl:block" aria-label="Lesson reference">
               <div className="sticky top-24 flex flex-col gap-4">
-                <AircraftKeyNumbers columns={1} />
                 <GlossaryList terms={l.glossaryTerms} />
               </div>
             </aside>

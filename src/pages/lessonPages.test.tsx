@@ -68,7 +68,7 @@ describe('lesson page', () => {
       'Section 1 of 2: What a V-speed is',
     );
     expect(screen.getByText('State the key V-speeds.')).toBeInTheDocument();
-    expect(await screen.findByRole('region', { name: 'Key numbers (KIAS)' })).toBeInTheDocument();
+    expect(screen.queryByRole('region', { name: 'Key numbers (KIAS)' })).not.toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Go deeper' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /PHAK Chapter 9/ })).toHaveAttribute(
       'target',
