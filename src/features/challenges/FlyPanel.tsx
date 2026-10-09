@@ -4,7 +4,6 @@ import { Button } from '@/components/Button';
 import { Checkbox } from '@/components/Checkbox';
 import { Link } from '@/components/Link';
 import { Stopwatch } from '@/components/Stopwatch';
-import { AircraftKeyNumbers } from '@/features/content/AircraftKeyNumbers';
 import { cn } from '@/lib/cn';
 import type { ChallengeDetail } from '@shared/schemas/api';
 import { loadFlight, saveFlight, type FlightState } from './storage';
@@ -166,7 +165,7 @@ export function FlyPanel({
         </ol>
       </section>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6">
         <section aria-labelledby="timer-heading" className="flex flex-col gap-3">
           <h2 id="timer-heading" className={cn('font-bold', large ? 'text-2xl' : 'text-xl')}>
             Timer (optional)
@@ -193,7 +192,6 @@ export function FlyPanel({
             />
           )}
         </section>
-        <AircraftKeyNumbers large={large} columns={large ? 1 : 2} />
       </div>
 
       <div className="flex flex-wrap items-center gap-3">

@@ -24,7 +24,7 @@ export function keyNumbersFor(aircraft: AircraftDto): KeyNumber[] {
   });
 }
 
-/** The Skyhawk's key speeds for mid-flight lookup (lesson rail, fly mode). */
+/** The Skyhawk's key speeds for lookup (Reference hub and Speeds page). */
 export function AircraftKeyNumbers({
   large,
   columns,
