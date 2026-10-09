@@ -22,7 +22,7 @@ export default function FlyModePage() {
               <ArrowLeft aria-hidden className="size-5" /> Back to challenge
             </Link>
             <div>
-              <p className="font-mono text-muted">{c.code}</p>
+              <p className="font-mono text-ink-2">{c.code}</p>
               <h1 className="text-4xl font-bold">{c.title}</h1>
               <p className="mt-2 text-2xl">{c.goal}</p>
             </div>

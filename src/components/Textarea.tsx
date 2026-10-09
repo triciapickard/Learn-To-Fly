@@ -6,6 +6,7 @@ export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElemen
   ref?: Ref<HTMLTextAreaElement>;
 }
 
+/** Follows Input: minimum four lines, vertical resize only. */
 export function Textarea({ className, id, rows = 4, ...props }: TextareaProps) {
   const field = useFormField();
   return (
@@ -15,7 +16,7 @@ export function Textarea({ className, id, rows = 4, ...props }: TextareaProps) {
       aria-describedby={field?.describedBy}
       aria-invalid={field?.invalid || undefined}
       aria-required={field?.required || undefined}
-      className={cn(controlClasses, className)}
+      className={cn(controlClasses, 'h-auto min-h-24 resize-y py-2.5 leading-6', className)}
       {...props}
     />
   );

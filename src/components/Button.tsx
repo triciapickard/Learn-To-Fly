@@ -3,20 +3,27 @@ import { Loader2 } from 'lucide-react';
 import type { ButtonHTMLAttributes, ReactNode, Ref } from 'react';
 import { cn } from '@/lib/cn';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'accent' | 'danger';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
+/**
+ * Buttons are ink-inverted: a solid ink fill with on-ink text, so the primary action is a
+ * near-black button in Day and a near-white one in Night. `accent` is only for continuing
+ * along the lesson path; `danger` always sits behind a confirmation dialog.
+ */
 const variants: Record<ButtonVariant, string> = {
-  primary: 'bg-primary text-primary-contrast hover:bg-primary-hover',
-  secondary: 'border border-border-strong bg-surface text-text hover:bg-surface-2',
-  ghost: 'text-text hover:bg-surface-2',
-  danger: 'bg-danger text-white hover:opacity-90 dark:text-bg',
+  primary: 'bg-ink text-on-ink hover:bg-ink-2 active:shadow-press',
+  secondary:
+    'border-line-strong bg-transparent text-ink hover:bg-surface-sunken active:shadow-press',
+  ghost: 'bg-transparent text-ink hover:bg-surface-sunken',
+  accent: 'bg-accent text-on-accent hover:bg-accent-strong active:shadow-press',
+  danger: 'bg-warn text-on-warn hover:shadow-press',
 };
 
 const sizes: Record<ButtonSize, string> = {
-  sm: 'min-h-9 px-3 text-sm gap-1.5',
-  md: 'min-h-11 px-4 text-base gap-2',
-  lg: 'min-h-12 px-6 text-lg gap-2',
+  sm: 'min-h-control-sm px-3 text-sm',
+  md: 'min-h-control-md px-4 text-sm',
+  lg: 'min-h-control-lg px-6 text-base',
 };
 
 export function buttonClasses({
@@ -25,8 +32,9 @@ export function buttonClasses({
   className,
 }: { variant?: ButtonVariant; size?: ButtonSize; className?: string } = {}) {
   return cn(
-    'inline-flex items-center justify-center rounded-control font-semibold transition-colors duration-150',
-    'disabled:cursor-not-allowed disabled:opacity-60 aria-disabled:cursor-not-allowed aria-disabled:opacity-60',
+    'inline-flex items-center justify-center gap-2 rounded-md border border-transparent font-medium leading-5 whitespace-nowrap transition-colors duration-150',
+    '[&_svg]:size-[18px] [&_svg]:shrink-0',
+    'disabled:cursor-not-allowed disabled:opacity-45 aria-disabled:cursor-not-allowed aria-disabled:opacity-45',
     variants[variant],
     sizes[size],
     className,
@@ -36,6 +44,7 @@ export function buttonClasses({
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   size?: ButtonSize;
+  /** Swaps the icon for a 16px spinner and keeps the label so the width does not jump. */
   loading?: boolean;
   /** Render the child element (e.g. a link) with button styles. */
   asChild?: boolean;
@@ -70,7 +79,7 @@ export function Button({
       aria-busy={loading || undefined}
       {...props}
     >
-      {loading && <Loader2 aria-hidden className="size-4 animate-spin" />}
+      {loading && <Loader2 aria-hidden className="size-4! animate-spin" />}
       {children}
     </button>
   );

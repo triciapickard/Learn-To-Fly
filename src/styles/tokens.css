@@ -1,65 +1,82 @@
 /*
- * Design tokens (plan.md Section 21). Light values live in @theme so Tailwind generates
- * utilities (bg-surface, text-muted, border-strong, …); [data-theme='dark'] overrides the
- * same custom properties at runtime.
+ * Design tokens (design system 2026, tokens.json). Day values live in @theme so Tailwind
+ * generates utilities (bg-canvas, text-ink, border-line-strong, …); [data-theme='dark']
+ * overrides the same custom properties at runtime for Night.
  *
- * Contrast (step 3.8): every text token passes WCAG AA (≥ 4.5:1) on bg, surface and
- * surface-2 in both themes; border-strong passes 3:1 for form controls. Light success,
- * warning, gold, silver and accent were darkened from the Section 21.2 starting points.
+ * Rules (README "Color" and night-mode.md): near-neutral greys in both themes, never brown,
+ * slate or pure black; all text is ink / ink-2 / ink-3; one saturated non-status color, the
+ * horizon line (accent); status colors go / caution / warn always travel with an icon or a
+ * word; the instrument and chart tokens are fixed in both themes and are for gauges and
+ * charts only. Contrast figures for every pair are in each token's usage note in tokens.json.
  */
 @theme {
-  /* Reset Tailwind's default palette so only design tokens are used. */
+  /* Reset Tailwind's default palette, radii, shadows and fonts so only tokens are used. */
   --color-*: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+  --font-*: initial;
+
   --color-white: #ffffff;
   --color-black: #000000;
   --color-transparent: transparent;
   --color-current: currentColor;
 
-  --color-bg: #f7f9fc;
+  /* Grounds */
+  --color-canvas: #f7f5f3;
   --color-surface: #ffffff;
-  --color-surface-2: #eef2f8;
-  --color-border: #d5ddea;
-  --color-border-strong: #7a869a;
-  --color-text: #0f172a;
-  --color-muted: #475569;
-  --color-primary: #1d4ed8;
-  --color-primary-hover: #1e40af;
-  --color-primary-contrast: #ffffff;
-  --color-accent: #a34a06;
-  --color-success: #166534;
-  --color-warning: #92400e;
-  --color-danger: #b91c1c;
-  --color-magenta: #a21caf;
-  --color-cyan: #0e7490;
-  --color-gold: #8a5a00;
-  --color-silver: #5b6472;
-  --color-bronze: #8c5229;
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #efeeec;
+  --color-line: #dfdedc;
+  --color-line-strong: #81807e;
 
-  /* Tinted backgrounds for callouts and badges */
-  --color-primary-soft: #e0e9fb;
-  --color-success-soft: #e3f4e8;
-  --color-warning-soft: #fdf1dc;
-  --color-danger-soft: #fbe5e5;
-  --color-magenta-soft: #f7e3f9;
-  --color-cyan-soft: #ddf1f5;
+  /* Ink */
+  --color-ink: #171614;
+  --color-ink-2: #595856;
+  --color-ink-3: #6a6967;
+  --color-on-ink: #ffffff;
 
-  /* Instruments are dark in both themes, like the real panel. */
-  --color-instrument: #0b1220;
-  --color-instrument-text: #e6ecf5;
+  /* The horizon line */
+  --color-accent: #00757c;
+  --color-accent-strong: #005c62;
+  --color-accent-line: #009ca5;
+  --color-accent-tint: #daf7f8;
+  --color-on-accent: #ffffff;
+
+  /* Status */
+  --color-go: #006c43;
+  --color-go-tint: #d8f7e6;
+  --color-on-go: #ffffff;
+  --color-caution: #945a00;
+  --color-caution-tint: #ffeecb;
+  --color-warn: #b71824;
+  --color-warn-tint: #ffe7e4;
+  --color-on-warn: #ffffff;
+
+  /* Tiers */
+  --color-tier-gold: #906200;
+  --color-tier-silver: #5f6469;
+  --color-tier-bronze: #8c5331;
+
+  /* Focus ring (alias of accent) and the overlay scrim */
+  --color-focus: var(--color-accent);
+  --color-scrim: #171614b3;
+
+  /* Fixed instrument colors: real gauges look the same in both themes, like the real panel. */
+  --color-instrument: #100f0e;
+  --color-instrument-text: #ecebe9;
   --color-arc-white: #f1f5f9;
   --color-arc-green: #22c55e;
   --color-arc-yellow: #facc15;
   --color-arc-red: #ef4444;
-  /* Attitude indicator sky and ground (G1000 style). */
   --color-sky: #2563c9;
   --color-ground: #7a4d24;
-  /* Glass-cockpit display colours and the bezel (W2); fixed in both themes. */
-  --color-bezel: #2b3342;
-  --color-bezel-key: #465267;
+  --color-bezel: #2f2e2c;
+  --color-bezel-key: #4e4d4b;
   --color-display-magenta: #f472f6;
   --color-display-cyan: #22d3ee;
   --color-display-green: #4ade80;
-  /* Sectional chart paper colours (W10); a printed chart looks the same in both themes. */
+
+  /* Fixed sectional chart colors: a printed chart looks the same in both themes. */
   --color-chart-land: #eef2dc;
   --color-chart-hills: #e4d8b4;
   --color-chart-water: #b9dcf0;
@@ -67,38 +84,108 @@
   --color-chart-blue: #1f58a8;
   --color-chart-magenta: #a3166f;
   --color-chart-ink: #1d2733;
-  /* Landing page livery (redesign direction C): navy bands, white text, a gold tier word. */
-  --color-band: #0c1a3a;
-  --color-band-text: #ffffff;
-  --color-band-muted: #c9d0de;
-  --color-band-gold: #e8b931;
-  /* Landing calls to action (livery red), the thin hero stripe and section rules. */
-  --color-cta: #d0262d;
-  --color-cta-hover: #a81e24;
-  --color-cta-text: #ffffff;
-  --color-cta-band: #d0262d;
-  --color-cta-band-text: #ffffff;
-  --color-cta-band-button: #d0262d;
-  /* Livery paint: the brand red on the airplane, hero stripe and logo, fixed in both themes. */
-  --color-paint: #d0262d;
-  --color-stripe: #0c1a3a;
-  --color-rule: #0c1a3a;
 
-  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Big Shoulders Display Variable', 'Arial Narrow', system-ui, sans-serif;
+  /* Type: Instrument Sans for everything you read, JetBrains Mono for everything you measure. */
+  --font-sans: 'Instrument Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --radius-control: 6px;
-  --radius-card: 12px;
+  /* Space: a 4px grid. Tailwind's spacing scale (--spacing: 0.25rem) is the same grid, so
+     space-1 … space-24 are p-1 … p-24. The named tokens are kept for CSS and documentation. */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
 
-  --shadow-1: 0 1px 2px rgb(15 23 42 / 0.06), 0 1px 3px rgb(15 23 42 / 0.1);
-  --shadow-2: 0 4px 6px rgb(15 23 42 / 0.07), 0 10px 20px rgb(15 23 42 / 0.12);
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-1: 0 1px 2px rgba(23, 22, 20, 0.06), 0 1px 3px rgba(23, 22, 20, 0.08);
+  --shadow-2: 0 4px 8px rgba(23, 22, 20, 0.06), 0 12px 28px rgba(23, 22, 20, 0.1);
+  --shadow-press: inset 0 2px 0 rgba(23, 22, 20, 0.12);
+
+  /* Sizes: control heights (h-control-md, min-h-control-md, size-control-sm …) and widths
+     (max-w-measure, max-w-page). */
+  --spacing-control-sm: 32px;
+  --spacing-control-md: 40px;
+  --spacing-control-lg: 48px;
+  --container-measure: 68ch;
+  --container-page: 1200px;
+  --focus-ring: 2px;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
 
+  /* Enter 200ms ease-out, exit 150ms ease-in (README "Motion"). */
+  --animate-fade-in: fade-in 200ms var(--ease-out) both;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  --animate-pop-in: pop-in 200ms var(--ease-out) both;
+  @keyframes pop-in {
+    from {
+      opacity: 0;
+      scale: 0.98;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  --animate-slide-in-right: slide-in-right 200ms var(--ease-out) both;
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  --animate-slide-in-left: slide-in-left 200ms var(--ease-out) both;
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  --animate-rise-in: rise-in 200ms var(--ease-out) both;
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Skeleton shimmer: a faint surface sweep every 1.4s. */
+  --animate-shimmer: shimmer 1.4s linear infinite;
+  @keyframes shimmer {
+    to {
+      transform: translateX(100%);
+    }
+  }
+
   /* Challenge result: the tier badge pops in (skipped with prefers-reduced-motion). */
-  --animate-tier-pop: tier-pop 500ms var(--ease-out) both;
+  --animate-tier-pop: tier-pop 400ms var(--ease-out) both;
   @keyframes tier-pop {
     0% {
       transform: scale(0.6);
@@ -115,7 +202,7 @@
   --animate-warning-pulse: warning-pulse 1.2s ease-in-out infinite;
   @keyframes warning-pulse {
     0% {
-      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-danger) 70%, transparent);
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-warn) 70%, transparent);
     }
     100% {
       box-shadow: 0 0 0 8px transparent;
@@ -123,87 +210,47 @@
   }
 }
 
+/* Night: the same near-neutral grey at four lightness steps; accents lighter, their text darker. */
 [data-theme='dark'] {
   color-scheme: dark;
-  --color-bg: #0b1220;
-  --color-surface: #111a2e;
-  --color-surface-2: #18233a;
-  --color-border: #26324d;
-  --color-border-strong: #6b7c9e;
-  --color-text: #e6ecf5;
-  --color-muted: #9aa8bf;
-  --color-primary: #60a5fa;
-  --color-primary-hover: #93c5fd;
-  --color-primary-contrast: #0b1220;
-  --color-accent: #fbbf24;
-  --color-success: #4ade80;
-  --color-warning: #fcd34d;
-  --color-danger: #f87171;
-  --color-magenta: #e879f9;
-  --color-cyan: #22d3ee;
-  --color-gold: #f6c453;
-  --color-silver: #cbd5e1;
-  --color-bronze: #d69e6b;
+  --color-canvas: #141412;
+  --color-surface: #1f1e1c;
+  --color-surface-raised: #2b2a28;
+  --color-surface-sunken: #0f0e0d;
+  --color-line: #393836;
+  --color-line-strong: #878684;
 
-  --color-primary-soft: #16264a;
-  --color-success-soft: #10291e;
-  --color-warning-soft: #2c230f;
-  --color-danger-soft: #331618;
-  --color-magenta-soft: #2d1633;
-  --color-cyan-soft: #0f2a33;
+  --color-ink: #ecebe9;
+  --color-ink-2: #b2b1af;
+  --color-ink-3: #939290;
+  --color-on-ink: #141412;
 
-  --color-band: #16213b;
-  --color-band-text: #e6ecf5;
-  --color-band-muted: #aab6cb;
-  --color-band-gold: #f6c453;
+  --color-accent: #56d3da;
+  --color-accent-strong: #93e5e9;
+  --color-accent-line: #00c3cb;
+  --color-accent-tint: #023538;
+  --color-on-accent: #141412;
 
-  /* Dark mode uses borders rather than heavy shadows (Section 21.4). */
-  --shadow-1: 0 0 0 1px var(--color-border);
-  --shadow-2: 0 0 0 1px var(--color-border), 0 8px 24px rgb(0 0 0 / 0.4);
-}
+  --color-go: #6bdeaa;
+  --color-go-tint: #152f23;
+  --color-on-go: #141412;
+  --color-caution: #f8c655;
+  --color-caution-tint: #3b2b0d;
+  --color-warn: #ff8880;
+  --color-warn-tint: #442321;
+  --color-on-warn: #141412;
 
-/*
- * Landing page livery: the homepage's accent is livery red rather than the site's sky blue.
- * White on #d0262d is 5.2:1; #d0262d text on bg is 4.9:1.
- */
-.livery {
-  --color-primary: #d0262d;
-  --color-primary-hover: #a81e24;
-  --color-primary-contrast: #ffffff;
-  --color-primary-soft: #fbe5e6;
-}
+  --color-tier-gold: #f1c45e;
+  --color-tier-silver: #b9bec4;
+  --color-tier-bronze: #dea279;
 
-/*
- * Landing page "night livery" (dark mode for redesign direction C): a livery-navy page with
- * midnight bands, white pill buttons and a red final band, so the homepage does not look like
- * the generic dark theme. Contrast: text ≥ 4.5:1 on bg, surfaces and bands; primary text
- * 6.1:1 on bg; white on cta-band 5.2:1.
- */
-[data-theme='dark'] .livery {
-  --color-bg: #0c1a3a;
-  --color-surface: #13244b;
-  --color-surface-2: #182b57;
-  --color-border: #2b3f6e;
-  --color-border-strong: #7f8fb5;
-  --color-text: #f5f7fb;
-  --color-muted: #b4bed3;
-  --color-primary: #ff6b70;
-  --color-primary-hover: #ff9a9d;
-  --color-primary-contrast: #0c1a3a;
-  --color-primary-soft: #3b1a2c;
+  --color-scrim: #000000b3;
 
-  --color-band: #050b1c;
-  --color-band-text: #ffffff;
-  --color-band-muted: #b4bed3;
-
-  --color-cta: #ffffff;
-  --color-cta-hover: #ffd9da;
-  --color-cta-text: #0c1a3a;
-  --color-cta-band: #d0262d;
-  --color-cta-band-text: #ffffff;
-  --color-cta-band-button: #0c1a3a;
-  --color-stripe: #ffffff;
-  --color-rule: #7f8fb5;
+  /* Elevation is a lighter surface, not a shadow: a 1px line ring, plus a deep soft shadow
+     under floating things only. */
+  --shadow-1: 0 0 0 1px #393836;
+  --shadow-2: 0 0 0 1px #393836, 0 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow-press: inset 0 2px 0 rgba(0, 0, 0, 0.4);
 }
 
 [data-theme='light'] {

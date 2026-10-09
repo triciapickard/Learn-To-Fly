@@ -35,18 +35,18 @@ export function SectionNav({
 }) {
   return (
     <nav aria-label="Lesson sections" className="sticky top-24">
-      <p className="mb-2 text-sm font-semibold text-muted">In this lesson</p>
-      <ol className="flex flex-col gap-1 border-l-2 border-border">
+      <p className="mb-2 text-sm font-semibold text-ink-2">In this lesson</p>
+      <ol className="flex flex-col gap-1 border-l-2 border-line">
         {sections.map((section, index) => (
           <li key={section.id}>
             <a
               href={`#${section.id}`}
               aria-current={active === section.id ? 'location' : undefined}
               className={cn(
-                '-ml-0.5 block border-l-2 py-1 pl-3 text-sm hover:text-text',
+                '-ml-0.5 block border-l-2 py-1 pl-3 text-sm hover:text-ink',
                 active === section.id
-                  ? 'border-primary font-semibold text-primary'
-                  : 'border-transparent text-muted',
+                  ? 'border-accent-line font-semibold text-accent'
+                  : 'border-transparent text-ink-2',
               )}
             >
               <span className="mr-1 font-mono">{index + 1}.</span> {section.title}
@@ -71,7 +71,7 @@ export function MobileSectionSelect({
     sections.findIndex((s) => s.id === active),
   );
   return (
-    <div className="sticky top-16 z-20 -mx-4 border-b border-border bg-surface/95 px-4 py-2 backdrop-blur lg:hidden">
+    <div className="sticky top-16 z-20 -mx-4 border-b border-line bg-surface/95 px-4 py-2 backdrop-blur lg:hidden">
       <label htmlFor="section-jump" className="sr-only">
         Jump to section
       </label>
@@ -102,7 +102,7 @@ export function GlossaryList({ terms }: { terms: GlossaryTermRef[] }) {
   return (
     <section
       aria-labelledby="terms-heading"
-      className="rounded-card border border-border bg-surface p-4"
+      className="rounded-lg border border-line bg-surface p-4"
     >
       <h2 id="terms-heading" className="flex items-center gap-2 font-semibold">
         <BookMarked aria-hidden className="size-4" /> Terms in this lesson
@@ -111,12 +111,12 @@ export function GlossaryList({ terms }: { terms: GlossaryTermRef[] }) {
         {terms.map((term) => (
           <li key={term.slug}>
             <Popover>
-              <PopoverTrigger className="min-h-8 rounded-full border border-border px-2.5 text-sm hover:border-primary hover:text-primary">
+              <PopoverTrigger className="min-h-8 rounded-full border border-line px-2.5 text-sm hover:border-line-strong">
                 {term.term}
               </PopoverTrigger>
               <PopoverContent>
                 <p className="font-semibold">{term.term}</p>
-                <p className="mt-1 text-sm text-muted">{term.definition}</p>
+                <p className="mt-1 text-sm text-ink-2">{term.definition}</p>
                 <Link to={`/reference/glossary#${term.slug}`} className="mt-2 inline-block text-sm">
                   Open in the glossary
                 </Link>
@@ -131,13 +131,13 @@ export function GlossaryList({ terms }: { terms: GlossaryTermRef[] }) {
 
 export function ObjectivesBox({ objectives }: { objectives: string[] }) {
   return (
-    <Card className="my-6 bg-primary-soft">
+    <Card className="my-6 bg-accent-tint">
       <CardBody>
         <h2 className="font-semibold">In this lesson you will</h2>
         <ul className="mt-2 flex flex-col gap-1.5">
           {objectives.map((objective) => (
             <li key={objective} className="flex gap-2">
-              <Check aria-hidden className="mt-1 size-4 shrink-0 text-primary" />
+              <Check aria-hidden className="mt-1 size-4 shrink-0 text-accent" />
               {objective}
             </li>
           ))}
@@ -162,7 +162,7 @@ export function SignupBanner({ returnTo }: { returnTo: string }) {
   return (
     <aside
       aria-label="Save your progress"
-      className="my-4 flex items-center gap-3 rounded-card border border-border bg-surface-2 px-4 py-3"
+      className="my-4 flex items-center gap-3 rounded-lg border border-line bg-surface-sunken px-4 py-3"
     >
       <p className="flex-1 text-sm">
         <Link to={`/signup?returnTo=${encodeURIComponent(returnTo)}`}>Sign up</Link> (free) to save
@@ -199,7 +199,7 @@ export function GoDeeper({ resources }: { resources: ResourceDto[] }) {
           <li key={resource.slug}>
             <Card className="h-full">
               <CardBody className="flex h-full flex-col gap-1">
-                <p className="text-sm text-muted">
+                <p className="text-sm text-ink-2">
                   {resource.publisher} · <span className="capitalize">{resource.type}</span>
                   {!resource.free && ' · paid'}
                 </p>
@@ -208,7 +208,7 @@ export function GoDeeper({ resources }: { resources: ResourceDto[] }) {
                     href={resource.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-start gap-1 font-semibold text-primary underline-offset-2 hover:underline"
+                    className="inline-flex items-start gap-1 font-semibold text-accent underline-offset-2 hover:underline"
                   >
                     {resource.title}
                     <ExternalIcon aria-hidden className="mt-1 size-3.5 shrink-0" />
@@ -217,7 +217,7 @@ export function GoDeeper({ resources }: { resources: ResourceDto[] }) {
                 ) : (
                   <p className="font-semibold">{resource.title}</p>
                 )}
-                <p className="text-sm text-muted">{resource.description}</p>
+                <p className="text-sm text-ink-2">{resource.description}</p>
                 {resource.location && <p className="text-sm">{resource.location}</p>}
               </CardBody>
             </Card>
@@ -233,7 +233,7 @@ export function FlyIt({ challenges }: { challenges: ChallengeSummary[] }) {
   return (
     <section aria-labelledby="fly-it" className="mt-12">
       <h2 id="fly-it" className="flex items-center gap-2 text-2xl font-bold">
-        <Plane aria-hidden className="size-6 text-primary" /> Fly it
+        <Plane aria-hidden className="size-6 text-accent" /> Fly it
       </h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
         {challenges.map((challenge) => (
@@ -241,15 +241,15 @@ export function FlyIt({ challenges }: { challenges: ChallengeSummary[] }) {
             <Link
               unstyled
               to={`/challenges/${challenge.slug}`}
-              className="block h-full rounded-card border border-border bg-surface p-4 shadow-1 hover:border-primary"
+              className="block h-full rounded-lg border border-line bg-surface p-4 shadow-1 hover:border-accent"
             >
-              <p className="font-mono text-sm text-muted">{challenge.code}</p>
+              <p className="font-mono text-sm text-ink-2">{challenge.code}</p>
               <p className="font-semibold">{challenge.title}</p>
               <div className="mt-2 flex flex-wrap items-center gap-3">
                 <TypeIcon type={challenge.type} />
                 <DifficultyDots value={challenge.difficulty} />
-                <span className="text-sm text-muted">{challenge.estimatedMinutes} min</span>
-                {challenge.priority === 'P1' && <Badge variant="bonus">Bonus</Badge>}
+                <span className="text-sm text-ink-2">{challenge.estimatedMinutes} min</span>
+                {challenge.priority === 'P1' && <Badge variant="outline">Bonus</Badge>}
                 {challenge.draft && <DraftBadge />}
               </div>
             </Link>
@@ -274,9 +274,9 @@ export function PrevNext({
         <Link
           unstyled
           to={lessonHref(previous)}
-          className="rounded-card border border-border bg-surface p-4 hover:border-primary"
+          className="rounded-lg border border-line bg-surface p-4 hover:border-accent"
         >
-          <span className="flex items-center gap-1 text-sm text-muted">
+          <span className="flex items-center gap-1 text-sm text-ink-2">
             <ArrowLeft aria-hidden className="size-4" /> Previous lesson
           </span>
           <span className="font-semibold">
@@ -290,9 +290,9 @@ export function PrevNext({
         <Link
           unstyled
           to={lessonHref(next)}
-          className="rounded-card border border-border bg-surface p-4 text-right hover:border-primary"
+          className="rounded-lg border border-line bg-surface p-4 text-right hover:border-accent"
         >
-          <span className="flex items-center justify-end gap-1 text-sm text-muted">
+          <span className="flex items-center justify-end gap-1 text-sm text-ink-2">
             Next lesson <ArrowRight aria-hidden className="size-4" />
           </span>
           <span className="font-semibold">
@@ -324,7 +324,7 @@ export function MarkComplete({
   const [promptOpen, setPromptOpen] = useState(false);
   if (completed) {
     return (
-      <p role="status" className="flex items-center gap-2 font-semibold text-success">
+      <p role="status" className="flex items-center gap-2 font-semibold text-go">
         <Check aria-hidden className="size-5" /> Lesson complete
       </p>
     );
@@ -366,7 +366,7 @@ export function MarkComplete({
 
 export function LessonDisclaimer() {
   return (
-    <p className="mt-12 border-t border-border pt-4 text-sm text-muted">
+    <p className="mt-12 border-t border-line pt-4 text-sm text-ink-2">
       For simulation use only. Not for real-world flight training or navigation.
     </p>
   );

@@ -11,17 +11,23 @@ export function CourseBadge({ size = 180 }: { size?: number }) {
       role="img"
       aria-label="Skyhawk Pilot (Sim) badge: pilot wings around a Learn-To-Fly roundel"
     >
-      <circle cx={120} cy={120} r={112} className="fill-gold/15 stroke-gold" strokeWidth={6} />
+      <circle
+        cx={120}
+        cy={120}
+        r={112}
+        className="fill-tier-gold/15 stroke-tier-gold"
+        strokeWidth={6}
+      />
       <circle
         cx={120}
         cy={120}
         r={96}
-        className="fill-none stroke-gold"
+        className="fill-none stroke-tier-gold"
         strokeWidth={1.5}
         strokeDasharray="4 5"
       />
       {[-1, 1].map((side) => (
-        <g key={side} transform={`translate(120 112) scale(${side} 1)`} className="fill-gold">
+        <g key={side} transform={`translate(120 112) scale(${side} 1)`} className="fill-tier-gold">
           {[0, 1, 2, 3].map((i) => (
             <path
               key={i}
@@ -31,20 +37,20 @@ export function CourseBadge({ size = 180 }: { size?: number }) {
           ))}
         </g>
       ))}
-      <circle cx={120} cy={116} r={24} className="fill-surface stroke-gold" strokeWidth={4} />
+      <circle cx={120} cy={116} r={24} className="fill-surface stroke-tier-gold" strokeWidth={4} />
       <path
         d="M 120 100 l 5 12 h -4 v 14 l 7 5 v 3 l -8 -3 l -8 3 v -3 l 7 -5 v -14 h -4 Z"
-        className="fill-gold"
+        className="fill-tier-gold"
       />
       <text
         x={120}
         y={170}
         textAnchor="middle"
-        className="fill-text text-[17px] font-bold tracking-wide"
+        className="fill-ink text-[17px] font-bold tracking-wide"
       >
         SKYHAWK PILOT
       </text>
-      <text x={120} y={192} textAnchor="middle" className="fill-muted text-[13px] font-semibold">
+      <text x={120} y={192} textAnchor="middle" className="fill-ink-2 text-[13px] font-semibold">
         (SIM) · LEARN-TO-FLY
       </text>
     </svg>

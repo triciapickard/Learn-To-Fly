@@ -77,7 +77,7 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
   }
   if (isError || !aircraft) {
     return (
-      <p className="my-8 text-muted">
+      <p className="my-8 text-ink-2">
         The airspeed indicator could not load. The speeds are listed in the table above.
       </p>
     );
@@ -126,7 +126,7 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
         <div
           role="group"
           aria-label="Show"
-          className="flex rounded-control border border-border-strong p-0.5 text-sm"
+          className="flex rounded-md border border-line-strong p-0.5 text-sm"
         >
           {(['both', 'dial', 'tape'] as const).map((v) => (
             <button
@@ -136,7 +136,7 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
               onClick={() => setView(v)}
               className={cn(
                 'min-h-9 rounded-[4px] px-3 font-semibold',
-                view === v ? 'bg-surface-2 text-text' : 'text-muted',
+                view === v ? 'bg-surface-sunken text-ink' : 'text-ink-2',
               )}
             >
               {{ both: 'Both', dial: 'Round dial', tape: 'G1000 tape' }[v]}
@@ -260,7 +260,7 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
                     y={4 + 125 - (s.kias - ias) * 3.2}
                     textAnchor="middle"
                     dominantBaseline="central"
-                    className="fill-cyan font-mono text-[12px] font-bold"
+                    className="fill-display-cyan font-mono text-[12px] font-bold"
                   >
                     {TAPE_MARKERS[s.key]}
                   </text>
@@ -291,7 +291,7 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
           value={ias}
           aria-valuetext={speech}
           onChange={(e) => setIas(Number(e.target.value))}
-          className="h-11 flex-1 cursor-pointer accent-primary"
+          className="h-11 flex-1 cursor-pointer accent-accent"
         />
         <Button
           variant="secondary"
@@ -302,7 +302,7 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
           <Plus aria-hidden className="size-4" />
         </Button>
       </div>
-      <p className="mt-2 text-center text-sm text-muted">{band.meaning}</p>
+      <p className="mt-2 text-center text-sm text-ink-2">{band.meaning}</p>
 
       {mode === 'quiz' && (
         <div className="mt-4">

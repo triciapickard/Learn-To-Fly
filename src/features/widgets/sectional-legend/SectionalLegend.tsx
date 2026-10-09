@@ -66,7 +66,7 @@ export default function SectionalLegend({ props, onQuizAnswer }: WidgetProps) {
     >
       <svg
         viewBox={`0 0 ${CHART.width} ${CHART.height}`}
-        className="w-full rounded-control border border-border select-none"
+        className="w-full rounded-md border border-line select-none"
         role={quiz ? 'group' : 'img'}
         aria-label={
           quiz
@@ -94,7 +94,7 @@ export default function SectionalLegend({ props, onQuizAnswer }: WidgetProps) {
             data-hotspot={h.id}
             className={cn(
               'cursor-pointer',
-              quiz && 'outline-none focus-visible:stroke-primary focus-visible:[stroke-width:3px]',
+              quiz && 'outline-none focus-visible:stroke-accent focus-visible:[stroke-width:3px]',
             )}
             onPointerEnter={() => setHovered(h.id)}
             onPointerLeave={() => setHovered(null)}
@@ -114,7 +114,7 @@ export default function SectionalLegend({ props, onQuizAnswer }: WidgetProps) {
           />
         ))}
       </svg>
-      <p className="mt-1 text-xs text-muted">{CHART.note}</p>
+      <p className="mt-1 text-xs text-ink-2">{CHART.note}</p>
 
       {!quiz && (
         <div className="mt-4 grid gap-4 md:grid-cols-2">
@@ -133,10 +133,10 @@ export default function SectionalLegend({ props, onQuizAnswer }: WidgetProps) {
                   aria-pressed={selected === h.id}
                   onClick={() => select(h.id)}
                   className={cn(
-                    'min-h-9 rounded-control border px-3 text-left text-sm font-medium',
+                    'min-h-9 rounded-md border px-3 text-left text-sm font-medium',
                     selected === h.id
-                      ? 'border-primary bg-primary-soft text-text'
-                      : 'border-border-strong text-text hover:bg-surface-2',
+                      ? 'border-ink bg-surface text-ink shadow-[0_0_0_1px_var(--color-ink)]'
+                      : 'border-line-strong text-ink hover:bg-surface-sunken',
                   )}
                 >
                   {h.name}
@@ -149,7 +149,7 @@ export default function SectionalLegend({ props, onQuizAnswer }: WidgetProps) {
 
       {quiz && (
         <div className="mt-4">
-          <p className="mb-2 text-sm text-muted">
+          <p className="mb-2 text-sm text-ink-2">
             Click or tap the chart, or use Tab to move between chart areas and Enter to choose one.
           </p>
           <QuizPanel
@@ -173,21 +173,21 @@ export default function SectionalLegend({ props, onQuizAnswer }: WidgetProps) {
 function HotspotCard({ hotspot }: { hotspot: Hotspot | null }) {
   if (!hotspot) {
     return (
-      <div className="rounded-control bg-surface-2 p-4 text-sm text-muted">
+      <div className="rounded-md bg-surface-sunken p-4 text-sm text-ink-2">
         Hover over or tap a symbol on the chart, or choose one from the list.
       </div>
     );
   }
   return (
-    <div className="rounded-control bg-surface-2 p-4">
+    <div className="rounded-md bg-surface-sunken p-4">
       <p className="font-semibold">{hotspot.name}</p>
       <dl className="mt-2 space-y-2 text-sm">
         <div>
-          <dt className="text-xs font-semibold tracking-wide text-muted uppercase">On the chart</dt>
+          <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">On the chart</dt>
           <dd>{hotspot.legend}</dd>
         </div>
         <div>
-          <dt className="text-xs font-semibold tracking-wide text-muted uppercase">
+          <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">
             What it means
           </dt>
           <dd>{hotspot.explanation}</dd>

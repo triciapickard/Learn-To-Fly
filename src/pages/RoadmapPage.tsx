@@ -60,32 +60,30 @@ export default function RoadmapPage() {
         title="The road to the A380"
         description="One airplane at a time, each done properly before adding the next. The aircraft list is a plan, not a promise — it depends on what the sim offers and how well each aircraft is documented."
       />
-      <ol className="relative flex flex-col gap-4 border-l-2 border-border pl-6">
+      <ol className="relative flex flex-col gap-4 border-l-2 border-line pl-6">
         {LADDER.map((rung) => (
           <li key={rung.step} className="relative">
             <span
               aria-hidden
               className={cn(
                 'absolute top-3 -left-[33px] flex size-4 items-center justify-center rounded-full border-2',
-                rung.current
-                  ? 'border-success bg-success text-surface'
-                  : 'border-border-strong bg-surface',
+                rung.current ? 'border-go bg-go text-surface' : 'border-line-strong bg-surface',
               )}
             >
               {rung.current && <Check className="size-3" />}
             </span>
             <div
               className={cn(
-                'rounded-card border bg-surface p-4',
-                rung.current ? 'border-success' : 'border-border',
+                'rounded-lg border bg-surface p-4',
+                rung.current ? 'border-go' : 'border-line',
               )}
             >
               <div className="flex flex-wrap items-center gap-2">
-                <p className="text-sm font-semibold text-muted">Step {rung.step}</p>
-                {rung.current && <Badge variant="complete">Version 1</Badge>}
+                <p className="text-sm font-semibold text-ink-2">Step {rung.step}</p>
+                {rung.current && <Badge variant="go">Version 1</Badge>}
               </div>
               <h2 className="mt-1 text-lg font-semibold">{rung.title}</h2>
-              <p className="text-muted">
+              <p className="text-ink-2">
                 {rung.example} · {rung.skills}
               </p>
             </div>

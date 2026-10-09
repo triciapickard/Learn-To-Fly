@@ -32,12 +32,12 @@ export default function ChecklistsPage() {
               return (
                 <li
                   key={c.slug}
-                  className="relative flex gap-3 rounded-card border border-border bg-surface p-4 shadow-1 hover:border-primary"
+                  className="relative flex gap-3 rounded-lg border border-line bg-surface p-4 shadow-1 hover:border-accent"
                 >
                   <Icon
                     aria-hidden
                     className={
-                      emergency ? 'size-6 shrink-0 text-danger' : 'size-6 shrink-0 text-primary'
+                      emergency ? 'size-6 shrink-0 text-warn' : 'size-6 shrink-0 text-accent'
                     }
                   />
                   <div className="flex min-w-0 flex-col gap-1">
@@ -50,11 +50,11 @@ export default function ChecklistsPage() {
                         {c.title}
                       </Link>
                     </h2>
-                    <p className="text-sm text-muted">
+                    <p className="text-sm text-ink-2">
                       {plural(c.items.length, 'item')} · {MODE_LABELS[c.mode]}
                     </p>
                     {emergency && (
-                      <Badge variant="danger" className="self-start">
+                      <Badge variant="warn" className="self-start">
                         Emergency
                       </Badge>
                     )}

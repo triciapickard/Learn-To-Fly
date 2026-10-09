@@ -59,7 +59,7 @@ export function ResultView({
 
   return (
     <section aria-labelledby="result-heading" className="flex flex-col gap-6">
-      <div className="rounded-card border border-border bg-surface p-6 text-center">
+      <div className="rounded-lg border border-line bg-surface p-6 text-center">
         <h2
           id="result-heading"
           ref={heading}
@@ -74,12 +74,12 @@ export function ResultView({
             className="px-4 py-2 text-lg motion-safe:animate-tier-pop"
           />
           <p className="font-mono text-5xl font-bold">{attempt.percentage}%</p>
-          <p className="text-muted">
+          <p className="text-ink-2">
             {attempt.points} of {attempt.maxPoints} points
           </p>
           <p className="text-lg">{message}</p>
           {best && (best.tier !== attempt.tier || best.percentage !== attempt.percentage) && (
-            <p className="text-sm text-muted">
+            <p className="text-sm text-ink-2">
               Your best so far: <TierBadge tier={best.tier} /> {best.percentage}%
             </p>
           )}
@@ -91,18 +91,17 @@ export function ResultView({
         <ul className="mt-3 flex flex-col gap-2">
           {criterionFeedback(challenge, attempt).map(({ criterion, result, points, review }) => {
             const Icon = points >= 2 ? CheckCircle2 : points === 1 ? MinusCircle : XCircle;
-            const tone =
-              points >= 2 ? 'text-success' : points === 1 ? 'text-warning' : 'text-danger';
+            const tone = points >= 2 ? 'text-go' : points === 1 ? 'text-caution' : 'text-warn';
             return (
               <li
                 key={criterion.id}
-                className="flex gap-3 rounded-control border border-border bg-surface p-3"
+                className="flex gap-3 rounded-md border border-line bg-surface p-3"
               >
                 <Icon aria-hidden className={`mt-0.5 size-5 shrink-0 ${tone}`} />
                 <div>
                   <p>
                     <span className="font-semibold">{RESULT_TEXT[result]}:</span> {criterion.label}
-                    {criterion.required && <span className="text-muted"> (required)</span>}
+                    {criterion.required && <span className="text-ink-2"> (required)</span>}
                   </p>
                   {review && (
                     <Link to={review.href} className="text-sm">

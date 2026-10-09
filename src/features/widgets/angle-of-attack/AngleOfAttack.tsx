@@ -80,7 +80,7 @@ export default function AngleOfAttack({ props, onQuizAnswer }: WidgetProps) {
       onReset={() => update(initial, false)}
       description={description}
     >
-      <p className="text-sm text-muted">
+      <p className="text-sm text-ink-2">
         Simplified model: the shapes are realistic, the numbers are illustrative.
       </p>
       <div className="mt-3 grid gap-4">
@@ -94,20 +94,20 @@ export default function AngleOfAttack({ props, onQuizAnswer }: WidgetProps) {
         </span>
         <span
           className={cn(
-            'rounded-control px-2 py-0.5 text-sm font-semibold',
-            state === 'attached' && 'bg-success-soft text-success',
-            state === 'separating' && 'bg-warning-soft text-warning',
-            state === 'stalled' && 'bg-danger-soft text-danger',
+            'rounded-md px-2 py-0.5 text-sm font-semibold',
+            state === 'attached' && 'bg-go-tint text-go',
+            state === 'separating' && 'bg-caution-tint text-caution',
+            state === 'stalled' && 'bg-warn-tint text-warn',
           )}
         >
           Airflow: {FLOW_LABEL[state]}
         </span>
         <span
           className={cn(
-            'rounded-control border px-2 py-0.5 font-mono text-sm font-bold tracking-wider',
+            'rounded-md border px-2 py-0.5 font-mono text-sm font-bold tracking-wider',
             warning
-              ? 'border-danger bg-danger text-white motion-safe:animate-warning-pulse dark:text-bg'
-              : 'border-border text-muted',
+              ? 'border-warn bg-warn text-on-warn motion-safe:animate-warning-pulse'
+              : 'border-line text-ink-2',
           )}
         >
           STALL WARNING
@@ -135,7 +135,7 @@ export default function AngleOfAttack({ props, onQuizAnswer }: WidgetProps) {
           value={aoa}
           aria-valuetext={describe(aoa, flaps)}
           onChange={(e) => update(Number(e.target.value), flaps)}
-          className="h-11 flex-1 cursor-pointer accent-primary"
+          className="h-11 flex-1 cursor-pointer accent-accent"
         />
         <Button
           variant="secondary"
@@ -198,7 +198,7 @@ function AirfoilView({ aoa, flaps, cl }: { aoa: number; flaps: boolean; cl: numb
           key={i}
           d={smoothPath(line.points)}
           fill="none"
-          className={line.side === 'upper' ? 'stroke-cyan' : 'stroke-primary'}
+          className={line.side === 'upper' ? 'stroke-accent' : 'stroke-caution'}
           strokeOpacity={0.75}
           strokeWidth={1.6}
         />
@@ -208,7 +208,7 @@ function AirfoilView({ aoa, flaps, cl }: { aoa: number; flaps: boolean; cl: numb
           key={i}
           d={`M ${e.x + e.r} ${e.y} A ${e.r} ${e.r} 0 1 1 ${e.x} ${e.y + e.r}`}
           fill="none"
-          className="stroke-danger"
+          className="stroke-warn"
           strokeWidth={1.6}
         />
       ))}
@@ -217,12 +217,12 @@ function AirfoilView({ aoa, flaps, cl }: { aoa: number; flaps: boolean; cl: numb
         y1={le.y - chordDir.y * 56}
         x2={te.x + chordDir.x * 20}
         y2={te.y + chordDir.y * 20}
-        className="stroke-muted"
+        className="stroke-ink-2"
         strokeDasharray="4 4"
       />
       <path
         d={outlinePath(aoa, flaps)}
-        className="fill-surface-2 stroke-text"
+        className="fill-surface-sunken stroke-ink"
         strokeWidth={2}
         strokeLinejoin="round"
       />
@@ -233,22 +233,22 @@ function AirfoilView({ aoa, flaps, cl }: { aoa: number; flaps: boolean; cl: numb
             y1={le.y}
             x2={le.x - arcR - 8}
             y2={le.y}
-            className="stroke-muted"
+            className="stroke-ink-2"
             strokeWidth={1}
           />
           <path
             d={arcPath(le.x, le.y, arcR, Math.min(270, 270 + aoa), Math.max(270, 270 + aoa))}
             fill="none"
-            className="stroke-text"
+            className="stroke-ink"
             strokeWidth={1.5}
           />
-          <Label x={le.x - arcR - 16} y={le.y + (aoa > 0 ? -9 : 9)} className="fill-text">
+          <Label x={le.x - arcR - 16} y={le.y + (aoa > 0 ? -9 : 9)} className="fill-ink">
             α
           </Label>
         </>
       )}
-      <Arrow from={{ x: 6, y: 22 }} to={{ x: 70, y: 22 }} className="stroke-muted fill-muted" />
-      <Label x={8} y={9} anchor="start" className="fill-muted">
+      <Arrow from={{ x: 6, y: 22 }} to={{ x: 70, y: 22 }} className="stroke-ink-2 fill-ink-2" />
+      <Label x={8} y={9} anchor="start" className="fill-ink-2">
         Relative wind
       </Label>
       {liftLength > 6 && (
@@ -256,10 +256,10 @@ function AirfoilView({ aoa, flaps, cl }: { aoa: number; flaps: boolean; cl: numb
           <Arrow
             from={cp}
             to={{ x: cp.x, y: cp.y - liftLength - 10 }}
-            className="stroke-success fill-success"
+            className="stroke-go fill-go"
             width={4}
           />
-          <Label x={cp.x + 26} y={cp.y - liftLength - 4} className="fill-success">
+          <Label x={cp.x + 26} y={cp.y - liftLength - 4} className="fill-go">
             Lift
           </Label>
         </>
@@ -294,24 +294,24 @@ function LiftGraph({ aoa, flaps }: { aoa: number; flaps: boolean }) {
         y={G.top}
         width={gx(crit) - gx(warn)}
         height={G.bottom - G.top}
-        className="fill-warning-soft"
+        className="fill-caution-tint"
       />
       <rect
         x={gx(crit)}
         y={G.top}
         width={G.right - gx(crit)}
         height={G.bottom - G.top}
-        className="fill-danger-soft"
+        className="fill-warn-tint"
       />
       {[0, 0.5, 1, 1.5, 2].map((v) => (
         <g key={v}>
-          <line x1={G.left} x2={G.right} y1={gy(v)} y2={gy(v)} className="stroke-border" />
+          <line x1={G.left} x2={G.right} y1={gy(v)} y2={gy(v)} className="stroke-line" />
           <text
             x={G.left - 6}
             y={gy(v)}
             textAnchor="end"
             dominantBaseline="central"
-            className="fill-muted font-mono text-[12px]"
+            className="fill-ink-2 font-mono text-[12px]"
           >
             {v}
           </text>
@@ -323,12 +323,12 @@ function LiftGraph({ aoa, flaps }: { aoa: number; flaps: boolean }) {
           x={gx(a)}
           y={G.bottom + 14}
           textAnchor="middle"
-          className="fill-muted font-mono text-[12px]"
+          className="fill-ink-2 font-mono text-[12px]"
         >
           {a}°
         </text>
       ))}
-      <text x={G.left - 34} y={G.top - 2} className="fill-muted text-[12px] font-semibold">
+      <text x={G.left - 34} y={G.top - 2} className="fill-ink-2 text-[12px] font-semibold">
         C
         <tspan baselineShift="sub" className="text-[9px]">
           L
@@ -338,26 +338,26 @@ function LiftGraph({ aoa, flaps }: { aoa: number; flaps: boolean }) {
         x={(G.left + G.right) / 2}
         y={G.bottom + 32}
         textAnchor="middle"
-        className="fill-muted text-[12px] font-semibold"
+        className="fill-ink-2 text-[12px] font-semibold"
       >
         Angle of attack
       </text>
       <polyline
         points={line(!flaps)}
         fill="none"
-        className="stroke-border-strong"
+        className="stroke-line-strong"
         strokeWidth={1.5}
         strokeDasharray="4 4"
       />
-      <polyline points={line(flaps)} fill="none" className="stroke-primary" strokeWidth={3} />
-      <Label x={gx(crit)} y={G.top + 10} className="fill-danger">
+      <polyline points={line(flaps)} fill="none" className="stroke-accent" strokeWidth={3} />
+      <Label x={gx(crit)} y={G.top + 10} className="fill-warn">
         Stall
       </Label>
       <circle
         cx={gx(aoa)}
         cy={gy(cl)}
         r={6}
-        className="fill-primary stroke-surface"
+        className="fill-accent stroke-surface"
         strokeWidth={2}
       />
     </svg>

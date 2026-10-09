@@ -7,9 +7,9 @@ export default function NotFoundPage() {
   usePageTitle('Page not found');
   return (
     <PageContainer narrow className="text-center">
-      <p className="font-mono text-6xl font-bold text-primary">404</p>
+      <p className="font-mono text-6xl font-bold text-accent">404</p>
       <h1 className="mt-4 text-3xl font-bold">You&apos;ve wandered off the taxiway</h1>
-      <p className="mt-3 text-lg text-muted">
+      <p className="mt-3 text-lg text-ink-2">
         We couldn&apos;t find that page. It may have moved, or the link may be wrong.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">

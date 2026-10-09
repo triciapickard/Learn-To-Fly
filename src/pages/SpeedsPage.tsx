@@ -49,7 +49,7 @@ export default function SpeedsPage() {
               </div>
             </PageHeader>
 
-            <p className="mb-6 text-muted">
+            <p className="mb-6 text-ink-2">
               {aircraft.verifiedAt
                 ? `Last verified: ${formatDate(aircraft.verifiedAt)}${aircraft.simVersion ? `, sim version ${aircraft.simVersion}` : ''}.`
                 : 'Last verified: not yet checked against the MSFS 2024 in-sim checklist.'}
@@ -95,7 +95,7 @@ export default function SpeedsPage() {
                       key: 'notes',
                       header: 'Notes',
                       label: 'Notes',
-                      cell: (v) => <span className="text-muted">{v.notes ?? ''}</span>,
+                      cell: (v) => <span className="text-ink-2">{v.notes ?? ''}</span>,
                     },
                   ]}
                 />
@@ -105,40 +105,40 @@ export default function SpeedsPage() {
                     Limits
                   </h2>
                   <dl className="mt-3 grid gap-2 text-lg sm:grid-cols-2">
-                    <div className="rounded-card border border-border bg-surface p-3">
-                      <dt className="text-muted">Maneuvering speed by weight</dt>
+                    <div className="rounded-lg border border-line bg-surface p-3">
+                      <dt className="text-ink-2">Maneuvering speed by weight</dt>
                       <dd className="mt-1 font-mono font-semibold">
                         {aircraft.limits.maneuveringSpeed
                           .map((m) => `${m.kias} KIAS at ${m.weightLb.toLocaleString('en-US')} lb`)
                           .join(' · ')}
                       </dd>
                     </div>
-                    <div className="rounded-card border border-border bg-surface p-3">
-                      <dt className="text-muted">Maximum demonstrated crosswind</dt>
+                    <div className="rounded-lg border border-line bg-surface p-3">
+                      <dt className="text-ink-2">Maximum demonstrated crosswind</dt>
                       <dd className="mt-1 font-mono font-semibold">
                         {aircraft.limits.maxDemonstratedCrosswindKt} kt
                       </dd>
                     </div>
-                    <div className="rounded-card border border-border bg-surface p-3">
-                      <dt className="text-muted">White arc (flap operating range)</dt>
+                    <div className="rounded-lg border border-line bg-surface p-3">
+                      <dt className="text-ink-2">White arc (flap operating range)</dt>
                       <dd className="mt-1 font-mono font-semibold">
                         {aircraft.arcs.white[0]}–{aircraft.arcs.white[1]} KIAS
                       </dd>
                     </div>
-                    <div className="rounded-card border border-border bg-surface p-3">
-                      <dt className="text-muted">Green arc (normal operating range)</dt>
+                    <div className="rounded-lg border border-line bg-surface p-3">
+                      <dt className="text-ink-2">Green arc (normal operating range)</dt>
                       <dd className="mt-1 font-mono font-semibold">
                         {aircraft.arcs.green[0]}–{aircraft.arcs.green[1]} KIAS
                       </dd>
                     </div>
-                    <div className="rounded-card border border-border bg-surface p-3">
-                      <dt className="text-muted">Yellow arc (smooth air only)</dt>
+                    <div className="rounded-lg border border-line bg-surface p-3">
+                      <dt className="text-ink-2">Yellow arc (smooth air only)</dt>
                       <dd className="mt-1 font-mono font-semibold">
                         {aircraft.arcs.yellow[0]}–{aircraft.arcs.yellow[1]} KIAS
                       </dd>
                     </div>
-                    <div className="rounded-card border border-border bg-surface p-3">
-                      <dt className="text-muted">Red line (never exceed)</dt>
+                    <div className="rounded-lg border border-line bg-surface p-3">
+                      <dt className="text-ink-2">Red line (never exceed)</dt>
                       <dd className="mt-1 font-mono font-semibold">{aircraft.arcs.redline} KIAS</dd>
                     </div>
                   </dl>
@@ -148,7 +148,7 @@ export default function SpeedsPage() {
                   <h2 id="power-heading" className="text-2xl font-bold">
                     Typical power settings
                   </h2>
-                  <p className="mt-1 mb-3 text-muted">
+                  <p className="mt-1 mb-3 text-ink-2">
                     Rule-of-thumb starting points, not POH values. Set these, then adjust to hold
                     the target speed.
                   </p>
@@ -181,7 +181,7 @@ export default function SpeedsPage() {
                   <h2 id="asi-heading" className="text-2xl font-bold">
                     The airspeed indicator
                   </h2>
-                  <p className="mt-1 text-muted">
+                  <p className="mt-1 text-ink-2">
                     Drag the needle to see which arc and V-speed you're at.
                   </p>
                   <WidgetBlock name="airspeed-indicator" props={{ mode: 'explore' }} />

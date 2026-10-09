@@ -144,7 +144,7 @@ export function DebriefForm({
             label={
               <>
                 {c.label}
-                <span className="font-normal text-muted"> · weight ×{c.weight}</span>
+                <span className="font-normal text-ink-2"> · weight ×{c.weight}</span>
               </>
             }
             required={c.required}
@@ -218,7 +218,7 @@ export function DebriefForm({
 
       <section
         aria-labelledby={`${statusId}-preview`}
-        className="rounded-card border border-border bg-surface-2 p-4"
+        className="rounded-lg border border-line bg-surface-sunken p-4"
       >
         <h2 id={`${statusId}-preview`} className="font-semibold">
           Score preview
@@ -226,7 +226,7 @@ export function DebriefForm({
         <div role="status" className="mt-2 flex flex-wrap items-center gap-3">
           <TierBadge tier={preview.tier} />
           <span className="font-mono text-2xl font-bold">{preview.percentage}%</span>
-          <span className="text-muted">
+          <span className="text-ink-2">
             {preview.points} of {preview.maxPoints} points
             {answered < challenge.criteria.length && ' (unanswered criteria count as Not met)'}
           </span>
@@ -262,7 +262,7 @@ export function DebriefForm({
             </Button>
           </div>
           {missing.length > 0 && (
-            <p id={statusId} className="text-sm text-muted">
+            <p id={statusId} className="text-sm text-ink-2">
               Answer the required criteria to submit: {missing.map((c) => c.label).join('; ')}.
             </p>
           )}

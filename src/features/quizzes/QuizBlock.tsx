@@ -89,9 +89,9 @@ export function QuizBlock({
   return (
     <section
       aria-labelledby={legendId}
-      className="my-8 rounded-card border border-border bg-surface p-5 shadow-1"
+      className="my-8 rounded-lg border border-line bg-surface p-5 shadow-1"
     >
-      <p className="flex items-center gap-2 text-sm font-semibold text-primary">
+      <p className="flex items-center gap-2 text-sm font-semibold text-accent">
         <CircleHelp aria-hidden className="size-4" /> Quick check
       </p>
       <fieldset className="mt-2" aria-describedby={result !== null ? feedbackId : undefined}>
@@ -110,8 +110,10 @@ export function QuizBlock({
                   key={option.id}
                   htmlFor={inputId}
                   className={cn(
-                    'flex min-h-11 cursor-pointer items-center gap-3 rounded-control border px-3 py-2',
-                    checked ? 'border-primary bg-primary-soft' : 'border-border hover:bg-surface-2',
+                    'flex min-h-11 cursor-pointer items-center gap-3 rounded-md border px-3 py-2',
+                    checked
+                      ? 'border-ink bg-surface shadow-[0_0_0_1px_var(--color-ink)]'
+                      : 'border-line-strong hover:bg-surface-sunken',
                   )}
                 >
                   <input
@@ -130,14 +132,14 @@ export function QuizBlock({
                             : [...m, option.id],
                         );
                     }}
-                    className="size-5 shrink-0 accent-primary"
+                    className="size-5 shrink-0 accent-accent"
                   />
                   <MarkdownContent markdown={option.text} inline />
                 </label>
               );
             })}
             {quiz.quizType === 'multi' && (
-              <p className="text-sm text-muted">Select all that apply.</p>
+              <p className="text-sm text-ink-2">Select all that apply.</p>
             )}
           </div>
         )}
@@ -157,9 +159,9 @@ export function QuizBlock({
                 setNumeric(e.target.value);
                 setResult(null);
               }}
-              className="min-h-11 w-32 rounded-control border border-border-strong bg-surface px-3 font-mono"
+              className="min-h-11 w-32 rounded-md border border-line-strong bg-surface px-3 font-mono"
             />
-            {quiz.unit && <span className="text-muted">{quiz.unit}</span>}
+            {quiz.unit && <span className="text-ink-2">{quiz.unit}</span>}
           </div>
         )}
 
@@ -168,9 +170,9 @@ export function QuizBlock({
             {order.map((optionId, index) => (
               <li
                 key={optionId}
-                className="flex min-h-11 items-center gap-2 rounded-control border border-border px-3 py-1"
+                className="flex min-h-11 items-center gap-2 rounded-md border border-line px-3 py-1"
               >
-                <span className="w-6 font-mono text-muted">{index + 1}.</span>
+                <span className="w-6 font-mono text-ink-2">{index + 1}.</span>
                 <MarkdownContent markdown={optionText(optionId)} inline className="flex-1" />
                 <Button
                   variant="ghost"
@@ -206,21 +208,21 @@ export function QuizBlock({
         {result !== null && (
           <div
             className={cn(
-              'mt-4 rounded-control border-l-4 p-3',
-              result ? 'border-success bg-success-soft' : 'border-danger bg-danger-soft',
+              'mt-4 rounded-md border-l-4 p-3',
+              result ? 'border-go bg-go-tint' : 'border-warn bg-warn-tint',
             )}
           >
             <p className="flex items-center gap-2 font-semibold">
               {result ? (
-                <CheckCircle2 aria-hidden className="size-5 text-success" />
+                <CheckCircle2 aria-hidden className="size-5 text-go" />
               ) : (
-                <XCircle aria-hidden className="size-5 text-danger" />
+                <XCircle aria-hidden className="size-5 text-warn" />
               )}
               {result ? 'Correct!' : 'Not quite.'}
             </p>
             <MarkdownContent markdown={quiz.explanation} className="[&_p]:my-1" />
             {!result && (
-              <p className="mt-1 text-sm text-muted">Change your answer and check again.</p>
+              <p className="mt-1 text-sm text-ink-2">Change your answer and check again.</p>
             )}
           </div>
         )}

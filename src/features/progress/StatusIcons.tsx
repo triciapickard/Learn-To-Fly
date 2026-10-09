@@ -7,7 +7,7 @@ export function LessonStatusIcon({ progress }: { progress?: LessonProgressDto })
   if (progress?.status === 'completed') {
     return (
       <span className="inline-flex shrink-0">
-        <CheckCircle2 aria-hidden className="size-5 text-success" />
+        <CheckCircle2 aria-hidden className="size-5 text-go" />
         <span className="sr-only">Completed:</span>
       </span>
     );
@@ -15,14 +15,14 @@ export function LessonStatusIcon({ progress }: { progress?: LessonProgressDto })
   if (progress) {
     return (
       <span className="inline-flex shrink-0">
-        <CircleDashed aria-hidden className="size-5 text-primary" />
+        <CircleDashed aria-hidden className="size-5 text-accent" />
         <span className="sr-only">In progress:</span>
       </span>
     );
   }
   return (
     <span className="inline-flex shrink-0">
-      <Circle aria-hidden className="size-5 text-border-strong" />
+      <Circle aria-hidden className="size-5 text-line-strong" />
       <span className="sr-only">Not started:</span>
     </span>
   );
@@ -33,7 +33,7 @@ export function ChallengeStatusIcon({ progress }: { progress?: ChallengeProgress
   if (progress) return <TierBadge tier={progress.bestTier} className="shrink-0" />;
   return (
     <span className="inline-flex shrink-0">
-      <Circle aria-hidden className="size-5 text-border-strong" />
+      <Circle aria-hidden className="size-5 text-line-strong" />
       <span className="sr-only">Not attempted:</span>
     </span>
   );

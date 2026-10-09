@@ -183,15 +183,15 @@ export default function VorCdi({ props, onQuizAnswer }: WidgetProps) {
               ['Flag', r.flag],
               ['Needle', needleText(r)],
             ].map(([k, v]) => (
-              <div key={k} className="rounded-control bg-surface-2 px-3 py-2">
-                <dt className="text-xs font-semibold tracking-wide text-muted uppercase">{k}</dt>
+              <div key={k} className="rounded-md bg-surface-sunken px-3 py-2">
+                <dt className="text-xs font-semibold tracking-wide text-ink-2 uppercase">{k}</dt>
                 <dd className="font-mono font-semibold">{v}</dd>
               </div>
             ))}
           </dl>
           {r.reverse && r.flag !== 'OFF' && (
             <p className="mt-3 flex flex-wrap items-center gap-2 text-sm">
-              <Badge variant="warning">Reverse sensing</Badge>
+              <Badge variant="caution">Reverse sensing</Badge>
               Your heading opposes the OBS course, so turning toward the needle takes you away from
               the course.
             </p>
@@ -260,7 +260,7 @@ export default function VorCdi({ props, onQuizAnswer }: WidgetProps) {
             {flying ? 'Pause' : 'Fly'}
           </Button>
         )}
-        <span className="text-sm text-muted">
+        <span className="text-sm text-ink-2">
           {TAS} KTAS, track {three(track)}°, groundspeed {Math.round(gs)} kt
         </span>
       </div>
@@ -321,7 +321,7 @@ function Instrument({ caption, children }: { caption: string; children: ReactNod
   return (
     <figure className="text-center">
       {children}
-      <figcaption className="mt-1 text-sm font-semibold text-muted">{caption}</figcaption>
+      <figcaption className="mt-1 text-sm font-semibold text-ink-2">{caption}</figcaption>
     </figure>
   );
 }
@@ -341,17 +341,12 @@ function MapView({ state, r, trail }: { state: VorState; r: Reading; trail: Poin
           cx={C}
           cy={C}
           r={nm * PX_PER_NM}
-          className="fill-none stroke-border-strong"
+          className="fill-none stroke-line-strong"
           strokeDasharray="3 5"
         />
       ))}
-      <Arrow
-        from={course.from}
-        to={course.to}
-        className="stroke-primary fill-primary"
-        width={2.5}
-      />
-      <Label x={courseLabel.x} y={courseLabel.y} className="fill-primary">
+      <Arrow from={course.from} to={course.to} className="stroke-accent fill-accent" width={2.5} />
+      <Label x={courseLabel.x} y={courseLabel.y} className="fill-accent">
         OBS {three(state.obs)}
       </Label>
       {r.distance > 1 && (
@@ -361,11 +356,11 @@ function MapView({ state, r, trail }: { state: VorState; r: Reading; trail: Poin
             y1={C}
             x2={plane.x}
             y2={plane.y}
-            className="stroke-muted"
+            className="stroke-ink-2"
             strokeWidth={1.5}
             strokeDasharray="6 4"
           />
-          <Label x={mid.x} y={mid.y - 12} className="fill-muted">
+          <Label x={mid.x} y={mid.y - 12} className="fill-ink-2">
             R-{three(r.radial)}
           </Label>
         </>
@@ -373,7 +368,7 @@ function MapView({ state, r, trail }: { state: VorState; r: Reading; trail: Poin
       {trail.length > 1 && (
         <polyline
           points={trail.map((p) => `${toScreen(p).x},${toScreen(p).y}`).join(' ')}
-          className="fill-none stroke-success"
+          className="fill-none stroke-go"
           strokeWidth={2}
           strokeDasharray="2 4"
         />
@@ -384,14 +379,14 @@ function MapView({ state, r, trail }: { state: VorState; r: Reading; trail: Poin
           const p = polar(C, C, 9, i * 60 + 30);
           return `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`;
         }).join(' ')}
-        className="fill-surface stroke-cyan"
+        className="fill-surface stroke-caution"
         strokeWidth={2}
       />
-      <circle cx={C} cy={C} r={2} className="fill-cyan" />
+      <circle cx={C} cy={C} r={2} className="fill-caution" />
       <g transform={`translate(${plane.x} ${plane.y}) rotate(${state.heading})`}>
         <path
           d="M 0 -13 L 2.5 -4 L 12 1 L 12 4 L 2.5 2 L 2 9 L 5 12 L 5 14 L 0 12.5 L -5 14 L -5 12 L -2 9 L -2.5 2 L -12 4 L -12 1 L -2.5 -4 Z"
-          className="cursor-grab fill-accent stroke-surface"
+          className="cursor-grab fill-ink stroke-surface"
           strokeWidth={1.5}
         />
       </g>
@@ -484,7 +479,7 @@ function VorIndicator({ obs, r }: { obs: number; r: Reading }) {
         cx={c}
         cy={c}
         r={112}
-        className="fill-instrument stroke-border-strong"
+        className="fill-instrument stroke-line-strong"
         strokeWidth={3}
       />
       <Card cx={c} cy={c} r={104} rotate={obs} />
@@ -524,7 +519,7 @@ function Hsi({ obs, heading, r }: { obs: number; heading: number; r: Reading }) 
         cx={c}
         cy={c}
         r={112}
-        className="fill-instrument stroke-border-strong"
+        className="fill-instrument stroke-line-strong"
         strokeWidth={3}
       />
       <Card cx={c} cy={c} r={104} rotate={heading} />

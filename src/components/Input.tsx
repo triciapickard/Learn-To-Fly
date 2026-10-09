@@ -14,7 +14,7 @@ export function Input({ className, id, ...props }: InputProps) {
       aria-describedby={field?.describedBy}
       aria-invalid={field?.invalid || undefined}
       aria-required={field?.required || undefined}
-      className={cn(controlClasses, 'min-h-11', className)}
+      className={cn(controlClasses, className)}
       {...props}
     />
   );

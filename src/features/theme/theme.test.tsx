@@ -20,12 +20,18 @@ describe('theme helpers', () => {
 });
 
 describe('ThemeToggle', () => {
-  it('switches the theme and remembers it', async () => {
+  it('is a Day / System / Night control that switches the theme and remembers it', async () => {
     renderWithProviders(<ThemeToggle />);
-    await userEvent.click(screen.getByRole('button', { name: 'Theme: System' }));
-    await userEvent.click(screen.getByRole('radio', { name: 'Dark' }));
+    const group = screen.getByRole('radiogroup', { name: 'Theme' });
+    expect(group).toBeInTheDocument();
+    expect(screen.getByRole('radio', { name: 'System' })).toBeChecked();
+    await userEvent.click(screen.getByRole('radio', { name: 'Night' }));
     await waitFor(() => expect(document.documentElement.dataset.theme).toBe('dark'));
     expect(localStorage.getItem(THEME_STORAGE_KEY)).toBe('dark');
-    expect(screen.getByRole('button', { name: 'Theme: Dark' })).toBeInTheDocument();
+    expect(screen.getByRole('radio', { name: 'Night' })).toBeChecked();
+    // The UI never says "light" or "dark".
+    expect(screen.queryByRole('radio', { name: /^(Light|Dark)$/ })).not.toBeInTheDocument();
+    await userEvent.click(screen.getByRole('radio', { name: 'Day' }));
+    await waitFor(() => expect(document.documentElement.dataset.theme).toBe('light'));
   });
 });

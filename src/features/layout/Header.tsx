@@ -12,10 +12,13 @@ import { useSaveThemePreference } from '@/features/auth/useSaveThemePreference';
 import { cn } from '@/lib/cn';
 import { PRIMARY_NAV } from './navigation';
 
+/** Nav links are quiet labels; the current section carries the 3px accent-line rule. */
 const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
   cn(
-    'flex min-h-11 items-center rounded-control px-3 font-semibold hover:bg-surface-2',
-    isActive ? 'text-primary' : 'text-text',
+    'flex min-h-11 items-center rounded-md px-3 text-sm font-medium transition-colors duration-150 hover:bg-surface-sunken hover:text-ink',
+    isActive
+      ? 'rounded-b-none text-ink shadow-[inset_0_-3px_0_var(--color-accent-line)]'
+      : 'text-ink-2',
   );
 
 export function AccountLinks({ onNavigate }: { onNavigate?: () => void }) {
@@ -35,7 +38,7 @@ export function AccountLinks({ onNavigate }: { onNavigate?: () => void }) {
   );
 }
 
-/** Global header (Section 19.2): desktop nav, mobile drawer, theme toggle, account. */
+/** Global header (Section 19.2): the fin mark and wordmark, Learn, Challenges, Reference, the ThemeToggle and account. */
 export function Header() {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
@@ -43,9 +46,9 @@ export function Header() {
   const saveTheme = useSaveThemePreference();
   const account = isLoading ? null : user ? <UserMenu user={user} /> : <AccountLinks />;
   return (
-    <header className="sticky top-0 z-30 border-b border-border bg-surface/95 backdrop-blur print:hidden">
-      <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4">
-        <Link to="/" unstyled className="rounded-control" aria-label="Learn to Fly home">
+    <header className="sticky top-0 z-30 border-b border-line bg-canvas/95 backdrop-blur print:hidden">
+      <div className="mx-auto flex h-16 max-w-page items-center gap-4 px-4">
+        <Link to="/" unstyled className="shrink-0 rounded-sm" aria-label="Learn to Fly home">
           <Logo />
         </Link>
         <nav aria-label="Main" className="ml-4 hidden md:block">
@@ -59,15 +62,15 @@ export function Header() {
             ))}
           </ul>
         </nav>
-        <div className="ml-auto flex items-center gap-2">
-          <ThemeToggle onChange={saveTheme} />
+        <div className="ml-auto flex items-center gap-3">
+          <ThemeToggle compact="phone" onChange={saveTheme} />
           <div className="hidden items-center gap-2 md:flex">{account}</div>
           <Drawer open={open} onOpenChange={setOpen}>
             <DrawerTrigger
               aria-label="Open menu"
-              className="flex size-11 items-center justify-center rounded-control hover:bg-surface-2 md:hidden"
+              className="flex size-11 items-center justify-center rounded-md text-ink hover:bg-surface-sunken md:hidden"
             >
-              <Menu aria-hidden className="size-6" />
+              <Menu aria-hidden className="size-6" strokeWidth={1.75} />
             </DrawerTrigger>
             <DrawerContent title="Menu">
               <nav aria-label="Main">
@@ -81,7 +84,7 @@ export function Header() {
                   ))}
                 </ul>
               </nav>
-              <div className="mt-6 flex flex-wrap gap-2 border-t border-border pt-6">
+              <div className="mt-6 flex flex-wrap gap-2 border-t border-line pt-6">
                 {isLoading ? null : user ? (
                   <ul className="flex w-full flex-col gap-1">
                     <li>

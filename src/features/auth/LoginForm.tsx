@@ -73,7 +73,7 @@ export function LoginForm() {
       <Button type="submit" size="lg" loading={login.isPending}>
         Log in
       </Button>
-      <p className="text-center text-muted">
+      <p className="text-center text-ink-2">
         New here? <Link to={signupHref}>Create a free account</Link>
       </p>
     </form>

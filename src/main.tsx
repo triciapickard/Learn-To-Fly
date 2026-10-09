@@ -1,5 +1,4 @@
-import '@fontsource-variable/big-shoulders-display';
-import '@fontsource-variable/inter';
+import '@fontsource-variable/instrument-sans';
 import '@fontsource-variable/jetbrains-mono';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';

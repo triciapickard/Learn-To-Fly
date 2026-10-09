@@ -1,4 +1,4 @@
-import { CircleAlert, Inbox, type LucideIcon } from 'lucide-react';
+import { Inbox, OctagonAlert, type LucideIcon } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/cn';
 import { Button } from './Button';
@@ -11,6 +11,10 @@ interface StateProps {
   className?: string;
 }
 
+/**
+ * EmptyState and ErrorState share one layout: a 32px icon, a heading-md title, one body-sm
+ * sentence in ink-2 and one action, centered inside a dashed line-strong border.
+ */
 function StateLayout({
   title,
   message,
@@ -22,20 +26,20 @@ function StateLayout({
   return (
     <div
       className={cn(
-        'flex flex-col items-center gap-3 rounded-card border border-dashed border-border px-6 py-10 text-center',
+        'flex max-w-[420px] flex-col items-center gap-2 rounded-lg border border-dashed border-line-strong px-6 py-12 text-center',
         className,
       )}
     >
-      {Icon && <Icon aria-hidden className={cn('size-10', tone)} />}
-      <p className="text-lg font-semibold">{title}</p>
-      {message && <div className="max-w-prose text-muted">{message}</div>}
+      {Icon && <Icon aria-hidden className={cn('size-8', tone)} strokeWidth={1.5} />}
+      <p className="heading-md">{title}</p>
+      {message && <div className="text-sm leading-5 text-ink-2">{message}</div>}
       {action && <div className="mt-2">{action}</div>}
     </div>
   );
 }
 
 export function EmptyState({ icon = Inbox, ...props }: StateProps) {
-  return <StateLayout icon={icon} tone="text-muted" {...props} />;
+  return <StateLayout icon={icon} tone="text-ink-2" {...props} />;
 }
 
 export interface ErrorStateProps extends Omit<StateProps, 'action'> {
@@ -49,7 +53,7 @@ export function ErrorState({
   message = 'We could not load this. Check your connection and try again.',
   onRetry,
   action,
-  icon = CircleAlert,
+  icon = OctagonAlert,
   ...props
 }: Partial<ErrorStateProps>) {
   return (
@@ -58,11 +62,11 @@ export function ErrorState({
         title={title}
         message={message}
         icon={icon}
-        tone="text-danger"
+        tone="text-warn"
         action={
           action ??
           (onRetry && (
-            <Button variant="secondary" onClick={onRetry}>
+            <Button size="sm" onClick={onRetry}>
               Try again
             </Button>
           ))

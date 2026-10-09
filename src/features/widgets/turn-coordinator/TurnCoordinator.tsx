@@ -45,9 +45,9 @@ export default function TurnCoordinator({ props, onQuizAnswer }: WidgetProps) {
   const std = standardRate(tas);
   const coordinationBadge =
     state.coordination === 'coordinated' ? (
-      <Badge variant="complete">Coordinated</Badge>
+      <Badge variant="go">Coordinated</Badge>
     ) : (
-      <Badge variant="warning">{state.coordination === 'slip' ? 'Slipping' : 'Skidding'}</Badge>
+      <Badge variant="caution">{state.coordination === 'slip' ? 'Slipping' : 'Skidding'}</Badge>
     );
 
   const description = (
@@ -142,7 +142,7 @@ export default function TurnCoordinator({ props, onQuizAnswer }: WidgetProps) {
         />
       </div>
 
-      <div className="mx-auto mt-4 max-w-xl rounded-control bg-surface-2 p-3 text-sm">
+      <div className="mx-auto mt-4 max-w-xl rounded-md bg-surface-sunken p-3 text-sm">
         <p>
           <strong>Turn rate:</strong>{' '}
           <span className="font-mono">{Math.abs(state.rate).toFixed(1)}°/s</span>
@@ -202,7 +202,7 @@ function Instrument({ caption, children }: { caption: string; children: ReactNod
   return (
     <div className="flex flex-col items-center gap-1">
       <div className="w-full max-w-[180px] min-[480px]:max-w-[220px]">{children}</div>
-      <p className="text-sm font-medium text-muted">{caption}</p>
+      <p className="text-sm font-medium text-ink-2">{caption}</p>
     </div>
   );
 }
@@ -249,10 +249,10 @@ function Slider({
         value={value}
         aria-valuetext={valueText}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="h-11 w-full cursor-pointer accent-primary"
+        className="h-11 w-full cursor-pointer accent-accent"
       />
       {ends && (
-        <div className="flex justify-between text-xs text-muted" aria-hidden>
+        <div className="flex justify-between text-xs text-ink-2" aria-hidden>
           <span>{ends[0]}</span>
           <span>{ends[1]}</span>
         </div>
@@ -299,7 +299,7 @@ function ClassicTurnCoordinator({ state }: { state: TurnState }) {
         cx={120}
         cy={120}
         r={116}
-        className="fill-instrument stroke-border-strong"
+        className="fill-instrument stroke-line-strong"
         strokeWidth={2}
       />
       <text
@@ -462,7 +462,7 @@ function G1000Slip({ state }: { state: TurnState }) {
         width={232}
         height={232}
         rx={10}
-        className="stroke-border-strong"
+        className="stroke-line-strong"
         strokeWidth={2}
         fill="none"
       />
@@ -504,7 +504,7 @@ function TopDown({ state }: { state: TurnState }) {
         width={232}
         height={232}
         rx={10}
-        className="fill-surface-2 stroke-border-strong"
+        className="fill-surface-sunken stroke-line-strong"
         strokeWidth={2}
       />
       <polyline
@@ -513,17 +513,17 @@ function TopDown({ state }: { state: TurnState }) {
           .map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`)
           .join(' ')}
         fill="none"
-        className="stroke-magenta"
+        className="stroke-caution"
         strokeWidth={3}
         strokeDasharray="7 5"
       />
-      <Arrow from={prev} to={last} className="stroke-magenta fill-magenta" width={3} />
+      <Arrow from={prev} to={last} className="stroke-caution fill-caution" width={3} />
       <line
         x1={ax}
         y1={ay}
         x2={nose.x}
         y2={nose.y}
-        className="stroke-text"
+        className="stroke-ink"
         strokeWidth={1.5}
         strokeDasharray="3 3"
       />
@@ -531,11 +531,7 @@ function TopDown({ state }: { state: TurnState }) {
         transform={`rotate(${state.yaw} ${ax} ${ay})`}
         className="motion-safe:transition-transform"
       >
-        <g
-          transform={`translate(${ax} ${ay})`}
-          className="fill-surface stroke-text"
-          strokeWidth={2}
-        >
+        <g transform={`translate(${ax} ${ay})`} className="fill-surface stroke-ink" strokeWidth={2}>
           <rect x={-50} y={-14} width={100} height={11} rx={4} />
           <rect x={-18} y={24} width={36} height={7} rx={3} />
           <path d="M -7 -34 Q 0 -42 7 -34 L 5 30 L -5 30 Z" />
@@ -548,7 +544,7 @@ function TopDown({ state }: { state: TurnState }) {
       >
         Nose
       </Label>
-      <Label x={120} y={222} className="fill-magenta">
+      <Label x={120} y={222} className="fill-caution">
         Flight path
       </Label>
     </svg>

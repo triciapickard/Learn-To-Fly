@@ -34,20 +34,17 @@ export function WidgetFrame({
 }: WidgetFrameProps) {
   return (
     <figure
-      className={cn(
-        'not-prose my-8 rounded-card border border-border bg-surface shadow-1',
-        className,
-      )}
+      className={cn('not-prose my-8 rounded-lg border border-line bg-surface shadow-1', className)}
       aria-label={`Interactive diagram: ${title}`}
     >
-      <div className="flex flex-wrap items-center gap-2 border-b border-border px-4 py-2">
+      <div className="flex flex-wrap items-center gap-2 border-b border-line px-4 py-2">
         <figcaption className="mr-auto font-semibold">{title}</figcaption>
-        {simplified && <Badge variant="info">Simplified model</Badge>}
+        {simplified && <Badge variant="accent">Simplified model</Badge>}
         {quizAvailable && onModeChange && (
           <div
             role="group"
             aria-label="Widget mode"
-            className="flex rounded-control border border-border-strong p-0.5"
+            className="flex rounded-pill bg-surface-sunken p-[3px]"
           >
             {(['explore', 'quiz'] as const).map((m) => (
               <button
@@ -56,8 +53,8 @@ export function WidgetFrame({
                 aria-pressed={mode === m}
                 onClick={() => onModeChange(m)}
                 className={cn(
-                  'min-h-9 rounded-[4px] px-3 text-sm font-semibold capitalize',
-                  mode === m ? 'bg-primary text-primary-contrast' : 'text-muted hover:text-text',
+                  'min-h-9 rounded-pill px-3 text-sm font-semibold capitalize',
+                  mode === m ? 'bg-ink text-on-ink' : 'text-ink-2 hover:text-ink',
                 )}
               >
                 {m === 'quiz' ? 'Quiz me' : 'Explore'}
@@ -72,11 +69,11 @@ export function WidgetFrame({
         )}
       </div>
       <div className="p-4">{children}</div>
-      <details className="border-t border-border px-4 py-2 text-sm">
-        <summary className="min-h-9 cursor-pointer py-2 font-medium text-muted">
+      <details className="border-t border-line px-4 py-2 text-sm">
+        <summary className="min-h-9 cursor-pointer py-2 font-medium text-ink-2">
           Describe this diagram
         </summary>
-        <div className="pb-2 text-muted [&>p+p]:mt-2">{description}</div>
+        <div className="pb-2 text-ink-2 [&>p+p]:mt-2">{description}</div>
       </details>
     </figure>
   );

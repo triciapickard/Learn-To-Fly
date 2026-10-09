@@ -9,7 +9,7 @@ const components: Components = {
     href.startsWith('/') ? (
       <Link to={href}>{children}</Link>
     ) : (
-      <a href={href} className="font-medium text-primary underline underline-offset-2">
+      <a href={href} className="font-medium text-accent underline underline-offset-2">
         {children}
       </a>
     ),
@@ -17,7 +17,7 @@ const components: Components = {
     // Wide tables scroll sideways on phones; the scroll region must be keyboard-focusable
     // (WCAG 2.1.1, axe "scrollable-region-focusable").
     <div
-      className="my-4 overflow-x-auto rounded-card border border-border"
+      className="my-4 overflow-x-auto rounded-lg border border-line"
       // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
       tabIndex={0}
       role="region"
@@ -27,11 +27,13 @@ const components: Components = {
     </div>
   ),
   th: ({ children }) => (
-    <th className="border-b-2 border-border bg-surface-2 px-3 py-2 font-semibold">{children}</th>
+    <th className="border-b-2 border-line bg-surface-sunken px-3 py-2 font-semibold">{children}</th>
   ),
-  td: ({ children }) => <td className="border-b border-border px-3 py-2 align-top">{children}</td>,
+  td: ({ children }) => <td className="border-b border-line px-3 py-2 align-top">{children}</td>,
   code: ({ children }) => (
-    <code className="rounded bg-surface-2 px-1 py-0.5 font-mono text-[0.9em]">{children}</code>
+    <code className="rounded-sm bg-surface-sunken px-1 py-0.5 font-mono text-[0.9em]">
+      {children}
+    </code>
   ),
   // Lesson headings come from heading blocks; any stray h1/h2 renders as h3.
   h1: ({ children }) => <h3>{children}</h3>,

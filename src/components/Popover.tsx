@@ -6,6 +6,7 @@ export const Popover = PopoverPrimitive.Root;
 export const PopoverTrigger = PopoverPrimitive.Trigger;
 export const PopoverClose = PopoverPrimitive.Close;
 
+/** Shares the menu surface (surface-raised, line, radius-md, shadow-2) for richer content. */
 export function PopoverContent({
   className,
   sideOffset = 8,
@@ -16,7 +17,7 @@ export function PopoverContent({
       <PopoverPrimitive.Content
         sideOffset={sideOffset}
         className={cn(
-          'z-50 w-72 max-w-[calc(100vw-2rem)] rounded-card border border-border bg-surface p-4 shadow-2',
+          'z-50 w-72 max-w-[calc(100vw-2rem)] rounded-md border border-line bg-surface-raised p-4 text-sm leading-5 shadow-2 motion-safe:animate-rise-in',
           className,
         )}
         {...props}

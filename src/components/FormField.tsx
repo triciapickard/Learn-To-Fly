@@ -1,3 +1,4 @@
+import { OctagonAlert } from 'lucide-react';
 import { createContext, useContext, useId, type ReactNode } from 'react';
 import { cn } from '@/lib/cn';
 
@@ -25,7 +26,37 @@ export interface FormFieldProps {
   children: ReactNode;
 }
 
-/** Visible label, optional hint and error message linked to the control (Section 22.1). */
+/** Hint or error line under a control (also used by Checkbox and RadioGroup). */
+export function FieldMessage({
+  id,
+  error,
+  children,
+  className,
+}: {
+  id?: string;
+  error?: boolean;
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <p
+      id={id}
+      className={cn(
+        'text-sm leading-5',
+        error ? 'flex items-center gap-1.5 font-medium text-warn' : 'text-ink-2',
+        className,
+      )}
+    >
+      {error && <OctagonAlert aria-hidden className="size-3.5 shrink-0" strokeWidth={2} />}
+      {children}
+    </p>
+  );
+}
+
+/**
+ * Label, control, then hint or error, stacked with 6px gaps. Labels are 14px/500 ink; errors
+ * are warn with a 14px octagon icon and are wired with aria-describedby and aria-invalid.
+ */
 export function FormField({
   label,
   hint,
@@ -44,31 +75,26 @@ export function FormField({
   return (
     <FormFieldContext value={{ id, describedBy, invalid: Boolean(error), required }}>
       <div className={cn('flex flex-col gap-1.5', className)}>
-        <label htmlFor={id} className="font-medium">
+        <label htmlFor={id} className="label text-ink">
           {label}
           {required && (
-            <span className="text-muted" aria-hidden>
+            <span className="font-normal text-ink-2" aria-hidden>
               {' '}
               (required)
             </span>
           )}
         </label>
-        {hint && (
-          <p id={hintId} className="text-sm text-muted">
-            {hint}
-          </p>
-        )}
         {children}
+        {hint && <FieldMessage id={hintId}>{hint}</FieldMessage>}
         {error && (
-          <p id={errorId} className="text-sm font-medium text-danger">
+          <FieldMessage id={errorId} error>
             {error}
-          </p>
+          </FieldMessage>
         )}
       </div>
     </FormFieldContext>
   );
 }
 
-export const controlClasses =
-  'w-full rounded-control border border-border-strong bg-surface px-3 py-2 text-base text-text placeholder:text-muted ' +
-  'disabled:cursor-not-allowed disabled:opacity-60 aria-invalid:border-danger aria-invalid:border-2';
+/** The shared field box: 40px, radius-md, line-strong border, focus ring with a canvas gap. */
+export const controlClasses = 'control-box';
