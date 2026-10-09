@@ -35,13 +35,13 @@ setup:
   flightPlan: null
 
 procedure:
-  - Tune the Tracy CTAF (⚠ verify the frequency on the sectional) and listen for traffic.
-  - At 10 nm — "Tracy traffic, Skyhawk One Two Three, one zero miles west, inbound for landing, Tracy."
-  - Entering the pattern — "Tracy traffic, Skyhawk One Two Three, entering forty-five for left downwind, runway two six, Tracy."
-  - On downwind — "Tracy traffic, Skyhawk One Two Three, left downwind, runway two six, Tracy."
-  - On base — "Tracy traffic, Skyhawk One Two Three, left base, runway two six, Tracy."
-  - On final — "Tracy traffic, Skyhawk One Two Three, final, runway two six, Tracy."
-  - Clear of the runway — "Tracy traffic, Skyhawk One Two Three, clear of runway two six, Tracy."
+  - Tune the Tracy CTAF, 123.075, and listen for traffic.
+  - 'At 10 nm: "Tracy traffic, Skyhawk One Two Three, one zero miles west, inbound for landing, Tracy."'
+  - 'Entering the pattern: "Tracy traffic, Skyhawk One Two Three, entering forty-five for left downwind, runway two six, Tracy."'
+  - 'On downwind: "Tracy traffic, Skyhawk One Two Three, left downwind, runway two six, Tracy."'
+  - 'On base: "Tracy traffic, Skyhawk One Two Three, left base, runway two six, Tracy."'
+  - 'On final: "Tracy traffic, Skyhawk One Two Three, final, runway two six, Tracy."'
+  - 'Clear of the runway: "Tracy traffic, Skyhawk One Two Three, clear of runway two six, Tracy."'
   - Say each call out loud, or choose the closest option in the sim's ATC window. Use the runway in use if it isn't 26.
 
 criteria:

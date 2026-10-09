@@ -8,8 +8,8 @@
 
 | Group | Items | Published / verified | Open markers |
 | --- | --- | --- | --- |
-| Lessons | 33 | 3 | 23 |
-| Challenges | 29 | 1 | 22 |
+| Lessons | 33 | 3 | 22 |
+| Challenges | 29 | 1 | 21 |
 | Reference data | 6 | 1 | 49 |
 
 Every item still needs the full protocol from v1.md Section 54 even when it has no open
@@ -370,21 +370,20 @@ file (Section 54.2).
 
 [content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md](../../content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md) · P0 · draft
 
-- [line 32](../../content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md#L32): check the Tracy CTAF on the current sectional and add it to `airports.yaml`.
-- [line 103](../../content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md#L103): check which CTAF calls the MSFS 2024 ATC window offers, and whether AI traffic announces its position.
+- [line 101](../../content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md#L101): check which CTAF calls the MSFS 2024 ATC window offers, and whether AI traffic announces its position.
 
 ### L7.3 — Towered airports and sim ATC
 
 [content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md](../../content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md) · P0 · draft
 
-- [line 37](../../content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md#L37): check the Livermore runway numbers, ATIS, ground and tower frequencies, and the parking area names in the Chart Supplement and in the sim.
-- [line 115](../../content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md#L115): check the MSFS 2024 ATC window options for VFR departures and arrivals at Livermore, and note where they differ from the scripts above.
+- [line 37](../../content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md#L37): the runway numbers, frequencies and apron name come from the Chart Supplement (effective 2026-10-01) and the FAA airport diagram, and are on the KLVK airport card. Check the sim's ATC uses the same frequencies and runway names, and what the sim calls the parking area.
+- [line 117](../../content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md#L117): check the MSFS 2024 ATC window options for VFR departures and arrivals at Livermore, and note where they differ from the scripts above.
 
 ### C7.1 — CTAF pattern at Tracy
 
 [content/challenges/c7-1-ctaf-pattern-at-tracy.yaml](../../content/challenges/c7-1-ctaf-pattern-at-tracy.yaml) · P0 · draft
 
-- [line 38](../../content/challenges/c7-1-ctaf-pattern-at-tracy.yaml#L38): Tune the Tracy CTAF (⚠ verify the frequency on the sectional) and listen for traffic.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C7.2 — Towered departure and return at Livermore
 

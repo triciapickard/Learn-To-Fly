@@ -5,7 +5,7 @@ module: m7-radio-airport-operations
 order: 2
 priority: P0
 title: Non-towered airports (CTAF)
-summary: At airports without a tower, pilots talk to each other — the standard position reports and how to join and leave the pattern safely.
+summary: 'At airports without a tower, pilots talk to each other: the standard position reports and how to join and leave the pattern safely.'
 estimatedMinutes: 20
 prerequisites: [l7-1-radio-basics-and-the-phonetic-alphabet, l4-2-the-traffic-pattern]
 objectives:
@@ -29,9 +29,7 @@ At some airports, the CTAF is also a **UNICOM**: a ground station, often the fue
 - On the **sectional**, in the airport's data block, next to the Ⓒ symbol.
 - In the **Chart Supplement** entry for the airport.
 
-:::callout{type="verify"}
-Author note: check the Tracy CTAF on the current sectional and add it to `airports.yaml`.
-:::
+Tracy's CTAF, for example, is **123.075**. The Reference section's airport cards list the CTAF for every airport in this course.
 
 :::quiz{id="l7-2-q1" type="single"}
 Where do you find an airport's CTAF?
