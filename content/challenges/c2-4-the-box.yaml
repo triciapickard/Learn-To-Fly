@@ -38,10 +38,10 @@ setup:
   flightPlan: null
 
 procedure:
-  - Start the timer. Leg 1 (2 minutes) — heading 090, climb at 80 KIAS to 3,500 ft MSL, then level off.
-  - Leg 2 (2 minutes) — standard-rate left turn to heading 360, hold 3,500 ft.
-  - Leg 3 (2 minutes) — standard-rate left turn to heading 270, descend at 90 KIAS to 3,000 ft, then level off.
-  - Leg 4 (2 minutes) — standard-rate left turn to heading 180, hold 3,000 ft. Then turn left to 090 to close the box.
+  - Start the timer. Leg 1 (2 minutes). Heading 090, climb at 80 KIAS to 3,500 ft MSL, then level off.
+  - Leg 2 (2 minutes). Standard-rate left turn to heading 360, hold 3,500 ft.
+  - Leg 3 (2 minutes). Standard-rate left turn to heading 270, descend at 90 KIAS to 3,000 ft, then level off.
+  - Leg 4 (2 minutes). Standard-rate left turn to heading 180, hold 3,000 ft. Then turn left to 090 to close the box.
   - Trim after every change. Plan the next leg while the airplane is stable.
 
 criteria:
