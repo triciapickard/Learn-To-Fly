@@ -109,7 +109,9 @@
   line-height: 20px;
   font-weight: 500;
 }
-@utility overline {
+/* The "overline" text style from tokens.json. Named eyebrow here because Tailwind already
+   ships an `overline` utility (text-decoration-line), which would draw a line above the text. */
+@utility eyebrow {
   font-size: 12px;
   line-height: 16px;
   font-weight: 600;

@@ -3,7 +3,7 @@ import { cn } from '@/lib/cn';
 import { Breadcrumbs, type Crumb } from './Breadcrumbs';
 
 /**
- * Every app page opens with a PageHeader: Breadcrumbs, an overline eyebrow, the title in
+ * Every app page opens with a PageHeader: Breadcrumbs, an eyebrow eyebrow, the title in
  * display-md (the page's only h1), an optional meta row and up to two actions. A 1px line
  * rule closes the header with space-6 above and space-12 below.
  */
@@ -34,7 +34,7 @@ export function PageHeader({
       {crumbs && <Breadcrumbs items={crumbs} />}
       <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
         <div className="flex min-w-0 flex-col gap-1.5">
-          {eyebrow && <p className="overline text-ink-2">{eyebrow}</p>}
+          {eyebrow && <p className="eyebrow text-ink-2">{eyebrow}</p>}
           <h1 className="display-md">{title}</h1>
           {description && <div className="max-w-measure text-ink-2">{description}</div>}
           {meta}

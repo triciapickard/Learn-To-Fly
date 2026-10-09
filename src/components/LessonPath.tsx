@@ -39,6 +39,12 @@ export interface LessonPathProps {
   /** Label of the current stop's accent button. Set `showStart` false to hide it. */
   startLabel?: string;
   showStart?: boolean;
+  /**
+   * Underline the stop titles like quiet links (the default). Set false where the path sits
+   * in a card whose pins and layout already read as a list of links, e.g. the landing hero:
+   * titles are then plain and underline on hover and focus only.
+   */
+  underlineTitles?: boolean;
   className?: string;
   'aria-label'?: string;
 }
@@ -55,6 +61,7 @@ export function LessonPath({
   onStart,
   startLabel = 'Start',
   showStart = true,
+  underlineTitles = true,
   className,
   'aria-label': ariaLabel = 'Lesson path',
 }: LessonPathProps) {
@@ -96,7 +103,16 @@ export function LessonPath({
                   <div className={cn('leading-6', current ? 'font-semibold' : 'font-medium')}>
                     <span className="sr-only">{stateText[stop.state]}: </span>
                     {stop.to && !locked ? (
-                      <Link to={stop.to} quiet>
+                      <Link
+                        to={stop.to}
+                        quiet={underlineTitles}
+                        unstyled={!underlineTitles}
+                        className={
+                          underlineTitles
+                            ? undefined
+                            : 'rounded-[2px] decoration-line-strong decoration-[1.5px] underline-offset-[3px] hover:underline focus-visible:underline'
+                        }
+                      >
                         {stop.title}
                       </Link>
                     ) : (
