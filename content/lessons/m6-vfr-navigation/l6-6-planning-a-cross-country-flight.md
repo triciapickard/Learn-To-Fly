@@ -5,7 +5,7 @@ module: m6-vfr-navigation
 order: 6
 priority: P0
 title: Planning a cross-country flight
-summary: Put it all together — route, altitude, nav log, fuel and a plan B.
+summary: 'Put it all together: route, altitude, nav log, fuel and a plan B.'
 estimatedMinutes: 30
 prerequisites: [l6-3-pilotage-and-dead-reckoning, l6-5-gps-navigation-with-the-g1000]
 objectives:
@@ -64,10 +64,6 @@ A **nav log** is a table with one row for each leg of the route. Fill in everyth
 | KTCY → KLVK | 4,500 | 271 | 270/15 | 0   | 271 | 13 E | 258 | 18   | 95  | 11  |     |
 
 This worked example flies Livermore → Byron → Tracy → Livermore at 110 KTAS, with the wind from Lesson 6.3. **ETE** is the estimated time en route in minutes, and **ATE** is the actual time, which you write down in flight. The whole trip is about 42 nm and 23 minutes. The example ignores the time spent climbing.
-
-:::callout{type="verify"}
-Author note: measure the courses and distances on SkyVector.
-:::
 
 ## Fuel
 

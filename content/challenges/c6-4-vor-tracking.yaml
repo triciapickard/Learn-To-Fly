@@ -24,7 +24,7 @@ setup:
     altitudeFt: 3500
     headingDeg: 360
     speedKias: 100
-    fallback: Start on the runway at Tracy, take off and climb to 3,500 ft MSL. The Manteca VOR is about 12 nm east — start from wherever you are.
+    fallback: Start on the runway at Tracy, take off and climb to 3,500 ft MSL. The Manteca VOR is about 15 nm northeast of Tracy. Start from wherever you are.
   weatherPreset: WX_LIGHT_W
   timeLocal: '10:00'
   datePreset: late-spring
@@ -36,7 +36,7 @@ setup:
   flightPlan: null
 
 procedure:
-  - Tune the Manteca VOR (⚠ verify the frequency on the sectional) into NAV1 and identify it.
+  - Tune the Manteca VOR, 116.0, into NAV1 and identify it (ECA).
   - Press the CDI softkey until the needle is green (VOR1).
   - Turn the course knob until the needle centers with a FROM flag. That's the radial you're on.
   - Set 090 and turn to an intercept heading 30–45° toward the needle.

@@ -33,7 +33,7 @@ setup:
   flightPlan: null
 
 procedure:
-  - Make sure the sim's world-map flight plan is empty — you'll enter the route in the G1000 yourself.
+  - Make sure the sim's world-map flight plan is empty. You'll enter the route in the G1000 yourself.
   - On the ground, open the FPL page and enter KLVK, KTCY, C83, KLVK. Activate the flight plan.
   - Take off and fly the legs by hand, following the magenta line.
   - When the timer tells you, use Direct-To to go straight to C83, skipping Tracy. Then continue the flight plan from C83.

@@ -8,8 +8,8 @@
 
 | Group | Items | Published / verified | Open markers |
 | --- | --- | --- | --- |
-| Lessons | 33 | 3 | 28 |
-| Challenges | 29 | 1 | 25 |
+| Lessons | 33 | 3 | 23 |
+| Challenges | 29 | 1 | 22 |
 | Reference data | 6 | 1 | 49 |
 
 Every item still needs the full protocol from v1.md Section 54 even when it has no open
@@ -294,21 +294,19 @@ file (Section 54.2).
 
 [content/lessons/m6-vfr-navigation/l6-1-reading-a-sectional-chart.md](../../content/lessons/m6-vfr-navigation/l6-1-reading-a-sectional-chart.md) · P0 · draft
 
-- [line 54](../../content/lessons/m6-vfr-navigation/l6-1-reading-a-sectional-chart.md#L54): check each airport symbol against the current Aeronautical Chart User's Guide.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### L6.2 — Airspace
 
 [content/lessons/m6-vfr-navigation/l6-2-airspace.md](../../content/lessons/m6-vfr-navigation/l6-2-airspace.md) · P0 · draft
 
-- [line 74](../../content/lessons/m6-vfr-navigation/l6-2-airspace.md#L74): check the cross-section against the current San Francisco TAC. The data is marked unverified (D-19).
-- [line 112](../../content/lessons/m6-vfr-navigation/l6-2-airspace.md#L112): check this simplified table against the current text of 14 CFR 91.155.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### L6.3 — Pilotage and dead reckoning
 
 [content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md](../../content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md) · P0 · draft
 
-- [line 60](../../content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md#L60): read the isogonic line on the current San Francisco sectional and update the 13° figure if it has changed.
-- [line 117](../../content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md#L117): measure the course and distance on SkyVector and check that the checkpoints are charted and visible in the sim.
+- [line 113](../../content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md#L113): the true course (091°) and distance (18 nm) were recomputed from the FAA airport coordinates on 2026-10-09 and stand. Check that I-580, the Altamont Pass wind farms and the town of Tracy are recognizable from 3,500 ft in the sim (L0.3 found the turbines may be missing from the scenery).
 
 ### L6.4 — VOR navigation
 
@@ -326,36 +324,33 @@ file (Section 54.2).
 
 [content/lessons/m6-vfr-navigation/l6-6-planning-a-cross-country-flight.md](../../content/lessons/m6-vfr-navigation/l6-6-planning-a-cross-country-flight.md) · P0 · draft
 
-- [line 68](../../content/lessons/m6-vfr-navigation/l6-6-planning-a-cross-country-flight.md#L68): measure the courses and distances on SkyVector.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C6.1 — Landmark hunt
 
 [content/challenges/c6-1-landmark-hunt.yaml](../../content/challenges/c6-1-landmark-hunt.yaml) · P0 · draft
 
 - [line 22](../../content/challenges/c6-1-landmark-hunt.yaml#L22): runway: 25R — ⚠ verify the runway name in the sim
-- [line 35](../../content/challenges/c6-1-landmark-hunt.yaml#L35): Before the flight, find these on the San Francisco sectional — Lake Del Valle, the Altamont Pass wind farms, the I-580/I-680 interchange, Mount Diablo, Calaveras Reservoir and San Antonio Reservoir (⚠ verify each is charted and visible in the sim).
+- [line 35](../../content/challenges/c6-1-landmark-hunt.yaml#L35): Before the flight, find these six on the San Francisco sectional. Lake Del Valle, the Altamont Pass wind farms, the I-580/I-680 interchange, Mount Diablo, Calaveras Reservoir and San Antonio Reservoir (⚠ verify each is visible in the sim; L0.3 found the wind turbines may be missing).
 
 ### C6.2 — Pilotage to Tracy
 
 [content/challenges/c6-2-pilotage-to-tracy.yaml](../../content/challenges/c6-2-pilotage-to-tracy.yaml) · P0 · draft
 
 - [line 23](../../content/challenges/c6-2-pilotage-to-tracy.yaml#L23): runway: 25R — ⚠ verify the runway name in the sim
-- [line 36](../../content/challenges/c6-2-pilotage-to-tracy.yaml#L36): Plan the route with checkpoints — Altamont Pass, I-580, the California Aqueduct (⚠ verify) and the town of Tracy. Fill in the heading, time and fuel on your nav log.
+- [line 36](../../content/challenges/c6-2-pilotage-to-tracy.yaml#L36): Plan the route with these checkpoints in order. Altamont Pass, I-580, the California Aqueduct (⚠ verify the aqueduct is visible in the sim) and the town of Tracy. Fill in the heading, time and fuel on your nav log.
 
 ### C6.3 — Dead reckoning to Half Moon Bay
 
 [content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml](../../content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml) · P0 · draft
 
 - [line 23](../../content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml#L23): runway: '31' — ⚠ verify the runway in use
-- [line 38](../../content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml#L38): Depart Palo Alto (⚠ verify the published departure procedure) and climb to 2,500–3,500 ft, staying below the Class B floor (⚠ check the floors and terrain on the TAC).
-- [line 104](../../content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml#L104): prompt: With the brief's wind, the reference answer is a magnetic heading of about 266° at a groundspeed of about 95 kt (⚠ verify). How did your plan and your actual groundspeed compare, and why?
 
 ### C6.4 — VOR tracking
 
 [content/challenges/c6-4-vor-tracking.yaml](../../content/challenges/c6-4-vor-tracking.yaml) · P0 · draft
 
 - [line 23](../../content/challenges/c6-4-vor-tracking.yaml#L23): position: 10 nm south of the Manteca VOR (ECA), over the Central Valley — ⚠ verify ECA is in the sim; south keeps you clear of the Stockton Class C
-- [line 39](../../content/challenges/c6-4-vor-tracking.yaml#L39): Tune the Manteca VOR (⚠ verify the frequency on the sectional) into NAV1 and identify it.
 
 ### C6.5 — G1000 flight plan
 

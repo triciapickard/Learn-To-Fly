@@ -32,7 +32,7 @@ setup:
   flightPlan: null
 
 procedure:
-  - Before the flight, find these on the San Francisco sectional — Lake Del Valle, the Altamont Pass wind farms, the I-580/I-680 interchange, Mount Diablo, Calaveras Reservoir and San Antonio Reservoir (⚠ verify each is charted and visible in the sim).
+  - Before the flight, find these six on the San Francisco sectional. Lake Del Valle, the Altamont Pass wind farms, the I-580/I-680 interchange, Mount Diablo, Calaveras Reservoir and San Antonio Reservoir (⚠ verify each is visible in the sim; L0.3 found the wind turbines may be missing).
   - Put the EFB map away, and set the MFD to its widest map range or to the engine page, so the map doesn't do the work for you.
   - Take off and fly a loop at 3,500 ft MSL that passes each landmark. Stay clear of the Oakland Class C and the San Francisco Class B.
   - For each landmark, note the time you passed it and its bearing from you.

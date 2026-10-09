@@ -5,7 +5,7 @@ module: m6-vfr-navigation
 order: 2
 priority: P0
 title: Airspace
-summary: Classes B, C, D, E and G — how to spot them on a chart, what you need to enter each, and how to plan around them.
+summary: 'Classes B, C, D, E and G: how to spot them on a chart, what you need to enter each, and how to plan around them.'
 estimatedMinutes: 25
 prerequisites: [l6-1-reading-a-sectional-chart]
 objectives:
@@ -71,10 +71,6 @@ This cross-section runs from Half Moon Bay on the coast to Tracy in the Central 
 
 ::widget{name="airspace-profile" mode="explore"}
 
-:::callout{type="verify"}
-Author note: check the cross-section against the current San Francisco TAC. The data is marked unverified (D-19).
-:::
-
 ## Reading Class B shelves
 
 Class B looks like an **upside-down wedding cake**: small at the bottom, getting wider with height. Each shelf is labeled with its ceiling over its floor, in hundreds of feet MSL.
@@ -108,10 +104,6 @@ To fly VFR, you need a minimum visibility and distance from clouds. This is a si
 | Class G (day, low down) | 1 sm       | Clear of clouds                                   |
 
 Class G has more exceptions than this table shows. For the full rules, read 14 CFR 91.155.
-
-:::callout{type="verify"}
-Author note: check this simplified table against the current text of 14 CFR 91.155.
-:::
 
 ## Special use airspace
 
