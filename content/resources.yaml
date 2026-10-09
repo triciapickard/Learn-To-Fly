@@ -750,7 +750,7 @@ resources:
   - slug: 1800wxbrief
     title: 1800wxBrief
     publisher: Leidos Flight Service
-    url: https://www.1800wxbrief.com
+    url: https://www.1800wxbrief.com/Website/
     type: tool
     topics:
       - weather
