@@ -21,7 +21,7 @@ setup:
   startDetails:
     position: Over open valley, 5 nm east of KLVK
     altitudeFt: 4000
-    headingDeg: 320 # ⚠ verify the heading that points at Mt Diablo from here
+    headingDeg: 310 # about 308° magnetic from 5 nm east of KLVK (bearing 321° true, 13° E variation)
     speedKias: 95
     fallback: Start on the runway at KLVK, take off and climb east to 4,000 ft MSL, then turn toward Mt Diablo.
   weatherPreset: WX_CALM

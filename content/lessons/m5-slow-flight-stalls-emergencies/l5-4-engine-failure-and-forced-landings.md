@@ -5,11 +5,11 @@ module: m5-slow-flight-stalls-emergencies
 order: 4
 priority: P0
 title: Engine failure and forced landings
-summary: If the engine quits, fly the airplane first — best glide, best field, checklist, declare, execute.
+summary: 'If the engine quits, fly the airplane first: best glide, best field, checklist, declare, execute.'
 estimatedMinutes: 20
 prerequisites: [l5-2-stalls-power-off-and-power-on]
 objectives:
-  - Apply the ABCDE flow — Airspeed, Best field, Checklist, Declare, Execute.
+  - Apply the ABCDE flow (Airspeed, Best field, Checklist, Declare, Execute).
   - Estimate how far you can glide.
   - Fly to a landable field and set up an approach using key points.
 challenges: [c5-5-engine-failure]
@@ -57,7 +57,7 @@ Pick somewhere to land that you can definitely reach. A good field is:
 A planning figure: the Skyhawk glides about **1.5 nm for every 1,000 ft** above the ground. Pick a field well inside that range, and turn toward it straight away.
 
 :::callout{type="verify"}
-Author note: check the glide figure against the POH glide ratio ({{aircraft.glideRatio}}) and in the sim.
+Author note: the POH maximum glide chart (Figure 3-1: 68 KIAS, flaps up, propeller windmilling, zero wind) gives about 1.5 nm per 1,000 ft, so the figure stands ({{aircraft.glideRatio}}). Check the sim's Skyhawk glides about that far: from 3,000 ft above the ground at 68 KIAS it should cover roughly 4.5 nm in still air.
 :::
 
 ## C: Checklist

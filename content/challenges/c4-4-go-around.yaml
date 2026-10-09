@@ -32,10 +32,10 @@ setup:
   flightPlan: null
 
 procedure:
-  - Take off and fly the left pattern for runway 25R.
+  - Take off and fly the right pattern for runway 25R (its pattern is on the north side of the field).
   - On short final, at about 200 ft AGL, go around as if the runway were blocked.
   - Full power, pitch for the climb, flaps 20. With a positive climb, flaps 10, then flaps up at a safe altitude and speed.
-  - Side-step to the right of the runway, rejoin the pattern on crosswind and fly a second pattern.
+  - Side-step slightly to one side of the runway so you can see any traffic departing below you, rejoin the pattern on crosswind and fly a second pattern.
   - Land from the second approach.
 
 criteria:
@@ -79,7 +79,7 @@ commonMistakes:
   - Pitching too high, so the stall horn sounds.
 
 tips:
-  - Say the sequence out loud as you fly it — "power, attitude, flaps 20".
+  - 'Say the sequence out loud as you fly it: "power, attitude, flaps 20".'
 
 debriefQuestions:
   - id: altitude-lost

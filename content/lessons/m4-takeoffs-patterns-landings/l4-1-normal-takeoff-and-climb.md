@@ -38,7 +38,7 @@ Author note: check the lined-up sight picture from the MSFS 2024 default cockpit
 
 ## Right rudder
 
-As the airplane accelerates at full power, it wants to turn **left**. The engine's torque, the spiraling propeller slipstream and P-factor all push the nose left (Lesson 2.5, a bonus lesson, explains why). Hold the centerline with **right rudder**, adding more as the speed builds.
+As the airplane accelerates at full power, it wants to turn **left**. The engine's torque, the spiraling propeller slipstream and P-factor all push the nose left (the Go deeper links explain why). Hold the centerline with **right rudder**, adding more as the speed builds.
 
 :::quiz{id="l4-1-q1" type="single"}
 Which rudder do you usually need during the takeoff roll?

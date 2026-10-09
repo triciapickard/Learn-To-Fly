@@ -23,12 +23,12 @@ simVersion: null
 
 Pilots fly by numbers. A **V-speed** is a named airspeed with a job: the speed to lift the nose on takeoff, the speed that climbs fastest, the speed to glide farthest if the engine stops.
 
-The "V" comes from "velocity", and the letters after it say what the speed is for. You will see them written as Vy or V_Y. They are always **indicated airspeed in knots (KIAS)** — the number on your airspeed indicator — so you never need to calculate them in flight.
+The "V" comes from "velocity", and the letters after it say what the speed is for. You will see them written as Vy or V_Y. They are always **indicated airspeed in knots (KIAS)**, the number on your airspeed indicator, so you never need to calculate them in flight.
 
 You do not need to memorize them all today. Learn the four you will use on every flight first: rotate at {{vspeed.vr}}, climb at {{vspeed.vy}}, glide at {{vspeed.vg}} and approach at about {{vspeed.approach}}.
 
 :::callout{type="verify"}
-Author note: check every speed in this lesson against the MSFS 2024 in-sim checklist for the G1000 Skyhawk before publishing (Section 54).
+Author note: every speed here comes from `aircraft.yaml`, checked against the 172S POH on 2026-10-09. Compare them with the speeds in the sim's EFB checklist (rotate 55, climb 70–80 then 74, approach 65–75 flaps up and 60–70 full flaps, go-around 60). If the sim's checklist differs, keep the POH number and add a "Sim vs reality" callout (Section 54.1).
 :::
 
 ## The Skyhawk's key speeds
@@ -45,7 +45,7 @@ Author note: check every speed in this lesson against the MSFS 2024 in-sim check
 | V_NO    | Maximum structural cruising speed (smooth air above this) | {{vspeed.vno}} |
 | V_NE    | Never exceed                                              | {{vspeed.vne}} |
 
-A memory hook: **X is for eXtra steep** (best angle), **Y is for Yes, climb fast** (best rate). You rotate at 55, climb at 74 and glide at 68.
+A memory hook: **X is for eXtra steep** (best angle), **Y is for Yes, climb fast** (best rate). You rotate at {{vspeed.vr}}, climb at {{vspeed.vy}} and glide at {{vspeed.vg}}.
 
 :::quiz{id="l1-4-q1" type="single"}
 What is Vy, the best rate of climb speed, in the Cessna 172S?
@@ -105,7 +105,7 @@ Say the speeds out loud on every takeoff: "Airspeed alive… 55, rotate." Callin
 
 ## Maneuvering speed changes with weight
 
-**Maneuvering speed (Va)** is the fastest speed at which you can make a full, abrupt control movement — or fly through a strong gust — without overstressing the airplane. The wing stalls before the structure is overloaded.
+**Maneuvering speed (Va)** is the fastest speed at which you can make a full, abrupt control movement (or fly through a strong gust) without overstressing the airplane. The wing stalls before the structure is overloaded.
 
 Unlike most V-speeds, Va gets **lower as the airplane gets lighter**. A lighter airplane is pushed around more easily by the same gust, so it reaches its load limit at a lower speed.
 
@@ -115,11 +115,11 @@ Unlike most V-speeds, Va gets **lower as the airplane gets lighter**. A lighter 
 | 2,200 lb           | 98 KIAS           |
 | 1,900 lb           | 90 KIAS           |
 
-In turbulence, slow down to below Va for your weight. Solo with 75% fuel, the Skyhawk weighs roughly 2,100–2,200 lb, so use about 95 KIAS.
+In turbulence, slow down to below Va for your weight. Solo with 75% fuel, the Skyhawk weighs roughly 2,100 lb, so use about 95 KIAS.
 
 ## Why professional pilots use checklists
 
-In 1935 Boeing's new Model 299 bomber crashed on takeoff during an evaluation flight. The experienced crew had forgotten to release the control lock. The airplane was not too hard to fly — it was too complex to fly from memory. The response was a simple card of steps for each phase of flight: the pilot's checklist.
+In 1935 Boeing's new Model 299 bomber crashed on takeoff during an evaluation flight. The experienced crew had forgotten to release the control lock. The airplane was not too hard to fly. It was too complex to fly from memory. The response was a simple card of steps for each phase of flight: the pilot's checklist.
 
 Checklists are used in two ways:
 

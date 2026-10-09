@@ -35,7 +35,7 @@ setup:
 procedure:
   - Plan the flight. Measure the true course and distance, then use the wind triangle with the winds aloft in the brief (270° at 15 kt at 3,000 ft) and a cruise of 110 KTAS to work out the WCA, magnetic heading, groundspeed and time.
   - Turn off the GPS maps and put the EFB map away.
-  - Depart Palo Alto (⚠ verify the published departure procedure) and climb to 2,500–3,500 ft, staying below the Class B floor (⚠ check the floors and terrain on the TAC).
+  - Depart Palo Alto. From runway 31 the Chart Supplement asks for a 10° right turn after takeoff until the Dumbarton Bridge, then turn west. Climb to 2,500 ft at first, because the Class B floor is 3,000 ft MSL for a stretch just west of Palo Alto and the San Carlos Class D runs up to 2,000 ft under your route. Past Crystal Springs Reservoir the floor is 4,000 ft, so climb to 3,500 ft to cross the ridge with 1,000 ft to spare.
   - Fly your computed heading. Use Crystal Springs Reservoir to check your position.
   - Cross the ridge, descend to Half Moon Bay's pattern altitude, and join the pattern on the CTAF.
 
@@ -101,4 +101,4 @@ tips:
 
 debriefQuestions:
   - id: groundspeed
-    prompt: With the brief's wind, the reference answer is a magnetic heading of about 266° at a groundspeed of about 95 kt (⚠ verify). How did your plan and your actual groundspeed compare, and why?
+    prompt: With the brief's wind, the reference answer is a magnetic heading of about 266° at a groundspeed of about 95 kt (true course 280°, 18.6 nm, variation 13° east). How did your plan and your actual groundspeed compare, and why?

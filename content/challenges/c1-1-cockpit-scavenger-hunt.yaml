@@ -36,22 +36,22 @@ setup:
   flightPlan: null
 
 procedure:
-  - Master switch (BAT and ALT) — turn it on.
-  - Avionics master — turn it on and watch the screens start.
-  - Fuel selector — set it to BOTH.
-  - Mixture — find it, but don't move it to rich yet.
-  - Throttle — find it and move it a little.
-  - Ignition switch — find the OFF, R, L, BOTH and START positions (don't start the engine).
-  - Flap switch — lower and raise the flaps and watch the flap indicator.
-  - Elevator trim — move it and find the trim indicator.
-  - Parking brake — find it and check it is set.
-  - PFD airspeed tape — find the colored V-speed bands.
-  - Altimeter setting (BARO) — set 29.92.
-  - Heading bug — move it with the HDG knob.
-  - COM1 — tune 123.45 in standby and swap it to active.
-  - Transponder — find the code 1200 and the ALT mode.
-  - EIS — find the fuel quantity and fuel flow.
-  - Standby instruments and the magnetic compass — find them.
+  - Master switch (BAT and ALT). Turn it on.
+  - Avionics master. Turn it on and watch the screens start.
+  - Fuel selector. Set it to BOTH.
+  - Mixture. Find it, but don't move it to rich yet.
+  - Throttle. Find it and move it a little.
+  - Ignition switch. Find the OFF, R, L, BOTH and START positions (don't start the engine).
+  - Flap switch. Lower and raise the flaps and watch the flap indicator.
+  - Elevator trim. Move it and find the trim indicator.
+  - Parking brake. Find it and check it is set.
+  - PFD airspeed tape. Find the colored V-speed bands.
+  - Altimeter setting (BARO). Set 29.92.
+  - Heading bug. Move it with the HDG knob.
+  - COM1. Tune 123.45 in standby and swap it to active.
+  - Transponder. Find the code 1200 and the ALT mode.
+  - EIS. Find the fuel quantity and fuel flow.
+  - Standby instruments and the magnetic compass. Find them.
   - Return every switch you moved to its cold-and-dark position.
 
 criteria:
@@ -85,7 +85,7 @@ randomEvents: []
 
 commonMistakes:
   - Confusing the avionics master with the master switch.
-  - Moving the mixture out of idle cut-off. On some setups this starts fuel flow — harmless on the ground, but put it back.
+  - Moving the mixture out of idle cut-off. On some setups this starts fuel flow. It's harmless on the ground, but put it back.
 
 tips:
   - Zoom the camera toward each area of the panel.

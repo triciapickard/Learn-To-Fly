@@ -12,7 +12,7 @@ lastVerifiedAt: null # set when verified in the sim (Section 54)
 simVersion: null
 
 goal: >
-  A "checkride" around Livermore — the core maneuvers, in order, in one continuous flight
+  A "checkride" around Livermore: the core maneuvers, in order, in one continuous flight
   from a cold-and-dark start to shutdown.
 
 setup:
@@ -36,17 +36,17 @@ procedure:
   - Start the timer. Cold-and-dark start, using the checklists.
   - Taxi, run-up and takeoff briefing.
   - Normal takeoff and departure to the practice area east of Livermore.
-  - Steep turns — 360° left, then 360° right, at 45° of bank.
+  - Steep turns, 360° left then 360° right, at 45° of bank.
   - Slow flight, including a gentle turn, then recover.
   - Power-off stall and recovery.
-  - Engine failure — when the page beeps, set the mixture to idle cut-off, fly the ABCDE flow and glide toward a field. At 500 ft above the ground, set the mixture rich, add power and climb away. If the beep comes during another maneuver, finish that maneuver first.
+  - Engine failure. When the page beeps, set the mixture to idle cut-off, fly the ABCDE flow and glide toward a field. At 500 ft above the ground, set the mixture rich, add power and climb away. If the beep comes during another maneuver, finish that maneuver first.
   - Return to Livermore with ATC and join the pattern as instructed.
   - Normal landing. If the page has told you to go around, go around once from short final and land from the second approach.
   - Taxi to parking and shut down.
 
 criteria:
   - id: ground-ops
-    label: Ground operations — cold-and-dark start, taxi, run-up, briefing and shutdown, with the checklists
+    label: Ground operations (cold-and-dark start, taxi, run-up, briefing and shutdown, with the checklists)
     kind: tiered
     tiers:
       gold: Every item, in order
@@ -131,13 +131,13 @@ randomEvents:
     label: Engine failure
     minSeconds: 1200
     maxSeconds: 1800
-    message: Examiner — "Simulated engine failure." Finish the maneuver you're on if you're mid-maneuver, then set the mixture to idle cut-off and fly the ABCDE flow. Recover at 500 ft above the ground.
+    message: 'Examiner: "Simulated engine failure." Finish the maneuver you''re on if you''re mid-maneuver, then set the mixture to idle cut-off and fly the ABCDE flow. Recover at 500 ft above the ground.'
   - id: go-around
     label: Go-around
     minSeconds: 2100
     maxSeconds: 2700
     chance: 0.5
-    message: Examiner — "On your approach to Livermore, go around once from short final, then land from the second approach."
+    message: 'Examiner: "On your approach to Livermore, go around once from short final, then land from the second approach."'
 
 commonMistakes:
   - Rushing the checklists at the start because the flight feels long.

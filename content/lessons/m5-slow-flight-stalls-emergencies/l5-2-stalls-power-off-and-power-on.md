@@ -5,11 +5,11 @@ module: m5-slow-flight-stalls-emergencies
 order: 2
 priority: P0
 title: 'Stalls: power-off and power-on'
-summary: Recognize a stall and recover from it — reduce the angle of attack first, every time.
+summary: Recognize a stall and recover from it by reducing the angle of attack first, every time.
 estimatedMinutes: 20
 prerequisites: [l5-1-slow-flight]
 objectives:
-  - Recognize the signs of a stall — horn, buffet, soft controls and the nose dropping.
+  - Recognize the signs of a stall (horn, buffet, soft controls and the nose dropping).
   - Recover using the recovery sequence, reducing the angle of attack first.
   - Explain when power-off and power-on stalls happen in real flying.
 challenges: [c5-2-power-off-stall, c5-3-power-on-stall]
@@ -41,7 +41,7 @@ MSFS shows the buffet as a camera shake and plays the stall horn, but you don't 
 
 ## The recovery sequence
 
-This is the FAA's stall recovery template, in short:
+This is the FAA's stall recovery template (Airplane Flying Handbook, chapter 5), in short:
 
 1. **Autopilot off**, if it's on.
 2. **Pitch nose down** to reduce the angle of attack. This is what actually ends the stall.
@@ -50,11 +50,7 @@ This is the FAA's stall recovery template, in short:
 5. **Return to the desired flight path.** Climb away, and raise the flaps in stages.
 
 :::callout{type="safety"}
-Reduce angle of attack — always the first step. Adding power without lowering the nose can keep the wing stalled.
-:::
-
-:::callout{type="verify"}
-Author note: check this sequence against the current wording in the Airplane Flying Handbook, chapter 5.
+Reduce the angle of attack. It's always the first step. Adding power without lowering the nose can keep the wing stalled.
 :::
 
 :::quiz{id="l5-2-q1" type="single"}

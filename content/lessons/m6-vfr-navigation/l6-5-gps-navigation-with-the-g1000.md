@@ -5,7 +5,7 @@ module: m6-vfr-navigation
 order: 5
 priority: P0
 title: GPS navigation with the G1000
-summary: Direct-To, flight plans and the Nearest page — and why GPS doesn't replace looking outside.
+summary: Direct-To, flight plans and the Nearest page, and why GPS doesn't replace looking outside.
 estimatedMinutes: 25
 prerequisites: [l6-4-vor-navigation]
 objectives:

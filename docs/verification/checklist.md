@@ -8,8 +8,8 @@
 
 | Group | Items | Published / verified | Open markers |
 | --- | --- | --- | --- |
-| Lessons | 33 | 3 | 32 |
-| Challenges | 29 | 1 | 30 |
+| Lessons | 33 | 3 | 22 |
+| Challenges | 29 | 1 | 20 |
 | Reference data | 6 | 1 | 49 |
 
 Every item still needs the full protocol from v1.md Section 54 even when it has no open
@@ -56,7 +56,7 @@ file (Section 54.2).
 
 [content/lessons/m1-meet-the-skyhawk/l1-2-the-cockpit-g1000-pfd-and-mfd.md](../../content/lessons/m1-meet-the-skyhawk/l1-2-the-cockpit-g1000-pfd-and-mfd.md) · P0 · draft
 
-- [line 98](../../content/lessons/m1-meet-the-skyhawk/l1-2-the-cockpit-g1000-pfd-and-mfd.md#L98): check which knob sets the altimeter setting in the MSFS 2024 G1000 NXi (on the real NXi it's on the CRS/BARO knob) and update this table.
+- [line 98](../../content/lessons/m1-meet-the-skyhawk/l1-2-the-cockpit-g1000-pfd-and-mfd.md#L98): on the real G1000 NXi the altimeter setting is on the large outer ring of the CRS/BARO dual knob on the PFD bezel (Garmin G1000 NXi Pilot's Guide, PFD section). Check the sim's bezel labels the same knob CRS/BARO and that turning the outer ring changes the BARO box.
 
 ### L1.3 — Engine, fuel and electrical systems
 
@@ -68,7 +68,7 @@ file (Section 54.2).
 
 [content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md) · P0 · draft
 
-- [line 30](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L30): check every speed in this lesson against the MSFS 2024 in-sim checklist for the G1000 Skyhawk before publishing (Section 54).
+- [line 30](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L30): every speed here comes from `aircraft.yaml`, checked against the 172S POH on 2026-10-09. Compare them with the speeds in the sim's EFB checklist (rotate 55, climb 70–80 then 74, approach 65–75 flaps up and 60–70 full flaps, go-around 60). If the sim's checklist differs, keep the POH number and add a "Sim vs reality" callout (Section 54.1).
 - [line 154](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md#L154): the in-sim checklist is in the EFB (checked in 1.8.16.0). Check whether it can auto-complete items or highlight controls, and where that option is set, then update this section and its callout. Lesson 0.2 doesn't cover it.
 
 ### C1.1 — Cockpit scavenger hunt
@@ -89,7 +89,7 @@ file (Section 54.2).
 
 [content/lessons/m2-fundamentals/l2-2-attitude-flying-and-trim.md](../../content/lessons/m2-fundamentals/l2-2-attitude-flying-and-trim.md) · P0 · draft
 
-- [line 36](../../content/lessons/m2-fundamentals/l2-2-attitude-flying-and-trim.md#L36): add a screenshot of the level-cruise sight picture from the default cockpit view (Section 49.5), and check that 2,300 RPM gives about 100–105 KIAS in level flight.
+- [line 36](../../content/lessons/m2-fundamentals/l2-2-attitude-flying-and-trim.md#L36): add a screenshot of the level-cruise sight picture from the default cockpit view (Section 49.5). L0.3 (verified in 1.8.16.0) found about 100 knots at 2,300 RPM; confirm 100–105 KIAS at C2.1's weight and 3,500 ft and adjust the numbers here and in C2.1 if needed.
 
 ### L2.3 — Climbs and descents
 
@@ -134,34 +134,33 @@ file (Section 54.2).
 [content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md](../../content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md) · P0 · draft
 
 - [line 34](../../content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md#L34): describe MSFS 2024's walkaround features for the Skyhawk (which items it models, such as the pitot cover, chocks and fuel sampling) after checking them in the sim.
-- [line 69](../../content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md#L69): check the exact start sequence (mixture position, auxiliary pump use, throttle setting) against the MSFS 2024 in-sim checklist for the G1000 Skyhawk, and the 30-second oil pressure rule.
+- [line 69](../../content/lessons/m3-ground-operations/l3-1-preflight-and-engine-start.md#L69): the sequence above is the POH's (Section 4, Starting Engine: throttle ¼ inch, mixture idle cut-off, prime with the pump, START, mixture to rich; oil pressure in the green within 30 to 60 seconds). Check the sim's EFB checklist against it, and check the sim engine actually starts this way: does priming with the pump do anything, and does it fire with the mixture at idle cut-off?
 
 ### L3.2 — Taxiing, signs and markings
 
 [content/lessons/m3-ground-operations/l3-2-taxiing-signs-and-markings.md](../../content/lessons/m3-ground-operations/l3-2-taxiing-signs-and-markings.md) · P0 · draft
 
-- [line 117](../../content/lessons/m3-ground-operations/l3-2-taxiing-signs-and-markings.md#L117): check the current KLVK airport diagram against the MSFS 2024 layout and add the expected taxiway sequence from the main ramp to the 25R run-up area.
+- [line 119](../../content/lessons/m3-ground-operations/l3-2-taxiing-signs-and-markings.md#L119): the apron and taxiway names above come from the FAA airport diagram for LVK (01 Oct 2026 cycle). Check the sim's KLVK layout matches it (parking on the northwest apron, taxiway A along the north side, a run-up pad at the 25R end), note the sim's parking spot name, and then write the exact taxiway sequence from that spot into this section and C3.2.
 
 ### L3.3 — Run-up, before takeoff, and after landing
 
 [content/lessons/m3-ground-operations/l3-3-run-up-before-takeoff-and-after-landing.md](../../content/lessons/m3-ground-operations/l3-3-run-up-before-takeoff-and-after-landing.md) · P0 · draft
 
-- [line 39](../../content/lessons/m3-ground-operations/l3-3-run-up-before-takeoff-and-after-landing.md#L39): check the run-up RPM and magneto drop limits against the MSFS 2024 in-sim checklist (commonly 1,800 RPM, a drop of no more than 150 RPM on each magneto, and no more than 50 RPM difference between them).
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C3.1 — Cold and dark to running
 
 [content/challenges/c3-1-cold-and-dark-to-running.yaml](../../content/challenges/c3-1-cold-and-dark-to-running.yaml) · P0 · draft
 
 - [line 22](../../content/challenges/c3-1-cold-and-dark-to-running.yaml#L22): parking: Main ramp — ⚠ verify the parking spot name in the sim
-- [line 36](../../content/challenges/c3-1-cold-and-dark-to-running.yaml#L36): Complete "Before starting engine" with a left-to-right flow, then verify with the checklist.
-- [line 91](../../content/challenges/c3-1-cold-and-dark-to-running.yaml#L91): Do a flow left to right across the panel, then verify with the checklist.
 
 ### C3.2 — Taxi to the runway at KLVK
 
 [content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml](../../content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml) · P0 · draft
 
-- [line 23](../../content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml#L23): parking: Main ramp — ⚠ verify the parking spot name in the sim
+- [line 23](../../content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml#L23): parking: Main ramp (the northwest apron, by the FBO) — ⚠ verify the parking spot name in the sim
 - [line 24](../../content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml#L24): runway: 25R — ⚠ verify the runway name in the sim
+- [line 37](../../content/challenges/c3-2-taxi-to-the-runway-at-klvk.yaml#L37): Open the KLVK airport diagram (FAA Terminal Procedures, see Go deeper in Lesson 3.2). Plan your route from the northwest apron to the run-up area for runway 25R. On the FAA diagram it is taxiway Alfa east along the north side of runway 7L/25R, with no runway to cross. ⚠ verify the sim's parking spot and taxiway signs match the diagram, then write the exact sequence here.
 
 ### C3.3 — Run-up
 
@@ -174,7 +173,7 @@ file (Section 54.2).
 [content/challenges/c3-4-after-landing-and-shutdown.yaml](../../content/challenges/c3-4-after-landing-and-shutdown.yaml) · P0 · draft
 
 - [line 23](../../content/challenges/c3-4-after-landing-and-shutdown.yaml#L23): runway: 25R — ⚠ verify the runway name in the sim
-- [line 38](../../content/challenges/c3-4-after-landing-and-shutdown.yaml#L38): After-landing items — flaps up, transponder to standby (⚠ verify the G1000 mode name), lights as needed.
+- [line 38](../../content/challenges/c3-4-after-landing-and-shutdown.yaml#L38): After-landing items. Flaps up, transponder to GND or standby (⚠ verify which modes the sim's XPDR softkeys offer), lights as needed.
 
 ## M4 — Takeoffs, patterns and landings
 
@@ -188,34 +187,31 @@ file (Section 54.2).
 
 [content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md](../../content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md) · P0 · draft
 
-- [line 45](../../content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md#L45): check the pattern altitude and traffic direction for each KLVK and KTCY runway in the current Chart Supplement, and add them to `airports.yaml`.
-- [line 75](../../content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md#L75): fly these settings in the sim at C4.2's weight and adjust (Section 8.5).
+- [line 72](../../content/lessons/m4-takeoffs-patterns-landings/l4-2-the-traffic-pattern.md#L72): fly these settings in the sim at C4.2's weight and adjust (Section 8.5).
 
 ### L4.3 — Normal approach and landing
 
 [content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md](../../content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md) · P0 · draft
 
-- [line 71](../../content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md#L71): check which KLVK and KTCY runways have a PAPI or VASI, in reality and in the sim.
+- [line 71](../../content/lessons/m4-takeoffs-patterns-landings/l4-3-normal-approach-and-landing.md#L71): in reality (Chart Supplement, effective 2026-10-01) Livermore has a PAPI on runways 7L and 25R only, and Tracy has a PAPI on all four runway ends (8, 26, 12 and 30). Check the sim shows them in the same places and that the lights read correctly on a 3° path.
 
 ### L4.4 — Go-arounds
 
 [content/lessons/m4-takeoffs-patterns-landings/l4-4-go-arounds.md](../../content/lessons/m4-takeoffs-patterns-landings/l4-4-go-arounds.md) · P0 · draft
 
-- [line 45](../../content/lessons/m4-takeoffs-patterns-landings/l4-4-go-arounds.md#L45): check this sequence against the in-sim balked-landing checklist for the G1000 Skyhawk.
+- [line 45](../../content/lessons/m4-takeoffs-patterns-landings/l4-4-go-arounds.md#L45): the sequence matches the POH balked-landing checklist (full throttle, flaps 20°, climb at 60 KIAS, flaps 10° when clear of obstacles, up after a safe altitude and 65 KIAS). Check the sim's EFB checklist says the same, and that the sim Skyhawk climbs at 60 KIAS with flaps 20°.
 
 ### C4.1 — Normal takeoff and departure
 
 [content/challenges/c4-1-normal-takeoff-and-departure.yaml](../../content/challenges/c4-1-normal-takeoff-and-departure.yaml) · P0 · draft
 
 - [line 22](../../content/challenges/c4-1-normal-takeoff-and-departure.yaml#L22): runway: 25R — ⚠ verify the runway name in the sim
-- [line 38](../../content/challenges/c4-1-normal-takeoff-and-departure.yaml#L38): Climb straight out to pattern altitude (⚠ verify the KLVK pattern altitude), then make a 45° left turn to depart. Continue the climb to 3,000 ft MSL at 80 KIAS.
 
 ### C4.2 — Fly the pattern
 
 [content/challenges/c4-2-fly-the-pattern.yaml](../../content/challenges/c4-2-fly-the-pattern.yaml) · P0 · draft
 
 - [line 23](../../content/challenges/c4-2-fly-the-pattern.yaml#L23): runway: '26' — ⚠ verify the active runway for the wind
-- [line 37](../../content/challenges/c4-2-fly-the-pattern.yaml#L37): Level off at pattern altitude on downwind (⚠ verify the KTCY pattern altitude). Set about 2,000–2,100 RPM for 85–90 KIAS and run the before-landing checklist.
 
 ### C4.3 — Full-stop landing
 
@@ -242,13 +238,12 @@ file (Section 54.2).
 [content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md) · P0 · draft
 
 - [line 40](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md#L40): check the RPM that holds 55 KIAS with full flaps at C5.1's weight and altitude in the sim.
-- [line 100](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-1-slow-flight.md#L100): check the current ACS wording for the stall warning in slow flight.
 
 ### L5.2 — Stalls: power-off and power-on
 
 [content/lessons/m5-slow-flight-stalls-emergencies/l5-2-stalls-power-off-and-power-on.md](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-2-stalls-power-off-and-power-on.md) · P0 · draft
 
-- [line 56](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-2-stalls-power-off-and-power-on.md#L56): check this sequence against the current wording in the Airplane Flying Handbook, chapter 5.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### L5.3 — Steep turns and load factor
 
@@ -260,20 +255,20 @@ file (Section 54.2).
 
 [content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md) · P0 · draft
 
-- [line 59](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md#L59): check the glide figure against the POH glide ratio ({{aircraft.glideRatio}}) and in the sim.
+- [line 59](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md#L59): the POH maximum glide chart (Figure 3-1: 68 KIAS, flaps up, propeller windmilling, zero wind) gives about 1.5 nm per 1,000 ft, so the figure stands ({{aircraft.glideRatio}}). Check the sim's Skyhawk glides about that far: from 3,000 ft above the ground at 68 KIAS it should cover roughly 4.5 nm in still air.
 - [line 123](../../content/lessons/m5-slow-flight-stalls-emergencies/l5-4-engine-failure-and-forced-landings.md#L123): check the MSFS 2024 failure menu options for engine failures.
 
 ### C5.1 — Slow flight
 
 [content/challenges/c5-1-slow-flight.yaml](../../content/challenges/c5-1-slow-flight.yaml) · P0 · draft
 
-- [line 42](../../content/challenges/c5-1-slow-flight.yaml#L42): Settle at about 55 KIAS, adding power to hold altitude (about 1,900–2,100 RPM; ⚠ verify).
+- [line 42](../../content/challenges/c5-1-slow-flight.yaml#L42): Settle at about 55 KIAS, adding power to hold altitude (about 1,900–2,100 RPM; ⚠ verify the RPM in the sim).
 
 ### C5.2 — Power-off stall
 
 [content/challenges/c5-2-power-off-stall.yaml](../../content/challenges/c5-2-power-off-stall.yaml) · P0 · draft
 
-- [line 42](../../content/challenges/c5-2-power-off-stall.yaml#L42): This challenge uses the full stall — hold the nose up until the nose drops or the buffet is clear (⚠ verify the current ACS wording for when to recover).
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C5.3 — Power-on stall
 
@@ -285,7 +280,7 @@ file (Section 54.2).
 
 [content/challenges/c5-4-steep-turns.yaml](../../content/challenges/c5-4-steep-turns.yaml) · P0 · draft
 
-- [line 24](../../content/challenges/c5-4-steep-turns.yaml#L24): headingDeg: 320 — ⚠ verify the heading that points at Mt Diablo from here
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C5.5 — Engine failure
 
@@ -299,21 +294,19 @@ file (Section 54.2).
 
 [content/lessons/m6-vfr-navigation/l6-1-reading-a-sectional-chart.md](../../content/lessons/m6-vfr-navigation/l6-1-reading-a-sectional-chart.md) · P0 · draft
 
-- [line 54](../../content/lessons/m6-vfr-navigation/l6-1-reading-a-sectional-chart.md#L54): check each airport symbol against the current Aeronautical Chart User's Guide.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### L6.2 — Airspace
 
 [content/lessons/m6-vfr-navigation/l6-2-airspace.md](../../content/lessons/m6-vfr-navigation/l6-2-airspace.md) · P0 · draft
 
-- [line 74](../../content/lessons/m6-vfr-navigation/l6-2-airspace.md#L74): check the cross-section against the current San Francisco TAC. The data is marked unverified (D-19).
-- [line 112](../../content/lessons/m6-vfr-navigation/l6-2-airspace.md#L112): check this simplified table against the current text of 14 CFR 91.155.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### L6.3 — Pilotage and dead reckoning
 
 [content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md](../../content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md) · P0 · draft
 
-- [line 60](../../content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md#L60): read the isogonic line on the current San Francisco sectional and update the 13° figure if it has changed.
-- [line 117](../../content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md#L117): measure the course and distance on SkyVector and check that the checkpoints are charted and visible in the sim.
+- [line 113](../../content/lessons/m6-vfr-navigation/l6-3-pilotage-and-dead-reckoning.md#L113): the true course (091°) and distance (18 nm) were recomputed from the FAA airport coordinates on 2026-10-09 and stand. Check that I-580, the Altamont Pass wind farms and the town of Tracy are recognizable from 3,500 ft in the sim (L0.3 found the turbines may be missing from the scenery).
 
 ### L6.4 — VOR navigation
 
@@ -331,36 +324,33 @@ file (Section 54.2).
 
 [content/lessons/m6-vfr-navigation/l6-6-planning-a-cross-country-flight.md](../../content/lessons/m6-vfr-navigation/l6-6-planning-a-cross-country-flight.md) · P0 · draft
 
-- [line 68](../../content/lessons/m6-vfr-navigation/l6-6-planning-a-cross-country-flight.md#L68): measure the courses and distances on SkyVector.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C6.1 — Landmark hunt
 
 [content/challenges/c6-1-landmark-hunt.yaml](../../content/challenges/c6-1-landmark-hunt.yaml) · P0 · draft
 
 - [line 22](../../content/challenges/c6-1-landmark-hunt.yaml#L22): runway: 25R — ⚠ verify the runway name in the sim
-- [line 35](../../content/challenges/c6-1-landmark-hunt.yaml#L35): Before the flight, find these on the San Francisco sectional — Lake Del Valle, the Altamont Pass wind farms, the I-580/I-680 interchange, Mount Diablo, Calaveras Reservoir and San Antonio Reservoir (⚠ verify each is charted and visible in the sim).
+- [line 35](../../content/challenges/c6-1-landmark-hunt.yaml#L35): Before the flight, find these six on the San Francisco sectional. Lake Del Valle, the Altamont Pass wind farms, the I-580/I-680 interchange, Mount Diablo, Calaveras Reservoir and San Antonio Reservoir (⚠ verify each is visible in the sim; L0.3 found the wind turbines may be missing).
 
 ### C6.2 — Pilotage to Tracy
 
 [content/challenges/c6-2-pilotage-to-tracy.yaml](../../content/challenges/c6-2-pilotage-to-tracy.yaml) · P0 · draft
 
 - [line 23](../../content/challenges/c6-2-pilotage-to-tracy.yaml#L23): runway: 25R — ⚠ verify the runway name in the sim
-- [line 36](../../content/challenges/c6-2-pilotage-to-tracy.yaml#L36): Plan the route with checkpoints — Altamont Pass, I-580, the California Aqueduct (⚠ verify) and the town of Tracy. Fill in the heading, time and fuel on your nav log.
+- [line 36](../../content/challenges/c6-2-pilotage-to-tracy.yaml#L36): Plan the route with these checkpoints in order. Altamont Pass, I-580, the California Aqueduct (⚠ verify the aqueduct is visible in the sim) and the town of Tracy. Fill in the heading, time and fuel on your nav log.
 
 ### C6.3 — Dead reckoning to Half Moon Bay
 
 [content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml](../../content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml) · P0 · draft
 
 - [line 23](../../content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml#L23): runway: '31' — ⚠ verify the runway in use
-- [line 38](../../content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml#L38): Depart Palo Alto (⚠ verify the published departure procedure) and climb to 2,500–3,500 ft, staying below the Class B floor (⚠ check the floors and terrain on the TAC).
-- [line 104](../../content/challenges/c6-3-dead-reckoning-to-half-moon-bay.yaml#L104): prompt: With the brief's wind, the reference answer is a magnetic heading of about 266° at a groundspeed of about 95 kt (⚠ verify). How did your plan and your actual groundspeed compare, and why?
 
 ### C6.4 — VOR tracking
 
 [content/challenges/c6-4-vor-tracking.yaml](../../content/challenges/c6-4-vor-tracking.yaml) · P0 · draft
 
 - [line 23](../../content/challenges/c6-4-vor-tracking.yaml#L23): position: 10 nm south of the Manteca VOR (ECA), over the Central Valley — ⚠ verify ECA is in the sim; south keeps you clear of the Stockton Class C
-- [line 39](../../content/challenges/c6-4-vor-tracking.yaml#L39): Tune the Manteca VOR (⚠ verify the frequency on the sectional) into NAV1 and identify it.
 
 ### C6.5 — G1000 flight plan
 
@@ -380,21 +370,20 @@ file (Section 54.2).
 
 [content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md](../../content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md) · P0 · draft
 
-- [line 32](../../content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md#L32): check the Tracy CTAF on the current sectional and add it to `airports.yaml`.
-- [line 103](../../content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md#L103): check which CTAF calls the MSFS 2024 ATC window offers, and whether AI traffic announces its position.
+- [line 101](../../content/lessons/m7-radio-airport-operations/l7-2-non-towered-airports-ctaf.md#L101): check which CTAF calls the MSFS 2024 ATC window offers, and whether AI traffic announces its position.
 
 ### L7.3 — Towered airports and sim ATC
 
 [content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md](../../content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md) · P0 · draft
 
-- [line 37](../../content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md#L37): check the Livermore runway numbers, ATIS, ground and tower frequencies, and the parking area names in the Chart Supplement and in the sim.
-- [line 115](../../content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md#L115): check the MSFS 2024 ATC window options for VFR departures and arrivals at Livermore, and note where they differ from the scripts above.
+- [line 37](../../content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md#L37): the runway numbers, frequencies and apron name come from the Chart Supplement (effective 2026-10-01) and the FAA airport diagram, and are on the KLVK airport card. Check the sim's ATC uses the same frequencies and runway names, and what the sim calls the parking area.
+- [line 117](../../content/lessons/m7-radio-airport-operations/l7-3-towered-airports-and-sim-atc.md#L117): check the MSFS 2024 ATC window options for VFR departures and arrivals at Livermore, and note where they differ from the scripts above.
 
 ### C7.1 — CTAF pattern at Tracy
 
 [content/challenges/c7-1-ctaf-pattern-at-tracy.yaml](../../content/challenges/c7-1-ctaf-pattern-at-tracy.yaml) · P0 · draft
 
-- [line 38](../../content/challenges/c7-1-ctaf-pattern-at-tracy.yaml#L38): Tune the Tracy CTAF (⚠ verify the frequency on the sectional) and listen for traffic.
+- No open markers. Run the Section 54 protocol for this item.
 
 ### C7.2 — Towered departure and return at Livermore
 
@@ -426,7 +415,7 @@ file (Section 54.2).
 
 [content/challenges/c8-2-cross-country-capstone.yaml](../../content/challenges/c8-2-cross-country-capstone.yaml) · P0 · draft
 
-- [line 38](../../content/challenges/c8-2-cross-country-capstone.yaml#L38): Plan the flight on the page before you open the sim (about 30 minutes). Suggested route — Livermore, Calaveras Reservoir, Morgan Hill, Gilroy, Watsonville (KWVI). This route passes close to the San Jose Class C — plan to stay clear of it or to call San Jose Approach (⚠ verify the airspace on the current TAC).
+- No open markers. Run the Section 54 protocol for this item.
 
 ## Reference data
 

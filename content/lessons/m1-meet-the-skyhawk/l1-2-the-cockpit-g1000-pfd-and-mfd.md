@@ -87,16 +87,16 @@ The **Engine Indication System** shows engine and fuel information: RPM, fuel fl
 
 The bezels around the screens hold the knobs you'll use most:
 
-| Knob or key       | What it does                                                  |
-| ----------------- | ------------------------------------------------------------- |
-| NAV and COM knobs | Tune the standby frequency; the swap key makes it active.     |
-| BARO (inside CRS) | Sets the altimeter setting.                                   |
-| HDG               | Moves the cyan heading bug; press it to sync to your heading. |
-| CRS               | Sets the course on the HSI when you use a VOR.                |
-| RANGE             | Zooms the map in and out.                                     |
+| Knob or key                            | What it does                                                  |
+| -------------------------------------- | ------------------------------------------------------------- |
+| NAV and COM knobs                      | Tune the standby frequency; the swap key makes it active.     |
+| BARO (outer ring of the CRS/BARO knob) | Sets the altimeter setting.                                   |
+| HDG                                    | Moves the cyan heading bug; press it to sync to your heading. |
+| CRS                                    | Sets the course on the HSI when you use a VOR.                |
+| RANGE                                  | Zooms the map in and out.                                     |
 
 :::callout{type="verify"}
-Author note: check which knob sets the altimeter setting in the MSFS 2024 G1000 NXi (on the real NXi it's on the CRS/BARO knob) and update this table.
+Author note: on the real G1000 NXi the altimeter setting is on the large outer ring of the CRS/BARO dual knob on the PFD bezel (Garmin G1000 NXi Pilot's Guide, PFD section). Check the sim's bezel labels the same knob CRS/BARO and that turning the outer ring changes the BARO box.
 :::
 
 ## The classic six-pack on the glass

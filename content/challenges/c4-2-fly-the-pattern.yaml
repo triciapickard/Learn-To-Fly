@@ -34,10 +34,10 @@ setup:
 
 procedure:
   - Take off and climb on the upwind leg to about 300 ft below pattern altitude, then turn crosswind.
-  - Level off at pattern altitude on downwind (⚠ verify the KTCY pattern altitude). Set about 2,000–2,100 RPM for 85–90 KIAS and run the before-landing checklist.
+  - Level off at pattern altitude on downwind (about 1,000 ft MSL at Tracy, 800 ft above the field). Set about 2,000–2,100 RPM for 85–90 KIAS and run the before-landing checklist.
   - Abeam the numbers, reduce to about 1,500 RPM, set flaps 10, slow to 80 KIAS and start down.
   - On base, flaps 20 and 70 KIAS. On final, flaps 30 and 65 KIAS, stabilized by 300 ft AGL.
-  - At about 100 ft above the runway, go around (a low approach) — full power, flaps 20, climb.
+  - At about 100 ft above the runway, go around (a low approach) with full power, flaps 20, and climb.
 
 criteria:
   - id: pattern-altitude

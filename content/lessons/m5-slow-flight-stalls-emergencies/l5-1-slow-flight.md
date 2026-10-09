@@ -5,7 +5,7 @@ module: m5-slow-flight-stalls-emergencies
 order: 1
 priority: P0
 title: Slow flight
-summary: Fly the airplane slowly and under control — the same speed range you use on every takeoff, landing and go-around.
+summary: Fly the airplane slowly and under control, in the same speed range you use on every takeoff, landing and go-around.
 estimatedMinutes: 15
 prerequisites: [l2-4-turns-and-coordination, l4-3-normal-approach-and-landing]
 objectives:
@@ -95,11 +95,7 @@ What's the first action when you recover from slow flight?
 
 ## The stall warning
 
-The current Airman Certification Standards say slow flight should be flown **without** setting off the stall warning. Our Gold tier follows that rule. If the horn chirps, lower the nose slightly or add a little power.
-
-:::callout{type="verify"}
-Author note: check the current ACS wording for the stall warning in slow flight.
-:::
+The current Airman Certification Standards (FAA-S-ACS-6C) say slow flight is flown at a speed where any further increase in angle of attack or load factor, or any reduction in power, would set off the stall warning, and that the turns, climbs and descents are flown **without** the warning sounding. Our Gold tier follows that rule. If the horn chirps, lower the nose slightly or add a little power.
 
 :::callout{type="sim"}
 In a real airplane, you feel the controls go soft and hear the airflow get quieter. In the sim, watch the airspeed tape closely and listen for the stall horn.

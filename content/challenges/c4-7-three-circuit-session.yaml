@@ -15,7 +15,7 @@ lastVerifiedAt: null # set when verified in the sim (Section 54)
 simVersion: null
 
 goal: >
-  Fly three patterns in a row — touch-and-go, touch-and-go, full stop — with consistent
+  Fly three patterns in a row (touch-and-go, touch-and-go, full stop) with consistent
   quality.
 
 setup:
@@ -37,7 +37,7 @@ setup:
 
 procedure:
   - Take off and fly the pattern for runway 26.
-  - Land. For a touch-and-go, keep rolling on the centerline — flaps up, full power, take off again.
+  - Land. For a touch-and-go, keep rolling on the centerline, raise the flaps, add full power and take off again.
   - Fly the second pattern and do another touch-and-go.
   - Fly the third pattern and make a full-stop landing.
   - Some instructors prefer a full stop and taxi back instead of a touch-and-go. Either is fine here; the touch-and-go criterion is optional.

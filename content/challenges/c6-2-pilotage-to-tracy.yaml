@@ -33,8 +33,8 @@ setup:
   flightPlan: null
 
 procedure:
-  - Plan the route with checkpoints — Altamont Pass, I-580, the California Aqueduct (⚠ verify) and the town of Tracy. Fill in the heading, time and fuel on your nav log.
-  - Turn off the GPS maps — set the MFD to the engine page, turn off the PFD inset map and put the EFB map away.
+  - Plan the route with these checkpoints in order. Altamont Pass, I-580, the California Aqueduct (⚠ verify the aqueduct is visible in the sim) and the town of Tracy. Fill in the heading, time and fuel on your nav log.
+  - Turn off the GPS maps. Set the MFD to the engine page, turn off the PFD inset map and put the EFB map away.
   - Take off and fly the route at 3,500 ft MSL. Note the time at each checkpoint.
   - Descend to Tracy's pattern altitude, join on the 45° to downwind and land.
 

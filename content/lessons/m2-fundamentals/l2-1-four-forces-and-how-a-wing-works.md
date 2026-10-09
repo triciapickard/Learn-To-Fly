@@ -55,7 +55,7 @@ Angle of attack is not the same as pitch attitude. In a steep descent with the n
 
 ## Lift and the critical angle of attack
 
-As angle of attack increases, the wing makes more lift, up to a point. At the **critical angle of attack** (roughly 16–18° for a typical light-airplane wing) the air can no longer follow the curved top of the wing. The flow separates, lift drops sharply and drag climbs. That's a **stall**.
+As angle of attack increases, the wing makes more lift, up to a point. At the **critical angle of attack** (roughly 15–20° for a typical light-airplane wing) the air can no longer follow the curved top of the wing. The flow separates, lift drops sharply and drag climbs. That's a **stall**.
 
 Drag the slider below and watch the streamlines and the lift curve. Try it with flaps down too.
 

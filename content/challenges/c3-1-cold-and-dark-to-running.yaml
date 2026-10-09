@@ -33,10 +33,10 @@ setup:
 procedure:
   - Make sure checklist assistance (auto-complete) is off in the sim.
   - Open the Learn-To-Fly checklists on a second screen (Reference → Checklists) or the in-sim checklist.
-  - Complete "Before starting engine" with a left-to-right flow, then verify with the checklist.
+  - Complete "Before starting engine" with a left-to-right flow, then check it against the checklist.
   - Complete "Starting engine". Look outside and say "CLEAR!" before turning the key.
-  - Check oil pressure rises into the green within 30 seconds and set about 1,000 RPM.
-  - Complete the after-start items — avionics master on, flaps checked, lights, altimeter set.
+  - Check oil pressure rises into the green within 30 to 60 seconds and set about 1,000 RPM.
+  - Complete the after-start items (avionics master on, flaps checked, lights, altimeter set).
 
 criteria:
   - id: running
@@ -66,7 +66,7 @@ criteria:
     required: false
     weight: 1
   - id: oil-pressure
-    label: Oil pressure checked within 30 seconds
+    label: Oil pressure checked rising within 60 seconds
     kind: binary
     required: true
     weight: 2
@@ -88,7 +88,7 @@ commonMistakes:
   - Holding the key on START for too long after the engine fires.
 
 tips:
-  - Do a flow left to right across the panel, then verify with the checklist.
+  - Do a flow left to right across the panel, then check it against the checklist.
 
 debriefQuestions:
   - id: almost-missed

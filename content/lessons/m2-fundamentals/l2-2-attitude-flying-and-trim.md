@@ -34,7 +34,7 @@ For a given weight, a particular attitude and power setting always give the same
 In level cruise at about 2,300 RPM, the Skyhawk's nose sits just about on the horizon. From the pilot's seat, the horizon crosses the windshield a few inches above the top of the glare shield. Learn this picture. It's your reference for level flight.
 
 :::callout{type="verify"}
-Author note: add a screenshot of the level-cruise sight picture from the default cockpit view (Section 49.5), and check that 2,300 RPM gives about 100–105 KIAS in level flight.
+Author note: add a screenshot of the level-cruise sight picture from the default cockpit view (Section 49.5). L0.3 (verified in 1.8.16.0) found about 100 knots at 2,300 RPM; confirm 100–105 KIAS at C2.1's weight and 3,500 ft and adjust the numbers here and in C2.1 if needed.
 :::
 
 :::callout{type="classic"}
