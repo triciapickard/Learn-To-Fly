@@ -5,15 +5,17 @@
 
 @layer base {
   html {
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
     font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.625;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
   }
 
   body {
     min-height: 100dvh;
-    line-height: 1.6;
   }
 
   h1,
@@ -24,9 +26,9 @@
     text-wrap: balance;
   }
 
-  /* Visible focus indicator: 2 px outline with offset (Section 22.1). */
+  /* Focus is a solid 2px focus ring, offset 2px, on every interactive element. Never removed. */
   :focus-visible {
-    outline: 2px solid var(--color-primary);
+    outline: var(--focus-ring) solid var(--color-focus);
     outline-offset: 2px;
   }
 
@@ -34,6 +36,7 @@
     outline: none;
   }
 
+  /* Theme switches are quiet: nothing animates page colors (night-mode.md rule 9). */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -48,4 +51,138 @@
 
 @utility tabular {
   font-variant-numeric: tabular-nums;
+}
+
+/* Type scale (tokens.json "type"). Display and headings in Instrument Sans, readouts in
+   JetBrains Mono with tabular figures. */
+@utility display-xl {
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+@utility display-lg {
+  font-size: 44px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+@utility display-md {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+@utility heading-lg {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+@utility heading-md {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+}
+@utility heading-sm {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+@utility body-lg {
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 400;
+}
+@utility body-md {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+@utility body-sm {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+@utility label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+@utility overline {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+@utility readout-lg {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+@utility readout {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+@utility readout-sm {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+@utility code {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+/* Form controls: the shared field box (FormField README). */
+@utility control-box {
+  height: var(--spacing-control-md);
+  width: 100%;
+  padding-inline: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 16px;
+  line-height: 24px;
+  transition:
+    border-color 150ms,
+    box-shadow 150ms;
+  &::placeholder {
+    color: var(--color-ink-3);
+  }
+  &:hover:not(:disabled) {
+    border-color: var(--color-ink-2);
+  }
+  &:focus-visible {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow:
+      0 0 0 2px var(--color-canvas),
+      0 0 0 4px var(--color-focus);
+  }
+  &[aria-invalid='true'] {
+    border-color: var(--color-warn);
+  }
+  &[aria-invalid='true']:focus-visible {
+    box-shadow:
+      0 0 0 2px var(--color-canvas),
+      0 0 0 4px var(--color-warn);
+  }
+  &:disabled {
+    background: var(--color-surface-sunken);
+    color: var(--color-ink-3);
+    border-color: var(--color-line);
+    cursor: not-allowed;
+  }
 }

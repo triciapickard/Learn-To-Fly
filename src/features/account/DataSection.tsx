@@ -43,7 +43,7 @@ export function DataSection() {
       <CardBody className="flex flex-col gap-6">
         <div>
           <h3 className="font-semibold">Export</h3>
-          <p className="mt-1 text-muted">Download everything we store about you as a JSON file.</p>
+          <p className="mt-1 text-ink-2">Download everything we store about you as a JSON file.</p>
           <a
             href={`${API_BASE_PATH}/me/export`}
             download
@@ -54,7 +54,7 @@ export function DataSection() {
         </div>
         <div>
           <h3 className="font-semibold">Delete account</h3>
-          <p className="mt-1 text-muted">
+          <p className="mt-1 text-ink-2">
             Permanently deletes your account, progress, challenge attempts and notes, and signs you
             out everywhere. This cannot be undone.
           </p>

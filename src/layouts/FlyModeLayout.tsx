@@ -11,7 +11,7 @@ export default function FlyModeLayout() {
   return (
     <div
       data-theme={preference === 'light' ? 'light' : 'dark'}
-      className="min-h-dvh bg-bg text-xl text-text"
+      className="min-h-dvh bg-canvas text-xl text-ink"
     >
       <main id="main" tabIndex={-1} className="mx-auto max-w-3xl px-4 py-6 focus:outline-none">
         <Outlet />

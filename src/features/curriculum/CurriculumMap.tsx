@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import { Link } from '@/components/Link';
+import { LessonPath, type LessonStop, type LessonStopState } from '@/components/LessonPath';
 import { ProgressRing } from '@/components/Progress';
 import { ChallengeStatusIcon, LessonStatusIcon } from '@/features/progress/StatusIcons';
 import { cn } from '@/lib/cn';
@@ -12,7 +12,23 @@ function formatHours(minutes: number) {
   return hours < 1 ? `${minutes} min` : `${Number.isInteger(hours) ? hours : hours.toFixed(1)} h`;
 }
 
-/** Vertical "flight path" of modules; each expands to its lessons and challenges (Section 20.2). */
+/** Done modules are complete; the first unfinished module is the current stop; the rest wait. */
+function moduleStates(modules: ModuleSummary[], progress?: ProgressResponse): LessonStopState[] {
+  let currentFound = false;
+  return modules.map((module) => {
+    if (progress?.modules[module.slug]?.complete) return 'done';
+    if (!currentFound) {
+      currentFound = true;
+      return 'current';
+    }
+    return 'upcoming';
+  });
+}
+
+/**
+ * The curriculum as a lesson path (Section 20.2): module stops on the horizon line, each
+ * expanding to its lessons and challenges. Exactly one module is current.
+ */
 export function CurriculumMap({
   modules,
   progress,
@@ -21,110 +37,112 @@ export function CurriculumMap({
   /** The signed-in learner's progress: rings per module and status per item (step 8.6). */
   progress?: ProgressResponse;
 }) {
-  return (
-    <ol className="relative flex flex-col gap-4 border-l-2 border-dashed border-border-strong pl-6 sm:pl-8">
-      {modules.map((module) => (
-        <li key={module.slug} className="relative">
-          <span
-            aria-hidden
-            className="absolute top-5 -left-[37px] flex size-6 items-center justify-center rounded-full border-2 border-primary bg-surface font-mono text-xs font-bold text-primary sm:-left-[45px]"
-          >
-            {module.order}
-          </span>
-          <details
-            className="group rounded-card border border-border bg-surface shadow-1"
-            open={module.order === 0}
-          >
-            <summary className="flex cursor-pointer list-none items-start gap-4 p-5">
-              <div className="flex-1">
-                <p className="text-sm font-semibold text-primary">Module {module.order}</p>
-                <h2 className="text-xl font-semibold">{module.title}</h2>
-                <p className="mt-1 text-muted">{module.summary}</p>
-                <p className="mt-2 text-sm text-muted">
-                  {plural(module.lessons.length, 'lesson')} ·{' '}
-                  {plural(module.challenges.length, 'challenge')} · about{' '}
-                  {formatHours(module.estimatedMinutes)}
-                </p>
-              </div>
-              {progress?.modules[module.slug] && (
-                <ProgressRing
-                  value={progress.modules[module.slug]!.percent}
-                  label={`Module ${module.order} progress`}
-                  valueText={
-                    progress.modules[module.slug]!.complete
-                      ? 'Complete'
-                      : `${progress.modules[module.slug]!.percent}% complete`
-                  }
-                />
-              )}
-              <ChevronDown
-                aria-hidden
-                className="mt-1 size-5 shrink-0 text-muted transition-transform group-open:rotate-180"
-              />
-            </summary>
-            <div className="border-t border-border px-2 py-3 sm:px-3">
-              {module.lessons.length + module.challenges.length === 0 ? (
-                <p className="px-3 py-2 text-muted">
-                  The lessons for this module are being written.
-                </p>
-              ) : (
-                <>
-                  {module.lessons.length > 0 && (
-                    <>
-                      <h3 className="px-3 pt-1 text-sm font-semibold text-muted">Lessons</h3>
-                      <ul>
-                        {module.lessons.map((lesson) => (
-                          <li key={lesson.slug}>
-                            <LessonRow
-                              lesson={lesson}
-                              status={
-                                progress && (
-                                  <LessonStatusIcon progress={progress.lessons[lesson.slug]} />
-                                )
-                              }
-                            />
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
-                  {module.challenges.length > 0 && (
-                    <>
-                      <h3
-                        className={cn(
-                          'px-3 text-sm font-semibold text-muted',
-                          module.lessons.length && 'mt-3',
-                        )}
-                      >
-                        Challenges
-                      </h3>
-                      <ul>
-                        {module.challenges.map((challenge) => (
-                          <li key={challenge.slug}>
-                            <ChallengeRow
-                              challenge={challenge}
-                              status={
-                                progress && (
-                                  <ChallengeStatusIcon
-                                    progress={progress.challenges[challenge.slug]}
-                                  />
-                                )
-                              }
-                            />
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
-                </>
-              )}
-              <Link to={`/learn/${module.slug}`} className="mt-2 inline-block px-3">
-                Module {module.order} overview
-              </Link>
+  const states = moduleStates(modules, progress);
+  const stops: LessonStop[] = modules.map((module, index) => {
+    const state = states[index]!;
+    const current = state === 'current';
+    const moduleProgress = progress?.modules[module.slug];
+    return {
+      id: module.slug,
+      title: module.title,
+      state,
+      content: (
+        <details
+          className={cn(
+            'group my-1.5 w-full min-w-0 rounded-lg border bg-surface shadow-1',
+            current ? 'border-accent-line bg-accent-tint shadow-none' : 'border-line',
+          )}
+          open={current}
+        >
+          <summary className="flex cursor-pointer list-none items-start gap-4 rounded-lg p-5">
+            <div className="min-w-0 flex-1">
+              <p className={cn('overline', current ? 'text-accent' : 'text-ink-2')}>
+                Module {module.order}
+                {state === 'done' && ' · Done'}
+                {current && ' · Up next'}
+              </p>
+              <h2 className="heading-md mt-1">{module.title}</h2>
+              <p className="mt-1 text-ink-2">{module.summary}</p>
+              <p className="mt-2 text-sm leading-5 text-ink-2">
+                {plural(module.lessons.length, 'lesson')} ·{' '}
+                {plural(module.challenges.length, 'challenge')} · about{' '}
+                {formatHours(module.estimatedMinutes)}
+              </p>
             </div>
-          </details>
-        </li>
-      ))}
-    </ol>
-  );
+            {moduleProgress && (
+              <ProgressRing
+                value={moduleProgress.percent}
+                label={`Module ${module.order} progress`}
+                valueText={
+                  moduleProgress.complete ? 'Complete' : `${moduleProgress.percent}% complete`
+                }
+              />
+            )}
+            <ChevronDown
+              aria-hidden
+              className="mt-1 size-5 shrink-0 text-ink-2 transition-transform group-open:rotate-180"
+              strokeWidth={1.75}
+            />
+          </summary>
+          <div
+            className={cn(
+              'border-t px-2 py-3 sm:px-3',
+              current ? 'border-accent-line' : 'border-line',
+            )}
+          >
+            {module.lessons.length + module.challenges.length === 0 ? (
+              <p className="px-3 py-2 text-ink-2">The lessons for this module are being written.</p>
+            ) : (
+              <>
+                {module.lessons.length > 0 && (
+                  <>
+                    <h3 className="overline px-3 pt-1 text-ink-2">Lessons</h3>
+                    <ul>
+                      {module.lessons.map((lesson) => (
+                        <li key={lesson.slug}>
+                          <LessonRow
+                            lesson={lesson}
+                            status={
+                              progress && (
+                                <LessonStatusIcon progress={progress.lessons[lesson.slug]} />
+                              )
+                            }
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+                {module.challenges.length > 0 && (
+                  <>
+                    <h3 className={cn('overline px-3 text-ink-2', module.lessons.length && 'mt-3')}>
+                      Challenges
+                    </h3>
+                    <ul>
+                      {module.challenges.map((challenge) => (
+                        <li key={challenge.slug}>
+                          <ChallengeRow
+                            challenge={challenge}
+                            status={
+                              progress && (
+                                <ChallengeStatusIcon
+                                  progress={progress.challenges[challenge.slug]}
+                                />
+                              )
+                            }
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </>
+            )}
+          </div>
+        </details>
+      ),
+    };
+  });
+
+  return <LessonPath aria-label="Modules" stops={stops} showStart={false} className="gap-1" />;
 }

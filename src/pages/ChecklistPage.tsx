@@ -85,7 +85,7 @@ export default function ChecklistPage() {
                 </Button>
               )}
             </PageHeader>
-            <div ref={panel} className="bg-bg [&:fullscreen]:overflow-auto [&:fullscreen]:p-6">
+            <div ref={panel} className="bg-canvas [&:fullscreen]:overflow-auto [&:fullscreen]:p-6">
               {fullscreen.active && (
                 <p className="mb-4 text-2xl font-bold" aria-hidden>
                   {checklist.title}

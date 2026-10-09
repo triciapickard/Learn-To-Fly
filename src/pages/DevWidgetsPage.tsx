@@ -28,7 +28,7 @@ export default function DevWidgetsPage() {
             type="button"
             aria-pressed={name === selected}
             onClick={() => setParams({ w: name, mode })}
-            className="min-h-11 rounded-control border border-border-strong px-3 text-sm font-semibold aria-pressed:bg-primary aria-pressed:text-primary-contrast"
+            className="min-h-11 rounded-md border border-line-strong px-3 text-sm font-semibold aria-pressed:bg-accent aria-pressed:text-on-accent"
           >
             {WIDGETS[name]} {WIDGET_TITLES[name]}
           </button>

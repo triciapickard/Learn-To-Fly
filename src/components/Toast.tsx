@@ -1,4 +1,4 @@
-import { CircleAlert, CircleCheck, Info, X } from 'lucide-react';
+import { Check, Info, OctagonAlert, TriangleAlert, X, type LucideIcon } from 'lucide-react';
 import {
   createContext,
   useCallback,
@@ -9,17 +9,27 @@ import {
   type ReactNode,
 } from 'react';
 import { cn } from '@/lib/cn';
+import { Button } from './Button';
 
-export type ToastTone = 'info' | 'success' | 'error';
+export type ToastTone = 'info' | 'success' | 'warning' | 'error';
 
-interface ToastItem {
+export interface ToastOptions {
+  /** First line, bold. */
+  title: string;
+  description?: string;
+  tone?: ToastTone;
+  /** Replaces the dismiss control, e.g. a Retry button. */
+  action?: ReactNode;
+}
+
+interface ToastItem extends ToastOptions {
   id: number;
-  message: string;
   tone: ToastTone;
 }
 
 interface ToastContextValue {
-  toast: (message: string, tone?: ToastTone) => void;
+  /** `toast('Saved.', 'success')` or `toast({ title, description, tone, action })`. */
+  toast: (message: string | ToastOptions, tone?: ToastTone) => void;
 }
 
 const ToastContext = createContext<ToastContextValue | null>(null);
@@ -30,66 +40,94 @@ export function useToast(): ToastContextValue {
   return value;
 }
 
-const icons = { info: Info, success: CircleCheck, error: CircleAlert };
-const tones = {
-  info: 'border-primary',
-  success: 'border-success',
-  error: 'border-danger',
+/** Tone is carried by the 20px icon color only, never by the whole toast turning a color. */
+const tones: Record<ToastTone, { icon: LucideIcon; color: string }> = {
+  info: { icon: Info, color: 'text-ink-2' },
+  success: { icon: Check, color: 'text-go' },
+  warning: { icon: TriangleAlert, color: 'text-caution' },
+  error: { icon: OctagonAlert, color: 'text-warn' },
 };
 
 const DURATION_MS = 6000;
 
-/** Toast notifications in a polite live region (Section 21.5). */
+/**
+ * Toast notifications in a live region. One toast at a time; a new one replaces the
+ * previous. Success and caution dismiss after 6 seconds; errors stay until dismissed.
+ */
 export function ToastProvider({ children }: { children: ReactNode }) {
-  const [toasts, setToasts] = useState<ToastItem[]>([]);
+  const [current, setCurrent] = useState<ToastItem | null>(null);
   const nextId = useRef(1);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const dismiss = useCallback((id: number) => {
-    setToasts((current) => current.filter((t) => t.id !== id));
+  const dismiss = useCallback(() => {
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = null;
+    setCurrent(null);
   }, []);
 
-  const toast = useCallback(
-    (message: string, tone: ToastTone = 'info') => {
-      const id = nextId.current++;
-      setToasts((current) => [...current.slice(-2), { id, message, tone }]);
-      setTimeout(() => dismiss(id), DURATION_MS);
-    },
-    [dismiss],
-  );
+  const toast = useCallback((message: string | ToastOptions, tone?: ToastTone) => {
+    const options = typeof message === 'string' ? { title: message, tone } : message;
+    const item: ToastItem = { ...options, id: nextId.current++, tone: options.tone ?? 'info' };
+    if (timer.current) clearTimeout(timer.current);
+    setCurrent(item);
+    timer.current =
+      item.tone === 'error'
+        ? null
+        : setTimeout(() => setCurrent((c) => (c?.id === item.id ? null : c)), DURATION_MS);
+  }, []);
 
   const value = useMemo(() => ({ toast }), [toast]);
+  const isError = current?.tone === 'error';
+  const Icon = current ? tones[current.tone].icon : null;
 
   return (
     <ToastContext value={value}>
       {children}
       <div
-        role="status"
-        aria-live="polite"
-        className="pointer-events-none fixed right-4 bottom-4 left-4 z-50 flex flex-col items-end gap-2 sm:left-auto"
+        role={isError ? 'alert' : 'status'}
+        aria-live={isError ? 'assertive' : 'polite'}
+        className="pointer-events-none fixed right-4 bottom-4 left-4 z-50 flex justify-end sm:left-auto"
       >
-        {toasts.map((t) => {
-          const Icon = icons[t.tone];
-          return (
-            <div
-              key={t.id}
-              className={cn(
-                'pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-card border border-l-4 border-border bg-surface p-3 shadow-2',
-                tones[t.tone],
-              )}
-            >
-              <Icon aria-hidden className="mt-0.5 size-5 shrink-0" />
-              <p className="flex-1">{t.message}</p>
+        {current && Icon && (
+          <div
+            key={current.id}
+            className="pointer-events-auto flex w-full items-start gap-3 rounded-md border border-line bg-surface-raised px-4 py-3.5 text-sm leading-5 text-ink shadow-2 motion-safe:animate-rise-in sm:w-[360px]"
+          >
+            <Icon
+              aria-hidden
+              strokeWidth={1.75}
+              className={cn('mt-px size-5 shrink-0', tones[current.tone].color)}
+            />
+            <div className="min-w-0 flex-1">
+              <p className="font-semibold">{current.title}</p>
+              {current.description && <p>{current.description}</p>}
+            </div>
+            {current.action ? (
+              <div className="ml-auto flex shrink-0 items-center gap-2">
+                {current.action}
+                {isError && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={dismiss}
+                    aria-label="Dismiss notification"
+                  >
+                    <X aria-hidden />
+                  </Button>
+                )}
+              </div>
+            ) : (
               <button
                 type="button"
-                onClick={() => dismiss(t.id)}
+                onClick={dismiss}
                 aria-label="Dismiss notification"
-                className="-m-1 flex size-8 items-center justify-center rounded-control text-muted hover:text-text"
+                className="-m-1 flex size-7 shrink-0 items-center justify-center rounded-sm text-ink-2 hover:bg-surface-sunken hover:text-ink"
               >
-                <X aria-hidden className="size-4" />
+                <X aria-hidden className="size-4" strokeWidth={2} />
               </button>
-            </div>
-          );
-        })}
+            )}
+          </div>
+        )}
       </div>
     </ToastContext>
   );

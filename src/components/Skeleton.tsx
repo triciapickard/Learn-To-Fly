@@ -1,12 +1,19 @@
 import type { HTMLAttributes } from 'react';
 import { cn } from '@/lib/cn';
 
-/** Placeholder block shaped like the final content (avoids layout shift). */
+/**
+ * Placeholder block shaped like the final content (avoids layout shift): surface-sunken with
+ * radius-sm and a faint surface shimmer every 1.4s (stops under reduced motion).
+ */
 export function Skeleton({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       aria-hidden
-      className={cn('animate-pulse rounded-control bg-surface-2', className)}
+      className={cn(
+        'relative overflow-hidden rounded-sm bg-surface-sunken',
+        "after:absolute after:inset-0 after:-translate-x-full after:bg-linear-to-r after:from-transparent after:via-surface after:to-transparent after:opacity-60 after:content-[''] motion-safe:after:animate-shimmer",
+        className,
+      )}
       {...props}
     />
   );

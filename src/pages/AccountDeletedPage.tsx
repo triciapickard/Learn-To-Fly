@@ -11,7 +11,7 @@ export default function AccountDeletedPage() {
         title="Your account has been deleted"
         description="Your account, progress, challenge attempts and notes have been permanently removed, and you have been signed out everywhere."
       />
-      <p className="text-muted">
+      <p className="text-ink-2">
         Thanks for flying with us. The lessons are still free to read any time.
       </p>
       <Button asChild className="mt-6">

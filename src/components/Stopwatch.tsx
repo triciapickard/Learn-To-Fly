@@ -1,7 +1,6 @@
 import { Pause, Play, RotateCcw } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ButtonHTMLAttributes } from 'react';
 import { cn } from '@/lib/cn';
-import { Button } from './Button';
 
 export function formatElapsed(ms: number): string {
   const totalSeconds = Math.floor(ms / 1000);
@@ -20,7 +19,32 @@ export interface StopwatchProps {
   large?: boolean;
 }
 
-/** Optional flight timer for challenges. Ticks are not announced (would be noisy). */
+/** 36px pill buttons inside the ink pill: the primary is on-ink filled, the secondary outlined. */
+function PillButton({
+  primary,
+  className,
+  ...props
+}: ButtonHTMLAttributes<HTMLButtonElement> & { primary?: boolean }) {
+  return (
+    <button
+      type="button"
+      className={cn(
+        'inline-flex h-9 items-center gap-1.5 rounded-pill px-3.5 text-sm font-medium whitespace-nowrap transition-opacity duration-150 disabled:cursor-not-allowed disabled:opacity-45',
+        primary
+          ? 'bg-on-ink text-ink hover:opacity-90'
+          : 'border border-line-strong text-on-ink hover:border-on-ink',
+        className,
+      )}
+      {...props}
+    />
+  );
+}
+
+/**
+ * The challenge fly-mode timer: an ink pill with on-ink text (the same inversion as the
+ * primary button). Time is readout-lg in tabular mono; while running an 8px accent-line dot
+ * sits after it. Ticks are not announced (they would be noisy).
+ */
 export function Stopwatch({ onStart, onTick, className, large }: StopwatchProps) {
   const [elapsed, setElapsed] = useState(0);
   const [running, setRunning] = useState(false);
@@ -58,27 +82,40 @@ export function Stopwatch({ onStart, onTick, className, large }: StopwatchProps)
   };
 
   return (
-    <div className={cn('flex flex-wrap items-center gap-3', className)}>
-      <span
-        role="timer"
-        aria-label="Elapsed time"
-        className={cn('font-mono font-semibold tabular', large ? 'text-5xl' : 'text-3xl')}
-      >
-        {formatElapsed(elapsed)}
+    <div
+      className={cn(
+        'inline-flex max-w-full flex-wrap items-center gap-4 rounded-pill bg-ink py-2.5 pr-2.5 pl-6 text-on-ink',
+        className,
+      )}
+    >
+      <span className="inline-flex items-center">
+        <span
+          role="timer"
+          aria-label="Elapsed time"
+          className={cn('readout-lg', large && 'text-5xl leading-none')}
+        >
+          {formatElapsed(elapsed)}
+        </span>
+        {running && (
+          <span
+            aria-hidden
+            className="ml-3 inline-block size-2 shrink-0 rounded-pill bg-accent-line"
+          />
+        )}
       </span>
       <div className="flex gap-2">
         {running ? (
-          <Button variant="secondary" onClick={pause}>
+          <PillButton onClick={pause}>
             <Pause aria-hidden className="size-4" /> Pause
-          </Button>
+          </PillButton>
         ) : (
-          <Button variant="secondary" onClick={start}>
+          <PillButton primary onClick={start}>
             <Play aria-hidden className="size-4" /> {elapsed === 0 ? 'Start' : 'Resume'}
-          </Button>
+          </PillButton>
         )}
-        <Button variant="ghost" onClick={reset} disabled={elapsed === 0 && !running}>
+        <PillButton onClick={reset} disabled={elapsed === 0 && !running}>
           <RotateCcw aria-hidden className="size-4" /> Reset
-        </Button>
+        </PillButton>
       </div>
     </div>
   );

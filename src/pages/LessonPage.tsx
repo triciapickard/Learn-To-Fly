@@ -87,11 +87,11 @@ export default function LessonPage() {
                 ]}
               />
               <header className="mt-4">
-                <p className="font-mono text-sm font-semibold text-primary">
+                <p className="font-mono text-sm font-semibold text-accent">
                   Lesson {l.code.slice(1)}
                 </p>
                 <h1 className="mt-1 text-3xl font-bold sm:text-4xl">{l.title}</h1>
-                <div className="mt-3 flex flex-wrap items-center gap-3 text-muted">
+                <div className="mt-3 flex flex-wrap items-center gap-3 text-ink-2">
                   {l.estimatedMinutes && (
                     <span className="flex items-center gap-1">
                       <Clock aria-hidden className="size-4" /> About {l.estimatedMinutes} minutes
@@ -99,7 +99,7 @@ export default function LessonPage() {
                   )}
                   {l.draft && <DraftBadge />}
                   {completed && (
-                    <Badge variant="complete">
+                    <Badge variant="go">
                       <CheckCircle2 aria-hidden className="size-3.5" /> Completed
                     </Badge>
                   )}
@@ -139,7 +139,7 @@ export default function LessonPage() {
                 <GlossaryList terms={l.glossaryTerms} />
               </div>
 
-              <div className="mt-12 flex flex-wrap items-center gap-4 rounded-card border border-border bg-surface p-5">
+              <div className="mt-12 flex flex-wrap items-center gap-4 rounded-lg border border-line bg-surface p-5">
                 <p className="flex-1 font-semibold">Finished reading and trying the questions?</p>
                 <MarkComplete
                   signedIn={Boolean(user)}
@@ -186,9 +186,9 @@ function ResumeLink({
   const index = sections.findIndex((s) => s.id === sectionId);
   if (index <= 0) return null;
   return (
-    <p className="mt-4 rounded-card border border-primary/40 bg-primary-soft px-4 py-3">
+    <p className="mt-4 rounded-lg border border-accent-line bg-accent-tint px-4 py-3">
       Pick up where you left off:{' '}
-      <a href={`#${sectionId}`} className="font-semibold text-primary underline">
+      <a href={`#${sectionId}`} className="font-semibold text-accent underline">
         {index + 1}. {sections[index]!.title}
       </a>
     </p>

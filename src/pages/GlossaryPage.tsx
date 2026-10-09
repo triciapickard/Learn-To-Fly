@@ -63,20 +63,20 @@ export default function GlossaryPage() {
             id={t.slug}
             tabIndex={-1}
             aria-labelledby={`${t.slug}-term`}
-            className="scroll-mt-24 rounded-card border border-border bg-surface p-4 md:scroll-mt-40 target:border-primary target:ring-2 target:ring-primary/40"
+            className="scroll-mt-24 rounded-lg border border-line bg-surface p-4 md:scroll-mt-40 target:border-accent-line target:ring-2 target:ring-accent-line/40"
           >
             <h3 id={`${t.slug}-term`} className="text-xl font-semibold">
               {t.term}
             </h3>
             {t.aliases.length > 0 && (
-              <p className="text-sm text-muted">Also: {t.aliases.join(', ')}</p>
+              <p className="text-sm text-ink-2">Also: {t.aliases.join(', ')}</p>
             )}
             <p className="mt-2 max-w-prose">{t.definition}</p>
             {(t.related.length > 0 || t.lessons.length > 0) && (
               <dl className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
                 {t.related.length > 0 && (
                   <div>
-                    <dt className="font-semibold text-muted">Related</dt>
+                    <dt className="font-semibold text-ink-2">Related</dt>
                     <dd className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
                       {t.related.flatMap((slug) => {
                         const r = bySlug.get(slug);
@@ -86,7 +86,7 @@ export default function GlossaryPage() {
                                 key={slug}
                                 href={`#${slug}`}
                                 onClick={(e) => openRelated(e, slug)}
-                                className="font-medium text-primary underline underline-offset-2"
+                                className="font-medium text-accent underline underline-offset-2"
                               >
                                 {r.term}
                               </a>,
@@ -98,7 +98,7 @@ export default function GlossaryPage() {
                 )}
                 {t.lessons.length > 0 && (
                   <div>
-                    <dt className="font-semibold text-muted">Used in</dt>
+                    <dt className="font-semibold text-ink-2">Used in</dt>
                     <dd className="mt-1 flex flex-col gap-1">
                       {t.lessons.map((l) => (
                         <Link key={l.slug} to={l.href}>
@@ -132,7 +132,7 @@ export default function GlossaryPage() {
                 <div className="relative">
                   <Search
                     aria-hidden
-                    className="pointer-events-none absolute top-1/2 left-3 size-5 -translate-y-1/2 text-muted"
+                    className="pointer-events-none absolute top-1/2 left-3 size-5 -translate-y-1/2 text-ink-2"
                   />
                   <Input
                     type="search"
@@ -144,7 +144,7 @@ export default function GlossaryPage() {
                 </div>
               </FormField>
             </form>
-            <p role="status" className="mt-3 text-sm text-muted">
+            <p role="status" className="mt-3 text-sm text-ink-2">
               {query
                 ? `${plural(shown.length, 'term')} match “${query}”`
                 : `${plural(terms.length, 'term')}`}
@@ -153,7 +153,7 @@ export default function GlossaryPage() {
             {groups && (
               <nav
                 aria-label="Jump to letter"
-                className="z-10 -mx-4 mt-4 bg-bg/95 px-4 py-2 backdrop-blur md:sticky md:top-16"
+                className="z-10 -mx-4 mt-4 bg-canvas/95 px-4 py-2 backdrop-blur md:sticky md:top-16"
               >
                 <ul className="flex flex-wrap gap-1">
                   {LETTERS.filter((l) => l !== '#' || present.has('#')).map((letter) => (
@@ -161,13 +161,13 @@ export default function GlossaryPage() {
                       {present.has(letter) ? (
                         <a
                           href={`#letter-${letter === '#' ? 'num' : letter}`}
-                          className="flex size-9 items-center justify-center rounded-control font-mono font-semibold text-primary hover:bg-primary-soft"
+                          className="flex size-9 items-center justify-center rounded-md font-mono font-semibold text-accent hover:bg-accent-tint"
                         >
                           {letter}
                         </a>
                       ) : (
                         <span
-                          className="flex size-9 items-center justify-center font-mono text-muted/60"
+                          className="flex size-9 items-center justify-center font-mono text-ink-2/60"
                           aria-hidden
                         >
                           {letter}
@@ -202,7 +202,7 @@ export default function GlossaryPage() {
                     >
                       <h2
                         id={`letter-${letter === '#' ? 'num' : letter}-heading`}
-                        className="mb-3 font-mono text-2xl font-bold text-primary"
+                        className="mb-3 font-mono text-2xl font-bold text-accent"
                       >
                         {letter === '#' ? '0–9' : letter}
                       </h2>

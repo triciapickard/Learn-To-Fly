@@ -8,10 +8,7 @@ import type { LessonBlock } from '@shared/schemas/content';
 
 function WidgetFallback({ title }: { title: string }) {
   return (
-    <div
-      role="note"
-      className="my-8 rounded-card border border-dashed border-border p-4 text-muted"
-    >
+    <div role="note" className="my-8 rounded-lg border border-dashed border-line p-4 text-ink-2">
       The interactive diagram “{title}” failed to load. Open “Describe this diagram” in a refreshed
       page, or carry on — the text around it covers the same ideas.
     </div>
@@ -34,7 +31,7 @@ export function WidgetBlock({
   const title = WIDGET_TITLES[name];
   if (!Widget) {
     return import.meta.env.DEV ? (
-      <p className="my-8 rounded-card border-2 border-dashed border-warning p-4 text-warning">
+      <p className="my-8 rounded-lg border-2 border-dashed border-caution p-4 text-caution">
         Development only: the widget “{name}” is not built yet.
       </p>
     ) : null;

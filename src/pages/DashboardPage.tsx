@@ -15,7 +15,7 @@ function ItemIcon({ type }: { type: DashboardItem['type'] }) {
   const Icon = type === 'lesson' ? BookOpen : Flag;
   return (
     <span className="inline-flex shrink-0">
-      <Icon aria-hidden className="size-5 text-muted" />
+      <Icon aria-hidden className="size-5 text-ink-2" />
       <span className="sr-only">{type === 'lesson' ? 'Lesson' : 'Challenge'}:</span>
     </span>
   );
@@ -64,7 +64,7 @@ export default function DashboardPage() {
             {d.course.complete && (
               <section
                 aria-labelledby="complete-heading"
-                className="mb-8 flex flex-col items-center gap-6 rounded-card border border-gold bg-surface p-6 text-center sm:flex-row sm:text-left"
+                className="mb-8 flex flex-col items-center gap-6 rounded-lg border border-tier-gold bg-surface p-6 text-center sm:flex-row sm:text-left"
               >
                 <CourseBadge />
                 <div>
@@ -74,7 +74,7 @@ export default function DashboardPage() {
                   <p className="mt-2">
                     You finished every core lesson and passed every core challenge. Great flying.
                   </p>
-                  <p className="mt-2 text-sm text-muted">
+                  <p className="mt-2 text-sm text-ink-2">
                     This badge celebrates your simulator practice on Learn-To-Fly. It is not a pilot
                     certificate and has no value for real-world flying.
                   </p>
@@ -96,12 +96,12 @@ export default function DashboardPage() {
             {!d.continue && !d.course.complete && (
               <section
                 aria-labelledby="caught-up-heading"
-                className="mb-8 rounded-card border border-border bg-surface p-5"
+                className="mb-8 rounded-lg border border-line bg-surface p-5"
               >
                 <h2 id="caught-up-heading" className="text-xl font-bold">
                   All caught up
                 </h2>
-                <p className="mt-1 text-muted">
+                <p className="mt-1 text-ink-2">
                   You have finished everything published so far. More lessons and challenges are on
                   the way: see the <Link to="/roadmap">roadmap</Link>, or fly a challenge again for
                   a better tier.
@@ -112,15 +112,15 @@ export default function DashboardPage() {
             {d.continue && (
               <section
                 aria-labelledby="continue-heading"
-                className="mb-8 rounded-card border border-primary bg-primary-soft p-5"
+                className="mb-8 rounded-lg border border-accent-line bg-accent-tint p-5"
               >
-                <h2 id="continue-heading" className="text-sm font-semibold text-primary">
+                <h2 id="continue-heading" className="text-sm font-semibold text-accent">
                   {fresh ? 'Start here' : d.continue.started ? 'Continue' : 'Up next'}
                 </h2>
                 <p className="mt-1 text-xl font-bold">
                   {d.continue.code} {d.continue.title}
                 </p>
-                <p className="text-muted">
+                <p className="text-ink-2">
                   {d.continue.moduleTitle}
                   {d.continue.estimatedMinutes ? ` · about ${d.continue.estimatedMinutes} min` : ''}
                 </p>
@@ -147,7 +147,7 @@ export default function DashboardPage() {
                   <h2 id="progress-heading" className="text-2xl font-bold">
                     Your progress
                   </h2>
-                  <div className="mt-3 grid gap-3 rounded-card border border-border bg-surface p-4">
+                  <div className="mt-3 grid gap-3 rounded-lg border border-line bg-surface p-4">
                     <ProgressBar
                       label="Core lessons completed"
                       value={d.course.lessonsCompleted}
@@ -191,20 +191,20 @@ export default function DashboardPage() {
                     <h2 id="next-heading" className="text-2xl font-bold">
                       Next up
                     </h2>
-                    <ol className="mt-3 rounded-card border border-border bg-surface p-2">
+                    <ol className="mt-3 rounded-lg border border-line bg-surface p-2">
                       {d.nextUp.map((item) => (
                         <li key={item.slug}>
                           <Link
                             unstyled
                             to={item.href}
-                            className="flex min-h-11 items-center gap-3 rounded-control px-3 py-2 hover:bg-surface-2"
+                            className="flex min-h-11 items-center gap-3 rounded-md px-3 py-2 hover:bg-surface-sunken"
                           >
                             <ItemIcon type={item.type} />
-                            <span className="w-10 shrink-0 font-mono text-sm text-muted">
+                            <span className="w-10 shrink-0 font-mono text-sm text-ink-2">
                               {item.code}
                             </span>
                             <span className="flex-1 font-medium">{item.title}</span>
-                            <span className="hidden text-sm text-muted sm:block">
+                            <span className="hidden text-sm text-ink-2 sm:block">
                               {item.moduleTitle}
                             </span>
                           </Link>
@@ -226,8 +226,8 @@ export default function DashboardPage() {
                       ['Gold results', String(d.stats.goldCount)],
                       ['Sim time (estimated)', simTime(d.stats.estimatedSimMinutes)],
                     ].map(([label, value]) => (
-                      <div key={label} className="rounded-card border border-border bg-surface p-3">
-                        <dt className="text-sm text-muted">{label}</dt>
+                      <div key={label} className="rounded-lg border border-line bg-surface p-3">
+                        <dt className="text-sm text-ink-2">{label}</dt>
                         <dd className="font-mono text-2xl font-bold">{value}</dd>
                       </div>
                     ))}
@@ -244,7 +244,7 @@ export default function DashboardPage() {
                         {d.recentAttempts.map((a) => (
                           <li
                             key={a.id}
-                            className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-card border border-border bg-surface p-3"
+                            className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-lg border border-line bg-surface p-3"
                           >
                             <Link
                               to={`/challenges/${a.challengeSlug}?tab=history`}
@@ -254,7 +254,7 @@ export default function DashboardPage() {
                             </Link>
                             <TierBadge tier={a.tier} />
                             <span className="font-mono">{a.percentage}%</span>
-                            <span className="w-full text-sm text-muted">
+                            <span className="w-full text-sm text-ink-2">
                               {formatDateTime(a.submittedAt)}
                             </span>
                           </li>
@@ -265,7 +265,7 @@ export default function DashboardPage() {
                       </Link>
                     </>
                   ) : (
-                    <p className="mt-3 flex items-center gap-2 text-muted">
+                    <p className="mt-3 flex items-center gap-2 text-ink-2">
                       <Trophy aria-hidden className="size-5" /> Your challenge results will appear
                       here.
                     </p>

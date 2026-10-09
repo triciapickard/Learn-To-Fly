@@ -43,10 +43,10 @@ export function ImageBlock({ block }: { block: Block<'image'> }) {
         height={block.height}
         loading="lazy"
         decoding="async"
-        className="h-auto w-full rounded-card border border-border"
+        className="h-auto w-full rounded-lg border border-line"
       />
       {block.caption && (
-        <figcaption className="mt-2 text-sm text-muted">{block.caption}</figcaption>
+        <figcaption className="mt-2 text-sm text-ink-2">{block.caption}</figcaption>
       )}
     </figure>
   );
@@ -57,7 +57,7 @@ export function VideoBlock({ block }: { block: Block<'video'> }) {
   const [playing, setPlaying] = useState(false);
   return (
     <figure className="my-6">
-      <div className="relative aspect-video overflow-hidden rounded-card border border-border bg-instrument">
+      <div className="relative aspect-video overflow-hidden rounded-lg border border-line bg-instrument">
         {playing ? (
           <iframe
             src={`https://www.youtube-nocookie.com/embed/${block.videoId}?autoplay=1&rel=0`}
@@ -72,7 +72,7 @@ export function VideoBlock({ block }: { block: Block<'video'> }) {
             onClick={() => setPlaying(true)}
             className="group absolute inset-0 flex flex-col items-center justify-center gap-3 p-4 text-center text-instrument-text"
           >
-            <span className="flex size-16 items-center justify-center rounded-full bg-danger text-white group-hover:scale-105 dark:text-bg">
+            <span className="flex size-16 items-center justify-center rounded-full bg-warn text-on-warn group-hover:scale-105">
               <Play aria-hidden className="size-8 fill-current" />
             </span>
             <span className="text-lg font-semibold">Play video: {block.title}</span>
@@ -82,7 +82,7 @@ export function VideoBlock({ block }: { block: Block<'video'> }) {
           </button>
         )}
       </div>
-      <figcaption className="mt-2 text-sm text-muted">
+      <figcaption className="mt-2 text-sm text-ink-2">
         {block.title}
         {block.captions ? ' · captions available' : ''}
       </figcaption>

@@ -1,38 +1,133 @@
-import { ChevronRight } from 'lucide-react';
-import { DifficultyDots, TierBadge } from '@/components/ChallengeMeta';
+import {
+  ArrowRight,
+  BookOpen,
+  Check,
+  ChevronRight,
+  ClipboardCheck,
+  Eye,
+  Gamepad2,
+  Monitor,
+  PlaneTakeoff,
+  SlidersHorizontal,
+  Smartphone,
+  type LucideIcon,
+} from 'lucide-react';
+import { Button } from '@/components/Button';
+import { Card } from '@/components/Card';
+import { DifficultyDots } from '@/components/ChallengeMeta';
+import { LessonPath, type LessonStop, type LessonStopState } from '@/components/LessonPath';
 import { Link } from '@/components/Link';
-import { CURRICULUM_PREVIEW } from '@/features/landing/curriculumPreview';
-import { HeroIllustration } from '@/features/landing/HeroIllustration';
-import { WidgetBlock } from '@/features/lessons/blocks/WidgetBlock';
+import { CURRICULUM_PREVIEW, FIRST_STOPS } from '@/features/landing/curriculumPreview';
+import { useMyProgress } from '@/features/progress/api';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { cn } from '@/lib/cn';
 import { plural } from '@/lib/format';
-import { FIRST_LESSON_PATH } from '@shared/constants';
+import type { ProgressResponse } from '@shared/schemas/api';
 
-// Landing page, redesign direction C ("Skyhawk livery"): big condensed display type,
-// livery stripes and navy bands. In dark mode the page switches to its own "night livery"
-// palette (the .livery overrides in tokens.css). Section order follows v1.md Section 20.1.
+// Landing page (design system 2026, homepage redesign): the hero is type and the Module 0
+// lesson path, no airplane illustration. Bands alternate canvas and surface with space-24
+// padding. The one accent control on the page is the lesson path's "Start lesson" button.
 
-const STEPS = [
+const MODULE_0 = CURRICULUM_PREVIEW[0];
+const MODULE_0_LESSONS = FIRST_STOPS.filter((lesson) => lesson.module === MODULE_0.slug);
+const FIRST_CHALLENGE = {
+  slug: 'c0-1-first-flight-over-livermore',
+  code: 'Challenge C0.1',
+  title: 'First flight over Livermore',
+};
+
+const STATS = [
+  { value: String(CURRICULUM_PREVIEW.length), label: 'modules, one airplane' },
+  {
+    value: String(CURRICULUM_PREVIEW.reduce((sum, m) => sum + m.lessons, 0)),
+    label: 'short interactive lessons',
+  },
+  {
+    value: String(CURRICULUM_PREVIEW.reduce((sum, m) => sum + m.challenges, 0)),
+    label: 'scored in-sim challenges',
+  },
+  { value: '~25 h', label: 'of lessons and sim time' },
+];
+
+const STEPS: { title: string; text: string; icon: LucideIcon }[] = [
   {
     title: 'Learn',
-    text: 'Short explanations, never more than a few paragraphs before something visual.',
+    text: 'Why before how, in a few short paragraphs written to you.',
+    icon: BookOpen,
   },
-  { title: 'See', text: 'Diagrams and cockpit views that show the idea next to the words.' },
-  { title: 'Try', text: 'Interactive widgets and quick questions to check you have it.' },
-  { title: 'Fly', text: 'A challenge in MSFS 2024 with an exact setup and clear standards.' },
-  { title: 'Reflect', text: 'Debrief honestly with a scored rubric and see yourself improve.' },
+  {
+    title: 'See',
+    text: 'Diagrams and cockpit views next to the words, not instead of them.',
+    icon: Eye,
+  },
+  {
+    title: 'Try',
+    text: 'Change the wind, bank the airplane, answer a quick question. Check you have it.',
+    icon: SlidersHorizontal,
+  },
+  {
+    title: 'Fly',
+    text: 'A challenge in MSFS 2024 with the exact setup and clear standards.',
+    icon: PlaneTakeoff,
+  },
+  {
+    title: 'Reflect',
+    text: 'Debrief honestly against a rubric. Good go-arounds count too.',
+    icon: ClipboardCheck,
+  },
+];
+
+const TIERS = [
+  { tier: 'gold', label: 'Gold', range: '65 KIAS −5/+10', note: 'Within private pilot standards.' },
+  { tier: 'silver', label: 'Silver', range: '65 KIAS ±10', note: 'A good student pilot.' },
+  { tier: 'bronze', label: 'Bronze', range: '65 KIAS ±15', note: 'Safe, and worth celebrating.' },
+] as const;
+
+const TIER_RING: Record<(typeof TIERS)[number]['tier'], string> = {
+  gold: 'border-tier-gold text-tier-gold',
+  silver: 'border-tier-silver text-tier-silver',
+  bronze: 'border-tier-bronze text-tier-bronze',
+};
+
+const SAMPLE_CHALLENGE = {
+  slug: 'c4-3-full-stop-landing',
+  lessonSlug: 'l4-3-normal-approach-and-landing',
+  moduleSlug: 'm4-takeoffs-patterns-landings',
+  setup: [
+    { text: 'KLVK · Rwy 25R', mono: true },
+    { text: 'Calm, clear', mono: false },
+    { text: '10:00 local', mono: true },
+    { text: 'Flaps 30 · 65 KIAS', mono: true },
+  ],
+  criteria: [
+    <>
+      A stabilized approach by <span className="readout-sm">300 ft AGL</span>, on speed and on the
+      centerline
+    </>,
+    'Main wheels first, in the first third of the runway',
+    'Straight on the rollout, no bounce, or a go-around if it is not working',
+  ],
+};
+
+const NEEDS: { title: string; text: string; icon: LucideIcon }[] = [
+  {
+    title: 'MSFS 2024, any edition',
+    text: 'The course uses the Cessna 172 Skyhawk with the G1000 and airports around the San Francisco Bay, all included in every edition on PC and Xbox.',
+    icon: Monitor,
+  },
+  {
+    title: 'A controller or joystick',
+    text: 'An Xbox controller is enough for every lesson and challenge. Lesson 0.2 sets it up. A yoke and rudder pedals feel more real, but they are optional.',
+    icon: Gamepad2,
+  },
+  {
+    title: 'A second screen',
+    text: 'Keep a phone, tablet or laptop open beside the sim. Fly mode shows the setup, the procedure and a stopwatch in big type while you fly.',
+    icon: Smartphone,
+  },
 ];
 
 const FAQ = [
-  {
-    q: 'Do I need a yoke or rudder pedals?',
-    a: 'No. An Xbox controller or a basic joystick is enough to complete every lesson and challenge. Lesson 0.2 shows you how to set up your controls. A yoke and pedals make it feel more real, but they are optional.',
-  },
-  {
-    q: 'Which edition of Microsoft Flight Simulator 2024 do I need?',
-    a: 'Any edition. The course uses the Cessna 172 Skyhawk and airports in the San Francisco Bay Area, which are available to every MSFS 2024 player.',
-  },
   {
     q: 'Is this real flight training?',
     a: 'No. Learn-To-Fly is for simulation only. It borrows real-world standards so you build good habits, but it does not count toward any pilot certificate. For real flying, learn with a certified flight instructor.',
@@ -42,314 +137,418 @@ const FAQ = [
     a: 'Yes. Every lesson is free to read without an account. A free account saves your progress, challenge scores and attempt history.',
   },
   {
-    q: 'Does it work with Xbox as well as PC?',
-    a: 'Yes. The site runs in any modern browser, so keep it open on a phone, tablet or laptop next to your Xbox or PC. Challenge "fly mode" is designed for a second screen.',
+    q: 'Do I need a yoke or rudder pedals?',
+    a: 'No. An Xbox controller or a basic joystick is enough to complete every lesson and challenge. A yoke and pedals make it feel more real, but they are optional.',
+  },
+  {
+    q: 'How far does it go?',
+    a: (
+      <>
+        Version 1 covers one airplane, the Cessna 172, done properly: from the first takeoff to a
+        local checkride and a planned cross-country. Bigger airplanes come later.{' '}
+        <Link to="/roadmap">See the roadmap</Link>
+      </>
+    ),
   },
 ];
 
-const TOTAL_LESSONS = CURRICULUM_PREVIEW.reduce((sum, module) => sum + module.lessons, 0);
-const TOTAL_CHALLENGES = CURRICULUM_PREVIEW.reduce((sum, module) => sum + module.challenges, 0);
+/** Module 0 as lesson path stops; done and current follow the learner's progress when signed in. */
+function moduleZeroStops(progress?: ProgressResponse): LessonStop[] {
+  let currentFound = false;
+  const stops: LessonStop[] = MODULE_0_LESSONS.map((lesson) => {
+    const done = progress?.lessons[lesson.slug]?.status === 'completed';
+    let state: LessonStopState = 'upcoming';
+    if (done) state = 'done';
+    else if (!currentFound) {
+      currentFound = true;
+      state = 'current';
+    }
+    const minutes = `${lesson.minutes} min`;
+    return {
+      id: lesson.slug,
+      title: lesson.title,
+      state,
+      to: `/learn/${lesson.module}/${lesson.slug}`,
+      meta:
+        state === 'done'
+          ? `${lesson.code} · Done`
+          : state === 'current'
+            ? `${lesson.code} · ${minutes} · Start here`
+            : `${lesson.code} · ${minutes}`,
+    };
+  });
+  const passed = Boolean(progress?.challenges[FIRST_CHALLENGE.slug]?.passed);
+  let challengeState: LessonStopState = 'upcoming';
+  if (passed) challengeState = 'done';
+  else if (!currentFound) challengeState = 'current';
+  stops.push({
+    id: FIRST_CHALLENGE.slug,
+    title: FIRST_CHALLENGE.title,
+    state: challengeState,
+    to: `/challenges/${FIRST_CHALLENGE.slug}`,
+    meta: passed
+      ? `${FIRST_CHALLENGE.code} · Passed`
+      : `${FIRST_CHALLENGE.code} · Fly it in the sim, then score yourself`,
+  });
+  return stops;
+}
 
-const STATS = [
-  { value: String(CURRICULUM_PREVIEW.length), label: 'modules, one airplane' },
-  { value: String(TOTAL_LESSONS), label: 'short interactive lessons' },
-  { value: String(TOTAL_CHALLENGES), label: 'scored in-sim challenges' },
-  { value: '~25 h', label: 'of lessons and sim time' },
-];
+/** The module to act on next: the first one with lessons left. */
+function currentModuleIndex(progress?: ProgressResponse): number {
+  const index = CURRICULUM_PREVIEW.findIndex((m) => !progress?.modules[m.slug]?.complete);
+  return index === -1 ? CURRICULUM_PREVIEW.length - 1 : index;
+}
 
-const TIERS = [
-  { tier: 'gold', range: '65 KIAS −5/+10' },
-  { tier: 'silver', range: '65 KIAS ±10' },
-  { tier: 'bronze', range: '65 KIAS ±15' },
-] as const;
+const band = 'mx-auto w-full max-w-page px-4';
+const bandPad = 'py-16 sm:py-24';
 
-/** Section heading in the livery display face. */
-const displayHeading =
-  'font-display font-black uppercase leading-[0.9] text-[clamp(3rem,6vw,5.5rem)]';
-
-const pillButton =
-  'inline-flex min-h-13 items-center justify-center rounded-full px-6 text-lg font-bold transition-colors duration-150';
+function Eyebrow({ children, className }: { children: React.ReactNode; className?: string }) {
+  return <p className={cn('overline text-ink-2', className)}>{children}</p>;
+}
 
 export default function LandingPage() {
   usePageTitle();
+  const { data: progress } = useMyProgress();
+  const stops = moduleZeroStops(progress);
+  const currentModule = currentModuleIndex(progress);
+  const started = Boolean(
+    progress && Object.values(progress.lessons).some((l) => l.status === 'completed'),
+  );
+  const nextStop = stops.find((s) => s.state === 'current');
+  const nextTo = nextStop?.to ?? `/learn/${(CURRICULUM_PREVIEW[currentModule] ?? MODULE_0).slug}`;
+  const nextLabel = started
+    ? 'Continue where you left off'
+    : nextStop
+      ? `Start ${nextStop.id === FIRST_CHALLENGE.slug ? 'challenge 0.1' : 'lesson 0.1'}`
+      : 'Open the course';
+
   return (
-    <div className="livery bg-bg text-text">
-      {/* Hero */}
-      <section className="mx-auto max-w-7xl px-4 pt-10 sm:px-10 sm:pt-14">
-        <div className="flex flex-wrap items-end justify-between gap-8">
-          <h1 className="font-display text-[clamp(3.75rem,10vw,9rem)] leading-[0.86] font-black uppercase">
-            Learn to fly <br />
-            <span className="text-primary">the Skyhawk.</span>
+    <div>
+      {/* Hero: type and the Module 0 lesson path, on canvas. */}
+      <section
+        aria-labelledby="hero-heading"
+        className={cn(
+          band,
+          'grid gap-12 pt-16 pb-12 sm:pt-24 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-16',
+        )}
+      >
+        <div>
+          <Eyebrow>Free · Cessna 172 Skyhawk · MSFS 2024</Eyebrow>
+          <h1 id="hero-heading" className="display-lg sm:display-xl mt-6 max-w-[12ch]">
+            Yes, you can fly a plane.
           </h1>
-          <div className="flex flex-[0_1_22rem] flex-col gap-5 pb-3">
-            <p className="text-lg text-muted">
-              Short interactive lessons and in-sim challenges take a complete beginner from first
-              takeoff to a planned cross-country flight in the Cessna 172 in Microsoft Flight
-              Simulator 2024.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                unstyled
-                to={FIRST_LESSON_PATH}
-                className={cn(pillButton, 'bg-cta text-cta-text hover:bg-cta-hover')}
-              >
-                Start lesson 1 (free)
+          <p className="body-lg mt-6 max-w-[34em] text-ink-2">
+            Learn-To-Fly takes a complete beginner from the first takeoff to a planned cross-country
+            flight in the Cessna 172, inside Microsoft Flight Simulator 2024. Short lessons,
+            diagrams you can play with, and challenges you fly in the sim and score against real
+            pilot standards.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button size="lg" asChild>
+              <Link unstyled to={nextTo}>
+                {nextLabel} <ArrowRight aria-hidden strokeWidth={1.75} />
               </Link>
-              <Link
-                unstyled
-                to="/learn"
-                className={cn(pillButton, 'border-2 border-text text-text hover:bg-surface-2')}
-              >
+            </Button>
+            <Button variant="secondary" size="lg" asChild>
+              <Link unstyled to="/learn">
                 See the curriculum
               </Link>
-            </div>
-            <p className="text-sm text-muted">
-              No account needed to start. For simulation use only.
-            </p>
+            </Button>
           </div>
-        </div>
-      </section>
-
-      <div className="mt-6 overflow-hidden">
-        <HeroIllustration className="block h-auto min-h-[280px] w-full" />
-      </div>
-
-      {/* At a glance */}
-      <section aria-label="The course at a glance" className="bg-band text-band-text">
-        <ul className="mx-auto grid max-w-7xl gap-6 px-4 py-9 sm:grid-cols-2 sm:px-10 lg:grid-cols-4">
-          {STATS.map(({ value, label }) => (
-            <li key={label}>
-              <span className="block font-display text-6xl leading-none font-black">{value}</span>
-              <span className="text-band-muted">{label}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* How it works */}
-      <section
-        aria-labelledby="how-heading"
-        className="mx-auto max-w-7xl px-4 pt-24 pb-14 sm:px-10"
-      >
-        <h2 id="how-heading" className={cn(displayHeading, 'mb-12 max-w-[12em]')}>
-          Each lesson, the same five steps.
-        </h2>
-        <ol className="grid border-t-[3px] border-rule sm:grid-cols-2 lg:grid-cols-5">
-          {STEPS.map(({ title, text }, index) => (
-            <li key={title} className="flex flex-col gap-2.5 py-6 pr-6">
-              <span
-                aria-hidden
-                className={cn(
-                  'font-display text-6xl leading-none font-black',
-                  title === 'Fly' ? 'text-primary' : 'text-border-strong',
-                )}
-              >
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <h3 className="text-xl font-bold">
-                <span className="sr-only">Step {index + 1}: </span>
-                {title}
-              </h3>
-              <p className="text-muted">{text}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* Live widget demo (step 6.31): W7 needs no API data, so it works for every visitor. */}
-      <section aria-labelledby="demo-heading" className="mx-auto max-w-7xl px-4 py-14 sm:px-10">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
-          <h2 id="demo-heading" className={displayHeading}>
-            Try it <br />
-            right here.
-          </h2>
-          <p className="max-w-[24em] text-muted">
-            Lessons are built around interactive diagrams. Press Play to fly a traffic pattern,
-            change the wind and watch the airplane crab, or turn on the radio calls.
+          <p className="mt-4 text-sm leading-5 text-ink-3">
+            No account needed to start. Any edition of MSFS 2024, on PC or Xbox. For simulation use
+            only.
           </p>
         </div>
-        <div id="landing-widget-demo" className="rounded-3xl bg-surface-2 p-4 sm:p-6">
-          <WidgetBlock name="traffic-pattern" props={{ calls: 'true' }} />
+
+        <Card className="w-full max-w-[460px] p-5 sm:p-6 lg:justify-self-end">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+            <Eyebrow>Module 0 · {MODULE_0.title}</Eyebrow>
+            <p className="readout-sm text-ink-3">
+              {plural(MODULE_0.lessons, 'lesson')} · {plural(MODULE_0.challenges, 'challenge')}
+            </p>
+          </div>
+          <LessonPath
+            stops={stops}
+            startLabel="Start"
+            aria-label="Module 0 lesson path"
+            className="mt-4"
+          />
+        </Card>
+      </section>
+
+      {/* The course at a glance. */}
+      <section aria-label="The course at a glance" className={cn(band, 'pb-16 sm:pb-24')}>
+        <dl className="grid gap-6 border-t border-line pt-8 sm:grid-cols-2 lg:grid-cols-4">
+          {STATS.map(({ value, label }) => (
+            <div key={label} className="flex flex-col gap-1">
+              <dd className="readout-lg order-first">{value}</dd>
+              <dt className="text-sm leading-5 text-ink-2">{label}</dt>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      {/* How a lesson works. */}
+      <section aria-labelledby="how-heading" className="bg-surface">
+        <div className={cn(band, bandPad)}>
+          <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-4">
+            <div className="max-w-[640px]">
+              <Eyebrow>How a lesson works</Eyebrow>
+              <h2 id="how-heading" className="display-md sm:display-lg mt-3">
+                Read a little. Try it on the page. Fly it in the sim.
+              </h2>
+            </div>
+            <p className="max-w-[30em] text-ink-2">
+              Every lesson follows the same five steps, so you always know what comes next. Nothing
+              is more than a few paragraphs before something you can see or do.
+            </p>
+          </div>
+          <ol className="mt-12 grid gap-x-6 gap-y-8 border-t-2 border-line-strong sm:grid-cols-2 lg:grid-cols-5">
+            {STEPS.map(({ title, text, icon: Icon }, index) => (
+              <li key={title} className="flex flex-col gap-2.5 pt-6">
+                <span aria-hidden className="readout-sm text-ink-3">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <Icon aria-hidden className="size-5 text-ink" strokeWidth={1.75} />
+                <h3 className="heading-md">
+                  <span className="sr-only">Step {index + 1}: </span>
+                  {title}
+                </h3>
+                <p className="text-sm leading-5 text-ink-2">{text}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
-      {/* Curriculum preview */}
-      <section
-        aria-labelledby="curriculum-heading"
-        className="mx-auto max-w-7xl px-4 pt-14 pb-24 sm:px-10"
-      >
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
-          <h2 id="curriculum-heading" className={displayHeading}>
-            Nine modules. <br />
-            Every detail verified.
-          </h2>
-          <p className="max-w-[24em] text-muted">
-            Built in the same order real flight schools teach, from setting up the sim to a
-            cross-country flight.{' '}
-            <Link to="/learn" className="inline-flex items-center gap-1 font-bold">
-              Full curriculum <ChevronRight aria-hidden className="size-4" />
+      {/* The curriculum: nine modules as one flight-plan style list. */}
+      <section aria-labelledby="curriculum-heading" className={cn(band, bandPad)}>
+        <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-4">
+          <div className="max-w-[640px]">
+            <Eyebrow>The curriculum</Eyebrow>
+            <h2 id="curriculum-heading" className="display-md sm:display-lg mt-3">
+              Nine modules, in the order a flight school teaches them.
+            </h2>
+          </div>
+          <p className="max-w-[30em] text-ink-2">
+            From setting up the sim to a planned cross-country flight. Every lesson is free to read.{' '}
+            <Link to="/learn" className="font-medium whitespace-nowrap">
+              Full curriculum
             </Link>
           </p>
         </div>
-        <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {CURRICULUM_PREVIEW.map((module, index) => {
-            const last = index === CURRICULUM_PREVIEW.length - 1;
-            return (
-              <li
-                key={module.code}
-                className={cn(
-                  'flex items-start gap-5 rounded-2xl p-7',
-                  last ? 'bg-band text-band-text' : 'bg-surface-2',
-                )}
-              >
-                <span
-                  aria-hidden
-                  className={cn(
-                    'min-w-[1.1em] font-display text-6xl leading-[0.85] font-black',
-                    index === 0 && 'text-primary',
-                  )}
-                >
-                  {module.code.slice(1)}
-                </span>
-                <div>
-                  <h3 className="mb-1.5 text-xl font-bold">
-                    <span className="sr-only">Module {module.code.slice(1)}: </span>
-                    {module.title}
-                  </h3>
-                  <p className={cn('mb-2.5', last ? 'text-band-muted' : 'text-muted')}>
-                    {module.summary}
-                  </p>
-                  <p
-                    className={cn('text-sm font-semibold', last ? 'text-band-muted' : 'text-muted')}
+        <Card className="mt-10 p-2" aria-label="Modules">
+          <ol>
+            {CURRICULUM_PREVIEW.map((module, index) => {
+              const done = Boolean(progress?.modules[module.slug]?.complete);
+              const isCurrent = progress !== undefined && index === currentModule;
+              return (
+                <li key={module.code} className={cn(index > 0 && 'border-t border-line')}>
+                  <Link
+                    unstyled
+                    to={`/learn/${module.slug}`}
+                    className={cn(
+                      'flex flex-wrap items-baseline gap-x-6 gap-y-2 rounded-md px-4 py-5 text-ink transition-colors duration-150 hover:bg-surface-sunken',
+                      isCurrent && 'bg-accent-tint hover:bg-accent-tint',
+                    )}
                   >
-                    {plural(module.lessons, 'lesson')} · {plural(module.challenges, 'challenge')}
-                  </p>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+                    <span className="readout w-12 shrink-0 text-ink-3">{module.code}</span>
+                    <span className="min-w-0 flex-[1_1_320px]">
+                      <span className="heading-md block">
+                        <span className="sr-only">Module {module.code.slice(1)}: </span>
+                        {module.title}
+                      </span>
+                      <span className="block text-sm leading-5 text-ink-2">{module.summary}</span>
+                    </span>
+                    <span className="readout-sm flex-[0_1_220px] text-ink-2">
+                      {done ? (
+                        <span className="inline-flex items-center gap-1.5 text-go">
+                          <Check aria-hidden className="size-4" strokeWidth={2} /> Done
+                        </span>
+                      ) : isCurrent ? (
+                        <span className="text-accent">Up next</span>
+                      ) : (
+                        `${plural(module.lessons, 'lesson')} · ${plural(module.challenges, 'challenge')}`
+                      )}
+                    </span>
+                    <ChevronRight
+                      aria-hidden
+                      className="size-[18px] shrink-0 self-center text-ink-3"
+                      strokeWidth={1.75}
+                    />
+                  </Link>
+                </li>
+              );
+            })}
+          </ol>
+        </Card>
       </section>
 
-      {/* What a challenge looks like */}
-      <section aria-labelledby="challenge-heading" className="bg-band text-band-text">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-16 px-4 py-24 sm:px-10">
-          <div className="flex flex-[1_1_24rem] flex-col gap-5">
-            <h2 id="challenge-heading" className={displayHeading}>
-              Bronze. Silver. <br />
-              <span className="text-band-gold">Gold.</span>
+      {/* Challenges: the tiers beside a real challenge card. */}
+      <section aria-labelledby="challenge-heading" className="bg-surface">
+        <div className={cn(band, bandPad, 'grid gap-12 lg:grid-cols-2 lg:gap-16')}>
+          <div>
+            <Eyebrow>Challenges</Eyebrow>
+            <h2 id="challenge-heading" className="display-md sm:display-lg mt-3 max-w-[12em]">
+              Bronze means you did it safely. Gold is checkride-ready.
             </h2>
-            <p className="text-band-muted">
-              Each challenge gives you the exact sim setup (airport, runway, weather, time and
-              fuel), a step-by-step procedure and measurable criteria borrowed from real pilot
-              standards. Bronze means you did it safely, Silver is a good student pilot, and Gold is
-              checkride-ready.
+            <p className="mt-6 max-w-[32em] text-ink-2">
+              Each challenge gives you the exact sim setup, a step-by-step procedure and measurable
+              criteria borrowed from real pilot standards. You fly it, you score it, and the site
+              keeps your attempts so you can watch yourself improve.
             </p>
+            <ul aria-label="Tiers for final approach speed" className="mt-6 border-t border-line">
+              {TIERS.map(({ tier, label, range, note }) => (
+                <li
+                  key={tier}
+                  className="flex flex-wrap items-center gap-x-4 gap-y-3 border-b border-line py-3.5"
+                >
+                  <span
+                    aria-hidden
+                    className={cn('size-5 shrink-0 rounded-pill border-2', TIER_RING[tier])}
+                  />
+                  <span className={cn('w-[72px] text-sm leading-5 font-semibold', TIER_RING[tier])}>
+                    {label}
+                  </span>
+                  <span className="readout w-40">{range}</span>
+                  <span className="flex-[1_1_160px] text-sm leading-5 text-ink-2">{note}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="flex min-w-0 flex-[1_1_28rem] flex-col gap-5 rounded-3xl bg-surface p-8 text-text">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <p className="text-sm font-bold tracking-widest text-primary uppercase">
-                Challenge C4.3
-              </p>
-              {/* Visible words beside the dots; the dots carry the accessible name. */}
-              <span className="inline-flex items-center gap-2.5 text-sm font-semibold text-muted">
+
+          <Card className="w-full max-w-[560px] p-5 sm:p-6">
+            <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+              <Eyebrow>Challenge C4.3 · Landing</Eyebrow>
+              <p className="inline-flex items-center gap-2 text-sm leading-5 text-ink-2">
                 <span aria-hidden>Difficulty</span>
                 <DifficultyDots value={3} />
-                <span aria-hidden>3 of 5</span>
-              </span>
+                <span aria-hidden className="readout-sm">
+                  3 of 5
+                </span>
+              </p>
             </div>
-            <h3 className="font-display text-5xl leading-[0.95] font-black uppercase">
-              Full-stop landing
-            </h3>
-            <p className="text-muted">
+            <h3 className="display-md mt-5">Full-stop landing</h3>
+            <p className="mt-4 text-ink-2">
               Fly a pattern and land in the first third of the runway, on the centerline, without
               bouncing.
             </p>
-            <ul aria-label="Sim setup" className="flex flex-wrap gap-2 text-sm font-semibold">
-              <li className="rounded-full bg-surface-2 px-3.5 py-2 font-mono">KLVK · Rwy 25R</li>
-              <li className="rounded-full bg-surface-2 px-3.5 py-2">Calm, clear</li>
-              <li className="rounded-full bg-surface-2 px-3.5 py-2 font-mono">10:00 local</li>
+            <ul aria-label="Sim setup" className="mt-5 flex flex-wrap gap-2">
+              {SAMPLE_CHALLENGE.setup.map(({ text, mono }) => (
+                <li
+                  key={text}
+                  className={cn(
+                    'rounded-sm bg-surface-sunken px-3 py-1.5 text-sm leading-5',
+                    mono && 'readout-sm',
+                  )}
+                >
+                  {text}
+                </li>
+              ))}
             </ul>
-            <div>
-              <p className="mb-2 font-semibold">Final approach speed</p>
-              <ul className="grid gap-2 sm:grid-cols-3">
-                {TIERS.map(({ tier, range }) => (
-                  <li
-                    key={tier}
-                    className="flex flex-col items-start gap-2 rounded-2xl bg-surface-2 p-3.5"
-                  >
-                    <TierBadge tier={tier} />
-                    <span className="font-mono text-sm">{range}</span>
-                  </li>
-                ))}
-              </ul>
+            <h4 className="heading-sm mt-5">You are scored on</h4>
+            <ul className="mt-2 flex flex-col gap-1.5 text-sm leading-5 text-ink-2">
+              {SAMPLE_CHALLENGE.criteria.map((criterion, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <Check
+                    aria-hidden
+                    className="mt-0.5 size-4 shrink-0 text-ink"
+                    strokeWidth={1.75}
+                  />
+                  <span>{criterion}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5">
+              <span className="text-sm leading-5 text-ink-3">
+                Est. <span className="readout-sm">20 min</span> · Builds on{' '}
+                <Link
+                  to={`/learn/${SAMPLE_CHALLENGE.moduleSlug}/${SAMPLE_CHALLENGE.lessonSlug}`}
+                  quiet
+                >
+                  lesson 4.3
+                </Link>
+              </span>
+              <Button variant="secondary" size="md" asChild>
+                <Link unstyled to={`/challenges/${SAMPLE_CHALLENGE.slug}`}>
+                  Read the procedure
+                </Link>
+              </Button>
             </div>
-          </div>
+          </Card>
         </div>
       </section>
 
-      {/* Honest scope */}
-      <section aria-labelledby="scope-heading" className="mx-auto max-w-7xl px-4 pt-24 sm:px-10">
-        <div className="flex flex-wrap items-center justify-between gap-4 border-y-[3px] border-rule py-6">
-          <div>
-            <h2 id="scope-heading" className="font-display text-3xl font-black uppercase">
-              Honest scope
-            </h2>
-            <p className="text-muted">
-              Version 1 covers one airplane, the Cessna 172, done properly. The long road to the
-              Airbus A380 comes next.
-            </p>
-          </div>
-          <Link to="/roadmap" className="inline-flex items-center gap-1 font-bold">
-            See the roadmap <ChevronRight aria-hidden className="size-4" />
-          </Link>
+      {/* What you need. */}
+      <section aria-labelledby="need-heading" className={cn(band, bandPad)}>
+        <div className="max-w-[640px]">
+          <Eyebrow>What you need</Eyebrow>
+          <h2 id="need-heading" className="display-md sm:display-lg mt-3">
+            The sim you already have, and a browser next to it.
+          </h2>
         </div>
-      </section>
-
-      {/* FAQ */}
-      <section aria-labelledby="faq-heading" className="mx-auto max-w-4xl px-4 py-24 sm:px-10">
-        <h2
-          id="faq-heading"
-          className="mb-7 font-display text-6xl leading-[0.95] font-black uppercase"
-        >
-          Questions
-        </h2>
-        <div className="flex flex-col gap-2.5">
-          {FAQ.map((item) => (
-            <details key={item.q} className="group rounded-2xl bg-surface-2">
-              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 font-bold">
-                {item.q}
-                <ChevronRight
-                  aria-hidden
-                  className="size-5 shrink-0 transition-transform group-open:rotate-90"
-                />
-              </summary>
-              <p className="px-6 pb-5 text-muted">{item.a}</p>
-            </details>
+        <ul className="mt-10 grid gap-6 md:grid-cols-3">
+          {NEEDS.map(({ title, text, icon: Icon }) => (
+            <li key={title}>
+              <Card className="h-full p-6">
+                <Icon aria-hidden className="size-6 text-ink" strokeWidth={1.75} />
+                <h3 className="heading-md mt-3">{title}</h3>
+                <p className="mt-2 text-sm leading-5 text-ink-2">{text}</p>
+              </Card>
+            </li>
           ))}
+        </ul>
+      </section>
+
+      {/* Questions. */}
+      <section aria-labelledby="faq-heading" className="bg-surface">
+        <div className={cn(band, bandPad)}>
+          <h2 id="faq-heading" className="display-md">
+            Questions
+          </h2>
+          <dl className="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2">
+            {FAQ.map((item) => (
+              <div key={item.q} className="border-t border-line pt-5">
+                <dt className="heading-md">{item.q}</dt>
+                <dd className="mt-2 text-ink-2">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="bg-cta-band text-cta-band-text">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-8 px-4 py-24 sm:px-10">
-          <div>
-            <h2 className="mb-3 font-display text-[clamp(3.25rem,7vw,6.5rem)] leading-[0.88] font-black uppercase">
-              Ready for your <br />
-              first flight?
-            </h2>
-            <p className="text-lg">Lesson 0.1 takes about five minutes and needs no account.</p>
-          </div>
-          <Link
-            unstyled
-            to={FIRST_LESSON_PATH}
-            className={cn(
-              pillButton,
-              'min-h-14 bg-white px-8 text-cta-band-button hover:opacity-90',
-            )}
-          >
-            Start lesson 1 (free)
-          </Link>
+      {/* Final call to action. */}
+      <section
+        aria-labelledby="cta-heading"
+        className={cn(
+          band,
+          bandPad,
+          'flex flex-wrap items-center justify-between gap-x-16 gap-y-8',
+        )}
+      >
+        <div className="max-w-[640px]">
+          <h2 id="cta-heading" className="display-md sm:display-lg">
+            Lesson 0.1 takes five minutes. Start there.
+          </h2>
+          <p className="mt-3 max-w-[32em] text-ink-2">
+            You will know how the course works, what a challenge looks like and whether this is for
+            you. No account, no download.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          <Button size="lg" asChild>
+            <Link unstyled to={nextTo}>
+              {nextLabel} <ArrowRight aria-hidden strokeWidth={1.75} />
+            </Link>
+          </Button>
+          {!progress && (
+            <Button variant="secondary" size="lg" asChild>
+              <Link unstyled to="/signup">
+                Create a free account
+              </Link>
+            </Button>
+          )}
         </div>
       </section>
     </div>

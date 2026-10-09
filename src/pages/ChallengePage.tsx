@@ -64,7 +64,7 @@ export default function ChallengePage() {
           <PageContainer narrow>
             <Breadcrumbs items={[{ label: 'Challenges', to: '/challenges' }, { label: c.code }]} />
             <PageHeader className="mt-4" eyebrow={`Challenge ${c.code}`} title={c.title}>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-muted">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-ink-2">
                 <TypeIcon type={c.type} />
                 <DifficultyDots value={c.difficulty} />
                 <span className="inline-flex items-center gap-1 text-sm">

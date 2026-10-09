@@ -23,11 +23,11 @@ export function CopyButton({ text, label }: { text: string; label: string }) {
           () => undefined,
         );
       }}
-      className="inline-flex min-h-9 min-w-9 items-center justify-center rounded-control text-muted hover:bg-surface-2 hover:text-text"
+      className="inline-flex min-h-9 min-w-9 items-center justify-center rounded-md text-ink-2 hover:bg-surface-sunken hover:text-ink"
       aria-label={copied ? `Copied ${label}` : `Copy ${label}`}
     >
       {copied ? (
-        <Check aria-hidden className="size-4 text-success" />
+        <Check aria-hidden className="size-4 text-go" />
       ) : (
         <Copy aria-hidden className="size-4" />
       )}
@@ -62,15 +62,15 @@ function weatherText(w: ResolvedSetup['weather']): ReactNode {
   return (
     <>
       <span className="font-medium">{w.label}</span>
-      {w.preset && <span className="font-mono text-sm text-muted"> ({w.preset})</span>}
+      {w.preset && <span className="font-mono text-sm text-ink-2"> ({w.preset})</span>}
       {items.length ? (
-        <ul className="mt-1 text-sm text-muted">
+        <ul className="mt-1 text-sm text-ink-2">
           {items.map((i) => (
             <li key={i}>{i}</li>
           ))}
         </ul>
       ) : (
-        <p className="mt-1 text-sm text-muted">{w.summary}</p>
+        <p className="mt-1 text-sm text-ink-2">{w.summary}</p>
       )}
     </>
   );
@@ -97,7 +97,7 @@ export function setupRows(setup: ResolvedSetup): { label: string; value: ReactNo
       value: (
         <>
           <span className="font-medium">{setup.startState.label}</span>
-          <span className="block text-sm text-muted">{setup.startState.description}</span>
+          <span className="block text-sm text-ink-2">{setup.startState.description}</span>
         </>
       ),
     },
@@ -133,7 +133,7 @@ export function setupRows(setup: ResolvedSetup): { label: string; value: ReactNo
       value: (
         <>
           <span className="font-medium">{setup.load.label}</span>
-          <span className="block text-sm text-muted">{setup.load.description}</span>
+          <span className="block text-sm text-ink-2">{setup.load.description}</span>
         </>
       ),
     },
@@ -142,7 +142,7 @@ export function setupRows(setup: ResolvedSetup): { label: string; value: ReactNo
       value: (
         <>
           <span className="font-medium">{setup.assistance.label}</span>
-          <span className="block text-sm text-muted">{setup.assistance.description}</span>
+          <span className="block text-sm text-ink-2">{setup.assistance.description}</span>
         </>
       ),
     },
@@ -179,13 +179,13 @@ export function BriefTab({
         <h2 id="setup-heading" className="text-2xl font-bold">
           Sim setup
         </h2>
-        <p className="mt-1 text-muted">
+        <p className="mt-1 text-ink-2">
           Set these up with the sim paused, then read the procedure before you start.
         </p>
-        <dl className="mt-4 divide-y divide-border rounded-card border border-border bg-surface">
+        <dl className="mt-4 divide-y divide-line rounded-lg border border-line bg-surface">
           {setupRows(challenge.setup).map((row) => (
             <div key={row.label} className="grid gap-1 px-4 py-3 sm:grid-cols-[12rem_1fr]">
-              <dt className="font-semibold text-muted">{row.label}</dt>
+              <dt className="font-semibold text-ink-2">{row.label}</dt>
               <dd>{row.value}</dd>
             </div>
           ))}
@@ -197,7 +197,7 @@ export function BriefTab({
           <h2 id="lessons-heading" className="text-2xl font-bold">
             Recommended lessons
           </h2>
-          <ul className="mt-2 rounded-card border border-border bg-surface p-2">
+          <ul className="mt-2 rounded-lg border border-line bg-surface p-2">
             {challenge.lessons.map((lesson) => (
               <li key={lesson.slug}>
                 <LessonRow lesson={lesson} />
@@ -235,7 +235,7 @@ export function BriefTab({
               cell: (c) => (
                 <span className="font-medium">
                   {c.label}
-                  {c.required && <span className="text-muted"> (required)</span>}
+                  {c.required && <span className="text-ink-2"> (required)</span>}
                 </span>
               ),
             },
@@ -243,7 +243,7 @@ export function BriefTab({
             { key: 'weight', header: 'Weight', numeric: true, cell: (c) => `×${c.weight}` },
           ]}
         />
-        <p className="mt-2 text-sm text-muted">
+        <p className="mt-2 text-sm text-ink-2">
           Gold needs 90% or more with every required criterion at Silver or better; Silver needs
           70%; Bronze needs every required criterion met.
         </p>

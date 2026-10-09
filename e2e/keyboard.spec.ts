@@ -18,7 +18,7 @@ async function tabTo(page: Page, target: Locator, max = 80) {
 test('flow A: landing page to the first lesson and a quiz, by keyboard', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  await tabTo(page, page.getByRole('link', { name: 'Start lesson 1 (free)' }).first());
+  await tabTo(page, page.getByRole('link', { name: 'Start lesson 0.1' }).first());
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(/l0-1-welcome-how-learn-to-fly-works$/);
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();

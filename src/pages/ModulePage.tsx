@@ -41,7 +41,7 @@ export default function ModulePage() {
               title={m.title}
               description={m.description}
             >
-              <p className="flex items-center gap-2 text-muted">
+              <p className="flex items-center gap-2 text-ink-2">
                 <Clock aria-hidden className="size-4" />
                 About {Math.round(m.estimatedMinutes / 6) / 10} hours of lessons and sim time ·{' '}
                 {plural(m.lessons.length, 'lesson')} · {plural(m.challenges.length, 'challenge')}
@@ -77,7 +77,7 @@ export default function ModulePage() {
                   <ul className="mt-3 flex flex-col gap-2">
                     {objectives.map((objective) => (
                       <li key={objective} className="flex gap-2">
-                        <CheckCircle2 aria-hidden className="mt-0.5 size-5 shrink-0 text-success" />
+                        <CheckCircle2 aria-hidden className="mt-0.5 size-5 shrink-0 text-go" />
                         {objective}
                       </li>
                     ))}
@@ -91,7 +91,7 @@ export default function ModulePage() {
                 Lessons
               </h2>
               {m.lessons.length ? (
-                <ol className="rounded-card border border-border bg-surface p-2">
+                <ol className="rounded-lg border border-line bg-surface p-2">
                   {m.lessons.map((lesson) => (
                     <li key={lesson.slug}>
                       <LessonRow
@@ -113,7 +113,7 @@ export default function ModulePage() {
                 <h2 id="challenges-heading" className="mb-2 text-2xl font-bold">
                   Challenges
                 </h2>
-                <ol className="rounded-card border border-border bg-surface p-2">
+                <ol className="rounded-lg border border-line bg-surface p-2">
                   {m.challenges.map((challenge) => (
                     <li key={challenge.slug}>
                       <ChallengeRow

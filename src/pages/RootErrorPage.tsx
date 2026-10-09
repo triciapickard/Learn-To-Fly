@@ -14,7 +14,7 @@ export default function RootErrorPage() {
       className="mx-auto flex min-h-dvh max-w-xl flex-col justify-center gap-4 px-4 text-center"
     >
       <h1 className="text-3xl font-bold">Something went wrong</h1>
-      <p className="text-lg text-muted">
+      <p className="text-lg text-ink-2">
         An unexpected error stopped this page from loading. Reloading usually fixes it. If it keeps
         happening, please try again later.
       </p>
@@ -22,7 +22,7 @@ export default function RootErrorPage() {
         <Button onClick={() => window.location.reload()}>Reload the page</Button>
       </div>
       {import.meta.env.DEV && error instanceof Error && (
-        <pre className="mt-4 overflow-auto rounded-control bg-surface-2 p-4 text-left text-sm">
+        <pre className="mt-4 overflow-auto rounded-md bg-surface-sunken p-4 text-left text-sm">
           {error.stack}
         </pre>
       )}

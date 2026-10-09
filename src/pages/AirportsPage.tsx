@@ -29,10 +29,10 @@ export default function AirportsPage() {
               return (
                 <li
                   key={a.icao}
-                  className="relative flex flex-col gap-3 rounded-card border border-border bg-surface p-5 shadow-1 hover:border-primary"
+                  className="relative flex flex-col gap-3 rounded-lg border border-line bg-surface p-5 shadow-1 hover:border-accent"
                 >
                   <div>
-                    <p className="font-mono text-sm font-bold text-primary">{a.icao}</p>
+                    <p className="font-mono text-sm font-bold text-accent">{a.icao}</p>
                     <h2 className="text-xl font-semibold">
                       <Link
                         to={`/reference/airports/${a.icao}`}
@@ -42,18 +42,18 @@ export default function AirportsPage() {
                         {a.name}
                       </Link>
                     </h2>
-                    <p className="text-sm text-muted">
+                    <p className="text-sm text-ink-2">
                       {a.city} · {ROLE_LABELS[a.role]}
                     </p>
                   </div>
                   <AirportBadges airport={a} />
                   <dl className="grid grid-cols-2 gap-2 text-sm">
                     <div>
-                      <dt className="text-muted">Runways</dt>
+                      <dt className="text-ink-2">Runways</dt>
                       <dd className="font-mono font-semibold">{runwayList(a)}</dd>
                     </div>
                     <div>
-                      <dt className="text-muted">Elevation</dt>
+                      <dt className="text-ink-2">Elevation</dt>
                       <dd className="font-mono font-semibold">
                         {a.elevationFt === null ? 'Not listed' : `${a.elevationFt} ft`}
                       </dd>

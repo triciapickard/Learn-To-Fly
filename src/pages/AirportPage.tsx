@@ -65,7 +65,7 @@ export default function AirportPage() {
                   </h2>
                   <dl className="mt-3 grid gap-3 text-lg sm:grid-cols-3">
                     <div>
-                      <dt className="text-sm text-muted">Elevation</dt>
+                      <dt className="text-sm text-ink-2">Elevation</dt>
                       <dd className="font-mono font-semibold">
                         {airport.elevationFt === null
                           ? 'Not listed'
@@ -73,11 +73,11 @@ export default function AirportPage() {
                       </dd>
                     </div>
                     <div>
-                      <dt className="text-sm text-muted">Airspace</dt>
+                      <dt className="text-sm text-ink-2">Airspace</dt>
                       <dd className="font-semibold">Class {airport.airspaceClass}</dd>
                     </div>
                     <div>
-                      <dt className="text-sm text-muted">Tower</dt>
+                      <dt className="text-sm text-ink-2">Tower</dt>
                       <dd className="font-semibold">
                         {airport.towered ? 'Yes' : 'No, self-announce on the CTAF'}
                       </dd>
@@ -147,20 +147,20 @@ export default function AirportPage() {
                       {airport.frequencies.map((f) => (
                         <div
                           key={`${f.type}-${f.mhz}`}
-                          className="flex items-baseline justify-between gap-3 rounded-card border border-border bg-surface p-3"
+                          className="flex items-baseline justify-between gap-3 rounded-lg border border-line bg-surface p-3"
                         >
                           <dt>{f.type}</dt>
                           <dd className="font-mono font-bold">
                             {f.mhz}
                             {f.notes && (
-                              <span className="ml-2 text-sm font-normal text-muted">{f.notes}</span>
+                              <span className="ml-2 text-sm font-normal text-ink-2">{f.notes}</span>
                             )}
                           </dd>
                         </div>
                       ))}
                     </dl>
                   ) : (
-                    <p className="mt-2 text-muted">
+                    <p className="mt-2 text-ink-2">
                       Frequencies are listed here once they're verified. Until then, use the
                       sectional chart or the Chart Supplement.
                     </p>
@@ -193,14 +193,14 @@ export default function AirportPage() {
                       ))}
                     </ul>
                   ) : (
-                    <p className="mt-2 text-muted">No published challenges start here yet.</p>
+                    <p className="mt-2 text-ink-2">No published challenges start here yet.</p>
                   )}
                 </section>
               </div>
 
               <aside
                 aria-labelledby="links-heading"
-                className="self-start rounded-card border border-border bg-surface p-4"
+                className="self-start rounded-lg border border-line bg-surface p-4"
               >
                 <h2 id="links-heading" className="font-semibold">
                   Charts and airport information
@@ -218,7 +218,7 @@ export default function AirportPage() {
                     </li>
                   )}
                 </ul>
-                <p className="mt-4 text-sm text-muted">
+                <p className="mt-4 text-sm text-ink-2">
                   {airport.verifiedAt
                     ? `Verified ${formatDate(airport.verifiedAt)}${airport.verifiedAgainst.length ? ` against ${airport.verifiedAgainst.join(', ')}` : ''}.`
                     : 'Not yet verified.'}

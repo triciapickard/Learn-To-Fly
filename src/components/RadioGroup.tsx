@@ -1,6 +1,7 @@
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group';
 import { useId, type ReactNode } from 'react';
 import { cn } from '@/lib/cn';
+import { FieldMessage } from './FormField';
 
 export interface RadioOption {
   value: string;
@@ -20,12 +21,21 @@ export interface RadioGroupProps {
   error?: string;
   required?: boolean;
   orientation?: 'horizontal' | 'vertical';
+  /**
+   * `plain` radios for short options in forms; `card` for quiz answers and setup choices
+   * (a bordered box with a bold title and a description). Defaults to card when any option
+   * has a description.
+   */
+  variant?: 'plain' | 'card';
   /** Hide the group label visually (still read by screen readers). */
   hideLabel?: boolean;
   className?: string;
 }
 
-/** Accessible radio group (Radix): arrow keys move between options. */
+/**
+ * Radios are 20px pills with a 1.5px line-strong border; checked becomes a 6px ink ring
+ * around a surface center. Built on Radix for keyboard and ARIA.
+ */
 export function RadioGroup({
   label,
   options,
@@ -33,6 +43,7 @@ export function RadioGroup({
   error,
   required,
   orientation = 'vertical',
+  variant,
   hideLabel,
   className,
   ...rootProps
@@ -41,29 +52,29 @@ export function RadioGroup({
   const labelId = `${id}-label`;
   const hintId = hint ? `${id}-hint` : undefined;
   const errorId = error ? `${id}-error` : undefined;
+  const card = (variant ?? (options.some((o) => o.description) ? 'card' : 'plain')) === 'card';
   return (
     <div className={cn('flex flex-col gap-2', className)}>
-      <p id={labelId} className={cn('font-medium', hideLabel && 'sr-only')}>
+      <p id={labelId} className={cn('label text-ink', hideLabel && 'sr-only')}>
         {label}
         {required && (
-          <span className="text-muted" aria-hidden>
+          <span className="font-normal text-ink-2" aria-hidden>
             {' '}
             (required)
           </span>
         )}
       </p>
-      {hint && (
-        <p id={hintId} className="text-sm text-muted">
-          {hint}
-        </p>
-      )}
+      {hint && <FieldMessage id={hintId}>{hint}</FieldMessage>}
       <RadioGroupPrimitive.Root
         aria-labelledby={labelId}
         aria-describedby={[hintId, errorId].filter(Boolean).join(' ') || undefined}
         aria-required={required || undefined}
         aria-invalid={error ? true : undefined}
         orientation={orientation}
-        className={cn('flex gap-2', orientation === 'vertical' ? 'flex-col' : 'flex-row flex-wrap')}
+        className={cn(
+          'flex',
+          orientation === 'vertical' ? 'flex-col gap-2' : 'flex-row flex-wrap gap-x-5 gap-y-2',
+        )}
         {...rootProps}
       >
         {options.map((option) => {
@@ -73,23 +84,30 @@ export function RadioGroup({
               key={option.value}
               htmlFor={optionId}
               className={cn(
-                'flex min-h-11 cursor-pointer items-start gap-3 rounded-control border border-border px-3 py-2',
-                'has-[[data-state=checked]]:border-primary has-[[data-state=checked]]:bg-primary-soft',
-                option.disabled && 'cursor-not-allowed opacity-60',
+                'flex items-start gap-2.5 text-base leading-6',
+                card &&
+                  'rounded-md border border-line-strong bg-surface px-3.5 py-3 transition-[border-color,box-shadow] duration-150 has-[[data-state=checked]]:border-ink has-[[data-state=checked]]:shadow-[0_0_0_1px_var(--color-ink)]',
+                !card && 'min-h-6',
+                option.disabled ? 'cursor-not-allowed text-ink-3' : 'cursor-pointer',
               )}
             >
               <RadioGroupPrimitive.Item
                 id={optionId}
                 value={option.value}
                 disabled={option.disabled}
-                className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border-2 border-border-strong bg-surface data-[state=checked]:border-primary"
-              >
-                <RadioGroupPrimitive.Indicator className="size-2.5 rounded-full bg-primary" />
-              </RadioGroupPrimitive.Item>
+                className={cn(
+                  'mt-0.5 size-5 shrink-0 rounded-pill border-[1.5px] border-line-strong bg-surface transition-[border-width,border-color] duration-150',
+                  'data-[state=checked]:border-[6px] data-[state=checked]:border-ink',
+                  'disabled:border-line disabled:bg-surface-sunken',
+                  error && 'border-warn',
+                )}
+              />
               <span className="flex flex-col">
-                <span className="font-medium">{option.label}</span>
+                <span className={cn('font-medium', option.disabled && 'text-ink-3')}>
+                  {option.label}
+                </span>
                 {option.description && (
-                  <span className="text-sm text-muted">{option.description}</span>
+                  <span className="text-sm leading-5 text-ink-2">{option.description}</span>
                 )}
               </span>
             </label>
@@ -97,9 +115,9 @@ export function RadioGroup({
         })}
       </RadioGroupPrimitive.Root>
       {error && (
-        <p id={errorId} className="text-sm font-medium text-danger">
+        <FieldMessage id={errorId} error>
           {error}
-        </p>
+        </FieldMessage>
       )}
     </div>
   );
