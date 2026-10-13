@@ -69,7 +69,17 @@ function Row({ children, className }: { children: ReactNode; className?: string 
 
 const BUTTONS = ['primary', 'secondary', 'ghost', 'accent', 'danger'] as const;
 const BADGES: BadgeVariant[] = ['neutral', 'accent', 'go', 'caution', 'warn', 'outline'];
-const CALLOUTS: CalloutType[] = ['safety', 'sim', 'tip', 'classic', 'note', 'verify'];
+const CALLOUTS: CalloutType[] = [
+  'safety',
+  'sim',
+  'tip',
+  'classic',
+  'note',
+  'decision',
+  'memory',
+  'real-world',
+  'verify',
+];
 const TIERS: Tier[] = ['gold', 'silver', 'bronze', 'none'];
 const ATTEMPTS = [
   { id: '1', date: '20 May', tier: 'gold' as Tier, percent: 96 },

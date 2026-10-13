@@ -9,11 +9,17 @@ import { WIDGET_NAMES } from '../widgets.js';
 export const SlugSchema = z
   .string()
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'Slugs are lowercase kebab-case (a-z, 0-9, -)');
-export const ModuleSlugSchema = SlugSchema.regex(/^m\d-/, 'Module slugs start with m<digit>-');
-export const LessonSlugSchema = SlugSchema.regex(/^l\d-\d+-/, 'Lesson slugs look like l2-3-…');
+export const ModuleSlugSchema = SlugSchema.regex(
+  /^m\d{1,2}-/,
+  'Module slugs start with m<number>- (m0-… to m21-…)',
+);
+export const LessonSlugSchema = SlugSchema.regex(
+  /^l\d{1,2}-\d+-/,
+  'Lesson slugs look like l2-3-… or l12-3-…',
+);
 export const ChallengeSlugSchema = SlugSchema.regex(
-  /^c\d-\d+-/,
-  'Challenge slugs look like c4-3-…',
+  /^c\d{1,2}-\d+-/,
+  'Challenge slugs look like c4-3-… or c20-2-…',
 );
 export const PrioritySchema = z.enum(['P0', 'P1']);
 export type Priority = z.infer<typeof PrioritySchema>;
@@ -126,7 +132,7 @@ export type Aircraft = z.infer<typeof AircraftSchema>;
 
 export const ModuleSchema = z.strictObject({
   slug: ModuleSlugSchema,
-  code: z.string().regex(/^M\d$/),
+  code: z.string().regex(/^M\d{1,2}$/),
   order: z.number().int().min(0),
   title: z.string().min(1),
   summary: z.string().min(1).max(200),
@@ -145,7 +151,7 @@ export const ModulesFileSchema = z.strictObject({ modules: z.array(ModuleSchema)
 
 export const LessonFrontmatterSchema = z.strictObject({
   slug: LessonSlugSchema,
-  code: z.string().regex(/^L\d\.\d+$/),
+  code: z.string().regex(/^L\d{1,2}\.\d+$/),
   module: ModuleSlugSchema,
   order: z.number().int().min(1),
   priority: PrioritySchema,
@@ -164,7 +170,18 @@ export const LessonFrontmatterSchema = z.strictObject({
 });
 export type LessonFrontmatter = z.infer<typeof LessonFrontmatterSchema>;
 
-export const CALLOUT_TYPES = ['safety', 'sim', 'classic', 'tip', 'verify', 'note'] as const;
+/** v1 Section 18.4 plus the v2 additions `decision`, `memory` and `real-world` (v2 Section 19.2). */
+export const CALLOUT_TYPES = [
+  'safety',
+  'sim',
+  'classic',
+  'tip',
+  'verify',
+  'note',
+  'decision',
+  'memory',
+  'real-world',
+] as const;
 export const QUIZ_TYPES = ['single', 'multi', 'numeric', 'order'] as const;
 
 export const QuizOptionSchema = z.strictObject({ id: z.string(), text: z.string().min(1) });
@@ -355,7 +372,7 @@ export const ChallengeSetupSchema = z.strictObject({
 export const ChallengeSchema = z
   .object({
     slug: ChallengeSlugSchema,
-    code: z.string().regex(/^C\d\.\d+$/),
+    code: z.string().regex(/^C\d{1,2}\.\d+$/),
     title: z.string().min(1),
     module: ModuleSlugSchema,
     lessons: z.array(LessonSlugSchema).default([]),

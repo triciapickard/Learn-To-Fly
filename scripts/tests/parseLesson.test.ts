@@ -16,6 +16,20 @@ function parse(body: string, frontmatter?: Record<string, unknown>, ctxOverrides
   return { lesson, issues: ctx.issues };
 }
 
+describe('frontmatter', () => {
+  it('reports malformed YAML as an error instead of throwing', () => {
+    const ctx = testContext();
+    const source = '---\nslug: l2-4-turns\nsummary: Bad: unquoted colon\n---\n\n## A\n\nText.';
+    expect(parseLessonSource(source, FILE, ctx)).toBeNull();
+    expect(ctx.issues.errors).toHaveLength(1);
+    expect(ctx.issues.errors[0]).toMatchObject({
+      file: FILE,
+      line: 1,
+      message: expect.stringContaining('frontmatter YAML:'),
+    });
+  });
+});
+
 describe('sections and headings', () => {
   it('turns ## headings into sections and heading blocks', () => {
     const { lesson, issues } = parse(

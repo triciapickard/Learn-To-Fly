@@ -1046,3 +1046,379 @@ resources:
       - sim
     description: Current charts and navigation data for the sim. Not required for v1.
     verifiedAt: 2026-10-13
+  # --------------------------------------------------------------------------------------
+  # v2 additions (v2.md Section 6). URLs unverified until the link check runs (verifiedAt).
+  - slug: iph
+    title: Instrument Procedures Handbook (FAA-H-8083-16B)
+    publisher: FAA
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook
+    type: handbook
+    topics:
+      - ifr
+      - procedures
+    free: true
+    description: 'The FAA handbook on IFR procedures: departures, enroute, arrivals, approaches and holding. The core reference for Modules 18–20.'
+    verifiedAt: null
+  - slug: iph-departures
+    title: Instrument Procedures Handbook — Departures
+    publisher: FAA
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook
+    type: handbook
+    topics:
+      - ifr
+      - procedures
+    free: true
+    description: 'The departures chapter: obstacle departure procedures, takeoff minimums, climb gradients and clearances.'
+    verifiedAt: null
+  - slug: iph-enroute
+    title: Instrument Procedures Handbook — En Route Operations
+    publisher: FAA
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook
+    type: handbook
+    topics:
+      - ifr
+      - navigation
+    free: true
+    description: 'The en route chapter: airways, minimum altitudes, position reports and lost communications.'
+    verifiedAt: null
+  - slug: iph-holding
+    title: Instrument Procedures Handbook — Holding
+    publisher: FAA
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook
+    type: handbook
+    topics:
+      - ifr
+      - procedures
+    free: true
+    description: Holding patterns, entries, timing and wind correction, with the AIM holding figures.
+    verifiedAt: null
+  - slug: iph-approaches
+    title: Instrument Procedures Handbook — Approaches
+    publisher: FAA
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook
+    type: handbook
+    topics:
+      - ifr
+      - procedures
+    free: true
+    description: 'The approaches chapter: approach segments, minima, RNAV, ILS, VOR, circling and missed approaches.'
+    verifiedAt: null
+  - slug: ifh-instruments
+    title: Instrument Flying Handbook — Flight Instruments
+    publisher: FAA
+    url: https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf
+    type: handbook
+    topics:
+      - instruments
+      - emergencies
+    free: true
+    description: 'The flight instruments chapter: pitot-static and gyroscopic instruments, their errors and what happens when they fail.'
+    verifiedAt: null
+  - slug: ifh-human-factors
+    title: Instrument Flying Handbook — Human Factors
+    publisher: FAA
+    url: https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf
+    type: handbook
+    topics:
+      - safety
+      - instruments
+    free: true
+    description: 'The human factors chapter: the vestibular system, spatial disorientation and the illusions that cause it.'
+    verifiedAt: null
+  - slug: ifh-ifr-flight
+    title: Instrument Flying Handbook — IFR Flight
+    publisher: FAA
+    url: https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf
+    type: handbook
+    topics:
+      - ifr
+      - planning
+    free: true
+    description: 'The IFR flight chapter: planning, filing, clearances and an instrument flight from preflight to landing.'
+    verifiedAt: null
+  - slug: ifh-emergencies
+    title: Instrument Flying Handbook — Emergency Operations
+    publisher: FAA
+    url: https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf
+    type: handbook
+    topics:
+      - ifr
+      - emergencies
+    free: true
+    description: 'The emergency operations chapter: inadvertent IMC, instrument failures, lost communications and declaring an emergency.'
+    verifiedAt: null
+  - slug: afh-ch11
+    title: AFH Chapter 11 — Night Operations
+    publisher: FAA
+    url: https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/00_afh_full.pdf
+    type: handbook
+    topics:
+      - night
+      - safety
+    free: true
+    description: Night vision, illusions, aircraft and airport lighting, and night takeoffs, patterns, landings and emergencies.
+    verifiedAt: null
+  - slug: faa-acs-instrument
+    title: Instrument Rating – Airplane Airman Certification Standards
+    publisher: FAA
+    url: https://www.faa.gov/training_testing/testing/acs
+    type: regulation
+    topics:
+      - ifr
+      - learning
+    free: true
+    description: The standards for a real instrument rating. Course 3 tolerances are inspired by this document, never a substitute for it.
+    verifiedAt: null
+  - slug: faa-acs-commercial
+    title: Commercial Pilot – Airplane Airman Certification Standards
+    publisher: FAA
+    url: https://www.faa.gov/training_testing/testing/acs
+    type: regulation
+    topics:
+      - landing
+      - learning
+    free: true
+    description: The source of the power-off 180° accuracy approach and landing task used by the P1 challenge C10.6.
+    verifiedAt: null
+  - slug: aim-1-1
+    title: AIM 1-1 — Navigation Aids
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html
+    type: regulation
+    topics:
+      - navigation
+      - ifr
+    free: true
+    description: VOR, ILS, GPS and WAAS, including RNAV approach types, CDI scaling and RAIM.
+    verifiedAt: null
+  - slug: aim-2-1
+    title: AIM 2-1 — Airport Lighting Aids
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_1.html
+    type: regulation
+    topics:
+      - night
+      - airports
+    free: true
+    description: Approach lighting systems, VASI and PAPI, runway and taxiway lights, beacons and pilot-controlled lighting.
+    verifiedAt: null
+  - slug: aim-5
+    title: AIM Chapter 5 — Air Traffic Procedures
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap5_section_1.html
+    type: regulation
+    topics:
+      - ifr
+      - procedures
+    free: true
+    description: IFR preflight, departures, en route (including holding in Section 5-3), arrivals and approaches.
+    verifiedAt: null
+  - slug: aim-6
+    title: AIM Chapter 6 — Emergency Procedures
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap6_section_1.html
+    type: regulation
+    topics:
+      - emergencies
+      - radio
+    free: true
+    description: Declaring an emergency, transponder emergency codes, two-way radio failure and search and rescue.
+    verifiedAt: null
+  - slug: aim-7
+    title: AIM Chapter 7 — Safety of Flight
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_1.html
+    type: regulation
+    topics:
+      - weather
+      - safety
+    free: true
+    description: Weather products and services, thunderstorms, icing, wake turbulence (Section 7-4) and mountain flying (Section 7-6).
+    verifiedAt: null
+  - slug: faa-ifr-enroute-charts
+    title: FAA IFR Enroute Charts (low altitude)
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/ifr/
+    type: chart
+    topics:
+      - ifr
+      - charts
+    free: true
+    description: Free digital IFR enroute low charts showing airways, MEAs, MOCAs and fixes. Updated every 56 days.
+    verifiedAt: null
+  - slug: faa-pilot-safety-brochures
+    title: FAA pilot safety brochures
+    publisher: FAA
+    url: https://www.faa.gov/pilots/safety/pilotsafetybrochures
+    type: article
+    topics:
+      - safety
+      - learning
+    free: true
+    description: Short FAA brochures including Density Altitude, Pilot Vision, Spatial Disorientation and Tips on Mountain Flying.
+    verifiedAt: null
+  - slug: faa-tips-mountain-flying
+    title: Tips on Mountain Flying (FAA-P-8740-60)
+    publisher: FAA
+    url: https://www.faa.gov/pilots/safety/pilotsafetybrochures
+    type: article
+    topics:
+      - mountain
+      - safety
+    free: true
+    description: The classic FAA pamphlet on mountain weather, density altitude, ridge crossings and canyon flying. Listed on the pilot safety brochures page.
+    verifiedAt: null
+  - slug: faa-runway-safety
+    title: FAA Runway Safety
+    publisher: FAA
+    url: https://www.faa.gov/airports/runway_safety
+    type: article
+    topics:
+      - airports
+      - safety
+    free: true
+    description: Runway incursion prevention, hot spots and the airport hot spot lists.
+    verifiedAt: null
+  - slug: awc-gfa
+    title: Aviation Weather Center — Graphical Forecasts for Aviation
+    publisher: NOAA / NWS
+    url: https://aviationweather.gov/gfa/
+    type: tool
+    topics:
+      - weather
+      - planning
+    free: true
+    description: Interactive forecast maps for clouds, weather, winds, icing and turbulence; the GFA walkthrough in L11.2 uses it.
+    verifiedAt: null
+  - slug: ecfr-91-157
+    title: 14 CFR 91.157 — Special VFR weather minimums
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.157
+    type: regulation
+    topics:
+      - regulations
+      - airspace
+    free: true
+    description: When and how a pilot can operate under special VFR in controlled airspace.
+    verifiedAt: null
+  - slug: ecfr-91-167
+    title: 14 CFR 91.167 — Fuel requirements for flight in IFR conditions
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.167
+    type: regulation
+    topics:
+      - regulations
+      - ifr
+    free: true
+    description: 'The IFR fuel rule: destination, alternate and 45 minutes at normal cruise.'
+    verifiedAt: null
+  - slug: ecfr-91-169
+    title: 14 CFR 91.169 — IFR flight plan; information required
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.169
+    type: regulation
+    topics:
+      - regulations
+      - ifr
+    free: true
+    description: When an alternate airport is required (the 1-2-3 rule) and the standard alternate minimums.
+    verifiedAt: null
+  - slug: ecfr-91-175
+    title: 14 CFR 91.175 — Takeoff and landing under IFR
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.175
+    type: regulation
+    topics:
+      - regulations
+      - ifr
+    free: true
+    description: The rule for descending below DA or MDA, the runway environment and when a missed approach is required.
+    verifiedAt: null
+  - slug: ecfr-91-185
+    title: 14 CFR 91.185 — IFR operations; two-way radio communications failure
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.185
+    type: regulation
+    topics:
+      - regulations
+      - ifr
+    free: true
+    description: The lost-communications rules for route and altitude (AVEF) and when to leave the clearance limit.
+    verifiedAt: null
+  - slug: ecfr-91-209
+    title: 14 CFR 91.209 — Aircraft lights
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.209
+    type: regulation
+    topics:
+      - regulations
+      - night
+    free: true
+    description: When position lights and anti-collision lights must be on.
+    verifiedAt: null
+  - slug: ecfr-61-57
+    title: 14 CFR 61.57 — Recent flight experience
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-61/section-61.57
+    type: regulation
+    topics:
+      - regulations
+      - night
+    free: true
+    description: Day, night and instrument currency requirements for carrying passengers and flying IFR.
+    verifiedAt: null
+  - slug: ecfr-91-130
+    title: 14 CFR 91.130 — Operations in Class C airspace
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.130
+    type: regulation
+    topics:
+      - regulations
+      - airspace
+    free: true
+    description: The two-way communication requirement for entering Class C airspace.
+    verifiedAt: null
+  - slug: ecfr-91-131
+    title: 14 CFR 91.131 — Operations in Class B airspace
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.131
+    type: regulation
+    topics:
+      - regulations
+      - airspace
+    free: true
+    description: The clearance requirement and equipment rules for Class B airspace.
+    verifiedAt: null
+  - slug: vatsim-code-of-conduct
+    title: VATSIM Code of Conduct
+    publisher: VATSIM
+    url: https://vatsim.net/docs/policy/code-of-conduct
+    type: community
+    topics:
+      - radio
+      - sim
+    free: true
+    description: The rules every VATSIM member agrees to. Read it before your first online flight.
+    verifiedAt: null
+  - slug: vzoa
+    title: Oakland ARTCC on VATSIM (vZOA)
+    publisher: vZOA
+    url: https://oakartcc.org
+    type: community
+    topics:
+      - radio
+      - sim
+    free: true
+    description: The virtual facility that controls the Bay Area and the Sierra on VATSIM, with local procedures, events and training.
+    verifiedAt: null
+  - slug: vpilot
+    title: vPilot — VATSIM pilot client
+    publisher: Ross Carlson
+    url: https://vpilot.rosscarlson.dev
+    type: tool
+    topics:
+      - radio
+      - sim
+    free: true
+    description: The free pilot client that connects MSFS on Windows to VATSIM. Not affiliated with Learn-To-Fly.
+    verifiedAt: null
