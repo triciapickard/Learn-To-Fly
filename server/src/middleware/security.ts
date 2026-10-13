@@ -23,7 +23,8 @@ export function securityHeaders({ scriptHashes = [], isProduction = false }: Sec
         fontSrc: ["'self'"],
         imgSrc: ["'self'", 'data:', 'https://i.ytimg.com'],
         frameSrc: ['https://www.youtube-nocookie.com'],
-        connectSrc: ["'self'"],
+        // Sentry's ingest hosts (o<org>.ingest.<region>.sentry.io) for client error reports.
+        connectSrc: ["'self'", 'https://*.sentry.io'],
         manifestSrc: ["'self'"],
         frameAncestors: ["'none'"],
         baseUri: ["'self'"],

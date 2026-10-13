@@ -33,6 +33,10 @@ services:
         value: info
       - key: RATE_LIMIT_ENABLED
         value: 'true'
+      # Sentry DSN for client error reports, baked into the client at build time. Public by
+      # nature, but entered in the dashboard so each service can use its own project.
+      - key: VITE_SENTRY_DSN
+        sync: false
       # Set to "true" only on a preview/staging service to show unverified drafts.
       - key: CONTENT_INCLUDE_DRAFTS
         value: 'false'

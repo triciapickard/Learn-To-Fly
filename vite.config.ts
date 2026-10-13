@@ -19,6 +19,12 @@ export default defineConfig({
     process.env.ANALYZE ? visualizer({ filename: 'dist/stats.html', gzipSize: true }) : null,
   ],
   resolve: { alias },
+  define: {
+    // Tags Sentry events with the deployed commit (Render sets RENDER_GIT_COMMIT at build).
+    'import.meta.env.VITE_RELEASE': JSON.stringify(
+      process.env.GIT_SHA || process.env.RENDER_GIT_COMMIT || '',
+    ),
+  },
   build: {
     // Never inline fonts as data: URLs, so the CSP can keep font-src 'self' (step 11.11).
     assetsInlineLimit: (file) => (/\.(woff2?|ttf|otf)$/.test(file) ? false : undefined),
