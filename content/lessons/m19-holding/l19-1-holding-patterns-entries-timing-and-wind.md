@@ -237,7 +237,8 @@ Every time you cross the fix, run the same five items in the same order. They st
 3. **Twist** the course knob to the inbound course if it is not already set.
 4. **Throttle**: set holding power and speed.
 5. **Talk**: report entering the hold if required, with the time and altitude.
-   :::
+
+:::
 
 The order is what matters: turn first, because the airplane needs it; time second, because the clock is already running; the rest once the wings are level.
 

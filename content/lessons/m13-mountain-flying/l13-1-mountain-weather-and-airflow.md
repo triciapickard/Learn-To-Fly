@@ -22,15 +22,15 @@ simVersion: null
 ## The invisible river
 
 :::callout{type="real-world"}
-In a real airplane, nobody flies the Sierra after reading a lesson. A real pilot takes a mountain flying course with an instructor who knows the local passes, flies the route in calm weather first, and builds up to windier days over many flights. This module gives you the ideas and lets you try them in the sim, where a bad decision costs a restart. Treat it as a first look, not a license.
+In a real airplane, nobody flies the Sierra after reading a lesson. A real pilot takes a mountain flying course with an instructor who knows the local passes, flies the route in calm weather first, and builds up to windier days over many flights. This module gives you the ideas and lets you try them in the sim, where a bad decision costs a restart. It is a first look, not a license.
 :::
 
-Think of the air as a river and the mountains as rocks on the riverbed. Water meeting a rock speeds up over the top, then tumbles and swirls on the downstream side. Air over a ridge does exactly the same thing, and the Skyhawk is a leaf on that river.
+Think of the air as a river and the mountains as rocks on the riverbed. Water meeting a rock speeds up over the top, then tumbles and swirls on the downstream side. Air over a ridge does the same thing, and the Skyhawk is a leaf on that river.
 
 Course 1 weather was about clouds and visibility. Mountain weather adds a third thing: **the vertical movement of air**. Rising air lifts you for free. Sinking air can descend faster than the Skyhawk can climb. This lesson shows you where each one lives, how to see it coming, and when the honest answer is "not today."
 
 :::callout{type="safety"}
-A Skyhawk at a high density altitude might climb 300 ft per minute. The air on the lee side of a Sierra ridge in a strong wind can sink at 1,000 ft per minute or more. No amount of skill wins that contest. The only winning move is to not be there.
+A Skyhawk at a high density altitude might climb 300 ft per minute. The lee side of a Sierra ridge in a strong wind can sink at 1,000 ft per minute or more. No amount of skill wins that contest. The only winning move is to not be there.
 :::
 
 ## Why wind accelerates over ridges
@@ -55,25 +55,17 @@ Crossing a ridge with a strong wind, where should you expect the sink?
 
 ---
 
-The air rises on the windward side and sinks on the **lee side**. Flying downwind across a ridge, the sink is waiting right after the crest; flying upwind, it is the first thing you meet.
+The air rises on the windward side and sinks on the **lee side**. Flying downwind across a ridge, the sink waits right after the crest; flying upwind, it is the first thing you meet.
 :::
 
 ## Lee-side downdrafts and rotors
 
 On the lee side the sinking air can curl back on itself into a horizontal spinning tube called a **rotor**, roughly level with the ridge top and a few miles downwind. The turbulence inside can be severe enough to cause loss of control in a light airplane, and it is invisible unless there is enough moisture to form a ragged, tumbling cloud.
 
-Above the rotor, in a stable air mass, the air keeps bouncing up and down for tens of miles downwind. That is **mountain wave**. Glider pilots love the rising parts; you care about the sinking parts and the rotor underneath.
-
-| Hazard        | Where it lives                                 | Visible sign (if there is moisture)       |
-| ------------- | ---------------------------------------------- | ----------------------------------------- |
-| Lee-side sink | Just downwind of the crest, below ridge level  | Cap cloud spilling down the lee slope     |
-| Rotor         | Level with the ridge top, a few miles downwind | Ragged, rolling cloud that stays in place |
-| Mountain wave | Above ridge level, 10–50 nm downwind           | Smooth, lens-shaped lenticular clouds     |
-
-The rule for a VFR pilot: in a strong wind, stay well above ridge level, keep away from the lee side, and treat any sink as a signal to turn toward lower terrain.
+Above the rotor, in a stable air mass, the air keeps bouncing up and down for tens of miles downwind. That is **mountain wave**. Glider pilots love the rising parts; you care about the sinking parts and the rotor underneath. In a strong wind, stay well above ridge level, keep away from the lee side, and treat any sink as a signal to turn toward lower terrain.
 
 :::callout{type="verify"}
-Widget W29 (Mountain Airflow) is embedded here once Phase 20 ships it: `::widget{name="mountain-airflow" mode="explore"}` (wind-speed slider, stability toggle, windward lift, lee sink, rotor and wave). Until then the tables carry the content. Confirm the rotor and wave description against AIM 7-6 and "Tips on Mountain Flying" (FAA-P-8740-60).
+Widget W29 (Mountain Airflow) is embedded here once Phase 20 ships it: `::widget{name="mountain-airflow" mode="explore"}`. Confirm the rotor and wave description against AIM 7-6 and "Tips on Mountain Flying" (FAA-P-8740-60).
 :::
 
 ## Lenticular clouds
@@ -81,6 +73,12 @@ Widget W29 (Mountain Airflow) is embedded here once Phase 20 ships it: `::widget
 Lenticular clouds are the mountain's warning flag. They form at the crest of each wave, where rising air cools below its dew point, and evaporate on the way down. The result is a smooth, lens-shaped cloud that **does not move**, even in a 40 kt wind.
 
 One lenticular tells you three things: strong wind aloft, air stable enough to form a wave, and probably a rotor below. A dry day can have all three without the cloud, which is why you also check the forecast.
+
+| Sign        | What it looks like                                  | What it means                      |
+| ----------- | --------------------------------------------------- | ---------------------------------- |
+| Cap cloud   | Cloud hugging the crest, spilling down the lee side | Strong flow over the ridge         |
+| Rotor cloud | Ragged, rolling cloud level with the ridge top      | Severe turbulence beneath the wave |
+| Lenticular  | Smooth lens that stays put, sometimes stacked       | Wave above; rotor probably below   |
 
 :::quiz{id="l13-1-q2" type="multi"}
 Which of these are signs of mountain wave? Pick all that apply.
@@ -92,7 +90,7 @@ Which of these are signs of mountain wave? Pick all that apply.
 
 ---
 
-Lenticular clouds, rotor clouds and strong winds at ridge level all point to wave. Fair-weather cumulus at noon are a sign of afternoon convection, a different hazard covered below.
+Lenticular clouds, rotor clouds and strong winds at ridge level all point to wave. Fair-weather cumulus at noon are a sign of afternoon convection, covered below.
 :::
 
 ## Winds aloft at ridge level
@@ -103,7 +101,7 @@ You learned to read a winds-aloft forecast in [[l11-2-forecasts-and-briefings]].
 - **Direction relative to the ridge.** Wind blowing straight across the ridge makes the strongest wave. Wind along the ridge is gentler.
 
 :::callout{type="verify"}
-Confirm the 20–25 kt ridge-level wind caution and its exact wording against "Tips on Mountain Flying" (FAA-P-8740-60) and AIM 7-6. Confirm the I-80 corridor ridge elevations (8,000–9,000 ft) against the current San Francisco sectional, and that the winds-aloft (FB) forecast includes a 9,000 ft level.
+Confirm the 20–25 kt ridge-level wind caution against "Tips on Mountain Flying" (FAA-P-8740-60) and AIM 7-6, the I-80 corridor ridge elevations (8,000–9,000 ft) against the current San Francisco sectional, and that the winds-aloft (FB) forecast has a 9,000 ft level.
 :::
 
 :::callout{type="decision"}
@@ -120,16 +118,16 @@ The winds-aloft forecast gives 9,000 ft winds of 270° at 28 kt. The ridge you p
 
 ---
 
-28 kt blowing straight across the ridge is above the 20 kt limit, so the crossing is off. Altitude does not fix a rotor, and night adds its own problems. The good decision here is the "no."
+28 kt straight across the ridge is above the 20 kt limit, so the crossing is off. Altitude does not fix a rotor, and night adds its own problems. The good decision here is the "no."
 :::
 
 ## Afternoon convection
 
 Wave is a wind problem. Convection is a sun problem. By late morning in summer the slopes heat the air beside them and it rises in bubbles called thermals. Over the flat Central Valley you felt these as light chop; mountain slopes face the sun directly, so the thermals are stronger and closer together. Three things follow:
 
-1. **Turbulence** builds through the afternoon and is worst over sun-facing slopes and ridgelines.
-2. **Cumulus** form over the peaks by noon and can grow into thunderstorms by mid-afternoon, especially in July and August.
-3. **Density altitude** peaks at the same time, so your climb rate is at its worst exactly when the air is roughest ([[l9-1-density-altitude-and-performance]]).
+1. **Turbulence** builds through the afternoon, worst over sun-facing slopes and ridgelines.
+2. **Cumulus** form over the peaks by noon and can grow into thunderstorms by mid-afternoon in July and August.
+3. **Density altitude** peaks at the same time, so your climb is at its worst exactly when the air is roughest ([[l9-1-density-altitude-and-performance]]).
 
 The fix is the oldest mountain rule: **fly early**. Dawn departures give cool, calm air and the best climb you will get all day.
 
@@ -145,14 +143,14 @@ Put the pieces together for the region this module flies:
 | Smoke           | Wildfire smoke can cut visibility for days                             | Check visibility, not just clouds                                 |
 | Terrain         | Peaks above 9,000 ft near the passes                                   | Plan the crossing altitude in [[l13-2-planning-a-mountain-route]] |
 
-Minden (KMEV) is a famous glider site precisely because the Carson Range makes such reliable wave: wonderful for a sailplane, a warning for you. Challenge C13.4 "Mountain wave" puts you eastbound over that range on a windy day so you can feel the sink early, slow to {{vspeed.va}}, turn toward lower ground and choose not to continue.
+Minden (KMEV) is a famous glider site because the Carson Range makes such reliable wave: wonderful for a sailplane, a warning for you. Challenge C13.4 "Mountain wave" puts you eastbound over that range on a windy day to feel the sink early, slow to {{vspeed.va}}, turn toward lower ground and choose not to continue.
 
 :::callout{type="sim"}
-MSFS 2024 models wind over terrain and some updrafts and downdrafts, but how strong and how realistic its lee-side sink and rotor turbulence are is uncertain. Whether the sim produces 1,000 fpm of sink or 200 fpm is checked before the challenge ships.
+MSFS 2024 models wind over terrain and some updrafts and downdrafts, but how strong and realistic its lee-side sink and rotor turbulence are is uncertain, and is checked before the challenge ships.
 :::
 
 :::callout{type="verify"}
-Fly the `WX_MOUNTAIN_WAVE` preset over the Carson Range and record the actual sink rate, turbulence and whether any rotor is modeled (v2 Phase 16 flight test). Screenshot for the shot list: "lenticular cloud over the Carson Range" if the sim renders one.
+Fly the `WX_MOUNTAIN_WAVE` preset over the Carson Range and record the sink rate, turbulence and whether any rotor is modeled (v2 Phase 16 flight test). Shot list: "lenticular cloud over the Carson Range" if the sim renders one.
 :::
 
 ## Practice and next steps
@@ -163,6 +161,6 @@ Three things to carry forward:
 2. Lenticular clouds, rotor clouds and 20 kt or more at ridge level mean mountain wave: do not cross.
 3. Fly the mountains early, when the air is cool and calm and your climb rate is best.
 
-**Practice.** This lesson feeds the `weather-signs` flashcard deck: windward versus lee, the three cloud signs of wave, and the 20 kt ridge-level limit.
+**Practice.** This lesson feeds the `weather-signs` flashcard deck: windward versus lee, the cloud signs of wave, and the 20 kt ridge-level limit.
 
 **Next.** [[l13-2-planning-a-mountain-route]] plans the KAUN to KTRK crossing over Donner Summit, with a crossing altitude and an escape route for every leg.

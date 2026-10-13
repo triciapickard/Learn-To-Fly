@@ -22,12 +22,12 @@ simVersion: null
 
 ## The sentence that starts every IFR flight
 
-A VFR flight starts when you decide to go. An IFR flight starts when ATC says "cleared to". From that moment the flight belongs to the system: ATC knows where you are going, which way, how high, and which code your transponder will show. Your job is to copy that sentence exactly, read it back exactly, and fly it exactly.
+A VFR flight starts when you decide to go. An IFR flight starts when ATC says "cleared to". From that moment ATC knows where you are going, which way, how high, and which code your transponder will show. Your job is to copy that sentence exactly, read it back exactly, and fly it exactly.
 
-The sentence arrives fast and only once unless you ask. Pilots survive it with a five-letter shorthand called **CRAFT**, and with a pen already in hand.
+It arrives fast and only once unless you ask. Pilots survive it with a five-letter shorthand called **CRAFT**, and a pen already in hand.
 
 :::callout{type="real-world"}
-In a real airplane, copying clearances is practiced with an instructor at the hold-short line, with the engine running and the ATIS still ringing in your ears. Real clearances include departure procedures that are flown over real terrain. The shorthand here is the real thing; the terrain is the reason real pilots brief every departure before they ask for the clearance.
+In a real airplane, copying clearances is practiced with an instructor, engine running, ATIS still ringing in your ears, and the departure procedure is flown over real terrain. The shorthand here is the real thing; the terrain is why real pilots brief every departure before asking for the clearance.
 :::
 
 :::callout{type="safety"}
@@ -45,9 +45,9 @@ Where you get the clearance depends on the airport:
 | Non-towered                                       | Flight service or the ATC facility by phone or a remote radio outlet | You get a **release** with a **void time**                                       |
 | In the air (picking up IFR after a VFR departure) | The approach or center controller                                    | A shorter clearance, usually starting with "cleared to" and an altitude          |
 
-At a non-towered airport, nobody can see you take off, so ATC protects the airspace for a window of time. "**Released** at 1520, clearance void if not off by 1530; if not off by 1530, advise no later than 1600 of intentions" means: you may depart between 1520 and 1530; after 1530 the clearance no longer exists, and ATC will start a search if you do not call by 1600. "**Hold for release**" means you have the clearance but may not take off yet.
+At a non-towered airport nobody can see you take off, so ATC protects the airspace for a window of time. "**Released** at 1520, clearance void if not off by 1530; if not off by 1530, advise no later than 1600 of intentions" means: depart between 1520 and 1530; after 1530 the clearance no longer exists, and ATC starts a search if you have not called by 1600. "**Hold for release**" means you have the clearance but may not take off yet.
 
-In the sim, MSFS 2024's built-in ATC gives IFR clearances from the menu after you file in the world map; on VATSIM, a delivery or ground controller gives it over voice ([[l15-5-flying-on-vatsim]]).
+In the sim, MSFS 2024's ATC gives IFR clearances from the menu after you file in the world map; on VATSIM a delivery or ground controller gives it by voice ([[l15-5-flying-on-vatsim]]).
 
 :::callout{type="verify"}
 Verify the clearance delivery paths and the void-time phraseology against AIM 5-2-6 (departure control and void times) and the Pilot/Controller Glossary entries for "release time", "void time" and "hold for release". Confirm KLVK's clearance delivery arrangement in the current Chart Supplement, and the MSFS 2024 menu path for IFR clearances with the sim version.
@@ -68,7 +68,7 @@ After the void time the clearance is cancelled. ATC may have released other traf
 
 ## CRAFT
 
-Every IFR clearance has the same five parts in the same order. Write the letters down the margin of your kneeboard before you call, then fill the blanks as the controller speaks:
+Every IFR clearance has the same five parts in the same order. Write the letters down your kneeboard before you call, then fill the blanks as the controller speaks:
 
 - **C** — Clearance limit: usually the destination airport.
 - **R** — Route: a departure procedure, fixes and airways, or "as filed".
@@ -86,9 +86,9 @@ Here is a worked example. The clearance, the callsign and the frequency are inve
 | F      | "departure frequency 123.45"                                              | `F: 123.45`          | "departure 123.45"                                     |
 | T      | "squawk 4521"                                                             | `T: 4521`            | "squawk 4521, Skyhawk 172LF"                           |
 
-The **readback** is the whole thing, in order, ending with your callsign. If a letter is blank when the controller stops, ask: "Skyhawk 172LF, say again the route". One "say again" is normal; nobody minds. Guessing is the mistake.
+The **readback** is the whole thing, in order, ending with your callsign. If a letter is blank when the controller stops, ask: "Skyhawk 172LF, say again the route". One "say again" is normal. Guessing is the mistake.
 
-The "expect" altitude is not decoration. It is the altitude you climb to if you lose radio contact ([[l18-5-enroute-ifr-and-lost-communications]]), so it goes in the readback.
+The "expect" altitude is not decoration: it is the altitude you climb to if you lose radio contact ([[l18-5-enroute-ifr-and-lost-communications]]), so it goes in the readback.
 
 :::callout{type="verify"}
 Verify the clearance structure and readback expectations against AIM 5-2-5 and 4-4-7. The example is fictional; make sure the frequency and squawk never match a real Bay Area assignment. Widget W32 (Radio Readback Trainer) in clearance mode is embedded here once Phase 20 ships it: `::widget{name="radio-readback" mode="clearance"}`. Until then the table is the walkthrough and Challenge C18.1 "Copy a clearance" uses W32 directly.
@@ -110,9 +110,9 @@ CRAFT: Clearance limit, Route, Altitude, Frequency, Transponder. Writing the let
 
 ## Obstacle departure procedures and takeoff minimums
 
-The enroute chart's MEA protects you once you are on the airway. The gap between the runway and the airway is covered by the **departure procedure**. Big airports publish graphic SIDs. Smaller ones, including Livermore, publish a textual **obstacle departure procedure** (ODP) in the "Takeoff Minimums and (Obstacle) Departure Procedures" section at the front of the d-TPP. The "T" triangle on the approach plate ([[l18-2-ifr-charts-and-the-approach-plate]]) is the pointer to that section.
+The MEA protects you once you are on the airway. The gap between the runway and the airway is covered by the **departure procedure**. Big airports publish graphic SIDs. Smaller ones, including Livermore, publish a textual **obstacle departure procedure** (ODP) in the "Takeoff Minimums and (Obstacle) Departure Procedures" section of the d-TPP. The "T" triangle on the plate ([[l18-2-ifr-charts-and-the-approach-plate]]) points to that section.
 
-An ODP entry has up to three parts. Read Livermore's as an example, not for navigation:
+An ODP entry has up to three parts. Livermore's, as an example and not for navigation:
 
 | Part                   | What it says                                                                         | How you brief it                                                         |
 | ---------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -120,9 +120,9 @@ An ODP entry has up to three parts. Read Livermore's as an example, not for navi
 | Takeoff obstacle notes | The obstacles near each runway end, with their height and distance                   | "Trees 1,200 ft from the departure end, 60 ft above the runway"          |
 | Departure procedure    | A heading, altitude and turn to join the route or reach an altitude                  | "Runway 25R: climb heading 253° to 1,500 ft before turning left"         |
 
-For a Part 91 flight like yours, published takeoff minimums are legally advisory. For the airlines they are mandatory. Learn-To-Fly treats them as mandatory, and so should you: they exist because something near the runway is tall enough to hit.
+For a Part 91 flight like yours, published takeoff minimums are legally advisory; for airlines they are mandatory. Learn-To-Fly treats them as mandatory: they exist because something near the runway is tall enough to hit.
 
-ATC does not usually assign an ODP. You fly it on your own, unless the clearance gives you a heading or a SID instead. If the clearance's "fly heading 250" conflicts with the ODP, say so before you take off.
+ATC does not usually assign an ODP. You fly it on your own unless the clearance gives a heading or a SID instead. If "fly heading 250" conflicts with the ODP, say so before you take off.
 
 :::callout{type="verify"}
 The KLVK takeoff minimums and ODP must be paraphrased from the current d-TPP "Takeoff Minimums and (Obstacle) DP" section and recorded with the cycle checked (v2 Section 12.4). The three quoted examples in the table are illustrative placeholders, not the published text; replace them with a paraphrase of the real entries or keep them clearly fictional. Confirm the Part 91 advisory status of takeoff minimums against 14 CFR 91.175(f) and the AIM 5-2-9 guidance on ODPs.
@@ -143,7 +143,7 @@ ODPs are textual, live in the takeoff minimums section of the d-TPP, and are flo
 
 ## Climb gradients
 
-A departure procedure that says "minimum climb of 300 ft per nm" is talking about distance, not time. Your vertical speed indicator shows feet per minute. To compare them you need your groundspeed:
+"Minimum climb of 300 ft per nm" is distance, not time. Your vertical speed indicator shows feet per minute. To compare them you need groundspeed:
 
 > **Rate of climb (fpm) = gradient (ft per nm) × groundspeed (kt) ÷ 60**
 
@@ -155,10 +155,10 @@ The standard gradient, assumed when nothing is printed, is **200 ft per nm**. In
 | 300 ft per nm | 375 fpm              | 450 fpm              |
 | 400 ft per nm | 500 fpm              | 600 fpm              |
 
-A faster groundspeed, from a tailwind, needs a faster climb. The Skyhawk climbs at well over 600 fpm on a cool day at sea level. On a hot day at a high airport the required rate can exceed what the airplane can do, which is where [[l9-1-density-altitude-and-performance]] and [[l13-3-high-elevation-airport-operations]] come back.
+A tailwind means a faster groundspeed and a faster required climb. The Skyhawk climbs well over 600 fpm on a cool day at sea level; on a hot day at a high airport the required rate can exceed what it can do, which is where [[l9-1-density-altitude-and-performance]] and [[l13-3-high-elevation-airport-operations]] come back.
 
 :::callout{type="decision"}
-The ODP asks for 400 ft per nm, your groundspeed will be 85 kt, and today's density altitude gives you 450 fpm at {{vspeed.vy}}. You need 567 fpm. The honest answer is: not this runway, not today. Wait for the wind, lighten the airplane, or depart another way. Deciding that on the ground is the skill.
+The ODP asks for 400 ft per nm, your groundspeed will be 85 kt, and today's density altitude gives you 450 fpm at {{vspeed.vy}}. You need 567 fpm. The honest answer: not this runway, not today. Wait for the wind, lighten the airplane, or depart another way. Deciding that on the ground is the skill.
 :::
 
 :::quiz{id="l18-3-q4" type="numeric" answer="450" tolerance="10" unit="fpm"}
@@ -171,7 +171,7 @@ The departure procedure requires 300 ft per nm. Your groundspeed in the climb wi
 
 ## Briefing the departure
 
-Before you ask for the clearance, brief the departure out loud, from the d-TPP page and the clearance you expect:
+Before asking for the clearance, brief the departure out loud from the d-TPP page and the clearance you expect:
 
 1. **Runway and initial heading.** Which runway, and what the ODP or clearance says to do first.
 2. **Initial altitude.** The "climb and maintain" number, set in the altitude preselect.
@@ -180,7 +180,7 @@ Before you ask for the clearance, brief the departure out loud, from the d-TPP p
 5. **Lost communications.** The expected altitude and route you would fly without a radio.
 6. **Emergency return.** Which approach you would fly back if the engine runs rough after takeoff into cloud.
 
-The brief takes 1 minute. It turns the clearance from a sentence into a plan, and it is exactly what Challenge C18.3 "IFR departure and enroute" expects to hear.
+The brief takes 1 minute. It turns the clearance from a sentence into a plan, and it is what Challenge C18.3 "IFR departure and enroute" expects to hear.
 
 ## Practice and next steps
 

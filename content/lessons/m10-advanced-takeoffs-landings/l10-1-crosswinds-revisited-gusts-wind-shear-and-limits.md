@@ -21,9 +21,9 @@ simVersion: null
 
 ## The wind that will not sit still
 
-It is a spring afternoon at Livermore. The ATIS reports wind 290 at 12 gusting 20. You are set up for Runway 25R, which points roughly 250°, so the wind is 40° off the nose and from the right. In Course 1 you landed in light crosswinds and learned the two techniques, crab and wing-low. Today the wind has a second number, and that second number changes the approach speed, the touchdown and the decision to land at all.
+It is a spring afternoon at Livermore. The ATIS reports wind 290 at 12 gusting 20. You are set up for Runway 25R, which points roughly 250°, so the wind is 40° off the nose and from the right. In Course 1 you landed in light crosswinds. Today the wind has a second number, and it changes the approach speed, the touchdown and the decision to land at all.
 
-This lesson gives you three tools: a way to put numbers on the wind, a speed margin for gusts, and a personal limit you set before the wind sets it for you.
+This lesson gives you three tools: numbers for the wind, a speed margin for gusts, and a personal limit you set before the wind sets it for you.
 
 :::callout{type="verify"}
 The spec's prerequisite is v1 L4.5 (crosswind takeoffs and landings), which is not written yet; `l4-3-normal-approach-and-landing` stands in and the recap below is self-contained. Swap the prerequisite to the L4.5 slug when it exists. Confirm the magnetic heading of KLVK Runway 25R (about 250° used throughout) against the FAA airport diagram.
@@ -38,7 +38,7 @@ Two ways to stop the wind pushing you off the centerline on final:
 | **Crab**                 | Wings level, nose turned into the wind, ground track straight down the runway | Final approach, down to the round-out    |
 | **Wing-low (side slip)** | Upwind wing lowered with aileron, nose held straight with opposite rudder     | The last 100 ft, the flare and touchdown |
 
-The crab is comfortable, but you cannot touch down in one: the wheels would meet the runway pointing sideways and the airplane would skip or swerve. So the crab becomes a wing-low slip before touchdown. Lower the upwind wing just enough to stop the drift, and press the opposite rudder just enough to keep the nose on the centerline. Touch down on the **upwind main wheel first**, then the other main, then the nose wheel. [[l10-2-slips]] takes the slip apart in detail.
+The crab is comfortable, but you cannot touch down in one: the wheels would meet the runway pointing sideways and the airplane would skip or swerve. So before touchdown the crab becomes a wing-low slip: lower the upwind wing just enough to stop the drift, and press the opposite rudder just enough to keep the nose on the centerline. Touch down on the **upwind main wheel first**, then the other main, then the nose wheel. [[l10-2-slips]] takes the slip apart in detail.
 
 :::callout{type="verify"}
 Widget W25 (Crosswind Technique & Slip Visualiser) is embedded here once Phase 20 ships it, in crab and wing-low modes side by side (directive name to be confirmed when the widget exists). Until then the table above carries the recap. Screenshot for the shot list: "crab on final, Runway 25R, KLVK".
@@ -46,9 +46,9 @@ Widget W25 (Crosswind Technique & Slip Visualiser) is embedded here once Phase 2
 
 ## Gusts: add half the gust factor
 
-A gust is a sudden change in wind speed. On final, a gust that drops from 20 kt to 12 kt takes 8 kt of airspeed away from your wing in a second or two, and at {{vspeed.approach}} that is a big slice of your stall margin. The fix is to carry extra speed, but not so much that you float down the runway.
+A gust is a sudden change in wind speed. On final, a gust that drops from 20 kt to 12 kt takes 8 kt of airspeed away from your wing in a second or two, and at {{vspeed.approach}} that is a big slice of your stall margin. The fix is to carry extra speed, but not so much that you float.
 
-The rule of thumb: **add half the gust factor** to your normal approach speed. The gust factor is the difference between the gust and the steady wind.
+The rule of thumb: **add half the gust factor** to your normal approach speed. The gust factor is the gust minus the steady wind.
 
 | Reported wind        | Gust factor | Additive | Final approach speed    |
 | -------------------- | ----------- | -------- | ----------------------- |
@@ -56,10 +56,10 @@ The rule of thumb: **add half the gust factor** to your normal approach speed. T
 | 290 at 12 gusting 20 | 8 kt        | +4 kt    | {{vspeed.approach}} + 4 |
 | 290 at 15 gusting 25 | 10 kt       | +5 kt    | {{vspeed.approach}} + 5 |
 
-Keep the extra speed to the round-out, then let it bleed off in the flare. Expect to float a little longer than usual; that is the price of the margin. Some pilots land with 20° of flaps instead of 30° in strong, gusty winds, for a slightly higher touchdown speed and crisper control, but the sight picture and the float change, so practice it before you need it.
+Keep the extra speed to the round-out, then let it bleed off in the flare. Expect to float a little longer than usual; that is the price of the margin.
 
 :::callout{type="verify"}
-Confirm the gust-additive rule against the current AFH chapter on approaches and landings (the "one-half the gust factor" wording, and whether the AFH caps the additive) and against the 172S POH Section 4 note on wind gusts, which may phrase it as a speed range. Confirm the 20° flap option is consistent with the POH. Record the wording used.
+Confirm the gust-additive rule against the current AFH chapter on approaches and landings (the "one-half the gust factor" wording, and whether the AFH caps the additive) and against the 172S POH Section 4 note on wind gusts, which may phrase it as a speed range. Record the wording used.
 :::
 
 :::quiz{id="l10-1-q1" type="numeric" answer="4" tolerance="0" unit="kt"}
@@ -72,14 +72,14 @@ Gust factor 20 − 12 = 8 kt. Half of that is **4 kt**, so you fly final at {{vs
 
 ## Wind shear near the ground
 
-Wind shear is a sudden change in wind speed or direction over a short distance. Near the ground it comes from gust fronts, thunderstorm outflow, strong wind spilling over hills and hangars, and from a strong wind aloft slowing down in the last few hundred feet above the surface.
+Wind shear is a sudden change in wind speed or direction over a short distance. Near the ground it comes from gust fronts, thunderstorm outflow, strong wind spilling over hills and hangars, and from a strong wind aloft slowing in the last few hundred feet.
 
 What it feels like on final: the airspeed jumps or drops 10 kt with no change in pitch or power; the airplane sinks hard, or balloons; the drift reverses. A sudden loss of headwind is the dangerous case: airspeed drops, lift drops, and you sink toward the ground short of the runway.
 
 What to do: **go around**. Full power, pitch for {{vspeed.goAround}}, flaps to 20°, climb away and think about it at pattern altitude. A go-around in wind shear is not a failed landing. It is the correct landing.
 
 :::callout{type="safety"}
-Loss of control during the landing is the most common kind of accident in light airplanes, and a gusty crosswind is the usual ingredient. Most of these accidents are not dramatic: a drift at touchdown, a side load on the gear, a swerve toward the grass. The defenses are the ones in this lesson: the right speed, the right technique and a go-around decided early.
+Loss of control during the landing is the most common kind of accident in light airplanes, and a gusty crosswind is the usual ingredient. Most are not dramatic: a drift at touchdown, a side load on the gear, a swerve toward the grass. The defenses are the right speed, the right technique and a go-around decided early.
 :::
 
 :::callout{type="verify"}
@@ -103,7 +103,7 @@ That is wind shear. **Full power and go around.** Trying to rescue the approach 
 
 The Skyhawk's handbook gives a **maximum demonstrated crosswind** of {{aircraft.maxCrosswind}}. The word to notice is _demonstrated_. It means a test pilot landed the airplane in that crosswind during certification and found it controllable. It is not a limitation, and the airplane does not become uncontrollable at 16 kt.
 
-But you are not a test pilot on a test day. For a new pilot the demonstrated figure is a sensible **personal limit** to grow toward, and many instructors set a lower one, such as 10 kt, for a student's first solo flights. The idea comes from [[l8-1-decision-making-and-personal-minimums]]: a number you write down on a calm day, so you do not have to invent one on a windy one.
+But you are not a test pilot on a test day. For a new pilot the demonstrated figure is a sensible **personal limit** to grow toward, and many instructors set a lower one, such as 10 kt, for early solo flights. The idea comes from [[l8-1-decision-making-and-personal-minimums]]: a number you write down on a calm day, so you do not have to invent one on a windy one.
 
 | Your experience                                  | Suggested personal crosswind limit          |
 | ------------------------------------------------ | ------------------------------------------- |
@@ -137,7 +137,7 @@ A rough table does the job in the cockpit:
 
 For gusts, compute the component twice: once with the steady wind and once with the gust. The gust number is the one you compare against your limit. Wind 290 at 12 gusting 20 on Runway 25R (40° off): steady crosswind about 8 kt, gust crosswind about 13 kt.
 
-Use the widget with real wind. Enter the runway heading and the reported wind, then try the other runway end and the other airports in the region. At Livermore the only choice is 7 or 25; at Tracy the crossing runways (8/26 and 12/30) give you four directions to pick from, and Half Moon Bay's 12/30 often faces a sea breeze that Livermore does not.
+Use the widget with real wind. Enter the runway heading and the reported wind, then try the other runway end and the other airports in the region. At Livermore the only choice is 7 or 25; at Tracy the crossing runways (8/26 and 12/30) give you four directions to pick from.
 
 ::widget{name="crosswind" mode="explore"}
 
@@ -151,7 +151,7 @@ The wind is 60° off the runway. 16 × sin 60° ≈ 16 × 0.87 ≈ **14 kt**. Th
 
 ## Controls on the rollout and taxi
 
-The landing is not over at touchdown. As the airplane slows, the controls lose authority but the wind does not, so you need **more** aileron into the wind as you decelerate, until the yoke is fully over by taxi speed. Keep the nose straight with rudder and let the nose wheel down gently.
+The landing is not over at touchdown. As the airplane slows, the controls lose authority but the wind does not, so you need **more** aileron into the wind as you decelerate, until the yoke is fully over by taxi speed. Keep the nose straight with rudder.
 
 On the taxiway, position the controls for the wind:
 
@@ -161,7 +161,7 @@ On the taxiway, position the controls for the wind:
 | Quartering tailwind           | Turn the yoke away from the wind (upwind aileron down) | Forward (nose down) | "Dive away"  |
 
 :::callout{type="sim"}
-MSFS 2024 models gusts, but the sim's ground handling in gusts is forgiving compared with a real Skyhawk: there is no seat-of-the-pants cue when a gust lifts a wing, and the tires grip well. Fly the rollout as if it mattered anyway, with the aileron fully into the wind by taxi speed, every time. The habit is the point.
+MSFS 2024 models gusts, but its ground handling in gusts is forgiving compared with a real Skyhawk: no seat-of-the-pants cue when a gust lifts a wing, and tires that grip well. Fly the rollout as if it mattered anyway, aileron fully into the wind by taxi speed, every time. The habit is the point.
 :::
 
 :::quiz{id="l10-1-q4" type="single"}

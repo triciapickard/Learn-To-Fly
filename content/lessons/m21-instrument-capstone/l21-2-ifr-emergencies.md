@@ -88,7 +88,8 @@ Alternator failure in IMC:
 3. Shed load: everything not needed to fly, navigate and talk.
 4. Tell ATC: Pan-Pan, request the nearest approach.
 5. Land as soon as practical, before the battery clock runs out.
-   :::
+
+:::
 
 :::callout{type="verify"}
 Confirm the alternator-failure flow and the reset order against the 172S POH Section 3 and the in-sim checklist. Confirm the main battery endurance with load shed and the standby battery duration for the sim's G1000 NXi variant (v2 Section 8.4, Week 6 sim notes) and whether the sim models battery depletion at all. Numbers belong in `aircraft.yaml`, not here.
@@ -135,7 +136,8 @@ AHRS or PFD failure in IMC:
 3. Compass for heading; timed turns at standard rate.
 4. Tell ATC: Pan-Pan, request no-gyro vectors to the simplest approach.
 5. Hand-fly; do not rely on the autopilot.
-   :::
+
+:::
 
 :::callout{type="verify"}
 Check the no-gyro wording ("turn left", "stop turn", half-standard-rate turns on final) against AIM 5-4-11 (radar approaches) and the Pilot/Controller Glossary. Confirm whether the sim's GFC 700 disconnects when the AHRS fails and whether sim ATC offers no-gyro vectors; if not, this is a self-voiced or online-network item. Confirm the standby attitude indicator type in the sim's 172S (electric or vacuum), v2 Section 8.4.
@@ -180,7 +182,8 @@ Lost comms in IMC:
 3. Altitude: the highest of assigned, MEA and expected, for each segment.
 4. Start the approach at the EFC time, or at the ETA if there was none.
 5. In VMC at any point: stay VMC and land as soon as practical.
-   :::
+
+:::
 
 :::callout{type="verify"}
 Check every row of the table against the current wording of 14 CFR 91.185 and AIM 6-4-1, especially the clearance-limit timing (EFC vs ETA, and the case where the limit is not an approach fix) and the "last assigned altitude" wording. The 5,000 ft MEA on the KLVK–KMRY segment is a placeholder; replace it with the real MEA from the current IFR Enroute Low chart and record the cycle. Confirm what sim ATC does when the COM volume is turned down, and whether 7600 has any effect in sim ATC, VATSIM and PilotEdge.

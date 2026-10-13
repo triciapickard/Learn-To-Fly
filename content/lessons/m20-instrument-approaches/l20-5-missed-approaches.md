@@ -74,7 +74,8 @@ The first part of the missed approach is a memory flow. You do not look it up an
 4. **Flaps:** retract in stages per the checklist, once climbing.
 5. **Navigate:** the published missed approach; check the CDI source and that the G1000 has sequenced.
 6. **Talk:** "Skyhawk 123AB, missed approach."
-   :::
+
+:::
 
 The order is the order of what kills you. Power and pitch stop the descent; positive rate proves it; flaps clean the airplane up; only then does anyone care where you are going, and ATC can wait until the airplane is climbing. In the sim, at DA, say each word as you do it. In Challenge C20.5 the flow is scored in this exact order.
 

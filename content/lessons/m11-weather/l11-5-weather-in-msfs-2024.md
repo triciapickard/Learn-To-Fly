@@ -25,38 +25,38 @@ In a real airplane the weather is given and you decide whether to fly in it. In 
 
 ## Presets, custom and live
 
-MSFS 2024 offers three ways to set the weather, chosen before the flight on the world map or changed during it from the toolbar's weather panel:
+MSFS 2024 offers three ways to set the weather, chosen on the world map before the flight or changed in flight from the toolbar's weather panel:
 
 | Mode       | What it is                                                                                | Use it for                                                                    |
 | ---------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | **Preset** | A named, fixed scene such as clear skies, scattered clouds, overcast or rain              | Quick setup when the brief names a sim preset                                 |
 | **Custom** | Every element set by hand: clouds, wind, visibility, precipitation, temperature, pressure | Every Learn-To-Fly challenge: the brief lists the values and you dial them in |
-| **Live**   | Real-world weather pulled from a weather data service and rendered in the sim             | Looking at today's sky; the P1 live-weather challenge C11.4                   |
+| **Live**   | Real-world weather pulled from a data service and rendered in the sim                     | Looking at today's sky; the P1 live-weather challenge C11.4                   |
 
-Challenges use custom weather for the same reason they did in [[l0-2-setting-up-msfs-2024-for-training]]: repeatability. A brief that says `WX_MARINE_LAYER` has to mean the same cloud base for every learner, every time.
+Challenges use custom weather for the reason they did in [[l0-2-setting-up-msfs-2024-for-training]]: repeatability. A brief that says `WX_MARINE_LAYER` has to mean the same cloud base for every learner, every time.
 
 :::callout{type="verify"}
-Confirm the MSFS 2024 menu paths: weather selection on the world map before a flight, and the toolbar weather panel in flight. Record the preset names the sim currently ships (Clear Skies, Few Clouds, Scattered Clouds, Broken Clouds, Overcast, Rain, Snow, Storm, and any others) and the sim version checked. Confirm which real-world service feeds live weather in MSFS 2024 and how often it refreshes.
+Confirm the MSFS 2024 menu paths: weather selection on the world map before a flight, and the toolbar weather panel in flight. Record the preset names the sim currently ships (Clear Skies, Few Clouds, Scattered Clouds, Broken Clouds, Overcast, Rain, Snow, Storm, and any others) and the sim version checked. Confirm which service feeds live weather and how often it refreshes.
 :::
 
 ## The custom weather controls
 
-The custom panel is a stack of layers. Each control maps onto something you learned to read in [[l11-2-forecasts-and-briefings]]:
+The custom panel is a stack of layers. Each control maps onto something you read in [[l11-2-forecasts-and-briefings]]:
 
-| Control           | What it sets                                                         | METAR equivalent                      |
-| ----------------- | -------------------------------------------------------------------- | ------------------------------------- |
-| **Cloud layers**  | Base and top altitude, coverage (from a few wisps to solid), density | `FEW`, `SCT`, `BKN`, `OVC` and height |
-| **Precipitation** | Rain or snow intensity from a cloud layer                            | `-RA`, `RA`, `SN`                     |
-| **Visibility**    | How far you can see; may be labeled as haze or aerosol density       | `10SM`, `4SM`, `BR`, `HZ`, `FU`       |
-| **Wind layers**   | Direction, speed and gusts at the surface and at altitudes you add   | `27012G20KT` and the winds aloft      |
-| **Temperature**   | Surface temperature                                                  | `22/09` (the first number)            |
-| **Pressure**      | Altimeter setting at the surface                                     | `A3010`                               |
-| **Humidity**      | How moist the air is; affects haze and cloud formation               | The dewpoint, loosely                 |
+| Control           | What it sets                                                       | METAR equivalent                      |
+| ----------------- | ------------------------------------------------------------------ | ------------------------------------- |
+| **Cloud layers**  | Base and top altitude, coverage (a few wisps to solid), density    | `FEW`, `SCT`, `BKN`, `OVC` and height |
+| **Precipitation** | Rain or snow intensity from a cloud layer                          | `-RA`, `RA`, `SN`                     |
+| **Visibility**    | How far you can see; may be labeled as haze or aerosol density     | `10SM`, `4SM`, `BR`, `HZ`, `FU`       |
+| **Wind layers**   | Direction, speed and gusts at the surface and at altitudes you add | `27012G20KT` and the winds aloft      |
+| **Temperature**   | Surface temperature                                                | `22/09` (the first number)            |
+| **Pressure**      | Altimeter setting at the surface                                   | `A3010`                               |
+| **Humidity**      | How moist the air is; affects haze and cloud formation             | The dewpoint, loosely                 |
 
-Add cloud layers from the bottom up, exactly as a METAR lists them. Set the lowest layer first, check its base against the brief, then add the next. A gust value in the wind layer gives you the gusty approaches of [[l10-1-crosswinds-revisited-gusts-wind-shear-and-limits]].
+Add cloud layers from the bottom up, as a METAR lists them. Set the lowest layer first, check its base against the brief, then add the next. A gust value in the wind layer gives you the gusty approaches of [[l10-1-crosswinds-revisited-gusts-wind-shear-and-limits]].
 
 :::callout{type="verify"}
-Confirm the exact control names and units in the MSFS 2024 custom weather panel: whether cloud bases are entered in feet MSL or AGL (this changes every preset in Module 11), whether visibility is a distance or an aerosol/haze slider, whether pressure is in inHg or hPa (or follows the sim's unit setting), and whether separate turbulence or thermal controls exist. Shot list: "custom weather panel with a single overcast layer at 600 ft over KHAF, annotated".
+Confirm the exact control names and units in the MSFS 2024 custom weather panel: whether cloud bases are entered in feet MSL or AGL (this changes every preset in Module 11), whether visibility is a distance or a haze slider, whether pressure is in inHg or hPa, and whether separate turbulence or thermal controls exist. Shot list: "custom weather panel with a single overcast layer at 600 ft over KHAF, annotated".
 :::
 
 :::quiz{id="l11-5-q1" type="single"}
@@ -69,7 +69,7 @@ A challenge brief specifies `WX_MARINE_LAYER`. Which weather mode do you use?
 
 ---
 
-Custom weather, entered from the brief's values. Live weather may or may not have a marine layer today, and a preset's overcast is at the preset's height, not the brief's. Only custom weather gives every learner the same cloud base.
+Custom weather, entered from the brief's values. Live weather may or may not have a marine layer today, and a preset's overcast is at the preset's height, not the brief's.
 :::
 
 ## Recreating a real METAR
@@ -79,19 +79,19 @@ Take an example METAR for Half Moon Bay (invented for this lesson): `KHAF 131655
 | METAR group | Set in the sim                                                                                                            |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `30008KT`   | Surface wind layer: 300° at 8 kt, no gusts                                                                                |
-| `3SM BR`    | Visibility about 3 statute miles (about 5 km). Mist means the haze is thick; raise the humidity if the sim offers it      |
+| `3SM BR`    | Visibility about 3 statute miles (about 5 km). Mist means thick haze; raise the humidity if the sim offers it             |
 | `OVC006`    | One cloud layer, solid coverage, base 600 ft above the airport. KHAF is at 66 ft, so about 670 ft MSL if the sim uses MSL |
 | `14/13`     | Temperature 14 °C; humidity high                                                                                          |
 | `A3012`     | Pressure 30.12 inHg                                                                                                       |
 
-Then check it from the cockpit. Set the altimeter to 30.12 and confirm the field elevation reads about right. Taxi out and look up: the cloud base should be a few hundred feet overhead. Climb into it and note the altitude the windscreen goes white. If it is more than 100 ft off the brief, adjust the layer and try again; Challenge C11.3 "Inadvertent IMC: the 180" depends on the cloud base being where the brief says.
+Then check it from the cockpit. Set the altimeter to 30.12 and confirm the field elevation reads about right. Taxi out and look up: the base should be a few hundred feet overhead. Climb into it and note the altitude the windscreen goes white. If it is more than 100 ft off the brief, adjust the layer and try again; Challenge C11.3 "Inadvertent IMC: the 180" depends on the cloud base being where the brief says.
 
 :::callout{type="tip"}
-Save your custom weather as a named preset in the sim after you build it. Name it after the Learn-To-Fly preset (`WX_MARINE_LAYER_600`) and you will never have to dial it in again.
+Save your custom weather as a named preset in the sim after you build it. Name it after the Learn-To-Fly preset (`WX_MARINE_LAYER_600`) and you will never dial it in again.
 :::
 
 :::callout{type="verify"}
-Confirm that MSFS 2024 lets you save custom weather as a user preset and the menu path to do it. Check how precisely the sim holds a cloud base once set (v2 Section 9.3): fly through the layer three times and record the entry altitude each time. Confirm the 3 SM to 5 km conversion matches how the sim's visibility control is labeled.
+Confirm that MSFS 2024 lets you save custom weather as a user preset and the menu path. Check how precisely the sim holds a cloud base (v2 Section 9.3): fly through the layer three times and record the entry altitude each time. Confirm the 3 SM to 5 km conversion matches how the visibility control is labeled.
 :::
 
 :::quiz{id="l11-5-q2" type="single"}
@@ -104,7 +104,7 @@ A METAR reports `OVC008` at an airport with an elevation of 400 ft. Where should
 
 ---
 
-METAR cloud heights are in hundreds of feet above ground level, so `OVC008` is an overcast at 800 ft AGL. Over a 400 ft airport that is about 1,200 ft MSL. Check whether the sim's layer control wants AGL or MSL before you enter it.
+METAR cloud heights are in hundreds of feet above ground level, so `OVC008` is an overcast at 800 ft AGL, about 1,200 ft MSL over a 400 ft airport. Check whether the sim's layer control wants AGL or MSL before you enter it.
 :::
 
 ## What the sim gets right, and what it only paints
@@ -112,9 +112,9 @@ METAR cloud heights are in hundreds of feet above ground level, so `OVC008` is a
 The sim's atmosphere is good enough for everything this course asks of it. It is not the real sky, and this is the lesson to say so plainly.
 
 :::callout{type="sim"}
-**What works.** Density altitude is real: temperature and pressure change engine power and takeoff distance ([[l9-1-density-altitude-and-performance]]). Wind layers, gusts and crosswinds are modeled and the airplane responds honestly. Cloud layers block the view like real cloud, so a marine layer or a cloud bank is a true view-limiting device, and that is what makes C11.2 and C11.3 possible. Visibility and haze reduce what you can see at about the distances you set.
+**What works.** Density altitude is real: temperature and pressure change engine power and takeoff distance ([[l9-1-density-altitude-and-performance]]). Wind layers, gusts and crosswinds are modeled and the airplane responds honestly. Cloud layers block the view like real cloud, so a marine layer or a cloud bank is a true view-limiting device, which is what makes C11.2 and C11.3 possible. Visibility and haze reduce what you can see at about the distances you set.
 
-**What is only painted, or uncertain.** Thunderstorms are visuals with some bumps; they do not produce hail, microbursts or the gust fronts of [[l11-4-thunderstorms-icing-and-turbulence]], so a sim storm teaches nothing about real storms except what they look like. Icing may be modeled on the airframe and pitot tube, or may not be, depending on the version; never learn ice behavior from the sim. Turbulence inside and under cloud is mild compared with the real thing. Live weather is a snapshot that can lag the real METAR by an hour and smooth out local detail; the marine layer in live weather may stop short of where it really is. There are no AIRMETs, SIGMETs or PIREPs inside the sim, and the sim's ATIS reads back the sim's weather, not the real one.
+**What is only painted, or uncertain.** Thunderstorms are visuals with some bumps; they do not produce the hail, microbursts or gust fronts of [[l11-4-thunderstorms-icing-and-turbulence]], so a sim storm teaches nothing about real storms except what they look like. Icing may or may not be modeled, depending on the version; never learn ice behavior from the sim. Turbulence in and under cloud is mild compared with the real thing. Live weather is a snapshot that can lag the real METAR by an hour and smooths out local detail. There are no AIRMETs, SIGMETs or PIREPs inside the sim, and the sim's ATIS reads the sim's weather, not the real one.
 
 **What this means for you.** Use the sim to practice setting up, reading and deciding. Use the real products and the real minimums to decide whether a real flight would go. The decision skill transfers; the feel of a storm does not, and you do not want it to.
 :::
@@ -131,6 +131,6 @@ Three things to carry forward:
 2. A METAR maps onto the custom panel group by group: wind, visibility, clouds, temperature, pressure.
 3. The sim models wind, cloud and density altitude well; it only paints thunderstorms and icing.
 
-**Practice.** This lesson has no flashcard deck of its own, but the METAR-to-sim table above is worth rebuilding from memory before you set up your first Module 11 challenge.
+**Practice.** This lesson has no flashcard deck of its own, but rebuild the METAR-to-sim table from memory before your first Module 11 challenge.
 
 **Fly it.** Challenge C11.4 "Live-weather cross-country" (P1) switches live weather on, has you brief it for real, and flies KLVK to KMRY and back if the briefing says go. Before that, [[l11-6-the-go-no-go-decision-and-vfr-into-imc]] teaches the decision itself, and what to do when you get it wrong.

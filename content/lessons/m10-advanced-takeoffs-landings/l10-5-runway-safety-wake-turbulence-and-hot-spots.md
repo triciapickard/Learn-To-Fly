@@ -23,13 +23,11 @@ simVersion: null
 
 You are number two for Runway 28R at Oakland, behind a Boeing 737 that has just started its takeoff roll. The tower says "Skyhawk 123, Runway 28R, cleared for takeoff, caution wake turbulence." That caution is not small talk. The 737 has left two invisible horizontal tornadoes behind it, and a Skyhawk that flies into one can be rolled past vertical a few hundred feet above the ground.
 
-The second half of this lesson is about the ground. More airplanes are damaged in taxiing mistakes and runway incursions than in wake encounters, and the fix is a habit: brief the taxi, know the hot spots, and read back every hold-short instruction.
+The second half of this lesson is about the ground, where more airplanes are damaged in taxi mistakes and runway incursions than in wake encounters. The fix is a habit: brief the taxi, know the hot spots, and read back every hold-short instruction.
 
 ## Wingtip vortices: sink, drift, linger
 
-Every wing that makes lift spills air around its tips, from the high pressure below to the low pressure above. The spilled air rolls up into two **vortices** that trail behind the airplane. The heavier, slower and cleaner (flaps up) the airplane, the stronger the vortex.
-
-Picture a diagram looking along the runway from behind a departing jet: two counter-rotating tubes of air, one off each wingtip, starting where the nose wheel leaves the ground.
+Every wing that makes lift spills air around its tips, from the high pressure below to the low pressure above. The spilled air rolls up into two **vortices** that trail behind the airplane. The heavier, slower and cleaner (flaps up) the airplane, the stronger the vortex. Picture the view from behind a departing jet: two counter-rotating tubes of air, one off each wingtip, starting where the nose wheel leaves the ground.
 
 | Vortices...                                                                                       | What that means for you                                                                  |
 | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -56,7 +54,7 @@ The rule is to stay above the larger airplane's path and upwind of its vortices.
 | Crossing or parallel runways                       | Watch for drift across; a vortex can cross a parallel runway                    |
 | Any of the above with no room to do it             | **Wait.** Two to three minutes is the usual guidance; in calm wind, wait longer |
 
-At a towered airport, ATC applies wake-turbulence separation behind heavy and super aircraft, and you will hear "caution wake turbulence" when the spacing is your responsibility. You can always ask for more time: "Skyhawk 123, we'll wait two minutes for wake turbulence." Nobody will argue.
+At a towered airport, ATC applies wake-turbulence separation behind heavy and super aircraft, and you will hear "caution wake turbulence" when the spacing is your responsibility. You can always ask for more time: "Skyhawk 123, we'll wait two minutes for wake turbulence."
 
 :::callout{type="verify"}
 Confirm the time-based spacing for a small aircraft departing behind a large or heavy jet (the 2- and 3-minute intervals, and when the pilot may waive them) against AIM 7-4-9 in the current edition and FAA Order JO 7110.65, and keep the learner text at "two to three minutes" unless the source gives a cleaner rule.
@@ -77,9 +75,7 @@ You are landing behind a larger airplane that has just landed on the same runway
 
 ## Runway incursions: the hold-short line and the sign
 
-A runway incursion is any airplane, vehicle or person on a runway without authorization. Most are honest mistakes made by pilots who were lost, distracted, or sure they had heard a clearance they had not.
-
-Two things stop you at the edge of a runway, both from [[l3-2-taxiing-signs-and-markings]]:
+A runway incursion is any airplane, vehicle or person on a runway without authorization. Most are honest mistakes by pilots who were lost, distracted, or sure they had heard a clearance they had not. Two things stop you at the edge of a runway, both from [[l3-2-taxiing-signs-and-markings]]:
 
 - The **runway holding position marking**: two solid yellow lines and two dashed yellow lines across the taxiway. Solid lines on your side means stop here unless cleared. Dashed lines on your side means you are on the runway side, so keep going until you are past the marking.
 - The **runway holding position sign**: white numbers on a red background, such as "25R-7L", beside the marking.
@@ -111,7 +107,7 @@ Confirm the hold-short and runway-crossing rules against 14 CFR 91.129(i) and AI
 
 A **hot spot** is a place on an airport where the FAA has recorded a history of incursions or confusion: a taxiway that meets a runway at an odd angle, two runway ends close together, a taxiway that looks like a runway. On the FAA airport diagram each one appears as a brown circle or oval labeled **HS 1**, **HS 2** and so on. The Chart Supplement lists them with a sentence explaining the trap.
 
-Oakland is the regional example. Its north field has three runways and a maze of taxiways, and its diagram carries hot spots where taxiways run between the parallel runways. You will not land there in this course, but Challenge C10.5 has you taxi there, because that is where the briefing habit gets tested. Livermore's trap is simpler and uncharted: from the air and on the ground, the parallel taxiway north of 25R looks a lot like the runway.
+Oakland is the regional example: three runways on the north field, a maze of taxiways, and hot spots where taxiways run between the parallel runways. You will not land there in this course, but Challenge C10.5 has you taxi there, because that is where the briefing habit gets tested. Livermore's trap is simpler and uncharted: the parallel taxiway north of 25R looks a lot like the runway.
 
 | Where to find it       | What it tells you                                                  |
 | ---------------------- | ------------------------------------------------------------------ |
@@ -136,7 +132,7 @@ Before you move, with the diagram in front of you, say it out loud:
 | Who I talk to     | "Ground 121.6, then Tower 118.1 at the hold line"                                 |
 | If I get lost     | "Stop, say I am unfamiliar, and ask for progressive taxi instructions"            |
 
-Then the hold-short readback. Every instruction with "hold short" in it gets a readback that includes the runway and your call sign: "Hold short Runway 25R, Skyhawk 123." Controllers are required to get that readback; if you do not give it, they will ask again. The `radio-phraseology` deck in the practice hub drills these.
+Then the hold-short readback. Every instruction with "hold short" in it gets a readback with the runway and your call sign: "Hold short Runway 25R, Skyhawk 123." Controllers are required to get that readback; if you do not give it, they will ask again. The `radio-phraseology` deck in the practice hub drills these.
 
 :::quiz{id="l10-5-q3" type="single"}
 Ground says: "Skyhawk 123, taxi to Runway 30 via Bravo, hold short of Runway 28R." What is the correct readback?

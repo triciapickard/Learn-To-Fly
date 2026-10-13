@@ -159,7 +159,8 @@ By day an alternator failure is an inconvenience. At night it takes away the thi
 4. Keep: COM1, transponder, position lights, one G1000 display, the flashlight in your hand.
 5. Drop: landing and taxi lights, strobes, the second display, anything else drawing power.
 6. Tell ATC, and land as soon as practical at the nearest suitable **lit** airport. Turn the landing light on for the flare only.
-   :::
+
+:::
 
 Shedding load is about buying time. A Skyhawk battery alone may give you about 30 minutes with the load trimmed, far less with everything on, and you want the radio and the transponder to be the last things to die. Get the flashlight out before the screens go, not after. [[l14-1-electrical-failures]] covers the full flow, the battery math and what the G1000 does as the voltage drops; this lesson's job is the night-specific version: the flashlight first, the lights that keep you seen stay on, and the destination is lit.
 

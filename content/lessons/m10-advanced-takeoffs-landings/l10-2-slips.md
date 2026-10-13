@@ -21,9 +21,9 @@ simVersion: null
 
 ## Too high, and no flaps to spare
 
-You are on a 2-mile final to Runway 26 at Tracy, and you are high. Very high. The PAPI shows four white lights, you already have full flaps, and pulling the power to idle is not fixing it. Pushing the nose down would only add airspeed and make you float. What you need is more **drag**, and the airplane has a big source of it you have not used yet: its own fuselage, turned sideways to the airflow.
+You are on a 2-mile final to Runway 26 at Tracy, and you are high. Very high. The PAPI shows four white lights, you already have full flaps, and idle power is not fixing it. Pushing the nose down would only add airspeed and make you float. What you need is more **drag**, and the airplane has a big source of it you have not used yet: its own fuselage, turned sideways to the airflow.
 
-That is a slip. A slip is a cross-controlled maneuver: aileron one way, rudder the other. The airplane flies partly sideways, the fuselage makes drag, and you come down steeply at a steady airspeed. There are two kinds, and they differ in where the nose points.
+That is a slip: a cross-controlled maneuver, aileron one way and rudder the other. The airplane flies partly sideways, the fuselage makes drag, and you come down steeply at a steady airspeed. There are two kinds, and they differ in where the nose points.
 
 ## The two slips and what each is for
 
@@ -36,7 +36,7 @@ That is a slip. A slip is a cross-controlled maneuver: aileron one way, rudder t
 | **Rudder**       | Full or nearly full, opposite the bank                       | Enough to keep the nose straight                          |
 | **When**         | High on final, engine-out approach                           | The last 100 ft of a crosswind landing                    |
 
-The forward slip is the altitude tool. The side slip is the crosswind tool from [[l10-1-crosswinds-revisited-gusts-wind-shear-and-limits]], the wing-low method. In both, the ground track stays on the runway centerline. The difference is the nose. In a forward slip the nose is deliberately turned away from the lowered wing, so the fuselage meets the air sideways. In a side slip the nose stays on the runway heading and the lowered wing cancels the drift.
+The forward slip is the altitude tool. The side slip is the crosswind tool from [[l10-1-crosswinds-revisited-gusts-wind-shear-and-limits]], the wing-low method. In both, the ground track stays on the centerline; the difference is the nose. In a forward slip it is deliberately turned away from the lowered wing, so the fuselage meets the air sideways. In a side slip it stays on the runway heading and the lowered wing cancels the drift.
 
 :::callout{type="verify"}
 Widget W25 (Crosswind Technique & Slip Visualiser) is embedded here once Phase 20 ships it, in forward-slip and side-slip modes side by side (directive name to be confirmed when the widget exists). Until then the table above carries the comparison. Screenshot for the shot list: "forward slip on final, Tracy Runway 26, pilot's view".
@@ -57,7 +57,7 @@ In a forward slip, where does the nose point?
 
 ## Entering, holding and recovering from a forward slip
 
-Enter the slip from a stabilized, power-idle approach when you can see you are going to be high:
+Enter from a stabilized, power-idle approach when you can see you are going to be high:
 
 | Step               | Action                                                                                    | Watch for                                                 |
 | ------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------- |
@@ -66,9 +66,9 @@ Enter the slip from a stabilized, power-idle approach when you can see you are g
 | 3. Pitch for speed | Hold the attitude that normally gives {{vspeed.approach}}                                 | Do not chase the airspeed tape (see below)                |
 | 4. Hold it         | Keep the aiming point still in the windshield                                             | When it stops moving down, you are back on the glide path |
 
-To recover, in this order: **release the rudder** so the nose swings back to the runway heading; **level the wings** with aileron, or leave the upwind wing slightly low in a crosswind, which turns the forward slip into a side slip; **re-check the pitch and airspeed**, because the drag is gone and the nose may need to come up a touch; then **land normally**, aligned with the runway, main wheels first.
+To recover, in this order: **release the rudder** so the nose swings back to the runway heading; **level the wings**, or leave the upwind wing slightly low in a crosswind, which turns the forward slip into a side slip; **re-check the pitch and airspeed**, because the drag is gone; then **land normally**, aligned with the runway, main wheels first.
 
-Recover with enough height to settle the airplane before the flare, by 100–200 ft AGL on your first attempts. A slip taken out in the flare is a side-loaded touchdown waiting to happen. If you are still high after the slip, go around; a slip that did not work is information, not a problem.
+Recover with enough height to settle before the flare, by 100–200 ft AGL on your first attempts. A slip taken out in the flare is a side-loaded touchdown waiting to happen. Still high after the slip? Go around; a slip that did not work is information, not a problem.
 
 :::quiz{id="l10-2-q2" type="order"}
 Put the forward-slip recovery steps in order.
@@ -85,7 +85,7 @@ Rudder first, then wings, then a pitch check, then the landing. Taking the bank 
 
 ## Slips with flaps
 
-Skyhawks of many generations carry a note about slips with the flaps extended. With full flaps and a strong slip, the disturbed airflow over the tail can cause a mild up-and-down pitching that feels as if the elevator is bobbing. It is harmless when you know what it is, and it goes away as you ease the slip. The practical advice: slip with the flaps you have, but prefer to fix a high approach early, with less flap and a slip, rather than late, with full flaps and a full slip.
+Skyhawks of many generations carry a note about slips with the flaps extended. With full flaps and a strong slip, the disturbed airflow over the tail can cause a mild pitch bobbing. It is harmless when you know what it is, and it goes away as you ease the slip. The practical advice: slip with the flaps you have, but fix a high approach early, with less flap and a slip, rather than late, with full flaps and a full slip.
 
 :::callout{type="verify"}
 Check the 172S POH (Section 4, normal procedures, and any placard in the sim cockpit) for the exact wording on slips with flaps extended. Older 172 models carried an "avoid slips with flaps extended" placard; the 172S wording is milder and mentions a possible elevator oscillation with full flaps. Paraphrase the current wording and record it here, and note whether the MSFS 2024 flight model shows any such behavior.
@@ -93,13 +93,11 @@ Check the 172S POH (Section 4, normal procedures, and any placard in the sim coc
 
 ## The side slip as the wing-low crosswind technique
 
-You already know this slip; you used it to touch down in [[l10-1-crosswinds-revisited-gusts-wind-shear-and-limits]]. In a crosswind the last part of final is a side slip: lower the upwind wing until the drift stops, hold the nose straight with opposite rudder, and keep both inputs through the flare. Touch down on the upwind main wheel, then the downwind main, then the nose wheel.
-
-The side slip is small. The bank is often only a few degrees and the rudder a light pressure, and you adjust both continuously as the wind changes near the ground. If you run out of rudder to hold the nose straight, the crosswind is beyond what the airplane can handle at that speed. That is the real crosswind limit, and the answer is a go-around.
+You already know this slip from [[l10-1-crosswinds-revisited-gusts-wind-shear-and-limits]]: lower the upwind wing until the drift stops, hold the nose straight with opposite rudder, keep both inputs through the flare, and touch down on the upwind main wheel first. The side slip is small: a few degrees of bank and a light rudder pressure, adjusted continuously as the wind changes near the ground. If you run out of rudder to hold the nose straight, the crosswind is beyond what the airplane can handle at that speed. That is the real crosswind limit, and the answer is a go-around.
 
 ## Airspeed indication in a slip
 
-In a slip the airflow hits the pitot tube and the static port at an angle, so the **airspeed indicator may read wrong**, by several knots, high or low depending on which way you slip. The Skyhawk's static port is on one side of the fuselage, so a slip toward that side and a slip away from it give different errors. That is one reason instructors teach the slip by **attitude**: set the pitch that normally gives {{vspeed.approach}}, hold it, and treat the airspeed tape as a rough cross-check until the slip is out. The airplane stalls at the same angle of attack whether or not it is slipping; it just lies to you about the speed.
+In a slip the airflow hits the pitot tube and the static port at an angle, so the **airspeed indicator may read wrong**, by several knots, high or low depending on which way you slip. The Skyhawk's static port is on one side of the fuselage, so a slip toward it and a slip away from it give different errors. That is why instructors teach the slip by **attitude**: set the pitch that normally gives {{vspeed.approach}}, hold it, and treat the airspeed tape as a rough cross-check until the slip is out. The airplane stalls at the same angle of attack whether or not it is slipping; it just lies to you about the speed.
 
 | What you see                                     | What it means                | What to do                                            |
 | ------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
@@ -112,7 +110,7 @@ Confirm the 172S static port location (a single port on the left forward fuselag
 :::
 
 :::callout{type="sim"}
-A slip needs real rudder. With a twist-grip joystick or a gamepad trigger it works, but with less finesse than pedals, so practice holding a steady half-rudder input. If the sim's **auto-rudder** assistance is on, the sim coordinates the airplane for you and a slip is not possible; turn it off for this module (MSFS 2024 assistance settings, piloting section). If you cannot fly without it, Challenge C10.2 offers a P1 variant that scores the glide path and touchdown only.
+A slip needs real rudder. A twist-grip joystick or a gamepad trigger works, with less finesse than pedals, so practice holding a steady half-rudder input. If the sim's **auto-rudder** assistance is on, the sim coordinates the airplane for you and a slip is not possible; turn it off for this module (MSFS 2024 assistance settings, piloting section). If you cannot fly without it, Challenge C10.2 offers a P1 variant that scores the glide path and touchdown only.
 :::
 
 :::callout{type="verify"}
@@ -136,9 +134,9 @@ The slipping airflow fools the pitot-static system. Hold the pitch attitude you 
 
 Three things to carry forward:
 
-1. Forward slip: lots of bank, opposite rudder, nose off the ground track, same ground track, same airspeed. It is the altitude tool.
-2. Side slip: a little bank into the wind, nose straight. It is the crosswind tool.
-3. Take the slip out with enough height to settle before the flare, and go around if you are still high.
+1. Forward slip: lots of bank, opposite rudder, nose off the ground track, same airspeed. The altitude tool.
+2. Side slip: a little bank into the wind, nose straight. The crosswind tool.
+3. Take the slip out with enough height to settle before the flare; go around if you are still high.
 
 **Practice.** This lesson feeds the `limits-and-speeds` flashcard deck (what each slip is for and the recovery order).
 

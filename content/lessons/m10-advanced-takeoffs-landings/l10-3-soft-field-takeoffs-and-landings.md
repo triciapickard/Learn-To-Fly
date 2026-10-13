@@ -23,7 +23,7 @@ simVersion: null
 
 Picture a grass strip after a week of rain. The surface is soft, the grass is long and wet, and a nose wheel that sinks an inch into it is a brake you cannot release. Every technique in this lesson comes from one idea: **keep the weight off the nose wheel and keep the airplane moving**.
 
-The same skills apply to a bumpy gravel strip, a snow-covered runway, and a paved runway where you are practicing for the real thing. The checkride asks for them, and the real world asks for them whenever the runway is not smooth asphalt.
+The same skills apply to a gravel strip, a snow-covered runway, and the paved runway where you practice for the real thing.
 
 ## What makes a field "soft" and why it matters
 
@@ -35,7 +35,7 @@ A soft field is any surface that resists the wheels rolling: wet grass, mud, sof
 | The nose wheel digs in | It drags, and on a rough surface it can be damaged                                                          | A firm nose-wheel touchdown can bury it or bend it                             |
 | Bumps and ruts         | The airplane may lurch into the air before it is ready to fly                                               | A bounce off a rut can put you airborne at a very low speed                    |
 
-The nose wheel is the weak point. The Skyhawk's nose gear is lighter than the main gear and it steers, so it is the first thing to suffer. Soft-field technique protects it from the moment you start taxiing to the moment you shut down.
+The nose wheel is the weak point: the Skyhawk's nose gear is lighter than the main gear and it steers, so it is the first thing to suffer. Soft-field technique protects it from the first taxi to shutdown.
 
 :::callout{type="verify"}
 Confirm the dry-grass correction (about +15% ground roll) against the 172S POH takeoff chart notes and the Learn-To-Fly sim-data table (v2 Section 8.3), and label it a typical figure. Record what the MSFS 2024 surface model does on grass (Week 2 notes).
@@ -46,8 +46,8 @@ Confirm the dry-grass correction (about +15% ground roll) against the 172S POH t
 On a soft surface:
 
 - **Full back elevator** (yoke fully aft) the whole time, to hold the nose wheel light. In a strong quartering tailwind, back elevator is the wrong input, so use the taxi table from [[l10-1-crosswinds-revisited-gusts-wind-shear-and-limits]] and accept a heavier nose wheel.
-- **Keep moving.** Once you stop in soft ground, it can take a lot of power to get going again, and the blast throws stones into the propeller. Plan the taxi so you never have to stop: do the before-takeoff checks on firm ground, then taxi onto the runway and straight into the takeoff roll without a pause.
-- **Taxi slowly** and use as little braking as possible; the surface does the braking for you.
+- **Keep moving.** Once you stop in soft ground it can take a lot of power to get going again, and the blast throws stones into the propeller. Do the before-takeoff checks on firm ground, then taxi onto the runway and straight into the takeoff roll without a pause.
+- **Taxi slowly** with as little braking as possible; the surface does the braking for you.
 
 ## Takeoff: lift off early, accelerate in ground effect
 
@@ -60,7 +60,7 @@ On a soft surface:
 | 5. Stay low   | Lower the nose immediately and hold the airplane a few feet above the runway while it accelerates                                       |
 | 6. Climb      | At {{vspeed.vx}} (or {{vspeed.vy}} with no obstacles) climb out; flaps up once clear and accelerating                                   |
 
-Ground effect is the cushion of air within about a wingspan of the surface. Near the ground the wingtip vortices are squashed, so the wing makes less **induced drag**, and the airplane can fly, barely, at a speed that would not sustain it 50 ft up. That is exactly why step 5 matters. If you climb out of ground effect at that low speed, the drag comes back, the airplane cannot accelerate, and it settles back onto the runway or stalls.
+Ground effect is the cushion of air within about a wingspan of the surface. Near the ground the wingtip vortices are squashed, so the wing makes less **induced drag**, and the airplane can fly, barely, at a speed that would not sustain it 50 ft up. That is why step 5 matters: climb out of ground effect at that low speed and the drag comes back, the airplane cannot accelerate, and it settles back onto the runway or stalls.
 
 :::callout{type="verify"}
 Confirm the soft-field takeoff flap setting (10° assumed) and the climb speeds against the 172S POH Section 4 procedure and the MSFS 2024 in-sim checklist. Confirm that the sim's Skyhawk lifts off early with full aft yoke and flaps 10° on a paved runway, and record the typical lift-off speed. Screenshot for the shot list: "soft-field takeoff, nose-high roll, Tracy".
@@ -92,7 +92,7 @@ The goal: touch down at the **slowest possible speed**, main wheels only, as gen
 | Rollout   | Nose wheel held off until it drops on its own; little or no braking                    | Nose wheel down early, brakes as needed             |
 | Taxi      | Keep moving, elevator back                                                             | Normal taxi                                         |
 
-The little bit of power is the trick. It softens the touchdown and keeps the elevator effective at a lower speed, so the nose stays up longer. Pull it to idle only once the mains are rolling and you are sure the airplane has finished flying.
+The little bit of power is the trick. It softens the touchdown and keeps the elevator effective at a lower speed, so the nose stays up longer. Pull it to idle only once the mains are rolling.
 
 :::quiz{id="l10-3-q2" type="multi"}
 Which of these are part of a soft-field landing? Pick all that apply.
@@ -110,7 +110,7 @@ Power, a slow touchdown and the nose held off. Firm braking and an early nose-wh
 
 ## Practicing on pavement and on grass
 
-Most soft-field practice happens on a paved runway, because that is where the training airplane lives. The technique is identical; you simply pretend the pavement is mud. Challenge C10.3 does this at Tracy. The instructor's checklist for a convincing paved-runway rehearsal:
+Most soft-field practice happens on a paved runway, because that is where the training airplane lives. The technique is identical; you pretend the pavement is mud. Challenge C10.3 does this at Tracy. The instructor's checklist for a convincing rehearsal:
 
 - Rolled onto the runway without stopping, yoke back.
 - Nose wheel light within the first few hundred feet of the roll.
@@ -118,10 +118,10 @@ Most soft-field practice happens on a paved runway, because that is where the tr
 - Touchdown with the stall warning sounding, nose high, with a little power.
 - Nose wheel held off until the elevator ran out of authority.
 
-A real grass strip adds the real surface: the airplane accelerates more slowly, bounces more and stops faster. A P1 variant of C10.3 uses a grass strip in the region. In a real airplane you would also walk the strip first, looking for holes, ruts and soft patches, and you would add a healthy margin to every performance number.
+A real grass strip adds the real surface: slower acceleration, more bouncing, a faster stop. A P1 variant of C10.3 uses a grass strip in the region. In a real airplane you would walk the strip first, looking for holes, ruts and soft patches, and add a healthy margin to every performance number.
 
 :::callout{type="sim"}
-MSFS 2024 models different runway surfaces, and grass noticeably slows the airplane on the ground, but the sim will not bend a nose wheel, bury a tire in mud or throw a stone through the propeller. Nothing in the sim punishes a sloppy soft-field landing, so the scoring in C10.3 watches the technique instead: the lift-off speed, the time in ground effect and how long the nose stays up.
+MSFS 2024 models runway surfaces, and grass noticeably slows the airplane on the ground, but the sim will not bend a nose wheel, bury a tire in mud or throw a stone through the propeller. Nothing in the sim punishes a sloppy soft-field landing, so C10.3 scores the technique instead: the lift-off speed, the time in ground effect and how long the nose stays up.
 :::
 
 :::callout{type="verify"}

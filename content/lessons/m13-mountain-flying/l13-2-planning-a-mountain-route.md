@@ -22,7 +22,7 @@ simVersion: null
 ## Fifty miles that need a plan
 
 :::callout{type="real-world"}
-In a real airplane, a mountain crossing is planned with a mountain flying instructor, in a classroom first and then on a calm morning with the instructor beside you. Local knowledge matters: which passes close in with cloud, where the sink sits on a west wind, which strip is really usable. Nothing in the sim replaces that. Learn the method here, and if you ever fly the real Sierra, go with someone who has done it.
+In a real airplane, a mountain crossing is planned with a mountain flying instructor, in a classroom first and then on a calm morning with the instructor beside you. Local knowledge matters: which passes close in with cloud, where the sink sits on a west wind, which strip is really usable. Learn the method here; if you ever fly the real Sierra, go with someone who has done it.
 :::
 
 Auburn Municipal (KAUN) sits in the Sierra foothills at about 1,500 ft MSL. Truckee–Tahoe (KTRK) sits on the far side of the crest at about 5,900 ft. They are roughly 50 nm apart, and between them is a wall of granite above 8,000 ft. The only sensible way over it for a Skyhawk is the way the trucks go: **Interstate 80 over Donner Summit**.
@@ -30,26 +30,23 @@ Auburn Municipal (KAUN) sits in the Sierra foothills at about 1,500 ft MSL. Truc
 In [[l6-6-planning-a-cross-country-flight]] you planned legs between checkpoints over the Central Valley. Mountain planning uses the same nav log with three additions: a **crossing altitude** you must reach before the ridge, a **45° approach** to the ridge, and an **escape route** for every leg. This lesson builds all three for the route you will fly in Challenge C13.2 "Donner Pass crossing".
 
 :::callout{type="verify"}
-Confirm KAUN (about 1,500 ft), KBLU (about 5,300 ft) and KTRK (about 5,900 ft) field elevations, the I-80 Donner Summit pass elevation (about 7,200 ft) and the terrain either side of the pass (about 8,000–9,000 ft) against the current San Francisco sectional and Chart Supplement, then add them to `airports.yaml`. Every number here that depends on them says "about".
+Confirm KAUN (about 1,500 ft), KBLU (about 5,300 ft) and KTRK (about 5,900 ft) elevations, the I-80 Donner Summit pass (about 7,200 ft) and the terrain either side (about 8,000–9,000 ft) against the current San Francisco sectional and Chart Supplement, then add them to `airports.yaml`.
 :::
 
 ## Follow the passes: I-80 over Donner Summit
 
 Mountain pilots follow roads for the same reason the road builders chose that line: it is the lowest, gentlest way through. A highway also gives you a checkpoint you cannot lose, a strip of cleared ground, and a place rescuers can reach.
 
-| Leg | From → To                   | Landmark                                                 | Terrain under you (about) |
-| --- | --------------------------- | -------------------------------------------------------- | ------------------------- |
-| 1   | KAUN → Colfax               | I-80 and the railroad climbing the ridge between canyons | 1,500–2,500 ft MSL        |
-| 2   | Colfax → Blue Canyon (KBLU) | I-80, Emigrant Gap, the airport beside the highway       | 2,500–5,500 ft MSL        |
-| 3   | KBLU → Donner Summit        | I-80 climbing to the pass; Donner Peak to the south      | 5,500–7,200 ft MSL        |
-| 4   | Donner Summit → KTRK        | Donner Lake below, then the Truckee basin                | 7,200 ft down to 5,900 ft |
+| Leg | From → To                   | Landmark                                            | Terrain under you (about) |
+| --- | --------------------------- | --------------------------------------------------- | ------------------------- |
+| 1   | KAUN → Colfax               | I-80 and the railroad climbing between the canyons  | 1,500–2,500 ft MSL        |
+| 2   | Colfax → Blue Canyon (KBLU) | I-80, Emigrant Gap, the airport beside the highway  | 2,500–5,500 ft MSL        |
+| 3   | KBLU → Donner Summit        | I-80 climbing to the pass; Donner Peak to the south | 5,500–7,200 ft MSL        |
+| 4   | Donner Summit → KTRK        | Donner Lake below, then the Truckee basin           | 7,200 ft down to 5,900 ft |
 
 Notice what the road does on leg 3. The pass is a notch in the ridge: the highway crosses at about 7,200 ft while the peaks either side stand above 8,000 ft. Crossing over the notch gives you the lowest terrain and the widest escape.
 
-Two rules for the valley legs:
-
-- **Fly the side of the valley, not the middle.** One side leaves the whole width for a turn, and on a windy day the windward side has the rising air.
-- **Never fly up a canyon you have not planned.** The American River canyons either side of I-80 look inviting, and some dead-end at a wall. The highway is the plan; stay with it.
+Two rules for the valley legs. **Fly the side of the valley, not the middle**, so the whole width is there for a turn; on a windy day the windward side has the rising air. And **never fly up a canyon you have not planned**. The American River canyons either side of I-80 look inviting, and some dead-end at a wall. The highway is the plan.
 
 ## Crossing altitude and the 45° approach
 
@@ -59,13 +56,13 @@ The crossing altitude comes from the terrain, not from the pass. Use the highest
 
 For Donner Summit the nearby terrain is about 8,000 ft MSL, so calm air gives 9,000 ft and a light wind 10,000 ft. Eastbound VFR above 3,000 ft AGL you fly odd thousands plus 500, so **9,500 ft MSL** is the practical minimum and 11,500 ft the next step on a windier morning.
 
-Then there is **when** to reach it. The Skyhawk climbs slowly at a high density altitude, and the climb from 1,500 ft to 9,500 ft takes 20 min or more. Plan to be level at the crossing altitude **before** Blue Canyon, with a kneeboard note that says "not level at KBLU: circle over the valley until you are." Climbing toward a ridge that is higher than you is how pilots end up in the trees.
+Then there is **when** to reach it. The Skyhawk climbs slowly at a high density altitude, and the climb from 1,500 ft to 9,500 ft takes 20 min or more. Plan to be level at the crossing altitude **before** Blue Canyon, with a kneeboard note: "not level at KBLU, circle over the valley until you are." Climbing toward a ridge that is higher than you is how pilots end up in the trees.
 
 :::callout{type="verify"}
-Widget W21 (Density Altitude Calculator) is embedded here once Phase 20 ships it: `::widget{name="density-altitude" mode="explore"}`, pre-set to KAUN on a summer morning. Until then, refer learners to [[l9-1-density-altitude-and-performance]]. Confirm the climb-time estimate (about 20 min for 8,000 ft) against the W22 sim flight-test data.
+Widget W21 (Density Altitude Calculator) is embedded here once Phase 20 ships it: `::widget{name="density-altitude" mode="explore"}`, pre-set to KAUN on a summer morning. Confirm the climb-time estimate (about 20 min for 8,000 ft) against the W22 sim flight-test data.
 :::
 
-Finally, the angle. Approach the ridge at about **45°** to it, not straight on. If the air over the crest turns out to be sinking or rough, a turn of about 90° points you back toward lower ground. Straight-on, you would need a full 180° turn, in sink, with the terrain close. Only when you can see the ground falling away on the far side do you turn to cross.
+Finally, the angle. Approach the ridge at about **45°**, not straight on. If the air over the crest turns out to be sinking or rough, a turn of about 90° points you back toward lower ground. Straight-on, you would need a full 180° turn, in sink, with the terrain close. Only when you can see the ground falling away on the far side do you turn to cross.
 
 :::quiz{id="l13-2-q1" type="single"}
 At what angle should you approach a ridge you plan to cross?
@@ -102,7 +99,7 @@ An escape route is the turn you make when something goes wrong: sink, cloud over
 The last row matters. Over the summit with the ground falling away ahead, Truckee is the escape. Before that moment, every escape points west.
 
 :::callout{type="decision"}
-You are level at 9,500 ft passing Blue Canyon. The ridge ahead looks clear, but the airplane starts losing 300 ft per minute with full power and {{vspeed.vy}}. This is the lee-side sink from [[l13-1-mountain-weather-and-airflow]], a few miles earlier than expected. Decide now: turn 90° away from the ridge toward the lower ground west, get out of the sink, then choose between another attempt higher up and going home. Pressing on and hoping is not on the list. In Challenge C13.2, turning back here scores as the right decision.
+Level at 9,500 ft passing Blue Canyon, the ridge ahead looks clear, but the airplane starts losing 300 ft per minute with full power and {{vspeed.vy}}. That is the lee-side sink from [[l13-1-mountain-weather-and-airflow]], earlier than expected. Decide now: turn 90° away from the ridge toward the lower ground west, get out of the sink, then choose between another attempt higher up and going home. Pressing on and hoping is not on the list; in Challenge C13.2, turning back here scores as the right decision.
 :::
 
 ## Emergency options: KBLU, valleys, roads
@@ -111,14 +108,14 @@ In Course 1 you learned to pick a field and set up a glide ([[l5-4-engine-failur
 
 ::widget{name="glide-range" mode="explore"}
 
-1. **Blue Canyon (KBLU).** A paved mountain airport beside I-80 at about 5,300 ft. It is the best option between Colfax and the summit, and the reason this route follows the highway. Planning-only until it is verified in the sim.
+1. **Blue Canyon (KBLU).** A paved mountain airport beside I-80 at about 5,300 ft: the best option between Colfax and the summit, and the reason this route follows the highway.
 2. **The valleys.** Meadows and the flatter ground around Donner Lake and the Truckee basin. Fewer than you would like, but real.
 3. **The highway.** A last resort: traffic, signs, overpasses and a slope. Still better than trees. Land along it, not across it.
 
 From 9,500 ft over terrain at 7,000 ft, the Skyhawk's {{aircraft.glideRatio}} glide gives you only about 2,500 ft to work with: roughly 4 nm in still air. That is why the crossing altitude is generous and the escape is pre-planned.
 
 :::callout{type="verify"}
-Confirm KBLU's runway, surface and elevation (about 5,300 ft) in the current Chart Supplement and check it exists and is landable in MSFS 2024 scenery. Confirm that Donner Lake, Emigrant Gap and the I-80 corridor are recognizable in the sim at 9,500 ft (v2 Section 12.3). Screenshot for the shot list: "Donner Summit from 9,500 ft, I-80 and Donner Lake visible".
+Confirm KBLU's runway, surface and elevation (about 5,300 ft) in the Chart Supplement and that it is landable in MSFS 2024 scenery. Confirm Donner Lake, Emigrant Gap and I-80 are recognizable in the sim at 9,500 ft (v2 Section 12.3). Shot list: "Donner Summit from 9,500 ft, I-80 and Donner Lake visible".
 :::
 
 :::quiz{id="l13-2-q3" type="single"}
@@ -138,32 +135,30 @@ You are over Blue Canyon at 9,500 ft, eastbound, and the engine starts running r
 
 Mountain routes stretch two things you are used to planning tightly:
 
-- **Fuel.** The climb to 9,500 ft burns more than cruise, and a turn-back doubles the leg. Day VFR legally needs 30 min of reserve after landing; for a mountain flight plan at least **1 hour** at {{aircraft.fuelBurn}}, and plan the turn-back as if it were the destination.
-- **Daylight.** Shadows fill the valleys an hour or more before official sunset, and a night mountain crossing is not a VFR plan at all. Plan to be on the ground **1 hour before sunset**; the calm air is at dawn anyway.
+- **Fuel.** The climb to 9,500 ft burns more than cruise, and a turn-back doubles the leg. Day VFR legally needs 30 min of reserve; for a mountain flight plan at least **1 hour** at {{aircraft.fuelBurn}}, with the turn-back counted as if it were the destination.
+- **Daylight.** Shadows fill the valleys an hour or more before sunset, and a night mountain crossing is not a VFR plan. Be on the ground **1 hour before sunset**; the calm air is at dawn anyway.
 - **Weather margin.** A ceiling that gives 1,000 ft over the Central Valley gives nothing over an 8,000 ft ridge. Your go/no-go needs a ceiling **above the crossing altitude**, not just VFR minimums at the airports.
 
 :::callout{type="verify"}
-Confirm the day VFR fuel reserve (30 min, 14 CFR 91.151) and the Learn-To-Fly 1 hour mountain reserve wording with the content reviewer. Confirm the sunset timing used by the `TIME_DAWN` preset for C13.2.
+Confirm the day VFR fuel reserve (30 min, 14 CFR 91.151) and the Learn-To-Fly 1 hour mountain reserve wording, and the sunset timing used by the `TIME_DAWN` preset for C13.2.
 :::
 
 ## The Sierra route worksheet (kneeboard)
 
 Everything above fits on one page. Fill it in before every mountain flight; Challenge C13.2 checks that it is on your kneeboard before you taxi.
 
-| Item                                 | Your entry for KAUN → KTRK                                           |
-| ------------------------------------ | -------------------------------------------------------------------- |
-| Route                                | KAUN, I-80, Colfax, KBLU, Donner Summit, Donner Lake, KTRK           |
-| Highest terrain near crossing        | About 8,000 ft MSL                                                   |
-| Crossing altitude (calm / windy)     | 9,500 ft / 11,500 ft MSL                                             |
-| Must be level by                     | KBLU; if not, circle over the valley                                 |
-| Ridge approach                       | 45° from the southwest; turn to cross only when the far side is seen |
-| Ridge-level wind limit               | 20 kt or less at 9,000 ft, no lenticular or rotor cloud              |
-| Ceiling needed                       | At least 1,000 ft above the crossing altitude over the pass          |
-| Escape, each leg                     | West, back down I-80; after the summit, continue to KTRK             |
-| Emergency options                    | KBLU, Donner Lake meadows, the highway                               |
-| Fuel on board / reserve              | Full / 1 hour minimum, turn-back counted                             |
-| Latest departure for a calm crossing | Dawn; across the ridge by mid-morning                                |
-| Latest landing                       | 1 hour before sunset                                                 |
+| Item                             | Your entry for KAUN → KTRK                                           |
+| -------------------------------- | -------------------------------------------------------------------- |
+| Route                            | KAUN, I-80, Colfax, KBLU, Donner Summit, Donner Lake, KTRK           |
+| Highest terrain near crossing    | About 8,000 ft MSL                                                   |
+| Crossing altitude (calm / windy) | 9,500 ft / 11,500 ft MSL, level by KBLU or circle                    |
+| Ridge approach                   | 45° from the southwest; turn to cross only when the far side is seen |
+| Ridge-level wind limit           | 20 kt or less at 9,000 ft, no lenticular or rotor cloud              |
+| Ceiling needed                   | At least 1,000 ft above the crossing altitude over the pass          |
+| Escape, each leg                 | West, back down I-80; after the summit, continue to KTRK             |
+| Emergency options                | KBLU, Donner Lake meadows, the highway                               |
+| Fuel on board / reserve          | Full / 1 hour minimum, turn-back counted                             |
+| Timing                           | Depart at dawn, across by mid-morning, landed 1 hour before sunset   |
 
 :::quiz{id="l13-2-q4" type="multi"}
 Which items belong on the kneeboard before a mountain crossing? Pick all that apply.
@@ -188,4 +183,4 @@ Three things to carry forward:
 
 **Practice.** This lesson feeds the `mountain-planning` flashcard deck: the crossing-altitude rule, the 45° approach, the escape rule and the worksheet items.
 
-**Fly it.** Challenge C13.2 "Donner Pass crossing" flies this route from KAUN at dawn, with a variant that puts 25 kt at ridge level so you can practice saying no. It opens after [[l13-3-high-elevation-airport-operations]], which teaches the takeoff and landing at each end.
+**Fly it.** Challenge C13.2 "Donner Pass crossing" flies this route from KAUN at dawn, with a variant that puts 25 kt at ridge level so you can practice saying no. Next: [[l13-3-high-elevation-airport-operations]].

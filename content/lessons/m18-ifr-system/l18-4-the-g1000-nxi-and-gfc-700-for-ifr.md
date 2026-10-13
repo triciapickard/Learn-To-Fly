@@ -21,12 +21,12 @@ simVersion: null
 
 ## The box flies the plan you give it
 
-In [[l6-5-gps-navigation-with-the-g1000]] you learned Direct-To and a simple flight plan. IFR asks much more of the G1000: it must hold the whole clearance, fly a procedure's turns and altitudes, switch its needle sensitivity as you approach the runway, and tell the autopilot what to do next. Set up well, it does all that. Set up badly, it does something else, confidently, in cloud.
+In [[l6-5-gps-navigation-with-the-g1000]] you learned Direct-To and a simple flight plan. IFR asks more of the G1000: hold the whole clearance, fly a procedure's turns and altitudes, tighten its needle as you near the runway, and tell the autopilot what to do next. Set up well, it does all that. Set up badly, it does something else, confidently, in cloud.
 
-This lesson is about setting it up well, then watching it like a hawk.
+This lesson is about setting it up well, then watching it.
 
 :::callout{type="real-world"}
-In a real airplane, an instructor sits beside you while you learn the avionics, and you practice the button pushes on a desktop trainer before the airplane ever moves. Garmin publishes a pilot's guide for the NXi that runs to hundreds of pages. This lesson covers the pages you need for Course 3; the pilot's guide is in "Go deeper" for the rest.
+In a real airplane, an instructor sits beside you while you learn the avionics, and you practice the button pushes on a desktop trainer before the airplane moves. Garmin's NXi pilot's guide runs to hundreds of pages; this lesson covers the pages you need for Course 3, and "Go deeper" has the rest.
 :::
 
 :::callout{type="safety"}
@@ -34,16 +34,16 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 :::
 
 :::callout{type="sim"}
-The G1000 NXi in MSFS 2024 is a Working Title model of the real unit. It is close, but some menus, softkeys and autopilot behaviors differ from the Garmin manual, and they change with sim updates. Where this lesson says "press", the intent is right; the exact key may have moved.
+The G1000 NXi in MSFS 2024 is a Working Title model of the real unit. It is close, but some menus, softkeys and autopilot behaviors differ from the Garmin manual and change with sim updates. Where this lesson says "press", the intent is right; the exact key may have moved.
 :::
 
 :::callout{type="verify"}
-Author note: verify every key sequence in this lesson against the current MSFS 2024 Working Title G1000 NXi and record the sim version. Known differences to check: airway loading in the FPL page, the VTF behavior, automatic GPS-to-LOC CDI switching, GA mode behavior after a missed approach, and whether the yaw damper exists. Screenshot for the shot list: "G1000 FPL with a loaded approach; PROC menu; mode annunciator (armed/active)".
+Author note: the spec lists L6.5 and L6.8 as prerequisites; L6.8 is not written, so `prerequisites` uses l6-5 only. Swap in l6-8 when it exists. Verify every key sequence in this lesson against the current MSFS 2024 Working Title G1000 NXi and record the sim version. Known differences to check: airway loading in the FPL page, the VTF behavior, automatic GPS-to-LOC CDI switching, GA mode behavior after a missed approach, and whether the yaw damper exists. Screenshot for the shot list: "G1000 FPL with a loaded approach; PROC menu; mode annunciator (armed/active)".
 :::
 
 ## The flight plan for IFR
 
-Your clearance ([[l18-3-clearances-and-departures]]) is a list of fixes and airways. The FPL page holds them in order, departure to destination. The NXi can load a whole airway as one entry, so you type the entry fix and the exit fix, not every intersection between.
+Your clearance ([[l18-3-clearances-and-departures]]) is a list of fixes and airways. The FPL page holds them in order, departure to destination. The NXi loads a whole airway as one entry: you type the entry and exit fixes, not every intersection between.
 
 | Step | Where                     | What you do                                                                                            |
 | ---- | ------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -54,7 +54,7 @@ Your clearance ([[l18-3-clearances-and-departures]]) is a list of fixes and airw
 | 5    | PROC key                  | Load the departure (if any) and the expected approach (next section)                                   |
 | 6    | FPL page                  | Check the total distance and ETE make sense against your fuel plan                                     |
 
-A **discontinuity** is a gap: the NXi will fly to the fix before it, then give up. A plan with a discontinuity in cloud is a plan with a hole in it. Fix every one before engine start.
+A **discontinuity** is a gap: the NXi flies to the fix before it, then gives up. A plan with a discontinuity in cloud is a plan with a hole in it. Fix every one before engine start.
 
 :::callout{type="verify"}
 Verify the "Load Airway" menu path and the discontinuity display in the sim's NXi. In the sim, a flight plan filed on the world map is pushed into the G1000; confirm what happens to procedures loaded there and whether the learner should clear the plan and rebuild it (Challenge C18.2 assumes a rebuild from the clearance).
@@ -62,9 +62,7 @@ Verify the "Load Airway" menu path and the discontinuity display in the sim's NX
 
 ## Loading procedures: the PROC key
 
-Departures, arrivals and approaches are not typed in fix by fix. They come from the database through the **PROC** key, so the turns, altitudes and the missed approach arrive with them.
-
-Loading the approach is the one you will do most:
+Departures, arrivals and approaches are not typed in fix by fix. They come from the database through the **PROC** key, so the turns, altitudes and missed approach arrive with them. Loading the approach is the one you will do most:
 
 1. Press **PROC**.
 2. Choose **Select Approach**.
@@ -73,7 +71,7 @@ Loading the approach is the one you will do most:
 5. Choose **Load** to add it to the end of the plan, or **Load and Activate** to fly it now.
 6. Confirm the approach appears in the FPL page with its fixes, and that the CDI source is right (next section).
 
-**Load** early, during the cruise, so the plan is ready. **Activate** only when ATC clears you for the approach or you are joining it. Activating too early can turn the airplane toward the first fix while you still owe ATC the enroute route.
+**Load** early, in the cruise, so the plan is ready. **Activate** only when ATC clears you for the approach. Activating too early can turn the airplane toward the first fix while you still owe ATC the enroute route.
 
 ::widget{name="g1000-pfd" mode="explore"}
 
@@ -99,7 +97,7 @@ The magenta leg on the map is the one the G1000 is flying. Two things change it 
 - **Activate Leg.** On the FPL page, put the cursor on the fix you want, press MENU and choose "Activate Leg". The G1000 now navigates to that fix along the leg leading into it. Use it after ATC says "proceed direct" to a fix on the route, or when you joined the route mid-way.
 - **Vectors-to-final (VTF).** Choosing VECTORS as the approach transition, or "Activate Vectors-to-Final" from the PROC menu, makes the final approach course the active leg, extended outward from the final approach fix. When ATC says "turn left heading 220, intercept the final approach course", you want this: the CDI shows the final approach course, and NAV or APR mode will capture it.
 
-If you keep the full procedure active while being vectored, the G1000 may try to take you to an initial fix you were never going to see. If you activate VTF too early, the G1000 drops the earlier fixes. Both are recoverable, and both are the kind of surprise this lesson exists to prevent.
+Keep the full procedure active while being vectored and the G1000 may try to take you to an initial fix you were never going to see. Activate VTF too early and it drops the earlier fixes. Both are recoverable, and both are the surprises this lesson exists to prevent.
 
 :::callout{type="verify"}
 Verify Activate Leg and VTF behavior in the sim's NXi: whether VTF keeps the intermediate fixes (newer NXi software does) or drops them, and whether reactivating the full approach restores them. The learner-facing text must match what the sim actually does.
@@ -107,9 +105,9 @@ Verify Activate Leg and VTF behavior in the sim's NXi: whether VTF keeps the int
 
 ## CDI source and scaling
 
-The HSI needle follows whichever source the **CDI** softkey selects: **GPS** (magenta), **LOC1/VOR1** (green) or **VOR2**. IFR turns this from a convenience into a checklist item, because the autopilot's NAV and APR modes follow the same source. For an RNAV approach the source must be GPS. For an ILS it must be LOC1, tuned and identified. The NXi can switch from GPS to LOC by itself as you join an ILS; check that it did.
+The HSI needle follows whichever source the **CDI** softkey selects: **GPS** (magenta), **LOC1/VOR1** (green) or **VOR2**. IFR makes this a checklist item, because the autopilot's NAV and APR modes follow the same source. For an RNAV approach the source must be GPS; for an ILS, LOC1, tuned and identified. The NXi can switch from GPS to LOC by itself as you join an ILS; check that it did.
 
-GPS does one more thing you need to know about. The needle's **full-scale** distance shrinks as you get closer to the runway, so the same half-dot means a smaller error on final than enroute:
+GPS does one more thing. The needle's **full-scale** distance shrinks as you near the runway, so the same half-dot means a smaller error on final than enroute:
 
 | Phase           | Annunciation on the HSI | Full-scale deflection                              | When                                                 |
 | --------------- | ----------------------- | -------------------------------------------------- | ---------------------------------------------------- |
@@ -118,7 +116,7 @@ GPS does one more thing you need to know about. The needle's **full-scale** dist
 | Approach (LNAV) | LNAV or LNAV+V          | ±0.3 nm at the final approach fix                  | From about 2 nm before the FAF                       |
 | Approach (LPV)  | LPV                     | Angular, like a localizer, narrowing to the runway | After the FAF, with a glidepath on the HSI           |
 
-Fly the needle to the center in every phase and the scaling takes care of itself. The trap is the **transition**: as scaling tightens, a needle that was centered can drift toward a dot with no change in your heading. Expect it, and correct early.
+Fly the needle to the center in every phase and the scaling takes care of itself. The trap is the **transition**: as scaling tightens, a centered needle can drift toward a dot with no change in heading. Expect it and correct early.
 
 :::callout{type="verify"}
 CDI scaling values are from v2 Appendix F.6 and must be verified against the G1000 NXi pilot's guide (ENR, TERM, LNAV and LPV full-scale values and the distances at which they change). Confirm whether the sim's NXi auto-switches GPS to LOC on an ILS and whether a "MISSED APPR" scaling state exists. Widget W36 (HSI, CDI Scaling and ILS) is embedded here once Phase 21 ships it: `::widget{name="cdi-scaling" mode="explore"}`. Until then the table is the walkthrough.
@@ -139,7 +137,7 @@ Within 30 nm the scaling is TERM, full scale ±1.0 nm. One dot on a five-dot sca
 
 ## The GFC 700: autopilot modes
 
-The GFC 700 autopilot has two jobs, lateral (where the nose points) and vertical (what the altitude does), and one mode in each at a time. The **AP** key engages the servos; the **FD** key shows the command bars without them, so you hand-fly the same targets.
+The GFC 700 has two jobs, lateral (where the nose points) and vertical (what the altitude does), with one mode in each at a time. **AP** engages the servos; **FD** shows the command bars without them, so you hand-fly the same targets.
 
 | Mode | Kind                 | What it does                                                               | Use it for                                  |
 | ---- | -------------------- | -------------------------------------------------------------------------- | ------------------------------------------- |
@@ -152,9 +150,9 @@ The GFC 700 autopilot has two jobs, lateral (where the nose points) and vertical
 | VNV  | Vertical             | Flies the altitudes in the flight plan's descent profile                   | Enroute descents with VNAV constraints      |
 | GA   | Both                 | Go-around: wings level, pitch up, flight director on, autopilot off        | The missed approach, first second           |
 
-Every vertical mode uses the **altitude preselect**: set the cleared altitude, and ALT captures it. Forget to set it and FLC or VS will climb through the clearance. Set it first, every time.
+Every vertical mode uses the **altitude preselect**: set the cleared altitude and ALT captures it. Forget it and FLC or VS will climb through the clearance. Set it first, every time.
 
-The **mode annunciator** at the top of the PFD shows what the autopilot is doing. **Active** modes are shown in **green**; **armed** modes, waiting for a condition, are shown in **white**. "HDG" green with "GPS" white means: flying the heading bug now, will capture the GPS course when it gets there. The annunciator is the autopilot's only honest sentence; read it after every button press.
+The **mode annunciator** at the top of the PFD shows what the autopilot is doing. **Active** modes are **green**; **armed** modes, waiting for a condition, are **white**. "HDG" green with "GPS" white means: flying the heading bug now, capturing the GPS course when it gets there. Read it after every button press.
 
 :::callout{type="verify"}
 Verify the mode list and names in the sim's GFC 700 (and whether VNV and a yaw damper are modeled), the NOSE UP/DN key names, and the GA behavior (whether GA disconnects the autopilot in the sim). The active-green, armed-white convention is from the Garmin pilot's guide and must be confirmed on the sim's PFD; the knowledge check below depends on it.
@@ -175,7 +173,7 @@ Active modes are green; armed modes, waiting for a capture, are white. Reading t
 
 ## What's it doing now?
 
-Every autopilot surprise has the same cause: the mode you think is engaged is not the mode in the annunciator. The common ones:
+Every autopilot surprise has the same cause: the mode you think is engaged is not the one in the annunciator. The common ones:
 
 | What you see                             | Why                                                          | Fix                                                         |
 | ---------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
@@ -186,7 +184,7 @@ Every autopilot surprise has the same cause: the mode you think is engaged is no
 | Turn toward a fix you did not expect     | Full procedure active while being vectored                   | Activate vectors-to-final, or HDG mode until cleared        |
 | Autopilot quietly off                    | GA pressed, or trim or servo disconnect                      | Check the annunciator; re-engage when stable                |
 
-The habit that beats all of them: press a button, look at the annunciator, say what it shows out loud. "HDG, ALT, GPS armed." If the words do not match the plan, fix it before the airplane shows you the difference.
+The habit that beats all of them: press a button, look at the annunciator, say it out loud. "HDG, ALT, GPS armed." If the words do not match the plan, fix it before the airplane shows you the difference.
 
 ## The before-approach setup
 

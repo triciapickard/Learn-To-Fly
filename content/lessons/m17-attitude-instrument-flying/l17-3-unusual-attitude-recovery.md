@@ -85,7 +85,8 @@ In a nose-high attitude the airspeed is bleeding away toward a stall. Every step
 2. **Nose down**: lower the nose to the horizon on the attitude indicator.
 3. **Wings level**: roll level with coordinated aileron and rudder.
 4. **Return** to the desired attitude, power and trim.
-   :::
+
+:::
 
 Why this order? Power first, because thrust is the fastest way to buy airspeed when it is low. Nose down second, because lowering the nose reduces the angle of attack and ends the stall threat; rolling while slow and nose high can drop a wing. Wings level third, and then rebuild the picture. Keep the control inputs smooth: a sharp push at low speed is unpleasant and unnecessary.
 
@@ -104,7 +105,8 @@ In a nose-low attitude the airspeed is rising toward {{vspeed.vno}} and beyond, 
 2. **Wings level**: roll level with coordinated aileron and rudder.
 3. **Ease out of the dive**: raise the nose smoothly to the horizon.
 4. **Return** to the desired attitude, power and trim.
-   :::
+
+:::
 
 Why this order? Power off first, because every second of power adds speed. Wings level second and **before** you pull: pulling while banked tightens the spiral, adds load factor and gains nothing. Only with the wings level does back pressure point the lift upward. Then ease out: a smooth pull that keeps the airplane below {{vspeed.va}} if you can, and never a snatch. Expect to lose a few hundred feet; Challenge C17.3 scores under 300 ft as Gold.
 

@@ -21,32 +21,32 @@ simVersion: null
 
 ## The decision is the skill
 
-Everything in this module has been leading to one moment: you have the briefing in front of you, the airplane is fueled, and someone, maybe only you, is asking "are we going?" This lesson is about answering that question well, keeping the answer honest once you are airborne, and surviving the one case where the answer was wrong.
+Everything in this module leads to one moment: the briefing is in front of you, the airplane is fueled, and someone, maybe only you, is asking "are we going?" This lesson is about answering well, keeping the answer honest once you are airborne, and surviving the one case where the answer was wrong.
 
 :::callout{type="safety"}
-VFR flight into instrument conditions is one of the deadliest things a pilot can do. In the accident record a large majority of VFR-into-IMC accidents are fatal, a rate several times higher than general aviation accidents as a whole. Most of them began with a pilot who could fly perfectly well and who took off, or kept going, into weather the briefing had already described. The airplane was fine. The decision was not.
+VFR flight into instrument conditions is one of the deadliest things a pilot can do. In the accident record a large majority of VFR-into-IMC accidents are fatal, a rate several times higher than general aviation accidents as a whole. Most began with a pilot who could fly perfectly well and who took off, or kept going, into weather the briefing had already described. The airplane was fine. The decision was not.
 :::
 
 :::callout{type="verify"}
-Cite a current source for the VFR-into-IMC statistic above: the AOPA Air Safety Institute's latest Nall Report (percentage of VFR-into-IMC accidents that were fatal, against the overall GA fatal-accident rate) or an NTSB safety alert. Put the exact figure and year in the text once confirmed and keep the source in the resources list (`aopa-asi`).
+Cite a current source for the statistic above: the AOPA Air Safety Institute's latest Nall Report (share of VFR-into-IMC accidents that were fatal, against the overall GA fatal rate) or an NTSB safety alert. Put the exact figure and year in the text once confirmed; the source stays in the resources list (`aopa-asi`).
 :::
 
 ## PAVE and IMSAFE, revisited
 
-You met the two checklists in [[l8-1-decision-making-and-personal-minimums]]. Here they are again, with a weather lens:
+You met both checklists in [[l8-1-decision-making-and-personal-minimums]]. Here they are with a weather lens:
 
 | Letter                 | Ask                                                                                                                             |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | **P**ilot              | Am I fit (IMSAFE: illness, medication, stress, alcohol, fatigue, emotion and eating)? Have I flown in weather like this before? |
-| **A**ircraft           | Fuel for the flight plus the reserve plus a diversion? Pitot heat working? Is this flight inside what a Skyhawk can do?         |
+| **A**ircraft           | Fuel for the flight, the reserve and a diversion? Pitot heat working? Is this inside what a Skyhawk can do?                     |
 | en**V**ironment        | The briefing: ceilings, visibility, wind, the trend, daylight left, terrain between me and the alternate                        |
 | **E**xternal pressures | Who is waiting? What have I promised? What would I do if nobody were watching?                                                  |
 
-Environment is where this module lives, but external pressures are where the accidents start. The briefing in [[l11-2-forecasts-and-briefings]] was easy to read on a lesson page. It is harder to read when a friend has driven to the airport and the forecast says "probably fine by 1 p.m."
+Environment is where this module lives, but external pressures are where accidents start. The briefing in [[l11-2-forecasts-and-briefings]] was easy to read on a lesson page. It is harder when a friend has driven to the airport and the forecast says "probably fine by 1 p.m."
 
 ## Writing personal minimums
 
-Legal minimums are the floor; **personal minimums** are the numbers you fly to. Write them before the briefing, when nothing is pushing you, and apply them as a rule rather than a feeling. A starting set for a pilot at this stage of the course:
+Legal minimums are the floor; **personal minimums** are the numbers you fly to. Write them before the briefing, when nothing is pushing you, and apply them as a rule rather than a feeling. A starting set for this stage of the course:
 
 | Item                                 | Legal VFR (Class D/E) | Suggested personal minimum now                              |
 | ------------------------------------ | --------------------- | ----------------------------------------------------------- |
@@ -57,14 +57,14 @@ Legal minimums are the floor; **personal minimums** are the numbers you fly to. 
 | Forecast trend at the destination    | None                  | Improving or steady, never worsening                        |
 | Fuel at landing                      | 30 min day reserve    | 1 hour                                                      |
 
-Those are deliberately conservative. Relax them one at a time, after you have flown comfortably at the current number several times, and never on the day you need them relaxed. Later in the course, [[l16-1-risk-management-for-longer-flights]] builds a full worksheet that Learn-To-Fly saves to your profile and applies to every challenge brief; until then, keep yours on paper.
+These are deliberately conservative. Relax them one at a time, after several comfortable flights at the current number, and never on the day you need them relaxed. [[l16-1-risk-management-for-longer-flights]] builds a full worksheet that Learn-To-Fly saves to your profile; until then, keep yours on paper.
 
 :::callout{type="verify"}
-The saved personal-minimums worksheet is P1 (v2 L11.6 spec). Confirm the legal column against 14 CFR 91.155 (3 SM, 500 ft below cloud) and 91.151 (30-minute day VFR fuel reserve), and that the suggested values match the starting set in [[l8-1-decision-making-and-personal-minimums]] (wind 15 kt, crosswind 8 kt, visibility 5 SM there versus 6 SM here; align one with the other).
+The saved personal-minimums worksheet is P1 (v2 L11.6 spec). Confirm the legal column against 14 CFR 91.155 (3 SM, 500 ft below cloud) and 91.151 (30-minute day VFR reserve), and align the suggested values with the starting set in [[l8-1-decision-making-and-personal-minimums]] (visibility 5 SM there versus 6 SM here).
 :::
 
 :::callout{type="decision"}
-**Go, no-go or delay?** Take the KLVK to KMRY briefing from [[l11-2-forecasts-and-briefings]]: Monterey under a 600 ft overcast and 4 SM in mist, AIRMET Sierra until 20Z, a TAF that clears at 1 p.m., a thin layer per a PIREP, and a clear route inland. Against the personal minimums above it is a **no-go now** and a **delay** until the 1 p.m. improvement is confirmed by a new METAR, with Salinas as the alternate. Write that down, with the reason, before you read on. Writing the decision is the habit; Challenge C11.1 "Go / no-go board" grades it.
+**Go, no-go or delay?** Take the KLVK to KMRY briefing from [[l11-2-forecasts-and-briefings]]: Monterey under a 600 ft overcast and 4 SM in mist, AIRMET Sierra until 20Z, a TAF that clears at 1 p.m., a thin layer per a PIREP, a clear route inland. Against the minimums above it is a **no-go now** and a **delay** until the 1 p.m. improvement is confirmed by a new METAR, with Salinas as the alternate. Write that down, with the reason, before you read on. Writing the decision is the habit; Challenge C11.1 "Go / no-go board" grades it.
 :::
 
 :::quiz{id="l11-6-q1" type="single"}
@@ -77,21 +77,21 @@ It is 11 a.m. Your friend has a 2 p.m. meeting in Monterey. The destination is I
 
 ---
 
-The destination is below minimums with a forecast trend that is improving but not yet confirmed. Delay and re-brief is the decision that respects both the weather and the minimums. "Probably lifted" is plan continuation bias; descending through a layer VFR is illegal and lethal; cancelling is safe but not necessary when a confirmed improvement is two hours away.
+The destination is below minimums with a trend that is improving but not yet confirmed. Delay and re-brief respects both the weather and the minimums. "Probably lifted" is plan continuation bias; descending through a layer VFR is illegal and lethal; cancelling is safe but unnecessary when a confirmed improvement is two hours away.
 :::
 
 ## Plan continuation bias
 
-Pilots rarely decide to fly into cloud. They decide, a dozen times, not to turn around yet. The name for that is **plan continuation bias**: the pull to keep doing what you planned, because you planned it, long after the evidence says stop.
+Pilots rarely decide to fly into cloud. They decide, a dozen times, not to turn around yet. That is **plan continuation bias**: the pull to keep doing what you planned, because you planned it, long after the evidence says stop.
 
-It has recognizable symptoms. "It looked better on the forecast." "It's only 10 more miles." "I've come this far." "I'll just drop down a bit." Each thought is reasonable alone. Together they are the scud-running story from [[l11-3-clouds-fog-and-low-visibility]]. The defense has three parts:
+Its symptoms are familiar. "It looked better on the forecast." "It's only 10 more miles." "I'll just drop down a bit." Each is reasonable alone. Together they are the scud-running story from [[l11-3-clouds-fog-and-low-visibility]]. The defense has three parts:
 
-1. **Decide the turn-back point before takeoff**, as a place and a condition, and tell someone, even if it is only the passenger. A decision made on the ground does not have to be made in the air.
+1. **Decide the turn-back point before takeoff**, as a place and a condition, and tell someone. A decision made on the ground does not have to be made in the air.
 2. **Treat the first lowering as the decision**, not the third. If the ceiling or visibility reaches your number, the question is already answered.
-3. **Count the strikes.** Three things going wrong, however small, means land or turn back. A tailwind, a lower ceiling than forecast and a radio that is being difficult are three strikes.
+3. **Count the strikes.** Three things going wrong, however small, means land or turn back.
 
 :::callout{type="decision"}
-**The turn-back point, in flight.** You are over the ridge west of Palo Alto, heading for Half Moon Bay. Your briefed point was "if I cannot see the coast from the ridge, I turn back." You cannot see the coast. The layer is higher than you expected, maybe landable. The right action is the one you briefed: turn back, now, while the turn is easy, and go look at it from the ground on the Half Moon Bay webcam. The decision point exists so that you do not have to be clever in the air.
+**The turn-back point, in flight.** You are over the ridge west of Palo Alto, heading for Half Moon Bay. Your briefed point was "if I cannot see the coast from the ridge, I turn back." You cannot see the coast. The layer looks higher than expected, maybe landable. The right action is the one you briefed: turn back, now, while the turn is easy. The decision point exists so that you do not have to be clever in the air.
 :::
 
 :::quiz{id="l11-6-q2" type="single"}
@@ -109,38 +109,39 @@ You reached your condition. The number was chosen on the ground precisely so you
 
 ## The 180° turn
 
-Suppose it still happens. The haze thickened, the horizon faded, and the windscreen went white. Your body will tell you the airplane is turning, climbing, diving. It is lying. Within seconds of losing the horizon, your sense of balance has no reliable reference, and pilots who follow it are in a spiral dive in well under a minute. The only truth in the cockpit is the attitude indicator, and the escape is a turn flown entirely on it.
+Suppose it still happens. The haze thickened, the horizon faded, and the windscreen went white. Your body will tell you the airplane is turning, climbing, diving. It is lying. Within seconds of losing the horizon your sense of balance has no reliable reference, and pilots who follow it are in a spiral dive in well under a minute. The only truth in the cockpit is the attitude indicator, and the escape is a turn flown entirely on it.
 
 :::callout{type="memory"}
 **Inadvertent IMC: the 180° turn**
 
 1. **Eyes on the attitude indicator.** Level the wings and set the cruise pitch attitude. Do not touch the power yet. Do not descend.
 2. **Note the heading** and work out the reciprocal (add or subtract 180).
-3. **Roll into a standard-rate turn**, about 15–20° of bank, no more, toward the side you came from (the air you know was clear).
+3. **Roll into a standard-rate turn**, about 15–20° of bank, no more, toward the side you came from.
 4. **Hold altitude** with small pitch changes on the attitude indicator; cross-check the altimeter and the VSI every few seconds.
 5. **Roll out on the reciprocal heading**, leading it by about 10°.
 6. **Keep flying the instruments** straight and level until you are clearly out of cloud and the horizon is back.
 7. **Ask for help**: tell ATC, or call 121.5, and squawk 7700 if you need it.
-   :::
 
-Why these steps, in this order? Wings level first, because almost every VFR-into-IMC crash is a spiral that started with a bank the pilot never noticed. Shallow bank, because at 15–20° the airplane is stable and a small error stays small; a 45° bank in cloud is how the spiral begins. Hold altitude, because the ground is below the cloud and you do not know where. Turn toward where you came from, because that air was flyable a minute ago. The standard-rate turn takes a full minute to come around; that minute will feel like ten, and the discipline is to let it.
+:::
 
-| Instrument         | What you are watching for                                                            |
-| ------------------ | ------------------------------------------------------------------------------------ |
-| Attitude indicator | Bank at 15–20°, pitch at the cruise picture. Your primary instrument                 |
-| Heading indicator  | Progress through the turn; lead the roll-out by 10°                                  |
-| Altimeter          | Holding altitude ±100 ft; correct with pitch, not power                              |
-| Turn coordinator   | Standard rate; ball centered                                                         |
-| Airspeed           | Steady; a rising airspeed means the nose is down, fix it with the attitude indicator |
+Why this order? Wings level first, because almost every VFR-into-IMC crash is a spiral that started with a bank the pilot never noticed. Shallow bank, because at 15–20° a small error stays small; a 45° bank in cloud is how the spiral begins. Hold altitude, because the ground is below the cloud and you do not know where. Turn toward where you came from, because that air was flyable a minute ago. The standard-rate turn takes a full minute; it will feel like ten, and the discipline is to let it.
 
-Two more rules. Do not climb into the cloud hoping to top it unless you know the tops from a PIREP and are already close to them. And once you are out, **land at the nearest suitable airport** and think about what happened; the flight is over.
+| Instrument         | What you are watching for                                                          |
+| ------------------ | ---------------------------------------------------------------------------------- |
+| Attitude indicator | Bank at 15–20°, pitch at the cruise picture. Your primary instrument               |
+| Heading indicator  | Progress through the turn; lead the roll-out by 10°                                |
+| Altimeter          | Holding altitude ±100 ft; correct with pitch, not power                            |
+| Turn coordinator   | Standard rate; ball centered                                                       |
+| Airspeed           | Steady; a rising airspeed means the nose is down, fix it on the attitude indicator |
+
+Two more rules. Do not climb into the cloud hoping to top it unless a PIREP has told you the tops and you are already close. And once you are out, **land at the nearest suitable airport**; the flight is over.
 
 :::callout{type="tip"}
-If you know the GFC 700 autopilot well, a level-wings mode can hold the airplane steady while you find the heading and talk on the radio. If you do not know it well, this is not the moment to learn. The hand-flown turn is the skill, and you fly it first; [[l17-1-the-instrument-scan]] and [[l17-5-spatial-disorientation]] take the instrument flying much further.
+If you know the GFC 700 autopilot well, a wings-level mode can hold the airplane steady while you find the heading and talk. If you do not know it well, this is not the moment to learn. The hand-flown turn is the skill; [[l17-1-the-instrument-scan]] and [[l17-5-spatial-disorientation]] take instrument flying much further.
 :::
 
 :::callout{type="verify"}
-Check the 180° turn against Section 10.3 and the AFH chapter on basic instrument maneuvers (emergency recovery, 180° turn). Confirm the bank guidance (standard rate, about 15–20° at Skyhawk speeds; some sources say "no more than standard rate"). Confirm whether the sim's GFC 700 has a LVL button and whether this course wants it mentioned at all. These steps feed the `memory-items` deck and must match Challenge C11.3's criteria (wings level first, bank 15–20°, altitude ±100 ft, roll-out ±10° at Gold).
+Check the 180° turn against v2 Section 10.3 and the AFH chapter on basic instrument maneuvers (emergency 180° turn). Confirm the bank guidance (standard rate, about 15–20° at Skyhawk speeds). Confirm whether the sim's GFC 700 has a LVL button and whether this course wants it mentioned. These steps feed the `memory-items` deck and must match Challenge C11.3's criteria (wings level first, bank 15–20°, altitude ±100 ft, roll-out ±10° at Gold).
 :::
 
 :::quiz{id="l11-6-q3" type="order"}
@@ -156,7 +157,7 @@ Put the 180° turn steps in order.
 
 ---
 
-Wings level and attitude first, because the spiral is the killer. Then the heading, the shallow turn, altitude, the roll-out, and stay on the instruments until the horizon returns. Help comes last only because the first six steps take all of your attention for about a minute; if you can call sooner without losing the scan, do.
+Wings level and attitude first, because the spiral is the killer. Then the heading, the shallow turn, altitude, the roll-out, and stay on the instruments until the horizon returns. Help comes last only because the first six steps take all your attention for about a minute; if you can call sooner without losing the scan, do.
 :::
 
 :::quiz{id="l11-6-q4" type="single"}
@@ -180,12 +181,12 @@ Once the airplane is stable, the radio makes everything easier, and nobody will 
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | ATC, if you are already talking to them | "Skyhawk 123, VFR, I have entered cloud at 3,500, request a heading to VFR conditions"                         | Vectors toward clear air and away from terrain; traffic separation      |
 | Any ATC on 121.5                        | "Mayday, mayday, mayday, Skyhawk 123, VFR in cloud, 5 miles east of Livermore, 3,500 feet, request assistance" | Someone always listens on 121.5; they find the right controller for you |
-| Transponder 7700                        | Squawk it if you have declared an emergency or if you cannot raise anyone                                      | Every radar scope in range lights up with your position                 |
+| Transponder 7700                        | Squawk it if you have declared an emergency or cannot raise anyone                                             | Every radar scope in range lights up with your position                 |
 
-Say what you are, where you are, your altitude, and what you need. Do not spend the call apologizing. Flight following, which [[l15-2-flight-following-and-working-approach-control]] teaches, means ATC already knows who you are before the day goes wrong, which is one more reason to use it on every cross-country.
+Say what you are, where you are, your altitude, and what you need. Do not spend the call apologizing. Flight following ([[l15-2-flight-following-and-working-approach-control]]) means ATC already knows you before the day goes wrong, one more reason to use it on every cross-country.
 
 :::callout{type="decision"}
-**After the escape.** You are out of the cloud, heading back the way you came, heart pounding. The destination is still 15 nm the other way and the layer might have gaps. This is a decision too, and it is an easy one: the nearest suitable airport, a landing, and a long think. A pilot who flew into cloud once and turned around made one error and one excellent recovery. Going back for another look would be the second error, and the record says the second one is the fatal one.
+**After the escape.** You are out of the cloud, heading back the way you came, heart pounding. The destination is still 15 nm the other way and the layer might have gaps. This is a decision too, and an easy one: the nearest suitable airport, a landing, and a long think. A pilot who flew into cloud once and turned around made one error and one excellent recovery. Going back for another look would be the second error, and the record says the second one is the fatal one.
 :::
 
 ## Practice and next steps
@@ -199,6 +200,6 @@ Four things to carry forward:
 
 **Practice.** This lesson feeds the `airspace-and-minimums` deck (VFR and personal minimums) and the `memory-items` deck (the 180° turn steps, linked from the memory callout above).
 
-**Fly it.** Challenge C11.1 "Go / no-go board" gives you four briefings and asks for the decision. Challenge C11.3 "Inadvertent IMC: the 180" puts you in a cloud bank at 3,500 ft east of Livermore and prompts the turn when you least expect it. Challenge C11.2 "Marine layer at Half Moon Bay" ties the whole module together: brief the turn-back point, fly toward the layer, and make the call. Go-arounds and turn-backs are the best flying in this course; celebrate every one.
+**Fly it.** Challenge C11.1 "Go / no-go board" gives you four briefings and asks for the decision. Challenge C11.3 "Inadvertent IMC: the 180" puts you in a cloud bank at 3,500 ft east of Livermore and prompts the turn when you least expect it. Challenge C11.2 "Marine layer at Half Moon Bay" ties the module together: brief the turn-back point, fly toward the layer, and make the call. Turn-backs are the best flying in this course; celebrate every one.
 
 **Next.** [[l12-1-night-vision-and-illusions]] opens Module 12, where the same decisions are made in the dark.
