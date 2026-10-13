@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/react';
 import type { ComponentType } from 'react';
 import { createBrowserRouter, type RouteObject } from 'react-router';
 import AppLoading from './pages/AppLoading';
@@ -75,5 +76,7 @@ export const routes: RouteObject[] = [
 ];
 
 export function createRouter() {
-  return createBrowserRouter(routes);
+  // Sentry's wrapper names traces by route pattern (/learn/:moduleSlug). Without Sentry
+  // initialised it behaves exactly like createBrowserRouter.
+  return Sentry.wrapCreateBrowserRouter(createBrowserRouter)(routes);
 }

@@ -24,10 +24,14 @@ export default function PrivacyPage() {
           <li>Your preferences, such as theme and controller type.</li>
           <li>Your learning progress, challenge attempts, notes and reflections.</li>
           <li>Server logs (IP address, browser user agent, request details) for security.</li>
+          <li>
+            Error reports when something breaks: the page, your browser and device type, and the
+            error itself. They never include your IP address, account or email.
+          </li>
         </ul>
         <p>
           You can read every lesson without an account; we collect nothing about visitors beyond
-          server logs.
+          server logs and error reports.
         </p>
         <h2>3. Why we collect it</h2>
         <ul>
@@ -46,8 +50,9 @@ export default function PrivacyPage() {
         <ul>
           <li>Render — hosting.</li>
           <li>MongoDB Atlas — database.</li>
+          <li>Sentry, error monitoring (receives the error reports described above).</li>
         </ul>
-        <p>If we add an email or error-monitoring provider, it will be listed here first.</p>
+        <p>If we add an email provider, it will be listed here first.</p>
         <h2>6. Retention</h2>
         <p>
           Account data is kept until you delete your account. Server logs are kept for no more than
