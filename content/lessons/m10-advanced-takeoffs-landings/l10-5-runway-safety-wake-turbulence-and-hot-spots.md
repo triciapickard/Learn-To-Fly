@@ -13,7 +13,7 @@ objectives:
   - Identify a hot spot on an airport diagram and include it in a taxi brief.
   - Read back every hold-short instruction with the runway number and your call sign.
 challenges: []
-resources: [aim-7, faa-runway-safety]
+resources: [aim-7, aim-2-3, aim-4-3, faa-chart-supplement, faa-runway-safety]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -29,36 +29,32 @@ The second half of this lesson is about the ground, where more airplanes are dam
 
 Every wing that makes lift spills air around its tips, from the high pressure below to the low pressure above. The spilled air rolls up into two **vortices** that trail behind the airplane. The heavier, slower and cleaner (flaps up) the airplane, the stronger the vortex. Picture the view from behind a departing jet: two counter-rotating tubes of air, one off each wingtip, starting where the nose wheel leaves the ground.
 
-| Vortices...                                                                                       | What that means for you                                                                  |
-| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| **Start** at rotation and stop at touchdown                                                       | Only a flying airplane makes them; a jet taxiing does not                                |
-| **Sink** at a few hundred feet per minute and level off a little below the airplane's flight path | Stay **above** the larger airplane's path                                                |
-| **Drift** with the wind, at about the wind speed, and spread outward near the ground              | A light crosswind can hold one vortex on the runway, or push it onto the parallel runway |
-| **Linger** for a few minutes in calm air                                                          | Calm wind is the worst case; a good breeze blows them away                               |
-| Are strongest from a **heavy, slow, clean** airplane                                              | A jet on final or just after takeoff is the most dangerous                               |
+| Vortices...                                                                                    | What that means for you                                                                      |
+| ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **Start** at rotation and stop at touchdown                                                    | Only a flying airplane makes them; a jet taxiing does not                                    |
+| **Sink** at several hundred feet per minute, slowing and weakening as they go                  | Stay **at or above** the larger airplane's path                                              |
+| **Drift** with the wind, and near the ground (within 100–200 ft) also spread outward at 2–3 kt | A crosswind of 1–5 kt can hold one vortex on the runway, or push it onto the parallel runway |
+| **Linger** for minutes in calm air                                                             | Calm wind and a light quartering tailwind are the worst cases; turbulence breaks them up     |
+| Are strongest from a **heavy, slow, clean** airplane                                           | A jet on final or just after takeoff is the most dangerous                                   |
 
 :::callout{type="verify"}
-Confirm the vortex behavior figures (sink rate, leveling off below the flight path, drift at about the wind speed) against AIM 7-4-3 through 7-4-6 in the current edition and the AFH, and keep the numbers approximate in the learner text. Diagram for the shot list: "wingtip vortices behind a departing jet, rear view, with sink and drift arrows" (original drawing, not a handbook figure).
+Author decision: diagram for the shot list, "wingtip vortices behind a departing jet, rear view, with sink and drift arrows" (original drawing, not a handbook figure). (Desk-verified 2026-10-13: the vortex table matches AIM 7-4-3 and 7-4-4.)
 :::
 
 ## Avoidance: land beyond, take off before, wait
 
 The rule is to stay above the larger airplane's path and upwind of its vortices.
 
-| Situation                                          | What to do                                                                      |
-| -------------------------------------------------- | ------------------------------------------------------------------------------- |
-| Landing behind a larger airplane that landed       | Stay above its approach path; **touch down beyond** its touchdown point         |
-| Landing behind a larger airplane that is departing | Touch down **before** its rotation point                                        |
-| Taking off behind a larger airplane that departed  | Rotate **before** its rotation point; climb above its path; turn upwind of it   |
-| Taking off behind a larger airplane that landed    | Rotate **beyond** its touchdown point                                           |
-| Crossing or parallel runways                       | Watch for drift across; a vortex can cross a parallel runway                    |
-| Any of the above with no room to do it             | **Wait.** Two to three minutes is the usual guidance; in calm wind, wait longer |
+| Situation                                                               | What to do                                                                    |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Landing behind a larger airplane that landed                            | Stay at or above its approach path; **touch down beyond** its touchdown point |
+| Landing behind a larger airplane that is departing                      | Touch down **well before** its rotation point                                 |
+| Taking off behind a larger airplane that departed                       | Rotate **before** its rotation point; climb above its path; turn upwind of it |
+| After a larger airplane's low approach, missed approach or touch-and-go | Its wake can lie along the runway; **wait at least 2 minutes**                |
+| Parallel runway closer than 2,500 ft                                    | Expect drift onto your runway; stay at or above the larger airplane's path    |
+| Any of the above with no room to do it                                  | **Wait.** ATC's own intervals are 2 to 3 minutes; in calm wind, wait longer   |
 
-At a towered airport, ATC applies wake-turbulence separation behind heavy and super aircraft, and you will hear "caution wake turbulence" when the spacing is your responsibility. You can always ask for more time: "Skyhawk 123, we'll wait two minutes for wake turbulence."
-
-:::callout{type="verify"}
-Confirm the time-based spacing for a small aircraft departing behind a large or heavy jet (the 2- and 3-minute intervals, and when the pilot may waive them) against AIM 7-4-9 in the current edition and FAA Order JO 7110.65, and keep the learner text at "two to three minutes" unless the source gives a cleaner rule.
-:::
+At a towered airport, ATC applies wake-turbulence separation behind heavy and super aircraft and behind the Boeing 757: 2 minutes for a departure behind a heavy, 3 behind a super. Behind an ordinary large jet such as a 737 there is no mandatory interval from the same runway end (there is a 3-minute one if you depart from an intersection behind it, and you may waive that), so the spacing is yours, and you will hear "caution wake turbulence". You can always ask for more time, and the AIM says to ask on ground control before you taxi onto the runway: "Skyhawk 123, request two minutes for wake turbulence."
 
 :::quiz{id="l10-5-q1" type="single"}
 You are landing behind a larger airplane that has just landed on the same runway. Where do you touch down?
@@ -100,14 +96,14 @@ Taxiing toward a runway you see a red sign with white "25R-7L" and, on the pavem
 :::
 
 :::callout{type="verify"}
-Confirm the hold-short and runway-crossing rules against 14 CFR 91.129(i) and AIM 4-3-18 (taxi clearances and explicit runway crossing clearances), and the marking descriptions against AIM 2-3-5. Check that the sim's KLVK and KOAK show the markings and signs correctly.
+Sim check: check that the sim's KLVK and KOAK show the runway holding position markings and signs correctly (at KLVK, the signs along Taxiway A should read "25R-7L" from the north side). (Desk-verified 2026-10-13: 14 CFR 91.129(i), AIM 4-3-18, AIM 2-3-5 and 2-3-8.)
 :::
 
 ## Hot spots on airport diagrams and in the Chart Supplement
 
-A **hot spot** is a place on an airport where the FAA has recorded a history of incursions or confusion: a taxiway that meets a runway at an odd angle, two runway ends close together, a taxiway that looks like a runway. On the FAA airport diagram each one appears as a brown circle or oval labeled **HS 1**, **HS 2** and so on. The Chart Supplement lists them with a sentence explaining the trap.
+A **hot spot** is a place on an airport with a history of incursions or confusion: a taxiway meeting a runway at an odd angle, two runway ends close together, a taxiway that looks like a runway. On the FAA airport diagram each one is an open circle or oval labeled **HS 1**, **HS 2** and so on, and the Chart Supplement explains each in a sentence.
 
-Oakland is the regional example: three runways on the north field, a maze of taxiways, and hot spots where taxiways run between the parallel runways. You will not land there in this course, but Challenge C10.5 has you taxi there, because that is where the briefing habit gets tested. Livermore's trap is simpler and uncharted: the parallel taxiway north of 25R looks a lot like the runway.
+Oakland is the regional example: three runways on the north field, a maze of taxiways, and three charted hot spots. HS 1 is where Taxiways A and B both cross Runway 28R and get mixed up; HS 2 is where airplanes leaving the ramp miss their turn and head for Runway 10L-28R; HS 3 is a stretch of Taxiway C under an approach and departure hold. Challenge C10.5 has you taxi there, because that is where the briefing habit gets tested. Livermore has six of its own, HS 1 to HS 6, nearly all hold-short lines where pilots have failed to stop: HS 1 is the 25R hold line at Taxiway B, HS 5 the one at Taxiway G, HS 6 the junction of Taxiways J, A and G near the 7L end. Its uncharted trap: the parallel taxiway north of 25R looks a lot like the runway.
 
 | Where to find it       | What it tells you                                                  |
 | ---------------------- | ------------------------------------------------------------------ |
@@ -117,20 +113,20 @@ Oakland is the regional example: three runways on the north field, a maze of tax
 | ATIS                   | Runways in use, closed taxiways, and sometimes a hot spot reminder |
 
 :::callout{type="verify"}
-Confirm the current hot spot numbering and descriptions for KOAK, and whether KLVK has any charted hot spots, against the FAA airport diagrams and Chart Supplement for the cycle in use, and record the cycle. Screenshot for the shot list: "KOAK airport diagram with HS circles" (FAA diagram, public domain).
+Author decision: screenshot for the shot list, "KOAK airport diagram with HS circles" (FAA diagram AL-294, public domain). (Desk-verified 2026-10-13 against the Chart Supplement SW hot spot list and FAA diagrams, cycle 2610; re-check the numbering each cycle.)
 :::
 
 ## The taxi brief
 
 Before you move, with the diagram in front of you, say it out loud:
 
-| Brief item        | Example (KLVK, northwest apron to Runway 25R)                                     |
-| ----------------- | --------------------------------------------------------------------------------- |
-| Route             | "Alpha to 25R, no runway crossings"                                               |
-| Hot spots         | "No charted hot spots; the parallel taxiway looks like the runway, stay on Alpha" |
-| Hold-short points | "Hold short of 25R at Alpha unless cleared"                                       |
-| Who I talk to     | "Ground 121.6, then Tower 118.1 at the hold line"                                 |
-| If I get lost     | "Stop, say I am unfamiliar, and ask for progressive taxi instructions"            |
+| Brief item        | Example (KLVK, northwest apron to Runway 25R)                                                                                                        |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Route             | "Alpha to 25R, no runway crossings"                                                                                                                  |
+| Hot spots         | "HS 1 at the 25R end where Bravo meets the runway; HS 5 and HS 6 behind me at the 7L end; the parallel taxiway looks like the runway, stay on Alpha" |
+| Hold-short points | "Hold short of 25R at the end of Alpha unless cleared"                                                                                               |
+| Who I talk to     | "Ground 121.6, then Tower 118.1 at the hold line"                                                                                                    |
+| If I get lost     | "Stop, say I am unfamiliar, and ask for progressive taxi instructions"                                                                               |
 
 Then the hold-short readback. Every instruction with "hold short" in it gets a readback with the runway and your call sign: "Hold short Runway 25R, Skyhawk 123." Controllers are required to get that readback; if you do not give it, they will ask again. The `radio-phraseology` deck in the practice hub drills these.
 
@@ -145,10 +141,6 @@ Ground says: "Skyhawk 123, taxi to Runway 30 via Bravo, hold short of Runway 28R
 ---
 
 Read back the route and the **hold-short instruction with the runway number**, and end with your call sign. "Roger" and "Wilco" are never acceptable readbacks of a hold-short instruction.
-:::
-
-:::callout{type="verify"}
-Confirm the readback requirement for hold-short instructions against AIM 4-3-18 and the Pilot/Controller Glossary, and confirm the KLVK taxi example against `airports.yaml` (Taxiway A along the north side of 7L/25R, no runway crossing from the northwest apron) and the current airport diagram.
 :::
 
 ## Practice and next steps

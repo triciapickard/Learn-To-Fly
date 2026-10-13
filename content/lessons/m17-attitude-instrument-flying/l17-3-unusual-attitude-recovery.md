@@ -13,7 +13,7 @@ objectives:
   - State the recovery steps for each, in order.
   - Recover from an unusual attitude without stalling or overstressing the airplane.
 challenges: []
-resources: [ifh-attitude-flying, afh-ch5]
+resources: [ifh-attitude-flying, afh-ch5, garmin-g1000-nxi-pilots-guide]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -55,10 +55,10 @@ On the PFD, the attitude indicator tells you directly, but in a surprise you may
 
 Airspeed and altimeter moving in **opposite** directions from normal (speed falling while height rises) means nose high. Speed rising while height falls means nose low. On the standby instruments, the standby airspeed and altimeter give you the same answer even if the big display is gone.
 
-When the attitude gets extreme, the G1000 **declutters**: it removes most of the symbology from the attitude display and draws large red chevrons that point toward the horizon. Follow the chevrons. They exist so that a startled pilot sees one thing: which way is up.
+When the attitude gets extreme, the G1000 helps. Past about 30° nose up, 20° nose down or 65° of bank, the PFD **declutters**: the inset map, annunciations and the small windows go, and only the attitude, airspeed, altitude, vertical speed and HSI stay. From 50° nose up or 30° nose down, large red chevrons appear on the attitude display, pointing toward the horizon. Follow the chevrons. They exist so that a startled pilot sees one thing: which way is up.
 
 :::callout{type="verify"}
-Confirm the NXi extreme-attitude behavior in MSFS 2024: the pitch and bank thresholds at which the PFD declutters and shows red chevrons (the Garmin G1000 NXi Pilot's Guide gives the real thresholds), and whether the sim's NXi reproduces it. Screenshot for the shot list: "PFD declutter chevrons, nose low".
+Sim check: does the MSFS 2024 NXi declutter the PFD past +30°/−20° pitch or 65° bank and draw red chevrons from 50° nose up and 30° nose down? Thresholds desk-verified 2026-10-13 against the Garmin G1000 NXi Pilot's Guide (Cessna Nav III, Flight Instruments). Screenshot for the shot list: "PFD declutter chevrons, nose low".
 :::
 
 :::quiz{id="l17-3-q1" type="single"}
@@ -135,7 +135,7 @@ If the attitude indicator is the thing that failed, you can still recognize and 
 | 4     | Nose low, left bank, no attitude indicator | Power idle   | Center the turn indicator, ease out |
 
 :::callout{type="verify"}
-Widget W34 (Unusual Attitude Trainer) is embedded here once Phase 21 ships it: `::widget{name="unusual-attitude" mode="drill"}`, showing frozen attitude, airspeed, altimeter and turn indicators with the learner selecting the recovery actions in order against a timer, with nose-high, nose-low and partial-panel variants. Until then the drill table and the quizzes carry the content.
+Widget pending: W34 (Unusual Attitude Trainer) is embedded here once Phase 21 ships it: `::widget{name="unusual-attitude" mode="drill"}`, showing frozen attitude, airspeed, altimeter and turn indicators with the learner selecting the recovery actions in order against a timer, with nose-high, nose-low and partial-panel variants. Until then the drill table and the quizzes carry the content.
 :::
 
 :::quiz{id="l17-3-q3" type="single"}

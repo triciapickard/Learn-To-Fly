@@ -13,7 +13,7 @@ objectives:
   - Recognize the signs of mountain wave from clouds and the winds-aloft forecast.
   - Set a wind limit for a ridge crossing and apply it to a forecast.
 challenges: []
-resources: [faa-tips-mountain-flying, aim-7]
+resources: [faa-tips-mountain-flying, aim-7, faa-weather-handbook]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -30,7 +30,7 @@ Think of the air as a river and the mountains as rocks on the riverbed. Water me
 Course 1 weather was about clouds and visibility. Mountain weather adds a third thing: **the vertical movement of air**. Rising air lifts you for free. Sinking air can descend faster than the Skyhawk can climb. This lesson shows you where each one lives, how to see it coming, and when the honest answer is "not today."
 
 :::callout{type="safety"}
-A Skyhawk at a high density altitude might climb 300 ft per minute. The lee side of a Sierra ridge in a strong wind can sink at 1,000 ft per minute or more. No amount of skill wins that contest. The only winning move is to not be there.
+A Skyhawk at a high density altitude might climb 300 ft per minute. The lee side of a Sierra ridge in a strong wind can sink at 1,500–2,000 ft per minute. No amount of skill wins that contest. The only winning move is to not be there.
 :::
 
 ## Why wind accelerates over ridges
@@ -60,12 +60,12 @@ The air rises on the windward side and sinks on the **lee side**. Flying downwin
 
 ## Lee-side downdrafts and rotors
 
-On the lee side the sinking air can curl back on itself into a horizontal spinning tube called a **rotor**, roughly level with the ridge top and a few miles downwind. The turbulence inside can be severe enough to cause loss of control in a light airplane, and it is invisible unless there is enough moisture to form a ragged, tumbling cloud.
+On the lee side the sinking air can curl back on itself into a horizontal spinning tube called a **rotor**, at or below ridge-top level and anywhere from a few miles to about 20 nm downwind. The turbulence inside can be severe enough to cause loss of control in a light airplane, and it is invisible unless there is enough moisture to form a ragged, tumbling cloud.
 
 Above the rotor, in a stable air mass, the air keeps bouncing up and down for tens of miles downwind. That is **mountain wave**. Glider pilots love the rising parts; you care about the sinking parts and the rotor underneath. In a strong wind, stay well above ridge level, keep away from the lee side, and treat any sink as a signal to turn toward lower terrain.
 
 :::callout{type="verify"}
-Widget W29 (Mountain Airflow) is embedded here once Phase 20 ships it: `::widget{name="mountain-airflow" mode="explore"}`. Confirm the rotor and wave description against AIM 7-6 and "Tips on Mountain Flying" (FAA-P-8740-60).
+Widget pending: W29 (Mountain Airflow) is embedded here once Phase 20 ships it: `::widget{name="mountain-airflow" mode="explore"}`. Desk-verified 2026-10-13: the wave, rotor and lenticular description matches AIM 7-6-7, FAA-P-8740-60 and AC 00-57.
 :::
 
 ## Lenticular clouds
@@ -97,12 +97,8 @@ Lenticular clouds, rotor clouds and strong winds at ridge level all point to wav
 
 You learned to read a winds-aloft forecast in [[l11-2-forecasts-and-briefings]]. For a crossing, the number that matters is the wind at **ridge level**, not the surface wind at your departure airport. Sierra crests along the I-80 corridor sit around 8,000–9,000 ft MSL, so the 9,000 ft forecast level is your reference. Two things matter most:
 
-- **Speed at ridge level.** The FAA's mountain flying material cautions that about 20–25 kt or more at ridge level means strong lee-side sink and likely turbulence. Many instructors use 20 kt as the number that ends the conversation for a light airplane.
+- **Speed at ridge level.** The FAA's "Tips on Mountain Flying" says not to attempt a mountain flight when the forecast wind at mountain-top level is above 25 kt, and to add an extra 1,000 ft of ridge clearance once it is above 20 kt; the AIM puts the light-airplane limit at 35 mph, about 30 kt. Many instructors use 20 kt as the number that ends the conversation.
 - **Direction relative to the ridge.** Wind blowing straight across the ridge makes the strongest wave. Wind along the ridge is gentler.
-
-:::callout{type="verify"}
-Confirm the 20–25 kt ridge-level wind caution against "Tips on Mountain Flying" (FAA-P-8740-60) and AIM 7-6, the I-80 corridor ridge elevations (8,000–9,000 ft) against the current San Francisco sectional, and that the winds-aloft (FB) forecast has a 9,000 ft level.
-:::
 
 :::callout{type="decision"}
 Set your limit before you look at the forecast, not after. Learn-To-Fly's starting mountain limit: **ridge-level wind 20 kt or more, or any lenticular or rotor cloud, and you do not cross.** Write it on the kneeboard. When the 9,000 ft forecast says 25 kt from the west, the decision is already made.
@@ -150,7 +146,7 @@ MSFS 2024 models wind over terrain and some updrafts and downdrafts, but how str
 :::
 
 :::callout{type="verify"}
-Fly the `WX_MOUNTAIN_WAVE` preset over the Carson Range and record the sink rate, turbulence and whether any rotor is modeled (v2 Phase 16 flight test). Shot list: "lenticular cloud over the Carson Range" if the sim renders one.
+Sim check: fly the `WX_MOUNTAIN_WAVE` preset over the Carson Range and record the sink rate, turbulence and whether any rotor is modeled (v2 Phase 16 flight test); then confirm the sim callout above still reads true. Shot list: "lenticular cloud over the Carson Range" if the sim renders one.
 :::
 
 ## Practice and next steps

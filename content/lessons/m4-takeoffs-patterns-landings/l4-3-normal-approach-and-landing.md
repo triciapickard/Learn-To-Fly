@@ -68,8 +68,10 @@ Many runways have a **PAPI**: four lights beside the runway that show your glide
 
 Some airports have an older two-bar **VASI** instead: red over white means on path. A memory aid: "red over white, you're all right".
 
+Smaller airports often have a **two-light PAPI** instead of four: one white and one red means on the glide path, two white is high, two red is low.
+
 :::callout{type="verify"}
-Author note: in reality (Chart Supplement, effective 2026-10-01) Livermore has a PAPI on runways 7L and 25R only, and Tracy has a PAPI on all four runway ends (8, 26, 12 and 30). Check the sim shows them in the same places and that the lights read correctly on a 3° path.
+Sim check: desk-verified 2026-10-13 against AirNav (FAA data effective 2026-10-01): Livermore has a four-light PAPI on 7L (4.0° path) and 25R (3.0°) only; Tracy has a two-light PAPI on all four ends (8 at 3.4°, 26, 12 and 30 at 3.0°). Still open: that the sim shows them in the same places, with the same number of lights, and that they read on-path at those angles.
 :::
 
 :::quiz{id="l4-3-q2" type="single"}

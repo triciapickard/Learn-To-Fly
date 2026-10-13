@@ -36,7 +36,7 @@ MSFS 2024 offers three ways to set the weather, chosen on the world map before t
 Challenges use custom weather for the reason they did in [[l0-2-setting-up-msfs-2024-for-training]]: repeatability. A brief that says `WX_MARINE_LAYER` has to mean the same cloud base for every learner, every time.
 
 :::callout{type="verify"}
-Confirm the MSFS 2024 menu paths: weather selection on the world map before a flight, and the toolbar weather panel in flight. Record the preset names the sim currently ships (Clear Skies, Few Clouds, Scattered Clouds, Broken Clouds, Overcast, Rain, Snow, Storm, and any others) and the sim version checked. Confirm which service feeds live weather and how often it refreshes.
+Sim check: confirm the MSFS 2024 menu paths (weather on the world map before a flight; the toolbar weather panel in flight), record the preset names the sim ships (Clear Skies, Few Clouds, Scattered Clouds, Broken Clouds, Overcast, Rain, Snow, Storm, any others) with the sim version, and note which service feeds live weather and how often it refreshes.
 :::
 
 ## The custom weather controls
@@ -56,7 +56,7 @@ The custom panel is a stack of layers. Each control maps onto something you read
 Add cloud layers from the bottom up, as a METAR lists them. Set the lowest layer first, check its base against the brief, then add the next. A gust value in the wind layer gives you the gusty approaches of [[l10-1-crosswinds-revisited-gusts-wind-shear-and-limits]].
 
 :::callout{type="verify"}
-Confirm the exact control names and units in the MSFS 2024 custom weather panel: whether cloud bases are entered in feet MSL or AGL (this changes every preset in Module 11), whether visibility is a distance or a haze slider, whether pressure is in inHg or hPa, and whether separate turbulence or thermal controls exist. Shot list: "custom weather panel with a single overcast layer at 600 ft over KHAF, annotated".
+Sim check: confirm the control names and units in the MSFS 2024 custom weather panel: cloud bases in feet MSL or AGL (MSFS developers have said layer altitudes are MSL, which changes every Module 11 preset; confirm in the sim), visibility as a distance or a haze slider, pressure in inHg or hPa, and whether separate turbulence or thermal controls exist. Shot list: "custom weather panel with a single overcast layer at 600 ft over KHAF, annotated".
 :::
 
 :::quiz{id="l11-5-q1" type="single"}
@@ -91,7 +91,7 @@ Save your custom weather as a named preset in the sim after you build it. Name i
 :::
 
 :::callout{type="verify"}
-Confirm that MSFS 2024 lets you save custom weather as a user preset and the menu path. Check how precisely the sim holds a cloud base (v2 Section 9.3): fly through the layer three times and record the entry altitude each time. Confirm the 3 SM to 5 km conversion matches how the visibility control is labeled.
+Sim check: confirm MSFS 2024 can save custom weather as a user preset and the menu path; fly through a layer three times and record the entry altitude each time to see how precisely the sim holds a cloud base (v2 Section 9.3); confirm the visibility control's units so the 3 SM to about 5 km conversion matches its label.
 :::
 
 :::quiz{id="l11-5-q2" type="single"}
@@ -120,7 +120,7 @@ The sim's atmosphere is good enough for everything this course asks of it. It is
 :::
 
 :::callout{type="verify"}
-Confirm in the current sim version: whether airframe and pitot icing are modeled (visually and in performance); whether thunderstorm presets produce turbulence, wind shear or lightning effects on the airplane; the live-weather refresh interval and typical lag against the real METAR; and whether the sim ATIS reports the active custom weather. Record the sim version in `simVersion` when verified.
+Sim check: in the current sim version, whether airframe and pitot icing are modeled (visually and in performance); whether thunderstorm presets produce turbulence, wind shear or lightning effects on the airplane; the live-weather refresh interval and typical lag against the real METAR; and whether the sim ATIS reads the active custom weather. Record the sim version in `simVersion` when verified.
 :::
 
 ## Practice and next steps

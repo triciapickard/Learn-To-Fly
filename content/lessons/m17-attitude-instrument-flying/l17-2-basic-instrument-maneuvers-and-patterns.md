@@ -13,7 +13,7 @@ objectives:
   - Calculate the bank angle for a standard-rate turn and the time for a timed turn to any heading.
   - Fly Pattern A from the leg table using only the clock, the attitude indicator and power.
 challenges: []
-resources: [ifh-attitude-flying, faa-acs-instrument]
+resources: [ifh-attitude-flying, faa-acs-instrument, garmin-g1000-nxi-pilots-guide]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -67,7 +67,7 @@ The bank angle for standard rate depends on true airspeed. The rule of thumb fro
 | 110 KTAS      | About 18°              |
 | 120 KTAS      | About 19°              |
 
-On the G1000 PFD the **turn rate indicator** sits just above the HSI compass card: a magenta trend bar grows from the lug toward tick marks that mean half-standard and standard rate. Roll in to about 17° on the attitude indicator, then check that the bar reaches the standard-rate mark and adjust the bank a degree or two. In a turn your scan adds the heading more often, and the altimeter still gets every other look, because the nose wants to drop as you bank.
+On the G1000 PFD the **turn rate indicator** sits directly above the HSI compass card: a magenta trend bar grows from the lubber line toward tick marks that mean half-standard and standard rate. Roll in to about 17° on the attitude indicator, then check that the bar reaches the standard-rate mark and adjust the bank a degree or two; the rule of thumb rounds a little high, and the bar is the judge. In a turn your scan adds the heading more often, and the altimeter still gets every other look, because the nose wants to drop as you bank.
 
 Roll out early. The lead is about half the bank angle: at 17° of bank, start rolling out about 8° before the heading.
 
@@ -78,7 +78,7 @@ The classic Skyhawk has a turn coordinator: a small airplane symbol that banks t
 :::
 
 :::callout{type="verify"}
-Confirm the appearance and tick marks of the NXi turn rate indicator in MSFS 2024 (the standard-rate marks and whether a half-standard mark is drawn) against the Garmin G1000 NXi Pilot's Guide and a screenshot: "PFD in standard-rate turn (KLVK area)". Confirm the 100 KTAS → 17° figure matches the bar at the C17.1 cruise speed.
+Sim check: screenshot "PFD in standard-rate turn (KLVK area)" and confirm the MSFS 2024 NXi draws both tick marks and the magenta trend vector as Garmin describes (desk-verified 2026-10-13 against the G1000 NXi Pilot's Guide: half-standard and standard-rate ticks either side of the lubber line, arrowhead above 4°/s). Record the bank that puts the bar on the standard-rate mark at the C17.1 cruise speed (the geometry gives about 15° at 100 KTAS; the lesson's rule says 17°) and adjust the table if the sim disagrees.
 :::
 
 :::quiz{id="l17-2-q1" type="numeric" answer="17" tolerance="2" unit="°"}
@@ -165,7 +165,7 @@ Instrument training patterns string the maneuvers together with a stopwatch, so 
 Start the stopwatch at the beginning of each leg and let it run; the turns are timed turns, so the clock and the heading should agree when you roll out. The pattern ends where it started, which is the test: if you finish on 090 at 4,000 ft and 100 KIAS, every leg was flown right. Pattern B (Challenge C17.5, a P1 extra) adds a simulated approach and a missed-approach segment to the same idea.
 
 :::callout{type="verify"}
-Verify the version of Pattern A taught: this leg table is an original Learn-To-Fly sequence built to match Challenge C17.2's criteria (timed legs, standard-rate turns, one climb and one descent) rather than a copy of the Instrument Flying Handbook figure. Compare it with the IFH "Pattern A" and decide whether to adopt the IFH timings or keep ours; the C17.2 challenge file and the Fly tab stopwatch must use the same legs. Add a plan-view diagram (original drawing) to the shot list.
+Author decision: keep this original leg table or adopt an IFH pattern. Desk-verified 2026-10-13: the current IFH (FAA-H-8083-15B, Chapter 7) has no "Pattern A"; its basic instrument flight patterns are the racetrack, procedure-turn, 80/260, teardrop and circling patterns, all clock-plus-maneuver exercises, so the name is ours. The legs above are internally consistent (every turn and altitude change matches its time). The C17.2 challenge file and the Fly tab stopwatch must use these legs; a plan-view diagram (original drawing) is on the shot list.
 :::
 
 :::callout{type="tip"}

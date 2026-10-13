@@ -12,7 +12,7 @@ objectives:
   - Describe circling minima, the protected area and the rule for a missed approach while circling.
   - Recognize a procedure turn and a hold-in-lieu on a plate and describe how each is flown.
 challenges: []
-resources: [iph-approaches, aim-5]
+resources: [iph-approaches, aim-5, ecfr-91-175, faa-dtpp]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -32,20 +32,16 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 ## Circling minima and the protected area
 
-A **circling approach** ends not at the runway but at the airport: you descend to a circling MDA, find the airport visually, and maneuver to land on a runway the approach does not point at, perhaps because the wind favors the other end, perhaps because the final course is 70° off every runway. Circling minima are listed on their own line, by category, and they are always higher than straight-in minima because you will be turning low over terrain the designer could not see you avoid.
+A **circling approach** ends not at the runway but at the airport: you descend to a circling MDA, find the airport visually, and maneuver to land on a runway the approach does not point at, perhaps because the wind favors the other end, perhaps because the final course is 70° off every runway. Circling minima are listed on their own line, by category, and they are never lower than straight-in minima, and usually higher, because you will be turning low over terrain the designer could not see you avoid.
 
-The **protected area** is the airspace around the runways in which the circling MDA guarantees obstacle clearance. For Category A it is drawn from arcs 1.3 nm from each runway end on standard plates; newer plates with a "C" in a black box use larger radii that grow with altitude. Stay inside it. The circling MDA means nothing a mile and a half outside the arcs.
+The **protected area** is the airspace around the runways in which the circling MDA guarantees obstacle clearance. For Category A it is drawn from arcs 1.3 nm from each runway end. The FAA's newer table grows the radius with the circling altitude and the category, but for Category A it stays 1.3 nm below 7,000 ft; you may still see a "C" in a black box marking plates built to that table. Stay inside it. The circling MDA means nothing a mile and a half outside the arcs.
 
-| Item             | Category A, standard plate                          | Note                                            |
-| ---------------- | --------------------------------------------------- | ----------------------------------------------- |
-| Protected radius | 1.3 nm from each runway end                         | Larger on plates with the boxed "C" symbol      |
-| Minimum altitude | Circling MDA (HAA given)                            | Hold it until in a position to descend normally |
-| Visual contact   | Keep the runway environment in sight the whole time | Lose it: missed approach, now                   |
-| Speed            | {{vspeed.approach}} or slower                       | Keeps you Category A and inside the area        |
-
-:::callout{type="verify"}
-Confirm the Category A circling radius (1.3 nm standard; expanded radii with the boxed "C") against the current Chart User's Guide and AIM 5-4-20, and the visual-contact rule against 14 CFR 91.175. Keep the numbers labelled "standard plate" until confirmed. In the procedure-turn section, confirm the "remain within 10 nm" wording (the usual limit, but plate-specific), the 45/180 technique and the NoPT / vectors / "straight in" exceptions against AIM 5-4-9.
-:::
+| Item             | Category A, standard plate                                       | Note                                                                    |
+| ---------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Protected radius | 1.3 nm from each runway end                                      | Grows for faster categories and high MDAs, not for a Category A Skyhawk |
+| Minimum altitude | Circling MDA (HAA given)                                         | Hold it until in a position to descend normally                         |
+| Visual contact   | Keep an identifiable part of the airport in sight the whole time | Lose it (other than briefly in a normal bank): missed approach, now     |
+| Speed            | {{vspeed.approach}} or slower                                    | Keeps you Category A and inside the area                                |
 
 :::quiz{id="l20-6-q1" type="single"}
 While circling at the MDA you lose sight of the runway in a patch of low cloud. What do you do?
@@ -80,10 +76,10 @@ Circling MDA, airport in sight, but it is dusk, the runway lights are dim, and t
 
 When you fly a full procedure without radar vectors and arrive heading the wrong way, the plate gives you a **course reversal** to turn around and get established inbound. There are two kinds.
 
-| Course reversal                      | On the plate                                                | How it is flown                                                                                    |
-| ------------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| **Procedure turn**                   | A barbed arrow on the plan view, with "remain within 10 nm" | Outbound on the course, turn 45° to the barb side, fly 1 minute, turn 180° back, intercept inbound |
-| **Hold-in-lieu of a procedure turn** | A racetrack at the IF or FAF                                | Enter the hold normally, fly one circuit, continue inbound                                         |
+| Course reversal                      | On the plate                                                                                           | How it is flown                                                                                    |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| **Procedure turn**                   | A barbed arrow on the plan view, with "remain within 10 nm" (the usual limit; some plates say 5 or 15) | Outbound on the course, turn 45° to the barb side, fly 1 minute, turn 180° back, intercept inbound |
+| **Hold-in-lieu of a procedure turn** | A racetrack at the IF or FAF                                                                           | Enter the hold normally, fly one circuit, continue inbound                                         |
 
 The procedure turn's exact shape is yours to choose as long as you stay on the barb side and within the distance limit; the 45/180 is the classic. Start it at or above the altitude printed beside it and descend only when established inbound. Do not fly either reversal when the plate says **NoPT** for your route, when you are on vectors, or when ATC clears you "straight in". The G1000 will sequence a hold-in-lieu automatically when the transition needs it, as in [[l19-2-holding-with-the-g1000-and-autopilot]]; it does not fly a procedure turn for you.
 
@@ -110,8 +106,8 @@ Three things to carry forward:
 
 **Practice.** This lesson feeds the `approach-plate-symbols` deck (the barbed arrow, the racetrack, the boxed "C" and the circling minima line).
 
-**Fly it.** Challenge C20.7 "Circle to land" (P1) uses an RNAV (GPS) approach with circling minima at Watsonville or Half Moon Bay (not for navigation) in `WX_IMC_CIRCLE` weather. That completes Module 20. The capstone, [[l21-1-single-pilot-ifr-and-automation-management]], puts every approach in this module into one flight.
+**Fly it.** Challenge C20.7 "Circle to land" (P1) uses a Watsonville approach with circling minima, the KWVI "RNAV (GPS) RWY 2" or the circling-only "VOR-A" (not for navigation), in `WX_IMC_CIRCLE` weather. That completes Module 20. The capstone, [[l21-1-single-pilot-ifr-and-automation-management]], puts every approach in this module into one flight.
 
 :::callout{type="verify"}
-Real procedures named: KWVI or KHAF "RNAV (GPS)" approaches with circling minima (Section 12.4 candidates). Confirm which exist in the current d-TPP and the sim's nav database, name the chosen one by its charted title, and record the d-TPP cycle checked here before publishing.
+Sim check: in d-TPP cycle 2610 (01–29 Oct 2026) KWVI "RNAV (GPS) RWY 2" (Amdt 4) carries a circling line and KWVI "VOR-A" (Amdt 1B) is circling-only; KHAF "RNAV (GPS) RWY 12" and "RWY 30" have no circling minima, so Half Moon Bay is out. Still open: which of the two Watsonville procedures the sim's nav database carries, then name it by its charted title in C20.7.
 :::

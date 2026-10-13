@@ -13,7 +13,7 @@ objectives:
   - Fly a forward slip on final to lose altitude without gaining airspeed.
   - Recover from the slip and align the airplane with the runway before touchdown.
 challenges: []
-resources: [afh-ch9]
+resources: [afh-ch9, faa-acs-private]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -39,7 +39,7 @@ That is a slip: a cross-controlled maneuver, aileron one way and rudder the othe
 The forward slip is the altitude tool. The side slip is the crosswind tool from [[l10-1-crosswinds-revisited-gusts-wind-shear-and-limits]], the wing-low method. In both, the ground track stays on the centerline; the difference is the nose. In a forward slip it is deliberately turned away from the lowered wing, so the fuselage meets the air sideways. In a side slip it stays on the runway heading and the lowered wing cancels the drift.
 
 :::callout{type="verify"}
-Widget W25 (Crosswind Technique & Slip Visualiser) is embedded here once Phase 20 ships it, in forward-slip and side-slip modes side by side (directive name to be confirmed when the widget exists). Until then the table above carries the comparison. Screenshot for the shot list: "forward slip on final, Tracy Runway 26, pilot's view".
+Widget pending: Widget W25 (Crosswind Technique & Slip Visualiser) is embedded here once Phase 20 ships it, in forward-slip and side-slip modes side by side (directive name to be confirmed when the widget exists). Until then the table above carries the comparison. Screenshot for the shot list: "forward slip on final, Tracy Runway 26, pilot's view".
 :::
 
 :::quiz{id="l10-2-q1" type="single"}
@@ -66,29 +66,29 @@ Enter from a stabilized, power-idle approach when you can see you are going to b
 | 3. Pitch for speed | Hold the attitude that normally gives {{vspeed.approach}}                                 | Do not chase the airspeed tape (see below)                |
 | 4. Hold it         | Keep the aiming point still in the windshield                                             | When it stops moving down, you are back on the glide path |
 
-To recover, in this order: **release the rudder** so the nose swings back to the runway heading; **level the wings**, or leave the upwind wing slightly low in a crosswind, which turns the forward slip into a side slip; **re-check the pitch and airspeed**, because the drag is gone; then **land normally**, aligned with the runway, main wheels first.
+To recover: **level the wings and release the rudder together**, smoothly, so the nose swings back to the runway heading. Let the rudder go abruptly and the nose snaps into line and the airspeed builds. In a crosswind leave the upwind wing slightly low, which turns the forward slip into a side slip. Then **re-check the pitch and airspeed**, because the drag is gone, and **land normally**, aligned with the runway, main wheels first.
 
 Recover with enough height to settle before the flare, by 100–200 ft AGL on your first attempts. A slip taken out in the flare is a side-loaded touchdown waiting to happen. Still high after the slip? Go around; a slip that did not work is information, not a problem.
 
 :::quiz{id="l10-2-q2" type="order"}
 Put the forward-slip recovery steps in order.
 
-1. Release the rudder so the nose returns to the runway heading
-2. Level the wings with aileron
-3. Re-check the pitch attitude and airspeed
+1. Level the wings and release the rudder together, smoothly
+2. Re-set the normal glide attitude and check the airspeed
+3. Hold the centerline with a small side slip if there is a crosswind
 4. Land aligned with the runway, main wheels first
 
 ---
 
-Rudder first, then wings, then a pitch check, then the landing. Taking the bank out before the rudder would swing the airplane across the runway.
+Wings and rudder come out together; a rudder released abruptly swings the nose and lets the speed build. Then the attitude and airspeed check, then the crosswind correction, then the landing.
 :::
 
 ## Slips with flaps
 
-Skyhawks of many generations carry a note about slips with the flaps extended. With full flaps and a strong slip, the disturbed airflow over the tail can cause a mild pitch bobbing. It is harmless when you know what it is, and it goes away as you ease the slip. The practical advice: slip with the flaps you have, but fix a high approach early, with less flap and a slip, rather than late, with full flaps and a full slip.
+Skyhawks of many generations carry a note about slips with the flaps extended. Older models had a placard telling pilots to avoid them. The 172S handbook is milder: a steep slip with more than 20° of flap can cause a slight tendency for the elevator to oscillate, depending on airspeed, slip angle and loading, and in a full-rudder side slip with 30° of flap you may feel it at normal approach speed. It does not affect control of the airplane, and it goes away as you ease the slip. The practical advice: slip with the flaps you have, but fix a high approach early, with less flap and a slip, rather than late, with full flaps and a full slip.
 
 :::callout{type="verify"}
-Check the 172S POH (Section 4, normal procedures, and any placard in the sim cockpit) for the exact wording on slips with flaps extended. Older 172 models carried an "avoid slips with flaps extended" placard; the 172S wording is milder and mentions a possible elevator oscillation with full flaps. Paraphrase the current wording and record it here, and note whether the MSFS 2024 flight model shows any such behavior.
+Sim check: fly a full-rudder slip with flaps 30° in the MSFS 2024 Skyhawk and note whether the flight model shows any elevator oscillation or pitch bobbing. (Desk-verified 2026-10-13: the paragraph above paraphrases 172S POH Section 4, normal landing and crosswind landing notes.)
 :::
 
 ## The side slip as the wing-low crosswind technique
@@ -97,7 +97,7 @@ You already know this slip from [[l10-1-crosswinds-revisited-gusts-wind-shear-an
 
 ## Airspeed indication in a slip
 
-In a slip the airflow hits the pitot tube and the static port at an angle, so the **airspeed indicator may read wrong**, by several knots, high or low depending on which way you slip. The Skyhawk's static port is on one side of the fuselage, so a slip toward it and a slip away from it give different errors. That is why instructors teach the slip by **attitude**: set the pitch that normally gives {{vspeed.approach}}, hold it, and treat the airspeed tape as a rough cross-check until the slip is out. The airplane stalls at the same angle of attack whether or not it is slipping; it just lies to you about the speed.
+In a slip the airflow hits the pitot tube and the static port at an angle, so the **airspeed indicator may read wrong**, by several knots. The Skyhawk's single static port is on the left side of the fuselage, so a slip to the left and a slip to the right do not give the same error. That is why instructors teach the slip by **attitude**: set the pitch that normally gives {{vspeed.approach}}, hold it, and treat the airspeed tape as a rough cross-check until the slip is out. The airplane stalls at the same angle of attack whether or not it is slipping; it just lies to you about the speed.
 
 | What you see                                     | What it means                | What to do                                            |
 | ------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
@@ -106,7 +106,7 @@ In a slip the airflow hits the pitot tube and the static port at an angle, so th
 | Airspeed returns to normal as the slip comes out | The indication error is gone | Carry on                                              |
 
 :::callout{type="verify"}
-Confirm the 172S static port location (a single port on the left forward fuselage) and the direction of the airspeed error in left and right slips from the POH or a flight test; the sim may model little or no error. Also check the AFH wording on airspeed indications in a slip.
+Sim check: in a full-rudder slip at a held pitch attitude, record how much the sim's airspeed tape moves in a left slip and a right slip; the sim may model little or no error. (Desk-verified 2026-10-13: 172S POH preflight lists the static source opening on the left side of the fuselage; AFH Chapter 9 says airspeed indicators "may have considerable error" in a slip and to judge the slip by attitude, sound and feel.)
 :::
 
 :::callout{type="sim"}
@@ -114,7 +114,7 @@ A slip needs real rudder. A twist-grip joystick or a gamepad trigger works, with
 :::
 
 :::callout{type="verify"}
-Confirm the MSFS 2024 menu path and the exact setting name for auto-rudder, and record how the sim's G1000 Skyhawk behaves in a full-rudder slip (airspeed error, any pitch bobbing with flaps 30°).
+Sim check: confirm the MSFS 2024 menu path and the exact setting name for auto-rudder (expected under Options, Assistance options, Piloting) and write it into the sim callout above.
 :::
 
 :::quiz{id="l10-2-q3" type="single"}

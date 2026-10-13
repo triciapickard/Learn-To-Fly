@@ -45,11 +45,7 @@ Take any one away and you get, at worst, a shower. Put all three together and a 
 
 The mature stage holds everything: lightning, hail, severe turbulence, wind shear, heavy rain, and **microbursts**, sudden downdrafts that spread out at the ground with more sink than any light airplane can out-climb. The hazards reach well outside the cloud: hail falls from the anvil miles from the rain, and the gust front races ahead of the storm at the surface.
 
-The AIM's rule: avoid any thunderstorm identified as severe or giving an intense radar echo by **at least 20 nm**, never fly under the anvil, and never try to fly beneath a storm even if you can see the other side. Embedded storms hidden in stratus are the worst case because you cannot see them; a Convective SIGMET for embedded thunderstorms ends the flight. The Bay Area sees only a few storms a year. The Sierra in summer is a different story, which [[l13-1-mountain-weather-and-airflow]] takes up.
-
-:::callout{type="verify"}
-Check the avoidance guidance against the current AIM paragraph "Thunderstorm flying" (AIM 7-1-27 in recent editions; the number has moved): 20 nm for severe storms or intense echoes, the anvil, "never fly under", and the note that storms with tops at 35,000 ft or higher should be treated as severe. Confirm the three-stage life cycle and the microburst description against the Aviation Weather Handbook.
-:::
+The AIM's rule: avoid any thunderstorm identified as severe or giving an intense radar echo by **at least 20 miles**, never fly under the anvil, and never try to fly beneath a storm even if you can see the other side. Treat any storm with tops at 35,000 ft or higher as extremely hazardous. Embedded storms hidden in stratus are the worst case because you cannot see them; a Convective SIGMET for embedded thunderstorms ends the flight. The Bay Area sees only a few storms a year. The Sierra in summer is a different story, which [[l13-1-mountain-weather-and-airflow]] takes up.
 
 :::quiz{id="l11-4-q1" type="multi"}
 Which three ingredients must all be present for a thunderstorm to form? Pick all that apply.
@@ -68,14 +64,14 @@ Moisture, unstable air and a lifting action. An inversion is the opposite of uns
 :::quiz{id="l11-4-q4" type="single"}
 How far should you stay from a severe thunderstorm?
 
-- [ ] 5 nm
-- [ ] 10 nm
-- [x] At least 20 nm
+- [ ] 5 miles
+- [ ] 10 miles
+- [x] At least 20 miles
 - [ ] Clear of the rain is enough
 
 ---
 
-At least 20 nm, and never under the anvil. Hail, turbulence and gust fronts extend well beyond the visible cloud and the rain.
+At least 20 miles, and never under the anvil. Hail, turbulence and gust fronts extend well beyond the visible cloud and the rain.
 :::
 
 ## Icing: why the Skyhawk says no
@@ -99,7 +95,7 @@ The G1000 Skyhawk's engine is fuel-injected: no carburetor, no carburetor heat. 
 :::
 
 :::callout{type="verify"}
-Confirm the 172S POH Section 2 limitation wording on flight into known icing (paraphrase only). Confirm the sim's variants: the G1000 NXi version should be fuel-injected; check whether the classic variant is carbureted and whether MSFS 2024 models airframe or pitot icing at all ([[l11-5-weather-in-msfs-2024]]). Check the rime/clear/mixed descriptions and the frost guidance against the Aviation Weather Handbook and PHAK Chapter 12.
+POH check: confirm the 172S POH Section 2 limitation wording on flight into known icing (paraphrase only). Sim check: which MSFS 2024 Skyhawk variants are fuel-injected and which, if any, are carbureted, and whether the sim models airframe or pitot icing ([[l11-5-weather-in-msfs-2024]]). Desk-verified 2026-10-13: the rime/clear/mixed descriptions and the frost guidance match the Aviation Weather Handbook Chapter 20 and PHAK Chapter 12.
 :::
 
 :::quiz{id="l11-4-q3" type="single"}
@@ -138,14 +134,10 @@ Pilots report it in four grades, and AIRMET Tango or a SIGMET tells you which to
 
 Now the number. **Maneuvering speed**, Va, is {{vspeed.va}} at maximum weight for the Skyhawk. At or below Va, a sharp gust or a full control input makes the wing **stall before it can overload** the airframe; above Va, the same gust can bend something. So the rule in rough air is: **slow to Va or below**, then fly attitude, not altitude. Accept that the altitude wanders a hundred feet; chasing it with big control inputs loads the airplane more than the bumps do.
 
-One catch: Va is lower when the airplane is lighter, because a lighter wing reaches its limit load at a lower speed. The figure above is for maximum weight. Solo with half tanks, slow another 10 kt or so.
+One catch: Va is lower when the airplane is lighter, because a lighter wing reaches its limit load at a lower speed. The figure above is for maximum weight; the POH gives 98 KIAS at 2,200 lb and 90 KIAS at 1,900 lb. Solo with half tanks, slow another 10 kt or so.
 
 :::callout{type="tip"}
 Do not confuse Va with the top of the green arc (Vno, {{vspeed.vno}}). The green arc is for smooth air. In turbulence, Va is your limit, and it is well inside the green.
-:::
-
-:::callout{type="verify"}
-Confirm Va at the three POH weights (planned as 105, 98 and 90 KIAS at 2,550, 2,200 and 1,900 lb; v2 Section 8.1) against POH Section 2, and whether `aircraft.yaml` gains per-weight tokens; if so, replace the "another 10 kt or so" prose with tokens. Check the turbulence intensity definitions against the AIM PIREP turbulence table (AIM 7-1-23 in recent editions).
 :::
 
 :::quiz{id="l11-4-q2" type="single"}
@@ -165,7 +157,7 @@ At or below maneuvering speed for your current weight. Below Va the wing stalls 
 
 Four things to carry forward:
 
-1. Thunderstorms need moisture, unstable air and lift. Stay at least 20 nm from a severe one and never under the anvil.
+1. Thunderstorms need moisture, unstable air and lift. Stay at least 20 miles from a severe one and never under the anvil.
 2. Ice needs visible moisture and freezing temperatures. The Skyhawk is not approved for known icing: if it forms, turn back and descend to warmer air.
 3. In turbulence, slow to Va for your weight and fly attitude, not altitude.
 4. AIRMETs Tango and Zulu, SIGMETs and Convective SIGMETs are the briefing's stop signs for all three.

@@ -13,7 +13,7 @@ objectives:
   - Choose a level of automation for each phase, and step down a level when the airplane surprises you.
   - Write a set of personal IFR minimums and apply them to a go/no-go decision.
 challenges: []
-resources: [faa-risk-management-handbook, ifh-ifr-flight]
+resources: [faa-risk-management-handbook, ifh-ifr-flight, faa-dtpp]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -89,7 +89,7 @@ The G1000 NXi and GFC 700 give you a ladder of automation. Each rung takes work 
 Two habits make this ladder safe. First, **say the mode out loud** when you change it, and check that the annunciator agrees: "NAV armed, ALT holding." Second, when you cannot explain what the airplane is doing, **step down a level**. HDG and ALT are always available and always simple. If even that is confusing, disconnect and hand-fly. Pilots have followed autopilots into trouble while trying to work out why they would not behave. Flying the airplane yourself is never wrong.
 
 :::callout{type="verify"}
-Confirm that the sim's 172S G1000 NXi offers a flight director without the autopilot engaged (the FD key), and record which autopilot modes the sim models (v2 Section 8.5). Adjust the ladder if the sim lacks a level. Screenshot for the shot list: "GFC 700 mode annunciator with NAV armed and ALT active".
+Sim check: does the sim's 172S G1000 NXi show the flight director with the autopilot off (the FD key), and which GFC 700 modes does it model (HDG, NAV, APR, ALT, VS, FLC, VNV; v2 Section 8.5)? Adjust the ladder if a level is missing. Screenshot for the shot list: "GFC 700 mode annunciator with NAV armed and ALT active".
 :::
 
 :::quiz{id="l21-1-q2" type="single"}
@@ -166,10 +166,10 @@ Put these IFR flight steps in order.
 Planning first, then the clearance, then the briefing in the quiet cruise phase, and finally the decision at the DA with everything already prepared.
 :::
 
-Challenge C21.2 "IFR cross-country capstone" is this workflow flown for real: KLVK to KMRY in cloud, from the briefing and alternate decision through the clearance, departure, enroute leg and the ILS or LOC RWY 10R at Monterey. In one variant Monterey is above minimums and you land. In the other you go missed at the DA and divert to Salinas for the ILS or LOC RWY 31. The challenge scores your planning numbers, tracking and altitudes, the DA decision, the alternate leg if needed, the 45-minute reserve on landing and the logbook entry. Not for navigation.
+Challenge C21.2 "IFR cross-country capstone" is this workflow flown for real: KLVK to KMRY in cloud, from the briefing and alternate decision through the clearance, the Livermore departure, the enroute leg by Modesto and V111 to Salinas, and the ILS or LOC RWY 10R at Monterey. In one variant Monterey is above minimums and you land. In the other you go missed at the DA and divert to Salinas for the ILS RWY 31. The challenge scores your planning numbers, tracking and altitudes, the DA decision, the alternate leg if needed, the 45-minute reserve on landing and the logbook entry. Not for navigation.
 
 :::callout{type="verify"}
-Confirm the charted titles "ILS or LOC RWY 10R" (KMRY) and "ILS or LOC RWY 31" (KSNS) against the current d-TPP and record the cycle checked. KMRY is not yet in `airports.yaml`; add it before the capstone ships. Confirm the sim's nav database has both procedures.
+Desk-verified 2026-10-13: d-TPP cycle 2610 (01–29 Oct 2026) charts KMRY "ILS or LOC RWY 10R" (DA 398 ft, 200 ft above the touchdown zone, 1/2 sm) and KSNS "ILS RWY 31" with a separate "LOC RWY 31"; the earlier "ILS or LOC RWY 31" title was wrong and has been fixed. Author decision: KMRY is not in `airports.yaml`; add it before the capstone ships. Sim check: the sim's nav database has both procedures.
 :::
 
 ## Practice and next steps

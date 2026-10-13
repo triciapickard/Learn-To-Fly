@@ -35,7 +35,7 @@ At a towered airport, you talk to different controllers at each stage:
 The frequencies are on the sectional and in the Chart Supplement: at Livermore, ATIS 119.65, ground 121.6 and tower 118.1. The FBO ramp is the **northwest apron**, north of runway 7L/25R.
 
 :::callout{type="verify"}
-Author note: the runway numbers, frequencies and apron name come from the Chart Supplement (effective 2026-10-01) and the FAA airport diagram, and are on the KLVK airport card. Check the sim's ATC uses the same frequencies and runway names, and what the sim calls the parking area.
+Sim check: desk-verified 2026-10-13 against AirNav (FAA data effective 2026-10-01) and the LVK airport diagram (AL-6075): ATIS 119.65, ground 121.6, tower 118.1, FBO and terminal on the Northwest Apron, runways 7L/25R and 7R/25L. Still open: that the sim's ATC uses the same frequencies and runway names, and what the sim calls the parking area.
 :::
 
 **Ground:**
@@ -115,7 +115,7 @@ The sim's ATC window lets you choose calls from a menu:
 - **Practice anyway.** Say each call out loud before you choose it.
 
 :::callout{type="verify"}
-Author note: check the MSFS 2024 ATC window options for VFR departures and arrivals at Livermore, and note where they differ from the scripts above.
+Sim check: the MSFS 2024 ATC window options for VFR departures and arrivals at Livermore; note where they differ from the scripts above.
 :::
 
 ## Next steps: online ATC

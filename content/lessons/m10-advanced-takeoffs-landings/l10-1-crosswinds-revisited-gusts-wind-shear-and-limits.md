@@ -13,7 +13,7 @@ objectives:
   - Apply the gust-factor speed additive to the final approach speed.
   - Decide when a crosswind exceeds your personal limit and choose another runway or airport.
 challenges: []
-resources: [afh-ch9, boldmethod-crosswind]
+resources: [afh-ch9, aim-7, boldmethod-crosswind]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -21,12 +21,12 @@ simVersion: null
 
 ## The wind that will not sit still
 
-It is a spring afternoon at Livermore. The ATIS reports wind 290 at 12 gusting 20. You are set up for Runway 25R, which points roughly 250°, so the wind is 40° off the nose and from the right. In Course 1 you landed in light crosswinds. Today the wind has a second number, and it changes the approach speed, the touchdown and the decision to land at all.
+It is a spring afternoon at Livermore. The ATIS reports wind 290 at 12 gusting 20. You are set up for Runway 25R, whose magnetic heading is about 254°, so the wind is about 35° off the nose and from the right. In Course 1 you landed in light crosswinds. Today the wind has a second number, and it changes the approach speed, the touchdown and the decision to land at all.
 
 This lesson gives you three tools: numbers for the wind, a speed margin for gusts, and a personal limit you set before the wind sets it for you.
 
 :::callout{type="verify"}
-The spec's prerequisite is v1 L4.5 (crosswind takeoffs and landings), which is not written yet; `l4-3-normal-approach-and-landing` stands in and the recap below is self-contained. Swap the prerequisite to the L4.5 slug when it exists. Confirm the magnetic heading of KLVK Runway 25R (about 250° used throughout) against the FAA airport diagram.
+Author decision: the spec's prerequisite is v1 L4.5 (crosswind takeoffs and landings), which is not written yet; `l4-3-normal-approach-and-landing` stands in and the recap below is self-contained. Swap the prerequisite to the L4.5 slug when it exists. (Desk-verified 2026-10-13: KLVK Runway 25R is 254° magnetic on the FAA airport diagram AL-6075 and AirNav.)
 :::
 
 ## Recap: crab and wing-low
@@ -41,7 +41,7 @@ Two ways to stop the wind pushing you off the centerline on final:
 The crab is comfortable, but you cannot touch down in one: the wheels would meet the runway pointing sideways and the airplane would skip or swerve. So before touchdown the crab becomes a wing-low slip: lower the upwind wing just enough to stop the drift, and press the opposite rudder just enough to keep the nose on the centerline. Touch down on the **upwind main wheel first**, then the other main, then the nose wheel. [[l10-2-slips]] takes the slip apart in detail.
 
 :::callout{type="verify"}
-Widget W25 (Crosswind Technique & Slip Visualiser) is embedded here once Phase 20 ships it, in crab and wing-low modes side by side (directive name to be confirmed when the widget exists). Until then the table above carries the recap. Screenshot for the shot list: "crab on final, Runway 25R, KLVK".
+Widget pending: Widget W25 (Crosswind Technique & Slip Visualiser) is embedded here once Phase 20 ships it, in crab and wing-low modes side by side (directive name to be confirmed when the widget exists). Until then the table above carries the recap. Screenshot for the shot list: "crab on final, Runway 25R, KLVK".
 :::
 
 ## Gusts: add half the gust factor
@@ -56,11 +56,7 @@ The rule of thumb: **add half the gust factor** to your normal approach speed. T
 | 290 at 12 gusting 20 | 8 kt        | +4 kt    | {{vspeed.approach}} + 4 |
 | 290 at 15 gusting 25 | 10 kt       | +5 kt    | {{vspeed.approach}} + 5 |
 
-Keep the extra speed to the round-out, then let it bleed off in the flare. Expect to float a little longer than usual; that is the price of the margin.
-
-:::callout{type="verify"}
-Confirm the gust-additive rule against the current AFH chapter on approaches and landings (the "one-half the gust factor" wording, and whether the AFH caps the additive) and against the 172S POH Section 4 note on wind gusts, which may phrase it as a speed range. Record the wording used.
-:::
+Keep the extra speed to the round-out, then let it bleed off in the flare. Expect to float a little longer than usual; that is the price of the margin. Half the gust factor is the Airplane Flying Handbook's figure, and for a short-field landing it is also the most the handbook allows; the Skyhawk's own handbook says only that approach speeds should be "slightly higher" in turbulent air.
 
 :::quiz{id="l10-1-q1" type="numeric" answer="4" tolerance="0" unit="kt"}
 The wind is reported as 12 knots gusting 20. How many knots do you add to your final approach speed?
@@ -79,11 +75,11 @@ What it feels like on final: the airspeed jumps or drops 10 kt with no change in
 What to do: **go around**. Full power, pitch for {{vspeed.goAround}}, flaps to 20°, climb away and think about it at pattern altitude. A go-around in wind shear is not a failed landing. It is the correct landing.
 
 :::callout{type="safety"}
-Loss of control during the landing is the most common kind of accident in light airplanes, and a gusty crosswind is the usual ingredient. Most are not dramatic: a drift at touchdown, a side load on the gear, a swerve toward the grass. The defenses are the right speed, the right technique and a go-around decided early.
+Landing accidents are the biggest group of pilot-caused accidents in light airplanes, and loss of control on the runway leads that group; a gusty crosswind is the usual ingredient. Most are not dramatic: a drift at touchdown, a side load on the gear, a swerve toward the grass. The defenses are the right speed, the right technique and a go-around decided early.
 :::
 
 :::callout{type="verify"}
-Check the AIM wind shear material (AIM 7-1-24 onward in the current edition, including LLWAS and PIREP reporting) and the AFH or AOPA ASI source for the loss-of-control accident claim. Confirm MSFS 2024 can produce gusts and shear in the custom weather menu (wind layers with a gust setting) and name the controls.
+Sim check: confirm MSFS 2024 can produce gusts and low-level shear in the custom weather menu (wind layers with a gust setting) and name the controls here. (Desk-verified 2026-10-13: wind shear material is AIM 7-1-24 microbursts, 7-1-22 wind shear PIREPs and 4-3-7 LLWAS; the accident claim follows the AOPA ASI McSpadden Report, where loss of control on the ground is the leading landing-accident category.)
 :::
 
 :::quiz{id="l10-1-q2" type="single"}
@@ -115,7 +111,7 @@ But you are not a test pilot on a test day. For a new pilot the demonstrated fig
 Raise your limit the way Challenge C10.1 "Crosswind mastery pack" raises it: one step at a time, after clean landings at the step below.
 
 :::callout{type="decision"}
-The ATIS reports 290 at 15 gusting 25 and your personal limit is 12 kt. The gust crosswind on Runway 25R works out at about 16 kt. This is not a technique problem to solve on final; it is a decision to make on the ground or at pattern altitude. **Crosswind above your limit? Pick another runway, or divert.** Flying to an airport with a runway that faces the wind is good airmanship, not a defeat.
+The ATIS reports 290 at 15 gusting 25 and your personal limit is 12 kt. The gust crosswind on Runway 25R works out at about 14 kt. This is not a technique problem to solve on final; it is a decision to make on the ground or at pattern altitude. **Crosswind above your limit? Pick another runway, or divert.** Flying to an airport with a runway that faces the wind is good airmanship, not a defeat.
 :::
 
 ## Choosing the runway and the airport
@@ -135,7 +131,7 @@ A rough table does the job in the cockpit:
 | 60°                  | 0.87                             | 0.5                             |
 | 90°                  | 1.0                              | 0                               |
 
-For gusts, compute the component twice: once with the steady wind and once with the gust. The gust number is the one you compare against your limit. Wind 290 at 12 gusting 20 on Runway 25R (40° off): steady crosswind about 8 kt, gust crosswind about 13 kt.
+For gusts, compute the component twice: once with the steady wind and once with the gust. The gust number is the one you compare against your limit. Wind 290 at 12 gusting 20 on Runway 25R (about 35° off, so call it 0.6 of the wind): steady crosswind about 7 kt, gust crosswind about 12 kt.
 
 Use the widget with real wind. Enter the runway heading and the reported wind, then try the other runway end and the other airports in the region. At Livermore the only choice is 7 or 25; at Tracy the crossing runways (8/26 and 12/30) give you four directions to pick from.
 

@@ -13,7 +13,7 @@ objectives:
   - Turn to north and to south by compass, applying the correct lead or lag.
   - Describe the compass acceleration (ANDS) and turning (UNOS) errors.
 challenges: []
-resources: [ifh-attitude-flying, ifh-instruments, phak-ch8]
+resources: [ifh-attitude-flying, ifh-instruments, phak-ch8, garmin-g1000-nxi-pilots-guide, aim-5]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -43,7 +43,7 @@ The G1000 is built from separate boxes, and each one failing takes a different s
 The standby instruments sit in a row below or beside the displays: a small attitude indicator, airspeed indicator and altimeter, with the magnetic compass above the glare shield. They are small and not where your eyes are used to looking. The failures themselves and the DISPLAY BACKUP flow are covered in [[l14-2-instrument-and-avionics-failures]].
 
 :::callout{type="verify"}
-Confirm against the Garmin G1000 NXi Pilot's Guide and the sim: which PFD fields show a red X for an AHRS failure versus an ADC failure, whether the turn rate indicator is lost with the AHRS, and what powers the standby attitude indicator in the MSFS 2024 Skyhawk (electric, vacuum or a self-contained unit) and whether it has its own battery. Screenshot: "standby instruments close-up".
+Sim check: whether the MSFS 2024 NXi also drops the turn rate indicator with the AHRS; screenshot "standby instruments close-up". POH check: what powers the Skyhawk's standby attitude indicator (172S NAV III POH Section 7; vacuum on the original NAV III panel, a GI 275 on recent airframes) and which the sim models. Desk-verified 2026-10-13 against the Garmin G1000 NXi Pilot's Guide: an AHRS failure puts a red X over the attitude and heading fields, an ADC failure over airspeed, altitude, vertical speed, TAS and OAT.
 :::
 
 :::quiz{id="l17-4-q1" type="single"}
@@ -119,41 +119,41 @@ ANDS: decelerating on an east or west heading makes the compass show a turn towa
 
 ## Compass turning errors: UNOS and the latitude rule
 
-In a banked turn the same downward pull makes the card **lag** when you turn through north and **lead** when you turn through south. Through east and west it reads about right.
+In a banked turn the same downward pull tilts the card, so through north the compass shows **less** turn than you have made and through south it shows **more**. Through east and west it reads about right.
 
-| Turning to | The compass   | So you roll out               |
-| ---------- | ------------- | ----------------------------- |
-| **N**orth  | Lags behind   | **U**nder: before the heading |
-| **S**outh  | Runs ahead    | **O**ver: past the heading    |
-| East/West  | About correct | On the heading                |
+| Turning to | The compass                   | So you roll out               |
+| ---------- | ----------------------------- | ----------------------------- |
+| **N**orth  | Shows less turn than you made | **U**nder: before the heading |
+| **S**outh  | Shows more turn than you made | **O**ver: past the heading    |
+| East/West  | About correct                 | On the heading                |
 
-**UNOS**: Undershoot North, Overshoot South. How much? Learn-To-Fly teaches the Instrument Flying Handbook rule: **lead or lag ≈ your latitude plus half the bank angle**. The Bay Area sits at about 38° N, so with a 15° bank the number is about 38 + 7 ≈ 45°. Turning right from east to north, roll out when the compass reads about 315; turning left from east to south, roll out when it reads about 225. Past the roll-out, wings level, wait a few seconds, and the compass will swing onto the heading you wanted.
+**UNOS**: Undershoot North, Overshoot South. How much? Learn-To-Fly teaches the rule in the Instrument Flying Handbook and the PHAK: for a standard-rate turn, **lead or lag ≈ 15° plus half your latitude**. The Bay Area sits at about 38° N, so the number is 15 + 19 ≈ 34°, call it 35°. Turning right from west to north, roll out when the compass reads about 325; turning right from east to south, let it run past and roll out when it reads about 215. Then wings level, wait a few seconds, and the compass will settle onto the heading you wanted.
 
 :::callout{type="verify"}
-Two versions of the rule are taught: lead equals latitude, or latitude plus half the bank angle. This lesson and quiz q4 use the latitude-plus-half-bank version; confirm it against the current Instrument Flying Handbook compass section, and update the quiz answer (38 instead of 45) if the lesson switches to the latitude-only version. Widget W35 (Magnetic Compass Errors, P1) is embedded here once Phase 21 ships it: `::widget{name="magnetic-compass" mode="explore"}`, with heading, bank and latitude sliders and the "roll out on north" quiz. Until then the two tables carry the content.
+Widget pending: W35 (Magnetic Compass Errors, P1) is embedded here once Phase 21 ships it: `::widget{name="magnetic-compass" mode="explore"}`, with heading, bank and latitude sliders and the "roll out on north" quiz; its model must use the 15°-plus-half-latitude rule (IFH Chapter 5, PHAK Chapter 8, desk-verified 2026-10-13). Until then the two tables carry the content.
 :::
 
-:::quiz{id="l17-4-q4" type="numeric" answer="45" tolerance="5" unit="°"}
-At 38° N with 15° of bank, how many degrees before north do you roll out of a turn to north?
+:::quiz{id="l17-4-q4" type="numeric" answer="34" tolerance="5" unit="°"}
+At 38° N in a standard-rate turn, about how many degrees before north do you roll out of a turn to north?
 
 ---
 
-Lead ≈ latitude + half the bank = 38 + 7.5 ≈ 45°. Turning right to north, that means rolling out as the compass passes about 315.
+Lead ≈ 15° + half the latitude = 15 + 19 = 34°. Turning right to north, that means rolling out as the compass passes about 325.
 :::
 
 ## Getting help from ATC: no-gyro vectors
 
-You do not have to do this alone. Tell ATC you have lost your heading indicator and ask for **no-gyro vectors**. Instead of headings, the controller says "turn left" and "stop turn" while watching your target on radar. Make every turn at standard rate; on the final approach course the controller will ask for half standard rate.
+You do not have to do this alone. Tell ATC you have lost your heading indicator and ask for **no-gyro vectors**. Instead of headings, the controller says "turn left" and "stop turn" while watching your target on radar. Start every turn the moment you hear it and make it at standard rate; once you are turned onto final, the controller will ask for half-standard-rate turns.
 
-| Controller says                     | You do                                                       |
-| ----------------------------------- | ------------------------------------------------------------ |
-| "This will be a no-gyro vector"     | Acknowledge; be ready for turn and stop-turn calls           |
-| "Turn left"                         | Roll into a standard-rate left turn now                      |
-| "Stop turn"                         | Roll wings level now                                         |
-| "Make all turns half standard rate" | Use half the standard-rate bank for the rest of the approach |
+| Controller says                 | You do                                                      |
+| ------------------------------- | ----------------------------------------------------------- |
+| "This will be a no-gyro vector" | Acknowledge; be ready for turn and stop-turn calls          |
+| "Turn left"                     | Roll into a standard-rate left turn now                     |
+| "Stop turn"                     | Roll wings level now                                        |
+| "Make half-standard rate turns" | Use about half the standard-rate bank for the rest of final |
 
 :::callout{type="verify"}
-Confirm the no-gyro phraseology against AIM 5-4-11 (radar approaches) and the Pilot/Controller Glossary entries for "no-gyro approach" and "no-gyro vector", and check whether the sim's built-in ATC offers it (likely not) and whether VATSIM controllers routinely do. Record the AIM edition checked.
+Sim check: confirm that MSFS 2024's built-in ATC has no no-gyro option, as the sim callout below says. Phraseology desk-verified 2026-10-13 against AIM 5-4-11 (Change 3, effective 2026-07-09), the P/CG "No gyro approach" entry and FAA Order JO 7110.65 paragraph 5-10-3.
 :::
 
 :::callout{type="sim"}
@@ -169,7 +169,7 @@ A real AHRS failure in cloud is not a maneuver to finish; it is a reason to land
 :::
 
 :::callout{type="verify"}
-Confirm the MSFS 2024 failure menu path for an AHRS or attitude failure (v2 Section 9.1 table: "Instruments → AHRS/attitude") and whether it produces the red X on the NXi. The sticky-note method is the default per D2-09.
+Sim check: the MSFS 2024 failure menu path for an AHRS or attitude failure (v2 Section 9.1: "Instruments → AHRS/attitude") and whether it produces the red X on the NXi. The sticky-note method stays the default (D2-09).
 :::
 
 ## Practice and next steps
@@ -178,7 +178,7 @@ Three things to carry forward:
 
 1. AHRS failure: fly the standby attitude indicator and the compass; ADC failure: fly the standby airspeed and altimeter.
 2. Turn by the clock: degrees ÷ 3 seconds at standard rate, then let the compass settle.
-3. ANDS on east and west; UNOS through north and south, by about latitude plus half the bank.
+3. ANDS on east and west; UNOS through north and south, by about 15° plus half your latitude.
 
 **Practice.** This lesson feeds the `memory-items` flashcard deck: ANDS, UNOS and the roll-out lead at 38° N.
 

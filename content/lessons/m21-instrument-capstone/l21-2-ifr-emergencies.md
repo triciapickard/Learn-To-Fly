@@ -19,7 +19,7 @@ objectives:
   - Fly an approach on partial panel using no-gyro vectors and the simplest approach available.
   - Apply the lost-communications rules for route, altitude and when to start the approach to a whole flight.
 challenges: []
-resources: [ifh-emergencies, aim-6, ecfr-91-185]
+resources: [ifh-emergencies, aim-6, aim-5, pilot-controller-glossary, ecfr-91-185]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -43,19 +43,15 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 In cloud you are not alone. ATC can see you, clear traffic out of your way, tell you where the nearest VMC is and talk you down with headings. Pilots delay asking because they fear paperwork. It is rare, and far easier than the alternative.
 
-| You need                           | Say                                             | Set                        | What ATC can do                                                 |
-| ---------------------------------- | ----------------------------------------------- | -------------------------- | --------------------------------------------------------------- |
-| Immediate help, danger to life     | "Mayday, Mayday, Mayday" then your call sign    | 7700 if told, or if lost   | Clear all traffic, vector you, alert the airport, stay with you |
-| Help, but not yet life-threatening | "Pan-Pan, Pan-Pan, Pan-Pan" then your call sign | Keep your code unless told | Priority handling, vectors, weather, nearest suitable airport   |
-| Nobody answers on your frequency   | Call on 121.5                                   | 7700                       | Any station that hears you relays to ATC                        |
+| You need                           | Say                                             | Set                                                                         | What ATC can do                                                 |
+| ---------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Immediate help, danger to life     | "Mayday, Mayday, Mayday" then your call sign    | Your assigned code while ATC answers; 7700 if told to, or if nobody answers | Clear all traffic, vector you, alert the airport, stay with you |
+| Help, but not yet life-threatening | "Pan-Pan, Pan-Pan, Pan-Pan" then your call sign | Keep your code unless told                                                  | Priority handling, vectors, weather, nearest suitable airport   |
+| Nobody answers on your frequency   | Call on 121.5                                   | 7700                                                                        | Any station that hears you relays to ATC                        |
 
-Then give the four facts ATC needs: who you are, what is wrong, where you are and what you want. "Mayday, Mayday, Mayday, Skyhawk 123, alternator failure in cloud, 15 miles north of Salinas at 6,000, request vectors to the nearest ILS." Then fly the airplane and let them work.
+Then give the facts ATC needs, in this order: who you are (call sign and type), what is wrong, what you want, where you are and your altitude. Add fuel remaining in minutes and people on board if there is time. "Mayday, Mayday, Mayday, NorCal Approach, Skyhawk 123, alternator failure in cloud, request vectors to the nearest ILS, 15 miles north of Salinas at 6,000." Then fly the airplane and let them work.
 
-Once declared, you may do whatever the emergency needs, including breaking a rule, as long as you tell ATC. If you are not sure it is an emergency, say "Pan-Pan". You can always upgrade.
-
-:::callout{type="verify"}
-Check the Mayday and Pan-Pan wording, 7700 and the 121.5 guard frequency against AIM Chapter 6, Section 3 (distress and urgency communications) and Section 2 (emergency services). Check the "deviate in an emergency, report if asked" paraphrase against 14 CFR 91.3(b) and (c), and the four facts (identity, nature, position, intentions) against the AIM distress message contents.
-:::
+In an emergency that needs immediate action you may deviate from any rule as far as the emergency requires. No permission and no declaration are needed for that authority; the FAA may ask you for a written report afterward. Tell ATC what you are doing anyway, so they can protect you. If you are not sure it is an emergency, say "Pan-Pan". You can always upgrade.
 
 :::quiz{id="l21-2-q1" type="single"}
 Your attitude indicator has failed in cloud. You are flying on the standby instruments but want ATC to know and to get priority handling. What do you say?
@@ -92,7 +88,7 @@ Alternator failure in IMC:
 :::
 
 :::callout{type="verify"}
-Confirm the alternator-failure flow and the reset order against the 172S POH Section 3 and the in-sim checklist. Confirm the main battery endurance with load shed and the standby battery duration for the sim's G1000 NXi variant (v2 Section 8.4, Week 6 sim notes) and whether the sim models battery depletion at all. Numbers belong in `aircraft.yaml`, not here.
+POH check: the alternator-failure flow and the reset order against the 172S POH Section 3 and the in-sim checklist; the main battery endurance with load shed and the standby battery minimum (the IFH gives only a rough 30–40 minutes for a main battery). Numbers go in `aircraft.yaml`, not here. Sim check: whether MSFS 2024 drains the battery with the ALT switch off (v2 Section 8.4, Week 6 sim notes).
 :::
 
 :::callout{type="sim"}
@@ -116,7 +112,7 @@ In IMC the battery is your only source of flight instruments, and its time is li
 
 The second failure is a red X across the attitude and heading displays: the AHRS has failed. You learned to fly on the standby attitude indicator, standby airspeed and altimeter and the magnetic compass in [[l17-4-partial-panel-and-the-magnetic-compass]]. Two decisions make the difference in cloud.
 
-**Ask for no-gyro vectors.** Tell ATC your heading indicator has failed and request a no-gyro approach. The controller stops giving headings and says "turn left" and "stop turn" instead. You roll into a standard-rate turn on "turn" and roll out on "stop"; on final, the controller asks for half-standard-rate turns. This takes the compass errors out of the problem.
+**Ask for no-gyro vectors.** Tell ATC your heading indicator has failed and request a no-gyro vector or approach. The controller stops giving headings and says "turn left" and "stop turn" instead. You start a standard-rate turn the moment you hear "turn" and roll out on "stop turn"; once you are turned onto final, the controller tells you to make half-standard-rate turns. This takes the compass errors out of the problem.
 
 **Choose the simplest approach.** Simple means vertical guidance, a long runway, straight-in, and the best weather within reach. An ILS or LPV to a long runway beats a VOR approach with a circle every time, even 10 miles further away. If anywhere within reach is VMC, go there and land visually.
 
@@ -140,7 +136,7 @@ AHRS or PFD failure in IMC:
 :::
 
 :::callout{type="verify"}
-Check the no-gyro wording ("turn left", "stop turn", half-standard-rate turns on final) against AIM 5-4-11 (radar approaches) and the Pilot/Controller Glossary. Confirm whether the sim's GFC 700 disconnects when the AHRS fails and whether sim ATC offers no-gyro vectors; if not, this is a self-voiced or online-network item. Confirm the standby attitude indicator type in the sim's 172S (electric or vacuum), v2 Section 8.4.
+Desk-verified 2026-10-13: AIM 5-4-11 and the P/CG confirm "turn left/right", "stop turn", standard-rate turns started immediately, and half standard rate once on final. Sim check: does the sim's GFC 700 disconnect when the AHRS fails, and does sim ATC offer no-gyro vectors (if not, this is a self-voiced or online-network item)? Confirm the standby attitude indicator type in the sim's 172S (electric or vacuum), v2 Section 8.4.
 :::
 
 :::quiz{id="l21-2-q3" type="single"}
@@ -158,21 +154,21 @@ No-gyro vectors replace headings with timed turns. Start a standard-rate turn on
 
 ## Lost comms flight end to end
 
-The third failure is the quietest. You call approach and nobody answers. You learned the rules in [[l18-5-enroute-ifr-and-lost-communications]]: in VMC, stay VMC and land as soon as practical; in IMC, squawk 7600 and fly the route and altitude the rules give you. Here is a whole flight, so you can see how each rule connects to the next.
+The third failure is the quietest: you call approach and nobody answers. [[l18-5-enroute-ifr-and-lost-communications]] gave you the rules. Here is a whole flight, so you can see how they connect.
 
-The clearance was: "Cleared to Monterey as filed, climb and maintain 4,000, expect 6,000 10 minutes after departure." Your flight plan gave 45 minutes en route. The radios fail 15 minutes after takeoff, in solid cloud at 4,000 ft, before you received the climb.
+You filed ALTAM, Modesto (MOD) and V111 to Salinas (SNS), 1 hour 10 minutes en route. The clearance: "Cleared to Monterey as filed, climb and maintain 4,000, expect 6,000 one-zero minutes after departure." The radios fail 8 minutes after takeoff, level at 4,000 in solid cloud, before you received the climb.
 
-| Step               | Question                        | Rule                                                                        | What you do                                                                  |
-| ------------------ | ------------------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| 1. Confirm         | Is it really lost comms?        | Try both radios, the last frequency, squelch, headset                       | Still nothing; squawk 7600                                                   |
-| 2. VMC?            | Can you stay visual and land?   | VMC: remain VMC, land as soon as practical                                  | Solid cloud, so continue IFR                                                 |
-| 3. Route           | Which route?                    | Assigned, then Vectored, then Expected, then Filed                          | "As filed" was assigned, so fly the filed route to Monterey                  |
-| 4. Altitude        | Which altitude on this segment? | Highest of assigned, MEA, or expected                                       | Assigned 4,000; expected 6,000; MEA 5,000 on this segment, so climb to 6,000 |
-| 5. Clearance limit | When do you start the approach? | Leave the limit at the expect-further-clearance time, or at the ETA if none | No EFC was given, so arrive at Monterey and start the approach at the ETA    |
-| 6. Approach        | Which approach?                 | The one you would most expect, flown as published without a clearance       | The ILS or LOC RWY 10R; fly it as published and land                         |
-| 7. On the ground   | Who do you call?                | Close the flight plan by phone                                              | Call the tower or Flight Service as soon as you are parked                   |
+| Step               | Question                        | Rule                                                                  | What you do                                                                                                                                   |
+| ------------------ | ------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Confirm         | Is it really lost comms?        | Try both radios, the last frequency, squelch, headset                 | Still nothing; squawk 7600                                                                                                                    |
+| 2. VMC?            | Can you stay visual and land?   | VMC: remain VMC, land as soon as practicable                          | Solid cloud, so continue IFR                                                                                                                  |
+| 3. Route           | Which route?                    | Assigned, Vectored, Expected, Filed                                   | "As filed": ALTAM, MOD, V111 to SNS                                                                                                           |
+| 4. Altitude        | Which altitude on this segment? | Highest of assigned, MEA or expected, segment by segment              | 4,000 until 10 minutes after departure, then 6,000, the expected altitude. V111 MEAs MOD–SNS are 5,000 and 5,500, both lower, so 6,000 to SNS |
+| 5. Clearance limit | When do you start the approach? | Leave the limit at the EFC time, or the ETA if none                   | The airport is not an approach fix: fly to SNS, where the approach begins, and start it at your ETA                                           |
+| 6. Approach        | Which approach?                 | The one you would most expect, flown as published without a clearance | The ILS or LOC RWY 10R from SNS, as published; land                                                                                           |
+| 7. On the ground   | Who do you call?                | Close the flight plan by phone                                        | Call the tower or Flight Service as soon as you are parked                                                                                    |
 
-Look at step 4. Pilots often stay at the assigned altitude because that is what they were cleared to. The rule says you also climb to the altitude you were told to expect, and never fly below the MEA. ATC protects airspace around you based on these rules, so follow them even when lower feels more comfortable.
+Look at step 4. Pilots often stay at the assigned altitude because that is what they were cleared to. The rule says you also climb to the altitude you were told to expect, once the time or fix you were given arrives, and never fly below the MEA. ATC protects airspace around you based on these rules, so follow them even when lower feels more comfortable. One trap: if the radios fail after that time has passed and ATC never gave you the climb, the expected altitude no longer applies; fly the higher of the assigned altitude and the MEA.
 
 :::callout{type="memory"}
 Lost comms in IMC:
@@ -181,16 +177,16 @@ Lost comms in IMC:
 2. Route: Assigned, Vectored, Expected, Filed.
 3. Altitude: the highest of assigned, MEA and expected, for each segment.
 4. Start the approach at the EFC time, or at the ETA if there was none.
-5. In VMC at any point: stay VMC and land as soon as practical.
+5. In VMC at any point: stay VMC and land as soon as practicable.
 
 :::
 
 :::callout{type="verify"}
-Check every row of the table against the current wording of 14 CFR 91.185 and AIM 6-4-1, especially the clearance-limit timing (EFC vs ETA, and the case where the limit is not an approach fix) and the "last assigned altitude" wording. The 5,000 ft MEA on the KLVK–KMRY segment is a placeholder; replace it with the real MEA from the current IFR Enroute Low chart and record the cycle. Confirm what sim ATC does when the COM volume is turned down, and whether 7600 has any effect in sim ATC, VATSIM and PilotEdge.
+Desk-verified 2026-10-13: every row checked against 14 CFR 91.185 and AIM 6-4-1 (including the clearance-limit timing and the "expected altitude no longer applies after the EFC time" note); V111 MEAs MOD–SNS taken from FAA NASR airway data effective 2026-10-01. Sim check: what sim ATC does when the COM volume is turned down, and whether 7600 has any effect in sim ATC, VATSIM and PilotEdge.
 :::
 
 :::quiz{id="l21-2-q4" type="numeric" answer="6000" tolerance="0" unit="ft"}
-Lost comms in IMC. You were cleared to maintain 4,000 and told to expect 6,000 in 10 minutes. The MEA on your current segment is 5,000. What altitude do you fly?
+Lost comms in IMC. You were cleared to maintain 4,000 and told to expect 6,000 in 10 minutes; the radios failed before that time and it has now passed. The MEA on your current segment is 5,000. What altitude do you fly?
 
 ---
 

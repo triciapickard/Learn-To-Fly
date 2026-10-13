@@ -13,7 +13,7 @@ objectives:
   - Fly the alternator-failure flow in order and shed non-essential electrical load.
   - Decide where to land before the battery runs out, using a battery-time estimate.
 challenges: []
-resources: [phak-ch7, msfs-checklist]
+resources: [phak-ch7, afh-ch18, garmin-g1000-nxi-crg, msfs-checklist]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -21,7 +21,7 @@ simVersion: null
 
 ## The quietest emergency
 
-You are 20 minutes out of Livermore, heading south toward Salinas, trimmed and relaxed. Nothing bangs. Nothing smokes. The engine hums along at 2,300 RPM. The only sign that anything has changed is a small amber message on the PFD that you may not notice for a minute or two: **LOW VOLTS**.
+You are 20 minutes out of Livermore, heading south toward Salinas, trimmed and relaxed. Nothing bangs. Nothing smokes. The engine hums along at 2,300 RPM. The only sign that anything has changed is a small red message in the PFD's alerts window, with a tone, that you may not notice for a minute or two: **LOW VOLTS**.
 
 That is an alternator failure, the quietest emergency in the airplane. The engine does not care, because its magnetos make their own spark ([[l1-3-engine-fuel-and-electrical-systems]]). Everything else that runs on electricity, both G1000 displays, the radios, the transponder, the flaps and the lights, is now running off a battery that is slowly emptying.
 
@@ -45,10 +45,10 @@ Power flows along **buses**, which are just shared wiring: the main bus feeds mo
 
 The **master switch** is split, as you learned in Course 1: **BAT** connects the battery, **ALT** connects the alternator. Turning ALT off alone is the instructor's trick for simulating this failure, and it is also part of the real checklist.
 
-On the MFD, the **EIS** shows bus **volts** and battery **amps**. In normal flight you see about 28 V and a small positive (charging) current. Memorize that picture, because the failure is a change from it.
+On the MFD, the **EIS** shows bus **volts** (M for the main bus, E for the essential bus) and battery **amps** (M for the main battery, S for the standby). In normal flight you see about 28 V and a small positive (charging) current. Memorize that picture, because the failure is a change from it.
 
 :::callout{type="verify"}
-Widget W30 (Electrical System Schematic) is embedded here once Phase 20 ships it: `::widget{name="electrical-system" mode="explore"}`. Until then the table above is the walkthrough. Confirm against the POH Section 7 and the sim's EIS: the 28 V / 24 V / 60 A figures, the exact EIS field names (M BUS VOLTS, E BUS VOLTS, M BATT AMPS, S BATT AMPS or similar), which buses the avionics master halves control, and what the standby battery switch is labeled (STBY BATT ARM/OFF/TEST). Screenshot for the shot list: "EIS electrical page, normal cruise".
+Widget pending: W30 (Electrical System Schematic) is embedded here once Phase 20 ships it: `::widget{name="electrical-system" mode="explore"}`. Until then the table above is the walkthrough. Desk-verified 2026-10-13: 28 V / 24 V / 60 A, the STBY BATT switch positions ARM/OFF/TEST and the EIS VOLTS M/E and BATT M/S fields confirmed (Garmin G1000 NXi CRG for the Cessna NAV III; UND and CAP 172S systems guides). Sim check: the EIS field labels on the sim's Skyhawk. POH check: Section 7, which units sit on AVN BUS 1 vs BUS 2. Screenshot for the shot list: "EIS electrical page, normal cruise".
 :::
 
 ## What alternator failure looks like
@@ -57,19 +57,19 @@ When the alternator stops, three things change on the panel, in this order:
 
 1. **The ammeter goes negative.** The battery is now supplying current instead of receiving it. On the EIS the battery amps show a **discharge**.
 2. **Bus voltage falls.** From about 28 V toward 24 V (the battery's own voltage) and then lower as it drains.
-3. **LOW VOLTS** appears on the PFD annunciator area, usually with a chime, once the voltage drops below the alert threshold.
+3. **LOW VOLTS** appears in red in the PFD's alerts window, with a repeating tone, once the bus voltage drops below the alert threshold (about 24.5 V).
 
 | Reading      | Normal cruise      | After alternator failure        |
 | ------------ | ------------------ | ------------------------------- |
 | Bus volts    | About 28 V         | About 24 V and falling          |
 | Battery amps | Small positive (+) | Negative (−), a discharge       |
-| Annunciation | None               | LOW VOLTS (amber)               |
+| Annunciation | None               | LOW VOLTS (red, with a tone)    |
 | Engine       | Normal             | Normal (magnetos need no power) |
 
 The first two signs are silent, so glance at the EIS volts and amps on every cruise check. Challenge C14.1 "Alternator failure" scores how fast you notice, and the only way to notice fast is to already be looking.
 
 :::callout{type="verify"}
-Confirm in the sim: what the EIS shows within the first 30 seconds of switching ALT off, the voltage at which the LOW VOLTS annunciation appears (POH Section 7 and the G1000 NXi guide), its color, and whether a chime sounds. Note the sim version.
+Desk-verified 2026-10-13: LOW VOLTS is a red warning with a repeating tone, inhibited on the ground (Garmin G1000 NXi CRG for the Cessna NAV III, Annunciations). Sim check: what the sim's EIS shows within 30 seconds of ALT off, and whether the sim draws LOW VOLTS in red and plays the tone; note the sim version. POH check: Section 7, the 24.5 V threshold.
 :::
 
 :::quiz{id="l14-1-q1" type="single"}
@@ -102,7 +102,7 @@ Here is the flow in our own words; the exact switch names come from the in-sim c
 Step 2 exists because some "failures" are a tripped breaker or an alternator that dropped offline. One reset is reasonable; repeated resets of a failed alternator can do harm, so after one try you commit to step 3.
 
 :::callout{type="verify"}
-Check steps 2 and 3 against the MSFS 2024 in-sim checklist and POH Section 3 ("Low voltage annunciation" or similar): whether the POH says to cycle the ALT switch, whether it mentions the ALT breaker, and whether it directs STBY BATT to ARM. Record the exact item order so the flow matches the checklist the learner sees in the sim.
+Desk-verified 2026-10-13: shed load, tell ATC, land at the nearest suitable airport and expect a no-flap landing confirmed (AFH Ch 18, Electrical System); one reset of the ALT FIELD breaker and the ALT switch, no repeats, confirmed against the UND 172S systems guide. POH check: Section 3 "LOW VOLTS annunciation" item order and wording (breaker name, AVIONICS BUS 1/2 off before the reset, STBY BATT ARM), and the sim's checklist wording, so steps 2 and 3 match what the learner sees.
 :::
 
 :::quiz{id="l14-1-q2" type="order"}
@@ -139,7 +139,7 @@ Shed load **before** you call ATC. The call takes 30 seconds; the shed takes 10 
 
 How long does the battery last? It depends on its charge, how much you shed and how cold it is. A healthy battery with the load trimmed hard might carry the panel for something like 30 minutes. Treat any number as a planning figure, not a promise.
 
-When the main battery can no longer hold the voltage, the **standby battery** takes over the essential bus, keeping the PFD and standby instruments alive for a limited time so you can keep flying attitude and find the airport. It will not run the flaps or the landing light.
+When the main battery can no longer hold the voltage, the **standby battery** takes over the essential bus, keeping the PFD alive for about 30 minutes so you can keep flying attitude and find the airport. It will not run the flaps, the transponder or the landing light.
 
 | Stage                     | What still works                               | Your job                           |
 | ------------------------- | ---------------------------------------------- | ---------------------------------- |
@@ -152,7 +152,7 @@ The sim's battery may drain far slower or faster than a real one, and the standb
 :::
 
 :::callout{type="verify"}
-Week 6 notes: time the sim's battery from ALT off to PFD blackout with and without load shed, check whether STBY BATT is modeled, and record what the standby battery powers in the sim. Confirm the POH's standby battery endurance (Section 7, "at least 30 minutes" or similar) before stating any figure to learners.
+Desk-verified 2026-10-13: standby battery runs the essential bus for at least 30 minutes, essential bus has no flaps or transponder (CAP TXWG 172S Introduction; UND 172S systems guide; both paraphrase POH Section 7). POH check: exact Section 7 wording for the 30-minute figure. Sim check: time the sim's battery from ALT off to PFD blackout with and without load shed, whether STBY BATT is modeled, and what it powers.
 :::
 
 ## Land as soon as practical

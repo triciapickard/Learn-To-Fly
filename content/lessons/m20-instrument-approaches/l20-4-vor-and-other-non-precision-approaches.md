@@ -13,7 +13,7 @@ objectives:
   - Compute a continuous-descent rate from the FAF and compare it with step-down flying.
   - Identify the missed approach point by distance or by timing from the FAF, and state when you may leave the MDA.
 challenges: []
-resources: [iph-approaches, ecfr-91-175]
+resources: [iph-approaches, ecfr-91-175, aim-5, faa-chart-users-guide, faa-dtpp]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -35,7 +35,7 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 A **VOR approach** uses a radial to or from a VOR as the final approach course. The VOR may be on the airport, in which case the MAP is station passage, or miles away, in which case the MAP is a DME distance or a time. Because a radial is a straight line from wherever the station happens to be, the final approach course is often not aligned with any runway. When the course is more than 30° off the runway heading, the plate offers only **circling** minima, covered in [[l20-6-circling-approaches-and-procedure-turns]].
 
-A **LOC approach** is an ILS with the glideslope ignored or out of service. It shares the ILS plate ("ILS or LOC RWY 25R" is one procedure with two lines of minima), the localizer is as sensitive as ever, and the MDA replaces the DA.
+A **LOC approach** is an ILS with the glideslope ignored or out of service. It usually shares the ILS plate (Monterey's "ILS or LOC RWY 10R" is one procedure with two lines of minima; Livermore charts "ILS RWY 25R" and "LOC RWY 25R" separately), the localizer is as sensitive as ever, and the MDA replaces the DA.
 
 | Approach | Final course from | CDI source on the G1000 | Sensitivity                   | MAP identified by                          |
 | -------- | ----------------- | ----------------------- | ----------------------------- | ------------------------------------------ |
@@ -72,7 +72,7 @@ Between the FAF and the MAP a non-precision approach may have one or more **step
 Flown "dive and drive", you would descend from 2,000 ft to 1,400 ft, level off until CREST, then descend to 900 ft and level off again. Two descents, two level-offs, two power changes, inside a 5 nm final. It works, and you must know it, but there is a better way.
 
 :::callout{type="verify"}
-Widget W39 (Descent and VDP Planner, P1) is embedded here once Phase 21 ships it: `::widget{name="descent-vdp" mode="stepdowns"}`, drawing this profile with the CDFA line over the step-downs. The fictional VOR Runway 28 profile above must match the P1 second training plate when it exists.
+Widget pending: Widget W39 (Descent and VDP Planner, P1) is embedded here once Phase 21 ships it: `::widget{name="descent-vdp" mode="stepdowns"}`, drawing this profile with the CDFA line over the step-downs. The fictional VOR Runway 28 profile above must match the P1 second training plate when it exists.
 :::
 
 ## CDFA vs dive-and-drive
@@ -106,10 +106,10 @@ Level at MDA with the runway in sight, there is one more question: can you still
 
 On the Training Plate VOR, the HAT is 450 ft, so the VDP is about 1.5 nm from the threshold. If you reach the VDP at MDA without the runway, you may continue level to the MAP and look, but landing from there would need a steep, unstable dive. The honest plan is: no runway at the VDP, start thinking "missed", and at the MAP, go.
 
-Leaving the MDA follows the same rule as leaving DA in [[l20-3-ils-approaches]]: the required visibility, a normal descent to a normal landing in the touchdown zone, and at least one item from the runway environment list distinctly visible.
+Leaving the MDA follows the same rule as leaving DA in [[l20-3-ils-approaches]]: the required flight visibility, a descent to a landing on the runway at a normal rate using normal maneuvers, and at least one item from the runway environment list distinctly visible and identifiable.
 
 :::callout{type="verify"}
-Confirm the VDP rule of thumb (HAT ÷ 300, Appendix F.4) and the VDP definition against the IPH and the Chart User's Guide; confirm the leaving-MDA conditions against 14 CFR 91.175(c). Confirm whether the sim's G1000 shows a VDP for approaches that chart one.
+Sim check: the VDP definition and "do not descend below the MDA before the VDP" (AIM 5-4-5, Chart User's Guide), the 300 ft per nm rule (IPH Ch 4) and the leaving-MDA conditions (14 CFR 91.175(c)) are desk-verified. Still open: whether the sim's G1000 shows the VDP on approaches that chart one.
 :::
 
 :::quiz{id="l20-4-q3" type="numeric" answer="2" tolerance="0.2" unit="nm"}
@@ -155,8 +155,8 @@ Four things to carry forward:
 
 **Practice.** This lesson feeds the `ifr-rules` deck (the VDP formula, the leaving-MDA rule) and the `approach-plate-symbols` deck (the step-down fix and the timing table).
 
-**Fly it.** Challenge C20.4 "VOR approach" flies a VOR approach from the candidate list, likely the KSNS VOR approach (not for navigation), in `WX_IMC_NP` weather, and scores the course tracking, every step-down or the CDFA, the MAP identification and the decision at MDA. Next: [[l20-5-missed-approaches]], because sooner or later the runway will not be there.
+**Fly it.** Challenge C20.4 "VOR approach" flies a VOR approach from the candidate list, likely the KSNS "VOR RWY 13" (not for navigation), in `WX_IMC_NP` weather, and scores the course tracking, every step-down or the CDFA, the MAP identification and the decision at MDA. Next: [[l20-5-missed-approaches]], because sooner or later the runway will not be there.
 
 :::callout{type="verify"}
-Real procedures named: a KSNS VOR approach and the KSNS "ILS or LOC RWY 31" (Section 12.4 candidates; KCCR VOR or RNAV approaches are the alternative). Confirm which VOR approaches exist in the current d-TPP and in the sim's nav database, name the chosen one by its charted title in the challenge, and record the d-TPP cycle checked here before publishing.
+Sim check: d-TPP cycle 2610 (01–29 Oct 2026) charts KSNS "VOR RWY 13" (Amdt 13; SNS VORTAC, DME required, straight-in and circling minima), "ILS RWY 31" and "LOC RWY 31" as separate plates, and four RNAV (GPS) approaches; there is no "ILS or LOC RWY 31". Still open: VOR RWY 13 in the sim's nav database, then name it by that title in Challenge C20.4.
 :::

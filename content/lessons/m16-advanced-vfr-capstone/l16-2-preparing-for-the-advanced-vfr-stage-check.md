@@ -78,7 +78,11 @@ C16.2 has five legs, and you may pause between them. You depart Livermore at daw
 Two things can happen. In the decision variant, afternoon build-ups form over the summit while you are still in the foothills. And with a 30% chance the page says "Truckee closed — divert" during the Pass leg. Either way the safe decision is a pass: turning back to Auburn, or diverting to an alternate you planned with the fuel and terrain checked, scores as well as landing at Truckee. Pressing on fails a required criterion.
 
 :::callout{type="verify"}
-Confirm before publishing: tolerances (v1 Section 12.9) and the completion rule and badge copy (v2 Section 14.3); KAUN and KTRK runways, elevations and tower hours (KTRK about 5,900 ft, KTVL about 6,300 ft); the approach facility and frequencies for flight following near Sacramento and its Class C; terrain height at Donner Summit along I-80 and a sensible crossing altitude; whether KBLU is usable in the sim as an escape airport; leg distances. Swap `[[l6-6…]]` for `l6-7` when it exists. Shot list: "Donner Summit from the west, I-80 visible".
+Sim check: confirm MSFS 2024 models Blue Canyon (KBLU, 3,300 x 50 ft asphalt at 5,284 ft; closed in winter in reality) as a usable escape airport, and that the sim's Truckee tower hours and frequencies match the real part-time tower (desk-verified 2026-10-13 against AirNav: KAUN 1,538 ft non-towered, KTRK 5,904 ft, KTVL 6,268 ft non-towered; NorCal Approach for flight following; I-80 Donner Summit 7,239 ft; legs KLVK–KAUN 83 nm, KAUN–KTRK 49 nm, KTRK–KTVL 27 nm).
+:::
+
+:::callout{type="verify"}
+Author decision: shot list "Donner Summit from the west, I-80 visible" (lessons carry no images; for the region page or marketing only).
 :::
 
 ## The planning worksheet
@@ -93,7 +97,7 @@ The page checks your planning before you fly; the first criterion is whether the
 | Fuel, with reserve                  | Each leg at {{aircraft.fuelBurn}}, plus 1 hour at landing ([[l9-4-leaning-the-mixture-and-fuel-management]]) |
 | Crossing altitude and escape routes | Terrain plus margin, and the turn-back point ([[l13-2-planning-a-mountain-route]])                           |
 | Personal minimums                   | Your worksheet from [[l16-1-risk-management-for-longer-flights]]                                             |
-| Frequencies and airspace by leg     | Flight following, CTAF at Auburn, the tower at Truckee ([[l15-1-class-b-and-class-c-operations]])            |
+| Frequencies and airspace by leg     | Flight following, CTAF at Auburn, the part-time tower at Truckee ([[l15-1-class-b-and-class-c-operations]])  |
 
 :::callout{type="decision"}
 You land at Truckee at 10:40 a.m. The Return leg is optional. Before you decide, run the 5P check: fuel, build-ups to the south, your own fatigue after 2 hours, and the arrival time. "Not today" is a complete answer, and the page records it as a decision made, not a leg missed.

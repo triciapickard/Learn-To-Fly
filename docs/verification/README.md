@@ -22,6 +22,7 @@ already verified, starting with the sample in v1.md Section 54.5.
 | [`tracker.csv`](./tracker.csv)   | One row per item; your columns are kept on re-runs  | `npm run content:verify-report`            |
 | [`checklist.md`](./checklist.md) | Every open verify marker, by module                 | `npm run content:verify-report`            |
 | [`links.md`](./links.md)         | External link check: broken, blocked and redirected | `npm run content:links -- --report`        |
+| [`v2-desk/`](./v2-desk/)         | Desk-verification reports per module: what each verify marker was checked against, what changed, what still needs the sim, the POH or an author decision | Written by hand during Phases 22–23 |
 
 ## When an item passes
 

@@ -23,7 +23,7 @@ setup:
   airportIcao: KTCY
   startState: RUNWAY
   startDetails:
-    runway: '26' # ⚠ verify the active runway for the wind
+    runway: '26' # ⚠ verify — Sim check: 26 (255° magnetic) faces the preset's 250°/8 kt wind (AirNav 2026-10-13); confirm the sim offers it as a start
     fallback: If the sim starts you on a different runway, fly the pattern for that runway instead.
   weatherPreset: WX_LIGHT_W
   timeLocal: '10:00'

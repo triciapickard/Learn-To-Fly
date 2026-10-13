@@ -13,6 +13,10 @@ All notable changes to this project are documented here. The format is based on
   `modules.yaml` and the v2 "Go deeper" resources. The content pipeline accepts
   two-digit module numbers and the v2 callout types `decision`, `memory` and
   `real-world`; malformed lesson frontmatter is reported instead of crashing validation.
+- Desk verification of every v2 lesson draft and of the open v1 markers against the AIM,
+  14 CFR, the FAA handbooks, the current d-TPP and Chart Supplement, with one report per
+  module in `docs/verification/v2-desk/`. Remaining markers are tagged `Sim check:`,
+  `POH check:`, `Author decision:` or `Widget pending:`.
 
 - Phase 12 tooling: `npm run content:verify-report` writes a verification tracker
   (`docs/verification/tracker.csv`) and a checklist of every open verify marker by module;

@@ -121,7 +121,7 @@ Two independent magnetos mean the engine keeps running if one fails, and two spa
 The 172S is **fuel injected**. Older Skyhawks have a carburetor, which can ice up in humid air and needs **carburetor heat**. The injected engine can't get carburetor ice, so there's no carb heat knob in the 172S.
 
 :::callout{type="verify"}
-Author note: confirm that both MSFS 2024 Skyhawk variants model a fuel-injected engine. If the classic variant has a carburetor, add a Classic panel callout about carb heat here and in the landing lessons.
+Sim check: the default MSFS 2024 Skyhawk is the fuel-injected 172S, but its steam-gauge configuration (the sim's "Basic"/"Classic" variant) may be modeled with a carburetor. Look for a carb heat control on its panel; if there is one, add a Classic panel callout here and in Lessons 4.3 and 4.4.
 :::
 
 :::callout{type="sim"}

@@ -76,7 +76,7 @@ Work the August example:
 Livermore has become a 3,400 ft airport. Now flip it: a cold winter morning at 5 °C and 30.12 inHg gives a pressure altitude of 200 ft and a density altitude of about **−900 ft**. The same airplane leaps off the runway. Pilots love January and respect August.
 
 :::callout{type="verify"}
-Widget W21 (Density Altitude Calculator) is embedded here once Phase 20 ships it: `::widget{name="density-altitude" mode="explore"}`. Until then the table above is the walkthrough. Confirm KLVK field elevation (400 ft used here) against the current Chart Supplement and `airports.yaml` before publishing; the knowledge check below depends on it.
+Widget pending: W21 (Density Altitude Calculator) is embedded here once Phase 20 ships it: `::widget{name="density-altitude" mode="explore"}`. Until then the table above is the walkthrough. Desk-verified 2026-10-13: KLVK field elevation 400 ft (real-world AirNav 399.9 ft; `airports.yaml` 400 ft).
 :::
 
 :::quiz{id="l9-1-q2" type="numeric" answer="3400" tolerance="300" unit="ft"}
@@ -142,7 +142,7 @@ The sim's engine model loses power with altitude, but the exact loss may not mat
 :::
 
 :::callout{type="verify"}
-Confirm the MSFS 2024 custom-weather menu path and the names of the temperature and pressure controls, and record the sim version. Screenshot for the shot list: "hot-day takeoff: runway remaining at lift-off (KLVK)".
+Sim check: confirm the MSFS 2024 custom-weather menu path and the labels of the surface temperature and pressure (QNH) controls, and record the sim version. Screenshot for the shot list: "hot-day takeoff: runway remaining at lift-off (KLVK)".
 :::
 
 ## Practice and next steps

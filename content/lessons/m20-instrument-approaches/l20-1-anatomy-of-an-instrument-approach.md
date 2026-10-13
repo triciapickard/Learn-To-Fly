@@ -13,7 +13,7 @@ objectives:
   - Read the minima section of a plate and choose the correct line for a Cessna 172.
   - Brief an approach aloud using the standard Learn-To-Fly briefing format.
 challenges: []
-resources: [iph-approaches, faa-chart-users-guide, faa-dtpp]
+resources: [iph-approaches, faa-chart-users-guide, faa-dtpp, aim-5, faa-acs-instrument]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -29,10 +29,6 @@ In a real airplane, instrument approaches are flown under an instrument rating t
 
 :::callout{type="safety"}
 Instrument procedures change every 28 days. Never use this content for real IFR flight.
-:::
-
-:::callout{type="verify"}
-The "40 hours of simulated or actual instrument time" in the real-world callout is the 14 CFR 61.65(d) aeronautical experience requirement; confirm the current wording before publishing or soften it to "dozens of hours".
 :::
 
 ## The segments of an approach
@@ -51,7 +47,7 @@ On a precision approach the final segment starts at the glideslope intercept poi
 Picture the **Learn-To-Fly Training Plate**: a fictional ILS to Runway 28 at an invented airport. The IAF is a fix called DEPOT at 4,000 ft MSL. From DEPOT a feeder route runs to the IF, a fix called ROLLA, where the course turns onto final at 3,000 ft. The FAF, called FLARE, is 5 nm from the runway at 2,000 ft. The DA is 650 ft MSL. Keep this picture; every lesson in Module 20 refers back to it.
 
 :::callout{type="verify"}
-Widget W38 (Approach Plate Explorer) is embedded here once Phase 21 ships it: `::widget{name="approach-plate" mode="segments"}`. The Training Plate it draws is original and fictional (D2-10); the fix names DEPOT, ROLLA and FLARE and the altitudes in this lesson must match the plate's hotspot JSON when it exists. Until then the table and the description above are the walkthrough.
+Widget pending: Widget W38 (Approach Plate Explorer) is embedded here once Phase 21 ships it: `::widget{name="approach-plate" mode="segments"}`. The Training Plate it draws is original and fictional (D2-10); the fix names DEPOT, ROLLA and FLARE and the altitudes in this lesson must match the plate's hotspot JSON when it exists. Until then the table and the description above are the walkthrough.
 :::
 
 :::quiz{id="l20-1-q1" type="single"}
@@ -97,13 +93,9 @@ The minima section is where the approach ends if the runway is not there. There 
 | **DA** (decision altitude)         | ILS, LPV, LNAV/VNAV (vertical guidance) | Keep descending on the glidepath. _At_ DA, decide: runway in sight, land; not in sight, go missed. |
 | **MDA** (minimum descent altitude) | LNAV, LOC, VOR (no vertical guidance)   | Descend to the MDA and **level off**. Hold it until you see the runway or reach the MAP.           |
 
-Next to each altitude is a **visibility** number, in statute miles or RVR. Both must be met: you need the runway environment in sight and at least the charted visibility. The small number after the altitude is the height above the touchdown zone (HAT) or above the airport (HAA). On the Training Plate the ILS line reads "650 / 24 (200)": DA 650 ft MSL, RVR 2,400 ft, 200 ft above the touchdown zone.
+Next to each altitude is a **visibility** number: statute miles after a hyphen ("980-1") or RVR in hundreds of feet after a slash ("650/24"). Both must be met: you need the runway environment in sight and at least the charted visibility. The small number after the visibility is the height above the touchdown zone (HAT) for a straight-in, or above the airport (HAA) for circling. On the Training Plate the ILS line reads "650/24 200": DA 650 ft MSL, RVR 2,400 ft, 200 ft above the touchdown zone. Anything in parentheses after that is a military minimum; civil pilots ignore it.
 
-Minima are listed by **aircraft approach category**, which is based on approach speed. The Skyhawk approaches at {{vspeed.approach}}, which makes it **Category A**. Always read the Category A column. On most straight-in approaches the categories share one line; on circling approaches they do not.
-
-:::callout{type="verify"}
-Confirm the category boundaries (Category A: approach speed less than 91 knots) against the current AIM 5-4-7 and the d-TPP legend, and confirm the "650 / 24 (200)" format against the Chart User's Guide. Confirm that `{{vspeed.approach}}` is the 1.3 × Vso value in `aircraft.yaml`, since the category argument depends on it.
-:::
+Minima are listed by **aircraft approach category**, fixed for each type by its certified landing reference speed (1.3 × Vso at maximum landing weight, or Vref): Category A is below 91 kt, B is 91 to 120 kt, C is 121 to 140 kt. The Skyhawk's figure, and the {{vspeed.approach}} you fly on final, are both far below 91 kt, so it is **Category A**. Always read the Category A column, and if you ever fly an approach faster than 90 kt, use the next category's minima. On most straight-in approaches the categories share one line; on circling approaches they often do not.
 
 :::quiz{id="l20-1-q3" type="single"}
 You are flying an approach to an MDA of 900 ft MSL. At 900 ft you do not see the runway and you are still 2 nm from the MAP. What do you do?
@@ -155,7 +147,7 @@ Name it, tune it, set the course, then the fix you fly it from. The order follow
 
 ## Stabilized approach criteria for IFR
 
-You already know a stabilized approach from [[l4-3-normal-approach-and-landing]]: configured, on speed, on the glidepath, with only small corrections. IFR tightens the rule, because you will break out of the cloud with seconds to land, not minutes.
+You already know a stabilized approach from [[l4-3-normal-approach-and-landing]]: configured, on speed, on the glidepath, with only small corrections. IFR tightens the rule, because you will break out of the cloud with seconds to land, not minutes. The table is the Learn-To-Fly standard: the FAA's handbook sets the 1,000 fpm and 1,000 ft limits, the Instrument ACS allows up to three-quarters scale on the needles, and we ask for half.
 
 | By the FAF (or glideslope intercept)         | Inside the FAF                                                 |
 | -------------------------------------------- | -------------------------------------------------------------- |
@@ -170,10 +162,6 @@ A full-scale needle inside the FAF is not something to fix. It is a missed appro
 Inside the FAF on the Training Plate ILS, the localizer needle is three-quarters of a dot out and moving away, and you are 15 kt fast. You are 800 ft above DA. The runway might be there. The honest call is a missed approach now, while you still have altitude and a plan. "I'll fix it on short final" is the sentence that ends up in accident reports.
 :::
 
-:::callout{type="verify"}
-Confirm the stabilized-approach numbers (half-scale needles, 1,000 fpm, 1,000 ft in IMC) against the Instrument Procedures Handbook chapter on approaches and the Instrument ACS "Approach" tasks before publishing, and label them "Learn-To-Fly standard" where they are our choice rather than a regulation.
-:::
-
 ## Practice and next steps
 
 Four things to carry forward:
@@ -185,8 +173,8 @@ Four things to carry forward:
 
 **Practice.** This lesson feeds the `approach-plate-symbols` flashcard deck: the fix abbreviations, the profile-view symbols and the minima format.
 
-**Fly it.** There is no challenge for this lesson. Your first flown approach is Challenge C20.1 "RNAV (GPS) approach", which opens after [[l20-2-rnav-gps-approaches]]. If you want to read a real plate now, open the current d-TPP and find the KLVK "ILS or LOC RWY 25R" (not for navigation) and brief it with the table above.
+**Fly it.** There is no challenge for this lesson. Your first flown approach is Challenge C20.1 "RNAV (GPS) approach", which opens after [[l20-2-rnav-gps-approaches]]. If you want to read a real plate now, open the current d-TPP and find the KLVK "ILS RWY 25R" (not for navigation; Livermore charts its ILS and its localizer-only approach as two separate plates) and brief it with the table above.
 
 :::callout{type="verify"}
-Real procedure named: KLVK "ILS or LOC RWY 25R" (Section 12.4 candidate). Confirm it exists in the current d-TPP and in the sim's nav database, and record the d-TPP cycle checked here before publishing.
+Sim check: KLVK "ILS RWY 25R" (Amdt 9A) is confirmed in d-TPP cycle 2610 (01–29 Oct 2026), charted separately from "LOC RWY 25R" (Amdt 1). Still open: confirm the sim's nav database carries ILS RWY 25R under that title before publishing.
 :::

@@ -23,32 +23,28 @@ simVersion: null
 
 In [[l7-3-towered-airports-and-sim-atc]] you learned to read back runway assignments and hold-short instructions. Here is why it matters so much. A controller says "hold short of runway two five left". You hear "two five right", which is the runway you are heading for anyway, and taxi across 25L in front of a landing Skyhawk. If you had read back "hold short two five right", the controller would have caught it: "Negative, hold short of two five **left**."
 
-The readback is the only moment in the exchange where a mistake can be found before it becomes a runway incursion or an altitude bust. That is why some elements are required, and why the controller's "readback correct" is not a formality. This lesson makes the list exact, then gives you the words for everything else.
+The readback is the only moment in the exchange where a mistake can be found before it becomes a runway incursion or an altitude bust. That is why the controller must get a readback of every hold-short instruction, why the AIM tells you to read back the numbers, and why "readback correct" is not a formality. This lesson makes the list exact, then gives you the words for everything else.
 
-## What must be read back
+## What to read back, every time
 
-| Element                            | Example instruction                          | Your readback                                                       |
-| ---------------------------------- | -------------------------------------------- | ------------------------------------------------------------------- |
-| **Hold short**                     | "Hold short of runway two five left"         | "Hold short of runway two five left, Skyhawk One Two Three"         |
-| **Runway assignment**              | "Runway two five right, taxi via Alfa"       | "Runway two five right, via Alfa, Skyhawk One Two Three"            |
-| **Takeoff and landing clearances** | "Runway two five right, cleared for takeoff" | "Runway two five right, cleared for takeoff, Skyhawk One Two Three" |
-| **Altitude**                       | "Maintain three thousand five hundred"       | "Three thousand five hundred, Skyhawk One Two Three"                |
-| **Heading**                        | "Fly heading zero niner zero"                | "Heading zero niner zero, Skyhawk One Two Three"                    |
-| **Frequency**                      | "Contact tower one one eight point one"      | "One one eight point one, Skyhawk One Two Three"                    |
-| **Squawk**                         | "Squawk four six one two"                    | "Squawk four six one two, Skyhawk One Two Three"                    |
-| **Clearance**                      | "Cleared into the Class Bravo airspace"      | "Cleared into the Bravo, Skyhawk One Two Three"                     |
-| **Altimeter setting**              | "Livermore altimeter three zero zero two"    | "Three zero zero two, Skyhawk One Two Three"                        |
-| **Line up and wait**               | "Runway two five right, line up and wait"    | "Runway two five right, line up and wait, Skyhawk One Two Three"    |
+| Element                            | Example instruction                          | Your readback                                                              |
+| ---------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------- |
+| **Hold short**                     | "Hold short of runway two five left"         | "Hold short of runway two five left, Skyhawk One Two Three"                |
+| **Runway assignment**              | "Runway two five right, taxi via Alfa"       | "Runway two five right, via Alfa, Skyhawk One Two Three"                   |
+| **Takeoff and landing clearances** | "Runway two five right, cleared for takeoff" | "Runway two five right, cleared for takeoff, Skyhawk One Two Three"        |
+| **Altitude**                       | "Maintain three thousand five hundred"       | "Three thousand five hundred, Skyhawk One Two Three"                       |
+| **Heading**                        | "Fly heading zero niner zero"                | "Heading zero niner zero, Skyhawk One Two Three"                           |
+| **Frequency**                      | "Contact tower one one eight point one"      | "One one eight point one, Skyhawk One Two Three"                           |
+| **Squawk**                         | "Squawk four six one two"                    | "Squawk four six one two, Skyhawk One Two Three"                           |
+| **Clearance**                      | "Cleared into the Class Bravo airspace"      | "Cleared into the Bravo, Skyhawk One Two Three"                            |
+| **Altimeter setting**              | "Livermore altimeter three zero zero two"    | "Three zero zero two, Skyhawk One Two Three" (good practice, not required) |
+| **Line up and wait**               | "Runway two five right, line up and wait"    | "Runway two five right, line up and wait, Skyhawk One Two Three"           |
 
 Three rules sit under the table:
 
-- **Numbers, always.** Every number the controller gives you comes back in your reply, and the runway comes back with every runway instruction.
-- **Call sign, always last.** The readback belongs to someone; the call sign says who.
+- **Numbers, always.** Every number the controller gives you comes back in your reply, in the order it was given, and the runway comes back with every runway instruction, including "left" or "right".
+- **Call sign, always.** The readback belongs to someone; the call sign says who. The AIM allows it at either end; this course puts it last so you never forget it.
 - **Say what you heard, not what you expected.** If the readback is wrong, the controller fixes it. If you silently "correct" it, nobody can.
-
-:::callout{type="verify"}
-Author note: check the required readback items against AIM 4-4-7(b) (altitude assignments, altitude restrictions and vectors), AIM 4-3-18 (runway assignments, hold-short instructions and taxi instructions) and AIM 4-3-10 (line up and wait). The altimeter setting is good practice rather than required; label it as such if the AIM does not list it.
-:::
 
 :::quiz{id="l15-4-q1" type="multi"}
 Which of these must be read back? Pick all that apply.
@@ -61,7 +57,7 @@ Which of these must be read back? Pick all that apply.
 
 ---
 
-Hold-short instructions, squawk codes and headings are all required readbacks. A traffic call is answered with "looking" or "in sight", and the wind needs no reply at all.
+Hold-short instructions, squawk codes and headings are all read back: the hold-short because the controller must hear it, the others because they are numbers. A traffic call is answered with "looking" or "in sight", and the wind needs no reply at all.
 :::
 
 ## The structure of a good call
@@ -91,21 +87,21 @@ Thousands are spoken digit by digit, then "thousand", then the hundreds: **"one 
 
 Most of the radio is numbers. The rest is a small set of words that each mean one precise thing:
 
-| Word                 | Meaning                                    | Not the same as                                       |
-| -------------------- | ------------------------------------------ | ----------------------------------------------------- |
-| **Roger**            | I received all of your last transmission   | "Yes": roger never answers a question                 |
-| **Wilco**            | I received it and will comply              | Roger: wilco promises action                          |
-| **Affirm**           | Yes                                        | "Affirmative" is also used; never "yeah"              |
-| **Negative**         | No                                         |                                                       |
-| **Unable**           | I cannot comply with that instruction      | Silence: always say why or what you can do            |
-| **Stand by**         | Wait, I will call you back                 | An answer: it is a pause, not a yes                   |
-| **Request**          | I would like…                              | "Can I…": "request" starts the controller's checklist |
-| **Say again**        | Repeat your last transmission              | "What?"                                               |
-| **Verify**           | Confirm what I think I heard               | Say again: verify checks a specific item              |
-| **Correction**       | I made an error; the right version follows |                                                       |
-| **Readback correct** | The controller agrees with your readback   |                                                       |
+| Word                 | Meaning                                    | Not the same as                                         |
+| -------------------- | ------------------------------------------ | ------------------------------------------------------- |
+| **Roger**            | I received all of your last transmission   | "Yes": roger never answers a question                   |
+| **Wilco**            | I received it and will comply              | Roger: wilco promises action                            |
+| **Affirmative**      | Yes                                        | "Affirm" is the ICAO form you hear abroad; never "yeah" |
+| **Negative**         | No                                         |                                                         |
+| **Unable**           | I cannot comply with that instruction      | Silence: always say why or what you can do              |
+| **Stand by**         | Wait, I will call you back                 | An answer: it is a pause, not a yes                     |
+| **Request**          | I would like…                              | "Can I…": "request" starts the controller's checklist   |
+| **Say again**        | Repeat your last transmission              | "What?"                                                 |
+| **Verify**           | Confirm what I think I heard               | Say again: verify checks a specific item                |
+| **Correction**       | I made an error; the right version follows |                                                         |
+| **Readback correct** | The controller agrees with your readback   |                                                         |
 
-Use the words, and only the words. "Roger" to a question ("say altitude") is a non-answer. "Wilco" alone in reply to a hold-short instruction is a violation: the required elements must be spoken back.
+Use the words, and only the words. "Roger" to a question ("say altitude") is a non-answer. "Wilco" alone in reply to a hold-short instruction is not acceptable: the controller is required to get a readback of the hold-short, and will ask for it again.
 
 :::quiz{id="l15-4-q3" type="single"}
 The controller says "Skyhawk One Two Three, say altitude." Which reply is correct?
@@ -113,7 +109,7 @@ The controller says "Skyhawk One Two Three, say altitude." Which reply is correc
 - [ ] "Roger, Skyhawk One Two Three"
 - [ ] "Wilco"
 - [x] "Three thousand five hundred, Skyhawk One Two Three"
-- [ ] "Affirm"
+- [ ] "Affirmative"
 
 ---
 
@@ -152,7 +148,7 @@ Widget W32 (Radio Readback Trainer) is embedded here once Phase 20 ships it. It 
 | "Cleared into the Class Bravo airspace, maintain three thousand five hundred"          | Cleared into the Bravo, 3,500, call sign                   |
 
 :::callout{type="verify"}
-Author note: W32 (`::widget{name="radio-readback"}`, modes VFR ground, VFR airborne, Class B/C) replaces the table above when it ships. The instructions here should match the first items in `content/radio-drills.yaml` so the drill and the lesson agree.
+Widget pending: W32 (`::widget{name="radio-readback"}`, modes VFR ground, VFR airborne, Class B/C) replaces the table above when it ships. Keep these five instructions in sync with the first items of `content/radio-drills.yaml` (not yet created as of 2026-10-13).
 :::
 
 ## Common sim-ATC differences
@@ -174,7 +170,7 @@ In self-voiced mode you speak both sides from the challenge script. On VATSIM, t
 :::
 
 :::callout{type="verify"}
-Author note: confirm each row of the sim-ATC table against MSFS 2024 at the current sim version, including whether the menu offers "say again" and how it voices altitudes.
+Sim check: confirm each row of the sim-ATC table against MSFS 2024 at the current sim version, including whether the menu offers "say again" and how it voices altitudes.
 :::
 
 ## Practice and next steps

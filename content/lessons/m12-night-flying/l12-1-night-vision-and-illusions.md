@@ -27,10 +27,6 @@ It is 9 p.m. at Livermore. The ramp lights buzz, the runway is a pair of white d
 In a real airplane, night flying is a separate block of training. A student pilot flies at least 3 hours at night with an instructor, including a night cross-country and 10 takeoffs and landings to a full stop, before the private pilot checkride. Nothing in this module replaces that. The sim gives you the procedures and the habits; the instructor gives you the judgment.
 :::
 
-:::callout{type="verify"}
-Confirm the night training requirement (3 hours of night flight training, one cross-country over 100 nm total distance, 10 takeoffs and 10 landings to a full stop at an airport) against the current wording of 14 CFR 61.109(a)(2) before publishing.
-:::
-
 ## Rods and cones
 
 The back of your eye has two kinds of light sensors. **Cones** sit in the center of your vision. They see color and fine detail, and they need plenty of light. **Rods** surround the cones. They see only shades of gray, they are poor at detail, but they work in very dim light and they are good at spotting movement.
@@ -46,15 +42,11 @@ Everything else in this lesson follows from that table: you see at night with yo
 
 ## Dark adaptation
 
-Walk out of a lit hangar onto a dark ramp and at first you see almost nothing. After 5–10 minutes your cones have adjusted and you can make out shapes. Your rods keep improving for about **30 minutes**. That full sensitivity is what pilots call being **dark adapted**, and it is fragile. One bright white light, a flashlight in the face, a lightning flash, a phone screen at full brightness, and you are back near the start.
+Walk out of a lit hangar onto a dark ramp and at first you see almost nothing. After 5–10 minutes your cones have adjusted and you can make out shapes. Your rods keep improving for up to about **30 minutes**. That full sensitivity is what pilots call being **dark adapted**, and it is fragile. One bright white light, a flashlight in the face, a lightning flash, a phone screen at full brightness, and you are back near the start.
 
 Red light is kinder to your rods than white light, which is why so many cockpit flashlights have a red mode. The trade-off is that red light washes out red ink: the magenta and red symbols on a sectional chart can vanish. Most pilots use dim white light for reading charts and red or very dim light for everything else.
 
 A few things make night vision worse before you even start: tiredness, carbon monoxide, smoking and altitude. Night vision degrades noticeably above about 5,000 ft, even if you feel fine.
-
-:::callout{type="verify"}
-Check the dark adaptation timings (cones about 5–10 min, rods about 30 min), the 5,000 ft figure and the red-light trade-off against PHAK Chapter 17 (Aeromedical Factors) and the FAA "Pilot Vision" safety brochure.
-:::
 
 :::quiz{id="l12-1-q1" type="single"}
 After 25 minutes in a dark cockpit, someone shines a white flashlight into the cabin for 3 seconds. What happens to your night vision?
@@ -84,14 +76,14 @@ Your brain builds a picture of the world from what it can see. At night it has l
 | Illusion                | What you feel                                          | What is really happening                                                                                            | The counter                                                                                              |
 | ----------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | **Black-hole approach** | You feel high, so you descend early and fly too low    | No ground lights between you and the runway (water, fields, desert). Your brain judges height from the runway alone | Fly the PAPI or VASI, stay at pattern altitude until the normal descent point, cross-check the altimeter |
-| **Autokinesis**         | A single light seems to drift or move                  | You stared at one point of light for 6–12 seconds; tiny eye movements make it appear to wander                      | Shift your gaze, keep scanning, check the instruments, use more than one reference                       |
+| **Autokinesis**         | A single light seems to drift or move                  | You stared at one point of light for more than a few seconds; tiny eye movements make it appear to wander           | Shift your gaze, keep scanning, check the instruments, use more than one reference                       |
 | **False horizon**       | You level the wings against something that is tilted   | A sloping cloud deck, a lit highway, a shoreline, or stars below a cloud layer that look like ground lights         | Trust the attitude indicator, not the view                                                               |
 | **Featureless terrain** | You feel higher than you are over dark ground or water | Nothing in view to give a sense of scale; the black-hole effect away from the runway                                | Altimeter and planned altitudes; never descend "by eye" at night                                         |
 
 The black-hole approach deserves the most respect. A runway at the edge of a dark area, such as Watsonville with Monterey Bay beyond it, looks and feels normal while you fly a long, low approach into the ground short of the threshold. The runway's shape says you are on path; the missing lights below say nothing at all.
 
 :::callout{type="verify"}
-Widget W28 (Night Vision and Illusions, P1) is embedded here once Phase 20 ships it: an eye diagram, a dark-adaptation timer, an off-center viewing demo and a side-view black-hole approach showing perceived versus actual glide path. Until then the table above carries the content. Check the autokinesis timing (6–12 s) against PHAK Chapter 17. Screenshot for the shot list: "black-hole approach at KWVI".
+Widget pending: W28 (Night Vision and Illusions, P1) is embedded here once Phase 20 ships it: an eye diagram, a dark-adaptation timer, an off-center viewing demo and a side-view black-hole approach showing perceived versus actual glide path. Until then the table above carries the content. Screenshot for the shot list: "black-hole approach at KWVI".
 :::
 
 :::quiz{id="l12-1-q2" type="single"}
@@ -136,7 +128,7 @@ Dim your room and your screen before a night challenge: room lights off, monitor
 :::
 
 :::callout{type="verify"}
-Confirm the MSFS 2024 night rendering notes in v2 Section 9.2 (time-of-day setting, moon phase and moonlight, Bay Area city lights, cockpit lighting controls) and record the sim version checked.
+Sim check: confirm the MSFS 2024 night rendering notes in v2 Section 9.2 (how night is chosen in free flight, moon phase and moonlight, Bay Area city lights, cockpit lighting controls) and record the sim version checked.
 :::
 
 ## Practice and next steps

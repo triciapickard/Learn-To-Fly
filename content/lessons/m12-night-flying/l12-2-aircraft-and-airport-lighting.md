@@ -13,7 +13,7 @@ objectives:
   - Read a PAPI and a VASI and say whether you are high, low or on the glide path.
   - Activate pilot-controlled lighting at the correct intensity.
 challenges: []
-resources: [aim-2-1, afh-ch11, ecfr-91-209]
+resources: [aim-2-1, afh-ch11, ecfr-91-209, faa-chart-supplement, faa-chart-users-guide, airnav]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -36,20 +36,20 @@ The Skyhawk carries five sets of lights. Two are required by regulation at night
 | **Position (navigation)**    | Red on the left wingtip, green on the right, white tail | Show others which way you are going | On from sunset to sunrise, required                                         |
 | **Beacon** (red flashing)    | Top of the tail                                         | Be seen                             | On before engine start, off after shutdown                                  |
 | **Strobes** (white flashing) | Wingtips                                                | Be seen                             | On when entering the runway, off when clear and on the ramp (and in clouds) |
-| **Landing light**            | Cowl or wing                                            | See and be seen                     | Takeoff and landing; many pilots leave it on below 10 nm from an airport    |
-| **Taxi light**               | Cowl                                                    | See the taxiway                     | Taxiing at night                                                            |
+| **Landing light**            | Left wing leading edge (nose cowl on older Skyhawks)    | See and be seen                     | Takeoff and landing; many pilots leave it on within 10 nm of an airport     |
+| **Taxi light**               | Left wing leading edge, beside the landing light        | See the taxiway                     | Taxiing at night                                                            |
 
 The plain-language rule: from sunset to sunrise, your position lights must be on, and if the airplane has an anticollision light (the beacon or strobes) it should be on whenever the airplane is operating, unless flashing it would be unsafe, for example in cloud or next to another pilot on a dark ramp.
 
 Position lights also let you read other traffic: another airplane's **red** light on your right and its **green** on your left means it is coming toward you.
 
 :::callout{type="verify"}
-Check the position-light and anticollision-light rules against the current wording of 14 CFR 91.209 (lighted position lights from sunset to sunrise; anticollision lights on all operating aircraft so equipped, unless the pilot in command judges it in the interest of safety to turn them off). Confirm the Skyhawk's light switch layout (NAV, BCN, STROBE, LAND, TAXI) in the MSFS 2024 G1000 NXi Skyhawk and the exact position of each light on the airframe.
+Sim check: confirm the light switch names (NAV, BCN, STROBE, LAND, TAXI) and where each light sits on the MSFS 2024 G1000 NXi Skyhawk airframe (the real 172S carries the landing and taxi lights in the left wing leading edge). Desk-verified 2026-10-13: the position-light and anticollision-light rules match 14 CFR 91.209.
 :::
 
 ## The airport beacon
 
-The rotating beacon is the first thing you find at night. From 20 nm out a lit airport is a slow, regular flash on the horizon, and the colors tell you what kind of airport it is.
+The rotating beacon is the first thing you find at night. From miles out a lit airport is a slow, regular flash on the horizon, and the colors tell you what kind of airport it is.
 
 | Beacon flashes                    | Meaning                    |
 | --------------------------------- | -------------------------- |
@@ -61,7 +61,7 @@ The rotating beacon is the first thing you find at night. From 20 nm out a lit a
 Beacons run from dusk to dawn. A beacon lit in daytime at an airport with Class B, C, D or E airspace to the surface usually means the weather there is below VFR minimums; a hint, not a guarantee.
 
 :::callout{type="verify"}
-Confirm the beacon color codes and the daytime-beacon convention against AIM 2-1-10 (Airport/Heliport Beacons). Check which Bay Area beacons the sim actually renders (KLVK, KTCY, KWVI) per v2 Section 9.2.
+Sim check: which Bay Area beacons MSFS 2024 renders (KLVK, KTCY and KWVI are all white-green, sunset to sunrise, in the Chart Supplement) per v2 Section 9.2. Desk-verified 2026-10-13: the color codes and the daytime convention match AIM 2-1-9.
 :::
 
 ## Runway and taxiway lighting
@@ -73,7 +73,7 @@ Once you are close, the beacon stops mattering and the colors on the ground take
 | **Runway edge lights**                    | White. On instrument runways, yellow for the last 2,000 ft (or the last half, if shorter) as a caution zone |
 | **Runway threshold**                      | Green, seen from the approach                                                                               |
 | **Runway end**                            | Red, seen from the runway looking toward the far end (the same fixtures show green to the other direction)  |
-| **Runway centerline** (large runways)     | White, then alternating red and white for the last 3,000 ft, then all red for the last 1,000 ft             |
+| **Runway centerline** (large runways)     | White, then alternating red and white from 3,000 ft remaining, then all red for the last 1,000 ft           |
 | **Touchdown zone lights** (large runways) | Rows of white bars either side of the centerline for the first 3,000 ft                                     |
 | **REIL**                                  | A pair of synchronized white flashes, one each side of the threshold: "the runway is here"                  |
 | **Taxiway edge lights**                   | Blue                                                                                                        |
@@ -83,8 +83,14 @@ Once you are close, the beacon stops mattering and the colors on the ground take
 
 Two things catch new night pilots. First, **blue is never a runway**. Lining up on the taxiway happens, even at towered airports, and the color is the cue. Second, a runway with only edge lights looks like a narrow pair of lines, and as you descend the lines spread apart. That spreading is the sight picture you will use in [[l12-3-night-operations-preflight-to-landing]] to judge the flare.
 
+For the home airports, the Chart Supplement says: Livermore's long runway (7L/25R) has high-intensity edge lights and the short one (7R/25L) medium-intensity, with no REIL; Tracy has medium-intensity edge lights, REIL on all four runway ends and a PAPI for each. The sim may draw less than that.
+
 :::callout{type="verify"}
-Widget W27 (Airport Lighting Explorer) is embedded here once Phase 20 ships it: `::widget{name="airport-lighting" mode="explore"}`, a night-view runway and taxiway with every light clickable, a day/night toggle, a PCL panel and a PAPI slider. The spec's "W27 hotspots" knowledge check goes there. Until then the table above carries the content. Verify every color and distance against AIM 2-1-4 through 2-1-9 and record which lights MSFS 2024 renders at KLVK and KTCY (v2 Section 9.2). Screenshot for the shot list: "KLVK runway lights at night".
+Widget pending: W27 (Airport Lighting Explorer) is embedded here once Phase 20 ships it: `::widget{name="airport-lighting" mode="explore"}`, a night-view runway and taxiway with every light clickable, a day/night toggle, a PCL panel and a PAPI slider. The spec's "W27 hotspots" knowledge check goes there. Until then the table above carries the content. Screenshots for the shot list: "KLVK runway lights at night", "PAPI at night".
+:::
+
+:::callout{type="verify"}
+Sim check: record which lights MSFS 2024 renders at KLVK and KTCY (v2 Section 9.2). Real-world baseline (Chart Supplement SW, 2026-10-13): KLVK HIRL 7L/25R, MIRL 7R/25L, MALSR 25R, PAPI on 7L (right side, 4°) and 25R (left side, 3°), no REIL; KTCY MIRL, REIL and a 2-light PAPI on all four runway ends. Desk-verified 2026-10-13: every color and distance in the table matches AIM 2-1-3 through 2-1-5 and 2-1-10.
 :::
 
 :::quiz{id="l12-2-q1" type="single"}
@@ -104,7 +110,7 @@ Green across the near end is the threshold; the synchronized white flashes are t
 
 At night you cannot judge your glide path by looking at the ground, so the airport does it for you with colored lights beside the runway. The two common systems use the same idea: white means you are above the light's beam, red means you are below it.
 
-A **PAPI** is a row of four lights to the left of the touchdown zone. Each light turns from white to red at a slightly different angle, so the mix of colors tells you how far off a roughly 3° path you are.
+A **PAPI** is a single row of two or four lights, usually on the left side of the runway near the touchdown zone. Each light turns from white to red at a slightly different angle, so the mix of colors tells you how far off the path you are. The path is normally 3°; a few are steeper.
 
 | PAPI                   | Meaning                   |
 | ---------------------- | ------------------------- |
@@ -114,6 +120,8 @@ A **PAPI** is a row of four lights to the left of the touchdown zone. Each light
 | One white, three red   | Slightly low              |
 | Four red               | Well below the glide path |
 
+A two-light PAPI, common at small airports such as Tracy and Watsonville, gives only three answers: both white is high, one of each is on the path, both red is low.
+
 A **VASI** uses two bars, one nearer the threshold and one farther down the runway. The near bar's beam is set a little lower than the far bar's, so on path you see the near bar white and the far bar red. The old rhyme still works: _red over white, you're all right; white over white, you're high as a kite; red over red, you're dead_.
 
 | VASI (far bar over near bar) | Meaning               |
@@ -122,11 +130,7 @@ A **VASI** uses two bars, one nearer the threshold and one farther down the runw
 | **Red over white**           | **On the glide path** |
 | Red over red                 | Too low               |
 
-Livermore has a PAPI on Runways 7L and 25R only, so if you are landing on the short runway at night you are on your own for glide path: fly the same descent point and power setting you would by day and watch the altimeter.
-
-:::callout{type="verify"}
-Check the PAPI and VASI indications, the nominal 3° path and obstacle clearance (PAPI protection typically within ±10° of the centerline out to 4 nm) against AIM 2-1-2. Confirm KLVK's PAPI runways in the Chart Supplement and `airports.yaml`. Screenshot for the shot list: "PAPI at night".
-:::
+Livermore has a PAPI on Runways 7L and 25R only (the 7L one sits on the right side of the runway and is set to a steep 4°), so if you are landing on the short runway at night you are on your own for glide path: fly the same descent point and power setting you would by day and watch the altimeter.
 
 :::quiz{id="l12-2-q2" type="single"}
 On final at night the PAPI shows two white and two red lights. You are…
@@ -145,10 +149,10 @@ Two white, two red is on path. More white means higher, more red means lower. Fl
 
 Runways with instrument approaches add a long carpet of lights stretching out from the threshold: an **approach lighting system** (ALS). It gives an instrument pilot the first visual cue at the end of an approach, and at night it is the easiest way to find the runway from miles away.
 
-You do not need the variants for VFR flight. Know the shape: white bars down the extended centerline, often with a crossbar, sometimes with sequenced flashing lights that race toward the runway ("the rabbit"). Systems named MALSR, ALSF-2 or ODALS differ in length and flashing; the Chart Supplement lists which one an airport has. The threshold is where the green starts, and the approach lights sit **before** it. Do not land on them.
+You do not need the variants for VFR flight. Know the shape: white bars down the extended centerline, often with a crossbar, sometimes with sequenced flashing lights that race toward the runway ("the rabbit"). Systems named MALSR, ALSF-2 or ODALS differ in length and flashing; the Chart Supplement lists which one an airport has. The threshold is where the green starts, and the approach lights sit **before** it. Do not land on them. Livermore has one: a 1,400 ft MALSR on Runway 25R, which you turn on yourself on 118.1 once the tower has closed.
 
 :::callout{type="verify"}
-Confirm the ALS family names and descriptions against AIM 2-1-1, and check which Bay Area airports in `airports.yaml` have an ALS (and whether the sim renders them).
+Sim check: does MSFS 2024 render the KLVK Runway 25R MALSR (real-world 1,400 ft MALSR, Chart Supplement SW, 2026-10-13)? Desk-verified 2026-10-13: the ALS names and descriptions match AIM 2-1-1; of the `airports.yaml` fields checked (KLVK, KTCY, KWVI, KHWD) only KLVK has an ALS, besides the airline airports.
 :::
 
 ## Pilot-controlled lighting
@@ -166,11 +170,11 @@ Always start with 7 clicks: full brightness is what you want while you are still
 On a sectional, an airport whose lighting has limitations (such as PCL) shows an asterisk before the lighting letter, and the Chart Supplement spells out the details.
 
 :::callout{type="sim"}
-Whether MSFS 2024 models pilot-controlled lighting, and at which airports, is unconfirmed. Challenge C12.2 "Pilot-controlled lighting at Tracy" keeps the 7-click procedure as a required habit step either way: tune the CTAF, click 7 times within 5 seconds, say what you see. If the sim's lights are already on, the habit still counts.
+Whether MSFS 2024 models pilot-controlled lighting, and at which airports, is unconfirmed. Challenge C12.2 "Pilot-controlled lighting at Tracy" keeps the 7-click procedure as a required habit step either way: tune the CTAF, click 7 times within 5 seconds, say what you see. If the sim's lights are already on, the habit still counts. In the real world Tracy's edge lights, REIL and PAPIs are all pilot-controlled on the CTAF, 123.075.
 :::
 
 :::callout{type="verify"}
-Check the PCL procedure (7/5/3 clicks within 5 seconds, roughly 15-minute timer, always start high) against AIM 2-1-8, and the sectional lighting-code convention against the FAA Chart User's Guide. Verify whether MSFS 2024 implements PCL by clicking the CTAF at KTCY and record the result (v2 Section 9.2).
+Sim check: key the CTAF 7 times within 5 seconds at KTCY in MSFS 2024 and record whether the lights respond (v2 Section 9.2). Desk-verified 2026-10-13: the 7/5/3 clicks, 5-second window, 15-minute timer and "start with 7" match AIM 2-1-8; the star-before-L sectional convention matches the Chart User's Guide.
 :::
 
 :::quiz{id="l12-2-q3" type="numeric" answer="7" tolerance="0" unit="clicks"}

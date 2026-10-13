@@ -103,7 +103,7 @@ Try it below: set up a 500 fpm descent at 90 knots.
 ::widget{name="pitch-power" mode="quiz"}
 
 :::callout{type="verify"}
-Author note: fly the descent settings in the sim and adjust the RPM ranges (Section 8.5) to match.
+Sim check: fly the descent settings in the sim and adjust the RPM ranges (Section 8.5) to match.
 :::
 
 ## Leveling off from a descent

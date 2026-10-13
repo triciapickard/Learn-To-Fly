@@ -13,7 +13,7 @@ objectives:
   - Manage energy with flaps and slips so that you arrive neither short nor long.
   - Judge the base turn from the key position and correct early.
 challenges: []
-resources: [afh-ch18, faa-acs-commercial]
+resources: [afh-ch9, afh-ch18, faa-acs-commercial]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -23,11 +23,7 @@ simVersion: null
 
 In [[l5-4-engine-failure-and-forced-landings]] you learned the flow for an engine failure and how to pick a field. What that lesson could not give you was the feel for how far the Skyhawk really glides from pattern altitude, and how to hit a spot with no engine to fix a mistake. The **power-off 180** teaches exactly that: abeam your aiming point on downwind, the throttle goes to idle and stays there, and the goal is a touchdown within 200 ft beyond the aiming point.
 
-Commercial pilot candidates fly this on their checkride. For you it is optional, and it is the most honest test of judgment in this module.
-
-:::callout{type="verify"}
-The 200 ft tolerance is inspired by the Commercial Pilot ACS task "power-off 180° accuracy approach and landing"; confirm the current ACS wording and tolerance. Confirm the maximum glide figure ({{aircraft.glideRatio}}) against POH Section 3 and the sim.
-:::
+Commercial pilot candidates fly this on their checkride, where the standard is a touchdown on or within 200 ft beyond the chosen point, with no side drift and the airplane aligned with the centerline. For you it is optional, and it is the most honest test of judgment in this module.
 
 ## The key position
 
@@ -100,7 +96,7 @@ Fly the first three attempts without correcting and note where you land. The tou
 :::
 
 :::callout{type="verify"}
-Confirm typical altitudes at the base turn and the final roll-out for a gliding Skyhawk in the sim (the figures above are estimates), and note that the Tracy pattern is 800 ft AGL (994 ft MSL in `airports.yaml`), so the C10.6 numbers will be lower. Screenshot for the shot list: "power-off 180, key position abeam the numbers, Tracy".
+Sim check: fly the glide from a 1,000 ft AGL pattern and record the altitudes at the base turn and the final roll-out (the figures above are estimates); the Tracy pattern is 800 ft AGL (994 ft MSL in `airports.yaml`), so the C10.6 numbers will be lower. Screenshot for the shot list: "power-off 180, key position abeam the numbers, Tracy".
 :::
 
 :::quiz{id="l10-6-q3" type="single"}

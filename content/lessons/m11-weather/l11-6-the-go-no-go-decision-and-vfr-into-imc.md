@@ -13,7 +13,7 @@ objectives:
   - Set a turn-back point, as a place and a condition, before departure.
   - Fly a 180° turn on instruments after inadvertent cloud entry, holding altitude and rolling out on the reciprocal heading.
 challenges: []
-resources: [faa-risk-management-handbook, aopa-asi]
+resources: [faa-risk-management-handbook, aopa-asi, afh-ch18, ecfr-91-151]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -24,11 +24,7 @@ simVersion: null
 Everything in this module leads to one moment: the briefing is in front of you, the airplane is fueled, and someone, maybe only you, is asking "are we going?" This lesson is about answering well, keeping the answer honest once you are airborne, and surviving the one case where the answer was wrong.
 
 :::callout{type="safety"}
-VFR flight into instrument conditions is one of the deadliest things a pilot can do. In the accident record a large majority of VFR-into-IMC accidents are fatal, a rate several times higher than general aviation accidents as a whole. Most began with a pilot who could fly perfectly well and who took off, or kept going, into weather the briefing had already described. The airplane was fine. The decision was not.
-:::
-
-:::callout{type="verify"}
-Cite a current source for the statistic above: the AOPA Air Safety Institute's latest Nall Report (share of VFR-into-IMC accidents that were fatal, against the overall GA fatal rate) or an NTSB safety alert. Put the exact figure and year in the text once confirmed; the source stays in the resources list (`aopa-asi`).
+VFR flight into instrument conditions is one of the deadliest things a pilot can do. In the AOPA Air Safety Institute's 35th McSpadden Report (2023 data), VFR into IMC led the weather accident categories, and all 10 of its accidents were fatal; across every non-commercial fixed-wing accident that year, about one in six was. Most began with a pilot who could fly perfectly well and who took off, or kept going, into weather the briefing had already described. The airplane was fine. The decision was not.
 :::
 
 ## PAVE and IMSAFE, revisited
@@ -51,17 +47,13 @@ Legal minimums are the floor; **personal minimums** are the numbers you fly to. 
 | Item                                 | Legal VFR (Class D/E) | Suggested personal minimum now                              |
 | ------------------------------------ | --------------------- | ----------------------------------------------------------- |
 | Ceiling at departure and destination | 1,000 ft              | 3,000 ft                                                    |
-| Visibility                           | 3 SM                  | 6 SM                                                        |
+| Visibility                           | 3 SM                  | 5 SM                                                        |
 | Ceiling en route over hills          | 500 ft below cloud    | 2,000 ft above the highest terrain and 1,000 ft below cloud |
 | Surface wind / crosswind             | None                  | 15 kt / 8 kt                                                |
 | Forecast trend at the destination    | None                  | Improving or steady, never worsening                        |
 | Fuel at landing                      | 30 min day reserve    | 1 hour                                                      |
 
 These are deliberately conservative. Relax them one at a time, after several comfortable flights at the current number, and never on the day you need them relaxed. [[l16-1-risk-management-for-longer-flights]] builds a full worksheet that Learn-To-Fly saves to your profile; until then, keep yours on paper.
-
-:::callout{type="verify"}
-The saved personal-minimums worksheet is P1 (v2 L11.6 spec). Confirm the legal column against 14 CFR 91.155 (3 SM, 500 ft below cloud) and 91.151 (30-minute day VFR reserve), and align the suggested values with the starting set in [[l8-1-decision-making-and-personal-minimums]] (visibility 5 SM there versus 6 SM here).
-:::
 
 :::callout{type="decision"}
 **Go, no-go or delay?** Take the KLVK to KMRY briefing from [[l11-2-forecasts-and-briefings]]: Monterey under a 600 ft overcast and 4 SM in mist, AIRMET Sierra until 20Z, a TAF that clears at 1 p.m., a thin layer per a PIREP, a clear route inland. Against the minimums above it is a **no-go now** and a **delay** until the 1 p.m. improvement is confirmed by a new METAR, with Salinas as the alternate. Write that down, with the reason, before you read on. Writing the decision is the habit; Challenge C11.1 "Go / no-go board" grades it.
@@ -141,7 +133,7 @@ If you know the GFC 700 autopilot well, a wings-level mode can hold the airplane
 :::
 
 :::callout{type="verify"}
-Check the 180° turn against v2 Section 10.3 and the AFH chapter on basic instrument maneuvers (emergency 180° turn). Confirm the bank guidance (standard rate, about 15–20° at Skyhawk speeds). Confirm whether the sim's GFC 700 has a LVL button and whether this course wants it mentioned. These steps feed the `memory-items` deck and must match Challenge C11.3's criteria (wings level first, bank 15–20°, altitude ±100 ft, roll-out ±10° at Gold).
+Author decision: AFH Chapter 18 (Inadvertent VFR Flight Into IMC) tells the untrained pilot to use the smallest practical bank, no more than 10°, while this lesson, v2 Section 10.3 and Challenge C11.3 (Gold 15–20°) teach a standard-rate turn. Decide whether to keep standard rate (the Private Pilot ACS basic instrument maneuvers) or adopt the AFH's 10° cap, and keep the memory callout, the `memory-items` deck and C11.3 in step. Sim check: whether the MSFS 2024 GFC 700 has a LVL button and whether the course wants it mentioned. Desk-verified 2026-10-13: wings level first, trust the instruments, small pitch changes and "ask for help" match AFH Chapter 18.
 :::
 
 :::quiz{id="l11-6-q3" type="order"}

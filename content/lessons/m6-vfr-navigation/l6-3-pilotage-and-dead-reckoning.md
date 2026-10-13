@@ -111,7 +111,7 @@ The wind at 3,000 ft is **270° at 15 kt**, and we'll cruise at **110 KTAS**.
 Checkpoints by pilotage: Interstate 580, the **Altamont Pass** wind farms, then the town of **Tracy**, with the airport just southwest of it.
 
 :::callout{type="verify"}
-Author note: the true course (091°) and distance (18 nm) were recomputed from the FAA airport coordinates on 2026-10-09 and stand. Check that I-580, the Altamont Pass wind farms and the town of Tracy are recognizable from 3,500 ft in the sim (L0.3 found the turbines may be missing from the scenery).
+Sim check: recomputed 2026-10-13 from the FAA airport coordinates: true course 091°, 18.0 nm; variation 12.7° E (NOAA WMM-2025), so 13° E stands. Still open: that I-580, the Altamont Pass wind farms and the town of Tracy are recognizable from 3,500 ft in the sim (L0.3 found the turbines may be missing from the scenery).
 :::
 
 On the way back, the same wind is a headwind: the groundspeed drops to about 95 kt, and the trip takes 11 minutes.

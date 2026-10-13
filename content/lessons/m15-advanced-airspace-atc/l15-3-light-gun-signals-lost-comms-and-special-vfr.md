@@ -35,16 +35,12 @@ The same six signals mean different things depending on whether you are on the g
 | **Flashing green**            | Cleared to taxi                 | Return for landing (a steady green follows later) |
 | **Steady red**                | Stop                            | Give way to other aircraft and keep circling      |
 | **Flashing red**              | Taxi clear of the runway in use | Airport unsafe, do not land                       |
-| **Flashing white**            | Return to your starting point   | Not used                                          |
-| **Alternating red and green** | Use extreme caution             | Use extreme caution                               |
+| **Flashing white**            | Return to your starting point   | Not applicable                                    |
+| **Alternating red and green** | Exercise extreme caution        | Exercise extreme caution                          |
 
 A pattern helps: **green** means go, **red** means stop or stay away, **white** only exists on the ground, and **red and green together** means the tower is worried about something and wants your full attention.
 
 You acknowledge a signal so the controller knows you saw it. In the air during the day, **rock your wings**. At night, **flash the landing light** or the navigation lights. On the ground, move the ailerons or rudder so the control surfaces visibly wiggle.
-
-:::callout{type="verify"}
-Author note: the table follows AIM 4-3-13 and v2 Appendix B.9. Check the wording of each signal and the acknowledgment methods (rocking wings by day, flashing landing or navigation lights by night) against the current AIM before publishing.
-:::
 
 :::quiz{id="l15-3-q1" type="single"}
 You are on downwind with a failed radio and the tower shows you a steady red light. What does it mean?
@@ -88,14 +84,14 @@ If it is really gone, the VFR procedure at a towered airport has four steps:
 - **Enter the pattern.** Fly the normal pattern for the runway in use, which you can judge from the wind sock, other traffic or the ATIS if you can still hear it.
 - **Watch the tower.** From downwind onward, keep looking at the tower cab for a light signal, and acknowledge each one.
 
-If your transmitter works but your receiver does not, keep transmitting your position and intentions in the blind. If your receiver works but your transmitter does not, listen: the tower may talk to you and ask you to acknowledge by rocking your wings.
+If your transmitter works but your receiver does not, tell the tower your type, position, altitude and intention to land, ask to be controlled by light signals, and keep transmitting in the blind: 3 to 5 miles out, on downwind and on base. If your receiver works but your transmitter does not, listen: the tower may talk to you and ask you to acknowledge by rocking your wings.
 
 :::callout{type="tip"}
 The transponder is your voice now. Set 7600 _before_ you spend five minutes troubleshooting, then troubleshoot. Controllers see the code immediately, and nothing is lost if you fix the radio and switch back to 1200.
 :::
 
 :::callout{type="verify"}
-Author note: check the VFR lost-communications procedure against AIM 4-2-13 (receiver and transmitter failure) and 14 CFR 91.129(d) for Class D arrivals with two-way radio failure (weather at or above VFR minimums, visual contact with the tower, clearance to land by light signal). Confirm whether MSFS 2024 towers model light gun signals; Challenge C15.4 shows them as prompt cards on the Fly tab if not.
+Sim check: desk-verified 2026-10-13 against AIM 4-2-13, AIM 6-4-2 (code 7600) and 14 CFR 91.129(d)(2). Still open: do MSFS 2024 towers show light gun signals at all? If not, Challenge C15.4 shows them as prompt cards on the Fly tab.
 :::
 
 :::quiz{id="l15-3-q3" type="order"}
@@ -113,7 +109,7 @@ Squawk 7600 first, so the controllers know. Then remain VFR outside the airspace
 
 ## Special VFR
 
-The usual VFR minimums near a towered airport are 3 sm visibility and 1,000 ft of cloud clearance above you. On a Bay Area morning the marine layer can sit at 800 ft with 2 sm underneath, which is perfectly flyable and completely illegal under basic VFR.
+The usual VFR minimums near a towered airport are 3 sm visibility, a ceiling of at least 1,000 ft, and 500 ft between you and the cloud above. On a Bay Area morning the marine layer can sit at 800 ft with 2 sm underneath, which is perfectly flyable and completely illegal under basic VFR.
 
 **Special VFR** is an ATC clearance that lets you operate inside the surface area of Class B, C, D or E airspace with lower minimums:
 
@@ -124,17 +120,17 @@ The usual VFR minimums near a towered airport are 3 sm visibility and 1,000 ft o
 | Clouds             | Clear of clouds, no distance required                                  |
 | Who asks           | **You.** ATC never offers it; you request it                           |
 | At night           | Pilot must be instrument rated and the airplane IFR-equipped           |
-| Where it is banned | Some major Class B airports, marked "NO SVFR" on the chart             |
+| Where it is banned | Some busy Class B and Class C airports, marked "NO SVFR" on the chart  |
 | Traffic            | ATC separates you from IFR traffic, so you may be told to wait outside |
 
-The request is short: "Livermore Tower, Skyhawk One Two Three, one zero miles east, request special VFR to land." The clearance you want to hear is "cleared into the Livermore Class Delta surface area, special VFR, maintain special VFR conditions".
+The request is short: "Livermore Tower, Skyhawk One Two Three, one zero miles east, request special VFR to land." The clearance you want to hear is "cleared to enter the Livermore surface area, maintain special VFR conditions", sometimes with "at or below" an altitude. SFO is one of the "NO SVFR" airports; Oakland and San Jose are not.
 
 :::callout{type="decision"}
 Special VFR gets you the last 5 miles into an airport under a thin layer. It does not get you across the valley at 700 ft under an overcast. If the weather needs special VFR on the way _out_ of an airport, ask yourself where you will be when the clearance ends and the ceiling is still 800 ft. The pilot who stays on the ground, or asks for the clearance to come back and land, has made the better decision.
 :::
 
 :::callout{type="verify"}
-Author note: check every row of the table against 14 CFR 91.157 (clearance, 1 sm visibility, clear of clouds, the night instrument-rating and equipment rule, the helicopter exceptions) and the Class B airports where fixed-wing special VFR is prohibited (Part 91 Appendix D, Section 3), including whether SFO, OAK or SJC are listed. Check the request and clearance phraseology against AIM 4-4-6. Confirm that MSFS 2024 ATC offers special VFR at all, or note that it does not.
+Sim check: desk-verified 2026-10-13 against 14 CFR 91.157, Part 91 Appendix D Section 3 (SFO listed; OAK and SJC not), AIM 4-4-6 and FAA Order 7110.65 7-5-3 (clearance phraseology). Still open: does MSFS 2024 ATC offer special VFR at all? If not, say so in a sim callout.
 :::
 
 :::quiz{id="l15-3-q4" type="single"}
