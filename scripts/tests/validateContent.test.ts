@@ -10,7 +10,7 @@ describe('the real content/ folder', () => {
     const bundle = loadContent();
     validateContent(bundle);
     expect(bundle.issues.items.map(formatIssue)).toEqual([]);
-    expect(bundle.modules).toHaveLength(9);
+    expect(bundle.modules).toHaveLength(22);
     expect(bundle.glossary.length).toBeGreaterThanOrEqual(150);
     expect(bundle.lessons.length).toBeGreaterThanOrEqual(1);
   });

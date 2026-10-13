@@ -220,7 +220,16 @@ export function parseLessonSource(
   file: string,
   ctx: ParseContext,
 ): ParsedLesson | null {
-  const parsedMatter = matter(source);
+  let parsedMatter: ReturnType<typeof matter>;
+  try {
+    parsedMatter = matter(source);
+  } catch (error) {
+    // Malformed YAML (e.g. an unquoted colon in `summary:`) must be a reported issue, not a
+    // crash that hides every other file's problems.
+    const message = error instanceof Error ? error.message.split('\n')[0] : String(error);
+    ctx.issues.error(file, `frontmatter YAML: ${message}`, 1);
+    return null;
+  }
   const fm = LessonFrontmatterSchema.safeParse(parsedMatter.data);
   if (!fm.success) {
     for (const issue of fm.error.issues) {

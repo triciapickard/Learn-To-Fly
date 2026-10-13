@@ -8,6 +8,12 @@ All notable changes to this project are documented here. The format is based on
 
 ### Added
 
+- v2 content drafts: all 56 Course 2 and Course 3 lessons (Modules 9–21, v2.md
+  Section 15) as unpublished drafts with verify callouts, plus Modules 9–21 in
+  `modules.yaml` and the v2 "Go deeper" resources. The content pipeline accepts
+  two-digit module numbers and the v2 callout types `decision`, `memory` and
+  `real-world`; malformed lesson frontmatter is reported instead of crashing validation.
+
 - Phase 12 tooling: `npm run content:verify-report` writes a verification tracker
   (`docs/verification/tracker.csv`) and a checklist of every open verify marker by module;
   `npm run content:links` checks every external URL in `content/` (step 12.4).

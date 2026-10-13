@@ -54,6 +54,8 @@ export default defineConfig({
           include: ['server/**/*.test.ts', 'shared/**/*.test.ts', 'scripts/**/*.test.ts'],
           globalSetup: ['server/tests/globalSetup.ts'],
           hookTimeout: 60_000,
+          // Seeding the full content/ folder (89 lessons) takes a few seconds per run.
+          testTimeout: 30_000,
         },
       },
     ],

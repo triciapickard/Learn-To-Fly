@@ -1,20 +1,25 @@
 import {
+  Brain,
   Gauge,
   Info,
   Lightbulb,
   Monitor,
   OctagonAlert,
+  Plane,
   SearchCheck,
+  Signpost,
   type LucideIcon,
 } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/cn';
 
-export type CalloutType = 'safety' | 'sim' | 'classic' | 'tip' | 'verify' | 'note';
+export type CalloutType =
+  'safety' | 'sim' | 'classic' | 'tip' | 'verify' | 'note' | 'decision' | 'memory' | 'real-world';
 
 /**
- * The six Markdown directives from the content style guide. Fill is the type's tint and the
- * type color is spent only on the icon and title; body copy stays ink. No left stripe.
+ * The Markdown callout directives from the content style guide (v1 Section 18.4) and the v2
+ * additions (v2 Section 19.2). Fill is the type's tint and the type color is spent only on
+ * the icon and title; body copy stays ink. No left stripe.
  */
 const config: Record<CalloutType, { title: string; icon: LucideIcon; classes: string }> = {
   safety: {
@@ -40,6 +45,24 @@ const config: Record<CalloutType, { title: string; icon: LucideIcon; classes: st
   note: {
     title: 'Note',
     icon: Info,
+    classes: 'border border-line bg-surface-sunken [&_.callout-head]:text-ink-2',
+  },
+  // v2: a go/no-go or divert moment (v2 Section 13.3).
+  decision: {
+    title: 'Decision',
+    icon: Signpost,
+    classes: 'bg-warn-tint [&_.callout-head]:text-warn',
+  },
+  // v2: emergency memory items, drilled in the practice hub.
+  memory: {
+    title: 'Memory item',
+    icon: Brain,
+    classes: 'bg-accent-tint [&_.callout-head]:text-accent',
+  },
+  // v2: the extra training a real pilot needs before doing this for real (v2 Section 13.8).
+  'real-world': {
+    title: 'In a real airplane',
+    icon: Plane,
     classes: 'border border-line bg-surface-sunken [&_.callout-head]:text-ink-2',
   },
   // Author-only: content validation refuses to publish it. Rendered dashed so it is obvious.

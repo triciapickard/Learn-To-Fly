@@ -55,11 +55,16 @@ export interface LogoProps {
    * the mark cannot be drawn.
    */
   variant?: 'mark' | 'type';
+  /**
+   * `sm`: show the wordmark only from the `sm` breakpoint up, leaving the fin mark alone on
+   * phones. The header uses this so the lockup, theme toggle and menu button fit in 320 px.
+   */
+  wordmark?: 'always' | 'sm';
   className?: string;
 }
 
 /** "Learn to Fly" in Instrument Sans 700 at 22px with -0.02em tracking, in ink. */
-export function Logo({ variant = 'mark', className }: LogoProps) {
+export function Logo({ variant = 'mark', wordmark = 'always', className }: LogoProps) {
   return (
     <span
       className={cn(
@@ -68,7 +73,7 @@ export function Logo({ variant = 'mark', className }: LogoProps) {
       )}
     >
       {variant === 'mark' && <LogoMark className="size-7" />}
-      <span>Learn to Fly</span>
+      <span className={cn(wordmark === 'sm' && 'hidden sm:inline')}>Learn to Fly</span>
       {variant === 'type' && (
         <span
           aria-hidden
