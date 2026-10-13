@@ -13,7 +13,7 @@ objectives:
   - List the reports you must make to ATC in a radar environment.
   - Apply the lost-communications rules to choose a route and an altitude.
 challenges: []
-resources: [iph-enroute, ecfr-91-185, aim-6]
+resources: [iph-enroute, ecfr-91-185, aim-6, aim-5]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -37,20 +37,16 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 Your route is either an **airway** from the enroute chart ([[l18-2-ifr-charts-and-the-approach-plate]]) or a **direct** leg between fixes that GPS makes possible. ATC mixes them freely: "cleared direct SUNOL, then as filed" is normal.
 
-| Routing         | How you fly it                                                                                                       | What to watch                                                                   |
-| --------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| Victor airway   | Loaded as an airway in the FPL ([[l18-4-the-g1000-nxi-and-gfc-700-for-ifr]]); NAV mode on GPS, or VOR if GPS is lost | The changeover point; the MEA changes at each fix                               |
-| T-route         | Same, GPS only                                                                                                       | The MEA is a GPS MEA; VOR is not an option                                      |
-| Direct to a fix | D→ the fix, then Activate Leg to rejoin the route                                                                    | Terrain: no airway means no MEA, so check the OROCA and your clearance altitude |
-| Radar vectors   | HDG mode on the assigned heading                                                                                     | ATC is responsible for terrain while vectoring; you still watch the map         |
+| Routing         | How you fly it                                                                                                       | What to watch                                                                                                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Victor airway   | Loaded as an airway in the FPL ([[l18-4-the-g1000-nxi-and-gfc-700-for-ifr]]); NAV mode on GPS, or VOR if GPS is lost | The changeover point; the MEA changes at each fix                                                                                                                              |
+| T-route         | Same, GPS only                                                                                                       | The MEA is a GPS MEA; VOR is not an option                                                                                                                                     |
+| Direct to a fix | D→ the fix, then Activate Leg to rejoin the route                                                                    | Terrain: no airway means no MEA; off-route you need 1,000 ft (2,000 ft in mountains) above anything within 4 nm of your course, so check the OROCA and your clearance altitude |
+| Radar vectors   | HDG mode on the assigned heading                                                                                     | ATC is responsible for terrain while vectoring; you still watch the map                                                                                                        |
 
 Joining an airway is the intercept from [[l6-4-vor-navigation]]: a 30–45° angle, then turn onto the course as the needle comes alive. With GPS the airway is a magenta line, so the intercept happens on the map as much as on the HSI.
 
 At each fix, run the 5 Ts you will meet again in [[l19-1-holding-patterns-entries-timing-and-wind]]: **Turn, Time, Twist, Throttle, Talk**. Enroute, most are "nothing to do", and saying so is the point.
-
-:::callout{type="verify"}
-Verify the off-airway terrain guidance (OROCA and 91.177 for direct routes) against the Instrument Procedures Handbook enroute chapter and AIM 5-3-3 (direct routing on GPS). SUNOL is a real fix near Livermore; keep the example as "direct to a fix on your route" and confirm the name against the current enroute chart or replace it with a fictional one.
-:::
 
 ## Altitudes on the airway
 
@@ -63,11 +59,7 @@ Two rules decide your cruising altitude. Terrain: at or above the **MEA** for th
 
 Compare the VFR rule from [[l6-6-planning-a-cross-country-flight]]: the same east-odd, west-even split without the extra 500 ft, which keeps VFR and IFR traffic 500 ft apart by rule alone.
 
-In controlled airspace, which is almost everywhere you fly IFR, you fly the altitude **ATC assigns**, and ATC follows this rule for you. Your job is to notice when an assigned altitude is below the MEA ahead, and say so.
-
-:::callout{type="verify"}
-IFR cruising altitudes are 14 CFR 91.179; verify the course bands and that the rule applies in controlled airspace only when ATC has not assigned an altitude. Minimum altitudes are 91.177. Confirm the wording before publishing; the quiz below depends on the odd/even split.
-:::
+The odd/even rule is written for uncontrolled airspace. In controlled airspace, which is almost everywhere you fly IFR, you fly the altitude **ATC assigns**, and ATC normally follows the same convention for you. Your job is to notice when an assigned altitude is below the MEA ahead, and say so.
 
 :::quiz{id="l18-5-q1" type="single"}
 You are flying IFR on a magnetic course of 250° in uncontrolled airspace below 18,000 ft MSL. Which altitude fits the cruising altitude rule?
@@ -100,7 +92,7 @@ In a radar environment ATC can see your position, so position reports are not ne
 Outside radar coverage, add a **position report** at each compulsory reporting point (the filled triangles): identification, position, time, altitude, next fix and ETA, then the fix after that. In the Bay Area you will rarely be outside radar, but the sim's ATC may never say "radar contact", so Challenge C18.3 asks for the reports regardless.
 
 :::callout{type="verify"}
-Verify the required reports list against AIM 5-3-3 and the position report format against AIM 5-3-2. Confirm the 500 fpm and 5%/10 kt figures. Check whether MSFS 2024 ATC acknowledges voluntary reports; on VATSIM they are expected.
+Sim check: whether MSFS 2024 ATC acknowledges voluntary reports (on VATSIM they are expected). Reports list, position report format and the 500 fpm and 5%/10 kt figures desk-verified 2026-10-13 against AIM 5-3-2 and 5-3-3.
 :::
 
 :::quiz{id="l18-5-q2" type="multi"}
@@ -145,16 +137,17 @@ Worked example: cleared to Monterey as filed, "climb and maintain 3,000, expect 
 
 Three details catch people. "Highest of the three" is checked **per segment**, so your altitude can change along the route. The "expect" altitude counts only once its time or fix has been reached. And if you are in VMC, the rules stop: land, then phone.
 
-| Situation                                              | What you do                                                                     |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| Radio fails, you are in VMC                            | Stay VMC, land at the nearest suitable airport, telephone ATC                   |
-| Radio fails in IMC, you were on vectors                | Squawk 7600, go direct to the fix you were being vectored to, continue AVEF     |
-| Radio fails in IMC, you were told "expect 7,000"       | Climb to 7,000 once the expected time has passed, higher where the MEA requires |
-| You reach the clearance limit before the expected time | Hold at the fix until the expected time, then begin the approach                |
-| No expected time was given                             | Begin the approach at the ETA you filed, or the amended ETA you gave ATC        |
+| Situation                                                | What you do                                                                                                                                                    |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Radio fails, you are in VMC                              | Stay VMC, land at the nearest suitable airport, telephone ATC                                                                                                  |
+| Radio fails in IMC, you were on vectors                  | Squawk 7600, go direct to the fix you were being vectored to, continue AVEF                                                                                    |
+| Radio fails in IMC, you were told "expect 7,000"         | Climb to 7,000 once the expected time has passed, higher where the MEA requires                                                                                |
+| You reach the clearance limit before the expected time   | Hold at the fix until the expected time, then begin the approach                                                                                               |
+| No expected time was given                               | Begin the approach at the ETA you filed, or the amended ETA you gave ATC                                                                                       |
+| The clearance limit is not a fix an approach starts from | Leave it at the expected time (or on arrival, if none was given), fly to a fix an approach starts from, and begin the approach as close to your ETA as you can |
 
 :::callout{type="verify"}
-Lost communications are 14 CFR 91.185 and AIM 6-4-1; the summary is from v2 Appendix B.14. Verify the exact wording on when to leave the clearance limit (expect-further-clearance time vs ETA, and the case where the clearance limit is not an approach fix). Confirm 7600 and the VMC provision in 91.185(b). Keep the worked example consistent with the C21.3 "Lost comms in IMC" challenge once it is written.
+Author decision: keep the worked example consistent with the C21.3 "Lost comms in IMC" challenge once it is written. Route, altitude and clearance-limit rules, 7600 and the VMC provision desk-verified 2026-10-13 against 14 CFR 91.185 and AIM 6-4-1 and 6-4-2.
 :::
 
 :::quiz{id="l18-5-q3" type="single"}

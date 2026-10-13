@@ -26,7 +26,7 @@ Taxi onto the runway and line up on the **centerline**, using the whole runway: 
 From the left seat, the centerline runs under the airplane's nose, a little to the right of where you're sitting. In the sim, find the view where the centerline disappears under the middle of the nose and remember it.
 
 :::callout{type="verify"}
-Author note: check the lined-up sight picture from the MSFS 2024 default cockpit camera and add a screenshot (Section 49.5).
+Sim check: check the lined-up sight picture from the MSFS 2024 default cockpit camera and add a screenshot (Section 49.5).
 :::
 
 ## Full power, smoothly

@@ -20,7 +20,7 @@ setup:
   airportIcao: KTCY
   startState: AIR_START
   startDetails:
-    position: 10 nm south of the Manteca VOR (ECA), over the Central Valley # ⚠ verify ECA is in the sim; south keeps you clear of the Stockton Class C
+    position: 10 nm south of the Manteca VOR (ECA), over the Central Valley # ⚠ verify — Sim check: ECA (Manteca VORTAC, 116.0) is in the sim's database; south keeps you clear of the Stockton Class D (surface to 2,500 ft within 4.5 nm of KSCK)
     altitudeFt: 3500
     headingDeg: 360
     speedKias: 100

@@ -38,26 +38,30 @@ The G1000 NXi in MSFS 2024 is a Working Title model of the real unit. It is clos
 :::
 
 :::callout{type="verify"}
-Author note: the spec lists L6.5 and L6.8 as prerequisites; L6.8 is not written, so `prerequisites` uses l6-5 only. Swap in l6-8 when it exists. Verify every key sequence in this lesson against the current MSFS 2024 Working Title G1000 NXi and record the sim version. Known differences to check: airway loading in the FPL page, the VTF behavior, automatic GPS-to-LOC CDI switching, GA mode behavior after a missed approach, and whether the yaw damper exists. Screenshot for the shot list: "G1000 FPL with a loaded approach; PROC menu; mode annunciator (armed/active)".
+Author decision: the spec lists L6.5 and L6.8 as prerequisites; L6.8 is not written, so `prerequisites` uses l6-5 only. Swap in l6-8 when it exists.
+:::
+
+:::callout{type="verify"}
+Sim check: every key sequence in this lesson is desk-verified 2026-10-13 against the Garmin G1000 NXi Pilot's Guide for the Cessna Nav III (190-02177-00 Rev A); fly each one in the current MSFS 2024 Working Title NXi and record the sim version. Known differences to check: airway loading in the FPL page, VTF behavior, automatic GPS-to-LOC CDI switching, GA behavior after a missed approach, and whether the yaw damper exists. Screenshot for the shot list: "G1000 FPL with a loaded approach; PROC menu; mode annunciator (armed/active)".
 :::
 
 ## The flight plan for IFR
 
 Your clearance ([[l18-3-clearances-and-departures]]) is a list of fixes and airways. The FPL page holds them in order, departure to destination. The NXi loads a whole airway as one entry: you type the entry and exit fixes, not every intersection between.
 
-| Step | Where                     | What you do                                                                                            |
-| ---- | ------------------------- | ------------------------------------------------------------------------------------------------------ |
-| 1    | FPL page (MFD)            | Enter the departure airport, then each fix in the clearance, with the FMS knob and ENT as before       |
-| 2    | FPL page, on a VOR or fix | Press MENU, choose "Load Airway", pick the airway and the exit fix; the NXi inserts every fix along it |
-| 3    | FPL page                  | Enter the destination airport last                                                                     |
-| 4    | FPL page                  | Read the plan against the clearance, fix by fix; look for a "discontinuity" line between legs          |
-| 5    | PROC key                  | Load the departure (if any) and the expected approach (next section)                                   |
-| 6    | FPL page                  | Check the total distance and ETE make sense against your fuel plan                                     |
+| Step | Where                     | What you do                                                                                                                                                                                       |
+| ---- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | FPL page (MFD)            | Enter the departure airport, then each fix in the clearance, with the FMS knob and ENT as before                                                                                                  |
+| 2    | FPL page, on a VOR or fix | With the cursor on the fix after the airway's entry point, press the LD AIRWY softkey (MFD) or MENU and "Load Airway" (PFD), pick the airway and the exit fix; the NXi inserts every fix along it |
+| 3    | FPL page                  | Enter the destination airport last                                                                                                                                                                |
+| 4    | FPL page                  | Read the plan against the clearance, fix by fix; look for a "discontinuity" line between legs                                                                                                     |
+| 5    | PROC key                  | Load the departure (if any) and the expected approach (next section)                                                                                                                              |
+| 6    | FPL page                  | Check the total distance and ETE make sense against your fuel plan                                                                                                                                |
 
 A **discontinuity** is a gap: the NXi flies to the fix before it, then gives up. A plan with a discontinuity in cloud is a plan with a hole in it. Fix every one before engine start.
 
 :::callout{type="verify"}
-Verify the "Load Airway" menu path and the discontinuity display in the sim's NXi. In the sim, a flight plan filed on the world map is pushed into the G1000; confirm what happens to procedures loaded there and whether the learner should clear the plan and rebuild it (Challenge C18.2 assumes a rebuild from the clearance).
+Sim check: confirm how the Working Title NXi shows a gap between legs (the Garmin guide does not use the word "discontinuity") and the airway path above (desk-verified 2026-10-13 against the Garmin NXi Pilot's Guide: LD AIRWY softkey on the MFD, MENU and "Load Airway" on the PFD). In the sim, a flight plan filed on the world map is pushed into the G1000; confirm what happens to procedures loaded there and whether the learner should clear the plan and rebuild it (Challenge C18.2 assumes a rebuild from the clearance).
 :::
 
 ## Loading procedures: the PROC key
@@ -95,12 +99,12 @@ PROC, Select Approach, the approach, the transition, Load, then check. Loading a
 The magenta leg on the map is the one the G1000 is flying. Two things change it on purpose:
 
 - **Activate Leg.** On the FPL page, put the cursor on the fix you want, press MENU and choose "Activate Leg". The G1000 now navigates to that fix along the leg leading into it. Use it after ATC says "proceed direct" to a fix on the route, or when you joined the route mid-way.
-- **Vectors-to-final (VTF).** Choosing VECTORS as the approach transition, or "Activate Vectors-to-Final" from the PROC menu, makes the final approach course the active leg, extended outward from the final approach fix. When ATC says "turn left heading 220, intercept the final approach course", you want this: the CDI shows the final approach course, and NAV or APR mode will capture it.
+- **Vectors-to-final (VTF).** Choosing VECTORS as the approach transition, or "Activate Vector-to-Final" from the PROC menu, makes the final approach course the active leg, extended outward from the final approach fix. When ATC says "turn left heading 220, intercept the final approach course", you want this: the CDI shows the final approach course, and NAV or APR mode will capture it.
 
 Keep the full procedure active while being vectored and the G1000 may try to take you to an initial fix you were never going to see. Activate VTF too early and it drops the earlier fixes. Both are recoverable, and both are the surprises this lesson exists to prevent.
 
 :::callout{type="verify"}
-Verify Activate Leg and VTF behavior in the sim's NXi: whether VTF keeps the intermediate fixes (newer NXi software does) or drops them, and whether reactivating the full approach restores them. The learner-facing text must match what the sim actually does.
+Sim check: whether VTF in the sim's NXi keeps the intermediate fixes (newer NXi software does) or drops them, and whether reactivating the full approach restores them; the learner-facing text must match what the sim does. Activate Leg (ACT LEG softkey or MENU, "Activate Leg") and "Activate Vector-to-Final" desk-verified 2026-10-13 against the Garmin NXi Pilot's Guide.
 :::
 
 ## CDI source and scaling
@@ -109,53 +113,59 @@ The HSI needle follows whichever source the **CDI** softkey selects: **GPS** (ma
 
 GPS does one more thing. The needle's **full-scale** distance shrinks as you near the runway, so the same half-dot means a smaller error on final than enroute:
 
-| Phase           | Annunciation on the HSI | Full-scale deflection                              | When                                                 |
-| --------------- | ----------------------- | -------------------------------------------------- | ---------------------------------------------------- |
-| Enroute         | ENR                     | ±2.0 nm                                            | More than 30 nm from the destination                 |
-| Terminal        | TERM                    | ±1.0 nm                                            | Within 30 nm of the departure or destination airport |
-| Approach (LNAV) | LNAV or LNAV+V          | ±0.3 nm at the final approach fix                  | From about 2 nm before the FAF                       |
-| Approach (LPV)  | LPV                     | Angular, like a localizer, narrowing to the runway | After the FAF, with a glidepath on the HSI           |
+| Phase           | Annunciation on the HSI | Full-scale deflection                                                      | When                                                                        |
+| --------------- | ----------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Departure       | DPRT                    | ±0.3 nm                                                                    | While a loaded departure procedure is being flown                           |
+| Terminal        | TERM                    | ±1.0 nm                                                                    | Within 30 nm of the departure airport, and within 31 nm of the destination  |
+| Enroute         | ENR                     | ±2.0 nm                                                                    | Between those: more than 30 nm out and more than 31 nm from the destination |
+| Approach (LNAV) | LNAV or LNAV+V          | Shrinks from ±1.0 nm to ±0.3 nm at the FAF, then tighter toward the runway | From 2 nm before the final approach fix                                     |
+| Approach (LPV)  | LPV                     | Shrinks to an angle, like a localizer, narrowing to the runway             | From 2 nm before the FAF, with a glidepath on the HSI                       |
+| Missed approach | MAPR                    | ±0.3 nm                                                                    | Once the missed approach is activated                                       |
 
-Fly the needle to the center in every phase and the scaling takes care of itself. The trap is the **transition**: as scaling tightens, a centered needle can drift toward a dot with no change in heading. Expect it and correct early.
+Fly the needle to the center in every phase and the scaling takes care of itself. The trap is the **transition**: as scaling tightens, a centered needle can drift toward a dot with no change in heading. Expect it and correct early. Note the G1000 HSI shows two dots each side, so one dot is half of full scale.
 
 :::callout{type="verify"}
-CDI scaling values are from v2 Appendix F.6 and must be verified against the G1000 NXi pilot's guide (ENR, TERM, LNAV and LPV full-scale values and the distances at which they change). Confirm whether the sim's NXi auto-switches GPS to LOC on an ILS and whether a "MISSED APPR" scaling state exists. Widget W36 (HSI, CDI Scaling and ILS) is embedded here once Phase 21 ships it: `::widget{name="cdi-scaling" mode="explore"}`. Until then the table is the walkthrough.
+Widget pending: Widget W36 (HSI, CDI Scaling and ILS) is embedded here once Phase 21 ships it: `::widget{name="cdi-scaling" mode="explore"}`. Until then the table is the walkthrough. Scaling values and distances desk-verified 2026-10-13 against the Garmin NXi Pilot's Guide (Table 2-2).
+:::
+
+:::callout{type="verify"}
+Sim check: whether the Working Title NXi auto-switches the CDI from GPS to LOC on an ILS (the Garmin guide says it does when an ILS is loaded, the FAF is the active leg within 15 nm, the localizer is tuned and the GPS needle is within 1.2 times full scale) and whether it shows the MAPR scaling state.
 :::
 
 :::quiz{id="l18-4-q2" type="single"}
 You are 20 nm from the destination with the HSI on GPS and the needle one dot right of center. Roughly how far are you from the course?
 
 - [ ] 2.0 nm
-- [x] About 0.4 nm
+- [x] About 0.5 nm
 - [ ] 0.3 nm
 - [ ] Impossible to say without an ILS
 
 ---
 
-Within 30 nm the scaling is TERM, full scale ±1.0 nm. One dot on a five-dot scale is about 0.2 of full scale, so about 0.4 nm. Enroute the same dot would be 0.8 nm; on final it would be 0.12 nm or less.
+Within 31 nm the scaling is TERM, full scale ±1.0 nm. The G1000 HSI has two dots each side, so one dot is half of full scale: about 0.5 nm. Enroute the same dot would be 1.0 nm; at the final approach fix it would be 0.15 nm or less.
 :::
 
 ## The GFC 700: autopilot modes
 
 The GFC 700 has two jobs, lateral (where the nose points) and vertical (what the altitude does), with one mode in each at a time. **AP** engages the servos; **FD** shows the command bars without them, so you hand-fly the same targets.
 
-| Mode | Kind                 | What it does                                                               | Use it for                                  |
-| ---- | -------------------- | -------------------------------------------------------------------------- | ------------------------------------------- |
-| HDG  | Lateral              | Flies the heading bug                                                      | Vectors                                     |
-| NAV  | Lateral              | Follows the CDI source (GPS, VOR or localizer)                             | Airways, direct legs, a localizer intercept |
-| APR  | Lateral and vertical | Follows the course and captures the glideslope or glidepath                | ILS and LPV final approach                  |
-| ALT  | Vertical             | Holds the current altitude                                                 | Cruise, level segments                      |
-| VS   | Vertical             | Holds a vertical speed you set with the NOSE UP/DN keys                    | Descents at a planned rate                  |
-| FLC  | Vertical             | Holds an airspeed by pitching, climbing or descending at the power you set | Climbs at {{vspeed.vy}} or cruise climb     |
-| VNV  | Vertical             | Flies the altitudes in the flight plan's descent profile                   | Enroute descents with VNAV constraints      |
-| GA   | Both                 | Go-around: wings level, pitch up, flight director on, autopilot off        | The missed approach, first second           |
+| Mode | Kind                 | What it does                                                                                | Use it for                                  |
+| ---- | -------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| HDG  | Lateral              | Flies the heading bug                                                                       | Vectors                                     |
+| NAV  | Lateral              | Follows the CDI source (GPS, VOR or localizer)                                              | Airways, direct legs, a localizer intercept |
+| APR  | Lateral and vertical | Follows the course and captures the glideslope or glidepath                                 | ILS and LPV final approach                  |
+| ALT  | Vertical             | Holds the current altitude                                                                  | Cruise, level segments                      |
+| VS   | Vertical             | Holds a vertical speed you set with the NOSE UP/DN keys                                     | Descents at a planned rate                  |
+| FLC  | Vertical             | Holds an airspeed by pitching, climbing or descending at the power you set                  | Climbs at {{vspeed.vy}} or cruise climb     |
+| VNV  | Vertical             | Flies the altitudes in the flight plan's descent profile                                    | Enroute descents with VNAV constraints      |
+| GA   | Both                 | Go-around: wings level, pitch up, flight director on, autopilot off, altitude capture armed | The missed approach, first second           |
 
 Every vertical mode uses the **altitude preselect**: set the cleared altitude and ALT captures it. Forget it and FLC or VS will climb through the clearance. Set it first, every time.
 
 The **mode annunciator** at the top of the PFD shows what the autopilot is doing. **Active** modes are **green**; **armed** modes, waiting for a condition, are **white**. "HDG" green with "GPS" white means: flying the heading bug now, capturing the GPS course when it gets there. Read it after every button press.
 
 :::callout{type="verify"}
-Verify the mode list and names in the sim's GFC 700 (and whether VNV and a yaw damper are modeled), the NOSE UP/DN key names, and the GA behavior (whether GA disconnects the autopilot in the sim). The active-green, armed-white convention is from the Garmin pilot's guide and must be confirmed on the sim's PFD; the knowledge check below depends on it.
+Sim check: whether VNV and a yaw damper are modeled in the sim's GFC 700, whether GA disconnects the autopilot in the sim, and that the sim's PFD shows armed modes white and active modes green (the knowledge check below depends on it). Desk-verified 2026-10-13 against the Garmin NXi Pilot's Guide: mode names, NOSE UP/NOSE DN keys, GA disengaging the autopilot and arming altitude capture, and the white/green convention.
 :::
 
 :::quiz{id="l18-4-q3" type="single"}
@@ -197,14 +207,14 @@ Ten minutes before descent, with the approach briefed from the plate ([[l18-2-if
 | CDI source             | GPS for RNAV; LOC1 for ILS (or confirmed auto-switch)                       |
 | Altitude preselect     | The next cleared altitude                                                   |
 | Heading bug            | The current heading, so HDG mode does nothing surprising                    |
-| Minimums               | DA or MDA entered in the PFD's minimums field                               |
+| Minimums               | DA or MDA entered as BARO minimums in the PFD's Tmr/Ref window              |
 | Missed approach        | First heading and altitude reviewed out loud                                |
-| Timer                  | Reset, for a timed non-precision approach                                   |
+| Timer                  | Reset in the same Tmr/Ref window, for a timed non-precision approach        |
 | Standby frequencies    | Tower or CTAF in COM standby                                                |
 | Fuel and the alternate | Rechecked against [[l18-1-ifr-rules-minimums-currency-alternates-and-fuel]] |
 
 :::callout{type="verify"}
-Verify the PFD minimums field (BARO MIN) softkey path and the timer location in the sim's NXi. Align this table with the 14 items in Challenge C18.2 once the challenge YAML is written.
+Sim check: confirm the Tmr/Ref softkey path (MINS field, BARO, altitude) and the timer in the sim's NXi; desk-verified 2026-10-13 against the Garmin NXi Pilot's Guide. Author decision: align this table with the 14 items in Challenge C18.2 once the challenge YAML is written.
 :::
 
 ## Practice and next steps

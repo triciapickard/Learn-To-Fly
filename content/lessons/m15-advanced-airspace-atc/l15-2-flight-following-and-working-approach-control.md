@@ -26,7 +26,7 @@ On the cross-country in Course 1 you flew from Livermore to Half Moon Bay talkin
 **Flight following** is the fix. You call the approach controller, get a squawk code, and from then on a radar controller watches your target and tells you about traffic near you. It costs nothing, it is optional, and it is the single best habit a new VFR pilot can pick up. This lesson teaches the whole conversation, from the first call to "squawk VFR".
 
 :::callout{type="verify"}
-Author note: the spec lists L7.4 as the prerequisite. That lesson does not exist yet, so [[l7-3-towered-airports-and-sim-atc]] is used. Swap the prerequisite to l7-4 when it is written.
+Author decision: the v2 spec lists L7.4 as the prerequisite, but that lesson does not exist (checked 2026-10-13), so [[l7-3-towered-airports-and-sim-atc]] is used. Swap the prerequisite to l7-4 if and when it is written.
 :::
 
 ## What flight following is, and is not
@@ -85,7 +85,8 @@ The reason you are here. A traffic call tells you where another airplane is usin
 | "Skyhawk One Two Three, traffic, two o'clock, three miles, northbound, altitude indicates three thousand." | Look right of the nose, 3 nm, crossing left to right, 500 ft below you | "Looking for traffic, Skyhawk One Two Three." |
 | (you spot it)                                                                                              |                                                                        | "Traffic in sight, Skyhawk One Two Three."    |
 | (you never spot it)                                                                                        |                                                                        | "Negative contact, Skyhawk One Two Three."    |
-| "Skyhawk One Two Three, traffic no longer a factor."                                                       | It has passed                                                          | "Skyhawk One Two Three."                      |
+| "Skyhawk One Two Three, traffic no factor."                                                                | It has passed                                                          | "Skyhawk One Two Three."                      |
+| "Skyhawk One Two Three, traffic no longer observed."                                                       | The radar lost it; it may still be out there, so keep looking          | "Skyhawk One Two Three."                      |
 
 Three habits:
 
@@ -117,10 +118,10 @@ Most of the time on flight following, altitude is yours: "maintain VFR" means fl
 | "Skyhawk One Two Three, resume own navigation."                                | The vector is over; go back to your route                    | "Resume own navigation, Skyhawk One Two Three."                   |
 | "Skyhawk One Two Three, say altitude."                                         | The radar altitude readout does not match, or is missing     | "Three thousand five hundred, Skyhawk One Two Three."             |
 
-Read back every altitude and heading, always with your call sign. If an instruction would put you in a cloud or into terrain, the answer is **"unable"**, followed by what you can do: "Unable three thousand for clouds, Skyhawk One Two Three can maintain two thousand five hundred." The controller would much rather hear "unable" than watch you fly into the weather.
+Read back every altitude and heading, always with your call sign. If an instruction would put you in a cloud or into terrain, the answer is **"unable"**, followed by what you can do: "Unable three thousand for clouds, Skyhawk One Two Three can maintain two thousand five hundred." The controller would much rather hear "unable" than watch you fly into the weather. When an assigned altitude is no longer needed you will hear "resume appropriate VFR altitudes": go back to a cruising altitude that fits your direction of flight.
 
 :::callout{type="verify"}
-Author note: check the VFR altitude and heading phraseology ("maintain VFR at or below", "resume own navigation", "say altitude") against the Pilot/Controller Glossary and AIM 4-1-15, and confirm that MSFS 2024 ATC issues any of these to VFR aircraft on flight following.
+Sim check: desk-verified 2026-10-13 against the Pilot/Controller Glossary ("maintain", "resume own navigation", "say altitude"), AIM 4-1-18 (at-or-below altitude assignments) and FAA Order 7110.65 7-8-5/7-9-7 ("resume appropriate VFR altitudes"). Still open: does MSFS 2024 ATC issue altitude or heading assignments, "say altitude" or "resume own navigation" to VFR aircraft on flight following?
 :::
 
 ## Frequency changes
@@ -169,7 +170,7 @@ In sim-ATC mode, say every call out loud before you pick it from the menu, inclu
 :::
 
 :::callout{type="verify"}
-Author note: confirm the MSFS 2024 ATC menu path for requesting flight following, whether it issues altitude or heading assignments to VFR aircraft, and how it terminates service. Record the sim version. Screenshot for the shot list: "ATC menu, flight following request airborne near KLVK".
+Sim check: confirm the MSFS 2024 ATC menu path for requesting flight following, whether it issues altitude or heading assignments to VFR aircraft, and how it terminates service; record the sim version. Screenshot for the shot list: "ATC menu, flight following request airborne near KLVK".
 :::
 
 ## Practice and next steps

@@ -10,7 +10,7 @@ estimatedMinutes: 30
 prerequisites: [l15-4-readbacks-and-phraseology]
 objectives:
   - Create a VATSIM account and complete the network's requirements for new pilots.
-  - Install and configure a pilot client for MSFS 2024 and connect in observer mode.
+  - Install and configure a pilot client for MSFS 2024, then connect parked and listen before you fly.
   - File a VFR flight plan and fly a first flight that follows the Code of Conduct, with or without a controller online.
 challenges: []
 resources: [vatsim, vatsim-getting-started, vatsim-code-of-conduct, vpilot, vzoa]
@@ -44,26 +44,28 @@ It sits alongside the other two ways to fly a communication challenge in this co
 
 Coverage on VATSIM depends on who is online. A Bay Area tower may be staffed on a weekday evening and empty on a weekday morning. That is normal, and the UNICOM section below covers the empty case.
 
+One limit up front: the pilot client for MSFS runs on a Windows PC, so VATSIM is PC-only. There is no Xbox path, and the network has said it does not expect one. On Xbox, the sim's ATC and the self-voiced script are your two modes.
+
 :::callout{type="verify"}
-Author note: confirm the current description of VATSIM, its pricing (free), and that pilot clients remain Windows-only, which makes online flying PC-only; check whether any Xbox path exists (v2 Section 9.4). Check VATSIM's guidance on third-party training material before publishing (Section 54.2).
+Author decision: desk-verified 2026-10-13 against vatsim.net (free to join; approved pilot client for MSFS 2024 is vPilot, Windows; no console client) and VATSIM's Xbox compatibility statement. Still open: check VATSIM's Commercial Use Policy and any guidance on third-party training material before publishing (Section 54.2).
 :::
 
 ## Account, pilot training and ratings
 
 Joining happens on the VATSIM website, not in the sim. The likely steps:
 
-| Step                          | What happens                                                                                                          |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| 1. Register                   | Create an account with your real name and email; you receive a numeric **VATSIM ID**                                  |
-| 2. Join a region and division | Pick where you live, not where you fly; your division provides local support                                          |
-| 3. New member orientation     | A short online course and test on the basics: the rules, how to connect, what to expect                               |
-| 4. Read the Code of Conduct   | You agree to it when you join; the etiquette section below summarizes the parts that bite new pilots                  |
-| 5. Pilot ratings (optional)   | Free training courses with the network's partner organizations lead to P1, P2 and higher ratings. Not required to fly |
+| Step                          | What happens                                                                                                                                            |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Register                   | Create an account with your real, full name and email (you must be 16 or older); you receive a numeric **VATSIM ID**                                    |
+| 2. Join a region and division | Pick where you live, not where you fly; your division provides local support                                                                            |
+| 3. New Member Orientation     | A short online course and exam in myVATSIM on the basics: the rules, how to connect, what to expect. Your account goes active once you pass             |
+| 4. Read the Code of Conduct   | You agree to it when you join; the etiquette section below summarizes the parts that bite new pilots                                                    |
+| 5. Pilot ratings (optional)   | Optional training through the network's Pilot Training Department leads to the P1 (VFR), P2 (IFR), P3 (multi-engine) and P4 (ATP) ratings. Not required |
 
-You do not need a pilot rating to connect and fly VFR. You do need the orientation, and you need a real name: the network does not allow pseudonyms. Keep the VATSIM ID and password; the pilot client asks for both.
+You do not need a pilot rating to connect and fly VFR. You do need the orientation, which the network calls the **P0** rating, and you need a real name: the network does not allow pseudonyms. Keep the VATSIM ID and password; the pilot client asks for both.
 
 :::callout{type="verify"}
-Author note: confirm every row against vatsim.net at the time of writing: the registration flow, whether the new member orientation (or any replacement) is mandatory for pilots, the current rating names (P0–P4 or as renamed), and the real-name policy. Update the step names to match the website's own wording.
+Author decision: desk-verified 2026-10-13 against vatsim.net (free, age 16+, real-name rule in Code of Conduct A4, New Member Orientation course and exam mandatory before logging on, P0 the only rating required, P1–P4 names from the VATSIM pilot training blog). Still open: the sign-up form itself could not be read without an account; confirm the region/division step wording and whether ATO training is free before publishing.
 :::
 
 :::quiz{id="l15-5-q1" type="single"}
@@ -86,10 +88,10 @@ The pilot client is the bridge between MSFS 2024 and the network. For MSFS on Wi
 1. **Install** the client on the same PC as the sim, or on a second PC on the same network.
 2. **Enter your VATSIM ID and password** in the client settings.
 3. **Set a push-to-talk key.** Pick a key or a joystick button you can reach without looking; the same one every time.
-4. **Install model matching** so other pilots' airplanes appear as the right type instead of a default model. The client's documentation names the packages it supports.
-5. **Turn off the sim's own traffic and ATC.** AI traffic, live traffic and the sim's ATC voices conflict with the network. Only network traffic should appear.
+4. **Install model matching** so other pilots' airplanes appear as the right type instead of one of a few default models. When MSFS 2024 support arrived, VATSIM pointed pilots at the free FSLTL package; check the client's current advice.
+5. **Turn off the sim's own traffic and ATC.** AI traffic, live traffic and the sim's ATC voices conflict with the network. Only network traffic should appear. Use free flight, not Career mode, which retunes your radios on its own.
 6. **Choose a call sign and type.** Your call sign is the N-number you want on the radio, such as N172SP. The aircraft type is the ICAO code **C172**.
-7. **Connect**, first in observer mode (below), then as a pilot.
+7. **Connect**, parked, and spend the first session listening (below) before you fly.
 
 Start the sim, load your airplane at a parking spot, and only then connect. Never connect on a runway or taxiway: you appear instantly on everyone's scope and in their windows.
 
@@ -98,12 +100,12 @@ The sim's ATC window and the network are not aware of each other. With the sim's
 :::
 
 :::callout{type="verify"}
-Author note: confirm that vPilot supports MSFS 2024 and is still the client VATSIM recommends; check the current URL, the model-matching recommendation for MSFS 2024, the exact settings names (push-to-talk, VATSIM ID), observer mode, and the MSFS 2024 menu paths for disabling AI traffic, live traffic and ATC voices. Record the client and sim versions. Screenshot for the shot list: "pilot client connect dialog with call sign and type (check the client's terms before publishing)".
+Sim check: desk-verified 2026-10-13: vPilot (vpilot.rosscarlson.dev, v3.12.1 of 15 Feb 2026) is VATSIM's approved client for MSFS 2024; credentials go on its Network tab and the push-to-talk key on its PTT tab; the connect window asks for call sign and type; typed text goes out on the selected COM frequency; the FSLTL advice is from VATSIM's Nov 2024 MSFS 2024 note and may be out of date. Still open: the MSFS 2024 menu paths for disabling AI traffic, live traffic and ATC voices; record client and sim versions; screenshot "pilot client connect dialog with call sign and type (check the client's terms before publishing)".
 :::
 
 ## VFR flight plans and remarks
 
-On VATSIM you file a flight plan for every flight, VFR included. It is how the controller knows what you intend before you call. The client has a flight plan form; the network's website has another. The fields that matter for a VFR flight in the Skyhawk:
+On VATSIM an IFR flight must file a flight plan; a VFR flight is only encouraged to. File one anyway, every time. It is how the controller knows what you intend before you call. The client's Flight Plan button opens the network's own form in your browser. The fields that matter for a VFR flight in the Skyhawk:
 
 | Field           | What to enter                                     | Example                                   |
 | --------------- | ------------------------------------------------- | ----------------------------------------- |
@@ -117,10 +119,10 @@ On VATSIM you file a flight plan for every flight, VFR included. It is how the c
 | Remarks         | Anything the controller should know               | "New VATSIM member, Learn-To-Fly student" |
 | Voice           | Whether you will use voice, receive only, or text | Voice                                     |
 
-The remark is not an apology. Controllers see it on your strip and slow down, spell things out, and expect "say again". Many pilots on the network started the same way, and the ones who declare it get the most patient controllers.
+The remark is not an apology. Controllers see it on your strip and slow down, spell things out, and expect "say again". Many pilots on the network started the same way, and the ones who declare it get the most patient controllers. Voice is the network's preferred mode; receive-only and text-only exist for pilots who cannot use voice.
 
 :::callout{type="verify"}
-Author note: confirm the flight plan form fields and the voice/text indicator against the current pilot client and the VATSIM website, including the aircraft type and equipment format the form expects for a G1000 Skyhawk and whether a pattern flight with the same departure and destination is accepted.
+Author decision: desk-verified 2026-10-13: VFR plans encouraged, IFR required (Code of Conduct B10); vPilot 3.8+ opens the VATSIM ICAO-format web form; voice preferred (Code of Conduct A14). Still open: the live form at my.vatsim.net could not be read without an account; confirm the exact field labels, the type/equipment entry for a G1000 Skyhawk, how the voice capability is entered, and whether a pattern flight with the same departure and destination is accepted.
 :::
 
 :::quiz{id="l15-5-q2" type="single"}
@@ -140,12 +142,12 @@ The remark appears on the controller's strip. A controller who knows you are new
 
 Most of the time at most airports, nobody is controlling. Then VATSIM works like the non-towered airports of [[l7-2-non-towered-airports-ctaf]]: everyone tunes **UNICOM on 122.800** and self-announces. The calls are the ones you already know, with the airport name at both ends: "Livermore traffic, Skyhawk One Two Three, taxiing to runway two five right, Livermore."
 
-The habit that is different from real life is **text**. On VATSIM UNICOM you send the same calls as short typed messages in the client, so pilots without voice can read them: "N172SP, Livermore, departing 25R, right crosswind." Many pilots do both, voice and text, on UNICOM.
+The habit that is different from real life is **text**. UNICOM carries voice, but many pilots also send the same calls as short typed messages in the client, so pilots without voice can read them: "Livermore traffic, N172SP departing runway 25R, right crosswind departure." Typed text goes out on whichever COM frequency you have selected to transmit on.
 
-Before you decide nobody is there, check who is online. The client lists controllers in range, and the network's online map shows staffing. VATSIM controllers work **top-down**: if Oakland Center is online and the Livermore tower is not, Center is your tower. Call Center.
+Before you decide nobody is there, check who is online. The client lists controllers in range, and the network's online map shows staffing. VATSIM controllers work **top-down**: if Oakland Center is online and the Livermore tower is not, Center is your tower. Call Center. When in doubt, ask.
 
 :::callout{type="verify"}
-Author note: confirm the UNICOM frequency (122.800), whether UNICOM is text only or supports voice on the current network, the top-down coverage rule, and the suggested text format against the VATSIM pilot guidance. Challenge C15.5 allows a UNICOM-only flight; make sure its criteria match what is confirmed here.
+Author decision: desk-verified 2026-10-13: 122.800 and the duty to monitor and announce (Code of Conduct B5), voice and text both carried (vPilot documentation), top-down coverage (vatsim.net "Finding ATC"), text format from VATSIM's UNICOM guidance. Still open: make the Challenge C15.5 UNICOM-only criteria match this section.
 :::
 
 :::quiz{id="l15-5-q3" type="single"}
@@ -163,7 +165,7 @@ On VATSIM a higher position covers everything beneath it. With **Center online a
 
 ## Listening first
 
-Your first session on the network should involve no flying at all. Connect in **observer mode**, which lets you tune frequencies and hear everything without appearing as an airplane. Park at a busy airport on the network's map, tune the tower, and listen for 30 minutes.
+Your first session on the network should involve no flying at all. The network's own advice is to connect normally, parked on an apron where you block nobody, and just listen. Pick an airport on the network's map that has a tower online, tune it, and listen for 30 minutes. (The client's "observer mode" is for a second pilot sharing a cockpit, not for this.) Stay at the keyboard: a parked, unattended connection breaks the rules too.
 
 What to listen for:
 
@@ -175,58 +177,50 @@ What to listen for:
 An hour of listening does more for your phraseology than a week of reading. Half of flying on the network is knowing when **not** to transmit.
 
 :::callout{type="tip"}
-Pair the observer session with LiveATC. Real NorCal Approach and the Bay Area towers sound almost exactly like the better VATSIM controllers, and the comparison teaches you which habits are the network's and which are aviation's.
+Pair the listening session with LiveATC. Real NorCal Approach and the Bay Area towers sound almost exactly like the better VATSIM controllers, and the comparison teaches you which habits are the network's and which are aviation's.
 :::
 
 ## Etiquette and the Code of Conduct
 
 The Code of Conduct is short, and most of it is common sense. The parts that catch new pilots:
 
-| Do                                                             | Don't                                                                                                           |
-| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Stay at the controls for the whole time you are connected      | Connect and walk away: an unattended airplane gets disconnected                                                 |
-| Connect at a parking spot and disconnect at one                | Connect on a runway, or disconnect while still taxiing or airborne                                              |
-| Follow controller instructions, and say "unable" if you cannot | Ignore an instruction, or argue on frequency                                                                    |
-| Fly in real time                                               | Pause, slew or speed up time while connected under ATC                                                          |
-| Use your real name and a sensible call sign                    | Use someone else's name, an offensive call sign or a real airline's flight number without the airplane to match |
-| Be courteous on voice and in text                              | Swear, interrupt, or play with the push-to-talk                                                                 |
-| Tell the controller if you need to leave                       | Vanish mid-pattern                                                                                              |
+| Do                                                                       | Don't                                                                                                                            |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| Stay at the controls for the whole time you are connected                | Leave the connection unattended: 30 minutes is the hard limit, and under ATC you ask before stepping away                        |
+| Connect at a parking spot, and disconnect if you have to leave           | Connect on a runway or taxiway, or vanish mid-pattern without a word to the controller                                           |
+| Follow controller instructions, and say "unable" if you cannot           | Ignore an instruction, or argue on frequency                                                                                     |
+| Fly in real time                                                         | Pause while connected (only under ATC, with the controller's permission), or speed up time in controlled airspace without asking |
+| Use real-world weather: at least the live wind, pressure and temperature | Fly in clear-sky weather while everyone else has the marine layer                                                                |
+| Use your real name and a realistic call sign                             | Use a false name, a call sign that implies a status you do not hold, or a fictional aircraft                                     |
+| Be courteous on voice and in text, and keep frequencies for operations   | Swear, chat, interrupt, or play with the push-to-talk                                                                            |
 
 If a controller asks you to do something you do not understand, the right answer is "say again" or "unable, student pilot". If you make a mess of a call, the right answer is to fix it and carry on. Controllers on the network were all new once, and nearly all of them remember it.
-
-:::callout{type="verify"}
-Author note: check each row against the current VATSIM Code of Conduct, especially the rules on pausing, slewing and time acceleration while under ATC, the inactivity disconnect period, the call sign rules, and the real-name policy. Quote nothing; paraphrase. Confirm nothing here suggests behavior the Code prohibits (Section 54.2).
-:::
 
 :::quiz{id="l15-5-q4" type="multi"}
 Which of these break the Code of Conduct? Pick all that apply.
 
-- [x] Pausing the sim on downwind to answer the door while the tower is online
+- [x] Pausing the sim on downwind to answer the door, without asking the tower
 - [x] Connecting while sitting on the runway, ready for takeoff
 - [ ] Saying "unable, student pilot" to a complicated instruction
-- [x] Disconnecting on short final because the landing looks bad
+- [x] Switching on time acceleration on downwind without asking the tower
 - [ ] Putting "new member" in the flight plan remarks
 
 ---
 
-Pausing under ATC, connecting on a runway and disconnecting in flight all break the Code. **"Unable, student pilot"** and an honest remark are exactly what the network wants from a new pilot.
+Pausing under ATC without permission, connecting on a runway and speeding up time in controlled airspace without permission all break the Code. **"Unable, student pilot"** and an honest remark are exactly what the network wants from a new pilot.
 :::
 
 ## vZOA: the Bay Area on VATSIM
 
-The Bay Area and the Sierra belong to **Oakland ARTCC**, run on VATSIM by the virtual facility **vZOA**. Its website lists the positions it staffs, the events it runs, pilot briefings for the busy airports, and the local procedures the controllers expect. Before a flight into San Jose or Oakland, read the facility's pilot briefing for that airport: it tells you the expected VFR arrival routes and which frequency to call first.
+The Bay Area and the Sierra belong to **Oakland ARTCC**, run on VATSIM by the virtual facility **vZOA** at oakartcc.org. Its website shows who is online, the events it runs, and an airports-and-charts page for pilots that was still being rebuilt when this lesson was written. Before a flight into San Jose or Oakland, look there for a pilot briefing; if there is none, the controller's text ATIS and the charts from [[l6-2-airspace]] are enough, and the controller will tell you which frequency to call first.
 
 Events are the best and the worst time for a first flight: the most controllers online, and the busiest frequencies. Save them for after Challenge C15.5.
-
-:::callout{type="verify"}
-Author note: confirm the vZOA website, that it is the Oakland ARTCC facility on VATSIM, and what pilot resources it currently publishes for KLVK, KOAK and KSJC.
-:::
 
 ## Your first flight: a plan
 
 Put the whole lesson together into one short flight:
 
-1. **The night before**: account done, orientation done, client installed, observer session complete.
+1. **The night before**: account done, orientation done, client installed, listening session complete.
 2. **Check the map** for who is online in the Bay Area. A tower or Center online is ideal; nobody online means UNICOM.
 3. **Load the sim** at a Livermore parking spot, airplane running, sim ATC and AI traffic off.
 4. **File the plan**: KLVK to KLVK, VFR, 1,400, "pattern work, new VATSIM member".
@@ -242,7 +236,7 @@ The frequency is a wall of airliners and the controller has said "stand by" twic
 
 Three things to carry forward:
 
-1. Account, orientation, client, observer session: in that order, before the first call.
+1. Account, orientation, client, listening session: in that order, before the first call.
 2. File a VFR plan for every flight, with an honest remark, and connect only at a parking spot.
 3. When nobody is online, UNICOM 122.800 and the CTAF habits from Course 1; when Center is online, Center is your tower.
 

@@ -12,7 +12,7 @@ objectives:
   - Explain why you never enter a canyon without room to turn around.
   - Describe the escape turn, as awareness only.
 challenges: []
-resources: [faa-tips-mountain-flying]
+resources: [faa-tips-mountain-flying, aim-7, phak-ch5]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -26,7 +26,7 @@ In a real airplane, canyon flying is taught by a mountain flying instructor in t
 
 Picture it. You left I-80 to look at a waterfall up one of the American River canyons. The walls were far apart at the mouth. Ten miles in they have closed to a few thousand feet, the floor has risen to meet you, and ahead the canyon bends out of sight. You cannot out-climb the walls, and you cannot see whether the bend opens or ends. This is a box canyon, and it has killed experienced pilots.
 
-The rule from [[l13-2-planning-a-mountain-route]] exists for this moment: **never enter a canyon you cannot turn around in.** Here is the physics behind it, and what the turn looks like if you ever need it.
+The rule from [[l13-2-planning-a-mountain-route]] exists for this moment: **never enter a canyon you cannot turn around in.** The AIM says the same thing: avoid confined terrain without room for a 180° turn, and always fly with a planned escape route. Here is the physics behind it, and what the turn looks like if you ever need it.
 
 ## Why room to turn is everything
 
@@ -72,7 +72,7 @@ A steep turn at low speed is the most dangerous combination in this course. At 4
 :::
 
 :::callout{type="verify"}
-Confirm the escape-turn technique and the "fly one side of the canyon" guidance against "Tips on Mountain Flying" (FAA-P-8740-60) and a mountain flying instructor's review. Check the turn-diameter figures (radius in feet ≈ TAS² ÷ (11.26 × tan bank), TAS in knots) and the 45° bank stall-speed increase against the Cessna 172S POH.
+Author decision: the escape-turn steps (slow down, flaps 10°, one side, 45° coordinated turn) are not in FAA-P-8740-60 or the AIM, which only say keep room for a 180° turn and plan an escape route; have a mountain flying instructor review steps 2–4 or cite a source. (Desk-verified 2026-10-13: the turn-diameter table matches the PHAK Ch 5 formula, the 45° stall-speed increase of about 19% follows from PHAK Ch 5, and flying the updraft side of a valley is in FAA-P-8740-60.)
 :::
 
 :::quiz{id="l13-4-q2" type="single"}

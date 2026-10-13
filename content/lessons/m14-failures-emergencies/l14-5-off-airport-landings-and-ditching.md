@@ -12,7 +12,7 @@ objectives:
   - Choose a landing field by surface, slope, length, wind and obstacles, and explain the order of priority.
   - 'Describe the key points of a ditching: direction, configuration, touchdown attitude and getting out.'
 challenges: []
-resources: [afh-ch18]
+resources: [afh-ch18, aim]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -38,7 +38,7 @@ Pilots use a short priority list. Each line beats the ones below it when they co
 | 4. Surface              | Firm and smooth: pasture, a dry field, a dirt road      | Plowed fields and tall crops flip airplanes; land **along** the furrows |
 | 5. Slope                | Flat, or uphill                                         | Uphill shortens the roll; downhill can make it endless                  |
 
-Trade-offs are the whole game. A short field into the wind usually beats a long one with a tailwind; a slightly uphill field with a clear approach beats a flat one behind power lines. Roads carry wires, signs and traffic. Use the glide ring to shortlist, then apply the table to what is inside it.
+Trade-offs are the whole game. A short field into the wind usually beats a long one with a tailwind; a slightly uphill field with a clear approach beats a flat one behind power lines. Roads carry wires, signs and traffic. Use the glide ring to shortlist, then apply the table to what is inside it. Pick the general area first from altitude, then the spot; you may change your mind once, and a controlled arrival in a poor field beats an uncontrolled one in a good field.
 
 ::widget{name="glide-range" mode="explore"}
 
@@ -68,20 +68,20 @@ Fly it like the forced landing in [[l5-4-engine-failure-and-forced-landings]]: h
 3. **Secure the airplane** before the flare: mixture idle cut-off, fuel off, magnetos off, master off once the flaps are set.
 
 :::callout{type="verify"}
-Check the field-selection priorities and rough-field technique against AFH Chapter 18 ("Emergency approaches and landings" and "Terrain selection"). Confirm the POH Section 3 order for securing the airplane before a forced landing, and the recommended touchdown technique. Note whether the sim models a soft field well enough to score a touchdown.
+Desk-verified 2026-10-13: wind, field dimensions and slope, and obstacles as the three approach factors, poles as the warning for wires along roads, flaps once the landing is certain, engine and fuel off just before touchdown and the master off only when you no longer need power, all confirmed (AFH Ch 18, Terrain Selection, Airplane Configuration, Approach). POH check: Section 3 "Emergency landing without engine power" item order and the touchdown wording (tail-low, flaps 30°). Sim check: whether the sim models a soft field well enough to score a touchdown.
 :::
 
 ## Ditching
 
-Fly from Half Moon Bay toward Monterey and the glide ring is mostly water. A planned landing on water is **ditching**, and the Skyhawk, with its fixed gear, will almost certainly flip as the wheels dig in. That is survivable if you have thought about it in advance. This section is awareness, not a skill you will be scored on.
+Fly from Half Moon Bay toward Monterey and the glide ring is mostly water. A planned landing on water is **ditching**. A Skyhawk ditched slowly in a normal landing attitude does not sink at once; the wings and tanks float it for minutes, even with the cabin at the waterline, though the fixed gear may dig in and tip it over. That is survivable if you have thought about it in advance. This section is awareness, not a skill you will be scored on.
 
-| Decision         | Guidance                                                                                                     |
-| ---------------- | ------------------------------------------------------------------------------------------------------------ |
-| Direction        | Land **parallel to the swells**, not into their faces. In a strong wind with small waves, land into the wind |
-| Configuration    | Full flaps, power off, slowest controllable speed                                                            |
-| Attitude         | Nose up, like a soft-field landing. Do not dive in, and do not stall high above the water                    |
-| Before touchdown | Doors unlatched, belts tight, life vests on but **not** inflated inside the cabin                            |
-| After            | Wait for the motion to stop, find the door, get out, then inflate the vest                                   |
+| Decision         | Guidance                                                                                                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Direction        | Land **parallel to the swells**, never into a swell face; of the two parallel headings, take the one with the most headwind. Only a strong wind with small swells justifies landing into the wind |
+| Configuration    | Full flaps, slowest controllable speed. If the engine still runs, use power to drag it in at a gentle, steady descent                                                                             |
+| Attitude         | Nose up, like a soft-field landing. Do not dive in, and do not stall high above the water                                                                                                         |
+| Before touchdown | Doors unlatched, belts tight, life vests on but **not** inflated inside the cabin                                                                                                                 |
+| After            | Wait for the motion to stop, find the door, get out, then inflate the vest                                                                                                                        |
 
 Judging height over smooth water is hard: use the altimeter and a gentle, steady descent rate rather than flaring by eye. Land near a boat or the shore if you can, so someone sees you.
 
@@ -90,7 +90,7 @@ No one practices ditching in an airplane, and this lesson will not make you read
 :::
 
 :::callout{type="verify"}
-Verify the ditching guidance against AFH Chapter 18 ("Ditching"): swell direction rule, touchdown attitude, and the fixed-gear flip-over note. Check whether MSFS 2024 allows a water landing in the Skyhawk at all (it may crash or reset). If not, keep this section as awareness only and say so in the sim callout.
+Desk-verified 2026-10-13: parallel to the swell with the most into-wind component, avoid the swell face, lowest speed and descent rate with a nose-up attitude, use power if available, and the difficulty of judging height over smooth water confirmed (AIM 6-3-3; AFH Ch 18, Water (Ditching) and Snow). POH check: Section 3 "Ditching" flap setting (20°–30°?), descent rate and touchdown attitude wording. Sim check: whether MSFS 2024 allows a water landing in the Skyhawk at all (it may crash or reset); if not, keep this section awareness-only and say so in the sim callout.
 :::
 
 :::quiz{id="l14-5-q2" type="single"}

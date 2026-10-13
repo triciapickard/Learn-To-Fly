@@ -13,7 +13,7 @@ objectives:
   - Compute endurance and the fuel required for a planned flight, including the legal reserve and a personal buffer.
   - Manage the fuel selector and recognize and correct a fuel imbalance.
 challenges: []
-resources: [phak-ch7, aopa-asi]
+resources: [phak-ch7, aopa-asi, ecfr-91-151]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -58,18 +58,18 @@ Learn-To-Fly teaches the method in the in-sim cruise checklist: at cruise power,
 4. Push the mixture back in until EGT is about 50 °F below peak on the rich side: **rich of peak**, a safe compromise between power and economy.
 5. Note the fuel flow. It should fall from around 13–14 GPH at full rich to about {{aircraft.fuelBurn}}.
 
-| Mixture setting       | EGT                       | Power                    | When                                       |
-| --------------------- | ------------------------- | ------------------------ | ------------------------------------------ |
-| Full rich             | Well below peak           | Full                     | Takeoff and climb below 3,000 ft           |
-| Best power            | About 100 °F rich of peak | Highest at this throttle | Climbing at altitude, when you need it all |
-| Rich of peak (taught) | About 50 °F rich of peak  | Slightly less            | Normal cruise at 75% power or less         |
-| Peak EGT              | Peak                      | Less                     | Best economy; only at low cruise power     |
-| Lean of peak          | Below peak, lean side     | Less                     | Not taught in this course                  |
+| Mixture setting       | EGT                       | Power                    | When                                                          |
+| --------------------- | ------------------------- | ------------------------ | ------------------------------------------------------------- |
+| Full rich             | Well below peak           | Full                     | Takeoff and climb below 3,000 ft                              |
+| Best power            | About 100 °F rich of peak | Highest at this throttle | Climbing at altitude, when you need it all                    |
+| Rich of peak (taught) | About 50 °F rich of peak  | Slightly less            | Normal cruise at 75% power or less                            |
+| Peak EGT              | Peak                      | Less                     | Best economy at 75% power or less, if the engine stays smooth |
+| Lean of peak          | Below peak, lean side     | Less                     | Not taught in this course                                     |
 
 Re-lean after every altitude or power change: climb and the mixture you set is rich again; descend and it is lean, so push it in as you come down. The before-landing checklist sets it full rich.
 
 :::callout{type="verify"}
-The in-sim cruise checklist (`content/checklists.yaml → cruise`) says "lean to peak EGT, then enrich slightly (simplified in v1)". Confirm the method and the 50 °F / 100 °F rich-of-peak figures against the 172S POH Section 4 cruise leaning notes and against how the MSFS 2024 G1000 NXi lean page behaves (ENGINE softkey → LEAN; does it show a ΔPEAK readout and assist mode?). Confirm the full-rich cruise fuel flow (13–14 GPH used here). Screenshot for the shot list: "G1000 lean page at peak EGT in cruise".
+Sim check: on the MSFS 2024 G1000 NXi, confirm that ENGINE → LEAN → ASSIST shows a ΔPEAK readout and marks peak per cylinder, and record the full-rich fuel flow at 2,300–2,400 RPM (13–14 GPH used here). POH check: 50 °F rich of peak as the recommended-lean setting (the widely published 172S NAV III POH copy, Section 4 Figure 4-4, agrees; 100 °F rich of peak for best power is Lycoming SI 1094D). Screenshot for the shot list: "G1000 lean page at peak EGT in cruise".
 :::
 
 :::callout{type="sim"}
@@ -81,10 +81,6 @@ Engine roughness modelling. A real engine shakes, then stumbles, as you lean too
 The climb checklist says mixture rich, and at Bay Area field elevations that is right: the extra fuel helps keep the cylinders cool. Above about 3,000 ft pressure altitude full rich costs power, and the checklist note says lean for **maximum RPM**: pull the mixture slowly until the tachometer stops rising, then stop.
 
 The same idea applies on the ground at a high airport. At Truckee, about 5,900 ft, full rich at full throttle makes noticeably less power than the engine has. During the run-up, at full throttle, lean until the RPM peaks, and take off with that mixture. [[l13-3-high-elevation-airport-operations]] turns this into a procedure.
-
-:::callout{type="verify"}
-The 3,000 ft pressure-altitude threshold and "lean for maximum RPM" are from the v1 climb checklist note, citing the POH. Confirm against the 172S POH Section 4 (takeoff and climb) and verify the KTRK elevation (about 5,900 ft) before publishing.
-:::
 
 :::quiz{id="l9-4-q2" type="single"}
 You are about to take off from an airport at 6,000 ft pressure altitude. The mixture should be…
@@ -105,11 +101,11 @@ Fuel planning is multiplication plus honesty. The Skyhawk carries {{aircraft.fue
 
 | Item                              | Gallons |
 | --------------------------------- | ------- |
-| Taxi, run-up, takeoff and climb   | 2       |
+| Start, taxi, takeoff and climb    | 3       |
 | Cruise, 1 h 40 min at 10 GPH      | 17      |
 | Legal day reserve, 30 min         | 5       |
 | Personal buffer, 1 h              | 10      |
-| **Fuel required at engine start** | **34**  |
+| **Fuel required at engine start** | **35**  |
 
 With full tanks you have 53 gal, so this leg is comfortable. Turn it around and you get **endurance**: on 53 gal at 10 GPH the tanks last about 5 hours 20 minutes, so about 4 hours 50 minutes by day before you touch the reserve, less once your buffer is counted. On a long leg, "do I have enough" becomes "at what time must I be on the ground," and you write that time on the nav log.
 
@@ -118,7 +114,7 @@ Note fuel at every checkpoint. Next to each checkpoint time on the nav log, writ
 :::
 
 :::callout{type="verify"}
-Day and night VFR reserves (30 and 45 minutes at normal cruise) are 14 CFR 91.151; confirm the wording. Confirm the taxi, takeoff and climb allowance (2 gal used here) against the 172S POH Section 5 note on fuel for engine start, taxi and takeoff, and confirm the G1000 NXi fuel totalizer behaviour in the sim (does it ask for fuel on board at start-up?).
+Sim check: does the MSFS 2024 NXi fuel totalizer ask for fuel on board at start-up, or does it read the sim's tank quantity? POH check: the 3 gal start, taxi, takeoff and climb allowance (the widely published 172S POH copy gives 1.4 gal for start, taxi and takeoff, plus the Section 5 climb-table fuel).
 :::
 
 :::quiz{id="l9-4-q3" type="numeric" answer="210" tolerance="5" unit="min"}
@@ -135,18 +131,18 @@ The Skyhawk's tanks feed by gravity through a selector with three positions: **L
 
 In cruise the tanks do not always feed evenly: flying with the ball off-center, or one wing slightly low for a long time, drains one tank faster. A few gallons of difference is normal. A large one is worth fixing, because a heavy wing is tiring and an empty tank is a surprise you do not want.
 
-| Situation                                | Action                                                            |
-| ---------------------------------------- | ----------------------------------------------------------------- |
-| Tanks within a few gallons               | Stay on BOTH                                                      |
-| One tank several gallons lower in cruise | Select the fuller tank for a while, then back to BOTH             |
-| Before descent and landing               | BOTH, confirmed on the before-landing checklist                   |
-| Fuel pressure dropping, engine faltering | Fuel pump ON, selector to BOTH or the fuller tank, mixture rich   |
-| One gauge reads unexpectedly low         | Believe it until proven otherwise; cross-check time and totalizer |
+| Situation                                | Action                                                                |
+| ---------------------------------------- | --------------------------------------------------------------------- |
+| Tanks within a few gallons               | Stay on BOTH                                                          |
+| One tank several gallons lower in cruise | Select the fuller tank for a while, then back to BOTH                 |
+| Before descent and landing               | BOTH, confirmed on the before-landing checklist                       |
+| Fuel pressure dropping, engine faltering | Fuel pump ON, selector BOTH, mixture RICH, shutoff valve confirmed ON |
+| One gauge reads unexpectedly low         | Believe it until proven otherwise; cross-check time and totalizer     |
 
 The fuel shutoff valve is separate from the selector and stays open in flight; it is for fire and shutdown, not balancing. Fuel-starvation accidents almost always have fuel somewhere on the airplane. The selector, the gauges and the clock are how you make sure it reaches the engine.
 
 :::callout{type="verify"}
-Confirm the selector positions and the takeoff/landing BOTH requirement against the 172S POH Section 7, confirm how the MSFS 2024 Skyhawk models uneven tank feed and the selector (does LEFT/RIGHT actually change the flow?), and confirm the fuel-pump and selector actions in the engine-faltering row against POH Section 3 and `aircraft.yaml`.
+Sim check: does the MSFS 2024 Skyhawk model uneven tank feed, and does LEFT or RIGHT on the selector change which tank drains? (Desk-verified 2026-10-13: selector positions, BOTH for takeoff and landing, LEFT or RIGHT for level cruising flight only, and the restart actions match the widely published 172S POH Sections 2, 3 and 7 and `checklists.yaml`.)
 :::
 
 :::quiz{id="l9-4-q4" type="single"}

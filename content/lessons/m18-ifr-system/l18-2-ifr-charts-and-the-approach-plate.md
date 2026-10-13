@@ -10,7 +10,7 @@ estimatedMinutes: 30
 prerequisites: [l18-1-ifr-rules-minimums-currency-alternates-and-fuel]
 objectives:
   - Identify airways, fixes, MEA and MOCA on an enroute low altitude chart.
-  - Name the five parts of an approach plate and say what you read from each.
+  - Name the six parts of an approach plate and say what you read from each.
   - Choose the correct minima line for the Skyhawk and state its DA or MDA and visibility.
   - Find a current plate in the d-TPP and check its effective dates.
 challenges: []
@@ -38,23 +38,23 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 The enroute chart is a network map: its roads are **airways**, its junctions are **fixes**, and almost every line carries an altitude.
 
-| Element                 | What it looks like                                       | What it tells you                                                              |
-| ----------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Victor airway (V-route) | A black line labelled "V" and a number, between VORs     | A VOR-defined route; the radial from each end is printed on it                 |
-| T-route                 | A blue line labelled "T" and a number                    | A GPS-only route, often routed around busy airspace                            |
-| VOR                     | A compass rose with a frequency box and Morse identifier | The navaid that defines the airway; identify it as in [[l6-4-vor-navigation]]  |
-| Fix or intersection     | A small triangle, with a five-letter name                | A named point; a **filled** triangle is a compulsory reporting point           |
-| MEA                     | A bold number on the airway segment (for example 5000)   | Minimum enroute altitude: obstacle clearance and navaid reception              |
-| MOCA                    | A number with an asterisk (for example \*3500)           | Minimum obstruction clearance altitude: obstacle clearance only                |
-| MRA                     | A flag with "MRA" and an altitude at a fix               | Minimum reception altitude to identify that fix with a VOR                     |
-| MCA                     | A flag with "MCA" at a fix, with a direction             | Minimum crossing altitude: be at or above it before crossing in that direction |
-| Segment distance        | A number inside a box, or alongside the segment          | Nautical miles between fixes; totals between VORs are in a box with arrows     |
-| Changeover point        | A bent symbol like a stepped line across the airway      | Where to switch from the VOR behind you to the one ahead                       |
+| Element                 | What it looks like                                                         | What it tells you                                                                                   |
+| ----------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Victor airway (V-route) | A black line labelled "V" and a number, between VORs                       | A VOR-defined route; the radial from each end is printed on it                                      |
+| T-route                 | A blue line labelled "T" and a number                                      | A GPS-only route, often routed around busy airspace                                                 |
+| VOR                     | A compass rose with a frequency box and Morse identifier                   | The navaid that defines the airway; identify it as in [[l6-4-vor-navigation]]                       |
+| Fix or intersection     | A small triangle, with a five-letter name                                  | A named point; a **filled** triangle is a compulsory reporting point, an open one is "on request"   |
+| MEA                     | A number on the airway segment (for example 5000; 5000G is a GPS-only MEA) | Minimum enroute altitude: obstacle clearance and navaid reception                                   |
+| MOCA                    | A number with an asterisk (for example \*3500)                             | Minimum obstruction clearance altitude: obstacle clearance only                                     |
+| MRA                     | A flag with "MRA" and an altitude at a fix                                 | Minimum reception altitude to identify that fix with a VOR                                          |
+| MCA                     | A flag with "MCA" at a fix, with a direction                               | Minimum crossing altitude: be at or above it before crossing in that direction                      |
+| Segment distance        | A number inside a box, or alongside the segment                            | Nautical miles between fixes; totals between VORs are in a box with arrows                          |
+| Changeover point        | A bent symbol like a stepped line across the airway                        | Where to switch from the VOR behind you to the one ahead; shown only when it is not at the midpoint |
 
 The source for every symbol is the FAA Chart User's Guide, and the chart is reissued on a **56-day** cycle.
 
 :::callout{type="verify"}
-Verify every symbol description against the current Chart User's Guide (IFR enroute section) and confirm the enroute chart cycle (56 days). Screenshot for the shot list: none; use an original annotated drawing of a sample airway segment (not a chart crop) once the illustrator is available.
+Author decision: illustrate this section with an original annotated drawing of a sample airway segment (not a chart crop) once the illustrator is available. Symbols desk-verified 2026-10-13 against the Chart Users' Guide (9 July 2026 edition).
 :::
 
 ## The altitude alphabet
@@ -74,10 +74,6 @@ That is why the MOCA is often lower. With GPS as primary navigation, ATC may cle
 | MCA      | Terrain clearance after a fix                  | Climb before the fix when the next MEA is higher    |
 | MAA      | Staying out of conflicting signals or airspace | The maximum altitude on the segment                 |
 | OROCA    | Terrain clearance for a whole grid square      | Off-airway planning only; it is not an ATC altitude |
-
-:::callout{type="verify"}
-Verify the MEA, MOCA, MRA, MCA, MAA and OROCA definitions against the Chart User's Guide and the Instrument Procedures Handbook (enroute chapter). Confirm the 22 nm MOCA reception figure and how 91.177 treats operating below the MEA with GPS.
-:::
 
 :::quiz{id="l18-2-q1" type="single"}
 An airway segment shows an MEA of 5,000 ft and a MOCA of \*3,500 ft. What does the MOCA guarantee that the MEA does not have to?
@@ -99,7 +95,7 @@ An **approach plate** is a one-page set of instructions for getting from the enr
 To teach it, Learn-To-Fly uses the **Learn-To-Fly Training Plate**: an original, fictional **RNAV (GPS) RWY 25** approach to an invented airport called Training Field. It looks like an FAA plate but is not a real procedure, and is watermarked "Training plate — not a real procedure — not for navigation".
 
 :::callout{type="verify"}
-Widget W38 (Approach Plate Explorer) is embedded here once Phase 21 ships it: `::widget{name="approach-plate" mode="explore"}`. Until then the tables below describe the training plate; keep every number consistent with `content/approach-plates/` when the SVG and hotspot JSON are drawn (D2-10). Screenshot for the shot list: none (plate crops are never used).
+Widget pending: Widget W38 (Approach Plate Explorer) is embedded here once Phase 21 ships it: `::widget{name="approach-plate" mode="explore"}`. Until then the tables below describe the training plate; keep every number consistent with `content/approach-plates/` when the SVG and hotspot JSON are drawn (D2-10). Screenshot for the shot list: none (plate crops are never used).
 :::
 
 Read a plate from the top down. The order is the order you brief it:
@@ -132,12 +128,12 @@ The briefing strip gathers the facts you need first: final approach course, runw
 
 The minima section is the business end of the plate. Each **line** is an approach type; each **column** is an aircraft **category** by approach speed. The Skyhawk's final approach target of {{vspeed.approach}} puts it in **Category A**.
 
-| Category | Approach speed (1.3 × stall speed in landing configuration) | Typical aircraft |
-| -------- | ----------------------------------------------------------- | ---------------- |
-| A        | Less than 91 kt                                             | Skyhawk          |
-| B        | 91–120 kt                                                   | Light twins      |
-| C        | 121–140 kt                                                  | Regional jets    |
-| D        | 141–165 kt                                                  | Airliners        |
+| Category | Approach speed (Vref, or 1.3 × stall speed in landing configuration) | Typical aircraft |
+| -------- | -------------------------------------------------------------------- | ---------------- |
+| A        | Less than 91 kt                                                      | Skyhawk          |
+| B        | 91–120 kt                                                            | Light twins      |
+| C        | 121–140 kt                                                           | Regional jets    |
+| D        | 141–165 kt                                                           | Airliners        |
 
 Now the training plate's minima, read down the Category A column:
 
@@ -151,7 +147,7 @@ Now the training plate's minima, read down the Category A column:
 The bracketed number is the **height above touchdown** (HAT) for straight-in lines, or height above airport for circling. Visibility is in statute miles, or an RVR value on runways that measure it. Which line you may use depends on equipment and signal: with a working WAAS GPS and an "LPV" annunciation on the HSI, you fly the LPV line.
 
 :::callout{type="verify"}
-Approach categories are in 14 CFR 97.3 and the d-TPP legend. Confirm the speed bands and the 1.3 × Vso definition. The training plate minima above are invented; keep them identical to the W38 data file once it exists so the hotspot questions stay correct.
+Widget pending: the training plate minima above are invented; keep them identical to the W38 data file once it exists so the hotspot questions stay correct. Categories desk-verified 2026-10-13 against 14 CFR 97.3.
 :::
 
 :::quiz{id="l18-2-q3" type="single"}
@@ -177,17 +173,13 @@ The symbols you must recognize on any plate:
 | Triangle with **A** and "NA"        | Not authorised as an alternate                                                                                              |
 | Triangle with **T** inside          | Non-standard takeoff minimums or an obstacle departure procedure; see [[l18-3-clearances-and-departures]]                   |
 | Maltese cross in the profile view   | The final approach fix for a non-precision approach                                                                         |
-| Lightning-bolt arrow in the profile | Glideslope or glidepath intercept point, the FAF for a precision approach                                                   |
+| Lightning-bolt arrow in the profile | Glideslope intercept altitude, the start of the final segment on a precision approach                                       |
 | Dashed line in plan or profile      | The missed approach path                                                                                                    |
 | "Procedure NA for arrivals at…"     | A restriction on how you may join the approach                                                                              |
 | Minima line marked "NA"             | That line is not available (for example, circling to a runway over terrain)                                                 |
 | Inoperative components note         | Higher minima when runway lights or a part of the system is out of service                                                  |
 
 Read every note out loud when you brief. The note you skip is the one that applies today.
-
-:::callout{type="verify"}
-Verify each symbol against the d-TPP legend pages and the Chart User's Guide (terminal procedures section). Confirm the current rendering of the alternate and takeoff minimums symbols (triangle-A and triangle-T) and the inoperative components table reference.
-:::
 
 :::quiz{id="l18-2-q4" type="single"}
 A plate shows a triangle with a "T" inside it next to the airport name. What should you do?
@@ -206,10 +198,10 @@ The "T" triangle means the airport has non-standard takeoff minimums, an obstacl
 
 Real plates come from the FAA's **digital Terminal Procedures Publication** (d-TPP), free, as one PDF per procedure, reissued on a **28-day** cycle. Each plate's margin shows the dates it is valid. An approach is amended when a tower is built, a minimum changes, a fix is renamed or a runway renumbered. Flying last cycle's plate means flying against a world that has moved.
 
-For the Livermore procedures used in Course 3, the **ILS or LOC RWY 25R** and the **RNAV (GPS) RWY 25R** at KLVK (not for navigation), each challenge brief links to the current d-TPP PDF and records the cycle checked. The sim's navigation database follows a different, usually older cycle, so a fix name or minimum in the sim may differ from the current plate. When that happens, the lesson teaches the current one and the challenge flies the sim's.
+For the Livermore procedures used in Course 3, the **ILS RWY 25R**, the **LOC RWY 25R** and the **RNAV (GPS) RWY 25R** at KLVK (not for navigation), each challenge brief links to the current d-TPP PDF and records the cycle checked. The cycle matters even here: in the October 2026 cycle the ILS and LOC were issued as two separate plates. The sim's navigation database follows a different, usually older cycle, so a fix name or minimum in the sim may differ from the current plate. When that happens, the lesson teaches the current one and the challenge flies the sim's.
 
 :::callout{type="verify"}
-Record the d-TPP cycle checked for the KLVK ILS or LOC RWY 25R and RNAV (GPS) RWY 25R (v2 Section 12.4; candidates only until verified in both the d-TPP and the sim's nav database). Confirm the 28-day d-TPP cycle and the current d-TPP URL in `resources.yaml`. Record the sim's AIRAC cycle for the version tested.
+Sim check: record the sim's AIRAC cycle for the version tested and confirm the KLVK ILS RWY 25R, LOC RWY 25R and RNAV (GPS) RWY 25R exist in its nav database. Desk-verified 2026-10-13: all three are charted in d-TPP cycle 2610 (effective 1–29 Oct 2026); 28-day cycle and `faa-dtpp` URL confirmed.
 :::
 
 :::callout{type="decision"}

@@ -14,7 +14,7 @@ objectives:
   - Land at night with and without the landing light, using the runway edge lights to judge the flare.
   - State the night currency rule and explain why it exists.
 challenges: []
-resources: [afh-ch11, ecfr-61-57, msfs-checklist]
+resources: [afh-ch11, ecfr-61-57, msfs-checklist, phak-ch17, faa-chart-supplement]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -50,7 +50,7 @@ On a steam-gauge Skyhawk, the panel is lit by small post lights beside each inst
 :::
 
 :::callout{type="verify"}
-Confirm the MSFS 2024 Skyhawk's cockpit lighting controls (panel, flood and glareshield dimmers; G1000 NXi display brightness and whether the photocell auto-dim is modeled) and the light switch names, and record the sim version. Cross-check the light-by-phase table against the in-sim checklist and v2 Appendix B.2. Screenshot for the shot list: "panel lighting".
+Sim check: confirm the MSFS 2024 Skyhawk's cockpit lighting controls (panel, flood and glareshield dimmers; G1000 NXi display brightness and whether the photocell auto-dim is modeled) and the light switch names against the in-sim checklist, and record the sim version. Screenshot for the shot list: "panel lighting". Desk-verified 2026-10-13: the light-by-phase table matches AFH Chapter 11 and v2 Appendix B.2.
 :::
 
 ## Taxi at night
@@ -61,10 +61,10 @@ Taxiing at night is slower, and it should be. Distances are hard to judge, hold-
 2. **Walking pace.** If you have to brake hard to stop at a hold-short line, you were too fast. Use the airport diagram and confirm each sign against it, as in [[l3-2-taxiing-signs-and-markings]].
 3. **Runway guard lights mean stop and think.** Alternating flashing yellow at a hold point is the airport telling you a runway is next. Do not cross without a clearance (towered) or a look and a call (non-towered).
 
-At Livermore the tower closes at 9 p.m. local; after that the airport is non-towered and you make CTAF calls on the tower frequency, 118.1. Night at a towered airport can mean a non-towered airport, so check the hours before you plan the flight.
+At Livermore the tower closes at 9 p.m. local; after that the Class D lapses to Class G, the airport is non-towered and you make CTAF calls on the tower frequency, 118.1. The lights change too: the short runway's edge lights are off after hours, the long runway's sit at low intensity until you key 118.1, and the PAPIs stay on. Night at a towered airport can mean a non-towered airport, so check the hours before you plan the flight.
 
 :::callout{type="verify"}
-Confirm KLVK tower hours (0700–2100 local per `airports.yaml`) and the after-hours CTAF against the current Chart Supplement. Check how MSFS 2024 handles a closed tower: whether sim ATC still answers after hours, and whether the Class D reverts to E or G in the sim.
+Sim check: does sim ATC still answer at KLVK after 2100 local in MSFS 2024, and does the sim drop the Class D? Desk-verified 2026-10-13: tower 0700–2100 local, CTAF 118.1, Class D service hours then Class G, and the after-hours lighting, per the Chart Supplement SW.
 :::
 
 ## Takeoff and the black climb-out
@@ -119,7 +119,7 @@ Wider, no early descent, and an earlier checklist are the night changes. Closer 
 
 With the landing light on, final at night looks like a very dark day: the runway lights give you the aim point and the PAPI gives you the path. The light does not reach the runway until you are low. When the beam sweeps the pavement and you can suddenly see texture and the centerline, that is your cue to begin the roundout, just as the runway "spreading out" is by day.
 
-Without the landing light (it fails, or you are practicing for the day it does), you fly the flare on the **runway edge lights**. On a normal approach they converge toward a point ahead. As you near the ground they appear to spread apart and rise up to your sides. Start the roundout a little higher than you think you should, hold the nose-high attitude, reduce the power slowly, and let the airplane settle. It may feel like you are waiting a long time. That is normal.
+Without the landing light (it fails, or you are practicing for the day it does), you fly the flare on the **runway edge lights**. On a normal approach they converge toward a point ahead. As you near the ground they appear to spread apart and rise up to your sides. Start the roundout when the far-end runway lights first seem to rise above the nose, hold the nose-high attitude, reduce the power slowly, and feel for the runway with small pitch and power changes. It may feel like you are waiting a long time. That is normal.
 
 ::widget{name="landing-sight-picture" mode="explore"}
 
@@ -128,7 +128,11 @@ The sim's landing light does illuminate the ground, so the "beam sweeps the pave
 :::
 
 :::callout{type="verify"}
-Widget W18 is used here in its night mode once the Phase 20 extension ships ("W18 (+night)", v2 Section 17); until then the default explore mode shows the day sight picture. Confirm how the MSFS 2024 landing light renders on the runway at the flare and record the sim version. Widget W27 (Airport Lighting Explorer) is also referenced from this lesson for the runway-light perspective view.
+Widget pending: W18 is used here in its night mode once the Phase 20 extension ships ("W18 (+night)", v2 Section 17); until then the default explore mode shows the day sight picture. Widget W27 (Airport Lighting Explorer) is also referenced from this lesson for the runway-light perspective view.
+:::
+
+:::callout{type="verify"}
+Sim check: confirm how the MSFS 2024 landing light renders on the runway at the flare and record the sim version.
 :::
 
 ## Night currency, and why it exists
@@ -144,10 +148,6 @@ Three definitions of "night" exist, and each one does a different job:
 The currency rule, in plain language: **to carry passengers at night, you must have made 3 takeoffs and 3 landings to a full stop within the preceding 90 days, at night (1 hour after sunset to 1 hour before sunrise), in the same category and class of airplane.** Touch-and-goes do not count; each landing must be to a full stop.
 
 Why does the rule exist? Because the night landing is the most perishable skill in flying. The flare is a judgment of height from a few sliding lines of light, and that judgment decays in weeks, not years. Three full-stop landings in 90 days is the regulator's estimate of how often you need to refresh it before you put someone else in the right seat. Learn-To-Fly's logbook tracks a sim version of the same rule so you build the habit of checking it before a night flight.
-
-:::callout{type="verify"}
-Check the three night definitions against 14 CFR 1.1 (night), 61.51 (logging) and 61.57(b) (recent flight experience: night), and confirm the currency wording: 3 takeoffs and 3 landings to a full stop, preceding 90 days, between 1 hour after sunset and 1 hour before sunrise, same category, class and type if required. Confirm the sim currency panel wording in v2 Section 18.4 matches.
-:::
 
 :::quiz{id="l12-3-q3" type="single"}
 Which of these satisfies night currency to carry passengers?

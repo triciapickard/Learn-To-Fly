@@ -13,7 +13,7 @@ objectives:
   - Intercept and track the localizer and glideslope with corrections sized to the needle sensitivity.
   - Fly the ILS to decision altitude hand-flown and coupled, and state what must be in sight to continue below DA.
 challenges: []
-resources: [iph-approaches, ifh-nav, ecfr-91-175]
+resources: [iph-approaches, ifh-nav, ecfr-91-175, aim-1-1, garmin-g1000-nxi-pilots-guide, faa-dtpp]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -46,7 +46,7 @@ Because the wedge narrows, the same error in feet is a bigger needle movement th
 ::widget{name="vor-cdi" mode="explore"}
 
 :::callout{type="verify"}
-Widget W36 (HSI, CDI Scaling and ILS) is embedded here once Phase 21 ships it: `::widget{name="hsi-cdi-ils" mode="ils"}`, with its "where is the aircraft?" quiz. The vor-cdi widget above shows the angular principle at VOR sensitivity. Confirm the full-scale values (localizer ±2.5°, 700 ft at the threshold; glideslope ±0.7°) against the IFH navigation chapter and AIM 1-1-9, and the worked numbers (1° at 5 nm ≈ 530 ft; at 1 nm ≈ 106 ft) against Appendix F.6.
+Widget pending: Widget W36 (HSI, CDI Scaling and ILS) is embedded here once Phase 21 ships it: `::widget{name="hsi-cdi-ils" mode="ils"}`, with its "where is the aircraft?" quiz. The vor-cdi widget above shows the angular principle at VOR sensitivity.
 :::
 
 :::quiz{id="l20-3-q1" type="single"}
@@ -67,14 +67,14 @@ The localizer is a wedge. Full scale is the same _angle_ everywhere, so the same
 The ILS setup is a short ritual, done during the approach briefing from [[l20-1-anatomy-of-an-instrument-approach]] so that each item on the plate is matched by an action in the cockpit.
 
 1. **Tune** the localizer frequency from the briefing strip into NAV1 (standby, then flip-flop to active). The glideslope is paired to the same frequency; there is nothing separate to tune.
-2. **Identify** it. A localizer identifier is four letters starting with I, sent in Morse: the Training Plate's is **I-LTF**. On the G1000, the decoded identifier appears next to the frequency once the signal is received; you can also turn up the NAV audio and listen to the dots and dashes against the plate.
+2. **Identify** it. A localizer identifier is four letters starting with I, sent in Morse: the Training Plate's is **I-LTF**. On the G1000, the decoded identifier appears in the NAV frequency box once the signal is received; you can also push the NAV VOL/ID knob to hear the Morse and check it against the plate.
 3. **Set the course.** Turn the CRS knob to the final approach course from the plate (280 on the Training Plate). On the HSI, the localizer needle rotates with the course arrow, so a wrong course gives you a tilted picture and a wrong intercept.
 4. **Set the minimums** bug to the DA, and the heading bug to the expected vector.
 
 Identifying is not optional. A localizer on a nearby frequency, or one under maintenance with the ident switched off, will show a needle that means nothing. If the identifier is missing or wrong, the ILS is not usable.
 
 :::callout{type="verify"}
-Confirm how the MSFS 2024 G1000 NXi shows the decoded localizer identifier and how to listen to the Morse (NAV1 audio selection on the audio panel). Confirm the Training Plate identifier I-LTF is the one used in the W38 data. Screenshot for the shot list: "NAV1 with localizer tuned and identified (I-LTF)".
+Sim check: the decoded identifier in the NAV frequency box and the NAV VOL/ID knob for Morse audio are confirmed in Garmin 190-02177-02. Still open: that the Working Title NXi in MSFS 2024 decodes the ident, and the screenshot "NAV1 with localizer tuned and identified (I-LTF)". Author decision: I-LTF must match the W38 Training Plate data when it exists.
 :::
 
 :::quiz{id="l20-3-q2" type="single"}
@@ -94,7 +94,7 @@ A centered needle with no identifier is a needle you cannot trust. The localizer
 
 Modern IFR flying has a trap built into it. You fly enroute and to the intercept on GPS, with a magenta needle. The ILS needs the HSI to show the localizer, a green needle driven by NAV1. If the CDI source is still GPS when you intercept, the needle you follow is the GPS leg, not the localizer, and the glideslope never appears.
 
-The G1000 NXi is designed to switch the CDI source for you: with an ILS approach loaded and activated and the localizer tuned, it changes GPS → LOC on its own as you approach the final approach course. That is convenient, and it is exactly why you must check it rather than assume it. The callout, every ILS, as the localizer comes alive: "**CDI green, LOC1, course 280, glideslope alive.**" If the needle is still magenta, press the **CDI** softkey until it reads LOC1.
+The G1000 NXi is designed to switch the CDI source for you: with an ILS approach loaded and the localizer tuned, it changes GPS → LOC on its own once the FAF is the active leg and you are within 15 nm of it (activating Vector-to-Final switches it too). That is convenient, and it is exactly why you must check it rather than assume it. The callout, every ILS, as the localizer comes alive: "**CDI green, LOC1, course 280, glideslope alive.**" If the needle is still magenta, press the **CDI** softkey until it reads LOC1.
 
 | Check                   | Right                                         | Wrong                             |
 | ----------------------- | --------------------------------------------- | --------------------------------- |
@@ -104,7 +104,7 @@ The G1000 NXi is designed to switch the CDI source for you: with an ILS approach
 | Glideslope indicator    | Present (a green diamond, alive or centering) | Absent, or the magenta GP diamond |
 
 :::callout{type="verify"}
-Verify the automatic GPS → LOC switch in the MSFS 2024 G1000 NXi: whether it happens, when (about 2 nm before the FAF with the approach active and the localizer tuned), and whether it works with the VECTORS transition. Verify the needle colours (magenta GPS, green LOC) and the HSI source labels. If auto-switching does not occur in the sim, rewrite this section to teach the manual CDI press as the default. Screenshot for the shot list: "HSI before and after the CDI switch to LOC1".
+Sim check: the automatic GPS → LOC switch and its conditions (ILS/LOC approach loaded, FAF the active leg and within 15 nm, valid localizer tuned, GPS CDI inside 1.2 × full scale; Vector-to-Final also switches), and the colours (magenta GPS, green LOC1), are desk-verified against Garmin 190-02177-02. Still open: whether the Working Title NXi in MSFS 2024 does the switch, and the screenshot "HSI before and after the CDI switch to LOC1". If it does not, rewrite this section to teach the manual CDI press as the default.
 :::
 
 :::quiz{id="l20-3-q3" type="single"}
@@ -152,7 +152,7 @@ The sequence, as the diamond descends:
 | 100 kt               | 500 fpm                            |
 
 :::callout{type="verify"}
-Confirm the Skyhawk configuration at glideslope intercept (flaps 10, about 1,700 RPM, {{vspeed.approach}}) by flying the sim airplane and record it in `aircraft.yaml`. Confirm that the sim's ILS does not model false glideslopes, and keep the false-glideslope sentence labelled as real-world only.
+Sim check: confirm the Skyhawk configuration at glideslope intercept (flaps 10, about 1,700 RPM, {{vspeed.approach}}) by flying the sim airplane and record it in `aircraft.yaml`; confirm the sim's ILS does not model false glideslopes. The false-glideslope sentence is real-world (AIM 1-1-9) and stays labelled as such.
 :::
 
 :::quiz{id="l20-3-q4" type="numeric" answer="400" tolerance="30" unit="fpm"}
@@ -165,7 +165,7 @@ Groundspeed × 5: 80 × 5 = 400 fpm. The headwind makes the descent shallower th
 
 ## Decision altitude and the runway environment
 
-At DA you decide, and the decision is not "can I see something?" but "can I see the right things?" The rules say you may continue below DA only if you have the required flight visibility, you can land normally in the touchdown zone, and at least one of a specific list of **runway environment** references is distinctly visible.
+At DA you decide, and the decision is not "can I see something?" but "can I see the right things?" The rules say you may continue below DA only if you have the required flight visibility, you can descend to a landing on the runway at a normal rate using normal maneuvers, and at least one of a specific list of **runway environment** references is distinctly visible and identifiable.
 
 | Reference you may use                                    | Notes                                                                                                               |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -177,10 +177,6 @@ At DA you decide, and the decision is not "can I see something?" but "can I see 
 | Runway, runway markings or runway lights                 |                                                                                                                     |
 
 In the sim the weather presets make this a fair test: at `WX_IMC_LOW` you break out just above DA and the lights are there; at `WX_IMC_BELOW` they are not, and the only correct answer is the missed approach in [[l20-5-missed-approaches]]. "I think I see a glow" is not on the list. Say it aloud at DA: "Minimums. Runway in sight, landing," or "Minimums. Going missed."
-
-:::callout{type="verify"}
-The runway environment list is a paraphrase of 14 CFR 91.175(c). Confirm every item, the 100 ft approach-light rule and the "distinctly visible and identifiable" wording against the current regulation before publishing, and keep the learner-facing table simplified.
-:::
 
 :::quiz{id="l20-3-q5" type="multi"}
 At DA, which of these alone allow you to continue descending? Pick all that apply.
@@ -213,7 +209,7 @@ Coupled, at DA, in `WX_IMC_LOW`: the approach lights appear through the murk. Yo
 :::
 
 :::callout{type="verify"}
-Confirm the GFC 700 mode names and colours in the MSFS 2024 G1000 NXi (APR arms LOC and GS; armed modes in white, active in green), whether APR captures the localizer from HDG mode without NAV first, and the behaviour of the GA button at DA (flight director GA pitch, autopilot disconnect or not). Screenshot for the shot list: "Mode annunciator with LOC and GS captured".
+Sim check: Garmin 190-02177-02 confirms that APR arms LOC and GS (armed modes in white beside the active mode), that APR can be pressed from HDG mode, and that the GA button keeps the autopilot engaged in GA mode (older G1000 installations disconnected it). Still open: the sim's annunciator text and colours, GA behaviour at DA, and the screenshot "Mode annunciator with LOC and GS captured".
 :::
 
 ## Practice and next steps
@@ -227,8 +223,8 @@ Four things to carry forward:
 
 **Practice.** This lesson feeds the `ifr-rules` deck (the runway environment list) and the `limits-and-speeds` deck (the approach configuration).
 
-**Fly it.** Challenge C20.2 "Hand-flown ILS" puts you on a 30° intercept to the KLVK "ILS or LOC RWY 25R" (not for navigation) with the autopilot off. Challenge C20.3 "Coupled ILS" flies the full procedure on the KMRY "ILS or LOC RWY 10R" (not for navigation) with the autopilot in APR. Fly the hand-flown one first; the coupled one is more fun when you know what the autopilot is doing for you. Next: [[l20-4-vor-and-other-non-precision-approaches]].
+**Fly it.** Challenge C20.2 "Hand-flown ILS" puts you on a 30° intercept to the KLVK "ILS RWY 25R" (not for navigation) with the autopilot off. Challenge C20.3 "Coupled ILS" flies the full procedure on the KMRY "ILS or LOC RWY 10R" (not for navigation) with the autopilot in APR. Fly the hand-flown one first; the coupled one is more fun when you know what the autopilot is doing for you. Next: [[l20-4-vor-and-other-non-precision-approaches]].
 
 :::callout{type="verify"}
-Real procedures named: KLVK "ILS or LOC RWY 25R" and KMRY "ILS or LOC RWY 10R" (Section 12.4 candidates). Confirm both exist in the current d-TPP and in the sim's nav database, confirm the localizer identifiers and final approach courses are not stated in this lesson (they are not; keep it that way until verified), and record the d-TPP cycle checked here before publishing.
+Sim check: KLVK "ILS RWY 25R" (Amdt 9A; charted separately from "LOC RWY 25R") and KMRY "ILS or LOC RWY 10R" (Amdt 29A) are confirmed in d-TPP cycle 2610 (01–29 Oct 2026). The lesson states no identifiers or courses for them; keep it that way. Still open: both procedures in the sim's nav database under those titles.
 :::

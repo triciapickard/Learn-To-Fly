@@ -14,7 +14,7 @@ objectives:
   - Recognize the five hazardous attitudes as they sound on a long cross-country and apply the antidote.
   - Recognize the signs of fatigue and decide when to shorten a flight.
 challenges: []
-resources: [faa-risk-management-handbook, phak-ch2, phak-ch17]
+resources: [faa-risk-management-handbook, phak-ch2, phak-ch17, aim]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -40,10 +40,10 @@ PAVE asks four questions once. The **5P check** asks five questions several time
 | **Passengers**  | Comfortable, quiet when I need quiet, not pushing my decisions?  | A sick passenger; one who "has to be back by 5"        |
 | **Programming** | Is the G1000 set for the next phase? Am I heads-down too long?   | A missed waypoint, a frequency not loaded              |
 
-The important word is **again**. Run the whole check at five fixed points: preflight; before takeoff; top of climb; before descent, with the destination weather in hand; and just before the approach. The fourth check saves flights. At the top of descent you still have the fuel and altitude to go somewhere else. On short final you do not.
+The important word is **again**. Run the whole check at the five points PHAK Chapter 2 names: preflight; just before takeoff; the midpoint of the flight, or every hour on a flight longer than 2 hours; before descent, with the destination weather in hand; and just before entering the pattern. The fourth check saves flights. At the top of descent you still have the fuel and altitude to go somewhere else. On short final you do not.
 
 :::quiz{id="l16-1-q1" type="single"}
-At the top of descent into Truckee the ATIS now gives winds 240° at 18 kt gusting 26 kt, a 15 kt crosswind component on the runway in use. Which P has changed, and what do you do?
+At the top of descent into Truckee the ATIS now gives winds 240° at 18 kt gusting 26 kt: about 13 kt of crosswind on Runway 29, and nearly 19 kt in the gusts. Which P has changed, and what do you do?
 
 - [ ] Plane: lean the mixture for the descent and continue
 - [x] Plan: compare the crosswind with your personal minimum and decide now whether to divert
@@ -74,7 +74,7 @@ In Course 1 you wrote five numbers: wind, crosswind, visibility, cloud base and 
 Two rules. **A minimum is a decision already made**: if the number is exceeded you do not go, or you divert, with no new reasoning. And **relax one line at a time**, after a flight that went well, never because today's weather needs it.
 
 :::callout{type="verify"}
-The starting values are the author's suggestions for a sim learner, not from a published source. Check them against the Risk Management Handbook personal minimums checklist (FAA-H-8083-2A) and `aircraft.yaml`; confirm the kneeboard prints this worksheet (v2 Section 21.8).
+Author decision: the starting values are the author's figures. Desk-verified 2026-10-13: the Risk Management Handbook (FAA-H-8083-2A) Chapter 2 prescribes no numbers, only a sample table built from the pilot's own experience, and `aircraft.yaml` gives 15 kt for `{{aircraft.maxCrosswind}}`. Still open: v2 Section 21.8 lists the kneeboard's planning sheet but not this worksheet; confirm it prints.
 :::
 
 :::quiz{id="l16-1-q2" type="single"}
@@ -123,7 +123,7 @@ Past success is the voice of **invulnerability**. Three good crossings say nothi
 
 ## Fatigue on long flights
 
-Fatigue is the F in IMSAFE. On a short flight you answer it at the ramp; on a long one the answer changes in the air. **Acute** fatigue comes from the day (a short night, a long drive, 2 hours of concentration) and rest fixes it. **Chronic** fatigue builds over days of poor sleep, one good night does not fix it, and you stop noticing it.
+Fatigue is the F in IMSAFE. On a short flight you answer it at the ramp; on a long one the answer changes in the air. **Acute** fatigue comes from the day (a short night, a long drive, 2 hours of concentration) and rest fixes it. **Chronic** fatigue builds when there is not enough recovery between tired days; one good night does not fix it, and you stop noticing it.
 
 That is the dangerous part. Fatigue removes the ability to notice fatigue, so watch for what it does instead:
 
@@ -157,14 +157,14 @@ Feeling sleepy is the one sign you cannot rely on, because fatigue dulls the sen
 
 Three things to carry forward:
 
-1. The 5P check runs at five points: preflight, before takeoff, top of climb, before descent and before the approach.
+1. The 5P check runs at five points: preflight, before takeoff, the midpoint of the flight (hourly beyond 2 hours), before descent and before entering the pattern.
 2. A personal minimum is a decision already made. Relax one line at a time, on the ground.
 3. Every hazardous attitude is an argument for continuing. When you hear one, check the numbers.
 
 **Practice.** This lesson feeds the `airspace-and-minimums` deck with the five Ps and the five antidotes.
 
 :::callout{type="verify"}
-Confirm the flashcard deck for the 5P and antidote cards (v2 Section 18); `airspace-and-minimums` is a placeholder. Check the 2.5-hour leg and 10-hours-awake figures against the Risk Management Handbook and PHAK Chapter 17.
+Author decision: the `airspace-and-minimums` deck slug exists in v2 Section 14.4 but no deck file exists yet; confirm it is the home for the 5P and antidote cards. The 2.5-hour leg and 10-hours-awake limits are the author's figures; desk-verified 2026-10-13 that neither the Risk Management Handbook nor PHAK Chapters 2 and 17 gives a number (PHAK 2 only asks for an hourly 5P check on flights over 2 hours).
 :::
 
 **Next.** [[l16-2-preparing-for-the-advanced-vfr-stage-check]] describes the two flights that finish Course 2. Print the worksheet first.

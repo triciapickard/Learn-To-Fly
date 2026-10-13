@@ -13,7 +13,7 @@ objectives:
   - Apply headwind, tailwind and grass corrections to a chart distance.
   - Add a personal safety margin and compare the result with the runway available.
 challenges: []
-resources: [phak-ch11, afh-ch6]
+resources: [phak-ch11, afh-ch6, faa-pilot-safety-brochures]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -58,7 +58,7 @@ _Learn-To-Fly sim data · provisional. Replace with the flown table before publi
 The table is entered with **pressure altitude and temperature**, not density altitude; the chart does that arithmetic for you. Find your row, find your column, read the cell. Notice how fast it grows: heat alone adds a third at sea level, and a hot day at a 6,000 ft airport needs two and a half times the distance you are used to at Livermore.
 
 :::callout{type="verify"}
-The table above is illustrative and provisional. Replace every cell with the Week 1 and Week 5 sim flight-test results stored in `aircraft.yaml → performanceTables` (v2 Section 8.3, D2-11) and record the sim version. Widget W22 (Performance Chart Reader) is embedded here once Phase 20 ships it: `::widget{name="performance-chart" mode="explore"}`. Until then the table is the walkthrough. The numeric knowledge-check answers below are computed from this provisional table and must be recomputed when it is replaced.
+Sim check: the takeoff table above is illustrative and provisional. Replace every cell with the Week 1 and Week 5 sim flight-test results stored in `aircraft.yaml → performanceTables` (v2 Section 8.3, D2-11), record the sim version, and recompute the August interpolation and the numeric answers to l9-2-q1 and l9-2-q2. Widget pending: W22 (Performance Chart Reader), `::widget{name="performance-chart" mode="explore"}`, replaces this walkthrough once Phase 20 ships it.
 :::
 
 :::callout{type="sim"}
@@ -100,17 +100,17 @@ Using the provisional table, what is the distance over a 50 ft obstacle at a pre
 
 The chart assumes zero wind on dry pavement. Now adjust for the runway you actually have, using these typical rules of thumb:
 
-| Condition            | Correction                                                        | Example on a 2,030 ft obstacle distance |
-| -------------------- | ----------------------------------------------------------------- | --------------------------------------- |
-| Headwind             | Subtract about 10% for each 9 kt of headwind                      | 9 kt headwind → about 1,830 ft          |
-| Tailwind             | Add about 10% for each 2 kt of tailwind                           | 4 kt tailwind → about 2,440 ft          |
-| Dry grass            | Add about 15% of the **ground roll**                              | 1,110 ft roll → add about 170 ft        |
-| Upslope, wet or soft | No simple factor; a reason for more margin, or a reason not to go |                                         |
+| Condition            | Correction                                                              | Example on a 2,030 ft obstacle distance |
+| -------------------- | ----------------------------------------------------------------------- | --------------------------------------- |
+| Headwind             | Subtract about 10% for each 9 kt of headwind                            | 9 kt headwind → about 1,830 ft          |
+| Tailwind             | Add about 10% for each 2 kt of tailwind (the chart notes stop at 10 kt) | 4 kt tailwind → about 2,440 ft          |
+| Dry grass            | Add about 15% of the **ground roll**                                    | 1,110 ft roll → add about 170 ft        |
+| Upslope, wet or soft | No simple factor; a reason for more margin, or a reason not to go       |                                         |
 
 Look at the asymmetry. A 9 kt headwind buys 10%; a tailwind of just 2 kt costs the same 10%. That is why pilots taxi the full length of an airport to take off into a light wind. Use only the headwind component; the crosswind widget from Course 1 splits the wind for you.
 
 :::callout{type="verify"}
-Confirm the correction factors (−10% per 9 kt headwind, +10% per 2 kt tailwind, +15% of ground roll on dry grass) against the notes on the Cessna 172S POH Section 5 takeoff tables, and label them as typical in the published lesson. Decide whether to teach a slope factor; the POH tables give none and the draft deliberately gives no number.
+Author decision: whether to teach a runway-slope factor. The 172S takeoff and landing tables give none and the draft deliberately gives no number. (Desk-verified 2026-10-13: the headwind, tailwind and dry-grass corrections match the notes on the Cessna short-field takeoff table reproduced in PHAK Chapter 11, Figure 11-24, and the 172S POH Section 5.)
 :::
 
 :::quiz{id="l9-2-q3" type="single"}
@@ -161,14 +161,14 @@ Landing has its own chart, read the same way. The numbers are shorter than takeo
 
 _Learn-To-Fly sim data · provisional._
 
-Two things make landing the harder problem at a short field. First, the chart assumes you cross the obstacle at exactly {{vspeed.shortFieldApproach}} with no float; every 5 kt of extra speed adds roughly 10% to the distance, plus float you cannot predict. Second, a landing has no "abort before midpoint": if it goes long, your only tool is the go-around, decided early. Density altitude hurts the landing less than the takeoff, because the engine is not involved, and hurts the go-around a lot, because it is.
+Two things make landing the harder problem at a short field. First, the chart assumes you cross the obstacle at exactly {{vspeed.shortFieldApproach}} with no float; the ground roll grows with the square of your touchdown speed, so landing 10% fast (about 6 kt at {{vspeed.shortFieldApproach}}) adds roughly 20% to the roll, plus float you cannot predict. Second, a landing has no "abort before midpoint": if it goes long, your only tool is the go-around, decided early. Density altitude hurts the landing less than the takeoff, because the engine is not involved, and hurts the go-around a lot, because it is.
 
 :::callout{type="safety"}
 A long landing at a short field is a go-around, not a hard-braking contest. If you are not on the ground in the first third of the runway, go around. The runway behind you cannot be used.
 :::
 
 :::callout{type="verify"}
-Replace the provisional landing table with Week 1 sim test data (v2 Section 8.3). Confirm the "about 10% per 5 kt extra approach speed" rule against the POH landing-table notes, or drop the number and keep the idea. Screenshot for the shot list: "performance table with the August interpolation marked" (v2 Section 46.4).
+Sim check: replace the provisional landing table with the Week 1 sim test data (v2 Section 8.3) and record the sim version. Screenshot for the shot list: "performance table with the August interpolation marked" (v2 Section 46.4). (Desk-verified 2026-10-13: the extra-speed rule now follows FAA P-8740-49 "On Landings, Part II": roll-out grows with the square of the touchdown-speed ratio.)
 :::
 
 :::quiz{id="l9-2-q4" type="multi"}

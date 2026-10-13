@@ -96,7 +96,7 @@ The bezels around the screens hold the knobs you'll use most:
 | RANGE                                  | Zooms the map in and out.                                     |
 
 :::callout{type="verify"}
-Author note: on the real G1000 NXi the altimeter setting is on the large outer ring of the CRS/BARO dual knob on the PFD bezel (Garmin G1000 NXi Pilot's Guide, PFD section). Check the sim's bezel labels the same knob CRS/BARO and that turning the outer ring changes the BARO box.
+Sim check: desk-verified 2026-10-13 against the Garmin G1000 NXi Pilot's Guide (PFD bezel: the large ring of the CRS/BARO knob sets the altimeter). Still open: that the MSFS 2024 bezel labels the knob CRS/BARO and that turning the outer ring moves the BARO box.
 :::
 
 ## The classic six-pack on the glass

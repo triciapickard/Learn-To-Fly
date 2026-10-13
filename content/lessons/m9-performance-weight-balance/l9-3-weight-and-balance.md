@@ -47,7 +47,7 @@ Aft CG and stall recovery. In [[l5-2-stalls-power-off-and-power-on]] the airplan
 
 Four words carry the whole subject.
 
-- **Datum.** An imaginary vertical line the manufacturer chose, near the front of the engine compartment. Every position is measured from it, in inches aft.
+- **Datum.** An imaginary vertical line the manufacturer chose. On the Skyhawk it is the lower front face of the firewall, the wall between the engine and the cabin. Every position is measured from it, in inches aft.
 - **Arm.** The distance from the datum to where a weight sits. The rear seats are farther aft than the front seats, so they have a bigger arm.
 - **Moment.** Weight × arm: how hard a weight pulls the balance toward itself. 200 lb at 73 in pulls harder than 200 lb at 37 in.
 - **CG.** The balance point: total moment divided by total weight.
@@ -62,7 +62,7 @@ Four words carry the whole subject.
 | CG     | in    | Total moment ÷ total weight                               |
 
 :::callout{type="verify"}
-Widget W23 (Weight and Balance Explorer) is embedded here once Phase 20 ships it: `::widget{name="weight-and-balance" mode="explore"}`. Until then the tables below are the walkthrough. Confirm the datum description ("lower front face of the firewall" in the 172S POH Section 6) and simplify the learner-facing wording accordingly.
+Widget pending: W23 (Weight and Balance Explorer) is embedded here once Phase 20 ships it: `::widget{name="weight-and-balance" mode="explore"}`. Until then the tables below are the walkthrough.
 :::
 
 :::quiz{id="l9-3-q1" type="order"}
@@ -86,11 +86,11 @@ The **basic empty weight** (the airplane with oil and unusable fuel, nobody aboa
 | Station                           | Arm (in)         | Limit                               |
 | --------------------------------- | ---------------- | ----------------------------------- |
 | Basic empty weight (illustrative) | 39.5 at 1,680 lb | Use the sim's value                 |
-| Front seats                       | 37               |                                     |
+| Front seats                       | 37               | Seat adjustable, 34–46 in           |
 | Rear seats                        | 73               |                                     |
 | Fuel                              | 48               | 53 gal usable, 6 lb per gal         |
 | Baggage area 1                    | 95               | 120 lb                              |
-| Baggage area 2                    | 123              | 50 lb (200 lb combined with area 1) |
+| Baggage area 2                    | 123              | 50 lb (120 lb combined with area 1) |
 
 The maximum takeoff weight is {{aircraft.mtow}}. The envelope has an aft limit of 47.3 in at every weight and a forward limit that moves aft as the airplane gets heavier, 1.0 in for each 100 lb above 1,950 lb:
 
@@ -102,7 +102,7 @@ The maximum takeoff weight is {{aircraft.mtow}}. The envelope has an aft limit o
 | 2,550 lb         | 41.0 in       | 47.3 in   |
 
 :::callout{type="verify"}
-Station arms (37, 73, 48, 95, 123), the baggage limits (120 / 50 / 200 lb combined), the envelope (forward 35.0 in at or below 1,950 lb rising linearly to 41.0 in at 2,550 lb; aft 47.3 in) and 6 lb per gallon are from v2 Section 8.2 and must be verified against the 172S POH Section 6 and `aircraft.yaml → weightAndBalance`. The front-seat arm is adjustable (about 34–46 in); 37 in is the standard position used here. The basic empty weight of 1,680 lb at 39.5 in is illustrative: record the sim airplane's actual value and recompute every example and the numeric question below.
+Sim check: the basic empty weight of 1,680 lb at 39.5 in is illustrative. Record the MSFS 2024 Skyhawk's basic empty weight and CG from its weight and balance screen, then recompute every worked example, the fixes table and the answer to l9-3-q2. (Desk-verified 2026-10-13: station arms, baggage limits, the envelope and 6 lb/gal confirmed against the EASA TCDS for the 172S, PHAK Chapter 10 and the 172S POH Sections 2 and 6; the combined baggage limit was corrected to 120 lb.)
 :::
 
 Now work a load: you (190 lb) and a friend (150 lb) in front, one passenger (150 lb) in the back, a 40 lb bag in area 1, and 40 gal of fuel (240 lb).
@@ -197,7 +197,7 @@ The sim's payload screen maps to our stations, but not always one for one: it ma
 :::
 
 :::callout{type="verify"}
-Confirm the MSFS 2024 menu path for weight and balance (EFB "Aircraft" tab versus the pre-flight customization panel), the station names it shows, whether baggage is one station or two, and whether it enforces the envelope. Record the sim's basic empty weight and CG and the sim version. Screenshot for the shot list: "weight and balance screen with the aft-loaded lunch flight".
+Sim check: confirm the MSFS 2024 menu path for weight and balance (EFB "Aircraft" tab versus the pre-flight customization panel), the station names it shows, whether baggage is one station or two, and whether it enforces the envelope. Record the sim's basic empty weight and CG and the sim version. Screenshot for the shot list: "weight and balance screen with the aft-loaded lunch flight".
 :::
 
 ## Practice and next steps

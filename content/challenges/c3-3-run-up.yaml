@@ -20,7 +20,7 @@ setup:
   airportIcao: KLVK
   startState: RAMP_RUNNING
   startDetails:
-    parking: Run-up area for runway 25R, or continue from C3.2 # ⚠ verify that the sim offers this spot
+    parking: Run-up area for runway 25R, or continue from C3.2 # ⚠ verify — Sim check: does the sim offer a start at the 25R run-up area?
   weatherPreset: WX_LIGHT_W
   timeLocal: '10:00'
   datePreset: late-spring

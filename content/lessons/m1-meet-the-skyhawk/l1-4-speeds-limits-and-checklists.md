@@ -28,7 +28,7 @@ The "V" comes from "velocity", and the letters after it say what the speed is fo
 You do not need to memorize them all today. Learn the four you will use on every flight first: rotate at {{vspeed.vr}}, climb at {{vspeed.vy}}, glide at {{vspeed.vg}} and approach at about {{vspeed.approach}}.
 
 :::callout{type="verify"}
-Author note: every speed here comes from `aircraft.yaml`, checked against the 172S POH on 2026-10-09. Compare them with the speeds in the sim's EFB checklist (rotate 55, climb 70–80 then 74, approach 65–75 flaps up and 60–70 full flaps, go-around 60). If the sim's checklist differs, keep the POH number and add a "Sim vs reality" callout (Section 54.1).
+Sim check: every speed here comes from `aircraft.yaml`, checked against the 172S POH on 2026-10-09. Still open: compare them with the sim's EFB checklist (rotate 55, climb 70–80 then 74, approach 65–75 flaps up and 60–70 full flaps, go-around 60); if it differs, keep the POH number and add a "Sim vs reality" callout (Section 54.1).
 :::
 
 ## The Skyhawk's key speeds
@@ -148,11 +148,11 @@ MSFS 2024 includes a checklist for the Skyhawk in the **checklist** section of t
 Learn-To-Fly's checklists are a **simplified summary in our own words**, written to match the sim. They are great for learning the flow of each phase, but the in-sim checklist is your reference while flying.
 
 :::callout{type="sim"}
-The in-sim checklist can auto-complete items for you. Turn that assistance off (Lesson 0.2): the point is that you check each item yourself.
+The in-sim checklist can highlight the control an item refers to (the eye icon) and move the camera to it, but it won't check items off or move the controls for you. Good: the point is that you do each item yourself.
 :::
 
 :::callout{type="verify"}
-Author note: the in-sim checklist is in the EFB (checked in 1.8.16.0). Check whether it can auto-complete items or highlight controls, and where that option is set, then update this section and its callout. Lesson 0.2 doesn't cover it.
+Sim check: desk-verified 2026-10-13 against the MSFS 2024 SDK docs (Checklist Best Practices: the default EFB checklist app supports visual helpers only, not automatic evaluation or automatic actions). Still open: confirm in 1.8.16.0 that the eye icon highlights the control, and that there is no checklist-assist option under Assistance.
 :::
 
 ## Try a checklist

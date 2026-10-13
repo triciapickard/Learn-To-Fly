@@ -13,7 +13,7 @@ objectives:
   - Choose the recommended entry (direct, teardrop or parallel) from the heading at the fix.
   - Fly the hold with correct outbound timing and a tripled outbound wind correction.
 challenges: []
-resources: [aim-5, iph-holding, faa-acs-instrument]
+resources: [aim-5, iph-holding, faa-acs-instrument, pilot-controller-glossary, ifh-ifr-flight]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -51,22 +51,22 @@ The moment you copy "expect further clearance at 2145", do the fuel sum. If hold
 
 A holding instruction always has the same parts in the same order. Learn the order and you can copy one at radio speed.
 
-| Part                     | In our example                     | What it tells you                                                                    |
-| ------------------------ | ---------------------------------- | ------------------------------------------------------------------------------------ |
-| Direction from the fix   | "south of ECA"                     | Which side of the fix the racetrack lies on                                          |
-| The fix                  | "ECA"                              | The VOR, intersection or waypoint the pattern is anchored to                         |
-| Radial, course or airway | "on the 180 radial"                | The line the inbound leg lies along                                                  |
-| Leg length               | (not stated)                       | Only given when legs are measured in miles (DME or GPS); otherwise legs are timed    |
-| Direction of turns       | "right turns"                      | Right is standard; ATC says "left turns" only when the hold is non-standard          |
-| Altitude                 | "maintain 4,000"                   | Your holding altitude                                                                |
-| Expect further clearance | "expect further clearance at 2145" | The EFC: when to expect onward clearance, and your departure time if the radios fail |
+| Part                     | In our example                     | What it tells you                                                                                |
+| ------------------------ | ---------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Direction from the fix   | "south of ECA"                     | Which side of the fix the racetrack lies on                                                      |
+| The fix                  | "ECA"                              | The VOR, intersection or waypoint the pattern is anchored to                                     |
+| Radial, course or airway | "on the 180 radial"                | The line the inbound leg lies along                                                              |
+| Leg length               | (not stated)                       | Given in miles when DME or GPS legs are used; otherwise legs are timed (ask if you want minutes) |
+| Direction of turns       | "right turns"                      | Right is standard; ATC says "left turns" only when the hold is non-standard                      |
+| Altitude                 | "maintain 4,000"                   | Your holding altitude                                                                            |
+| Expect further clearance | "expect further clearance at 2145" | The EFC: when to expect onward clearance, and your departure time if the radios fail             |
 
 Two traps hide in that list. First, "on the 180 radial" names a **radial**, which runs _from_ the station. The hold lies south of ECA along it, so the **inbound course**, the direction you fly toward the fix, is the reciprocal: **360**. Second, right turns are standard, so a controller usually leaves the turn direction out: hear nothing about turns and it is a right-hand hold.
 
 Always write down the EFC. If you lose communications in the hold, it is the time you leave the fix under the lost-comms rules from [[l18-5-enroute-ifr-and-lost-communications]].
 
 :::callout{type="verify"}
-Check the order and wording of the holding instruction elements against AIM 5-3-8 and the "expect further clearance" entry in the Pilot/Controller Glossary. Confirm that ATC omits the turn direction for standard right-turn holds and that the C19.1 "Hold at a VOR" clearance uses the same wording as this lesson.
+Author decision: C19.1 "Hold at a VOR" has no YAML yet. When it is written, keep the clearance in this element order (desk-verified 2026-10-13 against AIM 5-3-8 and the Pilot/Controller Glossary "expect further clearance (time)" entry) and pick one EFC form: this lesson uses a clock time ("at 2145"); v2.md Section 15 uses "in 15 minutes".
 :::
 
 :::quiz{id="l19-1-q1" type="single"}
@@ -100,18 +100,18 @@ Say the picture out loud as you build it: "Inbound 360 to the fix, right turns, 
 :::
 
 :::callout{type="verify"}
-Widget W37 (Holding Pattern Entry Trainer) is embedded here once Phase 21 ships it: `::widget{name="holding-entry" mode="explore"}`. It draws the racetrack and the three entry sectors on an HSI view and animates the entry. Until then the `vor-cdi` widget and the tables in this lesson carry the content. Screenshot for the shot list: "G1000 HSI with course 360 set, annotated with the racetrack on the east side."
+Widget pending: W37 (Holding Pattern Entry Trainer) is embedded here once Phase 21 ships it: `::widget{name="holding-entry" mode="explore"}`. It draws the racetrack and the three entry sectors on an HSI view and animates the entry. Until then the `vor-cdi` widget and the tables in this lesson carry the content. Screenshot for the shot list: "G1000 HSI with course 360 set, annotated with the racetrack on the east side."
 :::
 
 ## Entries: direct, teardrop and parallel
 
 You rarely arrive at the fix lined up with the inbound course. The **entry** is how you join the racetrack, and which one you fly depends on your **heading when you cross the fix** compared with the inbound course. Subtract the inbound course from your heading and call the result the **relative angle**, kept between −180° and +180° (250° becomes −110°; −200° becomes +160°). For a **right-turn** hold:
 
-| Relative angle (heading − inbound course) | Entry        | Sector | What you do at the fix                                                                                                                     |
-| ----------------------------------------- | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| −70° to +110°                             | **Direct**   | 180°   | Turn right straight onto the outbound heading and fly the pattern                                                                          |
-| +110° to +180°                            | **Teardrop** | 70°    | Turn to a heading 30° from the outbound heading, toward the holding side; fly 1 minute; turn right to intercept the inbound course         |
-| −180° to −70°                             | **Parallel** | 110°   | Turn to the outbound heading on the non-holding side; fly 1 minute; turn **left**, through the inbound course, and intercept it to the fix |
+| Relative angle (heading − inbound course) | Entry        | Sector | What you do at the fix                                                                                                                                                               |
+| ----------------------------------------- | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| −70° to +110°                             | **Direct**   | 180°   | Turn right straight onto the outbound heading and fly the pattern                                                                                                                    |
+| +110° to +180°                            | **Teardrop** | 70°    | Turn to a heading 30° from the outbound heading, toward the holding side; fly 1 minute; turn right to intercept the inbound course                                                   |
+| −180° to −70°                             | **Parallel** | 110°   | Turn to the outbound heading on the non-holding side; fly 1 minute; turn **left** (toward the pattern) through more than 180° and intercept the inbound course, or return to the fix |
 
 For a **left-turn** hold, flip the sign of the relative angle and use the same table (and the parallel entry turns right instead of left).
 
@@ -126,12 +126,8 @@ On the HSI you can skip the arithmetic: with the inbound course set, see where t
 | 270                | −90°           | Parallel                                  |
 | 300                | −60°           | Direct                                    |
 
-:::callout{type="verify"}
-Check the sector boundaries (direct −70° to +110°, teardrop +110° to +180°, parallel −180° to −70° for right turns) against the AIM 5-3-8 holding-entry figure, which draws the 70° line through the fix. They match v2 Appendix F.5, which W37 uses; the widget's boundary unit tests and this lesson must agree. Confirm the 30° teardrop offset and the 1-minute leg for the teardrop and parallel entries against the AIM and the Instrument Procedures Handbook holding chapter.
-:::
-
 :::callout{type="tip"}
-At a sector boundary either neighboring entry is fine. The instrument ACS asks for the recommended entry, but a safe entry flown promptly always beats the perfect entry chosen too late. Decide before the fix, then fly it. If you realize over the fix that you picked the "wrong" one, keep flying what you chose: all three keep you inside protected airspace.
+At a sector boundary either neighboring entry is fine. The instrument ACS asks for an entry appropriate to the pattern, and these three are the ones the FAA recommends, but a safe entry flown promptly always beats the perfect entry chosen too late. Decide before the fix, then fly it. If you realize over the fix that you picked the "wrong" one, keep flying what you chose: all three keep you inside protected airspace.
 :::
 
 **Four worked examples.** Each matches a clearance variant in Challenge C19.1 "Hold at a VOR".
@@ -190,9 +186,9 @@ The inbound course is 270 (the reciprocal of the 090 radial). 010 − 270 = −2
 
 ## Timing and wind
 
-A hold is a 1-minute pattern, measured on the **inbound** leg: at or below 14,000 ft MSL the inbound leg should take 1 minute. The outbound leg is whatever makes that true.
+A hold is a 1-minute pattern, measured on the **inbound** leg: at or below 14,000 ft MSL the inbound leg should take 1 minute (1½ minutes above 14,000 ft). The outbound leg is whatever makes that true, and the first outbound leg is flown for the full minute.
 
-**Where to start the clock.** Start the outbound time abeam the fix, or wings level outbound, whichever comes later. On a VOR hold "abeam" is the moment the TO/FROM flag flips to FROM. Start the inbound time when you roll out on the inbound course.
+**Where to start the clock.** Start the outbound time over the fix or abeam it, whichever comes later; if you cannot tell when you are abeam, start it when the turn to outbound is complete. Holding at a VOR with the inbound course set, the TO/FROM flag does both jobs: its first flip (to FROM) is station passage, your cue to start the turn outbound, and when it flips back to TO you are abeam the station, so start the clock. Start the inbound time when you roll out on the inbound course.
 
 **Correcting the time.** Fly the first outbound leg for 1 minute, then time the inbound leg. If it ran long you had a headwind inbound (a tailwind outbound) and went too far out: shorten the next outbound leg by the amount the inbound leg was over. If it ran short, lengthen the outbound leg.
 
@@ -207,7 +203,7 @@ A hold is a 1-minute pattern, measured on the **inbound** leg: at or below 14,00
 
 It is a first guess; wind rarely blows exactly along the legs, so expect to adjust again next lap.
 
-**Correcting the heading.** Wind also pushes you sideways. Find the inbound wind correction by bracketing the needle as in [[l6-4-vor-navigation]] and note the crab angle. Outbound there is no needle, and the two turns add drift of their own, so **triple** the inbound correction on the outbound leg, on the opposite side of the compass but still into the wind. Inbound 360 with a westerly wind and a 10° left crab means an inbound heading of 350; outbound is 180 plus 30° into the wind, heading 210.
+**Correcting the heading.** Wind also pushes you sideways. Find the inbound wind correction by bracketing the needle as in [[l6-4-vor-navigation]] and note the crab angle. Outbound there is no needle, and the two turns add drift of their own, so **triple** the inbound correction on the outbound leg, on the opposite side of the compass but still into the wind. Inbound 360 with a westerly wind and a 10° left crab means an inbound heading of 350; outbound is 180 plus 30° into the wind, heading 210. Tripling is an instructor rule of thumb, not an FAA number: the handbooks say only to correct for drift on both legs and to adjust the outbound time.
 
 :::quiz{id="l19-1-q6" type="numeric" answer="40" tolerance="5" unit="s"}
 You flew the outbound leg for 60 seconds and the inbound leg took 80 seconds. How many seconds should the next outbound leg be?
@@ -215,10 +211,6 @@ You flew the outbound leg for 60 seconds and the inbound leg took 80 seconds. Ho
 ---
 
 The inbound leg was 20 seconds long, so shorten the outbound leg by 20 seconds: 60 − 20 = 40 seconds.
-:::
-
-:::callout{type="verify"}
-Confirm the timing rules against AIM 5-3-8: inbound leg 1 minute at or below 14,000 ft MSL and 1.5 minutes above; outbound timing begins abeam the fix or wings level outbound, whichever is later; adjust the outbound leg to achieve the inbound time. The outbound time formula and "triple the inbound correction" are v2 Appendix F.5 and Section 11.3 rules of thumb, not regulation. Confirm the C19.1 timing tiers (inbound 1 min ±15 s Gold, ±30 s Silver, ±45 s Bronze, v2 Section 13.7).
 :::
 
 :::callout{type="sim"}
@@ -233,7 +225,7 @@ Every time you cross the fix, run the same five items in the same order. They st
 **The 5 Ts at the fix**
 
 1. **Turn** to the outbound heading (or the entry heading).
-2. **Time**: start the clock abeam the fix, or wings level outbound, whichever is later.
+2. **Time**: start the clock over or abeam the fix, whichever is later (wings level outbound if you cannot tell).
 3. **Twist** the course knob to the inbound course if it is not already set.
 4. **Throttle**: set holding power and speed.
 5. **Talk**: report entering the hold if required, with the time and altitude.
@@ -252,10 +244,10 @@ A hold sits inside a protected area, and a fast airplane flies a bigger racetrac
 | 6,001–14,000 ft | 230 KIAS                 |
 | Above 14,000 ft | 265 KIAS                 |
 
-Some holds carry a lower limit printed on the chart. Slow to holding speed within 3 minutes of the fix so you cross it settled. In the Skyhawk a comfortable holding speed is about 90 KIAS with power a little under cruise; slower saves fuel, which is the point of a hold.
+Some holds carry a lower limit printed on the chart (an icon with the speed, often 210 or 175 KIAS). Start slowing when you are 3 minutes or less from the fix, so you cross it the first time at or below the limit. In the Skyhawk a comfortable holding speed is about 90 KIAS with power a little under cruise; slower saves fuel, which is the point of a hold.
 
 :::callout{type="verify"}
-Check the maximum holding airspeed table (200/230/265 KIAS by altitude band), the note that charted holds may carry a lower limit, and the "within 3 minutes of the fix" speed-reduction guidance against the current AIM 5-3-8. The Skyhawk holding speed (about 90 KIAS) is an instructor rule of thumb, not a POH number; fly it in the sim and record what the sim's 172 actually holds.
+Sim check: fly the hold in the sim's 172 and record the power setting and speed it holds comfortably; "about 90 KIAS" is an instructor rule of thumb, not a POH number. The speed table, the charted lower limits and the 3-minute rule were desk-verified 2026-10-13 against AIM 5-3-8 and Instrument ACS task IR.III.B.
 :::
 
 :::callout{type="classic"}
@@ -268,7 +260,7 @@ Three things to carry forward:
 
 1. The hold lies on the named radial on the named side of the fix; the **inbound course is the reciprocal** of the radial, and right turns are standard.
 2. Entry from the relative angle: **direct** −70° to +110°, **teardrop** +110° to +180°, **parallel** −180° to −70° (flip the sign for left turns). Any safe entry beats a late one.
-3. One minute inbound: start timing abeam the fix, correct the next outbound time by the inbound error, and triple the wind correction outbound.
+3. One minute inbound: start timing over or abeam the fix, whichever is later, correct the next outbound time by the inbound error, and triple the wind correction outbound.
 
 **Practice.** This lesson feeds the `holding-entries` flashcard deck: random clearances and headings, and you name the entry. The 5 Ts go to the `memory-items` deck.
 

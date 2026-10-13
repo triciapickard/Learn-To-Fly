@@ -20,8 +20,8 @@ setup:
   airportIcao: KLVK
   startState: RAMP_RUNNING
   startDetails:
-    parking: Main ramp (the northwest apron, by the FBO) # ⚠ verify the parking spot name in the sim
-    runway: 25R # ⚠ verify the runway name in the sim
+    parking: Main ramp (the northwest apron, by the FBO) # ⚠ verify — Sim check: the sim's name for this spot; the FAA diagram (AL-6075) calls it the Northwest Apron
+    runway: 25R # ⚠ verify — Sim check: real-world 7L/25R (AirNav 2026-10-13); confirm the sim lists it as 25R
   weatherPreset: WX_LIGHT_W
   timeLocal: '10:00'
   datePreset: late-spring
@@ -34,7 +34,7 @@ setup:
 
 procedure:
   - Turn the sim's taxi ribbon off.
-  - Open the KLVK airport diagram (FAA Terminal Procedures, see Go deeper in Lesson 3.2). Plan your route from the northwest apron to the run-up area for runway 25R. On the FAA diagram it is taxiway Alfa east along the north side of runway 7L/25R, with no runway to cross. ⚠ verify the sim's parking spot and taxiway signs match the diagram, then write the exact sequence here.
+  - "Open the KLVK airport diagram (FAA Terminal Procedures, see Go deeper in Lesson 3.2). Plan your route from the northwest apron to the run-up area for runway 25R. On the FAA diagram it is taxiway Alfa east along the north side of runway 7L/25R, with no runway to cross. ⚠ verify — Sim check: desk-verified 2026-10-13 against the FAA diagram (AL-6075, taxiway A along the north side of 7L/25R); confirm the sim's parking spot and taxiway signs match, then write the exact sequence here."
   - Release the parking brake. Taxi at a brisk walking pace (10 kt or less, 5 kt or less in turns).
   - Hold the yoke for the wind (wind from 250° at 8 kt).
   - Stop in the run-up area, short of the hold short line for 25R. Set the parking brake.

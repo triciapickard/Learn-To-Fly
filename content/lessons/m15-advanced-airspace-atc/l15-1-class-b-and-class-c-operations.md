@@ -26,28 +26,24 @@ In [[l6-2-airspace]] you learned to read the upside-down wedding cake of the San
 The airspace around SFO, OAK and SJC exists because airliners are climbing and descending through it at 250 knots. ATC needs to know where every airplane is, including yours. This lesson teaches you the two conversations that get you in: the Class B clearance and the Class C check-in. They sound similar. They are not.
 
 :::callout{type="safety"}
-Entering Class B without a clearance is one of the most common pilot deviations in the country. The fix is simple: never cross the solid blue line until you have heard the words "cleared into the Class Bravo airspace" with your call sign.
+Entering Class B without a clearance is one of the most common pilot deviations in the country. The fix is simple: never cross the solid blue line until you have heard "cleared into the Class Bravo airspace" (or "cleared through", or "cleared to enter") with your call sign.
 :::
 
 ## The rules, in plain words
 
 Class B and Class C each have a regulation that says who may enter and with what. The learner version:
 
-| Requirement              | Class B (SFO)                                   | Class C (OAK, SJC)                                        |
-| ------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
-| Before you enter         | An **explicit ATC clearance**                   | **Two-way radio communication** established with ATC      |
-| Pilot certificate        | Private pilot, or a student with an endorsement | Any pilot certificate                                     |
-| Transponder              | Mode C (altitude reporting) and ADS-B Out       | Mode C (altitude reporting) and ADS-B Out                 |
-| Two-way radio            | Required                                        | Required                                                  |
-| Speed limit              | 250 KIAS inside; 200 KIAS under the shelves     | 200 KIAS within 4 nm of the airport at or below 2,500 AGL |
-| VFR weather minimums     | 3 sm visibility, clear of clouds                | 3 sm visibility, standard cloud clearances                |
-| Departing a nearby field | Contact ATC before entering                     | Contact ATC as soon as practical after takeoff            |
+| Requirement              | Class B (SFO)                                                                        | Class C (OAK, SJC)                                        |
+| ------------------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------- |
+| Before you enter         | An **explicit ATC clearance**                                                        | **Two-way radio communication** established with ATC      |
+| Pilot certificate        | Private pilot, or a student with an endorsement (never a student solo at SFO itself) | Any pilot certificate                                     |
+| Transponder              | Mode C (altitude reporting) and ADS-B Out                                            | Mode C (altitude reporting) and ADS-B Out                 |
+| Two-way radio            | Required                                                                             | Required                                                  |
+| Speed limit              | 250 KIAS inside; 200 KIAS under the shelves                                          | 200 KIAS within 4 nm of the airport at or below 2,500 AGL |
+| VFR weather minimums     | 3 sm visibility, clear of clouds                                                     | 3 sm visibility, standard cloud clearances                |
+| Departing a nearby field | Contact ATC before entering                                                          | Contact ATC as soon as practical after takeoff            |
 
 The Skyhawk cannot reach any of these speed limits, so the rows that matter to you are the first three. The transponder rule reaches further than the airspace itself, which is what the Mode C veil section covers below.
-
-:::callout{type="verify"}
-Author note: check the Class C requirements against 14 CFR 91.130 and the Class B requirements against 14 CFR 91.131 (pilot certification, the two-way radio, the transponder in 91.215 and ADS-B Out in 91.225). Confirm the student-pilot endorsement rule (14 CFR 61.95) and the speed limits (14 CFR 91.117). Learner text stays paraphrased; the citations live here.
-:::
 
 ## "Cleared into the Class Bravo" versus "remain clear"
 
@@ -60,7 +56,7 @@ A Class B clearance is a specific sentence. Everything else the controller says,
 | "Squawk four five two one, remain clear of the Bravo, Skyhawk One Two Three."                                                                                               | (a minute later) "Skyhawk One Two Three, radar contact, **cleared into the Class Bravo airspace**, fly heading two seven zero, maintain three thousand five hundred." |
 | "Cleared into the Bravo, heading two seven zero, three thousand five hundred, Skyhawk One Two Three."                                                                       | "Skyhawk One Two Three, readback correct."                                                                                                                            |
 
-Notice the middle row. You have a squawk code, the controller knows who you are, and you are still **not cleared**. If the line is coming up, turn or slow down and stay outside until you hear the magic words. "Stand by", "remain clear" and "squawk four five two one" are all ways of saying "not yet".
+Notice the middle row. You have a squawk code, the controller knows who you are, and you are still **not cleared**. If the line is coming up, turn or slow down and stay outside until you hear the magic words. "Stand by", "remain clear" and "squawk four five two one" are all ways of saying "not yet". The controller's rule book words it as "cleared to enter", "cleared through" or "cleared out of Bravo airspace"; "cleared into the Class Bravo" is what you will hear most often, and all of them count.
 
 Once inside, you fly the headings and altitudes you are given, and you do not leave them without asking. ATC is separating you from airliners now.
 
@@ -98,7 +94,7 @@ The second row surprises people. If the controller uses your call sign and says 
 The call itself is the four-part call from [[l7-1-radio-basics-and-the-phonetic-alphabet]], with your intentions and the ATIS letter: "NorCal Approach, Skyhawk One Two Three, over Livermore at three thousand five hundred, inbound to Oakland with information Delta." Inside Class C you will be given a squawk code, probably an altitude, and later a handoff to the tower.
 
 :::callout{type="verify"}
-Author note: confirm the "stand by with call sign counts as established" guidance against AIM 3-2-4 (Class C) and the matching Class B wording in AIM 3-2-3. Check that the sim's ATC behaves this way, or note the difference in a sim callout.
+Sim check: desk-verified 2026-10-13 against AIM 3-2-4 (call sign plus "standby" establishes communication; a reply without your call sign does not) and AIM 3-2-3 (Class B needs the clearance regardless). Still open: does MSFS 2024 ATC answer a Class C check-in this way, and does it hold you outside Class B until an explicit clearance? If not, add a sim callout.
 :::
 
 :::quiz{id="l15-1-q2" type="single"}
@@ -118,10 +114,10 @@ Class C needs **two-way radio communication**, which exists as soon as the contr
 
 Draw a 30 nm circle around SFO and you have the **Mode C veil**. Inside it, from the surface up to 10,000 ft MSL, every airplane needs a transponder that reports altitude (Mode C) and ADS-B Out, even when it never touches the Class B itself. Livermore, Tracy, Half Moon Bay and Palo Alto are all inside the veil. So are you, on every flight in this course.
 
-The veil is drawn on the sectional and the TAC as a thin, solid magenta circle. In the Skyhawk the rule costs you nothing: the transponder is on ALT and the G1000 is broadcasting from the moment you take off. The rule matters when you fly a different airplane, or when the transponder fails. A failed transponder inside the veil means a phone call to ATC before you fly, not a shrug.
+The veil is drawn on the sectional and the TAC as a thin, solid magenta circle. In the Skyhawk the rule costs you nothing: the transponder is on ALT and the G1000 is broadcasting from the moment you take off. The rule matters when you fly a different airplane, or when the transponder fails. A failed transponder inside the veil means a request to ATC for a deviation before you fly, not a shrug.
 
 :::callout{type="verify"}
-Author note: check the veil radius (30 nm), vertical extent (surface to 10,000 ft MSL) and the exemptions against 14 CFR 91.215(b) and 91.225, and the list of Class B primary airports in Part 91 Appendix D. Confirm how the sim's Skyhawk transponder behaves (ALT vs ON vs STBY) in MSFS 2024 and whether the sim ATC enforces any of it.
+Sim check: desk-verified 2026-10-13 against 14 CFR 91.215(b)(2), 91.225(d)(2) and Part 91 Appendix D Section 1 (SFO listed; OAK and SJC not). Still open: how the MSFS 2024 Skyhawk transponder behaves (ALT vs ON vs STBY vs GND) and whether sim ATC enforces the veil at all.
 :::
 
 :::quiz{id="l15-1-q3" type="single"}
@@ -159,12 +155,14 @@ The FAA offers two kinds of help for crossing a busy terminal area:
 | Route                    | Where you find it                                    | Clearance needed? | What it gives you                                                                            |
 | ------------------------ | ---------------------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------- |
 | **VFR flyway**           | The VFR Flyway Planning Chart on the back of the TAC | No                | A recommended path and altitude _around and under_ the Class B, away from the airliner flows |
-| **VFR transition route** | Drawn on the TAC itself                              | Yes               | A published path _through_ the Class B that ATC can clear you on with one short call         |
+| **VFR transition route** | Drawn on the TAC itself (and on the flyway chart)    | Yes               | A published path _through_ the Class B that ATC can clear you on with one short call         |
 
-A flyway is advice: a route other pilots use that keeps you under the shelves and clear of the busy corridors. A transition route is a shortcut through the clearance process: you ask for it by name, and the controller already knows the altitude and path. Either way, you still read the chart and fly the altitude yourself.
+A flyway is advice: a route other pilots use that keeps you under the shelves and clear of the busy corridors. A transition route is a shortcut through the clearance process: you ask for it by name, and the controller already knows the path. Either way, you still read the chart and fly the altitude yourself.
+
+On the San Francisco TAC the transition routes are the **Bay Shore**, **Pacifica** and **Coastline** VFR transition routes, each marked "ATC clearance required, altitude assigned by ATC". The Bay Shore route runs along the bayshore over SFO from Hunters Point to the San Mateo interchange, which is the busiest airspace in the region, so expect "remain clear" on a busy afternoon. On the flyway chart, the **SE Bay Flyway** runs along the East Bay shoreline "below 3,000" and continues "below 4,000" through Niles Canyon toward Livermore; the **NE Bay Flyway** crosses the hills toward Walnut Creek "below 4,000", then "below 5,000". Where a flyway passes through the Oakland Class C the chart says "alt ATC asgn": you still need two-way communication there.
 
 :::callout{type="verify"}
-Author note: confirm which VFR flyways and VFR transition routes appear on the current San Francisco TAC and its flyway planning chart, and name one of each here with its charted altitude. Design the Challenge C15.1 route after that check. Screenshot for the shot list: "SF TAC flyway planning chart, East Bay flyway (Not for navigation)".
+Author decision: desk-verified 2026-10-13 against the San Francisco TAC and VFR Flyway Planning Chart, edition 3 Sep 2026 (next 29 Oct 2026); route names and altitudes above are from that chart. Still open: design the Challenge C15.1 route after choosing a flyway or transition route, and take the shot-list screenshot "SF TAC flyway planning chart, SE Bay flyway (Not for navigation)".
 :::
 
 :::quiz{id="l15-1-q4" type="single"}

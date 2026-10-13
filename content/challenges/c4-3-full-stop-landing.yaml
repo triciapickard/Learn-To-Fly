@@ -20,7 +20,7 @@ setup:
   airportIcao: KLVK
   startState: RUNWAY
   startDetails:
-    runway: 25R # ⚠ verify the runway name in the sim
+    runway: 25R # ⚠ verify — Sim check: real-world 7L/25R (AirNav 2026-10-13); confirm the sim lists it as 25R
     fallback: If the sim starts you on a different runway, fly the pattern for that runway.
   weatherPreset: WX_CALM
   timeLocal: '10:00'

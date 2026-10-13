@@ -33,10 +33,10 @@ In a real airplane, instrument students experience disorientation on purpose: an
 
 Your sense of balance lives in two sets of organs in each inner ear, and both were designed for walking, not flying.
 
-| Organ               | Senses                          | How it is fooled in flight                                                       |
-| ------------------- | ------------------------------- | -------------------------------------------------------------------------------- |
-| Semicircular canals | Rotation (roll, pitch, yaw)     | Fluid stops moving after about 20 s of steady turn, so the turn feels like level |
-| Otolith organs      | Linear acceleration and gravity | Cannot tell "pushed back by acceleration" from "tilted nose up"                  |
+| Organ               | Senses                          | How it is fooled in flight                                                        |
+| ------------------- | ------------------------------- | --------------------------------------------------------------------------------- |
+| Semicircular canals | Rotation (roll, pitch, yaw)     | Fluid catches up after about 15–20 s of steady turn, so the turn feels like level |
+| Otolith organs      | Linear acceleration and gravity | Cannot tell "pushed back by acceleration" from "tilted nose up"                   |
 
 The canals are three fluid-filled loops. When your head starts to rotate, the fluid lags and bends tiny hairs, and you feel the turn. In a steady turn the fluid catches up and the turn vanishes from your senses. Stop the turn and the fluid overshoots: now you feel a turn the other way that is not happening.
 
@@ -115,7 +115,7 @@ Head movements trigger Coriolis, and your balance organs are less reliable when 
 
 Three things to carry forward:
 
-1. The canals stop sensing a steady turn after about 20 seconds; the otoliths confuse acceleration with pitch.
+1. The canals stop sensing a steady turn after about 15–20 seconds; the otoliths confuse acceleration with pitch.
 2. The leans, Coriolis, graveyard spiral, somatogravic and inversion illusions all come from those two facts.
 3. The only cure is to trust the instruments, and the only way to make that a reflex in a real airplane is real training.
 

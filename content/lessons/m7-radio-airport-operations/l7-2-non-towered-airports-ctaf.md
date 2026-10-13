@@ -99,5 +99,5 @@ In MSFS, the ATC window offers CTAF calls at non-towered airports, and the AI tr
 :::
 
 :::callout{type="verify"}
-Author note: check which CTAF calls the MSFS 2024 ATC window offers, and whether AI traffic announces its position.
+Sim check: which CTAF calls the MSFS 2024 ATC window offers, and whether AI traffic announces its position.
 :::

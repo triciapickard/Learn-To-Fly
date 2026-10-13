@@ -38,7 +38,7 @@ A soft field is any surface that resists the wheels rolling: wet grass, mud, sof
 The nose wheel is the weak point: the Skyhawk's nose gear is lighter than the main gear and it steers, so it is the first thing to suffer. Soft-field technique protects it from the first taxi to shutdown.
 
 :::callout{type="verify"}
-Confirm the dry-grass correction (about +15% ground roll) against the 172S POH takeoff chart notes and the Learn-To-Fly sim-data table (v2 Section 8.3), and label it a typical figure. Record what the MSFS 2024 surface model does on grass (Week 2 notes).
+Sim check: record what the MSFS 2024 surface model does on grass (acceleration, bounce, stopping) from the Week 2 notes and the v2 Section 8.3 sim-data table. (Desk-verified 2026-10-13: the 172S POH takeoff chart notes add 15% of the ground-roll figure for a dry grass runway.)
 :::
 
 ## Taxi: keep moving, elevator back
@@ -63,7 +63,7 @@ On a soft surface:
 Ground effect is the cushion of air within about a wingspan of the surface. Near the ground the wingtip vortices are squashed, so the wing makes less **induced drag**, and the airplane can fly, barely, at a speed that would not sustain it 50 ft up. That is why step 5 matters: climb out of ground effect at that low speed and the drag comes back, the airplane cannot accelerate, and it settles back onto the runway or stalls.
 
 :::callout{type="verify"}
-Confirm the soft-field takeoff flap setting (10° assumed) and the climb speeds against the 172S POH Section 4 procedure and the MSFS 2024 in-sim checklist. Confirm that the sim's Skyhawk lifts off early with full aft yoke and flaps 10° on a paved runway, and record the typical lift-off speed. Screenshot for the shot list: "soft-field takeoff, nose-high roll, Tracy".
+Sim check: confirm that the sim's Skyhawk lifts off early with full aft yoke and flaps 10° on a paved runway, record the typical lift-off speed, and take the shot-list screenshot "soft-field takeoff, nose-high roll, Tracy". (Desk-verified 2026-10-13: 172S POH Section 4 says soft or rough field takeoffs use 10° flaps, lifting off as soon as practical in a slightly tail-low attitude and leveling off immediately to accelerate; AFH Chapter 6 says stay in ground effect until at least Vx and retract flaps at Vy.)
 :::
 
 :::quiz{id="l10-3-q1" type="single"}
@@ -83,14 +83,14 @@ After a soft-field lift-off, why do you level off a few feet above the runway in
 
 The goal: touch down at the **slowest possible speed**, main wheels only, as gently as the airplane can manage, and keep the nose wheel off as long as the elevator will hold it.
 
-| Phase     | Soft-field technique                                                                   | How it differs from a normal landing                |
-| --------- | -------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| Final     | Full flaps, {{vspeed.approach}}, stabilized as in [[l4-3-normal-approach-and-landing]] | Same                                                |
-| Round-out | Start a little earlier; carry a touch of power into the flare                          | A normal landing is power-idle                      |
-| Flare     | Hold the airplane off, nose high, and let it settle onto the mains close to the stall  | A normal landing accepts a firmer, faster touchdown |
-| Touchdown | Keep the yoke coming back; keep a little power to cushion it                           | Power is idle                                       |
-| Rollout   | Nose wheel held off until it drops on its own; little or no braking                    | Nose wheel down early, brakes as needed             |
-| Taxi      | Keep moving, elevator back                                                             | Normal taxi                                         |
+| Phase     | Soft-field technique                                                                                                    | How it differs from a normal landing                                 |
+| --------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Final     | Full flaps, {{vspeed.shortFieldApproach}}, the short-field speed, stabilized as in [[l4-3-normal-approach-and-landing]] | A few knots slower than {{vspeed.approach}}; extra speed means float |
+| Round-out | Start a little earlier; carry a touch of power into the flare                                                           | A normal landing is power-idle                                       |
+| Flare     | Hold the airplane off, nose high, and let it settle onto the mains close to the stall                                   | A normal landing accepts a firmer, faster touchdown                  |
+| Touchdown | Keep the yoke coming back; keep a little power to cushion it                                                            | Power is idle                                                        |
+| Rollout   | Nose wheel held off until it drops on its own; little or no braking                                                     | Nose wheel down early, brakes as needed                              |
+| Taxi      | Keep moving, elevator back                                                                                              | Normal taxi                                                          |
 
 The little bit of power is the trick. It softens the touchdown and keeps the elevator effective at a lower speed, so the nose stays up longer. Pull it to idle only once the mains are rolling.
 
@@ -125,7 +125,7 @@ MSFS 2024 models runway surfaces, and grass noticeably slows the airplane on the
 :::
 
 :::callout{type="verify"}
-Record the Week 2 findings on the MSFS 2024 surface model (rolling resistance on grass, any bounce on rough surfaces) and the ICAO of the grass strip chosen for the C10.3 variant.
+Author decision: choose the grass strip for the C10.3 P1 variant and record its identifier here. Sim check: record the Week 2 findings on the MSFS 2024 surface model (rolling resistance on grass, any bounce on rough surfaces).
 :::
 
 :::quiz{id="l10-3-q3" type="single"}

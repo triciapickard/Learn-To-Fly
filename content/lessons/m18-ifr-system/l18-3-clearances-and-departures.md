@@ -14,7 +14,7 @@ objectives:
   - Explain what a void time and "released" mean at a non-towered airport.
   - Convert a climb gradient in feet per nautical mile into a rate of climb.
 challenges: []
-resources: [aim-5, iph-departures]
+resources: [aim-5, iph-departures, faa-dtpp, ecfr-91-175]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -45,25 +45,25 @@ Where you get the clearance depends on the airport:
 | Non-towered                                       | Flight service or the ATC facility by phone or a remote radio outlet | You get a **release** with a **void time**                                       |
 | In the air (picking up IFR after a VFR departure) | The approach or center controller                                    | A shorter clearance, usually starting with "cleared to" and an altitude          |
 
-At a non-towered airport nobody can see you take off, so ATC protects the airspace for a window of time. "**Released** at 1520, clearance void if not off by 1530; if not off by 1530, advise no later than 1600 of intentions" means: depart between 1520 and 1530; after 1530 the clearance no longer exists, and ATC starts a search if you have not called by 1600. "**Hold for release**" means you have the clearance but may not take off yet.
+At a non-towered airport nobody can see you take off, so ATC protects the airspace for a window of time. "**Released** at 1520, clearance void if not off by 1530; if not off by 1530, advise no later than 1600 of intentions" means: depart between 1520 and 1530; after 1530 your authority to depart IFR is withdrawn (the flight plan stays on file, but you need a new release), and ATC treats you as overdue and starts a search if you have not called by 1600. That deadline is never more than 30 minutes after the void time. "**Hold for release**" means you have the clearance but may not take off yet.
 
-In the sim, MSFS 2024's ATC gives IFR clearances from the menu after you file in the world map; on VATSIM a delivery or ground controller gives it by voice ([[l15-5-flying-on-vatsim]]).
+At Livermore the tower has no separate clearance delivery frequency: with the tower open, ground control gives the clearance; when it is closed, you telephone NorCal Approach at the number in the Chart Supplement. In the sim, MSFS 2024's ATC gives IFR clearances from the menu after you file in the world map; on VATSIM a delivery or ground controller gives it by voice ([[l15-5-flying-on-vatsim]]).
 
 :::callout{type="verify"}
-Verify the clearance delivery paths and the void-time phraseology against AIM 5-2-6 (departure control and void times) and the Pilot/Controller Glossary entries for "release time", "void time" and "hold for release". Confirm KLVK's clearance delivery arrangement in the current Chart Supplement, and the MSFS 2024 menu path for IFR clearances with the sim version.
+Sim check: confirm the MSFS 2024 menu path for IFR clearances with the sim version. Desk-verified 2026-10-13: clearance paths and void-time wording against AIM 5-2-3 and 5-2-7 and the Pilot/Controller Glossary; KLVK arrangement (ground 121.6, phone NorCal when the tower is closed) against the Chart Supplement data on AirNav.
 :::
 
 :::quiz{id="l18-3-q1" type="single"}
 Your clearance from a non-towered airport ends "clearance void if not off by 1530". It is 1535 and you are still on the ground. What is true?
 
 - [ ] You may still depart as long as you stay below 3,000 ft
-- [x] Your clearance no longer exists; call ATC for a new release before departing IFR
+- [x] Your authority to depart IFR has expired; call ATC for a new release before departing IFR
 - [ ] You may depart VFR and pick up the same clearance in the air
 - [ ] The clearance is valid until 1600
 
 ---
 
-After the void time the clearance is cancelled. ATC may have released other traffic into the airspace. Call for a new release. The 1600 time is the deadline for telling ATC your intentions, not an extension.
+After the void time you may not depart IFR; ATC may have released other traffic into the airspace. The flight plan itself is still on file, so call for a new release. The 1600 time is the deadline for telling ATC your intentions, not an extension.
 :::
 
 ## CRAFT
@@ -91,7 +91,7 @@ The **readback** is the whole thing, in order, ending with your callsign. If a l
 The "expect" altitude is not decoration: it is the altitude you climb to if you lose radio contact ([[l18-5-enroute-ifr-and-lost-communications]]), so it goes in the readback.
 
 :::callout{type="verify"}
-Verify the clearance structure and readback expectations against AIM 5-2-5 and 4-4-7. The example is fictional; make sure the frequency and squawk never match a real Bay Area assignment. Widget W32 (Radio Readback Trainer) in clearance mode is embedded here once Phase 20 ships it: `::widget{name="radio-readback" mode="clearance"}`. Until then the table is the walkthrough and Challenge C18.1 "Copy a clearance" uses W32 directly.
+Widget pending: Widget W32 (Radio Readback Trainer) in clearance mode is embedded here once Phase 20 ships it: `::widget{name="radio-readback" mode="clearance"}`. Until then the table is the walkthrough and Challenge C18.1 "Copy a clearance" uses W32 directly. Clearance structure and readback desk-verified 2026-10-13 against AIM 4-4-3, 4-4-7 and 5-2-6; 123.45 is not a NorCal sector frequency (squawks are assigned dynamically, so the example stays labelled fictional).
 :::
 
 :::quiz{id="l18-3-q2" type="order"}
@@ -110,22 +110,22 @@ CRAFT: Clearance limit, Route, Altitude, Frequency, Transponder. Writing the let
 
 ## Obstacle departure procedures and takeoff minimums
 
-The MEA protects you once you are on the airway. The gap between the runway and the airway is covered by the **departure procedure**. Big airports publish graphic SIDs. Smaller ones, including Livermore, publish a textual **obstacle departure procedure** (ODP) in the "Takeoff Minimums and (Obstacle) Departure Procedures" section of the d-TPP. The "T" triangle on the plate ([[l18-2-ifr-charts-and-the-approach-plate]]) points to that section.
+The MEA protects you once you are on the airway. The gap between the runway and the airway is covered by the **departure procedure**. Big airports publish graphic SIDs. Smaller ones publish an **obstacle departure procedure** (ODP): usually a few lines of text in the "Takeoff Minimums and (Obstacle) Departure Procedures" section at the front of the d-TPP, sometimes a separate chart with "(OBSTACLE)" in its title. The "T" triangle on the plate ([[l18-2-ifr-charts-and-the-approach-plate]]) points to that section, and the section tells you which kind you have. Livermore's entry just says "Use LIVERMORE DEPARTURE": its ODP is the graphic **LIVERMORE THREE DEPARTURE (OBSTACLE)**.
 
-An ODP entry has up to three parts. Livermore's, as an example and not for navigation:
+An ODP has up to three parts. Livermore's, paraphrased from the October 2026 cycle as an example and not for navigation:
 
-| Part                   | What it says                                                                         | How you brief it                                                         |
-| ---------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| Takeoff minimums       | A ceiling and visibility, or "standard", per runway, sometimes with a climb gradient | "Runway 25R: standard with a minimum climb of 300 ft per nm to 2,000 ft" |
-| Takeoff obstacle notes | The obstacles near each runway end, with their height and distance                   | "Trees 1,200 ft from the departure end, 60 ft above the runway"          |
-| Departure procedure    | A heading, altitude and turn to join the route or reach an altitude                  | "Runway 25R: climb heading 253° to 1,500 ft before turning left"         |
+| Part                   | What it says                                                                         | How you brief it                                                                                                                       |
+| ---------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Takeoff minimums       | A ceiling and visibility, or "standard", per runway, sometimes with a climb gradient | "Runways 25L and 25R: standard, with a minimum climb of 295 ft per nm to 3,400 ft, or 2,900 and 3 for a visual climb over the airport" |
+| Takeoff obstacle notes | The obstacles near each runway end, with their height and distance                   | "Runway 25R: a sign, fences and trees from the departure end outward, the tallest trees about 60 ft above the runway end"              |
+| Departure route        | A heading, altitude and turn to join the route or reach an altitude                  | "Runways 25L and 25R: climb heading 255° to 1,200 ft, then a climbing right turn heading 020° to join the Oakland 060 radial to ALTAM" |
 
 For a Part 91 flight like yours, published takeoff minimums are legally advisory; for airlines they are mandatory. Learn-To-Fly treats them as mandatory: they exist because something near the runway is tall enough to hit.
 
-ATC does not usually assign an ODP. You fly it on your own unless the clearance gives a heading or a SID instead. If "fly heading 250" conflicts with the ODP, say so before you take off.
+ATC does not usually assign an ODP. You fly it on your own unless the clearance gives a heading or a SID instead, and if the ODP has a route or a turn restriction, tell ATC you are flying it. If "fly heading 250" conflicts with the ODP, say so before you take off.
 
 :::callout{type="verify"}
-The KLVK takeoff minimums and ODP must be paraphrased from the current d-TPP "Takeoff Minimums and (Obstacle) DP" section and recorded with the cycle checked (v2 Section 12.4). The three quoted examples in the table are illustrative placeholders, not the published text; replace them with a paraphrase of the real entries or keep them clearly fictional. Confirm the Part 91 advisory status of takeoff minimums against 14 CFR 91.175(f) and the AIM 5-2-9 guidance on ODPs.
+Sim check: confirm the LIVERMORE THREE DEPARTURE (OBSTACLE) is in the sim's nav database (PROC, Select Departure) for Challenge C18.3. Desk-verified 2026-10-13: ODP, takeoff minimums and obstacle notes paraphrased from d-TPP cycle 2610 (effective 1–29 Oct 2026); Part 91 status against 14 CFR 91.175(f); ODP handling against AIM 5-2-9.
 :::
 
 :::quiz{id="l18-3-q3" type="multi"}
@@ -138,7 +138,7 @@ Which of these are true about an obstacle departure procedure? Pick all that app
 
 ---
 
-ODPs are textual, live in the takeoff minimums section of the d-TPP, and are flown on the pilot's own initiative. Takeoff minimums are legally advisory for Part 91 flights, but the ODP protects you from obstacles whoever you are, and Challenge C18.3 scores it as a required item.
+ODPs live in the takeoff minimums section of the d-TPP, as text or as their own "(OBSTACLE)" chart, never on the approach plate, and are flown on the pilot's own initiative. Takeoff minimums are legally advisory for Part 91 flights, but the ODP protects you from obstacles whoever you are, and Challenge C18.3 scores it as a required item.
 :::
 
 ## Climb gradients
@@ -155,7 +155,7 @@ The standard gradient, assumed when nothing is printed, is **200 ft per nm**. In
 | 300 ft per nm | 375 fpm              | 450 fpm              |
 | 400 ft per nm | 500 fpm              | 600 fpm              |
 
-A tailwind means a faster groundspeed and a faster required climb. The Skyhawk climbs well over 600 fpm on a cool day at sea level; on a hot day at a high airport the required rate can exceed what it can do, which is where [[l9-1-density-altitude-and-performance]] and [[l13-3-high-elevation-airport-operations]] come back.
+Livermore's 295 ft per nm off runway 25R is 369 fpm at 75 kt and 443 fpm at 90 kt. A tailwind means a faster groundspeed and a faster required climb. The Skyhawk climbs well over 600 fpm on a cool day at sea level; on a hot day at a high airport the required rate can exceed what it can do, which is where [[l9-1-density-altitude-and-performance]] and [[l13-3-high-elevation-airport-operations]] come back.
 
 :::callout{type="decision"}
 The ODP asks for 400 ft per nm, your groundspeed will be 85 kt, and today's density altitude gives you 450 fpm at {{vspeed.vy}}. You need 567 fpm. The honest answer: not this runway, not today. Wait for the wind, lighten the airplane, or depart another way. Deciding that on the ground is the skill.

@@ -13,7 +13,8 @@ objectives:
   - Use the alternate static source and describe how the readings change.
   - Fly pitch and power with a failed PFD in reversionary mode, and brief what still works.
 challenges: []
-resources: [phak-ch8, ifh-instruments, garmin-g1000-nxi-pilots-guide]
+resources:
+  [phak-ch8, afh-ch18, ifh-instruments, garmin-g1000-nxi-pilots-guide, garmin-g1000-nxi-crg]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -39,7 +40,7 @@ The airspeed indicator compares the two: ram minus static is the push of the air
 The pitot tube has a small **drain hole** so water can run out, and a **pitot heat** switch to melt ice. On the G1000 the pressures go to the **air data computer (ADC)**, which turns them into the numbers on the PFD, including true airspeed, so those readouts go wrong too when the lines do.
 
 :::callout{type="verify"}
-Widget W31 (Pitot-Static System) is embedded here once Phase 20 ships it: `::widget{name="pitot-static" mode="explore"}`, including its quiz mode. Until then the table in the next section is the walkthrough. Confirm on the sim's Skyhawk: pitot tube location, number and location of static ports, PITOT HEAT switch position, and whether pitot heat is modeled (does icing block the tube with heat off?).
+Widget pending: W31 (Pitot-Static System) is embedded here once Phase 20 ships it: `::widget{name="pitot-static" mode="explore"}`, including its quiz mode. Until then the table in the next section is the walkthrough. Desk-verified 2026-10-13: the drain hole, pitot heat and ADC description match PHAK Ch 8. Sim check: pitot tube location, number and location of static ports, PITOT HEAT switch position, and whether icing blocks the tube with heat off.
 :::
 
 ## Pitot blockage: ram, or ram and drain
@@ -97,8 +98,10 @@ The fix is the **alternate static source**: a pull knob low on the panel, left o
 
 They come back slightly wrong. Cabin air is at a little lower pressure than outside air, so with alternate static you read **slightly high** on airspeed and altitude, and the VSI shows a brief climb as the pressure equalizes. The POH has a small correction table; in the sim the difference is probably too small to see.
 
+A partial blockage is sneakier than a full one: the instruments may behave until you start down, then lag. If you suspect the static line, open the alternate source while climbing or descending; if the needles jump, you have found the problem, and you keep the alternate source open for the rest of the flight.
+
 :::callout{type="verify"}
-Confirm the alternate static valve's label and location in the sim cockpit (POH Section 7: "ALT STATIC AIR" or similar, left lower panel), whether the sim models it, and whether a static blockage can be set in the MSFS 2024 failure menu. If not, Challenge C14.3 keeps the talk-through scenario card. Check the direction of the airspeed error for a static blockage against PHAK Chapter 8 before publishing.
+Desk-verified 2026-10-13: static-blockage directions (airspeed low above the blockage altitude, high below; altimeter frozen; VSI zero) and the alternate-static readings confirmed (PHAK Ch 8, Blocked Static System and Alternate Static Source; AFH Ch 18, Pitot-Static System). POH check: Section 7 label and location of the alternate static valve. Sim check: whether the sim's Skyhawk has the knob, whether it does anything, and whether a static blockage can be set in the MSFS 2024 failure menu; if not, Challenge C14.3 keeps the talk-through card.
 :::
 
 :::quiz{id="l14-2-q3" type="single"}
@@ -120,17 +123,17 @@ The G1000 does not have mechanical gyros. Attitude and heading come from the **A
 
 | Failed unit | Red X over                                              | What you still have                                         |
 | ----------- | ------------------------------------------------------- | ----------------------------------------------------------- |
-| AHRS        | Attitude indicator, heading, turn rate                  | Airspeed, altitude, VSI; standby attitude; magnetic compass |
+| AHRS        | Attitude indicator and heading (HSI)                    | Airspeed, altitude, VSI; standby attitude; magnetic compass |
 | ADC         | Airspeed tape, altitude tape, VSI, TAS and OAT readouts | Attitude and heading; standby airspeed and altimeter        |
 
-The standby instruments are the point of this table. Beside the displays the Skyhawk carries a **standby airspeed indicator, attitude indicator and altimeter**, plus the **magnetic compass**. They have their own pitot-static lines, and the standby attitude indicator is electric, on the essential bus. When a red X appears, your eyes go to the standby instrument for that job and you keep flying.
+The standby instruments are the point of this table. Beside the displays the Skyhawk carries a **standby airspeed indicator, attitude indicator and altimeter**, plus the **magnetic compass**; there is no standby turn coordinator. The standby airspeed indicator and altimeter are plain pressure gauges on the same pitot and static lines as the ADC, so they survive an electronic failure but not a blocked line. The standby attitude indicator is a **vacuum gyro** driven by the engine's vacuum pump, which exists only for it; a **LOW VACUUM** caution on the PFD and a flag on the instrument warn you when it is starving. When a red X appears, your eyes go to the standby instrument for that job and you keep flying.
 
 :::callout{type="classic"}
-On the classic steam-gauge Skyhawk the attitude and heading indicators are **vacuum-driven** gyros. A vacuum pump failure gives no red X: the attitude indicator slowly tumbles over several minutes while looking almost right, which is far more dangerous. Watch the **suction gauge** on every cruise check and cross-check the attitude indicator against the electric turn coordinator and the altimeter.
+On the classic steam-gauge Skyhawk the main attitude and heading indicators are **vacuum-driven** gyros. A vacuum pump failure gives no red X: the attitude indicator slowly tumbles over several minutes while looking almost right, which is far more dangerous. Watch the **suction gauge** on every cruise check and cross-check the attitude indicator against the electric turn coordinator and the altimeter.
 :::
 
 :::callout{type="verify"}
-Confirm in the sim which standby instruments the Skyhawk has and what powers the standby attitude indicator (electric on the essential bus in the 172S NAV III, or vacuum in the sim variant). Confirm the red X behavior for AHRS and ADC failures if the failure menu allows them. Screenshot for the shot list: "PFD with AHRS red X".
+Desk-verified 2026-10-13: standby set (airspeed, attitude, altimeter, magnetic compass; no standby turn coordinator) per IFH Ch 7; vacuum-driven standby attitude indicator and LOW VACUUM caution per the Garmin G1000 NXi CRG for the Cessna NAV III (EIS "standby vacuum pump pressure", LOW VACUUM "aircraft without Standby ADI"); 2022-on airplanes replace it with a GI 275 with its own battery (CAP TXWG 172S Introduction). Sim check: which standby set the sim's Skyhawk has (vacuum gyro or GI 275), and the red X behavior if the failure menu can fail AHRS or ADC. Screenshot for the shot list: "PFD with AHRS red X".
 :::
 
 ## Reversionary mode: when a display dies
@@ -140,7 +143,7 @@ The PFD and MFD are separate screens with separate electronics. If one goes dark
 1. **Automatically**, when the system detects that a display has failed.
 2. **Manually**, when you press the red **DISPLAY BACKUP** button on the audio panel, the narrow strip between the PFD and the MFD.
 
-The surviving screen then shows a compressed PFD (attitude, airspeed, altitude, HSI) with the engine instruments down the side. The map is gone; the flight instruments are all there.
+The surviving screen then shows the PFD (attitude, airspeed, altitude, HSI) with the engine instruments down the side. The MFD's map pages are gone; the flight instruments are all there. Press DISPLAY BACKUP again and the displays return to normal.
 
 :::callout{type="memory"}
 **PFD failure (simplified for the sim)**
@@ -154,7 +157,7 @@ The surviving screen then shows a compressed PFD (attitude, airspeed, altitude, 
 In Challenge C14.2 "PFD failure" the event card tells you to press DISPLAY BACKUP and treat the PFD as failed. Covering the PFD with a sticky note on the monitor is honest in a way the sim cannot be.
 
 :::callout{type="verify"}
-Confirm the DISPLAY BACKUP button's location and label on the sim's audio panel, what the sim's reversionary layout shows, and whether the sim's failure menu can fail a single display (automatic reversion). Record the sim version.
+Desk-verified 2026-10-13: automatic reversion on a display failure, the red DISPLAY BACKUP button on the audio panel, press again to cancel, and flight instruments plus EIS on the surviving screen confirmed (Garmin G1000 NXi CRG for the Cessna NAV III, Reversionary Mode; FAA DPE and CFI Guide G1000 NXi). Sim check: the button's label and position on the sim's audio panel, the sim's reversionary layout, and whether the failure menu can fail one display; record the sim version.
 :::
 
 :::quiz{id="l14-2-q4" type="single"}
@@ -184,11 +187,11 @@ Whichever failure you have, the escape is the same: the Skyhawk flies a known sp
 Fly the attitude and the power, confirm with the altimeter, and cross-check with the **GPS groundspeed** on the MFD. Groundspeed is not airspeed, but on a calm day it is close, and it never freezes.
 
 :::callout{type="verify"}
-Fly these pitch-and-power pairs in the sim and replace the "expect about" column with measured values before publishing. Challenge C14.3 "Blocked pitot tube" scores against this table.
+Sim check: fly these four pitch-and-power pairs in the sim and replace the "expect about" column with measured values before publishing; Challenge C14.3 "Blocked pitot tube" scores against this table.
 :::
 
 :::callout{type="sim"}
-MSFS 2024 may not let you block the pitot tube from its failure menu. The default Challenge C14.3 uses a card instead: "Airspeed unreliable, cover the airspeed tape." Covering it with a sticky note is a legitimate method; real instructors do the same.
+MSFS 2024 may not let you block the pitot tube from its failure menu. The default Challenge C14.3 uses a card instead: "Airspeed unreliable, cover the airspeed tape." Covering it with a sticky note is a legitimate method; real instructors do the same. Remember that a real pitot blockage draws no red X: the tape just reads wrong, which is why you cross-check.
 :::
 
 ## Practice and next steps

@@ -110,7 +110,7 @@ Marginal VFR is legal, barely, and it is where scud running starts. For now, tre
 ::widget{name="metar-decoder" mode="explore"}
 
 :::callout{type="verify"}
-Check the ceiling definition and the flight-category thresholds against the Aviation Weather Handbook. Confirm the METAR decoder widget's example set includes a multi-layer METAR with a low scattered layer so the "ceiling is the first BKN" point can be clicked through.
+Widget pending: confirm the METAR decoder (W17) example set includes a multi-layer METAR with a low scattered layer, such as `FEW004 SCT009 BKN012 OVC020`, so the "ceiling is the first BKN" point can be clicked through. Desk-verified 2026-10-13: ceiling definition and flight-category thresholds match AIM 7-1-7 and 7-1-28.
 :::
 
 :::quiz{id="l11-3-q3" type="single"}
@@ -139,10 +139,6 @@ The legal minimums from [[l6-2-airspace]] are the floor under every decision in 
 Two more rules bite at airports. To take off, land or fly the pattern VFR at an airport inside Class B, C, D or E surface airspace, such as Livermore or Palo Alto, the reported **ceiling must be at least 1,000 ft** and ground **visibility at least 3 SM**. Otherwise you need a special VFR clearance ([[l15-3-light-gun-signals-lost-comms-and-special-vfr]]) or you wait.
 
 And cloud clearance is measured from you to the cloud. With a 1,200 ft ceiling at a 400 ft airport, the base is 1,600 ft MSL and you must stay 500 ft below it: 1,100 ft MSL, at an airport whose pattern altitude is 1,400 ft. The marine layer does not need to reach the ground to close an airport to you.
-
-:::callout{type="verify"}
-Check the table against 14 CFR 91.155 (basic VFR weather minimums), including the Class G day and night rows and the above-10,000 ft row, and the surface-area ceiling and visibility rule in 91.155(c) and (d). Confirm KLVK pattern altitude (1,400 ft MSL) and elevation (400 ft) in `airports.yaml`. Keep the learner table simplified; the regulation reference stays here.
-:::
 
 ## Visibility, haze and smoke
 

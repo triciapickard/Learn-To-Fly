@@ -49,7 +49,7 @@ The engine is in front of the firewall; the fuel is in the wings and runs forwar
 Notice what is missing: there is no restart. You are now a glider with a plan, and the forced landing from [[l5-4-engine-failure-and-forced-landings]] takes over.
 
 :::callout{type="verify"}
-Verify every item above against the MSFS 2024 in-sim checklist and POH Section 3 ("Engine fire in flight"): the order (mixture, fuel shutoff valve, auxiliary fuel pump, master, cabin heat/air, airspeed, forced landing), the exact airspeed the POH gives (100 KIAS is commonly quoted for the 172S, with a higher speed if the fire does not go out), and whether the POH says "fuel shutoff valve" or "fuel selector". Match the wording the learner sees in the sim's checklist. Record any differences and teach the POH version.
+Desk-verified 2026-10-13: fuel first (mixture idle cut-off, fuel shutoff OFF), no restart after the fire is out, and a faster descent to try to blow the fire out confirmed (AFH Ch 18, Engine Fire; the AFH notes the master-off item costs you the radios and transponder, so it comes after the fuel items). POH check: Section 3 "Engine fire in flight": exact item order and wording ("fuel shutoff valve" vs "fuel selector", any STBY BATT item), and the airspeed (100 KIAS is commonly quoted, with a higher speed if the fire persists); match the sim's checklist wording and teach the POH version.
 :::
 
 :::quiz{id="l14-4-q1" type="order"}
@@ -85,7 +85,7 @@ An electrical fire smells different: hot insulation, sharp acrid smoke, often no
 Step 4 is the judgment call. On a clear day you may not need power at all: the engine runs on magnetos and the airplane flies without a screen. At night, or at a towered airport, you may want one radio and the PFD back. Bring them back one at a time, so if the smoke returns you know which item caused it.
 
 :::callout{type="verify"}
-Verify against the POH Section 3 ("Electrical fire in flight") and the in-sim checklist: whether the POH closes vents first or opens them, the fire extinguisher item, and the order for restoring power (master, breakers, avionics). Confirm whether the sim models smoke or a fire extinguisher at all.
+Desk-verified 2026-10-13: master and all electrical switches off, vents opened to clear smoke only after the extinguisher and closed again if the smoke grows, and power restored one switch at a time with a pause after each, confirmed (AFH Ch 18, Electrical Fires and Cabin Fire). POH check: Section 3 "Electrical fire in flight" item order and wording (vents, extinguisher, master, breakers, avionics). Sim check: whether the sim models cabin smoke or a fire extinguisher at all.
 :::
 
 :::quiz{id="l14-4-q2" type="single"}
@@ -108,7 +108,7 @@ Fire is one reason to get down fast; so is a sick passenger or smoke you cannot 
 1. **Clear the area.** Look below before you go there.
 2. **Power: idle.** Mixture as required (in a fire, it is already at cut-off).
 3. **Bank 30°–45°** and lower the nose. The bank adds drag and lets you see the ground you are descending toward.
-4. **Airspeed.** Flaps up, accelerate to no faster than {{vspeed.vno}} in smooth air, and never above {{vspeed.vne}}. If you choose flaps, stay below {{vspeed.vfe}}; flaps give a steeper, slower descent. In rough air, stay at or below {{vspeed.va}}.
+4. **Airspeed.** Flaps up, accelerate to no faster than {{vspeed.vno}} in smooth air, and never above {{vspeed.vne}}. If you choose flaps, stay below {{vspeed.vfe}}; flaps give a steeper, slower descent. In rough air, stay at or below {{vspeed.va}}. {{vspeed.vno}} is our target, not an FAA number: the handbook says to descend at the fastest speed the configuration allows without passing its limit, and we keep a margin below the red line for a beginner.
 5. **Plan the level-off.** Decide the altitude you are descending to before you start, and begin leveling off a few hundred feet above it.
 
 | Choice                           | Descent                      | Use when                                        |
@@ -120,7 +120,7 @@ Fire is one reason to get down fast; so is a sick passenger or smoke you cannot 
 In a fire the bank also helps keep the flames away from the cabin side and the field in view.
 
 :::callout{type="verify"}
-Verify the emergency descent guidance against AFH Chapter 18 and POH Section 3: the recommended airspeed (the POH may specify a value or a "do not exceed"), the bank angle range (30°–45° is the AFH's typical guidance), whether flaps are recommended for the 172S, and the rough-air speed. Challenge C14.5 scores airspeed within ±5 kt of the taught target, so the number must be the verified one.
+Desk-verified 2026-10-13: power idle, bank about 30°–45° to keep positive load and look below, flaps and gear as the manufacturer recommends, never past VNE or VFE, VA in turbulence, and a level-off started high enough to recover, confirmed (AFH Ch 18, Emergency Descents). POH check: whether Section 3 gives an emergency descent airspeed or flap setting for the 172S; if it does, teach that number and retune Challenge C14.5's ±5 kt target to it.
 :::
 
 :::quiz{id="l14-4-q3" type="single"}
@@ -155,7 +155,7 @@ With no fire modeled, the engine keeps running until you cut the mixture. Cut it
 :::
 
 :::callout{type="verify"}
-Confirm whether MSFS 2024 models engine fire or cabin smoke for the Skyhawk, and record the sim version. Screenshot for the shot list: "emergency descent, 45° bank, {{vspeed.vno}} on the tape".
+Sim check: whether MSFS 2024 models engine fire or cabin smoke for the Skyhawk; record the sim version. Screenshot for the shot list: "emergency descent, 45° bank, {{vspeed.vno}} on the tape".
 :::
 
 ## Practice and next steps

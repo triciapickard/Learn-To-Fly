@@ -83,7 +83,7 @@ Once you've landed and slowed to taxi speed:
 
 1. **Clear the runway.** Turn off at a taxiway and keep going until the **whole airplane** is past the hold short line. Then stop.
 2. **Flaps up.**
-3. **Transponder** to standby (or as the checklist says).
+3. **Transponder**: leave it in ALT. ATC's ground surveillance should see you all the way to the ramp; standby only once you're parked.
 4. **Lights** as needed: strobes and landing light off, taxi light on.
 
 ::checklist{slug="after-landing"}

@@ -13,20 +13,20 @@ objectives:
   - Fly a short-field approach at the short-field speed and touch down within 200 ft beyond the aiming point.
   - Explain the trade-off between Vx and Vy and when to switch from one to the other.
 challenges: []
-resources: [afh-ch6, afh-ch9]
+resources: [afh-ch6, afh-ch9, faa-chart-supplement, airnav]
 published: false
 lastVerifiedAt: null
 simVersion: null
 ---
 
-## Palo Alto, full fuel, trees at the end
+## Palo Alto, full fuel, a dike at the end
 
-Palo Alto's single runway is about 2,400 ft long, with the bay at one end, obstacles at the other, and the San Francisco Class B overhead. With a passenger and full fuel on a warm afternoon, you do not have the luxury of a sloppy takeoff or a landing that floats. This is the short-field problem: the runway is firm, but there is not much of it, and something is in the way.
+Palo Alto's single runway is about 2,400 ft long, with the bay beyond the Runway 31 end, a lighted dike a few hundred feet past each end, and the San Francisco Class B overhead. With a passenger and full fuel on a warm afternoon, you do not have the luxury of a sloppy takeoff or a landing that floats. This is the short-field problem: the runway is firm, but there is not much of it, and something is in the way.
 
 The short-field techniques from Course 1 get you most of the way. This lesson adds the two things that turn technique into mastery: **numbers from the chart** before you go, and **precision** when you fly.
 
 :::callout{type="verify"}
-The spec's prerequisite is v1 L4.6 (short-field takeoffs and landings), which is not written yet; `l4-1-normal-takeoff-and-climb` stands in, and the recap below is written so the lesson stands alone. Swap the prerequisite to the L4.6 slug when it exists. Confirm KPAO's runway length (2,441 ft in `airports.yaml`) and which runway end has the obstacles against the Chart Supplement.
+Author decision: the spec's prerequisite is v1 L4.6 (short-field takeoffs and landings), which is not written yet; `l4-1-normal-takeoff-and-climb` stands in, and the recap below is written so the lesson stands alone. Swap the prerequisite to the L4.6 slug when it exists. (Desk-verified 2026-10-13: KPAO Runway 13/31 is 2,441 x 70 ft; the Chart Supplement lists an 8-ft lighted dike 300 ft from the Runway 13 end and a 5-ft lighted dike 230 ft from the Runway 31 end, real-world data via AirNav.)
 :::
 
 ## Recap: the short-field techniques
@@ -41,7 +41,7 @@ The spec's prerequisite is v1 L4.6 (short-field takeoffs and landings), which is
 Every number in that table is the difference between the normal procedure and a shorter one. The normal rotation speed, {{vspeed.vr}}, becomes {{vspeed.shortFieldLiftoff}}. The normal approach speed, {{vspeed.approach}}, becomes {{vspeed.shortFieldApproach}}. A few knots sound like nothing; on a 2,400 ft runway they are hundreds of feet.
 
 :::callout{type="verify"}
-Confirm every speed in the recap table against the 172S POH Section 4 short-field procedures and the MSFS 2024 in-sim checklist, and confirm the flap settings (10° for takeoff, 30° for landing). The tokens come from `aircraft.yaml`; fix the values there, not here.
+Sim check: confirm the MSFS 2024 in-sim checklist shows the same short-field speeds and flap settings as the recap table (the tokens come from `aircraft.yaml`; fix the values there, not here). (Desk-verified 2026-10-13: 172S POH Section 4 and the Section 5 chart give flaps 10°, lift-off 51 KIAS, 56 KIAS until obstacles are cleared, flaps up above 60 KIAS; landing flaps FULL at 61 KIAS, heavy braking, flaps retracted for maximum braking.)
 :::
 
 ## Obstacle clearance: distance to 50 ft, Vx and Vy
@@ -79,18 +79,18 @@ Which statement about Vx and Vy is correct?
 
 Open the Learn-To-Fly performance table from [[l9-2-reading-performance-charts]] and work the Palo Alto example. Field elevation is 7 ft, so pressure altitude is close to sea level; take 30 °C and a full airplane.
 
-| Step                                           | Figure (example)                            | Where it comes from                                                |
-| ---------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------ |
-| Distance to clear 50 ft, from the table        | 1,800 ft                                    | Takeoff table at pressure altitude and temperature, maximum weight |
-| Headwind correction: 9 kt headwind, about −10% | −180 ft                                     | Rule of thumb (typical: about 10% less per 9 kt of headwind)       |
-| Corrected distance to 50 ft                    | 1,620 ft                                    |                                                                    |
-| Runway available                               | 2,441 ft                                    | `airports.yaml`                                                    |
-| Margin                                         | About 820 ft, roughly a third of the runway | Your decision rule says whether that is enough                     |
+| Step                                           | Figure (example)                            | Where it comes from                                                                                                      |
+| ---------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Distance to clear 50 ft, from the table        | 1,800 ft                                    | Takeoff table at pressure altitude and temperature, maximum weight (the POH chart gives 1,810 ft at sea level and 30 °C) |
+| Headwind correction: 9 kt headwind, about −10% | −180 ft                                     | Rule of thumb (typical: about 10% less per 9 kt of headwind)                                                             |
+| Corrected distance to 50 ft                    | 1,620 ft                                    |                                                                                                                          |
+| Runway available                               | 2,441 ft                                    | `airports.yaml`                                                                                                          |
+| Margin                                         | About 820 ft, roughly a third of the runway | Your decision rule says whether that is enough                                                                           |
 
-The example figures are typical, not chart values; use the real table. Two corrections work against you, and you should know them: a **tailwind** of even 2 kt adds roughly 10% to the distance, and **dry grass** adds about 15% to the ground roll. Both are rules of thumb, and the chart notes override them.
+The example figures are rounded; use the real table. Two corrections work against you, and you should know them: a **tailwind** adds about 10% to the distance for every 2 kt, up to 10 kt, and **dry grass** adds about 15% to the ground roll. Those are the Skyhawk's own chart notes, and the chart notes always override a rule of thumb.
 
 :::callout{type="verify"}
-Widget W22 (Performance Chart Reader) is embedded here once Phase 20 ships it, with the takeoff table selected and the runway bar showing required against available distance (directive name to be confirmed). Until then the worked table above stands in. Confirm the wind and surface corrections (−10% per 9 kt headwind, +10% per 2 kt tailwind, +15% dry grass) against the POH takeoff chart notes, and replace the example 1,800 ft with the sim-data value once the D2-11 tests are flown.
+Widget pending: Widget W22 (Performance Chart Reader) is embedded here once Phase 20 ships it, with the takeoff table selected and the runway bar showing required against available distance (directive name to be confirmed). Until then the worked table above stands in. Sim check: replace the example 1,800 ft with the sim-data value once the D2-11 tests are flown. (Desk-verified 2026-10-13: the wind and surface corrections match the 172S POH takeoff chart notes.)
 :::
 
 :::quiz{id="l10-4-q2" type="numeric" answer="1620" tolerance="60" unit="ft"}
@@ -106,11 +106,11 @@ Palo Alto on a hot day, full fuel, and a 3 kt tailwind because the tower is usin
 :::
 
 :::callout{type="safety"}
-On the sectional chart and the airport diagram, obstacles near the runway appear as tower and tree symbols with their heights; the Chart Supplement lists them by runway end, for example "trees, 50 ft, 400 ft from the threshold". The "50-ft obstacle" in a takeoff chart is a planning assumption. The real tree may be 70 ft and closer. Read what is actually at the end of the runway before you plan around a number.
+On the sectional chart, obstructions near the airport appear as obstacle symbols with their heights; the Chart Supplement lists them by runway end. Palo Alto's entry says, in effect, "Runway 13: 8-ft dike 300 ft from the runway end, lighted" and "Runway 31: 5-ft dike 230 ft from the runway end, lighted". The "50-ft obstacle" in a takeoff chart is a planning assumption. The real obstacle may be taller and closer, or, as here, lower but very near. Read what is actually at the end of the runway before you plan around a number.
 :::
 
 :::callout{type="verify"}
-Confirm the obstacle symbols and the Chart Supplement obstruction wording against the FAA Chart User's Guide and the current Chart Supplement entry for KPAO. Screenshot for the shot list: "short-field takeoff, Vx climb, KPAO" (confirm which runway end has the obstacles and whether C10.4 uses Runway 31).
+Author decision: which runway C10.4 uses at KPAO (both ends have a low dike close in; 31 departs toward the bay and is the usual runway). Sim check: screenshot for the shot list, "short-field takeoff, Vx climb, KPAO".
 :::
 
 ## The precise approach
@@ -125,15 +125,15 @@ At the aiming point, power to idle, a brief flare, and touch down positively, wi
 
 ## Maximum braking without skidding
 
-After touchdown:
+After touchdown, the Skyhawk's handbook procedure:
 
-1. **Hold the nose up briefly** with back elevator for aerodynamic braking, then let the nose wheel down.
+1. **Lower the nose wheel carefully** as soon as the mains are rolling; Cessna does not hold it off for aerodynamic braking.
 2. **Flaps up.** With the flaps retracted the wing stops lifting, and the weight goes onto the wheels, where the brakes can use it.
-3. **Brake firmly and evenly**, as hard as you can without locking a wheel. A skidding tire has less grip than a rolling one, and the airplane swerves.
+3. **Yoke full back and brake firmly and evenly**, as hard as you can without locking a wheel. The back pressure keeps the weight on the mains under heavy braking. A skidding tire has less grip than a rolling one, and the airplane swerves.
 4. **Keep straight** with rudder, not with differential braking.
 
 :::callout{type="verify"}
-Confirm the "flaps up after touchdown for braking" step against the 172S POH short-field landing procedure and the AFH, and confirm it does not conflict with the Learn-To-Fly `short-field-landing` checklist embedded above. Confirm that MSFS 2024 models wheel lock-up and the loss of braking effectiveness in a skid.
+Sim check: confirm that MSFS 2024 models wheel lock-up and the loss of braking effectiveness in a skid. (Desk-verified 2026-10-13: the steps match the 172S POH short-field landing procedure, AFH Chapter 9 on braking, and the `short-field-landing` checklist above.)
 :::
 
 :::quiz{id="l10-4-q3" type="single"}

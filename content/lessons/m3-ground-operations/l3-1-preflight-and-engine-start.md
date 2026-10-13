@@ -32,7 +32,7 @@ Before every real flight, the pilot walks around the airplane. The **preflight i
 In the sim, most of this can't go wrong. MSFS 2024 may offer a walkaround mode where you can look at the airplane from outside; use it to build the habit.
 
 :::callout{type="verify"}
-Author note: describe MSFS 2024's walkaround features for the Skyhawk (which items it models, such as the pitot cover, chocks and fuel sampling) after checking them in the sim.
+Sim check: describe MSFS 2024's walkaround features for the Skyhawk (which items it models, such as the pitot cover, chocks and fuel sampling) after checking them in the sim.
 :::
 
 ## Setting up the cockpit
@@ -67,7 +67,7 @@ Always shout "CLEAR!" before starting, even in the sim. A spinning propeller is 
 ::checklist{slug="starting-engine"}
 
 :::callout{type="verify"}
-Author note: the sequence above is the POH's (Section 4, Starting Engine: throttle ¼ inch, mixture idle cut-off, prime with the pump, START, mixture to rich; oil pressure in the green within 30 to 60 seconds). Check the sim's EFB checklist against it, and check the sim engine actually starts this way: does priming with the pump do anything, and does it fire with the mixture at idle cut-off?
+Sim check: the sequence above is the POH's (Section 4, Starting Engine: throttle ¼ inch, mixture idle cut-off, prime with the pump, START, mixture to rich; oil pressure in the green within 30 to 60 seconds). Still open: does the sim's EFB checklist match it, does priming with the pump do anything, and does the sim engine fire with the mixture at idle cut-off?
 :::
 
 :::quiz{id="l3-1-q1" type="single"}

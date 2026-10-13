@@ -13,7 +13,7 @@ objectives:
   - Compute takeoff distance and climb rate at a high density altitude and set an abort point.
   - Fly an approach and go-around at a high airport at the normal indicated speed despite the higher groundspeed.
 challenges: []
-resources: [faa-tips-mountain-flying, phak-ch11]
+resources: [faa-tips-mountain-flying, phak-ch11, aim-7, airnav]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -30,7 +30,7 @@ Truckee–Tahoe (KTRK) sits at about 5,900 ft MSL. On a July afternoon it is 30 
 The engine makes roughly three quarters of its sea-level power, the runway roll about doubles, and the climb is a few hundred feet per minute. Nothing about the airplane has changed. Everything about the air has.
 
 :::callout{type="verify"}
-Confirm KTRK (about 5,900 ft) and KTVL (about 6,300 ft) elevations, runway lengths and tower status against the current Chart Supplement, then record them in `airports.yaml`. Widget W21 is embedded here once Phase 20 ships it: `::widget{name="density-altitude" mode="explore"}`, pre-set to KTRK.
+Widget pending: W21 is embedded here once Phase 20 ships it: `::widget{name="density-altitude" mode="explore"}`, pre-set to KTRK (5,904 ft; real-world AirNav 2026-10-13).
 :::
 
 ## Leaning for takeoff
@@ -45,7 +45,7 @@ At a high density altitude, full rich is too much fuel for the thin air: the eng
 The rule of thumb: lean for takeoff whenever the density altitude is above about 3,000 ft. Below that, full rich is fine and the extra fuel cools the engine.
 
 :::callout{type="verify"}
-Confirm the leaning method (maximum RPM at full throttle during the run-up) and the 3,000 ft threshold against the Cessna 172S POH Section 4 "Before Takeoff" and the MSFS 2024 in-sim checklist, and that the sim's engine loses RPM when over-rich so the method is observable.
+POH check: confirm the 3,000 ft leaning threshold and its wording against the Cessna 172S POH Section 4 "Before Takeoff" and the MSFS 2024 in-sim checklist. (Desk-verified 2026-10-13: the full-power run-up leaning method is confirmed by FAA-P-8740-60.) Sim check: the sim's engine must lose RPM when over-rich so the method is observable.
 :::
 
 :::quiz{id="l13-3-q1" type="single"}
@@ -63,7 +63,7 @@ Lean to **peak RPM at full throttle**, then push the mixture in a touch. Full ri
 
 ## The abort point
 
-Performance charts tell you how much runway the takeoff needs, not whether today's takeoff is going to plan. The abort point does. The Learn-To-Fly rule of thumb:
+Performance charts tell you how much runway the takeoff needs, not whether today's takeoff is going to plan. The abort point does. The FAA's rule of thumb (AIM 7-6-8):
 
 > **If you do not have 70% of lift-off speed by 50% of the runway, abort.**
 
@@ -83,7 +83,7 @@ The provisional Learn-To-Fly takeoff table shows what you are up against:
 Maximum weight, no wind, dry pavement. Learn-To-Fly sim data, provisional until verified.
 
 :::callout{type="verify"}
-Widget W22 (Performance Chart Reader) replaces this table once Phase 20 ships it: `::widget{name="performance-chart" table="takeoff" mode="explore"}`. The numbers are placeholders shaped like the real trend; replace them with the Truckee sim flight-test rows (v2 Phase 16, D2-11) and update the numeric question. Confirm the "70% by 50%" abort rule against "Tips on Mountain Flying" (FAA-P-8740-60) or another citable source (v2 Appendix F.10 marks it ⚠).
+Widget pending: W22 (Performance Chart Reader) replaces this table once Phase 20 ships it: `::widget{name="performance-chart" table="takeoff" mode="explore"}`. Sim check: the rows are placeholders shaped like the real trend; replace them with the Truckee flight-test rows (v2 Phase 16, D2-11) and update quiz l13-3-q2. (Desk-verified 2026-10-13: the "70% of lift-off speed by the midpoint" abort rule is AIM 7-6-8; v2 Appendix F.10 can drop its ⚠.)
 :::
 
 :::quiz{id="l13-3-q2" type="numeric" answer="3000" tolerance="100" unit="ft"}
@@ -127,7 +127,7 @@ Maximum weight. Learn-To-Fly sim data, provisional until verified.
 At Truckee on that hot afternoon you are near the 8,000–9,000 ft rows: perhaps 250 fpm, and the terrain north and east of the airport rises faster than that. The plan from [[l13-2-planning-a-mountain-route]] is to climb **over the valley**, circling if you must, and head for the ridge only at the crossing altitude. Turning toward rising terrain after takeoff is the mistake this module exists to prevent.
 
 :::callout{type="verify"}
-Replace the climb table with the W22 climb rows from the Truckee flight test. Confirm the climb-out direction at KTRK (over the Truckee basin or along the Truckee River) against the sectional and sim scenery, so Challenge C13.1 criterion 5 has a defined heading band.
+Sim check: replace the climb table with the W22 climb rows from the Truckee flight test, and fly the KTRK climb-out (over the Martis Valley/Truckee basin or along the Truckee River) in the sim to give Challenge C13.1 criterion 5 a heading band. Real-world KTRK remarks (AirNav 2026-10-13) ask pilots to avoid the residential areas north, west and south of the field.
 :::
 
 ## Approach with a high true airspeed
@@ -167,7 +167,7 @@ At Livermore a go-around is a non-event. At a density altitude of 8,000 ft, full
 Brief it before every mountain approach: "Leaned for 9,000, flaps 20 straight away, climb out over the lake." Challenge C13.3 "Arrival at South Lake Tahoe" checks that the brief happened.
 
 :::callout{type="verify"}
-Confirm the mixture setting and flap retraction sequence for a high-altitude go-around against the Cessna 172S POH balked-landing procedure and the MSFS 2024 in-sim checklist, and the climb-out direction at KTVL (over the lake versus the terrain south of the field) against the sectional and sim scenery.
+POH check: confirm the mixture setting and the flaps 30° → 20° → 10° → up sequence against the Cessna 172S POH balked-landing procedure and the MSFS 2024 in-sim checklist. Sim check: fly the KTVL go-around over the lake in the sim. (Desk-verified 2026-10-13: the Chart Supplement remarks for KTVL say rapidly rising terrain east, south and west, and send RWY 36 departures left to 320° after 1 nm to the shoreline, so "over the lake" is north.)
 :::
 
 ## Practice and next steps

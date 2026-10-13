@@ -13,7 +13,7 @@ objectives:
   - Explain the difference between fuel starvation and fuel exhaustion and what each one looks like.
   - Decide between continuing, landing at a nearby airport and a forced landing, using the glide range as a planning tool.
 challenges: []
-resources: [afh-ch18, phak-ch7]
+resources: [afh-ch18, phak-ch7, aim]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -58,7 +58,7 @@ Most partial power losses are fuel, air or spark. The flow checks each one, from
 Each step takes a few seconds. Say what you are doing aloud; in a real airplane the person next to you needs to know what you are about to touch.
 
 :::callout{type="verify"}
-Check this flow against the MSFS 2024 in-sim checklist and POH Section 3 ("Engine roughness" or "Rough engine operation or loss of power"): the order of fuel selector, auxiliary pump and mixture items; whether the POH says to try each magneto; and whether the 172S checklist mentions anything we have left out (primer, alternate air). The 172S is fuel-injected, so there is no carburetor heat; if the sim's classic variant is carbureted, add carb heat as the first item in a classic callout.
+Desk-verified 2026-10-13: the 172S is fuel-injected with an engine-driven pump backed by an electric auxiliary pump, so there is no carburetor heat item (PHAK Ch 7, Fuel-Pump System and Fuel Injection Systems). POH check: Section 3 "Engine failure during flight" and "Rough engine operation or loss of power": the order of fuel selector, auxiliary pump and mixture items, whether each magneto is tried, and anything left out (primer, alternate air); match the in-sim checklist wording. Sim check: if the sim's classic variant is carbureted, add carb heat as the first item in a classic callout.
 :::
 
 :::quiz{id="l14-3-q1" type="order"}
@@ -122,7 +122,7 @@ The MFD's **NRST** page lists the nearest airports with distance and bearing. Pr
 The flow takes under a minute. If it fixes the problem, you still land at the nearest suitable airport, because a problem that fixed itself can come back. If it does not, you stop troubleshooting and fly the plan. There is no step 8 where you try everything again, slower.
 
 :::callout{type="decision"}
-At 3,500 ft between Livermore and Tracy the engine drops to 1,800 RPM and the flow changes nothing. Tracy is 6 nm ahead, inside the glide ring. Livermore is 9 nm behind, outside it, with a tower and longer runways. Choose Tracy: an airport you can glide to beats a better one you cannot. Tell someone ("Pan-Pan" if the engine is running, "Mayday" if not), squawk 7700, and fly a high, tight pattern as if the engine were already gone.
+At 3,500 ft between Livermore and Tracy the engine drops to 1,800 RPM and the flow changes nothing. Tracy is 6 nm ahead, inside the glide ring. Livermore is 9 nm behind, outside it, with a tower and longer runways. Choose Tracy: an airport you can glide to beats a better one you cannot. Tell someone ("Pan-Pan" if the engine is running, "Mayday" if not), squawk 7700 unless you are already talking to ATC on a discrete code, and fly a high, tight pattern as if the engine were already gone.
 :::
 
 Partial power changes your pattern: stay high and close in, never drag a long final on an engine that might quit, flaps only when the runway is made, and carry extra altitude you can lose with a slip.
@@ -149,7 +149,7 @@ Pulling the mixture back to simulate roughness means step 4 (mixture rich) would
 :::
 
 :::callout{type="verify"}
-Confirm which engine failure options the MSFS 2024 failure menu offers for the Skyhawk (partial power, rough running, magneto, fuel pump) and record the menu path and sim version. Note whether the sim models fuel starvation when the selector is on an empty tank.
+Sim check: which engine failure options the MSFS 2024 failure menu offers for the Skyhawk (partial power, rough running, magneto, fuel pump), the menu path and sim version, and whether the sim models fuel starvation with the selector on an empty tank.
 :::
 
 ## Practice and next steps

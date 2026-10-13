@@ -39,19 +39,19 @@ In cloud, your body cannot tell which way is up. The balance organs in your inne
 
 In [[l2-2-attitude-flying-and-trim]] you learned the most useful sentence in flying: **attitude + power = performance**. Instrument flying is that sentence, applied with discipline.
 
-The **control instruments** show what you are putting in: the attitude indicator (pitch and bank) and the tachometer (power). The **performance instruments** show what you are getting out: altimeter, airspeed, vertical speed, heading and turn rate. Set the control instruments, let the airplane settle, read the performance instruments, adjust. Never the other way around: chasing the altimeter with the yoke is how students end up 300 ft off and climbing.
+The **control instruments** show what you are putting in: the attitude indicator (pitch and bank) and the tachometer (power, on the engine strip at the left edge of the MFD, right beside the PFD). The **performance instruments** show what you are getting out: altimeter, airspeed, vertical speed, heading and turn rate. Set the control instruments, let the airplane settle, read the performance instruments, adjust. Never the other way around: chasing the altimeter with the yoke is how students end up 300 ft off and climbing.
 
-| Instrument on the G1000 PFD | Kind        | Tells you                             |
+| Instrument on the G1000     | Kind        | Tells you                             |
 | --------------------------- | ----------- | ------------------------------------- |
 | Attitude indicator          | Control     | Pitch and bank you have set           |
-| Tachometer (EIS strip)      | Control     | Power you have set                    |
+| Tachometer (EIS strip, MFD) | Control     | Power you have set                    |
 | Airspeed tape               | Performance | Whether the pitch and power are right |
 | Altimeter tape              | Performance | Whether you are holding altitude      |
 | Vertical speed indicator    | Performance | The trend, before the altimeter moves |
 | HSI heading                 | Performance | Whether the wings are really level    |
 | Turn rate indicator         | Performance | Rate of turn (standard rate = 3°/s)   |
 
-Find each one on the PFD explorer. The G1000's attitude indicator fills the whole screen, which is a gift: a one-degree pitch change is easy to see.
+Find each one on the PFD explorer. The G1000's attitude indicator fills the whole screen, which is a gift: a one-degree pitch change is easy to see. The turn rate indicator sits directly above the HSI compass card.
 
 ::widget{name="g1000-pfd" mode="explore"}
 
@@ -60,7 +60,7 @@ Find each one on the PFD explorer. The G1000's attitude indicator fills the whol
 :::
 
 :::callout{type="verify"}
-Widget W33 (Instrument Scan Trainer) is embedded here once Phase 21 ships it: `::widget{name="instrument-scan" mode="explore"}`, a simplified PFD with the moving "eye" of a radial scan and the "What's wrong?" quiz. Until then the table and the knowledge check carry the content. Confirm the NXi PFD layout in MSFS 2024 (turn rate indicator above the HSI, EIS strip) against a screenshot: "PFD in IMC, level cruise (KLVK area)".
+Widget pending: W33 (Instrument Scan Trainer) is embedded here once Phase 21 ships it: `::widget{name="instrument-scan" mode="explore"}`, a simplified PFD with the moving "eye" of a radial scan and the "What's wrong?" quiz. Until then the table and the knowledge check carry the content. Sim check: screenshot "PFD in IMC, level cruise (KLVK area)" and confirm the MSFS 2024 NXi matches the Garmin layout (desk-verified 2026-10-13 against the G1000 NXi Pilot's Guide for the Cessna Nav III: turn rate indicator directly above the HSI compass card, EIS on the MFD).
 :::
 
 :::quiz{id="l17-1-q1" type="multi"}
@@ -131,7 +131,7 @@ Here is the sentence turned into numbers: the attitudes and power settings Learn
 Every value is provisional: **verify in the sim** before you rely on it. The habit matters more than the digits. Set the pitch, set the power, count to five, then read the performance instruments and nudge.
 
 :::callout{type="verify"}
-The table is derived from the rule-of-thumb `powerSettings` and the provisional `performanceModel` in `content/aircraft.yaml`, not from flight test. Fly each row in MSFS 2024 at the C17.1 weight and 4,000 ft, record pitch, RPM, airspeed and vertical speed, then update this table and `aircraft.yaml` together so the `limits-and-speeds` flashcards stay in step. The climb row uses 80 KIAS (the C17.1 climb speed), not {{vspeed.vy}}.
+Sim check: the table comes from the unverified `powerSettings` and `performanceModel` in `content/aircraft.yaml`, not from the sim. Fly each row in MSFS 2024 at the C17.1 weight and 4,000 ft, record pitch, RPM, airspeed and vertical speed, then update this table and `aircraft.yaml` together (the `limits-and-speeds` flashcards follow). The climb row uses 80 KIAS (the C17.1 climb speed), not {{vspeed.vy}}.
 :::
 
 ## Trim, trim, trim
@@ -159,7 +159,7 @@ In the sim, the cloud is your view-limiting device. Learn-To-Fly's instrument ch
 To practice in clear weather, an instruments-only camera view that hides the windshield does the same job, if you are honest about not looking outside.
 
 :::callout{type="verify"}
-Confirm the MSFS 2024 custom-weather controls for cloud layers (base, top, coverage) and the exact assistance setting names (v2 Section 9.6). Confirm whether a suitable instruments-only cockpit camera exists or whether the overcast layer should be the only method taught (v2 Section 9.5). Record the sim version.
+Sim check: in MSFS 2024, confirm the custom-weather cloud-layer controls (base, top, coverage) and the exact assistance setting names in the table (v2 Section 9.6), and whether an instruments-only cockpit camera exists; if not, delete the last sentence and teach the overcast layer only (v2 Section 9.5). Record the sim version.
 :::
 
 ## Practice and next steps

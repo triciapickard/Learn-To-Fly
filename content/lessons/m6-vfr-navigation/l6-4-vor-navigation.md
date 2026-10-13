@@ -28,12 +28,12 @@ Your VOR receiver tells you which radial you're on, or how far you are from the 
 ## Tune and identify
 
 1. **Tune** the VOR's frequency, shown in the box next to its compass rose on the sectional.
-2. **Identify** it. Each VOR sends a three-letter Morse code identifier. Listen to it (or, on the G1000, check the decoded identifier next to the frequency) and compare it with the chart.
+2. **Identify** it. Each VOR sends a three-letter Morse code identifier. On the G1000 the decoded identifier appears in the NAV box next to the active frequency; to hear the Morse, press **NAV1** on the audio panel and push the **NAV VOL/ID** knob. Compare it with the chart.
 
 Always identify. It confirms you have the right station and that it's working. A VOR under maintenance may send no identifier at all.
 
 :::callout{type="verify"}
-Author note: check how the MSFS 2024 G1000 shows the decoded identifier and how to listen to the Morse ID.
+Sim check: desk-verified 2026-10-13 against the Garmin G1000 NXi Pilot's Guide (the NAV box shows the decoded station identifier; audio via the audio panel's NAV1 key and the NAV VOL/ID knob). Still open: that the MSFS 2024 NXi decodes the identifier and that the NAV1 key plays the Morse.
 :::
 
 :::quiz{id="l6-4-q1" type="single"}

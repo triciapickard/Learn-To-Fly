@@ -26,7 +26,7 @@ It is 9 a.m. on a June morning. At Palo Alto the sky is blue and the wind is cal
 No storm, no front. This is the Bay Area doing what it does most summer mornings, and a pilot who understands _why_ can predict it before the forecast does. This lesson gives you enough theory to look at a sky, a METAR or a forecast and say "I know what that is, and I know what it does next."
 
 :::callout{type="verify"}
-Prerequisite: the spec says L6.7 (Weather basics: METARs and TAFs), which is not written. Swap `l6-6-planning-a-cross-country-flight` for `l6-7-...` when it exists.
+Author decision: the v2 spec names L6.7 (weather basics: METARs and TAFs) as the prerequisite, and that lesson is not written. Swap `l6-6-planning-a-cross-country-flight` for the L6.7 slug once it exists.
 :::
 
 ## The atmosphere in 5 minutes
@@ -74,7 +74,7 @@ Picture a cross-section. A cold front is a steep wall: the warm air ahead is sho
 In the sim you fly custom weather, so you will not watch a front go by. But the forecasts you decode in [[l11-2-forecasts-and-briefings]] are written in the language of fronts.
 
 :::callout{type="verify"}
-Widget W26 (Fronts cross-section, P1) is embedded here once Phase 20 ships it: `::widget{name="fronts-cross-section" mode="explore"}`. Until then the table above does the job. Check the front descriptions against the Aviation Weather Handbook (FAA-H-8083-28) and PHAK Chapter 12, including the wind shift: in the northern hemisphere the wind typically veers (for example southwest to northwest) as a cold front passes.
+Widget pending: W26 (Fronts cross-section, P1) is embedded here once Phase 20 ships it: `::widget{name="fronts-cross-section" mode="explore"}`. Until then the table above does the job. Desk-verified 2026-10-13: the front descriptions and the cold-front wind shift (variable and gusty at passage, then west-northwest behind it) match PHAK Chapter 12 and the Aviation Weather Handbook Chapter 11.
 :::
 
 :::quiz{id="l11-1-q2" type="multi"}
@@ -93,7 +93,7 @@ Cold fronts are steep and fast: a narrow band of showers, a gusty wind shift, a 
 
 ## Stability and lapse rates
 
-Lift a parcel of air. As it rises it expands and cools, about **3 °C per 1,000 ft** while dry. Once its water vapor starts condensing, the condensation releases heat and it cools more slowly, roughly **1.5 °C per 1,000 ft**. Now compare the parcel with the air around it:
+Lift a parcel of air. As it rises it expands and cools, about **3 °C per 1,000 ft** while dry. Once its water vapor starts condensing, the condensation releases heat and it cools more slowly, roughly **2 °C per 1,000 ft** (it varies with temperature). Now compare the parcel with the air around it:
 
 - If the lifted parcel is **colder** than its surroundings, it sinks back. The air is **stable**: lift stops and clouds spread out flat.
 - If it is **warmer**, it keeps rising on its own. The air is **unstable**: lift feeds on itself and clouds build upward.
@@ -124,22 +124,18 @@ Stable air resists vertical motion, so clouds form in flat layers and haze, smok
 
 The **dewpoint** is the temperature the air must cool to before its water vapor condenses into cloud or fog. A METAR reports both: `18/12` is 18 °C with a dewpoint of 12 °C. The gap is the **temperature/dewpoint spread**, one of the most useful numbers on a METAR:
 
-| Spread                       | What it tells you                                                 |
-| ---------------------------- | ----------------------------------------------------------------- |
-| 10 °C or more                | Dry air; fog unlikely; afternoon cumulus bases will be high       |
-| 3–5 °C and steady            | Humid; watch it in the evening                                    |
-| Under about 3 °C and closing | Fog or low cloud likely soon, especially at night with light wind |
-| 0 °C                         | Saturated: you are in fog or cloud                                |
+| Spread                       | What it tells you                                                                                           |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| 10 °C or more                | Dry air; fog unlikely; afternoon cumulus bases will be high                                                 |
+| 3–5 °C and steady            | Humid; watch it in the evening                                                                              |
+| Under about 3 °C and closing | Fog or low cloud likely soon, especially at night with light wind; fog seldom forms with a spread over 2 °C |
+| 0 °C                         | Saturated: you are in fog or cloud                                                                          |
 
-The spread also predicts the height of fair-weather cumulus. A rising parcel cools about 3 °C per 1,000 ft while its dewpoint falls only about 0.5 °C, so the two meet, and cloud forms, roughly 400 ft up for each degree of spread:
+The spread also predicts the height of fair-weather cumulus. A rising parcel cools about 3 °C per 1,000 ft while its dewpoint falls only about 0.5 °C, so the two meet, and cloud forms, roughly 400 ft up for each degree of spread. This is a rule of thumb for convective (cumulus) cloud only; it says nothing about stratus or fog:
 
 > **Cumulus base (ft AGL) ≈ temperature/dewpoint spread (°C) × 400**
 
 A Livermore afternoon of `26/11` has a spread of 15 °C: bases around 6,000 ft AGL. A Half Moon Bay morning of `13/12` has a spread of 1 °C: cloud 400 ft up, or already on the ground.
-
-:::callout{type="verify"}
-Check the cloud-base rule of thumb (spread in °C × 400 ft) and the "closing below about 3 °C" fog guidance against the Aviation Weather Handbook and PHAK Chapter 12. Label both as rules of thumb for convective cloud only.
-:::
 
 :::quiz{id="l11-1-q3" type="numeric" answer="4000" tolerance="400" unit="ft AGL"}
 The METAR shows a temperature of 24 °C and a dewpoint of 14 °C on a sunny, unstable afternoon. About how high will the cumulus bases be?
@@ -169,7 +165,7 @@ When the pattern reverses and a hot, dry wind blows from the land toward the sea
 :::
 
 :::callout{type="verify"}
-Confirm the local pattern against a NorCal source (NWS Monterey forecast discussions or the Aviation Weather Handbook on sea breezes and marine stratus): typical deck heights at KHAF and KMRY, burn-off times, and afternoon sea-breeze strength at KLVK. Confirm the runway choices (25 at KLVK, 31 at KPAO) against `airports.yaml`.
+Author decision: the local numbers (KHAF and KMRY deck 500–1,500 ft, burn-off by late morning, afternoon sea breeze 15–20 kt at KLVK) describe the typical pattern and have no single citable source; keep them as "typical" or soften them. Desk-verified 2026-10-13: the sea-breeze and marine-stratus mechanism matches the Aviation Weather Handbook 10.6.1 and 18.1.1.1.2; the runway choices are confirmed (KLVK 25L/25R 254° magnetic, KPAO 31 307° magnetic, AirNav 2026-10-13 and `airports.yaml`).
 :::
 
 :::quiz{id="l11-1-q4" type="single"}

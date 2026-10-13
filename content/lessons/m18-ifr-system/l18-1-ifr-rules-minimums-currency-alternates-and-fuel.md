@@ -13,7 +13,7 @@ objectives:
   - Compute the minimum IFR fuel for a flight with and without an alternate.
   - State the instrument currency requirements and when an IFR clearance is required.
 challenges: []
-resources: [ecfr-91-167, ecfr-91-169, ecfr-61-57, ifh-ifr-flight]
+resources: [ecfr-91-167, ecfr-91-169, ecfr-61-57, ifh-ifr-flight, aim-1-1]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -46,10 +46,6 @@ Under **VFR** you stay clear of clouds and other airplanes by looking. Under **I
 
 In plain words: **to fly in cloud in controlled airspace, you need a clearance first.** The sim will let you take off into fog without one. Learn-To-Fly's challenges will not.
 
-:::callout{type="verify"}
-Check the clearance and flight-plan requirement against 14 CFR 91.173 and the Class A rule against 91.135. Confirm the Class G wording (91.173 applies in controlled airspace only) and keep the learner-facing text as a paraphrase.
-:::
-
 ## The rules at a glance
 
 The whole module on one card. Each line comes back in the lesson that teaches it.
@@ -64,13 +60,9 @@ The whole module on one card. Each line comes back in the lesson that teaches it
 | Lost communications        | Route: Assigned, Vectored, Expected, Filed. Altitude: the highest of assigned, MEA or expected. Squawk 7600                    | [[l18-5-enroute-ifr-and-lost-communications]] |
 | Descending below DA or MDA | Only with the required visibility and the runway environment in sight, from a normal descent to a landing                      | [[l20-1-anatomy-of-an-instrument-approach]]   |
 
-:::callout{type="verify"}
-Verify each row against the source regulation: fuel 91.167, alternates 91.169, currency 61.57(c), lost communications 91.185, descent below minimums 91.175. The table is from v2 Section 11.2 and is a paraphrase; keep exact wording out of the learner-facing text.
-:::
-
 ## The 1-2-3 rule
 
-An **alternate** is a second airport you could land at if the destination weather goes bad. Whether you must name one depends only on the destination forecast around your arrival time. Write the rule as three numbers:
+An **alternate** is a second airport you could land at if the destination weather goes bad. If the destination has no instrument approach at all, you always need one. Otherwise, whether you must name one depends only on the destination forecast around your arrival time. Write the rule as three numbers:
 
 - **1** hour before to **1** hour after your estimated time of arrival,
 - ceiling at least **2**,000 ft, and
@@ -85,11 +77,7 @@ Two invented forecasts, labelled as fiction. Your ETA in each case is 2100Z.
 | `TAF KLVK 131720Z 1318/1418 25010KT P6SM FEW040 SCT250`                           | No ceiling (FEW and SCT only), visibility over 6 sm | Not required |
 | `TAF KMRY 131720Z 1318/1418 29008KT 3SM BR OVC008 FM132200 30006KT 1SM BR OVC004` | Ceiling 800 ft overcast, visibility 3 sm            | Required     |
 
-The second forecast fails on ceiling alone; one failure is enough. Temporary (TEMPO) and probability groups count too: if a TEMPO line drops the ceiling below 2,000 ft inside your window, plan the alternate.
-
-:::callout{type="verify"}
-The 1-2-3 rule is 14 CFR 91.169(b). Confirm the treatment of TEMPO and PROB groups against the current FAA guidance (the AIM and FAA legal interpretations on 91.169) and the 3 sm visibility boundary. Both TAFs above are invented for teaching and must stay labelled as fictional.
-:::
+The second forecast fails on ceiling alone; one failure is enough. Temporary (TEMPO) and probability groups count too: the FAA has long held that a forecast of "occasional", "brief" or "a chance of" below-minimum weather at your arrival time does not meet the rule, so if a TEMPO or PROB line drops the ceiling below 2,000 ft inside your window, plan the alternate.
 
 :::quiz{id="l18-1-q1" type="single"}
 Your ETA is 1500Z. The destination TAF (fictional) reads `1312/1412 20012KT P6SM BKN025` with no changes forecast. Is an alternate required?
@@ -121,17 +109,15 @@ Your window is 0200Z to 0400Z. The TEMPO group covers 0200Z to 0500Z and forecas
 
 An alternate is only useful if you could land there, so its forecast must be at or above its **alternate minimums** at your ETA there. The standard values depend on its best approach:
 
-| Best approach at the alternate                         | Standard alternate minimums (forecast at ETA)                     |
-| ------------------------------------------------------ | ----------------------------------------------------------------- |
-| Precision (ILS, or an LPV treated by the rule as such) | Ceiling 600 ft and visibility 2 sm                                |
-| Non-precision (LNAV, LOC, VOR)                         | Ceiling 800 ft and visibility 2 sm                                |
-| No instrument approach at all                          | Descent from the MEA and landing must be possible under basic VFR |
+| Best approach at the alternate                              | Standard alternate minimums (forecast at ETA)                     |
+| ----------------------------------------------------------- | ----------------------------------------------------------------- |
+| Precision (ILS)                                             | Ceiling 600 ft and visibility 2 sm                                |
+| Non-precision (LNAV, LOC, VOR), and any RNAV (GPS) approach | Ceiling 800 ft and visibility 2 sm                                |
+| No instrument approach at all                               | Descent from the MEA and landing must be possible under basic VFR |
 
-Many airports have **non-standard** alternate minimums. The approach plate shows a small triangle with an **A** inside: look the airport up in the alternate minimums section of the d-TPP. **NA** next to it means the airport cannot be an alternate at all, usually because its weather reporting is not reliable enough. You will find these symbols in [[l18-2-ifr-charts-and-the-approach-plate]].
+GPS has its own planning rule. When the alternate's approach is an RNAV (GPS), you plan on its **LNAV or circling** line (800-2) even if it also has LPV minima; once you arrive, you may fly the LPV if the box offers it. A non-WAAS GPS may plan a GPS approach at the destination or at the alternate, but not both.
 
-:::callout{type="verify"}
-Standard alternate minimums are in 14 CFR 91.169(c). Confirm the current wording for how RNAV (GPS) approaches with LPV minima are treated when planning an alternate (there are restrictions on using GPS approaches at both the destination and the alternate: AIM 1-1-17 and the d-TPP alternate minimums notes). Confirm the triangle-A and NA symbols against the Chart Users' Guide.
-:::
+Many airports have **non-standard** alternate minimums. The approach plate shows a small triangle with an **A** inside: look the airport up in the alternate minimums section of the d-TPP. Livermore, for example, cannot be an alternate when its tower is closed or its weather reporting is unavailable, and its LOC approach needs 1,600 ft and 2 sm. **NA** next to the symbol means the airport cannot be an alternate at all, usually because it has no weather reporting or its navaid is unmonitored. You will find these symbols in [[l18-2-ifr-charts-and-the-approach-plate]].
 
 :::callout{type="decision"}
 A forecast that needs an alternate is not a reason to cancel. It is a reason to plan properly: pick an alternate with better weather, check its minimums, add its fuel, and go. The pilot who gets caught is the one who skipped the arithmetic and hoped.
@@ -157,7 +143,7 @@ Work it with time, then turn time into gallons. The Skyhawk burns {{aircraft.fue
 That is the legal floor. Add taxi fuel, a margin for a hold, and your personal minimum from [[l8-1-decision-making-and-personal-minimums]]. With {{aircraft.fuelCapacity}}, fuel is rarely the problem on a short IFR flight, but the arithmetic is the habit.
 
 :::callout{type="verify"}
-IFR fuel is 14 CFR 91.167. The 10 GPH planning figure comes from `aircraft.yaml`; recheck the burn in the sim at the cruise power used in Course 3 challenges.
+Sim check: the 10 GPH planning figure comes from `aircraft.yaml` (fuel rule itself desk-verified 2026-10-13 against 14 CFR 91.167); recheck the burn in the sim at the cruise power used in Course 3 challenges.
 :::
 
 :::quiz{id="l18-1-q3" type="numeric" answer="165" tolerance="0" unit="min"}
@@ -180,11 +166,7 @@ Rated is not the same as current. To act as pilot in command under IFR, within t
 
 If the 6 months pass, you get a further 6 months to regain currency with a safety pilot or instructor; after that an **instrument proficiency check** is required. Currency is the legal minimum; **proficiency** is whether you can do it well today. A pilot with 6 approaches 5 months ago is current but may not be proficient.
 
-A home simulator does not count toward real currency. Learn-To-Fly's logbook tracks your sim approaches and holds as a habit tracker, so you can see when your skills are getting stale.
-
-:::callout{type="verify"}
-Currency is 14 CFR 61.57(c); the grace period and the IPC are 61.57(d). Confirm the current wording on what counts as an approach and on simulator credit (FAA-approved devices only). The Learn-To-Fly logbook is not a legal logbook (v2 D2-12).
-:::
+A home simulator does not count toward real currency: only an FAA-approved simulator, training device or aviation training device does. Learn-To-Fly's logbook tracks your sim approaches and holds as a habit tracker, not a legal logbook, so you can see when your skills are getting stale.
 
 :::quiz{id="l18-1-q4" type="multi"}
 Which of these are required to be instrument current? Pick all that apply.
