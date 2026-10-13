@@ -37,6 +37,16 @@ export function CopyButton({ text, label }: { text: string; label: string }) {
 
 const yesNo = (on: boolean) => (on ? 'On' : 'Off');
 
+/** A setting's value with a short note on where to find it in the sim. */
+function withWhere(value: string, where: string): ReactNode {
+  return (
+    <>
+      <span className="font-medium">{value}</span>
+      <span className="block text-sm text-ink-2">{where}</span>
+    </>
+  );
+}
+
 function detailsText(details: Record<string, string | number>): string | null {
   const parts: string[] = [];
   if (details.position) parts.push(String(details.position));
@@ -72,6 +82,9 @@ function weatherText(w: ResolvedSetup['weather']): ReactNode {
       ) : (
         <p className="mt-1 text-sm text-ink-2">{w.summary}</p>
       )}
+      <p className="mt-1 text-sm text-ink-2">
+        Use the Clear skies preset for calm, clear weather, or Custom to set wind and clouds.
+      </p>
     </>
   );
 }
@@ -82,7 +95,7 @@ export function setupRows(setup: ResolvedSetup): { label: string; value: ReactNo
   const rows: { label: string; value: ReactNode }[] = [
     { label: 'Aircraft', value: setup.aircraft.simName },
     {
-      label: 'Airport',
+      label: 'Departure',
       value: (
         <span className="inline-flex flex-wrap items-center gap-1">
           <Link to={`/reference/airports/${setup.airport.icao}`}>
@@ -126,8 +139,19 @@ export function setupRows(setup: ResolvedSetup): { label: string; value: ReactNo
     });
   }
   rows.push(
-    { label: 'Weather', value: weatherText(setup.weather) },
-    { label: 'Time', value: `${setup.time.local} local, ${setup.time.date}` },
+    { label: 'Flight conditions', value: weatherText(setup.weather) },
+    {
+      label: 'Time',
+      value: (
+        <>
+          {`${setup.time.local} local, ${setup.time.date}`}
+          <span className="block text-sm text-ink-2">
+            In Flight conditions, under Time. The sim shows UTC: for Livermore, add 7 hours in
+            summer (PDT) or 8 in winter (PST), so 10:00 local is 17:00 or 18:00 UTC.
+          </span>
+        </>
+      ),
+    },
     {
       label: 'Fuel and payload',
       value: (
@@ -143,12 +167,30 @@ export function setupRows(setup: ResolvedSetup): { label: string; value: ReactNo
         <>
           <span className="font-medium">{setup.assistance.label}</span>
           <span className="block text-sm text-ink-2">{setup.assistance.description}</span>
+          <span className="block text-sm text-ink-2">In Settings, on the Assistances tab.</span>
         </>
       ),
     },
-    { label: 'AI traffic', value: yesNo(setup.aiTraffic) },
-    { label: 'ATC', value: yesNo(setup.atc) },
-    { label: 'Crash damage', value: yesNo(setup.crashDamage) },
+    {
+      label: 'Air traffic',
+      value: withWhere(yesNo(setup.aiTraffic), 'In Flight conditions, under Air traffic.'),
+    },
+    {
+      label: 'ATC',
+      value: withWhere(
+        yesNo(setup.atc),
+        'AI Radio Communications, in Settings on the Assistances tab.',
+      ),
+    },
+    {
+      label: 'Crash damage',
+      value: withWhere(
+        yesNo(setup.crashDamage),
+        setup.crashDamage
+          ? 'Switch Disable Crash Damage off (Settings, Assistances tab).'
+          : 'Switch Disable Crash Damage on (Settings, Assistances tab).',
+      ),
+    },
   );
   return rows;
 }

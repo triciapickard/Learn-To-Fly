@@ -20,7 +20,7 @@ setup:
   airportIcao: KLVK
   startState: RAMP_RUNNING
   startDetails:
-    parking: Main ramp (the northwest apron, by the FBO) # ⚠ verify the parking spot name in the sim
+    parking: Parking 6 - Ramp GA Small (the northwest apron, by the FBO)
     runway: 25R # ⚠ verify the runway name in the sim
   weatherPreset: WX_LIGHT_W
   timeLocal: '10:00'
