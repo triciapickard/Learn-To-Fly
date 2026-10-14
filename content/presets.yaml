@@ -60,11 +60,11 @@ weather:
 loads:
   LOAD_SOLO:
     label: Solo
-    description: Pilot 170 lb, no passengers, 75% fuel (about 40 gal). Set it in the EFB (TAB) under Flight planner, on the Payload & fuel page.
+    description: Pilot 170 lb, no passengers, 75% fuel (about 40 gal). Set it in the EFB (TAB) under Flight planner, on the Payload & fuel page. Fuel is in pounds (6 lb a gallon), so set Extra fuel to about 230 lb for a block fuel near 240 lb, then press LOAD. The default is only 10 lb.
     priority: P0
   LOAD_FULL:
     label: Full
-    description: Pilot 170 lb, passenger 170 lb and 20 lb baggage, 100% fuel. Set it in the EFB (TAB) under Flight planner, on the Payload & fuel page.
+    description: Pilot 170 lb, passenger 170 lb and 20 lb baggage, 100% fuel. Set it in the EFB (TAB) under Flight planner, on the Payload & fuel page. Set Passengers to 1, Cargo to 20 lb and Extra fuel so block fuel matches the fuel tank capacity, then press LOAD.
     priority: P1
 
 dates:
