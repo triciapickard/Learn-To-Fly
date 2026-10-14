@@ -3,7 +3,7 @@
 startStates:
   COLD_DARK:
     label: Cold and dark
-    description: At a parking spot with all systems off. On the world map, pick a parking spot (one of the small dots), not the airport's large circle, which starts you on the runway with the engine running.
+    description: At a parking spot with all systems off. On the world map, pick a parking spot (one of the small dots), not the airport's large circle, which starts you on the runway with the engine running. You start outside the airplane, so remove the pitot, static port and engine covers and the wheel chocks, then climb in.
   RAMP_RUNNING:
     label: Parked, engine running
     description: At a parking spot with the engine running and the avionics on.
@@ -60,11 +60,11 @@ weather:
 loads:
   LOAD_SOLO:
     label: Solo
-    description: Pilot 170 lb, no passengers, 75% fuel (about 40 gal).
+    description: Pilot 170 lb, no passengers, 75% fuel (about 40 gal). Set it in the EFB (TAB) under Flight planner, on the Payload & fuel page.
     priority: P0
   LOAD_FULL:
     label: Full
-    description: Pilot 170 lb, passenger 170 lb and 20 lb baggage, 100% fuel.
+    description: Pilot 170 lb, passenger 170 lb and 20 lb baggage, 100% fuel. Set it in the EFB (TAB) under Flight planner, on the Payload & fuel page.
     priority: P1
 
 dates:

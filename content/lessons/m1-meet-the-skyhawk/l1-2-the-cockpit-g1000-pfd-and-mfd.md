@@ -63,9 +63,9 @@ The MFD's main page is a **moving map**: your airplane, airports, airspace and y
 Down the left edge is the **Engine Indication System (EIS)** strip. It shows:
 
 - **RPM** (engine power, since the propeller is fixed pitch)
-- **Fuel flow**, in gallons per hour
+- **Fuel flow**, in gallons per hour (labelled FFLOW GPH)
 - **Oil pressure** and **oil temperature**
-- **Fuel quantity** in each tank
+- **Fuel quantity** in each tank (FUEL QTY GAL)
 - **Voltage and amps** for the electrical system
 
 The keys on the right bezel include **D→** (Direct-To), **FPL** (flight plan) and the **NRST** softkey (nearest airports). You'll learn them in Lesson 6.5.

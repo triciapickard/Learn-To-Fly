@@ -77,7 +77,7 @@ Using the planning figure of 10 gallons per hour, how many gallons do you need f
 - **Battery.** Powers everything before the engine starts.
 - **Alternator.** Driven by the engine; it powers the airplane and recharges the battery once running.
 - **Master switch.** A split switch: **BAT** connects the battery, **ALT** connects the alternator. Normally both on or both off.
-- **Avionics master.** Powers the G1000 and radios. It stays **off during engine start**: the starter draws a big current and can cause voltage spikes that harm sensitive electronics. Turn it on after the engine is running.
+- **Avionics master.** Powers the radios and the rest of the G1000 (the PFD comes on with the battery). In the G1000 Skyhawk it's split into **BUS 1** and **BUS 2**; switch both together. It stays **off during engine start**: the starter draws a big current and can cause voltage spikes that harm sensitive electronics. Turn it on after the engine is running.
 
 :::quiz{id="l1-3-q2" type="single"}
 Why is the avionics master off during engine start?

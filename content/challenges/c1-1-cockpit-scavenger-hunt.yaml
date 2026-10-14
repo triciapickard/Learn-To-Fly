@@ -36,21 +36,22 @@ setup:
   flightPlan: null
 
 procedure:
-  - Master switch (BAT and ALT). Turn it on.
-  - Avionics master. Turn it on and watch the screens start.
+  - You start outside the airplane. Remove the three remove-before-flight covers (pitot tube, static port and engine) and the wheel chocks, then climb in.
+  - Master switch (BAT and ALT). Turn it on and watch the PFD start.
+  - Avionics switches (BUS 1 and BUS 2). Turn both on and watch the MFD start.
   - Fuel selector. Set it to BOTH.
   - Mixture. Find it, but don't move it to rich yet.
   - Throttle. Find it and move it a little.
-  - Ignition switch. Find the OFF, R, L, BOTH and START positions (don't start the engine).
+  - Ignition switch (the tooltip calls it Magnetos). Find the OFF, R, L, BOTH and START positions (don't start the engine).
   - Flap switch. Lower and raise the flaps and watch the flap indicator.
   - Elevator trim. Move it and find the trim indicator.
   - Parking brake. Find it and check it is set.
   - PFD airspeed tape. Find the colored V-speed bands.
   - Altimeter setting (BARO). Set 29.92.
   - Heading bug. Move it with the HDG knob.
-  - COM1. Tune 123.45 in standby and swap it to active.
-  - Transponder. Find the code 1200 and the ALT mode.
-  - EIS. Find the fuel quantity and fuel flow.
+  - COM1. Tune 123.450 in standby and swap it to active.
+  - Transponder. On the PFD, press the XPDR softkey. Find the code 1200 (CODE, then four digits 0–7) and the STBY, ON and ALT modes.
+  - EIS (the engine strip down the left edge of the MFD). Find FUEL QTY GAL and FFLOW GPH.
   - Standby instruments and the magnetic compass. Find them.
   - Return every switch you moved to its cold-and-dark position.
 
@@ -89,6 +90,7 @@ commonMistakes:
 
 tips:
   - Zoom the camera toward each area of the panel.
+  - On a gamepad, flaps and trim have buttons too (by default the D-pad for flaps, RB with the right stick for trim), but find the cockpit controls first.
   - Use the cockpit tooltips; they name every control.
   - Start the timer on the Fly tab when you begin.
 
