@@ -129,6 +129,9 @@ All notable changes to this project are documented here. The format is based on
 
 ### Fixed
 
+- The lesson "In this lesson" sidebar now highlights the section you jump to even when its
+  heading was already on screen, and follows scrolling back up. The scroll-spy reads
+  heading positions on every scroll instead of waiting for an IntersectionObserver crossing.
 - Warning badges (W4 stall warning, challenge random-event alert) pulse a ring instead of
   fading their text, and danger-filled elements use dark text in dark mode, so both keep
   AA contrast.
