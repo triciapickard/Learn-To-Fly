@@ -4,14 +4,14 @@ code: L0.1
 module: m0-getting-started
 order: 1
 priority: P0
-title: 'Welcome: how Learn-To-Fly works'
-summary: How the course works, how challenges are flown and scored, and what Learn-To-Fly is (and is not).
+title: 'Welcome: how Learn to Fly works'
+summary: How the course works, how challenges are flown and scored, and what Learn to Fly is (and is not).
 estimatedMinutes: 5
 prerequisites: []
 objectives:
   - Describe the Learn, See, Try, Fly, Reflect loop that every module follows.
   - Explain how a challenge is set up, flown and self-debriefed.
-  - State that Learn-To-Fly is not real-world flight training.
+  - State that Learn to Fly is not real-world flight training.
 challenges: []
 resources: [faa-plane-sense, aopa-students]
 published: true
@@ -21,7 +21,7 @@ simVersion: 'MSFS 2024 (1.8.16.0)'
 
 ## Where this course takes you
 
-By the end of Learn-To-Fly you will fly the Cessna 172 Skyhawk in Microsoft Flight Simulator 2024 the way a student pilot is taught to fly the real one. You will take off, fly a traffic pattern and land on the centerline. You will handle a stall and an engine failure calmly. And you will plan and fly a short cross-country flight with a chart, a VOR and the G1000.
+By the end of Learn to Fly you will fly the Cessna 172 Skyhawk in Microsoft Flight Simulator 2024 the way a student pilot is taught to fly the real one. You will take off, fly a traffic pattern and land on the centerline. You will handle a stall and an engine failure calmly. And you will plan and fly a short cross-country flight with a chart, a VOR and the G1000.
 
 You will not just press buttons that happen to work. Each lesson explains **why** the airplane behaves the way it does, so the skills carry over to any airplane you fly next.
 
@@ -81,13 +81,13 @@ Every challenge starts with the **Brief** (exact sim setup, read with the sim pa
 ## Sim training is not flight training
 
 :::callout{type="safety"}
-Learn-To-Fly is for simulation only. It is not flight instruction, it does not count toward any pilot certificate, and it must never be used for real-world flight training or navigation. If you want to fly a real airplane, find a certificated flight instructor.
+Learn to Fly is for simulation only. It is not flight instruction, it does not count toward any pilot certificate, and it must never be used for real-world flight training or navigation. If you want to fly a real airplane, find a certificated flight instructor.
 :::
 
 A simulator is a wonderful way to learn procedures, build a mental picture and practice decision making. It cannot teach you how a real airplane feels, how to handle real weather, or how to stay safe with real risks. Many real pilots use sims to stay sharp, and many real students find the sim makes their lessons easier. But the sim is the warm-up, not the real thing.
 
 :::quiz{id="l0-1-q2" type="single"}
-Does completing Learn-To-Fly count toward a pilot certificate?
+Does completing Learn to Fly count toward a pilot certificate?
 
 - [ ] Yes, it counts as ground school
 - [ ] Yes, it counts as simulator time
@@ -96,7 +96,7 @@ Does completing Learn-To-Fly count toward a pilot certificate?
 
 ---
 
-No. Learn-To-Fly is for simulation only. Real flight training needs a certificated flight instructor and an approved training program.
+No. Learn to Fly is for simulation only. Real flight training needs a certificated flight instructor and an approved training program.
 :::
 
 ## Tips for success

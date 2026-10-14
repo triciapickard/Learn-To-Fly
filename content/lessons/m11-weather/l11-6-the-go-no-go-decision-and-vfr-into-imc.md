@@ -53,7 +53,7 @@ Legal minimums are the floor; **personal minimums** are the numbers you fly to. 
 | Forecast trend at the destination    | None                  | Improving or steady, never worsening                        |
 | Fuel at landing                      | 30 min day reserve    | 1 hour                                                      |
 
-These are deliberately conservative. Relax them one at a time, after several comfortable flights at the current number, and never on the day you need them relaxed. [[l16-1-risk-management-for-longer-flights]] builds a full worksheet that Learn-To-Fly saves to your profile; until then, keep yours on paper.
+These are deliberately conservative. Relax them one at a time, after several comfortable flights at the current number, and never on the day you need them relaxed. [[l16-1-risk-management-for-longer-flights]] builds a full worksheet that Learn to Fly saves to your profile; until then, keep yours on paper.
 
 :::callout{type="decision"}
 **Go, no-go or delay?** Take the KLVK to KMRY briefing from [[l11-2-forecasts-and-briefings]]: Monterey under a 600 ft overcast and 4 SM in mist, AIRMET Sierra until 20Z, a TAF that clears at 1 p.m., a thin layer per a PIREP, a clear route inland. Against the minimums above it is a **no-go now** and a **delay** until the 1 p.m. improvement is confirmed by a new METAR, with Salinas as the alternate. Write that down, with the reason, before you read on. Writing the decision is the habit; Challenge C11.1 "Go / no-go board" grades it.

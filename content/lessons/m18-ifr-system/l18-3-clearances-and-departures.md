@@ -120,7 +120,7 @@ An ODP has up to three parts. Livermore's, paraphrased from the October 2026 cyc
 | Takeoff obstacle notes | The obstacles near each runway end, with their height and distance                   | "Runway 25R: a sign, fences and trees from the departure end outward, the tallest trees about 60 ft above the runway end"              |
 | Departure route        | A heading, altitude and turn to join the route or reach an altitude                  | "Runways 25L and 25R: climb heading 255° to 1,200 ft, then a climbing right turn heading 020° to join the Oakland 060 radial to ALTAM" |
 
-For a Part 91 flight like yours, published takeoff minimums are legally advisory; for airlines they are mandatory. Learn-To-Fly treats them as mandatory: they exist because something near the runway is tall enough to hit.
+For a Part 91 flight like yours, published takeoff minimums are legally advisory; for airlines they are mandatory. Learn to Fly treats them as mandatory: they exist because something near the runway is tall enough to hit.
 
 ATC does not usually assign an ODP. You fly it on your own unless the clearance gives a heading or a SID instead, and if the ODP has a route or a turn restriction, tell ATC you are flying it. If "fly heading 250" conflicts with the ODP, say so before you take off.
 
@@ -134,7 +134,7 @@ Which of these are true about an obstacle departure procedure? Pick all that app
 - [x] It is printed in a separate section of the d-TPP, not on the approach plate
 - [x] You fly it without an ATC instruction unless ATC gives you a heading or a SID instead
 - [ ] It only applies to airlines
-- [x] Learn-To-Fly's IFR challenges require you to fly it as published
+- [x] Learn to Fly's IFR challenges require you to fly it as published
 
 ---
 

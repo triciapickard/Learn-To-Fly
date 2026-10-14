@@ -214,7 +214,7 @@ The inbound leg was 20 seconds long, so shorten the outbound leg by 20 seconds: 
 :::
 
 :::callout{type="sim"}
-The wind in the Learn-To-Fly `WX_IMC_HIGH` preset is steady, so once your outbound time and heading are right they stay right. Real wind shifts with altitude and time, and a real hold needs a small adjustment almost every lap. Treat a perfect second lap in the sim as the start, not the finish.
+The wind in the Learn to Fly `WX_IMC_HIGH` preset is steady, so once your outbound time and heading are right they stay right. Real wind shifts with altitude and time, and a real hold needs a small adjustment almost every lap. Treat a perfect second lap in the sim as the start, not the finish.
 :::
 
 ## The 5 Ts

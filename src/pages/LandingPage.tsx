@@ -168,7 +168,7 @@ const NEEDS: { title: string; text: string; icon: LucideIcon }[] = [
 const FAQ = [
   {
     q: 'Is this real flight training?',
-    a: 'No. Learn-To-Fly is for simulation only. It borrows real-world standards so you build good habits, but it does not count toward any pilot certificate. For real flying, learn with a certified flight instructor.',
+    a: 'No. Learn to Fly is for simulation only. It borrows real-world standards so you build good habits, but it does not count toward any pilot certificate. For real flying, learn with a certified flight instructor.',
   },
   {
     q: 'Is it free?',
@@ -277,7 +277,7 @@ export default function LandingPage() {
             Yes, you can fly a plane.
           </h1>
           <p className="body-lg mt-6 max-w-[34em] text-ink-2">
-            Learn-To-Fly takes a complete beginner from the first takeoff to a planned cross-country
+            Learn to Fly takes a complete beginner from the first takeoff to a planned cross-country
             flight in the Cessna 172, inside Microsoft Flight Simulator 2024. Short lessons,
             diagrams you can play with, and challenges you fly in the sim and score against real
             pilot standards.

@@ -28,7 +28,7 @@ Course 2 ends with two flights. Challenge C16.1 "Advanced VFR stage check" is th
 Both use the Course 1 tiers: Bronze "you did it safely" (about ±200 ft, ±15 kt, ±20°), Silver "good student pilot" (±150 ft, ±10 kt, ±15°), Gold "checkride-ready" (±100 ft, ±10 kt, ±10°). One rule is new.
 
 :::callout{type="note"}
-**The Silver rule.** Course 2 is complete, and the badge "Skyhawk Advanced VFR (Sim)" is awarded, only when every P0 lesson and challenge in Modules 9–16 is done **and** C16.1 is passed at **Silver or better**. Bronze passes the challenge but does not finish the course; fly it again. The badge is a Learn-To-Fly award for sim flying, not a real certificate, rating or endorsement.
+**The Silver rule.** Course 2 is complete, and the badge "Skyhawk Advanced VFR (Sim)" is awarded, only when every P0 lesson and challenge in Modules 9–16 is done **and** C16.1 is passed at **Silver or better**. Bronze passes the challenge but does not finish the course; fly it again. The badge is a Learn to Fly award for sim flying, not a real certificate, rating or endorsement.
 :::
 
 ## The stage check, task by task

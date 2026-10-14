@@ -23,7 +23,7 @@ const ROUTES: [string, string | RegExp][] = [
   ['/account-deleted', 'Your account has been deleted'],
   ['/login', 'Log in'],
   ['/signup', 'Sign up'],
-  ['/about', 'About Learn-To-Fly'],
+  ['/about', 'About Learn to Fly'],
   ['/disclaimer', 'Simulation-only disclaimer'],
   ['/privacy', 'Privacy policy'],
   ['/terms', 'Terms of use'],
@@ -51,7 +51,7 @@ describe('routes', () => {
   it('sets a unique document title', async () => {
     renderRoute('/about');
     await screen.findByRole('heading', { level: 1 });
-    expect(document.title).toBe('About · Learn-To-Fly');
+    expect(document.title).toBe('About · Learn to Fly');
   });
 
   it('renders fly mode without the site header and footer', async () => {

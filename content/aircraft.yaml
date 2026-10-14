@@ -154,7 +154,7 @@ vspeeds:
     max: 70
   approach:
     label: Final approach target
-    meaning: Learn-To-Fly target speed on final with flaps 30°
+    meaning: Learn to Fly target speed on final with flaps 30°
     kias: 65
   shortFieldApproach:
     label: Short-field approach (flaps 30°)

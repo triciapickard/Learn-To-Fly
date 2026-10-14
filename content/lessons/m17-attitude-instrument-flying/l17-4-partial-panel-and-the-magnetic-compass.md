@@ -127,7 +127,7 @@ In a banked turn the same downward pull tilts the card, so through north the com
 | **S**outh  | Shows more turn than you made | **O**ver: past the heading    |
 | East/West  | About correct                 | On the heading                |
 
-**UNOS**: Undershoot North, Overshoot South. How much? Learn-To-Fly teaches the rule in the Instrument Flying Handbook and the PHAK: for a standard-rate turn, **lead or lag ≈ 15° plus half your latitude**. The Bay Area sits at about 38° N, so the number is 15 + 19 ≈ 34°, call it 35°. Turning right from west to north, roll out when the compass reads about 325; turning right from east to south, let it run past and roll out when it reads about 215. Then wings level, wait a few seconds, and the compass will settle onto the heading you wanted.
+**UNOS**: Undershoot North, Overshoot South. How much? Learn to Fly teaches the rule in the Instrument Flying Handbook and the PHAK: for a standard-rate turn, **lead or lag ≈ 15° plus half your latitude**. The Bay Area sits at about 38° N, so the number is 15 + 19 ≈ 34°, call it 35°. Turning right from west to north, roll out when the compass reads about 325; turning right from east to south, let it run past and roll out when it reads about 215. Then wings level, wait a few seconds, and the compass will settle onto the heading you wanted.
 
 :::callout{type="verify"}
 Widget pending: W35 (Magnetic Compass Errors, P1) is embedded here once Phase 21 ships it: `::widget{name="magnetic-compass" mode="explore"}`, with heading, bank and latitude sliders and the "roll out on north" quiz; its model must use the 15°-plus-half-latitude rule (IFH Chapter 5, PHAK Chapter 8, desk-verified 2026-10-13). Until then the two tables carry the content.
@@ -165,7 +165,7 @@ MSFS 2024's built-in ATC does not provide no-gyro vectors, so Challenge C17.4 sc
 Challenge C17.4 "Partial panel" starts you in the overcast and, a few minutes in, cues an AHRS failure: cover the PFD attitude and heading with a sticky note on the monitor, or use the sim's failure menu if it offers one. Then fly straight and level, a timed turn to a heading, compass turns to north and to south, and a 500 ft constant-rate descent.
 
 :::callout{type="decision"}
-A real AHRS failure in cloud is not a maneuver to finish; it is a reason to land. The decision is made in the first minute: tell ATC, ask for the nearest VMC or the simplest approach, and fly the airplane with the small instruments. Learn-To-Fly counts that call as the correct answer whenever a challenge offers it.
+A real AHRS failure in cloud is not a maneuver to finish; it is a reason to land. The decision is made in the first minute: tell ATC, ask for the nearest VMC or the simplest approach, and fly the airplane with the small instruments. Learn to Fly counts that call as the correct answer whenever a challenge offers it.
 :::
 
 :::callout{type="verify"}

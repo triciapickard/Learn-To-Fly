@@ -147,7 +147,7 @@ Three definitions of "night" exist, and each one does a different job:
 
 The currency rule, in plain language: **to carry passengers at night, you must have made 3 takeoffs and 3 landings to a full stop within the preceding 90 days, at night (1 hour after sunset to 1 hour before sunrise), in the same category and class of airplane.** Touch-and-goes do not count; each landing must be to a full stop.
 
-Why does the rule exist? Because the night landing is the most perishable skill in flying. The flare is a judgment of height from a few sliding lines of light, and that judgment decays in weeks, not years. Three full-stop landings in 90 days is the regulator's estimate of how often you need to refresh it before you put someone else in the right seat. Learn-To-Fly's logbook tracks a sim version of the same rule so you build the habit of checking it before a night flight.
+Why does the rule exist? Because the night landing is the most perishable skill in flying. The flare is a judgment of height from a few sliding lines of light, and that judgment decays in weeks, not years. Three full-stop landings in 90 days is the regulator's estimate of how often you need to refresh it before you put someone else in the right seat. Learn to Fly's logbook tracks a sim version of the same rule so you build the habit of checking it before a night flight.
 
 :::quiz{id="l12-3-q3" type="single"}
 Which of these satisfies night currency to carry passengers?

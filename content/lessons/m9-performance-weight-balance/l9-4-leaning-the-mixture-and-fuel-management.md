@@ -50,7 +50,7 @@ Past peak there is not enough fuel for the air in the cylinders. Combustion weak
 
 ## Leaning methods
 
-Learn-To-Fly teaches the method in the in-sim cruise checklist: at cruise power, lean to peak EGT, then enrich slightly. In practice:
+Learn to Fly teaches the method in the in-sim cruise checklist: at cruise power, lean to peak EGT, then enrich slightly. In practice:
 
 1. Level off, set cruise power (2,300–2,400 RPM for our settings), let the speed settle, trim.
 2. On the G1000 engine page, select the leaning display, which shows an EGT bar for each cylinder and tracks the peak.
@@ -97,7 +97,7 @@ Above about 3,000 ft pressure altitude a full-rich mixture gives away power you 
 
 ## Fuel planning: burn, reserve, buffer
 
-Fuel planning is multiplication plus honesty. The Skyhawk carries {{aircraft.fuelCapacity}}; plan with 53 gal and a burn of 10 GPH, deliberately pessimistic for a leaned cruise. The law requires enough fuel to reach your destination and then fly **30 minutes** by day or **45 minutes** at night at normal cruise. Those reserves are a floor, not a target, so Learn-To-Fly adds a **personal buffer**; one hour is a good one. A 1 hour 40 minute daytime leg:
+Fuel planning is multiplication plus honesty. The Skyhawk carries {{aircraft.fuelCapacity}}; plan with 53 gal and a burn of 10 GPH, deliberately pessimistic for a leaned cruise. The law requires enough fuel to reach your destination and then fly **30 minutes** by day or **45 minutes** at night at normal cruise. Those reserves are a floor, not a target, so Learn to Fly adds a **personal buffer**; one hour is a good one. A 1 hour 40 minute daytime leg:
 
 | Item                              | Gallons |
 | --------------------------------- | ------- |

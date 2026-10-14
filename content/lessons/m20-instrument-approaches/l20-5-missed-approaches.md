@@ -21,7 +21,7 @@ simVersion: null
 
 ## The approach that ends in a climb
 
-Half of every approach briefing is about the missed approach, and most pilots fly a hundred approaches before they need one for real. That is the problem. The missed approach is a go-around in cloud, started at the moment you most want to land, with a turn and a climb to a fix you have to find on the plate. Like the go-around in [[l4-4-go-arounds]], it is a normal maneuver and a sign of good judgment, not a failure. Learn-To-Fly scores it as a pass every time it is the right call.
+Half of every approach briefing is about the missed approach, and most pilots fly a hundred approaches before they need one for real. That is the problem. The missed approach is a go-around in cloud, started at the moment you most want to land, with a turn and a climb to a fix you have to find on the plate. Like the go-around in [[l4-4-go-arounds]], it is a normal maneuver and a sign of good judgment, not a failure. Learn to Fly scores it as a pass every time it is the right call.
 
 :::callout{type="real-world"}
 In a real airplane, the missed approach is practiced until the first three steps happen without thought, because the alternative, hesitating at 200 ft in cloud, is how controlled flight into terrain happens. Real training also covers things the sim cannot: a missed approach in icing, with a passenger asking questions, and with an engine that may not give full power. Fly the flow here until it is automatic, then remember it is only the beginning.
@@ -40,7 +40,7 @@ The obvious trigger is reaching DA, or the MAP at MDA, without the runway enviro
 | Runway environment not in sight at DA or the MAP      | At minimums          | The approach is finished                                                   |
 | Runway in sight but a normal landing is not possible  | At or after minimums | Too high, too fast, or not in the touchdown zone                           |
 | Full-scale needle inside the FAF                      | Any time             | You are outside the protected airspace                                     |
-| Not stabilized by 1,000 ft above the airport in IMC   | Inside the FAF       | The Learn-To-Fly standard from [[l20-1-anatomy-of-an-instrument-approach]] |
+| Not stabilized by 1,000 ft above the airport in IMC   | Inside the FAF       | The Learn to Fly standard from [[l20-1-anatomy-of-an-instrument-approach]] |
 | A guidance flag (NAV, GS, LOI) or a lost annunciation | Any time             | The needles are lying                                                      |
 | ATC instructs you to go around                        | Any time             | Traffic or a runway problem                                                |
 | You lose the runway after seeing it (circling)        | Below MDA            | See [[l20-6-circling-approaches-and-procedure-turns]]                      |
@@ -102,7 +102,7 @@ Power, pitch, positive rate, flaps, navigate, talk. Stop the descent first, prov
 
 ## The published missed approach
 
-Every plate prints its missed approach in the briefing strip and draws it with a dashed line on the plan and profile views. It is designed from the MAP, so it assumes you are there, at or above the DA or MDA, when you start it. On the Learn-To-Fly Training Plate the ILS Runway 28 missed approach reads:
+Every plate prints its missed approach in the briefing strip and draws it with a dashed line on the plan and profile views. It is designed from the MAP, so it assumes you are there, at or above the DA or MDA, when you start it. On the Learn to Fly Training Plate the ILS Runway 28 missed approach reads:
 
 | Element      | Training Plate ILS Runway 28                                 |
 | ------------ | ------------------------------------------------------------ |

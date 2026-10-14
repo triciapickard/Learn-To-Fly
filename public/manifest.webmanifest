@@ -1,6 +1,6 @@
 {
-  "name": "Learn-To-Fly",
-  "short_name": "Learn-To-Fly",
+  "name": "Learn to Fly",
+  "short_name": "Learn to Fly",
   "description": "Learn to fly the Cessna 172 in Microsoft Flight Simulator 2024.",
   "start_url": "/",
   "scope": "/",

@@ -175,7 +175,7 @@ Groundspeed × 5: 90 × 5 = 450 fpm. Slower groundspeed, lower rate; a headwind 
 
 ## LNAV with CDFA and the advisory glidepath
 
-When the box gives you only LNAV, the final segment ends at an MDA, and the old way to fly it was "dive and drive": descend quickly at each fix, level off, repeat. Learn-To-Fly teaches the **continuous descent final approach** (CDFA) instead: a steady 3° descent from the FAF, timed to reach the MDA at a point from which a normal landing is still possible, then a level-off at MDA if the runway is not in sight. It is one attitude and one power setting, just like an ILS, and it keeps the airplane stabilized.
+When the box gives you only LNAV, the final segment ends at an MDA, and the old way to fly it was "dive and drive": descend quickly at each fix, level off, repeat. Learn to Fly teaches the **continuous descent final approach** (CDFA) instead: a steady 3° descent from the FAF, timed to reach the MDA at a point from which a normal landing is still possible, then a level-off at MDA if the runway is not in sight. It is one attitude and one power setting, just like an ILS, and it keeps the airplane stabilized.
 
 The G1000's **LNAV+V** advisory glidepath is a gift for CDFA: it draws the 3° path for you. But it is _advisory_. It does not know about the step-down altitudes or the MDA, and following it below the MDA is descending below minima. The discipline is: fly the advisory glidepath down to the MDA, then **level off at MDA** and treat the diamond as decoration until the runway appears. Garmin's own guide warns that the autopilot will not level off at the MDA for you, even with the MDA set in the altitude preselect.
 

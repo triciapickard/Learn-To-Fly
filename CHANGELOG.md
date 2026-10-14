@@ -136,5 +136,5 @@ All notable changes to this project are documented here. The format is based on
 - Local log-in failing with `http proxy error … ECONNREFUSED`: the API exited when
   MongoDB wasn't running. In development it now waits for MongoDB and starts once it's
   reachable, with a short "Cannot reach MongoDB" log line instead of a driver dump; the
-  client shows "Couldn't reach the Learn-To-Fly server" for 502/503/504 gateway errors
+  client shows "Couldn't reach the Learn to Fly server" for 502/503/504 gateway errors
   instead of "Something went wrong".

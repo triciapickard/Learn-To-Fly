@@ -92,7 +92,7 @@ Both altitudes clear obstacles. The MEA also guarantees VOR reception along the 
 
 An **approach plate** is a one-page set of instructions for getting from the enroute structure to a runway without seeing it. Every FAA plate has the same layout, so once you can read one you can read them all.
 
-To teach it, Learn-To-Fly uses the **Learn-To-Fly Training Plate**: an original, fictional **RNAV (GPS) RWY 25** approach to an invented airport called Training Field. It looks like an FAA plate but is not a real procedure, and is watermarked "Training plate — not a real procedure — not for navigation".
+To teach it, Learn to Fly uses the **Learn to Fly Training Plate**: an original, fictional **RNAV (GPS) RWY 25** approach to an invented airport called Training Field. It looks like an FAA plate but is not a real procedure, and is watermarked "Training plate — not a real procedure — not for navigation".
 
 :::callout{type="verify"}
 Widget pending: Widget W38 (Approach Plate Explorer) is embedded here once Phase 21 ships it: `::widget{name="approach-plate" mode="explore"}`. Until then the tables below describe the training plate; keep every number consistent with `content/approach-plates/` when the SVG and hotspot JSON are drawn (D2-10). Screenshot for the shot list: none (plate crops are never used).

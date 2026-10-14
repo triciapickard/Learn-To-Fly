@@ -30,7 +30,7 @@ MSFS 2024 offers three ways to set the weather, chosen on the world map before t
 | Mode       | What it is                                                                                | Use it for                                                                    |
 | ---------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | **Preset** | A named, fixed scene such as clear skies, scattered clouds, overcast or rain              | Quick setup when the brief names a sim preset                                 |
-| **Custom** | Every element set by hand: clouds, wind, visibility, precipitation, temperature, pressure | Every Learn-To-Fly challenge: the brief lists the values and you dial them in |
+| **Custom** | Every element set by hand: clouds, wind, visibility, precipitation, temperature, pressure | Every Learn to Fly challenge: the brief lists the values and you dial them in |
 | **Live**   | Real-world weather pulled from a data service and rendered in the sim                     | Looking at today's sky; the P1 live-weather challenge C11.4                   |
 
 Challenges use custom weather for the reason they did in [[l0-2-setting-up-msfs-2024-for-training]]: repeatability. A brief that says `WX_MARINE_LAYER` has to mean the same cloud base for every learner, every time.
@@ -87,7 +87,7 @@ Take an example METAR for Half Moon Bay (invented for this lesson): `KHAF 131655
 Then check it from the cockpit. Set the altimeter to 30.12 and confirm the field elevation reads about right. Taxi out and look up: the base should be a few hundred feet overhead. Climb into it and note the altitude the windscreen goes white. If it is more than 100 ft off the brief, adjust the layer and try again; Challenge C11.3 "Inadvertent IMC: the 180" depends on the cloud base being where the brief says.
 
 :::callout{type="tip"}
-Save your custom weather as a named preset in the sim after you build it. Name it after the Learn-To-Fly preset (`WX_MARINE_LAYER_600`) and you will never dial it in again.
+Save your custom weather as a named preset in the sim after you build it. Name it after the Learn to Fly preset (`WX_MARINE_LAYER_600`) and you will never dial it in again.
 :::
 
 :::callout{type="verify"}

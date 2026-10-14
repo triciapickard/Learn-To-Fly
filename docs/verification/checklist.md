@@ -20,7 +20,7 @@ file (Section 54.2).
 
 ## M0 — Getting started
 
-### L0.1 — Welcome: how Learn-To-Fly works
+### L0.1 — Welcome: how Learn to Fly works
 
 [content/lessons/m0-getting-started/l0-1-welcome-how-learn-to-fly-works.md](../../content/lessons/m0-getting-started/l0-1-welcome-how-learn-to-fly-works.md) · P0 · published, verified 2026-09-28
 
@@ -601,7 +601,7 @@ file (Section 54.2).
 
 - [line 57](../../content/lessons/m13-mountain-flying/l13-2-planning-a-mountain-route.md#L57): Widget pending: W21 (Density Altitude Calculator) is embedded here once Phase 20 ships it: `::widget{name="density-altitude" mode="explore"}`, pre-set to KAUN on a summer morning. Sim check: confirm the climb-time estimate (about 20 min from 1,500 ft to 9,500 ft) against the W22 flight-test climb data.
 - [line 113](../../content/lessons/m13-mountain-flying/l13-2-planning-a-mountain-route.md#L113): Sim check: confirm KBLU (RWY 15/33, 3,300 x 50 ft asphalt, 5,284 ft; real-world AirNav 2026-10-13) is present and landable in MSFS 2024 scenery, and that Donner Lake, Emigrant Gap and I-80 are recognizable from 9,500 ft (v2 Section 12.3). Shot list: "Donner Summit from 9,500 ft, I-80 and Donner Lake visible".
-- [line 138](../../content/lessons/m13-mountain-flying/l13-2-planning-a-mountain-route.md#L138): Author decision: the 1 hour mountain fuel reserve is a Learn-To-Fly policy, not an FAA number (FAA-P-8740-60 gives no reserve figure; 14 CFR 91.151 day VFR is 30 min, desk-verified 2026-10-13). Confirm the wording stays as a house rule.
+- [line 138](../../content/lessons/m13-mountain-flying/l13-2-planning-a-mountain-route.md#L138): Author decision: the 1 hour mountain fuel reserve is a Learn to Fly policy, not an FAA number (FAA-P-8740-60 gives no reserve figure; 14 CFR 91.151 day VFR is 30 min, desk-verified 2026-10-13). Confirm the wording stays as a house rule.
 - [line 142](../../content/lessons/m13-mountain-flying/l13-2-planning-a-mountain-route.md#L142): Sim check: confirm the departure time and the sunrise/sunset the `TIME_DAWN` preset gives C13.2, so "landed 1 hour before sunset" is achievable in the challenge.
 
 ### L13.3 — High-elevation airport operations

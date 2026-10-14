@@ -87,7 +87,7 @@ Acceleration tilts your sense of "down" backward, which feels like pitching up. 
 A desktop sim does not move. Your inner ear sits in a chair that is not accelerating, so it reports "still", which is close enough to "level" that nothing fights your eyes. Every maneuver in this module feels easier than it will in an airplane. That gap matters most for the learner who later flies for real.
 
 :::callout{type="safety"}
-If you fly a real airplane, nothing in Learn-To-Fly's instrument course makes you safe in cloud. Your sim-trained scan will meet a body that insists, with total confidence, that the instruments are wrong. Only training with an instructor under a view-limiting device, and the rating that follows, prepares you for that argument. A VFR pilot who meets cloud makes the 180° turn from [[l11-6-the-go-no-go-decision-and-vfr-into-imc]] and does not test the question.
+If you fly a real airplane, nothing in Learn to Fly's instrument course makes you safe in cloud. Your sim-trained scan will meet a body that insists, with total confidence, that the instruments are wrong. Only training with an instructor under a view-limiting device, and the rating that follows, prepares you for that argument. A VFR pilot who meets cloud makes the 180° turn from [[l11-6-the-go-no-go-decision-and-vfr-into-imc]] and does not test the question.
 :::
 
 What the sim can build is the habit that wins the argument: eyes on the attitude indicator, small inputs, trust the gauges. You can also reduce the odds:

@@ -58,7 +58,7 @@ describe('lesson page', () => {
     expect(
       await screen.findByRole('heading', { level: 1, name: 'Speeds, limits and checklists' }),
     ).toBeInTheDocument();
-    expect(document.title).toBe('L1.4 Speeds, limits and checklists · Learn-To-Fly');
+    expect(document.title).toBe('L1.4 Speeds, limits and checklists · Learn to Fly');
     const nav = screen.getByRole('navigation', { name: 'Lesson sections' });
     expect(within(nav).getByRole('link', { name: /What a V-speed is/ })).toHaveAttribute(
       'href',
