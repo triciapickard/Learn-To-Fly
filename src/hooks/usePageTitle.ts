@@ -15,7 +15,7 @@ function setMeta(selector: string, attr: 'name' | 'property', key: string, conte
 }
 
 /**
- * Sets a unique document title, "Page title · Learn-To-Fly" (Section 22.1), and keeps the
+ * Sets a unique document title, "Page title · Learn to Fly" (Section 22.1), and keeps the
  * description, Open Graph tags and canonical URL in step when navigating (step 11.18).
  */
 export function usePageTitle(title?: string, description?: string): void {

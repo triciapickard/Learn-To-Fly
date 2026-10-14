@@ -135,7 +135,7 @@ MSFS 2024 computes air density from the weather you set, so density altitude is 
 - **Temperature.** In custom weather, the surface temperature slider sets the OAT. Drag it to 38 °C and the Skyhawk will struggle just as the chart predicts.
 - **Pressure.** The altimeter setting (shown as "pressure" or "QNH" in the weather panel) changes pressure altitude.
 
-The weather presets used by Learn-To-Fly challenges already fix both, so a challenge brief that says "hot day" is reproducible: everyone flies the same thin air.
+The weather presets used by Learn to Fly challenges already fix both, so a challenge brief that says "hot day" is reproducible: everyone flies the same thin air.
 
 :::callout{type="sim"}
 The sim's engine model loses power with altitude, but the exact loss may not match a real Lycoming. Our performance tables ([[l9-2-reading-performance-charts]]) come from flying the sim airplane, not from the real handbook, so they match what you will see in the sim. In a real airplane, use the real POH.

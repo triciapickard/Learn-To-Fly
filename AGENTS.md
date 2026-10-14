@@ -2,7 +2,7 @@
 
 ## Project Details
 
-Learn-To-Fly teaches a complete beginner to fly the Cessna 172 Skyhawk in Microsoft Flight Simulator 2024, through lessons, interactive visual explanations and in-sim challenges.
+Learn to Fly teaches a complete beginner to fly the Cessna 172 Skyhawk in Microsoft Flight Simulator 2024, through lessons, interactive visual explanations and in-sim challenges.
 
 ## Stack
 

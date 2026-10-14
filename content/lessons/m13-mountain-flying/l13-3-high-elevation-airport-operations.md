@@ -69,7 +69,7 @@ Performance charts tell you how much runway the takeoff needs, not whether today
 
 Lift-off is about {{vspeed.vr}}, so 70% is about 40 KIAS. Before you taxi, find the runway midpoint: a taxiway, a distance-remaining sign, or a landmark beside the runway. Then brief it aloud: "40 knots by the midpoint taxiway or I abort."
 
-The provisional Learn-To-Fly takeoff table shows what you are up against:
+The provisional Learn to Fly takeoff table shows what you are up against:
 
 | Density altitude | Ground roll (about) | Over a 50 ft obstacle (about) |
 | ---------------- | ------------------- | ----------------------------- |
@@ -80,7 +80,7 @@ The provisional Learn-To-Fly takeoff table shows what you are up against:
 | 8,000 ft         | 2,050 ft            | 3,750 ft                      |
 | 10,000 ft        | 2,550 ft            | 4,800 ft                      |
 
-Maximum weight, no wind, dry pavement. Learn-To-Fly sim data, provisional until verified.
+Maximum weight, no wind, dry pavement. Learn to Fly sim data, provisional until verified.
 
 :::callout{type="verify"}
 Widget pending: W22 (Performance Chart Reader) replaces this table once Phase 20 ships it: `::widget{name="performance-chart" table="takeoff" mode="explore"}`. Sim check: the rows are placeholders shaped like the real trend; replace them with the Truckee flight-test rows (v2 Phase 16, D2-11) and update quiz l13-3-q2. (Desk-verified 2026-10-13: the "70% of lift-off speed by the midpoint" abort rule is AIM 7-6-8; v2 Appendix F.10 can drop its ⚠.)
@@ -122,7 +122,7 @@ Once airborne the question changes from "will it fly" to "will it out-climb the 
 | 8,000 ft         | 300 fpm                             | 84 kt                        | 215 ft per nm    |
 | 10,000 ft        | 200 fpm                             | 86 kt                        | 140 ft per nm    |
 
-Maximum weight. Learn-To-Fly sim data, provisional until verified.
+Maximum weight. Learn to Fly sim data, provisional until verified.
 
 At Truckee on that hot afternoon you are near the 8,000–9,000 ft rows: perhaps 250 fpm, and the terrain north and east of the airport rises faster than that. The plan from [[l13-2-planning-a-mountain-route]] is to climb **over the valley**, circling if you must, and head for the ridge only at the crossing altitude. Turning toward rising terrain after takeoff is the mistake this module exists to prevent.
 

@@ -101,7 +101,7 @@ You learned to read a winds-aloft forecast in [[l11-2-forecasts-and-briefings]].
 - **Direction relative to the ridge.** Wind blowing straight across the ridge makes the strongest wave. Wind along the ridge is gentler.
 
 :::callout{type="decision"}
-Set your limit before you look at the forecast, not after. Learn-To-Fly's starting mountain limit: **ridge-level wind 20 kt or more, or any lenticular or rotor cloud, and you do not cross.** Write it on the kneeboard. When the 9,000 ft forecast says 25 kt from the west, the decision is already made.
+Set your limit before you look at the forecast, not after. Learn to Fly's starting mountain limit: **ridge-level wind 20 kt or more, or any lenticular or rotor cloud, and you do not cross.** Write it on the kneeboard. When the 9,000 ft forecast says 25 kt from the west, the decision is already made.
 :::
 
 :::quiz{id="l13-1-q3" type="single"}

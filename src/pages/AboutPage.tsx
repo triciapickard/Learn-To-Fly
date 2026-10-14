@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <PageContainer narrow>
       <PageHeader
-        title="About Learn-To-Fly"
+        title="About Learn to Fly"
         description="A structured, honest way to learn to fly in Microsoft Flight Simulator 2024."
       />
       <Prose>
@@ -22,13 +22,13 @@ export default function AboutPage() {
           building block at a time, against clear standards.
         </p>
         <p>
-          Learn-To-Fly brings that structure to the sim. Short lessons with interactive diagrams
+          Learn to Fly brings that structure to the sim. Short lessons with interactive diagrams
           explain each idea, and in-sim challenges let you practice it with an exact setup and an
           honest, scored debrief.
         </p>
         <h2>Who builds it</h2>
         <p>
-          Learn-To-Fly is an independent personal project built by a flight-sim enthusiast who
+          Learn to Fly is an independent personal project built by a flight-sim enthusiast who
           struggled to find in-depth tutorials that actually teach you how to fly the aircraft, not
           just which buttons to press. Every procedure and number is checked against FAA handbooks
           and flown in the sim before it is published.
@@ -47,7 +47,7 @@ export default function AboutPage() {
         <h2>Trademarks</h2>
         <p>{TRADEMARK_STATEMENT}</p>
         <p>
-          Learn-To-Fly is for simulation use only. Read the full{' '}
+          Learn to Fly is for simulation use only. Read the full{' '}
           <Link to="/disclaimer">disclaimer</Link>.
         </p>
       </Prose>

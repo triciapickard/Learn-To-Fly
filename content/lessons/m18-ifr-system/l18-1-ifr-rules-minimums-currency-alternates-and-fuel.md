@@ -42,9 +42,9 @@ Under **VFR** you stay clear of clouds and other airplanes by looking. Under **I
 | Weather at or above VFR minimums ([[l6-2-airspace]])          | Nothing extra. Fly VFR, or file IFR anyway if you prefer the service  |
 | Weather below VFR minimums in controlled airspace             | An IFR flight plan and an ATC clearance before you enter              |
 | Class A airspace (18,000 ft MSL and above)                    | IFR always, whatever the weather                                      |
-| Weather below VFR minimums in uncontrolled (Class G) airspace | IFR without a clearance is legal but rare; Learn-To-Fly never does it |
+| Weather below VFR minimums in uncontrolled (Class G) airspace | IFR without a clearance is legal but rare; Learn to Fly never does it |
 
-In plain words: **to fly in cloud in controlled airspace, you need a clearance first.** The sim will let you take off into fog without one. Learn-To-Fly's challenges will not.
+In plain words: **to fly in cloud in controlled airspace, you need a clearance first.** The sim will let you take off into fog without one. Learn to Fly's challenges will not.
 
 ## The rules at a glance
 
@@ -166,7 +166,7 @@ Rated is not the same as current. To act as pilot in command under IFR, within t
 
 If the 6 months pass, you get a further 6 months to regain currency with a safety pilot or instructor; after that an **instrument proficiency check** is required. Currency is the legal minimum; **proficiency** is whether you can do it well today. A pilot with 6 approaches 5 months ago is current but may not be proficient.
 
-A home simulator does not count toward real currency: only an FAA-approved simulator, training device or aviation training device does. Learn-To-Fly's logbook tracks your sim approaches and holds as a habit tracker, not a legal logbook, so you can see when your skills are getting stale.
+A home simulator does not count toward real currency: only an FAA-approved simulator, training device or aviation training device does. Learn to Fly's logbook tracks your sim approaches and holds as a habit tracker, not a legal logbook, so you can see when your skills are getting stale.
 
 :::quiz{id="l18-1-q4" type="multi"}
 Which of these are required to be instrument current? Pick all that apply.

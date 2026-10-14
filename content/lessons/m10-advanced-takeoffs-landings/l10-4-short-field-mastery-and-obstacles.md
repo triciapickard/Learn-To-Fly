@@ -77,7 +77,7 @@ Which statement about Vx and Vy is correct?
 
 ## Planning the takeoff with the chart
 
-Open the Learn-To-Fly performance table from [[l9-2-reading-performance-charts]] and work the Palo Alto example. Field elevation is 7 ft, so pressure altitude is close to sea level; take 30 °C and a full airplane.
+Open the Learn to Fly performance table from [[l9-2-reading-performance-charts]] and work the Palo Alto example. Field elevation is 7 ft, so pressure altitude is close to sea level; take 30 °C and a full airplane.
 
 | Step                                           | Figure (example)                            | Where it comes from                                                                                                      |
 | ---------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |

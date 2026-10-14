@@ -1,4 +1,4 @@
-export const APP_NAME = 'Learn-To-Fly';
+export const APP_NAME = 'Learn to Fly';
 export const API_BASE_PATH = '/api/v1';
 
 /** Where the landing page's "Start lesson 1" buttons go; a content test checks it exists. */

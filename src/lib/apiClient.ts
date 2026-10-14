@@ -92,7 +92,7 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
       throw new ApiError(
         response.status,
         'SERVICE_UNAVAILABLE',
-        "Couldn't reach the Learn-To-Fly server. Please try again in a moment.",
+        "Couldn't reach the Learn to Fly server. Please try again in a moment.",
       );
     }
     throw new ApiError(response.status, 'INTERNAL', 'Something went wrong. Please try again.');

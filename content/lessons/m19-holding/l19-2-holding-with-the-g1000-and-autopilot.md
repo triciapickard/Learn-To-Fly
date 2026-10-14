@@ -149,7 +149,7 @@ An autopilot in a hold is a textbook case of the question from [[l18-4-the-g1000
 - **Mode annunciator:** GPS and ALT green? A white, armed mode means the autopilot is waiting for something and the airplane may not be doing what you think.
 - **HSI:** magenta needle, SUSP showing (or not, for a hold-in-lieu), course pointer on the inbound course.
 - **Map:** the airplane symbol riding the drawn racetrack, turning the way the clearance said.
-- **Altitude and speed:** 4,000 ft within the Learn-To-Fly instrument standard, holding speed set with the throttle; the autopilot does not manage power.
+- **Altitude and speed:** 4,000 ft within the Learn to Fly instrument standard, holding speed set with the throttle; the autopilot does not manage power.
 - **Clock and fuel:** time to the EFC and fuel remaining, every lap.
 
 When something is wrong, say "I have the airplane", disconnect the autopilot, hand-fly the pattern from the last lesson and sort out the box on the next straight leg. The hand-flown hold is your fallback, not an embarrassment, which is why Challenge C19.2 "GPS hold" scores a hand-flown entry and first lap before the coupled lap.

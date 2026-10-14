@@ -74,7 +74,7 @@ dates:
 
 assistance:
   training:
-    label: Learn-To-Fly Training profile
+    label: Learn to Fly Training profile
     description: Auto-Rudder, AI Auto-Trim and path aids off, whatever your controller (gamepads use the LT and RT triggers for rudder). Lesson 0.2 lists every setting.
 
 defaults:

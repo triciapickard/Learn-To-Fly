@@ -11,7 +11,7 @@ prerequisites: [l18-2-ifr-charts-and-the-approach-plate]
 objectives:
   - Name each approach segment and the fix that starts it, in order from the IAF to the MAP.
   - Read the minima section of a plate and choose the correct line for a Cessna 172.
-  - Brief an approach aloud using the standard Learn-To-Fly briefing format.
+  - Brief an approach aloud using the standard Learn to Fly briefing format.
 challenges: []
 resources: [iph-approaches, faa-chart-users-guide, faa-dtpp, aim-5, faa-acs-instrument]
 published: false
@@ -44,7 +44,7 @@ Every approach is built from the same four segments. Each one starts at a named 
 
 On a precision approach the final segment starts at the glideslope intercept point, usually marked on the profile view with a lightning-bolt symbol. On a non-precision approach the FAF is a plain fix, drawn as a Maltese cross on the profile. The MAP on a precision approach is the **decision altitude**, a height, not a place. On a non-precision approach the MAP is a point: a fix, a DME distance, or a time from the FAF.
 
-Picture the **Learn-To-Fly Training Plate**: a fictional ILS to Runway 28 at an invented airport. The IAF is a fix called DEPOT at 4,000 ft MSL. From DEPOT a feeder route runs to the IF, a fix called ROLLA, where the course turns onto final at 3,000 ft. The FAF, called FLARE, is 5 nm from the runway at 2,000 ft. The DA is 650 ft MSL. Keep this picture; every lesson in Module 20 refers back to it.
+Picture the **Learn to Fly Training Plate**: a fictional ILS to Runway 28 at an invented airport. The IAF is a fix called DEPOT at 4,000 ft MSL. From DEPOT a feeder route runs to the IF, a fix called ROLLA, where the course turns onto final at 3,000 ft. The FAF, called FLARE, is 5 nm from the runway at 2,000 ft. The DA is 650 ft MSL. Keep this picture; every lesson in Module 20 refers back to it.
 
 :::callout{type="verify"}
 Widget pending: Widget W38 (Approach Plate Explorer) is embedded here once Phase 21 ships it: `::widget{name="approach-plate" mode="segments"}`. The Training Plate it draws is original and fictional (D2-10); the fix names DEPOT, ROLLA and FLARE and the altitudes in this lesson must match the plate's hotspot JSON when it exists. Until then the table and the description above are the walkthrough.
@@ -112,7 +112,7 @@ An MDA is a floor, not a decision point. Level off and fly to the MAP. If the ru
 
 ## The approach briefing
 
-An approach briefing is a spoken, ordered walk through the plate, done 10–15 minutes before the descent while you still have time to fix a mistake. Saying it aloud, even alone in the sim, is the point: the mouth catches errors the eyes skip over. Learn-To-Fly uses this format everywhere, including the kneeboard card in every approach challenge.
+An approach briefing is a spoken, ordered walk through the plate, done 10–15 minutes before the descent while you still have time to fix a mistake. Saying it aloud, even alone in the sim, is the point: the mouth catches errors the eyes skip over. Learn to Fly uses this format everywhere, including the kneeboard card in every approach challenge.
 
 | #   | Item                                                             | Training Plate example                                                    |
 | --- | ---------------------------------------------------------------- | ------------------------------------------------------------------------- |
@@ -147,7 +147,7 @@ Name it, tune it, set the course, then the fix you fly it from. The order follow
 
 ## Stabilized approach criteria for IFR
 
-You already know a stabilized approach from [[l4-3-normal-approach-and-landing]]: configured, on speed, on the glidepath, with only small corrections. IFR tightens the rule, because you will break out of the cloud with seconds to land, not minutes. The table is the Learn-To-Fly standard: the FAA's handbook sets the 1,000 fpm and 1,000 ft limits, the Instrument ACS allows up to three-quarters scale on the needles, and we ask for half.
+You already know a stabilized approach from [[l4-3-normal-approach-and-landing]]: configured, on speed, on the glidepath, with only small corrections. IFR tightens the rule, because you will break out of the cloud with seconds to land, not minutes. The table is the Learn to Fly standard: the FAA's handbook sets the 1,000 fpm and 1,000 ft limits, the Instrument ACS allows up to three-quarters scale on the needles, and we ask for half.
 
 | By the FAF (or glideslope intercept)         | Inside the FAF                                                 |
 | -------------------------------------------- | -------------------------------------------------------------- |

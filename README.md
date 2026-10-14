@@ -1,8 +1,8 @@
-# Learn-To-Fly
+# Learn to Fly
 
 ## Description
 
-Learn To Fly is a personal project that uses interactive visual explanations to teach
+Learn to Fly is a personal project that uses interactive visual explanations to teach
 beginners how to fly virtually in MSFS 2024.
 
 v1 teaches a complete beginner to fly the **Cessna 172 Skyhawk** in Microsoft Flight
@@ -11,7 +11,7 @@ in-sim challenges with a self-assessed, scored debrief. The full plan lives in
 [`v1.md`](./v1.md). v2 (advanced VFR, night, mountains, failures and instrument
 foundations in the same Skyhawk) is planned in [`v2.md`](./v2.md).
 
-> For simulation use only. Learn-To-Fly is not real-world flight training.
+> For simulation use only. Learn to Fly is not real-world flight training.
 
 ## Stack
 

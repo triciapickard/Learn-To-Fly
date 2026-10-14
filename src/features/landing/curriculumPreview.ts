@@ -80,7 +80,7 @@ export const FIRST_STOPS = [
     slug: 'l0-1-welcome-how-learn-to-fly-works',
     module: 'm0-getting-started',
     code: 'Lesson 0.1',
-    title: 'Welcome: how Learn-To-Fly works',
+    title: 'Welcome: how Learn to Fly works',
     minutes: 5,
   },
   {
