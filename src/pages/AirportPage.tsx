@@ -24,7 +24,7 @@ export default function AirportPage() {
   usePageTitle(
     data ? `${data.airport.icao} ${data.airport.name}` : 'Airport',
     data
-      ? `${data.airport.name} (${data.airport.icao}), ${data.airport.city}: runways, airspace and the Learn-To-Fly challenges that start there.`
+      ? `${data.airport.name} (${data.airport.icao}), ${data.airport.city}: runways, airspace and the Learn to Fly challenges that start there.`
       : undefined,
   );
 

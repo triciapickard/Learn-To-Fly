@@ -1,4 +1,4 @@
-# Learn-To-Fly: public lessons, challenges and reference pages may be indexed.
+# Learn to Fly: public lessons, challenges and reference pages may be indexed.
 User-agent: *
 Disallow: /api/
 Disallow: /account

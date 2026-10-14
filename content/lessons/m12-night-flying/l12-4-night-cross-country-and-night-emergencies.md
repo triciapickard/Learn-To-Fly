@@ -86,7 +86,7 @@ Lights with a recognizable pattern make night checkpoints. A highway interchange
 Fly higher at night than you would by day. Height buys three things: terrain you cannot see stays below you, your glide reaches more lights, and radio and GPS reception improve. The planning method:
 
 1. Read the **maximum elevation figure** (MEF) for every sectional quadrangle along the route. It is the highest thing in the whole quadrangle, obstacles included, so it can be far above the ground you actually cross; it tells you where the high ground is, and the terrain within a few miles of your course gives the number for the next step.
-2. Add at least 2,000 ft over hills and mountains at night. That is a Learn-To-Fly planning minimum, not a regulation: 1,000 ft is the day habit, and night deserves more.
+2. Add at least 2,000 ft over hills and mountains at night. That is a Learn to Fly planning minimum, not a regulation: 1,000 ft is the day habit, and night deserves more.
 3. Round up to the correct **VFR cruising altitude** for your magnetic course: above 3,000 ft AGL, odd thousands plus 500 ft on easterly courses (000–179), even thousands plus 500 ft on westerly courses (180–359).
 
 | Leg                                 | Magnetic course | Highest terrain near the route         | Night minimum | Planned cruise |

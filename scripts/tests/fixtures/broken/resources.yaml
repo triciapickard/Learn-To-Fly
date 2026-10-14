@@ -413,7 +413,7 @@ resources:
     topics:
       - learning
     free: true
-    description: How people learn to fly — the basis for how Learn-To-Fly lessons are designed.
+    description: How people learn to fly — the basis for how Learn to Fly lessons are designed.
     verifiedAt: null
   - slug: faa-plane-sense
     title: Plane Sense (FAA-H-8083-19A)
@@ -521,7 +521,7 @@ resources:
     topics:
       - standards
     free: true
-    description: The official standards for the private pilot practical test. Learn-To-Fly challenge
+    description: The official standards for the private pilot practical test. Learn to Fly challenge
       tolerances are inspired by it.
     verifiedAt: null
   - slug: ecfr-14
@@ -633,7 +633,7 @@ resources:
     free: true
     description:
       The checklist built into the sim. The primary cross-check for every procedure and speed
-      in Learn-To-Fly.
+      in Learn to Fly.
     verifiedAt: null
   - slug: faa-vfr-charts
     title: FAA VFR Raster Charts (sectionals and TACs)

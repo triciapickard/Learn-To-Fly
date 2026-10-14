@@ -40,7 +40,7 @@ airports:
       on 7R, left traffic on 25L). No pattern altitude is published, so the standard 1,000 ft
       above the field applies: about 1,400 ft MSL.
     notes:
-      - 'Primary Learn-To-Fly training base: a wide, flat valley with parallel runways.'
+      - 'Primary Learn to Fly training base: a wide, flat valley with parallel runways.'
       - Good practice area for maneuvers to the east, toward the Altamont Pass.
       - Class D from the surface to 2,900 ft MSL while the tower is open.
       - The FBO and terminal are on the northwest apron, north of runway 7L/25R. Taxiway A runs along the north side of 7L/25R to the runway 25R end, so taxiing from the northwest apron to 25R crosses no runway.
@@ -394,7 +394,7 @@ airports:
       - { type: Tower, mhz: '118.3', notes: 'North field: runways 10L/28R, 10R/28L and 15/33' }
       - { type: Tower, mhz: '127.2', notes: 'Runway 12/30' }
     notes:
-      - Class C airspace awareness only. Learn-To-Fly challenges never land here.
+      - Class C airspace awareness only. Learn to Fly challenges never land here.
       - Class C from the surface to 4,000 ft MSL, with the San Francisco Class B above it (floor 2,100 ft MSL over the airport).
     links:
       skyvector: https://skyvector.com/airport/OAK/Oakland-San-Francisco-Bay-Airport

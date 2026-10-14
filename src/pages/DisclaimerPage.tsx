@@ -19,7 +19,7 @@ export default function DisclaimerPage() {
       <Prose>
         <ul>
           <li>
-            Learn-To-Fly content is for entertainment and educational use with flight simulation
+            Learn to Fly content is for entertainment and educational use with flight simulation
             software.
           </li>
           <li>

@@ -11,7 +11,7 @@ const dist = mkdtempSync(path.join(tmpdir(), 'ltf-dist-'));
 mkdirSync(path.join(dist, 'assets'));
 writeFileSync(
   path.join(dist, 'index.html'),
-  '<!doctype html><html><head><title>Learn-To-Fly</title><meta name="description" content="x" /></head><body></body></html>',
+  '<!doctype html><html><head><title>Learn to Fly</title><meta name="description" content="x" /></head><body></body></html>',
 );
 writeFileSync(path.join(dist, 'assets', 'index-abc123.js'), 'console.log(1)');
 writeFileSync(path.join(dist, 'robots.txt'), 'User-agent: *');
@@ -55,7 +55,7 @@ describe('production static serving', () => {
 
   it("fills in each page's title, description, canonical URL and Open Graph tags", async () => {
     const res = await request(app).get('/reference/speeds').set('Host', 'fly.example');
-    expect(res.text).toContain('<title>V-speeds and limits · Learn-To-Fly</title>');
+    expect(res.text).toContain('<title>V-speeds and limits · Learn to Fly</title>');
     expect(res.text).toContain(
       '<link rel="canonical" href="http://fly.example/reference/speeds" />',
     );

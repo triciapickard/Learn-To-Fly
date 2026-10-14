@@ -7,13 +7,13 @@ const html = readFileSync('index.html', 'utf8');
 
 describe('page head (step 11.18)', () => {
   it('formats titles', () => {
-    expect(formatPageTitle('Glossary')).toBe('Glossary · Learn-To-Fly');
-    expect(formatPageTitle()).toBe('Learn-To-Fly — Learn to fly the Cessna 172 in MSFS 2024');
+    expect(formatPageTitle('Glossary')).toBe('Glossary · Learn to Fly');
+    expect(formatPageTitle()).toBe('Learn to Fly — Learn to fly the Cessna 172 in MSFS 2024');
   });
 
   it('writes absolute canonical and Open Graph URLs for index.html', () => {
     const out = renderHead(html, { siteUrl: 'https://learntofly.example/', pathname: '/learn' });
-    expect(out).toContain('<title>Learn · Learn-To-Fly</title>');
+    expect(out).toContain('<title>Learn · Learn to Fly</title>');
     expect(out).toContain('<link rel="canonical" href="https://learntofly.example/learn" />');
     expect(out).toContain('<meta property="og:url" content="https://learntofly.example/learn" />');
     expect(out).toContain(

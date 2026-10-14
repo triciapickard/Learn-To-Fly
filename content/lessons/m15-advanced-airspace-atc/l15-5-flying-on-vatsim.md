@@ -26,7 +26,7 @@ Every radio call in this course so far has been answered by a computer, or by yo
 It is the most realistic practice available without a real airplane, and it is free. It is also a shared space with rules, because the pilot in the airliner behind you is a person too. This lesson gets you from "never heard of it" to a first flight that leaves a good impression.
 
 :::callout{type="note"}
-Learn-To-Fly is not affiliated with VATSIM, vZOA or the authors of any pilot client. VATSIM is an independent organization with its own rules, which change. Where this lesson describes those rules, the network's own website is the authority.
+Learn to Fly is not affiliated with VATSIM, vZOA or the authors of any pilot client. VATSIM is an independent organization with its own rules, which change. Where this lesson describes those rules, the network's own website is the authority.
 :::
 
 ## What VATSIM is
@@ -116,7 +116,7 @@ On VATSIM an IFR flight must file a flight plan; a VFR flight is only encouraged
 | Destination     | ICAO airport code                                 | KTCY                                      |
 | Cruise altitude | Your planned VFR altitude                         | 3,500                                     |
 | Route           | Waypoints or landmarks, or "DCT" for direct       | DCT                                       |
-| Remarks         | Anything the controller should know               | "New VATSIM member, Learn-To-Fly student" |
+| Remarks         | Anything the controller should know               | "New VATSIM member, Learn to Fly student" |
 | Voice           | Whether you will use voice, receive only, or text | Voice                                     |
 
 The remark is not an apology. Controllers see it on your strip and slow down, spell things out, and expect "say again". Many pilots on the network started the same way, and the ones who declare it get the most patient controllers. Voice is the network's preferred mode; receive-only and text-only exist for pilots who cannot use voice.

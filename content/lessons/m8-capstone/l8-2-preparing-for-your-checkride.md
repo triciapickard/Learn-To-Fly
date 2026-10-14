@@ -62,4 +62,4 @@ What do you need to prepare before flying C8.2?
 
 - **Fly online** with real people on VATSIM or PilotEdge.
 - **Take a discovery flight** at a local flight school. Many offer a first lesson at a reduced price, and you'll be surprised how much you already know.
-- **Keep flying the challenges** to stay sharp. Future versions of Learn-To-Fly will move on to bigger airplanes.
+- **Keep flying the challenges** to stay sharp. Future versions of Learn to Fly will move on to bigger airplanes.

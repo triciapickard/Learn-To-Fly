@@ -336,7 +336,7 @@ checklists:
       - id: stabilized
         item: Stabilized approach
         action: BY 300 ft AGL
-        note: 'The Learn-To-Fly standard. If not stabilized, go around.'
+        note: 'The Learn to Fly standard. If not stabilized, go around.'
       - id: touchdown
         item: Touchdown
         action: Main wheels first

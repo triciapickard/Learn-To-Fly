@@ -23,7 +23,7 @@ simVersion: null
 
 You lift off from Livermore on a gray morning and climb into the overcast at 1,200 ft. The windshield turns white. No horizon, no ground, no sky: only the panel in front of you.
 
-Everything from Course 1 still works. The airplane does not know it is in a cloud. What changes is where your picture comes from: not the windshield, but the attitude indicator. Course 3, Learn-To-Fly's instrument course, starts here.
+Everything from Course 1 still works. The airplane does not know it is in a cloud. What changes is where your picture comes from: not the windshield, but the attitude indicator. Course 3, Learn to Fly's instrument course, starts here.
 
 :::callout{type="real-world"}
 In a real airplane, instrument training happens with an instrument instructor in the right seat. You wear a **view-limiting device** (a hood or "foggles") that hides the windshield; when you practice with a fellow pilot instead, that pilot is your **safety pilot** and watches for traffic. Nobody flies into real cloud without an instrument rating and an airplane equipped and current for IFR. In the sim, the cloud is the hood, and nothing is at risk.
@@ -118,7 +118,7 @@ Staring at the altimeter while the heading wanders is fixation. Omission would b
 
 ## The Skyhawk's attitude-and-power table for IMC
 
-Here is the sentence turned into numbers: the attitudes and power settings Learn-To-Fly teaches for instrument work in the sim's Skyhawk, flaps up.
+Here is the sentence turned into numbers: the attitudes and power settings Learn to Fly teaches for instrument work in the sim's Skyhawk, flaps up.
 
 | Phase                     | Pitch (attitude indicator) | Power         | Expect                       |
 | ------------------------- | -------------------------- | ------------- | ---------------------------- |
@@ -146,7 +146,7 @@ With a desktop yoke or stick you cannot feel control pressure. Trim until releas
 
 ## Setting up the sim for instrument practice
 
-In the sim, the cloud is your view-limiting device. Learn-To-Fly's instrument challenges start you in the air inside a thick overcast (the `WX_IMC_HIGH` preset), above the base and below the tops, so there is nothing to see and nothing to hit. For your own practice, set up the same thing:
+In the sim, the cloud is your view-limiting device. Learn to Fly's instrument challenges start you in the air inside a thick overcast (the `WX_IMC_HIGH` preset), above the base and below the tops, so there is nothing to see and nothing to hit. For your own practice, set up the same thing:
 
 | Step | Setting                                                        | Why                                              |
 | ---- | -------------------------------------------------------------- | ------------------------------------------------ |

@@ -136,7 +136,7 @@ Mountain routes stretch two things you are used to planning tightly:
 - **Weather margin.** A ceiling that gives 1,000 ft over the Central Valley gives nothing over an 8,000 ft ridge. Your go/no-go needs a ceiling **above the crossing altitude**, not just VFR minimums at the airports.
 
 :::callout{type="verify"}
-Author decision: the 1 hour mountain fuel reserve is a Learn-To-Fly policy, not an FAA number (FAA-P-8740-60 gives no reserve figure; 14 CFR 91.151 day VFR is 30 min, desk-verified 2026-10-13). Confirm the wording stays as a house rule.
+Author decision: the 1 hour mountain fuel reserve is a Learn to Fly policy, not an FAA number (FAA-P-8740-60 gives no reserve figure; 14 CFR 91.151 day VFR is 30 min, desk-verified 2026-10-13). Confirm the wording stays as a house rule.
 :::
 
 :::callout{type="verify"}

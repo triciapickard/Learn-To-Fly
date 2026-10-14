@@ -68,7 +68,7 @@ Sources consulted: AIM Chapter 2 Section 1 (current edition online, 2026-10-13: 
 | Beacon "visible 20 nm or more" | No FAA figure | — | "visible from a long way" |
 | Leg courses ~190/~250/~010 and altitudes | Wrong: KLVK→Gilroy ≈150 M, Gilroy→KWVI ≈235 M, KWVI→Gilroy ≈055 M, Gilroy→KLVK ≈330 M (from coordinates, 13° E variation); nearby terrain Mission/Monument Peaks ~2,600 ft | SkyVector bearing 358° T KWVI→KLVK, Wikipedia | table rebuilt with four legs: 5,500 / 4,500 / 5,500 / 6,500 ft MSL; callout `Author decision:` on courses and the 6,500 ft choice |
 | VFR cruising altitudes odd/even + 500 above 3,000 ft AGL | Confirmed | 14 CFR 91.159 | none |
-| "2,000 ft at night over mountainous terrain" | No FAA figure (AFH Ch 11, AIM 7-5); v2 B.3 uses 1,000–2,000 ft | AFH-3C Ch 11, AIM 7-5-6, v2 Appendix B.3 | text now calls it a Learn-To-Fly planning minimum |
+| "2,000 ft at night over mountainous terrain" | No FAA figure (AFH Ch 11, AIM 7-5); v2 B.3 uses 1,000–2,000 ft | AFH-3C Ch 11, AIM 7-5-6, v2 Appendix B.3 | text now calls it a Learn to Fly planning minimum |
 | Fuel reserve day 30 / night 45 minutes | Confirmed | 14 CFR 91.151(a) | none |
 | 10 GPH planning figure | Confirmed | `aircraft.yaml` fuelBurn | callout reduced to `Widget pending:` (W20 night mode) |
 | Glide 1.5 nm per 1,000 ft | Matches `aircraft.yaml` (9:1); POH chart not reachable | `aircraft.yaml` | callout tightened `POH check:` |

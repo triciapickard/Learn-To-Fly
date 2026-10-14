@@ -42,9 +42,9 @@ The chart is the **best case for a good pilot**. You start from its number and o
 Always use the POH for a real airplane. The real Cessna 172S handbook has its own takeoff and landing tables with notes explaining the corrections. The table in this lesson comes from the sim and is for the sim.
 :::
 
-## Reading the Learn-To-Fly sim-data chart
+## Reading the Learn to Fly sim-data chart
 
-Learn-To-Fly's performance tables are flown in the sim, so they match what the sim airplane actually does. Below is a **provisional** takeoff table for the Skyhawk at 2,550 lb, flaps 10°, paved dry level runway, zero wind. Each cell shows **ground roll / distance over a 50 ft obstacle**, in feet.
+Learn to Fly's performance tables are flown in the sim, so they match what the sim airplane actually does. Below is a **provisional** takeoff table for the Skyhawk at 2,550 lb, flaps 10°, paved dry level runway, zero wind. Each cell shows **ground roll / distance over a 50 ft obstacle**, in feet.
 
 | Pressure altitude | 0 °C          | 20 °C         | 40 °C         |
 | ----------------- | ------------- | ------------- | ------------- |
@@ -53,7 +53,7 @@ Learn-To-Fly's performance tables are flown in the sim, so they match what the s
 | 4,000 ft          | 1,170 / 2,180 | 1,360 / 2,550 | 1,580 / 2,970 |
 | 6,000 ft          | 1,430 / 2,720 | 1,670 / 3,200 | 1,940 / 3,760 |
 
-_Learn-To-Fly sim data · provisional. Replace with the flown table before publishing._
+_Learn to Fly sim data · provisional. Replace with the flown table before publishing._
 
 The table is entered with **pressure altitude and temperature**, not density altitude; the chart does that arithmetic for you. Find your row, find your column, read the cell. Notice how fast it grows: heat alone adds a third at sea level, and a hot day at a 6,000 ft airport needs two and a half times the distance you are used to at Livermore.
 
@@ -159,7 +159,7 @@ Landing has its own chart, read the same way. The numbers are shorter than takeo
 | 4,000 ft          | 690         | 1,500                 |
 | 6,000 ft          | 750         | 1,610                 |
 
-_Learn-To-Fly sim data · provisional._
+_Learn to Fly sim data · provisional._
 
 Two things make landing the harder problem at a short field. First, the chart assumes you cross the obstacle at exactly {{vspeed.shortFieldApproach}} with no float; the ground roll grows with the square of your touchdown speed, so landing 10% fast (about 6 kt at {{vspeed.shortFieldApproach}}) adds roughly 20% to the roll, plus float you cannot predict. Second, a landing has no "abort before midpoint": if it goes long, your only tool is the go-around, decided early. Density altitude hurts the landing less than the takeoff, because the engine is not involved, and hurts the go-around a lot, because it is.
 

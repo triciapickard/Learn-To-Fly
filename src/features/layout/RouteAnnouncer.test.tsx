@@ -16,6 +16,6 @@ describe('RouteAnnouncer', () => {
     await userEvent.click((await screen.findAllByRole('link', { name: 'See the curriculum' }))[0]!);
     const heading = await screen.findByRole('heading', { level: 1, name: 'Learn' });
     expect(heading).toHaveFocus();
-    await waitFor(() => expect(screen.getByText('Learn · Learn-To-Fly')).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByText('Learn · Learn to Fly')).toBeInTheDocument());
   });
 });

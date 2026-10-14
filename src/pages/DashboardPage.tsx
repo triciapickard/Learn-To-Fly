@@ -75,7 +75,7 @@ export default function DashboardPage() {
                     You finished every core lesson and passed every core challenge. Great flying.
                   </p>
                   <p className="mt-2 text-sm text-ink-2">
-                    This badge celebrates your simulator practice on Learn-To-Fly. It is not a pilot
+                    This badge celebrates your simulator practice on Learn to Fly. It is not a pilot
                     certificate and has no value for real-world flying.
                   </p>
                   <h3 className="mt-4 font-semibold">What&apos;s next</h3>

@@ -32,7 +32,7 @@ setup:
 
 procedure:
   - Make sure checklist assistance (auto-complete) is off in the sim.
-  - Open the Learn-To-Fly checklists on a second screen (Reference → Checklists) or the in-sim checklist.
+  - Open the Learn to Fly checklists on a second screen (Reference → Checklists) or the in-sim checklist.
   - Complete "Before starting engine" with a left-to-right flow, then check it against the checklist.
   - Complete "Starting engine". Look outside and say "CLEAR!" before turning the key.
   - Check oil pressure rises into the green within 30 to 60 seconds and set about 1,000 RPM.

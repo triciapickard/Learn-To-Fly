@@ -5,7 +5,7 @@ module: m17-attitude-instrument-flying
 order: 2
 priority: P0
 title: Basic instrument maneuvers and patterns
-summary: Straight and level, standard-rate turns, climbs and descents, timed turns and Pattern A, flown to the Learn-To-Fly instrument standard.
+summary: Straight and level, standard-rate turns, climbs and descents, timed turns and Pattern A, flown to the Learn to Fly instrument standard.
 estimatedMinutes: 25
 prerequisites: [l17-1-the-instrument-scan]
 objectives:
@@ -21,7 +21,7 @@ simVersion: null
 
 ## The same maneuvers, with the picture painted over
 
-Every maneuver in this lesson is one you flew in Module 2: level flight, turns, climbs and descents. What is new is that you fly them from the attitude indicator alone, and that you are now held to the **Learn-To-Fly instrument standard**, which is tighter than the visual one.
+Every maneuver in this lesson is one you flew in Module 2: level flight, turns, climbs and descents. What is new is that you fly them from the attitude indicator alone, and that you are now held to the **Learn to Fly instrument standard**, which is tighter than the visual one.
 
 | Tier        | Altitude | Heading | Airspeed |
 | ----------- | -------- | ------- | -------- |
@@ -149,7 +149,7 @@ How many seconds does a standard-rate turn through 90° take?
 
 ## Pattern A
 
-Instrument training patterns string the maneuvers together with a stopwatch, so you practice the transitions as well as the steady state. Learn-To-Fly teaches this version of Pattern A, starting at 4,000 ft MSL, heading 090, 100 KIAS:
+Instrument training patterns string the maneuvers together with a stopwatch, so you practice the transitions as well as the steady state. Learn to Fly teaches this version of Pattern A, starting at 4,000 ft MSL, heading 090, 100 KIAS:
 
 | Leg | Action                                                         | Time |
 | --- | -------------------------------------------------------------- | ---- |

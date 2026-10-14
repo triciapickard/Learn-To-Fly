@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       <Prose>
         <h2>1. Who we are</h2>
         <p>
-          Learn-To-Fly is an independent personal project. For any privacy question, open an issue
+          Learn to Fly is an independent personal project. For any privacy question, open an issue
           on <ExternalLink href={`${GITHUB_URL}/issues`}>GitHub</ExternalLink> and we will reply
           there or arrange a private channel.
         </p>
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
         </p>
         <h2>8. Children</h2>
         <p>
-          Learn-To-Fly is not directed at children under 13. If you are under 13, please do not
+          Learn to Fly is not directed at children under 13. If you are under 13, please do not
           create an account.
         </p>
         <h2>9. Changes to this policy</h2>

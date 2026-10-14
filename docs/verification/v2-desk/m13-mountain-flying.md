@@ -25,7 +25,7 @@ Terrain: I-80 Donner Summit 7,239 ft (westbound) / 7,227 ft (eastbound); histori
 | 20–25 kt ridge-level wind caution | Confirmed and sharpened: pamphlet says do not attempt mountain flying when forecast mountain-top wind exceeds 25 kt and adds 1,000 ft of ridge clearance above 20 kt; AIM says 35 mph (about 30 kt) for light aircraft; GAJSC sheet repeats 25 kt at 9,000/12,000 ft | FAA-P-8740-60 "Winds", "Ridge and Pass Crossing"; AIM 7-6-7; GAJSC Mountain Flying | Bullet rewritten with the exact FAA figures; callout deleted |
 | I-80 corridor ridge elevations 8,000–9,000 ft | Confirmed: Donner Peak 8,019, Mount Judah 8,243, Castle Peak 9,103 ft | USGS GNIS via Wikipedia | none (callout deleted) |
 | FB forecast has a 9,000 ft level | Confirmed: levels 3,000/6,000/9,000/12,000/18,000 ft…; the pamphlet itself says use the 9,000 and 12,000 ft forecasts in the west | NWS Directive 10-812; FAA-P-8740-60 "Winds Aloft Reports" | none (callout deleted) |
-| Learn-To-Fly 20 kt no-cross limit (decision callout) | Consistent with FAA guidance (more conservative than the 25 kt pamphlet limit) | FAA-P-8740-60 | none |
+| Learn to Fly 20 kt no-cross limit (decision callout) | Consistent with FAA guidance (more conservative than the 25 kt pamphlet limit) | FAA-P-8740-60 | none |
 | `WX_MOUNTAIN_WAVE` flight test | Open — sim check | v2 Phase 16 | Callout tightened and tagged `Sim check:` |
 
 Resources: added `faa-weather-handbook`.
@@ -45,7 +45,7 @@ Resources: added `faa-weather-handbook`.
 | W21 placeholder; 20 min climb-time estimate | Open — widget pending; climb time is sim data | W22 flight test | Callout tagged `Widget pending:` + `Sim check:` |
 | KBLU runway, surface, elevation | Confirmed RWY 15/33 3,300 x 50 ft asphalt, 5,284 ft, closed winters (snow) and sunset–sunrise | AirNav 2026-10-13 | Text now says "3,300 ft runway and closed in winter when snow covers it"; callout now `Sim check:` for scenery/landmarks only |
 | Day VFR fuel reserve 30 min | Confirmed | 14 CFR 91.151(a)(1) | none |
-| Learn-To-Fly 1 hour mountain reserve | Open — author decision (no FAA reserve figure for mountain flight) | FAA-P-8740-60 has none | Callout tagged `Author decision:` |
+| Learn to Fly 1 hour mountain reserve | Open — author decision (no FAA reserve figure for mountain flight) | FAA-P-8740-60 has none | Callout tagged `Author decision:` |
 | `TIME_DAWN` sunset timing | Open — sim check | presets | Separate callout tagged `Sim check:` |
 
 Resources: added `airnav`, `ecfr-91-151`, `ecfr-91-159`, `aim-7`.
@@ -58,7 +58,7 @@ Resources: added `airnav`, `ecfr-91-151`, `ecfr-91-159`, `aim-7`.
 | Density altitude arithmetic (5,900 ft, 30 °C → about 9,100 ft) | Confirmed: ISA at 5,900 ft is 3.3 °C; 5,900 + 120 × 27 = 9,140 ft | PHAK Ch 11 (ISA table) | none |
 | "Three quarters of sea-level power", TAS about 2% per 1,000 ft | Confirmed: 3% power loss and 2% TAS gain per 1,000 ft | GAJSC Mountain Flying sheet; FAA-P-8740-60 | none |
 | Leaning method: full-throttle run-up, lean to peak RPM | Confirmed for normally aspirated engines | FAA-P-8740-60 "Starting, Taxi, and Run-up"; GAJSC sheet | Callout tightened to `POH check:` (3,000 ft threshold wording) + `Sim check:` (RPM response) |
-| "70% of lift-off speed by 50% of the runway" abort rule | Confirmed; it is the FAA rule of thumb, with the caveat that the ASI may be unreliable at that speed | AIM 7-6-8 | "The Learn-To-Fly rule of thumb" → "The FAA's rule of thumb (AIM 7-6-8)"; callout now `Widget pending:` + `Sim check:` for the table rows only (v2 Appendix F.10 ⚠ can be cleared) |
+| "70% of lift-off speed by 50% of the runway" abort rule | Confirmed; it is the FAA rule of thumb, with the caveat that the ASI may be unreliable at that speed | AIM 7-6-8 | "The Learn to Fly rule of thumb" → "The FAA's rule of thumb (AIM 7-6-8)"; callout now `Widget pending:` + `Sim check:` for the table rows only (v2 Appendix F.10 ⚠ can be cleared) |
 | 70% of {{vspeed.vr}} = about 40 KIAS | Confirmed: 0.7 × 55 = 38.5 | aircraft.yaml | none |
 | Climb gradient table arithmetic (fpm × 60 ÷ kt) | Confirmed 568 / 380 / 214 / 140 ft per nm; rates are sim placeholders | arithmetic | none |
 | Climb table rows; KTRK climb-out direction | Open — sim check (W22 rows; heading band for C13.1); real-world noise-abatement remark recorded | AirNav KTRK remarks | Callout tagged `Sim check:` |
