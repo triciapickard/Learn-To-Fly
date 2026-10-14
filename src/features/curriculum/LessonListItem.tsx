@@ -7,14 +7,14 @@ import { cn } from '@/lib/cn';
 import type { ChallengeSummary, LessonSummary } from '@shared/schemas/api';
 
 const rowClasses =
-  'group flex min-h-11 items-center gap-3 rounded-md px-3 py-2 text-ink hover:bg-surface-sunken';
+  'group/row flex min-h-11 items-center gap-3 rounded-md px-3 py-2 text-ink hover:bg-surface-sunken';
 
 export function LessonRow({ lesson, status }: { lesson: LessonSummary; status?: React.ReactNode }) {
   return (
     <Link unstyled to={`/learn/${lesson.moduleSlug}/${lesson.slug}`} className={rowClasses}>
       {status ?? <BookOpen aria-hidden className="size-5 shrink-0 text-ink-2" />}
       <span className="w-10 shrink-0 font-mono text-sm text-ink-2">{lesson.code}</span>
-      <span className="flex-1 font-medium group-hover:underline">{lesson.title}</span>
+      <span className="flex-1 font-medium group-hover/row:underline">{lesson.title}</span>
       <span className="hidden items-center gap-2 sm:flex">
         {lesson.priority === 'P1' && <Badge variant="outline">Bonus</Badge>}
         {lesson.draft && <DraftBadge />}
@@ -43,7 +43,7 @@ export function ChallengeRow({
     <Link unstyled to={`/challenges/${challenge.slug}`} className={cn(rowClasses, className)}>
       {status ?? <TypeIcon type={challenge.type} showLabel={false} className="shrink-0" />}
       <span className="w-10 shrink-0 font-mono text-sm text-ink-2">{challenge.code}</span>
-      <span className="flex-1 font-medium group-hover:underline">{challenge.title}</span>
+      <span className="flex-1 font-medium group-hover/row:underline">{challenge.title}</span>
       <span className="hidden items-center gap-2 sm:flex">
         {challenge.priority === 'P1' && <Badge variant="outline">Bonus</Badge>}
         {challenge.draft && <DraftBadge />}
