@@ -6,12 +6,28 @@ import { DraftBadge } from '@/features/content/DraftBadge';
 import { cn } from '@/lib/cn';
 import type { ChallengeSummary, LessonSummary } from '@shared/schemas/api';
 
+/**
+ * Hover tints the row in the accent and darkens the title, so the row reads clearly against
+ * both a plain surface and the tinted current-module card (which passes hover:bg-surface).
+ */
 const rowClasses =
-  'group/row flex min-h-11 items-center gap-3 rounded-md px-3 py-2 text-ink hover:bg-surface-sunken';
+  'group/row flex min-h-11 items-center gap-3 rounded-md px-3 py-2 text-ink hover:bg-accent-tint hover:text-accent-strong';
 
-export function LessonRow({ lesson, status }: { lesson: LessonSummary; status?: React.ReactNode }) {
+export function LessonRow({
+  lesson,
+  status,
+  className,
+}: {
+  lesson: LessonSummary;
+  status?: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <Link unstyled to={`/learn/${lesson.moduleSlug}/${lesson.slug}`} className={rowClasses}>
+    <Link
+      unstyled
+      to={`/learn/${lesson.moduleSlug}/${lesson.slug}`}
+      className={cn(rowClasses, className)}
+    >
       {status ?? <BookOpen aria-hidden className="size-5 shrink-0 text-ink-2" />}
       <span className="w-10 shrink-0 font-mono text-sm text-ink-2">{lesson.code}</span>
       <span className="flex-1 font-medium group-hover/row:underline">{lesson.title}</span>

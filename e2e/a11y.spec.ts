@@ -94,9 +94,9 @@ test.describe('accessibility, CSP and reflow on every main page', () => {
     await expect(page).toHaveURL(/\/dashboard$/);
     for (const url of SIGNED_IN_PAGES) {
       await check(page, url);
-      await page.emulateMedia({ colorScheme: 'dark' });
+      await page.emulateMedia({ colorScheme: 'dark', reducedMotion: 'reduce' });
       await expectAccessible(page);
-      await page.emulateMedia({ colorScheme: 'light' });
+      await page.emulateMedia({ colorScheme: 'light', reducedMotion: 'no-preference' });
       await checkReflow(page, url);
       await page.setViewportSize({ width: 1280, height: 720 });
     }

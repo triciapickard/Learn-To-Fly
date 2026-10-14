@@ -41,6 +41,8 @@ export function CurriculumMap({
   const stops: LessonStop[] = modules.map((module, index) => {
     const state = states[index]!;
     const current = state === 'current';
+    // The current card is already accent-tinted, so its rows hover to plain surface instead.
+    const rowClassName = current ? 'hover:bg-surface' : undefined;
     const moduleProgress = progress?.modules[module.slug];
     return {
       id: module.slug,
@@ -102,6 +104,7 @@ export function CurriculumMap({
                         <li key={lesson.slug}>
                           <LessonRow
                             lesson={lesson}
+                            className={rowClassName}
                             status={
                               progress && (
                                 <LessonStatusIcon progress={progress.lessons[lesson.slug]} />
@@ -123,6 +126,7 @@ export function CurriculumMap({
                         <li key={challenge.slug}>
                           <ChallengeRow
                             challenge={challenge}
+                            className={rowClassName}
                             status={
                               progress && (
                                 <ChallengeStatusIcon
