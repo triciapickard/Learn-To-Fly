@@ -52,7 +52,7 @@ procedure:
   - COM1. Tune 123.450 in standby and swap it to active.
   - Transponder. On the PFD, press the XPDR softkey. Find the code 1200 (CODE, then four digits 0–7) and the STBY, ON and ALT modes.
   - EIS (the engine strip down the left edge of the MFD). Find FUEL QTY GAL and FFLOW GPH.
-  - Standby instruments and the magnetic compass. Find them.
+  - Standby instruments and the magnetic compass (at the top centre of the windscreen). Find them.
   - Return every switch you moved to its cold-and-dark position.
 
 criteria:

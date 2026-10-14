@@ -131,7 +131,7 @@ The slip/skid bar under the roll pointer does the job of the **ball** in the tur
 
 ## Standby instruments and the compass
 
-If the screens fail, you still have **standby instruments**: a small attitude indicator, airspeed indicator and altimeter. Above the glare shield is the **magnetic compass**. It needs no electricity at all, which makes it the last resort for heading.
+If the screens fail, you still have **standby instruments**: a small attitude indicator, airspeed indicator and altimeter. At the top centre of the windscreen is the **magnetic compass**, with a deviation card below it showing its small errors on each heading. It needs no electricity at all, which makes it the last resort for heading.
 
 :::callout{type="tip"}
 Scan, don't stare. Look outside, glance at the attitude, then airspeed, altitude and heading, and look outside again. Staring at any one number makes you miss the others.
