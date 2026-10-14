@@ -17,6 +17,7 @@ import { Card } from '@/components/Card';
 import { DifficultyDots } from '@/components/ChallengeMeta';
 import { LessonPath, type LessonStop, type LessonStopState } from '@/components/LessonPath';
 import { Link } from '@/components/Link';
+import { useModules } from '@/features/content/api';
 import { CURRICULUM_PREVIEW, FIRST_STOPS } from '@/features/landing/curriculumPreview';
 import { useMyProgress } from '@/features/progress/api';
 import { usePageTitle } from '@/hooks/usePageTitle';
@@ -36,18 +37,55 @@ const FIRST_CHALLENGE = {
   title: 'First flight over Livermore',
 };
 
-const STATS = [
-  { value: String(CURRICULUM_PREVIEW.length), label: 'modules, one airplane' },
-  {
-    value: String(CURRICULUM_PREVIEW.reduce((sum, m) => sum + m.lessons, 0)),
-    label: 'short interactive lessons',
-  },
-  {
-    value: String(CURRICULUM_PREVIEW.reduce((sum, m) => sum + m.challenges, 0)),
-    label: 'scored in-sim challenges',
-  },
-  { value: '~25 h', label: 'of lessons and sim time' },
-];
+/** One row of the curriculum list: the published module from the API, or the static preview. */
+interface PreviewModule {
+  code: string;
+  slug: string;
+  title: string;
+  summary: string;
+  lessons: number;
+  challenges: number;
+  /** Only known for modules from the API. */
+  minutes?: number;
+}
+
+/**
+ * The curriculum shown on the landing page is whatever is published right now (drafts
+ * included on preview builds), so it grows with each verified module. The static preview
+ * stands in while the modules load or if the API is unreachable.
+ */
+function useCurriculumPreview(): PreviewModule[] {
+  const { data } = useModules();
+  if (!data) return CURRICULUM_PREVIEW.map((m) => ({ ...m }));
+  return data.modules.map((m) => ({
+    code: m.code,
+    slug: m.slug,
+    title: m.title,
+    summary: m.summary,
+    lessons: m.lessons.length,
+    challenges: m.challenges.length,
+    minutes: m.estimatedMinutes,
+  }));
+}
+
+function stats(modules: PreviewModule[]) {
+  const minutes = modules.reduce((sum, m) => sum + (m.minutes ?? 0), 0);
+  return [
+    { value: String(modules.length), label: 'modules, one airplane' },
+    {
+      value: String(modules.reduce((sum, m) => sum + m.lessons, 0)),
+      label: 'short interactive lessons',
+    },
+    {
+      value: String(modules.reduce((sum, m) => sum + m.challenges, 0)),
+      label: 'scored in-sim challenges',
+    },
+    {
+      value: minutes > 0 ? `~${Math.round(minutes / 60)} h` : '~25 h',
+      label: 'of lessons and sim time',
+    },
+  ];
+}
 
 const STEPS: { title: string; text: string; icon: LucideIcon }[] = [
   {
@@ -194,9 +232,9 @@ function moduleZeroStops(progress?: ProgressResponse): LessonStop[] {
 }
 
 /** The module to act on next: the first one with lessons left. */
-function currentModuleIndex(progress?: ProgressResponse): number {
-  const index = CURRICULUM_PREVIEW.findIndex((m) => !progress?.modules[m.slug]?.complete);
-  return index === -1 ? CURRICULUM_PREVIEW.length - 1 : index;
+function currentModuleIndex(modules: PreviewModule[], progress?: ProgressResponse): number {
+  const index = modules.findIndex((m) => !progress?.modules[m.slug]?.complete);
+  return index === -1 ? modules.length - 1 : index;
 }
 
 const band = 'mx-auto w-full max-w-page px-4';
@@ -209,13 +247,14 @@ function Eyebrow({ children, className }: { children: React.ReactNode; className
 export default function LandingPage() {
   usePageTitle();
   const { data: progress } = useMyProgress();
+  const modules = useCurriculumPreview();
   const stops = moduleZeroStops(progress);
-  const currentModule = currentModuleIndex(progress);
+  const currentModule = currentModuleIndex(modules, progress);
   const started = Boolean(
     progress && Object.values(progress.lessons).some((l) => l.status === 'completed'),
   );
   const nextStop = stops.find((s) => s.state === 'current');
-  const nextTo = nextStop?.to ?? `/learn/${(CURRICULUM_PREVIEW[currentModule] ?? MODULE_0).slug}`;
+  const nextTo = nextStop?.to ?? `/learn/${(modules[currentModule] ?? MODULE_0).slug}`;
   const nextLabel = started
     ? 'Continue where you left off'
     : nextStop
@@ -281,7 +320,7 @@ export default function LandingPage() {
       {/* The course at a glance. */}
       <section aria-label="The course at a glance" className={cn(band, 'pb-16 sm:pb-24')}>
         <dl className="grid gap-6 border-t border-line pt-8 sm:grid-cols-2 lg:grid-cols-4">
-          {STATS.map(({ value, label }) => (
+          {stats(modules).map(({ value, label }) => (
             <div key={label} className="flex flex-col gap-1">
               <dd className="readout-lg order-first">{value}</dd>
               <dt className="text-sm leading-5 text-ink-2">{label}</dt>
@@ -323,13 +362,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* The curriculum: nine modules as one flight-plan style list. */}
+      {/* The curriculum: every published module as one flight-plan style list. */}
       <section aria-labelledby="curriculum-heading" className={cn(band, bandPad)}>
         <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-4">
           <div className="max-w-[640px]">
             <Eyebrow>The curriculum</Eyebrow>
             <h2 id="curriculum-heading" className="display-md sm:display-lg mt-3">
-              Nine modules, in the order a flight school teaches them.
+              {modules.length} modules, in the order a flight school teaches them.
             </h2>
           </div>
           <p className="max-w-[30em] text-ink-2">
@@ -341,7 +380,7 @@ export default function LandingPage() {
         </div>
         <Card className="mt-10 p-2" aria-label="Modules">
           <ol>
-            {CURRICULUM_PREVIEW.map((module, index) => {
+            {modules.map((module, index) => {
               const done = Boolean(progress?.modules[module.slug]?.complete);
               const isCurrent = progress !== undefined && index === currentModule;
               return (
