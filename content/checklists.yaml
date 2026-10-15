@@ -133,8 +133,8 @@ checklists:
         action: OBTAIN
       - id: transponder
         item: Transponder
-        action: STANDBY or ON as appropriate, code 1200 (VFR)
-        note: The G1000 NXi's XPDR softkeys are STBY, ON, ALT and GND. Verify the sim's softkeys use the same names.
+        action: ALT, code 1200 (VFR)
+        note: "The G1000 NXi's XPDR softkeys are STBY, ON, ALT and VFR (no ground mode); ALT is selected automatically on the ground and AIM 4-1-20 keeps altitude reporting on for taxi. Sim check: confirm the sim's softkey names."
       - id: frequencies
         item: COM and NAV frequencies
         action: SET
@@ -337,7 +337,7 @@ checklists:
       - id: stabilized
         item: Stabilized approach
         action: BY 300 ft AGL
-        note: 'The Learn-To-Fly standard. If not stabilized, go around.'
+        note: 'The Learn to Fly standard. If not stabilized, go around.'
       - id: touchdown
         item: Touchdown
         action: Main wheels first
@@ -418,8 +418,8 @@ checklists:
         action: UP
       - id: transponder
         item: Transponder
-        action: STANDBY or ground mode
-        note: On the G1000 NXi the ground mode is GND. Verify which the sim's XPDR softkeys offer.
+        action: LEAVE IN ALT until parked, then STANDBY
+        note: "AIM 4-1-20 keeps the transponder in ALT on the whole movement area; the G1000 NXi has no ground mode. Sim check: confirm the sim's XPDR softkeys."
       - id: lights
         item: Landing and strobe lights
         action: 'OFF'

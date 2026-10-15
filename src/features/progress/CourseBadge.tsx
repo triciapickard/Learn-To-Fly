@@ -9,7 +9,7 @@ export function CourseBadge({ size = 180 }: { size?: number }) {
       width={size}
       height={size}
       role="img"
-      aria-label="Skyhawk Pilot (Sim) badge: pilot wings around a Learn-To-Fly roundel"
+      aria-label="Skyhawk Pilot (Sim) badge: pilot wings around a Learn to Fly roundel"
     >
       <circle
         cx={120}
@@ -51,7 +51,7 @@ export function CourseBadge({ size = 180 }: { size?: number }) {
         SKYHAWK PILOT
       </text>
       <text x={120} y={192} textAnchor="middle" className="fill-ink-2 text-[13px] font-semibold">
-        (SIM) · LEARN-TO-FLY
+        (SIM) · LEARN TO FLY
       </text>
     </svg>
   );

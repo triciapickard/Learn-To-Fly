@@ -20,7 +20,7 @@ setup:
   airportIcao: KLVK
   startState: RUNWAY
   startDetails:
-    runway: 25R # ⚠ verify the runway name in the sim
+    runway: 25R # ⚠ verify — Sim check: real-world 7L/25R (AirNav 2026-10-13); confirm the sim lists it as 25R
     fallback: The sim can't start you just after landing. Either take off, fly a quick unscored pattern and land, or fly this straight after C4.3.
   weatherPreset: WX_CALM
   timeLocal: '10:00'
@@ -35,7 +35,7 @@ setup:
 procedure:
   - Take off, fly a quick unscored pattern and land (or continue straight after C4.3).
   - Slow to taxi speed and turn off at a taxiway. Keep going until the whole airplane is past the hold short line, then stop.
-  - After-landing items. Flaps up, transponder to GND or standby (⚠ verify which modes the sim's XPDR softkeys offer), lights as needed.
+  - "After-landing items. Flaps up, transponder left in ALT until you're parked (AIM 4-1-20; ⚠ verify — Sim check: the NXi's XPDR softkeys are Standby, On, ALT, VFR, Code and Ident, with no GND mode, per the Garmin NXi Pilot's Guide; confirm the sim's softkeys match), lights as needed."
   - Taxi to parking and set the parking brake.
   - Shut down. Avionics master off, mixture to idle cut-off, magnetos off, master off.
 

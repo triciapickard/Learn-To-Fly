@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       <Prose>
         <h2>1. Who we are</h2>
         <p>
-          Learn-To-Fly is an independent personal project. For any privacy question, open an issue
+          Learn to Fly is an independent personal project. For any privacy question, open an issue
           on <ExternalLink href={`${GITHUB_URL}/issues`}>GitHub</ExternalLink> and we will reply
           there or arrange a private channel.
         </p>
@@ -24,10 +24,14 @@ export default function PrivacyPage() {
           <li>Your preferences, such as theme and controller type.</li>
           <li>Your learning progress, challenge attempts, notes and reflections.</li>
           <li>Server logs (IP address, browser user agent, request details) for security.</li>
+          <li>
+            Error reports when something breaks: the page, your browser and device type, and the
+            error itself. They never include your IP address, account or email.
+          </li>
         </ul>
         <p>
           You can read every lesson without an account; we collect nothing about visitors beyond
-          server logs.
+          server logs and error reports.
         </p>
         <h2>3. Why we collect it</h2>
         <ul>
@@ -46,8 +50,9 @@ export default function PrivacyPage() {
         <ul>
           <li>Render — hosting.</li>
           <li>MongoDB Atlas — database.</li>
+          <li>Sentry, error monitoring (receives the error reports described above).</li>
         </ul>
-        <p>If we add an email or error-monitoring provider, it will be listed here first.</p>
+        <p>If we add an email provider, it will be listed here first.</p>
         <h2>6. Retention</h2>
         <p>
           Account data is kept until you delete your account. Server logs are kept for no more than
@@ -60,7 +65,7 @@ export default function PrivacyPage() {
         </p>
         <h2>8. Children</h2>
         <p>
-          Learn-To-Fly is not directed at children under 13. If you are under 13, please do not
+          Learn to Fly is not directed at children under 13. If you are under 13, please do not
           create an account.
         </p>
         <h2>9. Changes to this policy</h2>

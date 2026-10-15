@@ -57,7 +57,7 @@ Pick somewhere to land that you can definitely reach. A good field is:
 A planning figure: the Skyhawk glides about **1.5 nm for every 1,000 ft** above the ground. Pick a field well inside that range, and turn toward it straight away.
 
 :::callout{type="verify"}
-Author note: the POH maximum glide chart (Figure 3-1: 68 KIAS, flaps up, propeller windmilling, zero wind) gives about 1.5 nm per 1,000 ft, so the figure stands ({{aircraft.glideRatio}}). Check the sim's Skyhawk glides about that far: from 3,000 ft above the ground at 68 KIAS it should cover roughly 4.5 nm in still air.
+Sim check: the POH maximum glide chart (Figure 3-1: 68 KIAS, flaps up, propeller windmilling, zero wind) gives about 1.5 nm per 1,000 ft, so the figure stands ({{aircraft.glideRatio}}). Still open: from 3,000 ft above the ground at 68 KIAS the sim Skyhawk should cover roughly 4.5 nm in still air.
 :::
 
 ## C: Checklist
@@ -121,7 +121,7 @@ You can fail the engine in two ways:
 - **Mixture to idle cut-off** at a random moment. The challenge page gives you a timer that beeps when it's time.
 
 :::callout{type="verify"}
-Author note: check the MSFS 2024 failure menu options for engine failures.
+Sim check: whether MSFS 2024 1.8.16.0 lets you arm an engine failure for the default Skyhawk (Assistance > Failure and Damage only has damage toggles; look in the aircraft and EFB options). If there is no failures menu, drop the first bullet.
 :::
 
 :::callout{type="sim"}

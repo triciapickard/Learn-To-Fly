@@ -1,3 +1,5 @@
+import * as Sentry from '@sentry/react';
+import { useEffect } from 'react';
 import { isRouteErrorResponse, useRouteError } from 'react-router';
 import { Button } from '@/components/Button';
 import { usePageTitle } from '@/hooks/usePageTitle';
@@ -6,8 +8,13 @@ import NotFoundPage from './NotFoundPage';
 /** Root error boundary: a friendly page with a reload button (Section 34.2). */
 export default function RootErrorPage() {
   const error = useRouteError();
+  const isNotFound = isRouteErrorResponse(error) && error.status === 404;
   usePageTitle('Something went wrong');
-  if (isRouteErrorResponse(error) && error.status === 404) return <NotFoundPage />;
+  // React Router catches route errors here, so they never reach Sentry on their own.
+  useEffect(() => {
+    if (!isNotFound) Sentry.captureException(error);
+  }, [error, isNotFound]);
+  if (isNotFound) return <NotFoundPage />;
   return (
     <main
       id="main"

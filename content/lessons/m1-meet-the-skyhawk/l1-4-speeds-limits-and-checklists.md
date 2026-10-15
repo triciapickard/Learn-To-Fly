@@ -141,7 +141,7 @@ In do-verify, you complete the flow from memory first, then read the checklist t
 
 MSFS 2024 includes checklists for the Skyhawk in the EFB (electronic flight bag): open the **Aircraft** tab, then **Checklists**. They follow the real procedures closely but don't list speeds, so use the speeds in this lesson.
 
-Learn-To-Fly's checklists are a **simplified summary in our own words**, written to match the sim. They are great for learning the flow of each phase, but the in-sim checklist is your reference while flying.
+Learn to Fly's checklists are a **simplified summary in our own words**, written to match the sim. They are great for learning the flow of each phase, but the in-sim checklist is your reference while flying.
 
 :::callout{type="sim"}
 The in-sim checklist doesn't tick items for you: you check each one yourself. If you can't find a control, press the **eye** icon next to the item and the sim highlights it in the cockpit.

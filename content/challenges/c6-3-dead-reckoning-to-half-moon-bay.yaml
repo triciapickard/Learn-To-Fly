@@ -20,7 +20,7 @@ setup:
   airportIcao: KPAO
   startState: RUNWAY
   startDetails:
-    runway: '31' # ⚠ verify the runway in use
+    runway: '31' # ⚠ verify — Sim check: 31 (307° magnetic) faces the preset's 250°/8 kt wind (AirNav 2026-10-13); confirm the sim offers it as a start
     fallback: If the sim starts you on runway 13, use it and turn west after departure.
   weatherPreset: WX_LIGHT_W
   timeLocal: '10:00'

@@ -32,7 +32,7 @@ Before every real flight, the pilot walks around the airplane. The **preflight i
 In MSFS 2024 a cold-and-dark start puts you outside the airplane. Before you can climb in, remove the three remove-before-flight covers (pitot tube, static port and engine) and the wheel chocks. It's a short walkaround: use it to build the habit.
 
 :::callout{type="verify"}
-Author note: covers and chocks checked in the sim on 2026-10-14. Still to check: whether the walkaround models fuel sampling, the oil dipstick or tie-downs.
+Sim check: covers and chocks checked in the sim on 2026-10-14. Still to check: whether the walkaround models fuel sampling, the oil dipstick or tie-downs.
 :::
 
 ## Setting up the cockpit
@@ -67,7 +67,7 @@ Always shout "CLEAR!" before starting, even in the sim. A spinning propeller is 
 ::checklist{slug="starting-engine"}
 
 :::callout{type="verify"}
-Author note: the sequence above is the POH's (Section 4, Starting Engine: throttle ¼ inch, mixture idle cut-off, prime with the pump, START, mixture to rich; oil pressure in the green within 30 to 60 seconds). Check the sim's EFB checklist against it, and check the sim engine actually starts this way: does priming with the pump do anything, and does it fire with the mixture at idle cut-off?
+Sim check: the sequence above is the POH's (Section 4, Starting Engine: throttle ¼ inch, mixture idle cut-off, prime with the pump, START, mixture to rich; oil pressure in the green within 30 to 60 seconds). Still open: does the sim's EFB checklist match it, does priming with the pump do anything, and does the sim engine fire with the mixture at idle cut-off?
 :::
 
 :::quiz{id="l3-1-q1" type="single"}

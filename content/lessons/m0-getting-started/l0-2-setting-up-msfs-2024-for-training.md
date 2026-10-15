@@ -10,7 +10,7 @@ estimatedMinutes: 20
 prerequisites: [l0-1-welcome-how-learn-to-fly-works]
 objectives:
   - Configure your controls so every essential function works without the mouse.
-  - Apply the Learn-To-Fly Training assistance profile.
+  - Apply the Learn to Fly Training assistance profile.
   - Set up views and a free flight with a chosen airport, weather and time of day.
 challenges: []
 resources: [msfs-official-site, msfs-forums]
@@ -70,7 +70,7 @@ Two settings help:
 
 Start gently and adjust after a few flights. If turns feel sluggish, add sensitivity back.
 
-## The Learn-To-Fly Training assistance profile
+## The Learn to Fly Training assistance profile
 
 MSFS 2024 can help with almost everything. To learn real skills, turn most helpers off. From the main menu, open **Settings → General → Assistances**. The names below are the ones the sim uses (checked in MSFS 2024 version 1.8.16.0); they can change between sim updates.
 
@@ -160,7 +160,7 @@ Custom weather makes a challenge repeatable: everyone who flies it gets the same
 
 MSFS 2024 gives you an **EFB** (electronic flight bag): a tablet in the cockpit, like the ones real pilots carry. Its **map** shows your airplane on a moving map. It's a great safety net while you learn. In Module 6 you'll put it away for pilotage challenges and navigate with a chart instead.
 
-The EFB also has a **checklist** section for the Skyhawk. Learn-To-Fly has its own simplified checklists too (**Reference → Checklists**); Lesson 1.4 explains how the two fit together.
+The EFB also has a **checklist** section for the Skyhawk. Learn to Fly has its own simplified checklists too (**Reference → Checklists**); Lesson 1.4 explains how the two fit together.
 
 ## Keeping this site open while you fly
 

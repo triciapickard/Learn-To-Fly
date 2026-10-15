@@ -14,7 +14,7 @@ resources:
     free: true
     description: 'The number-one theory reference: aerodynamics, controls, instruments, systems,
       weather, airspace and navigation. Free PDF chapters.'
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch1
     title: PHAK Chapter 1 — Introduction to Flying
     publisher: FAA
@@ -25,7 +25,7 @@ resources:
     free: true
     description: Chapter 1 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch2
     title: PHAK Chapter 2 — Aeronautical Decision-Making
     publisher: FAA
@@ -36,7 +36,7 @@ resources:
     free: true
     description: Chapter 2 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch3
     title: PHAK Chapter 3 — Aircraft Construction
     publisher: FAA
@@ -47,7 +47,7 @@ resources:
     free: true
     description: Chapter 3 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch4
     title: PHAK Chapter 4 — Principles of Flight
     publisher: FAA
@@ -58,7 +58,7 @@ resources:
     free: true
     description: Chapter 4 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch5
     title: PHAK Chapter 5 — Aerodynamics of Flight
     publisher: FAA
@@ -69,7 +69,7 @@ resources:
     free: true
     description: Chapter 5 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch6
     title: PHAK Chapter 6 — Flight Controls
     publisher: FAA
@@ -81,7 +81,7 @@ resources:
     free: true
     description: Chapter 6 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch7
     title: PHAK Chapter 7 — Aircraft Systems
     publisher: FAA
@@ -93,7 +93,7 @@ resources:
     free: true
     description: Chapter 7 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch8
     title: PHAK Chapter 8 — Flight Instruments
     publisher: FAA
@@ -104,7 +104,7 @@ resources:
     free: true
     description: Chapter 8 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch9
     title: PHAK Chapter 9 — Flight Manuals and Other Documents
     publisher: FAA
@@ -116,7 +116,7 @@ resources:
     free: true
     description: Chapter 9 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch10
     title: PHAK Chapter 10 — Weight and Balance
     publisher: FAA
@@ -127,7 +127,7 @@ resources:
     free: true
     description: Chapter 10 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch11
     title: PHAK Chapter 11 — Aircraft Performance
     publisher: FAA
@@ -138,7 +138,7 @@ resources:
     free: true
     description: Chapter 11 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch12
     title: PHAK Chapter 12 — Weather Theory
     publisher: FAA
@@ -149,7 +149,7 @@ resources:
     free: true
     description: Chapter 12 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch13
     title: PHAK Chapter 13 — Aviation Weather Services
     publisher: FAA
@@ -160,7 +160,7 @@ resources:
     free: true
     description: Chapter 13 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch14
     title: PHAK Chapter 14 — Airport Operations
     publisher: FAA
@@ -171,7 +171,7 @@ resources:
     free: true
     description: Chapter 14 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch15
     title: PHAK Chapter 15 — Airspace
     publisher: FAA
@@ -182,7 +182,7 @@ resources:
     free: true
     description: Chapter 15 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch16
     title: PHAK Chapter 16 — Navigation
     publisher: FAA
@@ -193,7 +193,7 @@ resources:
     free: true
     description: Chapter 16 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: phak-ch17
     title: PHAK Chapter 17 — Aeromedical Factors
     publisher: FAA
@@ -204,7 +204,7 @@ resources:
     free: true
     description: Chapter 17 of the Pilot's Handbook of Aeronautical Knowledge (free PDF on the FAA
       handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh
     title: Airplane Flying Handbook (FAA-H-8083-3C)
     publisher: FAA
@@ -218,7 +218,7 @@ resources:
     description:
       'The number-one flying reference: how to fly every maneuver from ground operations to
       emergencies. Free PDF chapters.'
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch1
     title: AFH Chapter 1 — Introduction to Flight Training
     publisher: FAA
@@ -228,7 +228,7 @@ resources:
       - basics
     free: true
     description: Chapter 1 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch2
     title: AFH Chapter 2 — Ground Operations
     publisher: FAA
@@ -238,7 +238,7 @@ resources:
       - ground-ops
     free: true
     description: Chapter 2 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch3
     title: AFH Chapter 3 — Basic Flight Maneuvers
     publisher: FAA
@@ -248,7 +248,7 @@ resources:
       - fundamentals
     free: true
     description: Chapter 3 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch4
     title: 'AFH Chapter 4 — Energy Management: Mastering Altitude and Airspeed Control'
     publisher: FAA
@@ -258,7 +258,7 @@ resources:
       - fundamentals
     free: true
     description: Chapter 4 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch5
     title: 'AFH Chapter 5 — Maintaining Aircraft Control: Upset Prevention and Recovery Training'
     publisher: FAA
@@ -268,7 +268,7 @@ resources:
       - stalls
     free: true
     description: Chapter 5 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch6
     title: AFH Chapter 6 — Takeoffs and Departure Climbs
     publisher: FAA
@@ -278,7 +278,7 @@ resources:
       - takeoff
     free: true
     description: Chapter 6 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch7
     title: AFH Chapter 7 — Ground Reference Maneuvers
     publisher: FAA
@@ -288,7 +288,7 @@ resources:
       - maneuvers
     free: true
     description: Chapter 7 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch8
     title: AFH Chapter 8 — Airport Traffic Patterns
     publisher: FAA
@@ -298,7 +298,7 @@ resources:
       - patterns
     free: true
     description: Chapter 8 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch9
     title: AFH Chapter 9 — Approaches and Landings
     publisher: FAA
@@ -308,7 +308,7 @@ resources:
       - landing
     free: true
     description: Chapter 9 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch10
     title: AFH Chapter 10 — Performance Maneuvers
     publisher: FAA
@@ -318,7 +318,7 @@ resources:
       - maneuvers
     free: true
     description: Chapter 10 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: afh-ch18
     title: AFH Chapter 18 — Emergency Procedures
     publisher: FAA
@@ -328,7 +328,7 @@ resources:
       - emergencies
     free: true
     description: Chapter 18 of the Airplane Flying Handbook (free PDF on the FAA handbook page).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: faa-weather-handbook
     title: Aviation Weather Handbook (FAA-H-8083-28B)
     publisher: FAA
@@ -338,7 +338,7 @@ resources:
       - weather
     free: true
     description: Weather theory and how to decode METARs, TAFs and other weather products.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: faa-risk-management-handbook
     title: Risk Management Handbook (FAA-H-8083-2A)
     publisher: FAA
@@ -348,7 +348,7 @@ resources:
       - decision-making
     free: true
     description: PAVE, IMSAFE and practical decision making for pilots.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: faa-weight-balance-handbook
     title: Weight & Balance Handbook (FAA-H-8083-1B)
     publisher: FAA
@@ -358,7 +358,7 @@ resources:
       - performance
     free: true
     description: Weight and balance theory and calculations.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: ifh
     title: Instrument Flying Handbook (FAA-H-8083-15B)
     publisher: FAA
@@ -406,15 +406,15 @@ resources:
     description: VOR, DME and GPS theory, including how the course deviation indicator works.
     verifiedAt: null
   - slug: faa-instructors-handbook
-    title: Aviation Instructor's Handbook (FAA-H-8083-9)
+    title: Aviation Instructor's Handbook (FAA-H-8083-9B)
     publisher: FAA
     url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/aviation_instructors_handbook
     type: handbook
     topics:
       - learning
     free: true
-    description: How people learn to fly — the basis for how Learn-To-Fly lessons are designed.
-    verifiedAt: null
+    description: How people learn to fly — the basis for how Learn to Fly lessons are designed.
+    verifiedAt: 2026-10-13
   - slug: faa-plane-sense
     title: Plane Sense (FAA-H-8083-19A)
     publisher: FAA
@@ -424,7 +424,7 @@ resources:
       - basics
     free: true
     description: A light, general introduction to general aviation.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aim
     title: Aeronautical Information Manual (AIM)
     publisher: FAA
@@ -438,7 +438,7 @@ resources:
     description:
       'Official procedures: traffic patterns, radio phraseology, airspace, airport signs and
       markings.'
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aim-2-3
     title: AIM 2-3 — Airport Marking Aids and Signs
     publisher: FAA
@@ -449,9 +449,9 @@ resources:
       - ground-ops
     free: true
     description: Official guide to runway and taxiway markings and airport signs.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aim-3
-    title: AIM Chapter 3 — Airspace
+    title: AIM Chapter 3, Section 1 — Airspace
     publisher: FAA
     url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_1.html
     type: regulation
@@ -459,7 +459,7 @@ resources:
       - airspace
     free: true
     description: Official description of the airspace classes and their rules.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aim-4-1
     title: AIM 4-1 — Services Available to Pilots
     publisher: FAA
@@ -470,7 +470,7 @@ resources:
       - airports
     free: true
     description: CTAF, UNICOM, ATIS and other services, including non-towered airport procedures.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aim-4-2
     title: AIM 4-2 — Radio Communications Phraseology and Techniques
     publisher: FAA
@@ -480,7 +480,7 @@ resources:
       - radio
     free: true
     description: The official phraseology and radio technique every call in Module 7 is based on.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aim-4-3
     title: AIM 4-3 — Airport Operations
     publisher: FAA
@@ -491,7 +491,7 @@ resources:
       - airports
     free: true
     description: Traffic patterns, pattern entries and operations at towered and non-towered airports.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: pilot-controller-glossary
     title: Pilot/Controller Glossary
     publisher: FAA
@@ -502,7 +502,7 @@ resources:
       - glossary
     free: true
     description: The official definitions of aviation terms and phrases.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: faa-at-publications
     title: FAA Air Traffic Publications
     publisher: FAA
@@ -511,19 +511,19 @@ resources:
     topics:
       - procedures
     free: true
-    description: Index of the AIM, Pilot/Controller Glossary, Chart Supplement and more.
-    verifiedAt: null
+    description: Index of the AIM, Pilot/Controller Glossary and other air traffic publications.
+    verifiedAt: 2026-10-13
   - slug: faa-acs-private
-    title: Private Pilot – Airplane Airman Certification Standards (FAA-S-ACS-6)
+    title: Private Pilot – Airplane Airman Certification Standards (FAA-S-ACS-6C)
     publisher: FAA
     url: https://www.faa.gov/training_testing/testing/acs
     type: regulation
     topics:
       - standards
     free: true
-    description: The official standards for the private pilot practical test. Learn-To-Fly challenge
+    description: The official standards for the private pilot practical test. Learn to Fly challenge
       tolerances are inspired by it.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: ecfr-14
     title: 14 CFR — Federal Aviation Regulations
     publisher: eCFR
@@ -533,7 +533,7 @@ resources:
       - regulations
     free: true
     description: The full federal aviation regulations. Part 91 covers general operating rules.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: ecfr-91-151
     title: 14 CFR 91.151 — Fuel requirements for flight in VFR conditions
     publisher: eCFR
@@ -544,7 +544,7 @@ resources:
       - planning
     free: true
     description: The legal minimum fuel reserve for VFR flights.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: ecfr-91-155
     title: 14 CFR 91.155 — Basic VFR weather minimums
     publisher: eCFR
@@ -556,7 +556,7 @@ resources:
       - weather
     free: true
     description: Visibility and cloud clearance requirements for each airspace class.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: ecfr-91-159
     title: 14 CFR 91.159 — VFR cruising altitude or flight level
     publisher: eCFR
@@ -577,7 +577,7 @@ resources:
       - learning
     free: true
     description: Links to FAA training resources and airman education topics.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: faa-airman-education
     title: FAA airman education topics of interest
     publisher: FAA
@@ -586,8 +586,8 @@ resources:
     topics:
       - safety
     free: true
-    description: Safety topics such as runway safety and loss of control.
-    verifiedAt: null
+    description: Short FAA safety briefs on topics such as spatial disorientation, hypoxia and fatigue.
+    verifiedAt: 2026-10-13
   - slug: cessna-skyhawk
     title: Cessna Skyhawk product page
     publisher: Textron Aviation
@@ -597,7 +597,7 @@ resources:
       - aircraft
     free: true
     description: Official specifications and performance summary for the current 172S.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: msfs-checklist
     title: MSFS 2024 in-sim checklist for the Cessna 172
     publisher: Microsoft / Asobo Studio
@@ -609,7 +609,7 @@ resources:
     free: true
     description:
       The checklist built into the sim. The primary cross-check for every procedure and speed
-      in Learn-To-Fly.
+      in Learn to Fly.
     verifiedAt: null
   - slug: faa-vfr-charts
     title: FAA VFR Raster Charts (sectionals and TACs)
@@ -623,7 +623,7 @@ resources:
     description:
       Free downloads of every VFR chart, including the San Francisco Sectional. Updated every
       56 days.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: faa-sf-tac
     title: San Francisco Terminal Area Chart (TAC)
     publisher: FAA
@@ -636,7 +636,7 @@ resources:
     description:
       The detailed 1:250,000 chart around San Francisco, showing the Class B shelves clearly.
       Download it from the FAA VFR charts page.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: faa-chart-users-guide
     title: FAA Aeronautical Chart User's Guide
     publisher: FAA
@@ -646,7 +646,7 @@ resources:
       - charts
     free: true
     description: Explains every symbol on a sectional chart. The Sectional Legend widget is based on it.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: faa-chart-products
     title: FAA digital chart products
     publisher: FAA
@@ -656,7 +656,7 @@ resources:
       - charts
     free: true
     description: Index of all FAA chart products.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: faa-chart-supplement
     title: Chart Supplement (formerly A/FD)
     publisher: FAA
@@ -667,7 +667,7 @@ resources:
     free: true
     description: 'Airport details: runways, frequencies, pattern direction and remarks. Use the
       Southwest US volume for the Bay Area.'
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: faa-dtpp
     title: Digital Terminal Procedures (airport diagrams)
     publisher: FAA
@@ -678,7 +678,7 @@ resources:
       - ground-ops
     free: true
     description: Airport diagrams showing taxiway layouts for towered airports such as KLVK and KPAO.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: skyvector
     title: SkyVector
     publisher: SkyVector
@@ -692,7 +692,7 @@ resources:
     description:
       Free online sectional chart viewer with flight-plan drawing. The best tool for planning
       Module 6 flights.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: airnav
     title: AirNav
     publisher: AirNav
@@ -702,7 +702,7 @@ resources:
       - airports
     free: true
     description: 'Quick airport information pages: runways, frequencies, pattern information and fuel.'
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: flightaware
     title: FlightAware
     publisher: FlightAware
@@ -712,7 +712,7 @@ resources:
       - traffic
     free: true
     description: Real-world flight tracking — see real Cessna 172 flights around the Bay Area.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aviationweather
     title: Aviation Weather Center
     publisher: NOAA / National Weather Service
@@ -722,7 +722,7 @@ resources:
       - weather
     free: true
     description: Official METARs, TAFs and graphical forecasts.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: 1800wxbrief
     title: 1800wxBrief
     publisher: Leidos Flight Service
@@ -732,8 +732,8 @@ resources:
       - weather
       - planning
     free: true
-    description: Official US pilot weather briefings (free account) — how real pilots brief before a flight.
-    verifiedAt: null
+    description: US flight service weather briefings, run by Leidos for the FAA (free account) — how real pilots brief before a flight.
+    verifiedAt: 2026-10-13
   - slug: liveatc
     title: LiveATC
     publisher: LiveATC.net
@@ -745,7 +745,7 @@ resources:
     description:
       Real air traffic control audio, such as Palo Alto tower and NorCal Approach. Listen for
       20 minutes as homework.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: vatsim
     title: VATSIM
     publisher: VATSIM
@@ -756,7 +756,7 @@ resources:
       - sim
     free: true
     description: A free online network with human air traffic controllers — a great next step after Module 7.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: vatsim-getting-started
     title: VATSIM — getting started
     publisher: VATSIM
@@ -767,7 +767,7 @@ resources:
       - sim
     free: true
     description: How to join VATSIM and fly with live controllers.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: pilotedge
     title: PilotEdge
     publisher: PilotEdge
@@ -778,7 +778,7 @@ resources:
       - radio
       - sim
     description: Paid, professional-grade simulated ATC that covers the Bay Area.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aopa-asi
     title: AOPA Air Safety Institute
     publisher: AOPA
@@ -789,7 +789,7 @@ resources:
       - learning
     free: true
     description: Free courses, videos and quizzes on nearly every v1 topic (free account).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aopa-asi-stalls
     title: AOPA Air Safety Institute — stall and spin safety
     publisher: AOPA
@@ -802,7 +802,7 @@ resources:
     description:
       Free courses and videos on stall and spin awareness. Search the Air Safety Institute
       library for "stall".
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aopa-asi-engine-failure
     title: AOPA Air Safety Institute — engine failure and forced landings
     publisher: AOPA
@@ -815,7 +815,7 @@ resources:
     description:
       Free courses and videos on handling an engine failure. Search the Air Safety Institute
       library for "engine failure".
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aopa-asi-radio
     title: AOPA Air Safety Institute — radio communications
     publisher: AOPA
@@ -826,7 +826,7 @@ resources:
     free: true
     description: Free interactive courses on radio calls and communication. Search the Air Safety
       Institute library for "radio".
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: aopa-students
     title: AOPA student pilot resources
     publisher: AOPA
@@ -835,8 +835,8 @@ resources:
     topics:
       - learning
     free: true
-    description: Plain-language articles for beginners.
-    verifiedAt: null
+    description: A hub of plain-language guides and safety material for beginners.
+    verifiedAt: 2026-10-13
   - slug: faasafety
     title: FAASTeam and the WINGS program
     publisher: FAA Safety Team
@@ -846,7 +846,7 @@ resources:
       - safety
     free: true
     description: FAA Safety Team courses (free account).
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: sportys-learn-to-fly
     title: Sporty's Learn to Fly
     publisher: Sporty's
@@ -866,7 +866,7 @@ resources:
       - learning
     free: true
     description: A useful non-US perspective on general aviation.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: boldmethod-home
     title: Boldmethod
     publisher: Boldmethod
@@ -876,7 +876,7 @@ resources:
       - learning
     free: true
     description: Short, highly visual articles on aerodynamics, maneuvers, weather and charts.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: boldmethod-aerodynamics
     title: Boldmethod — how lift creates induced drag
     publisher: Boldmethod
@@ -888,7 +888,7 @@ resources:
     description: A visual explanation of how a wing makes lift and why that creates drag.
     verifiedAt: null
   - slug: boldmethod-left-turning
-    title: Boldmethod — the four left-turning tendencies
+    title: Boldmethod — why you need right rudder on takeoff (the four left-turning tendencies)
     publisher: Boldmethod
     url: https://www.boldmethod.com/learn-to-fly/aerodynamics/4-left-turning-tendencies/
     type: article
@@ -896,7 +896,7 @@ resources:
       - aerodynamics
     free: true
     description: Torque, P-factor, spiraling slipstream and gyroscopic precession, illustrated.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: boldmethod-patterns
     title: Boldmethod — flying the pattern at a non-towered airport
     publisher: Boldmethod
@@ -916,7 +916,7 @@ resources:
       - landing
     free: true
     description: How to judge the flare and touch down smoothly.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: boldmethod-crosswind
     title: Boldmethod — crosswind landings from touchdown through rollout
     publisher: Boldmethod
@@ -929,7 +929,7 @@ resources:
     description: Keeping the airplane on the centerline in a crosswind.
     verifiedAt: null
   - slug: boldmethod-stalls
-    title: Boldmethod — how stall-spin accidents happen
+    title: Boldmethod — avoiding a stall-spin accident in the traffic pattern
     publisher: Boldmethod
     url: https://www.boldmethod.com/learn-to-fly/maneuvers/stall-spin-accidents/
     type: article
@@ -938,7 +938,7 @@ resources:
       - safety
     free: true
     description: Why stalls near the ground are dangerous and how to prevent them.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: youtube-faa
     title: FAA on YouTube
     publisher: FAA
@@ -948,7 +948,7 @@ resources:
       - safety
     free: true
     description: Official FAA safety videos on runway safety, weather and more.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: youtube-boldmethod
     title: Boldmethod on YouTube
     publisher: Boldmethod
@@ -958,7 +958,7 @@ resources:
       - learning
     free: true
     description: Short animated explainers.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: youtube-flight-insight
     title: Flight Insight on YouTube
     publisher: Flight Insight
@@ -969,7 +969,7 @@ resources:
       - navigation
     free: true
     description: A real-world pilot explaining procedures and navigation in plain language.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: msfs-official-site
     title: Microsoft Flight Simulator — official site
     publisher: Microsoft / Asobo Studio
@@ -979,7 +979,7 @@ resources:
       - sim
     free: true
     description: News, sim updates and patch notes. Sim updates can change aircraft behavior and menus.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: msfs-forums
     title: Microsoft Flight Simulator forums
     publisher: Microsoft / Asobo Studio
@@ -989,7 +989,7 @@ resources:
       - sim
     free: true
     description: 'Official forums: bug reports, aircraft threads (search "C172") and control setup help.'
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: msfs-sdk
     title: MSFS SDK documentation
     publisher: Microsoft / Asobo Studio
@@ -1010,7 +1010,7 @@ resources:
       - sim
     free: true
     description: Free flight planning and moving-map tool that connects to the sim.
-    verifiedAt: null
+    verifiedAt: 2026-10-13
   - slug: navigraph
     title: Navigraph
     publisher: Navigraph
@@ -1021,4 +1021,380 @@ resources:
       - charts
       - sim
     description: Current charts and navigation data for the sim. Not required for v1.
+    verifiedAt: 2026-10-13
+  # --------------------------------------------------------------------------------------
+  # v2 additions (v2.md Section 6). URLs unverified until the link check runs (verifiedAt).
+  - slug: iph
+    title: Instrument Procedures Handbook (FAA-H-8083-16B)
+    publisher: FAA
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook
+    type: handbook
+    topics:
+      - ifr
+      - procedures
+    free: true
+    description: 'The FAA handbook on IFR procedures: departures, enroute, arrivals, approaches and holding. The core reference for Modules 18–20.'
+    verifiedAt: null
+  - slug: iph-departures
+    title: Instrument Procedures Handbook — Departures
+    publisher: FAA
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook
+    type: handbook
+    topics:
+      - ifr
+      - procedures
+    free: true
+    description: 'The departures chapter: obstacle departure procedures, takeoff minimums, climb gradients and clearances.'
+    verifiedAt: null
+  - slug: iph-enroute
+    title: Instrument Procedures Handbook — En Route Operations
+    publisher: FAA
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook
+    type: handbook
+    topics:
+      - ifr
+      - navigation
+    free: true
+    description: 'The en route chapter: airways, minimum altitudes, position reports and lost communications.'
+    verifiedAt: null
+  - slug: iph-holding
+    title: Instrument Procedures Handbook — Holding
+    publisher: FAA
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook
+    type: handbook
+    topics:
+      - ifr
+      - procedures
+    free: true
+    description: Holding patterns, entries, timing and wind correction, with the AIM holding figures.
+    verifiedAt: null
+  - slug: iph-approaches
+    title: Instrument Procedures Handbook — Approaches
+    publisher: FAA
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/instrument_procedures_handbook
+    type: handbook
+    topics:
+      - ifr
+      - procedures
+    free: true
+    description: 'The approaches chapter: approach segments, minima, RNAV, ILS, VOR, circling and missed approaches.'
+    verifiedAt: null
+  - slug: ifh-instruments
+    title: Instrument Flying Handbook — Flight Instruments
+    publisher: FAA
+    url: https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf
+    type: handbook
+    topics:
+      - instruments
+      - emergencies
+    free: true
+    description: 'The flight instruments chapter: pitot-static and gyroscopic instruments, their errors and what happens when they fail.'
+    verifiedAt: null
+  - slug: ifh-human-factors
+    title: Instrument Flying Handbook — Human Factors
+    publisher: FAA
+    url: https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf
+    type: handbook
+    topics:
+      - safety
+      - instruments
+    free: true
+    description: 'The human factors chapter: the vestibular system, spatial disorientation and the illusions that cause it.'
+    verifiedAt: null
+  - slug: ifh-ifr-flight
+    title: Instrument Flying Handbook — IFR Flight
+    publisher: FAA
+    url: https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf
+    type: handbook
+    topics:
+      - ifr
+      - planning
+    free: true
+    description: 'The IFR flight chapter: planning, filing, clearances and an instrument flight from preflight to landing.'
+    verifiedAt: null
+  - slug: ifh-emergencies
+    title: Instrument Flying Handbook — Emergency Operations
+    publisher: FAA
+    url: https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/FAA-H-8083-15B.pdf
+    type: handbook
+    topics:
+      - ifr
+      - emergencies
+    free: true
+    description: 'The emergency operations chapter: inadvertent IMC, instrument failures, lost communications and declaring an emergency.'
+    verifiedAt: null
+  - slug: afh-ch11
+    title: AFH Chapter 11 — Night Operations
+    publisher: FAA
+    url: https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/airplane_handbook/00_afh_full.pdf
+    type: handbook
+    topics:
+      - night
+      - safety
+    free: true
+    description: Night vision, illusions, aircraft and airport lighting, and night takeoffs, patterns, landings and emergencies.
+    verifiedAt: null
+  - slug: faa-acs-instrument
+    title: Instrument Rating – Airplane Airman Certification Standards
+    publisher: FAA
+    url: https://www.faa.gov/training_testing/testing/acs
+    type: regulation
+    topics:
+      - ifr
+      - learning
+    free: true
+    description: The standards for a real instrument rating. Course 3 tolerances are inspired by this document, never a substitute for it.
+    verifiedAt: null
+  - slug: faa-acs-commercial
+    title: Commercial Pilot – Airplane Airman Certification Standards
+    publisher: FAA
+    url: https://www.faa.gov/training_testing/testing/acs
+    type: regulation
+    topics:
+      - landing
+      - learning
+    free: true
+    description: The source of the power-off 180° accuracy approach and landing task used by the P1 challenge C10.6.
+    verifiedAt: null
+  - slug: aim-1-1
+    title: AIM 1-1 — Navigation Aids
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap1_section_1.html
+    type: regulation
+    topics:
+      - navigation
+      - ifr
+    free: true
+    description: VOR, ILS, GPS and WAAS, including RNAV approach types, CDI scaling and RAIM.
+    verifiedAt: null
+  - slug: aim-2-1
+    title: AIM 2-1 — Airport Lighting Aids
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap2_section_1.html
+    type: regulation
+    topics:
+      - night
+      - airports
+    free: true
+    description: Approach lighting systems, VASI and PAPI, runway and taxiway lights, beacons and pilot-controlled lighting.
+    verifiedAt: null
+  - slug: aim-5
+    title: AIM Chapter 5 — Air Traffic Procedures
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap5_section_1.html
+    type: regulation
+    topics:
+      - ifr
+      - procedures
+    free: true
+    description: IFR preflight, departures, en route (including holding in Section 5-3), arrivals and approaches.
+    verifiedAt: null
+  - slug: aim-6
+    title: AIM Chapter 6 — Emergency Procedures
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap6_section_1.html
+    type: regulation
+    topics:
+      - emergencies
+      - radio
+    free: true
+    description: Declaring an emergency, transponder emergency codes, two-way radio failure and search and rescue.
+    verifiedAt: null
+  - slug: aim-7
+    title: AIM Chapter 7 — Safety of Flight
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_1.html
+    type: regulation
+    topics:
+      - weather
+      - safety
+    free: true
+    description: Weather products and services, thunderstorms, icing, wake turbulence (Section 7-4) and mountain flying (Section 7-6).
+    verifiedAt: null
+  - slug: faa-ifr-enroute-charts
+    title: FAA IFR Enroute Charts (low altitude)
+    publisher: FAA
+    url: https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/ifr/
+    type: chart
+    topics:
+      - ifr
+      - charts
+    free: true
+    description: Free digital IFR enroute low charts showing airways, MEAs, MOCAs and fixes. Updated every 56 days.
+    verifiedAt: null
+  - slug: faa-pilot-safety-brochures
+    title: FAA pilot safety brochures
+    publisher: FAA
+    url: https://www.faa.gov/pilots/safety/pilotsafetybrochures
+    type: article
+    topics:
+      - safety
+      - learning
+    free: true
+    description: Short FAA brochures including Density Altitude, Pilot Vision, Spatial Disorientation and Tips on Mountain Flying.
+    verifiedAt: null
+  - slug: faa-tips-mountain-flying
+    title: Tips on Mountain Flying (FAA-P-8740-60)
+    publisher: FAA
+    url: https://www.faa.gov/pilots/safety/pilotsafetybrochures
+    type: article
+    topics:
+      - mountain
+      - safety
+    free: true
+    description: The classic FAA pamphlet on mountain weather, density altitude, ridge crossings and canyon flying. Listed on the pilot safety brochures page.
+    verifiedAt: null
+  - slug: faa-runway-safety
+    title: FAA Runway Safety
+    publisher: FAA
+    url: https://www.faa.gov/airports/runway_safety
+    type: article
+    topics:
+      - airports
+      - safety
+    free: true
+    description: Runway incursion prevention, hot spots and the airport hot spot lists.
+    verifiedAt: null
+  - slug: awc-gfa
+    title: Aviation Weather Center — Graphical Forecasts for Aviation
+    publisher: NOAA / NWS
+    url: https://aviationweather.gov/gfa/
+    type: tool
+    topics:
+      - weather
+      - planning
+    free: true
+    description: Interactive forecast maps for clouds, weather, winds, icing and turbulence; the GFA walkthrough in L11.2 uses it.
+    verifiedAt: null
+  - slug: ecfr-91-157
+    title: 14 CFR 91.157 — Special VFR weather minimums
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.157
+    type: regulation
+    topics:
+      - regulations
+      - airspace
+    free: true
+    description: When and how a pilot can operate under special VFR in controlled airspace.
+    verifiedAt: null
+  - slug: ecfr-91-167
+    title: 14 CFR 91.167 — Fuel requirements for flight in IFR conditions
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.167
+    type: regulation
+    topics:
+      - regulations
+      - ifr
+    free: true
+    description: 'The IFR fuel rule: destination, alternate and 45 minutes at normal cruise.'
+    verifiedAt: null
+  - slug: ecfr-91-169
+    title: 14 CFR 91.169 — IFR flight plan; information required
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.169
+    type: regulation
+    topics:
+      - regulations
+      - ifr
+    free: true
+    description: When an alternate airport is required (the 1-2-3 rule) and the standard alternate minimums.
+    verifiedAt: null
+  - slug: ecfr-91-175
+    title: 14 CFR 91.175 — Takeoff and landing under IFR
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.175
+    type: regulation
+    topics:
+      - regulations
+      - ifr
+    free: true
+    description: The rule for descending below DA or MDA, the runway environment and when a missed approach is required.
+    verifiedAt: null
+  - slug: ecfr-91-185
+    title: 14 CFR 91.185 — IFR operations; two-way radio communications failure
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.185
+    type: regulation
+    topics:
+      - regulations
+      - ifr
+    free: true
+    description: The lost-communications rules for route and altitude (AVEF) and when to leave the clearance limit.
+    verifiedAt: null
+  - slug: ecfr-91-209
+    title: 14 CFR 91.209 — Aircraft lights
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.209
+    type: regulation
+    topics:
+      - regulations
+      - night
+    free: true
+    description: When position lights and anti-collision lights must be on.
+    verifiedAt: null
+  - slug: ecfr-61-57
+    title: 14 CFR 61.57 — Recent flight experience
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-61/section-61.57
+    type: regulation
+    topics:
+      - regulations
+      - night
+    free: true
+    description: Day, night and instrument currency requirements for carrying passengers and flying IFR.
+    verifiedAt: null
+  - slug: ecfr-91-130
+    title: 14 CFR 91.130 — Operations in Class C airspace
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.130
+    type: regulation
+    topics:
+      - regulations
+      - airspace
+    free: true
+    description: The two-way communication requirement for entering Class C airspace.
+    verifiedAt: null
+  - slug: ecfr-91-131
+    title: 14 CFR 91.131 — Operations in Class B airspace
+    publisher: eCFR
+    url: https://www.ecfr.gov/current/title-14/part-91/section-91.131
+    type: regulation
+    topics:
+      - regulations
+      - airspace
+    free: true
+    description: The clearance requirement and equipment rules for Class B airspace.
+    verifiedAt: null
+  - slug: vatsim-code-of-conduct
+    title: VATSIM Code of Conduct
+    publisher: VATSIM
+    url: https://vatsim.net/docs/policy/code-of-conduct
+    type: community
+    topics:
+      - radio
+      - sim
+    free: true
+    description: The rules every VATSIM member agrees to. Read it before your first online flight.
+    verifiedAt: null
+  - slug: vzoa
+    title: Oakland ARTCC on VATSIM (vZOA)
+    publisher: vZOA
+    url: https://oakartcc.org
+    type: community
+    topics:
+      - radio
+      - sim
+    free: true
+    description: The virtual facility that controls the Bay Area and the Sierra on VATSIM, with local procedures, events and training.
+    verifiedAt: null
+  - slug: vpilot
+    title: vPilot — VATSIM pilot client
+    publisher: Ross Carlson
+    url: https://vpilot.rosscarlson.dev
+    type: tool
+    topics:
+      - radio
+      - sim
+    free: true
+    description: The free pilot client that connects MSFS on Windows to VATSIM. Not affiliated with Learn to Fly.
     verifiedAt: null

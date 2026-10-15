@@ -43,7 +43,7 @@ Decide **early**. The later you decide, the less room you have.
 ::checklist{slug="go-around"}
 
 :::callout{type="verify"}
-Author note: the sequence matches the POH balked-landing checklist (full throttle, flaps 20°, climb at 60 KIAS, flaps 10° when clear of obstacles, up after a safe altitude and 65 KIAS). Check the sim's EFB checklist says the same, and that the sim Skyhawk climbs at 60 KIAS with flaps 20°.
+Sim check: the sequence matches the POH balked-landing checklist (full throttle, flaps 20°, climb at 60 KIAS, flaps 10° when clear of obstacles, up after a safe altitude and 65 KIAS). Still open: does the sim's EFB checklist say the same, and does the sim Skyhawk climb at 60 KIAS with flaps 20°?
 :::
 
 :::quiz{id="l4-4-q1" type="single"}

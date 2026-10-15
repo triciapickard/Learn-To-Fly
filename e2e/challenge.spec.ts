@@ -3,8 +3,9 @@ import { expectAccessible, signUp } from './helpers.js';
 
 const SLUG = 'c2-1-straight-and-level';
 
+// The header's theme toggle is also a radio group, so debrief groups are found inside <main>.
 async function answerAllBest(page: Page) {
-  const groups = page.getByRole('radiogroup');
+  const groups = page.getByRole('main').getByRole('radiogroup');
   for (let i = 0; i < (await groups.count()); i++) {
     const group = groups.nth(i);
     const gold = group.getByRole('radio', { name: /^Gold/ });
@@ -49,6 +50,7 @@ test('challenge: brief → fly → debrief all Gold → result → history @mobi
 test('the debrief draft survives a refresh and a detour through sign-up', async ({ page }) => {
   await page.goto(`/challenges/${SLUG}?tab=debrief`);
   await page
+    .getByRole('main')
     .getByRole('radiogroup')
     .first()
     .getByRole('radio', { name: /^Silver/ })
@@ -58,6 +60,7 @@ test('the debrief draft survives a refresh and a detour through sign-up', async 
   await expect(page.getByLabel('Notes')).toHaveValue('Altitude wandered after the turn.');
   await expect(
     page
+      .getByRole('main')
       .getByRole('radiogroup')
       .first()
       .getByRole('radio', { name: /^Silver/ }),

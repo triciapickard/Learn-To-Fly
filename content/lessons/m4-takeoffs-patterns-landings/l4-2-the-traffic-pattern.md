@@ -70,7 +70,7 @@ These are starting points; adjust the power to hold the speed.
 Flaps have speed limits: 10° only below {{vspeed.vfe10}}, and more than 10° only below {{vspeed.vfe}}.
 
 :::callout{type="verify"}
-Author note: fly these settings in the sim at C4.2's weight and adjust (Section 8.5).
+Sim check: fly these settings in the sim at C4.2's weight and adjust (Section 8.5).
 :::
 
 ## Key points

@@ -49,7 +49,7 @@ export function Header() {
     <header className="sticky top-0 z-30 border-b border-line bg-canvas/95 backdrop-blur print:hidden">
       <div className="mx-auto flex h-16 max-w-page items-center gap-4 px-4">
         <Link to="/" unstyled className="shrink-0 rounded-sm" aria-label="Learn to Fly home">
-          <Logo />
+          <Logo wordmark="sm" />
         </Link>
         <nav aria-label="Main" className="ml-4 hidden md:block">
           <ul className="flex gap-1">

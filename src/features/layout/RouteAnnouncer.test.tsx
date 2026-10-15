@@ -15,7 +15,9 @@ describe('RouteAnnouncer', () => {
     renderRoute('/');
     await userEvent.click((await screen.findAllByRole('link', { name: 'See the curriculum' }))[0]!);
     const heading = await screen.findByRole('heading', { level: 1, name: 'Learn' });
-    expect(heading).toHaveFocus();
-    await waitFor(() => expect(screen.getByText('Learn · Learn-To-Fly')).toBeInTheDocument());
+    // Focus moves in an effect (or a MutationObserver callback) after the h1 renders, so
+    // under load findByRole can resolve first; wait for focus rather than racing it.
+    await waitFor(() => expect(heading).toHaveFocus());
+    await waitFor(() => expect(screen.getByText('Learn · Learn to Fly')).toBeInTheDocument());
   });
 });

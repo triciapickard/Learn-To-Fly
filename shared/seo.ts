@@ -1,6 +1,6 @@
 import { APP_NAME } from './constants.js';
 
-/** "Page · Learn-To-Fly", or the site tagline for the landing page (Section 22.1). */
+/** "Page · Learn to Fly", or the site tagline for the landing page (Section 22.1). */
 export function formatPageTitle(title?: string): string {
   return title
     ? `${title} · ${APP_NAME}`
@@ -20,7 +20,7 @@ export const PAGE_META: Record<string, { title?: string; description: string }> 
   '/learn': {
     title: 'Learn',
     description:
-      'The full Learn-To-Fly curriculum: nine modules from your first flight to a cross-country capstone in the Cessna 172.',
+      'The full Learn to Fly curriculum: nine modules from your first flight to a cross-country capstone in the Cessna 172.',
   },
   '/challenges': {
     title: 'Challenges',
@@ -45,11 +45,11 @@ export const PAGE_META: Record<string, { title?: string; description: string }> 
   '/reference/airports': {
     title: 'Airports',
     description:
-      'The San Francisco Bay Area airports used in Learn-To-Fly, with runways, airspace and challenges.',
+      'The San Francisco Bay Area airports used in Learn to Fly, with runways, airspace and challenges.',
   },
   '/reference/glossary': {
     title: 'Glossary',
-    description: 'Plain-English definitions of the aviation terms used in Learn-To-Fly lessons.',
+    description: 'Plain-English definitions of the aviation terms used in Learn to Fly lessons.',
   },
   '/reference/resources': {
     title: 'Resources',
@@ -58,22 +58,22 @@ export const PAGE_META: Record<string, { title?: string; description: string }> 
   '/about': {
     title: 'About',
     description:
-      'Why Learn-To-Fly exists and how it teaches flying in Microsoft Flight Simulator 2024.',
+      'Why Learn to Fly exists and how it teaches flying in Microsoft Flight Simulator 2024.',
   },
   '/disclaimer': {
     title: 'Disclaimer',
-    description: 'Learn-To-Fly is for simulation use only and is not flight instruction.',
+    description: 'Learn to Fly is for simulation use only and is not flight instruction.',
   },
-  '/privacy': { title: 'Privacy policy', description: 'What Learn-To-Fly stores and why.' },
-  '/terms': { title: 'Terms of use', description: 'The terms for using Learn-To-Fly.' },
+  '/privacy': { title: 'Privacy policy', description: 'What Learn to Fly stores and why.' },
+  '/terms': { title: 'Terms of use', description: 'The terms for using Learn to Fly.' },
   '/roadmap': {
     title: 'Roadmap',
-    description: 'Where Learn-To-Fly goes after the Cessna 172, all the way to the Airbus A380.',
+    description: 'Where Learn to Fly goes after the Cessna 172, all the way to the Airbus A380.',
   },
-  '/login': { title: 'Log in', description: 'Log in to Learn-To-Fly to save your progress.' },
+  '/login': { title: 'Log in', description: 'Log in to Learn to Fly to save your progress.' },
   '/signup': {
     title: 'Sign up',
-    description: 'Create a free Learn-To-Fly account to save your lessons and challenge results.',
+    description: 'Create a free Learn to Fly account to save your lessons and challenge results.',
   },
 };
 

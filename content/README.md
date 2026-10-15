@@ -44,15 +44,15 @@ characters) and are referenced by file name only: `![Alt text](m2-l4-lift.webp "
 
 ## Markdown directives
 
-| What           | Write                                                                                                                                         |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Callout        | `:::callout{type="tip"}` … `:::` — types: `safety`, `sim`, `classic`, `tip`, `note`, `verify` (author-only; not allowed in published lessons) |
-| Widget         | `::widget{name="airspeed-indicator" mode="explore"}` — names are in `shared/widgets.ts`                                                       |
-| Checklist      | `::checklist{slug="before-landing"}` — renders the Checklist Runner                                                                           |
-| Video          | `::video{provider="youtube" id="VIDEO_ID" title="What it shows"}`                                                                             |
-| Quiz           | see below                                                                                                                                     |
-| Internal link  | `[[c4-3-full-stop-landing]]` → "C4.3 Full-stop landing" link                                                                                  |
-| Aviation token | `{{vspeed.vy}}` → "74 KIAS"; `{{aircraft.cruiseTas}}` → a `specs` value                                                                       |
+| What           | Write                                                                                                                                                                                                             |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Callout        | `:::callout{type="tip"}` … `:::` — types: `safety`, `sim`, `classic`, `tip`, `note`, `verify` (author-only; not allowed in published lessons); v2 adds `decision`, `memory` and `real-world` (v2.md Section 19.2) |
+| Widget         | `::widget{name="airspeed-indicator" mode="explore"}` — names are in `shared/widgets.ts`                                                                                                                           |
+| Checklist      | `::checklist{slug="before-landing"}` — renders the Checklist Runner                                                                                                                                               |
+| Video          | `::video{provider="youtube" id="VIDEO_ID" title="What it shows"}`                                                                                                                                                 |
+| Quiz           | see below                                                                                                                                                                                                         |
+| Internal link  | `[[c4-3-full-stop-landing]]` → "C4.3 Full-stop landing" link                                                                                                                                                      |
+| Aviation token | `{{vspeed.vy}}` → "74 KIAS"; `{{aircraft.cruiseTas}}` → a `specs` value                                                                                                                                           |
 
 Quizzes (types `single`, `multi`, `numeric`, `order`; IDs unique across all lessons):
 

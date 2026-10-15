@@ -74,7 +74,7 @@ dates:
 
 assistance:
   training:
-    label: Learn-To-Fly Training profile
+    label: Learn to Fly Training profile
     description: Assisted flying, landing, trim and checklist auto-complete off; auto-rudder on only without rudder pedals or a twist stick (Lesson 0.2, Section 9.3).
 
 defaults:

@@ -117,7 +117,7 @@ On the current diagram, the FBO and terminal are on the **northwest apron**, and
 Trace your route with your finger before you release the brake.
 
 :::callout{type="verify"}
-Author note: the apron and taxiway names above come from the FAA airport diagram for LVK (01 Oct 2026 cycle). Check the sim's KLVK layout matches it (parking on the northwest apron, taxiway A along the north side, a run-up pad at the 25R end), note the sim's parking spot name, and then write the exact taxiway sequence from that spot into this section and C3.2.
+Sim check: desk-verified 2026-10-13 against the FAA airport diagram for LVK (AL-6075, 01 Oct 2026 cycle): FBO and terminal on the Northwest Apron, taxiway A along the north side of 7L/25R. Still open: that the sim's KLVK matches (parking spot name, taxiway A signs, a run-up pad at the 25R end); then write the exact taxiway sequence from that spot into this section and C3.2.
 :::
 
 ## Runway incursions

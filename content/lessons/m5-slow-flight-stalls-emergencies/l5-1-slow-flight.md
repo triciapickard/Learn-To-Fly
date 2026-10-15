@@ -38,7 +38,7 @@ Every takeoff, landing and go-around happens at low speed. **Slow flight** means
 5. **Trim** to take the pressure off.
 
 :::callout{type="verify"}
-Author note: check the RPM that holds 55 KIAS with full flaps at C5.1's weight and altitude in the sim.
+Sim check: the RPM that holds 55 KIAS with full flaps at C5.1's weight and altitude in the sim.
 :::
 
 Watch the angle of attack in the diagram as you slow down: at low speed the wing needs a high angle of attack to make enough lift.

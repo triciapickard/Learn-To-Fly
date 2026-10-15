@@ -1,5 +1,7 @@
-# The nine v1 modules (plan.md Section 13). `lessons` and `challenges` list slugs in
-# curriculum order; add each slug here when its file is written (Phase 9).
+# The nine v1 modules (v1.md Section 13) and the thirteen v2 modules (v2.md Section 14).
+# `lessons` and `challenges` list slugs in curriculum order; add each slug here when its
+# file is written (v1 Phase 9, v2 Phases 22–23). v2 modules stay `published: false` until
+# their content is verified (v2.md D2-17).
 modules:
   - slug: m0-getting-started
     code: M0
@@ -7,7 +9,7 @@ modules:
     title: Getting started
     summary: Set up MSFS 2024 for training and take your first flight.
     description: >
-      How Learn-To-Fly works, how to set up controls and assistance options so the sim
+      How Learn to Fly works, how to set up controls and assistance options so the sim
       teaches you instead of flying for you, and a first gentle flight over Livermore.
     icon: play
     lessons:
@@ -170,3 +172,243 @@ modules:
       - c8-1-local-checkride
       - c8-2-cross-country-capstone
     estimatedMinutes: 150
+  # ------------------------------------------------------------------------------------
+  # v2 · Course 2 — Skyhawk Advanced VFR (v2.md Section 14.2). Drafts: published: false.
+  - slug: m9-performance-weight-balance
+    code: M9
+    order: 9
+    title: Performance, weight and balance
+    summary: Density altitude, performance charts, weight and balance and leaning.
+    description: >
+      Judge what the airplane can do today: compute density altitude, read takeoff and
+      landing charts, load the airplane within its envelope and lean the mixture for cruise
+      and for high airports.
+    icon: scale
+    lessons:
+      - l9-1-density-altitude-and-performance
+      - l9-2-reading-performance-charts
+      - l9-3-weight-and-balance
+      - l9-4-leaning-the-mixture-and-fuel-management
+    challenges: []
+    estimatedMinutes: 180
+    published: false
+  - slug: m10-advanced-takeoffs-landings
+    code: M10
+    order: 10
+    title: Advanced takeoffs and landings
+    summary: Gusty crosswinds, slips, soft and short fields, and runway safety.
+    description: >
+      Land when the wind is not cooperating: gusts and wind shear, forward and side slips,
+      soft-field and short-field technique over obstacles, wake turbulence and hot spots.
+    icon: wind
+    lessons:
+      - l10-1-crosswinds-revisited-gusts-wind-shear-and-limits
+      - l10-2-slips
+      - l10-3-soft-field-takeoffs-and-landings
+      - l10-4-short-field-mastery-and-obstacles
+      - l10-5-runway-safety-wake-turbulence-and-hot-spots
+      - l10-6-power-off-accuracy-landings
+    challenges: []
+    estimatedMinutes: 270
+    published: false
+  - slug: m11-weather
+    code: M11
+    order: 11
+    title: Weather for pilots
+    summary: Weather theory, forecasts, fog, storms, sim weather and the go/no-go call.
+    description: >
+      Read the sky and the forecast: air masses and fronts, TAFs and briefings, fog and the
+      marine layer, thunderstorms and icing, how MSFS 2024 models weather, and how to make
+      a go/no-go decision and escape from cloud if you get it wrong.
+    icon: cloud-sun
+    lessons:
+      - l11-1-weather-theory-air-masses-fronts-and-stability
+      - l11-2-forecasts-and-briefings
+      - l11-3-clouds-fog-and-low-visibility
+      - l11-4-thunderstorms-icing-and-turbulence
+      - l11-5-weather-in-msfs-2024
+      - l11-6-the-go-no-go-decision-and-vfr-into-imc
+    challenges: []
+    estimatedMinutes: 240
+    published: false
+  - slug: m12-night-flying
+    code: M12
+    order: 12
+    title: Night flying
+    summary: Night vision, lighting, night patterns and a night cross-country.
+    description: >
+      Fly after dark: how your eyes work at night, aircraft and airport lighting, night
+      preflight and patterns, and a night cross-country with the emergencies that matter
+      most when you cannot see the ground.
+    icon: moon
+    lessons:
+      - l12-1-night-vision-and-illusions
+      - l12-2-aircraft-and-airport-lighting
+      - l12-3-night-operations-preflight-to-landing
+      - l12-4-night-cross-country-and-night-emergencies
+    challenges: []
+    estimatedMinutes: 240
+    published: false
+  - slug: m13-mountain-flying
+    code: M13
+    order: 13
+    title: Mountain flying
+    summary: Mountain weather, route planning, high-elevation airports and escape routes.
+    description: >
+      Cross the Sierra Nevada safely: wind over ridges and mountain wave, planning a route
+      along passes with escape options, operating at airports above 5,000 ft, and why you
+      never enter a canyon you cannot turn around in.
+    icon: mountain
+    lessons:
+      - l13-1-mountain-weather-and-airflow
+      - l13-2-planning-a-mountain-route
+      - l13-3-high-elevation-airport-operations
+      - l13-4-canyon-turns-and-escape-routes
+    challenges: []
+    estimatedMinutes: 270
+    published: false
+  - slug: m14-failures-emergencies
+    code: M14
+    order: 14
+    title: Systems failures and advanced emergencies
+    summary: Electrical, instrument, engine and fire emergencies, and off-airport landings.
+    description: >
+      Handle the failures that are not a dead engine: a failed alternator, a frozen pitot
+      tube or a dark PFD, a rough-running engine, fire and smoke with an emergency descent,
+      and choosing a field or ditching when there is no airport.
+    icon: zap-off
+    lessons:
+      - l14-1-electrical-failures
+      - l14-2-instrument-and-avionics-failures
+      - l14-3-partial-power-loss-and-fuel-problems
+      - l14-4-fire-smoke-and-emergency-descent
+      - l14-5-off-airport-landings-and-ditching
+    challenges: []
+    estimatedMinutes: 270
+    published: false
+  - slug: m15-advanced-airspace-atc
+    code: M15
+    order: 15
+    title: Advanced airspace, ATC and online flying
+    summary: Class B and C, flight following, light guns, readbacks and VATSIM.
+    description: >
+      Work with busy airspace and real controllers: Class B and Class C procedures, flight
+      following with approach control, light gun signals and lost communications, precise
+      readbacks, and your first flight on an online ATC network.
+    icon: radio-tower
+    lessons:
+      - l15-1-class-b-and-class-c-operations
+      - l15-2-flight-following-and-working-approach-control
+      - l15-3-light-gun-signals-lost-comms-and-special-vfr
+      - l15-4-readbacks-and-phraseology
+      - l15-5-flying-on-vatsim
+    challenges: []
+    estimatedMinutes: 240
+    published: false
+  - slug: m16-advanced-vfr-capstone
+    code: M16
+    order: 16
+    title: Advanced VFR capstone
+    summary: Risk management for long flights and the Advanced VFR stage check.
+    description: >
+      Put Course 2 together: the 5P check and personal minimums for longer flights, then
+      the Advanced VFR stage check and a Bay-to-Sierra cross-country.
+    icon: award
+    lessons:
+      - l16-1-risk-management-for-longer-flights
+      - l16-2-preparing-for-the-advanced-vfr-stage-check
+    challenges: []
+    estimatedMinutes: 210
+    published: false
+  # ------------------------------------------------------------------------------------
+  # v2 · Course 3 — Skyhawk Instrument Foundations (v2.md Section 14.2).
+  - slug: m17-attitude-instrument-flying
+    code: M17
+    order: 17
+    title: Attitude instrument flying
+    summary: The scan, basic instrument maneuvers, unusual attitudes and partial panel.
+    description: >
+      Fly the airplane by the instruments alone: the control-and-performance scan, basic
+      maneuvers to instrument tolerances, recovering from unusual attitudes, flying on the
+      standby instruments, and why your inner ear cannot be trusted.
+    icon: scan-eye
+    lessons:
+      - l17-1-the-instrument-scan
+      - l17-2-basic-instrument-maneuvers-and-patterns
+      - l17-3-unusual-attitude-recovery
+      - l17-4-partial-panel-and-the-magnetic-compass
+      - l17-5-spatial-disorientation
+    challenges: []
+    estimatedMinutes: 300
+    published: false
+  - slug: m18-ifr-system
+    code: M18
+    order: 18
+    title: The IFR system
+    summary: IFR rules, charts and plates, clearances, the G1000 for IFR, and enroute.
+    description: >
+      Understand how instrument flight works: fuel, alternates and currency rules, enroute
+      charts and approach plates, copying clearances, programming the G1000 NXi and GFC 700,
+      and flying enroute with the lost-communications rules.
+    icon: file-text
+    lessons:
+      - l18-1-ifr-rules-minimums-currency-alternates-and-fuel
+      - l18-2-ifr-charts-and-the-approach-plate
+      - l18-3-clearances-and-departures
+      - l18-4-the-g1000-nxi-and-gfc-700-for-ifr
+      - l18-5-enroute-ifr-and-lost-communications
+    challenges: []
+    estimatedMinutes: 270
+    published: false
+  - slug: m19-holding
+    code: M19
+    order: 19
+    title: Holding
+    summary: Holding pattern entries, timing and wind, by hand and with the G1000.
+    description: >
+      Fly a holding pattern from an ATC instruction: visualize the hold, pick the entry,
+      time the legs and correct for wind, then let the G1000 and autopilot do it while you
+      monitor.
+    icon: refresh-cw
+    lessons:
+      - l19-1-holding-patterns-entries-timing-and-wind
+      - l19-2-holding-with-the-g1000-and-autopilot
+    challenges: []
+    estimatedMinutes: 150
+    published: false
+  - slug: m20-instrument-approaches
+    code: M20
+    order: 20
+    title: Instrument approaches
+    summary: Approach anatomy, RNAV (GPS), ILS, VOR, missed and circling approaches.
+    description: >
+      Get down through the cloud: the segments and minima of an approach, RNAV (GPS) to
+      LPV and LNAV minimums, the ILS hand-flown and coupled, VOR and other non-precision
+      approaches, and the missed approach when the runway is not there.
+    icon: plane-landing
+    lessons:
+      - l20-1-anatomy-of-an-instrument-approach
+      - l20-2-rnav-gps-approaches
+      - l20-3-ils-approaches
+      - l20-4-vor-and-other-non-precision-approaches
+      - l20-5-missed-approaches
+      - l20-6-circling-approaches-and-procedure-turns
+    challenges: []
+    estimatedMinutes: 420
+    published: false
+  - slug: m21-instrument-capstone
+    code: M21
+    order: 21
+    title: Instrument capstone
+    summary: Single-pilot IFR, automation management, IFR emergencies and the stage check.
+    description: >
+      Finish Course 3: manage workload and automation as a single pilot, handle an
+      electrical failure, partial panel and lost communications in cloud, then fly the
+      Instrument stage check and an IFR cross-country capstone.
+    icon: award
+    lessons:
+      - l21-1-single-pilot-ifr-and-automation-management
+      - l21-2-ifr-emergencies
+    challenges: []
+    estimatedMinutes: 240
+    published: false

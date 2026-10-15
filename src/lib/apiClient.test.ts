@@ -78,7 +78,7 @@ describe('apiClient', () => {
       await expect(api.post('/things', {})).rejects.toMatchObject({
         status,
         code: 'SERVICE_UNAVAILABLE',
-        message: expect.stringContaining("Couldn't reach the Learn-To-Fly server") as unknown,
+        message: expect.stringContaining("Couldn't reach the Learn to Fly server") as unknown,
       });
     },
   );

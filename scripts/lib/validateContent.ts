@@ -1,5 +1,10 @@
 import type { ContentBundle } from './loadContent.js';
 
+/** `m12-night-flying` → "12" (module slugs are `m<number>-…`). */
+function moduleNumber(moduleSlug: string): string {
+  return /^m(\d{1,2})-/.exec(moduleSlug)?.[1] ?? '';
+}
+
 function duplicates(values: string[]): string[] {
   const seen = new Set<string>();
   const dupes = new Set<string>();
@@ -105,7 +110,7 @@ export function validateContent(bundle: ContentBundle): void {
     if (!module) issues.error(lesson.file, `Unknown module "${fm.module}"`, 1);
     else if (!module.lessons.includes(fm.slug))
       issues.error(lesson.file, `Lesson is not listed in module "${fm.module}" (orphan)`, 1);
-    if (!fm.code.startsWith(`L${fm.module.charAt(1)}.`))
+    if (!fm.code.startsWith(`L${moduleNumber(fm.module)}.`))
       issues.error(lesson.file, `Code ${fm.code} does not match module ${fm.module}`, 1);
     for (const slug of fm.prerequisites)
       if (!lessonBySlug.has(slug)) issues.error(lesson.file, `Unknown prerequisite "${slug}"`, 1);
@@ -134,7 +139,7 @@ export function validateContent(bundle: ContentBundle): void {
     if (!module) issues.error(c.file, `Unknown module "${c.module}"`);
     else if (!module.challenges.includes(c.slug))
       issues.error(c.file, `Challenge is not listed in module "${c.module}" (orphan)`);
-    if (!c.code.startsWith(`C${c.module.charAt(1)}.`))
+    if (!c.code.startsWith(`C${moduleNumber(c.module)}.`))
       issues.error(c.file, `Code ${c.code} does not match module ${c.module}`);
     for (const slug of c.lessons)
       if (!lessonBySlug.has(slug)) issues.error(c.file, `Unknown lesson "${slug}"`);

@@ -40,7 +40,7 @@ async function main() {
 
   const app = createApp({ env, logger });
   const server: Server = app.listen(env.PORT, () => {
-    logger.info(`Learn-To-Fly listening on http://localhost:${env.PORT}`);
+    logger.info(`Learn to Fly listening on http://localhost:${env.PORT}`);
   });
 
   let shuttingDown = false;

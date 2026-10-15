@@ -23,8 +23,9 @@ test('flow A: landing page to the first lesson and a quiz, by keyboard', async (
   await expect(page).toHaveURL(/l0-1-welcome-how-learn-to-fly-works$/);
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 
+  // The header's theme toggle is a radio group too; the quiz radios live inside <main>.
   const answer = page.getByRole('radio', { name: 'Brief, Fly, Debrief' });
-  await tabTo(page, page.getByRole('radio').first());
+  await tabTo(page, page.getByRole('main').getByRole('radio').first());
   // Arrow keys move through a radio group; Space selects.
   for (let i = 0; i < 4 && !(await answer.evaluate((el) => el === document.activeElement)); i++) {
     await page.keyboard.press('ArrowDown');
@@ -63,7 +64,7 @@ test('flows B and C: sign up, then brief → fly → debrief a challenge, by key
   await page.keyboard.press('Enter');
 
   // Each criterion is a radio group: Tab into it, Space picks the first (best) option.
-  const groups = page.getByRole('radiogroup');
+  const groups = page.getByRole('main').getByRole('radiogroup');
   await expect(groups.first()).toBeVisible();
   for (let i = 0; i < (await groups.count()); i++) {
     await tabTo(page, groups.nth(i).getByRole('radio').first());
