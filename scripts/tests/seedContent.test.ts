@@ -27,7 +27,7 @@ describe('seedContent', () => {
     expect(lesson).toMatchObject({
       version: 1,
       published: true,
-      draft: true,
+      draft: false,
       moduleSlug: 'm1-meet-the-skyhawk',
     });
     expect((lesson?.blocks as unknown[]).length).toBeGreaterThan(5);
@@ -82,13 +82,13 @@ describe('seedContent', () => {
 
   it('keeps drafts unpublished unless drafts are included, without bumping versions', async () => {
     await seedContent(bundle());
-    expect(await lessonDoc('l1-4-speeds-limits-and-checklists')).toMatchObject({
+    expect(await lessonDoc('l2-1-four-forces-and-how-a-wing-works')).toMatchObject({
       published: false,
       draft: true,
     });
     const withDrafts = await seedContent(bundle(), { includeDrafts: true });
     expect(withDrafts.updated).toEqual([]);
-    expect(await lessonDoc('l1-4-speeds-limits-and-checklists')).toMatchObject({
+    expect(await lessonDoc('l2-1-four-forces-and-how-a-wing-works')).toMatchObject({
       published: true,
       version: 1,
     });
