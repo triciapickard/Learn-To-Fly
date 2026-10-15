@@ -1,6 +1,6 @@
 {
   "name": "learn-to-fly",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Learn to fly the Cessna 172 in Microsoft Flight Simulator 2024 the way real pilots do.",
   "private": true,
   "type": "module",

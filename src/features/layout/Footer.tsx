@@ -1,5 +1,6 @@
 import { ExternalLink, Link } from '@/components/Link';
 import { Logo } from '@/components/Logo';
+import { RELEASE_LABEL, RELEASE_STAGE } from '@/lib/release';
 import { DISCLAIMER_SHORT, FOOTER_NAV, GITHUB_URL } from './navigation';
 
 export function Footer() {
@@ -25,8 +26,8 @@ export function Footer() {
         </nav>
         <p className="max-w-measure text-sm leading-5 text-ink-2">{DISCLAIMER_SHORT}</p>
         <p className="text-sm leading-5 text-ink-2">
-          © {new Date().getFullYear()} Learn to Fly. Not affiliated with Microsoft, Asobo Studio,
-          Textron Aviation, Garmin or the FAA.
+          {RELEASE_STAGE} {RELEASE_LABEL} · © {new Date().getFullYear()} Learn to Fly. Not
+          affiliated with Microsoft, Asobo Studio, Textron Aviation, Garmin or the FAA.
         </p>
       </div>
     </footer>

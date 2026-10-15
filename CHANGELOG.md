@@ -6,6 +6,27 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+## [0.0.0] - 2026-10-15
+
+The first public release: a very early beta so people can try the course while the rest
+of it is verified in the sim (v1.md D-26).
+
+### Beta scope
+
+- Published: Module 0 (Getting started: L0.1–L0.3 and C0.1) and Module 1 (Meet the
+  Skyhawk: L1.1–L1.4 and C1.1), verified against MSFS 2024 1.8.16.0; every reference
+  page; accounts, progress and the dashboard.
+- Not yet published: Modules 2–8 are drafted and are published one module at a time, each
+  after it is flown and checked in the current sim. `content/modules.yaml` marks them
+  `published: false` so the Learn page, landing page, dashboard and challenge list show
+  only live modules.
+- The site says so: a dismissible "Early beta v0.0" notice above the header, the version
+  in the footer, a "Where we are now" section on the roadmap, the live and coming modules
+  on the landing and Learn pages, and the first published challenge (C0.1) as the landing
+  page's sample card.
+- The "Skyhawk Pilot (Sim)" course-complete badge waits for all nine modules; finishing
+  what is live shows "All caught up".
+
 ### Added
 
 - v2 content drafts: all 56 Course 2 and Course 3 lessons (Modules 9–21, v2.md

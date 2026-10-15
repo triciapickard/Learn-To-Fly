@@ -1,7 +1,9 @@
 # The nine v1 modules (v1.md Section 13) and the thirteen v2 modules (v2.md Section 14).
 # `lessons` and `challenges` list slugs in curriculum order; add each slug here when its
-# file is written (v1 Phase 9, v2 Phases 22–23). v2 modules stay `published: false` until
-# their content is verified (v2.md D2-17).
+# file is written (v1 Phase 9, v2 Phases 22–23). Only verified modules are `published`
+# (default true): the v0.0 early beta ships Modules 0 and 1, and Modules 2–8 stay
+# `published: false` until each is verified in the sim (v1 D-26). v2 modules stay
+# `published: false` until their content is verified (v2.md D2-17).
 modules:
   - slug: m0-getting-started
     code: M0
@@ -55,6 +57,7 @@ modules:
       - c2-3-turns-to-headings
       - c2-4-the-box
     estimatedMinutes: 180
+    published: false # v0.0 early beta: returns when verified in the sim (v1.md D-26)
   - slug: m3-ground-operations
     code: M3
     order: 3
@@ -74,6 +77,7 @@ modules:
       - c3-3-run-up
       - c3-4-after-landing-and-shutdown
     estimatedMinutes: 120
+    published: false # v0.0 early beta: returns when verified in the sim (v1.md D-26)
   - slug: m4-takeoffs-patterns-landings
     code: M4
     order: 4
@@ -95,6 +99,7 @@ modules:
       - c4-4-go-around
       - c4-7-three-circuit-session
     estimatedMinutes: 270
+    published: false # v0.0 early beta: returns when verified in the sim (v1.md D-26)
   - slug: m5-slow-flight-stalls-emergencies
     code: M5
     order: 5
@@ -116,6 +121,7 @@ modules:
       - c5-4-steep-turns
       - c5-5-engine-failure
     estimatedMinutes: 210
+    published: false # v0.0 early beta: returns when verified in the sim (v1.md D-26)
   - slug: m6-vfr-navigation
     code: M6
     order: 6
@@ -139,6 +145,7 @@ modules:
       - c6-4-vor-tracking
       - c6-5-g1000-flight-plan
     estimatedMinutes: 300
+    published: false # v0.0 early beta: returns when verified in the sim (v1.md D-26)
   - slug: m7-radio-airport-operations
     code: M7
     order: 7
@@ -156,6 +163,7 @@ modules:
       - c7-1-ctaf-pattern-at-tracy
       - c7-2-towered-departure-and-return-at-livermore
     estimatedMinutes: 120
+    published: false # v0.0 early beta: returns when verified in the sim (v1.md D-26)
   - slug: m8-capstone
     code: M8
     order: 8
@@ -172,6 +180,7 @@ modules:
       - c8-1-local-checkride
       - c8-2-cross-country-capstone
     estimatedMinutes: 150
+    published: false # v0.0 early beta: returns when verified in the sim (v1.md D-26)
   # ------------------------------------------------------------------------------------
   # v2 · Course 2 — Skyhawk Advanced VFR (v2.md Section 14.2). Drafts: published: false.
   - slug: m9-performance-weight-balance

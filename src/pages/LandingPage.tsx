@@ -18,18 +18,24 @@ import { DifficultyDots } from '@/components/ChallengeMeta';
 import { LessonPath, type LessonStop, type LessonStopState } from '@/components/LessonPath';
 import { Link } from '@/components/Link';
 import { useModules } from '@/features/content/api';
-import { CURRICULUM_PREVIEW, FIRST_STOPS } from '@/features/landing/curriculumPreview';
+import {
+  comingModules,
+  FIRST_STOPS,
+  LIVE_MODULES,
+  type PreviewModule,
+} from '@/features/landing/curriculumPreview';
 import { useMyProgress } from '@/features/progress/api';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { cn } from '@/lib/cn';
 import { plural } from '@/lib/format';
+import { PLANNED_MODULE_COUNT, RELEASE_LABEL } from '@/lib/release';
 import type { ProgressResponse } from '@shared/schemas/api';
 
 // Landing page (design system 2026, homepage redesign): the hero is type and the Module 0
 // lesson path, no airplane illustration. Bands alternate canvas and surface with space-24
 // padding. The one accent control on the page is the lesson path's "Start lesson" button.
 
-const MODULE_0 = CURRICULUM_PREVIEW[0];
+const MODULE_0 = LIVE_MODULES[0]!;
 const MODULE_0_LESSONS = FIRST_STOPS.filter((lesson) => lesson.module === MODULE_0.slug);
 const FIRST_CHALLENGE = {
   slug: 'c0-1-first-flight-over-livermore',
@@ -38,40 +44,47 @@ const FIRST_CHALLENGE = {
 };
 
 /** One row of the curriculum list: the published module from the API, or the static preview. */
-interface PreviewModule {
-  code: string;
-  slug: string;
-  title: string;
-  summary: string;
-  lessons: number;
-  challenges: number;
+type LandingModule = PreviewModule & {
   /** Only known for modules from the API. */
   minutes?: number;
-}
+};
 
 /**
  * The curriculum shown on the landing page is whatever is published right now (drafts
  * included on preview builds), so it grows with each verified module. The static preview
- * stands in while the modules load or if the API is unreachable.
+ * stands in while the modules load or if the API is unreachable. The rest of v1 is listed
+ * as coming (D-26).
  */
-function useCurriculumPreview(): PreviewModule[] {
+function useCurriculumPreview(): { live: LandingModule[]; coming: PreviewModule[] } {
   const { data } = useModules();
-  if (!data) return CURRICULUM_PREVIEW.map((m) => ({ ...m }));
-  return data.modules.map((m) => ({
-    code: m.code,
-    slug: m.slug,
-    title: m.title,
-    summary: m.summary,
-    lessons: m.lessons.length,
-    challenges: m.challenges.length,
-    minutes: m.estimatedMinutes,
-  }));
+  const live: LandingModule[] = data
+    ? data.modules.map((m) => ({
+        code: m.code,
+        slug: m.slug,
+        title: m.title,
+        summary: m.summary,
+        lessons: m.lessons.length,
+        challenges: m.challenges.length,
+        minutes: m.estimatedMinutes,
+      }))
+    : LIVE_MODULES.map((m) => ({ ...m }));
+  return { live, coming: comingModules(live.map((m) => m.slug)) };
 }
 
-function stats(modules: PreviewModule[]) {
+function hours(minutes: number) {
+  const h = minutes / 60;
+  return `~${Number.isInteger(h) ? h : h.toFixed(1)} h`;
+}
+
+function stats(modules: LandingModule[]) {
   const minutes = modules.reduce((sum, m) => sum + (m.minutes ?? 0), 0);
+  // The static preview carries no durations: 60 and 90 minutes (v1.md Section 13.1).
+  const fallbackMinutes = 150;
   return [
-    { value: String(modules.length), label: 'modules, one airplane' },
+    {
+      value: String(modules.length),
+      label: `of ${PLANNED_MODULE_COUNT} modules live, one airplane`,
+    },
     {
       value: String(modules.reduce((sum, m) => sum + m.lessons, 0)),
       label: 'short interactive lessons',
@@ -81,8 +94,8 @@ function stats(modules: PreviewModule[]) {
       label: 'scored in-sim challenges',
     },
     {
-      value: minutes > 0 ? `~${Math.round(minutes / 60)} h` : '~25 h',
-      label: 'of lessons and sim time',
+      value: hours(minutes > 0 ? minutes : fallbackMinutes),
+      label: 'of lessons and sim time so far',
     },
   ];
 }
@@ -127,23 +140,30 @@ const TIER_RING: Record<(typeof TIERS)[number]['tier'], string> = {
   bronze: 'border-tier-bronze text-tier-bronze',
 };
 
+/** The first published challenge, C0.1, as the sample card (it must stay a live link). */
 const SAMPLE_CHALLENGE = {
-  slug: 'c4-3-full-stop-landing',
-  lessonSlug: 'l4-3-normal-approach-and-landing',
-  moduleSlug: 'm4-takeoffs-patterns-landings',
+  slug: 'c0-1-first-flight-over-livermore',
+  code: 'C0.1',
+  kind: 'First flight',
+  title: 'First flight over Livermore',
+  difficulty: 1,
+  minutes: 20,
+  goal: 'Take off, fly a relaxed loop around the Livermore valley and feel how the Skyhawk responds.',
+  lessonSlug: 'l0-3-your-first-flight',
+  lessonLabel: 'lesson 0.3',
+  moduleSlug: 'm0-getting-started',
   setup: [
     { text: 'KLVK · Rwy 25R', mono: true },
     { text: 'Calm, clear', mono: false },
     { text: '10:00 local', mono: true },
-    { text: 'Flaps 30 · 65 KIAS', mono: true },
+    { text: 'Flaps 10° · climb 75 KIAS', mono: true },
   ],
   criteria: [
     <>
-      A stabilized approach by <span className="readout-sm">300 ft AGL</span>, on speed and on the
-      centerline
+      Took off and reached <span className="readout-sm">3,000 ft MSL</span>
     </>,
-    'Main wheels first, in the first third of the runway',
-    'Straight on the rollout, no bounce, or a go-around if it is not working',
+    'Made at least one left and one right turn',
+    'Found Mt Diablo and Lake Del Valle (bonus)',
   ],
 };
 
@@ -183,7 +203,8 @@ const FAQ = [
     a: (
       <>
         Version 1 covers one airplane, the Cessna 172, done properly: from the first takeoff to a
-        local checkride and a planned cross-country. Bigger airplanes come later.{' '}
+        local checkride and a planned cross-country. This early beta ({RELEASE_LABEL}) has Modules 0
+        and 1, and the rest arrive as each one is verified in the sim. Bigger airplanes come later.{' '}
         <Link to="/roadmap">See the roadmap</Link>
       </>
     ),
@@ -232,7 +253,7 @@ function moduleZeroStops(progress?: ProgressResponse): LessonStop[] {
 }
 
 /** The module to act on next: the first one with lessons left. */
-function currentModuleIndex(modules: PreviewModule[], progress?: ProgressResponse): number {
+function currentModuleIndex(modules: LandingModule[], progress?: ProgressResponse): number {
   const index = modules.findIndex((m) => !progress?.modules[m.slug]?.complete);
   return index === -1 ? modules.length - 1 : index;
 }
@@ -247,7 +268,7 @@ function Eyebrow({ children, className }: { children: React.ReactNode; className
 export default function LandingPage() {
   usePageTitle();
   const { data: progress } = useMyProgress();
-  const modules = useCurriculumPreview();
+  const { live: modules, coming } = useCurriculumPreview();
   const stops = moduleZeroStops(progress);
   const currentModule = currentModuleIndex(modules, progress);
   const started = Boolean(
@@ -272,7 +293,7 @@ export default function LandingPage() {
         )}
       >
         <div>
-          <Eyebrow>Free · Cessna 172 Skyhawk · MSFS 2024</Eyebrow>
+          <Eyebrow>Early beta · Free · Cessna 172 Skyhawk · MSFS 2024</Eyebrow>
           <h1 id="hero-heading" className="display-lg sm:display-xl mt-6 max-w-[12ch]">
             Yes, you can fly a plane.
           </h1>
@@ -368,11 +389,13 @@ export default function LandingPage() {
           <div className="max-w-[640px]">
             <Eyebrow>The curriculum</Eyebrow>
             <h2 id="curriculum-heading" className="display-md sm:display-lg mt-3">
-              {modules.length} modules, in the order a flight school teaches them.
+              {modules.length} of {PLANNED_MODULE_COUNT} modules are live, in the order a flight
+              school teaches them.
             </h2>
           </div>
           <p className="max-w-[30em] text-ink-2">
-            From setting up the sim to a planned cross-country flight. Every lesson is free to read.{' '}
+            Start by setting up the sim and meeting the Skyhawk. The rest of the course arrives as
+            each module is verified in the sim. Every lesson is free to read.{' '}
             <Link to="/learn" className="font-medium whitespace-nowrap">
               Full curriculum
             </Link>
@@ -421,6 +444,26 @@ export default function LandingPage() {
                 </li>
               );
             })}
+            {coming.map((module) => (
+              <li
+                key={module.code}
+                className="flex flex-wrap items-baseline gap-x-6 gap-y-2 border-t border-line px-4 py-5 text-ink-3"
+              >
+                <span className="readout w-12 shrink-0">{module.code}</span>
+                <span className="min-w-0 flex-[1_1_320px]">
+                  <span className="heading-md block">
+                    <span className="sr-only">Module {module.code.slice(1)}: </span>
+                    {module.title}
+                  </span>
+                  <span className="block text-sm leading-5">{module.summary}</span>
+                </span>
+                <span className="readout-sm flex-[0_1_220px]">
+                  Coming · {plural(module.lessons, 'lesson')} ·{' '}
+                  {plural(module.challenges, 'challenge')}
+                </span>
+                <span aria-hidden className="size-[18px] shrink-0" />
+              </li>
+            ))}
           </ol>
         </Card>
       </section>
@@ -460,20 +503,19 @@ export default function LandingPage() {
 
           <Card className="w-full max-w-[560px] p-5 sm:p-6">
             <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-              <Eyebrow>Challenge C4.3 · Landing</Eyebrow>
+              <Eyebrow>
+                Challenge {SAMPLE_CHALLENGE.code} · {SAMPLE_CHALLENGE.kind}
+              </Eyebrow>
               <p className="inline-flex items-center gap-2 text-sm leading-5 text-ink-2">
                 <span aria-hidden>Difficulty</span>
-                <DifficultyDots value={3} />
+                <DifficultyDots value={SAMPLE_CHALLENGE.difficulty} />
                 <span aria-hidden className="readout-sm">
-                  3 of 5
+                  {SAMPLE_CHALLENGE.difficulty} of 5
                 </span>
               </p>
             </div>
-            <h3 className="display-md mt-5">Full-stop landing</h3>
-            <p className="mt-4 text-ink-2">
-              Fly a pattern and land in the first third of the runway, on the centerline, without
-              bouncing.
-            </p>
+            <h3 className="display-md mt-5">{SAMPLE_CHALLENGE.title}</h3>
+            <p className="mt-4 text-ink-2">{SAMPLE_CHALLENGE.goal}</p>
             <ul aria-label="Sim setup" className="mt-5 flex flex-wrap gap-2">
               {SAMPLE_CHALLENGE.setup.map(({ text, mono }) => (
                 <li
@@ -502,12 +544,12 @@ export default function LandingPage() {
             </ul>
             <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5">
               <span className="text-sm leading-5 text-ink-3">
-                Est. <span className="readout-sm">20 min</span> · Builds on{' '}
+                Est. <span className="readout-sm">{SAMPLE_CHALLENGE.minutes} min</span> · Builds on{' '}
                 <Link
                   to={`/learn/${SAMPLE_CHALLENGE.moduleSlug}/${SAMPLE_CHALLENGE.lessonSlug}`}
                   quiet
                 >
-                  lesson 4.3
+                  {SAMPLE_CHALLENGE.lessonLabel}
                 </Link>
               </span>
               <Button variant="secondary" size="md" asChild>

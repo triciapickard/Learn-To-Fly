@@ -13,6 +13,24 @@ foundations in the same Skyhawk) is planned in [`v2.md`](./v2.md).
 
 > For simulation use only. Learn to Fly is not real-world flight training.
 
+## Status: early beta (v0.0)
+
+Learn to Fly is public as a very early beta so people can try it while the rest of the
+course is verified (v1.md D-26). What is live:
+
+- **Module 0, Getting started:** how the course works, setting up MSFS 2024 for training,
+  your first flight, and challenge C0.1.
+- **Module 1, Meet the Skyhawk:** the airframe and controls, the G1000 cockpit, engine,
+  fuel and electrical systems, speeds, limits and checklists, and challenge C1.1.
+- Every reference page (V-speeds, checklists, airports, glossary, resources), accounts,
+  progress tracking and the dashboard.
+
+Modules 2 to 8 are written and are published one at a time, each after it has been flown
+and checked in the current sim (`published: true` in `content/modules.yaml` and in each
+lesson and challenge). Known gaps and the release checklist are in
+[`docs/release/v0.0.md`](./docs/release/v0.0.md). Please report problems as
+[GitHub issues](https://github.com/triciapickard/Learn-To-Fly/issues).
+
 ## Stack
 
 MERN with TypeScript on both sides (v1.md Section 26):

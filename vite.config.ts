@@ -1,9 +1,15 @@
 /// <reference types="vitest/config" />
+import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
+
+/** package.json's version, shown in the beta notice and footer (`npm version` keeps it current). */
+const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8')) as {
+  version: string;
+};
 
 const alias = {
   '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -20,6 +26,7 @@ export default defineConfig({
   ],
   resolve: { alias },
   define: {
+    __APP_VERSION__: JSON.stringify(pkg.version),
     // Tags Sentry events with the deployed commit (Render sets RENDER_GIT_COMMIT at build).
     'import.meta.env.VITE_RELEASE': JSON.stringify(
       process.env.GIT_SHA || process.env.RENDER_GIT_COMMIT || '',

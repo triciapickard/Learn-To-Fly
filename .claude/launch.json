@@ -5,6 +5,19 @@
       "name": "client-worktree",
       "url": "http://localhost:5173",
       "port": 5173
+    },
+    {
+      "name": "beta-preview",
+      "runtimeExecutable": "env",
+      "runtimeArgs": [
+        "PORT=4100",
+        "PUBLIC_SITE_URL=http://localhost:4100",
+        "MONGODB_URI=mongodb://localhost:27017/learntofly-beta",
+        "CONTENT_INCLUDE_DRAFTS=false",
+        "npm",
+        "start"
+      ],
+      "port": 4100
     }
   ]
 }

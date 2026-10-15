@@ -15,6 +15,8 @@ export default tseslint.config(
       'playwright-report',
       'test-results',
       'node_modules',
+      // Worktrees the desktop app keeps for other sessions; each has its own checkout.
+      '.claude/worktrees',
       'plan.md',
     ],
   },

@@ -4,6 +4,7 @@ import { Prose } from '@/components/Prose';
 import { TRADEMARK_STATEMENT } from '@/features/layout/legal';
 import { GITHUB_URL } from '@/features/layout/navigation';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { LIVE_MODULES, RELEASE_LABEL } from '@/lib/release';
 
 export default function AboutPage() {
   usePageTitle('About');
@@ -32,6 +33,13 @@ export default function AboutPage() {
           struggled to find in-depth tutorials that actually teach you how to fly the aircraft, not
           just which buttons to press. Every procedure and number is checked against FAA handbooks
           and flown in the sim before it is published.
+        </p>
+        <h2>Where it is now</h2>
+        <p>
+          Learn to Fly is in early beta ({RELEASE_LABEL}). {LIVE_MODULES} are live: setting up the
+          sim, your first flight and getting to know the Skyhawk. The remaining modules of the
+          course are written and are published one at a time, once each has been flown and checked
+          in the current sim. Expect rough edges, and please report them.
         </p>
         <h2>Where it is going</h2>
         <p>

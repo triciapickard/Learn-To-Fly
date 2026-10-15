@@ -1,5 +1,20 @@
-/** Module overview for the landing page (v1.md Section 13.1). */
-export const CURRICULUM_PREVIEW = [
+/**
+ * The curriculum as the landing page and the Learn page describe it (v1.md Section 13.1).
+ * LIVE_MODULES stands in for the modules API while it loads (or if it is unreachable) and
+ * lists only what the v0.0 early beta publishes (D-26). COMING_MODULES are the rest of v1,
+ * shown as "coming" until each one is verified in the sim and published; a module that the
+ * API returns is filtered out of this list, so publishing one needs no code change.
+ */
+export interface PreviewModule {
+  code: string;
+  slug: string;
+  title: string;
+  lessons: number;
+  challenges: number;
+  summary: string;
+}
+
+export const LIVE_MODULES: readonly PreviewModule[] = [
   {
     code: 'M0',
     slug: 'm0-getting-started',
@@ -16,6 +31,9 @@ export const CURRICULUM_PREVIEW = [
     challenges: 1,
     summary: 'Controls, the G1000 cockpit, engine, fuel, speeds and checklists.',
   },
+];
+
+export const COMING_MODULES: readonly PreviewModule[] = [
   {
     code: 'M2',
     slug: 'm2-fundamentals',
@@ -72,7 +90,13 @@ export const CURRICULUM_PREVIEW = [
     challenges: 2,
     summary: 'Decision making, a local checkride and a cross-country flight.',
   },
-] as const;
+];
+
+/** The modules still to come, given the ones the API says are live. */
+export function comingModules(liveSlugs: Iterable<string>): PreviewModule[] {
+  const live = new Set(liveSlugs);
+  return COMING_MODULES.filter((m) => !live.has(m.slug));
+}
 
 /** The first stops on the lesson path, shown on the landing page. */
 export const FIRST_STOPS = [

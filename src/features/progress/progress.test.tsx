@@ -86,25 +86,37 @@ describe('dashboard (step 8.8)', () => {
     expect(within(stats).getByText('3')).toBeInTheDocument();
   });
 
+  /** A dashboard where every core item is done; `moduleCount` modules are published. */
+  const finished = (moduleCount: number) => {
+    const base = dashboardFixture();
+    const module = base.modules[0]!;
+    return dashboardFixture({
+      continue: null,
+      nextUp: [],
+      course: {
+        lessonsCompleted: 1,
+        lessonsTotal: 1,
+        challengesPassed: 1,
+        challengesTotal: 1,
+        percent: 100,
+        complete: true,
+      },
+      modules: Array.from({ length: moduleCount }, (_, i) => ({
+        ...module,
+        slug: `m${i}-module`,
+        code: `M${i}`,
+        order: i,
+        title: `Module ${i}`,
+        percent: 100,
+        complete: true,
+      })),
+    });
+  };
+
   it('celebrates course completion with a clearly unofficial badge', async () => {
     server.use(
       signedIn(),
-      http.get('/api/v1/me/dashboard', () =>
-        HttpResponse.json(
-          dashboardFixture({
-            continue: null,
-            nextUp: [],
-            course: {
-              lessonsCompleted: 1,
-              lessonsTotal: 1,
-              challengesPassed: 1,
-              challengesTotal: 1,
-              percent: 100,
-              complete: true,
-            },
-          }),
-        ),
-      ),
+      http.get('/api/v1/me/dashboard', () => HttpResponse.json(finished(9))),
     );
     const { container } = renderRoute('/dashboard');
     expect(
@@ -114,6 +126,16 @@ describe('dashboard (step 8.8)', () => {
     expect(screen.getByText(/It is not a pilot certificate/)).toBeInTheDocument();
     expect(screen.queryByRole('region', { name: 'Next up' })).not.toBeInTheDocument();
     expect(await seriousViolations(container)).toEqual([]);
+  });
+
+  it('holds the badge back while modules are still unpublished (v0.0 beta, D-26)', async () => {
+    server.use(
+      signedIn(),
+      http.get('/api/v1/me/dashboard', () => HttpResponse.json(finished(2))),
+    );
+    renderRoute('/dashboard');
+    expect(await screen.findByRole('heading', { name: 'All caught up' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: /Course complete/ })).not.toBeInTheDocument();
   });
 });
 

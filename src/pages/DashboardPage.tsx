@@ -9,6 +9,7 @@ import { useDashboard } from '@/features/progress/api';
 import { CourseBadge } from '@/features/progress/CourseBadge';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { formatDateTime } from '@/lib/format';
+import { PLANNED_MODULE_COUNT } from '@/lib/release';
 import type { DashboardItem, DashboardResponse } from '@shared/schemas/api';
 
 function ItemIcon({ type }: { type: DashboardItem['type'] }) {
@@ -50,6 +51,9 @@ export default function DashboardPage() {
       {() => {
         const d = data!;
         const fresh = isNewLearner(d);
+        // Until every v1 module is published (D-26), finishing what is live is "all caught
+        // up", not the course-complete badge.
+        const courseComplete = d.course.complete && d.modules.length >= PLANNED_MODULE_COUNT;
         return (
           <PageContainer>
             <PageHeader
@@ -61,7 +65,7 @@ export default function DashboardPage() {
               }
             />
 
-            {d.course.complete && (
+            {courseComplete && (
               <section
                 aria-labelledby="complete-heading"
                 className="mb-8 flex flex-col items-center gap-6 rounded-lg border border-tier-gold bg-surface p-6 text-center sm:flex-row sm:text-left"
@@ -93,7 +97,7 @@ export default function DashboardPage() {
               </section>
             )}
 
-            {!d.continue && !d.course.complete && (
+            {!d.continue && !courseComplete && (
               <section
                 aria-labelledby="caught-up-heading"
                 className="mb-8 rounded-lg border border-line bg-surface p-5"

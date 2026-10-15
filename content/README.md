@@ -7,7 +7,8 @@ into MongoDB.
 ```
 content/
   aircraft.yaml        Cessna 172S data: V-speeds, arcs, limits, power settings
-  modules.yaml         The 9 modules and the ordered lessons/challenges in each
+  modules.yaml         The modules and the ordered lessons/challenges in each; `published: false`
+                       hides a whole module (the v0.0 beta publishes Modules 0 and 1, v1.md D-26)
   lessons/<module>/    One Markdown file per lesson
   challenges/          One YAML file per challenge
   checklists.yaml      Normal procedures in our own words (Appendix B)
