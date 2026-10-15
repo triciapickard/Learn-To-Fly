@@ -37,7 +37,7 @@ Hover over or tap each part of the PFD below, or press **Start tour** to step th
 The six things you'll look at most:
 
 1. **Attitude indicator.** The blue and brown background with the yellow airplane symbol. Pitch and bank.
-2. **Airspeed tape** on the left, with the colored bands you learned in Lesson 1.4.
+2. **Airspeed tape** on the left, with colored speed bands (you will learn what they mean in Lesson 1.4).
 3. **Altitude tape** on the right, with the **altimeter setting (BARO)** below it.
 4. **Vertical speed** just right of the altitude tape.
 5. **The HSI** at the bottom: heading, heading bug and course needle.

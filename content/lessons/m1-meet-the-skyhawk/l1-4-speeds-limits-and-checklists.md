@@ -111,7 +111,7 @@ Unlike most V-speeds, Va gets **lower as the airplane gets lighter**. A lighter 
 
 | Weight             | Maneuvering speed |
 | ------------------ | ----------------- |
-| 2,550 lb (maximum) | 105 KIAS          |
+| 2,550 lb (maximum) | {{vspeed.va}}     |
 | 2,200 lb           | 98 KIAS           |
 | 1,900 lb           | 90 KIAS           |
 
