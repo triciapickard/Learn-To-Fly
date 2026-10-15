@@ -13,8 +13,8 @@ checklists:
     aircraftSlug: c172
     items:
       - id: parking-brake
-        item: Parking brake
-        action: SET
+        item: Brakes
+        action: TEST and SET
       - id: walkaround
         item: Walkaround
         action: COMPLETE
@@ -52,6 +52,7 @@ checklists:
       - id: avionics-master
         item: Electrical equipment and avionics master
         action: 'OFF'
+        note: Both avionics switches (BUS 1 and BUS 2).
       - id: fuel-selector
         item: Fuel selector
         action: BOTH

@@ -30,7 +30,7 @@ Because the propeller's blade angle never changes, **engine RPM is a direct meas
 Two knobs control the engine:
 
 - **Throttle (black).** Push in for more power, pull out for less.
-- **Mixture (red).** Sets the ratio of fuel to air. Push in for **rich** (more fuel), pull out to **lean** (less fuel). Pulling it all the way out is **idle cut-off**: no fuel reaches the cylinders and the engine stops.
+- **Mixture (red).** Sets the ratio of fuel to air. Push in for **rich** (more fuel), pull out to **lean** (less fuel). Pulling it all the way out is **idle cut-off** (the sim's tooltip says CUT): no fuel reaches the cylinders and the engine stops.
 
 Air gets thinner as you climb. At altitude a full-rich mixture has too much fuel for the air available, so you lean it in cruise for smoother running and better economy. At the low Bay Area airports you'll use full rich for takeoff and landing and lean in cruise.
 
@@ -44,7 +44,7 @@ Fuel flows like this:
 
 1. Two **wing tanks**, one in each wing. Total capacity {{aircraft.fuelCapacity}}.
 2. The **fuel selector** on the floor between the seats: **LEFT**, **BOTH** or **RIGHT**. A separate red **fuel shutoff valve** next to it cuts the fuel off completely; it stays pushed in (on) for flying.
-3. The engine-driven **fuel pump**, with an electric **auxiliary pump** for starting and as a backup.
+3. The engine-driven **fuel pump**, with an electric **auxiliary pump** for starting and as a backup (the FUEL PUMP switch below the PFD).
 4. The **fuel injection** system, which sprays fuel into each cylinder.
 
 Use **BOTH** for takeoff, landing and most flying. It feeds from both tanks, so you can't accidentally run one dry at a bad moment.

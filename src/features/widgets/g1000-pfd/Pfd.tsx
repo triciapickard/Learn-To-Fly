@@ -209,6 +209,30 @@ function Bezel() {
           </text>
         </g>
       ))}
+      {BEZEL.swaps.map((k) => {
+        const cx = k.side === 'left' ? BEZEL.leftX : BEZEL.rightX;
+        return (
+          <g key={k.id}>
+            <rect
+              x={cx - BEZEL.swapSize.width / 2}
+              y={k.y}
+              {...BEZEL.swapSize}
+              rx={3}
+              className="fill-bezel-key stroke-black"
+              strokeWidth={1}
+            />
+            <text
+              x={cx}
+              y={k.y + BEZEL.swapSize.height / 2}
+              textAnchor="middle"
+              dominantBaseline="central"
+              className="fill-white text-[10px] font-bold"
+            >
+              ↔
+            </text>
+          </g>
+        );
+      })}
       {SOFTKEYS.map((_, i) => (
         <rect
           key={i}

@@ -15,7 +15,7 @@ objectives:
 challenges: []
 resources: [msfs-official-site, msfs-forums]
 published: true
-lastVerifiedAt: 2026-09-28
+lastVerifiedAt: 2026-10-15
 simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 

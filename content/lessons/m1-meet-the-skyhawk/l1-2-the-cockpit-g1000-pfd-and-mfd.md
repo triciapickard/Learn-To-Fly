@@ -14,9 +14,9 @@ objectives:
   - Relate each PFD element to its classic six-pack equivalent.
 challenges: []
 resources: [garmin-g1000-nxi-pilots-guide, ifh-glass, phak-ch8]
-published: false
-lastVerifiedAt: null
-simVersion: null
+published: true
+lastVerifiedAt: 2026-10-15
+simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
 ## Two screens
@@ -65,10 +65,12 @@ Down the left edge is the **Engine Indication System (EIS)** strip. It shows:
 - **RPM** (engine power, since the propeller is fixed pitch)
 - **Fuel flow**, in gallons per hour (labelled FFLOW GPH)
 - **Oil pressure** and **oil temperature**
+- **EGT** (exhaust gas temperature, used when leaning) and **VAC** (vacuum)
 - **Fuel quantity** in each tank (FUEL QTY GAL)
-- **Voltage and amps** for the electrical system
+- **Engine hours** (ENG HRS)
+- **Bus volts and battery amps** for the electrical system
 
-The keys on the right bezel include **D→** (Direct-To), **FPL** (flight plan) and the **NRST** softkey (nearest airports). You'll learn them in Lesson 6.5.
+The keys on the right bezel include **D→** (Direct-To), **FPL** (flight plan), **PROC** and **MENU**, and the **Nearest** softkey along the bottom lists the nearest airports. You'll learn them in Lesson 6.5.
 
 :::quiz{id="l1-2-q2" type="single"}
 What does the EIS strip on the MFD show?
@@ -95,8 +97,8 @@ The bezels around the screens hold the knobs you'll use most:
 | CRS                                    | Sets the course on the HSI when you use a VOR.                |
 | RANGE                                  | Zooms the map in and out.                                     |
 
-:::callout{type="verify"}
-Author note: on the real G1000 NXi the altimeter setting is on the large outer ring of the CRS/BARO dual knob on the PFD bezel (Garmin G1000 NXi Pilot's Guide, PFD section). Check the sim's bezel labels the same knob CRS/BARO and that turning the outer ring changes the BARO box.
+:::callout{type="sim"}
+In the sim, turning a knob uses the mouse wheel and pressing a knob (such as HDG to sync the heading bug) is a right-click. Press **Shift+1** to zoom in on the PFD so it's easy to read.
 :::
 
 ## The classic six-pack on the glass
