@@ -14,9 +14,9 @@ objectives:
   - Explain why pilots use checklists and the difference between read-do and do-verify.
 challenges: [c1-1-cockpit-scavenger-hunt]
 resources: [phak-ch9, afh-ch1, msfs-checklist]
-published: false
-lastVerifiedAt: null
-simVersion: null
+published: true
+lastVerifiedAt: 2026-10-15
+simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
 ## What a V-speed is

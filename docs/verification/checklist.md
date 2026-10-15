@@ -8,9 +8,9 @@
 
 | Group | Items | Published / verified | Open markers |
 | --- | --- | --- | --- |
-| Lessons | 33 | 5 | 19 |
+| Lessons | 33 | 7 | 18 |
 | Challenges | 29 | 2 | 17 |
-| Reference data | 6 | 1 | 48 |
+| Reference data | 6 | 1 | 47 |
 
 Every item still needs the full protocol from v1.md Section 54 even when it has no open
 markers: lessons follow 54.4 (numbers, sim instructions, screenshots, links, sim-vs-reality
@@ -60,15 +60,15 @@ file (Section 54.2).
 
 ### L1.3 — Engine, fuel and electrical systems
 
-[content/lessons/m1-meet-the-skyhawk/l1-3-engine-fuel-and-electrical-systems.md](../../content/lessons/m1-meet-the-skyhawk/l1-3-engine-fuel-and-electrical-systems.md) · P0 · draft
+[content/lessons/m1-meet-the-skyhawk/l1-3-engine-fuel-and-electrical-systems.md](../../content/lessons/m1-meet-the-skyhawk/l1-3-engine-fuel-and-electrical-systems.md) · P0 · published, verified 2026-10-15
 
-- [line 123](../../content/lessons/m1-meet-the-skyhawk/l1-3-engine-fuel-and-electrical-systems.md#L123): confirm that both MSFS 2024 Skyhawk variants model a fuel-injected engine. If the classic variant has a carburetor, add a Classic panel callout about carb heat here and in the landing lessons.
+- Verified.
 
 ### L1.4 — Speeds, limits and checklists
 
-[content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md) · P0 · draft
+[content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md](../../content/lessons/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists.md) · P0 · published, verified 2026-10-15
 
-- No open markers. Run the Section 54 protocol for this item.
+- Verified.
 
 ### C1.1 — Cockpit scavenger hunt
 
@@ -422,7 +422,6 @@ file (Section 54.2).
 [content/aircraft.yaml](../../content/aircraft.yaml) · P0 · unverified
 
 - [line 16](../../content/aircraft.yaml#L16): simName: Cessna 172 Skyhawk (G1000 NXi) — verify the exact name in the sim's aircraft list
-- [line 22](../../content/aircraft.yaml#L22): simName: Cessna 172 Skyhawk (classic) — verify the exact name and whether it has a GPS
 - [line 269](../../content/aircraft.yaml#L269): verification.specs not verified — Checked against POH Section 1 (2026-10-09). Compare with the sim's aircraft information page.
 - [line 272](../../content/aircraft.yaml#L272): verification.vspeeds not verified — Checked against POH Sections 2, 3 and 4 (2026-10-09). Compare every speed with the in-sim checklist; teach the POH number if they differ.
 - [line 275](../../content/aircraft.yaml#L275): verification.arcs not verified — Checked against POH Figure 2-2 (2026-10-09). Check the airspeed tape color bands in the sim match 40–85 white, 48–129 green, 129–163 yellow, 163 red.
@@ -487,11 +486,11 @@ file (Section 54.2).
 
 - Verified.
 
-### `resources.yaml` — External resources (96)
+### `resources.yaml` — External resources (94)
 
 [content/resources.yaml](../../content/resources.yaml) · P0 · unverified
 
-- [line 4](../../content/resources.yaml#L4): 96 resources have no verifiedAt — run npm run content:links, then check each still says what we claim
-- [line 966](../../content/resources.yaml#L966): Video "FAA on YouTube" — watch in full before setting verifiedAt
-- [line 976](../../content/resources.yaml#L976): Video "Boldmethod on YouTube" — watch in full before setting verifiedAt
-- [line 986](../../content/resources.yaml#L986): Video "Flight Insight on YouTube" — watch in full before setting verifiedAt
+- [line 4](../../content/resources.yaml#L4): 94 resources have no verifiedAt — run npm run content:links, then check each still says what we claim
+- [line 942](../../content/resources.yaml#L942): Video "FAA on YouTube" — watch in full before setting verifiedAt
+- [line 952](../../content/resources.yaml#L952): Video "Boldmethod on YouTube" — watch in full before setting verifiedAt
+- [line 962](../../content/resources.yaml#L962): Video "Flight Insight on YouTube" — watch in full before setting verifiedAt

@@ -13,7 +13,7 @@ objectives:
   - Work out which radial you're on using the course selector and CDI.
   - Intercept and track a radial to or from a station.
 challenges: [c6-4-vor-tracking]
-resources: [phak-ch16, ifh-nav, garmin-g1000-nxi-pilots-guide]
+resources: [phak-ch16, ifh-nav]
 published: false
 lastVerifiedAt: null
 simVersion: null

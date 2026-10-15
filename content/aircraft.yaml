@@ -19,7 +19,7 @@ variants:
     autopilot: GFC 700
     notes: The variant v1 lessons target (D-02).
   - id: c172-classic
-    simName: Cessna 172 Skyhawk (classic) # verify the exact name and whether it has a GPS
+    simName: Cessna 172 Skyhawk (classic) # not offered in MSFS 2024 (checked 2026-10-15); real-world comparison only
     avionics: Analog six-pack with NAV/COM radios
     gps: false
     autopilot: null
@@ -220,12 +220,12 @@ powerSettings:
     targetSpeed: 85–90
     pitch: Level
   - phase: Abeam the touchdown point
-    rpm: About 1,500
+    rpm: About 1,700
     flaps: 10° (below 110)
     targetSpeed: '80'
     pitch: Slightly nose down
   - phase: Base
-    rpm: About 1,500
+    rpm: About 1,700
     flaps: 20°
     targetSpeed: '70'
   - phase: Final

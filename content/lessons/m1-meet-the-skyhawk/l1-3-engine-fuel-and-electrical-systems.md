@@ -14,16 +14,16 @@ objectives:
   - Describe the roles of the master switch, the avionics master and the magnetos.
 challenges: []
 resources: [phak-ch7, cessna-skyhawk]
-published: false
-lastVerifiedAt: null
-simVersion: null
+published: true
+lastVerifiedAt: 2026-10-15
+simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
 ## The engine
 
 The Skyhawk has a {{aircraft.engine}} engine making {{aircraft.horsepower}}. It drives a {{aircraft.propeller}} propeller.
 
-Because the propeller's blade angle never changes, **engine RPM is a direct measure of power**. More throttle, more RPM, more power. That's why the lessons talk about power settings in RPM: about 2,300 RPM for cruise, about 1,500 RPM to descend in the pattern.
+Because the propeller's blade angle never changes, **engine RPM is a direct measure of power**. More throttle, more RPM, more power. That's why the lessons talk about power settings in RPM: about 2,300 RPM for cruise, about 1,700 RPM to descend in the pattern.
 
 ## Throttle and mixture
 
@@ -119,10 +119,6 @@ Two independent magnetos mean the engine keeps running if one fails, and two spa
 ## Fuel injected, not carbureted
 
 The 172S is **fuel injected**. Older Skyhawks have a carburetor, which can ice up in humid air and needs **carburetor heat**. The injected engine can't get carburetor ice, so there's no carb heat knob in the 172S.
-
-:::callout{type="verify"}
-Author note: confirm that both MSFS 2024 Skyhawk variants model a fuel-injected engine. If the classic variant has a carburetor, add a Classic panel callout about carb heat here and in the landing lessons.
-:::
 
 :::callout{type="sim"}
 In the sim, engine failures only happen if you enable failures or run out of fuel. Real engines are very reliable, but pilots still practice for failures, and so will you in Lesson 5.4.

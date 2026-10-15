@@ -13,7 +13,7 @@ objectives:
   - Identify the MFD's map, engine indication system (EIS) strip and softkeys.
   - Relate each PFD element to its classic six-pack equivalent.
 challenges: []
-resources: [garmin-g1000-nxi-pilots-guide, ifh-glass, phak-ch8]
+resources: [ifh-glass, phak-ch8]
 published: true
 lastVerifiedAt: 2026-10-15
 simVersion: 'MSFS 2024 (1.8.16.0)'
@@ -58,7 +58,7 @@ The altimeter setting is in the **BARO box below the altitude tape**. You set it
 
 ## A tour of the MFD
 
-The MFD's main page is a **moving map**: your airplane, airports, airspace and your flight plan. Turn the **range knob** to zoom in and out.
+In the sim the MFD shows OFF after a cold-and-dark start until you press the rightmost softkey (the up arrow) below it. Its main page is a **moving map**: your airplane, airports, airspace and your flight plan. Turn the **range knob** to zoom in and out.
 
 Down the left edge is the **Engine Indication System (EIS)** strip. It shows:
 
