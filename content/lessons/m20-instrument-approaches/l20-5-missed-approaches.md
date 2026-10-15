@@ -13,7 +13,7 @@ objectives:
   - Fly the missed approach flow from memory and the published missed approach to the holding fix.
   - Sequence the G1000 and autopilot through a missed approach and choose between holding, another attempt and a diversion.
 challenges: []
-resources: [iph-approaches, aim-5, garmin-g1000-nxi-pilots-guide, ecfr-91-167, faa-dtpp]
+resources: [iph-approaches, aim-5, ecfr-91-167, faa-dtpp]
 published: false
 lastVerifiedAt: null
 simVersion: null

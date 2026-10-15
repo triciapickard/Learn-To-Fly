@@ -13,7 +13,7 @@ objectives:
   - Select the CDI source and explain how GPS CDI scaling changes from enroute to approach.
   - Choose the autopilot mode for a climb, cruise, descent and approach, and read the mode annunciator.
 challenges: []
-resources: [garmin-g1000-nxi-pilots-guide, ifh-glass]
+resources: [ifh-glass]
 published: false
 lastVerifiedAt: null
 simVersion: null

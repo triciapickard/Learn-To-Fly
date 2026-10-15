@@ -63,8 +63,8 @@ These are starting points; adjust the power to hold the speed.
 | Point in the pattern      | Power        | Flaps | Speed (KIAS) |
 | ------------------------- | ------------ | ----- | ------------ |
 | Downwind                  | ~2,000–2,100 | 0°    | 85–90        |
-| Abeam the touchdown point | ~1,500       | 10°   | 80           |
-| Base                      | ~1,500       | 20°   | 70           |
+| Abeam the touchdown point | ~1,700       | 10°   | 80           |
+| Base                      | ~1,700       | 20°   | 70           |
 | Final                     | as needed    | 30°   | 65           |
 
 Flaps have speed limits: 10° only below {{vspeed.vfe10}}, and more than 10° only below {{vspeed.vfe}}.

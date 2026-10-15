@@ -13,7 +13,7 @@ objectives:
   - Fly the alternator-failure flow in order and shed non-essential electrical load.
   - Decide where to land before the battery runs out, using a battery-time estimate.
 challenges: []
-resources: [phak-ch7, afh-ch18, garmin-g1000-nxi-crg, msfs-checklist]
+resources: [phak-ch7, afh-ch18, msfs-checklist]
 published: false
 lastVerifiedAt: null
 simVersion: null

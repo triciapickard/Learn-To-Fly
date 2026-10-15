@@ -13,7 +13,7 @@ objectives:
   - Confirm the approach mode annunciation before the FAF and choose the matching line of minima.
   - Fly an LPV or LNAV/VNAV glidepath to DA, and an LNAV approach to MDA using a continuous descent.
 challenges: []
-resources: [aim-1-1, aim-5, iph-approaches, garmin-g1000-nxi-pilots-guide, faa-dtpp]
+resources: [aim-1-1, aim-5, iph-approaches, faa-dtpp]
 published: false
 lastVerifiedAt: null
 simVersion: null

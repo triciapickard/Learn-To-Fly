@@ -13,7 +13,7 @@ objectives:
   - Turn to north and to south by compass, applying the correct lead or lag.
   - Describe the compass acceleration (ANDS) and turning (UNOS) errors.
 challenges: []
-resources: [ifh-attitude-flying, ifh-instruments, phak-ch8, garmin-g1000-nxi-pilots-guide, aim-5]
+resources: [ifh-attitude-flying, ifh-instruments, phak-ch8, aim-5]
 published: false
 lastVerifiedAt: null
 simVersion: null

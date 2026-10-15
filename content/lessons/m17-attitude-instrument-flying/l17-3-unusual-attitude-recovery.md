@@ -13,7 +13,7 @@ objectives:
   - State the recovery steps for each, in order.
   - Recover from an unusual attitude without stalling or overstressing the airplane.
 challenges: []
-resources: [ifh-attitude-flying, afh-ch5, garmin-g1000-nxi-pilots-guide]
+resources: [ifh-attitude-flying, afh-ch5]
 published: false
 lastVerifiedAt: null
 simVersion: null

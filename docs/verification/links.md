@@ -6,7 +6,6 @@
 
 The site refused an automated request (bot protection). Open each one in a browser.
 
-- https://support.garmin.com/ — HTTP 403 — used in [resources.yaml:604](../../content/resources.yaml#L604), [resources.yaml:617](../../content/resources.yaml#L617)
 - https://www.ecfr.gov/current/title-14 — sent to a bot check at unblock.federalregister.gov — used in [resources.yaml:530](../../content/resources.yaml#L530)
 - https://www.ecfr.gov/current/title-14/part-91/section-91.151 — sent to a bot check at unblock.federalregister.gov — used in [resources.yaml:540](../../content/resources.yaml#L540)
 - https://www.ecfr.gov/current/title-14/part-91/section-91.155 — sent to a bot check at unblock.federalregister.gov — used in [resources.yaml:551](../../content/resources.yaml#L551)

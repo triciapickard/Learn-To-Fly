@@ -14,9 +14,9 @@ objectives:
   - Describe the three axes of rotation and which surface controls each one.
 challenges: []
 resources: [phak-ch3, phak-ch6, afh-ch3]
-published: false
-lastVerifiedAt: null
-simVersion: null
+published: true
+lastVerifiedAt: 2026-10-15
+simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
 ## The Skyhawk at a glance
@@ -114,11 +114,15 @@ On the ground the yoke doesn't steer. Instead:
 - **Rudder pedals** steer the nose wheel. Push the left pedal to turn left.
 - **Toe brakes** on the top of each pedal brake the wheel on that side. Pressing one brake more than the other (differential braking) tightens a turn.
 
-Taxi slowly, and use brakes gently. You'll learn taxiing properly in Module 3.
+Taxi slowly, and use brakes gently.
+
+:::callout{type="sim"}
+On a gamepad, rudder is on the triggers (LT and RT) and both brakes work together, so you can't brake one wheel at a time. Differential braking needs rudder pedals with toe brakes, or separate left and right brake bindings.
+::: You'll learn taxiing properly in Module 3.
 
 ## Seeing it in the sim
 
-Start at a parking spot with the engine off. Switch to an outside view, then move the yoke and pedals and watch the ailerons, elevator and rudder move. Lower the flaps one step at a time (the battery needs to be on) and watch them extend.
+Start at a parking spot with the engine off. Switch to an outside view, then move the yoke and pedals and watch the ailerons, elevator and rudder move. Lower the flaps one step at a time to 10°, 20° and 30° (the battery needs to be on) and watch them extend. The flap switch doesn't stop at each step in the sim, so watch the flap indicator; on a gamepad the D-pad down and up buttons move the flaps too.
 
 :::callout{type="sim"}
 In a real Skyhawk the controls push back: the faster you fly, the heavier they feel, and you can feel the airplane through the yoke. Most sim hardware has no control forces at all, which is why it's so easy to over-control. Make small, smooth inputs and watch what the airplane does.

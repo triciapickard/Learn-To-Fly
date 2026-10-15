@@ -29,10 +29,10 @@ Before every real flight, the pilot walks around the airplane. The **preflight i
 - **Tires and brakes.** Inflated, no damage.
 - **Covers and tie-downs.** Remove the pitot cover, the chocks and the tie-down ropes.
 
-In the sim, most of this can't go wrong. MSFS 2024 may offer a walkaround mode where you can look at the airplane from outside; use it to build the habit.
+In MSFS 2024 a cold-and-dark start puts you outside the airplane. Before you can climb in, remove the three remove-before-flight covers (pitot tube, static port and engine) and the wheel chocks. It's a short walkaround: use it to build the habit.
 
 :::callout{type="verify"}
-Sim check: describe MSFS 2024's walkaround features for the Skyhawk (which items it models, such as the pitot cover, chocks and fuel sampling) after checking them in the sim.
+Sim check: covers and chocks checked in the sim on 2026-10-14. Still to check: whether the walkaround models fuel sampling, the oil dipstick or tie-downs.
 :::
 
 ## Setting up the cockpit

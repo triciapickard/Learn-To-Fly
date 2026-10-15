@@ -63,6 +63,7 @@ export interface Region {
 export const SOFTKEYS = [
   '',
   'Map/HSI',
+  'TFC Map',
   'PFD Opt',
   'OBS',
   'CDI',
@@ -70,8 +71,7 @@ export const SOFTKEYS = [
   'XPDR',
   'Ident',
   'Tmr/Ref',
-  'Nrst',
-  '',
+  'Nearest',
   'Alerts',
 ];
 const SOFTKEY_WIDTH = SCREEN.width / SOFTKEYS.length;
@@ -111,6 +111,12 @@ export const BEZEL = {
     { id: 'ent', label: 'ENT', x: 689, y: 356 },
   ],
   keySize: { width: 28, height: 22 },
+  /** Frequency swap (↔) keys between the VOL and NAV/COM knobs. */
+  swaps: [
+    { id: 'nav-swap', side: 'left' as const, y: 78 },
+    { id: 'com-swap', side: 'right' as const, y: 78 },
+  ],
+  swapSize: { width: 26, height: 15 },
   leftX: 35,
   rightX: 685,
 };
@@ -328,12 +334,12 @@ export const NAV_REGIONS: Region[] = [
   },
   {
     id: 'nrst',
-    name: 'NRST softkey',
+    name: 'Nearest softkey',
     shows:
       'Lists the nearest airports with bearing and distance. Pick one and press D→ to go straight there.',
     classic: 'None.',
-    tip: 'In an emergency, NRST then D→ then ENT, ENT gets you a course to the closest runway.',
-    rect: softkeyRect(SOFTKEYS.indexOf('Nrst')),
+    tip: 'In an emergency, Nearest then D→ then ENT, ENT gets you a course to the closest runway.',
+    rect: softkeyRect(SOFTKEYS.indexOf('Nearest')),
   },
 ];
 

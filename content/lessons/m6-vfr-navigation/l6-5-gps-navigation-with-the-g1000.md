@@ -13,7 +13,7 @@ objectives:
   - Build, activate and fly a flight plan with 2–4 waypoints.
   - Use the Nearest page to find the nearest airport.
 challenges: [c6-5-g1000-flight-plan]
-resources: [garmin-g1000-nxi-pilots-guide, ifh-glass]
+resources: [ifh-glass]
 published: false
 lastVerifiedAt: null
 simVersion: null

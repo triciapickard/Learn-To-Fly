@@ -13,7 +13,7 @@ objectives:
   - Intercept and track the localizer and glideslope with corrections sized to the needle sensitivity.
   - Fly the ILS to decision altitude hand-flown and coupled, and state what must be in sight to continue below DA.
 challenges: []
-resources: [iph-approaches, ifh-nav, ecfr-91-175, aim-1-1, garmin-g1000-nxi-pilots-guide, faa-dtpp]
+resources: [iph-approaches, ifh-nav, ecfr-91-175, aim-1-1, faa-dtpp]
 published: false
 lastVerifiedAt: null
 simVersion: null

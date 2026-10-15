@@ -19,7 +19,7 @@ setup:
   airportIcao: KLVK
   startState: COLD_DARK
   startDetails:
-    parking: Main ramp # ⚠ verify — Sim check: the sim's name for the northwest-apron (FBO) parking; write it here
+    parking: Parking 6 - Ramp GA Small
   weatherPreset: WX_CALM
   timeLocal: '10:00'
   datePreset: late-spring

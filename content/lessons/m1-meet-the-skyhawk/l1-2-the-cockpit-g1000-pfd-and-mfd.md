@@ -13,10 +13,10 @@ objectives:
   - Identify the MFD's map, engine indication system (EIS) strip and softkeys.
   - Relate each PFD element to its classic six-pack equivalent.
 challenges: []
-resources: [garmin-g1000-nxi-pilots-guide, ifh-glass, phak-ch8]
-published: false
-lastVerifiedAt: null
-simVersion: null
+resources: [ifh-glass, phak-ch8]
+published: true
+lastVerifiedAt: 2026-10-15
+simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
 ## Two screens
@@ -37,7 +37,7 @@ Hover over or tap each part of the PFD below, or press **Start tour** to step th
 The six things you'll look at most:
 
 1. **Attitude indicator.** The blue and brown background with the yellow airplane symbol. Pitch and bank.
-2. **Airspeed tape** on the left, with the colored bands you learned in Lesson 1.4.
+2. **Airspeed tape** on the left, with colored speed bands (you will learn what they mean in Lesson 1.4).
 3. **Altitude tape** on the right, with the **altimeter setting (BARO)** below it.
 4. **Vertical speed** just right of the altitude tape.
 5. **The HSI** at the bottom: heading, heading bug and course needle.
@@ -58,17 +58,19 @@ The altimeter setting is in the **BARO box below the altitude tape**. You set it
 
 ## A tour of the MFD
 
-The MFD's main page is a **moving map**: your airplane, airports, airspace and your flight plan. Turn the **range knob** to zoom in and out.
+In the sim the MFD shows OFF after a cold-and-dark start until you press the rightmost softkey (the up arrow) below it. Its main page is a **moving map**: your airplane, airports, airspace and your flight plan. Turn the **range knob** to zoom in and out.
 
 Down the left edge is the **Engine Indication System (EIS)** strip. It shows:
 
 - **RPM** (engine power, since the propeller is fixed pitch)
-- **Fuel flow**, in gallons per hour
+- **Fuel flow**, in gallons per hour (labelled FFLOW GPH)
 - **Oil pressure** and **oil temperature**
-- **Fuel quantity** in each tank
-- **Voltage and amps** for the electrical system
+- **EGT** (exhaust gas temperature, used when leaning) and **VAC** (vacuum)
+- **Fuel quantity** in each tank (FUEL QTY GAL)
+- **Engine hours** (ENG HRS)
+- **Bus volts and battery amps** for the electrical system
 
-The keys on the right bezel include **D→** (Direct-To), **FPL** (flight plan) and the **NRST** softkey (nearest airports). You'll learn them in Lesson 6.5.
+The keys on the right bezel include **D→** (Direct-To), **FPL** (flight plan), **PROC** and **MENU**, and the **Nearest** softkey along the bottom lists the nearest airports. You'll learn them in Lesson 6.5.
 
 :::quiz{id="l1-2-q2" type="single"}
 What does the EIS strip on the MFD show?
@@ -95,8 +97,8 @@ The bezels around the screens hold the knobs you'll use most:
 | CRS                                    | Sets the course on the HSI when you use a VOR.                |
 | RANGE                                  | Zooms the map in and out.                                     |
 
-:::callout{type="verify"}
-Sim check: desk-verified 2026-10-13 against the Garmin G1000 NXi Pilot's Guide (PFD bezel: the large ring of the CRS/BARO knob sets the altimeter). Still open: that the MSFS 2024 bezel labels the knob CRS/BARO and that turning the outer ring moves the BARO box.
+:::callout{type="sim"}
+In the sim, turning a knob uses the mouse wheel and pressing a knob (such as HDG to sync the heading bug) is a right-click. Press **Shift+1** to zoom in on the PFD so it's easy to read.
 :::
 
 ## The classic six-pack on the glass
@@ -131,7 +133,7 @@ The slip/skid bar under the roll pointer does the job of the **ball** in the tur
 
 ## Standby instruments and the compass
 
-If the screens fail, you still have **standby instruments**: a small attitude indicator, airspeed indicator and altimeter. Above the glare shield is the **magnetic compass**. It needs no electricity at all, which makes it the last resort for heading.
+If the screens fail, you still have **standby instruments**: a small attitude indicator, airspeed indicator and altimeter. At the top centre of the windscreen is the **magnetic compass**, with a deviation card below it showing its small errors on each heading. It needs no electricity at all, which makes it the last resort for heading.
 
 :::callout{type="tip"}
 Scan, don't stare. Look outside, glance at the attitude, then airspeed, altitude and heading, and look outside again. Staring at any one number makes you miss the others.

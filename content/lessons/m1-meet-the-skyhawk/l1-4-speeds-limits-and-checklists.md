@@ -14,9 +14,9 @@ objectives:
   - Explain why pilots use checklists and the difference between read-do and do-verify.
 challenges: [c1-1-cockpit-scavenger-hunt]
 resources: [phak-ch9, afh-ch1, msfs-checklist]
-published: false
-lastVerifiedAt: null
-simVersion: null
+published: true
+lastVerifiedAt: 2026-10-15
+simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
 ## What a V-speed is
@@ -26,10 +26,6 @@ Pilots fly by numbers. A **V-speed** is a named airspeed with a job: the speed t
 The "V" comes from "velocity", and the letters after it say what the speed is for. You will see them written as Vy or V_Y. They are always **indicated airspeed in knots (KIAS)**, the number on your airspeed indicator, so you never need to calculate them in flight.
 
 You do not need to memorize them all today. Learn the four you will use on every flight first: rotate at {{vspeed.vr}}, climb at {{vspeed.vy}}, glide at {{vspeed.vg}} and approach at about {{vspeed.approach}}.
-
-:::callout{type="verify"}
-Sim check: every speed here comes from `aircraft.yaml`, checked against the 172S POH on 2026-10-09. Still open: compare them with the sim's EFB checklist (rotate 55, climb 70–80 then 74, approach 65–75 flaps up and 60–70 full flaps, go-around 60); if it differs, keep the POH number and add a "Sim vs reality" callout (Section 54.1).
-:::
 
 ## The Skyhawk's key speeds
 
@@ -111,7 +107,7 @@ Unlike most V-speeds, Va gets **lower as the airplane gets lighter**. A lighter 
 
 | Weight             | Maneuvering speed |
 | ------------------ | ----------------- |
-| 2,550 lb (maximum) | 105 KIAS          |
+| 2,550 lb (maximum) | {{vspeed.va}}     |
 | 2,200 lb           | 98 KIAS           |
 | 1,900 lb           | 90 KIAS           |
 
@@ -143,16 +139,12 @@ In do-verify, you complete the flow from memory first, then read the checklist t
 
 ## The in-sim checklist and ours
 
-MSFS 2024 includes a checklist for the Skyhawk in the **checklist** section of the EFB (electronic flight bag). It follows the real procedures closely, and some items can highlight the control you need.
+MSFS 2024 includes checklists for the Skyhawk in the EFB (electronic flight bag): open the **Aircraft** tab, then **Checklists**. They follow the real procedures closely but don't list speeds, so use the speeds in this lesson.
 
 Learn to Fly's checklists are a **simplified summary in our own words**, written to match the sim. They are great for learning the flow of each phase, but the in-sim checklist is your reference while flying.
 
 :::callout{type="sim"}
-The in-sim checklist can highlight the control an item refers to (the eye icon) and move the camera to it, but it won't check items off or move the controls for you. Good: the point is that you do each item yourself.
-:::
-
-:::callout{type="verify"}
-Sim check: desk-verified 2026-10-13 against the MSFS 2024 SDK docs (Checklist Best Practices: the default EFB checklist app supports visual helpers only, not automatic evaluation or automatic actions). Still open: confirm in 1.8.16.0 that the eye icon highlights the control, and that there is no checklist-assist option under Assistance.
+The in-sim checklist doesn't tick items for you: you check each one yourself. If you can't find a control, press the **eye** icon next to the item and the sim highlights it in the cockpit.
 :::
 
 ## Try a checklist

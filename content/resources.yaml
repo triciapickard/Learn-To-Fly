@@ -598,30 +598,6 @@ resources:
     free: true
     description: Official specifications and performance summary for the current 172S.
     verifiedAt: 2026-10-13
-  - slug: garmin-g1000-nxi-pilots-guide
-    title: Garmin G1000 NXi Pilot's Guide
-    publisher: Garmin
-    url: https://support.garmin.com/
-    type: handbook
-    topics:
-      - g1000
-      - avionics
-    free: true
-    description:
-      The real Garmin manual for the avionics — search Garmin support for "G1000 NXi Pilot's
-      Guide Cessna". The sim follows it closely but not perfectly.
-    verifiedAt: 2026-10-13
-  - slug: garmin-g1000-nxi-crg
-    title: Garmin G1000 NXi Cockpit Reference Guide
-    publisher: Garmin
-    url: https://support.garmin.com/
-    type: handbook
-    topics:
-      - g1000
-      - avionics
-    free: true
-    description: A shorter quick-reference version of the pilot's guide (search Garmin support).
-    verifiedAt: 2026-10-13
   - slug: msfs-checklist
     title: MSFS 2024 in-sim checklist for the Cessna 172
     publisher: Microsoft / Asobo Studio

@@ -3,13 +3,13 @@
 startStates:
   COLD_DARK:
     label: Cold and dark
-    description: At a parking spot with all systems off. Choose a cold-and-dark start in the flight setup (verify the menu option name).
+    description: At a parking spot with all systems off. On the world map, pick a parking spot (one of the small dots), not the airport's large circle, which starts you on the runway with the engine running. You start outside the airplane, so remove the pitot, static port and engine covers and the wheel chocks, then climb in.
   RAMP_RUNNING:
     label: Parked, engine running
     description: At a parking spot with the engine running and the avionics on.
   RUNWAY:
     label: On the runway
-    description: Lined up on the named runway, engine running, ready for takeoff.
+    description: Lined up on the named runway, engine running, ready for takeoff. On the world map, pick the airport's large circle, or the named runway.
   AIR_START:
     label: In the air
     description: In flight at the stated position, altitude, heading and speed. If your sim cannot start in the air, start on the runway at KLVK and fly to the start point; the timer starts there.
@@ -60,11 +60,11 @@ weather:
 loads:
   LOAD_SOLO:
     label: Solo
-    description: Pilot 170 lb, no passengers, 75% fuel (about 40 gal).
+    description: Pilot 170 lb, no passengers, 75% fuel (about 40 gal). Set it in the EFB (TAB) under Flight planner, on the Payload & fuel page. Fuel is in pounds (6 lb a gallon), so set Extra fuel to about 230 lb for a block fuel near 240 lb, then press LOAD. The default is only 10 lb.
     priority: P0
   LOAD_FULL:
     label: Full
-    description: Pilot 170 lb, passenger 170 lb and 20 lb baggage, 100% fuel.
+    description: Pilot 170 lb, passenger 170 lb and 20 lb baggage, 100% fuel. Set it in the EFB (TAB) under Flight planner, on the Payload & fuel page. Set Passengers to 1, Cargo to 20 lb and Extra fuel so block fuel matches the fuel tank capacity, then press LOAD.
     priority: P1
 
 dates:

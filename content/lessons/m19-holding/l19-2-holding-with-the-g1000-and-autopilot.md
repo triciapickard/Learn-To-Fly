@@ -13,7 +13,7 @@ objectives:
   - Create a hold at a fix in the G1000 NXi flight plan and let the GPS sequence the entry.
   - Monitor the autopilot through the hold and exit it correctly when cleared.
 challenges: []
-resources: [garmin-g1000-nxi-pilots-guide, iph-holding, aim-5, faa-chart-users-guide]
+resources: [iph-holding, aim-5, faa-chart-users-guide]
 published: false
 lastVerifiedAt: null
 simVersion: null

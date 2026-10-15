@@ -11,9 +11,9 @@ priority: P0
 type: procedure
 difficulty: 1
 estimatedMinutes: 15
-published: false
-lastVerifiedAt: null # set when verified in the sim (Section 54)
-simVersion: null
+published: true
+lastVerifiedAt: 2026-10-15
+simVersion: 'MSFS 2024 (1.8.16.0)'
 
 goal: >
   Find and operate every essential control and instrument in the Skyhawk without
@@ -24,7 +24,7 @@ setup:
   airportIcao: KLVK
   startState: COLD_DARK
   startDetails:
-    parking: Main ramp # ⚠ verify — Sim check: the sim's name for the northwest-apron (FBO) parking; write it here
+    parking: Parking 6 - Ramp GA Small
   weatherPreset: WX_CALM
   timeLocal: '10:00'
   datePreset: late-spring
@@ -36,22 +36,23 @@ setup:
   flightPlan: null
 
 procedure:
-  - Master switch (BAT and ALT). Turn it on.
-  - Avionics master. Turn it on and watch the screens start.
+  - You start outside the airplane. Remove the three remove-before-flight covers (pitot tube, static port and engine) and the wheel chocks, then climb in.
+  - Master switch (BAT and ALT). Turn it on and watch the PFD start.
+  - Avionics switches (BUS 1 and BUS 2). Turn both on. The right-hand screen (MFD) shows OFF until you press the rightmost softkey (the up arrow) below it.
   - Fuel selector. Set it to BOTH.
   - Mixture. Find it, but don't move it to rich yet.
   - Throttle. Find it and move it a little.
-  - Ignition switch. Find the OFF, R, L, BOTH and START positions (don't start the engine).
+  - Ignition switch (the tooltip calls it Magnetos). Find the OFF, R, L, BOTH and START positions (don't start the engine).
   - Flap switch. Lower and raise the flaps and watch the flap indicator.
   - Elevator trim. Move it and find the trim indicator.
   - Parking brake. Find it and check it is set.
   - PFD airspeed tape. Find the colored V-speed bands.
   - Altimeter setting (BARO). Set 29.92.
   - Heading bug. Move it with the HDG knob.
-  - COM1. Tune 123.45 in standby and swap it to active.
-  - Transponder. Find the code 1200 and the ALT mode.
-  - EIS. Find the fuel quantity and fuel flow.
-  - Standby instruments and the magnetic compass. Find them.
+  - COM1. Tune 123.450 in standby and swap it to active.
+  - Transponder. On the PFD, press the XPDR softkey. Find the code 1200 (CODE, then four digits 0–7) and the STBY, ON and ALT modes.
+  - EIS (the engine strip down the left edge of the MFD). Find FUEL QTY GAL and FFLOW GPH.
+  - Standby instruments and the magnetic compass (at the top centre of the windscreen). Find them.
   - Return every switch you moved to its cold-and-dark position.
 
 criteria:
@@ -85,10 +86,11 @@ randomEvents: []
 
 commonMistakes:
   - Confusing the avionics master with the master switch.
-  - Moving the mixture out of idle cut-off. On some setups this starts fuel flow. It's harmless on the ground, but put it back.
+  - Moving the mixture out of idle cut-off and leaving it there. Nothing happens with the engine off, but put it back so the next start begins from the checklist.
 
 tips:
   - Zoom the camera toward each area of the panel.
+  - On a gamepad, flaps and trim have buttons too (by default the D-pad for flaps, RB with the right stick for trim), but find the cockpit controls first.
   - Use the cockpit tooltips; they name every control.
   - Start the timer on the Fly tab when you begin.
 

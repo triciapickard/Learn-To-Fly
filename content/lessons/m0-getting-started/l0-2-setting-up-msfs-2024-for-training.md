@@ -15,7 +15,7 @@ objectives:
 challenges: []
 resources: [msfs-official-site, msfs-forums]
 published: true
-lastVerifiedAt: 2026-09-28
+lastVerifiedAt: 2026-10-15
 simVersion: 'MSFS 2024 (1.8.16.0)'
 ---
 
@@ -137,10 +137,10 @@ Save a custom camera for your favorite cockpit view so you can snap back to it w
 Every challenge lists its setup. Here is a worked example you can use for practice:
 
 1. Choose **Free Flight** and select the **Cessna 172 Skyhawk** with the **G1000 NXi** panel.
-2. Choose the departure airport: type **KLVK** (Livermore Municipal) and choose a parking spot on the ramp.
-3. Set the weather to **clear skies** with calm wind, or choose custom weather and set it layer by layer.
-4. Set the time to **10:00** local on a spring day.
-5. Check fuel and payload: one pilot and about three quarters fuel.
+2. Under **Departure**, type **KLVK** (Livermore Municipal). On the world map, pick a parking spot on the ramp (one of the small dots). The airport's large circle starts you on the runway with the engine running.
+3. Open **Flight conditions**. Under **Weather and time**, choose **Preset** and then **Clear skies**, or choose **Custom** and set it layer by layer. Set **Air traffic** to **Off**.
+4. Still in **Flight conditions**, turn off **Real time** and set a spring date and **10:00** local. The sim shows the time in UTC, so for Livermore in spring set **17:00 UTC** (local time plus 7 hours).
+5. Press **TAB** to open the EFB, choose **Flight planner** at the bottom, then **Payload & fuel** on the left. Fuel is set by weight in pounds (about 6 lb a gallon), and the default is only 10 lb. For three quarters fuel, set **Extra** to about **230 lb** so **Block fuel** reads about 240 lb, then press **LOAD**.
 6. Apply your assistance profile, then start the flight.
 
 :::quiz{id="l0-2-q3" type="single"}

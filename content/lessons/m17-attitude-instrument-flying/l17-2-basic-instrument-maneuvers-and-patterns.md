@@ -13,7 +13,7 @@ objectives:
   - Calculate the bank angle for a standard-rate turn and the time for a timed turn to any heading.
   - Fly Pattern A from the leg table using only the clock, the attitude indicator and power.
 challenges: []
-resources: [ifh-attitude-flying, faa-acs-instrument, garmin-g1000-nxi-pilots-guide]
+resources: [ifh-attitude-flying, faa-acs-instrument]
 published: false
 lastVerifiedAt: null
 simVersion: null

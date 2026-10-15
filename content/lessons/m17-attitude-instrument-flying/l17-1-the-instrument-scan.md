@@ -13,7 +13,7 @@ objectives:
   - Describe a radial scan and recognize fixation, omission and emphasis errors.
   - Set a known attitude and power for each phase of flight in IMC.
 challenges: []
-resources: [ifh-attitude-flying, ifh-glass, garmin-g1000-nxi-pilots-guide]
+resources: [ifh-attitude-flying, ifh-glass]
 published: false
 lastVerifiedAt: null
 simVersion: null

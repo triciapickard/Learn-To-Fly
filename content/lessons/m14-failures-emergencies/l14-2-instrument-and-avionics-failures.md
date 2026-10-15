@@ -13,8 +13,7 @@ objectives:
   - Use the alternate static source and describe how the readings change.
   - Fly pitch and power with a failed PFD in reversionary mode, and brief what still works.
 challenges: []
-resources:
-  [phak-ch8, afh-ch18, ifh-instruments, garmin-g1000-nxi-pilots-guide, garmin-g1000-nxi-crg]
+resources: [phak-ch8, afh-ch18, ifh-instruments]
 published: false
 lastVerifiedAt: null
 simVersion: null
@@ -181,7 +180,7 @@ Whichever failure you have, the escape is the same: the Skyhawk flies a known sp
 | --------------- | ----------- | ------------- | --------------------------- | ------------------- |
 | Climb           | Full        | Flaps up      | Nose well above the horizon | {{vspeed.vy}}       |
 | Cruise, level   | About 2,300 | Flaps up      | Horizon just below the cowl | 105–115 KIAS        |
-| Pattern descent | About 1,500 | Flaps 10°–20° | Slightly nose low           | 80–90 KIAS          |
+| Pattern descent | About 1,700 | Flaps 10°–20° | Slightly nose low           | 80–90 KIAS          |
 | Final           | About 1,500 | Flaps 30°     | Nose low, aim point steady  | {{vspeed.approach}} |
 
 Fly the attitude and the power, confirm with the altimeter, and cross-check with the **GPS groundspeed** on the MFD. Groundspeed is not airspeed, but on a calm day it is close, and it never freezes.
