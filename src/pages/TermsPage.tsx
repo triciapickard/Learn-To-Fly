@@ -46,7 +46,7 @@ export default function TermsPage() {
         <h2>7. Termination and changes</h2>
         <p>
           You can delete your account at any time. We may suspend accounts that break these terms.
-          We may update these terms; the date above shows the latest version. These terms are
+          We may update these terms. The date above shows the latest version. These terms are
           governed by the laws of the jurisdiction where the author lives.
         </p>
         <h2>8. Contact</h2>

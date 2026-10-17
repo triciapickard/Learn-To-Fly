@@ -18,7 +18,7 @@ suite('W9 VOR/CDI model', () => {
 
   it('describes reverse sensing and the cone of confusion', () => {
     const reverse = { aircraft: pointAt(90, 10), heading: 270, obs: 90 };
-    expect(describe(reverse, read(reverse))).toContain('Reverse sensing');
+    expect(describe(reverse, read(reverse))).toContain('(reverse sensing)');
     const over = { aircraft: { x: 0.1, y: 0 }, heading: 90, obs: 90 };
     expect(describe(over, read(over))).toContain('OFF');
   });

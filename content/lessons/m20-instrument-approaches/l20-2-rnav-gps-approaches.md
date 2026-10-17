@@ -19,12 +19,12 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## The approach that lives in the box
+## An approach with no ground station
 
-The RNAV (GPS) approach is the one you will fly most. It needs no ground station, it exists at small airports that never had an ILS, and with WAAS it can bring you down to minima that match an ILS. All of it comes from satellites and the receiver in your G1000, which is also why this lesson spends so much time on one question: _is the box in the mode you think it is?_
+The RNAV (GPS) approach is the one you will fly most. It needs no ground station, it exists at small airports that never had an ILS, and with WAAS it can bring you down to minima that match an ILS. All of it comes from satellites and the receiver in your G1000. The receiver decides what guidance you get, so this lesson spends a lot of time on checking that the box is in the mode you think it is.
 
 :::callout{type="real-world"}
-In a real airplane, flying RNAV approaches requires a WAAS-certified GPS with a current database, a check of GPS NOTAMs and RAIM or WAAS availability before the flight, and an instrument rating. The sim gives you a receiver that always works and a database that may be years old. The procedures here teach the method; treat every number as practice, not reference.
+In a real airplane, flying RNAV approaches requires a WAAS-certified GPS with a current database, a check of GPS NOTAMs and RAIM or WAAS availability before the flight, and an instrument rating. The sim gives you a receiver that always works and a database that may be years old. The procedures here teach the method. Use every number for practice only.
 :::
 
 :::callout{type="safety"}
@@ -42,7 +42,7 @@ Plain GPS is accurate enough to steer you left and right, but not up and down. *
 | **LNAV+V**    | GPS lateral + _advisory_ vertical   | MDA     | An LNAV approach with a helpful glidepath you may not trust below MDA      |
 | **LNAV**      | GPS lateral only                    | MDA     | Non-precision: step-downs or a continuous descent to a level-off           |
 
-LPV and LNAV/VNAV are **approaches with vertical guidance** (APV). They are flown to a DA exactly like an ILS. LNAV is non-precision and flown to an MDA. LNAV+V is not a line of minima at all; it is the G1000 drawing an advisory glidepath on an LNAV approach so your descent is smooth, and the minima are still the LNAV MDA. The temperature limit printed beside LNAV/VNAV minima on some plates applies to baro-VNAV equipment; a WAAS glidepath is not affected by temperature.
+LPV and LNAV/VNAV are **approaches with vertical guidance** (APV). You fly them to a DA like an ILS. LNAV is non-precision, and you fly it to an MDA. LNAV+V has no minima of its own. It is the G1000 drawing an advisory glidepath on an LNAV approach so your descent is smooth, and the minima are still the LNAV MDA. The temperature limit printed beside LNAV/VNAV minima on some plates applies to baro-VNAV equipment. Temperature does not affect a WAAS glidepath.
 
 :::callout{type="verify"}
 Sim check: desk-verified 2026-10-13 against AIM 5-4-5 and 1-1-18 and Garmin 190-02177-02 (Table 5-14): LPV and LNAV/VNAV are APV flown to a DA, LNAV+V is advisory and flown to the LNAV MDA, and the LNAV/VNAV temperature note applies to baro-VNAV. Still open: does the MSFS 2024 G1000 NXi ever annunciate L/VNAV, and which modes does it support? Record them in `aircraft.yaml → ifrCapabilities` (the key does not exist yet).
@@ -58,17 +58,17 @@ Your G1000 annunciates LPV on the final approach. Which minimum do you fly to, a
 
 ---
 
-LPV is an approach with vertical guidance, flown to a **decision altitude** on the glidepath. You decide at DA; you do not level off.
+LPV is an approach with vertical guidance, flown to a decision altitude on the glidepath. You decide at DA. You do not level off.
 :::
 
 ## Loading and activating the approach
 
-You built flight plans with approaches in [[l18-4-the-g1000-nxi-and-gfc-700-for-ifr]]. The habit for an RNAV approach is the same five steps, done before the briefing so the briefing can check them.
+You built flight plans with approaches in [[l18-4-the-g1000-nxi-and-gfc-700-for-ifr]]. For an RNAV approach, do these steps before the briefing so the briefing can check them.
 
 1. Press **PROC**, choose **Select Approach**, and pick the airport and the approach by its charted title, for example "RNAV 25R" for the RNAV (GPS) RWY 25R.
 2. Choose the **transition**: an IAF by name if you will fly the full procedure, or **VECTORS** if approach control will turn you onto final.
 3. **Load** it. The approach appears at the end of the flight plan, inactive, so you can brief it while still enroute.
-4. When ATC clears you, or you reach the IAF, **activate** it. With vectors, use **Activate Vector-to-Final**; the extended final approach course becomes the active leg.
+4. When ATC clears you, or you reach the IAF, **activate** it. With vectors, use **Activate Vector-to-Final**. The extended final approach course becomes the active leg.
 5. Check the **CDI** is on GPS (magenta) and the active leg on the HSI is the one you expect.
 
 Loading early and activating late is deliberate. An activated approach changes the active leg, and the autopilot in NAV mode will follow it. Activate when you mean it.
@@ -87,12 +87,12 @@ Put the approach setup in order.
 
 ---
 
-Load first so the briefing can check the box against the plate. Activate only when the clearance or the IAF makes it real, then confirm what the HSI is now showing you.
+Load first so the briefing can check the box against the plate. Activate only when you are cleared or reach the IAF, then confirm what the HSI shows.
 :::
 
 ## The annunciations to check before the FAF
 
-This is the heart of the lesson. About 2 nm before the FAF the receiver decides what level of service it can provide and announces it on the HSI, next to the CDI. The CDI scaling changes at the same moment, from the terminal scale to the approach scale.
+This is the most important check in the lesson. About 2 nm before the FAF the receiver decides what level of service it can provide and shows it on the HSI, next to the CDI. The CDI scaling changes at the same moment, from the terminal scale to the approach scale.
 
 | Annunciation           | Meaning                                | Minimum you may use           |
 | ---------------------- | -------------------------------------- | ----------------------------- |
@@ -102,7 +102,7 @@ This is the heart of the lesson. About 2 nm before the FAF the receiver decides 
 | **LNAV**               | Lateral only                           | LNAV MDA                      |
 | **TERM** still showing | The approach has not armed             | None: do not descend on final |
 
-A **LOI** flag (loss of integrity) before the FAF means the same as TERM: do not descend on final. The rule: **the annunciation chooses the minima, not the plate.** If you briefed LPV and the box says LNAV, the approach just became an LNAV to the MDA. You must notice this _before_ the FAF, because after the FAF you are busy, and because a glidepath that quietly disappears will leave you level at the FAF altitude wondering why.
+A **LOI** flag (loss of integrity) before the FAF means the same as TERM: do not descend on final. **The annunciation, not the plate, chooses the minima.** If you briefed LPV and the box says LNAV, the approach is now an LNAV to the MDA. Notice this _before_ the FAF. After the FAF you are busy, and if the glidepath disappears without warning you end up level at the FAF altitude, wondering why.
 
 The check is a spoken callout at about 2 nm from the FAF: "LPV annunciated, LPV minima, DA 650." If the box says something else: "LNAV annunciated, LNAV minima, MDA 900." Challenge C20.1 scores this callout as a required item, so make it a habit now.
 
@@ -120,7 +120,7 @@ You briefed the LPV line (DA 650 ft). Two miles before the FAF the HSI annunciat
 
 ---
 
-The annunciation chooses the minima. LNAV means lateral guidance only, so you fly to the **LNAV MDA** and level off. A missed approach is not required, but an unbriefed descent to 650 ft would be a serious error.
+The annunciation chooses the minima. LNAV means lateral guidance only, so you fly to the LNAV MDA and level off. A missed approach is not required, but an unbriefed descent to 650 ft would be a serious error.
 :::
 
 ## T-shaped approaches and the hold-in-lieu
@@ -133,21 +133,21 @@ Most RNAV approaches are drawn as a **T**. The stem of the T is the final approa
 | Straight ahead (along final) | The IF, marked as an IAF | Continue straight down the stem; no course reversal             |
 | From behind the airport      | The stem IAF             | Fly the **hold-in-lieu of a procedure turn** once, then inbound |
 
-The hold-in-lieu is a holding pattern printed at the IF or FAF that does the job of a procedure turn: it turns you around to face the runway. You enter it with the normal entry from [[l19-1-holding-patterns-entries-timing-and-wind]], fly one circuit, and continue inbound. If you arrive from a direction marked NoPT, you do not fly it, and the G1000 knows this: it only sequences the hold when the transition needs it. If you are cleared "straight in", the hold is skipped even when it would otherwise apply.
+The hold-in-lieu is a holding pattern printed at the IF or FAF that does the job of a procedure turn: it turns you around to face the runway. You enter it with the normal entry from [[l19-1-holding-patterns-entries-timing-and-wind]], fly one circuit, and continue inbound. If you arrive from a direction marked NoPT, you do not fly it. The G1000 sequences the hold only when the transition needs it. If you are cleared "straight in", the hold is skipped even when it would otherwise apply.
 
-Vectors-to-final skip all of this. ATC puts you on the stem, inside the IF, and the T is just a picture.
+Vectors-to-final skip all of this. ATC puts you on the stem, inside the IF, and you fly none of the T.
 
 :::callout{type="tip"}
-The G1000 shows the hold-in-lieu as a racetrack on the map. If you expected a straight-in and the map shows a racetrack ahead, your transition is wrong. Fix it before the IAF, not in the hold.
+The G1000 shows the hold-in-lieu as a racetrack on the map. If you expected a straight-in and the map shows a racetrack ahead, your transition is wrong. Fix it before you reach the IAF.
 :::
 
 ## Flying the glidepath
 
-From the FAF the LPV approach is an ILS in everything but the radio. The vertical needle (the **glidepath** indicator, a magenta diamond on the G1000) comes alive above you, descends to center, and you follow it down. The needles are angular, so they get sharper as the runway nears; small corrections early, tiny ones late.
+From the FAF you fly an LPV approach the same way as an ILS. Only the source of the guidance differs. The vertical needle (the **glidepath** indicator, a magenta diamond on the G1000) comes alive above you, descends to center, and you follow it down. The needles are angular, so they get more sensitive as the runway nears. Make small corrections early and tiny ones late.
 
 ::widget{name="g1000-pfd" mode="explore"}
 
-The Skyhawk's glidepath recipe at a 90 kt groundspeed is simple: the 3° path needs about 450 fpm (groundspeed × 5), and flaps 10 with roughly 1,700–1,800 RPM gives that at the approach speed of {{vspeed.approach}}. Set the attitude, set the power, trim, and then make corrections with power first: a little more power to shallow the descent, a little less to steepen it. If the needle starts to drift, fix the trend while it is still within half a dot.
+At a 90 kt groundspeed, the 3° path needs about 450 fpm (groundspeed × 5). In the Skyhawk, flaps 10 with roughly 1,700–1,800 RPM gives that at the approach speed of {{vspeed.approach}}. Set the attitude, set the power, trim, and then make corrections with power first: a little more power to shallow the descent, a little less to steepen it. If the needle starts to drift, fix the trend while it is still within half a dot.
 
 | Groundspeed on final | Descent rate for a 3° glidepath |
 | -------------------- | ------------------------------- |
@@ -155,7 +155,7 @@ The Skyhawk's glidepath recipe at a 90 kt groundspeed is simple: the 3° path ne
 | 90 kt                | 450 fpm                         |
 | 100 kt               | 500 fpm                         |
 
-Flown coupled, the GFC 700 does this for you: with the approach active and the CDI on GPS, press **APR**. The GP mode arms (white) and captures (green) as the glidepath comes down to you. Your job becomes monitoring, calling out each mode change, and disconnecting at or before DA to land by hand. Never let the autopilot fly through DA.
+The GFC 700 can fly this for you. With the approach active and the CDI on GPS, press **APR**. The GP mode arms (white) and captures (green) as the glidepath comes down to you. Your job becomes monitoring, calling out each mode change, and disconnecting at or before DA to land by hand. Never let the autopilot fly through DA.
 
 :::callout{type="verify"}
 Widget pending: Widget W36 (HSI, CDI Scaling and ILS) is embedded here once Phase 21 ships it: `::widget{name="hsi-cdi-ils" mode="lpv"}`.
@@ -170,14 +170,14 @@ Your groundspeed on final is 90 kt. What descent rate holds a 3° glidepath?
 
 ---
 
-Groundspeed × 5: 90 × 5 = 450 fpm. Slower groundspeed, lower rate; a headwind on final makes the descent shallower, not steeper.
+Groundspeed × 5: 90 × 5 = 450 fpm. Slower groundspeed means a lower rate. A headwind on final makes the descent shallower, not steeper.
 :::
 
 ## LNAV with CDFA and the advisory glidepath
 
-When the box gives you only LNAV, the final segment ends at an MDA, and the old way to fly it was "dive and drive": descend quickly at each fix, level off, repeat. Learn to Fly teaches the **continuous descent final approach** (CDFA) instead: a steady 3° descent from the FAF, timed to reach the MDA at a point from which a normal landing is still possible, then a level-off at MDA if the runway is not in sight. It is one attitude and one power setting, just like an ILS, and it keeps the airplane stabilized.
+When the box gives you only LNAV, the final segment ends at an MDA, and the old way to fly it was "dive and drive": descend quickly at each fix, level off, repeat. Learn to Fly teaches the **continuous descent final approach** (CDFA) instead. You fly a steady 3° descent from the FAF, timed to reach the MDA at a point from which a normal landing is still possible. If the runway is not in sight, you level off at MDA. It is one attitude and one power setting, like an ILS, and it keeps the airplane stabilized.
 
-The G1000's **LNAV+V** advisory glidepath is a gift for CDFA: it draws the 3° path for you. But it is _advisory_. It does not know about the step-down altitudes or the MDA, and following it below the MDA is descending below minima. The discipline is: fly the advisory glidepath down to the MDA, then **level off at MDA** and treat the diamond as decoration until the runway appears. Garmin's own guide warns that the autopilot will not level off at the MDA for you, even with the MDA set in the altitude preselect.
+The G1000's **LNAV+V** advisory glidepath helps with CDFA because it draws the 3° path for you. But it is _advisory_. It does not know about the step-down altitudes or the MDA, and following it below the MDA is descending below minima. Fly the advisory glidepath down to the MDA, then **level off at MDA** and ignore the diamond until the runway appears. Garmin's own guide warns that the autopilot will not level off at the MDA for you, even with the MDA set in the altitude preselect.
 
 | Technique      | Descent profile                    | Pros                                            | Cons                                                     |
 | -------------- | ---------------------------------- | ----------------------------------------------- | -------------------------------------------------------- |
@@ -196,10 +196,10 @@ Sim check: does the Working Title NXi's LNAV+V advisory glidepath in MSFS 2024 r
 
 ## Practice and next steps
 
-Four things to carry forward:
+To carry forward:
 
-1. LPV and LNAV/VNAV go to a DA; LNAV goes to an MDA; LNAV+V is LNAV with a hint.
-2. Load early, activate when cleared, and set the transition the way you will really arrive.
+1. LPV and LNAV/VNAV go to a DA. LNAV goes to an MDA. LNAV+V is LNAV with an advisory glidepath.
+2. Load early, activate when cleared, and set the transition the way you will arrive.
 3. Two miles before the FAF: read the annunciation aloud and set the minima it allows.
 4. On an LNAV, fly a continuous descent to MDA and level off there, whatever the diamond says.
 

@@ -197,7 +197,7 @@ export function FlyPanel({
       <div className="flex flex-wrap items-center gap-3">
         {onFinish && (
           <Button size="lg" onClick={onFinish}>
-            <Flag aria-hidden className="size-5" /> Finished — debrief
+            <Flag aria-hidden className="size-5" /> Finish and debrief
           </Button>
         )}
         {!large && (

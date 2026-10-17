@@ -19,22 +19,22 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## When the instruments lie
+## Instruments that read wrong
 
-An electrical failure takes the screens away, and you know they are gone. An instrument failure is worse: the number is still there, confidently displayed, and it is wrong. Pilots have stalled airplanes while the airspeed tape showed a comfortable speed, because a tube the width of a pencil was blocked by ice or an insect.
+An electrical failure takes the screens away, and you know they are gone. An instrument failure is worse, because the number is still on the screen and it is wrong. Pilots have stalled airplanes while the airspeed tape showed a comfortable speed, because ice or an insect blocked a tube the width of a pencil.
 
-This lesson covers a blocked **pitot** tube, a blocked **static** port, and the G1000's own sensors or displays failing. The common answer is the one from [[l2-2-attitude-flying-and-trim]]: a known pitch and a known power give a known airspeed, whatever the tape says.
+This lesson covers a blocked pitot tube, a blocked static port, and the G1000's own sensors or displays failing. The answer to all of them comes from [[l2-2-attitude-flying-and-trim]]. A known pitch and a known power give a known airspeed, whatever the tape says.
 
 ## The pitot-static system
 
-Three instruments on the PFD are driven by air pressure, not electronics: airspeed, altitude and vertical speed. They get that pressure from two places on the outside of the airplane.
+Three instruments on the PFD work from air pressure rather than electronics: airspeed, altitude and vertical speed. They get that pressure from two places on the outside of the airplane.
 
 | Source          | Where                               | What it measures                                      | Feeds                    |
 | --------------- | ----------------------------------- | ----------------------------------------------------- | ------------------------ |
 | **Pitot tube**  | Under the left wing, facing forward | Ram pressure: static air plus the push of the airflow | Airspeed only            |
 | **Static port** | On the side of the fuselage         | Still air pressure at your altitude                   | Airspeed, altimeter, VSI |
 
-The airspeed indicator compares the two: ram minus static is the push of the airflow, a measure of speed. The altimeter and VSI need only the static side. That one fact lets you predict every failure below.
+The airspeed indicator compares the two. Ram minus static is the push of the airflow, which measures speed. The altimeter and VSI need only the static side. That one fact lets you predict every failure below.
 
 The pitot tube has a small **drain hole** so water can run out, and a **pitot heat** switch to melt ice. On the G1000 the pressures go to the **air data computer (ADC)**, which turns them into the numbers on the PFD, including true airspeed, so those readouts go wrong too when the lines do.
 
@@ -44,13 +44,13 @@ Widget pending: W31 (Pitot-Static System) is embedded here once Phase 20 ships i
 
 ## Pitot blockage: ram, or ram and drain
 
-Two different pitot blockages give two different lies.
+A pitot blockage gives one of two wrong readings, depending on whether the drain is blocked too.
 
-**Ram inlet blocked, drain open.** The pressure in the tube leaks out of the drain until it equals static. Ram minus static is zero, so the **airspeed drops to zero**. Easy to spot, because it is obviously wrong.
+**Ram inlet blocked, drain open.** The pressure in the tube leaks out of the drain until it equals static. Ram minus static is zero, so the airspeed drops to zero. This one is easy to spot, because it is obviously wrong.
 
-**Ram inlet and drain both blocked.** The pitot pressure is trapped at whatever it was when the blockage formed, while the static side still changes with altitude. Climb, and static pressure falls, so the trapped pitot pressure looks bigger by comparison: **airspeed reads higher** as you climb, and lower as you descend. The airspeed indicator has become an altimeter. This is the dangerous one: pull the nose up to "slow down" from a false high reading and you climb toward a stall with the tape still saying you are fast.
+**Ram inlet and drain both blocked.** The pitot pressure is trapped at whatever it was when the blockage formed, while the static side still changes with altitude. When you climb, static pressure falls, so the trapped pitot pressure looks bigger by comparison. The airspeed reads higher as you climb and lower as you descend. The airspeed indicator has become an altimeter. This is the dangerous one. If you pull the nose up to "slow down" from a false high reading, you climb toward a stall with the tape still saying you are fast.
 
-The altimeter and VSI ignore both pitot blockages, because they use only static pressure.
+Neither pitot blockage affects the altimeter or VSI, because they use only static pressure.
 
 | Blockage                    | Airspeed                                                     | Altimeter     | VSI                          |
 | --------------------------- | ------------------------------------------------------------ | ------------- | ---------------------------- |
@@ -69,11 +69,11 @@ Both the pitot ram inlet and its drain hole are blocked by ice. You start a clim
 
 ---
 
-The pitot pressure is trapped; as you climb, static pressure falls, the difference grows and the indicator reads faster. Fly pitch and power and ignore it.
+The pitot pressure is trapped. As you climb, static pressure falls, the difference grows and the indicator reads faster. Fly pitch and power and ignore it.
 :::
 
 :::quiz{id="l14-2-q2" type="single"}
-Only the pitot ram inlet is blocked; the drain hole is clear. What happens?
+Only the pitot ram inlet is blocked. The drain hole is clear. What happens?
 
 - [x] Airspeed drops to about zero; altimeter and VSI are normal
 - [ ] Airspeed reads high; altimeter freezes
@@ -91,13 +91,13 @@ A blocked static port hits all three instruments at once, because they all need 
 
 - The **altimeter freezes** at the altitude where the blockage happened. Climb or descend and it does not move.
 - The **VSI shows zero**, since it works by comparing static pressure now with static pressure a moment ago, and the trapped pressure never changes.
-- The **airspeed** is subtle. The static reference is stuck. Climb into thinner air and the ram pressure falls while the trapped static stays high, so airspeed **reads low in a climb** and **high in a descent**. The opposite of the double pitot blockage.
+- The **airspeed** is subtle. The static reference is stuck. Climb into thinner air and the ram pressure falls while the trapped static stays high, so airspeed reads low in a climb and high in a descent. This is the opposite of the double pitot blockage.
 
-The fix is the **alternate static source**: a pull knob low on the panel, left of the pilot, that opens the static line to cabin air instead of the outside port. Pull it and the instruments come back to life.
+To fix it, use the **alternate static source**, a pull knob low on the panel, left of the pilot, that opens the static line to cabin air instead of the outside port. Pull it and the instruments start working again.
 
-They come back slightly wrong. Cabin air is at a little lower pressure than outside air, so with alternate static you read **slightly high** on airspeed and altitude, and the VSI shows a brief climb as the pressure equalizes. The POH has a small correction table; in the sim the difference is probably too small to see.
+Their readings are slightly off. Cabin air is at a little lower pressure than outside air, so with alternate static you read slightly high on airspeed and altitude, and the VSI shows a brief climb as the pressure equalizes. The POH has a small correction table. In the sim the difference is probably too small to see.
 
-A partial blockage is sneakier than a full one: the instruments may behave until you start down, then lag. If you suspect the static line, open the alternate source while climbing or descending; if the needles jump, you have found the problem, and you keep the alternate source open for the rest of the flight.
+A partial blockage is harder to spot than a full one. The instruments may read normally until you start down, then lag. If you suspect the static line, open the alternate source while climbing or descending. If the needles jump, you have found the problem, and you keep the alternate source open for the rest of the flight.
 
 :::callout{type="verify"}
 Desk-verified 2026-10-13: static-blockage directions (airspeed low above the blockage altitude, high below; altimeter frozen; VSI zero) and the alternate-static readings confirmed (PHAK Ch 8, Blocked Static System and Alternate Static Source; AFH Ch 18, Pitot-Static System). POH check: Section 7 label and location of the alternate static valve. Sim check: whether the sim's Skyhawk has the knob, whether it does anything, and whether a static blockage can be set in the MSFS 2024 failure menu; if not, Challenge C14.3 keeps the talk-through card.
@@ -113,22 +113,22 @@ The static port is blocked. Which set of readings matches?
 
 ---
 
-All three use static pressure: the altimeter freezes, the VSI zeros and the airspeed skews (low in a climb, high in a descent). Pull the alternate static source.
+All three use static pressure. The altimeter freezes, the VSI zeros and the airspeed skews (low in a climb, high in a descent). Pull the alternate static source.
 :::
 
 ## AHRS and ADC failures: the red X
 
-The G1000 does not have mechanical gyros. Attitude and heading come from the **AHRS** (attitude and heading reference system); airspeed, altitude and vertical speed come from the **ADC**. When either box fails, or loses its data, the G1000 draws a large **red X** across the fields it can no longer trust.
+The G1000 does not have mechanical gyros. Attitude and heading come from the **AHRS** (attitude and heading reference system). Airspeed, altitude and vertical speed come from the **ADC**. When either box fails, or loses its data, the G1000 draws a large **red X** across the fields that no longer have valid data.
 
 | Failed unit | Red X over                                              | What you still have                                         |
 | ----------- | ------------------------------------------------------- | ----------------------------------------------------------- |
 | AHRS        | Attitude indicator and heading (HSI)                    | Airspeed, altitude, VSI; standby attitude; magnetic compass |
 | ADC         | Airspeed tape, altitude tape, VSI, TAS and OAT readouts | Attitude and heading; standby airspeed and altimeter        |
 
-The standby instruments are the point of this table. Beside the displays the Skyhawk carries a **standby airspeed indicator, attitude indicator and altimeter**, plus the **magnetic compass**; there is no standby turn coordinator. The standby airspeed indicator and altimeter are plain pressure gauges on the same pitot and static lines as the ADC, so they survive an electronic failure but not a blocked line. The standby attitude indicator is a **vacuum gyro** driven by the engine's vacuum pump, which exists only for it; a **LOW VACUUM** caution on the PFD and a flag on the instrument warn you when it is starving. When a red X appears, your eyes go to the standby instrument for that job and you keep flying.
+The standby instruments in the right-hand column are what you fly with. Beside the displays the Skyhawk carries a **standby airspeed indicator, attitude indicator and altimeter**, plus the magnetic compass. There is no standby turn coordinator. The standby airspeed indicator and altimeter are plain pressure gauges on the same pitot and static lines as the ADC, so they survive an electronic failure but not a blocked line. The standby attitude indicator is a vacuum gyro driven by the engine's vacuum pump, which exists only for it. A LOW VACUUM caution on the PFD and a flag on the instrument warn you when its vacuum is low. When a red X appears, your eyes go to the standby instrument for that job and you keep flying.
 
 :::callout{type="classic"}
-On the classic steam-gauge Skyhawk the main attitude and heading indicators are **vacuum-driven** gyros. A vacuum pump failure gives no red X: the attitude indicator slowly tumbles over several minutes while looking almost right, which is far more dangerous. Watch the **suction gauge** on every cruise check and cross-check the attitude indicator against the electric turn coordinator and the altimeter.
+On the classic steam-gauge Skyhawk the main attitude and heading indicators are vacuum-driven gyros. A vacuum pump failure gives no red X. The attitude indicator slowly tumbles over several minutes while looking almost right, which is far more dangerous. Watch the suction gauge on every cruise check and cross-check the attitude indicator against the electric turn coordinator and the altimeter.
 :::
 
 :::callout{type="verify"}
@@ -137,12 +137,12 @@ Desk-verified 2026-10-13: standby set (airspeed, attitude, altimeter, magnetic c
 
 ## Reversionary mode: when a display dies
 
-The PFD and MFD are separate screens with separate electronics. If one goes dark, the other can show everything that matters. That is **reversionary mode**, and the G1000 enters it two ways:
+The PFD and MFD are separate screens with separate electronics. If one goes dark, the other can show everything that matters. That is **reversionary mode**, and the G1000 enters it in one of these ways:
 
 1. **Automatically**, when the system detects that a display has failed.
 2. **Manually**, when you press the red **DISPLAY BACKUP** button on the audio panel, the narrow strip between the PFD and the MFD.
 
-The surviving screen then shows the PFD (attitude, airspeed, altitude, HSI) with the engine instruments down the side. The MFD's map pages are gone; the flight instruments are all there. Press DISPLAY BACKUP again and the displays return to normal.
+The surviving screen then shows the PFD (attitude, airspeed, altitude, HSI) with the engine instruments down the side. The MFD's map pages are gone, but the flight instruments are all there. Press DISPLAY BACKUP again and the displays return to normal.
 
 :::callout{type="memory"}
 **PFD failure (simplified for the sim)**
@@ -153,7 +153,7 @@ The surviving screen then shows the PFD (attitude, airspeed, altitude, HSI) with
 
 :::
 
-In Challenge C14.2 "PFD failure" the event card tells you to press DISPLAY BACKUP and treat the PFD as failed. Covering the PFD with a sticky note on the monitor is honest in a way the sim cannot be.
+In Challenge C14.2 "PFD failure" the event card tells you to press DISPLAY BACKUP and treat the PFD as failed. Covering the PFD on your monitor with a sticky note makes the failure more realistic than the sim can.
 
 :::callout{type="verify"}
 Desk-verified 2026-10-13: automatic reversion on a display failure, the red DISPLAY BACKUP button on the audio panel, press again to cancel, and flight instruments plus EIS on the surviving screen confirmed (Garmin G1000 NXi CRG for the Cessna NAV III, Reversionary Mode; FAA DPE and CFI Guide G1000 NXi). Sim check: the button's label and position on the sim's audio panel, the sim's reversionary layout, and whether the failure menu can fail one display; record the sim version.
@@ -174,7 +174,7 @@ DISPLAY BACKUP is on the audio panel, the narrow strip between the two displays.
 
 ## Flying pitch and power when the airspeed lies
 
-Whichever failure you have, the escape is the same: the Skyhawk flies a known speed for a known pitch and power. You learned the pairs in Course 1 without naming them; now they are your airspeed indicator.
+Whichever failure you have, the way out is the same. The Skyhawk flies a known speed for a known pitch and power. You learned the pairs in Course 1 without naming them. Now they replace your airspeed indicator.
 
 | Phase           | Power (RPM) | Configuration | Pitch picture               | Expect about        |
 | --------------- | ----------- | ------------- | --------------------------- | ------------------- |
@@ -183,26 +183,26 @@ Whichever failure you have, the escape is the same: the Skyhawk flies a known sp
 | Pattern descent | About 1,700 | Flaps 10°–20° | Slightly nose low           | 80–90 KIAS          |
 | Final           | About 1,500 | Flaps 30°     | Nose low, aim point steady  | {{vspeed.approach}} |
 
-Fly the attitude and the power, confirm with the altimeter, and cross-check with the **GPS groundspeed** on the MFD. Groundspeed is not airspeed, but on a calm day it is close, and it never freezes.
+Fly the attitude and the power, confirm with the altimeter, and cross-check with the GPS groundspeed on the MFD. Groundspeed is not airspeed, but on a calm day it is close, and it never freezes.
 
 :::callout{type="verify"}
 Sim check: fly these four pitch-and-power pairs in the sim and replace the "expect about" column with measured values before publishing; Challenge C14.3 "Blocked pitot tube" scores against this table.
 :::
 
 :::callout{type="sim"}
-MSFS 2024 may not let you block the pitot tube from its failure menu. The default Challenge C14.3 uses a card instead: "Airspeed unreliable, cover the airspeed tape." Covering it with a sticky note is a legitimate method; real instructors do the same. Remember that a real pitot blockage draws no red X: the tape just reads wrong, which is why you cross-check.
+MSFS 2024 may not let you block the pitot tube from its failure menu. The default Challenge C14.3 uses a card instead: "Airspeed unreliable, cover the airspeed tape." Covering it with a sticky note is a legitimate method, and real instructors do the same. A real pitot blockage draws no red X. The tape reads wrong, so you cross-check.
 :::
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
-1. Pitot feeds only airspeed; static feeds all three. Predict every blockage from that.
-2. A red X means switch to the standby instrument for that job; a dark display means DISPLAY BACKUP.
+1. Pitot feeds only airspeed. Static feeds all three. Predict every blockage from that.
+2. A red X means switch to the standby instrument for that job. A dark display means DISPLAY BACKUP.
 3. Known pitch plus known power gives a known speed, whatever the tape says.
 
 **Practice.** This lesson feeds the `memory-items` deck: the pitot-static truth table and the PFD-failure flow.
 
-**Fly it.** Challenge C14.2 "PFD failure" and Challenge C14.3 "Blocked pitot tube" both come from this lesson. Fly C14.2 first; it is easier.
+**Fly it.** Challenge C14.2 "PFD failure" and Challenge C14.3 "Blocked pitot tube" both come from this lesson. Fly C14.2 first, because it is easier.
 
-**Next.** [[l14-3-partial-power-loss-and-fuel-problems]] moves from the panel to the engine. Behind you, [[l14-1-electrical-failures]] covered the screens simply going dark.
+**Next.** [[l14-3-partial-power-loss-and-fuel-problems]] moves from the panel to the engine. Before this, [[l14-1-electrical-failures]] covered the screens going dark.

@@ -23,8 +23,8 @@ simVersion: null
 
 A **sectional chart** is the standard map for VFR flying in the US. It shows everything you need to fly by looking outside: airports, airspace, terrain, obstacles, radio navigation aids and landmarks.
 
-- The FAA publishes them **free** as downloads, updated every 56 days. Download the **San Francisco** sectional for this module.
-- **SkyVector** shows the same charts in your browser, and lets you draw a route and read distances.
+- The FAA publishes them free as downloads, updated every 56 days. Download the San Francisco sectional for this module.
+- SkyVector shows the same charts in your browser, and lets you draw a route and read distances.
 - Around busy airports, a **Terminal Area Chart (TAC)** shows the same area at twice the scale.
 
 :::callout{type="sim"}
@@ -33,8 +33,8 @@ MSFS 2024 has a moving map in the EFB (electronic flight bag), but it doesn't sh
 
 ## Scale and position
 
-- **Scale.** A sectional is 1:500,000, about **6.86 nm per inch**. A TAC is 1:250,000.
-- **Latitude and longitude.** Tick marks along the grid lines mark every minute. One minute of latitude is **1 nautical mile**, which makes a handy ruler: the latitude scale on the side of the chart measures distance.
+- **Scale.** A sectional is 1:500,000, about 6.86 nm per inch. A TAC is 1:250,000.
+- **Latitude and longitude.** Tick marks along the grid lines mark every minute. One minute of latitude is 1 nautical mile, so you can use the latitude scale on the side of the chart to measure distance.
 
 ## Explore the chart
 
@@ -44,12 +44,12 @@ Click each symbol on this simplified chart of the Livermore area to find out wha
 
 ## Airports and data blocks
 
-- **Blue** airport symbols are **towered** airports. **Magenta** symbols are **non-towered**.
-- A **circle with runways drawn inside** means hard-surfaced runways from 1,500 to 8,069 ft long. Longer runways are drawn on their own, without the circle.
-- **Tick marks** around the circle mean services, such as fuel, are available.
-- A **star** on top means a rotating beacon.
+- Blue airport symbols are towered airports. Magenta symbols are non-towered.
+- A circle with runways drawn inside means hard-surfaced runways from 1,500 to 8,069 ft long. The chart draws longer runways on their own, without the circle.
+- Tick marks around the circle mean services, such as fuel, are available.
+- A star on top means a rotating beacon.
 
-Next to each airport is a **data block**: the name, identifier, tower frequency (a ★ means part-time), ATIS, field elevation, lighting, the **longest runway in hundreds of feet**, and the CTAF, marked with a Ⓒ. "RP" means right traffic for the runways listed.
+Next to each airport is a **data block**: the name, identifier, tower frequency (a ★ means part-time), ATIS, field elevation, lighting, the longest runway in hundreds of feet, and the CTAF, marked with a Ⓒ. "RP" means right traffic for the runways listed.
 
 :::quiz{id="l6-1-q1" type="single"}
 What does a magenta airport symbol mean?
@@ -61,7 +61,7 @@ What does a magenta airport symbol mean?
 
 ---
 
-**Non-towered.** Blue airports have a control tower; magenta ones don't.
+**Non-towered.** Blue airports have a control tower. Magenta ones don't.
 :::
 
 :::quiz{id="l6-1-q2" type="single"}
@@ -79,9 +79,9 @@ In the **airport data block**, in hundreds of feet. "52" means 5,200 ft.
 
 ## Terrain and obstacles
 
-- **Color tints** show terrain elevation, from green in the lowlands to tan and brown higher up.
-- Each quadrangle of latitude and longitude has a **Maximum Elevation Figure** (MEF), the height of the highest terrain or obstacle in it, rounded up. A large 3 with a small 5 means **3,500 ft MSL**.
-- **Obstacles**, like towers, show two heights: the top in feet MSL (in bold) and the height above the ground in parentheses.
+- Color tints show terrain elevation, from green in the lowlands to tan and brown higher up.
+- Each quadrangle of latitude and longitude has a **Maximum Elevation Figure** (MEF), the height of the highest terrain or obstacle in it, rounded up. A large 3 with a small 5 means 3,500 ft MSL.
+- Obstacles, like towers, show two heights: the top in feet MSL (in bold) and the height above the ground in parentheses.
 
 :::quiz{id="l6-1-q3" type="single"}
 An MEF shows a large 3 and a small 5. What does it mean?
@@ -98,12 +98,12 @@ An MEF shows a large 3 and a small 5. What does it mean?
 
 ## Navaids and magnetic variation
 
-- **VORs** appear as compass roses, with a box giving the name, frequency and Morse identifier. Lesson 6.4 covers flying them.
+- VORs appear as compass roses, with a box giving the name, frequency and Morse identifier. Lesson 6.4 covers flying them.
 - **Isogonic lines** are dashed magenta lines showing **magnetic variation**, the difference between true north and magnetic north. In the Bay Area it's about 13° east. You'll use it in Lesson 6.3.
 
 ## Landmarks
 
-For navigating by sight, the best landmarks are **big, unique and easy to see**:
+For navigating by sight, the best landmarks are big, unique and easy to see:
 
 - Water, such as lakes, reservoirs and shorelines.
 - Major highways and their interchanges, and railroads.

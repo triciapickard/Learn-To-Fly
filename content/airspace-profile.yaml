@@ -163,7 +163,7 @@ volumes:
     floorFt: 700
     floorRef: AGL
     ceilingFt: 17999
-    notes: Shown on sectionals by the faded magenta band; below it is Class G.
+    notes: Shown on sectionals by the faded magenta band. Below it is Class G.
 requirements:
   B:
     entry: >-

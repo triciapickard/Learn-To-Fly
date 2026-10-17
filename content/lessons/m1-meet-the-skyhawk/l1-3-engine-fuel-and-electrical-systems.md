@@ -23,11 +23,11 @@ simVersion: 'MSFS 2024 (1.8.16.0)'
 
 The Skyhawk has a {{aircraft.engine}} engine making {{aircraft.horsepower}}. It drives a {{aircraft.propeller}} propeller.
 
-Because the propeller's blade angle never changes, **engine RPM is a direct measure of power**. More throttle, more RPM, more power. That's why the lessons talk about power settings in RPM: about 2,300 RPM for cruise, about 1,700 RPM to descend in the pattern.
+Because the propeller's blade angle never changes, engine RPM is a direct measure of power. More throttle gives more RPM and more power, so the lessons give power settings in RPM: about 2,300 RPM for cruise, about 1,700 RPM to descend in the pattern.
 
 ## Throttle and mixture
 
-Two knobs control the engine:
+These knobs control the engine:
 
 - **Throttle (black).** Push in for more power, pull out for less.
 - **Mixture (red).** Sets the ratio of fuel to air. Push in for **rich** (more fuel), pull out to **lean** (less fuel). Pulling it all the way out is **idle cut-off** (the sim's tooltip says CUT): no fuel reaches the cylinders and the engine stops.
@@ -42,14 +42,14 @@ Shut the engine down with the mixture: pull it to idle cut-off. Never shut down 
 
 Fuel flows like this:
 
-1. Two **wing tanks**, one in each wing. Total capacity {{aircraft.fuelCapacity}}.
-2. The **fuel selector** on the floor between the seats: **LEFT**, **BOTH** or **RIGHT**. A separate red **fuel shutoff valve** next to it cuts the fuel off completely; it stays pushed in (on) for flying.
+1. Two **wing tanks**, one in each wing. Total capacity is {{aircraft.fuelCapacity}}.
+2. The **fuel selector** on the floor between the seats: LEFT, BOTH or RIGHT. A separate red **fuel shutoff valve** next to it cuts the fuel off completely. It stays pushed in (on) for flying.
 3. The engine-driven **fuel pump**, with an electric **auxiliary pump** for starting and as a backup (the FUEL PUMP switch below the PFD).
 4. The **fuel injection** system, which sprays fuel into each cylinder.
 
-Use **BOTH** for takeoff, landing and most flying. It feeds from both tanks, so you can't accidentally run one dry at a bad moment.
+Use BOTH for takeoff, landing and most flying. It feeds from both tanks, so you can't accidentally run one dry at a bad moment.
 
-The fuel is {{aircraft.fuelType}}. The EIS on the MFD shows fuel quantity in each tank and the fuel flow. For simple planning, use about **10 gallons per hour**. Real fuel burn at cruise is a little lower, so this leaves you a margin.
+The fuel is {{aircraft.fuelType}}. The EIS on the MFD shows fuel quantity in each tank and the fuel flow. For simple planning, use about 10 gallons per hour. Real fuel burn at cruise is a little lower, so this leaves you a margin.
 
 :::quiz{id="l1-3-q1" type="single"}
 Where should the fuel selector be for takeoff?
@@ -75,9 +75,9 @@ Using the planning figure of 10 gallons per hour, how many gallons do you need f
 ## The electrical system
 
 - **Battery.** Powers everything before the engine starts.
-- **Alternator.** Driven by the engine; it powers the airplane and recharges the battery once running.
-- **Master switch.** A split switch: **BAT** connects the battery, **ALT** connects the alternator. Normally both on or both off.
-- **Avionics master.** Powers the radios and the rest of the G1000 (the PFD comes on with the battery). In the G1000 Skyhawk it's split into **BUS 1** and **BUS 2**; switch both together. It stays **off during engine start**: the starter draws a big current and can cause voltage spikes that harm sensitive electronics. Turn it on after the engine is running.
+- **Alternator.** The engine drives it. Once the engine is running, it powers the airplane and recharges the battery.
+- **Master switch.** A split switch: **BAT** connects the battery, **ALT** connects the alternator. They are normally both on or both off.
+- **Avionics master.** Powers the radios and the rest of the G1000 (the PFD comes on with the battery). In the G1000 Skyhawk it's split into BUS 1 and BUS 2. Switch both together. It stays off during engine start, because the starter draws a big current and can cause voltage spikes that harm sensitive electronics. Turn it on after the engine is running.
 
 :::quiz{id="l1-3-q2" type="single"}
 Why is the avionics master off during engine start?
@@ -94,9 +94,9 @@ The starter motor draws a large current, and the voltage can dip and spike. Keep
 
 ## Ignition and magnetos
 
-The spark plugs are fired by **magnetos**: small generators driven by the engine. They don't need the battery at all, so the engine keeps running even if the electrical system fails.
+**Magnetos** fire the spark plugs. They are small generators that the engine drives. They don't need the battery at all, so the engine keeps running even if the electrical system fails.
 
-There are **two magnetos**, and each cylinder has two spark plugs, one from each. That gives:
+There are two magnetos, and each cylinder has two spark plugs, one from each. That gives:
 
 - **Redundancy.** If one magneto fails, the other keeps the engine running.
 - **Better combustion.** Two sparks burn the fuel more completely.

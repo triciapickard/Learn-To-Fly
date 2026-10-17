@@ -21,14 +21,14 @@ simVersion: null
 
 ## How a VOR works
 
-A **VOR** is a radio station on the ground that sends out 360 **radials**, like the spokes of a wheel. Each radial is a magnetic course **from** the station: the 090 radial runs due east (magnetic) from it.
+A **VOR** is a radio station on the ground that sends out 360 **radials**, like the spokes of a wheel. Each radial is a magnetic course from the station. The 090 radial runs due east (magnetic) from it.
 
 Your VOR receiver tells you which radial you're on, or how far you are from the course you've selected.
 
 ## Tune and identify
 
 1. **Tune** the VOR's frequency, shown in the box next to its compass rose on the sectional.
-2. **Identify** it. Each VOR sends a three-letter Morse code identifier. On the G1000 the decoded identifier appears in the NAV box next to the active frequency; to hear the Morse, press **NAV1** on the audio panel and push the **NAV VOL/ID** knob. Compare it with the chart.
+2. **Identify** it. Each VOR sends a three-letter Morse code identifier. On the G1000 the decoded identifier appears in the NAV box next to the active frequency. To hear the Morse, press **NAV1** on the audio panel and push the **NAV VOL/ID** knob. Compare it with the chart.
 
 Always identify. It confirms you have the right station and that it's working. A VOR under maintenance may send no identifier at all.
 
@@ -53,13 +53,13 @@ To **confirm it's the right station and that it's working**. Never navigate on a
 
 - The **course selector** (called the OBS on older instruments) sets the course you want.
 - The **course deviation indicator** (CDI) needle shows whether that course is to your left or right. Full deflection means 10° or more off.
-- The **TO/FROM flag** shows whether the selected course takes you **to** the station or **from** it.
+- The **TO/FROM flag** shows whether the selected course takes you to the station or from it.
 
 Move the airplane around the station, turn the course selector and watch the needle and the flag.
 
 ::widget{name="vor-cdi" mode="explore"}
 
-**To find which radial you're on:** turn the course selector until the needle centers with a **FROM** flag. The course shown is your radial.
+To find which radial you're on, turn the course selector until the needle centers with a FROM flag. The course shown is your radial.
 
 :::quiz{id="l6-4-q2" type="single"}
 The needle is centered with a FROM flag, and 090 is selected. Where are you?
@@ -82,7 +82,7 @@ You're **on the 090 radial**, east of the station. FROM means the course 090 lea
 4. As it centers, **turn onto the course**.
 5. **Correct for wind.** If the needle drifts off, turn about 10° toward it. When it's centered again, turn back about 5°. Keep halving the correction until the needle stays put. This is called **bracketing**.
 
-The rule to remember: **fly toward the needle**, as long as your heading roughly matches the selected course.
+**Fly toward the needle**, as long as your heading roughly matches the selected course.
 
 :::quiz{id="l6-4-q3" type="single"}
 Your heading roughly matches the selected course, and the needle is left of center. Which way do you turn?
@@ -99,12 +99,12 @@ Your heading roughly matches the selected course, and the needle is left of cent
 
 ## Reverse sensing
 
-If your heading is roughly **opposite** to the selected course, the needle works backward: turning toward it takes you further away. To avoid this, keep your heading roughly in line with the selected course. If you want to fly the other way, set the reciprocal course.
+If your heading is roughly opposite to the selected course, the needle works backward. Turning toward it takes you further away. To avoid this, keep your heading roughly in line with the selected course. If you want to fly the other way, set the reciprocal course.
 
 ## On the G1000
 
-- Press the **CDI** softkey to cycle the HSI's navigation source: **GPS → VOR1 → VOR2**.
-- The needle color tells you the source: **magenta for GPS**, **green for VOR**.
+- Press the **CDI** softkey to cycle the HSI's navigation source through GPS, VOR1 and VOR2.
+- The needle color shows the source: magenta for GPS, green for VOR.
 - Tune NAV frequencies with the **NAV knob** and the flip-flop key.
 - Set the course with the **CRS** knob.
 

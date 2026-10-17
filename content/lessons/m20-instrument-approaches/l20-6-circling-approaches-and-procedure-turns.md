@@ -18,12 +18,12 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## Two things the plate assumes you know
+## Circling and procedure turns on the plate
 
-Most of the approaches you fly in this course are straight-in, joined on vectors. Plates were drawn for a world without radar, and two of their features survive from it: **circling minima**, for when the approach does not line up with the runway you want, and the **procedure turn**, for when nobody is there to turn you onto final. This short lesson is awareness, not mastery: enough to read them on a plate, fly them in the sim when a challenge asks, and know why real pilots treat them with care.
+Most of the approaches you fly in this course are straight-in, joined on vectors. Many procedures were designed before radar coverage, and two features on the plates come from that time: **circling minima**, for when the approach does not line up with the runway you want, and the **procedure turn**, for when nobody is there to turn you onto final. This short lesson gives you enough to read them on a plate, fly them in the sim when a challenge asks, and know why real pilots treat them with care.
 
 :::callout{type="real-world"}
-In a real airplane, circling approaches are among the highest-risk maneuvers in instrument flying: low, slow, visual, close to terrain and often at night. Many operators forbid them below certain minima. Procedure turns demand situational awareness without a magenta line. Both are trained with an instructor, in the airplane, before anyone flies them alone in cloud.
+In a real airplane, circling approaches are among the highest-risk maneuvers in instrument flying: low, slow, visual, close to terrain and often at night. Many operators forbid them below certain minima. Procedure turns demand situational awareness without a magenta line. Pilots train both with an instructor, in the airplane, before flying them alone in cloud.
 :::
 
 :::callout{type="safety"}
@@ -32,9 +32,9 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 ## Circling minima and the protected area
 
-A **circling approach** ends not at the runway but at the airport: you descend to a circling MDA, find the airport visually, and maneuver to land on a runway the approach does not point at, perhaps because the wind favors the other end, perhaps because the final course is 70° off every runway. Circling minima are listed on their own line, by category, and they are never lower than straight-in minima, and usually higher, because you will be turning low over terrain the designer could not see you avoid.
+A **circling approach** ends at the airport rather than at a runway. You descend to a circling MDA, find the airport visually, and maneuver to land on a runway the approach does not point at. The wind may favor the other end, or the final course may be 70° off every runway. Circling minima have their own line, by category. They are never lower than straight-in minima, and usually higher, because you will be turning low over terrain on a path the designer cannot predict.
 
-The **protected area** is the airspace around the runways in which the circling MDA guarantees obstacle clearance. For Category A it is drawn from arcs 1.3 nm from each runway end. The FAA's newer table grows the radius with the circling altitude and the category, but for Category A it stays 1.3 nm below 7,000 ft; you may still see a "C" in a black box marking plates built to that table. Stay inside it. The circling MDA means nothing a mile and a half outside the arcs.
+The **protected area** is the airspace around the runways in which the circling MDA guarantees obstacle clearance. For Category A it is drawn from arcs 1.3 nm from each runway end. The FAA's newer table grows the radius with the circling altitude and the category, but for Category A it stays 1.3 nm below 7,000 ft. You may still see a "C" in a black box marking plates built to that table. Stay inside it. A mile and a half outside the arcs, the circling MDA gives you no obstacle clearance.
 
 | Item             | Category A, standard plate                                       | Note                                                                    |
 | ---------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -53,12 +53,12 @@ While circling at the MDA you lose sight of the runway in a patch of low cloud. 
 
 ---
 
-Losing the runway while circling means an immediate missed approach. The standard technique is a climbing turn **toward the landing runway**, which keeps you over the protected area while you rejoin the published missed approach course.
+Losing the runway while circling means an immediate missed approach. The standard technique is a climbing turn toward the landing runway, which keeps you over the protected area while you rejoin the published missed approach course.
 :::
 
 ## Flying the circle
 
-Circling is a traffic pattern flown at the MDA instead of pattern altitude, tighter than you are used to, and never further from the runway than the protected area allows. Choose the pattern that keeps the runway on your side and in sight; left or right does not matter unless the plate forbids circling on one side.
+Circling is a traffic pattern flown at the MDA instead of pattern altitude, tighter than you are used to, and never further from the runway than the protected area allows. Choose the pattern that keeps the runway on your side and in sight. Left or right does not matter unless the plate forbids circling on one side.
 
 | Where you break out                            | Pattern                                               |
 | ---------------------------------------------- | ----------------------------------------------------- |
@@ -66,7 +66,7 @@ Circling is a traffic pattern flown at the MDA instead of pattern altitude, tigh
 | Crossing the runway at an angle                | Turn to a downwind on the side that keeps it in sight |
 | Over the airport                               | Fly over it, turn downwind, then base and final       |
 
-Hold the MDA until you are on a normal descent path to the runway, then fly the approach you learned in [[l4-3-normal-approach-and-landing]]. The whole thing is flown at the approach speed with flaps 10 until final; configure late, not early. If anything goes wrong, the missed approach from a circle is always a climbing turn toward the landing runway, then the published missed approach.
+Hold the MDA until you are on a normal descent path to the runway, then fly the approach you learned in [[l4-3-normal-approach-and-landing]]. Fly the whole circle at the approach speed with flaps 10 until final, and configure late. If anything goes wrong, the missed approach from a circle is always a climbing turn toward the landing runway, then the published missed approach.
 
 :::callout{type="decision"}
 Circling MDA, airport in sight, but it is dusk, the runway lights are dim, and the downwind would put a ridge between you and the field. The straight-in runway has a 10 kt tailwind. Which risk do you prefer: a low circle you cannot see well, or a longer landing on a 5,000 ft runway? With the Skyhawk's landing distance, the tailwind is the smaller risk. Say it aloud and land straight in.
@@ -74,14 +74,14 @@ Circling MDA, airport in sight, but it is dusk, the runway lights are dim, and t
 
 ## Procedure turns and the hold-in-lieu
 
-When you fly a full procedure without radar vectors and arrive heading the wrong way, the plate gives you a **course reversal** to turn around and get established inbound. There are two kinds.
+When you fly a full procedure without radar vectors and arrive heading the wrong way, the plate gives you a **course reversal** to turn around and get established inbound.
 
 | Course reversal                      | On the plate                                                                                           | How it is flown                                                                                    |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
 | **Procedure turn**                   | A barbed arrow on the plan view, with "remain within 10 nm" (the usual limit; some plates say 5 or 15) | Outbound on the course, turn 45° to the barb side, fly 1 minute, turn 180° back, intercept inbound |
 | **Hold-in-lieu of a procedure turn** | A racetrack at the IF or FAF                                                                           | Enter the hold normally, fly one circuit, continue inbound                                         |
 
-The procedure turn's exact shape is yours to choose as long as you stay on the barb side and within the distance limit; the 45/180 is the classic. Start it at or above the altitude printed beside it and descend only when established inbound. Do not fly either reversal when the plate says **NoPT** for your route, when you are on vectors, or when ATC clears you "straight in". The G1000 will sequence a hold-in-lieu automatically when the transition needs it, as in [[l19-2-holding-with-the-g1000-and-autopilot]]; it does not fly a procedure turn for you.
+You choose the procedure turn's exact shape, as long as you stay on the barb side and within the distance limit. The 45/180 is the classic. Start it at or above the altitude printed beside it and descend only when established inbound. Do not fly either reversal when the plate says **NoPT** for your route, when you are on vectors, or when ATC clears you "straight in". The G1000 will sequence a hold-in-lieu automatically when the transition needs it, as in [[l19-2-holding-with-the-g1000-and-autopilot]]. It does not fly a procedure turn for you.
 
 :::quiz{id="l20-6-q2" type="single"}
 You are cleared for a full-procedure approach from the stem IAF behind the airport. The plate shows a racetrack at the IF marked "hold-in-lieu". ATC did not say "straight in". What do you do?
@@ -93,16 +93,16 @@ You are cleared for a full-procedure approach from the stem IAF behind the airpo
 
 ---
 
-A hold-in-lieu is flown once, like any hold, and replaces the procedure turn. Skipping it is only allowed with NoPT, vectors, or a straight-in clearance.
+A hold-in-lieu is flown once, like any hold, and replaces the procedure turn. You may skip it only with NoPT, vectors, or a straight-in clearance.
 :::
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. Circling minima are higher, the protected area is small, and losing the runway means a climbing turn toward it and the missed approach.
 2. Circle at the MDA, at the approach speed, configured late, on the side that keeps the runway in sight.
-3. A barbed arrow is a procedure turn; a racetrack at the IF or FAF is a hold-in-lieu; NoPT, vectors or "straight in" cancel both.
+3. A barbed arrow is a procedure turn. A racetrack at the IF or FAF is a hold-in-lieu. NoPT, vectors or "straight in" cancel both.
 
 **Practice.** This lesson feeds the `approach-plate-symbols` deck (the barbed arrow, the racetrack, the boxed "C" and the circling minima line).
 

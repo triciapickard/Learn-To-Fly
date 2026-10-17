@@ -19,14 +19,14 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## The quiet part of the flight
+## The enroute phase
 
-The clearance is read back, the departure flown, and the Skyhawk is climbing into gray with the needle centered. The enroute part of an IFR flight is calm by design: fly the route, hold the altitude, talk when ATC calls or a rule says you must. It is also where the safety net shows, because every enroute rule assumes the radio might stop working.
+After the clearance and the departure, the enroute part of an IFR flight begins. It is calm by design: fly the route, hold the altitude, and talk when ATC calls or a rule says you must. Every enroute rule also assumes the radio might stop working.
 
-This lesson covers both: flying the route, and what to do when nobody answers.
+This lesson covers flying the route and what to do when nobody answers.
 
 :::callout{type="real-world"}
-In a real airplane, enroute IFR means real ice, embedded thunderstorms and real fuel. An instrument student flies long cross-countries with an instructor before doing it alone, and lost communications is a genuine emergency with a plan behind it. The rules here are real, simplified for the sim; the weather judgment comes from Module 11 and from training.
+In a real airplane, enroute IFR means real ice, embedded thunderstorms and real fuel. An instrument student flies long cross-countries with an instructor before doing it alone, and lost communications is a genuine emergency with a plan behind it. The rules here are real but simplified for the sim. The weather judgment comes from Module 11 and from training.
 :::
 
 :::callout{type="safety"}
@@ -35,31 +35,31 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 ## Airways and direct routing
 
-Your route is either an **airway** from the enroute chart ([[l18-2-ifr-charts-and-the-approach-plate]]) or a **direct** leg between fixes that GPS makes possible. ATC mixes them freely: "cleared direct SUNOL, then as filed" is normal.
+Your route is either an **airway** from the enroute chart ([[l18-2-ifr-charts-and-the-approach-plate]]) or a **direct** leg between fixes that GPS makes possible. ATC often mixes them, and a clearance such as "cleared direct SUNOL, then as filed" is normal.
 
-| Routing         | How you fly it                                                                                                       | What to watch                                                                                                                                                                  |
-| --------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Victor airway   | Loaded as an airway in the FPL ([[l18-4-the-g1000-nxi-and-gfc-700-for-ifr]]); NAV mode on GPS, or VOR if GPS is lost | The changeover point; the MEA changes at each fix                                                                                                                              |
-| T-route         | Same, GPS only                                                                                                       | The MEA is a GPS MEA; VOR is not an option                                                                                                                                     |
-| Direct to a fix | D→ the fix, then Activate Leg to rejoin the route                                                                    | Terrain: no airway means no MEA; off-route you need 1,000 ft (2,000 ft in mountains) above anything within 4 nm of your course, so check the OROCA and your clearance altitude |
-| Radar vectors   | HDG mode on the assigned heading                                                                                     | ATC is responsible for terrain while vectoring; you still watch the map                                                                                                        |
+| Routing         | How you fly it                                                                                                       | What to watch                                                                                                                                                         |
+| --------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Victor airway   | Loaded as an airway in the FPL ([[l18-4-the-g1000-nxi-and-gfc-700-for-ifr]]); NAV mode on GPS, or VOR if GPS is lost | The changeover point. The MEA changes at each fix                                                                                                                     |
+| T-route         | Same, GPS only                                                                                                       | The MEA is a GPS MEA. VOR is not an option                                                                                                                            |
+| Direct to a fix | D→ the fix, then Activate Leg to rejoin the route                                                                    | No airway means no MEA. Off-route you need 1,000 ft (2,000 ft in mountains) above anything within 4 nm of your course, so check the OROCA and your clearance altitude |
+| Radar vectors   | HDG mode on the assigned heading                                                                                     | ATC is responsible for terrain while vectoring. You still watch the map                                                                                               |
 
-Joining an airway is the intercept from [[l6-4-vor-navigation]]: a 30–45° angle, then turn onto the course as the needle comes alive. With GPS the airway is a magenta line, so the intercept happens on the map as much as on the HSI.
+To join an airway, fly the intercept from [[l6-4-vor-navigation]]. Use a 30–45° angle, then turn onto the course as the needle starts to move. With GPS the airway is a magenta line, so the intercept happens on the map as much as on the HSI.
 
-At each fix, run the 5 Ts you will meet again in [[l19-1-holding-patterns-entries-timing-and-wind]]: **Turn, Time, Twist, Throttle, Talk**. Enroute, most are "nothing to do", and saying so is the point.
+At each fix, run the 5 Ts you will meet again in [[l19-1-holding-patterns-entries-timing-and-wind]]: **Turn, Time, Twist, Throttle, Talk**. Enroute, most are "nothing to do". Say so anyway, so you know you checked each one.
 
 ## Altitudes on the airway
 
-Two rules decide your cruising altitude. Terrain: at or above the **MEA** for the segment (or the MOCA when ATC allows it with GPS). Traffic: in level cruise below 18,000 ft MSL, IFR flights separate by direction of flight:
+Terrain and traffic decide your cruising altitude. For terrain, fly at or above the MEA for the segment (or the MOCA when ATC allows it with GPS). For traffic, in level cruise below 18,000 ft MSL, IFR flights separate by direction of flight:
 
 | Magnetic course          | IFR cruising altitude | Example            |
 | ------------------------ | --------------------- | ------------------ |
 | 000° through 179° (east) | **Odd** thousands     | 5,000 ft, 7,000 ft |
 | 180° through 359° (west) | **Even** thousands    | 4,000 ft, 6,000 ft |
 
-Compare the VFR rule from [[l6-6-planning-a-cross-country-flight]]: the same east-odd, west-even split without the extra 500 ft, which keeps VFR and IFR traffic 500 ft apart by rule alone.
+The VFR rule from [[l6-6-planning-a-cross-country-flight]] uses the same east-odd, west-even split plus 500 ft. That keeps VFR and IFR traffic 500 ft apart by rule alone.
 
-The odd/even rule is written for uncontrolled airspace. In controlled airspace, which is almost everywhere you fly IFR, you fly the altitude **ATC assigns**, and ATC normally follows the same convention for you. Your job is to notice when an assigned altitude is below the MEA ahead, and say so.
+The odd/even rule is written for uncontrolled airspace. In controlled airspace, which is almost everywhere you fly IFR, you fly the altitude ATC assigns, and ATC normally follows the same convention for you. Your job is to notice when an assigned altitude is below the MEA ahead, and say so.
 
 :::quiz{id="l18-5-q1" type="single"}
 You are flying IFR on a magnetic course of 250° in uncontrolled airspace below 18,000 ft MSL. Which altitude fits the cruising altitude rule?
@@ -76,7 +76,7 @@ A westbound course (180° through 359°) takes even thousands under IFR: 6,000 f
 
 ## Required reports
 
-In a radar environment ATC can see your position, so position reports are not needed. A short list of events still requires a call **without being asked**:
+In a radar environment ATC can see your position, so position reports are not needed. You must still call ATC without being asked for these events:
 
 | Report                                                                 | Why ATC needs it                                     |
 | ---------------------------------------------------------------------- | ---------------------------------------------------- |
@@ -110,7 +110,7 @@ Altitude changes, poor climb performance and missed approaches are required repo
 
 ## Lost communications: AVEF
 
-The radio fails in cloud. ATC's plan for you is already written into the clearance: the route, the altitude you were told to expect, the time you said you would arrive. Lost-communications rules exist so you and ATC fly the same plan without talking.
+If the radio fails in cloud, ATC's plan for you is already in the clearance: the route, the altitude you were told to expect, and the time you said you would arrive. Lost-communications rules let you and ATC fly the same plan without talking.
 
 :::callout{type="memory"}
 **Lost communications under IFR (simplified).**
@@ -132,10 +132,10 @@ The radio fails in cloud. ATC's plan for you is already written into the clearan
 
 **Leave the clearance limit** to begin the approach at the expect-further-clearance time, or, if none was given, at your filed ETA.
 
-Worked example: cleared to Monterey as filed, "climb and maintain 3,000, expect 7,000 ten minutes after departure". You are on a vector of 250° to join the filed route when the radio dies, 12 minutes after takeoff, in cloud. Route: go direct to the fix you were being vectored toward, then the filed route. Altitude: assigned 3,000, MEA on the first segment 5,000, expected 7,000 and the 10 minutes have passed, so **7,000 ft**. If a later segment's MEA is 9,000, climb to 9,000 for that segment and come back down to 7,000 after it.
+Worked example: cleared to Monterey as filed, "climb and maintain 3,000, expect 7,000 ten minutes after departure". You are on a vector of 250° to join the filed route when the radio fails, 12 minutes after takeoff, in cloud. Route: go direct to the fix you were being vectored toward, then the filed route. Altitude: assigned 3,000, MEA on the first segment 5,000, expected 7,000 and the 10 minutes have passed, so **7,000 ft**. If a later segment's MEA is 9,000, climb to 9,000 for that segment and come back down to 7,000 after it.
 :::
 
-Three details catch people. "Highest of the three" is checked **per segment**, so your altitude can change along the route. The "expect" altitude counts only once its time or fix has been reached. And if you are in VMC, the rules stop: land, then phone.
+Check "highest of the three" for each segment, so your altitude can change along the route. The "expect" altitude counts only once you reach its time or fix. If you are in VMC, stay VMC, land, then phone ATC.
 
 | Situation                                                | What you do                                                                                                                                                    |
 | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -164,15 +164,15 @@ Highest of assigned (4,000), MEA (5,000) and expected (8,000, but only after SUN
 :::
 
 :::callout{type="decision"}
-The radio has been silent for 2 minutes and you are not sure whether it failed or you missed a handoff. Before squawking 7600: try the last frequency, the previous one and 121.5, and transmit in the blind. Check the volume, the audio panel and the headset plug. Most "lost comms" are a knob. If nothing works, the rules are there for you; fly them calmly.
+The radio has been silent for 2 minutes and you are not sure whether it failed or you missed a handoff. Before you squawk 7600, try the last frequency, the previous one and 121.5, and transmit in the blind. Check the volume, the audio panel and the headset plug. Most "lost comms" turn out to be a knob setting. If nothing works, fly the lost-communications rules calmly.
 :::
 
 ## Practice and next steps
 
-Three things to carry forward: east-odd, west-even for IFR cruise; report altitude changes, poor climb and the missed without being asked; and A-V-E-F with the highest of assigned, MEA and expected.
+To carry forward: east-odd, west-even for IFR cruise; report altitude changes, poor climb and the missed without being asked; and A-V-E-F with the highest of assigned, MEA and expected.
 
 **Practice.** This lesson feeds the `ifr-rules` flashcard deck (cruising altitudes, required reports, the lost-communications route and altitude rules) and the `memory-items` deck through the memory callout above.
 
 **Fly it.** Challenge C18.3 "IFR departure and enroute" departs Livermore in cloud, flies the departure procedure from [[l18-3-clearances-and-departures]], joins the route and flies it to the first fix of your arrival, with every required report along the way.
 
-**Next.** [[l19-1-holding-patterns-entries-timing-and-wind]] teaches the one thing ATC asks of an enroute IFR flight that VFR never does: wait, precisely, in a racetrack in the sky.
+**Next.** [[l19-1-holding-patterns-entries-timing-and-wind]] teaches holding, the racetrack pattern you fly over a fix when ATC asks an IFR flight to wait.

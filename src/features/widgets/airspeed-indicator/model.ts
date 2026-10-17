@@ -33,21 +33,21 @@ export function bandFor(ias: number, arcs: Arcs): Band {
     return {
       id: 'yellow',
       label: 'yellow arc',
-      meaning: 'Caution range: smooth air only, gentle control inputs.',
+      meaning: 'Caution range. Fly here only in smooth air, with gentle control inputs.',
     };
   }
   if (ias < greenLow) {
     return {
       id: 'white',
       label: 'white arc',
-      meaning: 'Flap operating range, below the clean stall speed: you need flaps to keep flying.',
+      meaning: 'Flap operating range, below the clean stall speed. You need flaps to keep flying.',
     };
   }
   if (ias <= whiteHigh) {
     return {
       id: 'white-green',
       label: 'green arc',
-      meaning: 'Normal operating range, inside the white arc: every flap setting is allowed.',
+      meaning: 'Normal operating range, inside the white arc. You can use any flap setting.',
     };
   }
   return {
@@ -93,7 +93,7 @@ export function nearestVSpeed(ias: number, speeds: NamedSpeed[], tolerance = 0):
   return best;
 }
 
-/** Readout and screen-reader text, e.g. "74 KIAS — green arc — Vy, best rate of climb". */
+/** Readout and screen-reader text, e.g. "74 KIAS · green arc · Vy, best rate of climb". */
 export function describe(
   ias: number,
   arcs: Arcs,
@@ -103,7 +103,7 @@ export function describe(
   const v = nearestVSpeed(ias, speeds);
   const vText = v ? `${v.name}, ${v.meaning.charAt(0).toLowerCase()}${v.meaning.slice(1)}` : '';
   return {
-    readout: [`${ias} KIAS`, band.label, vText].filter(Boolean).join(' — '),
+    readout: [`${ias} KIAS`, band.label, vText].filter(Boolean).join(' · '),
     speech: [`${ias} knots`, band.label, vText].filter(Boolean).join(', '),
   };
 }

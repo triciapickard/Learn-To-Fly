@@ -101,10 +101,10 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
     <>
       <p>
         A round airspeed indicator and a G1000-style airspeed tape for the Cessna 172S, showing the
-        same airspeed. White arc {arcs.white[0]}–{arcs.white[1]} KIAS: the flap operating range.
-        Green arc {arcs.green[0]}–{arcs.green[1]} KIAS: the normal operating range. Yellow arc{' '}
-        {arcs.yellow[0]}–{arcs.yellow[1]} KIAS: caution, smooth air only. Red line {arcs.redline}{' '}
-        KIAS: never exceed.
+        same airspeed. The white arc, {arcs.white[0]}–{arcs.white[1]} KIAS, is the flap operating
+        range. The green arc, {arcs.green[0]}–{arcs.green[1]} KIAS, is the normal operating range.
+        The yellow arc, {arcs.yellow[0]}–{arcs.yellow[1]} KIAS, is the caution range, for smooth air
+        only. The red line at {arcs.redline} KIAS is the never-exceed speed.
       </p>
       <p>
         Marked speeds:{' '}

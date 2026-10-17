@@ -196,7 +196,7 @@ export default function G1000Pfd({ props, onQuizAnswer }: WidgetProps) {
         label={label}
       />
       <p className="mt-1 text-xs text-ink-2">
-        Simplified original drawing. Labels follow the G1000 NXi; the sim may differ slightly.
+        Simplified original drawing. Labels follow the G1000 NXi. The sim may differ slightly.
       </p>
       {!quiz && !navigation && (
         <div className="mt-3 flex flex-wrap items-center gap-2">

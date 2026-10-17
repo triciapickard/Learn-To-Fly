@@ -75,7 +75,7 @@ airports:
       - { type: NorCal Approach, mhz: '123.85' }
     patternNotes: >-
       Left traffic on every runway. The published pattern altitude is 994 ft MSL (800 ft
-      above the field); fly about 1,000 ft MSL. All four runway ends have a PAPI.
+      above the field). Fly about 1,000 ft MSL. All four runway ends have a PAPI.
     notes:
       - 'Non-towered: self-announce on the CTAF.'
       - East of Livermore over the Altamont Pass wind farms, a great landmark.
@@ -205,8 +205,8 @@ airports:
       - { type: NorCal Approach, mhz: '135.1' }
     patternNotes: >-
       Left traffic on runway 12 and right traffic on 30, so the pattern is over the water.
-      Published pattern altitude about 1,000 ft MSL. Both runway ends have a PAPI, and
-      expect turbulence on final to runway 12.
+      Published pattern altitude about 1,000 ft MSL. Both runway ends have a PAPI.
+      Expect turbulence on final to runway 12.
     notes:
       - Coastal non-towered airport over the hills from Palo Alto and San Carlos.
       - Watch for the marine layer and fog along the coast.
@@ -287,7 +287,7 @@ airports:
       - { type: Tower, mhz: '119.7', notes: '0700–2200 local; CTAF when the tower is closed' }
       - { type: Travis Approach, mhz: '119.9' }
     patternNotes: >-
-      Left traffic on 1L, 14L, 19L and 32L; right traffic on 1R, 14R, 19R and 32R. No
+      Left traffic on 1L, 14L, 19L and 32L. Right traffic on 1R, 14R, 19R and 32R. No
       pattern altitude is published, so the standard 1,000 ft above the field applies:
       about 1,000 ft MSL. Only runway 14L/32R is open when the tower is closed.
     notes:
@@ -324,7 +324,7 @@ airports:
     patternNotes: >-
       Left traffic on every runway. No pattern altitude is published, so the standard
       1,000 ft above the field applies: about 1,200 ft MSL. Runway 20 is the calm-wind
-      runway, straight-in approaches are not recommended, and no departures are allowed
+      runway. Straight-in approaches are not recommended, and no departures are allowed
       from runway 27.
     notes:
       - Non-towered capstone option to the south along the coast.

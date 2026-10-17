@@ -45,7 +45,7 @@ Use **PAVE** to check the four areas of risk:
 - **V: enVironment.** Weather, terrain, airspace, runway length, daylight.
 - **E: External pressures.** Anything pushing you to go: an appointment, passengers, wanting to get home.
 
-External pressures are the sneakiest. Make a plan B before you go, so you never feel you _have_ to continue.
+External pressures are the hardest to notice. Make a plan B before you go, so you never feel you _have_ to continue.
 
 :::quiz{id="l8-1-q1" type="single"}
 What does the "V" in PAVE stand for?
@@ -73,7 +73,7 @@ Check yourself before every flight:
 
 ## Personal minimums
 
-The regulations set the legal minimums. **Personal minimums** are your own, stricter limits, based on your experience. Write them down **before** you need them, when you're not under pressure.
+The regulations set the legal minimums. **Personal minimums** are your own, stricter limits, based on your experience. Write them down before you need them, when you're not under pressure.
 
 Fill in your own for sim flying:
 
@@ -85,8 +85,8 @@ Fill in your own for sim flying:
 | Minimum cloud base          |            |
 | Minimum fuel at landing     |            |
 
-A starting point for a new pilot: wind no more than 15 kt, crosswind no more than 8 kt, visibility at least 5 sm, cloud base at least 3,000 ft, and at least 1 hour of fuel at landing. As your skills grow, you can relax them, one at a time.
+For a new pilot, a good starting point is wind no more than 15 kt, crosswind no more than 8 kt, visibility at least 5 sm, cloud base at least 3,000 ft, and at least 1 hour of fuel at landing. As your skills grow, you can relax them, one at a time.
 
 ## Why it matters in a sim
 
-Nobody gets hurt in a sim. But the habits you build here are the ones you'll take into a real airplane. Run PAVE before each challenge, and treat a sim go-around or diversion as a good decision, not a failure.
+Nobody gets hurt in a sim. But the habits you build here are the ones you'll take into a real airplane. Run PAVE before each challenge, and treat a sim go-around or diversion as a good decision.

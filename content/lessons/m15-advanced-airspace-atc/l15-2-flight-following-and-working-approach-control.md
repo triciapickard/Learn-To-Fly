@@ -21,9 +21,9 @@ simVersion: null
 
 ## A second pair of eyes
 
-On the cross-country in Course 1 you flew from Livermore to Half Moon Bay talking to nobody between the two towers. That is legal, and on a quiet day it is fine. But the Bay Area is not quiet. Airliners descend through 5,000 ft over the East Bay, jets climb out of San Jose, and a dozen trainers share the valley.
+On the cross-country in Course 1 you flew from Livermore to Half Moon Bay talking to nobody between the two towers. That is legal, and on a quiet day it is fine. But the Bay Area is busy. Airliners descend through 5,000 ft over the East Bay, jets climb out of San Jose, and a dozen trainers share the valley.
 
-**Flight following** is the fix. You call the approach controller, get a squawk code, and from then on a radar controller watches your target and tells you about traffic near you. It costs nothing, it is optional, and it is the single best habit a new VFR pilot can pick up. This lesson teaches the whole conversation, from the first call to "squawk VFR".
+**Flight following** helps here. You call the approach controller, get a squawk code, and from then on a radar controller watches your target and tells you about traffic near you. It costs nothing, it is optional, and it is the single best habit a new VFR pilot can pick up. This lesson teaches the whole conversation, from the first call to "squawk VFR".
 
 :::callout{type="verify"}
 Author decision: the v2 spec lists L7.4 as the prerequisite, but that lesson does not exist (checked 2026-10-13), so [[l7-3-towered-airports-and-sim-atc]] is used. Swap the prerequisite to l7-4 if and when it is written.
@@ -43,12 +43,12 @@ Flight following is the everyday name for **radar traffic advisories** given to 
 You stay VFR. You choose your route and altitude unless the controller assigns one. If you want to turn, climb or descend, you may, but tell the controller first so the traffic picture stays right.
 
 :::callout{type="note"}
-The service has an international cousin. Outside the US you will hear "radar advisory service" or "basic service". The idea is the same: a controller watching, a pilot still responsible.
+Other countries have a similar service. Outside the US you will hear "radar advisory service" or "basic service". In each, a controller watches and the pilot stays responsible.
 :::
 
 ## The request
 
-Pick the approach frequency for where you are. For Livermore it is on the airport card and the sectional; in the Bay Area the controller is **NorCal Approach**. Listen first, then make a short first call so the controller can fit you in.
+Pick the approach frequency for where you are. For Livermore it is on the airport card and the sectional. In the Bay Area the controller is NorCal Approach. Listen first, then make a short first call so the controller can fit you in.
 
 | You say                                                                                                                                                                             | They say                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -57,7 +57,7 @@ Pick the approach frequency for where you are. For Livermore it is on the airpor
 | "Squawk four six one two, Skyhawk One Two Three."                                                                                                                                   | "Skyhawk One Two Three, radar contact six miles east of Livermore. Livermore altimeter three zero zero two." |
 | "Three zero zero two, Skyhawk One Two Three."                                                                                                                                       |                                                                                                              |
 
-Your second call carries the four things the controller needs: **who** you are and what type, **where** you are with altitude, **what** you want, and the **destination** with your planned altitude. "Radar contact" means the controller has found your target. It is not a clearance into anything.
+Your second call carries the four things the controller needs: who you are and what type, where you are with altitude, what you want, and the destination with your planned altitude. "Radar contact" means the controller has found your target. It is not a clearance into anything.
 
 :::quiz{id="l15-2-q1" type="order"}
 Put the parts of the full flight-following request in order.
@@ -73,12 +73,12 @@ Put the parts of the full flight-following request in order.
 :::
 
 :::callout{type="tip"}
-Set the squawk code before you read it back, then read it from the transponder. On the G1000 the code is entered on the PFD transponder softkeys. Reading it from the screen catches the kind of slip where you say "four six one two" and dial "four six two one".
+Set the squawk code before you read it back, then read it from the transponder. On the G1000 you enter the code with the PFD transponder softkeys. Reading it from the screen catches the kind of slip where you say "four six one two" and dial "four six two one".
 :::
 
 ## Traffic calls: "traffic in sight" or "looking"
 
-The reason you are here. A traffic call tells you where another airplane is using the clock face, with your nose at 12 o'clock, the distance, the direction it is moving, and its altitude if the radar knows it.
+A traffic call uses the clock face, with your nose at 12 o'clock, to tell you where another airplane is. It also gives the distance, the direction the airplane is moving, and its altitude if the radar knows it.
 
 | They say                                                                                                   | Meaning                                                                | You say                                       |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | --------------------------------------------- |
@@ -88,10 +88,10 @@ The reason you are here. A traffic call tells you where another airplane is usin
 | "Skyhawk One Two Three, traffic no factor."                                                                | It has passed                                                          | "Skyhawk One Two Three."                      |
 | "Skyhawk One Two Three, traffic no longer observed."                                                       | The radar lost it; it may still be out there, so keep looking          | "Skyhawk One Two Three."                      |
 
-Three habits:
+Build these habits:
 
-- **Look before you answer.** A quick "looking" is fine, but spend the next 10 seconds actually scanning the clock position, above and below the horizon.
-- **"Negative contact" is not failure.** It tells the controller to keep calling that traffic. Saying "in sight" when you are not sure is the dangerous answer.
+- **Look before you answer.** A quick "looking" is fine, but spend the next 10 seconds scanning the clock position, above and below the horizon.
+- **"Negative contact" is a useful answer.** It tells the controller to keep calling that traffic. Saying "in sight" when you are not sure is the dangerous answer.
 - **The clock is relative to your nose.** In a crab, the controller's "two o'clock" is still from your track. Scan a little wider than the number.
 
 :::quiz{id="l15-2-q2" type="single"}
@@ -104,12 +104,12 @@ The controller calls traffic at your two o'clock, three miles, and you cannot fi
 
 ---
 
-**"Negative contact"** tells the controller you are still looking, so they keep updating you. Claiming to see traffic you have not found is the one answer that can hurt you.
+"Negative contact" tells the controller you are still looking, so they keep updating you. Claiming to see traffic you have not found is the one answer that can hurt you.
 :::
 
 ## Altitudes and headings
 
-Most of the time on flight following, altitude is yours: "maintain VFR" means fly whatever VFR altitude suits you, and tell the controller when you change it. Inside Class B or C, or near traffic, the controller may assign one:
+Most of the time on flight following, you choose the altitude. When you hear "maintain VFR", fly whatever VFR altitude suits you, and tell the controller when you change it. Inside Class B or C, or near traffic, the controller may assign one:
 
 | They say                                                                       | What it means                                                | You say                                                           |
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------------- |
@@ -118,7 +118,7 @@ Most of the time on flight following, altitude is yours: "maintain VFR" means fl
 | "Skyhawk One Two Three, resume own navigation."                                | The vector is over; go back to your route                    | "Resume own navigation, Skyhawk One Two Three."                   |
 | "Skyhawk One Two Three, say altitude."                                         | The radar altitude readout does not match, or is missing     | "Three thousand five hundred, Skyhawk One Two Three."             |
 
-Read back every altitude and heading, always with your call sign. If an instruction would put you in a cloud or into terrain, the answer is **"unable"**, followed by what you can do: "Unable three thousand for clouds, Skyhawk One Two Three can maintain two thousand five hundred." The controller would much rather hear "unable" than watch you fly into the weather. When an assigned altitude is no longer needed you will hear "resume appropriate VFR altitudes": go back to a cruising altitude that fits your direction of flight.
+Read back every altitude and heading, always with your call sign. If an instruction would put you in a cloud or into terrain, the answer is "unable", followed by what you can do: "Unable three thousand for clouds, Skyhawk One Two Three can maintain two thousand five hundred." The controller would much rather hear "unable" than watch you fly into the weather. When an assigned altitude is no longer needed you will hear "resume appropriate VFR altitudes". Then go back to a cruising altitude that fits your direction of flight.
 
 :::callout{type="verify"}
 Sim check: desk-verified 2026-10-13 against the Pilot/Controller Glossary ("maintain", "resume own navigation", "say altitude"), AIM 4-1-18 (at-or-below altitude assignments) and FAA Order 7110.65 7-8-5/7-9-7 ("resume appropriate VFR altitudes"). Still open: does MSFS 2024 ATC issue altitude or heading assignments, "say altitude" or "resume own navigation" to VFR aircraft on flight following?
@@ -134,7 +134,7 @@ As you fly, you cross from one controller's sector into the next. The handoff is
 | (on the new frequency, after listening for a gap)                                  | "NorCal Approach, Skyhawk One Two Three, level four thousand five hundred." |
 | "Skyhawk One Two Three, NorCal Approach, Monterey altimeter three zero zero four." | "Three zero zero four, Skyhawk One Two Three."                              |
 
-Put the new frequency in the **standby** window as you read it back, then flip-flop. If nobody answers after two tries, flip back to the previous frequency and say so: the old controller can fix the handoff. Near your destination the last handoff is to the tower, and the tower already knows you are coming.
+Put the new frequency in the standby window as you read it back, then flip-flop. If nobody answers after two tries, flip back to the previous frequency and say so. The old controller can fix the handoff. Near your destination the last handoff is to the tower, and the tower already knows you are coming.
 
 :::quiz{id="l15-2-q3" type="single"}
 After a handoff, what belongs in your first call on the new frequency?
@@ -146,27 +146,27 @@ After a handoff, what belongs in your first call on the new frequency?
 
 ---
 
-The next controller already has your flight strip. A short **"NorCal Approach, Skyhawk One Two Three, level four thousand five hundred"** confirms who you are and lets the controller check the altitude readout.
+The next controller already has your flight strip. A short "NorCal Approach, Skyhawk One Two Three, level four thousand five hundred" confirms who you are and lets the controller check the altitude readout.
 :::
 
 ## "Radar service terminated, squawk VFR"
 
-Flight following ends in one of three ways:
+Flight following ends in one of these ways:
 
 - **The controller ends it.** "Skyhawk One Two Three, radar service terminated, squawk VFR, frequency change approved." Set 1200, answer "Squawk VFR, Skyhawk One Two Three", and you are on your own again. This happens when you leave radar coverage, when the controller is too busy, or when you are about to land at a non-towered field.
-- **You end it.** "NorCal Approach, Skyhawk One Two Three, Tracy in sight, cancel flight following." The controller terminates you and approves the frequency change. Never just switch away: a target that stops answering looks like an emergency.
+- **You end it.** "NorCal Approach, Skyhawk One Two Three, Tracy in sight, cancel flight following." The controller terminates you and approves the frequency change. Never switch away without telling the controller. A target that stops answering looks like an emergency.
 - **The tower takes over.** At a towered airport the approach controller hands you to the tower, and the tower's instructions replace the advisories.
 
 :::callout{type="decision"}
-Flight following was terminated 15 nm from Monterey because the controller got busy, and the coastal haze is thickening ahead. Your decision point is now, not at the shoreline: do you continue toward a towered airport in lowering visibility, or turn back toward the clear valley you just left? The right answer depends on the numbers from [[l8-1-decision-making-and-personal-minimums]], and a turn back counts as a good flight.
+Flight following was terminated 15 nm from Monterey because the controller got busy, and the coastal haze is thickening ahead. Decide now, before you reach the shoreline. Do you continue toward a towered airport in lowering visibility, or turn back toward the clear valley you just left? The right answer depends on the numbers from [[l8-1-decision-making-and-personal-minimums]], and a turn back counts as a good flight.
 :::
 
 ## In the sim
 
-MSFS 2024's ATC menu offers flight following once you are airborne, usually under the nearest approach or center facility. The sim gives traffic calls for AI aircraft and live traffic, hands you between sectors, and terminates service near your destination. What it does not do is understand "negative contact" or "unable", so some rows above will be missing from the menu.
+MSFS 2024's ATC menu offers flight following once you are airborne, usually under the nearest approach or center facility. The sim gives traffic calls for AI aircraft and live traffic, hands you between sectors, and terminates service near your destination. It does not understand "negative contact" or "unable", so some rows above will be missing from the menu.
 
 :::callout{type="sim"}
-In sim-ATC mode, say every call out loud before you pick it from the menu, including the ones the menu does not offer. In self-voiced mode you say both sides from the challenge script. On an online network a real person answers, and the full conversation above is exactly what you will hear.
+In sim-ATC mode, say every call out loud before you pick it from the menu, including the ones the menu does not offer. In self-voiced mode you say both sides from the challenge script. On an online network a real person answers, and you will hear the full conversation above.
 :::
 
 :::callout{type="verify"}
@@ -175,10 +175,10 @@ Sim check: confirm the MSFS 2024 ATC menu path for requesting flight following, 
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. The request is who, where, what and where to, and "radar contact" is not a clearance.
-2. Answer every traffic call honestly: "looking", "in sight" or "negative contact".
+2. Answer every traffic call with what you see: "looking", "in sight" or "negative contact".
 3. Read back altitudes, headings and frequencies, and never leave a frequency without being released.
 
 **Practice.** This lesson feeds the `radio-phraseology` flashcard deck: the request, the traffic responses and the termination phrases.

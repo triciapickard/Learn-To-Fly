@@ -19,12 +19,12 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## The same valley, a different world
+## What changes at night
 
-It is 9 p.m. at Livermore. The ramp lights buzz, the runway is a pair of white dotted lines, and the hills east of the field have simply vanished. Everything you learned in Course 1 still works at night. The airplane does not know it is dark. Your eyes do, and that is the problem this lesson solves.
+At 9 p.m. at Livermore, the runway is a pair of white dotted lines and the hills east of the field are invisible. Everything you learned in Course 1 still works at night, because the airplane flies the same way in the dark. Your eyes are what change, and this lesson covers how.
 
 :::callout{type="real-world"}
-In a real airplane, night flying is a separate block of training. A student pilot flies at least 3 hours at night with an instructor, including a night cross-country and 10 takeoffs and landings to a full stop, before the private pilot checkride. Nothing in this module replaces that. The sim gives you the procedures and the habits; the instructor gives you the judgment.
+In a real airplane, night flying is a separate block of training. A student pilot flies at least 3 hours at night with an instructor, including a night cross-country and 10 takeoffs and landings to a full stop, before the private pilot checkride. Nothing in this module replaces that. The sim gives you the procedures and the habits. The instructor gives you the judgment.
 :::
 
 ## Rods and cones
@@ -38,13 +38,13 @@ The center of your vision, the spot you point at whatever you are looking at, ha
 | Cones  | The center           | Color, fine detail | Bright light  |
 | Rods   | Around the center    | Dim light, motion  | Time to adapt |
 
-Everything else in this lesson follows from that table: you see at night with your rods, and your rods are slow to wake up, easy to blind and bad at the center.
+The rest of this lesson follows from that table. You see at night with your rods, and your rods are slow to adapt, easy to blind and missing from the center of your vision.
 
 ## Dark adaptation
 
-Walk out of a lit hangar onto a dark ramp and at first you see almost nothing. After 5–10 minutes your cones have adjusted and you can make out shapes. Your rods keep improving for up to about **30 minutes**. That full sensitivity is what pilots call being **dark adapted**, and it is fragile. One bright white light, a flashlight in the face, a lightning flash, a phone screen at full brightness, and you are back near the start.
+Walk out of a lit hangar onto a dark ramp and at first you see almost nothing. After 5–10 minutes your cones have adjusted and you can make out shapes. Your rods keep improving for up to about 30 minutes. That full sensitivity is what pilots call being **dark adapted**, and you lose it easily. One bright white light, such as a flashlight in the face, a lightning flash or a phone screen at full brightness, puts you back near the start.
 
-Red light is kinder to your rods than white light, which is why so many cockpit flashlights have a red mode. The trade-off is that red light washes out red ink: the magenta and red symbols on a sectional chart can vanish. Most pilots use dim white light for reading charts and red or very dim light for everything else.
+Red light disturbs your rods less than white light, so many cockpit flashlights have a red mode. The trade-off is that red light washes out red ink, so the magenta and red symbols on a sectional chart can vanish. Most pilots use dim white light for reading charts and red or very dim light for everything else.
 
 A few things make night vision worse before you even start: tiredness, carbon monoxide, smoking and altitude. Night vision degrades noticeably above about 5,000 ft, even if you feel fine.
 
@@ -63,24 +63,24 @@ A brief bright light resets much of your rods' adaptation, and recovery takes mi
 
 ## Off-center scanning
 
-Because the center of your vision is blind in the dark, you find things at night by **not** looking at them. To see a dim light, an unlit airplane or the far end of a runway, look about 5–10° to one side of where you expect it. The rods around the center pick it up.
+Because the center of your vision is blind in the dark, you find things at night by not looking straight at them. To see a dim light, an unlit airplane or the far end of a runway, look about 5–10° to one side of where you expect it. The rods around the center pick it up.
 
-Then keep moving. Scan the sky in short stops, a second or two each, rather than sweeping. Rods detect motion well, so a slow, stepped scan finds traffic that a stare never will. Staring also starts one of the illusions below.
+Then keep your eyes moving. Scan the sky in short stops, a second or two each, rather than sweeping. Rods detect motion well, so a slow, stepped scan finds traffic that a stare never will. Staring also starts one of the illusions below.
 
 The same trick works on the ground. A dark taxiway edge or a hold-short line is easier to find in the corner of your eye than straight ahead.
 
 ## Black hole, autokinesis and false horizon
 
-Your brain builds a picture of the world from what it can see. At night it has less to work with, so it guesses, and some of those guesses can kill you. Three are worth knowing by name.
+Your brain builds a picture of the world from what it can see. At night it has less to work with, so it guesses, and some of those guesses can kill you. Learn these by name.
 
-| Illusion                | What you feel                                          | What is really happening                                                                                            | The counter                                                                                              |
+| Illusion                | What you feel                                          | What is happening                                                                                                   | The counter                                                                                              |
 | ----------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | **Black-hole approach** | You feel high, so you descend early and fly too low    | No ground lights between you and the runway (water, fields, desert). Your brain judges height from the runway alone | Fly the PAPI or VASI, stay at pattern altitude until the normal descent point, cross-check the altimeter |
-| **Autokinesis**         | A single light seems to drift or move                  | You stared at one point of light for more than a few seconds; tiny eye movements make it appear to wander           | Shift your gaze, keep scanning, check the instruments, use more than one reference                       |
+| **Autokinesis**         | A single light seems to drift or move                  | You stared at one point of light for more than a few seconds. Tiny eye movements make it appear to wander           | Shift your gaze, keep scanning, check the instruments, use more than one reference                       |
 | **False horizon**       | You level the wings against something that is tilted   | A sloping cloud deck, a lit highway, a shoreline, or stars below a cloud layer that look like ground lights         | Trust the attitude indicator, not the view                                                               |
-| **Featureless terrain** | You feel higher than you are over dark ground or water | Nothing in view to give a sense of scale; the black-hole effect away from the runway                                | Altimeter and planned altitudes; never descend "by eye" at night                                         |
+| **Featureless terrain** | You feel higher than you are over dark ground or water | Nothing in view gives a sense of scale. It is the black-hole effect away from the runway                            | Altimeter and planned altitudes. Never descend "by eye" at night                                         |
 
-The black-hole approach deserves the most respect. A runway at the edge of a dark area, such as Watsonville with Monterey Bay beyond it, looks and feels normal while you fly a long, low approach into the ground short of the threshold. The runway's shape says you are on path; the missing lights below say nothing at all.
+The black-hole approach is the most dangerous of these. A runway at the edge of a dark area, such as Watsonville with Monterey Bay beyond it, looks and feels normal while you fly a long, low approach into the ground short of the threshold. The runway's shape tells you that you are on path, and the dark ground below gives you nothing to correct it.
 
 :::callout{type="verify"}
 Widget pending: W28 (Night Vision and Illusions, P1) is embedded here once Phase 20 ships it: an eye diagram, a dark-adaptation timer, an off-center viewing demo and a side-view black-hole approach showing perceived versus actual glide path. Until then the table above carries the content. Screenshot for the shot list: "black-hole approach at KWVI".
@@ -96,7 +96,7 @@ A black-hole approach makes you feel…
 
 ---
 
-With no lights between you and the runway, your brain overestimates your height. Pilots descend early and fly a dangerously low approach. The fix is the PAPI or VASI and the altimeter, not your eyes.
+With no lights between you and the runway, your brain overestimates your height. Pilots descend early and fly a dangerously low approach. Fly the PAPI or VASI and cross-check the altimeter instead of trusting your eyes.
 :::
 
 :::quiz{id="l12-1-q3" type="multi"}
@@ -110,17 +110,17 @@ Which of these protect your night vision? Pick all that apply.
 
 ---
 
-Dim lighting, off-center viewing and avoiding bright light all help. Staring at one light causes autokinesis, and the landing light in cruise lights up nothing but your own dark adaptation.
+Dim lighting, off-center viewing and avoiding bright light all help. Staring at one light causes autokinesis, and the landing light in cruise lights nothing useful ahead while its glare costs you dark adaptation.
 :::
 
 ## What the sim can and can't show
 
 The sim draws a convincing night, but it cannot do anything to your rods. A monitor is a light source, so you will never experience true dark adaptation at your desk.
 
-What the sim _does_ reproduce is geometry. The black-hole approach is a problem of missing visual cues, and the sim removes exactly the same cues. A false horizon from a sloping cloud deck looks the same on a screen. So the illusions are worth practicing here, with the understanding that the real thing arrives with tired eyes and no pause button.
+The sim does reproduce geometry. The black-hole approach is a problem of missing visual cues, and the sim removes the same cues. A false horizon from a sloping cloud deck looks the same on a screen. So the illusions are worth practicing here. In a real airplane they arrive when your eyes are tired and there is no pause button.
 
 :::callout{type="sim"}
-Your screen is not the night sky. Your eyes have more light than they would in a real cockpit, and the sim's ambient light is a setting, not the moon. Treat every night challenge as procedures and sight pictures; real night vision is slower and worse than what you see on screen.
+Your screen gives your eyes more light than they would get in a real cockpit, and the sim's ambient light comes from a setting rather than the moon. Treat every night challenge as practice for procedures and sight pictures. Real night vision is slower and worse than what you see on screen.
 :::
 
 :::callout{type="tip"}
@@ -133,12 +133,12 @@ Sim check: confirm the MSFS 2024 night rendering notes in v2 Section 9.2 (how ni
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. Rods see at night, they take about 30 minutes to adapt, and one bright light undoes it.
 2. Look 5–10° to one side of what you want to see, and keep scanning.
-3. Black hole, autokinesis, false horizon: the counter is always the instruments and the glide path lights.
+3. For black hole, autokinesis and false horizon, the counter is always the instruments and the glide path lights.
 
-**Practice.** This lesson has no flashcard deck of its own; the three illusions return in the knowledge checks of [[l12-3-night-operations-preflight-to-landing]] and in the Module 12 challenges.
+**Practice.** This lesson has no flashcard deck of its own. The three illusions return in the knowledge checks of [[l12-3-night-operations-preflight-to-landing]] and in the Module 12 challenges.
 
 **Next.** You cannot fly at night without reading lights, so [[l12-2-aircraft-and-airport-lighting]] teaches the colors and the codes: what the beacon means, how to read a PAPI, and how to turn on a dark airport with your microphone.

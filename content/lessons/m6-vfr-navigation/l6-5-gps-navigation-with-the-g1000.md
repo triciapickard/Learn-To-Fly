@@ -21,7 +21,7 @@ simVersion: null
 
 ## GPS is a tool
 
-GPS makes navigation easy, but it can pull your eyes inside the cockpit. Use it to **check** where you are, not as a reason to stop looking outside. Keep following your route on the chart, and keep scanning for traffic.
+GPS makes navigation easy, but it can pull your eyes inside the cockpit. Use it to check where you are. Keep following your route on the chart, and keep scanning for traffic.
 
 ## Direct-To
 
@@ -51,13 +51,13 @@ Which key starts a direct route to a single waypoint?
 
 ## Flight plans
 
-For a route with several waypoints, use a **flight plan**:
+For a route with several waypoints, use a flight plan:
 
 1. Press **FPL** to open the active flight plan. On the MFD, push the **FMS** knob to bring up the cursor (on the PFD it's already there). The NXi fills in your departure airport by itself.
 2. Turn the small **FMS** knob to start entering a waypoint, spell the identifier and press **ENT**. Repeat for each waypoint, then push the FMS knob to put the cursor away.
 3. To insert or delete a waypoint, move the cursor with the large FMS knob and enter a new one or press **CLR**.
-4. There's nothing to activate: waypoints entered here go straight into the active plan. Only a stored plan from the catalog needs activating.
-5. The active leg shows in **magenta**. The PFD shows the next waypoint, its distance and the time to get there.
+4. There's nothing to activate. Waypoints entered here go straight into the active plan. Only a stored plan from the catalog needs activating.
+5. The active leg shows in magenta. The PFD shows the next waypoint, its distance and the time to get there.
 
 :::callout{type="verify"}
 Sim check: desk-verified 2026-10-13 against the Garmin G1000 NXi Cockpit Reference Guide (Creating a Basic Flight Plan: FPL, push the FMS knob for the cursor on the MFD, enter waypoints with the FMS knob and ENT; no activation step for the active plan). Still open: how a flight plan from the MSFS 2024 world map syncs into the G1000, and whether the sim's NXi fills in the origin airport.

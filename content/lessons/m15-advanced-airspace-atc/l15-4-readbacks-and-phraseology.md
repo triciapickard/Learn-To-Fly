@@ -19,11 +19,11 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## The readback is a safety check, not good manners
+## The readback is a safety check
 
-In [[l7-3-towered-airports-and-sim-atc]] you learned to read back runway assignments and hold-short instructions. Here is why it matters so much. A controller says "hold short of runway two five left". You hear "two five right", which is the runway you are heading for anyway, and taxi across 25L in front of a landing Skyhawk. If you had read back "hold short two five right", the controller would have caught it: "Negative, hold short of two five **left**."
+In [[l7-3-towered-airports-and-sim-atc]] you learned to read back runway assignments and hold-short instructions. A controller says "hold short of runway two five left". You hear "two five right", which is the runway you are heading for anyway, and taxi across 25L in front of a landing Skyhawk. If you had read back "hold short two five right", the controller would have caught it: "Negative, hold short of two five **left**."
 
-The readback is the only moment in the exchange where a mistake can be found before it becomes a runway incursion or an altitude bust. That is why the controller must get a readback of every hold-short instruction, why the AIM tells you to read back the numbers, and why "readback correct" is not a formality. This lesson makes the list exact, then gives you the words for everything else.
+The readback is the only moment in the exchange where someone can catch a mistake before it becomes a runway incursion or an altitude bust. For that reason the controller must get a readback of every hold-short instruction, and the AIM tells you to read back the numbers. "Readback correct" means the controller has checked what you said. This lesson lists what to read back, then gives you the words for everything else.
 
 ## What to read back, every time
 
@@ -40,10 +40,10 @@ The readback is the only moment in the exchange where a mistake can be found bef
 | **Altimeter setting**              | "Livermore altimeter three zero zero two"    | "Three zero zero two, Skyhawk One Two Three" (good practice, not required) |
 | **Line up and wait**               | "Runway two five right, line up and wait"    | "Runway two five right, line up and wait, Skyhawk One Two Three"           |
 
-Three rules sit under the table:
+Apply these rules to every readback:
 
 - **Numbers, always.** Every number the controller gives you comes back in your reply, in the order it was given, and the runway comes back with every runway instruction, including "left" or "right".
-- **Call sign, always.** The readback belongs to someone; the call sign says who. The AIM allows it at either end; this course puts it last so you never forget it.
+- **Call sign, always.** The call sign tells the controller who is reading back. The AIM allows it at either end, and this course puts it last so you never forget it.
 - **Say what you heard, not what you expected.** If the readback is wrong, the controller fixes it. If you silently "correct" it, nobody can.
 
 :::quiz{id="l15-4-q1" type="multi"}
@@ -57,12 +57,12 @@ Which of these must be read back? Pick all that apply.
 
 ---
 
-Hold-short instructions, squawk codes and headings are all read back: the hold-short because the controller must hear it, the others because they are numbers. A traffic call is answered with "looking" or "in sight", and the wind needs no reply at all.
+You read back hold-short instructions, squawk codes and headings. The controller must hear the hold-short, and the others are numbers. You answer a traffic call with "looking" or "in sight", and the wind needs no reply at all.
 :::
 
 ## The structure of a good call
 
-The shape you learned in Course 1 has not changed: **who you are calling, who you are, where you are, what you want**. What changes with experience is how little you say. A good call carries exactly what the controller needs to act, in the order the controller writes it down.
+The shape you learned in Course 1 has not changed: **who you are calling, who you are, where you are, what you want**. What changes with experience is how little you say. A good call carries only what the controller needs to act, in the order the controller writes it down.
 
 Spell anything unusual with the phonetic alphabet, say each digit of a number separately, and keep "tree", "fife" and "niner". The trainer below is a quick refresher before the drill.
 
@@ -80,7 +80,7 @@ How do you say an altitude of 10,500 ft on the radio?
 
 ---
 
-Thousands are spoken digit by digit, then "thousand", then the hundreds: **"one zero thousand five hundred"**. "Ten" and "ten five" are easily mistaken for other numbers through static.
+Thousands are spoken digit by digit, then "thousand", then the hundreds: "one zero thousand five hundred". Through static, "ten" and "ten five" are easy to mistake for other numbers.
 :::
 
 ## The standard words
@@ -101,7 +101,7 @@ Most of the radio is numbers. The rest is a small set of words that each mean on
 | **Correction**       | I made an error; the right version follows |                                                         |
 | **Readback correct** | The controller agrees with your readback   |                                                         |
 
-Use the words, and only the words. "Roger" to a question ("say altitude") is a non-answer. "Wilco" alone in reply to a hold-short instruction is not acceptable: the controller is required to get a readback of the hold-short, and will ask for it again.
+Stick to these words. "Roger" to a question ("say altitude") is a non-answer. "Wilco" alone in reply to a hold-short instruction is not enough. The controller must get a readback of the hold-short, and will ask for it again.
 
 :::quiz{id="l15-4-q3" type="single"}
 The controller says "Skyhawk One Two Three, say altitude." Which reply is correct?
@@ -113,12 +113,12 @@ The controller says "Skyhawk One Two Three, say altitude." Which reply is correc
 
 ---
 
-A question needs an answer, not an acknowledgment. **"Three thousand five hundred, Skyhawk One Two Three"** gives the controller the number asked for. "Roger" only says you heard.
+A question needs an answer, not an acknowledgment. "Three thousand five hundred, Skyhawk One Two Three" gives the controller the number asked for. "Roger" only says you heard.
 :::
 
 ## Recovering from a missed call
 
-Everyone misses a call. The pilots who get into trouble are the ones who guess. Three tools:
+Everyone misses a call. Pilots get into trouble when they guess. Use these calls instead:
 
 | Situation                                                 | You say                                                                                           |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -129,7 +129,7 @@ Everyone misses a call. The pilots who get into trouble are the ones who guess. 
 | You got a readback wrong and the controller corrected you | "Correction, hold short of runway two five **left**, Skyhawk One Two Three."                      |
 | The frequency is too busy to get a word in                | Wait for "readback correct" or a pause, then transmit                                             |
 
-"Say again" costs five seconds. A wrong guess at a hold-short instruction can cost far more. Controllers repeat things all day; they will not think less of you.
+"Say again" costs five seconds. A wrong guess at a hold-short instruction can cost far more. Controllers repeat things all day. They will not think less of you.
 
 :::callout{type="tip"}
 Write it down. Keep a pen on the kneeboard and jot the numbers as they arrive: "25R A", "090", "3500", "4612". The readback then comes off the paper, and the paper is still there two minutes later when you wonder what the squawk was.
@@ -137,7 +137,7 @@ Write it down. Keep a pen on the kneeboard and jot the numbers as they arrive: "
 
 ## Readback practice
 
-Widget W32 (Radio Readback Trainer) is embedded here once Phase 20 ships it. It reads an instruction out loud, you type or speak the readback, and it highlights each required element you included or missed. Until then, cover the right-hand column of the table below and read each instruction back out loud:
+Widget W32 (Radio Readback Trainer) will appear here once Phase 20 ships it. It reads an instruction out loud, you type or speak the readback, and it highlights each required element you included or missed. Until then, cover the right-hand column of the table below and read each instruction back out loud:
 
 | Instruction                                                                            | Required elements in the readback                          |
 | -------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
@@ -153,7 +153,7 @@ Widget pending: W32 (`::widget{name="radio-readback"}`, modes VFR ground, VFR ai
 
 ## Common sim-ATC differences
 
-MSFS 2024's ATC does the readback for you when you pick a menu item, which is exactly the skill this lesson wants you to own. A few other differences to expect:
+MSFS 2024's ATC does the readback for you when you pick a menu item, so it skips the skill this lesson teaches. Expect a few other differences:
 
 | Real ATC                                                    | MSFS 2024 ATC                                                           |
 | ----------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -163,7 +163,7 @@ MSFS 2024's ATC does the readback for you when you pick a menu item, which is ex
 | Altitudes spoken as "three thousand five hundred"           | Sometimes "three thousand five hundred feet", or a different word order |
 | Controllers correct a wrong readback                        | The menu readback is always "correct"                                   |
 
-None of this is a reason to skip the sim's ATC. It is a reason to say the call out loud, with every required element, before you click the menu.
+You can still use the sim's ATC. Say the call out loud, with every required element, before you click the menu.
 
 :::callout{type="sim"}
 In self-voiced mode you speak both sides from the challenge script. On VATSIM, the controller is a person and the full list above applies, including "readback correct" and the occasional "negative".
@@ -175,11 +175,11 @@ Sim check: confirm each row of the sim-ATC table against MSFS 2024 at the curren
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. Hold short, runway, altitude, heading, frequency, squawk and clearance always come back, with your call sign last.
 2. Roger means heard, wilco means will do, and neither answers a question.
-3. "Say again" is free. Guessing is not.
+3. "Say again" costs seconds. A wrong guess can cost far more.
 
 **Practice.** This lesson feeds the `radio-phraseology` flashcard deck: the required readback items and the standard words.
 

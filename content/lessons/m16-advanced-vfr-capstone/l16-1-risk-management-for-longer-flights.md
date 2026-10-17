@@ -20,27 +20,27 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## Two hours is a long time
+## Decisions on a long flight
 
 Course 1 taught you to make one good decision before you fly: PAVE, IMSAFE, personal minimums, go or no-go. That works for a 40-minute hop to Tracy. Course 2 needs more.
 
-Livermore to Truckee takes about 2 hours. It crosses a valley, a mountain pass and a high-elevation runway, and lands in different weather from the weather you took off in. Fuel shrinks. You get tired. A decision made once at the ramp has to be made again, all the way to the destination.
+Livermore to Truckee takes about 2 hours. It crosses a valley, a mountain pass and a high-elevation runway, and lands in different weather from the weather you took off in. Your fuel goes down and you get tired. You have to make the decision from the ramp again and again, all the way to the destination.
 
-This lesson gives you a tool for that, the **5P check**, then updates your personal minimums for Course 2, revisits the hazardous attitudes after 2 hours in the seat, and ends with fatigue. It builds on [[l8-1-decision-making-and-personal-minimums]] and [[l11-6-the-go-no-go-decision-and-vfr-into-imc]]; nothing here replaces them.
+This lesson gives you a tool for that, the **5P check**, then updates your personal minimums for Course 2, revisits the hazardous attitudes after 2 hours in the seat, and ends with fatigue. It builds on [[l8-1-decision-making-and-personal-minimums]] and [[l11-6-the-go-no-go-decision-and-vfr-into-imc]] and does not replace them.
 
 ## The 5P check
 
-PAVE asks four questions once. The **5P check** asks five questions several times: **Plan, Plane, Pilot, Passengers, Programming**. Each is a place risk hides, and each can change while you fly.
+PAVE asks four questions once. The **5P check** asks five questions several times: **Plan, Plane, Pilot, Passengers, Programming**. Each one covers a source of risk, and each can change while you fly.
 
 | P               | Ask yourself                                                     | What changes on a long flight                          |
 | --------------- | ---------------------------------------------------------------- | ------------------------------------------------------ |
 | **Plan**        | Route, weather, fuel, timing, alternate: still what I briefed?   | Weather ahead, daylight left, a closed destination     |
-| **Plane**       | Fuel, oil, electrical load, any indication I have been ignoring? | Fuel burned, a lazy alternator, rising oil temperature |
+| **Plane**       | Fuel, oil, electrical load, any indication I have been ignoring? | Fuel burned, a weak alternator, rising oil temperature |
 | **Pilot**       | IMSAFE, again. Hungry, thirsty, tired, needing a bathroom?       | Fatigue builds and attention narrows                   |
-| **Passengers**  | Comfortable, quiet when I need quiet, not pushing my decisions?  | A sick passenger; one who "has to be back by 5"        |
+| **Passengers**  | Comfortable, quiet when I need quiet, not pushing my decisions?  | A sick passenger, or one who "has to be back by 5"     |
 | **Programming** | Is the G1000 set for the next phase? Am I heads-down too long?   | A missed waypoint, a frequency not loaded              |
 
-The important word is **again**. Run the whole check at the five points PHAK Chapter 2 names: preflight; just before takeoff; the midpoint of the flight, or every hour on a flight longer than 2 hours; before descent, with the destination weather in hand; and just before entering the pattern. The fourth check saves flights. At the top of descent you still have the fuel and altitude to go somewhere else. On short final you do not.
+Run the whole check again at each of the five points PHAK Chapter 2 names: preflight; just before takeoff; the midpoint of the flight, or every hour on a flight longer than 2 hours; before descent, with the destination weather in hand; and just before entering the pattern. The fourth check matters most. At the top of descent you still have the fuel and altitude to go somewhere else. On short final you do not.
 
 :::quiz{id="l16-1-q1" type="single"}
 At the top of descent into Truckee the ATIS now gives winds 240° at 18 kt gusting 26 kt: about 13 kt of crosswind on Runway 29, and nearly 19 kt in the gusts. Which P has changed, and what do you do?
@@ -57,7 +57,7 @@ Weather is part of the **Plan**, and it has changed. Top of descent is the last 
 
 ## The personal minimums worksheet
 
-In Course 1 you wrote five numbers: wind, crosswind, visibility, cloud base and fuel at landing. Course 2 adds density altitude, night, mountains and longer legs, so the worksheet grows. The kneeboard for Challenges C11.1 and C16.2 prints it. Fill it in **now**, calm and on the ground, not at the top of descent with a gusting ATIS.
+In Course 1 you wrote five numbers: wind, crosswind, visibility, cloud base and fuel at landing. Course 2 adds density altitude, night, mountains and longer legs, so the worksheet grows. The kneeboard for Challenges C11.1 and C16.2 prints it. Fill it in now, calm and on the ground, not at the top of descent with a gusting ATIS.
 
 | Item                                  | A Course 2 starting point                                          | My minimum |
 | ------------------------------------- | ------------------------------------------------------------------ | ---------- |
@@ -71,7 +71,7 @@ In Course 1 you wrote five numbers: wind, crosswind, visibility, cloud base and 
 | Night                                 | Known airports only; a night landing in the last 30 days           |            |
 | Maximum time awake before a challenge | 10 hours                                                           |            |
 
-Two rules. **A minimum is a decision already made**: if the number is exceeded you do not go, or you divert, with no new reasoning. And **relax one line at a time**, after a flight that went well, never because today's weather needs it.
+**A minimum is a decision already made.** If conditions exceed the number, you do not go, or you divert, with no new reasoning. **Relax one line at a time**, after a flight that went well, never because today's weather needs it.
 
 :::callout{type="verify"}
 Author decision: the starting values are the author's figures. Desk-verified 2026-10-13: the Risk Management Handbook (FAA-H-8083-2A) Chapter 2 prescribes no numbers, only a sample table built from the pilot's own experience, and `aircraft.yaml` gives 15 kt for `{{aircraft.maxCrosswind}}`. Still open: v2 Section 21.8 lists the kneeboard's planning sheet but not this worksheet; confirm it prints.
@@ -87,12 +87,12 @@ Your written crosswind minimum is 12 kt. The destination reports a 14 kt compone
 
 ---
 
-A minimum is a decision made in advance. You may raise it to 15 kt after a calm review on the ground, not on downwind because today needs it. That pressure is what the worksheet exists to resist.
+A minimum is a decision made in advance. You may raise it to 15 kt after a calm review on the ground, never on downwind because today needs it. The worksheet exists to resist that pressure.
 :::
 
 ## The hazardous attitudes after two hours
 
-You met the five hazardous attitudes and their antidotes in [[l8-1-decision-making-and-personal-minimums]]. What changes on a long flight is how they sound, because by then you are invested: a week of planning, 2 hours of flying, the destination in sight. Pilots call it **get-there-itis**; the formal name is **plan continuation bias**. The longer you have followed a plan, the harder it is to abandon.
+You met the five hazardous attitudes and their antidotes in [[l8-1-decision-making-and-personal-minimums]]. What changes on a long flight is how they sound, because by then you are invested: a week of planning, 2 hours of flying, the destination in sight. Pilots call it **get-there-itis**. The formal name is **plan continuation bias**. The longer you have followed a plan, the harder it is to abandon.
 
 | Attitude        | How it sounds at hour two                                        | Antidote                                    |
 | --------------- | ---------------------------------------------------------------- | ------------------------------------------- |
@@ -102,10 +102,10 @@ You met the five hazardous attitudes and their antidotes in [[l8-1-decision-maki
 | Macho           | "Fourteen knots of crosswind? I've got this."                    | Taking chances is foolish.                  |
 | Resignation     | "The weather's changed; nothing I can do about it now."          | I am not helpless. I can make a difference. |
 
-Every sentence in the middle column is a reason to **keep going**. Nobody has a hazardous attitude about turning back. When you catch yourself building a case for continuing, run the 5P check and read your minimums.
+Every sentence in the middle column is a reason to keep going. Nobody has a hazardous attitude about turning back. When you catch yourself building a case for continuing, run the 5P check and read your minimums.
 
 :::callout{type="decision"}
-Your turn-back point for Donner Pass is Blue Canyon. You arrive 20 minutes late and the build-ups over the summit are taller than briefed. Nobody is watching. Which attitude is talking, and what does the antidote say? Turning back to Auburn is a pass in C16.2, and a good one.
+Your turn-back point for Donner Pass is Blue Canyon. You arrive 20 minutes late and the build-ups over the summit are taller than briefed. Nobody is watching. Which attitude is at work, and what does the antidote say? Turning back to Auburn is a pass in C16.2, and a good one.
 :::
 
 :::quiz{id="l16-1-q3" type="single"}
@@ -118,26 +118,26 @@ Your turn-back point for Donner Pass is Blue Canyon. You arrive 20 minutes late 
 
 ---
 
-Past success is the voice of **invulnerability**. Three good crossings say nothing about today's wind and clouds.
+Relying on past success is **invulnerability**. Three good crossings say nothing about today's wind and clouds.
 :::
 
 ## Fatigue on long flights
 
-Fatigue is the F in IMSAFE. On a short flight you answer it at the ramp; on a long one the answer changes in the air. **Acute** fatigue comes from the day (a short night, a long drive, 2 hours of concentration) and rest fixes it. **Chronic** fatigue builds when there is not enough recovery between tired days; one good night does not fix it, and you stop noticing it.
+Fatigue is the F in IMSAFE. On a short flight you answer it at the ramp. On a long one, the answer changes in the air. **Acute** fatigue comes from the day (a short night, a long drive, 2 hours of concentration) and rest fixes it. **Chronic** fatigue builds when there is not enough recovery between tired days. One good night does not fix it, and you stop noticing it.
 
-That is the dangerous part. Fatigue removes the ability to notice fatigue, so watch for what it does instead:
+Fatigue also removes your ability to notice fatigue, so watch for its effects instead:
 
-| Sign                    | In the cockpit                              |
-| ----------------------- | ------------------------------------------- |
-| Narrowed attention      | You stare at one instrument; the scan stops |
-| Skipped checklist items | "I'll do the descent checklist in a minute" |
-| Tolerating drift        | 200 ft low and you shrug                    |
-| Irritation              | Snapping at a routine readback request      |
+| Sign                    | In the cockpit                                 |
+| ----------------------- | ---------------------------------------------- |
+| Narrowed attention      | You stare at one instrument and the scan stops |
+| Skipped checklist items | "I'll do the descent checklist in a minute"    |
+| Tolerating drift        | 200 ft low and you shrug                       |
+| Irritation              | Snapping at a routine readback request         |
 
-The counter-measures are unglamorous. Sleep before the flight. Eat and drink during it. Plan no leg longer than 2.5 hours, even if the fuel would stretch, and get out of the seat at the stop. Write a time limit into your worksheet so the decision to stop is made before you are too tired to make it.
+The countermeasures are simple. Sleep before the flight. Eat and drink during it. Plan no leg longer than 2.5 hours, even if the fuel would stretch, and get out of the seat at the stop. Write a time limit into your worksheet so you make the decision to stop before you are too tired to make it.
 
 :::callout{type="sim"}
-A sim cannot make you fly tired, but it can make you fly bored, and the symptoms overlap: the scan stops and the altitude drifts. Treat a 2-hour session like a 2-hour leg, and use the pauses between C16.2's legs.
+A sim cannot make you fly tired, but it can make you fly bored, and the symptoms overlap. The scan stops and the altitude drifts. Treat a 2-hour session like a 2-hour leg, and use the pauses between C16.2's legs.
 :::
 
 :::quiz{id="l16-1-q4" type="multi"}
@@ -155,7 +155,7 @@ Feeling sleepy is the one sign you cannot rely on, because fatigue dulls the sen
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. The 5P check runs at five points: preflight, before takeoff, the midpoint of the flight (hourly beyond 2 hours), before descent and before entering the pattern.
 2. A personal minimum is a decision already made. Relax one line at a time, on the ground.

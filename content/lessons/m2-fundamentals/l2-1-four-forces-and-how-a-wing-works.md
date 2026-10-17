@@ -28,7 +28,7 @@ Four forces act on an airplane in flight:
 - **Thrust** pulls it forward. The propeller makes it.
 - **Drag** holds it back. Every part of the airplane moving through the air makes some.
 
-In **straight-and-level, unaccelerated flight** (constant speed, constant altitude, constant heading), the forces balance: lift equals weight and thrust equals drag. Change one of them and the airplane changes what it's doing until they balance again. Add power and you gain speed until drag catches up; raise the nose and you climb.
+In **straight-and-level, unaccelerated flight** (constant speed, constant altitude, constant heading), the forces balance: lift equals weight and thrust equals drag. Change one of them and the airplane changes what it's doing until they balance again. Add power and you gain speed until drag catches up. Raise the nose and you climb.
 
 :::quiz{id="l2-1-q1" type="single"}
 In straight-and-level, unaccelerated flight, lift equals what?
@@ -40,12 +40,12 @@ In straight-and-level, unaccelerated flight, lift equals what?
 
 ---
 
-Lift equals **weight** (and thrust equals drag). If lift were greater than weight, the airplane would climb.
+Lift equals weight (and thrust equals drag). If lift were greater than weight, the airplane would climb.
 :::
 
 ## Relative wind and angle of attack
 
-Three terms matter here:
+These terms matter here:
 
 - The **chord line** is an imaginary straight line from the wing's leading edge to its trailing edge.
 - The **relative wind** is the airflow the wing feels. It always blows opposite to the direction the airplane is moving, not the direction the nose points.
@@ -62,7 +62,7 @@ Drag the slider below and watch the streamlines and the lift curve. Try it with 
 ::widget{name="angle-of-attack" mode="explore"}
 
 :::callout{type="tip"}
-The wing doesn't know your airspeed; it only knows its angle of attack. You can stall at any speed and in any attitude if you exceed the critical angle.
+Angle of attack, not airspeed, decides when the wing stalls. You can stall at any speed and in any attitude if you exceed the critical angle.
 :::
 
 :::quiz{id="l2-1-q2" type="single"}
@@ -75,17 +75,17 @@ A wing stalls when it exceeds what?
 
 ---
 
-A stall happens when the wing exceeds its **critical angle of attack**. It can happen at any airspeed or attitude.
+A stall happens when the wing exceeds its critical angle of attack. It can happen at any airspeed or attitude.
 :::
 
 ## The lift equation, in plain words
 
-Lift depends mainly on two things you control:
+Lift depends mainly on things you control:
 
 - **Speed.** More airflow makes more lift, and lift grows with the _square_ of speed: twice as fast makes four times the lift.
 - **Angle of attack.** A bigger angle makes more lift, up to the critical angle.
 
-So to keep the same lift (and hold altitude) at a lower speed, you need a higher angle of attack. That's why the nose comes up as you slow down in level flight.
+So to keep the same lift (and hold altitude) at a lower speed, you need a higher angle of attack. So the nose comes up as you slow down in level flight.
 
 :::quiz{id="l2-1-q3" type="single"}
 You slow down but want to keep your altitude. What must happen to the angle of attack?
@@ -96,16 +96,16 @@ You slow down but want to keep your altitude. What must happen to the angle of a
 
 ---
 
-Less speed means less lift at the same angle of attack. To hold altitude you **increase** the angle of attack, raising the nose, to make up the difference.
+Less speed means less lift at the same angle of attack. To hold altitude you increase the angle of attack, raising the nose, to make up the difference.
 :::
 
 ## Two kinds of drag
 
 - **Parasite drag** comes from pushing the airplane through the air: the shape of the fuselage, the wheels, the antennas. It grows quickly as you go faster.
-- **Induced drag** is the price of making lift. It is largest at **low** speed, where the wing works at a high angle of attack.
+- **Induced drag** comes from making lift. It is largest at low speed, where the wing works at a high angle of attack.
 
-Add them together and total drag is lowest somewhere in the middle. Slower than that, induced drag climbs so fast that you need **more power to fly slower**. You'll feel this in slow flight in Module 5.
+Add them together and total drag is lowest somewhere in the middle. Slower than that, induced drag climbs so fast that you need more power to fly slower. You'll feel this in slow flight in Module 5.
 
 ## Stall speed changes
 
-The stall speeds on the airspeed indicator, {{vspeed.vs1}} flaps up and {{vspeed.vso}} with full flaps, are for straight-and-level flight at maximum weight, at **1 G**.
+The stall speeds on the airspeed indicator, {{vspeed.vs1}} flaps up and {{vspeed.vso}} with full flaps, are for straight-and-level flight at maximum weight, at 1 G.

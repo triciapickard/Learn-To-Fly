@@ -23,14 +23,14 @@ simVersion: null
 
 **Pilotage** means navigating by looking at landmarks and matching them to the chart.
 
-1. Choose checkpoints that are **big, unique and easy to see**, about every **5–10 nm**.
+1. Choose checkpoints that are big, unique and easy to see, about every 5–10 nm.
 2. **Chart to ground, then ground to chart.** Find the next checkpoint on the chart, look for it outside, and when you think you've found it, check the chart again for something nearby that confirms it.
 3. **Hold your heading** precisely between checkpoints.
 4. **Note the time** at each checkpoint, so you know whether you're early or late.
 
 ## Dead reckoning
 
-**Dead reckoning** means navigating by calculation: you work out a heading and a time, then fly them. Pilots combine both methods, using dead reckoning to point the airplane and pilotage to check it.
+**Dead reckoning** means navigating by calculation. You work out a heading and a time, then fly them. Pilots combine both methods, using dead reckoning to point the airplane and pilotage to check it.
 
 The steps:
 
@@ -47,15 +47,15 @@ Drag the wind arrow and change the course. Watch how much you have to turn into 
 
 ::widget{name="wind-triangle"}
 
-A **headwind** slows you down, a **tailwind** speeds you up, and a **crosswind** means you have to point the nose into the wind to hold your course.
+A headwind slows you down, a tailwind speeds you up, and a crosswind means you have to point the nose into the wind to hold your course.
 
 ## True to magnetic
 
-Charts are drawn to **true** north, but your compass points to **magnetic** north. The difference is the **variation**, shown by the isogonic lines. Remember:
+Charts use true north, but your compass points to magnetic north. The difference is the **variation**, shown by the isogonic lines. Remember:
 
 > **East is least, West is best.**
 
-Subtract easterly variation; add westerly variation. In the Bay Area the variation is about **13° east**, so subtract 13°.
+Subtract easterly variation. Add westerly variation. In the Bay Area the variation is about 13° east, so subtract 13°.
 
 The compass itself has small errors, called **deviation**, listed on a card in the cockpit. The sim models little or none, so we'll ignore it here.
 
@@ -77,11 +77,11 @@ You have 20 nm to fly at a groundspeed of 100 kt. How many minutes will it take?
 
 ## The 1-in-60 rule
 
-If you're **1 nm off course after flying 60 nm**, your heading is **1° off**. Scale it for any distance:
+If you're 1 nm off course after flying 60 nm, your heading is 1° off. Scale it for any distance:
 
 > Degrees off = nm off course × 60 ÷ distance flown
 
-To correct, turn back toward your course by that many degrees to stop drifting. Turn about **twice** that many to get back on course, then take half of it off when you're back.
+To correct, turn back toward your course by that many degrees to stop drifting. Turn about twice that many to get back on course, then take half of it off when you're back.
 
 :::quiz{id="l6-3-q3" type="numeric" answer="4" tolerance="0" unit="°"}
 After 30 nm, you're 2 nm off course. How many degrees off is your heading?
@@ -93,7 +93,7 @@ After 30 nm, you're 2 nm off course. How many degrees off is your heading?
 
 ## Worked example: Livermore to Tracy
 
-The wind at 3,000 ft is **270° at 15 kt**, and we'll cruise at **110 KTAS**.
+The wind at 3,000 ft is 270° at 15 kt, and we'll cruise at 110 KTAS.
 
 | Step             | Value                                    |
 | ---------------- | ---------------------------------------- |
@@ -108,10 +108,10 @@ The wind at 3,000 ft is **270° at 15 kt**, and we'll cruise at **110 KTAS**.
 | Time en route    | About 9 minutes                          |
 | Fuel (at 10 GPH) | About 1.5 gal                            |
 
-Checkpoints by pilotage: Interstate 580, the **Altamont Pass** wind farms, then the town of **Tracy**, with the airport just southwest of it.
+Checkpoints by pilotage: Interstate 580, the Altamont Pass wind farms, then the town of Tracy, with the airport just southwest of it.
 
 :::callout{type="verify"}
 Sim check: recomputed 2026-10-13 from the FAA airport coordinates: true course 091°, 18.0 nm; variation 12.7° E (NOAA WMM-2025), so 13° E stands. Still open: that I-580, the Altamont Pass wind farms and the town of Tracy are recognizable from 3,500 ft in the sim (L0.3 found the turbines may be missing from the scenery).
 :::
 
-On the way back, the same wind is a headwind: the groundspeed drops to about 95 kt, and the trip takes 11 minutes.
+On the way back, the same wind is a headwind. The groundspeed drops to about 95 kt, and the trip takes 11 minutes.

@@ -3,7 +3,7 @@
 startStates:
   COLD_DARK:
     label: Cold and dark
-    description: At a parking spot with all systems off. On the world map, pick a parking spot (one of the small dots), not the airport's large circle, which starts you on the runway with the engine running. You start outside the airplane, so remove the pitot, static port and engine covers and the wheel chocks, then climb in.
+    description: At a parking spot with all systems off. On the world map, pick a parking spot (one of the small dots). The airport's large circle starts you on the runway with the engine running. You start outside the airplane, so remove the pitot, static port and engine covers and the wheel chocks, then climb in.
   RAMP_RUNNING:
     label: Parked, engine running
     description: At a parking spot with the engine running and the avionics on.
@@ -12,7 +12,7 @@ startStates:
     description: Lined up on the named runway, engine running, ready for takeoff. On the world map, pick the airport's large circle, or the named runway.
   AIR_START:
     label: In the air
-    description: In flight at the stated position, altitude, heading and speed. If your sim cannot start in the air, start on the runway at KLVK and fly to the start point; the timer starts there.
+    description: In flight at the stated position, altitude, heading and speed. If your sim cannot start in the air, start on the runway at KLVK and fly to the start point. The timer starts there.
 
 weather:
   WX_CALM:

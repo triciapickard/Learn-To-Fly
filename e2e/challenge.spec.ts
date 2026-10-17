@@ -21,11 +21,11 @@ test('challenge: brief → fly → debrief all Gold → result → history @mobi
   await expect(page.getByRole('heading', { name: 'Sim setup' })).toBeVisible();
   await expectAccessible(page);
 
-  await page.getByRole('button', { name: /set up — start/ }).click();
+  await page.getByRole('button', { name: /set up, start flying/ }).click();
   await expect(page.getByRole('tab', { name: 'Fly' })).toHaveAttribute('aria-selected', 'true');
   await page.getByRole('checkbox').first().check();
   await expectAccessible(page);
-  await page.getByRole('button', { name: /Finished — debrief/ }).click();
+  await page.getByRole('button', { name: /Finish and debrief/ }).click();
 
   const submit = page.getByRole('button', { name: 'Submit debrief' });
   await expect(submit).toBeDisabled();

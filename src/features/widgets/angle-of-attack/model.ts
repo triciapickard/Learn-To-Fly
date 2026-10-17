@@ -143,7 +143,7 @@ export const QUESTIONS: AoaQuestion[] = [
     id: 'w4-critical',
     prompt: 'Set the angle of attack where the wing stalls (flaps up).',
     explanation:
-      'The critical angle of attack, about 16° here. Past it the airflow separates from the upper surface and lift falls away — at any airspeed.',
+      'The critical angle of attack, about 16° here. Past it the airflow separates from the upper surface and lift falls away, at any airspeed.',
     check: (aoa, flaps) => !flaps && Math.abs(aoa - criticalAoA(false)) <= 1,
   },
   {
@@ -158,7 +158,7 @@ export const QUESTIONS: AoaQuestion[] = [
     id: 'w4-flaps',
     prompt: 'Lower the flaps and set the new critical angle of attack.',
     explanation:
-      'Flaps raise the whole lift curve, so there is more lift at every angle, but the wing stalls a little earlier: about 14.5° here.',
+      'Flaps raise the whole lift curve, so there is more lift at every angle, but the wing stalls a little earlier, at about 14.5° here.',
     check: (aoa, flaps) => flaps && Math.abs(aoa - criticalAoA(true)) <= 1,
   },
 ];

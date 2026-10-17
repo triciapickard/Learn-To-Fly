@@ -134,7 +134,7 @@ checklists:
       - id: transponder
         item: Transponder
         action: ALT, code 1200 (VFR)
-        note: "The G1000 NXi's XPDR softkeys are STBY, ON, ALT and VFR (no ground mode); ALT is selected automatically on the ground and AIM 4-1-20 keeps altitude reporting on for taxi. Sim check: confirm the sim's softkey names."
+        note: "The G1000 NXi's XPDR softkeys are STBY, ON, ALT and VFR (no ground mode). ALT is selected automatically on the ground, and AIM 4-1-20 keeps altitude reporting on for taxi. Sim check: confirm the sim's softkey names."
       - id: frequencies
         item: COM and NAV frequencies
         action: SET
@@ -419,7 +419,7 @@ checklists:
       - id: transponder
         item: Transponder
         action: LEAVE IN ALT until parked, then STANDBY
-        note: "AIM 4-1-20 keeps the transponder in ALT on the whole movement area; the G1000 NXi has no ground mode. Sim check: confirm the sim's XPDR softkeys."
+        note: "AIM 4-1-20 keeps the transponder in ALT on the whole movement area. The G1000 NXi has no ground mode. Sim check: confirm the sim's XPDR softkeys."
       - id: lights
         item: Landing and strobe lights
         action: 'OFF'
@@ -486,5 +486,5 @@ checklists:
       - id: secure-engine
         item: If no restart, secure the engine
         action: Mixture cut-off, fuel OFF, ignition OFF, master OFF
-        note: 'Master off only when the landing is assured and the flaps are set: the flaps are electric (POH).'
+        note: 'Master off only when the landing is assured and the flaps are set, because the flaps are electric (POH).'
     verifiedAt: null

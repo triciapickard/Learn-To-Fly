@@ -80,10 +80,10 @@ describe('V-speed naming', () => {
 describe('describe', () => {
   it('builds the readout and the spoken text', () => {
     expect(describeIas(74, arcs, speeds)).toEqual({
-      readout: '74 KIAS — green arc — Vy, best rate of climb',
+      readout: '74 KIAS · green arc · Vy, best rate of climb',
       speech: '74 knots, green arc, Vy, best rate of climb',
     });
-    expect(describeIas(100, arcs, speeds).readout).toBe('100 KIAS — green arc');
+    expect(describeIas(100, arcs, speeds).readout).toBe('100 KIAS · green arc');
   });
 });
 

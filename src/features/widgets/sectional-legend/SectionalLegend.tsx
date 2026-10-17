@@ -40,7 +40,7 @@ export default function SectionalLegend({ props, onQuizAnswer }: WidgetProps) {
     <>
       <p>
         An original, simplified drawing in the style of a VFR sectional chart around Livermore,
-        California, with a &ldquo;Not for navigation&rdquo; watermark. {CHART.note}
+        California, with a &quot;Not for navigation&quot; watermark. {CHART.note}
       </p>
       <ul className="list-disc pl-5">
         {HOTSPOTS.map((h) => (

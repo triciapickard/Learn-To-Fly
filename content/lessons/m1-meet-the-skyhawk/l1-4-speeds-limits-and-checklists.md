@@ -5,7 +5,7 @@ module: m1-meet-the-skyhawk
 order: 4
 priority: P0
 title: Speeds, limits and checklists
-summary: Learn the Skyhawk's key speeds, read the airspeed color bands and use checklists like a professional.
+summary: Learn the Skyhawk's key speeds, read the airspeed color bands and use checklists the way professional pilots do.
 estimatedMinutes: 20
 prerequisites: [l1-3-engine-fuel-and-electrical-systems]
 objectives:
@@ -75,7 +75,7 @@ The airspeed indicator shows the important limits as colored bands, so you can c
 
 - **White arc** ({{vspeed.vso}} to {{vspeed.vfe}}): the flap operating range. Use more than 10° of flaps only inside it.
 - **Green arc** ({{vspeed.vs1}} to {{vspeed.vno}}): the normal operating range.
-- **Yellow arc** ({{vspeed.vno}} to {{vspeed.vne}}): caution. Only in smooth air, and with gentle control inputs.
+- **Yellow arc** ({{vspeed.vno}} to {{vspeed.vne}}): caution. Fly in it only in smooth air, with gentle control inputs.
 - **Red line** ({{vspeed.vne}}): never exceed.
 
 On the G1000 these bands appear as colored strips along the airspeed tape instead of arcs. Drag the needle below, or use the slider or arrow keys, and watch which band you are in.
@@ -103,7 +103,7 @@ Say the speeds out loud on every takeoff: "Airspeed alive… 55, rotate." Callin
 
 **Maneuvering speed (Va)** is the fastest speed at which you can make a full, abrupt control movement (or fly through a strong gust) without overstressing the airplane. The wing stalls before the structure is overloaded.
 
-Unlike most V-speeds, Va gets **lower as the airplane gets lighter**. A lighter airplane is pushed around more easily by the same gust, so it reaches its load limit at a lower speed.
+Unlike most V-speeds, Va gets lower as the airplane gets lighter. The same gust pushes a lighter airplane around more easily, so it reaches its load limit at a lower speed.
 
 | Weight             | Maneuvering speed |
 | ------------------ | ----------------- |
@@ -117,10 +117,10 @@ In turbulence, slow down to below Va for your weight. Solo with 75% fuel, the Sk
 
 In 1935 Boeing's new Model 299 bomber crashed on takeoff during an evaluation flight. The experienced crew had forgotten to release the control lock. The airplane was not too hard to fly. It was too complex to fly from memory. The response was a simple card of steps for each phase of flight: the pilot's checklist.
 
-Checklists are used in two ways:
+Pilots use checklists in two ways:
 
-- **Read-do:** read an item, then do it. Used for procedures you do rarely, such as starting the engine or handling an emergency when time allows.
-- **Do-verify:** do the items from memory in a set physical order (a **flow**), then read the checklist to verify nothing was missed. Used for busy phases such as before landing.
+- **Read-do:** read an item, then do it. Use it for procedures you do rarely, such as starting the engine or handling an emergency when time allows.
+- **Do-verify:** do the items from memory in a set physical order (a **flow**), then read the checklist to verify you missed nothing. Use it for busy phases such as before landing.
 
 Either way, the checklist catches the one item that is easy to forget on a busy day.
 
@@ -141,14 +141,14 @@ In do-verify, you complete the flow from memory first, then read the checklist t
 
 MSFS 2024 includes checklists for the Skyhawk in the EFB (electronic flight bag): open the **Aircraft** tab, then **Checklists**. They follow the real procedures closely but don't list speeds, so use the speeds in this lesson.
 
-Learn to Fly's checklists are a **simplified summary in our own words**, written to match the sim. They are great for learning the flow of each phase, but the in-sim checklist is your reference while flying.
+Learn to Fly's checklists are a simplified summary in our own words, written to match the sim. They help you learn the flow of each phase. While flying, use the in-sim checklist as your reference.
 
 :::callout{type="sim"}
-The in-sim checklist doesn't tick items for you: you check each one yourself. If you can't find a control, press the **eye** icon next to the item and the sim highlights it in the cockpit.
+The in-sim checklist doesn't tick items for you. You check each one yourself. If you can't find a control, press the **eye** icon next to the item and the sim highlights it in the cockpit.
 :::
 
 ## Try a checklist
 
-Run the before-starting-engine checklist below. Press Space or tap an item to tick it; Backspace unticks. Try it once now, then keep it open next to the sim the first time you start the engine.
+Run the before-starting-engine checklist below. Press Space or tap an item to tick it. Backspace unticks it. Try it once now, then keep it open next to the sim the first time you start the engine.
 
 ::checklist{slug="before-starting-engine"}

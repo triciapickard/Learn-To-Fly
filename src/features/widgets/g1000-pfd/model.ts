@@ -137,7 +137,7 @@ export const PFD_REGIONS: Region[] = [
     id: 'attitude',
     name: 'Attitude indicator',
     shows:
-      'Pitch and bank. The yellow symbol is your airplane; blue is sky and brown is ground. The ladder marks pitch in degrees and the arc at the top marks bank.',
+      'Pitch and bank. The yellow symbol is your airplane. Blue is sky and brown is ground. The ladder marks pitch in degrees and the arc at the top marks bank.',
     classic: 'Attitude indicator (artificial horizon).',
     tip: 'This is the center of your scan. Set the attitude here first, then check the other instruments.',
     rect: onScreen(130, 44, 316, 186),
@@ -202,7 +202,7 @@ export const PFD_REGIONS: Region[] = [
     shows:
       'The small bar under the roll pointer. It slides sideways when the airplane slips or skids.',
     classic: "The turn coordinator's ball (inclinometer).",
-    tip: 'Step on the bar: press the rudder on the side it has slid toward, just like stepping on the ball.',
+    tip: 'Step on the bar. Press the rudder on the side it has slid toward, the same way you step on the ball.',
     rect: onScreen(268, 46, 44, 32),
   },
   {
@@ -219,7 +219,7 @@ export const PFD_REGIONS: Region[] = [
     name: 'Navigation status bar',
     shows:
       'The active leg or Direct-To waypoint, the distance to it (DIS) and the desired track (DTK).',
-    classic: 'None: this comes from the GPS.',
+    classic: 'None. This comes from the GPS.',
     tip: 'Check it after every Direct-To or flight plan change to confirm where the GPS is taking you.',
     rect: onScreen(150, 0, 280, 40),
   },
@@ -237,7 +237,7 @@ export const PFD_REGIONS: Region[] = [
     name: 'Wind box',
     shows:
       "The wind's direction and speed, with an arrow showing which way it blows compared with your heading.",
-    classic: 'None: the G1000 calculates it from GPS and air data.',
+    classic: 'None. The G1000 calculates it from GPS and air data.',
     tip: 'Turn it on under PFD Opt → Wind. It shows NO WIND DATA until the airplane is moving fast enough to work the wind out.',
     rect: onScreen(12, 328, 96, 48),
   },
@@ -255,7 +255,7 @@ export const PFD_REGIONS: Region[] = [
     name: 'Softkeys',
     shows:
       'Twelve keys under the screen. Their labels are on the screen just above them, and they change with the page you are on.',
-    classic: 'None: a classic panel has a separate switch or knob for each job.',
+    classic: 'None. A classic panel has a separate switch or knob for each job.',
     tip: 'If you get lost in a softkey menu, press the Back softkey until the top-level labels return.',
     rect: { x: SCREEN.x, y: SCREEN.y + 420, width: SCREEN.width, height: 52 },
   },
@@ -285,7 +285,7 @@ export const NAV_REGIONS: Region[] = [
     id: 'direct-to',
     name: 'D→ (Direct-To) key',
     shows: 'Opens the Direct-To window, to fly straight from where you are to one waypoint.',
-    classic: 'None: a classic panel has no GPS.',
+    classic: 'None. A classic panel has no GPS.',
     tip: 'Direct-To is the fastest way to head for an airport in an emergency or a diversion.',
     rect: keyRect('direct-to'),
   },
@@ -293,7 +293,7 @@ export const NAV_REGIONS: Region[] = [
     id: 'fms',
     name: 'FMS knobs',
     shows:
-      'Two knobs in one. The large outer knob moves the cursor between fields; the small inner knob changes the letter or number in the field. Press the knob to show or hide the cursor.',
+      'Two knobs in one. The large outer knob moves the cursor between fields. The small inner knob changes the letter or number in the field. Press the knob to show or hide the cursor.',
     classic: 'None.',
     tip: 'Small knob to change, large knob to move.',
     rect: knobRect('right', 'fms'),
@@ -320,7 +320,7 @@ export const NAV_REGIONS: Region[] = [
     shows:
       'Opens the active flight plan. Add, delete and reorder waypoints with the FMS knobs, and activate a leg.',
     classic: 'None.',
-    tip: 'Use it for 2 to 4 waypoints; use Direct-To when you only need one.',
+    tip: 'Use it for 2 to 4 waypoints. Use Direct-To when you only need one.',
     rect: keyRect('fpl'),
   },
   {
@@ -443,7 +443,7 @@ export const DIRECT_TO_STEPS: DirectToStep[] = [
     id: 'cdi',
     title: 'Switch the CDI to GPS',
     instruction:
-      'The HSI still shows VOR1, so the needle is not following the GPS yet. Press the CDI softkey until the HSI shows GPS: the needle turns magenta. Forgetting this step is a common error.',
+      'The HSI still shows VOR1, so the needle is not following the GPS yet. Press the CDI softkey until the HSI shows GPS and the needle turns magenta. Forgetting this step is a common error.',
     highlight: 'cdi',
     screen: { ...START, route: true, cdi: 'GPS' },
   },

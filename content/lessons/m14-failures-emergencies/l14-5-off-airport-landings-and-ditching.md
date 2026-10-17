@@ -18,32 +18,32 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## There is no runway
+## Landing where there is no runway
 
-Every forced landing so far has ended on a field you chose in a hurry. This lesson slows that choice down: what makes a field good, what makes it a trap, and what to do when the only flat thing in glide range is the Pacific Ocean. Modules 5 and 14 gave you the flying; this is the judgment that goes in front of it.
+Every forced landing so far has ended on a field you chose in a hurry. This lesson covers that choice in more detail. It explains what makes a field good or dangerous, and what to do when the only flat thing in glide range is the Pacific Ocean. Modules 5 and 14 taught you the flying. This lesson adds the judgment you use before it.
 
 :::callout{type="safety"}
-The goal is not to save the airplane but to walk away. A slow, wings-level arrival in a bad field is survivable; a stall from 50 ft while stretching toward a better one is not.
+The goal is to walk away, whatever happens to the airplane. A slow, wings-level arrival in a bad field is survivable. A stall from 50 ft while stretching toward a better one is not.
 :::
 
 ## Choosing a field
 
 Pilots use a short priority list. Each line beats the ones below it when they conflict.
 
-| Priority                | Look for                                                | Why                                                                     |
-| ----------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------- |
-| 1. Reachable            | Inside the glide ring with altitude to spare            | The best field you cannot reach is not a field                          |
-| 2. Wind                 | Land into the wind if you can                           | Lower groundspeed; energy at touchdown falls with the square of speed   |
-| 3. Length and obstacles | Long enough; no wires, trees or ditches on the approach | Wires are nearly invisible; look for the poles                          |
-| 4. Surface              | Firm and smooth: pasture, a dry field, a dirt road      | Plowed fields and tall crops flip airplanes; land **along** the furrows |
-| 5. Slope                | Flat, or uphill                                         | Uphill shortens the roll; downhill can make it endless                  |
+| Priority                | Look for                                                | Why                                                                   |
+| ----------------------- | ------------------------------------------------------- | --------------------------------------------------------------------- |
+| 1. Reachable            | Inside the glide ring with altitude to spare            | You cannot land on a field you cannot reach                           |
+| 2. Wind                 | Land into the wind if you can                           | Lower groundspeed. Energy at touchdown falls with the square of speed |
+| 3. Length and obstacles | Long enough; no wires, trees or ditches on the approach | Wires are nearly invisible, so look for the poles                     |
+| 4. Surface              | Firm and smooth: pasture, a dry field, a dirt road      | Plowed fields and tall crops flip airplanes. Land along the furrows   |
+| 5. Slope                | Flat, or uphill                                         | Uphill shortens the roll. Downhill can make it very long              |
 
-Trade-offs are the whole game. A short field into the wind usually beats a long one with a tailwind; a slightly uphill field with a clear approach beats a flat one behind power lines. Roads carry wires, signs and traffic. Use the glide ring to shortlist, then apply the table to what is inside it. Pick the general area first from altitude, then the spot; you may change your mind once, and a controlled arrival in a poor field beats an uncontrolled one in a good field.
+Most field choices are trade-offs. A short field into the wind usually beats a long one with a tailwind. A slightly uphill field with a clear approach beats a flat one behind power lines. Roads carry wires, signs and traffic. Use the glide ring to shortlist, then apply the table to what is inside it. Pick the general area first from altitude, then the spot. You may change your mind once. A controlled arrival in a poor field beats an uncontrolled one in a good field.
 
 ::widget{name="glide-range" mode="explore"}
 
 :::callout{type="tip"}
-Read **color and texture**. Dark, even green is often pasture: good. Bright, striped or tall is a crop: bad. Brown with ridges is plowed: land along the ridges, never across. A field that shines is flooded.
+Read color and texture. Dark, even green is often pasture, which is good. Bright, striped or tall is a crop, which is bad. Brown with ridges is plowed, so land along the ridges, never across. A field that shines is flooded.
 :::
 
 :::quiz{id="l14-5-q1" type="single"}
@@ -61,7 +61,7 @@ Field B wins on three counts: into the wind, no wires on the approach, and a sli
 
 ## Flying the arrival
 
-Fly it like the forced landing in [[l5-4-engine-failure-and-forced-landings]]: high key over the field, downwind with altitude in hand, base when you can see you will make it, flaps only once the landing is certain. Three additions for a rough field:
+Fly it like the forced landing in [[l5-4-engine-failure-and-forced-landings]]: high key over the field, downwind with altitude in hand, base when you can see you will make it, flaps only once the landing is certain. For a rough field, add these:
 
 1. **Touch down as slowly as you safely can**, full flaps, nose high. Do not stall it in.
 2. **Doors unlatched** before touchdown so they cannot jam.
@@ -73,20 +73,20 @@ Desk-verified 2026-10-13: wind, field dimensions and slope, and obstacles as the
 
 ## Ditching
 
-Fly from Half Moon Bay toward Monterey and the glide ring is mostly water. A planned landing on water is **ditching**. A Skyhawk ditched slowly in a normal landing attitude does not sink at once; the wings and tanks float it for minutes, even with the cabin at the waterline, though the fixed gear may dig in and tip it over. That is survivable if you have thought about it in advance. This section is awareness, not a skill you will be scored on.
+Fly from Half Moon Bay toward Monterey and the glide ring is mostly water. A planned landing on water is **ditching**. A Skyhawk ditched slowly in a normal landing attitude does not sink at once. The wings and tanks float it for minutes, even with the cabin at the waterline, though the fixed gear may dig in and tip it over. That is survivable if you have thought about it in advance. This section is for awareness only, and no challenge scores it.
 
 | Decision         | Guidance                                                                                                                                                                                          |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Direction        | Land **parallel to the swells**, never into a swell face; of the two parallel headings, take the one with the most headwind. Only a strong wind with small swells justifies landing into the wind |
+| Direction        | Land **parallel to the swells**, never into a swell face. Of the two parallel headings, take the one with the most headwind. Only a strong wind with small swells justifies landing into the wind |
 | Configuration    | Full flaps, slowest controllable speed. If the engine still runs, use power to drag it in at a gentle, steady descent                                                                             |
 | Attitude         | Nose up, like a soft-field landing. Do not dive in, and do not stall high above the water                                                                                                         |
-| Before touchdown | Doors unlatched, belts tight, life vests on but **not** inflated inside the cabin                                                                                                                 |
+| Before touchdown | Doors unlatched, belts tight, life vests on but not inflated inside the cabin                                                                                                                     |
 | After            | Wait for the motion to stop, find the door, get out, then inflate the vest                                                                                                                        |
 
-Judging height over smooth water is hard: use the altimeter and a gentle, steady descent rate rather than flaring by eye. Land near a boat or the shore if you can, so someone sees you.
+Judging height over smooth water is hard, so use the altimeter and a gentle, steady descent rate rather than flaring by eye. Land near a boat or the shore if you can, so someone sees you.
 
 :::callout{type="real-world"}
-No one practices ditching in an airplane, and this lesson will not make you ready for it. A real coastal pilot carries life vests, flies high enough to keep the shore in glide range, and takes a water-survival course if they cross water often. In the sim a ditching ends when the screen goes blue; in the real airplane it ends with a swim in cold water, which is the part that hurts people.
+No one practices ditching in an airplane, and this lesson will not make you ready for it. A real coastal pilot carries life vests, flies high enough to keep the shore in glide range, and takes a water-survival course if they cross water often. In the sim a ditching ends when the screen goes blue. In the real airplane it ends with a swim in cold water, which is the part that hurts people.
 :::
 
 :::callout{type="verify"}
@@ -103,16 +103,16 @@ You must ditch in a long ocean swell with a light wind. Which direction do you l
 
 ---
 
-Parallel to the swells. Hitting the face of a swell is like hitting a wall; along it is a long, smoother surface. Only in a strong wind with small waves does landing into the wind take priority.
+Parallel to the swells. Hitting the face of a swell is like hitting a wall. Along it is a long, smoother surface. Only in a strong wind with small waves does landing into the wind take priority.
 :::
 
 ## Practice and next steps
 
-Two things to carry forward:
+To carry forward:
 
 1. Reachable, into wind, long and clear, firm surface, flat or uphill, in that order.
 2. Ditching: parallel to the swells, slow, nose up, doors unlatched, vests on but not inflated until you are out.
 
 **Practice.** This lesson feeds the `memory-items` deck: the field priority list and the securing items.
 
-**Fly it.** Challenge C14.6 "Surprise failure" (P1) picks a random Module 14 failure on any route, and the field choice is part of what it scores. Behind you, [[l14-4-fire-smoke-and-emergency-descent]] is the emergency most likely to end in a field. Module 15 moves on to airspace and ATC with [[l15-1-class-b-and-class-c-operations]].
+**Fly it.** Challenge C14.6 "Surprise failure" (P1) picks a random Module 14 failure on any route, and the field choice is part of what it scores. Before this, [[l14-4-fire-smoke-and-emergency-descent]] covered the emergency most likely to end in a field. Module 15 moves on to airspace and ATC with [[l15-1-class-b-and-class-c-operations]].

@@ -29,7 +29,7 @@ In a level turn, the wing has to hold the airplane up _and_ pull it around the t
 | 45°  | 1.41 G      | ×1.19                |
 | 60°  | 2.0 G       | ×1.41                |
 
-The stall speed goes up with the **square root** of the load factor. With a clean stall speed of {{vspeed.vs1}}, the stall speed in a 60° bank is about 68 KIAS.
+The stall speed goes up with the square root of the load factor. With a clean stall speed of {{vspeed.vs1}}, the stall speed in a 60° bank is about 68 KIAS.
 
 Drag the bank slider and watch the G and the stall speed climb, slowly at first and then very fast past 60°.
 
@@ -58,14 +58,14 @@ About **68 KIAS**: 48 × 1.41 ≈ 68.
 
 ## Maneuvering speed
 
-Enter steep turns **at or below maneuvering speed** (Va). Below Va, the wing stalls before it can overstress the airplane. Va is {{vspeed.va}} at maximum weight and less when the airplane is lighter. For solo practice, use about **95 KIAS**.
+Enter steep turns at or below maneuvering speed (Va). Below Va, the wing stalls before it can overstress the airplane. Va is {{vspeed.va}} at maximum weight and less when the airplane is lighter. For solo practice, use about 95 KIAS.
 
 ## Flying a steep turn
 
 1. **Clearing turn** and look for traffic.
 2. **Note your heading** and pick a landmark on the horizon.
 3. **Roll into 45° of bank**, smoothly.
-4. As you pass about 30°, **add back pressure** to hold altitude, and **add about 100–200 RPM** to hold the speed.
+4. As you pass about 30°, **add back pressure** to hold altitude, and add about 100–200 RPM to hold the speed.
 5. **Hold the sight picture.** Keep the horizon in the same place on the windshield. Cross-check the altimeter and the bank angle.
 6. **Roll out about 20° before** your entry heading, releasing the back pressure as you do.
 
@@ -84,7 +84,7 @@ About **20° before** the target heading, which is roughly half the bank angle.
 
 ## The overbanking tendency
 
-In a steep turn, the outside wing travels faster than the inside wing, so it makes more lift and the bank tends to **keep increasing**. Hold a little **opposite aileron** to stop it.
+In a steep turn, the outside wing travels faster than the inside wing, so it makes more lift and the bank tends to keep increasing. Hold a little opposite aileron to stop it.
 
 ## Common errors
 

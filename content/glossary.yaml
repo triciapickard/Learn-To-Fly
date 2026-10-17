@@ -13,7 +13,7 @@ terms:
     definition: Height above the terrain directly below.
   - slug: aileron
     term: Aileron
-    definition: Hinged surface on the outer trailing edge of each wing; controls roll.
+    definition: Hinged surface on the outer trailing edge of each wing. It controls roll.
   - slug: airspace
     term: Airspace
     definition: Portions of the sky with defined rules (Classes A, B, C, D, E, G).
@@ -94,7 +94,7 @@ terms:
     term: BKN
     aliases:
       - broken
-    definition: Cloud layer covering 5/8–7/8 of the sky; counts as a ceiling.
+    definition: Cloud layer covering 5/8–7/8 of the sky. It counts as a ceiling.
   - slug: bracketing
     term: Bracketing
     definition: Correcting in progressively smaller heading changes to find the heading that holds a
@@ -116,7 +116,7 @@ terms:
     term: Center of gravity
     aliases:
       - CG
-    definition: Point where the airplane's weight acts; must stay within limits.
+    definition: Point where the airplane's weight acts. It must stay within limits.
   - slug: chart-supplement
     term: Chart Supplement
     definition: FAA publication with detailed airport information (formerly A/FD).
@@ -128,13 +128,13 @@ terms:
     definition: Straight line from the leading edge to the trailing edge of a wing.
   - slug: class-b-airspace
     term: Class B airspace
-    definition: Airspace around the busiest airports; requires an explicit clearance.
+    definition: Airspace around the busiest airports. You need an explicit clearance to enter.
   - slug: class-c-airspace
     term: Class C airspace
-    definition: Airspace around busy airports; requires two-way radio contact.
+    definition: Airspace around busy airports. You need two-way radio contact to enter.
   - slug: class-d-airspace
     term: Class D airspace
-    definition: Airspace around towered airports; requires two-way radio contact.
+    definition: Airspace around towered airports. You need two-way radio contact to enter.
   - slug: class-e-airspace
     term: Class E airspace
     definition: Controlled airspace not designated A–D.
@@ -155,7 +155,7 @@ terms:
     definition: Airspace where ATC services are provided (A, B, C, D, E).
   - slug: coordinated-flight
     term: Coordinated flight
-    definition: Flight without slip or skid; ball centered.
+    definition: Flight without slip or skid, with the ball centered.
   - slug: critical-angle-of-attack
     term: Critical angle of attack
     definition: The AoA beyond which the wing stalls.
@@ -178,7 +178,7 @@ terms:
     definition: Navigation by calculating heading, speed and time.
   - slug: density-altitude
     term: Density altitude
-    definition: Pressure altitude corrected for temperature; high density altitude reduces performance.
+    definition: Pressure altitude corrected for temperature. High density altitude reduces performance.
   - slug: departure-leg
     term: Departure leg
     definition: Pattern leg flown straight out after takeoff (also called upwind in some contexts).
@@ -208,7 +208,7 @@ terms:
     definition: G1000 display of engine and fuel data.
   - slug: elevator
     term: Elevator
-    definition: Hinged surface on the horizontal tail; controls pitch.
+    definition: Hinged surface on the horizontal tail. It controls pitch.
   - slug: empennage
     term: Empennage
     definition: 'The tail section: horizontal and vertical stabilizers, elevator, rudder.'
@@ -234,7 +234,7 @@ terms:
     term: Flight plan
     aliases:
       - FPL
-    definition: Planned route; on the G1000, the list of waypoints.
+    definition: Planned route. On the G1000, it is the list of waypoints.
   - slug: flow
     term: Flow
     definition: Doing checklist items from memory in a set physical order, then verifying.
@@ -263,7 +263,7 @@ terms:
     definition: Satellite-based navigation system.
   - slug: ground-effect
     term: Ground effect
-    definition: Reduced induced drag when flying within about one wingspan of the ground; causes floating.
+    definition: Reduced induced drag when flying within about one wingspan of the ground. It causes floating.
   - slug: groundspeed
     term: Groundspeed
     aliases:
@@ -280,7 +280,7 @@ terms:
     definition: VFR cruising altitude rule based on magnetic course (odd/even thousands + 500 ft).
   - slug: hold-short-line
     term: Hold short line
-    definition: Runway holding position marking; do not cross without clearance.
+    definition: Runway holding position marking. Do not cross it without clearance.
   - slug: hsi
     term: HSI
     aliases:
@@ -302,7 +302,7 @@ terms:
     definition: Airspeed read directly from the ASI, in knots.
   - slug: induced-drag
     term: Induced drag
-    definition: Drag created as a by-product of lift; increases at low speed.
+    definition: Drag created as a by-product of lift. It increases at low speed.
   - slug: isogonic-line
     term: Isogonic line
     definition: Chart line connecting points of equal magnetic variation.
@@ -314,7 +314,7 @@ terms:
     definition: One nautical mile per hour (≈ 1.15 mph).
   - slug: lateral-axis
     term: Lateral axis
-    definition: Wingtip-to-wingtip axis; rotation about it is pitch.
+    definition: Wingtip-to-wingtip axis. Rotation about it is pitch.
   - slug: leaning
     term: Leaning
     definition: Reducing the mixture to the correct fuel/air ratio.
@@ -330,7 +330,7 @@ terms:
     definition: Ratio of lift to weight, measured in G.
   - slug: longitudinal-axis
     term: Longitudinal axis
-    definition: Nose-to-tail axis; rotation about it is roll.
+    definition: Nose-to-tail axis. Rotation about it is roll.
   - slug: magnetic-course-heading
     term: Magnetic course / heading
     aliases:
@@ -342,12 +342,12 @@ terms:
     definition: Angle between true north and magnetic north.
   - slug: magneto
     term: Magneto
-    definition: Self-contained engine-driven ignition generator; the C172 has two.
+    definition: Self-contained engine-driven ignition generator. The C172 has two.
   - slug: maneuvering-speed
     term: Maneuvering speed
     aliases:
       - Va
-    definition: Maximum speed for full, abrupt control deflection; decreases with weight.
+    definition: Maximum speed for full, abrupt control deflection. It decreases with weight.
   - slug: master-switch
     term: Master switch
     definition: Switch connecting the battery (and alternator) to the electrical system.
@@ -366,7 +366,7 @@ terms:
     definition: "The G1000's right-hand screen: map, engine data, flight plan."
   - slug: mixture
     term: Mixture
-    definition: Control setting the fuel/air ratio; red knob.
+    definition: Control setting the fuel/air ratio. It is the red knob.
   - slug: msl
     term: MSL
     aliases:
@@ -376,13 +376,13 @@ terms:
     term: Nautical mile
     aliases:
       - nm
-    definition: 6,076 ft; one minute of latitude.
+    definition: 6,076 ft, or one minute of latitude.
   - slug: nav-log
     term: Nav log
     definition: Table of headings, distances, times and fuel for a planned flight.
   - slug: non-towered-airport
     term: Non-towered airport
-    definition: Airport without an operating control tower; uses CTAF.
+    definition: Airport without an operating control tower. Pilots self-announce on the CTAF.
   - slug: notam
     term: NOTAM
     definition: 'Notice to Air Missions: time-critical information about hazards or changes.'
@@ -398,7 +398,7 @@ terms:
     term: OVC
     aliases:
       - overcast
-    definition: Cloud layer covering the whole sky; counts as a ceiling.
+    definition: Cloud layer covering the whole sky. It counts as a ceiling.
   - slug: p-factor
     term: P-factor
     definition: Asymmetric propeller loading at high AoA causing left yaw.
@@ -409,7 +409,7 @@ terms:
     definition: 'Row of lights showing glide path: two white/two red = on path.'
   - slug: parasite-drag
     term: Parasite drag
-    definition: Drag from the airframe's shape and friction; increases with speed.
+    definition: Drag from the airframe's shape and friction. It increases with speed.
   - slug: pattern-altitude
     term: Pattern altitude
     definition: Altitude flown in the traffic pattern, commonly 1,000 ft AGL.
@@ -449,7 +449,7 @@ terms:
     definition: Altitude read with 29.92 inHg set.
   - slug: propeller
     term: Propeller
-    definition: Engine-driven airfoil producing thrust; fixed-pitch on the C172.
+    definition: Engine-driven airfoil producing thrust. It is fixed-pitch on the C172.
   - slug: radial
     term: Radial
     definition: Magnetic course outbound from a VOR.
@@ -461,7 +461,7 @@ terms:
     definition: Airflow relative to the wing, opposite the flight path.
   - slug: rich
     term: Rich
-    definition: Mixture with more fuel; full rich for start/takeoff at low elevations.
+    definition: Mixture with more fuel. Use full rich for start and takeoff at low elevations.
   - slug: roll
     term: Roll
     definition: Rotation about the longitudinal axis (banking).
@@ -473,10 +473,10 @@ terms:
     definition: The transition from descent to the flare.
   - slug: rpm
     term: RPM
-    definition: Engine/propeller revolutions per minute; the C172's power indication.
+    definition: Engine/propeller revolutions per minute. It is the C172's power indication.
   - slug: rudder
     term: Rudder
-    definition: Hinged surface on the vertical tail; controls yaw.
+    definition: Hinged surface on the vertical tail. It controls yaw.
   - slug: run-up
     term: Run-up
     definition: Engine and systems check before takeoff.
@@ -499,16 +499,16 @@ terms:
     definition: Wing-low technique to counter crosswind drift.
   - slug: skid
     term: Skid
-    definition: Uncoordinated turn with too much rudder; ball outside the turn.
+    definition: Uncoordinated turn with too much rudder. The ball sits outside the turn.
   - slug: slip
     term: Slip
-    definition: Uncoordinated flight with too little rudder (or deliberate); ball inside.
+    definition: Uncoordinated flight with too little rudder (or deliberate). The ball sits on the inside.
   - slug: slow-flight
     term: Slow flight
     definition: Flight at an airspeed just above the stall warning.
   - slug: squawk
     term: Squawk
-    definition: The transponder code; to set it.
+    definition: The transponder code, or to set it.
   - slug: stabilized-approach
     term: Stabilized approach
     definition: Approach on speed, on glide path, on centerline and configured, with small corrections only.
@@ -543,7 +543,7 @@ terms:
     definition: Beginning of the runway available for landing.
   - slug: throttle
     term: Throttle
-    definition: Power control; black knob.
+    definition: Power control. It is the black knob.
   - slug: torque
     term: Torque
     definition: Reaction to propeller rotation that rolls the airplane left.
@@ -569,7 +569,7 @@ terms:
     term: True airspeed
     aliases:
       - TAS
-    definition: Actual speed through the air; higher than IAS at altitude.
+    definition: Actual speed through the air. It is higher than IAS at altitude.
   - slug: true-course
     term: True course
     definition: Course relative to true north, measured on a chart.
@@ -581,7 +581,7 @@ terms:
     definition: Non-government radio station providing airport information.
   - slug: unstabilized-approach
     term: Unstabilized approach
-    definition: Any approach not meeting stabilized criteria; go around.
+    definition: Any approach not meeting stabilized criteria. Go around.
   - slug: upwind-leg
     term: Upwind leg
     definition: Pattern leg parallel to the runway on the takeoff side.

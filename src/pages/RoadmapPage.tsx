@@ -48,7 +48,7 @@ const LADDER = [
 
 const NEXT = [
   'Auto-grading: a companion app that reads your flight from the sim and scores challenges for you (PC).',
-  'More depth in the Cessna 172: night flying, crosswind mastery, mountain flying and basic instrument flying.',
+  'More depth in the Cessna 172: night flying, crosswind technique, mountain flying and basic instrument flying.',
   'More home regions beyond the San Francisco Bay Area.',
 ];
 
@@ -58,7 +58,7 @@ export default function RoadmapPage() {
     <PageContainer narrow>
       <PageHeader
         title="The road to the A380"
-        description="One airplane at a time, each done properly before adding the next. The aircraft list is a plan, not a promise — it depends on what the sim offers and how well each aircraft is documented."
+        description="One airplane at a time, each done properly before adding the next. The aircraft list may change, because it depends on what the sim offers and how well each aircraft is documented."
       />
       <ol className="relative flex flex-col gap-4 border-l-2 border-line pl-6">
         {LADDER.map((rung) => (

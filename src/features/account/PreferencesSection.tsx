@@ -41,7 +41,7 @@ export function PreferencesSection({ user }: { user: UserDto }) {
         <FormField
           id="account-cockpit"
           label="Cockpit variant"
-          hint="Lessons focus on the G1000; this will tailor classic-panel callouts."
+          hint="Lessons focus on the G1000. This setting will tailor the classic-panel callouts."
         >
           <Select
             value={user.preferences.cockpitVariant}
