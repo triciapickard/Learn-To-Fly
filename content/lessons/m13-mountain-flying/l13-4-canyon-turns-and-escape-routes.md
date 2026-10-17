@@ -18,19 +18,19 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## The canyon that narrows
+## Box canyons
 
 :::callout{type="real-world"}
-In a real airplane, canyon flying is taught by a mountain flying instructor in the canyon itself, after the turn has been practiced at a safe altitude over flat ground. This lesson is awareness only: there is no challenge, and you should not go looking for canyons in the sim to practice it. The skill that matters is the planning that makes the turn unnecessary.
+In a real airplane, a mountain flying instructor teaches canyon flying in the canyon itself, after you have practiced the turn at a safe altitude over flat ground. This lesson is awareness only. There is no challenge, and you should not go looking for canyons in the sim to practice it. The skill that matters is the planning that makes the turn unnecessary.
 :::
 
-Picture it. You left I-80 to look at a waterfall up one of the American River canyons. The walls were far apart at the mouth. Ten miles in they have closed to a few thousand feet, the floor has risen to meet you, and ahead the canyon bends out of sight. You cannot out-climb the walls, and you cannot see whether the bend opens or ends. This is a box canyon, and it has killed experienced pilots.
+Suppose you left I-80 to look at a waterfall up one of the American River canyons. The walls were far apart at the mouth. Ten miles in they have closed to a few thousand feet, the floor has risen toward you, and ahead the canyon bends out of sight. You cannot out-climb the walls, and you cannot see whether the bend opens or ends. This is a box canyon, and it has killed experienced pilots.
 
-The rule from [[l13-2-planning-a-mountain-route]] exists for this moment: **never enter a canyon you cannot turn around in.** The AIM says the same thing: avoid confined terrain without room for a 180° turn, and always fly with a planned escape route. Here is the physics behind it, and what the turn looks like if you ever need it.
+The rule from [[l13-2-planning-a-mountain-route]] is written for this moment: **never enter a canyon you cannot turn around in.** The AIM also says to avoid confined terrain without room for a 180° turn, and to always fly with a planned escape route.
 
-## Why room to turn is everything
+## Why you need room to turn
 
-Turn radius depends on groundspeed and bank. In [[l5-3-steep-turns-and-load-factor]] you learned the bank side. The speed side has a sting: at a high density altitude your groundspeed is higher than indicated, so every turn is wider than at Livermore.
+Turn radius depends on groundspeed and bank. In [[l5-3-steep-turns-and-load-factor]] you learned the bank side. Speed matters too. At a high density altitude your groundspeed is higher than indicated, so every turn is wider than at Livermore.
 
 | True airspeed | 30° bank, turn diameter (about) | 45° bank, turn diameter (about) |
 | ------------- | ------------------------------- | ------------------------------- |
@@ -40,7 +40,7 @@ Turn radius depends on groundspeed and bank. In [[l5-3-steep-turns-and-load-fact
 
 Still air, level turn, no allowance for the roll-in. Rules of thumb only.
 
-Two things jump out. At cruise speed and a comfortable bank you need over half a mile of width, and canyon walls do not come with a measuring tape. And slowing down helps far more than banking harder: halving the speed cuts the diameter to a quarter, while going from 30° to 45° cuts it by about 40%.
+At cruise speed and a comfortable bank you need over half a mile of width, and nothing in the cockpit measures the gap between canyon walls. Slowing down helps far more than banking harder. Halving the speed cuts the diameter to a quarter, while going from 30° to 45° cuts it by about 40%.
 
 Add wind pushing the turn toward one wall, sink off the lee wall, and eyes that judge width badly against a slope, and you cannot reliably tell from the cockpit whether a canyon has room. So you do not go in unless the plan, made on the ground with a chart, says it does.
 
@@ -54,17 +54,17 @@ Why should you never enter a canyon without room to turn around?
 
 ---
 
-The turn needs **more room than you think**, your groundspeed is higher in thin air, and if the canyon ends you cannot climb out. Decide on the ground, not at the bend.
+The turn needs more room than you think, your groundspeed is higher in thin air, and if the canyon ends you cannot climb out. Decide on the ground, not at the bend.
 :::
 
 ## The escape turn
 
-If you are ever in a canyon that is closing, the escape turn buys the most turn from the least width. It is slow, steep and coordinated, flown as soon as you decide:
+If you are ever in a canyon that is closing, the escape turn reverses your course in the least width. It is slow, steep and coordinated, flown as soon as you decide:
 
 1. **Decide early.** The moment you doubt the canyon, turn. Every second spent hoping costs width.
-2. **Slow down first.** Power back, slow toward the top of the flap range, flaps 10°. This is where most of the gain is.
-3. **Move to one side.** Fly along one wall so the whole width is available; if you know the wind, pick the side that puts it on your nose through the turn.
-4. **Bank 45°, add power.** Roll smoothly into a coordinated 45° turn toward the open side, with power to hold altitude and speed. Keep the ball centered; a skid here is how a stall becomes a spin.
+2. **Slow down first.** Power back, slow toward the top of the flap range, flaps 10°. Slowing down shrinks the turn the most.
+3. **Move to one side.** Fly along one wall so the whole width is available. If you know the wind, pick the side that puts it on your nose through the turn.
+4. **Bank 45°, add power.** Roll smoothly into a coordinated 45° turn toward the open side, with power to hold altitude and speed. Keep the ball centered. A skid here can turn a stall into a spin.
 5. **Roll out heading down-canyon** and fly back the way you came.
 
 :::callout{type="safety"}
@@ -85,17 +85,17 @@ You are at 90 KIAS in a canyon that is starting to close. Which single change sh
 
 ---
 
-**Slowing down.** Turn radius grows with the square of speed, so halving the speed cuts the diameter to a quarter. A steeper bank helps less and brings the stall closer; the lee wall is where the sink is.
+Slowing down. Turn radius grows with the square of speed, so halving the speed cuts the diameter to a quarter. A steeper bank helps less and brings the stall closer, and the lee wall is where the sink is.
 :::
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. Never enter a canyon you cannot turn around in. Decide on the ground with a chart.
-2. Turn radius grows with the square of groundspeed; thin air makes every turn wider.
+2. Turn radius grows with the square of groundspeed. Thin air makes every turn wider.
 3. If you ever must: decide early, slow down, flaps 10°, one side of the canyon, 45° coordinated turn toward the open side.
 
 **Practice.** This lesson feeds the `mountain-planning` flashcard deck: the canyon rule, the slow-down-first principle and the escape-turn steps.
 
-**Next.** That completes Module 13. Challenge C13.2 "Donner Pass crossing" is the capstone; fly it with the worksheet from [[l13-2-planning-a-mountain-route]] on your kneeboard. Module 14 begins with [[l14-1-electrical-failures]].
+**Next.** That completes Module 13. Challenge C13.2 "Donner Pass crossing" is the capstone. Fly it with the worksheet from [[l13-2-planning-a-mountain-route]] on your kneeboard. Module 14 begins with [[l14-1-electrical-failures]].

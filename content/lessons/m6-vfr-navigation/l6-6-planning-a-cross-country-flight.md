@@ -31,14 +31,14 @@ simVersion: null
 
 ## Choosing an altitude
 
-Above 3,000 ft above the ground, VFR flights use the **hemispheric rule**, based on the **magnetic course**:
+Above 3,000 ft above the ground, VFR flights use the **hemispheric rule**, based on the magnetic course:
 
-| Magnetic course | Cruising altitude           | Examples       |
-| --------------- | --------------------------- | -------------- |
-| 0° to 179°      | **Odd** thousands + 500 ft  | 3,500 or 5,500 |
-| 180° to 359°    | **Even** thousands + 500 ft | 4,500 or 6,500 |
+| Magnetic course | Cruising altitude       | Examples       |
+| --------------- | ----------------------- | -------------- |
+| 0° to 179°      | Odd thousands + 500 ft  | 3,500 or 5,500 |
+| 180° to 359°    | Even thousands + 500 ft | 4,500 or 6,500 |
 
-A memory aid: going **east** is **odd**. Also check the terrain (the MEFs) and the airspace along your route.
+Remember it as **east is odd**. Also check the terrain (the MEFs) and the airspace along your route.
 
 :::quiz{id="l6-6-q1" type="single"}
 Your magnetic course is 120°, and you'll cruise more than 3,000 ft above the ground. Which altitude?
@@ -50,7 +50,7 @@ Your magnetic course is 120°, and you'll cruise more than 3,000 ft above the gr
 
 ---
 
-Magnetic courses from 0° to 179° use **odd thousands + 500**, such as 3,500 or 5,500 ft.
+Magnetic courses from 0° to 179° use odd thousands + 500, such as 3,500 or 5,500 ft.
 :::
 
 ## The nav log
@@ -63,16 +63,16 @@ A **nav log** is a table with one row for each leg of the route. Fill in everyth
 | C83 → KTCY  | 3,500 | 134 | 270/15 | +5  | 139 | 13 E | 126 | 12   | 120 | 6   |     |
 | KTCY → KLVK | 4,500 | 271 | 270/15 | 0   | 271 | 13 E | 258 | 18   | 95  | 11  |     |
 
-This worked example flies Livermore → Byron → Tracy → Livermore at 110 KTAS, with the wind from Lesson 6.3. **ETE** is the estimated time en route in minutes, and **ATE** is the actual time, which you write down in flight. The whole trip is about 42 nm and 23 minutes. The example ignores the time spent climbing.
+This worked example flies from Livermore to Byron, then Tracy, and back to Livermore at 110 KTAS, with the wind from Lesson 6.3. **ETE** is the estimated time en route in minutes, and **ATE** is the actual time, which you write down in flight. The whole trip is about 42 nm and 23 minutes. The example ignores the time spent climbing.
 
 ## Fuel
 
-Fuel needed = flight time × fuel burn, **plus a reserve**, plus fuel for taxi and run-up.
+Fuel needed = flight time × fuel burn, plus a reserve, plus fuel for taxi and run-up.
 
-- Day VFR needs enough fuel to reach your destination and fly **30 more minutes** at normal cruise (14 CFR 91.151). At night, it's 45 minutes.
-- Use **10 GPH** for planning. The Skyhawk's fuel burn is {{aircraft.fuelBurn}}.
+- Day VFR needs enough fuel to reach your destination and fly 30 more minutes at normal cruise (14 CFR 91.151). At night, it's 45 minutes.
+- Use 10 GPH for planning. The Skyhawk's fuel burn is {{aircraft.fuelBurn}}.
 
-For the example: 23 minutes is about 4 gal, the 30-minute reserve is 5 gal, and taxi and run-up are about 1 gal. That's **10 gal** at the very least. Most pilots add a personal buffer on top.
+For the example: 23 minutes is about 4 gal, the 30-minute reserve is 5 gal, and taxi and run-up are about 1 gal. That's 10 gal at the very least. Most pilots add a personal buffer on top.
 
 :::quiz{id="l6-6-q2" type="single"}
 What's the minimum day VFR fuel reserve?

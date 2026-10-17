@@ -53,21 +53,22 @@ export default function TurnCoordinator({ props, onQuizAnswer }: WidgetProps) {
   const description = (
     <>
       <p>
-        Three views of the same turn. A classic turn coordinator: a miniature airplane that tilts
-        with the rate of turn (the L and R marks are standard rate, 3° per second) above a ball in a
-        curved glass tube. The top of a G1000 attitude indicator: the roll pointer shows the bank
-        and the small trapezoid under it moves like the ball. And a view from above showing where
-        the nose points compared with the flight path.
+        The widget shows the same turn three ways. The first is a classic turn coordinator, with a
+        miniature airplane that tilts with the rate of turn (the L and R marks are standard rate, 3°
+        per second) above a ball in a curved glass tube. The second is the top of a G1000 attitude
+        indicator. Its roll pointer shows the bank, and the small trapezoid under it moves like the
+        ball. The third is a view from above that shows where the nose points compared with the
+        flight path.
       </p>
       <p>
         When the rudder matches the bank, the ball is centered and the nose follows the flight path.
-        Too little rudder is a slip: the ball falls to the inside of the turn and the nose points
-        outside the path. Too much rudder is a skid: the ball slides to the outside and the nose
-        yaws into the turn. Either way, step on the ball: press the rudder on the side the ball has
-        moved to.
+        Too little rudder is a slip. The ball falls to the inside of the turn and the nose points
+        outside the path. Too much rudder is a skid. The ball slides to the outside and the nose
+        yaws into the turn. Either way, step on the ball by pressing the rudder on the side the ball
+        has moved to.
       </p>
       <p>
-        Standard rate at {tas} knots true airspeed needs about {Math.round(std.exact)}° of bank; the
+        Standard rate at {tas} knots true airspeed needs about {Math.round(std.exact)}° of bank. The
         rule of thumb TAS ÷ 10 + 7 gives {Math.round(std.ruleOfThumb)}°.
       </p>
     </>
@@ -146,7 +147,7 @@ export default function TurnCoordinator({ props, onQuizAnswer }: WidgetProps) {
         <p>
           <strong>Turn rate:</strong>{' '}
           <span className="font-mono">{Math.abs(state.rate).toFixed(1)}°/s</span>
-          {Math.abs(Math.abs(state.rate) - STANDARD_RATE) <= 0.3 && ' — standard rate'}
+          {Math.abs(Math.abs(state.rate) - STANDARD_RATE) <= 0.3 && ', standard rate'}
         </p>
         <p className="mt-1">
           <strong>Standard rate at {tas} KTAS:</strong> about {Math.round(std.exact)}° of bank (rule
@@ -396,7 +397,7 @@ function G1000Slip({ state }: { state: TurnState }) {
       viewBox="0 0 240 240"
       className="w-full select-none"
       role="img"
-      aria-label={`G1000 roll pointer at ${bankText(state.bank)}; slip/skid trapezoid ${Math.abs(state.ball) < 0.1 ? 'under the pointer' : `displaced ${state.ball > 0 ? 'right' : 'left'}`}.`}
+      aria-label={`G1000 roll pointer at ${bankText(state.bank)}, slip/skid trapezoid ${Math.abs(state.ball) < 0.1 ? 'under the pointer' : `displaced ${state.ball > 0 ? 'right' : 'left'}`}.`}
     >
       <defs>
         <clipPath id="w6-adi-clip">

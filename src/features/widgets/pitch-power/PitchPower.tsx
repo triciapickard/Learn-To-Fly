@@ -117,14 +117,14 @@ function Trainer({
       <p>
         An attitude indicator, an airspeed tape and a vertical speed scale for the Cessna 172.
         Choose a pitch attitude and a power setting (RPM), and the instruments show the airspeed and
-        climb or descent rate the airplane settles at. For example: cruise, 2,300 RPM with the nose
-        level, holds altitude at about 100 knots; Vy climb, full power and 8° nose up, climbs at
-        about 74 knots.
+        climb or descent rate the airplane settles at. For example, cruise power of 2,300 RPM with
+        the nose level holds altitude at about 100 knots. A Vy climb, with full power and 8° nose
+        up, climbs at about 74 knots.
       </p>
       <p>
-        With power fixed, raising the nose slows the airplane and lowering it speeds it up: pitch
+        With power fixed, raising the nose slows the airplane and lowering it speeds it up, so pitch
         controls airspeed. With pitch fixed, adding power makes it climb and reducing power makes it
-        descend. Trim sets an airspeed: fly slower than the trimmed speed and you have to pull;
+        descend. Trim sets an airspeed. Fly slower than the trimmed speed and you have to pull. Fly
         faster and you have to push. Press Trim to take the force away.
       </p>
     </>
@@ -145,7 +145,7 @@ function Trainer({
     >
       {!verified && (
         <p className="mb-3 rounded-md bg-caution-tint p-2 text-sm">
-          Provisional numbers: this trainer&apos;s table hasn&apos;t been checked against flights in
+          Provisional numbers. This trainer&apos;s table hasn&apos;t been checked against flights in
           the sim yet, so treat the exact speeds as approximate.
         </p>
       )}

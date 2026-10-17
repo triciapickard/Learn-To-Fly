@@ -26,7 +26,7 @@ The G1000 NXi has two large displays:
 - The **Primary Flight Display (PFD)**, in front of you on the left. It shows what you need to fly the airplane: attitude, speed, altitude, heading.
 - The **Multi-Function Display (MFD)**, in the middle of the panel. It shows the moving map, the engine instruments and pages for flight planning.
 
-The two screens are almost identical units. If one fails, the other can show the essential information (called **reversionary mode**).
+The two screens are almost identical units. If one fails, the other can show the information you need to fly (called **reversionary mode**).
 
 ## A tour of the PFD
 
@@ -34,9 +34,9 @@ Hover over or tap each part of the PFD below, or press **Start tour** to step th
 
 ::widget{name="g1000-pfd" mode="explore"}
 
-The six things you'll look at most:
+The items you'll look at most:
 
-1. **Attitude indicator.** The blue and brown background with the yellow airplane symbol. Pitch and bank.
+1. **Attitude indicator.** The blue and brown background with the yellow airplane symbol. It shows pitch and bank.
 2. **Airspeed tape** on the left, with colored speed bands (you will learn what they mean in Lesson 1.4).
 3. **Altitude tape** on the right, with the **altimeter setting (BARO)** below it.
 4. **Vertical speed** just right of the altitude tape.
@@ -53,7 +53,7 @@ Where is the altimeter setting shown on the G1000 PFD?
 
 ---
 
-The altimeter setting is in the **BARO box below the altitude tape**. You set it with the BARO knob. Your altitude is only correct when it's set to the local altimeter setting.
+The altimeter setting is in the BARO box below the altitude tape. You set it with the BARO knob. Your altitude is only correct when it's set to the local altimeter setting.
 :::
 
 ## A tour of the MFD
@@ -82,7 +82,7 @@ What does the EIS strip on the MFD show?
 
 ---
 
-The **Engine Indication System** shows engine and fuel information: RPM, fuel flow, oil pressure and temperature, fuel quantity and electrical values.
+The Engine Indication System shows engine and fuel information: RPM, fuel flow, oil pressure and temperature, fuel quantity and electrical values.
 :::
 
 ## Knobs and keys
@@ -91,9 +91,9 @@ The bezels around the screens hold the knobs you'll use most:
 
 | Knob or key                            | What it does                                                  |
 | -------------------------------------- | ------------------------------------------------------------- |
-| NAV and COM knobs                      | Tune the standby frequency; the swap key makes it active.     |
+| NAV and COM knobs                      | Tune the standby frequency. The swap key makes it active.     |
 | BARO (outer ring of the CRS/BARO knob) | Sets the altimeter setting.                                   |
-| HDG                                    | Moves the cyan heading bug; press it to sync to your heading. |
+| HDG                                    | Moves the cyan heading bug. Press it to sync to your heading. |
 | CRS                                    | Sets the course on the HSI when you use a VOR.                |
 | RANGE                                  | Zooms the map in and out.                                     |
 
@@ -115,7 +115,7 @@ Older Skyhawks have six round instruments in two rows, the **six-pack**. Every o
 | Vertical speed      | The vertical speed scale (right edge)                    |
 
 :::callout{type="classic"}
-In the classic Skyhawk, the six-pack sits in two rows in front of you: airspeed, attitude and altimeter on top; turn coordinator, heading indicator and vertical speed below. The procedures are the same, just the look is different.
+In the classic Skyhawk, the six-pack sits in two rows in front of you: airspeed, attitude and altimeter on top; turn coordinator, heading indicator and vertical speed below. The procedures are the same. Only the look is different.
 :::
 
 :::quiz{id="l1-2-q3" type="single"}
@@ -128,15 +128,15 @@ Which six-pack instrument does the PFD's slip/skid indicator replace?
 
 ---
 
-The slip/skid bar under the roll pointer does the job of the **ball** in the turn coordinator. Step on the bar just like you'd step on the ball.
+The slip/skid bar under the roll pointer does the job of the ball in the turn coordinator. Step on the bar the same way you'd step on the ball.
 :::
 
 ## Standby instruments and the compass
 
-If the screens fail, you still have **standby instruments**: a small attitude indicator, airspeed indicator and altimeter. At the top centre of the windscreen is the **magnetic compass**, with a deviation card below it showing its small errors on each heading. It needs no electricity at all, which makes it the last resort for heading.
+If the screens fail, you still have **standby instruments**: a small attitude indicator, airspeed indicator and altimeter. At the top center of the windshield is the **magnetic compass**, with a deviation card below it showing its small errors on each heading. It needs no electricity, so it is your last resort for heading.
 
 :::callout{type="tip"}
-Scan, don't stare. Look outside, glance at the attitude, then airspeed, altitude and heading, and look outside again. Staring at any one number makes you miss the others.
+Keep your eyes moving. Look outside, glance at the attitude, then airspeed, altitude and heading, and look outside again. Staring at any one number makes you miss the others.
 :::
 
 ## Reading the screens in the sim

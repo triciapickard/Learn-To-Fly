@@ -16,7 +16,7 @@
       "id": "lvk-data-block",
       "name": "Airport data block",
       "legend": "LIVERMORE (LVK) · CT – 118.1 ★ ATIS 119.65 · 400 L 53 122.95",
-      "explanation": "Name and identifier; CT is the control tower frequency (the star means it is part-time) and ATIS is the recorded weather. The last line gives the field elevation (400 ft), L for runway lighting, the longest runway in hundreds of feet (5,300 ft) and the UNICOM frequency.",
+      "explanation": "Name and identifier. CT is the control tower frequency (the star means it is part-time) and ATIS is the recorded weather. The last line gives the field elevation (400 ft), L for runway lighting, the longest runway in hundreds of feet (5,300 ft) and the UNICOM frequency.",
       "rect": { "x": 192, "y": 108, "width": 104, "height": 56 }
     },
     {

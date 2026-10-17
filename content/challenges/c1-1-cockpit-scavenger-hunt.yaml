@@ -16,7 +16,7 @@ lastVerifiedAt: 2026-10-15
 simVersion: 'MSFS 2024 (1.8.16.0)'
 
 goal: >
-  Find and operate every essential control and instrument in the Skyhawk without
+  Find and operate every main control and instrument in the Skyhawk without
   searching. Tick each item on the Fly tab as you find it.
 
 setup:
@@ -52,7 +52,7 @@ procedure:
   - COM1. Tune 123.450 in standby and swap it to active.
   - Transponder. On the PFD, press the XPDR softkey. Find the code 1200 (CODE, then four digits 0–7) and the STBY, ON and ALT modes.
   - EIS (the engine strip down the left edge of the MFD). Find FUEL QTY GAL and FFLOW GPH.
-  - Standby instruments and the magnetic compass (at the top centre of the windscreen). Find them.
+  - Standby instruments and the magnetic compass (at the top center of the windscreen). Find them.
   - Return every switch you moved to its cold-and-dark position.
 
 criteria:
@@ -91,7 +91,7 @@ commonMistakes:
 tips:
   - Zoom the camera toward each area of the panel.
   - On a gamepad, flaps and trim have buttons too (by default the D-pad for flaps, RB with the right stick for trim), but find the cockpit controls first.
-  - Use the cockpit tooltips; they name every control.
+  - Use the cockpit tooltips. They name every control.
   - Start the timer on the Fly tab when you begin.
 
 debriefQuestions:

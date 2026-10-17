@@ -10,7 +10,7 @@ function describeChecklist(checklist: ChecklistDto) {
     <ol className="list-decimal pl-5">
       {checklist.items.map((item) => (
         <li key={item.id}>
-          {item.item} — {item.action}
+          {item.item}: {item.action}
           {item.note ? ` (${item.note})` : ''}
         </li>
       ))}

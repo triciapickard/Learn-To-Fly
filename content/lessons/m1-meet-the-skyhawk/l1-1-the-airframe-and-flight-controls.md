@@ -21,7 +21,7 @@ simVersion: 'MSFS 2024 (1.8.16.0)'
 
 ## The Skyhawk at a glance
 
-The Cessna 172 Skyhawk is the most-produced airplane in history, and one of the most common training airplanes in the world. Flight schools love it because it is stable, forgiving and easy to see out of.
+The Cessna 172 Skyhawk is the most-produced airplane in history, and one of the most common training airplanes in the world. Flight schools choose it because it is stable, forgiving and easy to see out of.
 
 Some things to know about the 172S you fly in the sim:
 
@@ -39,7 +39,7 @@ Some things to know about the 172S you fly in the sim:
 
 ## Parts of the airframe
 
-Every airplane has the same five main parts:
+Every airplane has the same main parts:
 
 - **Fuselage.** The body. It holds the cabin, the instrument panel and the baggage area, and everything else attaches to it.
 - **Wings.** They make the lift that holds the airplane up. On the Skyhawk they also hold the fuel tanks.
@@ -61,7 +61,7 @@ Move the controls in the explorer below and watch which surfaces move and how th
 
 ::widget{name="control-surfaces" mode="explore"}
 
-A turn uses all three: the ailerons **roll** the airplane into a bank, the elevator adds a little back pressure to **pitch** the nose around the turn, and the rudder keeps the nose from **yawing** the wrong way. You'll practice that in Module 2.
+A turn uses all three. The ailerons roll the airplane into a bank, the elevator adds a little back pressure to pitch the nose around the turn, and the rudder keeps the nose from yawing the wrong way. You'll practice that in Module 2.
 
 :::quiz{id="l1-1-q1" type="single"}
 You move the yoke to the left. What happens to the ailerons?
@@ -73,7 +73,7 @@ You move the yoke to the left. What happens to the ailerons?
 
 ---
 
-The left aileron goes **up**, reducing lift on the left wing, and the right aileron goes **down**, increasing lift on the right wing. The airplane rolls left.
+The left aileron goes up, reducing lift on the left wing, and the right aileron goes down, increasing lift on the right wing. The airplane rolls left.
 :::
 
 :::quiz{id="l1-1-q2" type="single"}
@@ -85,14 +85,14 @@ Which axis does the rudder control?
 
 ---
 
-The rudder swings the tail left or right, so the nose yaws around the **vertical** axis.
+The rudder swings the tail left or right, so the nose yaws around the vertical axis.
 :::
 
 ## Flaps and trim
 
-**Flaps** are panels on the inboard trailing edge of each wing. Lowering them makes more lift **and** more drag, so you can fly slower and descend more steeply, which is useful for landing. The Skyhawk's flaps are electric, with four positions: {{aircraft.flaps}}. There's a flap switch and a position indicator on the lower panel.
+**Flaps** are panels on the inboard trailing edge of each wing. Lowering them makes more lift and more drag, so you can fly slower and descend more steeply, which is useful for landing. The Skyhawk's flaps are electric, with four positions: {{aircraft.flaps}}. There's a flap switch and a position indicator on the lower panel.
 
-The **trim tab** is a small hinged panel on the trailing edge of the elevator, moved by the trim wheel (or trim buttons). Once you've set the pitch attitude you want, you roll in trim until you no longer need to push or pull on the yoke. Trimming doesn't change what the airplane does; it removes the effort of holding it there.
+The **trim tab** is a small hinged panel on the trailing edge of the elevator, moved by the trim wheel (or trim buttons). Once you've set the pitch attitude you want, you roll in trim until you no longer need to push or pull on the yoke. Trimming doesn't change what the airplane does. It removes the effort of holding it there.
 
 :::quiz{id="l1-1-q3" type="single"}
 What does the elevator trim tab do?
@@ -118,12 +118,14 @@ Taxi slowly, and use brakes gently.
 
 :::callout{type="sim"}
 On a gamepad, rudder is on the triggers (LT and RT) and both brakes work together, so you can't brake one wheel at a time. Differential braking needs rudder pedals with toe brakes, or separate left and right brake bindings.
-::: You'll learn taxiing properly in Module 3.
+:::
+
+You'll learn taxiing in Module 3.
 
 ## Seeing it in the sim
 
-Start at a parking spot with the engine off. Switch to an outside view, then move the yoke and pedals and watch the ailerons, elevator and rudder move. Lower the flaps one step at a time to 10°, 20° and 30° (the battery needs to be on) and watch them extend. The flap switch doesn't stop at each step in the sim, so watch the flap indicator; on a gamepad the D-pad down and up buttons move the flaps too.
+Start at a parking spot with the engine off. Switch to an outside view, then move the yoke and pedals and watch the ailerons, elevator and rudder move. Lower the flaps one step at a time to 10°, 20° and 30° (the battery needs to be on) and watch them extend. The flap switch doesn't stop at each step in the sim, so watch the flap indicator. On a gamepad the D-pad down and up buttons move the flaps too.
 
 :::callout{type="sim"}
-In a real Skyhawk the controls push back: the faster you fly, the heavier they feel, and you can feel the airplane through the yoke. Most sim hardware has no control forces at all, which is why it's so easy to over-control. Make small, smooth inputs and watch what the airplane does.
+In a real Skyhawk the controls push back: the faster you fly, the heavier they feel, and you can feel the airplane through the yoke. Most sim hardware has no control forces at all, so it's easy to over-control. Make small, smooth inputs and watch what the airplane does.
 :::

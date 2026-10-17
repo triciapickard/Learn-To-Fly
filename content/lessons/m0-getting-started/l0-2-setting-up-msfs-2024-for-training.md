@@ -9,7 +9,7 @@ summary: Set up your controls, assistance options, views and a free flight so yo
 estimatedMinutes: 20
 prerequisites: [l0-1-welcome-how-learn-to-fly-works]
 objectives:
-  - Configure your controls so every essential function works without the mouse.
+  - Configure your controls so every function you need works without the mouse.
   - Apply the Learn to Fly Training assistance profile.
   - Set up views and a free flight with a chosen airport, weather and time of day.
 challenges: []
@@ -21,11 +21,11 @@ simVersion: 'MSFS 2024 (1.8.16.0)'
 
 ## Choose your controller profile
 
-You can learn to fly with any controller, but some make certain skills easier. Find your setup below. The key difference is **rudder**: the pedals (or a twist grip) that keep the airplane's nose lined up with where it is going. Every setup below has a way to use the rudder, so leave **Auto-Rudder off** whichever one you fly with.
+You can learn to fly with any controller, but some make certain skills easier. Find your setup below. The key difference is **rudder**: the pedals (or a twist grip) that keep the airplane's nose lined up with where it is going. Every setup below has a way to use the rudder, so leave Auto-Rudder off whichever one you fly with.
 
 ### Gamepad only
 
-A gamepad works for the whole course. By default the **triggers** control the rudder: **LT** for left rudder and **RT** for right rudder. Squeeze them gently; a light touch is all most turns and takeoffs need. The sticks are small, so use gentle movements and a softer sensitivity curve.
+A gamepad works for the whole course. By default the triggers control the rudder: LT for left rudder and RT for right rudder. Squeeze them gently. A light touch is all most turns and takeoffs need. The sticks are small, so use gentle movements and a softer sensitivity curve.
 
 ### Joystick with a twist grip
 
@@ -33,7 +33,7 @@ Twisting the stick controls the rudder. Most joysticks also have a throttle leve
 
 ### Yoke, throttle quadrant and rudder pedals
 
-The closest to a real cockpit. Bind the toe brakes on the pedals if they have them.
+This setup is the closest to a real cockpit. Bind the toe brakes on the pedals if they have them.
 
 :::callout{type="sim"}
 Auto-Rudder is an assist the real airplane doesn't have. In the real Skyhawk you use rudder in every turn and on every takeoff, so learn it from the first flight. If you ever fly with Auto-Rudder on, the lessons still explain what your feet would be doing.
@@ -56,14 +56,14 @@ Bind these so you never need the mouse while flying. Test each one before moving
 | Look around and reset view    | You can look left and right and snap back to the default view.        |
 
 :::callout{type="tip"}
-Bind pause to an easy button you can reach without looking. Pausing is how you learn.
+Bind pause to an easy button you can reach without looking. You will pause often while you learn.
 :::
 
 ## Sensitivity curves
 
 A desktop joystick or gamepad has only a few inches of travel, and it gives you no feel of the airflow. Beginners tend to over-control: they move the stick too far, the airplane reacts, they correct too far the other way.
 
-Two settings help:
+These settings help:
 
 - **A small dead zone** (a few percent) so the airplane doesn't twitch when your hand rests on the stick.
 - **A softer curve** (less sensitivity near the center) so small movements make small changes, and full deflection is still available when you need it.
@@ -72,7 +72,7 @@ Start gently and adjust after a few flights. If turns feel sluggish, add sensiti
 
 ## The Learn to Fly Training assistance profile
 
-MSFS 2024 can help with almost everything. To learn real skills, turn most helpers off. From the main menu, open **Settings → General → Assistances**. The names below are the ones the sim uses (checked in MSFS 2024 version 1.8.16.0); they can change between sim updates.
+MSFS 2024 can help with almost everything. To learn real skills, turn most helpers off. From the main menu, open **Settings → General → Assistances**. The names below are the ones the sim uses (checked in MSFS 2024 version 1.8.16.0). They can change between sim updates.
 
 | Setting                                                                            | Section             | Recommended                              | Why                                            |
 | ---------------------------------------------------------------------------------- | ------------------- | ---------------------------------------- | ---------------------------------------------- |
@@ -83,7 +83,7 @@ MSFS 2024 can help with almost everything. To learn real skills, turn most helpe
 | Display active Waypoint Marker, Flight Path                                        | Visual Assistance   | Off                                      | Learn the runway picture and find your way.    |
 | Taxi Ribbon                                                                        | Visual Assistance   | On for Modules 0–2, then off             | Lesson 3.2 teaches airport signs and markings. |
 | Piloting and Controls Notifications                                                | Visual Assistance   | On for Modules 0–2                       | Helps you learn the controls.                  |
-| Disable Crash Damage, Disable Aircraft Stress Damage, Disable Engine Stress Damage | Realism             | On (damage off) until Module 4, then off | Honest consequences, when you're ready.        |
+| Disable Crash Damage, Disable Aircraft Stress Damage, Disable Engine Stress Damage | Realism             | On (damage off) until Module 4, then off | Real consequences, once you're ready.          |
 | Unlimited Fuel                                                                     | Realism             | Off                                      | Fuel management matters.                       |
 
 :::callout{type="tip"}
@@ -94,7 +94,7 @@ The three damage settings are worded backwards: switching **Disable Crash Damage
 
 ![The Visual Assistance and Realism sections of the MSFS 2024 assistance settings, with Taxi Ribbon and Piloting and Controls Notifications on, the three Disable Damage switches on and Unlimited Fuel off](m0-l2-assistance-visual-realism.webp 'Visual Assistance and Realism, set for Module 0 (MSFS 2024 1.8.16.0).')
 
-![More MSFS 2024 assistance switches: G-Suit, AI Radio Communications (ATC), ATC enforce flight plan, Airport Services Motion and Start flight without walkaround](m0-l2-assistance-other.webp 'The rest of the page. Leave these as they are for now; each challenge says when it needs ATC.')
+![More MSFS 2024 assistance switches: G-Suit, AI Radio Communications (ATC), ATC enforce flight plan, Airport Services Motion and Start flight without walkaround](m0-l2-assistance-other.webp 'The rest of the page. Leave these as they are for now. Each challenge says when it needs ATC.')
 
 :::quiz{id="l0-2-q1" type="single"}
 Which assistance should be off so that you learn to trim?
@@ -106,7 +106,7 @@ Which assistance should be off so that you learn to trim?
 
 ---
 
-AI Auto-Trim does the trimming for you. Turn it off: trimming the airplane so it holds its attitude by itself is one of the most important skills in Module 2.
+AI Auto-Trim does the trimming for you. Turn it off. Trimming the airplane so it holds its attitude by itself is one of the most important skills in Module 2.
 :::
 
 :::quiz{id="l0-2-q2" type="single"}
@@ -119,7 +119,7 @@ You fly with a gamepad. How do you use the rudder?
 
 ---
 
-The gamepad triggers control the rudder by default, so leave Auto-Rudder off and learn to use it from the first flight, just as you would in the real airplane.
+The gamepad triggers control the rudder by default, so leave Auto-Rudder off and learn to use it from the first flight, as you would in the real airplane.
 :::
 
 ## Views
@@ -153,18 +153,18 @@ Why do challenges specify custom weather instead of live weather?
 
 ---
 
-Custom weather makes a challenge repeatable: everyone who flies it gets the same wind, clouds and visibility, and you can fly it again in the same conditions to see if you improved.
+Custom weather makes a challenge repeatable. Everyone who flies it gets the same wind, clouds and visibility, and you can fly it again in the same conditions to see if you improved.
 :::
 
 ## The EFB and its map
 
-MSFS 2024 gives you an **EFB** (electronic flight bag): a tablet in the cockpit, like the ones real pilots carry. Its **map** shows your airplane on a moving map. It's a great safety net while you learn. In Module 6 you'll put it away for pilotage challenges and navigate with a chart instead.
+MSFS 2024 gives you an **EFB** (electronic flight bag): a tablet in the cockpit, like the ones real pilots carry. Its **map** shows your airplane on a moving map. It keeps you from getting lost while you learn. In Module 6 you'll put it away for pilotage challenges and navigate with a chart instead.
 
-The EFB also has a **checklist** section for the Skyhawk. Learn to Fly has its own simplified checklists too (**Reference → Checklists**); Lesson 1.4 explains how the two fit together.
+The EFB also has a **checklist** section for the Skyhawk. Learn to Fly has its own simplified checklists too (**Reference → Checklists**). Lesson 1.4 explains how the two fit together.
 
 ## Keeping this site open while you fly
 
-MSFS 2024 has no built-in web browser. The toolbar (move the mouse to the top of the screen) holds the sim's own panels, but it can't show this site. The Fly tab of each challenge is designed for a second screen instead:
+MSFS 2024 has no built-in web browser. The toolbar (move the mouse to the top of the screen) holds the sim's own panels, but it can't show this site. Open the Fly tab of each challenge on a second screen instead:
 
 - **A second monitor** next to your main one is ideal.
 - **A tablet or phone** works well. Open the challenge, then choose "Open fly mode". Fly mode uses large type and a dark theme that's easy to read in a dim room.

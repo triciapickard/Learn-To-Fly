@@ -30,7 +30,7 @@ export default function PrivacyPage() {
           </li>
         </ul>
         <p>
-          You can read every lesson without an account; we collect nothing about visitors beyond
+          You can read every lesson without an account. We collect nothing about visitors beyond
           server logs and error reports.
         </p>
         <h2>3. Why we collect it</h2>
@@ -48,8 +48,8 @@ export default function PrivacyPage() {
         <h2>5. Sharing</h2>
         <p>We never sell your data. We use these service providers to run the site:</p>
         <ul>
-          <li>Render — hosting.</li>
-          <li>MongoDB Atlas — database.</li>
+          <li>Render: hosting.</li>
+          <li>MongoDB Atlas: database.</li>
           <li>Sentry, error monitoring (receives the error reports described above).</li>
         </ul>
         <p>If we add an email provider, it will be listed here first.</p>

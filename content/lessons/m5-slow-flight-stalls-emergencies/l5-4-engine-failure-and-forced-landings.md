@@ -29,7 +29,7 @@ Fly the airplane first. An airplane without an engine is still a glider, and it 
 
 ## A: Airspeed
 
-**Immediately** pitch for best glide, **{{vspeed.vg}}**, and trim for it. At cruise speed you'll need to raise the nose to slow down; hold your altitude while the speed bleeds off, then lower the nose to hold {{vspeed.vg}}.
+Pitch for best glide, **{{vspeed.vg}}**, immediately, and trim for it. At cruise speed you'll need to raise the nose to slow down. Hold your altitude while the speed bleeds off, then lower the nose to hold {{vspeed.vg}}.
 
 Best glide gives you the most distance for each foot of altitude. Flying faster or slower than best glide means you reach the ground sooner.
 
@@ -54,7 +54,7 @@ Pick somewhere to land that you can definitely reach. A good field is:
 - **Long and flat**, like a field, road or airport.
 - **Free of obstacles**, such as power lines, trees and ditches.
 
-A planning figure: the Skyhawk glides about **1.5 nm for every 1,000 ft** above the ground. Pick a field well inside that range, and turn toward it straight away.
+As a planning figure, the Skyhawk glides about **1.5 nm for every 1,000 ft** above the ground. Pick a field well inside that range, and turn toward it straight away.
 
 :::callout{type="verify"}
 Sim check: the POH maximum glide chart (Figure 3-1: 68 KIAS, flaps up, propeller windmilling, zero wind) gives about 1.5 nm per 1,000 ft, so the figure stands ({{aircraft.glideRatio}}). Still open: from 3,000 ft above the ground at 68 KIAS the sim Skyhawk should cover roughly 4.5 nm in still air.
@@ -87,11 +87,11 @@ What transponder code means an emergency?
 
 ## E: Execute
 
-Plan the approach using **key points**, just like a traffic pattern:
+Plan the approach using **key points**, as in a traffic pattern:
 
 - Aim for a **high downwind**, so you have altitude to spare.
-- Turn **base** when you can see you'll make the field.
-- **Flaps only when the field is made.** Flaps add drag; once they're out, you can't stretch the glide.
+- Turn base when you can see you'll make the field.
+- **Flaps only when the field is made.** Flaps add drag. Once they're out, you can't stretch the glide.
 - Before touchdown, **secure the engine**: mixture cut-off, fuel off, ignition off, and master off once the flaps are set.
 
 It's easier to lose extra altitude (with flaps or a slip) than to find altitude you don't have. If in doubt, stay high.

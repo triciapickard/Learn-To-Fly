@@ -82,7 +82,8 @@ export function eteText(minutes: number): string {
 
 export function describe(inputs: WindInputs, r: WindResults | null): string {
   const wind = `Wind from ${heading(inputs.wd)} at ${inputs.ws} knots`;
-  if (!r) return `${wind}: too strong to hold course ${heading(inputs.tc)} at ${inputs.tas} knots.`;
+  if (!r)
+    return `${wind} is too strong to hold course ${heading(inputs.tc)} at ${inputs.tas} knots.`;
   return `${wind}. Correct ${wcaText(r.wca)}: true heading ${heading(r.th)}, magnetic heading ${heading(r.mh)}, groundspeed ${Math.round(r.gs)} knots, time en route ${eteText(r.ete)}.`;
 }
 

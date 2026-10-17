@@ -20,24 +20,24 @@ simVersion: null
 
 ## A normal maneuver
 
-A **go-around** means abandoning a landing and climbing away to try again. It's not a failure. Airline pilots do them routinely, and the pilots who have accidents are usually the ones who tried to save a bad approach instead of going around.
+A **go-around** means abandoning a landing and climbing away to try again. It's a good decision. Airline pilots do them routinely, and the pilots who have accidents are usually the ones who tried to save a bad approach instead of going around.
 
-Decide **early**. The later you decide, the less room you have.
+Decide early. The later you decide, the less room you have.
 
 ## When to go around
 
-- The approach **isn't stabilized** at 300 ft.
-- The **runway is occupied** by another airplane or a vehicle.
-- You **bounce** on landing.
+- The approach isn't stabilized at 300 ft.
+- The runway is occupied by another airplane or a vehicle.
+- You bounce on landing.
 - The tower tells you to.
-- **Anything** doesn't feel right.
+- Anything doesn't feel right.
 
 ## The sequence: power, attitude, clean-up
 
 1. **Power.** Full power, immediately. Add right rudder.
 2. **Attitude.** Raise the nose to the climb attitude. Speed should be around {{vspeed.goAround}} to begin with.
 3. **Flaps to 20°** right away, to reduce drag.
-4. **Positive climb.** Once you're climbing and the speed is increasing, **flaps to 10°**.
+4. **Positive climb.** Once you're climbing and the speed is increasing, flaps to 10°.
 5. **Flaps up** once you're clear of obstacles, at a safe altitude and at least 65 KIAS.
 
 ::checklist{slug="go-around"}
@@ -69,14 +69,14 @@ Why not raise the flaps from 30° to 0° all at once?
 
 ---
 
-Raising all the flaps at once takes away a lot of **lift** close to the ground, and the airplane **sinks**. Raise them in stages as the speed builds.
+Raising all the flaps at once takes away a lot of lift close to the ground, and the airplane sinks. Raise them in stages as the speed builds.
 :::
 
 ## Where to fly
 
 At a non-towered airport, **side-step** slightly to the side of the runway (usually the right side for a left pattern) as you climb. That lets you see any airplane departing below you. Then rejoin the pattern on crosswind.
 
-Watch the go-around in the traffic pattern animation below: press **Go around**.
+To watch the go-around in the traffic pattern animation below, press **Go around**.
 
 ::widget{name="traffic-pattern" calls="true"}
 
@@ -91,7 +91,7 @@ At a towered airport, the tower may tell you to go around, or you tell them: "Li
 ## Common errors
 
 - **Forgetting right rudder** as full power comes in.
-- **Pitching too high** with full flaps still out: the airspeed drops and the stall horn sounds.
+- **Pitching too high** with full flaps still out, so the airspeed drops and the stall horn sounds.
 - **Retracting all the flaps at once**, so the airplane sinks.
 
 Practice it in [[c4-4-go-around]].

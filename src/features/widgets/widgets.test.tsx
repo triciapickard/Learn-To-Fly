@@ -175,7 +175,7 @@ describe('W6 Turn coordinator', () => {
     const bank = screen.getByRole('slider', { name: 'Bank' });
     fireEvent.change(bank, { target: { value: '20' } });
     expect(bank).toHaveAttribute('aria-valuetext', '20 degrees right bank');
-    expect(screen.getByText('Slipping — add right rudder')).toBeInTheDocument();
+    expect(screen.getByText('Slipping: add right rudder')).toBeInTheDocument();
     expect(
       screen.getByRole('img', { name: /Turn coordinator: .*ball displaced right/ }),
     ).toBeInTheDocument();

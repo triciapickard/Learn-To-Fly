@@ -271,14 +271,14 @@ verification:
     note: Checked against POH Section 1 (2026-10-09). Compare with the sim's aircraft information page.
   vspeeds:
     verified: false
-    note: Checked against POH Sections 2, 3 and 4 (2026-10-09). Compare every speed with the in-sim checklist; teach the POH number if they differ.
+    note: Checked against POH Sections 2, 3 and 4 (2026-10-09). Compare every speed with the in-sim checklist. Teach the POH number if they differ.
   arcs:
     verified: false
     note: Checked against POH Figure 2-2 (2026-10-09). Check the airspeed tape color bands in the sim match 40–85 white, 48–129 green, 129–163 yellow, 163 red.
   limits:
     verified: true
     note: >-
-      Checked against POH Figure 2-1 and Section 4 (2026-10-09); re-checked 2026-10-13. V_A 105/98/90
+      Checked against POH Figure 2-1 and Section 4 (2026-10-09) and re-checked 2026-10-13. V_A 105/98/90
       KIAS at 2,550/2,200/1,900 lb and 15 kt maximum demonstrated crosswind match the POH,
       the vspeeds.va entry and L1.4. These are POH limits, so no sim check is needed.
   powerSettings:

@@ -19,35 +19,35 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## Four people and a weekend's bags
+## Loading four people and their bags
 
-Three friends want to come to Half Moon Bay for lunch. Everyone has a bag. The tanks are full. The airplane has four seats, so it fits, right?
+Three friends want to come to Half Moon Bay for lunch. Everyone has a bag, and the tanks are full. The airplane has four seats, but that does not mean the load fits.
 
-Maybe. A Skyhawk with four adults, bags and full fuel is almost always over its maximum weight, and depending on who sits where it can also be out of balance. Neither problem shows on the walk-around. The airplane just flies differently, and in the worst case it stops flying in a way you cannot recover from. This lesson gives you the arithmetic to know before you start the engine: multiply, add, divide, compare.
+A Skyhawk with four adults, bags and full fuel is almost always over its maximum weight, and depending on who sits where it can also be out of balance. Neither problem shows on the walk-around. The airplane flies differently, and in the worst case you may not be able to recover from a stall. This lesson gives you the arithmetic to check before you start the engine: multiply, add, divide, compare.
 
 ## Why weight and balance matters
 
-**Weight** is the easy half. Every extra pound needs more lift: a longer roll, a shallower climb, a higher stall speed. The chart in [[l9-2-reading-performance-charts]] assumed maximum weight; above it there is no chart, because the airplane was never tested there.
+**Weight** is the easy half. Every extra pound needs more lift, which means a longer roll, a shallower climb and a higher stall speed. The chart in [[l9-2-reading-performance-charts]] assumed maximum weight. Above it there is no chart, because nobody tested the airplane there.
 
 **Balance** is where the weight sits. The airplane pivots about its **center of gravity** (CG), and the tail holds the nose where you want it. The designers tested a range of CG positions and drew a box, the **envelope**. Inside it the airplane is predictable. Outside it, it is not.
 
 | CG position          | What you feel                                                  | The danger                                                              |
 | -------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Forward (nose-heavy) | Heavy elevator, very stable, higher stall speed, hard to flare | Running out of elevator in the flare; a nosewheel-first landing         |
+| Forward (nose-heavy) | Heavy elevator, very stable, higher stall speed, hard to flare | Running out of elevator in the flare, or a nosewheel-first landing      |
 | In the middle        | Normal                                                         | None                                                                    |
 | Aft (tail-heavy)     | Light elevator, less stable, lower stall speed, better cruise  | A stall is easy to enter and may not recover, because the nose stays up |
 
-Stability is the airplane's tendency to return to where it was after a bump. An aft CG eats stability: past the aft limit the nose would rather pitch up than down.
+Stability is the airplane's tendency to return to where it was after a bump. An aft CG reduces stability. Past the aft limit, the nose tends to pitch up rather than down.
 
 :::callout{type="safety"}
-Aft CG and stall recovery. In [[l5-2-stalls-power-off-and-power-on]] the airplane recovered because the nose dropped when you released back pressure. With the CG behind the aft limit that help is gone, and a spin may be unrecoverable. Every loading case in this lesson is really a question about whether the stall recovery still works.
+Aft CG and stall recovery. In [[l5-2-stalls-power-off-and-power-on]] the airplane recovered because the nose dropped when you released back pressure. With the CG behind the aft limit that help is gone, and a spin may be unrecoverable. Every loading case in this lesson is a question about whether the stall recovery still works.
 :::
 
 ## Datum, arm, moment, CG
 
-Four words carry the whole subject.
+Weight and balance uses these terms:
 
-- **Datum.** An imaginary vertical line the manufacturer chose. On the Skyhawk it is the lower front face of the firewall, the wall between the engine and the cabin. Every position is measured from it, in inches aft.
+- **Datum.** An imaginary vertical line the manufacturer chose. On the Skyhawk it is the lower front face of the firewall, the wall between the engine and the cabin. You measure every position from it, in inches aft.
 - **Arm.** The distance from the datum to where a weight sits. The rear seats are farther aft than the front seats, so they have a bigger arm.
 - **Moment.** Weight × arm: how hard a weight pulls the balance toward itself. 200 lb at 73 in pulls harder than 200 lb at 37 in.
 - **CG.** The balance point: total moment divided by total weight.
@@ -76,12 +76,12 @@ Put the steps for finding the center of gravity in order.
 
 ---
 
-Weights and arms first, moments second, totals third, one division, then the check. Skipping the last step is the most common real-world mistake: a correct CG number nobody compared with the envelope.
+Weights and arms first, moments second, totals third, one division, then the check. Skipping the last step is the most common real-world mistake. The pilot gets a correct CG number and never compares it with the envelope.
 :::
 
 ## The loading table and the envelope
 
-The **basic empty weight** (the airplane with oil and unusable fuel, nobody aboard) and its CG differ for every individual airplane; the value below is illustrative, and for the sim airplane you use the sim's own.
+The **basic empty weight** (the airplane with oil and unusable fuel, nobody aboard) and its CG differ for every individual airplane. The value below is illustrative. For the sim airplane, use the sim's own.
 
 | Station                           | Arm (in)         | Limit                               |
 | --------------------------------- | ---------------- | ----------------------------------- |
@@ -116,7 +116,7 @@ Now work a load: you (190 lb) and a friend (150 lb) in front, one passenger (150
 | Fuel, 40 gal   | 240         | 48       | 11,520         |
 | **Total**      | **2,450**   |          | **105,210**    |
 
-CG = 105,210 ÷ 2,450 = **42.9 in**. At 2,450 lb the forward limit is 40.0 in and the aft limit 47.3 in; weight is under 2,550 lb. You are in the envelope with room on both sides.
+CG = 105,210 ÷ 2,450 = 42.9 in. At 2,450 lb the forward limit is 40.0 in and the aft limit 47.3 in. The weight is under 2,550 lb. You are in the envelope with room on both sides.
 
 :::quiz{id="l9-3-q2" type="numeric" answer="39.8" tolerance="0.3" unit="in"}
 Empty airplane 1,680 lb at 39.5 in. Two people in the front seats totaling 350 lb. 30 gal of fuel. Nothing else. What is the CG?
@@ -128,14 +128,14 @@ Moments: 66,360 + 350 × 37 (12,950) + 180 × 48 (8,640) = 87,950 lb-in. Weight:
 
 ## Fuel burn moves the CG
 
-The load you take off with is not the load you land with. Skyhawk fuel sits at 48 in, usually a little **aft** of the loaded CG, so burning fuel moves the CG slightly **forward**. The movement is small, but "small" is not "zero." Take the load above and burn 25 gal (150 lb):
+The load you take off with is not the load you land with. Skyhawk fuel sits at 48 in, usually a little aft of the loaded CG, so burning fuel moves the CG slightly forward. The movement is small, but you still need to check it. Take the load above and burn 25 gal (150 lb):
 
 | Condition | Weight   | Moment  | CG      | Forward limit |
 | --------- | -------- | ------- | ------- | ------------- |
 | Takeoff   | 2,450 lb | 105,210 | 42.9 in | 40.0 in       |
 | Landing   | 2,300 lb | 98,010  | 42.6 in | 38.5 in       |
 
-Both points are inside. The habit: compute takeoff **and** landing. A load that starts near the forward limit gets closer to it as fuel burns, exactly when you want elevator authority for the flare.
+Both points are inside. Always compute the CG for both takeoff and landing. A load that starts near the forward limit gets closer to it as fuel burns. That puts you closest to the limit in the flare, when you need elevator authority.
 
 :::quiz{id="l9-3-q3" type="single"}
 An aft center of gravity makes the airplane…
@@ -147,7 +147,7 @@ An aft center of gravity makes the airplane…
 
 ---
 
-With the CG aft the tail has less leverage to push the nose down, so the airplane is less stable in pitch and the nose may not drop on its own in a stall. It also stalls slightly slower and cruises slightly faster, which is why the aft limit is a temptation as well as a danger.
+With the CG aft the tail has less leverage to push the nose down, so the airplane is less stable in pitch and the nose may not drop on its own in a stall. It also stalls slightly slower and cruises slightly faster. Those benefits make the aft limit tempting as well as dangerous.
 :::
 
 ## Fixing an out-of-limits load
@@ -164,9 +164,9 @@ Back to the Half Moon Bay lunch: you alone in front (170 lb), two friends in the
 | Fuel, 30 gal   | 180         | 48       | 8,640          |
 | **Total**      | **2,490**   |          | **118,910**    |
 
-CG = 118,910 ÷ 2,490 = **47.8 in**. The weight is fine, but the aft limit is 47.3 in. Half an inch out is out.
+CG = 118,910 ÷ 2,490 = 47.8 in. The weight is fine, but the aft limit is 47.3 in. Even half an inch over the limit is out of limits.
 
-You have three tools, gentlest to bluntest: **move bags, reduce fuel, leave a passenger.** The weight-shift formula tells you what each move is worth without redoing the table:
+From least to most disruptive, you can move bags, reduce fuel or leave a passenger behind. The weight-shift formula tells you what each move is worth without redoing the table:
 
 > **Change in CG = weight moved × distance moved ÷ total weight**
 
@@ -175,7 +175,7 @@ You have three tools, gentlest to bluntest: **move bags, reduce fuel, leave a pa
 | Move the 50 lb bag from area 2 to area 1   | 50 × 28 ÷ 2,490 = 0.6 in forward  | 47.2 in | In, by 0.1 in. Area 1 is now at its 120 lb limit |
 | Move one friend from the back to the front | 170 × 36 ÷ 2,490 = 2.5 in forward | 45.3 in | Comfortably in                                   |
 
-Reducing fuel does not help here: fuel sits just aft of this CG, so taking it out moves the CG almost nowhere. People are the big lever.
+Reducing fuel does not help here. Fuel sits just aft of this CG, so taking it out barely moves the CG. Moving people has the biggest effect.
 
 :::callout{type="decision"}
 Would you go with the first fix, 0.1 in inside the limit? A careful pilot would not. Your weights are estimates (did anyone step on a scale?), the seats may not be where the table assumes, and 0.1 in is smaller than your errors. Put a friend in the front seat and fly with a margin you can trust.
@@ -183,7 +183,7 @@ Would you go with the first fix, 0.1 in inside the limit? A careful pilot would 
 
 ## Setting payload and fuel in the sim
 
-A challenge brief will tell you what to load. Set the fuel and the payload at each station so the sim airplane matches the table you worked on paper; then your computed CG is the sim's CG. In MSFS 2024 the loading is set from the aircraft's weight and balance screen, reachable from the EFB tablet in the cockpit or from the aircraft customization panel before the flight. It shows fuel per tank and a weight for each seat and baggage station.
+A challenge brief will tell you what to load. Set the fuel and the payload at each station so the sim airplane matches the table you worked on paper. Then your computed CG is the sim's CG. In MSFS 2024 you set the loading on the aircraft's weight and balance screen, reachable from the EFB tablet in the cockpit or from the aircraft customization panel before the flight. It shows fuel per tank and a weight for each seat and baggage station.
 
 | Our station   | Likely sim entry             | Note                                          |
 | ------------- | ---------------------------- | --------------------------------------------- |
@@ -193,7 +193,7 @@ A challenge brief will tell you what to load. Set the fuel and the payload at ea
 | Baggage 1 / 2 | Baggage station weights      | The sim may show one combined baggage station |
 
 :::callout{type="sim"}
-The sim's payload screen maps to our stations, but not always one for one: it may combine the two baggage areas, it may not model seat position, and its empty weight and CG are whatever the aircraft file says. Record those the first time you open the screen. The sim does model the consequences: an aft-loaded Skyhawk feels light in pitch and is reluctant to drop its nose in a stall. Feel it, carefully, at altitude.
+The sim's payload screen maps to our stations, but not always one for one. It may combine the two baggage areas, it may not model seat position, and its empty weight and CG are whatever the aircraft file says. Record those the first time you open the screen. The sim does model the consequences. An aft-loaded Skyhawk feels light in pitch, and its nose is slow to drop in a stall. Try it carefully, at altitude.
 :::
 
 :::callout{type="verify"}
@@ -202,12 +202,12 @@ Sim check: confirm the MSFS 2024 menu path for weight and balance (EFB "Aircraft
 
 ## Practice and next steps
 
-What to keep:
+To carry forward:
 
 1. Moment = weight × arm. CG = total moment ÷ total weight. Compare with the envelope at that weight.
-2. Check takeoff and landing; fuel burn moves the CG.
+2. Check takeoff and landing. Fuel burn moves the CG.
 3. Aft CG means less stability and a stall that may not recover. Forward CG means a heavy flare.
-4. To fix an aft load, move people before bags; fuel barely helps.
+4. To fix an aft load, move people before bags. Fuel barely helps.
 
 **Practice.** This lesson feeds the `limits-and-speeds` flashcard deck: the maximum weight, the baggage limits, 6 lb per gallon and the CG formula.
 

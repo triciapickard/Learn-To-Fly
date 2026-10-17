@@ -131,9 +131,9 @@ export function DebriefForm({
         });
       }}
     >
-      <Callout type="note" title="Be honest with yourself">
-        Scores are self-assessed: the only person you can cheat is yourself. If you can, check your
-        flight with the sim&apos;s replay before you answer.
+      <Callout type="note" title="Score what you flew">
+        Scores are self-assessed, so they only help you improve if they match what happened. If you
+        can, check your flight with the sim&apos;s replay before you answer.
       </Callout>
 
       <fieldset className="flex flex-col gap-6">

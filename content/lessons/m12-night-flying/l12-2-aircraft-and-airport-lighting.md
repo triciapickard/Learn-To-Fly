@@ -21,27 +21,27 @@ simVersion: null
 
 ## Reading an airport by its lights
 
-By day, an airport is pavement, paint and signs. By night it is a code: a flashing beacon on the horizon, two lines of white dots, a bar of green at one end and red at the other, blue dots wandering off to the side. Once you can read the code, a strange airport at night is easier to find than it is at noon.
+By day, an airport is pavement, paint and signs. By night it is a code: a flashing beacon on the horizon, two lines of white dots, a bar of green at one end and red at the other, blue dots off to the side. Once you can read the code, a strange airport at night is easier to find than it is at noon.
 
 :::callout{type="real-world"}
-In a real airplane you learn lighting with an instructor beside you, at an airport you already know, before you ever try a dark one. Real lights are also less tidy than the sim's: bulbs fail, PCL systems time out on short final, and the Chart Supplement is full of notes about which lights do what. The colors and codes in this lesson are universal; the quirks of a real airport are not.
+In a real airplane you learn lighting with an instructor beside you, at an airport you already know, before you ever try a dark one. Real lights are also less tidy than the sim's: bulbs fail, PCL systems time out on short final, and the Chart Supplement is full of notes about which lights do what. The colors and codes in this lesson are the same everywhere, but every real airport has its own quirks.
 :::
 
 ## Aircraft lights and when to use them
 
-The Skyhawk carries five sets of lights. Two are required by regulation at night; the rest are courtesy and self-preservation.
+The Skyhawk carries five sets of lights. Regulations require two of them at night. The rest are for courtesy and your own safety.
 
 | Light                        | Where                                                   | Why                                 | When                                                                        |
 | ---------------------------- | ------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------- |
 | **Position (navigation)**    | Red on the left wingtip, green on the right, white tail | Show others which way you are going | On from sunset to sunrise, required                                         |
 | **Beacon** (red flashing)    | Top of the tail                                         | Be seen                             | On before engine start, off after shutdown                                  |
 | **Strobes** (white flashing) | Wingtips                                                | Be seen                             | On when entering the runway, off when clear and on the ramp (and in clouds) |
-| **Landing light**            | Left wing leading edge (nose cowl on older Skyhawks)    | See and be seen                     | Takeoff and landing; many pilots leave it on within 10 nm of an airport     |
+| **Landing light**            | Left wing leading edge (nose cowl on older Skyhawks)    | See and be seen                     | Takeoff and landing. Many pilots leave it on within 10 nm of an airport     |
 | **Taxi light**               | Left wing leading edge, beside the landing light        | See the taxiway                     | Taxiing at night                                                            |
 
-The plain-language rule: from sunset to sunrise, your position lights must be on, and if the airplane has an anticollision light (the beacon or strobes) it should be on whenever the airplane is operating, unless flashing it would be unsafe, for example in cloud or next to another pilot on a dark ramp.
+In plain language, your position lights must be on from sunset to sunrise. If the airplane has an anticollision light (the beacon or strobes), it should be on whenever the airplane is operating, unless flashing it would be unsafe, for example in cloud or next to another pilot on a dark ramp.
 
-Position lights also let you read other traffic: another airplane's **red** light on your right and its **green** on your left means it is coming toward you.
+Position lights also let you read other traffic. If you see another airplane's red light on your right and its green on your left, it is coming toward you.
 
 :::callout{type="verify"}
 Sim check: confirm the light switch names (NAV, BCN, STROBE, LAND, TAXI) and where each light sits on the MSFS 2024 G1000 NXi Skyhawk airframe (the real 172S carries the landing and taxi lights in the left wing leading edge). Desk-verified 2026-10-13: the position-light and anticollision-light rules match 14 CFR 91.209.
@@ -58,7 +58,7 @@ The rotating beacon is the first thing you find at night. From miles out a lit a
 | White, green and yellow           | Lighted heliport           |
 | Two quick white flashes and green | Military airport           |
 
-Beacons run from dusk to dawn. A beacon lit in daytime at an airport with Class B, C, D or E airspace to the surface usually means the weather there is below VFR minimums; a hint, not a guarantee.
+Beacons run from dusk to dawn. A beacon lit in daytime at an airport with Class B, C, D or E airspace to the surface usually, but not always, means the weather there is below VFR minimums.
 
 :::callout{type="verify"}
 Sim check: which Bay Area beacons MSFS 2024 renders (KLVK, KTCY and KWVI are all white-green, sunset to sunrise, in the Chart Supplement) per v2 Section 9.2. Desk-verified 2026-10-13: the color codes and the daytime convention match AIM 2-1-9.
@@ -66,7 +66,7 @@ Sim check: which Bay Area beacons MSFS 2024 renders (KLVK, KTCY and KWVI are all
 
 ## Runway and taxiway lighting
 
-Once you are close, the beacon stops mattering and the colors on the ground take over. Learn this table until it is reflex; it is the whole of a night approach.
+Once you are close, you stop using the beacon and read the colors on the ground. Learn this table until it is reflex, because every night approach depends on it.
 
 | Light                                     | Color and pattern                                                                                           |
 | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -81,9 +81,9 @@ Once you are close, the beacon stops mattering and the colors on the ground take
 | **Runway guard lights**                   | Alternating flashing yellow at a runway holding position: "you are about to enter a runway"                 |
 | **Clearance bar**                         | Three yellow lights in the pavement marking a hold point on a taxiway                                       |
 
-Two things catch new night pilots. First, **blue is never a runway**. Lining up on the taxiway happens, even at towered airports, and the color is the cue. Second, a runway with only edge lights looks like a narrow pair of lines, and as you descend the lines spread apart. That spreading is the sight picture you will use in [[l12-3-night-operations-preflight-to-landing]] to judge the flare.
+New night pilots line up on taxiways, even at towered airports. Blue is never a runway, so the color is your cue. Also, a runway with only edge lights looks like a narrow pair of lines, and as you descend the lines spread apart. That spreading is the sight picture you will use in [[l12-3-night-operations-preflight-to-landing]] to judge the flare.
 
-For the home airports, the Chart Supplement says: Livermore's long runway (7L/25R) has high-intensity edge lights and the short one (7R/25L) medium-intensity, with no REIL; Tracy has medium-intensity edge lights, REIL on all four runway ends and a PAPI for each. The sim may draw less than that.
+For the home airports, the Chart Supplement lists high-intensity edge lights on Livermore's long runway (7L/25R) and medium-intensity lights on the short one (7R/25L), with no REIL. Tracy has medium-intensity edge lights, REIL on all four runway ends and a PAPI for each. The sim may draw less than that.
 
 :::callout{type="verify"}
 Widget pending: W27 (Airport Lighting Explorer) is embedded here once Phase 20 ships it: `::widget{name="airport-lighting" mode="explore"}`, a night-view runway and taxiway with every light clickable, a day/night toggle, a PCL panel and a PAPI slider. The spec's "W27 hotspots" knowledge check goes there. Until then the table above carries the content. Screenshots for the shot list: "KLVK runway lights at night", "PAPI at night".
@@ -103,14 +103,14 @@ On a night approach you see a row of green lights across the near end of the run
 
 ---
 
-Green across the near end is the threshold; the synchronized white flashes are the runway end identifier lights (REIL), there to help you pick the runway out of the surrounding lights.
+Green across the near end is the threshold. The synchronized white flashes are the runway end identifier lights (REIL), there to help you pick the runway out of the surrounding lights.
 :::
 
 ## PAPI and VASI
 
 At night you cannot judge your glide path by looking at the ground, so the airport does it for you with colored lights beside the runway. The two common systems use the same idea: white means you are above the light's beam, red means you are below it.
 
-A **PAPI** is a single row of two or four lights, usually on the left side of the runway near the touchdown zone. Each light turns from white to red at a slightly different angle, so the mix of colors tells you how far off the path you are. The path is normally 3°; a few are steeper.
+A **PAPI** is a single row of two or four lights, usually on the left side of the runway near the touchdown zone. Each light turns from white to red at a slightly different angle, so the mix of colors tells you how far off the path you are. The path is normally 3°, and a few are steeper.
 
 | PAPI                   | Meaning                   |
 | ---------------------- | ------------------------- |
@@ -130,7 +130,7 @@ A **VASI** uses two bars, one nearer the threshold and one farther down the runw
 | **Red over white**           | **On the glide path** |
 | Red over red                 | Too low               |
 
-Livermore has a PAPI on Runways 7L and 25R only (the 7L one sits on the right side of the runway and is set to a steep 4°), so if you are landing on the short runway at night you are on your own for glide path: fly the same descent point and power setting you would by day and watch the altimeter.
+Livermore has a PAPI on Runways 7L and 25R only. The 7L one sits on the right side of the runway and is set to a steep 4°. If you land on the short runway at night, you have no glide path lights, so fly the same descent point and power setting you would by day and watch the altimeter.
 
 :::quiz{id="l12-2-q2" type="single"}
 On final at night the PAPI shows two white and two red lights. You are…
@@ -142,14 +142,14 @@ On final at night the PAPI shows two white and two red lights. You are…
 
 ---
 
-Two white, two red is on path. More white means higher, more red means lower. Fly it all the way down: at night it is your best protection against a black-hole approach.
+Two white, two red is on path. More white means higher, more red means lower. Fly it all the way down, because at night it is your best protection against a black-hole approach.
 :::
 
 ## Approach lighting systems
 
-Runways with instrument approaches add a long carpet of lights stretching out from the threshold: an **approach lighting system** (ALS). It gives an instrument pilot the first visual cue at the end of an approach, and at night it is the easiest way to find the runway from miles away.
+Runways with instrument approaches add a long line of lights stretching out from the threshold, called an **approach lighting system** (ALS). It gives an instrument pilot the first visual cue at the end of an approach, and at night it is the easiest way to find the runway from miles away.
 
-You do not need the variants for VFR flight. Know the shape: white bars down the extended centerline, often with a crossbar, sometimes with sequenced flashing lights that race toward the runway ("the rabbit"). Systems named MALSR, ALSF-2 or ODALS differ in length and flashing; the Chart Supplement lists which one an airport has. The threshold is where the green starts, and the approach lights sit **before** it. Do not land on them. Livermore has one: a 1,400 ft MALSR on Runway 25R, which you turn on yourself on 118.1 once the tower has closed.
+You do not need the variants for VFR flight. Know the shape: white bars down the extended centerline, often with a crossbar, sometimes with sequenced flashing lights that race toward the runway ("the rabbit"). Systems named MALSR, ALSF-2 or ODALS differ in length and flashing, and the Chart Supplement lists which one an airport has. The threshold is where the green starts, and the approach lights sit before it. Do not land on them. Livermore has one: a 1,400 ft MALSR on Runway 25R, which you turn on yourself on 118.1 once the tower has closed.
 
 :::callout{type="verify"}
 Sim check: does MSFS 2024 render the KLVK Runway 25R MALSR (real-world 1,400 ft MALSR, Chart Supplement SW, 2026-10-13)? Desk-verified 2026-10-13: the ALS names and descriptions match AIM 2-1-1; of the `airports.yaml` fields checked (KLVK, KTCY, KWVI, KHWD) only KLVK has an ALS, besides the airline airports.
@@ -165,7 +165,7 @@ Many non-towered airports turn their lights off at night to save power and let y
 | **5**                   | Medium    |
 | **3**                   | Low       |
 
-Always start with 7 clicks: full brightness is what you want while you are still looking for the airport, and you can click down to 5 or 3 once the glare bothers you. The lights usually stay on for about 15 minutes, so re-key them when you join the pattern. There is nothing quite like the runway going dark on short final.
+Always start with 7 clicks. You want full brightness while you are still looking for the airport, and you can click down to 5 or 3 once the glare bothers you. The lights usually stay on for about 15 minutes, so re-key them when you join the pattern. Otherwise the runway can go dark on short final.
 
 On a sectional, an airport whose lighting has limitations (such as PCL) shows an asterisk before the lighting letter, and the Chart Supplement spells out the details.
 
@@ -195,15 +195,15 @@ Which lights must be on for a night flight? Pick all that apply.
 
 ---
 
-The rules require position lights and an anticollision light from sunset to sunrise. Landing and taxi lights are for the airport environment; in cruise they only cost you night vision.
+The rules require position lights and an anticollision light from sunset to sunrise. Landing and taxi lights are for the airport environment. In cruise they only cost you night vision.
 :::
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. White edges, green threshold, red end, blue taxiways. Blue is never a runway.
-2. Two white, two red on the PAPI; red over white on the VASI.
+2. Two white, two red on the PAPI. Red over white on the VASI.
 3. Seven clicks within 5 seconds, and re-key before they time out.
 
 **Practice.** This lesson feeds the `light-signals` deck with lighting cards: beacon colors, runway and taxiway colors, PAPI and VASI indications, and the PCL click counts.

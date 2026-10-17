@@ -20,19 +20,19 @@ simVersion: 'MSFS 2024 (1.8.16.0)'
 
 ## What to expect
 
-This first flight is about **feel**. There's no score to worry about: the challenge [[c0-1-first-flight-over-livermore]] passes as long as you take off and make a few turns. You'll learn the proper technique for everything you do today in later modules.
+This first flight is about getting a feel for the airplane. There's no score to worry about. The challenge [[c0-1-first-flight-over-livermore]] passes as long as you take off and make a few turns. You'll learn the proper technique for everything you do today in later modules.
 
 Expect the airplane to feel twitchy at first. That's normal. Everyone over-controls on their first flight.
 
 :::callout{type="tip"}
-Small inputs. Then wait. Then small inputs again. The airplane needs a moment to respond to each movement you make.
+Make a small input, wait, then make another small input. The airplane needs a moment to respond to each movement you make.
 :::
 
 ## Five things to watch
 
 1. **The horizon.** Where it sits in the windshield tells you whether the nose is up, down or level, and whether the wings are level.
-2. **Airspeed.** Shown on the tape on the left of the PFD, in knots.
-3. **Altitude.** Shown on the tape on the right, in feet above sea level.
+2. **Airspeed.** The tape on the left of the PFD shows it in knots.
+3. **Altitude.** The tape on the right shows it in feet above sea level.
 4. **Heading.** The compass at the bottom of the PFD shows which way the nose points.
 5. **The runway.** On the way out and on the way back, know where it is.
 
@@ -51,7 +51,7 @@ Start on runway 25R at Livermore with the engine running. Pause the sim and read
 7. **Look around.** Find Interstate 580 running east–west through the valley, the town of Livermore, and the Altamont Pass: the low gap in the hills to the east where I-580 heads over toward Tracy.
 
 :::callout{type="tip"}
-**Attitude and power work together.** The level-flight picture only holds your altitude at the right power. Leave the throttle at full (2,700 RPM) and the airplane keeps climbing slowly, even with the nose on the level picture; pull the power too far back and it sinks. At about 2,300 RPM, the level picture gives level flight. Module 2 explains why.
+**Attitude and power work together.** The level-flight picture only holds your altitude at the right power. Leave the throttle at full (2,700 RPM) and the airplane keeps climbing slowly, even with the nose on the level picture. Pull the power too far back and it sinks. At about 2,300 RPM, the level picture gives level flight. Module 2 explains why.
 :::
 
 :::callout{type="sim"}
@@ -75,10 +75,10 @@ You rotate at {{vspeed.vr}}. Then you climb at about {{vspeed.vy}}, the best rat
 
 When you're done, you have two choices:
 
-- **End the flight** from the pause menu. Perfectly fine for today.
-- **Try to land.** Fly back toward the airport, line up with a runway from a long way out, reduce power and descend gently. Don't worry if it isn't pretty: landing is what Module 4 is for.
+- **End the flight** from the pause menu. That is fine for today.
+- **Try to land.** Fly back toward the airport, line up with a runway from a long way out, reduce power and descend gently. Don't worry if it isn't pretty. Module 4 teaches landing.
 
-If things start to feel like too much at any point, **pause**. Take a breath, look at where you are, read the next step, then unpause.
+If things start to feel like too much at any point, pause. Take a breath, look at where you are, read the next step, then unpause.
 
 :::quiz{id="l0-3-q2" type="single"}
 What should you do if you feel overwhelmed during a flight?
@@ -90,7 +90,7 @@ What should you do if you feel overwhelmed during a flight?
 
 ---
 
-Pause. It freezes everything so you can look around, re-read the brief and make a plan. Real pilots can't pause, which is exactly why the sim is such a good place to learn.
+Pause. It freezes everything so you can look around, re-read the brief and make a plan. You can't pause a real airplane, so use pause freely while you learn in the sim.
 :::
 
 ## Reflect

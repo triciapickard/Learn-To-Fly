@@ -54,13 +54,13 @@ test('flows B and C: sign up, then brief → fly → debrief a challenge, by key
   await page.keyboard.press('Enter');
   await expect(page.getByRole('heading', { level: 1, name: 'Straight and level' })).toBeVisible();
 
-  await tabTo(page, page.getByRole('button', { name: /set up — start/ }));
+  await tabTo(page, page.getByRole('button', { name: /set up, start flying/ }));
   await page.keyboard.press('Enter');
   await expect(page.getByRole('tab', { name: 'Fly' })).toHaveAttribute('aria-selected', 'true');
   await tabTo(page, page.getByRole('checkbox').first());
   await page.keyboard.press('Space');
   await expect(page.getByRole('checkbox').first()).toBeChecked();
-  await tabTo(page, page.getByRole('button', { name: /Finished — debrief/ }));
+  await tabTo(page, page.getByRole('button', { name: /Finish and debrief/ }));
   await page.keyboard.press('Enter');
 
   // Each criterion is a radio group: Tab into it, Space picks the first (best) option.

@@ -21,19 +21,19 @@ simVersion: null
 
 ## What a stage check is
 
-In a real flight school a **stage check** is a flight with a different instructor, part-way through training, to confirm you are ready for the next stage. It is the honest look in the mirror before the checkride.
+In a real flight school a **stage check** is a flight with a different instructor, part-way through training, to confirm you are ready for the next stage. It shows where you stand before the checkride.
 
-Course 2 ends with two flights. Challenge C16.1 "Advanced VFR stage check" is the mirror: one 75-minute flight at Livermore that asks for every Course 2 skill in turn. Challenge C16.2 "Bay to the Sierra" is the reward: a 2-hour cross-country over Donner Pass to Truckee.
+Course 2 ends with two flights. Challenge C16.1 "Advanced VFR stage check" is one 75-minute flight at Livermore that asks for every Course 2 skill in turn. Challenge C16.2 "Bay to the Sierra" is the reward, a 2-hour cross-country over Donner Pass to Truckee.
 
 Both use the Course 1 tiers: Bronze "you did it safely" (about ±200 ft, ±15 kt, ±20°), Silver "good student pilot" (±150 ft, ±10 kt, ±15°), Gold "checkride-ready" (±100 ft, ±10 kt, ±10°). One rule is new.
 
 :::callout{type="note"}
-**The Silver rule.** Course 2 is complete, and the badge "Skyhawk Advanced VFR (Sim)" is awarded, only when every P0 lesson and challenge in Modules 9–16 is done **and** C16.1 is passed at **Silver or better**. Bronze passes the challenge but does not finish the course; fly it again. The badge is a Learn to Fly award for sim flying, not a real certificate, rating or endorsement.
+**The Silver rule.** Course 2 is complete, and the badge "Skyhawk Advanced VFR (Sim)" is awarded, only when every P0 lesson and challenge in Modules 9–16 is done and C16.1 is passed at Silver or better. Bronze passes the challenge but does not finish the course. Fly it again. The badge is a Learn to Fly award for sim flying, not a real certificate, rating or endorsement.
 :::
 
 ## The stage check, task by task
 
-C16.1 starts on the ramp, engine running, full load, gusty crosswind (12 kt or 12 gusting 18 by variant). Five legs: planning, departure, airwork, emergency, landings. Between 10 and 30 minutes in, something breaks: the alternator, a rough engine or the PFD. You will not know which. On the last circuit the page asks for a forward slip to a landing.
+C16.1 starts on the ramp, engine running, full load, gusty crosswind (12 kt or 12 gusting 18 by variant). It has five legs: planning, departure, airwork, emergency and landings. Between 10 and 30 minutes in, something breaks: the alternator, a rough engine or the PFD. You will not know which. On the last trip around the pattern, the page asks for a forward slip to a landing.
 
 Use the table as a self-check. For each row, could you fly it to Silver tomorrow? If the answer is "probably", review the lesson and re-fly its challenge first.
 
@@ -48,7 +48,7 @@ Use the table as a self-check. For each row, could you fly it to Silver tomorrow
 | Forward slip to a landing      | Entered and removed smoothly, stabilized                                  | Yes | [[l10-2-slips]]; C10.2                                                                                                    |
 | Soft- or short-field landing   | Correct technique, first third                                            | No  | [[l10-3-soft-field-takeoffs-and-landings]]; C10.3                                                                         |
 
-Weather ([[l11-2-forecasts-and-briefings]]), mountain flying and flight following are checked by the capstone instead. Night flying ([[l12-3-night-operations-preflight-to-landing]]) is in neither flight; its own challenges stand alone.
+The capstone checks weather ([[l11-2-forecasts-and-briefings]]), mountain flying and flight following instead. Night flying ([[l12-3-night-operations-preflight-to-landing]]) is in neither flight. Its own challenges stand alone.
 
 :::quiz{id="l16-2-q1" type="single"}
 You pass C16.1 with every required criterion met and an overall Bronze. What happens to Course 2?
@@ -75,7 +75,7 @@ C16.2 has five legs, and you may pause between them. You depart Livermore at daw
 | Truckee   | → KTRK                 | High-density-altitude landing at the normal indicated speed (required)     | [[l13-3-high-elevation-airport-operations]]; C13.1      |
 | Return    | KTRK → KTVL (optional) | Your go/no-go decision, recorded on the page                               | [[l11-6-the-go-no-go-decision-and-vfr-into-imc]]        |
 
-Two things can happen. In the decision variant, afternoon build-ups form over the summit while you are still in the foothills. And with a 30% chance the page says "Truckee closed — divert" during the Pass leg. Either way the safe decision is a pass: turning back to Auburn, or diverting to an alternate you planned with the fuel and terrain checked, scores as well as landing at Truckee. Pressing on fails a required criterion.
+In the decision variant, afternoon build-ups form over the summit while you are still in the foothills. There is also a 30% chance the page says "Truckee closed — divert" during the Pass leg. Either way, the safe decision passes. Turning back to Auburn, or diverting to an alternate you planned with the fuel and terrain checked, scores as well as landing at Truckee. Pressing on fails a required criterion.
 
 :::callout{type="verify"}
 Sim check: confirm MSFS 2024 models Blue Canyon (KBLU, 3,300 x 50 ft asphalt at 5,284 ft; closed in winter in reality) as a usable escape airport, and that the sim's Truckee tower hours and frequencies match the real part-time tower (desk-verified 2026-10-13 against AirNav: KAUN 1,538 ft non-towered, KTRK 5,904 ft, KTVL 6,268 ft non-towered; NorCal Approach for flight following; I-80 Donner Summit 7,239 ft; legs KLVK–KAUN 83 nm, KAUN–KTRK 49 nm, KTRK–KTVL 27 nm).
@@ -87,7 +87,7 @@ Author decision: shot list "Donner Summit from the west, I-80 visible" (lessons 
 
 ## The planning worksheet
 
-The page checks your planning before you fly; the first criterion is whether the numbers are right. The kneeboard worksheet has these fields:
+The page checks your planning before you fly. The first criterion is whether the numbers are right. The kneeboard worksheet has these fields:
 
 | Field                               | Where it comes from                                                                                          |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -114,25 +114,25 @@ Which of these must be on the worksheet before C16.2 lets you fly? Pick all that
 
 ---
 
-Density altitude and takeoff distance at Truckee, weight and balance, fuel with reserve, and the crossing altitude. The capstone is VFR; flight following is requested in the air, not filed.
+Density altitude and takeoff distance at Truckee, weight and balance, fuel with reserve, and the crossing altitude. The capstone is VFR. You request flight following in the air rather than filing it.
 :::
 
 ## Getting ready
 
-1. **Fill in the self-check honestly** and re-fly any row you cannot reach at Silver. The stage check opens once every P0 challenge in Modules 9–15 is passed.
+1. **Fill in the self-check** and re-fly any row you cannot reach at Silver. The stage check opens once you pass every P0 challenge in Modules 9–15.
 2. **Print the kneeboard** for C16.2 and complete the worksheet on the ground.
-3. **Rest.** Both flights are long; plan to pause C16.2 between legs.
+3. **Rest.** Both flights are long. Plan to pause C16.2 between legs.
 
 :::callout{type="safety"}
-A sim mountain crossing trains your decisions, not the real thing. In a real airplane the Sierra needs a mountain flying course with an instructor, an airplane with the performance margin, and the right day. Course 2 makes that first lesson easier; it does not replace it.
+A sim mountain crossing trains your decisions, not the real thing. In a real airplane the Sierra needs a mountain flying course with an instructor, an airplane with the performance margin, and the right day. Course 2 makes that first lesson easier. It does not replace it.
 :::
 
 ## Practice and next steps
 
-1. C16.1 is the mirror, C16.2 is the reward. Both use the Course 1 tiers.
-2. Course 2 finishes at Silver or better on C16.1. Bronze passes the flight; fly it again for the badge.
+1. C16.1 checks every Course 2 skill, and C16.2 is the capstone cross-country. Both use the Course 1 tiers.
+2. Course 2 finishes at Silver or better on C16.1. Bronze passes the flight. Fly it again for the badge.
 3. The capstone rewards the safe decision as much as the landing at Truckee.
 
-**Practice.** No new cards. Run the `limits-and-speeds` and `memory-items` decks once more; the stage check asks for both without warning.
+**Practice.** No new cards. Run the `limits-and-speeds` and `memory-items` decks once more. The stage check asks for both without warning.
 
 **Fly it.** Challenge C16.1 "Advanced VFR stage check", then Challenge C16.2 "Bay to the Sierra". When the badge appears, Course 2 is done, and Course 3 begins with [[l17-1-the-instrument-scan]].

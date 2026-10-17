@@ -21,7 +21,7 @@ simVersion: null
 
 ## The weather you choose
 
-In a real airplane the weather is given and you decide whether to fly in it. In the sim you choose the weather, which is a gift for training: you can put a 600 ft marine layer over Half Moon Bay on demand and fly the decision ten times in an afternoon. The price of the gift is honesty. You must know how the sim builds weather, how to set it up exactly as a brief asks, and which real hazards it only paints.
+In a real airplane the weather is given and you decide whether to fly in it. In the sim you choose the weather, which helps training. You can put a 600 ft marine layer over Half Moon Bay on demand and fly the decision ten times in an afternoon. In return, you need to know how the sim builds weather, how to set it up exactly as a brief asks, and which real hazards it shows only as visuals.
 
 ## Presets, custom and live
 
@@ -84,10 +84,10 @@ Take an example METAR for Half Moon Bay (invented for this lesson): `KHAF 131655
 | `14/13`     | Temperature 14 °C; humidity high                                                                                          |
 | `A3012`     | Pressure 30.12 inHg                                                                                                       |
 
-Then check it from the cockpit. Set the altimeter to 30.12 and confirm the field elevation reads about right. Taxi out and look up: the base should be a few hundred feet overhead. Climb into it and note the altitude the windscreen goes white. If it is more than 100 ft off the brief, adjust the layer and try again; Challenge C11.3 "Inadvertent IMC: the 180" depends on the cloud base being where the brief says.
+Then check it from the cockpit. Set the altimeter to 30.12 and confirm the field elevation reads about right. Taxi out and look up. The base should be a few hundred feet overhead. Climb into it and note the altitude the windscreen goes white. If it is more than 100 ft off the brief, adjust the layer and try again. Challenge C11.3 "Inadvertent IMC: the 180" needs the cloud base where the brief puts it.
 
 :::callout{type="tip"}
-Save your custom weather as a named preset in the sim after you build it. Name it after the Learn to Fly preset (`WX_MARINE_LAYER_600`) and you will never dial it in again.
+Save your custom weather as a named preset in the sim after you build it. Name it after the Learn to Fly preset (`WX_MARINE_LAYER_600`) so you never have to dial it in again.
 :::
 
 :::callout{type="verify"}
@@ -107,16 +107,16 @@ A METAR reports `OVC008` at an airport with an elevation of 400 ft. Where should
 METAR cloud heights are in hundreds of feet above ground level, so `OVC008` is an overcast at 800 ft AGL, about 1,200 ft MSL over a 400 ft airport. Check whether the sim's layer control wants AGL or MSL before you enter it.
 :::
 
-## What the sim gets right, and what it only paints
+## What the sim gets right, and what it only shows
 
-The sim's atmosphere is good enough for everything this course asks of it. It is not the real sky, and this is the lesson to say so plainly.
+The sim's atmosphere is good enough for everything this course asks of it, but it differs from the real sky in ways you need to know.
 
 :::callout{type="sim"}
-**What works.** Density altitude is real: temperature and pressure change engine power and takeoff distance ([[l9-1-density-altitude-and-performance]]). Wind layers, gusts and crosswinds are modeled and the airplane responds honestly. Cloud layers block the view like real cloud, so a marine layer or a cloud bank is a true view-limiting device, which is what makes C11.2 and C11.3 possible. Visibility and haze reduce what you can see at about the distances you set.
+**What works.** Density altitude is modeled. Temperature and pressure change engine power and takeoff distance ([[l9-1-density-altitude-and-performance]]). Wind layers, gusts and crosswinds are modeled, and the airplane responds realistically. Cloud layers block the view like real cloud, so a marine layer or a cloud bank limits your view the way real cloud would. C11.2 and C11.3 depend on that. Visibility and haze reduce what you can see at about the distances you set.
 
-**What is only painted, or uncertain.** Thunderstorms are visuals with some bumps; they do not produce the hail, microbursts or gust fronts of [[l11-4-thunderstorms-icing-and-turbulence]], so a sim storm teaches nothing about real storms except what they look like. Icing may or may not be modeled, depending on the version; never learn ice behavior from the sim. Turbulence in and under cloud is mild compared with the real thing. Live weather is a snapshot that can lag the real METAR by an hour and smooths out local detail. There are no AIRMETs, SIGMETs or PIREPs inside the sim, and the sim's ATIS reads the sim's weather, not the real one.
+**What is only visual, or uncertain.** Thunderstorms are visuals with some bumps. They do not produce the hail, microbursts or gust fronts of [[l11-4-thunderstorms-icing-and-turbulence]], so a sim storm teaches nothing about real storms except what they look like. Icing may or may not be modeled, depending on the version. Never learn ice behavior from the sim. Turbulence in and under cloud is mild compared with the real thing. Live weather is a snapshot that can lag the real METAR by an hour and smooths out local detail. There are no AIRMETs, SIGMETs or PIREPs inside the sim, and the sim's ATIS reads the sim's weather, not the real one.
 
-**What this means for you.** Use the sim to practice setting up, reading and deciding. Use the real products and the real minimums to decide whether a real flight would go. The decision skill transfers; the feel of a storm does not, and you do not want it to.
+**What this means for you.** Use the sim to practice setting up, reading and deciding. Use the real products and the real minimums to decide whether a real flight would go. The decision skill transfers. The feel of a storm does not, and you do not want it to.
 :::
 
 :::callout{type="verify"}
@@ -125,11 +125,11 @@ Sim check: in the current sim version, whether airframe and pitot icing are mode
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. Challenges always use custom weather from the brief's values. Build cloud layers bottom up and check the base from the cockpit.
 2. A METAR maps onto the custom panel group by group: wind, visibility, clouds, temperature, pressure.
-3. The sim models wind, cloud and density altitude well; it only paints thunderstorms and icing.
+3. The sim models wind, cloud and density altitude well. It does not model the real hazards of thunderstorms and icing.
 
 **Practice.** This lesson has no flashcard deck of its own, but rebuild the METAR-to-sim table from memory before your first Module 11 challenge.
 

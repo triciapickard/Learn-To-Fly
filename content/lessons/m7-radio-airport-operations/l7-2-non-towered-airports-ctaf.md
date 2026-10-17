@@ -29,7 +29,7 @@ At some airports, the CTAF is also a **UNICOM**: a ground station, often the fue
 - On the **sectional**, in the airport's data block, next to the Ⓒ symbol.
 - In the **Chart Supplement** entry for the airport.
 
-Tracy's CTAF, for example, is **123.075**. The Reference section's airport cards list the CTAF for every airport in this course.
+Tracy's CTAF, for example, is 123.075. The Reference section's airport cards list the CTAF for every airport in this course.
 
 :::quiz{id="l7-2-q1" type="single"}
 Where do you find an airport's CTAF?
@@ -41,12 +41,12 @@ Where do you find an airport's CTAF?
 
 ---
 
-In the **sectional data block**, next to the Ⓒ, or in the **Chart Supplement**. Many airports share common frequencies, but always check.
+In the sectional data block, next to the Ⓒ, or in the Chart Supplement. Many airports share common frequencies, but always check.
 :::
 
 ## The format
 
-Every CTAF call **starts and ends with the airport's name**. Pilots listening to several airports on the same frequency catch the name at either end.
+Every CTAF call starts and ends with the airport's name. Pilots listening to several airports on the same frequency catch the name at either end.
 
 > "**Tracy traffic**, Skyhawk One Two Three, entering left downwind, runway two six, **Tracy**."
 

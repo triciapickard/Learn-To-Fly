@@ -32,7 +32,7 @@ Stop in the **run-up area** near the end of the runway:
 With the parking brake set and your feet on the brakes:
 
 1. **Throttle to about 1,800 RPM.**
-2. **Magneto check.** Turn the key from BOTH to **L**: RPM drops slightly. Back to **BOTH**. Then **R**, and back to **BOTH**. A drop of up to 150 RPM on each magneto is normal, with no more than 50 RPM difference between the two. A bigger drop, no drop at all, or a big difference between them means a problem.
+2. **Magneto check.** Turn the key from BOTH to L and watch the RPM drop slightly. Turn it back to BOTH. Then turn it to R, and back to BOTH. A drop of up to 150 RPM on each magneto is normal, with no more than 50 RPM difference between the two. A bigger drop, no drop at all, or a big difference between them means a problem.
 3. **Engine instruments.** Oil pressure and temperature, and the electrical system, all in the green.
 4. **Throttle to idle.** Check the engine keeps running smoothly, then set about 1,000 RPM.
 
@@ -42,7 +42,7 @@ Always finish the magneto check with the key back on BOTH. Taking off on one mag
 
 ## Controls free and correct
 
-Move the yoke fully left, right, forward and back, and the rudder pedals both ways. Look out at each surface (or switch to an outside view in the sim) and check it moves **freely** and in the **correct** direction. Yoke left: left aileron up.
+Move the yoke fully left, right, forward and back, and the rudder pedals both ways. Look out at each surface (or switch to an outside view in the sim) and check it moves freely and in the correct direction. When you turn the yoke left, the left aileron goes up.
 
 ## Before-takeoff items
 
@@ -60,7 +60,7 @@ Run the before-takeoff checklist below.
 
 ## The takeoff briefing
 
-Say it out loud, every time. Deciding what you'll do **before** something goes wrong turns a scary surprise into a plan. For example:
+Say it out loud, every time. If you decide what you'll do before something goes wrong, you already have a plan when it happens. For example:
 
 > "This will be a normal takeoff from runway 25R. Rotate at 55, climb at 74. If the engine fails on the runway, I'll close the throttle and brake. If it fails after takeoff with runway left, I'll land straight ahead. If it fails with no runway left, I'll lower the nose to glide at 68 and land in the best spot within 30° of straight ahead. No turning back below 1,000 ft."
 
@@ -81,9 +81,9 @@ Your engine fails at 300 ft after takeoff, with no runway left. What does your t
 
 Once you've landed and slowed to taxi speed:
 
-1. **Clear the runway.** Turn off at a taxiway and keep going until the **whole airplane** is past the hold short line. Then stop.
+1. **Clear the runway.** Turn off at a taxiway and keep going until the whole airplane is past the hold short line. Then stop.
 2. **Flaps up.**
-3. **Transponder**: leave it in ALT. ATC's ground surveillance should see you all the way to the ramp; standby only once you're parked.
+3. **Transponder.** Leave it in ALT. ATC's ground surveillance should see you all the way to the ramp. Switch to standby only once you're parked.
 4. **Lights** as needed: strobes and landing light off, taxi light on.
 
 ::checklist{slug="after-landing"}
@@ -98,7 +98,7 @@ After landing, when is it safe to stop on the taxiway?
 
 ---
 
-Stop only once the **whole airplane** is past the hold short line (on the solid side). Until then, you're still in the runway's protected area.
+Stop only once the whole airplane is past the hold short line (on the solid side). Until then, you're still in the runway's protected area.
 :::
 
 ## Shutdown

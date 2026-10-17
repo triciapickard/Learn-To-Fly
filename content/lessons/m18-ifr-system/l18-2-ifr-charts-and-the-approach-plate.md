@@ -20,14 +20,14 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## Two charts, one flight
+## The two IFR charts
 
-A VFR sectional shows you the ground. An IFR chart shows none of that: it shows the invisible roads in the sky, the lowest altitudes that keep you clear of what you cannot see, and the exact path down to a runway hidden in cloud.
+A VFR sectional shows you the ground. An IFR chart leaves the ground out. It shows the airways, the lowest altitudes that keep you clear of terrain you cannot see, and the path down to a runway hidden in cloud.
 
 An IFR flight uses two charts. The **enroute low altitude chart** covers the cruise. The **approach plate** covers the last 10 minutes. This lesson teaches both, using an original training plate drawn for the purpose.
 
 :::callout{type="real-world"}
-In a real airplane, an instrument student spends hours with an instructor learning to brief plates under time pressure, in turbulence, with ATC talking. Reading a plate at a desk is step one; judging when a plate's numbers are too tight for today comes with training.
+In a real airplane, an instrument student spends hours with an instructor learning to brief plates under time pressure, in turbulence, with ATC talking. Reading a plate at a desk is step one. Judging when a plate's numbers are too tight for today comes with training.
 :::
 
 :::callout{type="safety"}
@@ -36,14 +36,14 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 ## The enroute low altitude chart
 
-The enroute chart is a network map: its roads are **airways**, its junctions are **fixes**, and almost every line carries an altitude.
+The enroute chart is a network of routes. The routes are **airways**, the named points along them are **fixes**, and almost every line carries an altitude.
 
 | Element                 | What it looks like                                                         | What it tells you                                                                                   |
 | ----------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| Victor airway (V-route) | A black line labelled "V" and a number, between VORs                       | A VOR-defined route; the radial from each end is printed on it                                      |
+| Victor airway (V-route) | A black line labelled "V" and a number, between VORs                       | A VOR-defined route. The radial from each end is printed on it                                      |
 | T-route                 | A blue line labelled "T" and a number                                      | A GPS-only route, often routed around busy airspace                                                 |
 | VOR                     | A compass rose with a frequency box and Morse identifier                   | The navaid that defines the airway; identify it as in [[l6-4-vor-navigation]]                       |
-| Fix or intersection     | A small triangle, with a five-letter name                                  | A named point; a **filled** triangle is a compulsory reporting point, an open one is "on request"   |
+| Fix or intersection     | A small triangle, with a five-letter name                                  | A named point. A filled triangle is a compulsory reporting point, an open one is "on request"       |
 | MEA                     | A number on the airway segment (for example 5000; 5000G is a GPS-only MEA) | Minimum enroute altitude: obstacle clearance and navaid reception                                   |
 | MOCA                    | A number with an asterisk (for example \*3500)                             | Minimum obstruction clearance altitude: obstacle clearance only                                     |
 | MRA                     | A flag with "MRA" and an altitude at a fix                                 | Minimum reception altitude to identify that fix with a VOR                                          |
@@ -51,20 +51,20 @@ The enroute chart is a network map: its roads are **airways**, its junctions are
 | Segment distance        | A number inside a box, or alongside the segment                            | Nautical miles between fixes; totals between VORs are in a box with arrows                          |
 | Changeover point        | A bent symbol like a stepped line across the airway                        | Where to switch from the VOR behind you to the one ahead; shown only when it is not at the midpoint |
 
-The source for every symbol is the FAA Chart User's Guide, and the chart is reissued on a **56-day** cycle.
+The FAA Chart User's Guide is the source for every symbol. The FAA reissues the enroute chart on a 56-day cycle.
 
 :::callout{type="verify"}
 Author decision: illustrate this section with an original annotated drawing of a sample airway segment (not a chart crop) once the illustrator is available. Symbols desk-verified 2026-10-13 against the Chart Users' Guide (9 July 2026 edition).
 :::
 
-## The altitude alphabet
+## Minimum IFR altitudes
 
-The two altitudes you use every flight are the MEA and the MOCA. Both clear the terrain along the airway. The difference is radio reception:
+The two altitudes you use every flight are the MEA and the MOCA. Both clear the terrain along the airway. They differ in radio reception:
 
-- **MEA** guarantees obstacle clearance **and** usable VOR signal along the whole segment.
-- **MOCA** guarantees obstacle clearance along the whole segment, but VOR signal only within **22 nm** of the VOR.
+- **MEA** guarantees obstacle clearance and usable VOR signal along the whole segment.
+- **MOCA** guarantees obstacle clearance along the whole segment, but VOR signal only within 22 nm of the VOR.
 
-That is why the MOCA is often lower. With GPS as primary navigation, ATC may clear you at the MOCA when there is no terrain reason to be higher.
+The MOCA is often lower because it does not have to guarantee VOR signal along the whole segment. With GPS as primary navigation, ATC may clear you at the MOCA when there is no terrain reason to be higher.
 
 | Altitude | Guarantees                                     | When you use it                                     |
 | -------- | ---------------------------------------------- | --------------------------------------------------- |
@@ -73,7 +73,7 @@ That is why the MOCA is often lower. With GPS as primary navigation, ATC may cle
 | MRA      | VOR reception for a specific fix               | Only if you identify that fix with VOR radials      |
 | MCA      | Terrain clearance after a fix                  | Climb before the fix when the next MEA is higher    |
 | MAA      | Staying out of conflicting signals or airspace | The maximum altitude on the segment                 |
-| OROCA    | Terrain clearance for a whole grid square      | Off-airway planning only; it is not an ATC altitude |
+| OROCA    | Terrain clearance for a whole grid square      | Off-airway planning only. It is not an ATC altitude |
 
 :::quiz{id="l18-2-q1" type="single"}
 An airway segment shows an MEA of 5,000 ft and a MOCA of \*3,500 ft. What does the MOCA guarantee that the MEA does not have to?
@@ -85,20 +85,20 @@ An airway segment shows an MEA of 5,000 ft and a MOCA of \*3,500 ft. What does t
 
 ---
 
-Both altitudes clear obstacles. The MEA also guarantees VOR reception along the whole segment; the MOCA only guarantees reception within 22 nm of the VOR, which is why it can be lower.
+Both altitudes clear obstacles. The MEA also guarantees VOR reception along the whole segment. The MOCA only guarantees reception within 22 nm of the VOR, which is why it can be lower.
 :::
 
 ## The approach plate, top to bottom
 
 An **approach plate** is a one-page set of instructions for getting from the enroute structure to a runway without seeing it. Every FAA plate has the same layout, so once you can read one you can read them all.
 
-To teach it, Learn to Fly uses the **Learn to Fly Training Plate**: an original, fictional **RNAV (GPS) RWY 25** approach to an invented airport called Training Field. It looks like an FAA plate but is not a real procedure, and is watermarked "Training plate — not a real procedure — not for navigation".
+Learn to Fly teaches it with the **Learn to Fly Training Plate**, an original, fictional RNAV (GPS) RWY 25 approach to an invented airport called Training Field. It looks like an FAA plate but is not a real procedure. Its watermark reads "Training plate — not a real procedure — not for navigation".
 
 :::callout{type="verify"}
 Widget pending: Widget W38 (Approach Plate Explorer) is embedded here once Phase 21 ships it: `::widget{name="approach-plate" mode="explore"}`. Until then the tables below describe the training plate; keep every number consistent with `content/approach-plates/` when the SVG and hotspot JSON are drawn (D2-10). Screenshot for the shot list: none (plate crops are never used).
 :::
 
-Read a plate from the top down. The order is the order you brief it:
+Read a plate from the top down, in the order you brief it:
 
 | Part                 | Where       | On the training plate                                                                                                                                                                                     |
 | -------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -126,7 +126,7 @@ The briefing strip gathers the facts you need first: final approach course, runw
 
 ## Minima lines and categories
 
-The minima section is the business end of the plate. Each **line** is an approach type; each **column** is an aircraft **category** by approach speed. The Skyhawk's final approach target of {{vspeed.approach}} puts it in **Category A**.
+The minima section tells you how low you may descend. Each line is an approach type, and each column is an aircraft **category** by approach speed. The Skyhawk's final approach target of {{vspeed.approach}} puts it in **Category A**.
 
 | Category | Approach speed (Vref, or 1.3 × stall speed in landing configuration) | Typical aircraft |
 | -------- | -------------------------------------------------------------------- | ---------------- |
@@ -135,7 +135,7 @@ The minima section is the business end of the plate. Each **line** is an approac
 | C        | 121–140 kt                                                           | Regional jets    |
 | D        | 141–165 kt                                                           | Airliners        |
 
-Now the training plate's minima, read down the Category A column:
+Here are the training plate's minima, read down the Category A column:
 
 | Line      | Minimum                                | Visibility | Kind                                              |
 | --------- | -------------------------------------- | ---------- | ------------------------------------------------- |
@@ -144,10 +144,10 @@ Now the training plate's minima, read down the Category A column:
 | LNAV      | MDA **900 ft** MSL (505 ft above TDZE) | 1 sm       | Minimum descent altitude: level off, look, wait   |
 | Circling  | MDA **1,000 ft** MSL                   | 1 sm       | For landing on a different runway                 |
 
-The bracketed number is the **height above touchdown** (HAT) for straight-in lines, or height above airport for circling. Visibility is in statute miles, or an RVR value on runways that measure it. Which line you may use depends on equipment and signal: with a working WAAS GPS and an "LPV" annunciation on the HSI, you fly the LPV line.
+The bracketed number is the **height above touchdown** (HAT) for straight-in lines, or height above airport for circling. Visibility is in statute miles, or an RVR value on runways that measure it. Which line you may use depends on equipment and signal. With a working WAAS GPS and an "LPV" annunciation on the HSI, you fly the LPV line.
 
 :::callout{type="verify"}
-Widget pending: the training plate minima above are invented; keep them identical to the W38 data file once it exists so the hotspot questions stay correct. Categories desk-verified 2026-10-13 against 14 CFR 97.3.
+Widget pending: the training plate minima above are invented. Keep them identical to the W38 data file once it exists so the hotspot questions stay correct. Categories desk-verified 2026-10-13 against 14 CFR 97.3.
 :::
 
 :::quiz{id="l18-2-q3" type="single"}
@@ -169,8 +169,8 @@ The symbols you must recognize on any plate:
 
 | Symbol or note                      | Meaning                                                                                                                     |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Triangle with **A** inside          | Non-standard alternate minimums; look them up in the d-TPP (from [[l18-1-ifr-rules-minimums-currency-alternates-and-fuel]]) |
-| Triangle with **A** and "NA"        | Not authorised as an alternate                                                                                              |
+| Triangle with **A** inside          | Non-standard alternate minimums. Look them up in the d-TPP (from [[l18-1-ifr-rules-minimums-currency-alternates-and-fuel]]) |
+| Triangle with **A** and "NA"        | Not authorized as an alternate                                                                                              |
 | Triangle with **T** inside          | Non-standard takeoff minimums or an obstacle departure procedure; see [[l18-3-clearances-and-departures]]                   |
 | Maltese cross in the profile view   | The final approach fix for a non-precision approach                                                                         |
 | Lightning-bolt arrow in the profile | Glideslope intercept altitude, the start of the final segment on a precision approach                                       |
@@ -179,7 +179,7 @@ The symbols you must recognize on any plate:
 | Minima line marked "NA"             | That line is not available (for example, circling to a runway over terrain)                                                 |
 | Inoperative components note         | Higher minima when runway lights or a part of the system is out of service                                                  |
 
-Read every note out loud when you brief. The note you skip is the one that applies today.
+Read every note out loud when you brief, so you do not skip one that applies today.
 
 :::quiz{id="l18-2-q4" type="single"}
 A plate shows a triangle with a "T" inside it next to the airport name. What should you do?
@@ -196,23 +196,23 @@ The "T" triangle means the airport has non-standard takeoff minimums, an obstacl
 
 ## Where current plates come from, and why the cycle matters
 
-Real plates come from the FAA's **digital Terminal Procedures Publication** (d-TPP), free, as one PDF per procedure, reissued on a **28-day** cycle. Each plate's margin shows the dates it is valid. An approach is amended when a tower is built, a minimum changes, a fix is renamed or a runway renumbered. Flying last cycle's plate means flying against a world that has moved.
+Real plates come from the FAA's **digital Terminal Procedures Publication** (d-TPP). It is free, has one PDF per procedure, and the FAA reissues it on a 28-day cycle. Each plate's margin shows the dates it is valid. The FAA amends an approach when a tower is built, a minimum changes, a fix is renamed or a runway renumbered. Last cycle's plate may show a fix or minimum that has since changed.
 
-For the Livermore procedures used in Course 3, the **ILS RWY 25R**, the **LOC RWY 25R** and the **RNAV (GPS) RWY 25R** at KLVK (not for navigation), each challenge brief links to the current d-TPP PDF and records the cycle checked. The cycle matters even here: in the October 2026 cycle the ILS and LOC were issued as two separate plates. The sim's navigation database follows a different, usually older cycle, so a fix name or minimum in the sim may differ from the current plate. When that happens, the lesson teaches the current one and the challenge flies the sim's.
+For the Livermore procedures used in Course 3, the **ILS RWY 25R**, the **LOC RWY 25R** and the **RNAV (GPS) RWY 25R** at KLVK (not for navigation), each challenge brief links to the current d-TPP PDF and records the cycle checked. The cycle matters even here. In the October 2026 cycle, the FAA issued the ILS and LOC as two separate plates. The sim's navigation database follows a different, usually older cycle, so a fix name or minimum in the sim may differ from the current plate. When that happens, the lesson teaches the current one and the challenge flies the sim's.
 
 :::callout{type="verify"}
-Sim check: record the sim's AIRAC cycle for the version tested and confirm the KLVK ILS RWY 25R, LOC RWY 25R and RNAV (GPS) RWY 25R exist in its nav database. Desk-verified 2026-10-13: all three are charted in d-TPP cycle 2610 (effective 1–29 Oct 2026); 28-day cycle and `faa-dtpp` URL confirmed.
+Sim check: record the sim's AIRAC cycle for the version tested and confirm the KLVK ILS RWY 25R, LOC RWY 25R and RNAV (GPS) RWY 25R exist in its nav database. Desk-verified 2026-10-13: all three are charted in d-TPP cycle 2610 (effective 1–29 Oct 2026). The 28-day cycle and `faa-dtpp` URL are confirmed.
 :::
 
 :::callout{type="decision"}
-You open your kneeboard and the plate's effective dates ended last week. The answer is not "it probably hasn't changed". Download the current one before you file. In the sim it takes 1 minute; in a real airplane it is the difference between a legal approach and a guess.
+You open your kneeboard and the plate's effective dates ended last week. Do not assume it probably hasn't changed. Download the current one before you file. In the sim it takes 1 minute. In a real airplane, an expired plate turns a legal approach into a guess.
 :::
 
 ## Practice and next steps
 
-Three things to carry forward: the MEA keeps you clear of terrain and in VOR range; a plate is read top to bottom, briefing strip first; and the Skyhawk reads the Category A column of the minima.
+To carry forward: the MEA keeps you clear of terrain and in VOR range; you read a plate top to bottom, briefing strip first; and the Skyhawk reads the Category A column of the minima.
 
-**Practice.** This lesson feeds the `approach-plate-symbols` and `chart-symbols` flashcard decks: the enroute chart elements, the altitude alphabet, the plate layout and the symbols table.
+**Practice.** This lesson feeds the `approach-plate-symbols` and `chart-symbols` flashcard decks: the enroute chart elements, the minimum altitudes, the plate layout and the symbols table.
 
 **Fly it.** No challenge yet. You will brief the training plate in Module 20, starting with [[l20-1-anatomy-of-an-instrument-approach]].
 

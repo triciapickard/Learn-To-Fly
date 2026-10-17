@@ -23,7 +23,7 @@ simVersion: 'MSFS 2024 (1.8.16.0)'
 
 By the end of Learn to Fly you will fly the Cessna 172 Skyhawk in Microsoft Flight Simulator 2024 the way a student pilot is taught to fly the real one. You will take off, fly a traffic pattern and land on the centerline. You will handle a stall and an engine failure calmly. And you will plan and fly a short cross-country flight with a chart, a VOR and the G1000.
 
-You will not just press buttons that happen to work. Each lesson explains **why** the airplane behaves the way it does, so the skills carry over to any airplane you fly next.
+Each lesson explains why the airplane behaves the way it does, so the skills carry over to any airplane you fly next.
 
 ## How the course is organized
 
@@ -57,7 +57,7 @@ Every challenge has three steps: **Brief, Fly, Debrief**.
 - **Fly.** Keep the Fly tab open on a second screen, a tablet or a phone. It shows the steps, the key numbers and an optional timer.
 - **Debrief.** After landing, score yourself against the rubric. Each criterion has a clear, measurable description, for example "altitude within ±100 ft".
 
-Your score earns a tier: **Bronze** means you passed, **Silver** means you flew it well, and **Gold** means you flew it like a pro. Scores are self-assessed. The only person you can cheat is yourself, so be honest and fly it again.
+Your score earns a tier: **Bronze** means you passed, **Silver** means you flew it well, and **Gold** means you flew it to a high standard. Scores are self-assessed, so they only help if you mark what you flew. If a row went wrong, fly it again.
 
 :::quiz{id="l0-1-q1" type="single"}
 What are the three steps of a challenge?
@@ -84,7 +84,7 @@ Every challenge starts with the **Brief** (exact sim setup, read with the sim pa
 Learn to Fly is for simulation only. It is not flight instruction, it does not count toward any pilot certificate, and it must never be used for real-world flight training or navigation. If you want to fly a real airplane, find a certificated flight instructor.
 :::
 
-A simulator is a wonderful way to learn procedures, build a mental picture and practice decision making. It cannot teach you how a real airplane feels, how to handle real weather, or how to stay safe with real risks. Many real pilots use sims to stay sharp, and many real students find the sim makes their lessons easier. But the sim is the warm-up, not the real thing.
+A simulator is a good way to learn procedures, build a mental picture and practice decision making. It cannot teach you how a real airplane feels, how to handle real weather, or how to stay safe with real risks. Many real pilots use sims to stay sharp, and many real students find the sim makes their lessons easier. Treat the sim as a warm-up for real flying.
 
 :::quiz{id="l0-1-q2" type="single"}
 Does completing Learn to Fly count toward a pilot certificate?
@@ -103,5 +103,5 @@ No. Learn to Fly is for simulation only. Real flight training needs a certificat
 
 - **Keep sessions short.** Twenty to forty minutes of focused practice beats three tired hours.
 - **Fly each challenge more than once.** The second attempt is where you learn the most.
-- **Use pause.** Pausing to look around or read the brief is not cheating; it is how you learn.
-- **Celebrate good decisions.** A go-around when things don't look right is a win, not a failure.
+- **Use pause.** Pausing to look around or read the brief is part of how you learn.
+- **Celebrate good decisions.** A go-around when things don't look right is a good decision.

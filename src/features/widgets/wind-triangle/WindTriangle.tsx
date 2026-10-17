@@ -91,7 +91,8 @@ export default function WindTriangle({ props }: WidgetProps) {
         A wind triangle drawn north-up inside a compass ring. The blue wind arrow starts at the
         center and points where the wind blows to. From its tip, the heading arrow (true heading and
         true airspeed) reaches the end of the green ground arrow, which runs along the true course
-        with a length equal to the groundspeed. Ground = air + wind.
+        with a length equal to the groundspeed. The ground vector is the air vector plus the wind
+        vector.
       </p>
       <p>{summary}</p>
     </>
@@ -182,7 +183,7 @@ export default function WindTriangle({ props }: WidgetProps) {
         </dl>
       ) : (
         <p role="alert" className="mt-4 rounded-md bg-warn-tint p-3 text-sm font-medium">
-          The wind is too strong for this airspeed: no heading can hold the course.
+          The wind is too strong for this airspeed. No heading can hold the course.
         </p>
       )}
 

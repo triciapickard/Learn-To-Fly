@@ -21,13 +21,13 @@ simVersion: null
 
 ## When the radio goes quiet
 
-You are 10 nm east of Livermore, inbound, and the tower does not answer. You try again. Nothing. The COM radio shows the right frequency, the volume is up, and the silence is complete. In a real airplane this happens a few times in a flying career: a failed radio, a loose headset plug, a popped circuit breaker.
+You are 10 nm east of Livermore, inbound, and the tower does not answer. You try again. Nothing. The COM radio shows the right frequency, the volume is up, and you hear nothing. In a real airplane this happens a few times in a flying career: a failed radio, a loose headset plug, a popped circuit breaker.
 
-The tower has a plan for exactly this: a light gun, a hand-held lamp that fires a narrow beam of red, green or white light at one airplane. You need to know what each color means, how to get into position to see it, and how to acknowledge it. And, because low weather is the other classic way to get stuck outside a towered airport, this lesson ends with **special VFR**, the clearance that lets you in when the clouds are below the usual minimums.
+For this case the tower has a light gun, a hand-held lamp that fires a narrow beam of red, green or white light at one airplane. You need to know what each color means, how to get into position to see it, and how to acknowledge it. Low weather is the other common way to get stuck outside a towered airport, so this lesson ends with **special VFR**, the clearance that lets you in when the clouds are below the usual minimums.
 
 ## Light gun signals
 
-The same six signals mean different things depending on whether you are on the ground or in the air. Learn both columns; the flashcard deck will drill them.
+The same six signals mean different things depending on whether you are on the ground or in the air. Learn both columns. The flashcard deck will drill them.
 
 | Signal                        | On the ground                   | In the air                                        |
 | ----------------------------- | ------------------------------- | ------------------------------------------------- |
@@ -38,7 +38,7 @@ The same six signals mean different things depending on whether you are on the g
 | **Flashing white**            | Return to your starting point   | Not applicable                                    |
 | **Alternating red and green** | Exercise extreme caution        | Exercise extreme caution                          |
 
-A pattern helps: **green** means go, **red** means stop or stay away, **white** only exists on the ground, and **red and green together** means the tower is worried about something and wants your full attention.
+A pattern helps. Green means go, red means stop or stay away, white only exists on the ground, and red and green together means the tower is worried about something and wants your full attention.
 
 You acknowledge a signal so the controller knows you saw it. In the air during the day, **rock your wings**. At night, **flash the landing light** or the navigation lights. On the ground, move the ailerons or rudder so the control surfaces visibly wiggle.
 
@@ -52,7 +52,7 @@ You are on downwind with a failed radio and the tower shows you a steady red lig
 
 ---
 
-In the air, **steady red** means give way to other traffic and keep circling. The tower will give you a steady green when it is your turn to land. Flashing red is the "do not land" signal.
+In the air, steady red means give way to other traffic and keep circling. The tower will give you a steady green when it is your turn to land. Flashing red is the "do not land" signal.
 :::
 
 :::quiz{id="l15-3-q2" type="single"}
@@ -65,29 +65,29 @@ Holding short of the runway with a failed radio, you see a flashing green light.
 
 ---
 
-On the ground, **flashing green** is cleared to taxi. Takeoff needs a **steady** green. The difference between steady and flashing is the whole message, so watch for a few seconds before you decide.
+On the ground, flashing green is cleared to taxi. Takeoff needs a steady green. The difference between steady and flashing is the whole message, so watch for a few seconds before you decide.
 :::
 
 ## Lost communications under VFR
 
-First, make sure the radio really has failed. Most "radio failures" are a knob or a plug:
+First, make sure the radio has failed. Most "radio failures" are a knob or a plug:
 
-1. Volume up, squelch set, correct frequency in the **active** window, not standby.
+1. Volume up, squelch set, correct frequency in the active window, not standby.
 2. Headset plugs fully in; try the other COM radio; try the hand microphone if there is one.
 3. Check the circuit breakers and the audio panel selection.
 4. Listen for the tower on the ATIS frequency or on a nearby airport's frequency to confirm the receiver works.
 
-If it is really gone, the VFR procedure at a towered airport has four steps:
+If the radio has failed, follow the VFR procedure for a towered airport:
 
 - **Squawk 7600.** The transponder tells every radar controller that you cannot talk.
 - **Remain VFR.** Stay in visual conditions and outside the Class D until you have worked out the direction of traffic.
 - **Enter the pattern.** Fly the normal pattern for the runway in use, which you can judge from the wind sock, other traffic or the ATIS if you can still hear it.
 - **Watch the tower.** From downwind onward, keep looking at the tower cab for a light signal, and acknowledge each one.
 
-If your transmitter works but your receiver does not, tell the tower your type, position, altitude and intention to land, ask to be controlled by light signals, and keep transmitting in the blind: 3 to 5 miles out, on downwind and on base. If your receiver works but your transmitter does not, listen: the tower may talk to you and ask you to acknowledge by rocking your wings.
+If your transmitter works but your receiver does not, tell the tower your type, position, altitude and intention to land, ask to be controlled by light signals, and keep transmitting in the blind: 3 to 5 miles out, on downwind and on base. If your receiver works but your transmitter does not, listen. The tower may talk to you and ask you to acknowledge by rocking your wings.
 
 :::callout{type="tip"}
-The transponder is your voice now. Set 7600 _before_ you spend five minutes troubleshooting, then troubleshoot. Controllers see the code immediately, and nothing is lost if you fix the radio and switch back to 1200.
+With the radio gone, the transponder is how you tell ATC. Set 7600 _before_ you spend five minutes troubleshooting, then troubleshoot. Controllers see the code immediately, and nothing is lost if you fix the radio and switch back to 1200.
 :::
 
 :::callout{type="verify"}
@@ -109,7 +109,7 @@ Squawk 7600 first, so the controllers know. Then remain VFR outside the airspace
 
 ## Special VFR
 
-The usual VFR minimums near a towered airport are 3 sm visibility, a ceiling of at least 1,000 ft, and 500 ft between you and the cloud above. On a Bay Area morning the marine layer can sit at 800 ft with 2 sm underneath, which is perfectly flyable and completely illegal under basic VFR.
+The usual VFR minimums near a towered airport are 3 sm visibility, a ceiling of at least 1,000 ft, and 500 ft between you and the cloud above. On a Bay Area morning the marine layer can sit at 800 ft with 2 sm underneath. That is flyable, but illegal under basic VFR.
 
 **Special VFR** is an ATC clearance that lets you operate inside the surface area of Class B, C, D or E airspace with lower minimums:
 
@@ -118,12 +118,12 @@ The usual VFR minimums near a towered airport are 3 sm visibility, a ceiling of 
 | Where              | Only within the surface area around an airport, with an ATC clearance  |
 | Visibility         | At least 1 sm, in flight and on the ground for takeoff or landing      |
 | Clouds             | Clear of clouds, no distance required                                  |
-| Who asks           | **You.** ATC never offers it; you request it                           |
+| Who asks           | You. ATC never offers it, so you request it                            |
 | At night           | Pilot must be instrument rated and the airplane IFR-equipped           |
 | Where it is banned | Some busy Class B and Class C airports, marked "NO SVFR" on the chart  |
 | Traffic            | ATC separates you from IFR traffic, so you may be told to wait outside |
 
-The request is short: "Livermore Tower, Skyhawk One Two Three, one zero miles east, request special VFR to land." The clearance you want to hear is "cleared to enter the Livermore surface area, maintain special VFR conditions", sometimes with "at or below" an altitude. SFO is one of the "NO SVFR" airports; Oakland and San Jose are not.
+The request is short: "Livermore Tower, Skyhawk One Two Three, one zero miles east, request special VFR to land." The clearance you want to hear is "cleared to enter the Livermore surface area, maintain special VFR conditions", sometimes with "at or below" an altitude. SFO is one of the "NO SVFR" airports. Oakland and San Jose are not.
 
 :::callout{type="decision"}
 Special VFR gets you the last 5 miles into an airport under a thin layer. It does not get you across the valley at 700 ft under an overcast. If the weather needs special VFR on the way _out_ of an airport, ask yourself where you will be when the clearance ends and the ceiling is still 800 ft. The pilot who stays on the ground, or asks for the clearance to come back and land, has made the better decision.
@@ -143,12 +143,12 @@ Which of these is true of a special VFR clearance?
 
 ---
 
-Special VFR is only available **on request**, only inside the airport's surface area, and by day it needs **1 sm visibility and clear of clouds**. At night it also needs an instrument-rated pilot in an IFR-equipped airplane.
+Special VFR is only available on request, only inside the airport's surface area, and by day it needs 1 sm visibility and clear of clouds. At night it also needs an instrument-rated pilot in an IFR-equipped airplane.
 :::
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. Steady green is go, flashing red is get off or stay away, alternating red and green is danger.
 2. Lost comms: 7600, remain VFR, enter the pattern, watch the tower, acknowledge by rocking your wings.

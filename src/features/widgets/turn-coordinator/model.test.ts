@@ -27,12 +27,12 @@ group('W6 turn coordinator model', () => {
     expect(right.coordination).toBe('slip');
     expect(right.ball).toBeGreaterThan(0);
     expect(right.yaw).toBeLessThan(0);
-    expect(right.advice).toBe('Slipping — add right rudder');
+    expect(right.advice).toBe('Slipping: add right rudder');
 
     const left = turnState(-20, 0, 100);
     expect(left.coordination).toBe('slip');
     expect(left.ball).toBeLessThan(0);
-    expect(left.advice).toBe('Slipping — add left rudder');
+    expect(left.advice).toBe('Slipping: add left rudder');
   });
 
   it('skids with too much rudder: ball outside, nose yawed into the turn', () => {
@@ -40,13 +40,13 @@ group('W6 turn coordinator model', () => {
     expect(s.coordination).toBe('skid');
     expect(s.ball).toBeLessThan(0);
     expect(s.yaw).toBeGreaterThan(0);
-    expect(s.advice).toBe('Skidding — too much right rudder; ease it off');
+    expect(s.advice).toBe('Skidding: too much right rudder, so ease it off');
   });
 
   it('treats rudder with wings level as a skid, and crossed controls as a slip', () => {
     expect(turnState(0, -0.4, 100)).toMatchObject({
       coordination: 'skid',
-      advice: 'Skidding — too much left rudder; ease it off',
+      advice: 'Skidding: too much left rudder, so ease it off',
     });
     expect(turnState(10, -0.4, 100).coordination).toBe('slip');
   });
@@ -66,7 +66,7 @@ group('W6 turn coordinator model', () => {
     expect(rateText(0)).toBe('not turning');
     expect(rateText(-3.12)).toBe('turning left at 3.1 degrees per second (standard rate)');
     const s = turnState(20, 0, 100);
-    expect(describe(s)).toMatch(/^Slipping — add right rudder\. 20 degrees right bank/);
+    expect(describe(s)).toMatch(/^Slipping: add right rudder\. 20 degrees right bank/);
   });
 
   it('gives the standard-rate bank', () => {

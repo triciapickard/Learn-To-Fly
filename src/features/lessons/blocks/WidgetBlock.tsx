@@ -10,7 +10,7 @@ function WidgetFallback({ title }: { title: string }) {
   return (
     <div role="note" className="my-8 rounded-lg border border-dashed border-line p-4 text-ink-2">
       The interactive diagram “{title}” failed to load. Open “Describe this diagram” in a refreshed
-      page, or carry on — the text around it covers the same ideas.
+      page, or keep reading. The text around it covers the same ideas.
     </div>
   );
 }

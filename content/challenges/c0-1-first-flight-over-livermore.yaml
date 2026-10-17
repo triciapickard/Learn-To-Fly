@@ -33,7 +33,7 @@ setup:
 
 procedure:
   - Set the flaps to 10°. Unpause and add full throttle smoothly. Keep the nose on the centerline with small rudder inputs (on a gamepad, the LT and RT triggers).
-  - At 55 KIAS, gently raise the nose; climb at about 75 KIAS.
+  - At 55 KIAS, gently raise the nose. Climb at about 75 KIAS.
   - Once you're climbing steadily, a few hundred feet above the ground, raise the flaps to 0°.
   - Climb to 3,000 ft MSL. Lower the nose to level and reduce power to about 2,300 RPM.
   - Make a gentle left turn (about 15–20° of bank) toward Lake Del Valle, then a right turn toward Mt Diablo.
@@ -66,7 +66,7 @@ criteria:
 randomEvents: []
 
 commonMistakes:
-  - Big stick movements. The airplane responds to small inputs; wait for it.
+  - Big stick movements. The airplane responds to small inputs, so wait for it.
   - Forgetting to reduce power after leveling off, so the speed keeps increasing.
 
 tips:

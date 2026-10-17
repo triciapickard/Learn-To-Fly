@@ -166,7 +166,7 @@ export default function TrafficPattern({ props }: WidgetProps) {
     <>
       <p>
         A top-down view of runway {runway} at {airport} with a {side}-hand traffic pattern. The
-        runway is drawn across the page with landings toward the left; an arrow shows north. The
+        runway is drawn across the page with landings toward the left. An arrow shows north. The
         legs are: the 45° entry, joining downwind at midfield; downwind, flown opposite to the
         landing direction about ¾ mile from the runway at pattern altitude; base; final; a
         touch-and-go; departure (upwind); and crosswind, turning back onto downwind.
@@ -175,8 +175,8 @@ export default function TrafficPattern({ props }: WidgetProps) {
         The step list below the diagram follows the airplane leg by leg, with the configuration and
         radio call for each leg when those options are on. With wind set, the airplane crabs into
         the wind to keep a rectangular ground track, and its groundspeed changes from leg to leg.
-        The go-around button shows a go-around from short final: side-step away from the pattern,
-        climb out, and rejoin the crosswind leg.
+        The go-around button shows a go-around from short final. The airplane side-steps away from
+        the pattern, climbs out and rejoins the crosswind leg.
       </p>
     </>
   );
@@ -430,7 +430,9 @@ export default function TrafficPattern({ props }: WidgetProps) {
                 {current && <span className="sr-only"> (current leg)</span>}
               </p>
               {showConfig && <p className="mt-1">{info.config}</p>}
-              {showCalls && info.call && <p className="mt-1 italic">“{info.call(place)}”</p>}
+              {showCalls && info.call && (
+                <p className="mt-1 italic">&quot;{info.call(place)}&quot;</p>
+              )}
             </li>
           );
         })}

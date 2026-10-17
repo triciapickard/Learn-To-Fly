@@ -65,11 +65,11 @@ export function describe(state: VorState, r: Reading): string {
   const where = `On the ${three(r.radial)} radial, ${r.distance.toFixed(1)} nautical miles from the station, heading ${three(state.heading)}.`;
   const indicator =
     r.flag === 'OFF'
-      ? 'Over the station: the flag shows OFF.'
+      ? 'Over the station, the flag shows OFF.'
       : `OBS ${three(state.obs)}: ${r.flag} flag, needle ${needleText(r)}.`;
   const reverse =
     r.reverse && r.flag !== 'OFF'
-      ? ' Reverse sensing: your heading opposes the course, so the needle works backwards.'
+      ? ' Your heading opposes the course, so the needle works backwards (reverse sensing).'
       : '';
   return `${where} ${indicator}${reverse}`;
 }
@@ -97,14 +97,14 @@ export const QUESTIONS: VorQuestion[] = [
     id: 'w9-which-radial',
     prompt: 'Which radial are you on? Turn the OBS until the needle centers with a FROM flag.',
     explanation:
-      'With a FROM flag and the needle centered, the OBS shows the radial you are on: the bearing from the station to you.',
+      'With a FROM flag and the needle centered, the OBS shows the radial you are on, which is the bearing from the station to you.',
     check: (_s, r) => r.flag === 'FROM' && centered(r),
   },
   {
     id: 'w9-center-to',
     prompt: 'Turn the OBS to center the needle with a TO flag.',
     explanation:
-      'With a TO flag the OBS shows the course that takes you to the station: the reciprocal of your radial.',
+      'With a TO flag the OBS shows the course that takes you to the station, which is the reciprocal of your radial.',
     check: (_s, r) => r.flag === 'TO' && centered(r),
   },
   {
@@ -112,7 +112,7 @@ export const QUESTIONS: VorQuestion[] = [
     prompt:
       'You are north of the 090 radial. Set a heading that intercepts it outbound at an angle of 30° to 45°.',
     explanation:
-      'Outbound on the 090 radial means a track of 090. From the north side, turn right to 120°–135°: 30° to 45° more than the course.',
+      'Outbound on the 090 radial means a track of 090. From the north side, turn right to 120°–135°, which is 30° to 45° more than the course.',
     check: (s, r) => r.radial > 0 && r.radial < 90 && inRange(s.heading, 120, 135),
   },
   {

@@ -21,7 +21,7 @@ simVersion: null
 
 ## Two beams to the runway
 
-The ILS is the oldest precision approach still in daily use, and it remains the standard every other approach is measured against. Two radio beams come up from the runway: the **localizer**, which tells you left or right of the centerline, and the **glideslope**, which tells you above or below a 3° path to the touchdown zone. Follow both needles to the center and you arrive 200 ft above the runway, lined up, on speed, with the lights in front of you. That is the plan, anyway. The craft is in how you follow the needles, and in what you do when the lights are not there.
+The ILS is the oldest precision approach still in daily use, and it remains the standard every other approach is measured against. Two radio beams come up from the runway: the **localizer**, which tells you left or right of the centerline, and the **glideslope**, which tells you above or below a 3° path to the touchdown zone. Follow both needles to the center and you arrive 200 ft above the runway, lined up, on speed, with the lights in front of you. This lesson covers how to follow the needles, and what to do when the lights are not there.
 
 :::callout{type="real-world"}
 In a real airplane, an ILS to minimums is flown after dozens of practice approaches with an instructor, in an airplane whose receivers and the ground equipment are both checked and NOTAMed. Real ILS signals have false glideslopes, critical areas and interference that the sim does not model. Use this lesson to learn the geometry and the habits, not to judge what you could do in real cloud.
@@ -33,7 +33,7 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 ## Localizer and glideslope geometry
 
-Both ILS needles are **angular**. The localizer course is a wedge about 5° wide in total, tailored so it is roughly 700 ft wide at the runway threshold. Full-scale deflection is about 2.5° either side of center. The glideslope wedge is far thinner: full scale is about 0.7° above or below the 3° path. Compare that with the VOR you learned in [[l6-4-vor-navigation]], where full scale was 10°: the localizer is four times more sensitive, and the glideslope about fourteen times.
+Both ILS needles are **angular**. The localizer course is a wedge about 5° wide in total, tailored so it is roughly 700 ft wide at the runway threshold. Full-scale deflection is about 2.5° either side of center. The glideslope wedge is far thinner: full scale is about 0.7° above or below the 3° path. Compare that with the VOR you learned in [[l6-4-vor-navigation]], where full scale was 10°. The localizer is four times more sensitive, and the glideslope about fourteen times.
 
 | Signal               | Full-scale deflection | Width at 5 nm from the runway | Width at 1 nm   |
 | -------------------- | --------------------- | ----------------------------- | --------------- |
@@ -41,7 +41,7 @@ Both ILS needles are **angular**. The localizer course is a wedge about 5° wide
 | Glideslope           | ±0.7°                 | About ±370 ft                 | About ±75 ft    |
 | VOR (for comparison) | ±10°                  | About ±5,300 ft               | About ±1,100 ft |
 
-Because the wedge narrows, the same error in feet is a bigger needle movement the closer you get. Being 1° off the localizer at 5 nm puts you about 530 ft from the centerline; the same 1° at 1 nm is only about 106 ft, yet the needle shows the same deflection. Turn that around and you have the rule for corrections: a half-dot error at 5 nm needs a 5° heading change; the same half dot at 1 nm needs 1–2°. Big corrections late in the approach produce the classic zig-zag down final.
+Because the wedge narrows, the same error in feet is a bigger needle movement the closer you get. Being 1° off the localizer at 5 nm puts you about 530 ft from the centerline. The same 1° at 1 nm is only about 106 ft, yet the needle shows the same deflection. So size each correction to your distance. A half-dot error at 5 nm needs a 5° heading change. The same half dot at 1 nm needs 1–2°. Big corrections late in the approach produce the classic zig-zag down final.
 
 ::widget{name="vor-cdi" mode="explore"}
 
@@ -64,10 +64,10 @@ The localizer is a wedge. Full scale is the same _angle_ everywhere, so the same
 
 ## Tune, identify, set up
 
-The ILS setup is a short ritual, done during the approach briefing from [[l20-1-anatomy-of-an-instrument-approach]] so that each item on the plate is matched by an action in the cockpit.
+Do the ILS setup during the approach briefing from [[l20-1-anatomy-of-an-instrument-approach]], so each item on the plate gets a matching action in the cockpit.
 
-1. **Tune** the localizer frequency from the briefing strip into NAV1 (standby, then flip-flop to active). The glideslope is paired to the same frequency; there is nothing separate to tune.
-2. **Identify** it. A localizer identifier is four letters starting with I, sent in Morse: the Training Plate's is **I-LTF**. On the G1000, the decoded identifier appears in the NAV frequency box once the signal is received; you can also push the NAV VOL/ID knob to hear the Morse and check it against the plate.
+1. **Tune** the localizer frequency from the briefing strip into NAV1 (standby, then flip-flop to active). The glideslope is paired to the same frequency, so there is nothing separate to tune.
+2. **Identify** it. A localizer identifier is four letters starting with I, sent in Morse. The Training Plate's is I-LTF. On the G1000, the decoded identifier appears in the NAV frequency box once the signal is received. You can also push the NAV VOL/ID knob to hear the Morse and check it against the plate.
 3. **Set the course.** Turn the CRS knob to the final approach course from the plate (280 on the Training Plate). On the HSI, the localizer needle rotates with the course arrow, so a wrong course gives you a tilted picture and a wrong intercept.
 4. **Set the minimums** bug to the DA, and the heading bug to the expected vector.
 
@@ -87,14 +87,14 @@ You tune the localizer and the needle centers, but no identifier appears and you
 
 ---
 
-A centered needle with no identifier is a needle you cannot trust. The localizer may be off the air for maintenance with its ident disabled, or you may be on the wrong frequency. **Never use an unidentified ILS.**
+A centered needle with no identifier is a needle you cannot trust. The localizer may be off the air for maintenance with its ident disabled, or you may be on the wrong frequency. Never use an unidentified ILS.
 :::
 
 ## The CDI source: GPS to LOC
 
-Modern IFR flying has a trap built into it. You fly enroute and to the intercept on GPS, with a magenta needle. The ILS needs the HSI to show the localizer, a green needle driven by NAV1. If the CDI source is still GPS when you intercept, the needle you follow is the GPS leg, not the localizer, and the glideslope never appears.
+Switching from GPS to the localizer is an easy step to miss. You fly enroute and to the intercept on GPS, with a magenta needle. The ILS needs the HSI to show the localizer, a green needle driven by NAV1. If the CDI source is still GPS when you intercept, the needle you follow is the GPS leg, not the localizer, and the glideslope never appears.
 
-The G1000 NXi is designed to switch the CDI source for you: with an ILS approach loaded and the localizer tuned, it changes GPS → LOC on its own once the FAF is the active leg and you are within 15 nm of it (activating Vector-to-Final switches it too). That is convenient, and it is exactly why you must check it rather than assume it. The callout, every ILS, as the localizer comes alive: "**CDI green, LOC1, course 280, glideslope alive.**" If the needle is still magenta, press the **CDI** softkey until it reads LOC1.
+The G1000 NXi can switch the CDI source for you. With an ILS approach loaded and the localizer tuned, it changes from GPS to LOC on its own once the FAF is the active leg and you are within 15 nm of it (activating Vector-to-Final switches it too). Because the switch happens without you, check it every time rather than assume it. Make this callout on every ILS as the localizer comes alive: "CDI green, LOC1, course 280, glideslope alive." If the needle is still magenta, press the **CDI** softkey until it reads LOC1.
 
 | Check                   | Right                                         | Wrong                             |
 | ----------------------- | --------------------------------------------- | --------------------------------- |
@@ -117,12 +117,12 @@ You are on a vector to the localizer, cleared for the ILS. The HSI needle is mag
 
 ---
 
-Magenta is GPS. Until the CDI reads **LOC1** in green you are not following the localizer, and the glideslope will not show. Press the CDI softkey, confirm the course, then intercept.
+Magenta is GPS. Until the CDI reads LOC1 in green you are not following the localizer, and the glideslope will not show. Press the CDI softkey, confirm the course, then intercept.
 :::
 
 ## Intercepting the localizer
 
-Approach control normally vectors you onto final at an **intercept angle of about 30°**, a few miles outside the FAF, below the glideslope. A 30° intercept is a good balance: shallow enough that the needle moves slowly as you join, steep enough that you get there. If you are flying the full procedure yourself, use 30° too; 45° at most, and never more at localizer sensitivity.
+Approach control normally vectors you onto final at an **intercept angle of about 30°**, a few miles outside the FAF, below the glideslope. A 30° intercept is shallow enough that the needle moves slowly as you join, and steep enough that you get there. If you are flying the full procedure yourself, use 30° too, or 45° at most. Never use more at localizer sensitivity.
 
 As the needle comes alive, **lead the turn**. At 30° and a typical final approach groundspeed, start turning onto the final approach course when the needle is about one dot from center. Roll out on the course heading plus a wind correction and watch the trend. Then bracket, as you did on VOR radials, but with smaller numbers.
 
@@ -132,18 +132,18 @@ As the needle comes alive, **lead the turn**. At 30° and a typical final approa
 | FAF to 2 nm     | 2–3°                                                 | Same                                              |
 | Inside 2 nm     | 1–2°, flown with the rudder feet as much as the yoke | Hold the heading that keeps it centered           |
 
-The number that matters is the **heading that holds the needle still**. Once you find it, fly that heading and stop chasing. Chasing the needle is the most common ILS error in the sim, and the cure is patience: make a small change, wait, read the trend.
+The number that matters is the **heading that holds the needle still**. Once you find it, fly that heading and stop chasing. Chasing the needle is the most common ILS error in the sim. Make a small change, wait, and read the trend.
 
 ## Glideslope intercept from below
 
-Always intercept the glideslope **from below**, at the altitude the plate or ATC gives you for the intercept. There are two reasons. From below, the glideslope needle comes down to you, and you simply start the descent as it centers, one clean transition. From above you must dive to catch it, which is never a stabilized approach. The second reason is real-world only but worth knowing: an ILS transmits false glideslopes at steeper angles, and intercepting from above can put you on one.
+Always intercept the glideslope **from below**, at the altitude the plate or ATC gives you for the intercept. From below, the glideslope needle comes down to you, and you start the descent as it centers in one clean transition. From above you must dive to catch it, which is never a stabilized approach. A second reason applies only in the real world. An ILS transmits false glideslopes at steeper angles, and intercepting from above can put you on one.
 
 The sequence, as the diamond descends:
 
 1. **Glideslope alive** (the diamond moves from the top): flaps 10, slow to {{vspeed.approach}}, before-landing checklist complete.
 2. **One dot above**: nothing yet, confirm the altitude is the intercept altitude.
 3. **Centered**: reduce power to about 1,700 RPM, pitch down to the descent attitude, trim. Start the timer if the plate gives a localizer-only time.
-4. Hold the attitude; correct the glideslope with **power**, the localizer with **heading**.
+4. Hold the attitude. Correct the glideslope with **power**, the localizer with **heading**.
 
 | Groundspeed on final | Descent rate for the 3° glideslope |
 | -------------------- | ---------------------------------- |
@@ -160,12 +160,12 @@ A 10 kt headwind on final leaves you with a groundspeed of 80 kt. What descent r
 
 ---
 
-Groundspeed × 5: 80 × 5 = 400 fpm. The headwind makes the descent shallower than the no-wind 450 fpm; if you keep 450 fpm you will sink below the glideslope.
+Groundspeed × 5: 80 × 5 = 400 fpm. The headwind makes the descent shallower than the no-wind 450 fpm. If you keep 450 fpm you will sink below the glideslope.
 :::
 
 ## Decision altitude and the runway environment
 
-At DA you decide, and the decision is not "can I see something?" but "can I see the right things?" The rules say you may continue below DA only if you have the required flight visibility, you can descend to a landing on the runway at a normal rate using normal maneuvers, and at least one of a specific list of **runway environment** references is distinctly visible and identifiable.
+At DA you decide whether you can see the specific things the rules require. The rules say you may continue below DA only if you have the required flight visibility, you can descend to a landing on the runway at a normal rate using normal maneuvers, and at least one of a specific list of **runway environment** references is distinctly visible and identifiable.
 
 | Reference you may use                                    | Notes                                                                                                               |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -176,7 +176,7 @@ At DA you decide, and the decision is not "can I see something?" but "can I see 
 | Touchdown zone, its markings or its lights               |                                                                                                                     |
 | Runway, runway markings or runway lights                 |                                                                                                                     |
 
-In the sim the weather presets make this a fair test: at `WX_IMC_LOW` you break out just above DA and the lights are there; at `WX_IMC_BELOW` they are not, and the only correct answer is the missed approach in [[l20-5-missed-approaches]]. "I think I see a glow" is not on the list. Say it aloud at DA: "Minimums. Runway in sight, landing," or "Minimums. Going missed."
+The sim's weather presets test this. At `WX_IMC_LOW` you break out just above DA and the lights are there. At `WX_IMC_BELOW` they are not, and the only correct answer is the missed approach in [[l20-5-missed-approaches]]. "I think I see a glow" is not on the list. Say it aloud at DA: "Minimums. Runway in sight, landing," or "Minimums. Going missed."
 
 :::quiz{id="l20-3-q5" type="multi"}
 At DA, which of these alone allow you to continue descending? Pick all that apply.
@@ -194,18 +194,18 @@ The PAPI, the threshold lights and the approach lights are all on the list (the 
 
 ## Coupled approach with APR
 
-The GFC 700 flies a beautiful ILS, and watching it do so teaches you what a good one looks like. The sequence, with the approach loaded and activated, the localizer tuned and identified, and the CDI on LOC1:
+The GFC 700 flies a smooth, accurate ILS, and watching it shows you what a good one looks like. The sequence, with the approach loaded and activated, the localizer tuned and identified, and the CDI on LOC1:
 
 1. On the intercept vector, **HDG** mode with the vector heading, **ALT** holding the intercept altitude.
 2. Press **APR**. The annunciator shows LOC and GS **armed** in white beside the active HDG and ALT.
 3. As the localizer comes alive the autopilot **captures** it: LOC turns green and HDG drops out. Call it: "LOC captured."
-4. As the glideslope centers, GS turns green and ALT drops out. Call it: "Glideslope captured." Set the power for the descent; the autopilot does not touch the throttle.
+4. As the glideslope centers, GS turns green and ALT drops out. Call it: "Glideslope captured." Set the power for the descent. The autopilot does not touch the throttle.
 5. At about 200 ft above DA, confirm your hand is on the yoke. **At DA, disconnect** and land by hand, or go missed. The autopilot never flies you below DA.
 
-If a mode you expected does not appear within a few seconds, intervene: press the mode again, check the CDI source, or disconnect and hand-fly. Challenge C20.3 scores exactly this: each mode change called out, and any wrong mode corrected within 5 seconds.
+If a mode you expected does not appear within a few seconds, intervene: press the mode again, check the CDI source, or disconnect and hand-fly. Challenge C20.3 scores this. It checks that you call out each mode change and correct any wrong mode within 5 seconds.
 
 :::callout{type="decision"}
-Coupled, at DA, in `WX_IMC_LOW`: the approach lights appear through the murk. You disconnect, keep the picture, and land. Same approach in `WX_IMC_BELOW`: nothing. You press the go-around button, say "going missed", and the autopilot is already pitching up. Both are good flights. Only one of them has a landing.
+Coupled, at DA, in `WX_IMC_LOW`: the approach lights appear through the murk. You disconnect, keep the picture, and land. Same approach in `WX_IMC_BELOW`: nothing. You press the go-around button, say "going missed", and the autopilot is already pitching up. Both are good flights, and only one ends in a landing.
 :::
 
 :::callout{type="verify"}
@@ -214,16 +214,16 @@ Sim check: Garmin 190-02177-02 confirms that APR arms LOC and GS (armed modes in
 
 ## Practice and next steps
 
-Four things to carry forward:
+To carry forward:
 
-1. ILS needles are angular; corrections shrink as the runway grows.
-2. Tune, identify, set the course, set the minimums; green needle, LOC1, course from the plate.
-3. Intercept at 30° and from below; descent rate ≈ groundspeed × 5; glideslope with power, localizer with heading.
+1. ILS needles are angular. Corrections shrink as the runway gets closer.
+2. Tune, identify, set the course, set the minimums. Then check for a green needle, LOC1 and the course from the plate.
+3. Intercept at 30° and from below. The descent rate is about groundspeed × 5. Correct the glideslope with power and the localizer with heading.
 4. At DA, land only on the runway environment list. Otherwise, go missed.
 
 **Practice.** This lesson feeds the `ifr-rules` deck (the runway environment list) and the `limits-and-speeds` deck (the approach configuration).
 
-**Fly it.** Challenge C20.2 "Hand-flown ILS" puts you on a 30° intercept to the KLVK "ILS RWY 25R" (not for navigation) with the autopilot off. Challenge C20.3 "Coupled ILS" flies the full procedure on the KMRY "ILS or LOC RWY 10R" (not for navigation) with the autopilot in APR. Fly the hand-flown one first; the coupled one is more fun when you know what the autopilot is doing for you. Next: [[l20-4-vor-and-other-non-precision-approaches]].
+**Fly it.** Challenge C20.2 "Hand-flown ILS" puts you on a 30° intercept to the KLVK "ILS RWY 25R" (not for navigation) with the autopilot off. Challenge C20.3 "Coupled ILS" flies the full procedure on the KMRY "ILS or LOC RWY 10R" (not for navigation) with the autopilot in APR. Fly the hand-flown one first. The coupled one is more fun when you know what the autopilot is doing for you. Next: [[l20-4-vor-and-other-non-precision-approaches]].
 
 :::callout{type="verify"}
 Sim check: KLVK "ILS RWY 25R" (Amdt 9A; charted separately from "LOC RWY 25R") and KMRY "ILS or LOC RWY 10R" (Amdt 29A) are confirmed in d-TPP cycle 2610 (01–29 Oct 2026). The lesson states no identifiers or courses for them; keep it that way. Still open: both procedures in the sim's nav database under those titles.

@@ -22,20 +22,20 @@ simVersion: null
 ## Steering and braking
 
 - **Steer with the rudder pedals.** They turn the nose wheel. Push left to go left.
-- **Brake gently** with the toe brakes, and only when you need to. Never ride the brakes: use a little power and let the airplane roll.
+- **Brake gently** with the toe brakes, and only when you need to. Never ride the brakes. Use a little power and let the airplane roll.
 - **Tight turns.** A little brake on the inside wheel helps in a tight corner.
 
 To start moving, release the parking brake, add a little power until the airplane rolls, then reduce power. Test the brakes as soon as you're moving.
 
 ## How fast?
 
-Taxi at about a **brisk walking pace**. In the sim, check your groundspeed on the PFD or the MFD: about **10 knots or less** on straight taxiways, and **5 knots or less** in turns.
+Taxi at about a brisk walking pace. In the sim, check your groundspeed on the PFD or the MFD. It should be about 10 knots or less on straight taxiways, and 5 knots or less in turns.
 
 If you're going too fast, reduce power first, then brake. Taxiing too fast is how airplanes end up in the grass.
 
 ## Holding the controls for the wind
 
-A high-wing airplane like the Skyhawk can be lifted by a strong wind on the ground. Hold the controls so the wind pushes the airplane down, not up.
+A strong wind can lift a high-wing airplane like the Skyhawk on the ground. Hold the controls so the wind pushes the airplane down, not up.
 
 | Wind from     | Yoke                           |
 | ------------- | ------------------------------ |
@@ -56,7 +56,7 @@ You're taxiing with a quartering headwind from the left. Where should the yoke b
 
 ---
 
-With a headwind from the left, turn the yoke **left**, into the wind, with the elevator **neutral**. The left aileron goes up and the wind can't lift that wing.
+With a headwind from the left, turn the yoke left, into the wind, with the elevator neutral. The left aileron goes up and the wind can't lift that wing.
 :::
 
 ## Airport signs
@@ -80,13 +80,13 @@ What colors is a runway holding position sign?
 
 ---
 
-Mandatory signs, including runway holding position signs, are **white text on red**. They mark places you must not enter without permission.
+Mandatory signs, including runway holding position signs, are white text on red. They mark places you must not enter without permission.
 :::
 
 ## Markings
 
 - **Taxiway centerline.** A solid yellow line. Keep the nose wheel on it.
-- **Runway holding position marking.** Four yellow lines across the taxiway: **two solid and two dashed**. Stop on the **solid** side when you're approaching the runway. When leaving the runway, the whole airplane must cross to the solid side before you're clear.
+- **Runway holding position marking.** Four yellow lines across the taxiway: two solid and two dashed. Stop on the solid side when you're approaching the runway. When leaving the runway, the whole airplane must cross to the solid side before you're clear.
 - **ILS critical area.** A yellow ladder-like marking. At a towered airport, don't enter it without clearance when instrument approaches are in use.
 
 :::quiz{id="l3-2-q3" type="single"}
@@ -99,7 +99,7 @@ Taxiing toward a runway, which side of the hold short line do you stop on?
 
 ---
 
-Stop on the side with the **solid lines**. The dashed lines face the runway; they let you cross when _leaving_ the runway.
+Stop on the side with the solid lines. The dashed lines face the runway. They let you cross when _leaving_ the runway.
 :::
 
 ## The Livermore airport diagram
@@ -108,11 +108,11 @@ Every airport has an **airport diagram**: a map of its runways, taxiways, ramps 
 
 Before you taxi at Livermore (KLVK), open the diagram and find:
 
-- The **main ramp** where you park.
-- The **taxiway** that leads from the ramp to the end of runway 25R.
-- The **run-up area** near that end.
+- The main ramp where you park.
+- The taxiway that leads from the ramp to the end of runway 25R.
+- The run-up area near that end.
 
-On the current diagram, the FBO and terminal are on the **northwest apron**, and **taxiway A** runs along the north side of runway 7L/25R all the way to the run-up area at the 25R end. From there you never have to cross a runway.
+On the current diagram, the FBO and terminal are on the northwest apron, and taxiway A runs along the north side of runway 7L/25R all the way to the run-up area at the 25R end. From there you never have to cross a runway.
 
 Trace your route with your finger before you release the brake.
 
@@ -126,10 +126,10 @@ A **runway incursion** is any airplane, vehicle or person on a runway where they
 
 - Never cross a hold short line at a towered airport without a clearance.
 - At a non-towered airport, stop, look both ways and announce before crossing.
-- If you're unsure where you are, **stop**. Stopping on a taxiway is always OK.
+- If you're unsure where you are, stop. Stopping on a taxiway is always OK.
 
 :::callout{type="sim"}
-MSFS 2024 can draw a taxi ribbon on the ground to show your route. It's useful the first time, but turn it off after this lesson: reading signs and a diagram is the skill you need.
+MSFS 2024 can draw a taxi ribbon on the ground to show your route. It's useful the first time, but turn it off after this lesson. Reading signs and a diagram is the skill you need.
 :::
 
 Now taxi to the runway in [[c3-2-taxi-to-the-runway-at-klvk]].

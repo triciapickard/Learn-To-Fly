@@ -5,7 +5,7 @@ module: m2-fundamentals
 order: 2
 priority: P0
 title: Attitude flying and trim
-summary: Set an attitude and a power setting, check the result, and trim the airplane so it flies itself.
+summary: Set an attitude and a power setting, check the result, and trim the airplane so it holds that attitude hands-off.
 estimatedMinutes: 15
 prerequisites: [l2-1-four-forces-and-how-a-wing-works]
 objectives:
@@ -21,13 +21,13 @@ simVersion: null
 
 ## Attitude plus power equals performance
 
-Here's the most useful idea in flying: **attitude + power = performance**.
+**Attitude + power = performance** is the most useful relationship in flying.
 
 - **Attitude** is where the nose points relative to the horizon (pitch) and how the wings are tilted (bank).
 - **Power** is the engine setting, in RPM.
 - **Performance** is what you get: airspeed, and whether you climb, hold altitude or descend.
 
-For a given weight, a particular attitude and power setting always give the same airspeed and vertical speed. So instead of chasing numbers, **set** a known attitude and power, let the airplane settle, then check the instruments and make small adjustments.
+For a given weight, a particular attitude and power setting always give the same airspeed and vertical speed. So instead of chasing numbers, set a known attitude and power, let the airplane settle, then check the instruments and make small adjustments.
 
 ## The cruise picture
 
@@ -43,9 +43,9 @@ In the classic panel, the attitude indicator is the top middle instrument of the
 
 ## The scan
 
-When you fly by looking outside (VFR), spend most of your time, about 80–90%, **looking outside**. Glance inside for the other 10–20%.
+When you fly by looking outside (VFR), spend most of your time, about 80–90%, looking outside. Glance inside for the other 10–20%.
 
-Inside, use a **hub-and-spoke** scan: the attitude indicator is the hub. Glance from the attitude to the airspeed and back, to the altitude and back, to the heading and back. The attitude tells you what the airplane is doing now; the other instruments confirm the result a moment later.
+Inside, use a **hub-and-spoke** scan: the attitude indicator is the hub. Glance from the attitude to the airspeed and back, to the altitude and back, to the heading and back. The attitude tells you what the airplane is doing now. The other instruments confirm the result a moment later.
 
 :::quiz{id="l2-2-q1" type="single"}
 When flying VFR, where should most of your attention be?
@@ -74,10 +74,10 @@ Trim is the step that turns a tiring flight into an easy one:
 2. **Let it stabilize.** Give the airspeed a few seconds to settle.
 3. **Trim away the pressure.** Roll the trim (or tap the trim button) in the direction you're pushing or pulling until you can relax your hand and the airplane stays put.
 
-Holding back pressure? Trim nose up. Pushing forward? Trim nose down.
+If you're holding back pressure, trim nose up. If you're pushing forward, trim nose down.
 
 :::callout{type="sim"}
-With a spring-centered joystick or gamepad, "pressure" means how far you're holding the stick from center. After you trim, you should be able to let the stick return to center and the airplane keeps its attitude. Trim buttons move in steps: use several short presses rather than holding the button down.
+With a spring-centered joystick or gamepad, "pressure" means how far you're holding the stick from center. After you trim, you should be able to let the stick return to center and the airplane keeps its attitude. Trim buttons move in steps, so use several short presses rather than holding the button down.
 :::
 
 :::quiz{id="l2-2-q2" type="single"}
@@ -90,17 +90,17 @@ Your altitude is slowly increasing with the stick centered. What do you do?
 
 ---
 
-The airplane is trimmed slightly nose-up. **Trim nose down** a little, wait, and see if it holds altitude.
+The airplane is trimmed slightly nose-up. Trim nose down a little, wait, and see if it holds altitude.
 :::
 
 ## Straight and level
 
 To fly straight and level in cruise:
 
-1. Set about **2,300 RPM**.
-2. Put the nose in the **cruise picture** and wings level.
-3. Pick a **landmark** on the horizon straight ahead. Keeping the nose on it holds your heading.
-4. Let the speed settle around 100–105 KIAS, then **trim**.
+1. Set about 2,300 RPM.
+2. Put the nose in the cruise picture and wings level.
+3. Pick a landmark on the horizon straight ahead. Keeping the nose on it holds your heading.
+4. Let the speed settle around 100–105 KIAS, then trim.
 5. Scan: outside, attitude, altitude, heading, back outside.
 
 :::quiz{id="l2-2-q3" type="single"}
@@ -113,7 +113,7 @@ You're changing from a climb to level flight. Which do you set first?
 
 ---
 
-Set the **attitude** (and power) first, let the airplane settle, and **trim last**. Trimming first makes the airplane wander while you're still setting up.
+Set the attitude (and power) first, let the airplane settle, and trim last. Trimming first makes the airplane wander while you're still setting up.
 :::
 
 ## Common errors

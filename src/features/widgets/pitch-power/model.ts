@@ -115,7 +115,7 @@ export const QUESTIONS: PitchPowerQuestion[] = [
     id: 'w5-descent',
     prompt: 'Set up a 500 fpm descent at 90 knots.',
     explanation:
-      'Reduce power to start the descent, then set the pitch attitude that holds 90 knots: power controls the descent rate, pitch the airspeed.',
+      'Reduce power to start the descent, then set the pitch attitude that holds 90 knots. Power controls the descent rate, and pitch controls the airspeed.',
     check: (s) => Math.abs(s.ias - 90) <= 5 && Math.abs(s.vs + 500) <= 100,
   },
   {
@@ -129,7 +129,7 @@ export const QUESTIONS: PitchPowerQuestion[] = [
     id: 'w5-vy',
     prompt: 'Climb at Vy, 74 knots, at 600 fpm or better.',
     explanation:
-      'Full power and about 8° nose up. If the airspeed drifts, adjust the pitch, not the power: pitch for airspeed.',
+      'Full power and about 8° nose up. If the airspeed drifts, adjust the pitch and leave the power alone. Pitch controls airspeed.',
     check: (s) => Math.abs(s.ias - 74) <= 3 && s.vs >= 600,
   },
 ];

@@ -23,7 +23,7 @@ simVersion: null
 
 It is 9 a.m. on a June morning. At Palo Alto the sky is blue and the wind is calm. At Half Moon Bay, 15 miles west over the hills, the airport sits under a gray lid of cloud at 600 ft, and it will stay there until lunchtime.
 
-No storm, no front. This is the Bay Area doing what it does most summer mornings, and a pilot who understands _why_ can predict it before the forecast does. This lesson gives you enough theory to look at a sky, a METAR or a forecast and say "I know what that is, and I know what it does next."
+There is no storm and no front. The Bay Area does this most summer mornings, and a pilot who understands _why_ can predict it before the forecast does. This lesson gives you enough theory to look at a sky, a METAR or a forecast and know what the weather is and what it will do next.
 
 :::callout{type="verify"}
 Author decision: the v2 spec names L6.7 (weather basics: METARs and TAFs) as the prerequisite, and that lesson is not written. Swap `l6-6-planning-a-cross-country-flight` for the L6.7 slug once it exists.
@@ -31,17 +31,17 @@ Author decision: the v2 spec names L6.7 (weather basics: METARs and TAFs) as the
 
 ## The atmosphere in 5 minutes
 
-Everything you fly in happens in the **troposphere**, the bottom layer of the atmosphere. Three facts about it explain most weather:
+Everything you fly in happens in the **troposphere**, the bottom layer of the atmosphere. These facts about it explain most weather:
 
 | Fact                                                                   | Why a pilot cares                                                             |
 | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Air gets colder with height, about 2 °C per 1,000 ft on a standard day | Rising air cools, and cool air cannot hold as much water: that makes cloud    |
+| Air gets colder with height, about 2 °C per 1,000 ft on a standard day | Rising air cools, and cool air cannot hold as much water, so cloud forms      |
 | Pressure falls with height, about 1 inHg per 1,000 ft near the surface | Your altimeter is a pressure gauge                                            |
 | The sun heats the ground unevenly, and the ground heats the air        | Uneven heating makes pressure differences, and pressure differences make wind |
 
-Wind blows from high pressure toward low pressure, bent by the Earth's rotation: in the northern hemisphere air spirals **clockwise and outward** around a high and **counterclockwise and inward** around a low. Air flowing into a low has nowhere to go but up, and rising air means cloud and rain. Air sinking in a high dries and warms. **Highs bring fair weather; lows bring weather.** Our systems travel roughly west to east, so what is over the Pacific today is often over you tomorrow.
+Wind blows from high pressure toward low pressure, bent by the Earth's rotation. In the northern hemisphere air spirals clockwise and outward around a high and counterclockwise and inward around a low. Air flowing into a low has nowhere to go but up, and rising air means cloud and rain. Air sinking in a high dries and warms. **Highs bring fair weather, and lows bring weather.** Our systems travel roughly west to east, so what is over the Pacific today is often over you tomorrow.
 
-The 2 °C per 1,000 ft figure is the standard lapse rate from [[l9-1-density-altitude-and-performance]]. It is an average; the real lapse rate on a given day decides whether the air is stable, the most useful idea in this lesson.
+The 2 °C per 1,000 ft figure is the standard lapse rate from [[l9-1-density-altitude-and-performance]]. It is an average. The real lapse rate on a given day decides whether the air is stable, and stability is the most useful idea in this lesson.
 
 ## Air masses
 
@@ -56,7 +56,7 @@ An **air mass** is a body of air hundreds of miles across that has sat over one 
 
 "Maritime polar" air is cool and moist, which is what sits off the California coast all summer. Inland, the Central Valley bakes under hot, dry continental air. The Bay Area lives on the boundary between the two, and nearly all its everyday weather, the sea breeze and the marine layer included, comes from that contrast.
 
-An air mass changes as it moves: cool air over warm ground is heated from below and becomes unstable; warm air over a cold ocean is cooled from below and becomes stable, and often foggy.
+An air mass changes as it moves. Warm ground heats cool air from below and makes it unstable. A cold ocean cools warm air from below and makes it stable, and often foggy.
 
 ## Fronts
 
@@ -69,9 +69,9 @@ A **front** is the boundary where two air masses meet. The weather depends on wh
 | **Stationary** | Neither air mass wins                              | Warm-front weather that lingers for days                                                                                                |
 | **Occluded**   | A cold front catches a warm front                  | A mix: wide low cloud plus embedded showers                                                                                             |
 
-Picture a cross-section. A cold front is a steep wall: the warm air ahead is shoved up fast, so the cloud is tall, the rain is heavy and short, and it all passes in an hour or two. A warm front is a long, gentle ramp: the cloud is flat and wide and the poor visibility lasts all day. "Warm front" on a briefing means **low cloud and poor visibility for a long time**. "Cold front" means **gusts, showers, maybe a thunderstorm, then it clears**.
+Seen in cross-section, a cold front is a steep wall. It shoves the warm air ahead up fast, so the cloud is tall, the rain is heavy and short, and it all passes in an hour or two. A warm front is a long, gentle ramp, so the cloud is flat and wide and the poor visibility lasts all day. "Warm front" on a briefing means low cloud and poor visibility for a long time. "Cold front" means gusts, showers, maybe a thunderstorm, then clearing.
 
-In the sim you fly custom weather, so you will not watch a front go by. But the forecasts you decode in [[l11-2-forecasts-and-briefings]] are written in the language of fronts.
+In the sim you fly custom weather, so you will not watch a front go by. The forecasts you decode in [[l11-2-forecasts-and-briefings]] still use the language of fronts.
 
 :::callout{type="verify"}
 Widget pending: W26 (Fronts cross-section, P1) is embedded here once Phase 20 ships it: `::widget{name="fronts-cross-section" mode="explore"}`. Until then the table above does the job. Desk-verified 2026-10-13: the front descriptions and the cold-front wind shift (variable and gusty at passage, then west-northwest behind it) match PHAK Chapter 12 and the Aviation Weather Handbook Chapter 11.
@@ -93,19 +93,19 @@ Cold fronts are steep and fast: a narrow band of showers, a gusty wind shift, a 
 
 ## Stability and lapse rates
 
-Lift a parcel of air. As it rises it expands and cools, about **3 °C per 1,000 ft** while dry. Once its water vapor starts condensing, the condensation releases heat and it cools more slowly, roughly **2 °C per 1,000 ft** (it varies with temperature). Now compare the parcel with the air around it:
+Lift a parcel of air. As it rises it expands and cools, about 3 °C per 1,000 ft while dry. Once its water vapor starts condensing, the condensation releases heat and it cools more slowly, roughly 2 °C per 1,000 ft (it varies with temperature). Now compare the parcel with the air around it:
 
-- If the lifted parcel is **colder** than its surroundings, it sinks back. The air is **stable**: lift stops and clouds spread out flat.
-- If it is **warmer**, it keeps rising on its own. The air is **unstable**: lift feeds on itself and clouds build upward.
+- If the lifted parcel is colder than its surroundings, it sinks back. The air is **stable**, so lift stops and clouds spread out flat.
+- If it is warmer, it keeps rising on its own. The air is **unstable**, so lift feeds on itself and clouds build upward.
 
 | Air      | Real lapse rate                | Clouds            | Precipitation          | Visibility                     | Ride            |
 | -------- | ------------------------------ | ----------------- | ---------------------- | ------------------------------ | --------------- |
 | Stable   | Small, or an inversion         | Stratus: flat     | Steady drizzle or rain | Poor: haze, fog, smoke trapped | Smooth          |
 | Unstable | Large (cools fast with height) | Cumulus: building | Showers, thunderstorms | Good, except in showers        | Bumpy, thermals |
 
-An **inversion**, where temperature _rises_ with height, is the most stable case of all. Nothing gets through it; smoke, haze and moisture pile up underneath. Early morning over the Central Valley and the marine layer on the coast are both inversions, which is why both mean fog and poor visibility rather than storms.
+An **inversion**, where temperature _rises_ with height, is the most stable case of all. Rising air cannot get through it, so smoke, haze and moisture pile up underneath. Early morning over the Central Valley and the marine layer on the coast are both inversions, so both mean fog and poor visibility rather than storms.
 
-Stability is a trade: a smooth ride under low cloud you cannot see through, or clear air between the clouds and a bumpy ride. [[l11-3-clouds-fog-and-low-visibility]] is mostly about stable air; [[l11-4-thunderstorms-icing-and-turbulence]] is mostly about unstable air.
+Stable air gives a smooth ride under low cloud you cannot see through. Unstable air gives clear air between the clouds and a bumpy ride. [[l11-3-clouds-fog-and-low-visibility]] is mostly about stable air, and [[l11-4-thunderstorms-icing-and-turbulence]] is mostly about unstable air.
 
 :::quiz{id="l11-1-q1" type="single"}
 Stable air brings…
@@ -131,11 +131,11 @@ The **dewpoint** is the temperature the air must cool to before its water vapor 
 | Under about 3 °C and closing | Fog or low cloud likely soon, especially at night with light wind; fog seldom forms with a spread over 2 °C |
 | 0 °C                         | Saturated: you are in fog or cloud                                                                          |
 
-The spread also predicts the height of fair-weather cumulus. A rising parcel cools about 3 °C per 1,000 ft while its dewpoint falls only about 0.5 °C, so the two meet, and cloud forms, roughly 400 ft up for each degree of spread. This is a rule of thumb for convective (cumulus) cloud only; it says nothing about stratus or fog:
+The spread also predicts the height of fair-weather cumulus. A rising parcel cools about 3 °C per 1,000 ft while its dewpoint falls only about 0.5 °C, so the two meet, and cloud forms, roughly 400 ft up for each degree of spread. This rule of thumb works for convective (cumulus) cloud only. It says nothing about stratus or fog.
 
 > **Cumulus base (ft AGL) ≈ temperature/dewpoint spread (°C) × 400**
 
-A Livermore afternoon of `26/11` has a spread of 15 °C: bases around 6,000 ft AGL. A Half Moon Bay morning of `13/12` has a spread of 1 °C: cloud 400 ft up, or already on the ground.
+A Livermore afternoon of `26/11` has a spread of 15 °C, so the bases sit around 6,000 ft AGL. A Half Moon Bay morning of `13/12` has a spread of 1 °C, so the cloud is 400 ft up or already on the ground.
 
 :::quiz{id="l11-1-q3" type="numeric" answer="4000" tolerance="400" unit="ft AGL"}
 The METAR shows a temperature of 24 °C and a dewpoint of 14 °C on a sunny, unstable afternoon. About how high will the cumulus bases be?
@@ -156,12 +156,12 @@ Now put it together for home. In summer a large high sits over the Pacific and t
 | Afternoon         | The valley is hot; the sea breeze blows at full strength, often 15–20 kt              | West-facing runways: Runway 25 at Livermore, Runway 31 at Palo Alto |
 | Evening           | The land cools, the breeze eases and the marine layer creeps back                     | KHAF goes IFR again by dinner time                                  |
 
-The gray deck is the **marine layer**: stratus in the cool, stable air under the inversion, a warm-front sky with no front. The inversion also traps haze and smoke, so visibility under the layer can be poor even with no cloud.
+The gray deck is the **marine layer**, a sheet of stratus in the cool, stable air under the inversion. It looks like a warm-front sky with no front. The inversion also traps haze and smoke, so visibility under the layer can be poor even with no cloud.
 
-**Valley heating** matters in two more ways. On hot afternoons the ground sends up thermals, so the ride below about 5,000 ft gets bumpy after noon, and the same heat drives the density altitude from [[l9-1-density-altitude-and-performance]]. Early morning is cooler, calmer and often foggier; afternoon is windier, bumpier and clearer. That trade is the Bay Area in one sentence.
+**Valley heating** matters in two more ways. On hot afternoons the ground sends up thermals, so the ride below about 5,000 ft gets bumpy after noon, and the same heat drives the density altitude from [[l9-1-density-altitude-and-performance]]. Early morning is cooler, calmer and often foggier. Afternoon is windier, bumpier and clearer.
 
 :::callout{type="tip"}
-When the pattern reverses and a hot, dry wind blows from the land toward the sea, the coast goes crystal clear and the inland hills become fire country: the best visibility of the year, and the worst smoke when something is burning ([[l11-3-clouds-fog-and-low-visibility]]).
+When the pattern reverses and a hot, dry wind blows from the land toward the sea, the coast clears and the fire risk in the inland hills climbs. You get the best visibility of the year, and the worst smoke when something is burning ([[l11-3-clouds-fog-and-low-visibility]]).
 :::
 
 :::callout{type="verify"}
@@ -183,9 +183,9 @@ That is the sea breeze. Hot air rising over the inland valleys lowers the pressu
 
 ## Practice and next steps
 
-Four things to carry forward:
+To carry forward:
 
-1. Highs bring fair weather; lows bring weather. Fronts are where air masses meet.
+1. Highs bring fair weather, and lows bring weather. Fronts are where air masses meet.
 2. Cold front: narrow, gusty, showery, clears fast. Warm front: wide, low, gray, slow.
 3. Stable air means stratus, poor visibility and a smooth ride. Unstable air means cumulus, good visibility and bumps.
 4. A spread under about 3 °C and closing means fog or low cloud is coming.

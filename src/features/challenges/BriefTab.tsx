@@ -286,8 +286,8 @@ export function BriefTab({
           ]}
         />
         <p className="mt-2 text-sm text-ink-2">
-          Gold needs 90% or more with every required criterion at Silver or better; Silver needs
-          70%; Bronze needs every required criterion met.
+          Gold needs 90% or more with every required criterion at Silver or better. Silver needs
+          70%. Bronze needs every required criterion met.
         </p>
       </section>
 
@@ -316,7 +316,7 @@ export function BriefTab({
 
       <div>
         <Button size="lg" onClick={onStart}>
-          <Play aria-hidden className="size-5" /> I&apos;m set up — start
+          <Play aria-hidden className="size-5" /> I&apos;m set up, start flying
         </Button>
       </div>
     </div>

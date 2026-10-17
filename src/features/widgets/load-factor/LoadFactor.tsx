@@ -50,8 +50,8 @@ export default function LoadFactor({ props, onQuizAnswer }: WidgetProps) {
   if (isError || !vs1) {
     return (
       <p className="my-8 text-ink-2">
-        The load factor diagram could not load. In a level turn the load factor is 1 ÷ cos(bank):
-        1.41 G at 45° and 2 G at 60°.
+        The load factor diagram could not load. In a level turn the load factor is 1 ÷ cos(bank),
+        which gives 1.41 G at 45° and 2 G at 60°.
       </p>
     );
   }
@@ -64,8 +64,8 @@ export default function LoadFactor({ props, onQuizAnswer }: WidgetProps) {
       <p>
         A rear view of the airplane in a level, coordinated turn. The lift arrow tilts with the
         wings. Its vertical part must still equal the weight to hold altitude, so total lift, and
-        the load factor, grow as the bank steepens: load factor = 1 ÷ cos(bank). Its horizontal part
-        is what turns the airplane.
+        the load factor, grow as the bank steepens. The load factor is 1 ÷ cos(bank). Its horizontal
+        part turns the airplane.
       </p>
       <p>
         Stall speed rises with the square root of the load factor. With a clean stall speed of {vs1}{' '}
@@ -144,8 +144,8 @@ export default function LoadFactor({ props, onQuizAnswer }: WidgetProps) {
         <p className="mt-3 flex items-start gap-2 rounded-md bg-warn-tint p-3 text-sm">
           <AlertTriangle aria-hidden className="mt-0.5 size-4 shrink-0 text-warn" />
           <span>
-            Over the {LIMIT_LOAD} G limit load of the normal category: the airframe could be
-            damaged.
+            This turn is over the {LIMIT_LOAD} G limit load of the normal category. The airframe
+            could be damaged.
           </span>
         </p>
       )}
