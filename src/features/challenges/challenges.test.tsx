@@ -222,7 +222,7 @@ describe('challenge page', () => {
     expect(screen.getByText('3,500 ft MSL, heading 090°, 100 KIAS')).toBeInTheDocument();
     expect(await seriousViolations(container)).toEqual([]);
 
-    await userEvent.click(screen.getByRole('button', { name: /set up — start/ }));
+    await userEvent.click(screen.getByRole('button', { name: /set up, start flying/ }));
     expect(screen.getByRole('tab', { name: 'Fly' })).toHaveAttribute('aria-selected', 'true');
     const step = screen.getByRole('checkbox', { name: '1. Set 2,300 RPM.' });
     await userEvent.click(step);

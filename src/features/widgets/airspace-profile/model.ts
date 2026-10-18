@@ -83,7 +83,7 @@ export function describe(profile: AirspaceProfileDto, x: number, altitude: numbe
     ? `You are in Class ${cls}. ${volumeSummary(volume)}`
     : 'You are in Class G.';
   const veil = inModeCVeil(profile, x)
-    ? ' Inside the Mode C veil: a transponder with altitude reporting and ADS-B Out are required.'
+    ? ' You are inside the Mode C veil, so you need a transponder with altitude reporting and ADS-B Out.'
     : '';
   return `${where} ${inClass} Requirement: ${profile.requirements[cls].entry}${veil}`;
 }
@@ -110,7 +110,7 @@ export const QUESTIONS: AirspaceQuestion[] = [
     id: 'w11-tower',
     prompt: 'Find a spot where you must talk to a control tower before entering.',
     explanation:
-      'Class D surrounds an airport with a working tower: establish two-way radio contact before you enter.',
+      'Class D surrounds an airport with a working tower. Establish two-way radio contact before you enter.',
     check: (p, x, alt) => classAt(p, x, alt).cls === 'D',
   },
   {
@@ -118,7 +118,7 @@ export const QUESTIONS: AirspaceQuestion[] = [
     prompt:
       'Fly under a Class B shelf without entering Class B, at least 1,000 ft above the ground.',
     explanation:
-      'Below a shelf’s floor you need no clearance. You are still inside the Mode C veil, so you need a transponder with altitude reporting and ADS-B Out.',
+      "Below a shelf's floor you need no clearance. You are still inside the Mode C veil, so you need a transponder with altitude reporting and ADS-B Out.",
     check: (p, x, alt) =>
       p.volumes.some((v) => v.class === 'B' && v.floorFt > 0 && covers(v, x, p.lengthNm)) &&
       classAt(p, x, alt).cls !== 'B' &&

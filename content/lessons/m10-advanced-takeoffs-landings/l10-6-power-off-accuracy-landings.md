@@ -19,11 +19,11 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## The best engine-failure practice there is
+## Why practice the power-off 180
 
-In [[l5-4-engine-failure-and-forced-landings]] you learned the flow for an engine failure and how to pick a field. What that lesson could not give you was the feel for how far the Skyhawk really glides from pattern altitude, and how to hit a spot with no engine to fix a mistake. The **power-off 180** teaches exactly that: abeam your aiming point on downwind, the throttle goes to idle and stays there, and the goal is a touchdown within 200 ft beyond the aiming point.
+In [[l5-4-engine-failure-and-forced-landings]] you learned the flow for an engine failure and how to pick a field. That lesson could not give you a feel for how far the Skyhawk glides from pattern altitude, or how to hit a spot with no engine to fix a mistake. The **power-off 180** teaches both. Abeam your aiming point on downwind, you bring the throttle to idle and leave it there. The goal is a touchdown within 200 ft beyond the aiming point.
 
-Commercial pilot candidates fly this on their checkride, where the standard is a touchdown on or within 200 ft beyond the chosen point, with no side drift and the airplane aligned with the centerline. For you it is optional, and it is the most honest test of judgment in this module.
+Commercial pilot candidates fly this on their checkride, where the standard is a touchdown on or within 200 ft beyond the chosen point, with no side drift and the airplane aligned with the centerline. For you it is optional, and it is the clearest test of judgment in this module.
 
 ## The key position
 
@@ -32,13 +32,13 @@ The maneuver starts at the **key position**: abeam the aiming point on downwind,
 | Step                      | Action                                                                                                |
 | ------------------------- | ----------------------------------------------------------------------------------------------------- |
 | 1. Abeam the aiming point | Throttle to idle. Pitch for {{vspeed.vg}}. Trim.                                                      |
-| 2. Judge the wind         | A headwind on final means turn base sooner; a tailwind on downwind is blowing you away from the field |
+| 2. Judge the wind         | A headwind on final means turn base sooner. A tailwind on downwind is blowing you away from the field |
 | 3. Base turn              | Begin when the aiming point is roughly 45° behind the wing, and sooner in any wind                    |
-| 4. Base leg               | Flaps 10° only if you are sure you will make it; keep {{vspeed.vg}} until the field is made           |
+| 4. Base leg               | Flaps 10° only if you are sure you will make it. Keep {{vspeed.vg}} until the field is made           |
 | 5. Final                  | Add flaps as needed and slow to {{vspeed.approach}} once the field is certain                         |
 | 6. Touchdown              | Within 200 ft beyond the aiming point, with no power added                                            |
 
-The glide-range widget shows how little margin pattern altitude gives: at {{aircraft.glideRatio}}, each 1,000 ft above the ground is worth about 1.5 nm in still air, and a normal pattern uses most of it.
+The glide-range widget shows how little margin pattern altitude gives. At {{aircraft.glideRatio}}, each 1,000 ft above the ground gives about 1.5 nm of glide in still air, and a normal pattern uses most of it.
 
 ::widget{name="glide-range" mode="explore"}
 
@@ -52,21 +52,21 @@ Where does the power-off 180 begin?
 
 ---
 
-**Abeam the aiming point on downwind.** Power to idle there, best glide, and the rest of the pattern is flown without the engine.
+It begins abeam the aiming point on downwind. You bring the power to idle there, pitch for best glide, and fly the rest of the pattern without the engine.
 :::
 
 ## Energy management with flaps and slips
 
-With the throttle out of the picture, you have ways to lose energy and none to gain it. So **stay high and slightly tight**, and spend the surplus on the way down:
+With the throttle at idle, you can lose energy but you cannot gain it. So **stay high and slightly tight**, and use up the extra height on the way down:
 
 | Tool                           | Effect                                                                         | When                                            |
 | ------------------------------ | ------------------------------------------------------------------------------ | ----------------------------------------------- |
-| Flaps 10°, 20°, 30°            | A steeper descent at the same speed; each notch is permanent, so add them late | Only once the field is made                     |
+| Flaps 10°, 20°, 30°            | A steeper descent at the same speed. Each notch is permanent, so add them late | Only once the field is made                     |
 | Forward slip ([[l10-2-slips]]) | A big, adjustable increase in descent rate that can be taken out again         | Final, when flaps alone will not fix it         |
-| Turn geometry                  | A tighter base turn shortens the path; a wider one lengthens it                | Downwind and base                               |
-| Airspeed                       | Faster than best glide shortens the glide; slower is worse and dangerous       | Never slower than {{vspeed.vg}} until the flare |
+| Turn geometry                  | A tighter base turn shortens the path, and a wider one lengthens it            | Downwind and base                               |
+| Airspeed                       | Faster than best glide shortens the glide. Slower is worse and dangerous       | Never slower than {{vspeed.vg}} until the flare |
 
-The rule from the forced-landing lesson still applies: flaps only when the field is made, which usually means no flaps until you roll out on final and see the aiming point sitting still in the windshield. If you are long, flaps and a slip bring you down. If you are short, nothing brings you back, which is why you planned high.
+The rule from the forced-landing lesson still applies. Add flaps only when the field is made. That usually means no flaps until you roll out on final and see the aiming point sitting still in the windshield. If you are long, flaps and a slip bring you down. If you are short, nothing brings you back, so plan high.
 
 :::quiz{id="l10-6-q2" type="single"}
 On final in a power-off 180 you are clearly going to land long. Which correction is best?
@@ -78,14 +78,14 @@ On final in a power-off 180 you are clearly going to land long. Which correction
 
 ---
 
-**Flaps and a slip.** Both add drag without adding power. Slowing below best glide reduces control and shortens the glide; adding power fails the maneuver.
+Add flaps and a slip. Both add drag without adding power. Slowing below best glide reduces control and shortens the glide. Adding power fails the maneuver.
 :::
 
 ## Judging the base turn
 
-The base turn is where most attempts are won or lost. Turn too early and you arrive high, which the slip and flaps can usually fix. Turn too late and you arrive low and short, which nothing fixes. So the bias is early: in doubt, turn sooner, and in a strong wind fly a **continuous turn** from downwind to final rather than a squared-off pattern.
+Most attempts succeed or fail at the base turn. Turn too early and you arrive high, which the slip and flaps can usually fix. Turn too late and you arrive low and short, which nothing fixes. So lean toward turning early. If in doubt, turn sooner. In a strong wind, fly a continuous turn from downwind to final rather than a squared-off pattern.
 
-Three cues:
+Use these cues:
 
 - **The aiming point in the window.** On base it should sit a little ahead of the wing tip, not behind it.
 - **Altitude at the base turn.** From a 1,000 ft AGL pattern, about 600–700 ft AGL turning base and 400 ft AGL rolling out on final is typical for a glide. Note your own numbers.
@@ -109,15 +109,17 @@ You are unsure whether you are high enough to make the field from downwind. What
 
 ---
 
-**Turn early.** Extra height can be spent with flaps and a slip. A short approach cannot be fixed without the engine, and slowing below best glide makes it worse.
+Turn early. You can lose extra height with flaps and a slip. A short approach cannot be fixed without the engine, and slowing below best glide makes it worse.
 :::
 
 ## Practice and next steps
 
+To carry forward:
+
 1. Key position: abeam the aiming point, throttle idle, {{vspeed.vg}}.
-2. Plan high and slightly tight; spend the surplus with flaps and a slip.
-3. In doubt, turn base early; nothing fixes a short approach.
+2. Plan high and slightly tight. Spend the extra height with flaps and a slip.
+3. In doubt, turn base early. Nothing fixes a short approach.
 
 **Practice.** This lesson feeds the `limits-and-speeds` flashcard deck (best glide and the "flaps when the field is made" rule).
 
-**Fly it.** Challenge C10.6 "Power-off 180" at Tracy scores the touchdown distance and that no power was added. This is the last lesson of Module 10; the weather module begins with [[l11-1-weather-theory-air-masses-fronts-and-stability]].
+**Fly it.** Challenge C10.6 "Power-off 180" at Tracy scores the touchdown distance and that no power was added. This is the last lesson of Module 10. The weather module begins with [[l11-1-weather-theory-air-masses-fronts-and-stability]].

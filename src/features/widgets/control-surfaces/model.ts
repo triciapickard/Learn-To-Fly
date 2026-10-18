@@ -149,7 +149,7 @@ export const SURFACES: SurfaceInfo[] = [
     control: 'Yoke left and right',
     axis: 'Longitudinal axis (roll)',
     effect:
-      'They move in opposite directions: the wing whose aileron goes down makes more lift and rises. This banks the airplane.',
+      'They move in opposite directions. The wing whose aileron goes down makes more lift and rises. This banks the airplane.',
   },
   {
     id: 'elevator',
@@ -199,7 +199,7 @@ export const QUESTIONS: ControlQuestion[] = [
     id: 'w1-roll-right',
     prompt: 'Make the airplane roll right.',
     explanation:
-      'Turn the yoke right: the right aileron goes up and the left one down, so the left wing rises and the airplane rolls right.',
+      'Turn the yoke right. The right aileron goes up and the left one goes down, so the left wing rises and the airplane rolls right.',
     check: (inputs) => inputs.roll >= 0.5,
   },
   {
@@ -213,13 +213,13 @@ export const QUESTIONS: ControlQuestion[] = [
     id: 'w1-pitch-down',
     prompt: 'Make the nose pitch down.',
     explanation:
-      'Push the yoke forward: the elevator goes down, the tail rises and the nose pitches down.',
+      'Push the yoke forward. The elevator goes down, the tail rises and the nose pitches down.',
     check: (inputs) => inputs.pitch <= -0.5,
   },
   {
     id: 'w1-roll-surface',
     prompt: 'Which surfaces move when you turn the yoke to the left? Select them.',
-    explanation: 'The ailerons: the left aileron goes up and the right one goes down.',
+    explanation: 'The ailerons move. The left aileron goes up and the right one goes down.',
     check: (_inputs, selected) => selected === 'ailerons',
     select: true,
   },
@@ -233,7 +233,7 @@ export const QUESTIONS: ControlQuestion[] = [
     id: 'w1-trim',
     prompt: 'Which surface relieves the pressure you hold on the yoke? Select it.',
     explanation:
-      'The elevator trim tab: set it with the trim wheel so the airplane holds its pitch attitude hands off.',
+      'The elevator trim tab. Set it with the trim wheel so the airplane holds its pitch attitude hands off.',
     check: (_inputs, selected) => selected === 'trim-tab',
     select: true,
   },

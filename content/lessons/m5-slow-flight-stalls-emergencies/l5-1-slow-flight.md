@@ -21,11 +21,11 @@ simVersion: null
 
 ## Why slow flight matters
 
-Every takeoff, landing and go-around happens at low speed. **Slow flight** means flying at a speed just above where the stall warning would sound, so that any more angle of attack or load factor would trigger it. Practicing up high teaches you how the airplane feels down low: the controls go soft, and the airplane needs more rudder and more attention.
+Every takeoff, landing and go-around happens at low speed. **Slow flight** means flying at a speed just above where the stall warning would sound, so that any more angle of attack or load factor would trigger it. Practicing up high teaches you how the airplane feels down low. The controls go soft, and the airplane needs more rudder and more attention.
 
 ## Before you start
 
-- **Altitude.** Practice high enough to recover from a stall with plenty to spare. In the challenges we use **3,000 ft above the ground** or higher.
+- **Altitude.** Practice high enough to recover from a stall with plenty to spare. In the challenges we use 3,000 ft above the ground or higher.
 - **Clearing turns.** Make two 90° turns (or one 180°) and look for traffic, especially below you, before you start.
 - **A reference.** Pick a heading and a landmark on the horizon.
 
@@ -34,14 +34,14 @@ Every takeoff, landing and go-around happens at low speed. **Slow flight** means
 1. **Power to about 1,500 RPM.** The 172S is fuel-injected, so it has no carb heat to worry about.
 2. **Raise the nose** gradually to hold altitude as the speed decreases.
 3. **Flaps in stages**: 10° below {{vspeed.vfe10}}, then 20° and 30° below {{vspeed.vfe}}.
-4. As the speed approaches **50–55 KIAS**, **add power** to hold both speed and altitude. It takes more power than you'd expect, often around 1,900–2,100 RPM.
+4. As the speed approaches 50–55 KIAS, add power to hold both speed and altitude. It takes more power than you'd expect, often around 1,900–2,100 RPM.
 5. **Trim** to take the pressure off.
 
 :::callout{type="verify"}
 Sim check: the RPM that holds 55 KIAS with full flaps at C5.1's weight and altitude in the sim.
 :::
 
-Watch the angle of attack in the diagram as you slow down: at low speed the wing needs a high angle of attack to make enough lift.
+Watch the angle of attack in the diagram as you slow down. At low speed the wing needs a high angle of attack to make enough lift.
 
 ::widget{name="angle-of-attack" mode="explore" initial="12" flaps="true"}
 
@@ -49,8 +49,8 @@ Watch the angle of attack in the diagram as you slow down: at low speed the wing
 
 In slow flight, the usual way of thinking turns around:
 
-- **Pitch controls airspeed.** Nose up, slower; nose down, faster.
-- **Power controls altitude.** Sinking? Add power. Climbing? Reduce it.
+- **Pitch controls airspeed.** Raise the nose to slow down, and lower it to speed up.
+- **Power controls altitude.** If you're sinking, add power. If you're climbing, reduce it.
 
 This is the **back side of the power curve**. At very low speed, flying slower takes _more_ power, not less, because the wing is producing so much drag.
 
@@ -69,9 +69,9 @@ In slow flight, what mainly controls your altitude?
 
 ## Rudder and coordination
 
-High power at low speed means strong left-turning tendencies, so you'll need plenty of **right rudder**. The controls are also soft and slow to respond. Keep the ball centered: an uncoordinated airplane near the stall can drop a wing.
+High power at low speed means strong left-turning tendencies, so you'll need plenty of right rudder. The controls are also soft and slow to respond. Keep the ball centered, because an uncoordinated airplane near the stall can drop a wing.
 
-Turns should be **gentle**, no more than about 15° of bank. Bank increases the load factor, and that brings the stall closer (Lesson 5.3).
+Turns should be gentle, no more than about 15° of bank. Bank increases the load factor, and that brings the stall closer (Lesson 5.3).
 
 ## Recovery
 
@@ -95,7 +95,7 @@ What's the first action when you recover from slow flight?
 
 ## The stall warning
 
-The current Airman Certification Standards (FAA-S-ACS-6C) say slow flight is flown at a speed where any further increase in angle of attack or load factor, or any reduction in power, would set off the stall warning, and that the turns, climbs and descents are flown **without** the warning sounding. Our Gold tier follows that rule. If the horn chirps, lower the nose slightly or add a little power.
+The current Airman Certification Standards (FAA-S-ACS-6C) say slow flight is flown at a speed where any further increase in angle of attack or load factor, or any reduction in power, would set off the stall warning. They also say the turns, climbs and descents are flown without the warning sounding. Our Gold tier follows that rule. If the horn chirps, lower the nose slightly or add a little power.
 
 :::callout{type="sim"}
 In a real airplane, you feel the controls go soft and hear the airflow get quieter. In the sim, watch the airspeed tape closely and listen for the stall horn.

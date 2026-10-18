@@ -25,14 +25,14 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## The same flight, three ways to go wrong
+## Three IFR failures on one route
 
-In [[l21-1-single-pilot-ifr-and-automation-management]] you planned KLVK to KMRY in cloud. This lesson flies that route three more times. First the alternator quits over the hills. Then the attitude indicator shows a red X on the approach. Then the radios go quiet. Each is a problem you know from Course 2, with the one thing that changes everything: you cannot look outside.
+In [[l21-1-single-pilot-ifr-and-automation-management]] you planned KLVK to KMRY in cloud. This lesson flies that route three more times. First the alternator quits over the hills. Then the attitude indicator shows a red X on the approach. Then the radios go quiet. You know each problem from Course 2. The difference now is that you cannot look outside.
 
 The fixes are mostly the ones from [[l14-1-electrical-failures]], [[l14-2-instrument-and-avionics-failures]] and [[l17-4-partial-panel-and-the-magnetic-compass]]. The new parts are the decisions: how soon to land, which approach to pick and how to get help.
 
 :::callout{type="real-world"}
-In a real airplane these emergencies are practiced with an instructor under a view-limiting device, never alone in real cloud, and instrument pilots fly recurrent training because the skills fade fast. A real electrical failure in cloud at night is one of the most dangerous situations in general aviation. Treat this lesson as a reason to keep real training current, not as a substitute for it.
+In a real airplane you practice these emergencies with an instructor under a view-limiting device, never alone in real cloud. Instrument pilots fly recurrent training because the skills fade fast. A real electrical failure in cloud at night is one of the most dangerous situations in general aviation. Treat this lesson as a reason to keep real training current, not as a substitute for it.
 :::
 
 :::callout{type="safety"}
@@ -41,7 +41,7 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 ## Declaring an emergency and asking for help
 
-In cloud you are not alone. ATC can see you, clear traffic out of your way, tell you where the nearest VMC is and talk you down with headings. Pilots delay asking because they fear paperwork. It is rare, and far easier than the alternative.
+In cloud, ATC can help. ATC can see you, clear traffic out of your way, tell you where the nearest VMC is and talk you down with headings. Pilots often delay asking because they fear paperwork. Paperwork after an emergency is rare, and much easier than the alternative.
 
 | You need                           | Say                                             | Set                                                                         | What ATC can do                                                 |
 | ---------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------- |
@@ -51,7 +51,7 @@ In cloud you are not alone. ATC can see you, clear traffic out of your way, tell
 
 Then give the facts ATC needs, in this order: who you are (call sign and type), what is wrong, what you want, where you are and your altitude. Add fuel remaining in minutes and people on board if there is time. "Mayday, Mayday, Mayday, NorCal Approach, Skyhawk 123, alternator failure in cloud, request vectors to the nearest ILS, 15 miles north of Salinas at 6,000." Then fly the airplane and let them work.
 
-In an emergency that needs immediate action you may deviate from any rule as far as the emergency requires. No permission and no declaration are needed for that authority; the FAA may ask you for a written report afterward. Tell ATC what you are doing anyway, so they can protect you. If you are not sure it is an emergency, say "Pan-Pan". You can always upgrade.
+In an emergency that needs immediate action you may deviate from any rule as far as the emergency requires. You need no permission and no declaration to use that authority. The FAA may ask you for a written report afterward. Tell ATC what you are doing anyway, so they can protect you. If you are not sure it is an emergency, say "Pan-Pan". You can always upgrade.
 
 :::quiz{id="l21-2-q1" type="single"}
 Your attitude indicator has failed in cloud. You are flying on the standby instruments but want ATC to know and to get priority handling. What do you say?
@@ -68,13 +68,13 @@ Pan-Pan is the urgency call: you need help and priority, but life is not yet in 
 
 ## Electrical failure in IMC
 
-An alternator failure looks the same in cloud as in sunshine: a LOW VOLTS annunciation, a discharge on the ammeter and a battery that is now the only thing keeping the G1000 alive. You learned the flow in [[l14-1-electrical-failures]]. In cloud, three things change.
+An alternator failure looks the same in cloud as in sunshine: a LOW VOLTS annunciation, a discharge on the ammeter and a battery that is now the only power source for the G1000. You learned the flow in [[l14-1-electrical-failures]]. In cloud, the plan changes in these ways.
 
-**Land soon.** In VMC you could fly home on the battery. In IMC you cannot. Every minute on the battery brings you closer to losing the screens keeping you upright. Go to the nearest airport with an approach you can fly, now. Not the destination, not the airport with cheap fuel.
+**Land soon.** In VMC you could fly home on the battery. In IMC you cannot. Every minute on the battery brings you closer to losing the attitude display you are flying by. Go now to the nearest airport with an approach you can fly, even if it is not the destination or the airport with cheap fuel.
 
 **Shed load hard.** Turn off everything not keeping you flying, navigating or talking: the second COM and NAV, lights you do not need, pitot heat unless you are in icing. The sooner you shed, the longer the battery lasts.
 
-**Know your battery time.** The main battery with a reduced load lasts a limited time, and the standby battery then keeps the essential instruments alive a little longer. That clock started when the alternator quit. Plan to be on the ground well inside it.
+**Know your battery time.** The main battery with a reduced load lasts a limited time, and the standby battery then powers the essential instruments a little longer. That clock started when the alternator quit. Plan to be on the ground well inside it.
 
 :::callout{type="memory"}
 Alternator failure in IMC:
@@ -92,7 +92,7 @@ POH check: the alternator-failure flow and the reset order against the 172S POH 
 :::
 
 :::callout{type="sim"}
-MSFS 2024 may not drain the battery after the ALT switch is turned off. If it does not, the challenge's event card still gives you a time limit, and you fly as if the clock were real. The habit matters more than the simulation.
+MSFS 2024 may not drain the battery after the ALT switch is turned off. If it does not, the challenge's event card still gives you a time limit. Fly as if the clock were real, so you build the habit.
 :::
 
 :::quiz{id="l21-2-q2" type="single"}
@@ -105,16 +105,16 @@ Alternator failure in cloud, 40 minutes from your destination and 12 minutes fro
 
 ---
 
-In IMC the battery is your only source of flight instruments, and its time is limited. The nearest airport with a flyable approach wins. Troubleshooting is one reset, then you fly.
+In IMC the battery is your only source of flight instruments, and its time is limited. Go to the nearest airport with a flyable approach. Troubleshooting is one reset, then you fly.
 :::
 
 ## Partial panel in IMC
 
-The second failure is a red X across the attitude and heading displays: the AHRS has failed. You learned to fly on the standby attitude indicator, standby airspeed and altimeter and the magnetic compass in [[l17-4-partial-panel-and-the-magnetic-compass]]. Two decisions make the difference in cloud.
+The second failure is a red X across the attitude and heading displays, which means the AHRS has failed. You learned to fly on the standby attitude indicator, standby airspeed and altimeter and the magnetic compass in [[l17-4-partial-panel-and-the-magnetic-compass]]. In cloud, you also need to make these decisions.
 
-**Ask for no-gyro vectors.** Tell ATC your heading indicator has failed and request a no-gyro vector or approach. The controller stops giving headings and says "turn left" and "stop turn" instead. You start a standard-rate turn the moment you hear "turn" and roll out on "stop turn"; once you are turned onto final, the controller tells you to make half-standard-rate turns. This takes the compass errors out of the problem.
+**Ask for no-gyro vectors.** Tell ATC your heading indicator has failed and request a no-gyro vector or approach. The controller stops giving headings and says "turn left" and "stop turn" instead. You start a standard-rate turn the moment you hear "turn" and roll out on "stop turn". Once you are on final, the controller tells you to make half-standard-rate turns. This method removes compass errors from the problem.
 
-**Choose the simplest approach.** Simple means vertical guidance, a long runway, straight-in, and the best weather within reach. An ILS or LPV to a long runway beats a VOR approach with a circle every time, even 10 miles further away. If anywhere within reach is VMC, go there and land visually.
+**Choose the simplest approach.** Simple means vertical guidance, a long runway, straight-in, and the best weather within reach. Choose an ILS or LPV to a long runway over a VOR approach with a circle, even if it is 10 miles farther away. If anywhere within reach is VMC, go there and land visually.
 
 | Choice    | Prefer                                | Avoid                                  |
 | --------- | ------------------------------------- | -------------------------------------- |
@@ -154,13 +154,13 @@ No-gyro vectors replace headings with timed turns. Start a standard-rate turn on
 
 ## Lost comms flight end to end
 
-The third failure is the quietest: you call approach and nobody answers. [[l18-5-enroute-ifr-and-lost-communications]] gave you the rules. Here is a whole flight, so you can see how they connect.
+In the third failure, you call approach and nobody answers. [[l18-5-enroute-ifr-and-lost-communications]] gave you the rules. Here is a whole flight, so you can see how they connect.
 
 You filed ALTAM, Modesto (MOD) and V111 to Salinas (SNS), 1 hour 10 minutes en route. The clearance: "Cleared to Monterey as filed, climb and maintain 4,000, expect 6,000 one-zero minutes after departure." The radios fail 8 minutes after takeoff, level at 4,000 in solid cloud, before you received the climb.
 
 | Step               | Question                        | Rule                                                                  | What you do                                                                                                                                   |
 | ------------------ | ------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Confirm         | Is it really lost comms?        | Try both radios, the last frequency, squelch, headset                 | Still nothing; squawk 7600                                                                                                                    |
+| 1. Confirm         | Is it really lost comms?        | Try both radios, the last frequency, squelch, headset                 | Still nothing. Squawk 7600                                                                                                                    |
 | 2. VMC?            | Can you stay visual and land?   | VMC: remain VMC, land as soon as practicable                          | Solid cloud, so continue IFR                                                                                                                  |
 | 3. Route           | Which route?                    | Assigned, Vectored, Expected, Filed                                   | "As filed": ALTAM, MOD, V111 to SNS                                                                                                           |
 | 4. Altitude        | Which altitude on this segment? | Highest of assigned, MEA or expected, segment by segment              | 4,000 until 10 minutes after departure, then 6,000, the expected altitude. V111 MEAs MOD–SNS are 5,000 and 5,500, both lower, so 6,000 to SNS |
@@ -168,7 +168,7 @@ You filed ALTAM, Modesto (MOD) and V111 to Salinas (SNS), 1 hour 10 minutes en r
 | 6. Approach        | Which approach?                 | The one you would most expect, flown as published without a clearance | The ILS or LOC RWY 10R from SNS, as published; land                                                                                           |
 | 7. On the ground   | Who do you call?                | Close the flight plan by phone                                        | Call the tower or Flight Service as soon as you are parked                                                                                    |
 
-Look at step 4. Pilots often stay at the assigned altitude because that is what they were cleared to. The rule says you also climb to the altitude you were told to expect, once the time or fix you were given arrives, and never fly below the MEA. ATC protects airspace around you based on these rules, so follow them even when lower feels more comfortable. One trap: if the radios fail after that time has passed and ATC never gave you the climb, the expected altitude no longer applies; fly the higher of the assigned altitude and the MEA.
+Pilots often get step 4 wrong. They stay at the assigned altitude because that is what they were cleared to. The rule says you also climb to the altitude you were told to expect, once the time or fix you were given arrives, and never fly below the MEA. ATC protects airspace around you based on these rules, so follow them even when lower feels more comfortable. Watch for one trap. If the radios fail after that time has passed and ATC never gave you the climb, the expected altitude no longer applies. Fly the higher of the assigned altitude and the MEA.
 
 :::callout{type="memory"}
 Lost comms in IMC:
@@ -195,19 +195,19 @@ The rule is the highest of the assigned altitude (4,000), the MEA (5,000) and th
 
 ## The stage check and the lost-comms challenge
 
-Two challenges finish Course 3.
+Course 3 ends with the challenges below.
 
-**Challenge C21.1 "Instrument stage check"** is the Course 3 checkride. From one brief, you copy a clearance, fly a departure, hold, fly the first approach by hand on partial panel after a failure event, go missed, then fly a second approach coupled to the autopilot and land. There is a 30% chance the alternator quits on the second approach. It is scored on the clearance, tracking, the hold, the partial-panel approach, the missed approach flow, your automation management and, above everything, never descending below DA or MDA without the runway environment. Silver or better earns the "Skyhawk Instrument Foundations (Sim)" badge, which marks what you have done in the sim. It is not a real certificate and does not count toward one.
+**Challenge C21.1 "Instrument stage check"** is the Course 3 checkride. From one brief, you copy a clearance, fly a departure, hold, fly the first approach by hand on partial panel after a failure event, go missed, then fly a second approach coupled to the autopilot and land. There is a 30% chance the alternator quits on the second approach. The challenge scores the clearance, tracking, the hold, the partial-panel approach, the missed approach flow, your automation management and, most important of all, never descending below DA or MDA without the runway environment. Silver or better earns the "Skyhawk Instrument Foundations (Sim)" badge, which marks what you have done in the sim. It is not a real certificate and does not count toward one.
 
-**Challenge C21.3 "Lost comms in IMC"** (P1) flies the C21.2 route with a two-way radio failure on the enroute leg: squawk 7600, choose the route by AVEF, fly the right altitude on each segment and fly the approach. It is the table above with you in the seat.
+**Challenge C21.3 "Lost comms in IMC"** (P1) flies the C21.2 route with a two-way radio failure on the enroute leg: squawk 7600, choose the route by AVEF, fly the right altitude on each segment and fly the approach. You fly the steps in the table above yourself.
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. Ask for help early: Pan-Pan or Mayday, then who, what, where and what you want. ATC can vector you, find VMC and talk you down.
 2. In cloud, an electrical or instrument failure means landing soon at the simplest approach within reach.
-3. Lost comms is a set of rules, not a guess: 7600, AVEF, highest altitude, approach at the EFC or ETA.
+3. Lost comms follows a set of rules: 7600, AVEF, highest altitude, approach at the EFC or ETA.
 
 **Practice.** This lesson feeds the `memory-items` deck (the three memory callouts) and the `ifr-rules` deck (the lost-comms route and altitude rules).
 

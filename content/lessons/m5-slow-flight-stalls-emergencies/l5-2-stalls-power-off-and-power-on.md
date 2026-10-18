@@ -21,7 +21,7 @@ simVersion: null
 
 ## What a stall is
 
-A **stall** happens when the wing exceeds its **critical angle of attack**. The air can no longer follow the top of the wing smoothly, and lift drops sharply. A stall is about **angle of attack**, not airspeed: you can stall at any speed and any attitude if you pull hard enough.
+A **stall** happens when the wing exceeds its **critical angle of attack**. The air can no longer follow the top of the wing smoothly, and lift drops sharply. A stall depends on angle of attack, not airspeed. You can stall at any speed and any attitude if you pull hard enough.
 
 Move the slider past the critical angle and watch the airflow break away.
 
@@ -36,7 +36,7 @@ Move the slider past the critical angle and watch the airflow break away.
 - **Sink.** The airplane descends even though the nose is high.
 
 :::callout{type="sim"}
-MSFS shows the buffet as a camera shake and plays the stall horn, but you don't feel it in your seat. The stall characteristics in the sim may be gentler or sharper than the real airplane. Treat the sim as practice for the recovery, not for the feel.
+MSFS shows the buffet as a camera shake and plays the stall horn, but you don't feel it in your seat. The stall characteristics in the sim may be gentler or sharper than the real airplane. Use the sim to practice the recovery, and expect the real airplane to feel different.
 :::
 
 ## The recovery sequence
@@ -44,7 +44,7 @@ MSFS shows the buffet as a camera shake and plays the stall horn, but you don't 
 This is the FAA's stall recovery template (Airplane Flying Handbook, chapter 5), in short:
 
 1. **Autopilot off**, if it's on.
-2. **Pitch nose down** to reduce the angle of attack. This is what actually ends the stall.
+2. **Pitch nose down** to reduce the angle of attack. This is what ends the stall.
 3. **Roll wings level.**
 4. **Add power** as needed.
 5. **Return to the desired flight path.** Climb away, and raise the flaps in stages.
@@ -68,7 +68,7 @@ What's the first action in any stall recovery?
 
 ## Power-off stalls
 
-A **power-off stall** simulates a stall on the **approach to land**, when you're slow, configured and at low power.
+A **power-off stall** simulates a stall on the approach to land, when you're slow, configured and at low power.
 
 1. Clearing turns.
 2. Configure as if on final: flaps 30°, about 65 KIAS, descending.
@@ -91,7 +91,7 @@ A power-off stall simulates which phase of flight?
 
 ## Power-on stalls
 
-A **power-on stall** simulates a stall on **takeoff or departure**, when you're climbing steeply at high power.
+A **power-on stall** simulates a stall on takeoff or departure, when you're climbing steeply at high power.
 
 1. Clearing turns.
 2. Slow to about liftoff speed (55–60 KIAS), flaps 0–10°.
@@ -99,17 +99,17 @@ A **power-on stall** simulates a stall on **takeoff or departure**, when you're 
 4. Raise the nose to a climb attitude steeper than for Vy, and hold it until the stall.
 5. Recover: nose down, wings level, climb away at Vy.
 
-At high power and low speed, you'll need **a lot of right rudder** to keep the ball centered. If you don't, one wing will drop at the stall.
+At high power and low speed, you'll need a lot of right rudder to keep the ball centered. If you don't, one wing will drop at the stall.
 
 ## Spins
 
-A **spin** is a stall where one wing is more stalled than the other, so the airplane rotates as it descends. Spins start from a stall with **uncoordinated** flight. Keep the ball centered near the stall and you won't spin. This course doesn't teach spin recovery.
+A **spin** is a stall where one wing is more stalled than the other, so the airplane rotates as it descends. Spins start from a stall with uncoordinated flight. Keep the ball centered near the stall and you won't spin. This course doesn't teach spin recovery.
 
 ## Common errors
 
-- **Pulling back during the recovery.** The nose is dropping and it feels natural to pull. Don't: pulling keeps the wing stalled.
+- **Pulling back during the recovery.** The nose is dropping and it feels natural to pull. Don't pull. Pulling keeps the wing stalled.
 - **Uncoordinated rudder**, which makes a wing drop.
-- **Big aileron inputs at the stall.** They can make things worse. Reduce the angle of attack first, then level the wings with coordinated aileron and rudder.
+- **Big aileron inputs at the stall.** They can deepen the stall. Reduce the angle of attack first, then level the wings with coordinated aileron and rudder.
 - **A secondary stall.** Pulling up too hard after the recovery stalls the wing again.
 
 :::quiz{id="l5-2-q3" type="single"}

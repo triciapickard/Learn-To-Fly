@@ -38,13 +38,13 @@ export const QUESTIONS: ChartQuestion[] = [
     id: 'w10-class-d-top',
     prompt: "Click the number that tells you the top of Livermore's Class D airspace.",
     targets: ['class-d-ceiling'],
-    explanation: 'The dashed blue box: 29 means the Class D goes up to 2,900 ft MSL.',
+    explanation: 'In the dashed blue box, 29 means the Class D goes up to 2,900 ft MSL.',
   },
   {
     id: 'w10-tower-frequency',
     prompt: 'Where would you find the tower frequency for Livermore? Click it.',
     targets: ['lvk-data-block'],
-    explanation: 'The airport data block: CT – 118.1 is the control tower frequency.',
+    explanation: 'In the airport data block, CT – 118.1 is the control tower frequency.',
   },
   {
     id: 'w10-isogonic',

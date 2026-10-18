@@ -39,7 +39,7 @@ procedure:
   - Clearing turns, looking for traffic below you.
   - Configure as if on final (flaps 30, about 65 KIAS, descending).
   - Reduce power to idle and smoothly raise the nose to hold altitude.
-  - This challenge uses the full stall. Hold the nose up until the nose drops or the buffet is clear, then recover promptly. That is what the ACS asks for (acknowledge the cues of the impending stall, then recover promptly after a full stall occurs).
+  - This challenge uses the full stall. Hold the nose up until the nose drops or the buffet is clear, then recover promptly. The ACS asks for this (acknowledge the cues of the impending stall, then recover promptly after a full stall occurs).
   - Recover. Nose down to reduce the angle of attack, wings level, full power, flaps 20, climb, then flaps up in stages.
 
 criteria:

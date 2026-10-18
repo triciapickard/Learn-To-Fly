@@ -5,7 +5,7 @@ module: m2-fundamentals
 order: 3
 priority: P0
 title: Climbs and descents
-summary: Enter climbs and descents with attitude, power and trim, and level off exactly on your target altitude.
+summary: Enter climbs and descents with attitude, power and trim, and level off on your target altitude.
 estimatedMinutes: 15
 prerequisites: [l2-2-attitude-flying-and-trim]
 objectives:
@@ -27,7 +27,7 @@ The order is **attitude, power, trim**:
 2. **Power.** Add full power.
 3. **Trim.** As the speed settles on your target, trim away the back pressure.
 
-Then adjust the attitude to hold the speed: nose up a little if you're too fast, down a little if you're too slow. In a climb, **pitch controls airspeed**.
+Then adjust the attitude to hold the speed: nose up a little if you're too fast, down a little if you're too slow. In a climb, pitch controls airspeed.
 
 ## Which climb speed?
 
@@ -54,7 +54,7 @@ Which speed gives the most altitude per unit of time?
 
 ## Leveling off from a climb
 
-Start the level-off before you reach the altitude, or you'll overshoot. Lead by about **10% of your vertical speed**: climbing at 500 fpm, start 50 ft early.
+Start the level-off before you reach the altitude, or you'll overshoot. Lead by about 10% of your vertical speed. If you're climbing at 500 fpm, start 50 ft early.
 
 The order for the level-off is **attitude, power, trim**:
 
@@ -96,7 +96,7 @@ To descend at a chosen speed:
 2. **Attitude.** Hold the attitude that gives your target speed. The nose goes a little below the horizon.
 3. **Trim** once it's stable.
 
-In a descent at constant speed, **power controls the rate of descent**: less power, faster descent. Pitch still sets the airspeed.
+In a descent at constant speed, power controls the rate of descent. Less power gives a faster descent. Pitch still sets the airspeed.
 
 Try it below: set up a 500 fpm descent at 90 knots.
 
@@ -108,7 +108,7 @@ Sim check: fly the descent settings in the sim and adjust the RPM ranges (Sectio
 
 ## Leveling off from a descent
 
-Start adding power **50–100 ft before** your target altitude, and raise the nose to the level picture as the power comes in. Then trim. If you raise the nose without adding power, you'll slow down.
+Start adding power 50–100 ft before your target altitude, and raise the nose to the level picture as the power comes in. Then trim. If you raise the nose without adding power, you'll slow down.
 
 ## Look before you climb
 

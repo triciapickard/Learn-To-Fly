@@ -29,7 +29,7 @@ Before every real flight, the pilot walks around the airplane. The **preflight i
 - **Tires and brakes.** Inflated, no damage.
 - **Covers and tie-downs.** Remove the pitot cover, the chocks and the tie-down ropes.
 
-In MSFS 2024 a cold-and-dark start puts you outside the airplane. Before you can climb in, remove the three remove-before-flight covers (pitot tube, static port and engine) and the wheel chocks. It's a short walkaround: use it to build the habit.
+In MSFS 2024 a cold-and-dark start puts you outside the airplane. Before you can climb in, remove the three remove-before-flight covers (pitot tube, static port and engine) and the wheel chocks. It's a short walkaround, so use it to build the habit.
 
 :::callout{type="verify"}
 Sim check: covers and chocks checked in the sim on 2026-10-14. Still to check: whether the walkaround models fuel sampling, the oil dipstick or tie-downs.
@@ -43,7 +43,7 @@ Before you touch the engine controls:
 2. **Parking brake.** Set.
 3. **A cockpit flow.** Work across the panel in one direction, left to right, touching each control in order. A flow is faster than reading every item, and the checklist afterwards catches anything you missed.
 
-Run the before-starting-engine checklist below. In this summary, each item has the **action** to take.
+Run the before-starting-engine checklist below. In this summary, each item has the action to take.
 
 ::checklist{slug="before-starting-engine"}
 
@@ -56,9 +56,9 @@ The starting sequence for the fuel-injected Skyhawk:
 3. **Prime.** Auxiliary fuel pump on and mixture pushed to rich for a few seconds, until the fuel flow shows, then mixture back to idle cut-off and pump off. Skip this if the engine is warm.
 4. **Beacon light** on, so people outside know the engine is about to start.
 5. **Look outside and shout "CLEAR!"**
-6. **Key to START.** Release it to BOTH as soon as the engine fires, and push the **mixture** smoothly to rich.
-7. **Throttle** to about **1,000 RPM**.
-8. **Oil pressure.** Check that it rises into the green within **30 to 60 seconds**. If it doesn't, shut the engine down.
+6. **Key to START.** Release it to BOTH as soon as the engine fires, and push the mixture smoothly to rich.
+7. **Throttle** to about 1,000 RPM.
+8. **Oil pressure.** Check that it rises into the green within 30 to 60 seconds. If it doesn't, shut the engine down.
 
 :::callout{type="safety"}
 Always shout "CLEAR!" before starting, even in the sim. A spinning propeller is almost invisible, and habits you build here transfer to the real airplane.
@@ -80,7 +80,7 @@ What must rise into the green within 30 to 60 seconds after the engine starts?
 
 ---
 
-**Oil pressure.** Without it the engine isn't being lubricated. If it doesn't rise within 60 seconds, shut down. Oil temperature takes much longer to rise.
+**Oil pressure.** Without it, nothing lubricates the engine. If it doesn't rise within 60 seconds, shut down. Oil temperature takes much longer to rise.
 :::
 
 :::quiz{id="l3-1-q2" type="single"}
@@ -93,14 +93,14 @@ Why do pilots shout "CLEAR!" before starting the engine?
 
 ---
 
-To **warn anyone near the propeller**, and to make yourself look outside before you turn the key.
+To warn anyone near the propeller, and to make yourself look outside before you turn the key.
 :::
 
 ## After the start
 
 Once the engine is running smoothly:
 
-- **Avionics master on.** The G1000 screens come to life.
+- **Avionics master on.** The G1000 screens turn on.
 - **Flaps** up, and check they move.
 - **Lights** as needed: navigation lights, taxi light.
 - **Altimeter** set, and listen to the airport weather (ATIS or AWOS).
@@ -108,7 +108,7 @@ Once the engine is running smoothly:
 
 ## When it won't start
 
-In the sim, a failed start is almost always one of three things:
+In the sim, a failed start almost always comes from one of these:
 
 - **Fuel selector** not on BOTH, or the fuel shutoff valve pulled out.
 - **Mixture** left at idle cut-off.
@@ -124,7 +124,7 @@ The engine won't start in the sim. What do you check first?
 
 ---
 
-Check the **mixture** (not in idle cut-off once the engine should be running) and the **fuel selector** (on BOTH). Without fuel, there's nothing to burn.
+Check the mixture (not in idle cut-off once the engine should be running) and the fuel selector (on BOTH). Without fuel, there's nothing to burn.
 :::
 
-Now try it for real in [[c3-1-cold-and-dark-to-running]].
+Now try it in [[c3-1-cold-and-dark-to-running]].

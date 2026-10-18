@@ -24,7 +24,7 @@ Radio is noisy, and many pilots share one frequency. Aviation uses a standard wa
 
 ## The phonetic alphabet
 
-Letters are spoken as words, so "B" and "D" can't be confused:
+Pilots say letters as words, so nobody confuses "B" and "D":
 
 | Letter | Word    | Letter | Word     | Letter | Word    |
 | ------ | ------- | ------ | -------- | ------ | ------- |
@@ -40,13 +40,13 @@ Letters are spoken as words, so "B" and "D" can't be confused:
 
 ## Numbers
 
-Most numbers are said normally, with a few exceptions to make them clearer:
+You say most numbers normally, with a few exceptions to make them clearer:
 
 - **3** is "tree", **5** is "fife" and **9** is "niner".
 - Say each digit separately: 123 is "one two three".
 - Altitudes use thousands and hundreds: 3,500 is "three thousand five hundred".
 - Headings are always three digits: 090 is "heading zero niner zero".
-- Frequencies: 122.8 is "one two two point eight".
+- In frequencies, 122.8 is "one two two point eight".
 
 ## Call signs
 
@@ -119,7 +119,7 @@ Listen to it before you call, and tell the controller which one you have: "with 
 
 ## Homework: listen
 
-Spend 15 minutes on **LiveATC**, listening to a towered airport near you or to Livermore. You'll start to hear the patterns: short calls, standard phrases and read-backs.
+Spend 15 minutes on LiveATC, listening to a towered airport near you or to Livermore. You'll start to hear the patterns: short calls, standard phrases and read-backs.
 
 :::callout{type="sim"}
 MSFS's ATC lets you choose calls from a menu, and reads them out for you. Try saying each call out loud before you choose it. It's the best way to practice without a real radio.

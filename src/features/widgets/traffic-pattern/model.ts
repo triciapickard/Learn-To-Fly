@@ -198,7 +198,7 @@ export const LEGS: Record<LegId, LegInfo> = {
     tas: 88,
     short: '85–90 KIAS, flaps 0 → 10',
     config:
-      'Level at pattern altitude, 2,000–2,100 RPM, 85–90 KIAS, flaps 0. Abeam the touchdown point: about 1,500 RPM, flaps 10, slow to 80 KIAS and start down.',
+      'Level at pattern altitude, 2,000–2,100 RPM, 85–90 KIAS, flaps 0. Abeam the touchdown point, reduce to about 1,500 RPM, set flaps 10, slow to 80 KIAS and start down.',
     call: ({ airport, runway, side }) =>
       `${airport} traffic, ${who}, ${side} downwind runway ${runway}, touch-and-go, ${airport}.`,
   },
@@ -226,7 +226,7 @@ export const LEGS: Record<LegId, LegInfo> = {
     name: 'Touch-and-go',
     tas: 55,
     short: 'Flaps up, full power',
-    config: 'After touchdown: flaps up, full power, rotate at 55 KIAS.',
+    config: 'After touchdown, raise the flaps, add full power and rotate at 55 KIAS.',
   },
   departure: {
     id: 'departure',
@@ -249,7 +249,7 @@ export const LEGS: Record<LegId, LegInfo> = {
     tas: 70,
     short: 'Full power, flaps 20',
     config:
-      'Full power, pitch for the climb, flaps 20; once climbing, flaps 10, then 0. Side-step to the side of the runway away from the pattern to keep departing traffic in sight.',
+      'Full power, pitch for the climb, flaps 20. Once climbing, flaps 10, then 0. Side-step to the side of the runway away from the pattern to keep departing traffic in sight.',
     call: ({ airport, runway }) =>
       `${airport} traffic, ${who}, going around runway ${runway}, ${airport}.`,
   },

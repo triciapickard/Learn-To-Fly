@@ -21,10 +21,10 @@ simVersion: null
 
 ## The approach that ends in a climb
 
-Half of every approach briefing is about the missed approach, and most pilots fly a hundred approaches before they need one for real. That is the problem. The missed approach is a go-around in cloud, started at the moment you most want to land, with a turn and a climb to a fix you have to find on the plate. Like the go-around in [[l4-4-go-arounds]], it is a normal maneuver and a sign of good judgment, not a failure. Learn to Fly scores it as a pass every time it is the right call.
+Half of every approach briefing is about the missed approach, but most pilots fly a hundred approaches before they need one for real, so it rarely gets practiced. The missed approach is a go-around in cloud, started at the moment you most want to land, with a turn and a climb to a fix you have to find on the plate. Like the go-around in [[l4-4-go-arounds]], it is a normal maneuver and a sign of good judgment. Learn to Fly scores it as a pass every time it is the right call.
 
 :::callout{type="real-world"}
-In a real airplane, the missed approach is practiced until the first three steps happen without thought, because the alternative, hesitating at 200 ft in cloud, is how controlled flight into terrain happens. Real training also covers things the sim cannot: a missed approach in icing, with a passenger asking questions, and with an engine that may not give full power. Fly the flow here until it is automatic, then remember it is only the beginning.
+In a real airplane, the missed approach is practiced until the first three steps happen without thought, because the alternative, hesitating at 200 ft in cloud, is how controlled flight into terrain happens. Real training also covers things the sim cannot: a missed approach in icing, with a passenger asking questions, and with an engine that may not give full power. Fly the flow here until it is automatic, and know that real training goes much further.
 :::
 
 :::callout{type="safety"}
@@ -33,7 +33,7 @@ Instrument procedures change every 28 days. Never use this content for real IFR 
 
 ## When to go missed
 
-The obvious trigger is reaching DA, or the MAP at MDA, without the runway environment in sight. It is not the only one. Anything that makes the approach unsafe before that point is also a missed approach, and the earlier you call it, the easier it is to fly.
+The obvious trigger is reaching DA, or the MAP at MDA, without the runway environment in sight, but there are others. Anything that makes the approach unsafe before that point is also a missed approach, and the earlier you call it, the easier it is to fly.
 
 | Trigger                                               | When                 | Why                                                                        |
 | ----------------------------------------------------- | -------------------- | -------------------------------------------------------------------------- |
@@ -41,11 +41,11 @@ The obvious trigger is reaching DA, or the MAP at MDA, without the runway enviro
 | Runway in sight but a normal landing is not possible  | At or after minimums | Too high, too fast, or not in the touchdown zone                           |
 | Full-scale needle inside the FAF                      | Any time             | You are outside the protected airspace                                     |
 | Not stabilized by 1,000 ft above the airport in IMC   | Inside the FAF       | The Learn to Fly standard from [[l20-1-anatomy-of-an-instrument-approach]] |
-| A guidance flag (NAV, GS, LOI) or a lost annunciation | Any time             | The needles are lying                                                      |
+| A guidance flag (NAV, GS, LOI) or a lost annunciation | Any time             | The guidance is no longer reliable                                         |
 | ATC instructs you to go around                        | Any time             | Traffic or a runway problem                                                |
 | You lose the runway after seeing it (circling)        | Below MDA            | See [[l20-6-circling-approaches-and-procedure-turns]]                      |
 
-The "not stabilized" line is the one pilots argue with themselves about. Do not argue. If you are off the needles, fast, and sinking at 1,200 fpm to catch up, the runway may appear and you may even land. That is luck. The missed approach is the plan.
+Pilots often talk themselves out of the "not stabilized" trigger. Treat it as final. If you are off the needles, fast, and sinking at 1,200 fpm to catch up, the runway may appear and you may even land, but only by luck. Go missed.
 
 :::quiz{id="l20-5-q1" type="multi"}
 Which of these require a missed approach? Pick all that apply.
@@ -63,7 +63,7 @@ Everything except the stabilized approach with the runway environment in sight. 
 
 ## The flow
 
-The first part of the missed approach is a memory flow. You do not look it up and you do not reach for the plate; you fly it from the top, in order, and only then navigate.
+The first part of the missed approach is a memory flow. Do not look it up or reach for the plate. Fly it from the top, in order, and only then navigate.
 
 :::callout{type="memory"}
 **Missed approach flow**
@@ -77,9 +77,9 @@ The first part of the missed approach is a memory flow. You do not look it up an
 
 :::
 
-The order is the order of what kills you. Power and pitch stop the descent; positive rate proves it; flaps clean the airplane up; only then does anyone care where you are going, and ATC can wait until the airplane is climbing. In the sim, at DA, say each word as you do it. In Challenge C20.5 the flow is scored in this exact order.
+The order puts the most urgent threat first. Power and pitch stop the descent. Positive rate proves it. Flaps clean the airplane up. Only then does navigation matter, and ATC can wait until the airplane is climbing. In the sim, at DA, say each word as you do it. Challenge C20.5 scores the flow in this order.
 
-The go-around speed from the checklist is {{vspeed.goAround}} with the flaps still partly out; let the airplane accelerate to {{vspeed.vy}} as they come up. Expect a strong pitch-up with full power and nose-up trim from the approach: push, then re-trim.
+The go-around speed from the checklist is {{vspeed.goAround}} with the flaps still partly out. Let the airplane accelerate to {{vspeed.vy}} as they come up. Expect a strong pitch-up with full power and nose-up trim from the approach. Push, then re-trim.
 
 :::callout{type="verify"}
 Sim check: confirm the flap retraction schedule for a go-around from flaps 10 (ILS) and from flaps 30 against the in-sim checklist, then against the POH balked-landing procedure, and that `{{vspeed.goAround}}` (60 KIAS, flaps 20 in `aircraft.yaml`) matches both. The flow is Appendix B.13, "simplified for the sim".
@@ -111,7 +111,7 @@ Every plate prints its missed approach in the briefing strip and draws it with a
 | Holding fix  | DEPOT                                                        |
 | Hold         | As published: right turns, inbound course 100, 1-minute legs |
 
-Two rules protect you. First, **no turns before the MAP**. If you go missed early, say at a full-scale needle 3 nm outside the MAP, climb to the missed approach altitude but fly the final approach course to the MAP before starting the turn, because the obstacle clearance for the turn starts there. Second, **the first altitude before the turn is a floor**: "climb to 1,200, then climbing right turn" means do not start the turn until 1,200 ft. You drew this hold and chose its entry in [[l19-1-holding-patterns-entries-timing-and-wind]]; now it has a purpose.
+Make **no turns before the MAP**. If you go missed early, say at a full-scale needle 3 nm outside the MAP, climb to the missed approach altitude but fly the final approach course to the MAP before starting the turn, because the obstacle clearance for the turn starts there. Also, **the first altitude before the turn is a floor**: "climb to 1,200, then climbing right turn" means do not start the turn until 1,200 ft. You drew this hold and chose its entry in [[l19-1-holding-patterns-entries-timing-and-wind]]. Here you fly it at the end of a missed approach.
 
 :::callout{type="verify"}
 Widget pending: Widget W38 (Approach Plate Explorer) is embedded here once Phase 21 ships it: `::widget{name="approach-plate" mode="missed"}`, animating the missed approach from the MAP to the hold. The DEPOT hold details (right turns, inbound course 100) must match the W38 data.
@@ -132,7 +132,7 @@ The missed approach is designed from the MAP. Going missed early, you climb at o
 
 ## The G1000 and the missed approach
 
-The box does not know you went missed until you tell it. As you pass the MAP the G1000 **suspends** automatic sequencing, shows SUSP on the HSI, and keeps guiding you along the runway's extended centerline. The navigate step of the flow is where you fix this:
+The G1000 does not switch to the missed approach until you tell it to. As you pass the MAP the G1000 **suspends** automatic sequencing, shows SUSP on the HSI, and keeps guiding you along the runway's extended centerline. Fix this at the navigate step of the flow:
 
 | Step | Action                                                                                      | What you should see                                                                                                                                                     |
 | ---- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -141,7 +141,7 @@ The box does not know you went missed until you tell it. As you pass the MAP the
 | 3    | On an ILS, confirm the CDI is back on **GPS**; if not, press the **CDI** softkey            | Needle turns magenta; the missed approach is a GPS route                                                                                                                |
 | 4    | When ready, select **NAV** on the autopilot and an altitude mode                            | The autopilot follows the missed approach to the hold                                                                                                                   |
 
-The autopilot in GA mode flies a wings-level climb at a fixed pitch and nothing else. It does not turn. (On the older, non-NXi G1000, pressing GA disconnected the autopilot and left only the flight director; the NXi keeps it engaged.) Either way, nobody is navigating until you complete step 2 and select NAV. Watch the mode annunciator and say what you see: "GA, GA; SUSP cleared, MAPR, GPS; NAV, ALT armed."
+The autopilot in GA mode flies a wings-level climb at a fixed pitch and nothing else. It does not turn. (On the older, non-NXi G1000, pressing GA disconnected the autopilot and left only the flight director. The NXi keeps it engaged.) Either way, nobody is navigating until you complete step 2 and select NAV. Watch the mode annunciator and say what you see: "GA, GA; SUSP cleared, MAPR, GPS; NAV, ALT armed."
 
 :::callout{type="verify"}
 Sim check: Garmin 190-02177-02 confirms SUSP at the MAP, the OBS softkey becoming SUSP, the GA button activating the missed approach, MAPR on the HSI once it is active, and the autopilot staying engaged in GA mode. Still open: whether the Working Title NXi in MSFS 2024 behaves the same, whether the CDI returns to GPS by itself after an ILS (Garmin's guide does not say), and the screenshot "HSI with SUSP at the MAP, then first missed approach leg active".
@@ -149,10 +149,10 @@ Sim check: Garmin 190-02177-02 confirms SUSP at the MAP, the OBS softkey becomin
 
 ## What to do next
 
-Established in the hold at DEPOT, climbing through the gray, you have time. Use it for the decision the hold exists to protect.
+Once you are established in the hold at DEPOT, you have time to decide what comes next.
 
 :::callout{type="decision"}
-**Hold, try again, or divert?** Hold if the weather is improving and you have the fuel to wait and still reach the alternate with 45 minutes to spare. Try again only if something _specific_ will be different: the ATIS now reports a higher ceiling, or the first attempt failed because of something you can fix (an unstable approach, a wrong transition). Divert if the weather at minimums was not there and nothing has changed, if fuel is a question, or if you are tired of the question itself. "I'll try once more and see" is not a plan. Two missed approaches in a row at the same airport is a strong signal that the third would be the same.
+**Hold, try again, or divert?** Hold if the weather is improving and you have the fuel to wait and still reach the alternate with 45 minutes to spare. Try again only if something _specific_ will be different: the ATIS now reports a higher ceiling, or the first attempt failed because of something you can fix (an unstable approach, a wrong transition). Divert if the weather at minimums was not there and nothing has changed, if fuel is a question, or if you are getting tired. "I'll try once more and see" is not a plan. Two missed approaches in a row at the same airport is a strong signal that the third would be the same.
 :::
 
 Whichever you choose, tell ATC early and in plain words: "Skyhawk 123AB, missed approach, request the RNAV 25R again" or "request clearance to Stockton." In the sim, the self-voiced script in the challenge brief covers both.
@@ -167,21 +167,21 @@ After a missed approach, the ATIS still reports a ceiling 200 ft below the minim
 
 ---
 
-Nothing will be different on a second attempt, the forecast says so, and fuel is already tight. The alternate exists for exactly this. Diverting is the good decision, and it is scored as one.
+Nothing will be different on a second attempt. The forecast says so, and fuel is already tight. The alternate exists for this situation. Diverting is the good decision, and the sim scores it as one.
 :::
 
 ## Practice and next steps
 
-Four things to carry forward:
+To carry forward:
 
 1. Go missed at DA or the MAP without the runway environment, and earlier for a full-scale needle, an unstable approach or a flag.
 2. Power, pitch, positive rate, flaps, navigate, talk.
-3. No turns before the MAP; the first altitude is a floor before the turn.
-4. SUSP off, CDI to GPS, NAV on; then hold, try again or divert, for a reason you can say aloud.
+3. No turns before the MAP. The first altitude is a floor before the turn.
+4. SUSP off, CDI to GPS, NAV on. Then hold, try again or divert, for a reason you can say aloud.
 
-**Practice.** This lesson feeds the `memory-items` deck: the missed approach flow, in order, is a card you should be able to answer in your sleep.
+**Practice.** This lesson feeds the `memory-items` deck: the missed approach flow, in order, is a card you should be able to answer instantly.
 
-**Fly it.** Challenge C20.5 "Missed approach to the hold" flies the KLVK "ILS RWY 25R" (not for navigation) in `WX_IMC_BELOW` weather, so the brief tells you to expect to go missed, and scores the flow, the published missed approach and the hold entry. Challenge C20.6 "Partial-panel approach" (P1) adds a failed PFD before the FAF. The last lesson in this module, [[l20-6-circling-approaches-and-procedure-turns]], covers two things you will meet on plates even if you rarely fly them.
+**Fly it.** Challenge C20.5 "Missed approach to the hold" flies the KLVK "ILS RWY 25R" (not for navigation) in `WX_IMC_BELOW` weather, so the brief tells you to expect to go missed, and scores the flow, the published missed approach and the hold entry. Challenge C20.6 "Partial-panel approach" (P1) adds a failed PFD before the FAF. The last lesson in this module, [[l20-6-circling-approaches-and-procedure-turns]], covers circling approaches and procedure turns, which you will meet on plates even if you rarely fly them.
 
 :::callout{type="verify"}
 Sim check: in d-TPP cycle 2610 (01–29 Oct 2026) the KLVK "ILS RWY 25R" missed approach is "climb to 1200, then climbing right turn to 5000 on heading 020° and OAK R-060 to ALTAM (OAK 23.3 DME) and hold, continue climb-in-hold to 5000", and it requires 358 ft per nm to 3,600 ft (the "LOC RWY 25R" alternative needs 235 ft per nm). Still open: the procedure, the ALTAM hold and that climb gradient in the sim's C172, before C20.5 is written against it.

@@ -95,7 +95,7 @@ const STEPS: { title: string; text: string; icon: LucideIcon }[] = [
   },
   {
     title: 'See',
-    text: 'Diagrams and cockpit views next to the words, not instead of them.',
+    text: 'Diagrams and cockpit views sit beside the text that explains them.',
     icon: Eye,
   },
   {
@@ -110,7 +110,7 @@ const STEPS: { title: string; text: string; icon: LucideIcon }[] = [
   },
   {
     title: 'Reflect',
-    text: 'Debrief honestly against a rubric. Good go-arounds count too.',
+    text: 'Score yourself against a rubric. Good go-arounds count too.',
     icon: ClipboardCheck,
   },
 ];
@@ -278,8 +278,8 @@ export default function LandingPage() {
           </h1>
           <p className="body-lg mt-6 max-w-[34em] text-ink-2">
             Learn to Fly takes a complete beginner from the first takeoff to a planned cross-country
-            flight in the Cessna 172, inside Microsoft Flight Simulator 2024. Short lessons,
-            diagrams you can play with, and challenges you fly in the sim and score against real
+            flight in the Cessna 172, inside Microsoft Flight Simulator 2024. You read short
+            lessons, play with diagrams, and fly challenges in the sim that you score against real
             pilot standards.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">

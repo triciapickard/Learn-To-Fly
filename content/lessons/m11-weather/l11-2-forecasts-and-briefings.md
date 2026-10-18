@@ -21,12 +21,12 @@ simVersion: null
 
 ## The morning ritual
 
-Every real pilot has the same ritual before a cross-country: coffee, then the weather. Not a phone app that says "sunny, 72°", but a **briefing**: a structured read of what the sky is doing now, what it will do over the next few hours and what the forecasters are worried about.
+Before a cross-country, every real pilot checks the weather with a **briefing**, a structured read of what the sky is doing now, what it will do over the next few hours and what the forecasters are worried about. A phone app that says "sunny, 72°" leaves most of that out.
 
 [[l11-1-weather-theory-air-masses-fronts-and-stability]] taught what fronts, stability and the marine layer do. This lesson teaches you to read the products that describe them, ending with a full briefing for Livermore to Monterey.
 
 :::callout{type="sim"}
-Nothing in this lesson is a forecast for the sim. MSFS 2024 presets are fixed conditions you set, and live weather is a snapshot of now, not a forecast of later ([[l11-5-weather-in-msfs-2024]]). You brief for the sim as you would for a real flight because the habit is the point.
+Nothing in this lesson is a forecast for the sim. MSFS 2024 presets are fixed conditions you set, and live weather shows conditions now without forecasting later ([[l11-5-weather-in-msfs-2024]]). You brief for the sim as you would for a real flight to build the habit.
 :::
 
 ## The standard briefing order
@@ -70,7 +70,7 @@ A **TAF** (terminal aerodrome forecast) covers the area within about 5 statute m
 
 ::widget{name="metar-decoder" mode="explore"}
 
-The difference is time: a METAR says what is happening now; a TAF is a list of periods, each with its own conditions. Here is an **invented example TAF** for Livermore, realistic for a fall night when the marine layer pushes inland, but made up for teaching and not a real forecast.
+The difference is time. A METAR says what is happening now, and a TAF is a list of periods, each with its own conditions. Here is an **invented example TAF** for Livermore, realistic for a fall night when the marine layer pushes inland, but made up for teaching and not a real forecast.
 
 ```
 TAF KLVK 131720Z 1318/1418 25010KT P6SM SKC
@@ -81,7 +81,7 @@ TAF KLVK 131720Z 1318/1418 25010KT P6SM SKC
      FM141700 26008KT P6SM SCT015
 ```
 
-Line by line. All times are Zulu; Pacific Daylight Time is 7 hours behind.
+Here it is line by line. All times are Zulu, and Pacific Daylight Time is 7 hours behind.
 
 | Line                             | Decoded                                                                                                              |
 | -------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -93,7 +93,7 @@ Line by line. All times are Zulu; Pacific Daylight Time is 7 hours behind.
 | `PROB30 1412/1415 1SM BR OVC003` | Between 12Z and 15Z, a **30% chance** of 1 SM in mist with an overcast at 300 ft                                     |
 | `FM141700 26008KT P6SM SCT015`   | From 17Z (10 a.m.): wind 260° at 8 kt, visibility over 6 SM, scattered at 1,500 ft. The marine layer has burned off  |
 
-The change groups are the whole skill of TAF reading:
+Most of TAF reading is knowing the change groups:
 
 | Group      | Meaning                                                                                    | How to treat it                                                  |
 | ---------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
@@ -101,9 +101,9 @@ The change groups are the whole skill of TAF reading:
 | **TEMPO**  | Temporary fluctuations, each under an hour and together less than half the period          | Plan for the TEMPO conditions; they can be there when you arrive |
 | **PROB30** | A 30% probability of those conditions during the period                                    | "Possible". For VFR, plan as if the worse case can happen        |
 
-There is also **BECMG**, a gradual change over a period, which NWS TAFs do not use; you will meet it in military and foreign TAFs. A TAF has no temperature or altimeter group; use the METAR for those.
+There is also **BECMG**, a gradual change over a period, which NWS TAFs do not use. You will meet it in military and foreign TAFs. A TAF has no temperature or altimeter group, so use the METAR for those.
 
-Now read it as a pilot. At 7 a.m. tomorrow the TAF says mist, scattered at 800 ft and short spells of an overcast at 600 ft: below VFR minimums for Livermore's Class D. By 10 a.m. it is scattered at 1,500 ft and clearing. A 7 a.m. departure is a no-go; a 10:30 departure is fine.
+Now read it as a pilot. At 7 a.m. tomorrow the TAF says mist, scattered at 800 ft and short spells of an overcast at 600 ft. That is below VFR minimums for Livermore's Class D. By 10 a.m. it is scattered at 1,500 ft and clearing. A 7 a.m. departure is a no-go, and a 10:30 departure is fine.
 
 :::callout{type="verify"}
 Widget pending: W17 is embedded above in METAR mode. The spec wants a TAF mode (`mode="taf"` or similar) that decodes this example on click; add it once the widget supports TAFs. The example is invented and must stay labeled "example"; never replace it with a real forecast. Desk-verified 2026-10-13: 5 SM radius, 24-hour validity (30 hours at some major airports), the TEMPO definition and the PROB30 rules match the Aviation Weather Handbook 27.4 and AIM 7-1-28.
@@ -135,7 +135,7 @@ The TAF includes `TEMPO 1410/1414 2SM BR OVC006`. You plan to arrive at 12Z. Wha
 TEMPO means temporary fluctuations, each under an hour, within that period. They are not continuous, but one can be in progress when you arrive, so you plan for them. `006` is 600 ft AGL, not 6,000.
 :::
 
-## The GFA: the picture, not the code
+## The GFA: graphical forecasts
 
 Text products describe single points. The **Graphical Forecasts for Aviation** (GFA) on aviationweather.gov shows the whole region at once, with a time slider to step through the hours of your flight.
 
@@ -148,7 +148,7 @@ Text products describe single points. The **Graphical Forecasts for Aviation** (
 | **Icing**                            | Icing probability and severity by altitude                                                    | For the Skyhawk, anywhere this is shaded is a no          |
 | **Turbulence**                       | Turbulence by altitude                                                                        | Low-level turbulence on a hot afternoon                   |
 
-Walk through it in briefing order: adverse first. Open the Ceiling & Visibility view, drag the slider to your departure time and look for blue, red and magenta (MVFR, IFR and LIFR) along your route; VFR areas are left unshaded. Drag it to your arrival time and look again. Then Clouds for the bases, then Winds for the ride. The slider runs about 18 hours ahead in hourly steps.
+Walk through it in briefing order, adverse conditions first. Open the Ceiling & Visibility view, drag the slider to your departure time and look for blue, red and magenta (MVFR, IFR and LIFR) along your route. VFR areas are unshaded. Drag it to your arrival time and look again. Then Clouds for the bases, then Winds for the ride. The slider runs about 18 hours ahead in hourly steps.
 
 :::callout{type="verify"}
 Author decision: shot list, "GFA Ceiling & Visibility view, NorCal, time slider at a marine-layer morning" and "GFA Clouds view for the same hour", annotated with the flight-category colors and the slider. Desk-verified 2026-10-13: view names and colors match aviationweather.gov/gfa and its help page; re-check them on the day the shots are taken, the site changes.
@@ -166,7 +166,7 @@ The **winds and temperatures aloft forecast** (FB) gives direction, speed and te
 | `9900`    | Light and variable (under 5 kt)                                                                           |
 | `7312`    | Wind from 230° at 112 kt: when the speed is over 99 kt, 50 is added to the direction and 100 to the speed |
 
-Two gaps: no wind is forecast within 1,500 ft of the station elevation and no temperature within 2,500 ft, so the 3,000 ft column often has wind only. Above 24,000 ft the temperature sign is dropped because it is always negative. Directions are true, like a chart, not magnetic.
+The forecast gives no wind within 1,500 ft of the station elevation and no temperature within 2,500 ft, so the 3,000 ft column often has wind only. Above 24,000 ft the code drops the temperature sign because it is always negative. Directions are true, like a chart, not magnetic.
 
 For a Skyhawk at 3,500 or 5,500 ft you care about the 3,000 and 6,000 ft columns. Feed them into the wind triangle from [[l6-3-pilotage-and-dead-reckoning]]. The temperatures also give you the freezing level, which matters in [[l11-4-thunderstorms-icing-and-turbulence]].
 
@@ -180,7 +180,7 @@ A direction code above 36 means the speed is over 99 kt. Subtract 50 from the di
 
 ## AIRMETs, SIGMETs and PIREPs
 
-These are the "adverse conditions" of the briefing. **AIRMETs** advise of weather that matters to small aircraft over a wide area; over the lower 48 they are issued as graphics (G-AIRMETs), which is how the GFA and 1800wxbrief show them:
+These are the "adverse conditions" of the briefing. **AIRMETs** advise of weather that matters to small aircraft over a wide area. Over the lower 48 they come as graphics (G-AIRMETs), which is how the GFA and 1800wxbrief show them:
 
 | AIRMET     | Covers                                                                                     | For the Skyhawk                           |
 | ---------- | ------------------------------------------------------------------------------------------ | ----------------------------------------- |
@@ -188,9 +188,9 @@ These are the "adverse conditions" of the briefing. **AIRMETs** advise of weathe
 | **Tango**  | Moderate turbulence, sustained surface winds above 30 kt, low-level wind shear             | A rough ride and crosswinds beyond limits |
 | **Zulu**   | Moderate icing and the freezing level                                                      | A no-go wherever it touches your route    |
 
-**SIGMETs** warn of severe hazards for all aircraft: severe icing, severe or extreme turbulence, dust or sand storms, volcanic ash. A **Convective SIGMET** covers thunderstorms: severe storms, embedded storms, lines or large areas of them. Any SIGMET touching your route is a stop sign.
+**SIGMETs** warn of severe hazards for all aircraft: severe icing, severe or extreme turbulence, dust or sand storms, volcanic ash. A **Convective SIGMET** covers thunderstorms: severe storms, embedded storms, lines or large areas of them. Any SIGMET touching your route makes the flight a no-go.
 
-A **PIREP** is a report from a pilot who was just out there, the only item in the briefing observed from the air rather than forecast from the ground:
+A **PIREP** is a report from a pilot who just flew in the area. It is the only item in the briefing observed from the air rather than forecast from the ground:
 
 | Field | Means                           | Example          |
 | ----- | ------------------------------- | ---------------- |
@@ -204,7 +204,7 @@ A **PIREP** is a report from a pilot who was just out there, the only item in th
 | `/IC` | Icing                           | `/IC NEG`        |
 | `/RM` | Remarks                         | `/RM CLR ABV`    |
 
-So `UA /OV SNS /TM 1740 /FL035 /TP C172 /SK OVC TOP018 /TB LGT /RM CLR ABV` is a Skyhawk over Salinas at 1740Z, at 3,500 ft, reporting an overcast with tops at 1,800 ft, light turbulence and clear above. Give PIREPs yourself in a real airplane; another pilot is briefing right now.
+So `UA /OV SNS /TM 1740 /FL035 /TP C172 /SK OVC TOP018 /TB LGT /RM CLR ABV` is a Skyhawk over Salinas at 1740Z, at 3,500 ft, reporting an overcast with tops at 1,800 ft, light turbulence and clear above. Give PIREPs yourself in a real airplane, because another pilot is briefing right now.
 
 ## A worked briefing: KLVK to KMRY
 
@@ -217,20 +217,20 @@ You plan to fly from Livermore to Monterey, about 65 nm south, departing at 11 a
 | Current: KLVK          | `25008KT 10SM CLR 22/09 A3010`                                                                        | Clear at home. Spread 13 °C                                                          |
 | Current: KMRY          | `30008KT 4SM BR OVC006 14/13 A3012`                                                                   | Below VFR minimums now. Spread 1 °C, so it is not lifting yet                        |
 | PIREP                  | `UA /OV SNS /TM 1740 /FL035 /TP C172 /SK OVC TOP018 /RM CLR ABV`                                      | The layer is thin: tops 1,800 ft, clear above. You still need a hole to land through |
-| En route forecast      | GFA: VFR inland all day; MVFR along the coast until about 20Z, then VFR                               | The route is fine; the last 10 miles are the problem                                 |
+| En route forecast      | GFA: VFR inland all day; MVFR along the coast until about 20Z, then VFR                               | The route is fine. The last 10 miles are the problem                                 |
 | Destination TAF (KMRY) | `FM132000 31010KT P6SM SCT012 BKN020`                                                                 | From 1 p.m.: VFR, with a scattered layer at 1,200 ft                                 |
 | Winds aloft            | 3,000 ft `2810`; 6,000 ft `2915+08`                                                                   | A light quartering headwind, about 15 kt at cruise. No icing: +8 °C at 6,000 ft      |
 | NOTAMs                 | KMRY: a taxiway closed. KLVK: none affecting you                                                      | Note it for the taxi plan                                                            |
 
 :::callout{type="decision"}
-What is the worst thing on this briefing? Not the taxiway, not the headwind. It is the destination under a 600 ft overcast in 4 SM of mist, with a 1 °C spread, two hours before the TAF says it clears. An 11 a.m. departure arrives about noon, an hour before the forecast improvement, with no guarantee the forecast is right. The good decision is one of two: **delay** to about 1 p.m. and re-brief, or **go** at 11 with Salinas (KSNS, inland and VFR) as a firm alternate and a decision point before descending toward the coast. Taking off at 11 to "see how it looks" with no alternate is the bad decision, and the one the accident reports describe.
+What is the worst thing on this briefing? It is the destination under a 600 ft overcast in 4 SM of mist, with a 1 °C spread, two hours before the TAF says it clears. The taxiway and the headwind are minor next to that. An 11 a.m. departure arrives about noon, an hour before the forecast improvement, with no guarantee the forecast is right. A good decision is to delay to about 1 p.m. and re-brief, or to go at 11 with Salinas (KSNS, inland and VFR) as a firm alternate and a decision point before descending toward the coast. Taking off at 11 to "see how it looks" with no alternate is the bad decision, and the one the accident reports describe.
 :::
 
-Notice how the order did the work. Adverse conditions told you where to look, the synopsis explained why, the METAR said "not now", the PIREP said "but it is thin", the TAF said "by 1 p.m.", and the winds said "no other problems".
+The briefing order led you through it. Adverse conditions told you where to look, the synopsis explained why, the METAR said "not now", the PIREP said "but it is thin", the TAF said "by 1 p.m.", and the winds said "no other problems".
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. Brief in order: adverse conditions, synopsis, now, en route, destination, winds, NOTAMs.
 2. In a TAF, FM is a lasting change, TEMPO is short spells you must plan for, PROB30 is "possible".
@@ -240,4 +240,4 @@ Three things to carry forward:
 
 **Fly it.** Challenge C11.1 "Go / no-go board" gives you four briefings for this KLVK to KMRY flight and asks for the decision. It opens after [[l11-6-the-go-no-go-decision-and-vfr-into-imc]]. First, [[l11-3-clouds-fog-and-low-visibility]] looks closely at what was wrong with this briefing: the fog.
 
-**Go deeper.** The GFA on aviationweather.gov and a free account at 1800wxbrief.com are how real pilots brief; both are worth an evening of exploring.
+**Go deeper.** The GFA on aviationweather.gov and a free account at 1800wxbrief.com are how real pilots brief. Both are worth an evening of exploring.

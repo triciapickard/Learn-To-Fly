@@ -30,13 +30,13 @@ The busier the airspace, the more you need before you go in: a clearance, radio 
 | Class | On the chart                                           | Typical limits                 | What you need to enter (VFR) | Bay Area example               |
 | ----- | ------------------------------------------------------ | ------------------------------ | ---------------------------- | ------------------------------ |
 | A     | Not shown on sectionals                                | 18,000 ft MSL and above        | IFR only                     | Overhead everything            |
-| B     | Solid blue lines, with shelves like 100/SFC            | Surface to about 10,000 ft     | An **explicit clearance**    | San Francisco (SFO)            |
-| C     | Solid magenta lines, a core and an outer shelf         | Surface to about 4,000 ft AGL  | **Two-way radio contact**    | Oakland (OAK), San Jose (SJC)  |
-| D     | Dashed blue lines, with the ceiling in brackets ([25]) | Surface to about 2,500 ft AGL  | **Two-way radio contact**    | Livermore, Palo Alto, Hayward  |
+| B     | Solid blue lines, with shelves like 100/SFC            | Surface to about 10,000 ft     | An explicit clearance        | San Francisco (SFO)            |
+| C     | Solid magenta lines, a core and an outer shelf         | Surface to about 4,000 ft AGL  | Two-way radio contact        | Oakland (OAK), San Jose (SJC)  |
+| D     | Dashed blue lines, with the ceiling in brackets ([25]) | Surface to about 2,500 ft AGL  | Two-way radio contact        | Livermore, Palo Alto, Hayward  |
 | E     | Faded magenta or blue shading, or dashed magenta lines | Starts at 700 or 1,200 ft AGL  | Nothing                      | Around Tracy and Half Moon Bay |
 | G     | Below Class E                                          | Surface to 700 or 1,200 ft AGL | Nothing                      | Near the ground at Tracy       |
 
-- **Class B** needs you to hear the words "**cleared into the Class Bravo airspace**". Being told to "remain clear" or "stand by" is not a clearance.
+- **Class B** needs you to hear the words "cleared into the Class Bravo airspace". Being told to "remain clear" or "stand by" is not a clearance.
 - **Class C and D** need **two-way radio communication**: the controller has to answer you using your call sign.
 
 :::quiz{id="l6-2-q1" type="single"}
@@ -73,7 +73,7 @@ This cross-section runs from Half Moon Bay on the coast to Tracy in the Central 
 
 ## Reading Class B shelves
 
-Class B looks like an **upside-down wedding cake**: small at the bottom, getting wider with height. Each shelf is labeled with its ceiling over its floor, in hundreds of feet MSL.
+Class B looks like an upside-down wedding cake, small at the bottom and wider with height. Each shelf's label shows its ceiling over its floor, in hundreds of feet MSL.
 
 - **100/SFC**: from the surface up to 10,000 ft MSL.
 - **80/30**: from 3,000 ft up to 8,000 ft MSL.
@@ -90,7 +90,7 @@ A Class B shelf is labeled 50/30. What does it mean?
 
 ---
 
-The top number is the **ceiling** and the bottom number is the **floor**, in hundreds of feet MSL: from 3,000 ft to 5,000 ft.
+The top number is the ceiling and the bottom number is the floor, in hundreds of feet MSL: from 3,000 ft to 5,000 ft.
 :::
 
 ## VFR weather minimums
@@ -107,8 +107,8 @@ Class G has more exceptions than this table shows. For the full rules, read 14 C
 
 ## Special use airspace
 
-Charts also show **restricted areas**, **military operations areas** (MOAs) and other special airspace. **Temporary flight restrictions** (TFRs) aren't on the chart at all; real pilots check for them before every flight. This course doesn't go into them in depth, but know they exist.
+Charts also show restricted areas, military operations areas (MOAs) and other special airspace. Temporary flight restrictions (TFRs) aren't on the chart at all. Real pilots check for them before every flight. This course doesn't go into them in depth, but know they exist.
 
 ## Practice
 
-On the San Francisco TAC, trace a route from **Palo Alto (KPAO)** west over the hills to **Half Moon Bay (KHAF)**. Which airspace do you start in? How high can you climb before you reach the Class B? Where does the Class B end? You'll fly this route in Lesson 6.3's dead reckoning challenge.
+On the San Francisco TAC, trace a route from Palo Alto (KPAO) west over the hills to Half Moon Bay (KHAF). Which airspace do you start in? How high can you climb before you reach the Class B? Where does the Class B end? You'll fly this route in Lesson 6.3's dead reckoning challenge.

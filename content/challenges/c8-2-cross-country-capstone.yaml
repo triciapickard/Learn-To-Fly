@@ -35,7 +35,7 @@ setup:
   flightPlan: null
 
 procedure:
-  - Plan the flight on the page before you open the sim (about 30 minutes). The suggested route is Livermore, Calaveras Reservoir, Morgan Hill, Gilroy, Watsonville (KWVI). It stays just outside the San Jose Class C, which reaches about 10 nm from the airport, and passes under the San Francisco Class B near Calaveras Reservoir, where the floor is 7,000 ft MSL. Keep the Class C on your right and stay below 7,000 ft, or call NorCal Approach.
+  - Plan the flight on the page before you open the sim (about 30 minutes). The suggested route is Livermore, Calaveras Reservoir, Morgan Hill, Gilroy, Watsonville (KWVI). It stays just outside the San Jose Class C, which reaches about 10 nm from the airport. Near Calaveras Reservoir it passes under the San Francisco Class B, where the floor is 7,000 ft MSL. Keep the Class C on your right and stay below 7,000 ft, or call NorCal Approach.
   - If the long route is too much, fly the shorter alternative instead, from Livermore to Buchanan Field (KCCR) to Byron (C83) and back to Livermore.
   - Choose altitudes using the hemispheric rule, clear of terrain and below the scattered clouds at 5,500 ft.
   - Enter the route in the G1000 as a backup, and put the EFB map away.

@@ -93,7 +93,7 @@ export function QuizPanel<Q extends WidgetQuestion>({
               <XCircle aria-hidden className="mt-0.5 size-5 shrink-0 text-warn" />
             )}
             <span>
-              <strong>{result.correct ? 'Correct. ' : 'Not quite — try again. '}</strong>
+              <strong>{result.correct ? 'Correct. ' : 'Not quite. Try again. '}</strong>
               {result.correct && question.explanation}
             </span>
           </p>

@@ -19,11 +19,11 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## Looking up from the chart
+## What an unusual attitude is
 
-You are in cloud at 5,500 ft, hand-flying, and you look down at the approach chart on your kneeboard for a few seconds. When you look up, the attitude indicator shows 40° of right bank, the airspeed is 135 KIAS and increasing, and the altimeter is unwinding. A few seconds of inattention, a trimmed airplane that was not quite trimmed, and the Skyhawk has found its own way into a spiral.
+You are in cloud at 5,500 ft, hand-flying, and you look down at the approach chart on your kneeboard for a few seconds. When you look up, the attitude indicator shows 40° of right bank, the airspeed is 135 KIAS and increasing, and the altimeter is unwinding. A few seconds of inattention in an airplane that was not quite trimmed have put the Skyhawk into a spiral.
 
-An **unusual attitude** is any attitude you did not intend and did not see develop. Recovering is not hard, but it has to be done in the right order, and the order is different for nose-high and nose-low. That is this lesson.
+An **unusual attitude** is any attitude you did not intend and did not see develop. Recovering is not hard, but you must do it in the right order, and the order is different for nose-high and nose-low attitudes. This lesson teaches both.
 
 :::callout{type="real-world"}
 In a real airplane, an instrument instructor puts the airplane into the unusual attitude while you close your eyes or look down under the view-limiting device, then hands it back with "recover". Instructors keep the attitudes within the airplane's limits and well above the ground. Nobody practices this alone or in actual cloud. In the sim you set the attitude yourself with the look-away method, and the cost of a bad recovery is a restart.
@@ -39,11 +39,11 @@ In a real airplane, an instrument instructor puts the airplane into the unusual 
 | Automation surprise | The autopilot disconnects or was never engaged, and nobody is flying                             |
 | Trim                | An untrimmed airplane drifts the moment you let go                                               |
 
-Notice that none of these is dramatic. Unusual attitudes are usually quiet, which is why the first and best defense is the scan from [[l17-1-the-instrument-scan]]. The second defense is recognizing the attitude the instant you see it.
+None of these is dramatic. Unusual attitudes usually develop quietly, so your first defense is the scan from [[l17-1-the-instrument-scan]]. The second defense is recognizing the attitude the instant you see it.
 
 ## Recognizing the attitude
 
-On the PFD, the attitude indicator tells you directly, but in a surprise you may not believe it, so confirm with the performance instruments. Two patterns cover everything:
+On the PFD, the attitude indicator tells you directly, but in a surprise you may not believe it, so confirm with the performance instruments. Each attitude has its own pattern:
 
 | Instrument | Nose high                              | Nose low                                 |
 | ---------- | -------------------------------------- | ---------------------------------------- |
@@ -53,9 +53,9 @@ On the PFD, the attitude indicator tells you directly, but in a surprise you may
 | Attitude   | Horizon low in the display, blue above | Horizon high in the display, brown above |
 | Bank       | Any, often steep                       | Any, often steep                         |
 
-Airspeed and altimeter moving in **opposite** directions from normal (speed falling while height rises) means nose high. Speed rising while height falls means nose low. On the standby instruments, the standby airspeed and altimeter give you the same answer even if the big display is gone.
+Airspeed and altimeter moving in opposite directions from normal (speed falling while height rises) means nose high. Speed rising while height falls means nose low. On the standby instruments, the standby airspeed and altimeter give you the same answer even if the big display is gone.
 
-When the attitude gets extreme, the G1000 helps. Past about 30° nose up, 20° nose down or 65° of bank, the PFD **declutters**: the inset map, annunciations and the small windows go, and only the attitude, airspeed, altitude, vertical speed and HSI stay. From 50° nose up or 30° nose down, large red chevrons appear on the attitude display, pointing toward the horizon. Follow the chevrons. They exist so that a startled pilot sees one thing: which way is up.
+When the attitude gets extreme, the G1000 helps. Past about 30° nose up, 20° nose down or 65° of bank, the PFD **declutters**: the inset map, annunciations and the small windows go, and only the attitude, airspeed, altitude, vertical speed and HSI stay. From 50° nose up or 30° nose down, large red chevrons appear on the attitude display, pointing toward the horizon. Follow the chevrons. They show a startled pilot which way is up.
 
 :::callout{type="verify"}
 Sim check: does the MSFS 2024 NXi declutter the PFD past +30°/−20° pitch or 65° bank and draw red chevrons from 50° nose up and 30° nose down? Thresholds desk-verified 2026-10-13 against the Garmin G1000 NXi Pilot's Guide (Cessna Nav III, Flight Instruments). Screenshot for the shot list: "PFD declutter chevrons, nose low".
@@ -76,7 +76,7 @@ Increasing airspeed with decreasing altitude is nose low. The bank is to the rig
 
 ## Nose-high recovery
 
-In a nose-high attitude the airspeed is bleeding away toward a stall. Every step is aimed at getting the wing flying again before you worry about anything else.
+In a nose-high attitude the airspeed is falling toward a stall. Every step aims to get the wing flying again before you worry about anything else.
 
 :::callout{type="memory"}
 **Nose high: recover**
@@ -88,15 +88,15 @@ In a nose-high attitude the airspeed is bleeding away toward a stall. Every step
 
 :::
 
-Why this order? Power first, because thrust is the fastest way to buy airspeed when it is low. Nose down second, because lowering the nose reduces the angle of attack and ends the stall threat; rolling while slow and nose high can drop a wing. Wings level third, and then rebuild the picture. Keep the control inputs smooth: a sharp push at low speed is unpleasant and unnecessary.
+Power comes first, because thrust is the fastest way to gain airspeed when it is low. Nose down comes second, because lowering the nose reduces the angle of attack and ends the stall threat. Rolling while slow and nose high can drop a wing. Wings level comes third, and then you rebuild the picture. Keep the control inputs smooth. A sharp push at low speed is unpleasant and unnecessary.
 
 :::callout{type="safety"}
-If the stall warning is sounding, treat it as a stall recovery first: nose down and power, exactly as in [[l5-2-stalls-power-off-and-power-on]]. The unusual-attitude order and the stall-recovery order agree; the difference is only how far you lower the nose.
+If the stall warning is sounding, treat it as a stall recovery first: nose down and power, as in [[l5-2-stalls-power-off-and-power-on]]. The unusual-attitude order and the stall-recovery order agree. The only difference is how far you lower the nose.
 :::
 
 ## Nose-low recovery
 
-In a nose-low attitude the airspeed is rising toward {{vspeed.vno}} and beyond, and a steep bank is loading the wing. The order flips.
+In a nose-low attitude the airspeed is rising toward {{vspeed.vno}} and beyond, and a steep bank is loading the wing. The order changes.
 
 :::callout{type="memory"}
 **Nose low: recover**
@@ -108,7 +108,7 @@ In a nose-low attitude the airspeed is rising toward {{vspeed.vno}} and beyond, 
 
 :::
 
-Why this order? Power off first, because every second of power adds speed. Wings level second and **before** you pull: pulling while banked tightens the spiral, adds load factor and gains nothing. Only with the wings level does back pressure point the lift upward. Then ease out: a smooth pull that keeps the airplane below {{vspeed.va}} if you can, and never a snatch. Expect to lose a few hundred feet; Challenge C17.3 scores under 300 ft as Gold.
+Power comes off first, because every second of power adds speed. Level the wings second, before you pull. Pulling while banked tightens the spiral, adds load factor and gains nothing. Only with the wings level does back pressure point the lift upward. Then ease out with a smooth pull that keeps the airplane below {{vspeed.va}} if you can. Never snatch the yoke. Expect to lose a few hundred feet. Challenge C17.3 scores under 300 ft as Gold.
 
 :::quiz{id="l17-3-q2" type="order"}
 Put the nose-low recovery in order.
@@ -125,7 +125,7 @@ Power off, wings level, then ease out of the dive. Leveling the wings before pul
 
 ## Partial-panel unusual attitudes
 
-If the attitude indicator is the thing that failed, you can still recognize and recover. Use the **airspeed trend and the altimeter for pitch** (speed rising and altitude falling means nose low) and the **turn indicator for bank** (roll until it shows no turn). The recovery steps are identical; only the instruments you read change. [[l17-4-partial-panel-and-the-magnetic-compass]] covers the standby instruments in detail.
+If the attitude indicator is the thing that failed, you can still recognize and recover. Use the airspeed trend and the altimeter for pitch (speed rising and altitude falling means nose low) and the turn indicator for bank (roll until it shows no turn). The recovery steps stay the same. Only the instruments you read change. [[l17-4-partial-panel-and-the-magnetic-compass]] covers the standby instruments in detail.
 
 | Drill | Attitude                                   | First action | Then                                |
 | ----- | ------------------------------------------ | ------------ | ----------------------------------- |
@@ -153,15 +153,15 @@ Falling airspeed with rising altitude is nose high, so the first action is full 
 
 ## Setting it up in the sim
 
-Challenge C17.3 "Unusual attitudes" uses the **look-away method**: an event card tells you to look away from the screen and make a gentle control input for a count of seconds, then look back and recover at the beep. Four attitudes, mixing nose high and nose low, left and right. To practice on your own, trim for level flight in the overcast, close your eyes, roll gently one way and push or pull for about eight seconds, then open your eyes and fly the recovery.
+Challenge C17.3 "Unusual attitudes" uses the **look-away method**: an event card tells you to look away from the screen and make a gentle control input for a count of seconds, then look back and recover at the beep. You get four attitudes, mixing nose high and nose low, left and right. To practice on your own, trim for level flight in the overcast, close your eyes, roll gently one way and push or pull for about eight seconds, then open your eyes and fly the recovery.
 
 :::callout{type="sim"}
-The sim cannot make you feel the load factor of a pull-out or the lightness of a nose-high push, so there is nothing to tell you that you are pulling too hard except the airspeed and the G-sense you do not have. Watch the airspeed through the recovery and keep the pull gentle; the real airplane has limits and the sim's crash damage setting will enforce them.
+The sim cannot make you feel the load factor of a pull-out or the lightness of a nose-high push. Only the airspeed tells you that you are pulling too hard. Watch the airspeed through the recovery and keep the pull gentle. The real airplane has limits and the sim's crash damage setting will enforce them.
 :::
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
 1. Nose high: power, nose down, wings level, return.
 2. Nose low: power off, wings level, ease out, return.

@@ -123,7 +123,7 @@ modules:
     summary: Charts, airspace, pilotage, dead reckoning, VOR and GPS.
     description: >
       Read a sectional chart, understand the airspace around the Bay Area and navigate with
-      landmarks, calculations, a VOR and the G1000 GPS — then plan a cross-country flight.
+      landmarks, calculations, a VOR and the G1000 GPS. Then plan a cross-country flight.
     icon: compass
     lessons:
       - l6-1-reading-a-sectional-chart
@@ -198,7 +198,7 @@ modules:
     title: Advanced takeoffs and landings
     summary: Gusty crosswinds, slips, soft and short fields, and runway safety.
     description: >
-      Land when the wind is not cooperating: gusts and wind shear, forward and side slips,
+      Land in harder conditions: gusts and wind shear, forward and side slips,
       soft-field and short-field technique over obstacles, wake turbulence and hot spots.
     icon: wind
     lessons:
@@ -273,7 +273,7 @@ modules:
     title: Systems failures and advanced emergencies
     summary: Electrical, instrument, engine and fire emergencies, and off-airport landings.
     description: >
-      Handle the failures that are not a dead engine: a failed alternator, a frozen pitot
+      Handle failures other than a dead engine: a failed alternator, a frozen pitot
       tube or a dark PFD, a rough-running engine, fire and smoke with an emergency descent,
       and choosing a field or ditching when there is no airport.
     icon: zap-off
@@ -330,7 +330,7 @@ modules:
     description: >
       Fly the airplane by the instruments alone: the control-and-performance scan, basic
       maneuvers to instrument tolerances, recovering from unusual attitudes, flying on the
-      standby instruments, and why your inner ear cannot be trusted.
+      standby instruments, and why your inner ear misleads you.
     icon: scan-eye
     lessons:
       - l17-1-the-instrument-scan

@@ -39,8 +39,8 @@ Play the animation below. Turn on the configuration and radio calls, change the 
 
 ## Direction and altitude
 
-- **Left turns** are standard. Every turn in the pattern is to the left, so the runway stays on your side of the airplane (you sit on the left). Some runways use **right traffic** instead; the sectional chart and the Chart Supplement show it as "RP" for that runway.
-- **Pattern altitude** is typically **1,000 ft above the airport**, unless the Chart Supplement publishes a different one. Livermore has no published pattern altitude, and its field elevation is about 400 ft, so its pattern is around **1,400 ft MSL**. Tracy publishes 800 ft above the field, so fly about **1,000 ft MSL** there.
+- **Left turns** are standard. Every turn in the pattern is to the left, so the runway stays on your side of the airplane (you sit on the left). Some runways use **right traffic** instead. The sectional chart and the Chart Supplement show it as "RP" for that runway.
+- **Pattern altitude** is typically 1,000 ft above the airport, unless the Chart Supplement publishes a different one. Livermore has no published pattern altitude, and its field elevation is about 400 ft, so its pattern is around 1,400 ft MSL. Tracy publishes 800 ft above the field, so fly about 1,000 ft MSL there.
 - **Livermore's patterns.** The long runway, 7L/25R, keeps its pattern on the north side of the field: left traffic on 7L, right traffic on 25R. The short runway, 7R/25L, uses the south side. The Reference section's airport cards list the pattern for every runway.
 
 :::quiz{id="l4-2-q1" type="single"}
@@ -53,12 +53,12 @@ What is the standard traffic pattern direction?
 
 ---
 
-**Left** turns are standard, unless the runway is marked for right traffic (RP).
+Left turns are standard, unless the runway is marked for right traffic (RP).
 :::
 
 ## Configuration and speed on each leg
 
-These are starting points; adjust the power to hold the speed.
+These are starting points. Adjust the power to hold the speed.
 
 | Point in the pattern      | Power        | Flaps | Speed (KIAS) |
 | ------------------------- | ------------ | ----- | ------------ |
@@ -76,7 +76,7 @@ Sim check: fly these settings in the sim at C4.2's weight and adjust (Section 8.
 ## Key points
 
 - **Abeam the numbers.** When the touchdown point is straight off your left wingtip on downwind, reduce power, set flaps 10 and start down.
-- **Turn base** when the touchdown point is about **45° behind** the wing.
+- **Turn base** when the touchdown point is about 45° behind the wing.
 - **Turn final** so you roll out lined up with the runway without overshooting. If you do overshoot, correct gently. Don't steepen the bank near the ground.
 - **Spacing.** On downwind, the runway should be about half to one mile away, just outside the wingtip.
 
@@ -99,11 +99,11 @@ At your home airport, pick a visual point on the ground for each turn: a road, a
 
 ## Wind on each leg
 
-A crosswind blows you sideways. On each leg, point the nose slightly **into the wind** (crab) so your path over the ground stays rectangular. In the animation, set a wind and watch the airplane's nose point off the ground track.
+A crosswind blows you sideways. On each leg, point the nose slightly into the wind (crab) so your path over the ground stays rectangular. In the animation, set a wind and watch the airplane's nose point off the ground track.
 
 ## Entering and leaving
 
-At a **non-towered** airport, the standard entry is on a **45° angle to the downwind leg**, at pattern altitude, aiming to join about midfield. Leave by flying straight out or with a 45° turn after reaching pattern altitude.
+At a non-towered airport, the standard entry is on a 45° angle to the downwind leg, at pattern altitude, aiming to join about midfield. Leave by flying straight out or with a 45° turn after reaching pattern altitude.
 
 :::quiz{id="l4-2-q3" type="single"}
 What is the standard pattern entry at a non-towered airport?
@@ -115,7 +115,7 @@ What is the standard pattern entry at a non-towered airport?
 
 ---
 
-A **45° entry to downwind** at pattern altitude, joining about midfield. It lets you see traffic already in the pattern.
+A 45° entry to downwind at pattern altitude, joining about midfield. It lets you see traffic already in the pattern.
 :::
 
 ## Where to look

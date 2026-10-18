@@ -37,7 +37,7 @@ export interface TurnState {
   tcTilt: number;
   /** Nose yaw relative to the flight path, degrees (positive = right). */
   yaw: number;
-  /** "Coordinated", "Slipping — add right rudder", … */
+  /** "Coordinated", "Slipping: add right rudder", … */
   advice: string;
 }
 
@@ -66,8 +66,8 @@ export function turnState(bank: number, rudder: number, tas: number): TurnState 
     coordination === 'coordinated'
       ? 'Coordinated'
       : coordination === 'slip'
-        ? `Slipping — add ${ballSide} rudder`
-        : `Skidding — too much ${otherSide} rudder; ease it off`;
+        ? `Slipping: add ${ballSide} rudder`
+        : `Skidding: too much ${otherSide} rudder, so ease it off`;
   return {
     bank: b,
     rudder: r,
@@ -124,20 +124,20 @@ export function quizQuestions(tas: number): TurnQuestion[] {
       id: 'w6-coordinated-right',
       prompt: 'Set up a coordinated turn to the right with about 20° of bank.',
       explanation:
-        'Bank with the ailerons and add enough right rudder to keep the ball centered: aileron and rudder together.',
+        'Bank with the ailerons and add enough right rudder to keep the ball centered. Use aileron and rudder together.',
       check: (s) => s.bank >= 17 && s.bank <= 23 && s.coordination === 'coordinated',
     },
     {
       id: 'w6-slip-left',
       prompt: 'Show a slip in a left turn.',
       explanation:
-        'Too little left rudder for the bank: the ball falls to the inside (left) of the turn. Step on the ball — add left rudder — to fix it.',
+        'With too little left rudder for the bank, the ball falls to the inside (left) of the turn. Step on the ball and add left rudder to fix it.',
       check: (s) => s.bank <= -5 && s.coordination === 'slip',
     },
     {
       id: 'w6-standard-rate-left',
       prompt: 'Fly a coordinated standard-rate turn to the left (the airplane on the L mark).',
-      explanation: `Standard rate is 3° per second. At ${tas} KTAS it needs about ${Math.round(exact)}° of bank; the rule of thumb TAS ÷ 10 + 7 gives ${Math.round(ruleOfThumb)}°.`,
+      explanation: `Standard rate is 3° per second. At ${tas} KTAS it needs about ${Math.round(exact)}° of bank. The rule of thumb TAS ÷ 10 + 7 gives ${Math.round(ruleOfThumb)}°.`,
       check: (s) => s.coordination === 'coordinated' && s.rate <= -2.7 && s.rate >= -3.3,
     },
   ];

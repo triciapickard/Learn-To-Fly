@@ -19,7 +19,7 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
-## The same maneuvers, with the picture painted over
+## The same maneuvers on instruments
 
 Every maneuver in this lesson is one you flew in Module 2: level flight, turns, climbs and descents. What is new is that you fly them from the attitude indicator alone, and that you are now held to the **Learn to Fly instrument standard**, which is tighter than the visual one.
 
@@ -32,14 +32,14 @@ Every maneuver in this lesson is one you flew in Module 2: level flight, turns, 
 Gold is inspired by the instrument rating standards. It sounds strict. With a good scan and a trimmed airplane it is not hard, because you catch every deviation when it is still small.
 
 :::callout{type="real-world"}
-In a real airplane these maneuvers are flown under a view-limiting device with an instrument instructor, or with a safety pilot who holds at least a private certificate and is current in the airplane. The instructor also puts the airplane into the attitude you did not expect; in the sim you will do that to yourself in [[l17-3-unusual-attitude-recovery]].
+In a real airplane you fly these maneuvers under a view-limiting device with an instrument instructor, or with a safety pilot who holds at least a private certificate and is current in the airplane. The instructor also puts the airplane into the attitude you did not expect. In the sim you will do that to yourself in [[l17-3-unusual-attitude-recovery]].
 :::
 
 ## Level flight
 
-Straight and level on instruments is three jobs at once: hold the pitch that gives your altitude, hold the wings level for your heading, and hold the power that gives your airspeed.
+Straight and level on instruments means holding pitch, bank and power at the same time. Hold the pitch that gives your altitude, hold the wings level for your heading, and hold the power that gives your airspeed.
 
-Set the cruise picture from the table in [[l17-1-the-instrument-scan]]: about +1° to +2° pitch, 2,300 RPM. Then scan. The altimeter tells you if the pitch is right; the VSI warns you before the altimeter moves; the heading tells you if the wings are really level. A heading that creeps right means a sliver of right bank you cannot see on the attitude indicator, so roll a hair left.
+Set the cruise picture from the table in [[l17-1-the-instrument-scan]]: about +1° to +2° pitch, 2,300 RPM. Then scan. The altimeter tells you if the pitch is right. The VSI warns you before the altimeter moves. The heading tells you if the wings are really level. A heading that creeps right means a sliver of right bank you cannot see on the attitude indicator, so roll slightly left.
 
 Corrections are small and proportional:
 
@@ -55,7 +55,7 @@ The rule for altitude is to climb or descend at about twice the deviation in fee
 
 ## Standard-rate turns and the rate-of-turn indicator
 
-Instrument turns are flown at **standard rate**: 3° per second, a full circle in 2 minutes. Standard rate is gentle enough to keep your scan going and predictable enough to time.
+You fly instrument turns at **standard rate**: 3° per second, a full circle in 2 minutes. Standard rate is gentle enough to keep your scan going and predictable enough to time.
 
 The bank angle for standard rate depends on true airspeed. The rule of thumb from Course 1 is **bank ≈ TAS ÷ 10 + 7**:
 
@@ -67,14 +67,14 @@ The bank angle for standard rate depends on true airspeed. The rule of thumb fro
 | 110 KTAS      | About 18°              |
 | 120 KTAS      | About 19°              |
 
-On the G1000 PFD the **turn rate indicator** sits directly above the HSI compass card: a magenta trend bar grows from the lubber line toward tick marks that mean half-standard and standard rate. Roll in to about 17° on the attitude indicator, then check that the bar reaches the standard-rate mark and adjust the bank a degree or two; the rule of thumb rounds a little high, and the bar is the judge. In a turn your scan adds the heading more often, and the altimeter still gets every other look, because the nose wants to drop as you bank.
+On the G1000 PFD the **turn rate indicator** sits directly above the HSI compass card: a magenta trend bar grows from the lubber line toward tick marks that mean half-standard and standard rate. Roll in to about 17° on the attitude indicator, then check that the bar reaches the standard-rate mark and adjust the bank a degree or two. The rule of thumb rounds a little high, so trust the bar. In a turn your scan adds the heading more often, and the altimeter still gets every other look, because the nose tends to drop as you bank.
 
 Roll out early. The lead is about half the bank angle: at 17° of bank, start rolling out about 8° before the heading.
 
 ::widget{name="turn-coordinator" mode="explore"}
 
 :::callout{type="classic"}
-The classic Skyhawk has a turn coordinator: a small airplane symbol that banks to the "L" and "R" marks at standard rate, with the slip ball below it. The G1000's turn rate indicator shows the same information as a bar above the HSI; the slip-skid indicator is the small bar under the bank pointer at the top of the attitude indicator.
+The classic Skyhawk has a turn coordinator: a small airplane symbol that banks to the "L" and "R" marks at standard rate, with the slip ball below it. The G1000's turn rate indicator shows the same information as a bar above the HSI. The slip-skid indicator is the small bar under the bank pointer at the top of the attitude indicator.
 :::
 
 :::callout{type="verify"}
@@ -100,9 +100,9 @@ There are two ways to climb or descend on instruments, and the difference is whi
 | Constant-airspeed descent | Airspeed       | Fixed (set)    | Cruise descent                     |
 | Constant-rate descent     | Rate (VSI)     | Airspeed       | Approaches: 500 fpm at 90 KIAS     |
 
-For a **constant-airspeed climb**, add full power and raise the nose to about +6°, then adjust pitch until the airspeed reads 80 KIAS. Whatever rate you get is the rate you get. For a **constant-rate descent**, reduce power to about 1,700 RPM and pitch for 500 fpm down on the VSI; if the airspeed drifts from 90 KIAS, fix it with power, not pitch. Pitch owns the rate, power owns the speed.
+For a constant-airspeed climb, add full power and raise the nose to about +6°, then adjust pitch until the airspeed reads 80 KIAS. Accept whatever climb rate results. For a constant-rate descent, reduce power to about 1,700 RPM and pitch for 500 fpm down on the VSI. If the airspeed drifts from 90 KIAS, fix it with power, not pitch. Pitch sets the rate, and power sets the speed.
 
-**Level-off leads.** The airplane keeps climbing while you change the picture, so start the level-off early: lead by about **10% of the vertical speed**. At 500 fpm, begin the level-off 50 ft before the target altitude. Lower the nose to the level attitude, let the speed build, then set cruise power and trim. For a descent, add power to the cruise setting as you raise the nose; the airplane levels and accelerates to cruise together.
+**Level-off leads.** The airplane keeps climbing while you change the picture, so start the level-off early: lead by about **10% of the vertical speed**. At 500 fpm, begin the level-off 50 ft before the target altitude. Lower the nose to the level attitude, let the speed build, then set cruise power and trim. For a descent, add power to the cruise setting as you raise the nose. The airplane levels and accelerates to cruise together.
 
 :::quiz{id="l17-2-q2" type="single"}
 In a constant-rate descent at 500 fpm, the airspeed is 5 kt fast. What do you change?
@@ -137,7 +137,7 @@ If you can hold standard rate, you can turn to any heading with nothing but a cl
 | 180° | 60 s                  |
 | 360° | 2 min                 |
 
-Start the timer as you begin the roll-in and begin the roll-out when the time is up; the roll-in and roll-out take about the same time and cancel each other. Hold the bank from the table above and resist the urge to peek at the heading until you are wings level and the compass has settled. Timed turns are the backbone of partial-panel flying in [[l17-4-partial-panel-and-the-magnetic-compass]], where the heading indicator is gone.
+Start the timer as you begin the roll-in and begin the roll-out when the time is up. The roll-in and roll-out take about the same time and cancel each other. Hold the bank from the table above, and do not look at the heading until you are wings level and the compass has settled. Partial-panel flying in [[l17-4-partial-panel-and-the-magnetic-compass]], where the heading indicator is gone, depends on timed turns.
 
 :::quiz{id="l17-2-q4" type="numeric" answer="30" tolerance="0" unit="s"}
 How many seconds does a standard-rate turn through 90° take?
@@ -162,24 +162,24 @@ Instrument training patterns string the maneuvers together with a stopwatch, so 
 | 7   | Constant-rate descent, 500 fpm at 90 KIAS, to 4,000 ft         | 1:00 |
 | 8   | Standard-rate left turn to heading 090; accelerate to 100 KIAS | 0:30 |
 
-Start the stopwatch at the beginning of each leg and let it run; the turns are timed turns, so the clock and the heading should agree when you roll out. The pattern ends where it started, which is the test: if you finish on 090 at 4,000 ft and 100 KIAS, every leg was flown right. Pattern B (Challenge C17.5, a P1 extra) adds a simulated approach and a missed-approach segment to the same idea.
+Start the stopwatch at the beginning of each leg and let it run. The turns are timed turns, so the clock and the heading should agree when you roll out. The pattern ends where it started, so it checks itself. If you finish on 090 at 4,000 ft and 100 KIAS, you flew every leg right. Pattern B (Challenge C17.5, a P1 extra) adds a simulated approach and a missed-approach segment to the same idea.
 
 :::callout{type="verify"}
 Author decision: keep this original leg table or adopt an IFH pattern. Desk-verified 2026-10-13: the current IFH (FAA-H-8083-15B, Chapter 7) has no "Pattern A"; its basic instrument flight patterns are the racetrack, procedure-turn, 80/260, teardrop and circling patterns, all clock-plus-maneuver exercises, so the name is ours. The legs above are internally consistent (every turn and altitude change matches its time). The C17.2 challenge file and the Fly tab stopwatch must use these legs; a plan-view diagram (original drawing) is on the shot list.
 :::
 
 :::callout{type="tip"}
-Say each leg aloud before you fly it: "Leg 5, climb 500 fpm, 80 knots, to 4,500." Announcing the target makes omission errors rare, and it is exactly what single-pilot IFR pilots do with real clearances.
+Say each leg aloud before you fly it: "Leg 5, climb 500 fpm, 80 knots, to 4,500." Announcing the target makes omission errors rare, and single-pilot IFR pilots do the same with real clearances.
 :::
 
 ## Practice and next steps
 
-Three things to carry forward:
+To carry forward:
 
-1. Bank for standard rate ≈ TAS ÷ 10 + 7; lead the rollout by half the bank.
-2. Degrees ÷ 3 = seconds; lead a level-off by 10% of the vertical speed.
+1. Bank for standard rate ≈ TAS ÷ 10 + 7. Lead the rollout by half the bank.
+2. Degrees ÷ 3 = seconds. Lead a level-off by 10% of the vertical speed.
 3. Constant airspeed: pitch for speed. Constant rate: pitch for rate, power for speed.
 
 **Practice.** This lesson feeds the `limits-and-speeds` flashcard deck: the standard-rate bank table, the timed-turn table and the level-off lead.
 
-**Fly it.** Challenge C17.1 "Basic instrument maneuvers" covers every maneuver here; Challenge C17.2 "Pattern A" strings them together against the stopwatch. Then move on to [[l17-3-unusual-attitude-recovery]], where you learn what to do when the picture is suddenly wrong.
+**Fly it.** Challenge C17.1 "Basic instrument maneuvers" covers every maneuver here. Challenge C17.2 "Pattern A" strings them together against the stopwatch. Then move on to [[l17-3-unusual-attitude-recovery]], which teaches you to recover when you find the airplane in an attitude you did not expect.

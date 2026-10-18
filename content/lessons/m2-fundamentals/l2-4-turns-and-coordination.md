@@ -23,9 +23,9 @@ simVersion: null
 
 An airplane doesn't turn with the rudder. It turns by **banking**.
 
-When the wings are level, lift points straight up. When you bank, lift tilts with the wings. Part of it still points up and holds the airplane in the air; the other part points sideways, toward the inside of the turn. That sideways part pulls the airplane around the turn.
+When the wings are level, lift points straight up. When you bank, lift tilts with the wings. Part of it still points up and holds the airplane in the air. The other part points sideways, toward the inside of the turn. That sideways part pulls the airplane around the turn.
 
-Turns are grouped by bank angle:
+Pilots group turns by bank angle:
 
 | Turn    | Bank angle |
 | ------- | ---------- |
@@ -41,9 +41,9 @@ The steeper the bank, the more back pressure you need. You'll see why in Module 
 
 ## Adverse yaw and the rudder
 
-When you roll into a turn, the aileron that goes down (on the rising wing) makes more lift, and also more drag. That drag pulls the rising wing back, so the nose swings **away** from the turn for a moment. This is **adverse yaw**.
+When you roll into a turn, the aileron that goes down (on the rising wing) makes more lift, and also more drag. That drag pulls the rising wing back, so the nose swings away from the turn for a moment. This is **adverse yaw**.
 
-The fix is rudder in the direction of the turn: left rudder with left aileron, right rudder with right aileron. When the turn is established, you need only a little rudder to keep it coordinated.
+To fix it, add rudder in the direction of the turn: left rudder with left aileron, right rudder with right aileron. When the turn is established, you need only a little rudder to keep it coordinated.
 
 Try it below. Bank the airplane, then use the rudder to center the ball.
 
@@ -58,11 +58,11 @@ The ball is to the right in a right turn. Which rudder do you press?
 
 ---
 
-"Step on the ball": press the rudder on the side the ball has moved to. The ball is on the right, so press **right rudder**.
+"Step on the ball": press the rudder on the side the ball has moved to. The ball is on the right, so press right rudder.
 :::
 
 :::callout{type="classic"}
-In the classic panel, the turn coordinator (bottom left of the six-pack) shows the rate of turn with a small airplane, and the ball below it shows coordination. On the G1000 the same jobs are done by the turn rate trend line and the slip/skid bar.
+In the classic panel, the turn coordinator (bottom left of the six-pack) shows the rate of turn with a small airplane, and the ball below it shows coordination. On the G1000 the turn rate trend line and the slip/skid bar do the same jobs.
 :::
 
 ## Standard-rate turns
@@ -71,7 +71,7 @@ A **standard-rate turn** changes heading at 3° per second, so a full circle tak
 
 **Bank ≈ (TAS ÷ 10) + 7**
 
-At about 100 knots that's 100 ÷ 10 + 7 = **17°**. On the G1000, the outer marks on the turn rate arc show standard rate: hold the magenta trend line on the mark.
+At about 100 knots that's 100 ÷ 10 + 7 = **17°**. On the G1000, the outer marks on the turn rate arc show standard rate. Hold the magenta trend line on the mark.
 
 :::quiz{id="l2-4-q2" type="single"}
 About how much bank do you need for a standard-rate turn at 100 knots true airspeed?
@@ -88,7 +88,7 @@ About how much bank do you need for a standard-rate turn at 100 knots true airsp
 
 ## Rolling out on a heading
 
-The airplane keeps turning while you roll the wings level, so start the rollout **before** the target heading. Lead by about **half your bank angle**: in a 20° bank, start rolling out 10° early.
+The airplane keeps turning while you roll the wings level, so start the rollout before the target heading. Lead by about half your bank angle. In a 20° bank, start rolling out 10° early.
 
 :::callout{type="tip"}
 Start the rollout about half your bank angle before the target heading.
@@ -104,7 +104,7 @@ You're turning left in a 20° bank toward heading 270. When do you start rolling
 
 ---
 
-Half of 20° is 10°. You're turning left, so heading numbers are decreasing: start the rollout at about **280**.
+Half of 20° is 10°. You're turning left, so heading numbers are decreasing. Start the rollout at about **280**.
 :::
 
 ## Look before you turn
@@ -114,7 +114,7 @@ Before every turn, look in the direction you're turning, and above and below. In
 ## When auto-rudder is on
 
 :::callout{type="sim"}
-With auto-rudder on, the sim adds the rudder for you and keeps the ball close to the center. It can't anticipate adverse yaw as well as good feet do, so you may still see a small slip as you roll in. The real Skyhawk has no auto-rudder: every turn needs your feet.
+With auto-rudder on, the sim adds the rudder for you and keeps the ball close to the center. It can't anticipate adverse yaw as well as a pilot's feet can, so you may still see a small slip as you roll in. The real Skyhawk has no auto-rudder, so every turn needs your feet.
 :::
 
 Now fly [[c2-3-turns-to-headings]], then put it all together in [[c2-4-the-box]].

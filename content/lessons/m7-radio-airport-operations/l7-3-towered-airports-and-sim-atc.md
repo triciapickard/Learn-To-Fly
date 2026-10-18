@@ -32,7 +32,7 @@ At a towered airport, you talk to different controllers at each stage:
 
 ## Departing Livermore
 
-The frequencies are on the sectional and in the Chart Supplement: at Livermore, ATIS 119.65, ground 121.6 and tower 118.1. The FBO ramp is the **northwest apron**, north of runway 7L/25R.
+You'll find the frequencies on the sectional and in the Chart Supplement. At Livermore they are ATIS 119.65, ground 121.6 and tower 118.1. The FBO ramp is the northwest apron, north of runway 7L/25R.
 
 :::callout{type="verify"}
 Sim check: desk-verified 2026-10-13 against AirNav (FAA data effective 2026-10-01) and the LVK airport diagram (AL-6075): ATIS 119.65, ground 121.6, tower 118.1, FBO and terminal on the Northwest Apron, runways 7L/25R and 7R/25L. Still open: that the sim's ATC uses the same frequencies and runway names, and what the sim calls the parking area.
@@ -62,7 +62,7 @@ Read back the important parts of an instruction so the controller can catch any 
 
 - **Runway assignments**, including "cleared for takeoff" and "cleared to land" with the runway.
 - **Hold short instructions.**
-- **Altimeter settings**, **frequencies**, **headings** and **altitudes**.
+- **Altimeter settings, frequencies, headings and altitudes.**
 
 End the read-back with your call sign.
 
@@ -76,7 +76,7 @@ Which instruction must you always read back?
 
 ---
 
-**Hold short instructions** (and runway assignments) must always be read back. Crossing a runway by mistake is one of the most serious errors at an airport.
+Always read back hold short instructions (and runway assignments). Crossing a runway by mistake is one of the most serious errors at an airport.
 :::
 
 :::quiz{id="l7-3-q2" type="single"}
@@ -94,7 +94,7 @@ What should you have before you first call ground?
 
 ## Coming back
 
-Call the tower about 10 nm out, **before** you reach the Class D:
+Call the tower about 10 nm out, before you reach the Class D:
 
 > **You:** "Livermore Tower, Skyhawk One Two Three, one zero miles east, three thousand five hundred, inbound for landing with information Bravo."
 >
@@ -102,9 +102,9 @@ Call the tower about 10 nm out, **before** you reach the Class D:
 >
 > **You:** "Right downwind two five right, report midfield, Skyhawk One Two Three."
 
-Once the tower has answered **using your call sign**, you have **two-way radio communication**, and you may enter the Class D. If the tower says "Aircraft calling Livermore Tower, stand by", you don't: they haven't used your call sign.
+Once the tower has answered using your call sign, you have **two-way radio communication**, and you may enter the Class D. If the tower says "Aircraft calling Livermore Tower, stand by", you don't have it yet, because they haven't used your call sign.
 
-Fly the pattern you're given, make the reports you're asked for, and land only when you hear "**cleared to land**". After landing, clear the runway and switch to ground when told.
+Fly the pattern you're given, make the reports you're asked for, and land only when you hear "cleared to land". After landing, clear the runway and switch to ground when told.
 
 ## MSFS ATC
 
@@ -120,4 +120,4 @@ Sim check: the MSFS 2024 ATC window options for VFR departures and arrivals at L
 
 ## Next steps: online ATC
 
-When you're ready for more, networks like **VATSIM** (free, with volunteer controllers) and **PilotEdge** (paid, with professional-style controllers) let you talk to real people. You speak on a real microphone, and nobody reads the calls out for you.
+When you're ready for more, networks such as VATSIM (free, with volunteer controllers) and PilotEdge (paid, with professional-style controllers) let you talk to real people. You speak on a real microphone, and nobody reads the calls out for you.

@@ -59,7 +59,7 @@ export default function AngleOfAttack({ props, onQuizAnswer }: WidgetProps) {
         air. The angle between the chord line and the relative wind is the angle of attack. Up to
         about {criticalAoA(false)}° the airflow follows the curved upper surface and lift grows
         steadily with angle of attack. Past that critical angle the flow separates from the upper
-        surface, starting at the trailing edge, and lift falls: the wing stalls.
+        surface, starting at the trailing edge, and lift falls. The wing stalls.
       </p>
       <p>
         The graph shows lift coefficient against angle of attack: a straight rise, a rounded peak at
@@ -81,7 +81,7 @@ export default function AngleOfAttack({ props, onQuizAnswer }: WidgetProps) {
       description={description}
     >
       <p className="text-sm text-ink-2">
-        Simplified model: the shapes are realistic, the numbers are illustrative.
+        In this simplified model the shapes are realistic, but the numbers are illustrative.
       </p>
       <div className="mt-3 grid gap-4">
         <AirfoilView aoa={aoa} flaps={flaps} cl={cl} />
