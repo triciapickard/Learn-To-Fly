@@ -2,7 +2,7 @@ import { ExternalLink, Link } from '@/components/Link';
 import { PageContainer, PageHeader } from '@/components/PageHeader';
 import { Prose } from '@/components/Prose';
 import { LEGAL_LAST_UPDATED } from '@/features/layout/legal';
-import { DISCLAIMER_SHORT, GITHUB_URL } from '@/features/layout/navigation';
+import { DISCLAIMER_SHORT, ISSUES_URL } from '@/features/layout/navigation';
 import { usePageTitle } from '@/hooks/usePageTitle';
 
 export default function TermsPage() {
@@ -39,9 +39,10 @@ export default function TermsPage() {
         </p>
         <h2>6. No warranty and limitation of liability</h2>
         <p>
-          The service is provided &quot;as is&quot;, without any warranty. To the fullest extent
-          permitted by law, Learn to Fly is not liable for any loss or damage arising from its use,
-          and in particular from any use of its content outside a flight simulator.
+          Learn to Fly is in public beta: features, content and scoring may change, and you may run
+          into bugs. The service is provided &quot;as is&quot;, without any warranty. To the fullest
+          extent permitted by law, Learn to Fly is not liable for any loss or damage arising from
+          its use, and in particular from any use of its content outside a flight simulator.
         </p>
         <h2>7. Termination and changes</h2>
         <p>
@@ -52,7 +53,7 @@ export default function TermsPage() {
         <h2>8. Contact</h2>
         <p>
           Questions about these terms? Open an issue on{' '}
-          <ExternalLink href={`${GITHUB_URL}/issues`}>GitHub</ExternalLink>.
+          <ExternalLink href={ISSUES_URL}>GitHub</ExternalLink>.
         </p>
       </Prose>
     </PageContainer>

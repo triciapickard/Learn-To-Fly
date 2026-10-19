@@ -16,9 +16,10 @@ import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
 import { DifficultyDots } from '@/components/ChallengeMeta';
 import { LessonPath, type LessonStop, type LessonStopState } from '@/components/LessonPath';
-import { Link } from '@/components/Link';
+import { ExternalLink, Link } from '@/components/Link';
 import { useModules } from '@/features/content/api';
 import { CURRICULUM_PREVIEW, FIRST_STOPS } from '@/features/landing/curriculumPreview';
+import { ISSUES_URL } from '@/features/layout/navigation';
 import { useMyProgress } from '@/features/progress/api';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { cn } from '@/lib/cn';
@@ -183,6 +184,17 @@ function faq(modules: PreviewModule[]) {
       a: 'Yes. Every lesson is free to read without an account. A free account saves your progress, challenge scores and attempt history.',
     },
     {
+      q: 'What does public beta mean?',
+      a: (
+        <>
+          The site is new and still growing. Every module that is open has been flown and checked in
+          MSFS 2024, but you may still find a typo, a rough edge or a bug. Modules that are still
+          being written stay closed until they are verified. If something looks wrong, tell us on{' '}
+          <ExternalLink href={ISSUES_URL}>GitHub</ExternalLink> and it will be fixed.
+        </>
+      ),
+    },
+    {
       q: 'Do I need a yoke or rudder pedals?',
       a: 'No. An Xbox controller or a basic joystick is enough to complete every lesson and challenge. A yoke and pedals make it feel more real, but they are optional.',
     },
@@ -293,7 +305,7 @@ export default function LandingPage() {
         )}
       >
         <div>
-          <Eyebrow>Free · Cessna 172 Skyhawk · MSFS 2024</Eyebrow>
+          <Eyebrow>Free · Public beta · Cessna 172 Skyhawk · MSFS 2024</Eyebrow>
           <h1 id="hero-heading" className="display-lg sm:display-xl mt-6 max-w-[12ch]">
             Yes, you can fly a plane.
           </h1>
@@ -317,7 +329,7 @@ export default function LandingPage() {
           </div>
           <p className="mt-4 text-sm leading-5 text-ink-3">
             No account needed to start. Any edition of MSFS 2024, on PC or Xbox. For simulation use
-            only.
+            only. Now in public beta.
           </p>
         </div>
 

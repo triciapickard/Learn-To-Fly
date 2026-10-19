@@ -20,7 +20,7 @@ export default function CurriculumPage() {
         <PageContainer narrow>
           <PageHeader
             title="Learn"
-            description="Nine modules take you from your first flight to a planned cross-country, in the same order real flight schools teach. Open a module to see its lessons and challenges."
+            description="Nine modules take you from your first flight to a planned cross-country, in the same order real flight schools teach. During the public beta, modules open as they are verified in the sim. Open a module to see its lessons and challenges."
           />
           <CurriculumMap modules={data!.modules} progress={progress} />
         </PageContainer>
