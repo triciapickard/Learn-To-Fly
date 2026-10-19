@@ -1,4 +1,4 @@
-/** Module overview for the landing page (v1.md Section 13.1). */
+/** Module overview for the landing page (v1.md Section 13.1); counts follow content/modules.yaml. */
 export const CURRICULUM_PREVIEW = [
   {
     code: 'M0',
@@ -20,7 +20,7 @@ export const CURRICULUM_PREVIEW = [
     code: 'M2',
     slug: 'm2-fundamentals',
     title: 'Fundamentals of flight',
-    lessons: 5,
+    lessons: 4,
     challenges: 4,
     summary: 'Straight and level, climbs, descents and coordinated turns.',
   },
@@ -36,32 +36,32 @@ export const CURRICULUM_PREVIEW = [
     code: 'M4',
     slug: 'm4-takeoffs-patterns-landings',
     title: 'Takeoffs, patterns and landings',
-    lessons: 6,
-    challenges: 7,
+    lessons: 4,
+    challenges: 5,
     summary: 'Take off, fly the traffic pattern, land and go around.',
   },
   {
     code: 'M5',
     slug: 'm5-slow-flight-stalls-emergencies',
     title: 'Slow flight, stalls and emergencies',
-    lessons: 5,
-    challenges: 6,
+    lessons: 4,
+    challenges: 5,
     summary: 'Handle the edges of the envelope and an engine failure.',
   },
   {
     code: 'M6',
     slug: 'm6-vfr-navigation',
     title: 'VFR navigation',
-    lessons: 8,
-    challenges: 7,
+    lessons: 6,
+    challenges: 5,
     summary: 'Charts, airspace, pilotage, dead reckoning, VOR and GPS.',
   },
   {
     code: 'M7',
     slug: 'm7-radio-airport-operations',
     title: 'Radio and airport operations',
-    lessons: 4,
-    challenges: 3,
+    lessons: 3,
+    challenges: 2,
     summary: 'Radio calls at non-towered and towered airports.',
   },
   {
@@ -102,13 +102,13 @@ export const FIRST_STOPS = [
     module: 'm1-meet-the-skyhawk',
     code: 'Lesson 1.1',
     title: 'The airframe and flight controls',
-    minutes: 20,
+    minutes: 15,
   },
   {
     slug: 'l1-2-the-cockpit-g1000-pfd-and-mfd',
     module: 'm1-meet-the-skyhawk',
     code: 'Lesson 1.2',
     title: 'The cockpit: G1000 PFD and MFD',
-    minutes: 15,
+    minutes: 20,
   },
 ] as const;
