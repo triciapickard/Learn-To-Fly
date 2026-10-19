@@ -83,7 +83,8 @@ function weatherText(w: ResolvedSetup['weather']): ReactNode {
         <p className="mt-1 text-sm text-ink-2">{w.summary}</p>
       )}
       <p className="mt-1 text-sm text-ink-2">
-        Use the Clear skies preset for calm, clear weather, or Custom to set wind and clouds.
+        In Flight conditions, under Weather: pick the Clear skies preset for calm, clear weather, or
+        Custom to set the wind and clouds yourself.
       </p>
     </>
   );
@@ -121,7 +122,7 @@ export function setupRows(setup: ResolvedSetup): { label: string; value: ReactNo
   if (details) rows.push({ label: 'Start position', value: details });
   if (setup.startDetails.fallback) {
     rows.push({
-      label: 'If you cannot start in the air',
+      label: "If you can't start in the air",
       value: String(setup.startDetails.fallback),
     });
   }
@@ -222,7 +223,7 @@ export function BriefTab({
           Sim setup
         </h2>
         <p className="mt-1 text-ink-2">
-          Set these up with the sim paused, then read the procedure before you start.
+          Match these settings in the sim before you fly, then read the procedure.
         </p>
         <dl className="mt-4 divide-y divide-line rounded-lg border border-line bg-surface">
           {setupRows(challenge.setup).map((row) => (
