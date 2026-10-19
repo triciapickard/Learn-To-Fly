@@ -25,7 +25,7 @@ The Cessna 172 Skyhawk is the most-produced airplane in history, and one of the 
 
 Some things to know about the 172S you fly in the sim:
 
-- **High wing.** The wing is mounted on top of the cabin. You get a great view of the ground, but you have to lift a wing (or look carefully) to check for traffic above you in a turn.
+- **High wing.** The wing is mounted on top of the cabin. You get a great view of the ground, but the wing blocks your view into a turn, so lift that wing slightly and look before you start the turn.
 - **Four seats.** Two in front, two in the back.
 - **Fixed tricycle landing gear.** Two main wheels under the cabin and a steerable nose wheel. The gear never retracts.
 - **One engine and a fixed-pitch propeller.** {{aircraft.engine}}, making {{aircraft.horsepower}}.

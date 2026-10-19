@@ -32,10 +32,10 @@ These knobs control the engine:
 - **Throttle (black).** Push in for more power, pull out for less.
 - **Mixture (red).** Sets the ratio of fuel to air. Push in for **rich** (more fuel), pull out to **lean** (less fuel). Pulling it all the way out is **idle cut-off** (the sim's tooltip says CUT): no fuel reaches the cylinders and the engine stops.
 
-Air gets thinner as you climb. At altitude a full-rich mixture has too much fuel for the air available, so you lean it in cruise for smoother running and better economy. At the low Bay Area airports you'll use full rich for takeoff and landing and lean in cruise.
+Air gets thinner as you climb. At altitude a full-rich mixture has too much fuel for the air available, so you lean it in cruise for smoother running and better economy. The Bay Area airports in this course are close to sea level, so you'll use full rich for takeoff and landing and lean in cruise.
 
 :::callout{type="safety"}
-Shut the engine down with the mixture: pull it to idle cut-off. Never shut down by turning the magnetos off first. It leaves fuel in the cylinders and can damage the engine.
+Shut the engine down with the mixture: pull it to idle cut-off. Never shut down by turning the magnetos off. That leaves fuel in the cylinders, and a bumped propeller could fire the engine with someone standing next to it.
 :::
 
 ## The fuel system
@@ -101,7 +101,7 @@ There are two magnetos, and each cylinder has two spark plugs, one from each. Th
 - **Redundancy.** If one magneto fails, the other keeps the engine running.
 - **Better combustion.** Two sparks burn the fuel more completely.
 
-The key switch has five positions: **OFF, R, L, BOTH, START**. You start on START, fly on BOTH, and check each magneto on its own (R, then L) during the run-up.
+The key switch has five positions: **OFF, R, L, BOTH, START**. Turn it to START to crank the engine, fly on BOTH, and check each magneto on its own (R, then L) during the run-up.
 
 :::quiz{id="l1-3-q3" type="single"}
 Why does the engine have two magnetos?
@@ -116,7 +116,7 @@ Why does the engine have two magnetos?
 Two independent magnetos mean the engine keeps running if one fails, and two sparks per cylinder burn the mixture more completely.
 :::
 
-## Fuel injected, not carbureted
+## No carburetor heat
 
 The 172S is **fuel injected**. Older Skyhawks have a carburetor, which can ice up in humid air and needs **carburetor heat**. The injected engine can't get carburetor ice, so there's no carb heat knob in the 172S.
 
