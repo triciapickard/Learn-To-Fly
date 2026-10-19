@@ -120,6 +120,11 @@ export function resolveSetup(setup: Challenge['setup'], bundle: ContentBundle): 
 /** Maps the validated bundle to the documents stored in each collection. */
 export function buildDocuments(bundle: ContentBundle, includeDrafts = false): CollectionPlan[] {
   const v = (published: boolean) => visibility(published, includeDrafts);
+  // Lessons and challenges are only published when their module is (D-27): an unpublished
+  // module is unverified as a whole, so nothing in it is served, listed or linked to.
+  const modulePublished = new Map(bundle.modules.map((m) => [m.slug, m.published]));
+  const inPublishedModule = (published: boolean, moduleSlug: string) =>
+    published && modulePublished.get(moduleSlug) === true;
   const lessons = bundle.lessons.map((l) => {
     const fm = l.frontmatter;
     return {
@@ -142,7 +147,7 @@ export function buildDocuments(bundle: ContentBundle, includeDrafts = false): Co
       sections: l.sections,
       lastVerifiedAt: fm.lastVerifiedAt,
       simVersion: fm.simVersion,
-      ...v(fm.published),
+      ...v(inPublishedModule(fm.published, fm.module)),
     };
   });
   // All lessons in the repo (the API hides unpublished ones), so publishing drafts does not
@@ -178,7 +183,7 @@ export function buildDocuments(bundle: ContentBundle, includeDrafts = false): Co
           setup: resolveSetup(setup, bundle),
           moduleSlug: module,
           lessonSlugs,
-          ...v(published),
+          ...v(inPublishedModule(published, module)),
         }),
       ),
     },

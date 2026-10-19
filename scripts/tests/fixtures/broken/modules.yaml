@@ -18,3 +18,22 @@ modules:
     description: Test.
     icon: plane
     estimatedMinutes: 10
+  - slug: m3-half-verified
+    code: M3
+    order: 3
+    title: Half verified
+    summary: Test.
+    description: Test.
+    icon: plane
+    lessons: [l3-1-still-a-draft]
+    estimatedMinutes: 10
+  - slug: m4-unpublished
+    code: M4
+    order: 4
+    title: Unpublished module
+    summary: Test.
+    description: Test.
+    icon: plane
+    lessons: [l4-1-verified-but-hidden]
+    estimatedMinutes: 10
+    published: false

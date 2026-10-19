@@ -121,8 +121,8 @@ describe('GET /me/progress', () => {
     let res = await agent.get('/api/v1/me/progress').expect(200);
     expect(res.body.lessons[L1].status).toBe('completed');
     expect(res.body.modules['m1-basics']).toMatchObject({ percent: 33, complete: false });
-    // The draft-only module has nothing to complete yet.
-    expect(res.body.modules['m2-next']).toMatchObject({ lessonsTotal: 0, complete: false });
+    // The unverified module is not published, so it has no progress entry at all.
+    expect(res.body.modules['m2-next']).toBeUndefined();
 
     await put(agent, L2, { status: 'completed' }).expect(200);
     await passC1(agent);

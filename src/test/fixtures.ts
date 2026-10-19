@@ -243,6 +243,7 @@ export function lessonDetail(overrides: Partial<LessonDetail> = {}): LessonDetai
 
 export function moduleSummary(overrides: Partial<ModuleSummary> = {}): ModuleSummary {
   return {
+    draft: false,
     slug: 'm1-meet-the-skyhawk',
     code: 'M1',
     order: 1,

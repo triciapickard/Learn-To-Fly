@@ -6,6 +6,15 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+### Changed
+
+- Public beta: only fully verified modules are shown (v1.md D-27). A module is published
+  only once every lesson and challenge in it is published; the validator enforces it, the
+  seeder hides everything in an unpublished module, and `ModuleSummary` gains a `draft`
+  flag for preview builds. Modules 2–8 are now `published: false` until verified, so the
+  site, API and progress list Modules 0 and 1 only; the landing page says how many of the
+  nine planned modules are open.
+
 ### Added
 
 - v2 content drafts: all 56 Course 2 and Course 3 lessons (Modules 9–21, v2.md

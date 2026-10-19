@@ -20,7 +20,7 @@ export const PAGE_META: Record<string, { title?: string; description: string }> 
   '/learn': {
     title: 'Learn',
     description:
-      'The full Learn to Fly curriculum: nine modules from your first flight to a cross-country capstone in the Cessna 172.',
+      'The Learn to Fly curriculum for the Cessna 172: modules open as they are verified in the sim, from your first flight to a cross-country capstone.',
   },
   '/challenges': {
     title: 'Challenges',
