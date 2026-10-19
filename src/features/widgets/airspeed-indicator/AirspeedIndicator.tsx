@@ -122,11 +122,13 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
       onReset={() => setIas(initial)}
       description={description}
     >
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      {/* The readout keeps room for two lines and never wraps onto its own row, so the dial
+          below it never moves while it is being dragged. */}
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div
           role="group"
           aria-label="Show"
-          className="flex rounded-md border border-line-strong p-0.5 text-sm"
+          className="flex shrink-0 self-start rounded-md border border-line-strong p-0.5 text-sm"
         >
           {(['both', 'dial', 'tape'] as const).map((v) => (
             <button
@@ -143,7 +145,10 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
             </button>
           ))}
         </div>
-        <p className="font-mono text-lg font-semibold" aria-hidden>
+        <p
+          className="min-h-14 font-mono text-lg font-semibold sm:min-w-0 sm:flex-1 sm:text-right"
+          aria-hidden
+        >
           {readout}
         </p>
       </div>
