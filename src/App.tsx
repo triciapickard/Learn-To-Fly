@@ -4,15 +4,18 @@ import { RouterProvider } from 'react-router';
 import { ToastProvider } from '@/components/Toast';
 import { TooltipProvider } from '@/components/Tooltip';
 import { AuthBootstrap } from '@/features/auth/AuthBootstrap';
+import { isReel } from '@/features/reel/frame';
 import { ThemeProvider } from '@/features/theme/ThemeProvider';
 import { queryClient } from '@/lib/queryClient';
 import { createRouter } from './router';
 
-const ReactQueryDevtools = import.meta.env.DEV
-  ? lazy(() =>
-      import('@tanstack/react-query-devtools').then((m) => ({ default: m.ReactQueryDevtools })),
-    )
-  : () => null;
+// Left out in the launch video reel, where its button would be on camera.
+const ReactQueryDevtools =
+  import.meta.env.DEV && !isReel()
+    ? lazy(() =>
+        import('@tanstack/react-query-devtools').then((m) => ({ default: m.ReactQueryDevtools })),
+      )
+    : () => null;
 
 const router = createRouter();
 

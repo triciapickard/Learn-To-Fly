@@ -147,13 +147,13 @@ export function ObjectivesBox({ objectives }: { objectives: string[] }) {
   );
 }
 
-const DISMISS_KEY = 'ltf-signup-banner-dismissed';
+export const SIGNUP_BANNER_STORAGE_KEY = 'ltf-signup-banner-dismissed';
 
 /** Non-blocking "Sign up to save your progress" banner for visitors (Flow A). */
 export function SignupBanner({ returnTo }: { returnTo: string }) {
   const [dismissed, setDismissed] = useState(() => {
     try {
-      return localStorage.getItem(DISMISS_KEY) === '1';
+      return localStorage.getItem(SIGNUP_BANNER_STORAGE_KEY) === '1';
     } catch {
       return false;
     }
@@ -175,7 +175,7 @@ export function SignupBanner({ returnTo }: { returnTo: string }) {
         onClick={() => {
           setDismissed(true);
           try {
-            localStorage.setItem(DISMISS_KEY, '1');
+            localStorage.setItem(SIGNUP_BANNER_STORAGE_KEY, '1');
           } catch {
             // ignore
           }

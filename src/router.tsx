@@ -73,6 +73,17 @@ export const routes: RouteObject[] = [
     HydrateFallback: AppLoading,
     children: [{ path: 'challenges/:slug/fly', ...page(() => import('./pages/FlyModePage')) }],
   },
+  // The launch video reel frames the site itself, so it sits outside the site's layout.
+  ...(import.meta.env.DEV
+    ? [
+        {
+          path: 'dev/reel',
+          errorElement: <RootErrorPage />,
+          HydrateFallback: AppLoading,
+          ...page(() => import('./pages/DevReelPage')),
+        },
+      ]
+    : []),
 ];
 
 export function createRouter() {
