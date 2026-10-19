@@ -57,7 +57,7 @@ Every challenge has three steps: **Brief, Fly, Debrief**.
 - **Fly.** Keep the Fly tab open on a second screen, a tablet or a phone. It shows the steps, the key numbers and an optional timer.
 - **Debrief.** After landing, score yourself against the rubric. Each criterion has a clear, measurable description, for example "altitude within ±100 ft".
 
-Your score earns a tier: **Bronze** means you passed, **Silver** means you flew it well, and **Gold** means you flew it to a high standard. Scores are self-assessed, so they only help if you mark what you flew. If a row went wrong, fly it again.
+Your score earns a tier: **Bronze** means you passed, **Silver** means you flew it well, and **Gold** means you flew it to a high standard. Scores are self-assessed, so they only help if you mark what you actually flew. If you missed a criterion, fly the challenge again.
 
 :::quiz{id="l0-1-q1" type="single"}
 What are the three steps of a challenge?
@@ -75,7 +75,7 @@ Every challenge starts with the **Brief** (exact sim setup, read with the sim pa
 ## What you need
 
 - **Microsoft Flight Simulator 2024**, any edition. The course uses the Cessna 172 Skyhawk with the G1000 NXi glass cockpit.
-- **A controller.** A gamepad works. A joystick with a twist grip, or a yoke with rudder pedals, is better. Lesson 0.2 covers all three.
+- **A controller.** A gamepad works. A joystick with a twist grip, or a yoke with rudder pedals, is better. Lesson 0.2 sets up all three.
 - **Ideally a second screen**, a tablet or a phone for the brief and the Fly tab, so you can read them without leaving the cockpit.
 
 ## Sim training is not flight training
