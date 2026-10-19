@@ -196,11 +196,15 @@ export function ReelPlayer({ shot, host }: { shot: Shot; host?: string }) {
   return (
     <div
       data-theme={shot.theme}
-      className="fixed inset-0 grid cursor-none place-items-center overflow-hidden bg-surface-sunken"
+      className="fixed inset-0 cursor-none overflow-hidden bg-surface-sunken"
     >
       <div
-        className="relative shrink-0 overflow-hidden bg-surface-sunken"
-        style={{ width: STAGE.width, height: STAGE.height, transform: `scale(${scale})` }}
+        className="absolute top-1/2 left-1/2 overflow-hidden bg-surface-sunken"
+        style={{
+          width: STAGE.width,
+          height: STAGE.height,
+          transform: `translate(-50%, -50%) scale(${scale})`,
+        }}
       >
         <div
           className="absolute overflow-hidden rounded-xl border border-line bg-canvas shadow-[0_24px_64px_-24px_rgb(0_0_0/0.35)]"
