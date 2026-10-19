@@ -1,5 +1,6 @@
-import { ExternalLink, Link } from '@/components/Link';
+import { ExternalLink, Link, linkClasses } from '@/components/Link';
 import { Logo } from '@/components/Logo';
+import { ReportProblemDialog } from '@/features/feedback/ReportProblemDialog';
 import { DISCLAIMER_SHORT, FOOTER_NAV, GITHUB_URL } from './navigation';
 
 export function Footer() {
@@ -20,6 +21,18 @@ export function Footer() {
               <ExternalLink href={GITHUB_URL} quiet className="text-ink-2">
                 GitHub
               </ExternalLink>
+            </li>
+            <li>
+              <ReportProblemDialog
+                trigger={
+                  <button
+                    type="button"
+                    className={linkClasses({ quiet: true, className: 'text-ink-2' })}
+                  >
+                    Report a problem
+                  </button>
+                }
+              />
             </li>
           </ul>
         </nav>

@@ -2,6 +2,7 @@ import * as Sentry from '@sentry/react';
 import { useEffect } from 'react';
 import { isRouteErrorResponse, useRouteError } from 'react-router';
 import { Button } from '@/components/Button';
+import { ReportProblemDialog } from '@/features/feedback/ReportProblemDialog';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import NotFoundPage from './NotFoundPage';
 
@@ -25,8 +26,16 @@ export default function RootErrorPage() {
         An unexpected error stopped this page from loading. Reloading usually fixes it. If it keeps
         happening, please try again later.
       </p>
-      <div>
+      <div className="flex flex-wrap justify-center gap-2">
         <Button onClick={() => window.location.reload()}>Reload the page</Button>
+        <ReportProblemDialog
+          error={error}
+          trigger={
+            <Button variant="secondary" type="button">
+              Report this error
+            </Button>
+          }
+        />
       </div>
       {import.meta.env.DEV && error instanceof Error && (
         <pre className="mt-4 overflow-auto rounded-md bg-surface-sunken p-4 text-left text-sm">

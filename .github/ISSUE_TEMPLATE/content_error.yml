@@ -1,0 +1,57 @@
+name: Content or aviation error
+description: A lesson, challenge, checklist or reference page says something wrong or unclear.
+title: '[Content] '
+labels: ['content', 'beta']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every number and procedure in Learn to Fly is meant to match the FAA handbooks, the Cessna 172
+        handbook and the aircraft as modelled in MSFS 2024. If something does not, please tell us.
+  - type: input
+    id: where
+    attributes:
+      label: Which lesson, challenge or page?
+      description: The lesson code (for example L2.3) or the page address.
+      placeholder: L2.3 or /learn/m2-first-flight/l2-3-straight-and-level
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What is wrong or unclear?
+      description: Quote the sentence or number if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it say instead?
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Where the correct information comes from (handbook section, chart, what the sim shows).
+      placeholder: Airplane Flying Handbook ch. 3, or "the G1000 in the sim shows …"
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of problem
+      options:
+        - Wrong fact or number
+        - Sim behaves differently from the lesson
+        - Confusing or hard to follow
+        - Typo or broken formatting
+        - Broken link, image or widget
+  - type: input
+    id: sim-version
+    attributes:
+      label: MSFS 2024 version
+      description: Shown in the sim's main menu.
+      placeholder: 1.8.16.0
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Technical details
+      description: Filled in automatically by the "Report a problem" button on the site. Leave as is.
+      render: text
