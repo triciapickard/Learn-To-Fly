@@ -6,6 +6,8 @@ import {
   expectedReadmes,
   hasUnverifiedWarning,
   removeUnverifiedWarning,
+  rootReadmeBlock,
+  syncRootReadme,
   WARNING_TITLE,
 } from '../lib/unverifiedWarning.js';
 import { lessonSource, testContext } from './helpers.js';
@@ -80,5 +82,59 @@ describe('folder READMEs', () => {
       'content/lessons/m2-fundamentals/README.md',
     )!;
     expect(readme).not.toContain('[!CAUTION]');
+  });
+});
+
+describe('repository README', () => {
+  const content = {
+    lessons: [
+      {
+        file: 'content/lessons/m0-getting-started/l0-1.md',
+        frontmatter: {
+          code: 'L0.1',
+          title: 'Welcome',
+          module: 'm0-getting-started',
+          order: 1,
+          published: true,
+        },
+      },
+      {
+        file: 'content/lessons/m2-fundamentals/l2-1.md',
+        frontmatter: {
+          code: 'L2.1',
+          title: 'Forces',
+          module: 'm2-fundamentals',
+          order: 1,
+          published: false,
+        },
+      },
+    ],
+    challenges: [
+      {
+        file: 'content/challenges/c0-1.yaml',
+        code: 'C0.1',
+        title: 'First flight',
+        module: 'm0-getting-started',
+        published: true,
+      },
+    ],
+    modules: [
+      { slug: 'm0-getting-started', code: 'M0', title: 'Getting started' },
+      { slug: 'm2-fundamentals', code: 'M2', title: 'Fundamentals of flight' },
+    ],
+  };
+  const block = rootReadmeBlock(content);
+
+  it('counts and lists only verified content', () => {
+    expect(block).toContain('Only 1 of 2 lessons and 1 of 1 challenges');
+    expect(block).toContain('> - M0 · Getting started: L0.1, C0.1');
+    expect(block).not.toContain('M2');
+  });
+
+  it('goes under the title once, then is replaced in place', () => {
+    const first = syncRootReadme('# Learn to Fly\n\n## Description\n', block);
+    expect(first).toBe(`# Learn to Fly\n\n${block}\n\n## Description\n`);
+    expect(syncRootReadme(first, block)).toBe(first);
+    expect(syncRootReadme(first, 'NEW')).toBe('# Learn to Fly\n\nNEW\n\n## Description\n');
   });
 });

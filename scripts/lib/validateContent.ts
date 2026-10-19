@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import type { ContentBundle } from './loadContent.js';
-import { expectedReadmes } from './unverifiedWarning.js';
+import { expectedReadmes, rootReadmeBlock } from './unverifiedWarning.js';
 
 const SYNC_WARNINGS = 'run `npm run content:warnings`';
 
@@ -207,6 +208,12 @@ export function validateContent(bundle: ContentBundle): void {
     if (!existsSync(file)) issues.error(file, `Folder README is missing (${SYNC_WARNINGS})`);
     else if (readFileSync(file, 'utf8') !== expected)
       issues.error(file, `Folder README is out of date (${SYNC_WARNINGS})`);
+  }
+  // The repository README's warning lists what is verified (real content/ folder only).
+  if (bundle.contentDir === path.resolve('content')) {
+    const readme = existsSync('README.md') ? readFileSync('README.md', 'utf8') : '';
+    if (!readme.includes(rootReadmeBlock(bundle)))
+      issues.error('README.md', `The verified-content warning is out of date (${SYNC_WARNINGS})`);
   }
 
   // Resources

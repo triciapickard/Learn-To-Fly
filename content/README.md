@@ -101,9 +101,10 @@ unverified — use it locally and on preview services, never in production.
 
 **Unverified warnings:** the repository is public, so every draft lesson and challenge
 file starts with a "not for learning use" warning, and each lesson folder and
-`challenges/` has a generated `README.md` marking what is verified. Run
+`challenges/` has a generated `README.md` marking what is verified. The repository
+README opens with the same warning and a list of what is verified. Run
 `npm run content:warnings` whenever you change `published`: it adds or removes the
-warnings and regenerates the READMEs. `content:validate` fails until you do. The lesson
+warnings and regenerates the READMEs and that list. `content:validate` fails until you do. The lesson
 warning is an HTML-commented block that the app never renders; the app shows its own
 banner on draft pages.
 

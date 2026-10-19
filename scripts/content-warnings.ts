@@ -12,6 +12,8 @@ import {
   addLessonWarning,
   expectedReadmes,
   removeUnverifiedWarning,
+  rootReadmeBlock,
+  syncRootReadme,
 } from './lib/unverifiedWarning.js';
 
 const args = process.argv.slice(2);
@@ -43,6 +45,8 @@ for (const c of bundle.challenges) {
   sync(c.file, c.published ? removeUnverifiedWarning : addChallengeWarning);
 }
 for (const [file, readme] of expectedReadmes(bundle)) sync(file, () => readme);
+// The repository README (beside the default content/ folder only, not test fixtures).
+if (!contentDir) sync('README.md', (source) => syncRootReadme(source, rootReadmeBlock(bundle)));
 
 for (const file of changed) console.log(`updated ${file}`);
 console.log(`${changed.length} file(s) updated.`);
