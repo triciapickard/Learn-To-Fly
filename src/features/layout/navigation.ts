@@ -16,3 +16,10 @@ export const GITHUB_URL = 'https://github.com/triciapickard/Learn-To-Fly';
 
 export const DISCLAIMER_SHORT =
   'For simulation use only. Learn to Fly is not flight instruction and must not be used for real-world flight training or navigation.';
+
+/**
+ * Where the beta banner's "Report a problem" link goes. The bug-reporting work for the public
+ * beta can point this at an in-app route (start with "/") or another URL; `BetaBanner`
+ * renders either correctly.
+ */
+export const BUG_REPORT_URL = `${GITHUB_URL}/issues/new/choose`;
