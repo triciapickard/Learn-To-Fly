@@ -27,7 +27,8 @@ export function AttemptDetails({
   return (
     <div className="flex flex-col gap-3 pt-3">
       <p className="text-sm text-ink-2">
-        {attempt.points} of {attempt.maxPoints} points · rubric version {attempt.challengeVersion}
+        {attempt.points} of {attempt.maxPoints} points · challenge version{' '}
+        {attempt.challengeVersion}
         {attempt.paused && ' · paused during the flight'}
       </p>
       <ul className="flex flex-col gap-1">

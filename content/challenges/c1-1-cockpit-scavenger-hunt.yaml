@@ -16,8 +16,8 @@ lastVerifiedAt: 2026-10-15
 simVersion: 'MSFS 2024 (1.8.16.0)'
 
 goal: >
-  Find and operate every main control and instrument in the Skyhawk without
-  searching. Tick each item on the Fly tab as you find it.
+  Find and operate the Skyhawk's main controls and instruments until you can
+  reach each one without hunting for it. Tick each step on the Fly tab as you go.
 
 setup:
   aircraftVariant: c172-g1000
@@ -36,31 +36,31 @@ setup:
   flightPlan: null
 
 procedure:
-  - You start outside the airplane. Remove the three remove-before-flight covers (pitot tube, static port and engine) and the wheel chocks, then climb in.
-  - Master switch (BAT and ALT). Turn it on and watch the PFD start.
-  - Avionics switches (BUS 1 and BUS 2). Turn both on. The right-hand screen (MFD) shows OFF until you press the rightmost softkey (the up arrow) below it.
+  - You start outside the airplane. Remove the three remove-before-flight covers (pitot tube, static port and engine) and the wheel chocks, then climb in. The 16 cockpit items start with the next step.
+  - Master switch (BAT and ALT). Turn both halves on and watch the PFD start.
+  - Avionics master (BUS 1 and BUS 2). Turn both on. The right-hand screen (MFD) shows OFF until you press the rightmost softkey (the up arrow) below it.
   - Fuel selector. Set it to BOTH.
-  - Mixture. Find it, but don't move it to rich yet.
+  - Mixture. Find it, but leave it in idle cut-off for now.
   - Throttle. Find it and move it a little.
-  - Ignition switch (the tooltip calls it Magnetos). Find the OFF, R, L, BOTH and START positions (don't start the engine).
+  - Ignition key switch (the tooltip calls it Magnetos). Find the five positions, OFF, R, L, BOTH and START, without starting the engine.
   - Flap switch. Lower and raise the flaps and watch the flap indicator.
   - Elevator trim. Move it and find the trim indicator.
   - Parking brake. Find it and check it is set.
   - PFD airspeed tape. Find the colored V-speed bands.
-  - Altimeter setting (BARO). Set 29.92.
+  - Altimeter setting (BARO). Set it to 29.92.
   - Heading bug. Move it with the HDG knob.
   - COM1. Tune 123.450 in standby and swap it to active.
-  - Transponder. On the PFD, press the XPDR softkey. Find the code 1200 (CODE, then four digits 0–7) and the STBY, ON and ALT modes.
+  - Transponder. On the PFD, press the XPDR softkey. Find how to enter a code (CODE, then four digits from 0 to 7, such as 1200) and the STBY, ON and ALT modes.
   - EIS (the engine strip down the left edge of the MFD). Find FUEL QTY GAL and FFLOW GPH.
-  - Standby instruments and the magnetic compass (at the top center of the windscreen). Find them.
-  - Return every switch you moved to its cold-and-dark position.
+  - Standby instruments and the magnetic compass (at the top center of the windshield). Find them.
+  - Put every switch you moved back to its cold-and-dark position.
 
 criteria:
   - id: items-found
-    label: Items found and operated (ticked on the Fly tab)
+    label: Cockpit items found and operated (steps 2 to 17 on the Fly tab)
     kind: tiered
     tiers:
-      gold: 16 of 16
+      gold: All 16
       silver: 14–15
       bronze: 12–13
     required: true
@@ -76,7 +76,7 @@ criteria:
     required: false
     weight: 1
   - id: cold-and-dark
-    label: Returned all switches to cold and dark at the end
+    label: Returned every switch to cold and dark at the end
     kind: binary
     required: true
     weight: 1
@@ -86,13 +86,13 @@ randomEvents: []
 
 commonMistakes:
   - Confusing the avionics master with the master switch.
-  - Moving the mixture out of idle cut-off and leaving it there. Nothing happens with the engine off, but put it back so the next start begins from the checklist.
+  - Moving the mixture out of idle cut-off and leaving it there. Nothing happens with the engine off, but put it back so your next engine start begins where the checklist expects it.
 
 tips:
   - Zoom the camera toward each area of the panel.
   - On a gamepad, flaps and trim have buttons too (by default the D-pad for flaps, RB with the right stick for trim), but find the cockpit controls first.
   - Use the cockpit tooltips. They name every control.
-  - Start the timer on the Fly tab when you begin.
+  - Start the optional timer on the Fly tab when you begin, so you can score your time.
 
 debriefQuestions:
   - id: hardest

@@ -76,7 +76,7 @@ export default function ChallengesPage() {
           <PageContainer>
             <PageHeader
               title="Challenges"
-              description="Fly these in Microsoft Flight Simulator 2024, then score yourself in the debrief. Each one has an exact sim setup, a procedure and a scored rubric."
+              description="Fly these in Microsoft Flight Simulator 2024, then score yourself in the debrief. Each one comes with an exact sim setup, a procedure to fly and the rubric you score yourself against."
             />
             <form
               role="search"

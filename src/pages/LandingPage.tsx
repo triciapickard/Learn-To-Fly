@@ -68,8 +68,11 @@ function useCurriculumPreview(): PreviewModule[] {
   }));
 }
 
+/** A module with no published lessons is still being written; its planned minutes do not count. */
+const isOpen = (m: PreviewModule) => m.lessons > 0;
+
 function stats(modules: PreviewModule[]) {
-  const minutes = modules.reduce((sum, m) => sum + (m.minutes ?? 0), 0);
+  const minutes = modules.filter(isOpen).reduce((sum, m) => sum + (m.minutes ?? 0), 0);
   return [
     { value: String(modules.length), label: 'modules, one airplane' },
     {
@@ -160,35 +163,39 @@ const NEEDS: { title: string; text: string; icon: LucideIcon }[] = [
   },
   {
     title: 'A second screen',
-    text: 'Keep a phone, tablet or laptop open beside the sim. Fly mode shows the setup, the procedure and a stopwatch in big type while you fly.',
+    text: 'Keep a phone, tablet or laptop open beside the sim. Fly mode shows the steps and a timer in big type while you fly.',
     icon: Smartphone,
   },
 ];
 
-const FAQ = [
-  {
-    q: 'Is this real flight training?',
-    a: 'No. Learn to Fly is for simulation only. It borrows real-world standards so you build good habits, but it does not count toward any pilot certificate. For real flying, learn with a certified flight instructor.',
-  },
-  {
-    q: 'Is it free?',
-    a: 'Yes. Every lesson is free to read without an account. A free account saves your progress, challenge scores and attempt history.',
-  },
-  {
-    q: 'Do I need a yoke or rudder pedals?',
-    a: 'No. An Xbox controller or a basic joystick is enough to complete every lesson and challenge. A yoke and pedals make it feel more real, but they are optional.',
-  },
-  {
-    q: 'How far does it go?',
-    a: (
-      <>
-        Version 1 covers one airplane, the Cessna 172, done properly: from the first takeoff to a
-        local checkride and a planned cross-country. Bigger airplanes come later.{' '}
-        <Link to="/roadmap">See the roadmap</Link>
-      </>
-    ),
-  },
-];
+function faq(modules: PreviewModule[]) {
+  const open = modules.filter(isOpen).length;
+  return [
+    {
+      q: 'Is this real flight training?',
+      a: 'No. Learn to Fly is for simulation only. It borrows real-world standards so you build good habits, but it does not count toward any pilot certificate. For real flying, learn with a certified flight instructor.',
+    },
+    {
+      q: 'Is it free?',
+      a: 'Yes. Every lesson is free to read without an account. A free account saves your progress, challenge scores and attempt history.',
+    },
+    {
+      q: 'Do I need a yoke or rudder pedals?',
+      a: 'No. An Xbox controller or a basic joystick is enough to complete every lesson and challenge. A yoke and pedals make it feel more real, but they are optional.',
+    },
+    {
+      q: 'How far does it go?',
+      a: (
+        <>
+          Version 1 covers one airplane, the Cessna 172, done properly: from the first takeoff to a
+          local checkride and a planned cross-country. Modules open as they are verified in the sim,
+          and {open} of {modules.length} {open === 1 ? 'is' : 'are'} open now. Bigger airplanes come
+          later. <Link to="/roadmap">See the roadmap</Link>
+        </>
+      ),
+    },
+  ];
+}
 
 /** Module 0 as lesson path stops; done and current follow the learner's progress when signed in. */
 function moduleZeroStops(progress?: ProgressResponse): LessonStop[] {
@@ -231,9 +238,19 @@ function moduleZeroStops(progress?: ProgressResponse): LessonStop[] {
   return stops;
 }
 
+/** Whether the sample challenge and its lesson are published, so the card only links to pages that exist. */
+function useSampleChallengeLinks() {
+  const { data } = useModules();
+  const module = data?.modules.find((m) => m.slug === SAMPLE_CHALLENGE.moduleSlug);
+  return {
+    challenge: Boolean(module?.challenges.some((c) => c.slug === SAMPLE_CHALLENGE.slug)),
+    lesson: Boolean(module?.lessons.some((l) => l.slug === SAMPLE_CHALLENGE.lessonSlug)),
+  };
+}
+
 /** The module to act on next: the first one with lessons left. */
 function currentModuleIndex(modules: PreviewModule[], progress?: ProgressResponse): number {
-  const index = modules.findIndex((m) => !progress?.modules[m.slug]?.complete);
+  const index = modules.findIndex((m) => isOpen(m) && !progress?.modules[m.slug]?.complete);
   return index === -1 ? modules.length - 1 : index;
 }
 
@@ -248,6 +265,7 @@ export default function LandingPage() {
   usePageTitle();
   const { data: progress } = useMyProgress();
   const modules = useCurriculumPreview();
+  const sampleLinks = useSampleChallengeLinks();
   const stops = moduleZeroStops(progress);
   const currentModule = currentModuleIndex(modules, progress);
   const started = Boolean(
@@ -406,6 +424,8 @@ export default function LandingPage() {
                         <span className="inline-flex items-center gap-1.5 text-go">
                           <Check aria-hidden className="size-4" strokeWidth={2} /> Done
                         </span>
+                      ) : !isOpen(module) ? (
+                        <span className="text-ink-3">Being written</span>
                       ) : isCurrent ? (
                         <span className="text-accent">Up next</span>
                       ) : (
@@ -503,17 +523,28 @@ export default function LandingPage() {
             <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5">
               <span className="text-sm leading-5 text-ink-3">
                 Est. <span className="readout-sm">20 min</span> · Builds on{' '}
-                <Link
-                  to={`/learn/${SAMPLE_CHALLENGE.moduleSlug}/${SAMPLE_CHALLENGE.lessonSlug}`}
-                  quiet
-                >
-                  lesson 4.3
-                </Link>
+                {sampleLinks.lesson ? (
+                  <Link
+                    to={`/learn/${SAMPLE_CHALLENGE.moduleSlug}/${SAMPLE_CHALLENGE.lessonSlug}`}
+                    quiet
+                  >
+                    lesson 4.3
+                  </Link>
+                ) : (
+                  'lesson 4.3'
+                )}
+                {!sampleLinks.challenge && ' · Opens with Module 4'}
               </span>
               <Button variant="secondary" size="md" asChild>
-                <Link unstyled to={`/challenges/${SAMPLE_CHALLENGE.slug}`}>
-                  Read the procedure
-                </Link>
+                {sampleLinks.challenge ? (
+                  <Link unstyled to={`/challenges/${SAMPLE_CHALLENGE.slug}`}>
+                    Read the procedure
+                  </Link>
+                ) : (
+                  <Link unstyled to="/challenges">
+                    See the open challenges
+                  </Link>
+                )}
               </Button>
             </div>
           </Card>
@@ -548,7 +579,7 @@ export default function LandingPage() {
             Questions
           </h2>
           <dl className="mt-10 grid gap-x-12 gap-y-8 md:grid-cols-2">
-            {FAQ.map((item) => (
+            {faq(modules).map((item) => (
               <div key={item.q} className="border-t border-line pt-5">
                 <dt className="heading-md">{item.q}</dt>
                 <dd className="mt-2 text-ink-2">{item.a}</dd>

@@ -12,8 +12,9 @@ lastVerifiedAt: 2026-09-28
 simVersion: 'MSFS 2024 (1.8.16.0)'
 
 goal: >
-  Take off, fly a relaxed loop around the Livermore valley and feel how the Skyhawk
-  responds. This challenge passes on completion.
+  Take off, fly a relaxed loop over the Livermore valley and feel how the Skyhawk
+  responds. Reach 3,000 ft and turn once each way and you've passed. There's no score
+  to chase today.
 
 setup:
   aircraftVariant: c172-g1000
@@ -32,13 +33,14 @@ setup:
   flightPlan: null
 
 procedure:
-  - Set the flaps to 10°. Unpause and add full throttle smoothly. Keep the nose on the centerline with small rudder inputs (on a gamepad, the LT and RT triggers).
-  - At 55 KIAS, gently raise the nose. Climb at about 75 KIAS.
+  - With the sim paused, set the flaps to 10°.
+  - Unpause and add full throttle smoothly. Keep the nose on the centerline with small rudder inputs (pedals, a twist of the stick, or the LT and RT triggers on a gamepad).
+  - At 55 KIAS, gently raise the nose. Hold it a little above the horizon and climb at about 75 KIAS.
   - Once you're climbing steadily, a few hundred feet above the ground, raise the flaps to 0°.
-  - Climb to 3,000 ft MSL. Lower the nose to level and reduce power to about 2,300 RPM.
-  - Make a gentle left turn (about 15–20° of bank) toward Lake Del Valle, then a right turn toward Mt Diablo.
+  - Climb to 3,000 ft MSL. Lower the nose to level flight and reduce power to about 2,300 RPM.
+  - Make a gentle left turn (about 15–20° of bank) toward Lake Del Valle, southeast of the airport. Then make a right turn toward Mt Diablo, the big mountain to the north.
   - Fly anywhere you like for 5–10 minutes. Try a small climb and a small descent.
-  - End the flight from the pause menu, or try a landing back at KLVK.
+  - End the flight from the pause menu, or fly back and try a landing at Livermore. It doesn't need to be pretty.
 
 criteria:
   - id: reached-3000
@@ -66,12 +68,13 @@ criteria:
 randomEvents: []
 
 commonMistakes:
-  - Big stick movements. The airplane responds to small inputs, so wait for it.
-  - Forgetting to reduce power after leveling off, so the speed keeps increasing.
+  - Big control inputs. The airplane needs a moment to respond, so make a small input and wait.
+  - Leaving full power in after leveling off, so the speed keeps building and the airplane drifts back into a climb.
 
 tips:
   - Hold the controls lightly, with your fingertips.
-  - Look outside more than inside.
+  - Look outside more than inside. Glance at the instruments, then look back out.
+  - Pause whenever you want to think or re-read a step. You can't pause a real airplane, so use it freely in the sim.
 
 debriefQuestions:
   - id: surprised
@@ -79,4 +82,4 @@ debriefQuestions:
   - id: hardest
     prompt: What felt hardest?
   - id: confidence
-    prompt: On a scale of 1–5, how confident do you feel?
+    prompt: On a scale of 1 to 5, how confident do you feel?
