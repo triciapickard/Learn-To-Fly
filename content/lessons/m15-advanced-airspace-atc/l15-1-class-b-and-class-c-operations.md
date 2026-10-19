@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## The wedding cake over the bay
 
 In [[l6-2-airspace]] you learned to read the upside-down wedding cake of the San Francisco Class B and to fly underneath its shelves. That is how most Bay Area pilots fly most of the time. But sooner or later you will want to go _through_ it: across the bay to the coast, over Oakland to the East Bay, or into San Jose itself.

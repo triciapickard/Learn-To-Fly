@@ -22,6 +22,7 @@ import {
 import { isWidgetName, type WidgetName } from '@shared/widgets.js';
 import type { IssueList } from './issues.js';
 import { INTERNAL_LINK_PATTERN, resolveToken, TOKEN_PATTERN } from './tokens.js';
+import { blankUnverifiedWarning, hasUnverifiedWarning } from './unverifiedWarning.js';
 
 export interface LinkTarget {
   code: string;
@@ -49,6 +50,8 @@ export interface ParsedLesson {
   /** Plain text of the lesson body (for glossary term detection). */
   text: string;
   hasVerifyCallout: boolean;
+  /** Starts with the "not for learning use" warning shown on GitHub (never rendered). */
+  hasUnverifiedWarning: boolean;
 }
 
 const MAX_IMAGE_BYTES = 400 * 1024;
@@ -238,8 +241,9 @@ export function parseLessonSource(
     return null;
   }
   const frontmatter = fm.data;
-  const body = parsedMatter.content;
-  const lineOffset = source.slice(0, source.indexOf(body)).split('\n').length - 1;
+  const lineOffset = source.slice(0, source.indexOf(parsedMatter.content)).split('\n').length - 1;
+  // The GitHub-only warning is for people reading the file; the app shows its own banner.
+  const body = blankUnverifiedWarning(parsedMatter.content);
   const tree = processor.parse(replaceTokens(body, lineOffset, file, ctx)) as Root;
   const lineOf = (node: { position?: { start: { line: number } } }) =>
     node.position ? node.position.start.line + lineOffset : undefined;
@@ -447,5 +451,6 @@ export function parseLessonSource(
     checklists,
     text: toText(tree as Nodes),
     hasVerifyCallout,
+    hasUnverifiedWarning: hasUnverifiedWarning(parsedMatter.content),
   };
 }

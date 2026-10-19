@@ -9,6 +9,7 @@ import { ProgressBar } from '@/components/Progress';
 import { EmptyState } from '@/components/States';
 import { useModule } from '@/features/content/api';
 import { QueryStates } from '@/features/content/queryState';
+import { UnverifiedWarning } from '@/features/content/UnverifiedWarning';
 import { ChallengeRow, LessonRow } from '@/features/curriculum/LessonListItem';
 import { useMyProgress } from '@/features/progress/api';
 import { ChallengeStatusIcon, LessonStatusIcon } from '@/features/progress/StatusIcons';
@@ -69,6 +70,10 @@ export default function ModulePage() {
                 </div>
               )}
             </PageHeader>
+
+            {(m.draft || [...m.lessons, ...m.challenges].some((item) => item.draft)) && (
+              <UnverifiedWarning kind="module" className="mb-8" />
+            )}
 
             {objectives.length > 0 && (
               <Card className="mb-8">

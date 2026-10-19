@@ -18,6 +18,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## Circling and procedure turns on the plate
 
 Most of the approaches you fly in this course are straight-in, joined on vectors. Many procedures were designed before radar coverage, and two features on the plates come from that time: **circling minima**, for when the approach does not line up with the runway you want, and the **procedure turn**, for when nobody is there to turn you onto final. This short lesson gives you enough to read them on a plate, fly them in the sim when a challenge asks, and know why real pilots treat them with care.

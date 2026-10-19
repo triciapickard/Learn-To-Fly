@@ -3,12 +3,12 @@ import { useEffect, useRef } from 'react';
 import { Navigate, useLocation, useParams } from 'react-router';
 import { Badge } from '@/components/Badge';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { Callout } from '@/components/Callout';
 import { useToast } from '@/components/Toast';
 import { useAuth } from '@/features/auth/api';
 import { useLesson } from '@/features/content/api';
 import { DraftBadge } from '@/features/content/DraftBadge';
 import { QueryStates } from '@/features/content/queryState';
+import { UnverifiedWarning } from '@/features/content/UnverifiedWarning';
 import {
   FlyIt,
   GlossaryList,
@@ -105,14 +105,7 @@ export default function LessonPage() {
                 </div>
               </header>
 
-              {l.draft && (
-                <Callout type="note" title="Draft lesson" className="mt-6">
-                  <p>
-                    This lesson hasn&apos;t been checked in MSFS 2024 yet, so numbers and steps may
-                    still change. Cross-check with the in-sim checklist.
-                  </p>
-                </Callout>
-              )}
+              {l.draft && <UnverifiedWarning kind="lesson" className="mt-6" />}
               {!user && <SignupBanner returnTo={location.pathname} />}
               {saved && !completed && saved.lastSectionId && !location.hash && (
                 <ResumeLink sections={l.sections} sectionId={saved.lastSectionId} />

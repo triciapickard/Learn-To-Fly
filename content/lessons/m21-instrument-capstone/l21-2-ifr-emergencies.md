@@ -25,6 +25,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## Three IFR failures on one route
 
 In [[l21-1-single-pilot-ifr-and-automation-management]] you planned KLVK to KMRY in cloud. This lesson flies that route three more times. First the alternator quits over the hills. Then the attitude indicator shows a red X on the approach. Then the radios go quiet. You know each problem from Course 2. The difference now is that you cannot look outside.

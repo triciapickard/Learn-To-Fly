@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## Getting down through the cloud
 
 You are level at 5,000 ft MSL over the Central Valley, heading home to Livermore. The ATIS reports an overcast at 1,200 ft and 3 miles visibility. Under VFR that would be a no-go. Under IFR it is routine, because a procedure designer has already drawn a safe path from the clouds to the runway on one page. That page is the approach plate you learned to read in [[l18-2-ifr-charts-and-the-approach-plate]]. This lesson is about what the plate _describes_: a sequence of segments, fixes and altitudes that is the same shape on almost every approach in the world.

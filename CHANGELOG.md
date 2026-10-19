@@ -17,6 +17,11 @@ All notable changes to this project are documented here. The format is based on
 
 ### Added
 
+- Unverified content warnings for the public beta (D-17): every draft lesson and
+  challenge file starts with a "not for learning use" warning, each content folder has a
+  generated README marking what is verified, and draft lesson, challenge and module pages
+  show a warning banner. `npm run content:warnings` keeps the files in step with
+  `published`, and `content:validate` fails when they drift.
 - v2 content drafts: all 56 Course 2 and Course 3 lessons (Modules 9–21, v2.md
   Section 15) as unpublished drafts with verify callouts, plus Modules 9–21 in
   `modules.yaml` and the v2 "Go deeper" resources. The content pipeline accepts

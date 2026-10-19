@@ -287,3 +287,20 @@ describe('challenges list', () => {
     expect(screen.getByText('Showing 2 challenges')).toBeInTheDocument();
   });
 });
+
+describe('unverified challenges', () => {
+  it('warns loudly on a draft challenge, and not on a verified one', async () => {
+    const warning = { name: 'Unverified content: not for learning use' };
+    renderRoute(`/challenges/${SLUG}`);
+    await screen.findByRole('heading', { level: 1, name: 'Straight and level' });
+    expect(screen.queryByRole('complementary', warning)).not.toBeInTheDocument();
+
+    server.use(
+      http.get('/api/v1/challenges/:slug', () =>
+        HttpResponse.json({ challenge: challengeDetail({ draft: true }) }),
+      ),
+    );
+    renderRoute(`/challenges/${SLUG}`);
+    expect(await screen.findByRole('complementary', warning)).toBeInTheDocument();
+  });
+});

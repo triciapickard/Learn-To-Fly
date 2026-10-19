@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## The weather you choose
 
 In a real airplane the weather is given and you decide whether to fly in it. In the sim you choose the weather, which helps training. You can put a 600 ft marine layer over Half Moon Bay on demand and fly the decision ten times in an afternoon. In return, you need to know how the sim builds weather, how to set it up exactly as a brief asks, and which real hazards it shows only as visuals.

@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## Two beams to the runway
 
 The ILS is the oldest precision approach still in daily use, and it remains the standard every other approach is measured against. Two radio beams come up from the runway: the **localizer**, which tells you left or right of the centerline, and the **glideslope**, which tells you above or below a 3° path to the touchdown zone. Follow both needles to the center and you arrive 200 ft above the runway, lined up, on speed, with the lights in front of you. This lesson covers how to follow the needles, and what to do when the lights are not there.

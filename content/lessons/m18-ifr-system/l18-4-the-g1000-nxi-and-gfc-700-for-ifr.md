@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## What the G1000 does for IFR
 
 In [[l6-5-gps-navigation-with-the-g1000]] you learned Direct-To and a simple flight plan. IFR asks more of the G1000: hold the whole clearance, fly a procedure's turns and altitudes, tighten its needle as you near the runway, and tell the autopilot what to do next. Set up correctly, it does all that. Set up wrong, it flies the wrong path in cloud with no warning.

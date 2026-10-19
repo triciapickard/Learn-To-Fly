@@ -15,6 +15,7 @@ import { ResultView } from '@/features/challenges/ResultView';
 import { useChallenge, useChallenges } from '@/features/content/api';
 import { DraftBadge } from '@/features/content/DraftBadge';
 import { QueryStates } from '@/features/content/queryState';
+import { UnverifiedWarning } from '@/features/content/UnverifiedWarning';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import type { AttemptCreateResponse } from '@shared/schemas/api';
 
@@ -81,6 +82,8 @@ export default function ChallengePage() {
                 )}
               </div>
             </PageHeader>
+
+            {c.draft && <UnverifiedWarning kind="challenge" className="mb-6" />}
 
             <Tabs value={tab} onValueChange={(v) => goTo(v as Tab)}>
               <TabsList aria-label="Challenge">

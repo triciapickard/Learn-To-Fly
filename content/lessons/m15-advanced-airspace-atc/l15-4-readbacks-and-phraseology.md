@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## The readback is a safety check
 
 In [[l7-3-towered-airports-and-sim-atc]] you learned to read back runway assignments and hold-short instructions. A controller says "hold short of runway two five left". You hear "two five right", which is the runway you are heading for anyway, and taxi across 25L in front of a landing Skyhawk. If you had read back "hold short two five right", the controller would have caught it: "Negative, hold short of two five **left**."

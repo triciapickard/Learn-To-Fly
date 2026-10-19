@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## The same racetrack on the G1000
 
 In [[l19-1-holding-patterns-entries-timing-and-wind]] you built the holding picture in your head and flew it with a clock and a tripled wind correction. The G1000 NXi can draw the same racetrack on the map, pick an entry, time the legs, correct for wind and, with the GFC 700 engaged, fly the whole thing while you talk to ATC and do the fuel sum.
