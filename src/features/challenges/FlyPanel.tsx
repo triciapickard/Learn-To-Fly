@@ -180,8 +180,8 @@ export function FlyPanel({
           />
           {challenge.randomEvents.length > 0 && (
             <p className="text-ink-2">
-              Start the timer when you unpause: something may happen during the flight. You will
-              hear a beep and see an alert.
+              Start the timer when you unpause: something may happen during this flight. You&apos;ll
+              hear a beep and see an alert here.
             </p>
           )}
           {wake.supported && (

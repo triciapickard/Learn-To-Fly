@@ -43,6 +43,10 @@ The items you'll look at most:
 5. **The HSI** at the bottom: heading, heading bug and course needle.
 6. **Turn rate and slip/skid.** The magenta trend line above the HSI, and the small bar under the roll pointer at the top.
 
+:::callout{type="note"}
+Outside the US the altimeter setting is called **QNH**, and it is often given in hectopascals instead of inches of mercury. Learn to Fly uses the US term and inches.
+:::
+
 :::quiz{id="l1-2-q1" type="single"}
 Where is the altimeter setting shown on the G1000 PFD?
 
@@ -58,12 +62,12 @@ The altimeter setting is in the BARO box below the altitude tape. You set it wit
 
 ## A tour of the MFD
 
-In the sim the MFD shows OFF after a cold-and-dark start until you press the rightmost softkey (the up arrow) below it. Its main page is a **moving map**: your airplane, airports, airspace and your flight plan. Turn the **range knob** to zoom in and out.
+The MFD's main page is a **moving map**: your airplane, airports, airspace and your flight plan. Turn the **range knob** to zoom in and out.
 
 Down the left edge is the **Engine Indication System (EIS)** strip. It shows:
 
 - **RPM** (engine power, since the propeller is fixed pitch)
-- **Fuel flow**, in gallons per hour (labelled FFLOW GPH)
+- **Fuel flow**, in gallons per hour (labeled FFLOW GPH)
 - **Oil pressure** and **oil temperature**
 - **EGT** (exhaust gas temperature, used when leaning) and **VAC** (vacuum)
 - **Fuel quantity** in each tank (FUEL QTY GAL)
@@ -71,6 +75,10 @@ Down the left edge is the **Engine Indication System (EIS)** strip. It shows:
 - **Bus volts and battery amps** for the electrical system
 
 The keys on the right bezel include **D→** (Direct-To), **FPL** (flight plan), **PROC** and **MENU**, and the **Nearest** softkey along the bottom lists the nearest airports. You'll learn them in Lesson 6.5.
+
+:::callout{type="sim"}
+After a cold-and-dark start in the sim, the MFD shows OFF until you press the rightmost softkey (the up arrow) below it.
+:::
 
 :::quiz{id="l1-2-q2" type="single"}
 What does the EIS strip on the MFD show?
@@ -98,7 +106,7 @@ The bezels around the screens hold the knobs you'll use most:
 | RANGE                                  | Zooms the map in and out.                                     |
 
 :::callout{type="sim"}
-In the sim, turning a knob uses the mouse wheel and pressing a knob (such as HDG to sync the heading bug) is a right-click. Press **Shift+1** to zoom in on the PFD so it's easy to read.
+In the sim, turning a knob uses the mouse wheel and pressing a knob (such as HDG to sync the heading bug) is a right-click.
 :::
 
 ## The classic six-pack on the glass
@@ -128,7 +136,7 @@ Which six-pack instrument does the PFD's slip/skid indicator replace?
 
 ---
 
-The slip/skid bar under the roll pointer does the job of the ball in the turn coordinator. Step on the bar the same way you'd step on the ball.
+The slip/skid bar under the roll pointer does the job of the ball in the turn coordinator. When it slides to one side, press the rudder pedal on that side. Pilots call this "stepping on the ball", and Module 2 teaches it.
 :::
 
 ## Standby instruments and the compass
@@ -141,4 +149,4 @@ Keep your eyes moving. Look outside, glance at the attitude, then airspeed, alti
 
 ## Reading the screens in the sim
 
-The PFD's text is small on a monitor. Use an **instrument close-up** camera view to read it, then snap back to your normal view for flying. Many pilots also zoom in slightly on their default view.
+The PFD's text is small on a monitor. Use an **instrument close-up** camera view to read it (**Shift+1** zooms in on the PFD), then snap back to your normal view for flying. Many pilots also zoom in slightly on their default view.

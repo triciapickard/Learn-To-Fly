@@ -23,23 +23,23 @@ simVersion: 'MSFS 2024 (1.8.16.0)'
 
 Pilots fly by numbers. A **V-speed** is a named airspeed with a job: the speed to lift the nose on takeoff, the speed that climbs fastest, the speed to glide farthest if the engine stops.
 
-The "V" comes from "velocity", and the letters after it say what the speed is for. You will see them written as Vy or V_Y. They are always **indicated airspeed in knots (KIAS)**, the number on your airspeed indicator, so you never need to calculate them in flight.
+The "V" comes from "velocity", and the letters after it say what the speed is for: Vy, for example, is the best rate of climb speed. V-speeds are always **indicated airspeed in knots (KIAS)**, the number on your airspeed indicator, so you never need to calculate them in flight.
 
-You do not need to memorize them all today. Learn the four you will use on every flight first: rotate at {{vspeed.vr}}, climb at {{vspeed.vy}}, glide at {{vspeed.vg}} and approach at about {{vspeed.approach}}.
+You don't need to memorize them all today. Learn the four you will use on every flight first: rotate at {{vspeed.vr}}, climb at {{vspeed.vy}}, glide at {{vspeed.vg}} and approach at about {{vspeed.approach}}.
 
 ## The Skyhawk's key speeds
 
 | V-speed | What it means                                             | KIAS           |
 | ------- | --------------------------------------------------------- | -------------- |
-| V_SO    | Stall speed with full (30°) flaps                         | {{vspeed.vso}} |
-| V_S1    | Stall speed with flaps up                                 | {{vspeed.vs1}} |
-| V_R     | Rotate: lift the nose on takeoff                          | {{vspeed.vr}}  |
-| V_X     | Best angle of climb: most height per distance             | {{vspeed.vx}}  |
-| V_Y     | Best rate of climb: most height per minute                | {{vspeed.vy}}  |
-| V_G     | Best glide: farthest distance with the engine off         | {{vspeed.vg}}  |
-| V_FE    | Maximum speed with more than 10° of flaps                 | {{vspeed.vfe}} |
-| V_NO    | Maximum structural cruising speed (smooth air above this) | {{vspeed.vno}} |
-| V_NE    | Never exceed                                              | {{vspeed.vne}} |
+| Vso     | Stall speed with full (30°) flaps                         | {{vspeed.vso}} |
+| Vs1     | Stall speed with flaps up                                 | {{vspeed.vs1}} |
+| Vr      | Rotate: lift the nose on takeoff                          | {{vspeed.vr}}  |
+| Vx      | Best angle of climb: most height per distance             | {{vspeed.vx}}  |
+| Vy      | Best rate of climb: most height per minute                | {{vspeed.vy}}  |
+| Vg      | Best glide: farthest distance with the engine off         | {{vspeed.vg}}  |
+| Vfe     | Maximum speed with more than 10° of flaps                 | {{vspeed.vfe}} |
+| Vno     | Maximum structural cruising speed (smooth air above this) | {{vspeed.vno}} |
+| Vne     | Never exceed                                              | {{vspeed.vne}} |
 
 A memory hook: **X is for eXtra steep** (best angle), **Y is for Yes, climb fast** (best rate). You rotate at {{vspeed.vr}}, climb at {{vspeed.vy}} and glide at {{vspeed.vg}}.
 
@@ -149,6 +149,6 @@ The in-sim checklist doesn't tick items for you. You check each one yourself. If
 
 ## Try a checklist
 
-Run the before-starting-engine checklist below. Press Space or tap an item to tick it. Backspace unticks it. Try it once now, then keep it open next to the sim the first time you start the engine.
+Run the before-starting-engine checklist below. Press Space or tap an item to tick it. Backspace unticks the last one you ticked. Try it once now, then keep it open next to the sim the first time you start the engine.
 
 ::checklist{slug="before-starting-engine"}
