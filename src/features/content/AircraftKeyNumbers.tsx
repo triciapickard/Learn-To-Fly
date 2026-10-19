@@ -25,15 +25,7 @@ export function keyNumbersFor(aircraft: AircraftDto): KeyNumber[] {
 }
 
 /** The Skyhawk's key speeds for lookup (Reference hub and Speeds page). */
-export function AircraftKeyNumbers({
-  large,
-  columns,
-  className,
-}: {
-  large?: boolean;
-  columns?: 1 | 2;
-  className?: string;
-}) {
+export function AircraftKeyNumbers({ large, className }: { large?: boolean; className?: string }) {
   const { data } = useAircraft();
   if (!data) return null;
   return (
@@ -41,7 +33,6 @@ export function AircraftKeyNumbers({
       title="Key numbers (KIAS)"
       items={keyNumbersFor(data.aircraft)}
       large={large}
-      columns={columns}
       className={className}
     />
   );
