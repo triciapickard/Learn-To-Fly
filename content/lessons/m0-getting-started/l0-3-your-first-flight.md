@@ -31,7 +31,7 @@ Make a small input, wait, then make another small input. The airplane needs a mo
 ## Five things to watch
 
 1. **The horizon.** Where it sits in the windshield tells you whether the nose is up, down or level, and whether the wings are level.
-2. **Airspeed.** The tape on the left of the PFD shows it in knots.
+2. **Airspeed.** The tape on the left of the PFD, the big screen in front of you, shows it in knots.
 3. **Altitude.** The tape on the right shows it in feet above sea level.
 4. **Heading.** The compass at the bottom of the PFD shows which way the nose points.
 5. **The runway.** On the way out and on the way back, know where it is.
@@ -40,18 +40,18 @@ Look outside most of the time. Glance at the instruments, then look back outside
 
 ## Step by step
 
-Start on runway 25R at Livermore with the engine running. Pause the sim and read these steps first.
+Start on Runway 25R at Livermore with the engine running. Pause the sim and read these steps first.
 
 1. **Set the flaps to 10°.** A little flap helps the airplane lift off sooner.
 2. **Unpause and add full power smoothly.** The airplane starts to roll. Keep the nose pointed down the centerline with small rudder inputs: pedals, a twist of the stick, or the LT and RT triggers on a gamepad.
 3. **At {{vspeed.vr}}, gently raise the nose.** The airplane lifts off. Hold the nose a little above the horizon and let it climb at about {{vspeed.vy}}.
 4. **Raise the flaps to 0°** once you're climbing steadily, a few hundred feet above the ground. Raising them right after lift-off, while you're still slow and low, can make the airplane sink.
-5. **Climb to 3,000 ft MSL.** Then lower the nose to the level-flight picture and reduce power to about 2,300 RPM. The airspeed settles around 100 knots.
-6. **Make gentle turns.** Roll to about 15–20° of bank, hold it, then roll level. Try a turn left toward Lake Del Valle, southeast of the airport, and a turn right toward Mt Diablo, the big mountain to the north.
+5. **Climb to 3,000 ft MSL.** Then lower the nose until the horizon sits a little above the top of the panel (the level-flight picture) and reduce power to about 2,300 RPM. The airspeed settles around 100 knots.
+6. **Make gentle turns.** Roll to about 15–20° of bank, hold it, then roll level. Try a turn left toward Lake Del Valle, southeast of the airport, and a turn right toward Mt Diablo, the big mountain to the northwest.
 7. **Look around.** Find Interstate 580 running east–west through the valley, the town of Livermore, and the Altamont Pass: the low gap in the hills to the east where I-580 heads over toward Tracy.
 
 :::callout{type="tip"}
-**Attitude and power work together.** The level-flight picture only holds your altitude at the right power. Leave the throttle at full (2,700 RPM) and the airplane keeps climbing slowly, even with the nose on the level picture. Pull the power too far back and it sinks. At about 2,300 RPM, the level picture gives level flight. Module 2 explains why.
+**Attitude and power work together.** The level-flight picture only holds your altitude at the right power. Leave the throttle at full and the airplane keeps climbing slowly, even with the nose on the level picture. Pull the power too far back and it sinks. At about 2,300 RPM, the level picture gives level flight. Module 2 explains why.
 :::
 
 :::callout{type="sim"}

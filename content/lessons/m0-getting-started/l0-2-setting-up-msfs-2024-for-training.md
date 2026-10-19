@@ -21,7 +21,7 @@ simVersion: 'MSFS 2024 (1.8.16.0)'
 
 ## Choose your controller profile
 
-You can learn to fly with any controller, but some make certain skills easier. Find your setup below. The key difference is **rudder**: the pedals (or a twist grip) that keep the airplane's nose lined up with where it is going. Every setup below has a way to use the rudder, so leave Auto-Rudder off whichever one you fly with.
+You can learn to fly with any controller, but some make certain skills easier. Find your setup below. The key difference is how you control the **rudder**, which keeps the airplane's nose pointed where it is going. Every setup below has a way to use it, so leave Auto-Rudder off whichever one you fly with.
 
 ### Gamepad only
 
@@ -61,7 +61,7 @@ Bind pause to an easy button you can reach without looking. You will pause often
 
 ## Sensitivity curves
 
-A desktop joystick or gamepad has only a few inches of travel, and it gives you no feel of the airflow. Beginners tend to over-control: they move the stick too far, the airplane reacts, they correct too far the other way.
+A desktop joystick or gamepad has only a few inches of travel, and it gives you none of the feedback a real yoke does. Beginners tend to over-control: they move the stick too far, the airplane reacts, they correct too far the other way.
 
 These settings help:
 
@@ -80,9 +80,9 @@ MSFS 2024 can help with almost everything. To learn real skills, turn most helpe
 | AI Auto-Trim                                                                       | Piloting Assistance | Off                                      | Trimming is a core skill.                      |
 | Automixture                                                                        | Piloting Assistance | On for Module 0 only, then off           | You'll learn mixture in Module 1.              |
 | Assisted Controller Sensitivity                                                    | Piloting Assistance | Off                                      | You set your own curves (above).               |
-| Display active Waypoint Marker, Flight Path                                        | Visual Assistance   | Off                                      | Learn the runway picture and find your way.    |
+| Display active Waypoint Marker, Flight Path                                        | Visual Assistance   | Off                                      | You learn to find the runway by eye.           |
 | Taxi Ribbon                                                                        | Visual Assistance   | On for Modules 0–2, then off             | Lesson 3.2 teaches airport signs and markings. |
-| Piloting and Controls Notifications                                                | Visual Assistance   | On for Modules 0–2                       | Helps you learn the controls.                  |
+| Piloting and Controls Notifications                                                | Visual Assistance   | On for Modules 0–2, then off             | Helps you learn the controls.                  |
 | Disable Crash Damage, Disable Aircraft Stress Damage, Disable Engine Stress Damage | Realism             | On (damage off) until Module 4, then off | Real consequences, once you're ready.          |
 | Unlimited Fuel                                                                     | Realism             | Off                                      | Fuel management matters.                       |
 
@@ -128,7 +128,7 @@ Good views make flying much easier:
 
 - **The default cockpit view** should show the top of the instrument panel and plenty of windshield. Most of your flying happens looking outside.
 - **An instrument close-up** is handy for reading the PFD or tuning radios. Switch to it, read, and switch back.
-- **Look left and right.** In the traffic pattern you need to see the runway off your wing. Practice looking with a hat switch or stick.
+- **Look left and right.** In the traffic pattern you need to see the runway off your wing. Practice looking around with the hat switch, or the right stick on a gamepad.
 
 Save a custom camera for your favorite cockpit view so you can snap back to it with one button.
 
@@ -144,7 +144,7 @@ Every challenge lists its setup. Here is a worked example you can use for practi
 6. Apply your assistance profile, then start the flight.
 
 :::quiz{id="l0-2-q3" type="single"}
-Why do challenges specify custom weather instead of live weather?
+Why do challenges specify the weather instead of using live weather?
 
 - [ ] Live weather is not available in MSFS 2024
 - [x] So everyone flies in the same conditions
@@ -153,19 +153,19 @@ Why do challenges specify custom weather instead of live weather?
 
 ---
 
-Custom weather makes a challenge repeatable. Everyone who flies it gets the same wind, clouds and visibility, and you can fly it again in the same conditions to see if you improved.
+Specifying the weather makes a challenge repeatable. Everyone who flies it gets the same wind, clouds and visibility, and you can fly it again in the same conditions to see if you improved.
 :::
 
 ## The EFB and its map
 
 MSFS 2024 gives you an **EFB** (electronic flight bag): a tablet in the cockpit, like the ones real pilots carry. Its **map** shows your airplane on a moving map. It keeps you from getting lost while you learn. In Module 6 you'll put it away for pilotage challenges and navigate with a chart instead.
 
-The EFB also has a **checklist** section for the Skyhawk. Learn to Fly has its own simplified checklists too (**Reference → Checklists**). Lesson 1.4 explains how the two fit together.
+The EFB also has a **checklist** section for the Skyhawk. Learn to Fly has its own simplified checklists too, in the Reference section. Lesson 1.4 explains how the two fit together.
 
 ## Keeping this site open while you fly
 
 MSFS 2024 has no built-in web browser. The toolbar (move the mouse to the top of the screen) holds the sim's own panels, but it can't show this site. Open the Fly tab of each challenge on a second screen instead:
 
 - **A second monitor** next to your main one is ideal.
-- **A tablet or phone** works well. Open the challenge, then choose "Open fly mode". Fly mode uses large type and a dark theme that's easy to read in a dim room.
+- **A tablet or phone** works well. Open the challenge's Fly tab, then choose **Open fly mode on another screen**. Fly mode uses large type and a dark theme that's easy to read in a dim room.
 - **Pause** the sim whenever you need to read. Nobody is timing you unless you start the timer.
