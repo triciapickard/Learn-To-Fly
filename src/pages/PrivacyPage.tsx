@@ -2,7 +2,7 @@ import { ExternalLink } from '@/components/Link';
 import { PageContainer, PageHeader } from '@/components/PageHeader';
 import { Prose } from '@/components/Prose';
 import { LEGAL_LAST_UPDATED } from '@/features/layout/legal';
-import { GITHUB_URL } from '@/features/layout/navigation';
+import { ISSUES_URL } from '@/features/layout/navigation';
 import { usePageTitle } from '@/hooks/usePageTitle';
 
 export default function PrivacyPage() {
@@ -14,8 +14,8 @@ export default function PrivacyPage() {
         <h2>1. Who we are</h2>
         <p>
           Learn to Fly is an independent personal project. For any privacy question, open an issue
-          on <ExternalLink href={`${GITHUB_URL}/issues`}>GitHub</ExternalLink> and we will reply
-          there or arrange a private channel.
+          on <ExternalLink href={ISSUES_URL}>GitHub</ExternalLink> and we will reply there or
+          arrange a private channel.
         </p>
         <h2>2. What we collect</h2>
         <ul>

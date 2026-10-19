@@ -78,6 +78,10 @@ Every challenge starts with the **Brief** (exact sim setup, read with the sim pa
 - **A controller.** A gamepad works. A joystick with a twist grip, or a yoke with rudder pedals, is better. Lesson 0.2 sets up all three.
 - **Ideally a second screen**, a tablet or a phone for the brief and the Fly tab, so you can read them without leaving the cockpit.
 
+## Learn to Fly is in public beta
+
+The site is new. Every module that is open has been flown and checked in MSFS 2024, but you may still find a typo, a rough edge or a bug, and some pages will change as feedback comes in. Modules that are still being written stay closed until they are verified. If something looks wrong, or you have an idea, open an issue on [GitHub](https://github.com/triciapickard/Learn-To-Fly/issues). Every report is read.
+
 ## Sim training is not flight training
 
 :::callout{type="safety"}

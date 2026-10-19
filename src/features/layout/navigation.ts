@@ -14,5 +14,8 @@ export const FOOTER_NAV = [
 
 export const GITHUB_URL = 'https://github.com/triciapickard/Learn-To-Fly';
 
+/** Where learners report bugs, mistakes and ideas during the public beta. */
+export const ISSUES_URL = `${GITHUB_URL}/issues`;
+
 export const DISCLAIMER_SHORT =
   'For simulation use only. Learn to Fly is not flight instruction and must not be used for real-world flight training or navigation.';

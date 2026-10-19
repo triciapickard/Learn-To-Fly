@@ -2,7 +2,7 @@ import { ExternalLink, Link } from '@/components/Link';
 import { PageContainer, PageHeader } from '@/components/PageHeader';
 import { Prose } from '@/components/Prose';
 import { TRADEMARK_STATEMENT } from '@/features/layout/legal';
-import { GITHUB_URL } from '@/features/layout/navigation';
+import { ISSUES_URL } from '@/features/layout/navigation';
 import { usePageTitle } from '@/hooks/usePageTitle';
 
 export default function AboutPage() {
@@ -33,6 +33,17 @@ export default function AboutPage() {
           buttons to press. Every procedure and number is checked against FAA handbooks and flown in
           the sim before it is published.
         </p>
+        <h2>Public beta</h2>
+        <p>
+          Learn to Fly is in public beta. Everything that is open has been flown and checked in MSFS
+          2024, but the site is new: you may find a typo, a rough edge or a bug, and some pages and
+          features will change as feedback comes in. Modules that are still being written are marked
+          as such and are not meant for learning yet.
+        </p>
+        <p>
+          The best thing you can do during the beta is fly the open lessons and challenges and say
+          what confused you, what broke and what you want next.
+        </p>
         <h2>Where it is going</h2>
         <p>
           Version 1 teaches one airplane, the Cessna 172 Skyhawk, from your first flight to a
@@ -41,8 +52,9 @@ export default function AboutPage() {
         </p>
         <h2>Contact</h2>
         <p>
-          Found a mistake or have an idea? Open an issue on{' '}
-          <ExternalLink href={`${GITHUB_URL}/issues`}>GitHub</ExternalLink>.
+          Found a bug or a mistake, or have an idea? Open an issue on{' '}
+          <ExternalLink href={ISSUES_URL}>GitHub</ExternalLink>. Every report during the beta is
+          read.
         </p>
         <h2>Trademarks</h2>
         <p>{TRADEMARK_STATEMENT}</p>
