@@ -12,7 +12,7 @@ const ROUTES: [string, string | RegExp][] = [
   ['/challenges', 'Challenges'],
   ['/challenges/c2-1-straight-and-level', 'Straight and level'],
   ['/challenges/c2-1-straight-and-level/fly', 'Straight and level'],
-  ['/reference', 'Reference'],
+  ['/reference', 'What do you need to know?'],
   ['/reference/speeds', 'V-speeds and limits'],
   ['/reference/checklists', 'Checklists'],
   ['/reference/checklists/before-takeoff', 'Before landing'],
