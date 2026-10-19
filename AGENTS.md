@@ -71,6 +71,10 @@ Stop and ask only when you can't continue without me, or before anything
 destructive: deleting data, force-pushing, or changing anything outside
 this repository.
 
+If a connector or MCP server the task names is not connected, not working, or
+missing from the session, stop and tell me how to fix it. Never substitute
+another tool, web search or made-up results for it.
+
 ---
 
 ## Required Actions
