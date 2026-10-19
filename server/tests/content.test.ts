@@ -14,8 +14,10 @@ beforeEach(async () => {
 describe('GET /modules', () => {
   it('lists published modules with published lesson and challenge summaries, without blocks', async () => {
     const res = await request(app).get('/api/v1/modules').expect(200);
-    expect(res.body.modules.map((m: { slug: string }) => m.slug)).toEqual(['m1-basics', 'm2-next']);
-    const [m1, m2] = res.body.modules;
+    // m2-next is unverified (published: false) and so is hidden with everything in it.
+    expect(res.body.modules.map((m: { slug: string }) => m.slug)).toEqual(['m1-basics']);
+    const [m1] = res.body.modules;
+    expect(m1.draft).toBe(false);
     expect(m1.lessons.map((l: { slug: string }) => l.slug)).toEqual([
       'l1-1-first-lesson',
       'l1-2-second-lesson',
@@ -26,10 +28,22 @@ describe('GET /modules', () => {
       airportIcao: 'KLVK',
       draft: false,
     });
-    expect(m2.lessons).toEqual([]);
-    expect(m2.challenges).toEqual([]);
     expect(JSON.stringify(res.body)).not.toContain('"blocks"');
     expect(JSON.stringify(res.body)).not.toContain('contentHash');
+  });
+
+  it('serves unverified modules, marked as drafts, only when drafts are seeded for a preview', async () => {
+    await seedFixtureContent({ includeDrafts: true });
+    const res = await request(app).get('/api/v1/modules').expect(200);
+    expect(
+      res.body.modules.map((m: { slug: string; draft: boolean }) => [m.slug, m.draft]),
+    ).toEqual([
+      ['m1-basics', false],
+      ['m2-next', true],
+    ]);
+    const m2 = res.body.modules[1];
+    expect(m2.lessons.map((l: { slug: string }) => l.slug)).toEqual(['l2-1-draft-lesson']);
+    expect(m2.challenges.map((c: { slug: string }) => c.slug)).toEqual(['c2-1-bonus-draft']);
   });
 
   it('returns one module or 404', async () => {
@@ -37,6 +51,8 @@ describe('GET /modules', () => {
     expect(res.body.module.title).toBe('Basics');
     const missing = await request(app).get('/api/v1/modules/m9-nope').expect(404);
     expect(missing.body.error.code).toBe('NOT_FOUND');
+    // An unverified module is not found in production, not just empty.
+    await request(app).get('/api/v1/modules/m2-next').expect(404);
     await request(app).get('/api/v1/modules/Bad_Slug!').expect(400);
   });
 });

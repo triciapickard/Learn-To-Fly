@@ -20,3 +20,4 @@ modules:
     lessons: [l2-1-draft-lesson]
     challenges: [c2-1-bonus-draft]
     estimatedMinutes: 30
+    published: false

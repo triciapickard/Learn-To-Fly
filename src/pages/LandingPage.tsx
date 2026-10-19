@@ -49,14 +49,17 @@ interface PreviewModule {
   minutes?: number;
 }
 
+/** How many v1 modules are planned, so the page can say how many of them are open. */
+const PLANNED_MODULES = CURRICULUM_PREVIEW.length;
+
 /**
  * The curriculum shown on the landing page is whatever is published right now (drafts
  * included on preview builds), so it grows with each verified module. The static preview
- * stands in while the modules load or if the API is unreachable.
+ * of the published modules stands in while the modules load or if the API is unreachable.
  */
 function useCurriculumPreview(): PreviewModule[] {
   const { data } = useModules();
-  if (!data) return CURRICULUM_PREVIEW.map((m) => ({ ...m }));
+  if (!data) return CURRICULUM_PREVIEW.filter((m) => m.published).map((m) => ({ ...m }));
   return data.modules.map((m) => ({
     code: m.code,
     slug: m.slug,
@@ -74,7 +77,7 @@ const isOpen = (m: PreviewModule) => m.lessons > 0;
 function stats(modules: PreviewModule[]) {
   const minutes = modules.filter(isOpen).reduce((sum, m) => sum + (m.minutes ?? 0), 0);
   return [
-    { value: String(modules.length), label: 'modules, one airplane' },
+    { value: String(modules.length), label: 'modules open now, one airplane' },
     {
       value: String(modules.reduce((sum, m) => sum + m.lessons, 0)),
       label: 'short interactive lessons',
@@ -189,8 +192,8 @@ function faq(modules: PreviewModule[]) {
         <>
           Version 1 covers one airplane, the Cessna 172, done properly: from the first takeoff to a
           local checkride and a planned cross-country. Modules open as they are verified in the sim,
-          and {open} of {modules.length} {open === 1 ? 'is' : 'are'} open now. Bigger airplanes come
-          later. <Link to="/roadmap">See the roadmap</Link>
+          and {open} of {PLANNED_MODULES} {open === 1 ? 'is' : 'are'} open now. Bigger airplanes
+          come later. <Link to="/roadmap">See the roadmap</Link>
         </>
       ),
     },
@@ -380,13 +383,14 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* The curriculum: every published module as one flight-plan style list. */}
+      {/* The curriculum: every published (verified) module as one flight-plan style list. */}
       <section aria-labelledby="curriculum-heading" className={cn(band, bandPad)}>
         <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-4">
           <div className="max-w-[640px]">
             <Eyebrow>The curriculum</Eyebrow>
             <h2 id="curriculum-heading" className="display-md sm:display-lg mt-3">
-              {modules.length} modules, in the order a flight school teaches them.
+              {modules.length} of {PLANNED_MODULES} modules are open, in the order a flight school
+              teaches them.
             </h2>
           </div>
           <p className="max-w-[30em] text-ink-2">

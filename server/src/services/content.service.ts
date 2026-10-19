@@ -162,6 +162,7 @@ function assembleModule(
   const lessonBySlug = new Map(lessons.map((l) => [l.slug, l]));
   const challengeBySlug = new Map(challenges.map((c) => [c.slug, c]));
   return {
+    draft: Boolean(m.draft),
     slug: m.slug,
     code: m.code,
     order: m.order,
