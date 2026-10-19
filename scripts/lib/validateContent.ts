@@ -1,4 +1,8 @@
+import { existsSync, readFileSync } from 'node:fs';
 import type { ContentBundle } from './loadContent.js';
+import { expectedReadmes } from './unverifiedWarning.js';
+
+const SYNC_WARNINGS = 'run `npm run content:warnings`';
 
 /** `m12-night-flying` → "12" (module slugs are `m<number>-…`). */
 function moduleNumber(moduleSlug: string): string {
@@ -126,6 +130,14 @@ export function validateContent(bundle: ContentBundle): void {
       if (!fm.lastVerifiedAt)
         issues.error(lesson.file, 'Published lessons need lastVerifiedAt (Section 54)', 1);
     }
+    if (!fm.published && !lesson.hasUnverifiedWarning)
+      issues.error(lesson.file, `Draft lessons need the unverified warning (${SYNC_WARNINGS})`, 1);
+    if (fm.published && lesson.hasUnverifiedWarning)
+      issues.error(
+        lesson.file,
+        `Published lesson still has the unverified warning (${SYNC_WARNINGS})`,
+        1,
+      );
   }
 
   // Challenges
@@ -180,6 +192,21 @@ export function validateContent(bundle: ContentBundle): void {
       if (!c.lastVerifiedAt)
         issues.error(c.file, 'Published challenges need lastVerifiedAt (Section 54)');
     }
+    if (!c.published && !c.hasUnverifiedWarning)
+      issues.error(c.file, `Draft challenges need the unverified warning (${SYNC_WARNINGS})`, 1);
+    if (c.published && c.hasUnverifiedWarning)
+      issues.error(
+        c.file,
+        `Published challenge still has the unverified warning (${SYNC_WARNINGS})`,
+        1,
+      );
+  }
+
+  // Folder READMEs say what is unverified to people browsing the repository on GitHub.
+  for (const [file, expected] of expectedReadmes(bundle)) {
+    if (!existsSync(file)) issues.error(file, `Folder README is missing (${SYNC_WARNINGS})`);
+    else if (readFileSync(file, 'utf8') !== expected)
+      issues.error(file, `Folder README is out of date (${SYNC_WARNINGS})`);
   }
 
   // Resources

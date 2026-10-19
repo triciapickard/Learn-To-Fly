@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## The morning ritual
 
 Before a cross-country, every real pilot checks the weather with a **briefing**, a structured read of what the sky is doing now, what it will do over the next few hours and what the forecasters are worried about. A phone app that says "sunny, 72°" leaves most of that out.

@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## An approach with no ground station
 
 The RNAV (GPS) approach is the one you will fly most. It needs no ground station, it exists at small airports that never had an ILS, and with WAAS it can bring you down to minima that match an ILS. All of it comes from satellites and the receiver in your G1000. The receiver decides what guidance you get, so this lesson spends a lot of time on checking that the box is in the mode you think it is.

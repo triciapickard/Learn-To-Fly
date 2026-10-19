@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## What changes at night
 
 At 9 p.m. at Livermore, the runway is a pair of white dotted lines and the hills east of the field are invisible. Everything you learned in Course 1 still works at night, because the airplane flies the same way in the dark. Your eyes are what change, and this lesson covers how.

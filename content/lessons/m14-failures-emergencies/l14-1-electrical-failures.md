@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## How an alternator failure starts
 
 You are 20 minutes out of Livermore, heading south toward Salinas, with the engine running normally at 2,300 RPM. The only sign that anything has changed is a small red LOW VOLTS message in the PFD's alerts window, with a tone, which you may not notice for a minute or two.

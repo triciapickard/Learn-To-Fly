@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## Why slow flight matters
 
 Every takeoff, landing and go-around happens at low speed. **Slow flight** means flying at a speed just above where the stall warning would sound, so that any more angle of attack or load factor would trigger it. Practicing up high teaches you how the airplane feels down low. The controls go soft, and the airplane needs more rudder and more attention.

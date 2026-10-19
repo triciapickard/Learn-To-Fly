@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## The approach that ends in a climb
 
 Half of every approach briefing is about the missed approach, but most pilots fly a hundred approaches before they need one for real, so it rarely gets practiced. The missed approach is a go-around in cloud, started at the moment you most want to land, with a turn and a climb to a fix you have to find on the plate. Like the go-around in [[l4-4-go-arounds]], it is a normal maneuver and a sign of good judgment. Learn to Fly scores it as a pass every time it is the right call.

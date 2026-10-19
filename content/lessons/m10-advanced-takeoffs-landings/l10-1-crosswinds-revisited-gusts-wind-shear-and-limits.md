@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## A gusty crosswind at Livermore
 
 On a spring afternoon at Livermore, the ATIS reports wind 290 at 12 gusting 20. You are set up for Runway 25R, whose magnetic heading is about 254°, so the wind is about 35° off the nose and from the right. In Course 1 you landed in light crosswinds. Today the wind has a second number, and it changes the approach speed, the touchdown and the decision to land at all.

@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## What an unusual attitude is
 
 You are in cloud at 5,500 ft, hand-flying, and you look down at the approach chart on your kneeboard for a few seconds. When you look up, the attitude indicator shows 40° of right bank, the airspeed is 135 KIAS and increasing, and the altimeter is unwinding. A few seconds of inattention in an airplane that was not quite trimmed have put the Skyhawk into a spiral.

@@ -13,6 +13,13 @@ foundations in the same Skyhawk) is planned in [`v2.md`](./v2.md).
 
 > For simulation use only. Learn to Fly is not real-world flight training.
 
+> [!CAUTION]
+> **Most of the content in this repository is unverified and not for learning use.**
+> Only lessons and challenges with `published: true` have been verified in the sim; every
+> other file under [`content/`](./content/) is a draft that may be wrong, and starts with a
+> warning saying so. Each lesson folder's `README.md` lists what is verified. Learn from
+> the published site, not from the files here.
+
 ## Stack
 
 MERN with TypeScript on both sides (v1.md Section 26):

@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## The airport that disappears
 
 Half Moon Bay is 12 minutes from Palo Alto in a Skyhawk. You leave KPAO under a blue sky and climb over the ridge, expecting to see the coast. Instead, where the airport should be, there is a flat white sheet, edge to edge, and the hills on your side of it have their tops in cloud.

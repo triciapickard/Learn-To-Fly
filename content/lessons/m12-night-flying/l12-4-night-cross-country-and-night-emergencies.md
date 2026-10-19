@@ -20,6 +20,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## The dark route and the lit route
 
 Livermore to Watsonville is about 45 nm in a straight line, which by day is about half an hour's flying. At night the straight line crosses the Diablo Range, a black ridge of hills with no lights, no roads and no fields, and ends over Monterey Bay, the darkest area in the region. The same trip also has a lit route. Follow Interstate 680 and US 101 down the Santa Clara Valley, which is lit all the way through San Jose and Gilroy, then follow Highway 152 over Hecker Pass to Watsonville. It is a few minutes longer and it never leaves you more than a glide from a lit place to land. Most of night cross-country planning is choosing the lit route on purpose.

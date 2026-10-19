@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## Why practice the power-off 180
 
 In [[l5-4-engine-failure-and-forced-landings]] you learned the flow for an engine failure and how to pick a field. That lesson could not give you a feel for how far the Skyhawk glides from pattern altitude, or how to hit a spot with no engine to fix a mistake. The **power-off 180** teaches both. Abeam your aiming point on downwind, you bring the throttle to idle and leave it there. The goal is a touchdown within 200 ft beyond the aiming point.

@@ -18,6 +18,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## Landing where there is no runway
 
 Every forced landing so far has ended on a field you chose in a hurry. This lesson covers that choice in more detail. It explains what makes a field good or dangerous, and what to do when the only flat thing in glide range is the Pacific Ocean. Modules 5 and 14 taught you the flying. This lesson adds the judgment you use before it.

@@ -44,6 +44,24 @@ describe('curriculum pages', () => {
     expect(screen.getByRole('link', { name: 'Start module 1' })).toHaveAttribute('href', LESSON);
   });
 
+  it('warns on a module with unverified lessons or challenges, and only then', async () => {
+    const { challengeSummary, moduleSummary } = await import('@/test/fixtures');
+    const warning = { name: 'Unverified content: not for learning use' };
+    renderRoute('/learn/m1-meet-the-skyhawk');
+    await screen.findByRole('heading', { level: 1, name: 'Meet the Skyhawk' });
+    expect(screen.queryByRole('complementary', warning)).not.toBeInTheDocument();
+
+    server.use(
+      http.get('/api/v1/modules/:slug', () =>
+        HttpResponse.json({
+          module: moduleSummary({ challenges: [challengeSummary({ draft: true })] }),
+        }),
+      ),
+    );
+    renderRoute('/learn/m2-fundamentals');
+    expect(await screen.findByRole('complementary', warning)).toBeInTheDocument();
+  });
+
   it('shows the 404 page for an unknown module', async () => {
     renderRoute('/learn/m9-nope');
     expect(
@@ -102,7 +120,7 @@ describe('lesson page', () => {
     );
   });
 
-  it('labels draft lessons', async () => {
+  it('warns loudly on draft lessons', async () => {
     const { lessonDetail } = await import('@/test/fixtures');
     server.use(
       http.get('/api/v1/lessons/:slug', () =>
@@ -110,7 +128,11 @@ describe('lesson page', () => {
       ),
     );
     renderRoute(LESSON);
-    expect(await screen.findByText('Draft lesson')).toBeInTheDocument();
+    expect(
+      await screen.findByRole('complementary', {
+        name: 'Unverified content: not for learning use',
+      }),
+    ).toBeInTheDocument();
     expect(screen.getAllByText('Draft · unverified').length).toBeGreaterThan(0);
   });
 

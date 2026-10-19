@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## Behind a 737 at Oakland
 
 You are number two for Runway 28R at Oakland, behind a Boeing 737 that has just started its takeoff roll. The tower says "Skyhawk 123, Runway 28R, cleared for takeoff, caution wake turbulence." Take that caution seriously. The 737 has left two invisible, fast-spinning vortices behind it, and a Skyhawk that flies into one can be rolled past vertical a few hundred feet above the ground.

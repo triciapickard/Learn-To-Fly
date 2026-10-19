@@ -32,6 +32,7 @@
     "content:links": "tsx scripts/check-links.ts",
     "content:stats": "tsx scripts/content-stats.ts",
     "content:verify-report": "tsx scripts/verification-report.ts",
+    "content:warnings": "tsx scripts/content-warnings.ts",
     "e2e": "npm run build:client && playwright test",
     "e2e:ui": "playwright test --ui"
   },

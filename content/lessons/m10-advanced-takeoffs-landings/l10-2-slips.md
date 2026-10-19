@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## When you are too high on final
 
 You are on a 2-mile final to Runway 26 at Tracy, and you are well above the glide path. The PAPI shows four white lights, you already have full flaps, and idle power is not fixing it. Pushing the nose down would only add airspeed and make you float. You need more drag, and the fuselage can give you a lot of it if you turn it sideways to the airflow.

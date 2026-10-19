@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## Why partial power is hard
 
 In [[l5-4-engine-failure-and-forced-landings]] the engine stopped, so the decision was simple: best glide, best field, go. This lesson is the harder case. The engine coughs, runs rough, or sags to 1,800 RPM and stays there. It is still making power, just not enough, and you have no idea whether it will recover or stop in 30 seconds.

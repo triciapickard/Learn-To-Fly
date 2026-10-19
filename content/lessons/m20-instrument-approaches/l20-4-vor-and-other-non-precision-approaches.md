@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## When there is no glidepath
 
 Not every runway has an ILS, and the G1000 does not always give you LPV. Sometimes the approach is a VOR radial pointing roughly at an airport, or a localizer with the glideslope out of service, and the only vertical guidance is a column of altitudes on the plate and your own arithmetic. These are the **non-precision approaches**, flown to an MDA rather than a DA. The skills are the ones you built tracking radials in [[l6-4-vor-navigation]], plus a stopwatch and a plan for the descent.

@@ -19,6 +19,18 @@ lastVerifiedAt: null
 simVersion: null
 ---
 
+<!-- ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit) -->
+
+> [!CAUTION]
+> **UNVERIFIED CONTENT: NOT FOR LEARNING USE**
+>
+> This lesson is an unverified draft. It has not been checked in Microsoft Flight
+> Simulator 2024 or against official sources, so its numbers, procedures and steps may be
+> wrong. Do not use it to learn to fly, in the sim or in a real aircraft. Only verified
+> content is published on the Learn to Fly site.
+
+<!-- ltf:unverified-warning:end -->
+
 ## Why the mixture matters
 
 In Course 1 the mixture had two positions: full rich to fly, idle cut-off to stop. That is no longer enough when you climb to 6,500 ft for a cross-country, plan a three-hour leg, or take off from a mountain airport. The red mixture knob sets how much fuel mixes with the air going into each cylinder. Setting it right gives you more power, more range and a cleaner engine. In [[l1-3-engine-fuel-and-electrical-systems]] you learned the plumbing: two wing tanks, a selector, a fuel-injected {{aircraft.engine}}. This lesson teaches you to run it.

@@ -31,7 +31,7 @@ characters) and are referenced by file name only: `![Alt text](m2-l4-lift.webp "
 4. Keep `published: false` until the lesson has been verified in the sim (Section 54).
    Then remove every `verify` callout, set `lastVerifiedAt` and `simVersion`, and set
    `published: true`.
-5. Run `npm run content:validate` and preview it (below).
+5. Run `npm run content:warnings`, then `npm run content:validate`, and preview it (below).
 
 ## Add a challenge
 
@@ -98,6 +98,14 @@ Errors name the file and line, e.g.
 **Drafts (Decision D-17):** unverified content stays `published: false`. Seeding with
 `--include-drafts` (or `CONTENT_INCLUDE_DRAFTS=true`) shows drafts, labelled as
 unverified — use it locally and on preview services, never in production.
+
+**Unverified warnings:** the repository is public, so every draft lesson and challenge
+file starts with a "not for learning use" warning, and each lesson folder and
+`challenges/` has a generated `README.md` marking what is verified. Run
+`npm run content:warnings` whenever you change `published`: it adds or removes the
+warnings and regenerates the READMEs. `content:validate` fails until you do. The lesson
+warning is an HTML-commented block that the app never renders; the app shows its own
+banner on draft pages.
 
 ## Verification (Phase 12)
 

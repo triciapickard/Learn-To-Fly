@@ -1,3 +1,14 @@
+# ltf:unverified-warning:start (managed by `npm run content:warnings`, do not edit)
+# ==============================================================================
+# ⚠  UNVERIFIED CONTENT: NOT FOR LEARNING USE  ⚠
+#
+# This challenge is an unverified draft. It has not been flown and checked in
+# Microsoft Flight Simulator 2024 or against official sources, so its numbers,
+# procedures and steps may be wrong. Do not use it to learn to fly, in the sim
+# or in a real aircraft. Only verified content is published on the Learn to
+# Fly site.
+# ==============================================================================
+# ltf:unverified-warning:end
 slug: c5-2-power-off-stall
 code: C5.2
 title: Power-off stall
