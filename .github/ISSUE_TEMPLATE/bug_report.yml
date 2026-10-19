@@ -1,0 +1,65 @@
+name: Bug report
+description: Something on the Learn to Fly site is broken or behaves wrongly.
+title: '[Bug] '
+labels: ['bug', 'beta']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping test the beta. Fill in what you can; a short report is far better than no report.
+        Do not include passwords or anything else private.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What did you do, and what went wrong?
+      placeholder: I clicked "Start challenge" on Challenge 2 and the page went blank.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to …
+        2. Click …
+        3. See …
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the page where it happened (filled in automatically if you came from the site).
+      placeholder: /challenges/c2-straight-and-level
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Desktop or laptop
+        - Phone
+        - Tablet
+        - Other
+  - type: dropdown
+    id: sim-platform
+    attributes:
+      label: Where do you run MSFS 2024?
+      options:
+        - PC
+        - Xbox
+        - Cloud (Xbox Cloud Gaming)
+        - Not relevant to this bug
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or video
+      description: Drag images or a short recording here if they help.
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Technical details
+      description: Filled in automatically by the "Report a problem" button on the site. Leave as is.
+      render: text

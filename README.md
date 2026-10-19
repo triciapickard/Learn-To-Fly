@@ -95,6 +95,23 @@ the Render dashboard.
 
 See [`CLAUDE.md`](./CLAUDE.md) for the folder tree and v1.md Section 25 for details.
 
+## Reporting bugs and content errors
+
+Use the **Report a problem** link in the site footer (or **Report this error** on the error
+page). It opens one of the issue forms in `.github/ISSUE_TEMPLATE/` pre-filled with a short
+block of non-identifying diagnostics (page, release, browser, viewport, theme, signed-in
+yes/no). Nothing is sent until the issue is created on GitHub, and people without a GitHub
+account can copy the report as text instead.
+
+| Form                      | Labels            | Use for                                               |
+| ------------------------- | ----------------- | ----------------------------------------------------- |
+| Bug report                | `bug`, `beta`     | The site is broken or behaves wrongly                 |
+| Content or aviation error | `content`, `beta` | A lesson, challenge or reference says something wrong |
+| Suggestion                | `enhancement`     | Ideas for lessons, challenges, widgets                |
+
+Security problems go through GitHub's private vulnerability reporting, linked from the issue
+chooser. Triage during the beta: `bug` + `beta` first, then `content`; close with a reason.
+
 ## Contributing
 
 Work follows the phases in `v1.md` Part VI (and `v2.md` Part VI for v2). Branches are named `phase-<n>-<name>`,

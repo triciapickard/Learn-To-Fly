@@ -1,0 +1,10 @@
+# Issue chooser (https://github.com/triciapickard/Learn-To-Fly/issues/new/choose).
+# Blank issues stay on so people can still file something that fits no form.
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/triciapickard/Learn-To-Fly/security/advisories/new
+    about: Please report security problems privately here, not as a public issue.
+  - name: Problems with the simulator itself
+    url: https://forums.flightsimulator.com
+    about: Crashes, performance or control problems inside MSFS 2024 belong on the official forums.

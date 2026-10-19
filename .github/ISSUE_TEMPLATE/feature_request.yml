@@ -1,0 +1,33 @@
+name: Suggestion
+description: An idea for a new lesson, challenge, widget or improvement.
+title: '[Idea] '
+labels: ['enhancement']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What would you like?
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve for you?
+      description: What were you trying to learn or do when you wished this existed?
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Lessons
+        - Challenges and scoring
+        - Interactive widgets
+        - Reference (speeds, checklists, airports, glossary)
+        - Account and progress
+        - Something else
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Technical details
+      description: Filled in automatically by the "Report a problem" button on the site. Leave as is.
+      render: text
