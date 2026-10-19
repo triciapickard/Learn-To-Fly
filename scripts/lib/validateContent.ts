@@ -20,7 +20,8 @@ function duplicates(values: string[]): string[] {
 /**
  * Cross-reference rules (plan.md Section 28.5). Adds issues to `bundle.issues`.
  * Draft items (`published: false`) may still contain `verify` callouts and have no
- * `lastVerifiedAt`; published items may not.
+ * `lastVerifiedAt`; published items may not. A published module is fully verified: every
+ * lesson and challenge it lists is published (D-27).
  */
 export function validateContent(bundle: ContentBundle): void {
   const {
@@ -105,6 +106,44 @@ export function validateContent(bundle: ContentBundle): void {
         modulesFile,
         `Module "${m.slug}": published lesson orders must be contiguous from 1`,
       );
+    }
+    // A published module is fully verified (D-27): every lesson and challenge it lists is
+    // published, and it has something to show. Published content in an unpublished module
+    // is never served (the seeder keeps it unpublished), so it is reported too.
+    if (m.published) {
+      const unverified = [
+        ...listed.filter((l) => !l.frontmatter.published).map((l) => l.frontmatter.slug),
+        ...m.challenges.filter((s) => challengeBySlug.get(s)?.published === false),
+      ];
+      if (unverified.length > 0) {
+        issues.error(
+          modulesFile,
+          `Module "${m.slug}" is published but lists unverified content: ${unverified.join(', ')} (set the module to published: false until every item is verified)`,
+        );
+      }
+      if (m.lessons.length === 0 && m.challenges.length === 0) {
+        issues.error(
+          modulesFile,
+          `Module "${m.slug}" is published but has no lessons or challenges`,
+        );
+      }
+    } else {
+      for (const l of listed.filter((l) => l.frontmatter.published)) {
+        issues.error(
+          l.file,
+          `Lesson is published but its module "${m.slug}" is not; it will not be shown until the module is published`,
+          1,
+        );
+      }
+      for (const slug of m.challenges) {
+        const c = challengeBySlug.get(slug);
+        if (c?.published) {
+          issues.error(
+            c.file,
+            `Challenge is published but its module "${m.slug}" is not; it will not be shown until the module is published`,
+          );
+        }
+      }
     }
   }
 

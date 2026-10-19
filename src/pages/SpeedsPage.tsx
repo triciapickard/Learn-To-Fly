@@ -8,13 +8,13 @@ import { AircraftKeyNumbers } from '@/features/content/AircraftKeyNumbers';
 import { useAircraft } from '@/features/content/api';
 import { QueryStates } from '@/features/content/queryState';
 import { WidgetBlock } from '@/features/lessons/blocks/WidgetBlock';
+import { PowerSettingsTable } from '@/features/reference/PowerSettingsTable';
 import { VSpeedLabel } from '@/features/reference/VSpeedLabel';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { formatDate } from '@/lib/format';
 import type { AircraftDto } from '@shared/schemas/api';
 
 type VSpeedRow = { key: string } & AircraftDto['vspeeds'][string];
-type PowerRow = AircraftDto['powerSettings'][number];
 
 const kias = (v: VSpeedRow) => (v.kias !== undefined ? String(v.kias) : `${v.min}–${v.max}`);
 
@@ -152,28 +152,10 @@ export default function SpeedsPage() {
                     Rule-of-thumb starting points, not POH values. Set these, then adjust to hold
                     the target speed.
                   </p>
-                  <Table<PowerRow>
+                  <PowerSettingsTable
+                    rows={aircraft.powerSettings}
                     caption="Typical training power settings"
                     hideCaption
-                    rows={aircraft.powerSettings}
-                    rowKey={(p) => p.phase}
-                    columns={[
-                      {
-                        key: 'phase',
-                        header: 'Phase',
-                        label: 'Phase',
-                        cell: (p) => <span className="font-semibold">{p.phase}</span>,
-                      },
-                      { key: 'rpm', header: 'RPM', label: 'RPM', cell: (p) => p.rpm },
-                      { key: 'flaps', header: 'Flaps', label: 'Flaps', cell: (p) => p.flaps },
-                      {
-                        key: 'speed',
-                        header: 'Target speed (KIAS)',
-                        label: 'Target speed (KIAS)',
-                        cell: (p) => p.targetSpeed,
-                      },
-                      { key: 'pitch', header: 'Pitch', label: 'Pitch', cell: (p) => p.pitch ?? '' },
-                    ]}
                   />
                 </section>
 

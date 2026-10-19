@@ -1,4 +1,5 @@
 import { Outlet, ScrollRestoration } from 'react-router';
+import { BetaBanner } from '@/features/layout/BetaBanner';
 import { RouteAnnouncer } from '@/features/layout/RouteAnnouncer';
 import { useTheme } from '@/features/theme/ThemeContext';
 
@@ -13,6 +14,7 @@ export default function FlyModeLayout() {
       data-theme={preference === 'light' ? 'light' : 'dark'}
       className="min-h-dvh bg-canvas text-xl text-ink"
     >
+      <BetaBanner />
       <main id="main" tabIndex={-1} className="mx-auto max-w-3xl px-4 py-6 focus:outline-none">
         <Outlet />
       </main>

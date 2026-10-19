@@ -32,6 +32,9 @@ characters) and are referenced by file name only: `![Alt text](m2-l4-lift.webp "
    Then remove every `verify` callout, set `lastVerifiedAt` and `simVersion`, and set
    `published: true`.
 5. Run `npm run content:warnings`, then `npm run content:validate`, and preview it (below).
+6. The module itself stays `published: false` in `modules.yaml` until every lesson and
+   challenge in it is published (v1.md D-27); the validator enforces this, and a lesson in
+   an unpublished module is never served, even when it is published.
 
 ## Add a challenge
 

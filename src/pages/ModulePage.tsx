@@ -71,7 +71,7 @@ export default function ModulePage() {
               )}
             </PageHeader>
 
-            {[...m.lessons, ...m.challenges].some((item) => item.draft) && (
+            {(m.draft || [...m.lessons, ...m.challenges].some((item) => item.draft)) && (
               <UnverifiedWarning kind="module" className="mb-8" />
             )}
 

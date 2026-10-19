@@ -1,4 +1,8 @@
-/** Module overview for the landing page (v1.md Section 13.1); counts follow content/modules.yaml. */
+/**
+ * The nine planned v1 modules (v1.md Section 13.1); counts and `published` follow
+ * content/modules.yaml. Only published (fully verified, D-27) modules are listed on the
+ * site; the rest count toward the planned total and live on the roadmap.
+ */
 export const CURRICULUM_PREVIEW = [
   {
     code: 'M0',
@@ -7,6 +11,7 @@ export const CURRICULUM_PREVIEW = [
     lessons: 3,
     challenges: 1,
     summary: 'Set up MSFS 2024 for training and take your first flight.',
+    published: true,
   },
   {
     code: 'M1',
@@ -15,6 +20,7 @@ export const CURRICULUM_PREVIEW = [
     lessons: 4,
     challenges: 1,
     summary: 'Controls, the G1000 cockpit, engine, fuel, speeds and checklists.',
+    published: true,
   },
   {
     code: 'M2',
@@ -23,6 +29,7 @@ export const CURRICULUM_PREVIEW = [
     lessons: 4,
     challenges: 4,
     summary: 'Straight and level, climbs, descents and coordinated turns.',
+    published: false,
   },
   {
     code: 'M3',
@@ -31,6 +38,7 @@ export const CURRICULUM_PREVIEW = [
     lessons: 3,
     challenges: 4,
     summary: 'Preflight, engine start, taxiing and the run-up.',
+    published: false,
   },
   {
     code: 'M4',
@@ -39,6 +47,7 @@ export const CURRICULUM_PREVIEW = [
     lessons: 4,
     challenges: 5,
     summary: 'Take off, fly the traffic pattern, land and go around.',
+    published: false,
   },
   {
     code: 'M5',
@@ -47,6 +56,7 @@ export const CURRICULUM_PREVIEW = [
     lessons: 4,
     challenges: 5,
     summary: 'Handle the edges of the envelope and an engine failure.',
+    published: false,
   },
   {
     code: 'M6',
@@ -55,6 +65,7 @@ export const CURRICULUM_PREVIEW = [
     lessons: 6,
     challenges: 5,
     summary: 'Charts, airspace, pilotage, dead reckoning, VOR and GPS.',
+    published: false,
   },
   {
     code: 'M7',
@@ -63,6 +74,7 @@ export const CURRICULUM_PREVIEW = [
     lessons: 3,
     challenges: 2,
     summary: 'Radio calls at non-towered and towered airports.',
+    published: false,
   },
   {
     code: 'M8',
@@ -71,6 +83,7 @@ export const CURRICULUM_PREVIEW = [
     lessons: 2,
     challenges: 2,
     summary: 'Decision making, a local checkride and a cross-country flight.',
+    published: false,
   },
 ] as const;
 
