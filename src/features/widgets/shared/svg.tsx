@@ -117,8 +117,10 @@ export function Gauge({
       ))}
       {ticks}
       {label}
+      {/* A CSS rotation about the pivot, not rotate(a cx cy): the browser animates that one as
+          a matrix, and the needle slid off its pivot mid-swing. */}
       <g
-        transform={`rotate(${needleAngle} ${cx} ${cy})`}
+        style={{ transform: `rotate(${needleAngle}deg)`, transformOrigin: `${cx}px ${cy}px` }}
         className="transition-transform duration-150"
       >
         <path
