@@ -8,8 +8,9 @@ test('W3 airspeed indicator: the slider stays put as V-speed descriptions appear
   page,
 }) => {
   await page.goto(LESSON);
-  const slider = page.getByRole('slider', { name: 'Airspeed in knots' });
-  const description = page.getByText('Describe this diagram');
+  const widget = page.getByRole('figure', { name: /Interactive diagram: Airspeed/ });
+  const slider = widget.getByRole('slider', { name: 'Airspeed in knots' });
+  const description = widget.getByText('Describe this diagram');
   // Page position, so scrolling the slider into view does not count as movement.
   const top = (el: Element) => Math.round(el.getBoundingClientRect().top + window.scrollY);
 
