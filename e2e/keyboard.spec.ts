@@ -81,8 +81,11 @@ test('flow D: header to the V-speeds page, by keyboard', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await tabTo(page, page.getByRole('banner').getByRole('link', { name: 'Reference' }));
   await page.keyboard.press('Enter');
-  await expect(page.getByRole('heading', { level: 1, name: 'Reference' })).toBeVisible();
-  await tabTo(page, page.getByRole('link', { name: 'V-speeds and limits' }));
+  await expect(
+    page.getByRole('heading', { level: 1, name: 'What do you need to know?' }),
+  ).toBeVisible();
+  // The V-speeds section of the hub links to the full page ("All 19 speeds").
+  await tabTo(page, page.getByRole('link', { name: /^All \d+ speeds$/ }));
   await page.keyboard.press('Enter');
   await expect(page.getByRole('heading', { level: 1, name: 'V-speeds and limits' })).toBeVisible();
   await expect(page.getByRole('table', { name: 'V-speeds' })).toBeVisible();
