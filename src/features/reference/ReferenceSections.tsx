@@ -368,7 +368,7 @@ export function ReferenceSections(sources: Sources) {
       value={section}
       onValueChange={select}
       orientation="vertical"
-      className="grid gap-8 lg:grid-cols-[260px_minmax(0,1fr)]"
+      className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[260px_minmax(0,1fr)]"
     >
       <div className="flex flex-col gap-6 print:hidden">
         <TabsPrimitive.List
