@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/node';
 import type { ErrorRequestHandler } from 'express';
 import mongoose from 'mongoose';
 import type { Logger } from 'pino';
@@ -85,6 +86,8 @@ export function errorHandler(logger: Logger, isProduction: boolean): ErrorReques
     const normalised = normalise(err, isProduction);
     if (normalised.status >= 500) {
       logger.error({ err, requestId: req.id }, 'Unhandled error');
+      // Only real server faults go to Sentry, not 4xx (a no-op when Sentry is off).
+      Sentry.captureException(err, { tags: { requestId: String(req.id) } });
     }
     const body: ApiErrorBody & { error: { stack?: string } } = {
       error: {
