@@ -1,7 +1,8 @@
+import * as Sentry from '@sentry/node';
 import express from 'express';
 import mongoose from 'mongoose';
 import request from 'supertest';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { z } from 'zod';
 import { createApp } from '@server/app.js';
 import { disconnectDb, connectDb } from '@server/config/db.js';
@@ -12,6 +13,11 @@ import { requestId } from '@server/middleware/requestId.js';
 import { requireJson } from '@server/middleware/requireJson.js';
 import { validate } from '@server/middleware/validate.js';
 import { testEnv, useTestDb } from './setup.js';
+
+vi.mock('@sentry/node', async (importOriginal) => ({
+  ...(await importOriginal<typeof Sentry>()),
+  captureException: vi.fn(),
+}));
 
 const silent = createLogger({ NODE_ENV: 'test', LOG_LEVEL: 'silent' });
 
@@ -174,6 +180,21 @@ describe('shared middleware', () => {
     const res = await request(harness()).get('/boom-async');
     expect(res.status).toBe(500);
     expect(res.body.error.message).toBe('async failure');
+  });
+
+  it('reports 500s to Sentry but not 4xx errors', async () => {
+    const capture = vi.mocked(Sentry.captureException);
+    capture.mockClear();
+    await request(harness()).post('/items/abc').send({ name: 'x', count: 1.5 });
+    expect(capture).not.toHaveBeenCalled();
+    const res = await request(harness()).get('/boom');
+    expect(capture).toHaveBeenCalledOnce();
+    expect(capture).toHaveBeenCalledWith(
+      expect.objectContaining({ message: 'secret internal detail' }),
+      {
+        tags: { requestId: res.body.error.requestId },
+      },
+    );
   });
 
   it('rate limits with a 429 in the error shape', async () => {

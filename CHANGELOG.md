@@ -17,6 +17,10 @@ All notable changes to this project are documented here. The format is based on
 
 ### Added
 
+- Server error monitoring with Sentry (v1.md Section 34.4). `server/src/instrument.ts`
+  starts `@sentry/node` via `node --import` when `SENTRY_DSN` is set; the error handler
+  reports 5xx errors only, and cookies, request bodies and user fields are never sent.
+  `SENTRY_DSN` is added to `render.yaml`.
 - Unverified content warnings for the public beta (D-17): every draft lesson and
   challenge file starts with a "not for learning use" warning, each content folder has a
   generated README marking what is verified, and draft lesson, challenge and module pages
