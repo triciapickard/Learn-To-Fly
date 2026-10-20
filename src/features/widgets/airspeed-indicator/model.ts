@@ -108,6 +108,25 @@ export function describe(
   };
 }
 
+/**
+ * Every readout and band meaning the widget can show between 0 and `max` KIAS, with the number
+ * at its widest. The widget lays these out invisibly to reserve room for the longest, so the
+ * slider does not move when a V-speed's description appears.
+ */
+export function textVariants(
+  arcs: Arcs,
+  speeds: NamedSpeed[],
+  max = 180,
+): { readouts: string[]; meanings: string[] } {
+  const all = Array.from({ length: max + 1 }, (_, ias) => ias);
+  return {
+    readouts: [
+      ...new Set(all.map((ias) => describe(ias, arcs, speeds).readout.replace(/^\d+/, `${max}`))),
+    ],
+    meanings: [...new Set(all.map((ias) => bandFor(ias, arcs).meaning))],
+  };
+}
+
 export const DIAL = { min: 20, max: 180, startAngle: -160, endAngle: 160 } as const;
 
 /** Dial angle → airspeed, clamped to the scale. */

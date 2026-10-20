@@ -7,6 +7,7 @@ import { cn } from '@/lib/cn';
 import { angleOf, clamp, polar } from '../shared/geometry';
 import { useAnnouncer, useDrag } from '../shared/hooks';
 import { QuizPanel } from '../shared/QuizPanel';
+import { ReservedText } from '../shared/ReservedText';
 import { Gauge, Tape, valueToDialAngle } from '../shared/svg';
 import { WidgetFrame } from '../shared/WidgetFrame';
 import type { WidgetMode, WidgetProps } from '../types';
@@ -18,6 +19,7 @@ import {
   isCorrect,
   markedSpeeds,
   quizQuestions,
+  textVariants,
 } from './model';
 
 type View = 'both' | 'dial' | 'tape';
@@ -35,6 +37,10 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
 
   const aircraft = data?.aircraft;
   const speeds = useMemo(() => (aircraft ? markedSpeeds(aircraft.vspeeds) : []), [aircraft]);
+  const variants = useMemo(
+    () => (aircraft ? textVariants(aircraft.arcs, speeds) : { readouts: [], meanings: [] }),
+    [aircraft, speeds],
+  );
 
   const setIas = useCallback(
     (value: number) => {
@@ -122,31 +128,34 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
       onReset={() => setIas(initial)}
       description={description}
     >
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div
-          role="group"
-          aria-label="Show"
-          className="flex rounded-md border border-line-strong p-0.5 text-sm"
-        >
-          {(['both', 'dial', 'tape'] as const).map((v) => (
-            <button
-              key={v}
-              type="button"
-              aria-pressed={view === v}
-              onClick={() => setView(v)}
-              className={cn(
-                'min-h-9 rounded-[4px] px-3 font-semibold',
-                view === v ? 'bg-surface-sunken text-ink' : 'text-ink-2',
-              )}
-            >
-              {{ both: 'Both', dial: 'Round dial', tape: 'G1000 tape' }[v]}
-            </button>
-          ))}
-        </div>
-        <p className="font-mono text-lg font-semibold" aria-hidden>
-          {readout}
-        </p>
+      <div
+        role="group"
+        aria-label="Show"
+        className="flex w-fit rounded-md border border-line-strong p-0.5 text-sm"
+      >
+        {(['both', 'dial', 'tape'] as const).map((v) => (
+          <button
+            key={v}
+            type="button"
+            aria-pressed={view === v}
+            onClick={() => setView(v)}
+            className={cn(
+              'min-h-9 rounded-[4px] px-3 font-semibold',
+              view === v ? 'bg-surface-sunken text-ink' : 'text-ink-2',
+            )}
+          >
+            {{ both: 'Both', dial: 'Round dial', tape: 'G1000 tape' }[v]}
+          </button>
+        ))}
       </div>
+      {/* Room for the longest readout, so the dial and slider stay put at V-speeds. */}
+      <ReservedText
+        variants={variants.readouts}
+        className="mt-3 font-mono text-lg font-semibold"
+        aria-hidden
+      >
+        {readout}
+      </ReservedText>
 
       <div className="mt-4 flex flex-wrap items-start justify-center gap-6">
         {view !== 'tape' && (
@@ -302,7 +311,9 @@ export default function AirspeedIndicator({ props, onQuizAnswer }: WidgetProps) 
           <Plus aria-hidden className="size-4" />
         </Button>
       </div>
-      <p className="mt-2 text-center text-sm text-ink-2">{band.meaning}</p>
+      <ReservedText variants={variants.meanings} className="mt-2 text-center text-sm text-ink-2">
+        {band.meaning}
+      </ReservedText>
 
       {mode === 'quiz' && (
         <div className="mt-4">

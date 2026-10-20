@@ -9,6 +9,7 @@ import {
   nearestVSpeed,
   quizQuestions,
   shortName,
+  textVariants,
 } from './model';
 
 const arcs = { white: [40, 85], green: [48, 129], yellow: [129, 163], redline: 163 } as {
@@ -84,6 +85,18 @@ describe('describe', () => {
       speech: '74 knots, green arc, Vy, best rate of climb',
     });
     expect(describeIas(100, arcs, speeds).readout).toBe('100 KIAS · green arc');
+  });
+
+  it('lists every readout and band meaning, widest number first, once each', () => {
+    const { readouts, meanings } = textVariants(arcs, speeds);
+    expect(readouts).toContain('180 KIAS · below the arcs');
+    expect(readouts).toContain('180 KIAS · white arc · Vso, stall speed with full flaps');
+    expect(readouts).toContain('180 KIAS · at or above the red line · Vne, never exceed speed');
+    expect(readouts).toHaveLength(new Set(readouts).size);
+    // One plain readout per band (white-green and green share a label), one per marked speed.
+    expect(readouts).toHaveLength(5 + speeds.length);
+    expect(meanings).toHaveLength(6);
+    expect(meanings).toContain(bandFor(100, arcs).meaning);
   });
 });
 
