@@ -7,11 +7,15 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { z } from 'zod';
 import App from './App';
+import { installChunkReloadHandler } from './lib/chunkReload';
 import './styles/index.css';
 
 // Zod probes `new Function` to decide whether to JIT; under our CSP (no 'unsafe-eval') that
 // probe is reported as a violation even though Zod catches it (step 11.11).
 z.config({ jitless: true });
+
+// Reload once when a chunk preload fails after a deploy (JAVASCRIPT-REACT-3).
+installChunkReloadHandler();
 
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error('Root element #root not found');

@@ -1,6 +1,7 @@
 import * as Sentry from '@sentry/react';
 import type { ComponentType } from 'react';
 import { createBrowserRouter, type RouteObject } from 'react-router';
+import { recoverFromChunkError } from './lib/chunkReload';
 import AppLoading from './pages/AppLoading';
 import RootErrorPage from './pages/RootErrorPage';
 
@@ -8,7 +9,18 @@ type PageModule = { default: ComponentType };
 
 /** Route-level code splitting: each page is its own chunk (Section 31.2). */
 function page(load: () => Promise<PageModule>): Pick<RouteObject, 'lazy'> {
-  return { lazy: async () => ({ Component: (await load()).default }) };
+  return {
+    lazy: async () => {
+      try {
+        return { Component: (await load()).default };
+      } catch (error) {
+        // A stale tab after a deploy can't fetch the old hashed chunk: reload once to pick up
+        // the new build (JAVASCRIPT-REACT-3). Stay pending while the page reloads.
+        if (recoverFromChunkError(error)) return new Promise<never>(() => undefined);
+        throw error;
+      }
+    },
+  };
 }
 
 const devRoutes: RouteObject[] = import.meta.env.DEV
