@@ -57,21 +57,11 @@ Learn-To-Fly/
 
 ## Preferences
 
-At the end of a task or phase completion, always include the following:
-
-- **What I changed**: A brief list of the changes you made.
-- **What I couldn't do** A list of things you where unable to do.
-- **What I need from you** Optional, any things that are absolutely necessary that you can't do but I can. Give me step by step instructions on how to do it.
-
----
-
 When a step doesn't need my input, keep going. Put status notes in the
 same message as your next action.
 Stop and ask only when you can't continue without me, or before anything
 destructive: deleting data, force-pushing, or changing anything outside
 this repository.
-
----
 
 ## Required Actions
 
