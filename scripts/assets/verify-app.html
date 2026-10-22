@@ -1,0 +1,1740 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LTF Verifier</title>
+    <style>
+      /* Design system 2026 (src/styles/tokens.css): Day values on :root, Night overrides. */
+      @font-face {
+        font-family: 'Instrument Sans Variable';
+        font-style: normal;
+        font-weight: 400 700;
+        font-display: swap;
+        src: url('fonts/instrument-sans-latin-wght-normal.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono Variable';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: swap;
+        src: url('fonts/jetbrains-mono-latin-wght-normal.woff2') format('woff2');
+      }
+      :root {
+        color-scheme: light;
+        --canvas: #f7f5f3;
+        --surface: #ffffff;
+        --surface-raised: #ffffff;
+        --surface-sunken: #efeeec;
+        --line: #dfdedc;
+        --line-strong: #81807e;
+        --ink: #171614;
+        --ink-2: #595856;
+        --ink-3: #6a6967;
+        --on-ink: #ffffff;
+        --accent: #00757c;
+        --accent-strong: #005c62;
+        --accent-line: #009ca5;
+        --accent-tint: #daf7f8;
+        --on-accent: #ffffff;
+        --go: #006c43;
+        --go-tint: #d8f7e6;
+        --on-go: #ffffff;
+        --caution: #945a00;
+        --caution-tint: #ffeecb;
+        --warn: #b71824;
+        --warn-tint: #ffe7e4;
+        --on-warn: #ffffff;
+        --tier-gold: #906200;
+        --tier-silver: #5f6469;
+        --tier-bronze: #8c5331;
+        --shadow-1: 0 1px 2px rgba(23, 22, 20, 0.06), 0 1px 3px rgba(23, 22, 20, 0.08);
+        --shadow-2: 0 4px 8px rgba(23, 22, 20, 0.06), 0 12px 28px rgba(23, 22, 20, 0.1);
+        --shadow-press: inset 0 2px 0 rgba(23, 22, 20, 0.12);
+        --font-sans: 'Instrument Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --radius-pill: 999px;
+      }
+      [data-theme='dark'] {
+        color-scheme: dark;
+        --canvas: #141412;
+        --surface: #1f1e1c;
+        --surface-raised: #2b2a28;
+        --surface-sunken: #0f0e0d;
+        --line: #393836;
+        --line-strong: #878684;
+        --ink: #ecebe9;
+        --ink-2: #b2b1af;
+        --ink-3: #939290;
+        --on-ink: #141412;
+        --accent: #56d3da;
+        --accent-strong: #93e5e9;
+        --accent-line: #00c3cb;
+        --accent-tint: #023538;
+        --on-accent: #141412;
+        --go: #6bdeaa;
+        --go-tint: #152f23;
+        --on-go: #141412;
+        --caution: #f8c655;
+        --caution-tint: #3b2b0d;
+        --warn: #ff8880;
+        --warn-tint: #442321;
+        --on-warn: #141412;
+        --tier-gold: #f1c45e;
+        --tier-silver: #b9bec4;
+        --tier-bronze: #dea279;
+        --shadow-1: 0 0 0 1px #393836;
+        --shadow-2: 0 0 0 1px #393836, 0 12px 32px rgba(0, 0, 0, 0.5);
+        --shadow-press: inset 0 2px 0 rgba(0, 0, 0, 0.4);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      html {
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        font-family: var(--font-sans);
+        font-size: 15px;
+        line-height: 1.5;
+        background: var(--canvas);
+        color: var(--ink);
+        display: flex;
+        flex-direction: column;
+      }
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+      code,
+      .mono {
+        font-family: var(--font-mono);
+        font-variant-numeric: tabular-nums;
+      }
+      code {
+        font-size: 12px;
+      }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.25;
+        margin: 0;
+      }
+      a {
+        color: var(--accent);
+      }
+
+      /* Header: the site lockup, progress as a thin horizon line, actions. */
+      .topbar {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 20px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+        flex-wrap: wrap;
+      }
+      .lockup {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 22px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        white-space: nowrap;
+        color: var(--ink);
+      }
+      .lockup svg {
+        width: 28px;
+        height: 28px;
+        flex: none;
+      }
+      .lockup .fin {
+        fill: currentColor;
+      }
+      .lockup .stripe {
+        fill: var(--accent-line);
+      }
+      .lockup .app-name {
+        font-weight: 500;
+        letter-spacing: 0;
+        color: var(--ink-2);
+        font-size: 15px;
+        margin-left: 2px;
+        padding-left: 12px;
+        border-left: 1px solid var(--line);
+      }
+      .lockup .app-name small {
+        display: block;
+        font-size: 11px;
+        color: var(--ink-3);
+        font-weight: 400;
+        margin-top: 2px;
+      }
+      .progress {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1;
+        min-width: 200px;
+      }
+      .bar {
+        flex: 1;
+        height: 6px;
+        background: var(--surface-sunken);
+        border-radius: var(--radius-pill);
+        overflow: hidden;
+        display: flex;
+      }
+      .bar i {
+        display: block;
+        height: 100%;
+      }
+      .bar .ok {
+        background: var(--go);
+      }
+      .bar .issue {
+        background: var(--warn);
+      }
+      .bar .skip {
+        background: var(--line-strong);
+      }
+      .progress span {
+        color: var(--ink-2);
+        white-space: nowrap;
+        font-size: 13px;
+      }
+      .topbar label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--ink-2);
+        font-size: 13px;
+      }
+      .input {
+        min-height: 32px;
+        padding: 4px 10px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-sm);
+        background: var(--surface);
+        color: var(--ink);
+      }
+      .input:hover {
+        border-color: var(--line-strong);
+      }
+      .topbar input.input {
+        width: 104px;
+      }
+      .actions {
+        display: flex;
+        gap: 8px;
+        position: relative;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        min-height: 32px;
+        padding: 0 12px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        background: var(--surface);
+        color: var(--ink);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        white-space: nowrap;
+        cursor: pointer;
+        transition:
+          background-color 150ms,
+          color 150ms;
+      }
+      .btn:hover {
+        background: var(--surface-sunken);
+      }
+      .btn:active {
+        box-shadow: var(--shadow-press);
+      }
+      .btn.primary {
+        background: var(--ink);
+        border-color: transparent;
+        color: var(--on-ink);
+      }
+      .btn.primary:hover {
+        background: var(--ink-2);
+      }
+      .btn.ghost {
+        background: transparent;
+        border-color: transparent;
+        color: var(--ink);
+      }
+      .btn.ghost:hover {
+        background: var(--surface-sunken);
+      }
+      .menu {
+        position: absolute;
+        right: 0;
+        top: 38px;
+        background: var(--surface-raised);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-2);
+        display: none;
+        flex-direction: column;
+        min-width: 240px;
+        z-index: 5;
+        padding: 4px;
+      }
+      .menu.open {
+        display: flex;
+      }
+      .menu button {
+        text-align: left;
+        padding: 8px 10px;
+        border: 0;
+        background: none;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .menu button:hover {
+        background: var(--surface-sunken);
+      }
+      .menu button.danger {
+        color: var(--warn);
+      }
+
+      /* Sidebar */
+      .layout {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+      }
+      .sidebar {
+        width: 300px;
+        background: var(--surface);
+        border-right: 1px solid var(--line);
+        overflow-y: auto;
+        padding: 8px;
+      }
+      .sidebar h2 {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink-3);
+        margin: 16px 10px 6px;
+      }
+      .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        min-height: 36px;
+        padding: 4px 10px;
+        border: 0;
+        background: none;
+        border-radius: var(--radius-sm);
+        text-align: left;
+        cursor: pointer;
+        color: var(--ink);
+      }
+      .nav-item:hover {
+        background: var(--surface-sunken);
+      }
+      .nav-item.active {
+        background: var(--accent-tint);
+        color: var(--ink);
+        box-shadow: inset 3px 0 0 var(--accent-line);
+      }
+      .nav-item .code {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        font-weight: 600;
+        width: 40px;
+        flex: none;
+      }
+      .nav-item .name {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+      .nav-item .count {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--ink-3);
+        font-variant-numeric: tabular-nums;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--line);
+        flex: none;
+      }
+      .dot.partial {
+        background: var(--accent-line);
+      }
+      .dot.done {
+        background: var(--go);
+      }
+      .dot.issue {
+        background: var(--warn);
+      }
+
+      /* Item */
+      main {
+        flex: 1;
+        overflow-y: auto;
+        padding: 24px 32px 96px;
+      }
+      .item-head h1 {
+        font-size: 28px;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+        margin: 0 0 6px;
+      }
+      .item-head h1 .code {
+        font-family: var(--font-mono);
+        font-weight: 600;
+        font-size: 22px;
+        color: var(--accent);
+        margin-right: 8px;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1;
+        padding: 5px 9px;
+        border-radius: var(--radius-pill);
+        background: var(--surface-sunken);
+        color: var(--ink-2);
+        margin-left: 8px;
+        vertical-align: middle;
+        letter-spacing: 0;
+      }
+      .chip.issue {
+        background: var(--warn-tint);
+        color: var(--warn);
+      }
+      .chip.done {
+        background: var(--go-tint);
+        color: var(--go);
+      }
+      .chip.partial {
+        background: var(--accent-tint);
+        color: var(--accent);
+      }
+      .filepath {
+        color: var(--ink-3);
+        margin-bottom: 12px;
+      }
+      .meta {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 2px 16px;
+        font-size: 14px;
+        margin: 0 0 16px;
+        max-width: 880px;
+      }
+      .meta dt {
+        color: var(--ink-3);
+      }
+      .meta dd {
+        margin: 0;
+      }
+      .card {
+        background: var(--surface);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-1);
+        margin-bottom: 16px;
+      }
+      .record {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px 20px;
+        align-items: flex-start;
+      }
+      .record label {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--ink-2);
+      }
+      .record .input {
+        font-size: 14px;
+      }
+      .record label.wide {
+        flex: 1 1 100%;
+      }
+      .record textarea {
+        min-height: 56px;
+        resize: vertical;
+        font-size: 14px;
+      }
+
+      /* Groups: one card per section */
+      .group {
+        overflow: hidden;
+      }
+      .group-head {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 20px;
+        border-bottom: 1px solid var(--line);
+      }
+      .group-head h2 {
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        flex: 1;
+      }
+      .group-head .hint {
+        display: block;
+        font-size: 13px;
+        color: var(--ink-3);
+        font-weight: 400;
+        margin-top: 2px;
+      }
+      .group-head .gcount {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--ink-3);
+      }
+      .toggle {
+        border: 0;
+        background: none;
+        color: var(--accent);
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 4px 6px;
+        border-radius: var(--radius-sm);
+      }
+      .toggle:hover {
+        background: var(--accent-tint);
+      }
+      .reading {
+        padding: 6px 24px 14px;
+        border-bottom: 1px solid var(--line);
+        background: var(--canvas);
+        font-size: 15px;
+        line-height: 1.625;
+      }
+      .reading > * {
+        max-width: 68ch;
+      }
+      .reading.hidden {
+        display: none;
+      }
+      .reading p,
+      .reading ul,
+      .reading ol,
+      .reading table {
+        margin: 10px 0;
+      }
+      .reading h4,
+      .reading h5 {
+        margin: 14px 0 4px;
+      }
+      .reading table,
+      .detail table {
+        border-collapse: collapse;
+        font-size: 13px;
+        width: 100%;
+      }
+      .reading th,
+      .reading td,
+      .detail th,
+      .detail td {
+        border-bottom: 1px solid var(--line);
+        padding: 5px 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .reading th,
+      .detail th {
+        color: var(--ink-2);
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      /* Callouts: the type's tint fill, the type color only on the title (no left stripe). */
+      .callout,
+      .quiz,
+      .embed,
+      .widget {
+        border-radius: var(--radius-md);
+        padding: 12px 16px;
+        margin: 12px 0;
+        background: var(--surface-sunken);
+        border: 1px solid var(--line);
+      }
+      .callout {
+        border-color: transparent;
+      }
+      .callout.sim {
+        background: var(--accent-tint);
+      }
+      .callout.sim .tag {
+        color: var(--accent);
+      }
+      .callout.tip {
+        background: var(--go-tint);
+      }
+      .callout.tip .tag {
+        color: var(--go);
+      }
+      .callout.classic {
+        background: var(--caution-tint);
+      }
+      .callout.classic .tag {
+        color: var(--caution);
+      }
+      .callout.safety {
+        background: var(--warn-tint);
+      }
+      .callout.safety .tag {
+        color: var(--warn);
+      }
+      .callout.verify {
+        background: var(--caution-tint);
+        border: 1px dashed var(--line-strong);
+      }
+      .callout.verify .tag {
+        color: var(--caution);
+      }
+      .callout p:last-child,
+      .quiz p:last-child,
+      .embed p:last-child {
+        margin-bottom: 0;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: var(--ink-2);
+        margin-bottom: 2px;
+      }
+      .quiz .prompt {
+        font-weight: 600;
+      }
+      .quiz .options {
+        padding-left: 0;
+        list-style: none;
+      }
+      .quiz .options li.correct {
+        font-weight: 600;
+        color: var(--go);
+      }
+      .quiz .explain {
+        color: var(--ink-2);
+        border-top: 1px dashed var(--line);
+        margin-top: 8px;
+        padding-top: 6px;
+        font-size: 14px;
+      }
+      .quiz .answer {
+        margin: 4px 0;
+      }
+      .widget {
+        color: var(--ink-2);
+        border-style: dashed;
+      }
+      .ilink {
+        color: var(--accent);
+        text-decoration: underline dotted;
+      }
+      .box.on {
+        color: var(--go);
+      }
+
+      /* Checks */
+      .check {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 6px 16px;
+        padding: 10px 20px;
+        border-bottom: 1px solid var(--line);
+        align-items: start;
+      }
+      .check:last-child {
+        border-bottom: 0;
+      }
+      .check.issue {
+        background: var(--warn-tint);
+      }
+      .check .label {
+        line-height: 1.45;
+        padding-top: 4px;
+      }
+      .check .line {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--ink-3);
+        margin-left: 8px;
+        white-space: nowrap;
+      }
+      .check .more {
+        border: 0;
+        background: none;
+        color: var(--accent);
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 0 2px;
+        margin-left: 8px;
+      }
+      .check .more:hover {
+        text-decoration: underline;
+      }
+      .seg {
+        display: inline-flex;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        background: var(--surface);
+      }
+      .seg button {
+        border: 0;
+        background: transparent;
+        min-height: 32px;
+        padding: 0 12px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 500;
+        border-right: 1px solid var(--line);
+        color: var(--ink-2);
+        transition:
+          background-color 150ms,
+          color 150ms;
+      }
+      .seg button:hover {
+        background: var(--surface-sunken);
+        color: var(--ink);
+      }
+      .seg button:last-child {
+        border-right: 0;
+      }
+      .seg button.on.ok {
+        background: var(--go);
+        color: var(--on-go);
+      }
+      .seg button.on.issue {
+        background: var(--warn);
+        color: var(--on-warn);
+      }
+      .seg button.on.skip {
+        background: var(--line-strong);
+        color: var(--on-ink);
+      }
+      .check .note {
+        grid-column: 1 / -1;
+      }
+      .check .note textarea {
+        width: 100%;
+        min-height: 52px;
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-sm);
+        background: var(--surface);
+        resize: vertical;
+        font-size: 14px;
+      }
+      .check .note textarea:focus {
+        border-color: var(--accent);
+      }
+      .check .detail {
+        grid-column: 1 / -1;
+        font-size: 13px;
+        color: var(--ink-2);
+        padding: 8px 12px;
+        border-radius: var(--radius-sm);
+        background: var(--surface-sunken);
+        display: none;
+      }
+      .check .detail.open {
+        display: block;
+      }
+      .detail dl {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 2px 14px;
+        margin: 2px 0;
+      }
+      .detail dt {
+        color: var(--ink-3);
+      }
+      .detail dd {
+        margin: 0;
+      }
+      .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+      }
+      .empty {
+        color: var(--ink-3);
+        padding: 48px;
+        text-align: center;
+      }
+      .toast {
+        position: fixed;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--ink);
+        color: var(--on-ink);
+        padding: 10px 16px;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-2);
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 150ms;
+        pointer-events: none;
+      }
+      .toast.show {
+        opacity: 1;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition-duration: 0.01ms !important;
+        }
+      }
+      @media (max-width: 760px) {
+        .layout {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: auto;
+          max-height: 40vh;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+        main {
+          padding: 16px;
+        }
+        .lockup .app-name small {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="lockup">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <defs>
+            <clipPath id="fin-clip">
+              <path d="M3 37 C13 35 18 27 22 17 L28.5 4 L35.5 4 C37 4 38 5 38 6.5 L38 37 Z" />
+            </clipPath>
+            <mask id="fin-gap">
+              <rect width="40" height="40" fill="#fff" />
+              <path d="M6 32 C17 23 29 15.5 44 10.5 L44 12 C29 17 18 24.5 7.5 33.5 Z" fill="#000" />
+            </mask>
+          </defs>
+          <g mask="url(#fin-gap)">
+            <path
+              class="fin"
+              d="M3 37 C13 35 18 27 22 17 L28.5 4 L35.5 4 C37 4 38 5 38 6.5 L38 37 Z"
+            />
+            <path
+              class="stripe"
+              clip-path="url(#fin-clip)"
+              d="M8 42 C18 30 29 22 44 16 L44 24.5 C31 29 23 35 17.5 42 Z"
+            />
+          </g>
+        </svg>
+        <span>Learn to Fly</span>
+        <span class="app-name">Verifier<small id="brandSub"></small></span>
+      </div>
+      <div class="progress">
+        <div class="bar" id="bar"></div>
+        <span id="progressText" class="mono"></span>
+      </div>
+      <label
+        >Sim <input type="text" class="input mono" id="simVersion" placeholder="1.8.16.0"
+      /></label>
+      <div class="actions">
+        <button class="btn primary" id="exportBtn">Export report (.txt)</button>
+        <button class="btn" id="copyBtn">Copy report</button>
+        <button class="btn ghost" id="themeBtn">Night</button>
+        <button class="btn" id="menuBtn" aria-label="More">⋯</button>
+        <div class="menu" id="menu">
+          <button id="saveBtn">Save progress to a file (.json)</button>
+          <button id="loadBtn">Load progress from a file…</button>
+          <button id="issuesOnlyBtn">Export issues only (.txt)</button>
+          <button class="danger" id="resetBtn">Reset all progress</button>
+        </div>
+        <input type="file" id="loadInput" accept="application/json" hidden />
+      </div>
+    </header>
+    <div class="layout">
+      <nav class="sidebar" id="sidebar"></nav>
+      <main id="main"></main>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script id="ltf-data" type="application/json">
+      __LTF_DATA__
+    </script>
+    <script>
+      (function () {
+        'use strict';
+        var DATA = JSON.parse(document.getElementById('ltf-data').textContent);
+        var MODULES = DATA.modules;
+        var ITEMS = [];
+        MODULES.forEach(function (m) {
+          m.items.forEach(function (it) {
+            it.module = m.code;
+            ITEMS.push(it);
+          });
+        });
+        var KEY =
+          'ltf-verifier:' +
+          MODULES.map(function (m) {
+            return m.code;
+          }).join('-');
+        var VERDICTS = ['ok', 'issue', 'skip'];
+        var LABELS = { ok: 'OK', issue: 'Issue', skip: 'Skip' };
+        var MARKS = { ok: '[OK]', issue: '[ISSUE]', skip: '[SKIP]' };
+
+        /* ---------------- state ---------------- */
+        var state = load();
+        function blank() {
+          return {
+            simVersion: DATA.simVersion,
+            checks: {},
+            items: {},
+            ui: { selected: ITEMS[0] ? ITEMS[0].id : null, hidden: {} },
+          };
+        }
+        function load() {
+          try {
+            var raw = localStorage.getItem(KEY);
+            if (raw) {
+              var s = JSON.parse(raw);
+              if (s && s.checks && s.items) {
+                s.ui = s.ui || {};
+                s.ui.hidden = s.ui.hidden || {};
+                if (!s.ui.selected) s.ui.selected = ITEMS[0] ? ITEMS[0].id : null;
+                if (!s.simVersion) s.simVersion = DATA.simVersion;
+                return s;
+              }
+            }
+          } catch (e) {
+            /* storage unavailable: work in memory */
+          }
+          return blank();
+        }
+        var saveTimer = null;
+        function save() {
+          clearTimeout(saveTimer);
+          saveTimer = setTimeout(function () {
+            try {
+              localStorage.setItem(KEY, JSON.stringify(state));
+            } catch (e) {
+              toast('Could not save to this browser. Use "Save progress to a file".');
+            }
+          }, 150);
+        }
+        function check(id) {
+          return state.checks[id] || { v: null, n: '' };
+        }
+        function setCheck(id, patch) {
+          var c = state.checks[id] || { v: null, n: '' };
+          Object.keys(patch).forEach(function (k) {
+            c[k] = patch[k];
+          });
+          if (!c.v && !c.n) delete state.checks[id];
+          else state.checks[id] = c;
+          touchItemDate(id.split(':')[0]);
+          save();
+        }
+        function rec(itemId) {
+          return (
+            state.items[itemId] ||
+            (state.items[itemId] = { date: '', tier: '', minutes: '', notes: '' })
+          );
+        }
+        function touchItemDate(itemId) {
+          var r = rec(itemId);
+          if (!r.date) r.date = today();
+        }
+        function today() {
+          var d = new Date();
+          return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+        }
+        function pad(n) {
+          return (n < 10 ? '0' : '') + n;
+        }
+
+        /* ---------------- stats ---------------- */
+        function itemChecks(it) {
+          var out = [];
+          it.groups.forEach(function (g) {
+            g.checks.forEach(function (c) {
+              out.push(c);
+            });
+          });
+          return out;
+        }
+        function stats(checks) {
+          var s = { total: checks.length, ok: 0, issue: 0, skip: 0, open: 0 };
+          checks.forEach(function (c) {
+            var v = check(c.id).v;
+            if (v) s[v]++;
+            else s.open++;
+          });
+          return s;
+        }
+        function itemStatus(it) {
+          var s = stats(itemChecks(it));
+          if (s.issue) return 'issue';
+          if (s.open === 0 && s.total > 0) return 'done';
+          if (s.open < s.total) return 'partial';
+          return 'none';
+        }
+        function statusWord(it) {
+          return {
+            issue: 'Needs changes',
+            done: 'Verified',
+            partial: 'In progress',
+            none: 'Not started',
+          }[itemStatus(it)];
+        }
+
+        /* ---------------- rendering ---------------- */
+        var $ = function (id) {
+          return document.getElementById(id);
+        };
+        function el(tag, attrs, children) {
+          var e = document.createElement(tag);
+          if (attrs)
+            Object.keys(attrs).forEach(function (k) {
+              if (k === 'class') e.className = attrs[k];
+              else if (k === 'html') e.innerHTML = attrs[k];
+              else if (k === 'text') e.textContent = attrs[k];
+              else if (k.indexOf('on') === 0) e.addEventListener(k.slice(2), attrs[k]);
+              else e.setAttribute(k, attrs[k]);
+            });
+          (children || []).forEach(function (c) {
+            if (c) e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+          });
+          return e;
+        }
+
+        function renderTop() {
+          $('brandSub').textContent =
+            MODULES.map(function (m) {
+              return m.code;
+            }).join(' · ') +
+            ' · built ' +
+            DATA.generatedAt;
+          var all = [];
+          ITEMS.forEach(function (it) {
+            all = all.concat(itemChecks(it));
+          });
+          var s = stats(all);
+          var bar = $('bar');
+          bar.innerHTML = '';
+          ['ok', 'issue', 'skip'].forEach(function (v) {
+            var i = document.createElement('i');
+            i.className = v;
+            i.style.width = (s.total ? (100 * s[v]) / s.total : 0) + '%';
+            bar.appendChild(i);
+          });
+          $('progressText').textContent =
+            s.total -
+            s.open +
+            ' / ' +
+            s.total +
+            ' checked · ' +
+            s.issue +
+            ' issue' +
+            (s.issue === 1 ? '' : 's');
+        }
+
+        function renderSidebar() {
+          var nav = $('sidebar');
+          nav.innerHTML = '';
+          MODULES.forEach(function (m) {
+            nav.appendChild(el('h2', { text: m.code + ' · ' + m.title }));
+            m.items.forEach(function (it) {
+              var s = stats(itemChecks(it));
+              var b = el(
+                'button',
+                {
+                  class: 'nav-item' + (state.ui.selected === it.id ? ' active' : ''),
+                  onclick: function () {
+                    select(it.id);
+                  },
+                },
+                [
+                  el('span', { class: 'dot ' + itemStatus(it) }),
+                  el('span', { class: 'code', text: it.id }),
+                  el('span', { class: 'name', text: it.title, title: it.title }),
+                  el('span', { class: 'count', text: s.total - s.open + '/' + s.total }),
+                ],
+              );
+              nav.appendChild(b);
+            });
+          });
+        }
+
+        function select(id) {
+          state.ui.selected = id;
+          save();
+          renderSidebar();
+          renderMain();
+          $('main').scrollTop = 0;
+        }
+
+        function renderMain() {
+          var main = $('main');
+          main.innerHTML = '';
+          var it = ITEMS.filter(function (x) {
+            return x.id === state.ui.selected;
+          })[0];
+          if (!it) {
+            main.appendChild(
+              el('div', { class: 'empty', text: 'Pick a lesson or challenge on the left.' }),
+            );
+            return;
+          }
+          var r = rec(it.id);
+
+          var head = el('div', { class: 'item-head' });
+          head.appendChild(
+            el('h1', {}, [
+              el('span', { class: 'code', text: it.id }),
+              it.title,
+              el('span', { class: 'chip', text: it.type }),
+              el('span', {
+                class: 'chip',
+                text: it.priority + ' · ' + it.estimatedMinutes + ' min',
+              }),
+              el('span', { class: 'chip ' + itemStatus(it), text: statusWord(it) }),
+            ]),
+          );
+          head.appendChild(el('div', { class: 'filepath' }, [el('code', { text: it.file })]));
+          var dl = el('dl', { class: 'meta' });
+          it.meta.forEach(function (m) {
+            dl.appendChild(el('dt', { text: m.label }));
+            dl.appendChild(el('dd', { text: m.value }));
+          });
+          head.appendChild(dl);
+          main.appendChild(head);
+
+          var record = el('div', { class: 'card record' });
+          record.appendChild(
+            el('label', {}, [
+              'Date checked',
+              el('input', {
+                class: 'input mono',
+                type: 'date',
+                value: r.date,
+                onchange: function (e) {
+                  r.date = e.target.value;
+                  save();
+                },
+              }),
+            ]),
+          );
+          if (it.type === 'challenge') {
+            var sel = el('select', {
+              class: 'input',
+              onchange: function (e) {
+                r.tier = e.target.value;
+                touchItemDate(it.id);
+                save();
+              },
+            });
+            ['', 'Gold', 'Silver', 'Bronze', 'Fail', 'Not flown'].forEach(function (t) {
+              var o = el('option', { value: t, text: t || '—' });
+              if (r.tier === t) o.selected = true;
+              sel.appendChild(o);
+            });
+            record.appendChild(el('label', {}, ['Tier flown', sel]));
+            record.appendChild(
+              el('label', {}, [
+                'Minutes taken (est. ' + it.estimatedMinutes + ')',
+                el('input', {
+                  class: 'input mono',
+                  type: 'number',
+                  min: '0',
+                  style: 'width:90px',
+                  value: r.minutes,
+                  oninput: function (e) {
+                    r.minutes = e.target.value;
+                    touchItemDate(it.id);
+                    save();
+                  },
+                }),
+              ]),
+            );
+          }
+          record.appendChild(
+            el('label', { class: 'wide' }, [
+              'General notes for ' + it.id + ' (anything that does not fit a single check)',
+              el('textarea', {
+                class: 'input',
+                oninput: function (e) {
+                  r.notes = e.target.value;
+                  touchItemDate(it.id);
+                  save();
+                },
+                text: r.notes,
+              }),
+            ]),
+          );
+          main.appendChild(record);
+
+          it.groups.forEach(function (g) {
+            main.appendChild(renderGroup(it, g));
+          });
+
+          var idx = ITEMS.indexOf(it);
+          var nav = el('div', { class: 'footer-nav' });
+          nav.appendChild(
+            idx > 0
+              ? el('button', {
+                  class: 'btn',
+                  text: '← ' + ITEMS[idx - 1].id,
+                  onclick: function () {
+                    select(ITEMS[idx - 1].id);
+                  },
+                })
+              : el('span'),
+          );
+          nav.appendChild(
+            idx < ITEMS.length - 1
+              ? el('button', {
+                  class: 'btn',
+                  text: ITEMS[idx + 1].id + ' →',
+                  onclick: function () {
+                    select(ITEMS[idx + 1].id);
+                  },
+                })
+              : el('span'),
+          );
+          main.appendChild(nav);
+        }
+
+        function renderGroup(it, g) {
+          var key = it.id + ':' + g.id;
+          var s = stats(g.checks);
+          var box = el('section', { class: 'card group' });
+          var h = el('div', { class: 'group-head' });
+          var title = el('h2', { text: g.title });
+          if (g.hint) title.appendChild(el('span', { class: 'hint', text: g.hint }));
+          h.appendChild(title);
+          h.appendChild(el('span', { class: 'gcount', text: s.total - s.open + '/' + s.total }));
+          if (g.reading) {
+            var hidden = !!state.ui.hidden[key];
+            var t = el('button', { class: 'toggle', text: hidden ? 'Show text' : 'Hide text' });
+            t.addEventListener('click', function () {
+              state.ui.hidden[key] = !state.ui.hidden[key];
+              save();
+              reading.classList.toggle('hidden', !!state.ui.hidden[key]);
+              t.textContent = state.ui.hidden[key] ? 'Show text' : 'Hide text';
+            });
+            h.appendChild(t);
+          }
+          h.appendChild(
+            el('button', {
+              class: 'toggle',
+              text: 'All OK',
+              title: 'Mark every unchecked item in this group OK',
+              onclick: function () {
+                g.checks.forEach(function (c) {
+                  if (!check(c.id).v) setCheck(c.id, { v: 'ok' });
+                });
+                refresh();
+              },
+            }),
+          );
+          box.appendChild(h);
+          var reading = null;
+          if (g.reading) {
+            reading = el('div', {
+              class: 'reading' + (state.ui.hidden[key] ? ' hidden' : ''),
+              html: g.reading,
+            });
+            box.appendChild(reading);
+          }
+          g.checks.forEach(function (c) {
+            box.appendChild(renderCheck(c));
+          });
+          return box;
+        }
+
+        function renderCheck(c) {
+          var cur = check(c.id);
+          var row = el('div', { class: 'check' + (cur.v === 'issue' ? ' issue' : '') });
+          var label = el('div', { class: 'label' }, [c.label]);
+          if (c.line) label.appendChild(el('span', { class: 'line', text: 'line ' + c.line }));
+          var detail = null;
+          if (c.detail) {
+            detail = el('div', { class: 'detail', html: c.detail });
+            label.appendChild(
+              el('button', {
+                class: 'more',
+                text: 'Show',
+                onclick: function (e) {
+                  detail.classList.toggle('open');
+                  e.target.textContent = detail.classList.contains('open') ? 'Hide' : 'Show';
+                },
+              }),
+            );
+          }
+          var noteWrap = el('div', { class: 'note' });
+          var ta = el('textarea', {
+            placeholder: 'What is different, wrong or unclear? What should it say instead?',
+            text: cur.n,
+          });
+          ta.addEventListener('input', function () {
+            setCheck(c.id, { n: ta.value });
+            renderTop();
+            renderSidebar();
+          });
+          noteWrap.appendChild(ta);
+          noteWrap.style.display = cur.v === 'issue' || cur.n ? 'block' : 'none';
+          if (cur.v !== 'issue' && !cur.n) {
+            label.appendChild(
+              el('button', {
+                class: 'more',
+                text: 'Note',
+                onclick: function () {
+                  noteWrap.style.display = 'block';
+                  ta.focus();
+                },
+              }),
+            );
+          }
+          var seg = el('div', { class: 'seg' });
+          VERDICTS.forEach(function (v) {
+            var b = el('button', { class: v + (cur.v === v ? ' on' : ''), text: LABELS[v] });
+            b.addEventListener('click', function () {
+              setCheck(c.id, { v: cur.v === v ? null : v });
+              var fresh = renderCheck(c);
+              row.replaceWith(fresh);
+              if (check(c.id).v === 'issue') fresh.querySelector('textarea').focus();
+              renderTop();
+              renderSidebar();
+            });
+            seg.appendChild(b);
+          });
+          row.appendChild(label);
+          row.appendChild(seg);
+          if (detail) row.appendChild(detail);
+          row.appendChild(noteWrap);
+          return row;
+        }
+
+        function refresh() {
+          renderTop();
+          renderSidebar();
+          renderMain();
+        }
+
+        /* ---------------- report ---------------- */
+        function wrap(text, width, indent) {
+          var words = String(text).replace(/\s+/g, ' ').trim().split(' ');
+          var lines = [],
+            line = '';
+          words.forEach(function (w) {
+            if ((line + ' ' + w).trim().length > width && line) {
+              lines.push(line);
+              line = w;
+            } else line = (line ? line + ' ' : '') + w;
+          });
+          if (line) lines.push(line);
+          return lines
+            .map(function (l, i) {
+              return (i === 0 ? '' : indent) + l;
+            })
+            .join('\n');
+        }
+        function padEnd(s, n) {
+          s = String(s);
+          while (s.length < n) s += ' ';
+          return s;
+        }
+        function rule(ch) {
+          return new Array(81).join(ch);
+        }
+        function groupTitle(it, c) {
+          var found = '';
+          it.groups.forEach(function (g) {
+            if (g.checks.indexOf(c) >= 0) found = g.title;
+          });
+          return found;
+        }
+        function report(issuesOnly) {
+          var out = [];
+          var now = new Date();
+          var all = [];
+          ITEMS.forEach(function (it) {
+            all = all.concat(itemChecks(it));
+          });
+          var s = stats(all);
+          out.push('LEARN TO FLY — VERIFICATION REPORT');
+          out.push(
+            'Modules: ' +
+              MODULES.map(function (m) {
+                return m.code + ' ' + m.title;
+              }).join(' · '),
+          );
+          out.push(
+            'Sim: MSFS 2024 ' +
+              (state.simVersion || '?') +
+              ' · Exported: ' +
+              today() +
+              ' ' +
+              pad(now.getHours()) +
+              ':' +
+              pad(now.getMinutes()) +
+              ' · Checklist built: ' +
+              DATA.generatedAt,
+          );
+          out.push(
+            'Progress: ' +
+              (s.total - s.open) +
+              ' of ' +
+              s.total +
+              ' checks done · ' +
+              s.ok +
+              ' OK · ' +
+              s.issue +
+              ' issues · ' +
+              s.skip +
+              ' skipped · ' +
+              s.open +
+              ' not yet checked',
+          );
+          out.push(rule('='));
+          out.push('');
+          out.push('SUMMARY');
+          out.push(
+            padEnd('Item', 7) +
+              padEnd('Status', 15) +
+              padEnd('OK', 5) +
+              padEnd('Issue', 7) +
+              padEnd('Skip', 6) +
+              padEnd('Open', 6) +
+              padEnd('Tier', 10) +
+              padEnd('Min', 5) +
+              'Date',
+          );
+          ITEMS.forEach(function (it) {
+            var st = stats(itemChecks(it)),
+              r = rec(it.id);
+            out.push(
+              padEnd(it.id, 7) +
+                padEnd(statusWord(it), 15) +
+                padEnd(st.ok, 5) +
+                padEnd(st.issue, 7) +
+                padEnd(st.skip, 6) +
+                padEnd(st.open, 6) +
+                padEnd(r.tier || '-', 10) +
+                padEnd(r.minutes || '-', 5) +
+                (r.date || '-'),
+            );
+          });
+          out.push('');
+          out.push(rule('='));
+          out.push('ISSUES TO FIX  (every check marked Issue, with what was found)');
+          out.push(rule('='));
+          var anyIssue = false;
+          ITEMS.forEach(function (it) {
+            var r = rec(it.id);
+            var issues = itemChecks(it).filter(function (c) {
+              return check(c.id).v === 'issue';
+            });
+            if (!issues.length && !(r.notes && r.notes.trim())) return;
+            anyIssue = true;
+            out.push('');
+            out.push(
+              it.id +
+                '  ' +
+                it.title +
+                (r.date
+                  ? '   (checked ' +
+                    r.date +
+                    (r.tier ? ', ' + r.tier : '') +
+                    (r.minutes ? ', ' + r.minutes + ' min' : '') +
+                    ')'
+                  : ''),
+            );
+            out.push('      ' + it.file);
+            issues.forEach(function (c) {
+              out.push(
+                '  ✗ ' +
+                  wrap(
+                    '[' + groupTitle(it, c) + (c.line ? ' · line ' + c.line : '') + '] ' + c.label,
+                    74,
+                    '    ',
+                  ),
+              );
+              var n = check(c.id).n;
+              out.push(
+                '      → ' + (n && n.trim() ? wrap(n, 70, '        ') : '(no note written)'),
+              );
+            });
+            if (r.notes && r.notes.trim())
+              out.push('  General notes: ' + wrap(r.notes, 62, '                 '));
+          });
+          if (!anyIssue) out.push('', '  None so far.');
+          out.push('');
+          out.push(rule('='));
+          out.push('OTHER COMMENTS  (notes on checks marked OK or Skip)');
+          out.push(rule('='));
+          var anyOther = false;
+          ITEMS.forEach(function (it) {
+            var others = itemChecks(it).filter(function (c) {
+              var k = check(c.id);
+              return k.v !== 'issue' && k.n && k.n.trim();
+            });
+            if (!others.length) return;
+            anyOther = true;
+            out.push('', it.id + '  ' + it.title);
+            others.forEach(function (c) {
+              out.push(
+                '  ' +
+                  (check(c.id).v ? MARKS[check(c.id).v] : '[ ]') +
+                  ' ' +
+                  wrap('[' + groupTitle(it, c) + '] ' + c.label, 66, '    '),
+              );
+              out.push('      → ' + wrap(check(c.id).n, 70, '        '));
+            });
+          });
+          if (!anyOther) out.push('', '  None.');
+          if (!issuesOnly) {
+            out.push('');
+            out.push(rule('='));
+            out.push(
+              'FULL CHECKLIST  ([OK] correct · [ISSUE] see above · [SKIP] not applicable · [ ] not checked yet)',
+            );
+            out.push(rule('='));
+            ITEMS.forEach(function (it) {
+              out.push('', it.id + '  ' + it.title + '  —  ' + statusWord(it));
+              it.groups.forEach(function (g) {
+                out.push('  ' + g.title);
+                g.checks.forEach(function (c) {
+                  var k = check(c.id);
+                  out.push(
+                    '    ' +
+                      (k.v ? MARKS[k.v] : '[ ]') +
+                      ' ' +
+                      wrap(c.label + (c.line ? ' (line ' + c.line + ')' : ''), 66, '          '),
+                  );
+                });
+              });
+            });
+          }
+          out.push('', rule('-'), 'End of report.');
+          return out.join('\n') + '\n';
+        }
+        function download(name, text, type) {
+          var blob = new Blob([text], { type: type || 'text/plain;charset=utf-8' });
+          var a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = name;
+          document.body.appendChild(a);
+          a.click();
+          setTimeout(function () {
+            URL.revokeObjectURL(a.href);
+            a.remove();
+          }, 1000);
+        }
+        function reportName(suffix) {
+          return (
+            'ltf-verification-' +
+            MODULES.map(function (m) {
+              return m.code;
+            }).join('-') +
+            '-' +
+            today() +
+            (suffix || '') +
+            '.txt'
+          );
+        }
+        var toastTimer;
+        function toast(msg) {
+          var t = $('toast');
+          t.textContent = msg;
+          t.classList.add('show');
+          clearTimeout(toastTimer);
+          toastTimer = setTimeout(function () {
+            t.classList.remove('show');
+          }, 2200);
+        }
+
+        /* ---------------- wiring ---------------- */
+        $('simVersion').value = state.simVersion || '';
+        $('simVersion').addEventListener('input', function (e) {
+          state.simVersion = e.target.value;
+          save();
+        });
+        $('exportBtn').addEventListener('click', function () {
+          download(reportName(), report(false));
+          toast('Report saved to your Downloads folder.');
+        });
+        $('copyBtn').addEventListener('click', function () {
+          var text = report(false);
+          if (navigator.clipboard && navigator.clipboard.writeText)
+            navigator.clipboard.writeText(text).then(
+              function () {
+                toast('Report copied.');
+              },
+              function () {
+                download(reportName(), text);
+              },
+            );
+          else download(reportName(), text);
+        });
+        $('menuBtn').addEventListener('click', function (e) {
+          e.stopPropagation();
+          $('menu').classList.toggle('open');
+        });
+        document.addEventListener('click', function () {
+          $('menu').classList.remove('open');
+        });
+        $('issuesOnlyBtn').addEventListener('click', function () {
+          download(reportName('-issues'), report(true));
+          toast('Issues report saved.');
+        });
+        $('saveBtn').addEventListener('click', function () {
+          download(
+            'ltf-verifier-progress-' + today() + '.json',
+            JSON.stringify(state, null, 2),
+            'application/json',
+          );
+          toast('Progress file saved.');
+        });
+        $('loadBtn').addEventListener('click', function () {
+          $('loadInput').click();
+        });
+        $('loadInput').addEventListener('change', function (e) {
+          var f = e.target.files[0];
+          if (!f) return;
+          var reader = new FileReader();
+          reader.onload = function () {
+            try {
+              var s = JSON.parse(reader.result);
+              if (!s.checks || !s.items) throw new Error('bad');
+              state = s;
+              state.ui = state.ui || {};
+              state.ui.hidden = state.ui.hidden || {};
+              if (!state.ui.selected) state.ui.selected = ITEMS[0].id;
+              save();
+              $('simVersion').value = state.simVersion || '';
+              refresh();
+              toast('Progress loaded.');
+            } catch (err) {
+              toast('That file is not a verifier progress file.');
+            }
+          };
+          reader.readAsText(f);
+          e.target.value = '';
+        });
+        $('resetBtn').addEventListener('click', function () {
+          if (
+            !confirm(
+              'Clear every tick and note? Save progress to a file first if you want to keep it.',
+            )
+          )
+            return;
+          state = blank();
+          save();
+          $('simVersion').value = state.simVersion;
+          refresh();
+        });
+        window.addEventListener('beforeunload', function () {
+          clearTimeout(saveTimer);
+          try {
+            localStorage.setItem(KEY, JSON.stringify(state));
+          } catch (e) {
+            /* nothing more to do while closing */
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.metaKey && e.key === 's') {
+            e.preventDefault();
+            download(reportName(), report(false));
+            toast('Report saved.');
+          }
+        });
+        /* ---------------- theme (Day / Night, like the site) ---------------- */
+        var THEME_KEY = 'ltf-verifier:theme';
+        function applyTheme(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          $('themeBtn').textContent = theme === 'dark' ? 'Day' : 'Night';
+          $('themeBtn').setAttribute(
+            'aria-label',
+            theme === 'dark' ? 'Switch to Day' : 'Switch to Night',
+          );
+        }
+        var savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem(THEME_KEY);
+        } catch (e) {
+          /* ignore */
+        }
+        applyTheme(
+          savedTheme ||
+            (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'),
+        );
+        $('themeBtn').addEventListener('click', function () {
+          var next =
+            document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          applyTheme(next);
+          try {
+            localStorage.setItem(THEME_KEY, next);
+          } catch (e) {
+            /* ignore */
+          }
+        });
+        window.addEventListener('beforeunload', function () {
+          clearTimeout(saveTimer);
+          try {
+            localStorage.setItem(KEY, JSON.stringify(state));
+          } catch (e) {
+            /* closing */
+          }
+        });
+        refresh();
+      })();
+    </script>
+  </body>
+</html>

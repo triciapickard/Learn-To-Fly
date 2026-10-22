@@ -1,0 +1,4 @@
+#!/bin/bash
+# Opens the verifier page in the default browser. Double-click the .app to run it.
+DIR="$(cd "$(dirname "$0")/../Resources" && pwd)"
+open "$DIR/index.html"
