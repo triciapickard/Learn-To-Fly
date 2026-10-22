@@ -81,23 +81,36 @@ describe('buildAppData', () => {
     expect(data.simVersion).toBe('1.8.16.0');
   });
 
-  it('turns a lesson into sim checks, one group per section and overall checks', () => {
+  it('keeps only what needs the sim for a lesson', () => {
     const lesson = data.modules[0]!.items[0]!;
+    expect(lesson.id).toBe('L2.1');
     expect(lesson.type).toBe('lesson');
-    expect(lesson.groups[0]!.title).toBe('Sim checks and open markers');
+    expect(lesson.groups.map((g) => g.id)).toEqual(['sim']);
     expect(lesson.groups[0]!.checks.map((c) => c.label)).toEqual([
       'Check the widget',
       'Check the links',
     ]);
-    const sections = lesson.groups.filter((g) => g.reading);
-    expect(sections[0]!.title).toBe('The four forces');
-    expect(sections[0]!.reading).toContain('<div class="quiz">');
-    expect(sections[0]!.checks[0]!.id).toBe('L2.1:the-four-forces:text');
-    expect(sections[0]!.checks.some((c) => c.id === 'L2.1:the-four-forces:quiz:l2-1-q1')).toBe(
-      true,
+    const l22 = data.modules[0]!.items.find((i) => i.id === 'L2.2')!;
+    expect(l22.groups.map((g) => g.id)).toEqual(['sim', 'callouts']);
+    expect(l22.groups[1]!.checks[0]!.label).toBe(
+      'Sim vs reality (section "Trim technique"): still true in the current sim?',
     );
-    expect(lesson.groups.at(-1)!.id).toBe('overall');
-    expect(lesson.groups.at(-1)!.checks.some((c) => c.id === 'L2.1:overall:numbers')).toBe(true);
+    expect(l22.groups[1]!.checks[0]!.detail).toContain('spring-centered joystick');
+    const l31 = buildAppData(bundle, { modules: [3] }).modules[0]!.items[0]!;
+    expect(l31.id).toBe('L3.1');
+    expect(l31.groups.map((g) => g.id)).toEqual(['sim', 'checklists']);
+    expect(l31.groups[1]!.checks.map((c) => c.id)).toEqual([
+      'L3.1:checklist:before-starting-engine',
+      'L3.1:checklist:starting-engine',
+    ]);
+  });
+
+  it('ignores tracker notes that are not sim notes and drops items with nothing to fly', () => {
+    const desk = buildAppData(bundle, {
+      modules: [2],
+      tracker: 'Item,Notes\nL2.1,"No sim instructions. Run 54.4: check the widget"\n',
+    });
+    expect(desk.modules[0]!.items.map((i) => i.id)).not.toContain('L2.1');
   });
 
   it('keeps open verify markers with their line numbers', () => {
@@ -111,13 +124,7 @@ describe('buildAppData', () => {
   it('turns a challenge into setup, procedure, criteria and flight-record groups', () => {
     const c21 = data.modules[0]!.items.find((i) => i.id === 'C2.1')!;
     expect(c21.type).toBe('challenge');
-    expect(c21.groups.map((g) => g.id)).toEqual([
-      'setup',
-      'procedure',
-      'criteria',
-      'extras',
-      'flight',
-    ]);
+    expect(c21.groups.map((g) => g.id)).toEqual(['setup', 'procedure', 'criteria', 'flight']);
     const setup = c21.groups[0]!.checks;
     expect(setup[0]!.label).toBe('Start: AIR_START at KLVK');
     expect(setup[0]!.detail).toContain('In the air');

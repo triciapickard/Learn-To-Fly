@@ -3,17 +3,16 @@ import type { Nodes } from 'mdast';
 import remarkGfm from 'remark-gfm';
 import remarkParse from 'remark-parse';
 import { unified } from 'unified';
-import type { Checklist, LessonBlock, Presets } from '@shared/schemas/content.js';
-import { WIDGETS } from '@shared/widgets.js';
+import type { Checklist, Presets } from '@shared/schemas/content.js';
 import type { ContentBundle } from './loadContent.js';
 import type { ParsedLesson } from './parseLesson.js';
-import { TOKEN_PATTERN, resolveToken } from './tokens.js';
 import { findLessonMarkers, findYamlMarkers, parseCsv, type Marker } from './verification.js';
 
 /**
- * Data for the verifier app (docs/verification/app): a checklist per lesson and challenge
- * of the chosen modules, built from the content, the open verify markers and the tracker
- * notes, following the Section 54 protocol. The app itself is scripts/assets/verify-app.html.
+ * Data for the verifier app (docs/verification/app): for every lesson and challenge of the
+ * chosen modules, only the checks that need the sim (Section 54.3 and the sim steps of 54.4),
+ * built from the content, the open verify markers and the "Sim:" tracker notes. The app
+ * itself is scripts/assets/verify-app.html.
  */
 
 export interface AppCheck {
@@ -168,30 +167,8 @@ export function textKey(text: string): string {
   return hash.toString(36);
 }
 
-const list = (items: string[]) =>
-  `<ul>${items.map((i) => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`;
 const dl = (rows: [string, string][]) =>
   `<dl>${rows.map(([k, v]) => `<dt>${escapeHtml(k)}</dt><dd>${v}</dd>`).join('')}</dl>`;
-
-/** The site's callout titles (src/components/Callout.tsx). */
-const CALLOUT_LABELS: Record<string, string> = {
-  sim: 'Sim vs reality',
-  verify: 'Verify (author note)',
-  classic: 'Classic panel',
-  safety: 'Safety',
-  tip: 'Pro tip',
-  note: 'Note',
-  decision: 'Decision',
-  memory: 'Memory item',
-  'real-world': 'In a real airplane',
-};
-
-const CALLOUT_QUESTIONS: Record<string, string> = {
-  sim: 'still true in the current sim?',
-  classic: 'matches the classic panel?',
-  safety: 'correct and complete?',
-  tip: 'correct and useful?',
-};
 
 /** Sentences of a tracker Notes cell ("Sim: a; b; c" → ["a", "b", "c"]). */
 export function splitTrackerNote(note: string): string[] {
@@ -227,38 +204,21 @@ function markerChecks(prefix: string, markers: Marker[], notes: string | undefin
     label: m.text,
     line: m.line,
   }));
-  for (const note of splitTrackerNote(notes ?? '')) {
+  for (const note of /^Sim:/i.test(notes ?? '') ? splitTrackerNote(notes ?? '') : []) {
     checks.push({ id: `${prefix}:tracker:${textKey(note)}`, label: note });
   }
   return checks;
 }
 
 /* ----------------------------------------------------------------------------
- * Lessons
+ * Lessons: only what needs the sim (open markers, "Sim:" tracker notes, "Sim vs reality"
+ * callouts, embedded checklists against the EFB, screenshots). Text, quizzes, numbers and
+ * links are desk checks and are left out on purpose.
  * -------------------------------------------------------------------------- */
 
 interface LessonContext {
-  bundle: ContentBundle;
   checklists: Map<string, Checklist>;
-  resourceTitles: Map<string, { title: string; url?: string; location?: string }>;
   itemTitles: Map<string, string>;
-}
-
-function quizHtml(block: Extract<LessonBlock, { type: 'quiz' }>): string {
-  let answer: string;
-  if (block.quizType === 'numeric') {
-    answer = `<p class="answer">Answer: <strong>${block.answer}${block.unit ? ` ${escapeHtml(block.unit)}` : ''}</strong> (±${block.tolerance ?? 0})</p>`;
-  } else if (block.quizType === 'order') {
-    answer = `<ol class="options">${block.options.map((o) => `<li>${markdownToHtml(o.text)}</li>`).join('')}</ol><p class="answer">Correct order: as listed.</p>`;
-  } else {
-    answer = `<ul class="options">${block.options
-      .map(
-        (o) =>
-          `<li class="${block.correct.includes(o.id) ? 'correct' : ''}">${block.correct.includes(o.id) ? '☑' : '☐'} ${markdownToHtml(o.text)}</li>`,
-      )
-      .join('')}</ul>`;
-  }
-  return `<div class="quiz"><div class="prompt">${markdownToHtml(block.prompt)}</div>${answer}<div class="explain">${markdownToHtml(block.explanation)}</div></div>`;
 }
 
 function checklistHtml(checklist: Checklist | undefined, slug: string): string {
@@ -282,170 +242,73 @@ function lessonItem(lesson: ParsedLesson, ctx: LessonContext, notes: string | un
   if (simChecks.length > 0) {
     groups.push({
       id: 'sim',
-      title: 'Sim checks and open markers',
+      title: 'Open markers and tracker notes',
       hint: 'Things that can only be settled in the sim. Tick OK when confirmed, or Issue and write what you found.',
       checks: simChecks,
     });
   }
 
-  // One group per section: the reading, then a check for the text and one per block.
-  type SectionAcc = { id: string; title: string; reading: string[]; checks: AppCheck[] };
-  let section: SectionAcc = { id: 'intro', title: 'Introduction', reading: [], checks: [] };
-  const sections: SectionAcc[] = [];
-  const push = () => {
-    if (section.reading.length || section.checks.length) sections.push(section);
-  };
-  const checkId = (kind: string, key: string) => `${fm.code}:${section.id}:${kind}:${key}`;
-
+  const callouts: AppCheck[] = [];
+  const checklists: AppCheck[] = [];
+  const media: AppCheck[] = [];
+  let section = '';
+  const where = () => (section ? ` (section "${section}")` : '');
   for (const block of lesson.blocks) {
     switch (block.type) {
       case 'heading':
-        push();
-        section = { id: block.id, title: block.text, reading: [], checks: [] };
+        section = block.text;
         break;
-      case 'markdown':
-        section.reading.push(markdownToHtml(block.markdown));
-        break;
-      case 'callout': {
-        const label = CALLOUT_LABELS[block.calloutType] ?? block.calloutType;
-        const html = markdownToHtml(block.markdown);
-        section.reading.push(
-          `<div class="callout ${block.calloutType}"><span class="tag">${escapeHtml(label)}</span>${html}</div>`,
-        );
-        if (block.calloutType !== 'verify') {
-          const marker = markers.find((m) =>
-            block.markdown.replace(/\s+/g, ' ').includes(m.text.slice(0, 40)),
-          );
-          section.checks.push({
-            id: checkId('callout', textKey(block.markdown)),
-            label: `${label}: ${CALLOUT_QUESTIONS[block.calloutType] ?? 'correct?'}`,
-            detail: html,
-            line: marker?.line,
+      case 'callout':
+        if (block.calloutType === 'sim') {
+          callouts.push({
+            id: `${fm.code}:callout:${textKey(block.markdown)}`,
+            label: `Sim vs reality${where()}: still true in the current sim?`,
+            detail: markdownToHtml(block.markdown),
           });
         }
         break;
-      }
-      case 'quiz': {
-        const html = quizHtml(block);
-        section.reading.push(html);
-        section.checks.push({
-          id: checkId('quiz', block.id),
-          label: `Quiz ${block.id}: question, answer and explanation correct?`,
-          detail: html,
-        });
-        break;
-      }
-      case 'widget': {
-        const props = Object.entries(block.props)
-          .map(([k, v]) => `${k}=${v}`)
-          .join(', ');
-        const label = `Widget ${WIDGETS[block.name]} (${block.name}${props ? `, ${props}` : ''})`;
-        section.reading.push(
-          `<div class="widget">⚙ ${escapeHtml(label)}: open it on the site to check it.</div>`,
-        );
-        section.checks.push({
-          id: checkId('widget', block.name + ':' + props),
-          label: `${label}: shows the right thing and matches the lesson text?`,
-        });
-        break;
-      }
       case 'checklist': {
         const checklist = ctx.checklists.get(block.slug);
-        const html = checklistHtml(checklist, block.slug);
-        section.reading.push(
-          `<div class="embed"><span class="tag">Checklist: ${escapeHtml(checklist?.title ?? block.slug)}</span>${html}</div>`,
-        );
-        section.checks.push({
-          id: checkId('checklist', block.slug),
-          label: `Checklist "${checklist?.title ?? block.slug}": items and order match the sim's EFB checklist and the POH?`,
-          detail: html,
+        checklists.push({
+          id: `${fm.code}:checklist:${block.slug}`,
+          label: `Checklist "${checklist?.title ?? block.slug}"${where()}: items and order match the sim's EFB checklist?`,
+          detail: checklistHtml(checklist, block.slug),
         });
         break;
       }
       case 'image':
-        section.reading.push(
-          `<div class="embed"><span class="tag">Screenshot</span><p>${escapeHtml(block.alt)}${block.caption ? ` — ${escapeHtml(block.caption)}` : ''}</p></div>`,
-        );
-        section.checks.push({
-          id: checkId('image', textKey(block.src)),
-          label: `Screenshot "${block.alt}": still matches the current sim?`,
+        media.push({
+          id: `${fm.code}:image:${textKey(block.src)}`,
+          label: `Screenshot "${block.alt}"${where()}: still matches the current sim?`,
         });
         break;
       case 'video':
-        section.reading.push(
-          `<div class="embed"><span class="tag">Video</span><p>${escapeHtml(block.title)}</p></div>`,
-        );
-        section.checks.push({
-          id: checkId('video', block.videoId),
-          label: `Video "${block.title}": still available and still relevant?`,
+        media.push({
+          id: `${fm.code}:video:${block.videoId}`,
+          label: `Video "${block.title}"${where()}: still matches the current sim?`,
         });
+        break;
+      default:
         break;
     }
   }
-  push();
-
-  for (const s of sections) {
+  if (callouts.length)
     groups.push({
-      id: s.id,
-      title: s.title,
-      reading: s.reading.join(''),
-      checks: [
-        {
-          id: `${fm.code}:${s.id}:text`,
-          label: 'Text, numbers and procedure in this section are correct and clear',
-        },
-        ...s.checks,
-      ],
+      id: 'callouts',
+      title: 'Sim vs reality callouts',
+      hint: 'Each one claims something about how MSFS 2024 behaves. Press Show to read it.',
+      checks: callouts,
     });
-  }
-
-  // Overall checks (protocol 54.4).
-  const tokens = new Map<string, string>();
-  for (const match of source.matchAll(TOKEN_PATTERN)) {
-    const value = ctx.bundle.aircraft
-      ? resolveToken(ctx.bundle.aircraft, match[1]!, match[2]!)
-      : null;
-    tokens.set(`${match[1]}.${match[2]}`, value ?? '?');
-  }
-  const resources = fm.resources.map((slug) => {
-    const r = ctx.resourceTitles.get(slug);
-    if (!r) return escapeHtml(slug);
-    if (!r.url) return `${escapeHtml(r.title)}${r.location ? ` (${escapeHtml(r.location)})` : ''}`;
-    return `<a href="${escapeHtml(r.url)}" target="_blank" rel="noopener">${escapeHtml(r.title)}</a>`;
-  });
-  const overall: AppCheck[] = [
-    {
-      id: `${fm.code}:overall:objectives`,
-      label: 'The lesson actually teaches its stated objectives',
-      detail: list(fm.objectives),
-    },
-  ];
-  if (tokens.size > 0) {
-    overall.push({
-      id: `${fm.code}:overall:numbers`,
-      label: 'Every number and V-speed matches the POH and what the sim shows',
-      detail: dl([...tokens].map(([k, v]) => [k, escapeHtml(v)])),
+  if (checklists.length)
+    groups.push({
+      id: 'checklists',
+      title: 'Checklists against the EFB',
+      hint: "Open the same checklist in the sim's EFB and compare the items and their order.",
+      checks: checklists,
     });
-  }
-  if (resources.length > 0) {
-    overall.push({
-      id: `${fm.code}:overall:resources`,
-      label: 'Go deeper links open and still say what we claim',
-      detail: `<ul>${resources.map((r) => `<li>${r}</li>`).join('')}</ul>`,
-    });
-  }
-  overall.push({
-    id: `${fm.code}:overall:minutes`,
-    label: `Estimated time (${fm.estimatedMinutes ?? '?'} min) is realistic`,
-  });
-  groups.push({ id: 'overall', title: 'Overall', checks: overall });
+  if (media.length) groups.push({ id: 'media', title: 'Screenshots and videos', checks: media });
 
   const meta: AppItem['meta'] = [{ label: 'Summary', value: fm.summary }];
-  if (fm.prerequisites.length)
-    meta.push({
-      label: 'Prerequisites',
-      value: fm.prerequisites.map((s) => ctx.itemTitles.get(s) ?? s).join(', '),
-    });
   if (fm.challenges.length)
     meta.push({
       label: 'Challenges',
@@ -612,47 +475,6 @@ function challengeItem(
     })),
   });
 
-  const extras: AppCheck[] = [];
-  for (const ev of c.randomEvents)
-    extras.push({
-      id: `${id}:event:${ev.id}`,
-      label: `Random event "${ev.label}" (${ev.minSeconds}–${ev.maxSeconds} s): doable and clear?`,
-      detail: `<p>${escapeHtml(ev.message)}</p>`,
-    });
-  if (c.planningFields.length)
-    extras.push({
-      id: `${id}:planning`,
-      label: 'Planning fields make sense',
-      detail: list(c.planningFields.map((f) => `${f.label} (${f.type})`)),
-    });
-  if (c.commonMistakes.length)
-    extras.push({
-      id: `${id}:mistakes`,
-      label: 'Common mistakes are the ones you actually see',
-      detail: list(c.commonMistakes),
-    });
-  if (c.tips.length)
-    extras.push({ id: `${id}:tips`, label: 'Tips are correct and useful', detail: list(c.tips) });
-  if (c.debriefQuestions.length)
-    extras.push({
-      id: `${id}:debrief`,
-      label: 'Debrief questions fit the flight',
-      detail: list(c.debriefQuestions.map((q) => q.prompt)),
-    });
-  if (extras.length)
-    groups.push({
-      id: 'extras',
-      title: 'Goal, tips and debrief',
-      checks: [
-        {
-          id: `${id}:goal`,
-          label: 'Goal is clear and matches the criteria',
-          detail: `<p>${escapeHtml(c.goal.trim())}</p>`,
-        },
-        ...extras,
-      ],
-    });
-
   groups.push({
     id: 'flight',
     title: 'Flight record (protocol 54.3)',
@@ -704,11 +526,7 @@ export function buildAppData(bundle: ContentBundle, options: BuildOptions): AppD
     itemTitles.set(l.frontmatter.slug, `${l.frontmatter.code} ${l.frontmatter.title}`);
   for (const c of bundle.challenges) itemTitles.set(c.slug, `${c.code} ${c.title}`);
   const ctx: LessonContext = {
-    bundle,
     checklists: new Map(bundle.checklists.map((c) => [c.slug, c])),
-    resourceTitles: new Map(
-      bundle.resources.map((r) => [r.slug, { title: r.title, url: r.url, location: r.location }]),
-    ),
     itemTitles,
   };
 
@@ -725,7 +543,10 @@ export function buildAppData(bundle: ContentBundle, options: BuildOptions): AppD
       if (challenge)
         items.push(challengeItem(challenge, bundle, notes.get(challenge.code), itemTitles));
     }
-    modules.push({ code: m.code, title: m.title, summary: m.summary, items });
+    // An item with nothing to check in the sim is a desk check only; leave it out.
+    const inSim = items.filter((i) => i.groups.some((g) => g.checks.length > 0));
+    if (inSim.length)
+      modules.push({ code: m.code, title: m.title, summary: m.summary, items: inSim });
   }
 
   return {

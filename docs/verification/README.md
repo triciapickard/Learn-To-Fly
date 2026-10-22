@@ -51,8 +51,13 @@ blocked in [`links.md`](./links.md). Check them by hand in a browser before each
 
 ## The verifier app (`app/LTF Verifier.app`)
 
-A self-contained page, wrapped in a macOS launcher, for working through the Section 54
-protocol module by module without a spreadsheet. It needs no server and no internet.
+A self-contained page, wrapped in a macOS launcher, for the part of the Section 54 protocol
+that needs the sim, module by module, without a spreadsheet. It needs no server and no
+internet. Desk checks (text, quizzes, numbers against the POH, links) are left out on
+purpose: for a lesson it lists the open verify markers, the "Sim:" tracker notes, the
+"Sim vs reality" callouts, the embedded checklists (against the EFB) and screenshots; for a
+challenge the setup, procedure, criteria and flight record. A lesson with nothing to check
+in the sim does not appear.
 
 1. Rebuild it for the modules you are checking:
    `npm run content:verify-app -- --modules 2,3,4` (it reads the lessons, challenges, open
@@ -60,10 +65,10 @@ protocol module by module without a spreadsheet. It needs no server and no inter
 2. Double-click `docs/verification/app/LTF Verifier.app`. It opens in your default
    browser. If macOS refuses to open it, right-click the app, choose **Show Package
    Contents**, and open `Contents/Resources/index.html` directly.
-3. Pick a lesson or challenge on the left. Read each section, then mark every check
-   **OK**, **Issue** or **Skip**. An Issue opens a note box: write what the sim or the
-   source actually shows and what the text should say instead. "All OK" ticks the rest
-   of a group. Challenges also record the tier flown and the minutes it took.
+3. Pick a lesson or challenge on the left and mark every check **OK**, **Issue** or
+   **Skip**. An Issue opens a note box: write what the sim actually shows and what the
+   text should say instead. "All OK" ticks the rest of a group. Challenges also record
+   the tier flown and the minutes it took.
 4. Progress saves in the browser as you go. Use the ⋯ menu to save it to a file (or load
    one) if you switch browsers or machines.
 5. When a module is done, press **Export report (.txt)** and hand the file to the next
