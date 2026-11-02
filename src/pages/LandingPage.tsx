@@ -10,6 +10,7 @@ import {
   PlaneTakeoff,
   SlidersHorizontal,
   Smartphone,
+  X,
   type LucideIcon,
 } from 'lucide-react';
 import { Button } from '@/components/Button';
@@ -153,6 +154,28 @@ const SAMPLE_CHALLENGE = {
     'Straight on the rollout, no bounce, or a go-around if it is not working',
   ],
 };
+
+/** Which simulators the course works with, shown near the top so nobody starts in the wrong sim. */
+const SIM_SUPPORT: { label: string; text: string; icon: LucideIcon; iconClass: string }[] = [
+  {
+    label: 'Works',
+    text: 'Microsoft Flight Simulator 2024, any edition, on PC or Xbox. The Cessna 172 and the Bay Area airports come with every edition.',
+    icon: Check,
+    iconClass: 'text-go',
+  },
+  {
+    label: 'Not supported',
+    text: 'MSFS 2020, X-Plane, Prepar3D and other sims. Their menus, controls and cockpits differ, so the steps will not line up.',
+    icon: X,
+    iconClass: 'text-ink-3',
+  },
+  {
+    label: 'Without the sim',
+    text: 'You can still read every lesson and try the diagrams. You need MSFS 2024 to fly the challenges.',
+    icon: BookOpen,
+    iconClass: 'text-ink',
+  },
+];
 
 const NEEDS: { title: string; text: string; icon: LucideIcon }[] = [
   {
@@ -360,6 +383,39 @@ export default function LandingPage() {
             </div>
           ))}
         </dl>
+      </section>
+
+      {/* Requirement: the course is written for, and checked in, MSFS 2024 only. */}
+      <section aria-labelledby="sim-heading" className={cn(band, 'pb-16 sm:pb-24')}>
+        <Card className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+          <div>
+            <Monitor aria-hidden className="size-6 text-ink" strokeWidth={1.75} />
+            <Eyebrow className="mt-4">Before you start</Eyebrow>
+            <h2 id="sim-heading" className="display-md mt-3">
+              Learn to Fly requires Microsoft Flight Simulator 2024.
+            </h2>
+            <p className="mt-4 max-w-[32em] text-ink-2">
+              Every lesson, cockpit view and challenge is written for MSFS 2024 and flown in it
+              before it opens. If you do not have it yet, get it first, then start with lesson 0.1.
+            </p>
+          </div>
+          <ul aria-label="Which simulators work" className="self-start border-t border-line">
+            {SIM_SUPPORT.map(({ label, text, icon: Icon, iconClass }) => (
+              <li
+                key={label}
+                className="flex flex-wrap items-start gap-x-4 gap-y-1 border-b border-line py-4"
+              >
+                <Icon
+                  aria-hidden
+                  className={cn('mt-0.5 size-4 shrink-0', iconClass)}
+                  strokeWidth={2}
+                />
+                <span className="w-32 text-sm leading-5 font-semibold">{label}</span>
+                <span className="flex-[1_1_220px] text-sm leading-5 text-ink-2">{text}</span>
+              </li>
+            ))}
+          </ul>
+        </Card>
       </section>
 
       {/* How a lesson works. */}
