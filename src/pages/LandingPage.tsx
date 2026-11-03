@@ -362,11 +362,7 @@ export default function LandingPage() {
         </div>
 
         <figure className="w-full">
-          <YouTubeEmbed
-            videoId={LAUNCH_VIDEO_ID}
-            title="Learn to Fly launch video"
-            detail="1:15, music only. Loads YouTube (privacy-enhanced mode) when you click."
-          />
+          <YouTubeEmbed videoId={LAUNCH_VIDEO_ID} title="Learn to Fly launch video" />
           <figcaption className="mt-3 text-sm leading-5 text-ink-2">
             A 75 second tour of the lessons, diagrams and challenges.
           </figcaption>
