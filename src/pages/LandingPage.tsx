@@ -18,6 +18,7 @@ import { Card } from '@/components/Card';
 import { DifficultyDots } from '@/components/ChallengeMeta';
 import { LessonPath, type LessonStop, type LessonStopState } from '@/components/LessonPath';
 import { ExternalLink, Link } from '@/components/Link';
+import { YouTubeEmbed } from '@/components/YouTubeEmbed';
 import { useModules } from '@/features/content/api';
 import { CURRICULUM_PREVIEW, FIRST_STOPS } from '@/features/landing/curriculumPreview';
 import { ISSUES_URL } from '@/features/layout/navigation';
@@ -27,12 +28,16 @@ import { cn } from '@/lib/cn';
 import { plural } from '@/lib/format';
 import type { ProgressResponse } from '@shared/schemas/api';
 
-// Landing page (design system 2026, homepage redesign): the hero is type and the Module 0
-// lesson path, no airplane illustration. Bands alternate canvas and surface with space-24
+// Landing page (design system 2026, homepage redesign): the hero is type and the launch
+// video (click-to-load, so YouTube is not contacted until play), no airplane illustration.
+// The Module 0 lesson path follows the MSFS 2024 requirement. Bands alternate canvas and surface with space-24
 // padding. The one accent control on the page is the lesson path's "Start lesson" button.
 
 const MODULE_0 = CURRICULUM_PREVIEW[0];
 const MODULE_0_LESSONS = FIRST_STOPS.filter((lesson) => lesson.module === MODULE_0.slug);
+/** The launch video on YouTube (1:15, music only, no narration). */
+const LAUNCH_VIDEO_ID = 'PoRC5bLH-YU';
+
 const FIRST_CHALLENGE = {
   slug: 'c0-1-first-flight-over-livermore',
   code: 'Challenge C0.1',
@@ -98,7 +103,7 @@ function stats(modules: PreviewModule[]) {
 const STEPS: { title: string; text: string; icon: LucideIcon }[] = [
   {
     title: 'Learn',
-    text: 'Why before how, in a few short paragraphs written to you.',
+    text: 'A few short paragraphs explain why the airplane behaves as it does, then how to fly it.',
     icon: BookOpen,
   },
   {
@@ -108,12 +113,12 @@ const STEPS: { title: string; text: string; icon: LucideIcon }[] = [
   },
   {
     title: 'Try',
-    text: 'Change the wind, bank the airplane, answer a quick question. Check you have it.',
+    text: 'Change the wind, bank the airplane or answer a quick question to check you understand.',
     icon: SlidersHorizontal,
   },
   {
     title: 'Fly',
-    text: 'A challenge in MSFS 2024 with the exact setup and clear standards.',
+    text: 'Fly a challenge in MSFS 2024 with an exact sim setup and measurable standards.',
     icon: PlaneTakeoff,
   },
   {
@@ -125,7 +130,12 @@ const STEPS: { title: string; text: string; icon: LucideIcon }[] = [
 
 const TIERS = [
   { tier: 'gold', label: 'Gold', range: '65 KIAS −5/+10', note: 'Within private pilot standards.' },
-  { tier: 'silver', label: 'Silver', range: '65 KIAS ±10', note: 'A good student pilot.' },
+  {
+    tier: 'silver',
+    label: 'Silver',
+    range: '65 KIAS ±10',
+    note: 'The standard of a good student pilot.',
+  },
   { tier: 'bronze', label: 'Bronze', range: '65 KIAS ±15', note: 'Safe, and worth celebrating.' },
 ] as const;
 
@@ -165,7 +175,7 @@ const SIM_SUPPORT: { label: string; text: string; icon: LucideIcon; iconClass: s
   },
   {
     label: 'Not supported',
-    text: 'MSFS 2020, X-Plane, Prepar3D and other sims. Their menus, controls and cockpits differ, so the steps will not line up.',
+    text: 'MSFS 2020, X-Plane, Prepar3D and other sims. Their menus, controls and cockpits differ, so the steps will not match what you see.',
     icon: X,
     iconClass: 'text-ink-3',
   },
@@ -180,7 +190,7 @@ const SIM_SUPPORT: { label: string; text: string; icon: LucideIcon; iconClass: s
 const NEEDS: { title: string; text: string; icon: LucideIcon }[] = [
   {
     title: 'MSFS 2024, any edition',
-    text: 'The course uses the Cessna 172 Skyhawk with the G1000 and airports around the San Francisco Bay, all included in every edition on PC and Xbox.',
+    text: 'The course uses the Cessna 172 Skyhawk with the G1000 and airports around the San Francisco Bay. Every edition includes them, on PC and Xbox.',
     icon: Monitor,
   },
   {
@@ -210,10 +220,10 @@ function faq(modules: PreviewModule[]) {
       q: 'What does public beta mean?',
       a: (
         <>
-          The site is new and still growing. Every module that is open has been flown and checked in
-          MSFS 2024, but you may still find a typo, a rough edge or a bug. Modules that are still
-          being written stay closed until they are verified. If something looks wrong, tell us on{' '}
-          <ExternalLink href={ISSUES_URL}>GitHub</ExternalLink> and it will be fixed.
+          The site is new. We flew and checked every open module in MSFS 2024, but you may still
+          find a typo or a bug. A module stays closed until we have verified it in the sim. If
+          something looks wrong, tell us on <ExternalLink href={ISSUES_URL}>GitHub</ExternalLink>{' '}
+          and we will fix it.
         </>
       ),
     },
@@ -225,10 +235,10 @@ function faq(modules: PreviewModule[]) {
       q: 'How far does it go?',
       a: (
         <>
-          Version 1 covers one airplane, the Cessna 172, done properly: from the first takeoff to a
-          local checkride and a planned cross-country. Modules open as they are verified in the sim,
-          and {open} of {PLANNED_MODULES} {open === 1 ? 'is' : 'are'} open now. Bigger airplanes
-          come later. <Link to="/roadmap">See the roadmap</Link>
+          Version 1 covers one airplane, the Cessna 172, from the first takeoff to a local checkride
+          and a planned cross-country flight. Modules open one at a time as we verify them, and{' '}
+          {open} of {PLANNED_MODULES} {open === 1 ? 'is' : 'are'} open now. Bigger airplanes come
+          later. <Link to="/roadmap">See the roadmap</Link>
         </>
       ),
     },
@@ -319,12 +329,12 @@ export default function LandingPage() {
 
   return (
     <div>
-      {/* Hero: type and the Module 0 lesson path, on canvas. */}
+      {/* Hero: type and the launch video, on canvas. */}
       <section
         aria-labelledby="hero-heading"
         className={cn(
           band,
-          'grid gap-12 pt-16 pb-12 sm:pt-24 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-16',
+          'grid gap-12 pt-16 pb-12 sm:pt-24 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-center lg:gap-16',
         )}
       >
         <div>
@@ -333,10 +343,10 @@ export default function LandingPage() {
             Yes, you can fly a plane.
           </h1>
           <p className="body-lg mt-6 max-w-[34em] text-ink-2">
-            Learn to Fly takes a complete beginner from the first takeoff to a planned cross-country
-            flight in the Cessna 172, inside Microsoft Flight Simulator 2024. You read short
-            lessons, play with diagrams, and fly challenges in the sim that you score against real
-            pilot standards.
+            Learn to Fly teaches a complete beginner to fly the Cessna 172 in Microsoft Flight
+            Simulator 2024, from the first takeoff to a planned cross-country flight. You read short
+            lessons, try interactive diagrams and fly challenges in the sim. Then you score each
+            challenge against real pilot standards.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button size="lg" asChild>
@@ -351,26 +361,17 @@ export default function LandingPage() {
             </Button>
           </div>
           <p className="mt-4 text-sm leading-5 text-ink-3">
-            No account needed to start. Any edition of MSFS 2024, on PC or Xbox. For simulation use
-            only. Now in public beta.
+            You can start without an account. Any edition of MSFS 2024 works, on PC or Xbox. For
+            simulation use only.
           </p>
         </div>
 
-        <Card className="w-full max-w-[460px] p-5 sm:p-6 lg:justify-self-end">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
-            <Eyebrow>Module 0 · {MODULE_0.title}</Eyebrow>
-            <p className="readout-sm text-ink-3">
-              {plural(MODULE_0.lessons, 'lesson')} · {plural(MODULE_0.challenges, 'challenge')}
-            </p>
-          </div>
-          <LessonPath
-            stops={stops}
-            startLabel="Start"
-            aria-label="Module 0 lesson path"
-            underlineTitles={false}
-            className="mt-4"
-          />
-        </Card>
+        <figure className="w-full">
+          <YouTubeEmbed videoId={LAUNCH_VIDEO_ID} title="Learn to Fly launch video" />
+          <figcaption className="mt-3 text-sm leading-5 text-ink-2">
+            A 75-second tour of the lessons, diagrams and challenges.
+          </figcaption>
+        </figure>
       </section>
 
       {/* The course at a glance. */}
@@ -391,12 +392,13 @@ export default function LandingPage() {
           <div>
             <Monitor aria-hidden className="size-6 text-ink" strokeWidth={1.75} />
             <Eyebrow className="mt-4">Before you start</Eyebrow>
-            <h2 id="sim-heading" className="display-md mt-3">
+            <h2 id="sim-heading" className="display-md sm:display-lg mt-3">
               Learn to Fly requires Microsoft Flight Simulator 2024.
             </h2>
             <p className="mt-4 max-w-[32em] text-ink-2">
-              Every lesson, cockpit view and challenge is written for MSFS 2024 and flown in it
-              before it opens. If you do not have it yet, get it first, then start with lesson 0.1.
+              We write every lesson, cockpit view and challenge for MSFS 2024 and fly it in the sim
+              before it opens. If you do not have the sim yet, get it first, then start with lesson
+              0.1.
             </p>
           </div>
           <ul aria-label="Which simulators work" className="self-start border-t border-line">
@@ -418,6 +420,38 @@ export default function LandingPage() {
         </Card>
       </section>
 
+      {/* Where you start: the Module 0 lesson path, with progress for signed-in learners. */}
+      <section aria-labelledby="start-heading" className={cn(band, 'pb-16 sm:pb-24')}>
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-center lg:gap-16">
+          <div>
+            <Eyebrow>Where you start · Module 0</Eyebrow>
+            <h2 id="start-heading" className="display-md sm:display-lg mt-3 max-w-[14em]">
+              {MODULE_0.title}: {MODULE_0.summary.charAt(0).toLowerCase()}
+              {MODULE_0.summary.slice(1)}
+            </h2>
+            <p className="mt-4 max-w-[32em] text-ink-2">
+              {plural(MODULE_0.lessons, 'short lesson')}, then{' '}
+              {plural(MODULE_0.challenges, 'challenge')} you fly in the sim.
+            </p>
+          </div>
+          <Card className="w-full max-w-[460px] p-5 sm:p-6 lg:justify-self-end">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+              <Eyebrow>Module 0 · {MODULE_0.title}</Eyebrow>
+              <p className="readout-sm text-ink-3">
+                {plural(MODULE_0.lessons, 'lesson')} · {plural(MODULE_0.challenges, 'challenge')}
+              </p>
+            </div>
+            <LessonPath
+              stops={stops}
+              startLabel="Start"
+              aria-label="Module 0 lesson path"
+              underlineTitles={false}
+              className="mt-4"
+            />
+          </Card>
+        </div>
+      </section>
+
       {/* How a lesson works. */}
       <section aria-labelledby="how-heading" className="bg-surface">
         <div className={cn(band, bandPad)}>
@@ -429,8 +463,8 @@ export default function LandingPage() {
               </h2>
             </div>
             <p className="max-w-[30em] text-ink-2">
-              Every lesson follows the same five steps, so you always know what comes next. Nothing
-              is more than a few paragraphs before something you can see or do.
+              Every lesson follows the same five steps, so you always know what comes next. You
+              never read more than a few paragraphs before you get something to see or do.
             </p>
           </div>
           <ol className="mt-12 grid gap-x-6 gap-y-8 border-t-2 border-line-strong sm:grid-cols-2 lg:grid-cols-5">
@@ -462,7 +496,8 @@ export default function LandingPage() {
             </h2>
           </div>
           <p className="max-w-[30em] text-ink-2">
-            From setting up the sim to a planned cross-country flight. Every lesson is free to read.{' '}
+            Module 0 sets up the sim, and Module 8 ends with a cross-country flight. Every lesson is
+            free to read.{' '}
             <Link to="/learn" className="font-medium whitespace-nowrap">
               Full curriculum
             </Link>
@@ -527,8 +562,9 @@ export default function LandingPage() {
             </h2>
             <p className="mt-6 max-w-[32em] text-ink-2">
               Each challenge gives you the exact sim setup, a step-by-step procedure and measurable
-              criteria borrowed from real pilot standards. You fly it, you score it, and the site
-              keeps your attempts so you can watch yourself improve.
+              criteria borrowed from real pilot standards. You fly it, then score yourself against
+              those criteria. With a free account, the site keeps every attempt so you can compare
+              them.
             </p>
             <ul aria-label="Tiers for final approach speed" className="mt-6 border-t border-line">
               {TIERS.map(({ tier, label, range, note }) => (
@@ -628,7 +664,7 @@ export default function LandingPage() {
         <div className="max-w-[640px]">
           <Eyebrow>What you need</Eyebrow>
           <h2 id="need-heading" className="display-md sm:display-lg mt-3">
-            The sim you already have, and a browser next to it.
+            MSFS 2024, a controller and a browser beside the sim.
           </h2>
         </div>
         <ul className="mt-10 grid gap-6 md:grid-cols-3">
@@ -675,8 +711,8 @@ export default function LandingPage() {
             Lesson 0.1 takes five minutes. Start there.
           </h2>
           <p className="mt-3 max-w-[32em] text-ink-2">
-            You will know how the course works, what a challenge looks like and whether this is for
-            you. No account, no download.
+            By the end, you will know how the course works, what a challenge looks like and whether
+            this is for you. You do not need an account or a download.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
