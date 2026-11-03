@@ -18,6 +18,7 @@ import { Card } from '@/components/Card';
 import { DifficultyDots } from '@/components/ChallengeMeta';
 import { LessonPath, type LessonStop, type LessonStopState } from '@/components/LessonPath';
 import { ExternalLink, Link } from '@/components/Link';
+import { YouTubeEmbed } from '@/components/YouTubeEmbed';
 import { useModules } from '@/features/content/api';
 import { CURRICULUM_PREVIEW, FIRST_STOPS } from '@/features/landing/curriculumPreview';
 import { ISSUES_URL } from '@/features/layout/navigation';
@@ -27,12 +28,16 @@ import { cn } from '@/lib/cn';
 import { plural } from '@/lib/format';
 import type { ProgressResponse } from '@shared/schemas/api';
 
-// Landing page (design system 2026, homepage redesign): the hero is type and the Module 0
-// lesson path, no airplane illustration. Bands alternate canvas and surface with space-24
+// Landing page (design system 2026, homepage redesign): the hero is type and the launch
+// video (click-to-load, so YouTube is not contacted until play), no airplane illustration.
+// The Module 0 lesson path follows the MSFS 2024 requirement. Bands alternate canvas and surface with space-24
 // padding. The one accent control on the page is the lesson path's "Start lesson" button.
 
 const MODULE_0 = CURRICULUM_PREVIEW[0];
 const MODULE_0_LESSONS = FIRST_STOPS.filter((lesson) => lesson.module === MODULE_0.slug);
+/** The launch video on YouTube (1:15, music only, no narration). */
+const LAUNCH_VIDEO_ID = 'PoRC5bLH-YU';
+
 const FIRST_CHALLENGE = {
   slug: 'c0-1-first-flight-over-livermore',
   code: 'Challenge C0.1',
@@ -319,12 +324,12 @@ export default function LandingPage() {
 
   return (
     <div>
-      {/* Hero: type and the Module 0 lesson path, on canvas. */}
+      {/* Hero: type and the launch video, on canvas. */}
       <section
         aria-labelledby="hero-heading"
         className={cn(
           band,
-          'grid gap-12 pt-16 pb-12 sm:pt-24 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-16',
+          'grid gap-12 pt-16 pb-12 sm:pt-24 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-center lg:gap-16',
         )}
       >
         <div>
@@ -356,21 +361,16 @@ export default function LandingPage() {
           </p>
         </div>
 
-        <Card className="w-full max-w-[460px] p-5 sm:p-6 lg:justify-self-end">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
-            <Eyebrow>Module 0 · {MODULE_0.title}</Eyebrow>
-            <p className="readout-sm text-ink-3">
-              {plural(MODULE_0.lessons, 'lesson')} · {plural(MODULE_0.challenges, 'challenge')}
-            </p>
-          </div>
-          <LessonPath
-            stops={stops}
-            startLabel="Start"
-            aria-label="Module 0 lesson path"
-            underlineTitles={false}
-            className="mt-4"
+        <figure className="w-full">
+          <YouTubeEmbed
+            videoId={LAUNCH_VIDEO_ID}
+            title="Learn to Fly launch video"
+            detail="1:15, music only. Loads YouTube (privacy-enhanced mode) when you click."
           />
-        </Card>
+          <figcaption className="mt-3 text-sm leading-5 text-ink-2">
+            A 75 second tour of the lessons, diagrams and challenges.
+          </figcaption>
+        </figure>
       </section>
 
       {/* The course at a glance. */}
@@ -391,7 +391,7 @@ export default function LandingPage() {
           <div>
             <Monitor aria-hidden className="size-6 text-ink" strokeWidth={1.75} />
             <Eyebrow className="mt-4">Before you start</Eyebrow>
-            <h2 id="sim-heading" className="display-md mt-3">
+            <h2 id="sim-heading" className="display-md sm:display-lg mt-3">
               Learn to Fly requires Microsoft Flight Simulator 2024.
             </h2>
             <p className="mt-4 max-w-[32em] text-ink-2">
@@ -416,6 +416,38 @@ export default function LandingPage() {
             ))}
           </ul>
         </Card>
+      </section>
+
+      {/* Where you start: the Module 0 lesson path, with progress for signed-in learners. */}
+      <section aria-labelledby="start-heading" className={cn(band, 'pb-16 sm:pb-24')}>
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-center lg:gap-16">
+          <div>
+            <Eyebrow>Where you start · Module 0</Eyebrow>
+            <h2 id="start-heading" className="display-md sm:display-lg mt-3 max-w-[14em]">
+              {MODULE_0.title}: {MODULE_0.summary.charAt(0).toLowerCase()}
+              {MODULE_0.summary.slice(1)}
+            </h2>
+            <p className="mt-4 max-w-[32em] text-ink-2">
+              {plural(MODULE_0.lessons, 'short lesson')}, then{' '}
+              {plural(MODULE_0.challenges, 'challenge')} you fly in the sim.
+            </p>
+          </div>
+          <Card className="w-full max-w-[460px] p-5 sm:p-6 lg:justify-self-end">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+              <Eyebrow>Module 0 · {MODULE_0.title}</Eyebrow>
+              <p className="readout-sm text-ink-3">
+                {plural(MODULE_0.lessons, 'lesson')} · {plural(MODULE_0.challenges, 'challenge')}
+              </p>
+            </div>
+            <LessonPath
+              stops={stops}
+              startLabel="Start"
+              aria-label="Module 0 lesson path"
+              underlineTitles={false}
+              className="mt-4"
+            />
+          </Card>
+        </div>
       </section>
 
       {/* How a lesson works. */}

@@ -1,6 +1,5 @@
-import { Play } from 'lucide-react';
-import { useState } from 'react';
 import { Callout } from '@/components/Callout';
+import { YouTubeEmbed } from '@/components/YouTubeEmbed';
 import type { LessonBlock } from '@shared/schemas/content';
 import { lessonImageUrl } from '../lessonImages';
 import { MarkdownContent } from '../MarkdownContent';
@@ -54,34 +53,13 @@ export function ImageBlock({ block }: { block: Block<'image'> }) {
 
 /** Click-to-load YouTube (privacy-enhanced domain): nothing loads from YouTube until clicked. */
 export function VideoBlock({ block }: { block: Block<'video'> }) {
-  const [playing, setPlaying] = useState(false);
   return (
     <figure className="my-6">
-      <div className="relative aspect-video overflow-hidden rounded-lg border border-line bg-instrument">
-        {playing ? (
-          <iframe
-            src={`https://www.youtube-nocookie.com/embed/${block.videoId}?autoplay=1&rel=0`}
-            title={block.title}
-            allow="autoplay; encrypted-media; picture-in-picture"
-            allowFullScreen
-            className="absolute inset-0 size-full"
-          />
-        ) : (
-          <button
-            type="button"
-            onClick={() => setPlaying(true)}
-            className="group absolute inset-0 flex flex-col items-center justify-center gap-3 p-4 text-center text-instrument-text"
-          >
-            <span className="flex size-16 items-center justify-center rounded-full bg-warn text-on-warn group-hover:scale-105">
-              <Play aria-hidden className="size-8 fill-current" />
-            </span>
-            <span className="text-lg font-semibold">Play video: {block.title}</span>
-            <span className="text-sm opacity-80">
-              Loads YouTube (privacy-enhanced mode) when you click.
-            </span>
-          </button>
-        )}
-      </div>
+      <YouTubeEmbed
+        videoId={block.videoId}
+        title={block.title}
+        detail="Loads YouTube (privacy-enhanced mode) when you click."
+      />
       <figcaption className="mt-2 text-sm text-ink-2">
         {block.title}
         {block.captions ? ' · captions available' : ''}
