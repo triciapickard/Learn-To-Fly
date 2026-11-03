@@ -391,7 +391,7 @@ export default function LandingPage() {
           <div>
             <Monitor aria-hidden className="size-6 text-ink" strokeWidth={1.75} />
             <Eyebrow className="mt-4">Before you start</Eyebrow>
-            <h2 id="sim-heading" className="display-md mt-3">
+            <h2 id="sim-heading" className="display-md sm:display-lg mt-3">
               Learn to Fly requires Microsoft Flight Simulator 2024.
             </h2>
             <p className="mt-4 max-w-[32em] text-ink-2">
