@@ -15,6 +15,9 @@ it at the repo root (v1.md Section 25):
 
 ```
 Learn-To-Fly/
+  .claude/                 # Claude Code: skills, hooks, settings.json (D-28)
+    skills/                # ltf-review, review-lesson, ship, unslop
+    hooks/                 # lint/format on edit, typecheck on stop, safety guard
   .github/                 # CI workflow, PR template, Dependabot
   content/                 # Authoring source of truth: YAML + Markdown lessons
     lessons/<module>/      # one Markdown file per lesson
@@ -62,6 +65,16 @@ same message as your next action.
 Stop and ask only when you can't continue without me, or before anything
 destructive: deleting data, force-pushing, or changing anything outside
 this repository.
+
+## Review workflow
+
+- Hooks in `.claude/settings.json` lint and format each file you edit, typecheck changed
+  TypeScript before you finish, and refuse edits to `.env` files, force-pushes and
+  `--no-verify`. Fix what they report; don't work around them.
+- Before opening a PR, run `/ship`. It runs the checks and `/ltf-review`, then opens the PR.
+  To review without shipping, run `/ltf-review` on its own.
+- When a lesson or challenge's facts change, run `/review-lesson <slug>` and put its sim
+  verification list in the PR.
 
 ## Required Actions
 
