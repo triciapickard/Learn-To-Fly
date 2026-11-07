@@ -4,6 +4,7 @@ import { cn } from '@/lib/cn';
 
 export const Popover = PopoverPrimitive.Root;
 export const PopoverTrigger = PopoverPrimitive.Trigger;
+/** @public Part of the Popover API, like Radix's Close. */
 export const PopoverClose = PopoverPrimitive.Close;
 
 /** Shares the menu surface (surface-raised, line, radius-md, shadow-2) for richer content. */

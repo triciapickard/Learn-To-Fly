@@ -38,7 +38,7 @@ export function LoginForm() {
       setFormError(null);
       try {
         await login.mutateAsync(values);
-        navigate(returnTo, { replace: true });
+        void navigate(returnTo, { replace: true });
       } catch (error) {
         setFormError(applyServerErrors(error, setError, [...FIELDS]));
         setAttempt((n) => n + 1);

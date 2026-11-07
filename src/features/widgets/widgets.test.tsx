@@ -51,7 +51,9 @@ describe('W3 Airspeed indicator', () => {
     );
     const slider = await screen.findByRole('slider', { name: 'Airspeed in knots' });
     fireEvent.change(slider, { target: { value: '170' } });
-    act(() => vi.advanceTimersByTime(600));
+    act(() => {
+      vi.advanceTimersByTime(600);
+    });
     expect(screen.getByText('170 knots, at or above the red line')).toBeInTheDocument();
     vi.useRealTimers();
   });
@@ -122,10 +124,14 @@ describe('W1 Control surfaces explorer', () => {
     await userEvent.click(screen.getByRole('button', { name: 'Roll right' }));
     const text = 'Yoke right: right aileron up, left aileron down. The airplane rolls right.';
     expect(screen.getByRole('img', { name: new RegExp(text) })).toBeInTheDocument();
-    act(() => vi.advanceTimersByTime(400));
+    act(() => {
+      vi.advanceTimersByTime(400);
+    });
     expect(container.querySelector('[aria-live="polite"]')).toHaveTextContent(text);
     await userEvent.click(screen.getByRole('button', { name: /^Pitch up/ }));
-    act(() => vi.advanceTimersByTime(400));
+    act(() => {
+      vi.advanceTimersByTime(400);
+    });
     expect(container.querySelector('[aria-live="polite"]')).toHaveTextContent(
       'Yoke back: elevator up. The tail goes down and the nose pitches up.',
     );

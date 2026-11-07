@@ -4,28 +4,8 @@ import {
   useRef,
   useState,
   type PointerEvent as ReactPointerEvent,
-  type RefObject,
 } from 'react';
 import { useReducedMotion } from '@/hooks/useMediaQuery';
-
-/** Width/height of an element, updated on resize (responsive SVG, step 6.15). */
-export function useElementSize<T extends HTMLElement>(): [
-  RefObject<T | null>,
-  { width: number; height: number },
-] {
-  const ref = useRef<T>(null);
-  const [size, setSize] = useState({ width: 0, height: 0 });
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || typeof ResizeObserver === 'undefined') return;
-    const observer = new ResizeObserver(([entry]) => {
-      if (entry) setSize({ width: entry.contentRect.width, height: entry.contentRect.height });
-    });
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-  return [ref, size];
-}
 
 /** Converts a pointer event to coordinates in an SVG's viewBox. */
 export function svgPoint(

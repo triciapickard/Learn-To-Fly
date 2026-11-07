@@ -25,6 +25,10 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run format:check
+      # Unused files, exports and dependencies across the whole project (D-28).
+      - run: npm run knip
+      # US English spelling in lessons, challenges and the README (Section 18.1, D-28).
+      - run: npm run spell
 
   typecheck:
     name: Typecheck

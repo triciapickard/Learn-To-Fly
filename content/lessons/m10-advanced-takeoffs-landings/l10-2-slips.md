@@ -51,7 +51,7 @@ That maneuver is a **slip**, a cross-controlled maneuver with aileron one way an
 The forward slip is the altitude tool. The side slip is the crosswind tool from [[l10-1-crosswinds-revisited-gusts-wind-shear-and-limits]], the wing-low method. In both, the ground track stays on the centerline. The difference is where the nose points. In a forward slip it is deliberately turned away from the lowered wing, so the fuselage meets the air sideways. In a side slip it stays on the runway heading and the lowered wing cancels the drift.
 
 :::callout{type="verify"}
-Widget pending: Widget W25 (Crosswind Technique & Slip Visualiser) is embedded here once Phase 20 ships it, in forward-slip and side-slip modes side by side (directive name to be confirmed when the widget exists). Until then the table above carries the comparison. Screenshot for the shot list: "forward slip on final, Tracy Runway 26, pilot's view".
+Widget pending: Widget W25 (Crosswind Technique & Slip Visualizer) is embedded here once Phase 20 ships it, in forward-slip and side-slip modes side by side (directive name to be confirmed when the widget exists). Until then the table above carries the comparison. Screenshot for the shot list: "forward slip on final, Tracy Runway 26, pilot's view".
 :::
 
 :::quiz{id="l10-2-q1" type="single"}

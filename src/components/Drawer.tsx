@@ -5,6 +5,7 @@ import { cn } from '@/lib/cn';
 
 export const Drawer = DialogPrimitive.Root;
 export const DrawerTrigger = DialogPrimitive.Trigger;
+/** @public Part of the Drawer API, like Radix's Close. */
 export const DrawerClose = DialogPrimitive.Close;
 
 export interface DrawerContentProps {

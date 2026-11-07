@@ -53,7 +53,7 @@ These techniques stop the wind pushing you off the centerline on final:
 The crab is comfortable, but you cannot touch down in one. The wheels would meet the runway pointing sideways and the airplane would skip or swerve. So before touchdown you change the crab into a wing-low slip. Lower the upwind wing just enough to stop the drift, and press the opposite rudder just enough to keep the nose on the centerline. Touch down on the **upwind main wheel first**, then the other main, then the nose wheel. [[l10-2-slips]] takes the slip apart in detail.
 
 :::callout{type="verify"}
-Widget pending: Widget W25 (Crosswind Technique & Slip Visualiser) is embedded here once Phase 20 ships it, in crab and wing-low modes side by side (directive name to be confirmed when the widget exists). Until then the table above carries the recap. Screenshot for the shot list: "crab on final, Runway 25R, KLVK".
+Widget pending: Widget W25 (Crosswind Technique & Slip Visualizer) is embedded here once Phase 20 ships it, in crab and wing-low modes side by side (directive name to be confirmed when the widget exists). Until then the table above carries the recap. Screenshot for the shot list: "crab on final, Runway 25R, KLVK".
 :::
 
 ## Gusts: add half the gust factor
