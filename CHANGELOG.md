@@ -23,6 +23,11 @@ All notable changes to this project are documented here. The format is based on
   content and the README. Fixes what they found: unawaited `navigate()` calls after login
   and sign-up, an async `server.close` callback, UK spellings in four v2 author notes, and
   six unused exports, an unused page and the unused `unist-util-visit` dependency removed.
+- Review workflow for Claude Code (v1.md D-28): `/ltf-review` checks a change against
+  the plan's rules, `/review-lesson` checks a lesson or challenge's aviation facts and lists
+  what to verify in the sim, and `/ship` runs every check and opens the PR. Project hooks
+  lint and format each edited file, typecheck before a turn ends, and block `.env` edits,
+  force-pushes and `--no-verify`.
 - Unverified content warnings for the public beta (D-17): every draft lesson and
   challenge file starts with a "not for learning use" warning, each content folder has a
   generated README marking what is verified, and draft lesson, challenge and module pages
