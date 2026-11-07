@@ -89,6 +89,7 @@ altitudes with MSL/AGL, headings as three digits ("heading 090"), thousands sepa
 
 ```sh
 npm run content:validate            # errors fail; add -- --strict to fail on warnings (CI does)
+npm run spell                       # US English spell-check; real terms go in cspell-words.txt
 npm run content:stats               # word counts, questions and widgets per lesson
 npm run content:seed -- --dry-run   # show what would change
 npm run content:seed -- --include-drafts   # seed, publishing drafts (local only)

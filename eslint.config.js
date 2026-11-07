@@ -48,6 +48,69 @@ export default tseslint.config(
       ],
     },
   },
+  // Type-aware rules for TypeScript files (D-28): unhandled promises are where Express
+  // handlers and TanStack Query mutations fail silently.
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parserOptions: { projectService: true, tsconfigRootDir: import.meta.dirname },
+    },
+    rules: {
+      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        { checksVoidReturn: { attributes: false } },
+      ],
+      '@typescript-eslint/await-thenable': 'error',
+    },
+  },
+  // Import boundaries (v1.md Section 25): shared code runs everywhere, so it imports
+  // nothing app-specific; the client and the server never import each other.
+  {
+    rules: {
+      'import-x/no-restricted-paths': [
+        'error',
+        {
+          zones: [
+            {
+              target: './shared',
+              from: ['./src', './server', './scripts'],
+              message:
+                'shared/ is imported by the client, server and scripts; keep it free of them.',
+            },
+            {
+              target: './src',
+              from: ['./server', './scripts'],
+              message: 'The client talks to the server over the API, never by import.',
+            },
+            {
+              target: './server/src',
+              from: ['./src', './scripts'],
+              message:
+                'The server never imports client or script code; move shared logic to shared/.',
+            },
+          ],
+        },
+      ],
+    },
+  },
+  // Services hold business logic with no req/res (v1.md Section 25).
+  {
+    files: ['server/src/services/**/*.ts'],
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          paths: [
+            {
+              name: 'express',
+              message: 'Services never touch req/res; take plain values and throw HttpError.',
+            },
+          ],
+        },
+      ],
+    },
+  },
   // Client (browser)
   {
     files: ['src/**/*.{ts,tsx}'],

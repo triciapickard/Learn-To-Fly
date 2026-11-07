@@ -167,10 +167,14 @@ describe('Stopwatch', () => {
     render(<Stopwatch onStart={onStart} />);
     act(() => screen.getByRole('button', { name: 'Start' }).click());
     expect(onStart).toHaveBeenCalledOnce();
-    act(() => vi.advanceTimersByTime(3100));
+    act(() => {
+      vi.advanceTimersByTime(3100);
+    });
     expect(screen.getByRole('timer')).toHaveTextContent('00:03');
     act(() => screen.getByRole('button', { name: 'Pause' }).click());
-    act(() => vi.advanceTimersByTime(5000));
+    act(() => {
+      vi.advanceTimersByTime(5000);
+    });
     expect(screen.getByRole('timer')).toHaveTextContent('00:03');
     act(() => screen.getByRole('button', { name: 'Reset' }).click());
     expect(screen.getByRole('timer')).toHaveTextContent('00:00');

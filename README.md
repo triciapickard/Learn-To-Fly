@@ -80,17 +80,19 @@ In development the server keeps retrying and starts by itself once MongoDB is re
 
 ## Scripts
 
-| Script                                | What it does                                                         |
-| ------------------------------------- | -------------------------------------------------------------------- |
-| `npm run dev`                         | Runs the client (Vite) and server (tsx watch) together               |
-| `npm run dev:client`                  | Vite dev server on port 5173                                         |
-| `npm run dev:server`                  | Express API on port 3000 with reload                                 |
-| `npm run build`                       | Builds the client (`dist/`) and compiles the server (`dist-server/`) |
-| `npm start`                           | Runs the compiled server                                             |
-| `npm run lint` / `lint:fix`           | ESLint                                                               |
-| `npm run format` / `format:check`     | Prettier                                                             |
-| `npm run typecheck`                   | TypeScript checks for client, server and tooling                     |
-| `npm test` / `test:watch` / `test:ci` | Vitest (client + node projects; `test:ci` adds coverage)             |
+| Script                                | What it does                                                                 |
+| ------------------------------------- | ---------------------------------------------------------------------------- |
+| `npm run dev`                         | Runs the client (Vite) and server (tsx watch) together                       |
+| `npm run dev:client`                  | Vite dev server on port 5173                                                 |
+| `npm run dev:server`                  | Express API on port 3000 with reload                                         |
+| `npm run build`                       | Builds the client (`dist/`) and compiles the server (`dist-server/`)         |
+| `npm start`                           | Runs the compiled server                                                     |
+| `npm run lint` / `lint:fix`           | ESLint                                                                       |
+| `npm run format` / `format:check`     | Prettier                                                                     |
+| `npm run typecheck`                   | TypeScript checks for client, server and tooling                             |
+| `npm run knip`                        | Unused files, exports and dependencies (Knip)                                |
+| `npm run spell`                       | Spell-check content and the README (cspell; add words to `cspell-words.txt`) |
+| `npm test` / `test:watch` / `test:ci` | Vitest (client + node projects; `test:ci` adds coverage)                     |
 
 ## Deployment
 

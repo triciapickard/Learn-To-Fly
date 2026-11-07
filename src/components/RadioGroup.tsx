@@ -52,7 +52,8 @@ export function RadioGroup({
   const labelId = `${id}-label`;
   const hintId = hint ? `${id}-hint` : undefined;
   const errorId = error ? `${id}-error` : undefined;
-  const card = (variant ?? (options.some((o) => o.description) ? 'card' : 'plain')) === 'card';
+  const card =
+    (variant ?? (options.some((o) => Boolean(o.description)) ? 'card' : 'plain')) === 'card';
   return (
     <div className={cn('flex flex-col gap-2', className)}>
       <p id={labelId} className={cn('label text-ink', hideLabel && 'sr-only')}>

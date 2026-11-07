@@ -11,12 +11,6 @@ const OPTIONS: { value: ThemePreference; label: string; icon: LucideIcon }[] = [
   { value: 'dark', label: 'Night', icon: Moon },
 ];
 
-export const THEME_LABELS: Record<ThemePreference, string> = {
-  light: 'Day',
-  system: 'System',
-  dark: 'Night',
-};
-
 export interface ThemeToggleProps {
   /** Called instead of the default local-only update (e.g. to also save to the account). */
   onChange?: (preference: ThemePreference) => void;

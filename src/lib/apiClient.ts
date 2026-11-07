@@ -22,10 +22,6 @@ export function setCsrfToken(token: string | null): void {
   csrfToken = token;
 }
 
-export function getCsrfToken(): string | null {
-  return csrfToken;
-}
-
 const GATEWAY_STATUSES = new Set([502, 503, 504]);
 
 type Method = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';

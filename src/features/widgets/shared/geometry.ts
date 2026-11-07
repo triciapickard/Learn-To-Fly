@@ -10,12 +10,6 @@ export function normalize360(deg: number): number {
   return ((deg % 360) + 360) % 360;
 }
 
-/** Normalises an angle to −180…180. */
-export function normalize180(deg: number): number {
-  const n = normalize360(deg);
-  return n > 180 ? n - 360 : n;
-}
-
 /** Point on a circle; 0° is straight up and angles grow clockwise (like a dial). */
 export function polar(cx: number, cy: number, r: number, deg: number): { x: number; y: number } {
   return { x: cx + r * Math.sin(toRad(deg)), y: cy - r * Math.cos(toRad(deg)) };

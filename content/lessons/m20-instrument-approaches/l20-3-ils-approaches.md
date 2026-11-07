@@ -116,7 +116,7 @@ The G1000 NXi can switch the CDI source for you. With an ILS approach loaded and
 | Glideslope indicator    | Present (a green diamond, alive or centering) | Absent, or the magenta GP diamond |
 
 :::callout{type="verify"}
-Sim check: the automatic GPS → LOC switch and its conditions (ILS/LOC approach loaded, FAF the active leg and within 15 nm, valid localizer tuned, GPS CDI inside 1.2 × full scale; Vector-to-Final also switches), and the colours (magenta GPS, green LOC1), are desk-verified against Garmin 190-02177-02. Still open: whether the Working Title NXi in MSFS 2024 does the switch, and the screenshot "HSI before and after the CDI switch to LOC1". If it does not, rewrite this section to teach the manual CDI press as the default.
+Sim check: the automatic GPS → LOC switch and its conditions (ILS/LOC approach loaded, FAF the active leg and within 15 nm, valid localizer tuned, GPS CDI inside 1.2 × full scale; Vector-to-Final also switches), and the colors (magenta GPS, green LOC1), are desk-verified against Garmin 190-02177-02. Still open: whether the Working Title NXi in MSFS 2024 does the switch, and the screenshot "HSI before and after the CDI switch to LOC1". If it does not, rewrite this section to teach the manual CDI press as the default.
 :::
 
 :::quiz{id="l20-3-q3" type="single"}
@@ -221,7 +221,7 @@ Coupled, at DA, in `WX_IMC_LOW`: the approach lights appear through the murk. Yo
 :::
 
 :::callout{type="verify"}
-Sim check: Garmin 190-02177-02 confirms that APR arms LOC and GS (armed modes in white beside the active mode), that APR can be pressed from HDG mode, and that the GA button keeps the autopilot engaged in GA mode (older G1000 installations disconnected it). Still open: the sim's annunciator text and colours, GA behaviour at DA, and the screenshot "Mode annunciator with LOC and GS captured".
+Sim check: Garmin 190-02177-02 confirms that APR arms LOC and GS (armed modes in white beside the active mode), that APR can be pressed from HDG mode, and that the GA button keeps the autopilot engaged in GA mode (older G1000 installations disconnected it). Still open: the sim's annunciator text and colors, GA behavior at DA, and the screenshot "Mode annunciator with LOC and GS captured".
 :::
 
 ## Practice and next steps

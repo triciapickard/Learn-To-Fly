@@ -17,6 +17,12 @@ All notable changes to this project are documented here. The format is based on
 
 ### Added
 
+- Whole-project checks in lint and CI (v1.md D-28): type-aware ESLint rules for unhandled
+  promises, import boundaries between `shared/`, `src/` and `server/src/` (and no Express in
+  services), Knip for unused files, exports and dependencies, and cspell for US English in
+  content and the README. Fixes what they found: unawaited `navigate()` calls after login
+  and sign-up, an async `server.close` callback, UK spellings in four v2 author notes, and
+  six unused exports, an unused page and the unused `unist-util-visit` dependency removed.
 - Unverified content warnings for the public beta (D-17): every draft lesson and
   challenge file starts with a "not for learning use" warning, each content folder has a
   generated README marking what is verified, and draft lesson, challenge and module pages

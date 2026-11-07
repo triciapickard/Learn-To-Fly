@@ -182,7 +182,6 @@ export const CALLOUT_TYPES = [
   'memory',
   'real-world',
 ] as const;
-export const QUIZ_TYPES = ['single', 'multi', 'numeric', 'order'] as const;
 
 export const QuizOptionSchema = z.strictObject({ id: z.string(), text: z.string().min(1) });
 

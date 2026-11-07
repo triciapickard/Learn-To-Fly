@@ -53,13 +53,14 @@ async function main() {
       process.exit(1);
     }, SHUTDOWN_TIMEOUT_MS);
     force.unref();
-    server.close(async (error) => {
+    server.close((error) => {
       if (error) logger.error({ err: error }, 'Error while closing HTTP server');
-      await disconnectDb().catch((err: unknown) =>
-        logger.error({ err }, 'Error while closing MongoDB connection'),
-      );
-      logger.info('Shutdown complete');
-      process.exit(error ? 1 : 0);
+      void disconnectDb()
+        .catch((err: unknown) => logger.error({ err }, 'Error while closing MongoDB connection'))
+        .finally(() => {
+          logger.info('Shutdown complete');
+          process.exit(error ? 1 : 0);
+        });
     });
     server.closeIdleConnections();
   };

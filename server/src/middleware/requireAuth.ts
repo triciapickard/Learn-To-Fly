@@ -19,7 +19,11 @@ export const requireAuth: RequestHandler = async (req, _res, next) => {
   next();
 };
 
-/** 403 unless the signed-in user has the role (use after `requireAuth`). */
+/**
+ * 403 unless the signed-in user has the role (use after `requireAuth`). Kept for the admin
+ * routes planned in Section 32; no route uses it yet.
+ * @public
+ */
 export function requireRole(role: 'admin'): RequestHandler {
   return (req, _res, next) => {
     if (req.user?.role !== role) return next(HttpError.forbidden());
