@@ -25,6 +25,8 @@ Run in one batch and keep the output short (`2>&1 | tail -30` each):
 ```sh
 npm run lint
 npm run format:check
+npm run knip                           # if package.json has it
+npm run spell                          # if package.json has it
 npm run typecheck
 npm test
 npm run content:validate -- --strict   # if content/ changed

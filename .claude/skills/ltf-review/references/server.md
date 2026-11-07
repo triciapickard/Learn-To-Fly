@@ -8,8 +8,9 @@ Sources: v1.md Sections 24, 25, 27, 29, 30, 32, 33.2, 34; v2.md Sections 29, 32,
   only wires paths to middleware and controller functions. Controllers read
   `req.validated.*` and `req.user`, call a service and send the response. Services hold the
   business logic and never import `express` or touch `req`/`res`.
-- **S2 Models stay behind services.** Controllers and routes don't import Mongoose models
-  as values (a `type` import such as `UserDoc` is fine).
+- **S2 Models stay behind services.** Controllers and routes don't query Mongoose models
+  (`User.find…`, `.save()`); that belongs in a service. Importing a type (`UserDoc`) or a
+  DTO helper from a model file (`toUserDto`) is fine.
 - **S3 Errors are `HttpError`** (`server/src/utils/HttpError.ts`), thrown from services and
   turned into the error shape by `middleware/errorHandler.ts`. Express 5 forwards rejected
   async handlers on its own, so no try/catch that only re-sends a 500.

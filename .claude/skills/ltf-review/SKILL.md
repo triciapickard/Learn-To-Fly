@@ -50,10 +50,12 @@ missing tests are the most common gap.
 
 Run what the diff touches, in one batch, and keep the output short (`2>&1 | tail -40`):
 
-- Any `.ts`/`.tsx`: `npm run lint` and `npm run typecheck`.
+- Any `.ts`/`.tsx`: `npm run lint` and `npm run typecheck`, plus `npm run knip` when
+  package.json has that script (unused files, exports and dependencies).
 - `server/`, `shared/`, `src/`, `scripts/`: `npx vitest run --changed main` (falls back to
   `npm test` if that finds nothing).
-- `content/`: `npm run content:validate -- --strict`.
+- `content/`: `npm run content:validate -- --strict`, plus `npm run spell` when package.json
+  has that script.
 - A new dependency or `package.json` change: `npm audit --omit=dev --audit-level=high`.
 
 A failing check is one finding (blocker) that quotes the first error. Don't re-report
