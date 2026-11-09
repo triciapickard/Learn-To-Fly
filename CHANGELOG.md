@@ -36,6 +36,11 @@ All notable changes to this project are documented here. The format is based on
   starts `@sentry/node` via `node --import` when `SENTRY_DSN` is set; the error handler
   reports 5xx errors only, and cookies, request bodies and user fields are never sent.
   `SENTRY_DSN` is added to `render.yaml`.
+- Failed API calls are now reported to Sentry from the client (v1.md Section 34.4). React
+  Query caught them for the error states, so they never reached Sentry: 5xx responses are
+  reported per endpoint and status with the server's request id, network failures as
+  warnings while the browser is online, and bugs inside query functions as they are. 4xx
+  responses are not reported.
 - Unverified content warnings for the public beta (D-17): every draft lesson and
   challenge file starts with a "not for learning use" warning, each content folder has a
   generated README marking what is verified, and draft lesson, challenge and module pages
