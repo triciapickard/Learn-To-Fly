@@ -28,10 +28,15 @@ export default function PrivacyPage() {
             Error reports when something breaks: the page, your browser and device type, and the
             error itself. They never include your IP address, account or email.
           </li>
+          <li>
+            Session recordings for a sample of visits, and for any visit where an error happens: a
+            replay of page layout, clicks and scrolling. All text, form inputs, images and video are
+            masked, so a recording never shows what you read or type.
+          </li>
         </ul>
         <p>
           You can read every lesson without an account. We collect nothing about visitors beyond
-          server logs and error reports.
+          server logs, error reports and session recordings.
         </p>
         <h2>3. Why we collect it</h2>
         <ul>
@@ -50,7 +55,10 @@ export default function PrivacyPage() {
         <ul>
           <li>Render: hosting.</li>
           <li>MongoDB Atlas: database.</li>
-          <li>Sentry, error monitoring (receives the error reports described above).</li>
+          <li>
+            Sentry, error monitoring (receives the error reports and session recordings described
+            above).
+          </li>
         </ul>
         <p>If we add an email provider, it will be listed here first.</p>
         <h2>6. Retention</h2>

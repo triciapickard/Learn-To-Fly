@@ -101,6 +101,8 @@ describe('createApp', () => {
     expect(res.headers['content-security-policy']).toMatch(
       /script-src 'self' 'sha256-[A-Za-z0-9+/=]+'/,
     );
+    // Sentry Session Replay compresses recordings in a worker created from a blob URL (D-30).
+    expect(res.headers['content-security-policy']).toContain("worker-src 'self' blob:");
     expect(res.headers['content-security-policy-report-only']).toBeUndefined();
     // HSTS only in production, where the app is served over HTTPS.
     expect(res.headers['strict-transport-security']).toBeUndefined();

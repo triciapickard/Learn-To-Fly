@@ -8,6 +8,9 @@ All notable changes to this project are documented here. The format is based on
 
 ### Changed
 
+- Sentry Session Replay records a sample of visits (10%) and every visit that hits an error,
+  with all text, inputs, images and video masked. The privacy policy lists session
+  recordings (v1.md D-30).
 - Landing page copy is shorter: the hero paragraph (31 words, down from 57, and speaking to
   the reader directly), the five "How a lesson works" steps, the curriculum heading, and the
   MSFS 2024 requirement, which is now a short note in the Module 0 section instead of its own

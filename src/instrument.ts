@@ -28,6 +28,10 @@ if (dsn) {
         matchRoutes,
       }),
     ],
+    // Session Replay: record 10% of sessions in production, every session while testing
+    // (dev builds with a DSN set). Always keep the replay of a session that hits an error.
+    replaysSessionSampleRate: import.meta.env.PROD ? 0.1 : 1.0,
+    replaysOnErrorSampleRate: 1.0,
     // Low traffic for now, so trace every page load and navigation. Lower this as usage grows.
     tracesSampleRate: 1.0,
     // The API is same-origin (/api/v1/...), so only relative URLs get trace headers.
@@ -35,4 +39,15 @@ if (dsn) {
     // PII scrubbing (Section 34.4): no IP address or user fields on events.
     dataCollection: { userInfo: false },
   });
+
+  // Session Replay, lazy-loaded so it stays out of the initial bundle. The defaults mask all
+  // text and inputs and block images and video, so recordings show page layout, clicks and
+  // scrolling, never what a learner reads or types. It uses the sample rates set above.
+  void import('./sentryReplay')
+    .then(({ replayIntegration }) => {
+      Sentry.addIntegration(replayIntegration());
+    })
+    .catch(() => {
+      // A failed chunk load only loses replay; error monitoring keeps working.
+    });
 }
