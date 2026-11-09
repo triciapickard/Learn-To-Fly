@@ -37,6 +37,9 @@ services:
       # nature, but entered in the dashboard so each service can use its own project.
       - key: VITE_SENTRY_DSN
         sync: false
+      # Sentry DSN for API (server) error reports. Read at startup by server/src/instrument.ts.
+      - key: SENTRY_DSN
+        sync: false
       # Set to "true" only on a preview/staging service to show unverified drafts.
       - key: CONTENT_INCLUDE_DRAFTS
         value: 'false'

@@ -9,6 +9,8 @@ export class ApiError extends Error {
     message: string,
     public readonly details: ErrorDetail[] = [],
     public readonly requestId?: string,
+    /** The request that failed, e.g. "GET /lessons/first-flight", for error reports. */
+    public readonly endpoint?: string,
   ) {
     super(message);
     this.name = 'ApiError';
@@ -59,6 +61,14 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
   const headers: Record<string, string> = { Accept: 'application/json' };
   if (body !== undefined) headers['Content-Type'] = 'application/json';
   if (method !== 'GET' && csrfToken) headers['X-CSRF-Token'] = csrfToken;
+  const endpoint = `${method} ${path}`;
+  const fail = (
+    status: number,
+    code: ApiError['code'],
+    message: string,
+    details?: ErrorDetail[],
+    requestId?: string,
+  ) => new ApiError(status, code, message, details, requestId, endpoint);
 
   let response: Response;
   try {
@@ -71,7 +81,7 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
     });
   } catch (error) {
     if (error instanceof DOMException && error.name === 'AbortError') throw error;
-    throw new ApiError(0, 'NETWORK_ERROR', 'Could not reach the server. Check your connection.');
+    throw fail(0, 'NETWORK_ERROR', 'Could not reach the server. Check your connection.');
   }
 
   if (response.status === 204) return undefined as T;
@@ -80,18 +90,18 @@ export async function apiRequest<T>(path: string, options: RequestOptions = {}):
   if (!response.ok) {
     if (isApiErrorBody(data)) {
       const { code, message, details, requestId } = data.error;
-      throw new ApiError(response.status, code, message, details, requestId);
+      throw fail(response.status, code, message, details, requestId);
     }
     // A gateway error without our error body means the API itself never answered (e.g. the
     // dev proxy or the host couldn't reach it), not that the request was wrong.
     if (GATEWAY_STATUSES.has(response.status)) {
-      throw new ApiError(
+      throw fail(
         response.status,
         'SERVICE_UNAVAILABLE',
         "Couldn't reach the Learn to Fly server. Please try again in a moment.",
       );
     }
-    throw new ApiError(response.status, 'INTERNAL', 'Something went wrong. Please try again.');
+    throw fail(response.status, 'INTERNAL', 'Something went wrong. Please try again.');
   }
   return data as T;
 }
