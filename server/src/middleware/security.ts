@@ -25,6 +25,8 @@ export function securityHeaders({ scriptHashes = [], isProduction = false }: Sec
         frameSrc: ['https://www.youtube-nocookie.com'],
         // Sentry's ingest hosts (o<org>.ingest.<region>.sentry.io) for client error reports.
         connectSrc: ["'self'", 'https://*.sentry.io'],
+        // Sentry Session Replay compresses recordings in a web worker it creates from a blob URL.
+        workerSrc: ["'self'", 'blob:'],
         manifestSrc: ["'self'"],
         frameAncestors: ["'none'"],
         baseUri: ["'self'"],
