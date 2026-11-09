@@ -91,8 +91,9 @@ describe('GET /me/export', () => {
   it('downloads all user data without secrets', async () => {
     const agent = await registerUser(app);
     const res = await agent.get('/api/v1/me/export').expect(200);
+    // Quoting is optional (RFC 6266), and content-disposition 2 leaves a plain name unquoted.
     expect(res.headers['content-disposition']).toMatch(
-      /attachment; filename="learn-to-fly-export-/,
+      /^attachment; filename="?learn-to-fly-export-\d{4}-\d{2}-\d{2}\.json"?$/,
     );
     expect(res.body.user).toMatchObject({ email: 'sam@example.com', displayName: 'Sam Simmer' });
     expect(res.body).toMatchObject({
