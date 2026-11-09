@@ -1,7 +1,7 @@
 import * as Sentry from '@sentry/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { ApiError } from './apiClient';
-import { reportQueryError } from './queryClient';
+import { createQueryClient, reportQueryError } from './queryClient';
 
 vi.mock('@sentry/react', async (importOriginal) => ({
   ...(await importOriginal<typeof Sentry>()),
@@ -12,6 +12,22 @@ const capture = vi.mocked(Sentry.captureException);
 
 beforeEach(() => capture.mockClear());
 afterEach(() => vi.restoreAllMocks());
+
+describe('createQueryClient', () => {
+  it('reports failed queries and mutations to Sentry', async () => {
+    const client = createQueryClient();
+    const serverError = new ApiError(500, 'INTERNAL', 'x', [], undefined, 'GET /modules');
+    await client
+      .fetchQuery({ queryKey: ['t'], queryFn: () => Promise.reject(serverError), retry: false })
+      .catch(() => undefined);
+    await client
+      .getMutationCache()
+      .build(client, { mutationFn: () => Promise.reject(new TypeError('bug')) })
+      .execute(undefined)
+      .catch(() => undefined);
+    expect(capture).toHaveBeenCalledTimes(2);
+  });
+});
 
 describe('reportQueryError', () => {
   it('reports 5xx responses grouped by endpoint and status, with the request id', () => {
