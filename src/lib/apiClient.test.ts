@@ -63,12 +63,17 @@ describe('apiClient', () => {
       code: 'VALIDATION_ERROR',
       details: [{ path: 'email', message: 'Invalid email' }],
       requestId: 'req-1',
+      endpoint: 'POST /things',
     });
   });
 
   it('throws a generic ApiError for non-JSON failures', async () => {
     server.use(http.get('/api/v1/things', () => new HttpResponse('oops', { status: 500 })));
-    await expect(api.get('/things')).rejects.toMatchObject({ status: 500, code: 'INTERNAL' });
+    await expect(api.get('/things')).rejects.toMatchObject({
+      status: 500,
+      code: 'INTERNAL',
+      endpoint: 'GET /things',
+    });
   });
 
   it.each([502, 503, 504])(
