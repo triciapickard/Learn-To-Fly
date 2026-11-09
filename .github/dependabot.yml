@@ -8,6 +8,11 @@ updates:
       npm-dependencies:
         patterns: ['*']
         update-types: [minor, patch]
+    ignore:
+      # eslint-plugin-jsx-a11y 6.x only allows eslint up to 9, so eslint 10 breaks npm ci.
+      # Remove this once jsx-a11y supports eslint 10.
+      - dependency-name: eslint
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:
