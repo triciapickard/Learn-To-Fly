@@ -8,6 +8,8 @@ All notable changes to this project are documented here. The format is based on
 
 ### Changed
 
+- Landing page: the hero paragraph is shorter (31 words, down from 57) and speaks to the
+  reader directly.
 - Public beta: only fully verified modules are shown (v1.md D-27). A module is published
   only once every lesson and challenge in it is published; the validator enforces it, the
   seeder hides everything in an unpublished module, and `ModuleSummary` gains a `draft`

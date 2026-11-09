@@ -343,10 +343,9 @@ export default function LandingPage() {
             Yes, you can fly a plane.
           </h1>
           <p className="body-lg mt-6 max-w-[34em] text-ink-2">
-            Learn to Fly teaches a complete beginner to fly the Cessna 172 in Microsoft Flight
-            Simulator 2024, from the first takeoff to a planned cross-country flight. You read short
-            lessons, try interactive diagrams and fly challenges in the sim. Then you score each
-            challenge against real pilot standards.
+            Learn to fly the Cessna 172 in Microsoft Flight Simulator 2024, even if you have never
+            flown. Read short lessons, then fly challenges in the sim and score them against real
+            pilot standards.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button size="lg" asChild>
