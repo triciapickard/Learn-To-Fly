@@ -103,27 +103,27 @@ function stats(modules: PreviewModule[]) {
 const STEPS: { title: string; text: string; icon: LucideIcon }[] = [
   {
     title: 'Learn',
-    text: 'A few short paragraphs explain why the airplane behaves as it does, then how to fly it.',
+    text: 'A few paragraphs on why the airplane behaves as it does.',
     icon: BookOpen,
   },
   {
     title: 'See',
-    text: 'Diagrams and cockpit views sit beside the text that explains them.',
+    text: 'Diagrams and cockpit views beside the text.',
     icon: Eye,
   },
   {
     title: 'Try',
-    text: 'Change the wind, bank the airplane or answer a quick question to check you understand.',
+    text: 'Change the wind or answer a quick question.',
     icon: SlidersHorizontal,
   },
   {
     title: 'Fly',
-    text: 'Fly a challenge in MSFS 2024 with an exact sim setup and measurable standards.',
+    text: 'Fly a challenge in MSFS 2024.',
     icon: PlaneTakeoff,
   },
   {
     title: 'Reflect',
-    text: 'Score yourself against a rubric. Good go-arounds count too.',
+    text: 'Score your flight against the standards.',
     icon: ClipboardCheck,
   },
 ];
@@ -166,25 +166,10 @@ const SAMPLE_CHALLENGE = {
 };
 
 /** Which simulators the course works with, shown near the top so nobody starts in the wrong sim. */
-const SIM_SUPPORT: { label: string; text: string; icon: LucideIcon; iconClass: string }[] = [
-  {
-    label: 'Works',
-    text: 'Microsoft Flight Simulator 2024, any edition, on PC or Xbox. The Cessna 172 and the Bay Area airports come with every edition.',
-    icon: Check,
-    iconClass: 'text-go',
-  },
-  {
-    label: 'Not supported',
-    text: 'MSFS 2020, X-Plane, Prepar3D and other sims. Their menus, controls and cockpits differ, so the steps will not match what you see.',
-    icon: X,
-    iconClass: 'text-ink-3',
-  },
-  {
-    label: 'Without the sim',
-    text: 'You can still read every lesson and try the diagrams. You need MSFS 2024 to fly the challenges.',
-    icon: BookOpen,
-    iconClass: 'text-ink',
-  },
+const SIM_SUPPORT: { text: string; icon: LucideIcon; iconClass: string }[] = [
+  { text: 'MSFS 2024, any edition, on PC or Xbox', icon: Check, iconClass: 'text-go' },
+  { text: 'Not MSFS 2020, X-Plane or other sims', icon: X, iconClass: 'text-ink-3' },
+  { text: 'No sim yet? You can still read every lesson.', icon: BookOpen, iconClass: 'text-ink' },
 ];
 
 const NEEDS: { title: string; text: string; icon: LucideIcon }[] = [
@@ -385,40 +370,6 @@ export default function LandingPage() {
         </dl>
       </section>
 
-      {/* Requirement: the course is written for, and checked in, MSFS 2024 only. */}
-      <section aria-labelledby="sim-heading" className={cn(band, 'pb-16 sm:pb-24')}>
-        <Card className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
-          <div>
-            <Monitor aria-hidden className="size-6 text-ink" strokeWidth={1.75} />
-            <Eyebrow className="mt-4">Before you start</Eyebrow>
-            <h2 id="sim-heading" className="display-md sm:display-lg mt-3">
-              Learn to Fly requires Microsoft Flight Simulator 2024.
-            </h2>
-            <p className="mt-4 max-w-[32em] text-ink-2">
-              We write every lesson, cockpit view and challenge for MSFS 2024 and fly it in the sim
-              before it opens. If you do not have the sim yet, get it first, then start with lesson
-              0.1.
-            </p>
-          </div>
-          <ul aria-label="Which simulators work" className="self-start border-t border-line">
-            {SIM_SUPPORT.map(({ label, text, icon: Icon, iconClass }) => (
-              <li
-                key={label}
-                className="flex flex-wrap items-start gap-x-4 gap-y-1 border-b border-line py-4"
-              >
-                <Icon
-                  aria-hidden
-                  className={cn('mt-0.5 size-4 shrink-0', iconClass)}
-                  strokeWidth={2}
-                />
-                <span className="w-32 text-sm leading-5 font-semibold">{label}</span>
-                <span className="flex-[1_1_220px] text-sm leading-5 text-ink-2">{text}</span>
-              </li>
-            ))}
-          </ul>
-        </Card>
-      </section>
-
       {/* Where you start: the Module 0 lesson path, with progress for signed-in learners. */}
       <section aria-labelledby="start-heading" className={cn(band, 'pb-16 sm:pb-24')}>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-center lg:gap-16">
@@ -432,6 +383,22 @@ export default function LandingPage() {
               {plural(MODULE_0.lessons, 'short lesson')}, then{' '}
               {plural(MODULE_0.challenges, 'challenge')} you fly in the sim.
             </p>
+            {/* Requirement: the course is written for, and checked in, MSFS 2024 only. */}
+            <div className="mt-8 max-w-[32em] border-t border-line pt-6">
+              <p className="font-semibold">You need Microsoft Flight Simulator 2024.</p>
+              <ul aria-label="Which simulators work" className="mt-3 flex flex-col gap-2">
+                {SIM_SUPPORT.map(({ text, icon: Icon, iconClass }) => (
+                  <li key={text} className="flex items-start gap-3 text-sm leading-5 text-ink-2">
+                    <Icon
+                      aria-hidden
+                      className={cn('mt-px size-4 shrink-0', iconClass)}
+                      strokeWidth={2}
+                    />
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <Card className="w-full max-w-[460px] p-5 sm:p-6 lg:justify-self-end">
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
@@ -461,10 +428,7 @@ export default function LandingPage() {
                 Read a little. Try it on the page. Fly it in the sim.
               </h2>
             </div>
-            <p className="max-w-[30em] text-ink-2">
-              Every lesson follows the same five steps, so you always know what comes next. You
-              never read more than a few paragraphs before you get something to see or do.
-            </p>
+            <p className="max-w-[30em] text-ink-2">Every lesson follows the same five steps.</p>
           </div>
           <ol className="mt-12 grid gap-x-6 gap-y-8 border-t-2 border-line-strong sm:grid-cols-2 lg:grid-cols-5">
             {STEPS.map(({ title, text, icon: Icon }, index) => (
@@ -490,8 +454,7 @@ export default function LandingPage() {
           <div className="max-w-[640px]">
             <Eyebrow>The curriculum</Eyebrow>
             <h2 id="curriculum-heading" className="display-md sm:display-lg mt-3">
-              {modules.length} of {PLANNED_MODULES} modules are open, in the order a flight school
-              teaches them.
+              {modules.length} modules, in flight-school order.
             </h2>
           </div>
           <p className="max-w-[30em] text-ink-2">
