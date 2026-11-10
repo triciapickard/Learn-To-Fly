@@ -1,0 +1,2279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- fragment:start -->
+    <title>Learn to Fly Redesign</title>
+    <meta name="claude:viewport-fit-sides" content="cover" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Besley:ital,wght@0,400..900;1,400..900&display=swap"
+    />
+    <style>
+      /* Layout: a pilot's logbook. Left-aligned on eye-ease green paper, one wide takeoff strip
+         as the hero, ruled tables where the content is tabular, loose sheets for single objects. */
+      :root {
+        --paper: #e3efd6; /* logbook page */
+        --sheet: #f2f8ea; /* a loose sheet on the page */
+        --rule: #9dbb8f; /* printed ledger rules */
+        --rule-soft: #c8ddb9; /* tinted columns, far hills */
+        --ink: #10261c; /* spruce printing ink */
+        --ink-2: #3c5646; /* secondary ink */
+        --orange: #f2500a; /* windsock orange: the one thing to act on */
+        --orange-ink: #b03a00; /* orange as text on paper */
+        --on-orange: #10261c;
+        --stamp: #5a2d91; /* endorsement stamp ink: signed-off status only */
+        --asphalt: #34413a;
+        --shade: #0b1711;
+        --paint: #f2f8ea; /* runway paint */
+        --gold: #d6a51c;
+        --silver: #9fb0a6;
+        --bronze: #b9763f;
+
+        --display: 'Besley', 'Rockwell', 'Roboto Slab', Georgia, serif;
+        --text:
+          'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', Verdana, system-ui, sans-serif;
+
+        --step--1: 0.875rem;
+        --step-0: 1.0625rem;
+        --step-1: 1.25rem;
+        --step-2: 1.5rem;
+        --step-3: 2rem;
+        --step-4: clamp(2rem, 1.2rem + 2.6vw, 2.75rem);
+        --step-5: clamp(2.375rem, 1rem + 4.4vw, 3.75rem);
+        --seam: clamp(72px, 10vw, 128px);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']) {
+          --paper: #0f241b;
+          --sheet: #17322a;
+          --rule: #446a54;
+          --rule-soft: #1f3d31;
+          --ink: #e3efd6;
+          --ink-2: #a9c39e;
+          --orange: #ff6a2b;
+          --orange-ink: #ff8f5c;
+          --on-orange: #10261c;
+          --stamp: #c9a8f7;
+          --asphalt: #07130e;
+          --shade: #000000;
+          --paint: #dfeccf;
+          --gold: #e2b93f;
+          --silver: #8ea196;
+          --bronze: #c98950;
+          color-scheme: dark;
+        }
+      }
+      :root[data-theme='dark'] {
+        --paper: #0f241b;
+        --sheet: #17322a;
+        --rule: #446a54;
+        --rule-soft: #1f3d31;
+        --ink: #e3efd6;
+        --ink-2: #a9c39e;
+        --orange: #ff6a2b;
+        --orange-ink: #ff8f5c;
+        --on-orange: #10261c;
+        --stamp: #c9a8f7;
+        --asphalt: #07130e;
+        --shade: #000000;
+        --paint: #dfeccf;
+        --gold: #e2b93f;
+        --silver: #8ea196;
+        --bronze: #c98950;
+        color-scheme: dark;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--text);
+        font-size: var(--step-0);
+        line-height: 1.55;
+        font-variant-numeric: tabular-nums;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      h1,
+      h2,
+      h3,
+      p,
+      ol,
+      ul,
+      figure,
+      table {
+        margin: 0;
+        padding: 0;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--display);
+        font-weight: 600;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+      }
+      a {
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 3px solid var(--stamp);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .wrap {
+        max-width: 1180px;
+        margin-inline: auto;
+        padding-left: max(20px, env(safe-area-inset-left, 0px));
+        padding-right: max(20px, env(safe-area-inset-right, 0px));
+      }
+
+      /* Header */
+      .masthead {
+        border-bottom: 1px solid var(--rule);
+      }
+      .masthead-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px 28px;
+        flex-wrap: wrap;
+        padding-block: 16px;
+      }
+      .wordmark {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 1.375rem;
+        letter-spacing: -0.02em;
+        text-decoration: none;
+      }
+      .wordmark svg {
+        width: 34px;
+        height: 28px;
+        flex: none;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 4px 24px;
+        flex-wrap: wrap;
+      }
+      .nav a {
+        text-decoration: none;
+        padding-block: 6px;
+        border-bottom: 2px solid transparent;
+      }
+      .nav a:hover {
+        border-bottom-color: var(--ink);
+      }
+
+      /* Buttons */
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 10px 22px;
+        border: 2px solid var(--ink);
+        border-radius: 8px;
+        background: var(--orange);
+        color: var(--on-orange);
+        font: inherit;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0 3px 0 var(--ink);
+        transition:
+          transform 80ms ease-out,
+          box-shadow 80ms ease-out;
+      }
+      .button:active {
+        transform: translateY(3px);
+        box-shadow: 0 0 0 var(--ink);
+      }
+      .button-quiet {
+        background: var(--sheet);
+        color: var(--ink);
+      }
+      .button:disabled {
+        background: transparent;
+        color: var(--ink-2);
+        border-color: var(--rule);
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+      .nav .button {
+        min-height: 40px;
+        padding: 6px 16px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      /* Hero */
+      .hero-top {
+        display: grid;
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+        gap: 24px 56px;
+        align-items: end;
+        padding-block: clamp(28px, 4vw, 44px) clamp(24px, 3vw, 32px);
+      }
+      .hero-title {
+        font-size: var(--step-5);
+        font-weight: 650;
+        letter-spacing: -0.03em;
+        line-height: 1;
+      }
+      .hero-side {
+        display: grid;
+        gap: 20px;
+        justify-items: start;
+        max-width: 30rem;
+      }
+      .hero-side p {
+        font-size: var(--step-1);
+        line-height: 1.45;
+      }
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px 20px;
+      }
+      .aside-note {
+        color: var(--ink-2);
+        font-size: var(--step--1);
+      }
+
+      .strip {
+        border-block: 2px solid var(--ink);
+        position: relative;
+        overflow: hidden;
+      }
+      .strip svg {
+        display: block;
+        width: 100%;
+        height: clamp(200px, 25vw, 300px);
+      }
+      .far-hills {
+        fill: var(--rule-soft);
+        opacity: 0.55;
+      }
+      .near-hills {
+        fill: var(--rule-soft);
+      }
+      .field {
+        fill: var(--rule);
+      }
+      .asphalt {
+        fill: var(--asphalt);
+      }
+      .paint {
+        fill: var(--paint);
+      }
+      .skin {
+        fill: var(--sheet);
+        stroke: var(--ink);
+        stroke-width: 2.2;
+        stroke-linejoin: round;
+      }
+      .trim {
+        fill: var(--orange);
+        stroke: var(--ink);
+        stroke-width: 2.2;
+        stroke-linejoin: round;
+      }
+      .glass {
+        fill: var(--ink);
+        opacity: 0.82;
+      }
+      .leg {
+        fill: none;
+        stroke: var(--ink);
+        stroke-width: 3;
+        stroke-linecap: round;
+      }
+      .tyre {
+        fill: var(--ink);
+      }
+      .prop {
+        fill: var(--ink);
+        opacity: 0.28;
+      }
+      .shadow {
+        fill: var(--shade);
+      }
+      .readout {
+        position: absolute;
+        top: clamp(10px, 2vw, 24px);
+        right: max(20px, env(safe-area-inset-right, 0px), calc(50vw - 570px));
+        text-align: right;
+        line-height: 1;
+      }
+      .readout-label {
+        font-size: var(--step--1);
+        color: var(--ink-2);
+      }
+      .readout-value {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: clamp(2.5rem, 1.5rem + 4vw, 4.75rem);
+        letter-spacing: -0.03em;
+      }
+      .readout-unit {
+        font-size: var(--step-0);
+      }
+
+      .speed-scale {
+        position: relative;
+        height: 64px;
+        margin-top: 14px;
+      }
+      .speed-track {
+        position: absolute;
+        inset: 26px 0 auto 0;
+        height: 10px;
+        border: 2px solid var(--ink);
+        border-radius: 5px;
+        background: repeating-linear-gradient(
+          to right,
+          transparent 0,
+          transparent calc(100% / 9 - 2px),
+          var(--rule) calc(100% / 9 - 2px),
+          var(--rule) calc(100% / 9)
+        );
+      }
+      .speed-mark {
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        display: grid;
+        justify-items: center;
+        gap: 22px;
+        font-size: var(--step--1);
+        line-height: 1.2;
+        white-space: nowrap;
+      }
+      .speed-mark b {
+        font-family: var(--display);
+        font-size: var(--step-1);
+      }
+      .speed-mark-start {
+        transform: none;
+        justify-items: start;
+      }
+      .speed-pointer {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        margin-left: -11px;
+        border: 2px solid var(--ink);
+        border-radius: 50%;
+        background: var(--orange);
+      }
+
+      .controls {
+        display: grid;
+        grid-template-columns: minmax(200px, 300px) minmax(0, 1fr) auto;
+        gap: 20px 40px;
+        align-items: center;
+        padding-block: 16px 8px;
+      }
+      .throttle label {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+      }
+      .throttle-ends {
+        display: flex;
+        justify-content: space-between;
+        font-size: var(--step--1);
+        color: var(--ink-2);
+      }
+      .throttle input {
+        -webkit-appearance: none;
+        appearance: none;
+        display: block;
+        width: 100%;
+        height: 44px;
+        margin: 0;
+        background: transparent;
+        cursor: grab;
+      }
+      .throttle input::-webkit-slider-runnable-track {
+        height: 12px;
+        border: 2px solid var(--ink);
+        border-radius: 6px;
+        background: var(--sheet);
+      }
+      .throttle input::-moz-range-track {
+        height: 8px;
+        border: 2px solid var(--ink);
+        border-radius: 6px;
+        background: var(--sheet);
+      }
+      .throttle input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 40px;
+        height: 40px;
+        margin-top: -16px;
+        border: 2px solid var(--ink);
+        border-radius: 50%;
+        background: var(--ink);
+        box-shadow:
+          inset 0 0 0 6px var(--ink),
+          inset 0 0 0 9px var(--paper);
+      }
+      .throttle input::-moz-range-thumb {
+        width: 36px;
+        height: 36px;
+        border: 2px solid var(--ink);
+        border-radius: 50%;
+        background: var(--ink);
+        box-shadow:
+          inset 0 0 0 6px var(--ink),
+          inset 0 0 0 9px var(--paper);
+      }
+      .cue {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: var(--step-2);
+        line-height: 1.15;
+        letter-spacing: -0.015em;
+        min-height: 2.3em;
+        display: flex;
+        align-items: center;
+        text-wrap: balance;
+      }
+      .control-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      /* Sections */
+      .sections {
+        display: grid;
+        gap: var(--seam);
+        padding-block: var(--seam);
+      }
+      .section-head {
+        display: grid;
+        gap: 14px;
+        max-width: 44rem;
+        margin-bottom: clamp(28px, 4vw, 44px);
+      }
+      .section-head h2 {
+        font-size: var(--step-4);
+      }
+      .section-head p {
+        font-size: var(--step-1);
+        line-height: 1.45;
+        color: var(--ink-2);
+      }
+
+      /* Desk and sim: column widths follow the minutes */
+      .sittings {
+        display: grid;
+        grid-template-columns: minmax(0, 10fr) minmax(0, 20fr);
+        border: 2px solid var(--ink);
+        border-radius: 6px;
+        background: var(--sheet);
+      }
+      .sitting {
+        display: grid;
+        align-content: start;
+        gap: 18px;
+        padding: clamp(20px, 3vw, 36px);
+        min-width: 0;
+      }
+      .sitting + .sitting {
+        border-left: 2px solid var(--ink);
+      }
+      .sitting h3 {
+        font-size: var(--step-2);
+      }
+      .minutes {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: var(--step-3);
+        line-height: 1;
+      }
+      .minutes small {
+        font-family: var(--text);
+        font-weight: 400;
+        font-size: var(--step-0);
+      }
+      .plain-list {
+        display: grid;
+        gap: 12px;
+      }
+      .plain-list li {
+        padding-left: 22px;
+        position: relative;
+      }
+      .plain-list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.62em;
+        width: 10px;
+        height: 2px;
+        background: var(--ink);
+      }
+      .sim-split {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 24px 36px;
+        align-items: start;
+      }
+      .card-rows {
+        border: 1px solid var(--rule);
+        border-radius: 4px;
+        background: var(--paper);
+      }
+      .card-rows caption,
+      .card-title {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: var(--step-0);
+        text-align: left;
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--rule);
+      }
+      .card-rows table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .card-rows th,
+      .card-rows td {
+        text-align: left;
+        vertical-align: top;
+        padding: 8px 14px;
+        border-top: 1px solid var(--rule-soft);
+        font-size: var(--step--1);
+      }
+      .card-rows tr:first-child th,
+      .card-rows tr:first-child td {
+        border-top: 0;
+      }
+      .card-rows th {
+        font-weight: 400;
+        color: var(--ink-2);
+        width: 38%;
+      }
+      .card-rows td {
+        font-weight: 650;
+      }
+
+      /* The course as a logbook page */
+      .logbook {
+        width: 100%;
+        border-collapse: collapse;
+        border-block: 2px solid var(--ink);
+      }
+      .logbook th,
+      .logbook td {
+        padding: 14px 16px;
+        text-align: left;
+        vertical-align: baseline;
+        border-bottom: 1px solid var(--rule);
+      }
+      .logbook thead th {
+        font-size: var(--step--1);
+        font-weight: 400;
+        color: var(--ink-2);
+        border-bottom: 2px solid var(--ink);
+        white-space: nowrap;
+      }
+      .logbook .num {
+        text-align: right;
+        white-space: nowrap;
+      }
+      .logbook td.num {
+        background: color-mix(in srgb, var(--rule-soft) 45%, transparent);
+      }
+      .logbook .module-name {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: var(--step-1);
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+      }
+      .logbook .module-does {
+        color: var(--ink-2);
+      }
+      .logbook .waiting .module-name {
+        font-weight: 400;
+      }
+      .logbook tfoot td {
+        font-weight: 700;
+        border-bottom: 0;
+        background: none;
+      }
+      .stamp {
+        display: inline-block;
+        padding: 3px 10px 2px;
+        border: 2px solid var(--stamp);
+        border-radius: 5px;
+        color: var(--stamp);
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: var(--step--1);
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+        transform: rotate(-3deg);
+      }
+      .pending {
+        white-space: nowrap;
+        color: var(--ink-2);
+        font-size: var(--step--1);
+      }
+
+      /* Scoring */
+      .debrief {
+        display: grid;
+        grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+        gap: 32px 64px;
+        align-items: start;
+      }
+      .tiers {
+        display: grid;
+        gap: 18px;
+      }
+      .tiers li {
+        display: grid;
+        grid-template-columns: 20px minmax(0, 1fr);
+        gap: 2px 12px;
+        align-items: baseline;
+      }
+      .tiers b {
+        font-family: var(--display);
+        font-size: var(--step-1);
+      }
+      .tiers span {
+        grid-column: 2;
+        color: var(--ink-2);
+      }
+      .medal {
+        width: 16px;
+        height: 16px;
+        border: 2px solid var(--ink);
+        border-radius: 50%;
+        align-self: center;
+      }
+      .medal-gold {
+        background: var(--gold);
+      }
+      .medal-silver {
+        background: var(--silver);
+      }
+      .medal-bronze {
+        background: var(--bronze);
+      }
+      .sheet {
+        border: 2px solid var(--ink);
+        border-radius: 6px;
+        background: var(--sheet);
+        padding: clamp(18px, 3vw, 32px);
+        display: grid;
+        gap: 20px;
+        min-width: 0;
+      }
+      .sheet h3 {
+        font-size: var(--step-2);
+      }
+      .sheet-note {
+        color: var(--ink-2);
+        font-size: var(--step--1);
+      }
+      .range-chart {
+        display: grid;
+        grid-template-columns: 4.5rem minmax(0, 1fr);
+        gap: 10px 12px;
+        align-items: center;
+        position: relative;
+      }
+      .range-lane {
+        position: relative;
+        height: 22px;
+      }
+      .range-bar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        border: 2px solid var(--ink);
+        border-radius: 4px;
+      }
+      .range-axis {
+        position: relative;
+        height: 24px;
+        font-size: var(--step--1);
+        color: var(--ink-2);
+      }
+      .range-axis span {
+        position: absolute;
+        transform: translateX(-50%);
+      }
+      .flown {
+        position: absolute;
+        top: -8px;
+        bottom: 26px;
+        width: 0;
+        border-left: 3px solid var(--orange-ink);
+      }
+      .result {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 6px 14px;
+      }
+      .result b {
+        font-family: var(--display);
+        font-size: var(--step-2);
+      }
+      .marks {
+        border-top: 1px solid var(--rule);
+      }
+      .marks li {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding-block: 10px;
+        border-bottom: 1px solid var(--rule);
+      }
+      .marks li span:last-child {
+        font-weight: 650;
+        text-align: right;
+      }
+
+      /* What you need */
+      .kit {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px 48px;
+      }
+      .kit h3 {
+        font-size: var(--step-2);
+        margin-bottom: 10px;
+        padding-top: 16px;
+        border-top: 2px solid var(--ink);
+      }
+      .kit p {
+        color: var(--ink-2);
+      }
+      .straight-talk {
+        margin-top: clamp(32px, 5vw, 56px);
+        max-width: 44rem;
+        font-family: var(--display);
+        font-style: italic;
+        font-size: var(--step-1);
+        line-height: 1.4;
+      }
+
+      .closing {
+        border-top: 2px solid var(--ink);
+        padding-block: clamp(40px, 7vw, 80px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px 48px;
+      }
+      .closing h2 {
+        font-size: var(--step-4);
+        max-width: 24ch;
+      }
+      .footer {
+        border-top: 1px solid var(--rule);
+        padding-block: 24px 40px;
+        color: var(--ink-2);
+        font-size: var(--step--1);
+        display: grid;
+        gap: 6px;
+      }
+      .footer p {
+        max-width: 60rem;
+      }
+
+      /* Lesson view */
+      .lesson-grid {
+        display: grid;
+        grid-template-columns: 220px minmax(0, 40rem) minmax(0, 240px);
+        grid-template-areas:
+          'rail head numbers'
+          'rail body numbers';
+        gap: 32px 56px;
+        padding-block: clamp(28px, 5vw, 56px) var(--seam);
+        align-items: start;
+      }
+      .rail {
+        grid-area: rail;
+        display: grid;
+        gap: 14px;
+        font-size: var(--step--1);
+      }
+      .rail-title {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: var(--step-0);
+      }
+      .rail ol {
+        display: grid;
+        border-top: 1px solid var(--rule);
+      }
+      .rail li {
+        display: grid;
+        grid-template-columns: 2.4rem minmax(0, 1fr);
+        gap: 4px;
+        padding-block: 10px;
+        border-bottom: 1px solid var(--rule);
+        color: var(--ink-2);
+      }
+      .rail li[aria-current] {
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .rail .done {
+        grid-column: 2;
+        color: var(--stamp);
+        font-size: 0.8125rem;
+      }
+      .lesson-head {
+        grid-area: head;
+      }
+      .lesson-body {
+        grid-area: body;
+      }
+      .lesson-body > h2:first-child {
+        margin-top: 0;
+      }
+      .article {
+        display: grid;
+        gap: 22px;
+        font-size: 1.1875rem;
+        line-height: 1.6;
+        min-width: 0;
+      }
+      .article h1 {
+        font-size: var(--step-5);
+        font-weight: 650;
+        letter-spacing: -0.03em;
+        line-height: 1;
+      }
+      .article .standfirst {
+        font-size: var(--step-2);
+        line-height: 1.35;
+        font-family: var(--display);
+      }
+      .article .meta {
+        color: var(--ink-2);
+        font-size: var(--step--1);
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--ink);
+        margin: 0;
+      }
+      .article h2 {
+        font-size: var(--step-3);
+        margin-top: 28px;
+      }
+      .article strong {
+        font-weight: 700;
+      }
+      .watch {
+        display: grid;
+        gap: 10px;
+        counter-reset: watch;
+      }
+      .watch li {
+        display: grid;
+        grid-template-columns: 1.6rem minmax(0, 1fr);
+        gap: 8px;
+        counter-increment: watch;
+      }
+      .watch li::before {
+        content: counter(watch);
+        font-family: var(--display);
+        font-weight: 700;
+      }
+      .right-seat {
+        padding-left: clamp(16px, 4vw, 40px);
+        display: grid;
+        gap: 6px;
+      }
+      .right-seat b {
+        font-size: var(--step--1);
+        color: var(--orange-ink);
+      }
+      .right-seat p {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: var(--step-1);
+        line-height: 1.45;
+      }
+      .sim-note {
+        border: 1px dashed var(--ink-2);
+        border-radius: 4px;
+        padding: 14px 18px;
+        font-size: var(--step-0);
+        display: grid;
+        gap: 4px;
+      }
+      .sim-note b {
+        font-size: var(--step--1);
+      }
+      .steps {
+        display: grid;
+        border-top: 2px solid var(--ink);
+        counter-reset: step;
+      }
+      .steps li {
+        counter-increment: step;
+        border-bottom: 1px solid var(--rule);
+      }
+      .steps label {
+        display: grid;
+        grid-template-columns: 2.2rem minmax(0, 1fr) 28px;
+        gap: 10px;
+        align-items: start;
+        padding-block: 14px;
+        cursor: pointer;
+      }
+      .steps label::before {
+        content: counter(step);
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: var(--step-2);
+        line-height: 1.15;
+      }
+      .steps input {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 26px;
+        height: 26px;
+        margin: 3px 0 0;
+        border: 2px solid var(--ink);
+        border-radius: 5px;
+        background: var(--sheet);
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+      }
+      .steps input:checked {
+        background: var(--ink);
+      }
+      .steps input:checked::after {
+        content: '';
+        width: 12px;
+        height: 7px;
+        border-left: 3px solid var(--paper);
+        border-bottom: 3px solid var(--paper);
+        transform: translateY(-2px) rotate(-45deg);
+      }
+      .steps li:has(input:checked) .step-text {
+        color: var(--ink-2);
+      }
+      .steps-count {
+        color: var(--ink-2);
+        font-size: var(--step--1);
+      }
+      .quiz {
+        border: 2px solid var(--ink);
+        border-radius: 6px;
+        background: var(--sheet);
+        padding: clamp(18px, 3vw, 28px);
+        display: grid;
+        gap: 16px;
+        font-size: var(--step-0);
+      }
+      .quiz legend {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: var(--step-1);
+        line-height: 1.25;
+        padding: 0;
+        margin-bottom: 14px;
+      }
+      .quiz fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+      }
+      .choices {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 10px;
+      }
+      .choices-long {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .choice {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 48px;
+        padding: 8px 14px;
+        border: 2px solid var(--rule);
+        border-radius: 6px;
+        background: var(--paper);
+        cursor: pointer;
+        font-weight: 650;
+      }
+      .choice:has(input:checked) {
+        border-color: var(--ink);
+      }
+      .choice:has(input:focus-visible) {
+        outline: 3px solid var(--stamp);
+        outline-offset: 3px;
+      }
+      .choice input {
+        appearance: none;
+        -webkit-appearance: none;
+        flex: none;
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        border: 2px solid var(--ink);
+        border-radius: 50%;
+        background: var(--sheet);
+        outline: none;
+      }
+      .choice input:checked {
+        box-shadow: inset 0 0 0 4px var(--sheet);
+        background: var(--ink);
+      }
+      .verdict {
+        display: grid;
+        gap: 4px;
+      }
+      .verdict b {
+        font-family: var(--display);
+        font-size: var(--step-1);
+      }
+      .numbers {
+        grid-area: numbers;
+        position: sticky;
+        top: calc(env(safe-area-inset-top, 0px) + 24px);
+        border: 2px solid var(--ink);
+        border-radius: 6px;
+        background: var(--sheet);
+      }
+      .numbers dl {
+        margin: 0;
+      }
+      .numbers div {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        padding: 9px 14px;
+        border-top: 1px solid var(--rule-soft);
+        font-size: var(--step--1);
+      }
+      .numbers dt {
+        color: var(--ink-2);
+      }
+      .numbers dd {
+        margin: 0;
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: var(--step-0);
+        white-space: nowrap;
+      }
+      .sign-off {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px 28px;
+        margin-top: 20px;
+        padding-top: 28px;
+        border-top: 2px solid var(--ink);
+        min-height: 110px;
+      }
+      .big-stamp {
+        display: grid;
+        gap: 2px;
+        padding: 10px 18px 8px;
+        border: 3px double var(--stamp);
+        border-radius: 8px;
+        color: var(--stamp);
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: var(--step-1);
+        line-height: 1.1;
+        letter-spacing: 0.03em;
+        transform: rotate(-5deg);
+      }
+      .big-stamp small {
+        font-family: var(--text);
+        font-weight: 400;
+        font-size: var(--step--1);
+        letter-spacing: 0;
+      }
+      .stamp-in {
+        animation: stamp-in 260ms cubic-bezier(0.2, 1.4, 0.4, 1) both;
+      }
+      @keyframes stamp-in {
+        from {
+          opacity: 0;
+          transform: rotate(-5deg) scale(1.6);
+        }
+        to {
+          opacity: 1;
+          transform: rotate(-5deg) scale(1);
+        }
+      }
+      .next-flight {
+        display: grid;
+        gap: 14px;
+        font-size: var(--step-0);
+      }
+      .next-flight h2 {
+        margin-top: 0;
+        font-size: var(--step-2);
+      }
+
+      @media (max-width: 1060px) {
+        .lesson-grid {
+          grid-template-columns: minmax(0, 40rem);
+          grid-template-areas: 'rail' 'head' 'numbers' 'body';
+          justify-content: start;
+        }
+        .rail ol {
+          display: none;
+        }
+        .numbers {
+          position: static;
+        }
+      }
+      @media (max-width: 860px) {
+        .hero-top,
+        .debrief,
+        .sim-split {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        .controls {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 16px;
+        }
+        .cue {
+          order: -1;
+          min-height: 2.3em;
+        }
+        .sittings {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        .sitting + .sitting {
+          border-left: 0;
+          border-top: 2px solid var(--ink);
+        }
+        .kit {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+      @media (max-width: 720px) {
+        .nav a:not(.button) {
+          display: none;
+        }
+        .masthead-row {
+          flex-wrap: nowrap;
+          gap: 12px;
+        }
+        .wordmark {
+          font-size: 1.1875rem;
+        }
+        .nav .button {
+          padding: 6px 12px;
+          font-size: 0.9375rem;
+          white-space: nowrap;
+        }
+        .logbook thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          clip-path: inset(50%);
+        }
+        .logbook,
+        .logbook tbody,
+        .logbook tfoot {
+          display: block;
+        }
+        .logbook tr {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+          gap: 4px 18px;
+          padding-block: 14px;
+          border-bottom: 1px solid var(--rule);
+        }
+        .logbook th,
+        .logbook td {
+          display: block;
+          padding: 0;
+          border: 0;
+        }
+        .logbook td.num {
+          order: 4;
+          background: none;
+          color: var(--ink-2);
+          font-size: var(--step--1);
+        }
+        .logbook td.num::after {
+          content: ' ' attr(data-unit);
+        }
+        .logbook .cell-name {
+          order: 1;
+          flex: 1 1 50%;
+        }
+        .logbook .cell-status {
+          order: 2;
+        }
+        .logbook .cell-does {
+          order: 3;
+          flex: 0 0 100%;
+        }
+        .logbook .cell-does:empty {
+          display: none;
+        }
+        .logbook tfoot tr {
+          border-bottom: 0;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .stamp-in {
+          animation: none;
+        }
+        .button {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="wrap masthead-row">
+        <a class="wordmark" href="#home" aria-label="Learn to Fly, home">
+          <svg viewBox="0 0 34 28" aria-hidden="true">
+            <path
+              d="M4 2v24"
+              fill="none"
+              stroke="var(--ink)"
+              stroke-width="2.6"
+              stroke-linecap="round"
+            />
+            <path
+              d="M5 4 31 9.5v5L5 18Z"
+              fill="var(--orange)"
+              stroke="var(--ink)"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+            <path d="M13.5 5.8v10.9M22 7.6v8" fill="none" stroke="var(--ink)" stroke-width="2" />
+          </svg>
+          Learn to Fly
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="#home" data-jump="sittings">How a lesson goes</a>
+          <a href="#home" data-jump="course">The course</a>
+          <a href="#home" data-jump="scoring">Scoring</a>
+          <a class="button" href="#lesson">Open a lesson</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="view-home">
+      <section aria-labelledby="hero-title">
+        <div class="wrap hero-top">
+          <h1 class="hero-title" id="hero-title">
+            Take off first. We&rsquo;ll explain everything after.
+          </h1>
+          <div class="hero-side">
+            <p>
+              A free course for the Cessna 172 in Microsoft Flight Simulator 2024. Read a short
+              lesson at your desk, then fly it in the sim and see how you did.
+            </p>
+            <div class="cta-row">
+              <a class="button" href="#lesson">Read the first-flight lesson</a>
+              <span class="aside-note">No account needed to read.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="strip">
+          <svg
+            id="scene"
+            viewBox="-70 110 1200 250"
+            preserveAspectRatio="xMidYMax slice"
+            role="img"
+            aria-label="A Cessna 172 on the runway, seen from the side."
+          >
+            <g id="far-hills" class="far-hills">
+              <path
+                id="far-shape"
+                d="M0 250C90 232 170 214 250 224 330 234 400 176 470 150 540 124 590 210 690 218 790 226 890 190 990 212 1090 234 1140 246 1200 250V380H0Z"
+              />
+              <use href="#far-shape" x="1200" />
+              <use href="#far-shape" x="-1200" />
+            </g>
+            <g id="near-hills" class="near-hills">
+              <path
+                id="near-shape"
+                d="M0 276C120 262 210 252 330 264 450 276 520 246 640 250 760 254 830 278 950 270 1070 262 1130 272 1200 276V380H0Z"
+              />
+              <use href="#near-shape" x="1200" />
+              <use href="#near-shape" x="-1200" />
+            </g>
+            <g id="ground">
+              <rect class="field" x="-200" y="290" width="1600" height="70" />
+              <rect class="asphalt" x="-200" y="296" width="1600" height="26" />
+              <g id="dashes" class="paint">
+                <rect x="-280" y="307" width="64" height="4" />
+                <rect x="-140" y="307" width="64" height="4" />
+                <rect x="0" y="307" width="64" height="4" />
+                <rect x="140" y="307" width="64" height="4" />
+                <rect x="280" y="307" width="64" height="4" />
+                <rect x="420" y="307" width="64" height="4" />
+                <rect x="560" y="307" width="64" height="4" />
+                <rect x="700" y="307" width="64" height="4" />
+                <rect x="840" y="307" width="64" height="4" />
+                <rect x="980" y="307" width="64" height="4" />
+                <rect x="1120" y="307" width="64" height="4" />
+                <rect x="1260" y="307" width="64" height="4" />
+              </g>
+              <ellipse id="shadow" class="shadow" cx="536" cy="300" rx="165" ry="4" opacity="0.5" />
+            </g>
+            <g id="plane" transform="translate(333.75 164.75) scale(1.25)">
+              <path class="skin" d="M88 42 47 3C45 1 42 0 39 0H22L27 52Z" />
+              <rect class="skin" x="4" y="50" width="58" height="6" rx="3" />
+              <path
+                class="skin"
+                d="M298 60C298 55 293 52 286 51L240 47 216 26H150C120 30 84 42 52 48L16 52 14 58C60 66 106 78 146 84L236 86C262 86 282 80 292 70 296 67 298 64 298 60Z"
+              />
+              <path class="glass" d="M219 31 237 46H212V31Z" />
+              <path class="glass" d="M208 31V46H180V31Z" />
+              <path class="glass" d="M176 31V46H153L160 31Z" />
+              <path class="leg" d="M198 26 204 84M192 85 182 93M268 86V93" />
+              <circle class="tyre" cx="181" cy="99" r="6" />
+              <circle class="tyre" cx="268" cy="100" r="5" />
+              <path class="skin" d="M162 99C164 91 178 88 190 91 195 92 197 95 197 98Z" />
+              <path class="skin" d="M252 100C254 93 266 91 276 93 280 94 282 96 282 99Z" />
+              <path
+                class="trim"
+                d="M236 21C236 17 226 15 212 15L150 17C142 18 138 20 138 23L140 26H228C233 26 236 24 236 21Z"
+              />
+              <path class="trim" d="M286 51C293 52 298 55 298 60 298 64 296 67 292 70Z" />
+              <ellipse class="prop" cx="300" cy="60" rx="3" ry="30" />
+            </g>
+          </svg>
+          <div class="readout" aria-hidden="true">
+            <div class="readout-label">Airspeed</div>
+            <div>
+              <span class="readout-value" id="speed">0</span>
+              <span class="readout-unit">knots</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="speed-scale" aria-hidden="true">
+            <div class="speed-track"></div>
+            <div class="speed-mark speed-mark-start" style="left: 0">
+              <b>0</b><span>Stopped</span>
+            </div>
+            <div class="speed-mark" style="left: 61.11%"><b>55</b><span>Raise the nose</span></div>
+            <div class="speed-mark" style="left: 82.22%"><b>74</b><span>Climb</span></div>
+            <div class="speed-pointer" id="pointer"></div>
+          </div>
+          <div class="controls">
+            <div class="throttle">
+              <label for="throttle"><span>Throttle</span><span id="throttle-value">0%</span></label>
+              <input id="throttle" type="range" min="0" max="100" step="1" value="0" />
+              <div class="throttle-ends" aria-hidden="true">
+                <span>Idle</span><span>Full power</span>
+              </div>
+            </div>
+            <p class="cue" id="cue" aria-live="polite">Push the throttle all the way forward.</p>
+            <div class="control-buttons">
+              <button class="button" id="raise" type="button" disabled>Raise the nose</button>
+              <button class="button button-quiet" id="again" type="button" hidden>
+                Start over
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="wrap sections">
+        <section id="sittings" aria-labelledby="sittings-title">
+          <div class="section-head">
+            <h2 id="sittings-title">Ten minutes of reading buys you twenty minutes of flying.</h2>
+            <p>
+              Each lesson has one job. You learn a single idea on the page, then go and prove it in
+              the airplane while it&rsquo;s fresh.
+            </p>
+          </div>
+          <div class="sittings">
+            <div class="sitting">
+              <p class="minutes">10 <small>minutes at your desk</small></p>
+              <h3>Understand it</h3>
+              <ul class="plain-list">
+                <li>Plain explanations of why the airplane does what it does.</li>
+                <li>Diagrams you can drag: turn the wind, bank the wings, move the needle.</li>
+                <li>Two or three questions to check it stuck.</li>
+              </ul>
+            </div>
+            <div class="sitting">
+              <p class="minutes">20 <small>minutes in the sim</small></p>
+              <div class="sim-split">
+                <div style="display: grid; gap: 18px">
+                  <h3>Fly it</h3>
+                  <ul class="plain-list">
+                    <li>A flight card tells you exactly how to set up the sim.</li>
+                    <li>
+                      Your phone sits beside the screen with the steps and a stopwatch in big type.
+                    </li>
+                    <li>After you land, you mark the flight and it goes in your logbook.</li>
+                  </ul>
+                </div>
+                <div class="card-rows">
+                  <table>
+                    <caption>
+                      Flight card: First flight over Livermore
+                    </caption>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Airplane</th>
+                        <td>Cessna 172 Skyhawk, G1000</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Airport</th>
+                        <td>Livermore, KLVK</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Start on</th>
+                        <td>Runway 25R, engine running</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Weather</th>
+                        <td>Calm</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Time</th>
+                        <td>10:00, late spring</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="course" aria-labelledby="course-title">
+          <div class="section-head">
+            <h2 id="course-title">
+              From a first wobble over Livermore to a cross-country on your own.
+            </h2>
+            <p>
+              The course runs in the order a flight school would teach it. Two modules are open
+              today. The rest open as each one is flown and checked in the sim.
+            </p>
+          </div>
+          <table class="logbook">
+            <thead>
+              <tr>
+                <th scope="col">Module</th>
+                <th scope="col">By the end you can</th>
+                <th scope="col" class="num">Lessons</th>
+                <th scope="col" class="num">Flights</th>
+                <th scope="col" class="num">Hours</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody id="course-rows"></tbody>
+            <tfoot>
+              <tr>
+                <td class="cell-name">The whole course</td>
+                <td class="cell-does"></td>
+                <td class="num" data-unit="lessons">33</td>
+                <td class="num" data-unit="flights">29</td>
+                <td class="num" data-unit="hours">25</td>
+                <td class="cell-status"></td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+
+        <section id="scoring" aria-labelledby="scoring-title">
+          <div class="section-head">
+            <h2 id="scoring-title">You&rsquo;ll know how the landing went, to the knot.</h2>
+            <p>
+              Every flight is marked against a few numbers borrowed from real pilot training, so
+              &ldquo;that felt okay&rdquo; turns into something you can beat next time.
+            </p>
+          </div>
+          <div class="debrief">
+            <ul class="tiers">
+              <li>
+                <i class="medal medal-bronze" aria-hidden="true"></i><b>Bronze</b>
+                <span>You got it up and down safely. That counts.</span>
+              </li>
+              <li>
+                <i class="medal medal-silver" aria-hidden="true"></i><b>Silver</b>
+                <span>What an instructor expects from a student who&rsquo;s been practising.</span>
+              </li>
+              <li>
+                <i class="medal medal-gold" aria-hidden="true"></i><b>Gold</b>
+                <span>Inside the limits a private pilot is tested to.</span>
+              </li>
+            </ul>
+            <div class="sheet">
+              <div>
+                <h3>Full-stop landing</h3>
+                <p class="sheet-note">
+                  An example debrief from module 4. Aim for 65 knots on final approach.
+                </p>
+              </div>
+              <div
+                class="range-chart"
+                role="img"
+                aria-label="Final approach speed. Bronze is 50 to 80 knots, silver 55 to 75, gold 60 to 75. This example flight flew 68 knots, which is gold."
+              >
+                <span>Bronze</span>
+                <div class="range-lane">
+                  <div
+                    class="range-bar"
+                    style="left: 12.5%; width: 75%; background: var(--bronze)"
+                  ></div>
+                </div>
+                <span>Silver</span>
+                <div class="range-lane">
+                  <div
+                    class="range-bar"
+                    style="left: 25%; width: 50%; background: var(--silver)"
+                  ></div>
+                </div>
+                <span>Gold</span>
+                <div class="range-lane">
+                  <div
+                    class="range-bar"
+                    style="left: 37.5%; width: 37.5%; background: var(--gold)"
+                  ></div>
+                </div>
+                <span></span>
+                <div class="range-axis">
+                  <span style="left: 12.5%">50</span><span style="left: 37.5%">60</span
+                  ><span style="left: 62.5%">70</span><span style="left: 87.5%">80 knots</span>
+                </div>
+                <div
+                  style="position: absolute; inset: 0 0 0 calc(4.5rem + 12px); pointer-events: none"
+                >
+                  <div class="flown" style="left: 57.5%"></div>
+                </div>
+              </div>
+              <div class="result">
+                <b>You flew 68 knots.</b>
+                <span class="stamp">Gold</span>
+              </div>
+              <ul class="marks">
+                <li><span>Touchdown point</span><span>First third of the runway, silver</span></li>
+                <li>
+                  <span>Distance from the centerline</span><span>Within half a wingspan, gold</span>
+                </li>
+                <li><span>Bounce</span><span>One small one, corrected, silver</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="kit-title">
+          <div class="section-head">
+            <h2 id="kit-title">Three things on your desk.</h2>
+          </div>
+          <div class="kit">
+            <div>
+              <h3>The simulator</h3>
+              <p>
+                Microsoft Flight Simulator 2024, any edition, on PC or Xbox. The Skyhawk and every
+                airport in the course come with it. Older versions and other sims won&rsquo;t match
+                the lessons.
+              </p>
+            </div>
+            <div>
+              <h3>Something to steer with</h3>
+              <p>
+                A gamepad does the whole course, and lesson 0.2 sets it up with you. If you own a
+                joystick, or a yoke and pedals, use them.
+              </p>
+            </div>
+            <div>
+              <h3>A second screen</h3>
+              <p>
+                A phone, tablet or laptop next to the sim, so the steps stay in view while your
+                hands are busy.
+              </p>
+            </div>
+          </div>
+          <p class="straight-talk">
+            One thing to be straight about: this teaches you to fly a simulator. It follows real
+            training standards so the habits are good ones, but none of it counts toward a
+            pilot&rsquo;s licence. For that you need a real instructor in a real airplane.
+          </p>
+        </section>
+      </div>
+
+      <div class="wrap">
+        <div class="closing">
+          <h2>The airplane is parked on runway 25R with the engine running.</h2>
+          <a class="button" href="#lesson">Read the first-flight lesson</a>
+        </div>
+      </div>
+    </main>
+
+    <main id="view-lesson" hidden>
+      <div class="wrap lesson-grid">
+        <nav class="rail" aria-label="Module 0">
+          <p><a href="#home">Back to the front page</a></p>
+          <p class="rail-title">Module 0: Getting started</p>
+          <ol>
+            <li>
+              <span>0.1</span><span>Welcome: how Learn to Fly works</span
+              ><span class="done">Signed off</span>
+            </li>
+            <li>
+              <span>0.2</span><span>Setting up MSFS 2024 for training</span
+              ><span class="done">Signed off</span>
+            </li>
+            <li aria-current="page"><span>0.3</span><span>Your first flight</span></li>
+            <li><span>Fly</span><span>First flight over Livermore</span></li>
+          </ol>
+        </nav>
+
+        <header class="article lesson-head">
+          <h1>Your first flight</h1>
+          <p class="standfirst">
+            Take off from Livermore, fly some gentle turns over the valley and come back. No scores,
+            just the feel of flying.
+          </p>
+          <p class="meta">
+            Lesson 0.3. A 10 minute read. Checked in MSFS 2024, version 1.8.16.0, on 28 September
+            2026.
+          </p>
+        </header>
+
+        <article class="article lesson-body">
+          <h2>What to expect</h2>
+          <p>
+            This first flight is about getting a feel for the airplane. There&rsquo;s no score to
+            worry about. The flight passes as long as you take off and make a few turns.
+            You&rsquo;ll learn the proper technique for everything you do today in later modules.
+          </p>
+          <p>
+            Expect the airplane to feel twitchy at first. That&rsquo;s normal. Everyone
+            over-controls on their first flight.
+          </p>
+          <div class="right-seat">
+            <b>From the right seat</b>
+            <p>
+              Make a small input, wait, then make another small input. The airplane needs a moment
+              to respond to each movement you make.
+            </p>
+          </div>
+
+          <h2>Five things to watch</h2>
+          <ol class="watch">
+            <li>
+              <span
+                ><strong>The horizon.</strong> Where it sits in the windshield tells you whether the
+                nose is up, down or level, and whether the wings are level.</span
+              >
+            </li>
+            <li>
+              <span
+                ><strong>Airspeed.</strong> The tape on the left of the PFD, the big screen in front
+                of you, shows it in knots.</span
+              >
+            </li>
+            <li>
+              <span
+                ><strong>Altitude.</strong> The tape on the right shows it in feet above sea
+                level.</span
+              >
+            </li>
+            <li>
+              <span
+                ><strong>Heading.</strong> The compass at the bottom of the PFD shows which way the
+                nose points.</span
+              >
+            </li>
+            <li>
+              <span
+                ><strong>The runway.</strong> On the way out and on the way back, know where it
+                is.</span
+              >
+            </li>
+          </ol>
+          <p>Look outside most of the time. Glance at the instruments, then look back outside.</p>
+
+          <h2>Step by step</h2>
+          <p>
+            Start on Runway 25R at Livermore with the engine running. Pause the sim and read these
+            steps first. Tick each one off as you go.
+          </p>
+          <ol class="steps" id="steps">
+            <li>
+              <label
+                ><span class="step-text"
+                  ><strong>Set the flaps to 10&deg;.</strong> A little flap helps the airplane lift
+                  off sooner.</span
+                ><input type="checkbox" id="step-1"
+              /></label>
+            </li>
+            <li>
+              <label
+                ><span class="step-text"
+                  ><strong>Unpause and add full power smoothly.</strong> The airplane starts to
+                  roll. Keep the nose pointed down the centerline with small rudder inputs: pedals,
+                  a twist of the stick, or the LT and RT triggers on a gamepad.</span
+                ><input type="checkbox" id="step-2"
+              /></label>
+            </li>
+            <li>
+              <label
+                ><span class="step-text"
+                  ><strong>At 55 knots, gently raise the nose.</strong> The airplane lifts off. Hold
+                  the nose a little above the horizon and let it climb at about 74 knots.</span
+                ><input type="checkbox" id="step-3"
+              /></label>
+            </li>
+            <li>
+              <label
+                ><span class="step-text"
+                  ><strong>Raise the flaps to 0&deg;</strong> once you&rsquo;re climbing steadily, a
+                  few hundred feet above the ground. Raising them right after lift-off, while
+                  you&rsquo;re still slow and low, can make the airplane sink.</span
+                ><input type="checkbox" id="step-4"
+              /></label>
+            </li>
+            <li>
+              <label
+                ><span class="step-text"
+                  ><strong>Climb to 3,000 ft MSL.</strong> Then lower the nose until the horizon
+                  sits a little above the top of the panel and reduce power to about 2,300 RPM. The
+                  airspeed settles around 100 knots.</span
+                ><input type="checkbox" id="step-5"
+              /></label>
+            </li>
+            <li>
+              <label
+                ><span class="step-text"
+                  ><strong>Make gentle turns.</strong> Roll to about 15&ndash;20&deg; of bank, hold
+                  it, then roll level. Try a turn left toward Lake Del Valle, southeast of the
+                  airport, and a turn right toward Mt Diablo, the big mountain to the
+                  northwest.</span
+                ><input type="checkbox" id="step-6"
+              /></label>
+            </li>
+            <li>
+              <label
+                ><span class="step-text"
+                  ><strong>Look around.</strong> Find Interstate 580 running east&ndash;west through
+                  the valley, the town of Livermore, and the Altamont Pass: the low gap in the hills
+                  to the east.</span
+                ><input type="checkbox" id="step-7"
+              /></label>
+            </li>
+          </ol>
+          <p class="steps-count" id="steps-count" aria-live="polite">0 of 7 ticked</p>
+
+          <div class="right-seat">
+            <b>From the right seat</b>
+            <p>
+              Attitude and power work together. Leave the throttle at full and the airplane keeps
+              climbing slowly, even with the nose level. Pull the power too far back and it sinks.
+              At about 2,300 RPM, the level picture gives level flight.
+            </p>
+          </div>
+          <div class="sim-note">
+            <b>Only in the sim</b>
+            <span
+              >In real life the Altamont Pass hills are lined with wind turbines. The sim&rsquo;s
+              scenery may not show them, so use the gap in the hills and the freeway instead.</span
+            >
+          </div>
+
+          <form class="quiz" id="quiz-1" data-answer="55">
+            <fieldset>
+              <legend>At what airspeed do you raise the nose in the Cessna 172?</legend>
+              <div class="choices">
+                <label class="choice"
+                  ><input type="radio" name="q1" id="q1-a" value="62" />62 knots</label
+                >
+                <label class="choice"
+                  ><input type="radio" name="q1" id="q1-b" value="55" />55 knots</label
+                >
+                <label class="choice"
+                  ><input type="radio" name="q1" id="q1-c" value="74" />74 knots</label
+                >
+                <label class="choice"
+                  ><input type="radio" name="q1" id="q1-d" value="129" />129 knots</label
+                >
+              </div>
+            </fieldset>
+            <div><button class="button button-quiet" type="submit">Check my answer</button></div>
+            <div class="verdict" aria-live="polite" hidden>
+              <b></b>
+              <span
+                >You raise the nose at 55 knots. Then you climb at about 74 knots, the speed that
+                gains height fastest.</span
+              >
+            </div>
+          </form>
+
+          <h2>Coming back</h2>
+          <p>When you&rsquo;re done, you have two choices:</p>
+          <ul class="plain-list">
+            <li><strong>End the flight</strong> from the pause menu. That is fine for today.</li>
+            <li>
+              <strong>Try to land.</strong> Fly back toward the airport, line up with a runway from
+              a long way out, reduce power and descend gently. Don&rsquo;t worry if it isn&rsquo;t
+              pretty. Module 4 teaches landing.
+            </li>
+          </ul>
+          <p>
+            If things start to feel like too much at any point, pause. Take a breath, look at where
+            you are, read the next step, then unpause.
+          </p>
+
+          <form class="quiz" id="quiz-2" data-answer="pause">
+            <fieldset>
+              <legend>What should you do if you feel overwhelmed during a flight?</legend>
+              <div class="choices choices-long">
+                <label class="choice"
+                  ><input type="radio" name="q2" id="q2-a" value="hope" />Keep going and hope it
+                  gets better</label
+                >
+                <label class="choice"
+                  ><input type="radio" name="q2" id="q2-b" value="pause" />Pause the sim</label
+                >
+                <label class="choice"
+                  ><input type="radio" name="q2" id="q2-c" value="autopilot" />Turn on the
+                  autopilot</label
+                >
+                <label class="choice"
+                  ><input type="radio" name="q2" id="q2-d" value="restart" />Restart the flight
+                  immediately</label
+                >
+              </div>
+            </fieldset>
+            <div><button class="button button-quiet" type="submit">Check my answer</button></div>
+            <div class="verdict" aria-live="polite" hidden>
+              <b></b>
+              <span
+                >Pause. It freezes everything so you can look around, re-read the steps and make a
+                plan. You can&rsquo;t pause a real airplane, so use it freely while you learn.</span
+              >
+            </div>
+          </form>
+
+          <div class="sign-off">
+            <button class="button" id="sign" type="button">Sign off this lesson</button>
+            <div class="big-stamp" id="signed" hidden>
+              Signed off<small id="signed-date"></small>
+            </div>
+          </div>
+
+          <div class="next-flight">
+            <h2>Now fly it: First flight over Livermore</h2>
+            <p>
+              About 20 minutes in the sim. Take off, fly a relaxed loop over the valley and feel how
+              the Skyhawk responds. Reach 3,000 ft and turn once each way and you&rsquo;ve passed.
+            </p>
+          </div>
+        </article>
+
+        <aside class="numbers" aria-labelledby="numbers-title">
+          <p class="card-title" id="numbers-title">Numbers for this flight</p>
+          <dl>
+            <div>
+              <dt>Takeoff flaps</dt>
+              <dd>10&deg;</dd>
+            </div>
+            <div>
+              <dt>Raise the nose</dt>
+              <dd>55 knots</dd>
+            </div>
+            <div>
+              <dt>Climb</dt>
+              <dd>74 knots</dd>
+            </div>
+            <div>
+              <dt>Level off</dt>
+              <dd>3,000 ft</dd>
+            </div>
+            <div>
+              <dt>Cruise power</dt>
+              <dd>2,300 RPM</dd>
+            </div>
+            <div>
+              <dt>Bank in turns</dt>
+              <dd>15&ndash;20&deg;</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="wrap">
+      <div class="footer">
+        <p>
+          Learn to Fly is for flight simulation only. Design prototype: the home page and one sample
+          lesson.
+        </p>
+        <p>Public beta. Modules 0 and 1 are open.</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var byId = function (id) {
+          return document.getElementById(id);
+        };
+        var calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        /* Views: #home and #lesson */
+        var home = byId('view-home');
+        var lesson = byId('view-lesson');
+        function show() {
+          var isLesson = location.hash === '#lesson';
+          home.hidden = isLesson;
+          lesson.hidden = !isLesson;
+        }
+        window.addEventListener('hashchange', function () {
+          show();
+          window.scrollTo(0, 0);
+        });
+        show();
+        document.querySelectorAll('[data-jump]').forEach(function (link) {
+          link.addEventListener('click', function (event) {
+            event.preventDefault();
+            if (location.hash === '#lesson') {
+              history.replaceState(null, '', '#home');
+              show();
+            }
+            byId(link.dataset.jump).scrollIntoView({ behavior: calm.matches ? 'auto' : 'smooth' });
+          });
+        });
+
+        /* The course table */
+        var modules = [
+          [
+            'Getting started',
+            'Set the sim up so it teaches you, then fly a loop over Livermore.',
+            3,
+            1,
+            '1',
+            true,
+          ],
+          [
+            'Meet the Skyhawk',
+            'Name every control and screen in the cockpit, and the speeds that matter.',
+            4,
+            1,
+            '1½',
+            true,
+          ],
+          [
+            'Fundamentals of flight',
+            'Hold a height, climb, descend and make smooth, balanced turns.',
+            4,
+            4,
+            '3',
+            false,
+          ],
+          [
+            'Ground operations',
+            'Start the engine, taxi to the runway and run the checks before takeoff.',
+            3,
+            4,
+            '2',
+            false,
+          ],
+          [
+            'Takeoffs, patterns and landings',
+            'Fly a full circuit of the airport and land on the centerline.',
+            4,
+            5,
+            '4½',
+            false,
+          ],
+          [
+            'Slow flight, stalls and emergencies',
+            'Fly slowly on purpose, recover from a stall and handle an engine failure.',
+            4,
+            5,
+            '3½',
+            false,
+          ],
+          [
+            'VFR navigation',
+            'Find your way with a chart, a compass, a radio beacon and the GPS.',
+            6,
+            5,
+            '5',
+            false,
+          ],
+          [
+            'Radio and airport operations',
+            'Talk on the radio at airports with and without a control tower.',
+            3,
+            2,
+            '2',
+            false,
+          ],
+          [
+            'Capstone',
+            'Plan and fly a cross-country trip, then pass a practice checkride.',
+            2,
+            2,
+            '2½',
+            false,
+          ],
+        ];
+        byId('course-rows').innerHTML = modules
+          .map(function (m, i) {
+            return (
+              '<tr class="' +
+              (m[5] ? 'open' : 'waiting') +
+              '">' +
+              '<th scope="row" class="cell-name"><span class="module-name">' +
+              i +
+              '. ' +
+              m[0] +
+              '</span></th>' +
+              '<td class="cell-does module-does">' +
+              m[1] +
+              '</td>' +
+              '<td class="num" data-unit="lessons">' +
+              m[2] +
+              '</td>' +
+              '<td class="num" data-unit="' +
+              (m[3] === 1 ? 'flight' : 'flights') +
+              '">' +
+              m[3] +
+              '</td>' +
+              '<td class="num" data-unit="' +
+              (m[4] === '1' ? 'hour' : 'hours') +
+              '">' +
+              m[4] +
+              '</td>' +
+              '<td class="cell-status">' +
+              (m[5]
+                ? '<span class="stamp">Open now</span>'
+                : '<span class="pending">In sim checks</span>') +
+              '</td></tr>'
+            );
+          })
+          .join('');
+
+        /* Takeoff strip */
+        var throttle = byId('throttle');
+        var raise = byId('raise');
+        var again = byId('again');
+        var cue = byId('cue');
+        var plane = byId('plane');
+        var state;
+        function reset() {
+          state = {
+            speed: 0,
+            power: 0,
+            flying: false,
+            pitch: 0,
+            height: 0,
+            roll: 0,
+            last: 0,
+            running: false,
+            airtime: 0,
+          };
+          throttle.value = 0;
+          throttle.disabled = false;
+          again.hidden = true;
+          raise.hidden = false;
+          draw();
+        }
+        function say(text) {
+          if (cue.textContent !== text) cue.textContent = text;
+        }
+        function draw() {
+          var s = state;
+          byId('speed').textContent = Math.round(s.speed);
+          byId('throttle-value').textContent = Math.round(s.power * 100) + '%';
+          byId('pointer').style.left = (Math.min(s.speed, 90) / 90) * 100 + '%';
+          plane.setAttribute(
+            'transform',
+            'translate(333.75 ' +
+              (164.75 - s.height * 0.45).toFixed(2) +
+              ') scale(1.25) rotate(' +
+              (-s.pitch).toFixed(2) +
+              ' 181 105)',
+          );
+          /* The ground drops away as the airplane climbs; it scrolls only when motion is welcome. */
+          var scroll = calm.matches ? 0 : s.roll;
+          var shift = function (id, x, y) {
+            byId(id).setAttribute(
+              'transform',
+              'translate(' + (-x).toFixed(1) + ' ' + y.toFixed(1) + ')',
+            );
+          };
+          shift('ground', 0, s.height * 0.44);
+          shift('dashes', scroll % 140, 0);
+          shift('near-hills', (scroll * 0.12) % 1200, s.height * 0.22);
+          shift('far-hills', (scroll * 0.04) % 1200, s.height * 0.1);
+          var shadow = byId('shadow');
+          shadow.setAttribute('opacity', Math.max(0, 0.5 * (1 - s.height / 100)).toFixed(3));
+          shadow.setAttribute('rx', (165 - s.height * 0.9).toFixed(1));
+          raise.disabled = s.flying || s.speed < 54.5;
+          if (s.flying) {
+            say(
+              s.height < 85
+                ? 'Nose up. You’re flying.'
+                : 'Climbing at 74 knots. That’s step three of your first lesson.',
+            );
+          } else if (s.speed >= 54.5) {
+            say('55 knots. Raise the nose.');
+          } else if (s.power === 0 && s.speed < 1) {
+            say('Push the throttle all the way forward.');
+          } else if (s.power === 0) {
+            say('Power’s off. The airplane is slowing down.');
+          } else if (s.power < 0.7 && s.speed > 82 * s.power - 3) {
+            say('Not enough power to lift off. Push it all the way.');
+          } else {
+            say('Rolling. Keep it straight and wait for 55 knots.');
+          }
+        }
+        function tick(now) {
+          var s = state;
+          var dt = Math.min(0.05, (now - s.last) / 1000) || 0;
+          s.last = now;
+          var target = s.flying ? 74 : 82 * s.power;
+          var rate = s.flying ? 0.9 : target > s.speed ? 0.28 : 0.5;
+          s.speed += (target - s.speed) * rate * dt;
+          if (s.flying) {
+            s.airtime += dt;
+            s.pitch += (9 - s.pitch) * 3 * dt;
+            if (s.pitch > 5) s.height += (100 - s.height) * 0.55 * dt;
+          }
+          s.roll += s.speed * dt * 7;
+          draw();
+          var moving = s.flying ? s.airtime < 12 : s.speed > 0.05 || s.power > 0;
+          if (s.flying && !moving) {
+            s.speed = 74;
+            draw();
+          }
+          if (moving) requestAnimationFrame(tick);
+          else s.running = false;
+        }
+        function run() {
+          if (state.running) return;
+          state.running = true;
+          state.last = performance.now();
+          requestAnimationFrame(tick);
+        }
+        throttle.addEventListener('input', function () {
+          state.power = throttle.value / 100;
+          throttle.setAttribute('aria-valuetext', throttle.value + ' percent power');
+          draw();
+          run();
+        });
+        raise.addEventListener('click', function () {
+          if (state.flying || state.speed < 54.5) return;
+          state.flying = true;
+          throttle.disabled = true;
+          raise.hidden = true;
+          again.hidden = false;
+          if (calm.matches) {
+            state.pitch = 9;
+            state.height = 100;
+            state.speed = 74;
+            state.airtime = 12;
+          }
+          draw();
+          run();
+          again.focus();
+        });
+        again.addEventListener('click', function () {
+          reset();
+          throttle.focus();
+        });
+        reset();
+
+        /* Lesson: steps, questions, sign-off */
+        var boxes = document.querySelectorAll('#steps input');
+        function count() {
+          var done = document.querySelectorAll('#steps input:checked').length;
+          byId('steps-count').textContent = done + ' of ' + boxes.length + ' ticked';
+        }
+        boxes.forEach(function (box) {
+          box.addEventListener('change', count);
+        });
+        count();
+
+        document.querySelectorAll('.quiz').forEach(function (quiz) {
+          quiz.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var picked = quiz.querySelector('input:checked');
+            var verdict = quiz.querySelector('.verdict');
+            var title = verdict.querySelector('b');
+            var body = verdict.querySelector('span');
+            verdict.hidden = false;
+            if (!picked) {
+              title.textContent = 'Pick an answer first.';
+              body.hidden = true;
+              return;
+            }
+            body.hidden = false;
+            title.textContent =
+              picked.value === quiz.dataset.answer ? 'That’s right.' : 'Not quite.';
+          });
+        });
+
+        byId('sign').addEventListener('click', function () {
+          var signed = byId('signed');
+          byId('signed-date').textContent = new Date().toLocaleDateString('en-GB', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+          });
+          signed.hidden = false;
+          signed.classList.remove('stamp-in');
+          void signed.offsetWidth;
+          signed.classList.add('stamp-in');
+          byId('sign').textContent = 'Signed off';
+          byId('sign').disabled = true;
+        });
+      })();
+    </script>
+    <!-- fragment:end -->
+  </body>
+</html>
