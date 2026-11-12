@@ -54,7 +54,7 @@ export interface ModuleSummary {
   /**
    * True when the module is an unverified draft shown in a preview environment. Production
    * only serves published modules, and a module is published only once every lesson and
-   * challenge in it is verified (D-27), so `draft` is false on everything a learner sees.
+   * challenge in it is verified (D-32), so `draft` is false on everything a learner sees.
    */
   draft: boolean;
   slug: string;

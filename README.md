@@ -31,7 +31,7 @@ foundations in the same Skyhawk) is planned in [`v2.md`](./v2.md).
 
 MERN with TypeScript on both sides (v1.md Section 26):
 
-- **Client:** React 19, Vite, React Router 7, TanStack Query, Tailwind CSS v4
+- **Client:** React 19, Vite, React Router 8, TanStack Query, Tailwind CSS v4
 - **Server:** Node.js 24 LTS, Express 5, Mongoose, express-session + connect-mongo
 - **Database:** MongoDB (local Docker or Atlas)
 - **Shared:** Zod schemas, scoring and aviation maths in `shared/`

@@ -120,7 +120,7 @@ export function resolveSetup(setup: Challenge['setup'], bundle: ContentBundle): 
 /** Maps the validated bundle to the documents stored in each collection. */
 export function buildDocuments(bundle: ContentBundle, includeDrafts = false): CollectionPlan[] {
   const v = (published: boolean) => visibility(published, includeDrafts);
-  // Lessons and challenges are only published when their module is (D-27): an unpublished
+  // Lessons and challenges are only published when their module is (D-32): an unpublished
   // module is unverified as a whole, so nothing in it is served, listed or linked to.
   const modulePublished = new Map(bundle.modules.map((m) => [m.slug, m.published]));
   const inPublishedModule = (published: boolean, moduleSlug: string) =>

@@ -7,7 +7,7 @@ into MongoDB.
 ```
 content/
   aircraft.yaml        Cessna 172S data: V-speeds, arcs, limits, power settings
-  modules.yaml         The 9 modules and the ordered lessons/challenges in each
+  modules.yaml         Modules 0–21 (v1 and v2) and the ordered lessons/challenges in each
   lessons/<module>/    One Markdown file per lesson
   challenges/          One YAML file per challenge
   checklists.yaml      Normal procedures in our own words (Appendix B)
@@ -33,7 +33,7 @@ characters) and are referenced by file name only: `![Alt text](m2-l4-lift.webp "
    `published: true`.
 5. Run `npm run content:warnings`, then `npm run content:validate`, and preview it (below).
 6. The module itself stays `published: false` in `modules.yaml` until every lesson and
-   challenge in it is published (v1.md D-27); the validator enforces this, and a lesson in
+   challenge in it is published (v1.md D-32); the validator enforces this, and a lesson in
    an unpublished module is never served, even when it is published.
 
 ## Add a challenge

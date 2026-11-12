@@ -1,7 +1,7 @@
 # The nine v1 modules (v1.md Section 13) and the thirteen v2 modules (v2.md Section 14).
 # `lessons` and `challenges` list slugs in curriculum order; add each slug here when its
 # file is written (v1 Phase 9, v2 Phases 22–23). A module stays `published: false` until
-# every lesson and challenge it lists is verified and published (v1.md D-27, v2.md D2-17):
+# every lesson and challenge it lists is verified and published (v1.md D-32, v2.md D2-17):
 # the site and the API only show published modules, and the validator rejects a published
 # module that lists unverified content. For the public beta that is M0 and M1.
 modules:
