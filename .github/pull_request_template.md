@@ -21,9 +21,3 @@
 - [ ] Content validated (`npm run content:validate`) if content changed
 - [ ] Accessibility checked (keyboard, labels, contrast) for UI changes
 - [ ] Relevant v1.md / v2.md steps ticked
-
-## What I changed
-
-## What I couldn't do
-
-## What I need from you

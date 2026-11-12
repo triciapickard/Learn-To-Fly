@@ -18,5 +18,4 @@ Sources: v1.md "How to use this document" and "Document maintenance rules";
   `README.md`, `content/README.md` or the AGENTS.md folder tree as needed. User-facing
   changes get a `CHANGELOG.md` line.
 - **P6 The PR body is complete** (when reviewing a PR): Summary, Plan reference, Screenshots
-  for UI changes (light and dark, mobile and desktop), Testing done, the checklist, and the
-  three closing sections ("What I changed", "What I couldn't do", "What I need from you").
+  for UI changes (light and dark, mobile and desktop), Testing done and the checklist.
