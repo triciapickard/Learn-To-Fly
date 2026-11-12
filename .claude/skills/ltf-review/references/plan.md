@@ -10,12 +10,12 @@ Sources: v1.md "How to use this document" and "Document maintenance rules";
   ticks it in the same PR. Completed steps are never deleted.
 - **P3 Decisions are logged.** A change that departs from the plan (a different library,
   layout, rule or scope) adds or updates an entry in the Decision Log (v1.md Section 5,
-  v2.md Section 5) **and** the section it affects. The next free id is one above the
-  highest existing `D-` number.
+  v2.md Section 5) **and** the section it affects. The next free id is at the top of
+  v1.md Section 5 (v2 decisions use `D2-`).
 - **P4 The Status line is current.** Finishing or starting a phase updates the Status line
   at the top of v1.md or v2.md.
 - **P5 Docs follow the code.** New scripts, env vars, content directives or folders update
-  `README.md`, `content/README.md` or the AGENTS.md folder tree as needed. User-facing
-  changes get a `CHANGELOG.md` line.
+  `README.md`, `content/README.md`, the v1.md Section 25 tree, or the AGENTS.md repo map
+  (top-level folders only) as needed. User-facing changes get a `CHANGELOG.md` line.
 - **P6 The PR body is complete** (when reviewing a PR): Summary, Plan reference, Screenshots
   for UI changes (light and dark, mobile and desktop), Testing done and the checklist.

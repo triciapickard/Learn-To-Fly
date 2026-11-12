@@ -21,7 +21,7 @@ function duplicates(values: string[]): string[] {
  * Cross-reference rules (plan.md Section 28.5). Adds issues to `bundle.issues`.
  * Draft items (`published: false`) may still contain `verify` callouts and have no
  * `lastVerifiedAt`; published items may not. A published module is fully verified: every
- * lesson and challenge it lists is published (D-27).
+ * lesson and challenge it lists is published (D-32).
  */
 export function validateContent(bundle: ContentBundle): void {
   const {
@@ -107,7 +107,7 @@ export function validateContent(bundle: ContentBundle): void {
         `Module "${m.slug}": published lesson orders must be contiguous from 1`,
       );
     }
-    // A published module is fully verified (D-27): every lesson and challenge it lists is
+    // A published module is fully verified (D-32): every lesson and challenge it lists is
     // published, and it has something to show. Published content in an unpublished module
     // is never served (the seeder keeps it unpublished), so it is reported too.
     if (m.published) {

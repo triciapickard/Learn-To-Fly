@@ -15,7 +15,7 @@ All notable changes to this project are documented here. The format is based on
   the reader directly), the five "How a lesson works" steps, the curriculum heading, and the
   MSFS 2024 requirement, which is now a short note in the Module 0 section instead of its own
   card (v1.md D-29).
-- Public beta: only fully verified modules are shown (v1.md D-27). A module is published
+- Public beta: only fully verified modules are shown (v1.md D-32). A module is published
   only once every lesson and challenge in it is published; the validator enforces it, the
   seeder hides everything in an unpublished module, and `ModuleSummary` gains a `draft`
   flag for preview builds. Modules 2–8 are now `published: false` until verified, so the

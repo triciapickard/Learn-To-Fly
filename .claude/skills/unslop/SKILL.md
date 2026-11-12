@@ -20,7 +20,7 @@ When the text is Learn to Fly content, these house rules come first. They come f
 
 ## Patterns to detect and fix
 
-Rule numbers are stable ids that other skills cite. A removed rule leaves a gap.
+Rule numbers are stable ids that other skills cite. A removed rule leaves a gap. Prettier renumbers each list to run in sequence, so add a new rule at the end of the last list, never in the middle.
 
 ### Content
 
@@ -28,8 +28,6 @@ Rule numbers are stable ids that other skills cite. A removed rule leaves a gap.
 4. **Vague attributions.** "Experts believe", "Industry reports suggest", "Some critics argue". Name the source or delete.
 5. **"X, not Y" taglines.** A sentence that ends by correcting a contrast nobody raised: "It is a first look, not a license.", "a floor, not a target", "a hint, not a guarantee", "is a win, not a failure", "the sim is the warm-up, not the real thing", "a plan, not a promise". LTF uses dozens. Keep one when the reader really would confuse the two and the contrast is the lesson ("the needle you follow is the GPS leg, not the localizer"). Otherwise state the positive fact and give the reason: "Those reserves are the legal minimum, so Learn to Fly adds a personal buffer." Same for "is not cheating; it is how you learn". Rule 9 covers the "not just X, but Y" form.
 6. **Count announcements.** "Two rules protect you.", "Three things happen:", "Holds have three jobs:", "Two habits keep you honest under the shelves:", "Three things to carry forward:". Announcing the count before the list adds a sentence and pushes the list toward three (rule 10). Drop the count and lead with the content, or let the list start the section. In the closing summaries, write "To carry forward:" so the list can have as many items as it needs. Keep a count only when the number is itself the fact ("Every challenge has three steps: Brief, Fly, Debrief", where the UI shows three tabs).
-7. **Scene-setting openers.** "Picture a grass strip after a week of rain." "Every technique in this lesson comes from one idea:" A lesson or section can open on a concrete situation, but in one sentence that leads straight to what the learner does. Cut the "one idea" and "comes down to" framing and state the idea.
-8. **Honesty talk.** "an honest, scored debrief", "Be honest with yourself", "Debrief honestly", "The only person you can cheat is yourself", "keeps you honest", "an honest 'I don't know'", "the airplane responds honestly". LTF repeats this across the site and lessons. Say it once where scoring is explained (self-assessed scores only help if you mark what happened), then describe the mechanism elsewhere: "score each row against what you flew".
 
 ### Language
 
@@ -42,14 +40,13 @@ Rule numbers are stable ids that other skills cite. A removed rule leaves a gap.
 
 ### Style
 
-13. **Em dash overuse.** Avoid em dashes entirely. Use periods or commas only (no parentheses, no en dashes, no hyphen-as-dash substitutes). If a thought needs separation, end the sentence or use a comma. LTF exceptions: an en dash in a numeric range ("60–70 KIAS") is house style, and a lone "—" marking an empty table cell is fine. A label list such as "**C** — Clearance limit" becomes "**C**: Clearance limit".
+13. **Em dash overuse.** Avoid em dashes entirely. Use commas, parentheses or full stops instead (not en dashes or hyphens as dash substitutes). If a thought needs separation, end the sentence or use a comma. LTF exceptions: an en dash in a numeric range ("60–70 KIAS") is house style, and a lone "—" marking an empty table cell is fine. A label list such as "**C** — Clearance limit" becomes "**C**: Clearance limit".
 14. **Colon overuse.** Colons are fine before a list or example, not as mid-sentence connectors. "If you're coming from traditional automation: instead of registering event handlers, you describe conditions" adds nothing with the colon. Rewrite to let the point stand on its own without comparison framing. "Describing when the scheduler should fire works best as plain English." Same meaning, no crutch punctuation. LTF form: the label-colon reveal, "The rule of thumb: lean for takeoff...", "The fix is a habit: brief the taxi...", "The habit: compute...", "The honest plan is: ...". Write the sentence: "Lean for takeoff whenever the density altitude is above about 3,000 ft."
 15. **Boldface overuse.** Don't bold every proper noun or acronym. LTF lessons average over 20 bold spans each. Bold a term where it is defined, a memory item, or the one action a step turns on. Unbold emphasis words (**not**, **and**, **never**, **why**) and phrases bolded for drama; the sentence should carry the stress.
 16. **Inline-header lists.** The tell is a bold label and colon that restates the line: "**Performance:** Performance improved...". Convert those to prose. A bold lead-in that ends in a period, names the item, and is followed by genuinely new detail ("**Schema in TypeScript.** Tables live in one file.") is fine, not a tell.
 17. **Title case headings.** Use sentence case.
 18. **Decorative emojis.** Remove from headings and bullets.
 19. **Curly quotes.** Use straight quotes.
-20. **Semicolon chains.** LTF lessons hold over 850 semicolons, most joining two full sentences: "Taxi slowly with as little braking as possible; the surface does the braking for you." Use a period. Keep a semicolon only inside a dense list where commas are already taken.
 
 ### Communication artifacts
 
@@ -76,3 +73,11 @@ Rule numbers are stable ids that other skills cite. A removed rule leaves a gap.
 32. **Mannered prose.** Metaphor or flourish where a literal phrase exists: aphorisms ("wire it or delete it"), rhetorical fragments for effect, personified code ("the plan holds it"), figurative verbs ("rides along", "stands on"), stock framing phrases. "A dial worth turning" becomes "a parameter worth varying". Say what you mean. Rule 26 covers the metaphor nouns. LTF form: personified airplanes, instruments and bodies ("the airplane will cheerfully fly whatever hold you loaded", "when the instruments lie", "Why your inner ear lies", "the runway that grabs your wheels", "the flashlight earns its place") and cute headings. Name what happens: "the autopilot flies whatever hold you loaded, right or wrong", "Why your inner ear misleads you". A heading names the section's topic.
 33. **Over-compression.** Dropped articles, verbless fragments, symbol-speak, and abbreviations that make the reader decode instead of read. "Parser rejects bad date → exit 2, no write" becomes "The parser rejects a bad date, exits with code 2, and writes nothing." Write whole sentences with their articles and verbs, and spell out arrows and abbreviations.
 34. **"That is why" pointers.** "That is why step 5 matters:", "which is exactly why the sim is such a good place to learn", "Here is the physics behind it". These point at the reasoning instead of giving it. Put the reason in the sentence that needs it ("Climb out of ground effect at that speed and the drag comes back, so the airplane cannot accelerate."), and cut "exactly", "really" and "actually" used for stress (rule 30).
+
+### Learn to Fly additions
+
+Rules added after the list above. 35 and 36 belong with Content, 37 with Style.
+
+35. **Scene-setting openers.** "Picture a grass strip after a week of rain." "Every technique in this lesson comes from one idea:" A lesson or section can open on a concrete situation, but in one sentence that leads straight to what the learner does. Cut the "one idea" and "comes down to" framing and state the idea.
+36. **Honesty talk.** "an honest, scored debrief", "Be honest with yourself", "Debrief honestly", "The only person you can cheat is yourself", "keeps you honest", "an honest 'I don't know'", "the airplane responds honestly". LTF repeats this across the site and lessons. Say it once where scoring is explained (self-assessed scores only help if you mark what happened), then describe the mechanism elsewhere: "score each row against what you flew".
+37. **Semicolon chains.** LTF lessons hold over 850 semicolons, most joining two full sentences: "Taxi slowly with as little braking as possible; the surface does the braking for you." Use a period. Keep a semicolon only inside a dense list where commas are already taken.

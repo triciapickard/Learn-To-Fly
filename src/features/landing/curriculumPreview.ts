@@ -1,6 +1,6 @@
 /**
  * The nine planned v1 modules (v1.md Section 13.1); counts and `published` follow
- * content/modules.yaml. Only published (fully verified, D-27) modules are listed on the
+ * content/modules.yaml. Only published (fully verified, D-32) modules are listed on the
  * site; the rest count toward the planned total and live on the roadmap.
  */
 export const CURRICULUM_PREVIEW = [
