@@ -67,6 +67,40 @@ describe('reportQueryError', () => {
     );
   });
 
+  it('reports gateway errors without an API body as warnings, not errors', () => {
+    // JAVASCRIPT-REACT-7/-8: the Vite dev proxy answers 502 while the API restarts.
+    for (const status of [502, 503, 504]) {
+      reportQueryError(
+        new ApiError(
+          status,
+          'SERVICE_UNAVAILABLE',
+          "Couldn't reach",
+          [],
+          undefined,
+          'GET /auth/me',
+        ),
+      );
+    }
+    expect(capture).toHaveBeenCalledTimes(3);
+    for (const [, context] of capture.mock.calls) {
+      expect(context).toMatchObject({
+        level: 'warning',
+        tags: { 'api.code': 'SERVICE_UNAVAILABLE' },
+      });
+    }
+  });
+
+  it('still reports a 503 sent by the API itself as an error', () => {
+    reportQueryError(new ApiError(503, 'SERVICE_UNAVAILABLE', 'Down', [], 'req-3', 'GET /health'));
+    expect(capture).toHaveBeenCalledWith(
+      expect.anything(),
+      expect.objectContaining({
+        level: 'error',
+        tags: expect.objectContaining({ requestId: 'req-3' }),
+      }),
+    );
+  });
+
   it('reports non-API errors as they are, but not aborted requests', () => {
     reportQueryError(new DOMException('aborted', 'AbortError'));
     expect(capture).not.toHaveBeenCalled();

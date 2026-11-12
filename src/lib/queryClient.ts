@@ -7,9 +7,11 @@ export const CONTENT_STALE_TIME = 5 * 60 * 1000;
 /**
  * Sends failed queries and mutations to Sentry (Section 34.4). React Query catches these
  * errors and the page shows an error state, so without this they would never be reported.
- * 4xx responses are the user's input or session, not bugs, so they are skipped. A network
- * failure is only reported while the browser is online (the server didn't answer), as a
- * warning. A no-op when Sentry is off.
+ * 4xx responses are the user's input or session, not bugs, so they are skipped. When the API
+ * never answered, the server is down or restarting rather than broken, so it is reported as a
+ * warning: a network failure while the browser is online, or a gateway error (502/503/504)
+ * without our error body, e.g. the Vite dev proxy while the API restarts or waits for
+ * MongoDB. A no-op when Sentry is off.
  */
 export function reportQueryError(error: unknown): void {
   if (!(error instanceof ApiError)) {
@@ -18,9 +20,11 @@ export function reportQueryError(error: unknown): void {
     Sentry.captureException(error);
     return;
   }
-  const isServerError = error.status >= 500;
   const isNetworkError = error.code === 'NETWORK_ERROR' && navigator.onLine;
-  if (!isServerError && !isNetworkError) return;
+  // apiClient's gateway fallback; a 503 from the API itself carries its request id.
+  const isGatewayError = error.code === 'SERVICE_UNAVAILABLE' && !error.requestId;
+  const isServerError = error.status >= 500 && !isGatewayError;
+  if (!isServerError && !isNetworkError && !isGatewayError) return;
 
   const endpoint = error.endpoint ?? 'unknown endpoint';
   // Every ApiError is thrown from the same line in apiClient, so group by request instead of
