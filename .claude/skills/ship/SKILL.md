@@ -36,12 +36,12 @@ npm run e2e                            # if pages, routes or the API changed
 
 Fix what fails (`npm run lint:fix`, `npm run format`, then the real errors) and rerun the
 failing check. If a failure isn't caused by this change (it fails on `main` too), don't fix
-it here: note it under "What I couldn't do".
+it here: note it under "Testing done".
 
 ## 3. Review
 
 Run the `ltf-review` skill on the branch. Fix every blocker. Fix should-fix items that are
-clearly right; list the ones that need the owner's call under "What I need from you". If
+clearly right; mention the ones that need the owner's call in your reply. If
 content facts changed, also run `review-lesson` on those files and put its sim verification
 list in the PR. Rerun the checks from step 2 that the fixes touched.
 
@@ -69,10 +69,9 @@ Fill `.github/pull_request_template.md` and open it with
 - **Summary:** what and why, in two to four sentences.
 - **Plan reference:** phase and step ids.
 - **Screenshots / GIFs:** for UI changes, light and dark, mobile and desktop. If you
-  couldn't capture them, say so and put it under "What I need from you".
+  couldn't capture them, say so in that section.
 - **Testing done:** the commands from step 2 and their results.
 - **Checklist:** tick only what was actually done.
-- **What I changed / What I couldn't do / What I need from you:** honest and short.
 
 End the body with the attribution line Claude Code provides. Don't merge, and don't
 request reviewers unless asked. Reply with the PR link, the check results and anything
