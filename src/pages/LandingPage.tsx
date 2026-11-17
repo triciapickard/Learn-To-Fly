@@ -180,7 +180,7 @@ const NEEDS: { title: string; text: string; icon: LucideIcon }[] = [
   },
   {
     title: 'A controller or joystick',
-    text: 'An Xbox controller is enough for every lesson and challenge. Lesson 0.2 sets it up. A yoke and rudder pedals feel more real, but they are optional.',
+    text: 'An Xbox controller is enough for every lesson and challenge. Lesson 0.2 sets it up.',
     icon: Gamepad2,
   },
   {
@@ -205,9 +205,8 @@ function faq(modules: PreviewModule[]) {
       q: 'What does public beta mean?',
       a: (
         <>
-          The site is new. We flew and checked every open module in MSFS 2024, but you may still
-          find a typo or a bug. A module stays closed until we have verified it in the sim. If
-          something looks wrong, tell us on <ExternalLink href={ISSUES_URL}>GitHub</ExternalLink>{' '}
+          We fly every module in MSFS 2024 before it opens, but you may still find a typo or a bug.
+          If something looks wrong, tell us on <ExternalLink href={ISSUES_URL}>GitHub</ExternalLink>{' '}
           and we will fix it.
         </>
       ),
@@ -323,14 +322,13 @@ export default function LandingPage() {
         )}
       >
         <div>
-          <Eyebrow>Free · Public beta · Cessna 172 Skyhawk · MSFS 2024</Eyebrow>
-          <h1 id="hero-heading" className="display-lg sm:display-xl mt-6 max-w-[12ch]">
-            Yes, you can fly a plane.
+          <Eyebrow>Free · Public beta</Eyebrow>
+          <h1 id="hero-heading" className="display-lg sm:display-xl mt-6 max-w-[16ch]">
+            Learn to fly the Cessna 172 in MSFS 2024
           </h1>
           <p className="body-lg mt-6 max-w-[34em] text-ink-2">
-            Learn to fly the Cessna 172 in Microsoft Flight Simulator 2024, even if you have never
-            flown. Read short lessons, then fly challenges in the sim and score them against real
-            pilot standards.
+            The lessons start from zero, so you need no flying experience. Between lessons, you fly
+            challenges in the sim and score yourself against real pilot standards.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button size="lg" asChild>
@@ -345,8 +343,7 @@ export default function LandingPage() {
             </Button>
           </div>
           <p className="mt-4 text-sm leading-5 text-ink-3">
-            You can start without an account. Any edition of MSFS 2024 works, on PC or Xbox. For
-            simulation use only.
+            No account needed. For simulation use only.
           </p>
         </div>
 
@@ -425,10 +422,9 @@ export default function LandingPage() {
             <div className="max-w-[640px]">
               <Eyebrow>How a lesson works</Eyebrow>
               <h2 id="how-heading" className="display-md sm:display-lg mt-3">
-                Read a little. Try it on the page. Fly it in the sim.
+                The same five steps, from reading to scoring your flight
               </h2>
             </div>
-            <p className="max-w-[30em] text-ink-2">Every lesson follows the same five steps.</p>
           </div>
           <ol className="mt-12 grid gap-x-6 gap-y-8 border-t-2 border-line-strong sm:grid-cols-2 lg:grid-cols-5">
             {STEPS.map(({ title, text, icon: Icon }, index) => (
@@ -454,12 +450,11 @@ export default function LandingPage() {
           <div className="max-w-[640px]">
             <Eyebrow>The curriculum</Eyebrow>
             <h2 id="curriculum-heading" className="display-md sm:display-lg mt-3">
-              {modules.length} modules, in flight-school order.
+              {modules.length} modules, in flight-school order
             </h2>
           </div>
           <p className="max-w-[30em] text-ink-2">
-            Module 0 sets up the sim, and Module 8 ends with a cross-country flight. Every lesson is
-            free to read.{' '}
+            Module 0 sets up the sim, and Module 8 ends with a cross-country flight.{' '}
             <Link to="/learn" className="font-medium whitespace-nowrap">
               Full curriculum
             </Link>
@@ -520,13 +515,12 @@ export default function LandingPage() {
           <div>
             <Eyebrow>Challenges</Eyebrow>
             <h2 id="challenge-heading" className="display-md sm:display-lg mt-3 max-w-[12em]">
-              Bronze means you did it safely. Gold is checkride-ready.
+              Score each flight Bronze, Silver or Gold
             </h2>
             <p className="mt-6 max-w-[32em] text-ink-2">
-              Each challenge gives you the exact sim setup, a step-by-step procedure and measurable
-              criteria borrowed from real pilot standards. You fly it, then score yourself against
-              those criteria. With a free account, the site keeps every attempt so you can compare
-              them.
+              Each challenge gives you the sim setup, the procedure and pass criteria taken from
+              real pilot standards. After you fly it, you score yourself against each criterion. A
+              free account saves every attempt so you can compare them.
             </p>
             <ul aria-label="Tiers for final approach speed" className="mt-6 border-t border-line">
               {TIERS.map(({ tier, label, range, note }) => (
@@ -624,9 +618,9 @@ export default function LandingPage() {
       {/* What you need. */}
       <section aria-labelledby="need-heading" className={cn(band, bandPad)}>
         <div className="max-w-[640px]">
-          <Eyebrow>What you need</Eyebrow>
+          <Eyebrow>Setup</Eyebrow>
           <h2 id="need-heading" className="display-md sm:display-lg mt-3">
-            MSFS 2024, a controller and a browser beside the sim.
+            What you need
           </h2>
         </div>
         <ul className="mt-10 grid gap-6 md:grid-cols-3">
@@ -670,12 +664,8 @@ export default function LandingPage() {
       >
         <div className="max-w-[640px]">
           <h2 id="cta-heading" className="display-md sm:display-lg">
-            Lesson 0.1 takes five minutes. Start there.
+            Lesson 0.1 shows how the course works in five minutes
           </h2>
-          <p className="mt-3 max-w-[32em] text-ink-2">
-            By the end, you will know how the course works, what a challenge looks like and whether
-            this is for you. You do not need an account or a download.
-          </p>
         </div>
         <div className="flex flex-wrap gap-3">
           <Button size="lg" asChild>

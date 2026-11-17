@@ -8,6 +8,9 @@ All notable changes to this project are documented here. The format is based on
 
 ### Changed
 
+- Landing page headings name each section's topic in sentence case ("Learn to fly the Cessna
+  172 in MSFS 2024", "What you need"), and paragraphs that repeated the MSFS 2024, account
+  and controller details stated elsewhere on the page are cut.
 - Sentry Session Replay records a sample of visits (10%) and every visit that hits an error,
   with all text, inputs, images and video masked. The privacy policy lists session
   recordings (v1.md D-30).
