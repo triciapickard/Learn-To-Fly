@@ -5,7 +5,7 @@ import { renderRoute } from '@/test/render';
 import { server } from '@/test/server';
 
 const ROUTES: [string, string | RegExp][] = [
-  ['/', /Yes, you can fly a plane/],
+  ['/', /Learn to fly the Cessna 172 in MSFS 2024/],
   ['/learn', 'Learn'],
   ['/learn/m1-meet-the-skyhawk', 'Meet the Skyhawk'],
   ['/learn/m1-meet-the-skyhawk/l1-4-speeds-limits-and-checklists', 'Speeds, limits and checklists'],
