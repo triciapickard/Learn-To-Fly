@@ -28,7 +28,7 @@ const LADDER = [
     step: 4,
     title: 'Turboprop',
     example: 'King Air class',
-    skills: 'Turbine engines, pressurisation',
+    skills: 'Turbine engines, pressurization',
   },
   { step: 5, title: 'Light jet', example: 'CJ4 class', skills: 'Jet handling, FMS, high altitude' },
   {
@@ -58,7 +58,7 @@ export default function RoadmapPage() {
     <PageContainer narrow>
       <PageHeader
         title="The road to the A380"
-        description="One airplane at a time, each done properly before adding the next. The aircraft list may change, because it depends on what the sim offers and how well each aircraft is documented."
+        description="Learn to Fly adds one aircraft at a time, once the one before it is finished. The list may change, depending on which aircraft the sim offers and how well each one is documented."
       />
       <ol className="relative flex flex-col gap-4 border-l-2 border-line pl-6">
         {LADDER.map((rung) => (

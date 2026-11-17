@@ -11,50 +11,38 @@ export default function AboutPage() {
     <PageContainer narrow>
       <PageHeader
         title="About Learn to Fly"
-        description="A structured course for learning to fly in Microsoft Flight Simulator 2024."
+        description="Lessons and in-sim challenges that teach you to fly the Cessna 172 Skyhawk in Microsoft Flight Simulator 2024."
       />
       <Prose>
-        <h2>Why this exists</h2>
+        <h2>How the course is built</h2>
         <p>
-          Microsoft Flight Simulator 2024 models real airplanes in detail, but most beginners take
-          off, crash a few times and give up. Tutorials are scattered across long videos, and
-          real-world handbooks are long and dense. Real pilots learn one skill at a time, in a set
-          order, against clear standards.
+          Real pilots learn one skill at a time, in a set order, against clear standards. Learn to
+          Fly follows the same order in MSFS 2024. A short lesson with interactive diagrams explains
+          each skill. An in-sim challenge then gives you an exact setup to practice it and a scored
+          debrief.
         </p>
+        <h2>Who writes it</h2>
         <p>
-          Learn to Fly brings that structure to the sim. Short lessons with interactive diagrams
-          explain each idea, and in-sim challenges let you practice it with an exact setup and a
-          scored debrief.
+          One flight-sim enthusiast builds Learn to Fly as an independent project. Before a lesson
+          is published, the author checks every procedure and number against the FAA handbooks and
+          flies it in the sim.
         </p>
-        <h2>Who builds it</h2>
+        <h2>What the public beta means</h2>
         <p>
-          Learn to Fly is an independent personal project built by a flight-sim enthusiast who
-          struggled to find in-depth tutorials that explain how to fly the aircraft as well as which
-          buttons to press. Every procedure and number is checked against FAA handbooks and flown in
-          the sim before it is published.
+          Every module you can open has been flown and checked in MSFS 2024. The site is new, so you
+          may still find a typo or a bug, and some pages will change as feedback comes in.
         </p>
-        <h2>Public beta</h2>
-        <p>
-          Learn to Fly is in public beta. Everything that is open has been flown and checked in MSFS
-          2024, but the site is new: you may find a typo, a rough edge or a bug, and some pages and
-          features will change as feedback comes in. Modules that are still being written are marked
-          as such and are not meant for learning yet.
-        </p>
-        <p>
-          The best thing you can do during the beta is fly the open lessons and challenges and say
-          what confused you, what broke and what you want next.
-        </p>
-        <h2>Where it is going</h2>
+        <h2>After the Cessna 172</h2>
         <p>
           Version 1 teaches one airplane, the Cessna 172 Skyhawk, from your first flight to a
-          planned cross-country. Later versions add one aircraft at a time, up the ladder to the
-          Airbus A380. See the <Link to="/roadmap">roadmap</Link>.
+          planned cross-country. Later versions add one aircraft at a time, up to the Airbus A380.
+          See the <Link to="/roadmap">roadmap</Link>.
         </p>
-        <h2>Contact</h2>
+        <h2>Report a bug or a mistake</h2>
         <p>
-          Found a bug or a mistake, or have an idea? Open an issue on{' '}
-          <ExternalLink href={ISSUES_URL}>GitHub</ExternalLink>. Every report during the beta is
-          read.
+          Use Report a problem at the bottom of any page, or open an issue on{' '}
+          <ExternalLink href={ISSUES_URL}>GitHub</ExternalLink>. Tell us what confused you, what
+          broke and what you want next. The author reads every report.
         </p>
         <h2>Trademarks</h2>
         <p>{TRADEMARK_STATEMENT}</p>

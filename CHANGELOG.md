@@ -8,6 +8,9 @@ All notable changes to this project are documented here. The format is based on
 
 ### Changed
 
+- The About page is shorter, with headings that name each section, and no longer says
+  unfinished modules are shown (only verified modules are, v1.md D-32). The roadmap
+  intro and the "Report a problem" dialog read more plainly.
 - Sentry Session Replay records a sample of visits (10%) and every visit that hits an error,
   with all text, inputs, images and video masked. The privacy policy lists session
   recordings (v1.md D-30).

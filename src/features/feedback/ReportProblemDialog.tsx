@@ -84,7 +84,7 @@ export function ReportProblemDialog({
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent
         title="Report a problem"
-        description="Learn to Fly is in public beta. Reports are filed as public GitHub issues; please leave out passwords and personal details."
+        description="Learn to Fly is in public beta. Reports become public GitHub issues, so leave out passwords and personal details."
         className="max-w-[520px]"
       >
         <form
