@@ -769,7 +769,7 @@ The classroom case most often cited against gamification is Hanus and Fox's seme
 
 ### A test for persuasion
 
-The rules in this Part reduce to one test that can be run on any screen. Imagine showing the learner a plain description of what the design is doing to their decision ("this button is bigger because we want you to sign up"; "this reminder is on by default because most people keep defaults"). If the learner would agree it serves them, the influence is persuasion. If they would object, it is manipulation, however mild. The test is ethical, not empirical, and it sits behind Thaler and Sunstein's requirement that a nudge be easy to avoid [@thaler2008nudge] and the FTC's concern with choices people "would not otherwise have made" [@ftc2022bringing].
+The rules in this Part reduce to one test that can be run on any screen. Imagine showing the learner a plain description of what the design is doing to their decision ("this button is bigger because we want you to sign up"; "this reminder is on by default because most people keep defaults"). If the learner would agree it serves them, the influence is persuasion. If they would object, it is manipulation, however mild. The test is ethical, not empirical, and it sits behind Thaler and Sunstein's requirement that a nudge be easy to avoid [@thaler2008nudge] and the FTC's description of dark patterns as pushing people into choices they would not otherwise have made [@ftc2022bringing].
 
 ::: {.rule #DEC-070 grade="C"}
 **Before shipping any design meant to change what learners do, write one sentence telling the learner what it does to their decision, and ship it only if a learner reading that sentence would agree it serves them.** This is the disclosure test implied by the nudge definition and by the regulator's description of dark patterns as producing choices people would not otherwise make [@thaler2008nudge; @ftc2022bringing]. Graded C.
@@ -780,4 +780,72 @@ The rules in this Part reduce to one test that can be run on any screen. Imagine
 ### What this means for Learn to Fly
 
 Keep the informational debrief, the named tiers, the honest course badge, the private history, and the calm "All caught up" end state. Change the brief and recommended-lesson copy so each effortful step says why it matters. Build stall diagnosis around ability first (widgets, checklists, shorter blocks). Never add leaderboards, streaks, points for visiting, or prompts in Fly mode. Put the disclosure sentence in the pull request template.
+
+## Holding Behavioral Claims to Evidence
+
+### How much of the literature replicates
+
+Most of the effects in this Part come from the same psychology literature, and that literature has been tested. The Open Science Collaboration replicated 100 experimental and correlational studies from three psychology journals, using high-powered designs and the original materials where available [@openscience2015estimating]. 97 percent of the original studies had statistically significant results; 36 percent of the replications did. Replication effects were about half the size of the originals. 47 percent of original effect sizes fell inside the 95 percent confidence interval of the replication. 39 percent of effects were judged by the replication teams to have replicated. Pooling original and replication data, on the assumption that the originals were unbiased, left 68 percent significant. Replication success was better predicted by the strength of the original evidence than by characteristics of the teams. The project reports five measures, so no single number summarizes it.
+
+The project was itself debated. Gilbert, King, Pettigrew and Wilson argued in a 2016 technical comment that low reproducibility was overstated because of sampling error and differences in how replications were run; the Collaboration's reply said the critics examined one of five measures, and that both optimistic and pessimistic conclusions were possible but neither was yet warranted [@openscience2015estimating]. The later Many Labs 2 project reported that 15 of 28 findings (54 percent) were reproduced at the conventional threshold and that 75 percent of replications had smaller effects than the originals. The robust lesson is not that psychology is false. It is that single-study, small-sample, surprising results should be treated as provisional, and that published effect sizes are inflated.
+
+That lesson grades this Part. Anchoring and framing replicate at reduced size. Defaults have a meta-analysis behind them. Choice overload, a single famous field study, averaged to nothing in a meta-analysis. Social priming largely failed. The nudge average shrinks to near zero after bias correction. Dark pattern effects rest on large randomized experiments not yet independently replicated.
+
+### How false positives are made
+
+Simmons, Nelson and Simonsohn showed how ordinary, well-meant flexibility in running and analyzing a study raises the real false-positive rate far above the nominal 5 percent [@simmons2011false]. Deciding when to stop collecting data, which measures to report, which covariates to include and which conditions to compare, after seeing the data, can produce "significant" support for almost any hypothesis. In their simulations (15,000 samples, as summarized by a column on the paper), adding participants after an interim check raised the false-positive rate by 50 percent, and combining several such freedoms produced a 61 percent rate. Their demonstration experiment "showed" that listening to "When I'm Sixty-Four" made 20 undergraduates about a year and a half younger (adjusted means 20.1 against 21.5 years, p = .040), a result produced only by the analysis choices. Their remedy is disclosure: decide the sample size rule before collecting data, report every variable collected, and report all conditions.
+
+The same mechanism inflates internal product tests. A team that checks an A/B test daily and stops on the first good day, tries five metrics and reports the one that moved, or slices by device until a segment looks significant, is running Simmons and colleagues' simulation on its own product.
+
+### Experiments at LTF's scale
+
+Kohavi and colleagues' practical guide to online controlled experiments, drawn from experience at large sites, gives the arithmetic [@kohavi2009controlled]. A rule of thumb for 80 percent power is n = 16σ²/Δ² per variant. Their example says detecting a 5 percent change in revenue needs over 409,000 users, and a conversion-rate example needs under 122,000. They advise agreeing a single Overall Evaluation Criterion in advance, running for at least one or two whole weeks, splitting traffic evenly for maximum power, validating the system with an A/A test, adjusting for multiple comparisons, and never reading "no significant difference" as proof of no difference. Their guide assumes traffic that LTF does not have.
+
+The consequence is direct. LTF cannot detect the small effects that nudges plausibly have [@maier2022no] with the learners it has. Fine-detail tests (a button's color, a copy tweak) will be underpowered and their results mostly noise. Tests of large differences (a new lesson structure against the old) can work. Everything else is decided from principles, qualitative sessions with learners, accessibility and the rules in this book.
+
+::: {.rule #DEC-071 grade="A"}
+**Treat any published behavioral effect as an upper bound, and plan for an effect about half its reported size or smaller.** Replication effects averaged about half the originals in the Open Science Collaboration project, and three in four replications were smaller than the original in Many Labs 2 [@openscience2015estimating]; bias correction shrinks the nudge literature further [@maier2022no]. Graded A: multiple large replication projects agree.
+
+*In LTF:* any design proposal that cites an effect from this Part states the halved figure, or "no reliable effect", in its pull request.
+:::
+
+::: {.rule #DEC-072 grade="C"}
+**Record the evidence type behind every behavioral claim used in a design decision: single study, replicated, meta-analysis, field trial or regulatory guidance.** Replication success is best predicted by the strength of the original evidence [@openscience2015estimating], so the type of evidence is the first thing a reviewer needs. Graded C.
+
+*In LTF:* the grade letters on this Part's rules serve this purpose. A design decision that cites a source outside this book adds its grade in the same terms.
+:::
+
+::: {.rule #DEC-073 grade="B"}
+**Before any LTF experiment starts, write down the single success metric, the sample size rule, the stopping date and the variants, and store that note with the result.** Undisclosed flexibility in stopping, measures and comparisons inflates false positives dramatically [@simmons2011false], and agreeing the evaluation criterion in advance is the guide's own guard [@kohavi2009controlled]. Graded B: a simulation-based demonstration, widely accepted.
+
+*In LTF:* a short file beside the experiment's code, linked from its pull request. The note is written before the first learner sees a variant.
+:::
+
+::: {.rule #DEC-074 grade="B"}
+**Compute the sample needed to detect a plausible effect before testing; if LTF cannot reach it, decide from principles and learner sessions instead of running the test.** Detecting small changes needs very large samples by the standard power arithmetic [@kohavi2009controlled], and plausible nudge effects are small [@maier2022no]. Graded B.
+
+*In LTF:* this rules out A/B tests of `SignupBanner` wording, button labels or colors at current traffic. Test whole-lesson structures or onboarding flows if anything, and run them in whole weeks.
+:::
+
+::: {.rule #DEC-075 grade="B"}
+**Report every variant and metric tried, and report null results with the same prominence as wins.** Reporting only the winning measure or condition is how false positives are produced [@simmons2011false], and selective publication explains most of the gap between published nudge effects and field results [@maier2022no]. Graded B.
+
+*In LTF:* the experiment note (DEC-073) ends with all results, including "no detectable difference", and the note is kept whether or not the change ships. A null result is never cited as proof that a change is harmless [@kohavi2009controlled].
+:::
+
+::: {.rule #DEC-076 grade="B"}
+**Measure learning and the learner's goal, not only engagement, in any test of a persuasive feature.** In the classroom gamification case, a design meant to raise engagement went with lower motivation and lower exam scores [@hanus2015assessing], and a surface metric can rise while the outcome falls. Graded B.
+
+*In LTF:* the outcomes that count are quiz results, challenge tiers over repeated attempts, and lesson completion followed by a challenge flown. Time on page and return visits are secondary and never the success metric alone.
+:::
+
+::: {.rule #DEC-077 grade="C"}
+**Hold LTF's own claims to learners about what the product achieves to the same standard: no promised outcome, percentage or comparison without LTF's own data behind it.** The replication record shows that confident effect claims are often inflated [@openscience2015estimating], and the FTC treats claims that induce false beliefs as deceptive [@ftc2022bringing]. Graded C.
+
+*In LTF:* the landing headline "Yes, you can fly a plane." is encouragement in a simulator context and is fine. Statements such as "learners who finish Module 1 land better" or "most learners reach Gold" need LTF's own measured data, stated with counts (DEC-017), or they are not said.
+:::
+
+### What this means for Learn to Fly
+
+Keep the grade letters as the visible evidence record for every rule. Change the pull request template so any behavioral claim carries its evidence type and a halved effect estimate. Build a one-page experiment note (metric, sample rule, stopping date, variants, all results) and require it before any test. At current traffic, decide small details from principles and learner sessions, not from A/B tests. Apply the same discipline to what LTF tells learners about outcomes.
 
