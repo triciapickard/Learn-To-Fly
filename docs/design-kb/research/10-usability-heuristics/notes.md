@@ -269,3 +269,31 @@ The CUE series has been repeated (CUE-4 and later, run by Molich and colleagues;
 Test results are a sample of what a team happened to notice, so LTF should not treat one round of testing as complete. Prefer iterative small tests on a narrow feature set (one lesson page, or fly mode alone) over a single large test. Write down test tasks, success criteria and the problem definition before testing, and keep a short report template so findings are usable by the next person. Because the unique problem is typical, never discard a finding just because only one person raised it; look at its severity. Combine methods (inspection, task testing, interviews) rather than relying on one.
 
 Confirmed this session: dialogdesign.dk/cue-2/ (page text); alistapart.com/usability-myth-jpg (relayed interview figures, treated as secondary); Hertzum and Jacobsen (2001) full text; web search for the abstract record; Crossref DOI 10.1080/0144929032000173951. Not read: the paper itself.
+
+## spool2001testing
+
+Spool, J. M., & Schroeder, W. (2001). Testing web sites: Five users is nowhere near enough. CHI '01 Extended Abstracts on Human Factors in Computing Systems, 285-286. ACM. DOI 10.1145/634067.634236.
+
+### Core claims
+
+Spool and Schroeder, of the consultancy User Interface Engineering, report a test in which 49 users executed the same task on four production web sites. Their conclusion, stated in the title and abstract as found via the Dblp record and search, is that these sites would need considerably more than five users to find 85% of their problems. It is a two-page extended abstract, not a full paper, and it is the standard citation for the claim that "five users" fails on realistic, open-ended web tasks. Its significance is as a counterexample to the homogeneous-task assumption behind the Nielsen and Landauer curve.
+
+### Specifics
+
+Evidence type: an industry field study, reported in a two-page conference abstract. I could not read the paper itself this session (the publisher page was not reachable); the figures below are what other peer-reviewed papers say about it, and I attribute each to its source.
+
+Design as described in the abstract record: the same task was executed by 49 users on four production web sites. Faulkner characterizes it as an unstructured, goal-oriented test, unlike her own structured one. I have not confirmed the task details.
+
+What other authors report. Faulkner (2003), read in full, writes that in this study the first five users revealed only 35% of the usability problems, and that both the 13th and 15th users tested revealed at least one new severe problem that would have been missed had testing stopped after the first five sessions. A search-result summary of Woolrych and Cockton (2001) says they cited this study as an example in which the probability of a user finding a problem was far lower than the 31% typical value that Nielsen and Landauer's model assumes. The 31% is Nielsen's figure for the average chance that one user finds a given problem (nngroup.com, confirmed this session); Spool and Schroeder's goal-oriented testing gave much less.
+
+My reading (inference, not from the paper): where the pool of possible problems is large, each user sees only a small slice, so detection probability per user is low and the curve rises slowly.
+
+### Replication and criticism
+
+The result is consistent with Faulkner's structured test with 60 users, where the lowest five-user sample found only 55% of problems, and with Lewis's (1994) finding that five participants suffice only when the average detection likelihood is about 0.32 to 0.42. It is weaker as evidence than those studies: it is an industry report with a short abstract, and I could not check how tasks were set or problems counted. Nielsen's reply is that the "five users" advice was always about iterative testing of a narrow design with comparable users, and that one big test should be replaced by several small ones; the data here do not test that reply directly. The paper's title is deliberately polemical, and the finding should be read as "the number depends on task openness and site size", not as a new constant such as "fifteen".
+
+### Implications for LTF
+
+Different LTF pages need different test sizes. A narrow scripted flow (open lesson one, answer the quiz, reach the result) behaves like the classic fixed-task case and will surface most of its problems in a few sessions. An open-ended area, such as free exploration of challenges, the dashboard or lesson search, behaves like Spool and Schroeder's sites and needs more learners and more sessions. Do not stop a round at the fifth learner when the fifth is still finding new problems; stop on a rule such as "two consecutive sessions with no new serious problem". Give open-ended sessions realistic goals, not only prescribed clicks.
+
+Confirmed this session: Crossref DOI 10.1145/634067.634236 (CHI '01 Extended Abstracts, pp. 285-286); Semantic Scholar record giving the full title "Testing web sites: five users is nowhere near enough"; Dblp-derived search summary (49 users, four production web sites, considerably more than five users for 85%); Faulkner (2003) full text for the 35% figure and the 13th and 15th user finding; search summary of Woolrych and Cockton (2001). Not read: the paper itself.

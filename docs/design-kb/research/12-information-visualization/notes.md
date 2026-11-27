@@ -412,3 +412,45 @@ For the categorical case (phases of flight), a small set of distinguishable hues
 
 Confirmed this session: Crossref DOI 10.1109/mcg.2007.323435 (vol. 27, issue 2, pages 14-17); abstract-level summary from WebSearch (ui.adsabs.harvard.edu listing and search snippets); the 2023 rebuttal PDF read in full (repository.library.noaa.gov/view/noaa/58953); the 2007 full text could not be retrieved (university copy blocked by a script challenge).
 
+## wainer1984display
+
+Wainer, H. (1984). How to display data badly. The American Statistician, 38(2), 137-147.
+
+### Core claims
+
+Wainer's essay, the text of an invited address to the American Statistical Association, inverts the usual advice: if the aim of good data graphics is to display data accurately and clearly, then there are three avenues to bad display, namely not showing the data, showing them inaccurately, and showing them unclearly. He distills "the dirty dozen", 12 techniques that he says underlie many bad graphics found in practice, each illustrated with real examples from government reports, newspapers and journals. The tone is satirical but the aim is serious: a first compendium of bad practice that could be categorized and measured. It complements Tufte's positive rules and Cleveland's perceptual findings.
+
+### Specifics
+
+The twelve rules, as titled in the paper:
+1. Show as few data as possible (minimize the data density).
+2. Hide what data you do show (minimize the data-ink ratio).
+3. Ignore the visual metaphor altogether.
+4. Only order matters.
+5. Graph data out of context.
+6. Change scales in mid-axis.
+7. Emphasize the trivial (ignore the important).
+8. Jiggle the baseline.
+9. Austria first!.
+10. Label (a) illegibly, (b) incompletely, (c) incorrectly, and (d) ambiguously.
+11. More is murkier: (a) more decimal places and (b) more dimensions.
+12. If it has been done well in the past, think of another way to do it.
+
+Measures. For Rule 1 Wainer uses Tufte's data density index (numbers plotted per square inch), finding values from 0.1 to 362 across popular and technical media; his low-density examples include a four-color graphic in a social indicators volume that carried 18 numbers (index about 0.3). For Rule 3, visual metaphor, he measures a "perceptual distortion" ratio: perceived change divided by actual change; in a dollar-value graphic the ratio he reads is about 7.6, a distortion of over 700 percent. These parallel Tufte's data-ink ratio and lie factor, which he cites.
+
+Illustrative content. Rule 2: hide data in a fine grid with dimly plotted points, or in the scale; Wainer ironically notes that one can justify blowing up a scale by appealing to "honesty requires that we start the scale at zero", and shows a private-schools graph whose scale hides growth that a redrawn scale reveals. Rule 5: choosing the interval can make a precipitous drop vanish. Rule 6: a newspaper circulation graph with a shifting scale. Rule 8: a stacked-area graph of red meat imports, where each series starts from a different base so one cannot tell whether pork imports are rising; a line for the total would have served better. Rule 11 criticizes tables with decimal places far beyond what a reader can perceive. He closes with Minard's 1861 graph of Napoleon's Russian campaign as the "World's Champion Graph".
+
+### Replication and criticism
+
+This is a craft essay, not an experiment, and its authority is the quality of its examples and its alignment with later evidence: the zero-baseline irony, the cost of stacked baselines, and the value of context reappear in Franconeri et al. (2021), who also note that the zero-baseline rule is contested. The data density rule is the part most debated; Wainer himself concedes that high density does not guarantee a good graphic, nor low density a bad one. Reading the paper as a list of absolute bans would misrepresent it, since he acknowledges that automatic rules do not always work and wisdom is required. It was reprinted in Wainer's 1997 book Visual Revelations; an ETS report version dates from 1982.
+
+### Implications for LTF
+
+Use the dozen as a pre-merge review checklist for any LTF chart, table or widget, especially the rules that apply to a small training app: label units and reference points (Rule 10), avoid unnecessary decimals (Rule 11a; a learner does not need airspeed to two decimals), keep one baseline for stacked or compared series (Rule 8), show context such as the target band and the learner's history when a single point would mislead (Rule 5), and keep scales continuous (Rule 6).
+
+Rule 3 is a good test for instrument widgets and icons: if a picture of a runway or a wing is scaled to show a quantity, check that the visual size changes in proportion to the data.
+
+The satire also suggests a lesson idea: a "spot the bad chart" exercise (a truncated axis on an altitude plot) to teach learners to question displays.
+
+Confirmed this session: Crossref DOI 10.1080/00031305.1984.10483186 (TAS 38(2), 137-147), the book-chapter record 10.1007/978-1-4612-2282-8_2 and the ETS 1982 record; full text read from sites.stat.columbia.edu/gelman/communication/Wainer1984.pdf (rule titles, measures and examples; the scanned text had OCR errors, so figures were checked only where legible).
+

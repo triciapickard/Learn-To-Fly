@@ -524,7 +524,7 @@ Krug, S. (2014). *Don't Make Me Think, Revisited: A Common Sense Approach to Web
 
 ### Core claims
 
-Krug's organizing idea is that a page should be self-evident, or at least self-explanatory, so that the user does not have to stop and puzzle over it. The publisher's description of the book says the sites that offer the best, easiest and most intuitive experience are the ones people visit again and again, and that the guide distills his on-the-job experience into the dos and don'ts of good Web design. On navigation he argues that users need constant, cheap answers to a handful of orientation questions, and that most people scan pages quickly instead of reading them.
+Krug's organizing idea is that a page should be self-evident, or at least self-explanatory, so that the user does not have to stop and puzzle over it. The Open Library publisher description (written for the second edition) says the sites that offer the best, easiest and most intuitive experience are the ones people visit again and again, and that the guide distills his on-the-job experience into the dos and don'ts of good Web design. On navigation he argues that users need constant, cheap answers to a handful of orientation questions, and that most people scan pages quickly instead of reading them.
 
 ### Specifics
 
@@ -533,12 +533,12 @@ I could not read the book. The points below come from the publisher description 
 - Scanning: a chapter titled "Billboard Design 101" argues that users treat pages like billboards at driving speed, so designers should make great billboards.
 - Mindless choices: a chapter on choices argues that the number of clicks matters less than whether each click is an obvious, unambiguous choice. The rule of thumb attributed to Krug is that three mindless clicks equal one click that requires thought. This is a statement about effort per step, not a limit on the number of steps.
 - Persistent navigation: summaries list the elements to include on every page: site ID, page name, sections (primary navigation), local navigation, "you are here" indicators and search.
-- The trunk test: imagine being blindfolded in a car trunk and dropped on a random page of a site. You should be able to say what site it is, what page you are on, what the major sections are, what options you have at this level, where you are in the scheme of things and how to search. The practical version is to print a random page, squint and circle those items. It matters because search results and shared links often land people on interior pages.
-- Editions: Open Library records the first edition in 2000 (New Riders), a second in 2005 and the third, "Revisited," in 2014 with mobile material added. The author's site says the book first appeared in 2000, has sold more than 700,000 copies in 15 languages, and that the third edition broadened it beyond the web to mobile and desktop apps and other things people use. The site's page header lists a fourth edition, an inconsistency I could not resolve.
+- The trunk test: imagine being blindfolded in a car trunk and dropped on a random page of a site. You should be able to tell what site it is, what page you are on, what the main sections are and how to get home. The practical version is to print a random page, hold it at arm's length or squint, and circle the site name, page name, main sections and where you are. It matters because search results and shared links often land people on interior pages.
+- Editions: Open Library records the first edition in 2000 (New Riders), a second in 2005 and the third, "Revisited," in 2014; a search summary of the Internet Archive record says the third edition adds a chapter on mobile. The author's site says the book first appeared in 2000, has sold more than 700,000 copies in 15 languages, and that the third edition broadened it beyond the web to mobile and desktop apps and other things people use. The site's page header lists a fourth edition, an inconsistency I could not resolve.
 
 ### Replication and criticism
 
-Krug's advice is opinion informed by a consultant's usability testing experience, not research; its claims are plausible and widely adopted, but the "three mindless clicks" rule is not an experimentally derived number, and I found no source for it beyond secondary summaries. It is consistent with Porter's 2003 finding that click counts do not predict success and with the information foraging idea that users follow scent, but it does not itself prove either. Porter's study is also a useful warning against reading Krug as endorsing a click budget. The trunk test is a heuristic walk-through, not a validated instrument, and I found no study of its reliability. Some tests (such as whether users scan) have been backed by eye tracking and usability studies from other groups, which I did not review in this lane.
+Krug's advice is opinion informed by a consultant's usability testing experience, not research; its claims are plausible and widely adopted, but the "three mindless clicks" rule is not an experimentally derived number, and I found no source for it beyond secondary summaries. It is consistent with Porter's 2003 finding that click counts do not predict success and with the information foraging idea that users follow scent, but it does not itself prove either. Porter's study is also a useful warning against reading Krug as endorsing a click budget. The trunk test is a heuristic walk-through, not a validated instrument, and I found no study of its reliability.
 
 ### Implications for LTF
 
@@ -556,7 +556,7 @@ Kalbach, J. (2007). *Designing Web Navigation: Optimizing the User Experience*. 
 
 ### Core claims
 
-Kalbach's book is a full treatment of how to design navigation for large, information-rich sites. One reviewer summarizes it as framing navigation around people instead of technology: good navigation depends on how people find information and how you guide them. The publisher's overview describes it as thoroughly rewritten for the web of its time and aimed at navigation systems for large sites with a business purpose, while noting the principles also apply to small sites.
+Kalbach's book is a full treatment of how to design navigation for large, information-rich sites. One reviewer summarizes it as framing navigation around people instead of technology: good navigation depends on how people find information and how you guide them. The publisher's overview describes it as thoroughly rewritten for the web environment and aimed at navigation systems for large sites with a business purpose, while noting the principles also apply to small sites.
 
 ### Specifics
 
@@ -569,12 +569,12 @@ I could not access the publisher's chapter pages, so the confirmed content comes
 
 ### Replication and criticism
 
-This is a synthesis and craft reference, not an experiment; its research basis is the usability and human factors literature it cites (the information scent concept comes from Pirolli and Card). The reviews are mostly positive, with the main criticisms about production quality and a dated example base, not about the principles. Because some examples assume a 2000s web, treat the specific design patterns (for example tag clouds) as period-bound.
+This is a synthesis and craft reference, not an experiment; its research basis is the usability and human factors literature it cites (the information scent concept comes from Pirolli and Card). The reviews are mostly positive, with the main criticisms about production quality and a dated example base, not about the principles. Because some examples assume a 2000s web, treat the specific design patterns as period-bound.
 
 ### Implications for LTF
 
 - The book supports designing navigation around human information behavior: LTF's learners will move between lesson, quiz, glossary and sim. Plan each of these as a place with a clear way in and out.
-- Information scent and "information shape" (the book's name for how the structure of a site looks to a user) are practical lenses. Check the breadth and depth of the course map so the shape is visible: how many modules, how many lessons in each.
+- Information scent is a practical lens (see Pirolli and Card). The book also names "information shape" as a topic; I could not confirm its definition, so check the book before using the term. Meanwhile, make the breadth and depth of the course map visible: how many modules, how many lessons in each.
 - Coordinate navigation and search: a lesson page should offer both a path (next, previous, up) and a search for the glossary.
 - If LTF later adds tagging of lessons or user notes, the book's tagging chapter would be the starting reference, but its examples are dated, so verify against current practice.
 
@@ -600,7 +600,7 @@ Nielsen and Li argue that large two-dimensional dropdown panels, "mega menus," h
 
 ### Replication and criticism
 
-The article's testing claim has no reported design, participant count or metrics, and the examples are illustrations, so this is expert opinion built on NN/g's experience. The timing numbers are practical guidelines, not published experimental thresholds. A related NN/g article on the 3-click rule recommends mega menus over cascading dropdowns but reports no new experiment. Treat the advice as a defensible default for large sites, not proof that mega menus outperform alternatives in every context.
+The article's testing claim has no reported design, participant count or metrics, and the examples are illustrations, so this is expert opinion built on NN/g's experience. The article gives no experimental basis for its timing numbers. A related NN/g article on the 3-click rule recommends mega menus over cascading dropdowns but reports no new experiment. Treat the advice as a defensible default for large sites, not proof that mega menus outperform alternatives in every context.
 
 ### Implications for LTF
 

@@ -359,3 +359,71 @@ Caveats: the rule is a certification floor, not an alert design method; it says 
 7. These are display principles only; real aircraft warnings and responses come from aircraft documentation.
 
 Confirmed this session: text of 14 CFR 25.1322 fetched from https://www.law.cornell.edu/cfr/text/14/25.1322 (paragraph-by-paragraph summary; I did not obtain a verbatim copy); web search listing for the 2 November 2010 Federal Register final rule (https://www.govinfo.gov/content/pkg/FR-2010-11-02/pdf/2010-27629.pdf, title "Flightcrew Alerting", pages 67201-67210) and FAA AC 25-11B listing; the AC itself returned 403 and was not read.
+
+## dismukes2007limits
+
+Dismukes, R. K., Berman, B. A., & Loukopoulos, L. D. (2007). *The Limits of Expertise: Rethinking Pilot Error and the Causes of Airline Accidents*. Aldershot, England: Ashgate.
+
+### Core claims
+
+The book asks how the great majority of commercial pilots, who are highly experienced, trained and regularly checked, can be involved in the "pilot error" that is a factor in more than half of airline accidents. A Flight Safety Foundation review of the book (Aero Safety World, May 2007, read in full this session) reports the authors' answer: the naive view that pilots who err are less expert is wrong. In the authors' words as quoted there, a pilot who makes an error, seen in hindsight, "typically does not lack skill, vigilance or conscientiousness" but is behaving expertly in a situation that may involve misinformation, lack of information, ambiguity or other stressors in a possibly unique combination.
+
+The review quotes the authors on a related misconception: that if experts can normally do a task without difficulty, they should always do it correctly. Experts in all domains make inadvertent errors at tasks they normally perform, from the interaction of "subtle variations in task demands, incomplete information available to the expert performing the task, and the inherent nature of the cognitive processes that enable skilled performance." Any deficiency "must be attributed to the overall system in which crews operate." Error must still be reduced, which requires understanding its factors.
+
+### Specifics
+
+Method (per the review): the authors reviewed 19 major accidents in U.S. air carrier operations from 1991 through 2000 in which the National Transportation Safety Board found flight crew error to be an important causal factor. The method was similar to a 1994 NTSB study on which Berman was principal investigator (a review of flightcrew-involved major accidents of U.S. air carriers, 1978 through 1990). The NTSB reports were the raw material; the aim is recurrent themes of vulnerability across many accidents, not the cause of one. The foreword, as quoted, says it is often impossible to know with certainty why crewmembers did what they did, but possible to understand the types of error pilots are vulnerable to.
+
+Recurrent themes listed in the review: inadvertent slips and oversights while performing highly practiced tasks under normal conditions; inadequate execution of highly practiced normal procedures under challenging conditions; inadequate execution of non-normal procedures under challenging conditions; inadequate response to rare situations; judgment in ambiguous situations that hindsight proves wrong; and deviation from explicit guidance or standard operating procedures.
+
+The review also reports the authors' view that human cognition, though vulnerable to failures of attention, memory and decision making, is essential because computers handle novel, ambiguous and value-laden situations poorly. A search snippet from a NASA-hosted conference summary (page not opened) says nearly two thirds of the 19 accidents involved situations requiring rapid response; I report that only as a snippet.
+
+### Replication and criticism
+
+Evidence type: a structured analysis of a fixed set of accident reports, with a book-length argument. It cannot give causal estimates, and its inputs are NTSB narratives shaped by hindsight. The set is U.S. air carrier accidents in one decade where the NTSB assigned crew error, not all accidents. Sources differ on the span (1990 to 2000 in one snippet, 1991 to 2000 in the review); I follow the review. The framing fits the system view of error (Reason 2000 and Fitts and Jones 1947 in this lane). I did not search for rebuttals.
+
+### Implications for LTF
+
+1. Expect competent learners to slip. An error on a task done correctly many times is not proof it was not learned; fluency does not guarantee reliability.
+2. Keep checklists and confirmations for routine steps in later lessons, not skippable as "mastered."
+3. Include non-normal practice in challenges, since a progression that trains only normal flow leaves learners unprepared. Frame it as rehearsing recognition and response, with procedures sourced from aircraft documents.
+4. Hindsight bias applies to review screens: show what the learner could see at the time before showing what was wrong.
+5. Avoid "pilot error" or "your mistake" framing; name the condition (time pressure, ambiguous cue, interruption).
+6. Assume interruptions in fly mode and make it obvious where the learner was.
+
+Confirmed this session: Flight Safety Foundation, Aero Safety World, May 2007, pages 53 to 54 (https://flightsafety.org/asw/may07/asw_may07_p53-56.pdf; fetched and text-extracted with pdftotext); Open Library records OL36773752W and OL13669841W (Dismukes, Berman and Loukopoulos, Limits of Expertise, Ashgate, 2007); web search results about a NASA-hosted summary (not opened). The book itself was not read.
+
+## gawande2010checklist
+
+Gawande, A. (2010). *The Checklist Manifesto: How to Get Things Right*. New York: Metropolitan Books.
+
+### Core claims
+
+Gawande, a surgeon and the senior author of the Haynes surgical checklist study (also in this lane), argues in a trade book that modern work has become too complex for memory and individual expertise alone, and that a well-made checklist is a cheap tool for catching the steps even experts forget. A Globe and Mail review (fetched this session) summarizes the argument: checklists do not diminish skill, people resist them because they seem beneath experts, and good checklists encourage teamwork. The book draws its main parallels from aviation (the pilot's checklist), surgery and construction.
+
+The best-known story, as retold by the same review and by two other summaries in search results, is Boeing's Model 299 bomber of 1935: highly advanced but complicated, it crashed on a test flight, killing two crew members, and the response was a simple pre-takeoff checklist rather than more training; the plane later flew 1.8 million miles without an accident and the Army ordered 13,000 of the resulting B-17 bombers (numbers as given by the Globe and Mail review). Accounts differ on some crash details, and I treat the story as the author's narrative, not as an independent source for aviation history.
+
+### Specifics
+
+Design advice, as summarized in the Globe and Mail review: good checklists are precise and practical and stay easy to use in difficult situations; they cover only the most critical steps rather than spelling out everything; poor checklists are vague, too long and treat users as unthinking; and checklists should support teamwork, such as having surgical team members introduce themselves.
+
+A search summary this session of the book's rules adds the two checklist styles Gawande distinguishes. A Do-Confirm checklist has people do their jobs from memory and experience, then pause to run the list and confirm that everything was done. A Read-Do checklist is like a recipe, in which people carry out the tasks as they check them off. His rules also begin with defining a clear pause point at which the checklist is to be used. These descriptions come from a secondary summary, so check the book before quoting them. The same summary reports that Pronovost's ICU teams improved care when clinicians created their own checklists, but I could not find a source on the line-infection study itself and do not report its numbers.
+
+The book connects to evidence only through other studies: the surgical checklist trial in eight hospitals (Haynes et al. 2009, in this lane) and the later Ontario policy evaluation. The Globe review notes that Ontario made a surgical checklist mandatory from April 2010, tracing partly to a WHO committee that Gawande led.
+
+### Replication and criticism
+
+Evidence type: popular synthesis and narrative argument by a practitioner-author, drawing on field visits, interviews and published studies. It is persuasive but anecdotal where it relies on stories such as Model 299 or individual hospital successes. The strongest quantitative claim it rests on is the Haynes study, which was a before-and-after comparison and was not reproduced in a later population-level evaluation in Ontario (Urbach et al., 2014, covered in the Haynes section: no significant reduction in death or complications; Gawande raised methodological concerns about that study, as reported by PSNet).
+
+Because the book is advocacy for a method, it understates the failure modes that Degani and Wiener document in the aviation literature: checklists that are too long, badly sequenced, or used as a disciplinary instrument. Read it as a motivation for checklist design, and use Degani and Wiener (this lane) for how to design them.
+
+### Implications for LTF
+
+1. Lesson pages can use the book's central framing, with care: a few critical steps, at a defined pause point, in a form people actually use under load. LTF checklists in fly mode should follow "cover only the critical steps."
+2. Offer the two styles deliberately. A Do-Confirm pattern suits actions the learner already knows from the lesson (do first, then confirm on the page). A Read-Do pattern suits sequences the learner must follow in order. Label which kind each LTF checklist is.
+3. Define the pause point on the page itself, as in a banner "Pause: run the confirm list now," so the learner knows when to look at it.
+4. Keep lists short. The advice that poor lists are "too long" is consistent with the Degani and Wiener guideline to subdivide long checklists into chunks.
+5. Do not use the Model 299 story as proof; if a lesson mentions it, label it as a well-known account and avoid specific claims about aircraft.
+6. Any claim that checklists "save lives" should be limited to the cited studies and their limits; for LTF, the honest claim is about learner accuracy and calm, which LTF would need to measure itself.
+
+Confirmed this session: Open Library edition listing (Metropolitan Books, 2010, ISBN 9780805091748; work OL15436462W); Globe and Mail review https://www.theglobeandmail.com/amp/report-on-business/how-to-handle-lifes-complexities-use-a-checklist/article557999/ (fetched); search-result summaries for Do-Confirm and Read-Do and for Pronovost; Haynes and Urbach evidence as described in the Haynes section. The book itself was not read.

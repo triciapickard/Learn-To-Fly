@@ -192,3 +192,35 @@ The qualitative result, that ellipses vary in size and orientation across the di
 MacAdam is the evidence behind a simple rule for palettes: spacing in a chromaticity plot or in raw RGB is not spacing in perception. If LTF builds a categorical palette for charts, lesson tags or challenge difficulty levels, choose steps with a perceptual distance measure (see the CIEDE2000 and Oklab entries), not by eye on a diagram. The 3X ellipse idea also yields a practical threshold language: two states that must be told apart without effort, such as active and inactive instrument elements, should differ by many just-noticeable steps, not one or two, because the thresholds above were measured with a trained observer matching adjacent fields in a lab, not a beginner scanning a busy screen. A warning for dark themes: the ellipse data cover a limited luminance range, so do not extrapolate them to very dim UI states.
 
 Confirmed this session: Crossref record doi 10.1364/josa.32.000247; web searches returning the abstract details and the Optica issue listing (pages 247-308 for the issue; 247-274 for the paper per the search); Wikipedia "MacAdam ellipse" (fetched). The scilit abstract page returned 403 and the paper itself was not read.
+
+## munsell1907color
+
+Munsell, Albert H. 1907 (second edition, Boston: Geo. H. Ellis Co.; copyright 1905). A Color Notation: A Measured Color System, Based on the Three Qualities Hue, Value and Chroma. Evidence type: a craft and teaching treatise by an artist and teacher, with a measured system, later given a colorimetric basis by committee work.
+
+### Core claims
+
+Munsell argues that every color is described by three independent qualities, hue, value and chroma, and that a color can be named by its position on three measured scales instead of by fanciful names. Two dimensions are not enough: flat diagrams of hue and value that omit chroma are, in his words, as incomplete as a map of Switzerland with the mountains left out. The book offers a color sphere as the organizing picture, a notation, a teaching method, and a theory of balance in which combinations that balance in neutral gray are harmonious.
+
+### Specifics
+
+Definitions (from the Gutenberg text I read). Hue is the quality by which one color is distinguished from another, as a red from a yellow. Value is the quality that distinguishes a light color from a dark one. Chroma is the "strength of color", the quality that separates a strong color from a weak one at the same hue and value. He calls "intensity" a misleading synonym for chroma.
+
+The sphere. The north pole is white, the south pole black, the vertical axis is a neutral gray scale, and the equator is a circuit of middle reds, yellows, greens, blues and purples. Perpendiculars to the axis are scales of chroma, running from neutral gray at the center outward. Five principal hues (R, Y, G, B, P) and five intermediates formed by joining initials (YR, GY, BG, PB, RP) give ten hue names, which Munsell says is as many as a child can handle at the outset. Value runs from black as 0 to white as 10.
+
+The notation. Hue is written first, value above the line and chroma below it, in the invariable order hue, value over chroma. R 5/9 is his example of vermilion; the buttercup is YR 7/9 and the wild violet B 3/4. The buttercup is more stimulating than the violet partly because it is lighter and partly because its chroma is five steps higher.
+
+Irregular solid. Because pigments differ in the chroma they can reach, he says a "color tree" with branches of unequal length is needed to show real pigment colors. A brilliant spectrum projects beyond the sphere, since spectral colors have far greater chroma than pigments.
+
+Balance. Munsell treats the sphere's center as the natural balancing point: points equally far from it on opposite sides balance. The buttercup and violet do not balance because the violet is too weak in chroma, so a designer can compensate by area.
+
+A debunking worth keeping. An appendix, "False color balance", says it is a widely accepted error that red, yellow and blue are primary, that Brewster's theory had long been dropped when the elements of color vision proved to be red, green and violet-blue, and that teaching red-green, yellow-purple and blue-orange as complements fails when tested with colored lights or Maxwell discs. He credits Professor Rood's 1879 "Modern Chromatics".
+
+### Replication and criticism
+
+The 1905 spacing was set by Munsell's own judgment; the Optical Society's committee (Newhall, Nickerson and Judd, JOSA 33, 385-418, 1943) renotated the system by new visual estimates, defining it in terms of the standard ICI (CIE) coordinates and Illuminant C and aiming at both psychological equispacing and precise applicability. Later NBS re-renotations (Judd and Nickerson 1967) proposed alternatives. One source says a system built on radiating polar coordinates can never be completely uniform. His physical explanations (value as the height of "ether waves") are of his day and should not be cited. Fairchild (2013) devotes a color order chapter to Munsell, and a search result says Munsell was consulted in building ColorBrewer's schemes.
+
+### Implications for LTF
+
+The three-quality picture is the right mental model for a theme system: separate hue, lightness and chroma tokens, and expect that equal changes in each do not look equal. The most useful rule is Munsell's: a vivid yellow and a vivid blue cannot be balanced at equal chroma or equal area, because the maximum chroma available differs by hue. For dark and light themes this means a single "saturation" number across hues will produce uneven results; set chroma limits per hue. The value scale also teaches beginners to judge whether two elements differ in lightness before judging hue.
+
+Confirmed this session: Open Library search (OL1560367W, OL32858853W); read the full Project Gutenberg text (archive.org acolornotationam26054gut), including paragraphs 10-14, 15-19, 22-23, 40-41, 73-77 and the appendix "False Color Balance"; web search on the 1943 renotation; Fairchild (2013) table of contents.

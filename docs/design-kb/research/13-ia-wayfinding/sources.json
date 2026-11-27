@@ -1,0 +1,561 @@
+[
+  {
+    "key": "lynch1960image",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Lynch",
+        "given": "Kevin"
+      }
+    ],
+    "year": 1960,
+    "title": "The Image of the City",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "MIT Press",
+    "publisher_place": "Cambridge, MA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780262120043",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'image of the city lynch' returned work OL4477193W and an edition with ISBN 9780262120043, MIT Press, first published 1960; work description names Boston, Jersey City, Los Angeles and 'imageability'; editions list Cambridge, MA, M.I.T. Press.",
+    "kind": "empirical urban study and design argument (interviews, sketch maps)",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "arthur1992wayfinding",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Arthur",
+        "given": "Paul"
+      },
+      {
+        "family": "Passini",
+        "given": "Romedi"
+      }
+    ],
+    "year": 1992,
+    "title": "Wayfinding: People, Signs, and Architecture",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "McGraw-Hill",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780075510161",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL3807999W 'Wayfinding' (1992, McGraw-Hill, New York, ISBN 9780075510161, 238 pages) with publisher description; web search confirmed authors Paul Arthur and Romedi Passini and the 2002 commemorative reissue (AbeBooks, Amazon, Semantic Scholar listings; IDeA Center resource DR-14).",
+    "kind": "design handbook synthesizing environmental psychology",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "golledge1999wayfinding",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Golledge",
+        "given": "Reginald G."
+      }
+    ],
+    "year": 1999,
+    "title": "Wayfinding Behavior: Cognitive Mapping and Other Spatial Processes",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Johns Hopkins University Press",
+    "publisher_place": "Baltimore",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Golledge",
+        "given": "Reginald G."
+      }
+    ],
+    "doi": "",
+    "isbn": "9780801859939",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL3349342W (Johns Hopkins University Press, Baltimore, 1998 to 1999, ISBN 9780801859939) with publisher description; web search of press.jhu.edu and library listings confirmed editor, 448 pages, chapter titles.",
+    "kind": "edited research survey volume",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "pirolli1999information",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Pirolli",
+        "given": "Peter"
+      },
+      {
+        "family": "Card",
+        "given": "Stuart"
+      }
+    ],
+    "year": 1999,
+    "title": "Information foraging",
+    "container_title": "Psychological Review",
+    "volume": "106",
+    "issue": "4",
+    "pages": "643-675",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0033-295x.106.4.643",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Pirolli Card Information foraging 1999' returned DOI 10.1037/0033-295x.106.4.643, Psychological Review 106(4) 643-675, authors Pirolli and Card; web search confirmed abstract content.",
+    "kind": "theory with rational analysis and a computational process model (ACT-IF)",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "fu2007snifact",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Fu",
+        "given": "Wai-Tat"
+      },
+      {
+        "family": "Pirolli",
+        "given": "Peter"
+      }
+    ],
+    "year": 2007,
+    "title": "SNIF-ACT: A cognitive model of user navigation on the World Wide Web",
+    "container_title": "Human-Computer Interaction",
+    "volume": "22",
+    "issue": "4",
+    "pages": "355-412",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/07370020701638806",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'SNIF-ACT cognitive model of user navigation World Wide Web Fu Pirolli' returned DOI 10.1080/07370020701638806, Human-Computer Interaction 22(4) 355-412, November 2007; full text read from the publicly hosted PDF.",
+    "kind": "computational cognitive model validated on two datasets",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "miller1981depth",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Miller",
+        "given": "Dwight P."
+      }
+    ],
+    "year": 1981,
+    "title": "The depth/breadth tradeoff in hierarchical computer menus",
+    "container_title": "Proceedings of the Human Factors Society Annual Meeting",
+    "volume": "25",
+    "issue": "1",
+    "pages": "296-300",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/107118138102500179",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Miller depth breadth tradeoff hierarchical computer menus 1981' returned DOI 10.1177/107118138102500179, Proceedings of the Human Factors Society Annual Meeting 25(1) 296-300, with abstract.",
+    "kind": "laboratory experiment",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "kiger1984depth",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Kiger",
+        "given": "John I."
+      }
+    ],
+    "year": 1984,
+    "title": "The depth/breadth trade-off in the design of menu-driven user interfaces",
+    "container_title": "International Journal of Man-Machine Studies",
+    "volume": "20",
+    "issue": "2",
+    "pages": "201-213",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/s0020-7373(84)80018-8",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Kiger depth breadth trade-off menu-driven user interfaces' returned DOI 10.1016/s0020-7373(84)80018-8, International Journal of Man-Machine Studies 20(2) 201-213, February 1984; dblp record also found.",
+    "kind": "laboratory experiment with performance and preference data",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "larson1998web",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Larson",
+        "given": "Kevin"
+      },
+      {
+        "family": "Czerwinski",
+        "given": "Mary"
+      }
+    ],
+    "year": 1998,
+    "title": "Web page design: Implications of memory, structure and scent for information retrieval",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '98)",
+    "volume": "",
+    "issue": "",
+    "pages": "25-32",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/274644.274649",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Larson Czerwinski Web page design implications of memory structure and scent' returned DOI 10.1145/274644.274649, CHI '98 pp. 25-32; full title and content confirmed from the Microsoft Research PDF (chi98_webdesign.pdf).",
+    "kind": "laboratory experiment (19 participants)",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "zaphiris2000depth",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Zaphiris",
+        "given": "Panayiotis G."
+      }
+    ],
+    "year": 2000,
+    "title": "Depth vs Breath in the Arrangement of Web Links",
+    "container_title": "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
+    "volume": "44",
+    "issue": "4",
+    "pages": "453-456",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/154193120004400414",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Zaphiris depth vs breadth in the arrangement of web links' returned DOI 10.1177/154193120004400414, Proceedings of the Human Factors and Ergonomics Society Annual Meeting 44(4) 453-456, July 2000, with abstract; full text read at ktisis.cut.ac.cy.",
+    "kind": "small within-subjects experiment (17 participants)",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "porter2003testing",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Porter",
+        "given": "Joshua"
+      }
+    ],
+    "year": 2003,
+    "title": "Testing the three-click rule",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "User Interface Engineering",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://articles.centercentre.com/three_click_rule/",
+    "verified_via": "websearch",
+    "verified_evidence": "WebSearch for 'Porter Testing the Three-Click Rule UIE 2003' returned the NN/g, Wikipedia and UIE pages; WebFetch of articles.centercentre.com/three_click_rule/ returned author Joshua Porter, April 16, 2003, 44 users, 620 tasks, 8,000+ clicks; NN/g 3-click-rule article (Laubheimer, 2019) also fetched.",
+    "kind": "observational analysis of usability session data (44 users, 620 tasks)",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "furnas1987vocabulary",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Furnas",
+        "given": "G. W."
+      },
+      {
+        "family": "Landauer",
+        "given": "T. K."
+      },
+      {
+        "family": "Gomez",
+        "given": "L. M."
+      },
+      {
+        "family": "Dumais",
+        "given": "S. T."
+      }
+    ],
+    "year": 1987,
+    "title": "The vocabulary problem in human-system communication",
+    "container_title": "Communications of the ACM",
+    "volume": "30",
+    "issue": "11",
+    "pages": "964-971",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/32206.32212",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Furnas Landauer Gomez Dumais vocabulary problem' returned DOI 10.1145/32206.32212, Communications of the ACM 30(11) 964-971, November 1987, with abstract (probability below 0.20; 80 to 90 percent failure; unlimited aliasing).",
+    "kind": "empirical study of word choice plus simulation",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "bates1989design",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Bates",
+        "given": "Marcia J."
+      }
+    ],
+    "year": 1989,
+    "title": "The design of browsing and berrypicking techniques for the online search interface",
+    "container_title": "Online Review",
+    "volume": "13",
+    "issue": "5",
+    "pages": "407-424",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1108/eb024320",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Bates design of browsing and berrypicking techniques online search interface' returned DOI 10.1108/eb024320, Online Review 13(5) 407-424, 1989, with abstract; author's full text read at pages.gseis.ucla.edu/faculty/bates/berrypicking.html.",
+    "kind": "conceptual model drawing on information-seeking literature",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "marchionini2006exploratory",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Marchionini",
+        "given": "Gary"
+      }
+    ],
+    "year": 2006,
+    "title": "Exploratory search: From finding to understanding",
+    "container_title": "Communications of the ACM",
+    "volume": "49",
+    "issue": "4",
+    "pages": "41-46",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1121949.1121979",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Marchionini Exploratory search from finding to understanding' returned DOI 10.1145/1121949.1121979, Communications of the ACM 49(4) 41-46, April 2006, with one-sentence abstract; arXiv review (2312.13695) fetched for the lookup/learn/investigate summary.",
+    "kind": "conceptual and review article",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "rosenfeld2015information",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Rosenfeld",
+        "given": "Louis"
+      },
+      {
+        "family": "Morville",
+        "given": "Peter"
+      },
+      {
+        "family": "Arango",
+        "given": "Jorge"
+      }
+    ],
+    "year": 2015,
+    "title": "Information Architecture: For the Web and Beyond",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "O'Reilly Media",
+    "publisher_place": "Sebastopol, CA",
+    "edition": "4th",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781491911686",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL17316790W lists the 4th Edition, O'Reilly, Sebastopol, CA, 2015, ISBN 9781491911686; Google Books page (fetched) confirmed authors, O'Reilly, ISBN 9781491913550 (ebook), three-part description; publisher preview PDF read for the table of contents.",
+    "kind": "practitioner textbook (craft authority)",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "spencer2009card",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Spencer",
+        "given": "Donna"
+      }
+    ],
+    "year": 2009,
+    "title": "Card Sorting: Designing Usable Categories",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Rosenfeld Media",
+    "publisher_place": "Brooklyn, NY",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781933820026",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL19833289W lists Card sorting, Donna Spencer, Rosenfeld Media, Brooklyn, N.Y., 2009, ISBN 9781933820026; Designer's Review of Books review (fetched) confirmed content and structure.",
+    "kind": "practitioner guide to a research method",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "nielsen2004card",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      }
+    ],
+    "year": 2004,
+    "title": "Card sorting: How many users to test",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Nielsen Norman Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.nngroup.com/articles/card-sorting-how-many-users-to-test/",
+    "verified_via": "websearch",
+    "verified_evidence": "WebFetch of nngroup.com/articles/card-sorting-how-many-users-to-test/ returned author Jakob Nielsen, July 18, 2004, the Tullis and Wood 168-user study, correlation table and recommendations.",
+    "kind": "expert commentary on a resampling study by Tullis and Wood (168 users)",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "krug2014dont",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Krug",
+        "given": "Steve"
+      }
+    ],
+    "year": 2014,
+    "title": "Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "New Riders",
+    "publisher_place": "Berkeley, CA",
+    "edition": "3rd",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780321965516",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL8578577W lists Don't Make Me Think, Revisited, 2014, third edition, New Riders, ISBN 9780321965516, with 1st edition October 2000 and 2nd edition 2005; author's site sensible.com/dont-make-me-think/ fetched for edition statements.",
+    "kind": "practitioner primer (craft authority and expert opinion)",
+    "lane": "13-ia-wayfinding",
+    "original_year": 2000
+  },
+  {
+    "key": "kalbach2007designing",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Kalbach",
+        "given": "James"
+      }
+    ],
+    "year": 2007,
+    "title": "Designing Web Navigation: Optimizing the User Experience",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "O'Reilly Media",
+    "publisher_place": "Sebastopol, CA",
+    "edition": "1st",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780596528102",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL8167698W lists Designing Web Navigation, James Kalbach, O'Reilly, 2007, ISBN 9780596528102 (1st ed.); web search of O'Reilly listing and press release confirmed August 2007 and contents; reviews page on experiencinginformation.com fetched.",
+    "kind": "practitioner reference grounded in human information behavior",
+    "lane": "13-ia-wayfinding"
+  },
+  {
+    "key": "nielsen2017mega",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      },
+      {
+        "family": "Li",
+        "given": "Angie"
+      }
+    ],
+    "year": 2017,
+    "title": "Mega menus work well for site navigation",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Nielsen Norman Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.nngroup.com/articles/mega-menus-work-well/",
+    "verified_via": "websearch",
+    "verified_evidence": "WebFetch of nngroup.com/articles/mega-menus-work-well/ returned authors Jakob Nielsen and Angie Li, March 26, 2017, with guidelines, timing, accessibility advice and examples.",
+    "kind": "expert guidelines (testing method not reported)",
+    "lane": "13-ia-wayfinding"
+  }
+]

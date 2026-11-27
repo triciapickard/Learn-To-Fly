@@ -111,3 +111,79 @@ The ten-to-twelve-word figure matches Morison's (morison1936first) without citat
 4. Even spacing matters most in short, high-stakes text such as checklist items and quiz stems; avoid forced justification and stretched spaces there.
 
 Confirmed this session: Introduction, preface, "The Theme", "Lettering" and "The Procrustean Bed" text read from the archive.org copy https://archive.org/details/an-essay-on-typography-1993-eric-gill (full text via archive.org download). Skelton's remarks, Joanna and 1936 printing details come from that edition's "Publishing History". Open Library work OL1178647W lists the Dent and Godine editions.
+
+## updike1922printing
+
+Daniel Berkeley Updike, *Printing Types: Their History, Forms, and Use. A Study in Survivals* (Cambridge, MA: Harvard University Press, 1922; The Merrymount Press, Boston; two volumes).
+
+### Core claims
+
+Updike's book is a history of European and American printing types arranged by country and period, with a practical purpose stated in the chapter on choosing types. He calls it "a study in survivals" because it tries to show "not only what types have survived, but what should survive through their fitness for the best typography." Its method assumes that long survival signals fitness, and that studying type forms teaches "not only how to choose" but gives "courage to eliminate."
+
+Its sharpest claim is a moral one about taste: "There are many ways of being wrong, but only one way of being right." He adds that if we do not judge types rightly, "they will judge us." The ideal composing room is built not from a list of "standard" faces accepted on others' say-so, but by printers who study and then add interesting fonts from sources that study has revealed.
+
+### Specifics
+
+The work has two volumes and, by the chapter numbers in the scan, runs to at least twenty-four chapters, covering Italian, French, Dutch, German, English and American types, with chapter XIX on "classical" types (Bodoni and the Didots) and later chapters on the revival of Caslon and on the English and American revival of early type forms. Chapter XXIII, "The Choice of Types for a Composing-Room," gives his working verdicts.
+
+In that chapter he praises transitional types (the Baskerville and later Caslon letter between old style and "modern") as workable, since they do "all the work of an old style type" while being "more interesting" and "less bleak and commonplace" than a modern face. He then lists the types "we ought not to want," which "have no place in any artistically respectable composing-room": practically all types on "standard line," all condensed or expanded types, all "sans-serif" or (as he says "absurdly miscalled") "gothic" types, all fat-faced black-letter and fat-faced roman, all hair-line types, almost all "ornamented" types and types imitating engraving, and almost all shaded types. He also condemns the family variants of many standard series as "condensations, distortions, or exaggerations of the original letter," the "disreputable offspring of honest parents."
+
+Chapter XIX on Bodoni records dated facts: the *Manuale Tipografico* appeared in a second and final edition in two quarto volumes in 1818, five years after Bodoni's death, completed by his widow and Luigi Orsi; only 290 copies were struck off, per Signora Bodoni's letter. Updike judges it "probably the most elaborate specimen that the world has ever seen," and "the acme of Bodoni's late, chilly, dry manner." He divides Bodoni's work into an early period of old style or transitional types with profuse decoration and a later period of his own designs and unadorned typography.
+
+### Replication and criticism
+
+Craft history and connoisseurship, written from within the Boston private-press tradition. It has no experimental content. The verdict against sans serif is a product of its date: Tschichold's *New Typography* would argue the opposite within six years of the book's appearance (tschichold1998new), and the later history Robin Kinross tells (kinross2004modern) is largely of sans serif and asymmetry becoming mainstream. Treat his lists as period taste, not findings.
+
+The survival logic is also questionable: survival can reflect habit, cost and foundry inventory, not fitness. I read an error-prone OCR scan and did not check his historical attributions against later scholarship, so use the book for his judgments and check any historical claim elsewhere.
+
+His verdict on hair-line types is echoed by a blogger's excerpt of Dowding that modern-face (Bodoni-style) types need generous leading and narrow measures (dowding1954finer).
+
+### Implications for LTF
+
+1. "Courage to eliminate" is a type-selection rule: LTF needs few families (one text face, one display or numeral face, one monospace if code appears), chosen deliberately.
+2. His "disreputable offspring" is a rule against synthetic distortion: do not let the browser fake bold or italic, and never scale a widget label horizontally to fit.
+3. Hair-line weights remain a risk. Updike condemns them in print; on screens at small sizes thin strokes are even more fragile (see lane 03 for the rendering evidence).
+4. The transitional category (moderate contrast, sturdy serifs) is a sensible default for lesson serifs.
+5. Updike's sans verdict should not bind LTF: instrument widgets and fly mode will use sans numerals for glanceability. Record this as a deliberate departure from a traditionalist source.
+
+Confirmed this session: Full text (OCR) of the 1922 Harvard edition read from https://archive.org/details/PrintingTypes (archive.org identifier PrintingTypes; contents, "Choice of Types" chapter, Bodoni chapter, quotations above). Edition data in Open Library work OL135223W (Harvard University Press, 1922).
+
+## devinne1910practice
+
+Theodore Low De Vinne, *The Practice of Typography: Correct Composition* (New York: The Century Co., 1901; third edition 1910, the text read here).
+
+### Core claims
+
+*Correct Composition* is the second book of De Vinne's four-volume *Practice of Typography*. It is a manual for compositors and proof-readers on spelling, abbreviations, compound words, figures and numerals, italic and capital letters, division of words, notes, indention, spacing, quotation marks, subheadings, punctuation and proof-reading. Its central argument is that consistency is a quality readers notice and demand. In the preface he says printing that passed a tolerant inspection in 1850 "does not pass now," and that "the reader of to-day is more or less a critic of style in type-setting."
+
+Because "there is no book of generally accepted authority that lays down a full code of explicit rules for orderly printing," each printing house that strives for consistency must make its own code, the "style-card," to guide new compositors and maintain uniformity. The book is his attempt to publish such a code for others, with the humility that different houses and different kinds of work need different rules.
+
+### Specifics
+
+The spacing chapter (XII) is the most useful part for design. Its rules, all for hand-set metal type:
+
+- Composition is made more pleasing "when the spaces between words seem to be of the same width in all lines on the page." Lines thick-spaced at one side and thin at the other are "a disgrace to the printer."
+- Absolute uniformity is impossible because words cannot always be divided; the compositor must "be content with approximations to an ideal but unreached standard."
+- To make spacing seem even, the physical spaces must differ. Round letters such as o and e fill about half the type body, ascending and descending letters about three fourths, and angled letters (A, L, Y, W) leave gaps that should be counted as part of the space, so a word ending in y followed by one beginning with W takes a thinner space. He says this discrimination is impractical for small sizes and "desirable and even necessary" above twelve point, and impossible on automatic typesetting machines.
+- For solid composition in lower case, the three-to-em space is the most used; the en quadrat suits wide-leaded matter. Em-quad word spaces ("pigeonholing") are "generally disapproved."
+- Capital letters, being about twice as high and twice as wide, "need spaces twice as wide ... and leads twice as thick"; the en quadrat is the least permissible word space in capitals.
+- On division of words he says words "always appear better unbroken, but the breaking of words may not be so unsightly as the breaking up of a general uniformity of the spacing between words." He names "hounds'-teeth," irregular white gaps across lines, as "more offensive to the reader than any strangeness of division."
+- Small capitals of nine point and smaller "are dense and not easily read" for running titles; hair-spacing helps. Full capitals of the text are "much too large" for signatures.
+
+He also quotes Horace Hart's rule for divisions at Oxford: the part left at line end should suggest the part carried over.
+
+### Replication and criticism
+
+Craft codification, from a leading American printer-historian. The rules are conventions, not findings, and many are tied to metal type and hand work. He is explicit that American and British houses differ (for example "fa-ther" versus "mo-ther"). The book's standing was high among practitioners: the introduction to the 1936 edition of Gill's *Essay on Typography* says De Vinne's four-volume work, "full of sound detail," was probably known to Gill and Hague, and that Morison "regarded it highly."
+
+De Vinne also pushes back at the fashion of his own time. A footnote criticizes advocates of the "fifteenth-century school of typography" who use only one thin space, arguing readers find tight spacing a vexation, and he calls em-quad-spaced running titles "too uncouth for long life." That makes him a useful counterweight to Dowding's later close-spacing doctrine (dowding1954finer): the same question, how wide a word space should be, got opposite answers a half century apart, and neither rests on experiment here.
+
+### Implications for LTF
+
+1. His "style-card" is the model for the LTF copy rulebook. A written code for units, abbreviations, capitalization, numerals and checklist wording is how consistency survives many authors. LTF's existing rules for US English, no em-dashes, and MSL/AGL labels are exactly this kind of code.
+2. Readers notice inconsistency faster than they notice errors of substance. In a lesson series, drift in how a quantity is written (unit, spacing, abbreviation) will be read as carelessness, which for a safety-adjacent subject erodes trust.
+3. Uppercase and small-cap labels need extra letterspacing and a bigger word space. That justifies CSS letter-spacing on all-caps widget labels and badges.
+4. Optical word spacing is a reminder that equal widths do not look equal; test labels at the sizes where they are shown.
+5. "Hounds'-teeth" are today's rivers in justified text, one more reason for ragged-right in narrow columns.
+
+Confirmed this session: Full text of the third edition read from the archive.org scan https://archive.org/details/typogr00devipracticeofrich (title page, contents, preface, chapter XII on spacing, small capitals, divisions). Open Library lists the 1901 Century Co. edition (work OL5150673W and edition OL34122483W). Gill introduction remark read in https://archive.org/details/an-essay-on-typography-1993-eric-gill.

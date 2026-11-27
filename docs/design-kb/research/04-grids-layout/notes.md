@@ -486,3 +486,152 @@ Experimental work with computational models, and generalization is its central c
 
 Confirmed this session: Crossref record 10.1167/7.2.17 (authors, 7(2), article 17, 16 August 2007); MIT DSpace record dspace.mit.edu/handle/1721.1/37593 (software for the two measures; Journal of Vision 2007); web-search summaries of the paper (the three measures, color variability, set-size framing); Yu, Samaras and Zelinsky (2014), PMC4528410, for comparison numbers and later criticism. The paper's full text (jov.arvojournals.org) returned a 403 error.
 
+## tufte1983visual
+
+Tufte, Edward R. (1983). *The Visual Display of Quantitative Information*. Cheshire, CT: Graphics Press (second edition 2001).
+
+### Core claims
+
+Tufte argues that graphics should show data with integrity and efficiency, and offers measures to judge a display: the data-ink ratio, data density and the lie factor. His maxim, as listed in secondary summaries, is "above all else show data." The key density claim for layout is that a page or screen can usually carry far more information than designers dare to put on it, if the information is well organized.
+
+### Specifics
+
+The author's site describes the book as the classic on statistical graphics, charts and tables, with about 250 illustrations and 197 pages; the second edition (2001) adds color reproductions of William Playfair's graphics and corrections from 17 printings of the first. Definitions and figures below come from secondary summaries (a University of Washington course outline of 1998, an IEEE Spectrum article and academic chapters) and should be checked against the book before being quoted as Tufte's words.
+
+- Data-ink ratio = data-ink divided by total ink used to print the graphic, equivalently 1.0 minus the proportion of the graphic that can be erased without loss of data. Data-ink is described as "the non-erasable core of a graphic."
+- Chartjunk: non-data ink or redundant data ink, described in a summary as "ink that does not tell the viewer anything new."
+- Data density = number of entries in the data matrix divided by the area of the graphic. The course outline says most scientific journals reach about 50 to 200 numbers per square inch and that an astronomical graph reaches about 110,000, the maximum known. The outline is old and the figures are illustrations, not benchmarks.
+- Small multiples: sets of thumbnail-sized graphics on one page showing aspects of one phenomenon, using the same measures and scale.
+- Lie factor = size of the effect shown in the graphic divided by size of the effect in the data; area and volume encodings exaggerate differences.
+
+### Replication and criticism
+
+Tufte's principles are expert opinion supported by examples, and the empirical record is mixed. Bateman, Mandryk, Gutwin, Genest, McDine and Brooks (CHI 2010, doi:10.1145/1753326.1753716) tested embellished charts against plain ones. From the abstract as reported by a web search, embellished charts were described about as accurately as plain ones, and recall after two to three weeks was significantly better for embellished charts, though the authors caution against recommending all charts adopt this style and found that background images made interpretation harder. A commentary by Stephen Few says the long-term recall group had 10 participants. A 2023 preprint (doi:10.31219/osf.io/dferj) reports a replication attempt, but I did not read its results. Parsons and Shukla (2020, arXiv 2009.02634) interviewed 20 data visualization practitioners and found pluralistic views of chartjunk, with personal and situational factors shaping its use. Data-ink minimalism is therefore a useful default for analytical charts, not a law for all audiences, and is least secure for teaching, where memorability and engagement matter.
+
+### Implications for LTF
+
+1. Instrument widgets are graphics in Tufte's sense: erase decoration that carries no information (chrome, bevels, drop shadows), keep tick marks and numerals that do. But a round gauge is also a learned convention that beginners must recognize, so fidelity to the real instrument may beat data-ink purity.
+2. Use small multiples for comparing variants: for example, several airspeed indicator states in a row with identical scales when teaching what a reading means.
+3. Density is context-dependent: a lesson can be sparse, a dashboard of progress can be dense, and fly mode must be sparse because attention is on the sim. Define a density budget per page type.
+4. The lie factor is an integrity check: progress bars and charts in LTF should scale area and length linearly with the data.
+5. Do not remove all non-data elements from teaching charts. The embellishment studies suggest some illustration may aid recall, and LTF should test this itself before adopting or banning it.
+
+Confirmed this session: Open Library work OL2824012W (Graphics Press, Cheshire, CT, 1983, 197 pages, ISBN 9780961392147; second edition 2001); author's page edwardtufte.com/book/the-visual-display-of-quantitative-information/; web-search summaries of definitions; the 1998 UW course outline staff.washington.edu/larryg/Classes/R560/zz-tufte.html (formulas, density numbers); Crossref record for Bateman et al. (2010) and the arXiv abstract for Parsons and Shukla. I did not read the book.
+
+## markowsky1992misconceptions
+
+Markowsky, George (1992). "Misconceptions about the Golden Ratio." *The College Mathematics Journal*, 23(1), 2-19. doi:10.1080/07468342.1992.11973428
+
+### Core claims
+
+Markowsky examines claims that the golden ratio (about 1.618) appears in ancient architecture, famous paintings, modern buildings and the human body, and that people prefer golden rectangles. He concludes that many of the claims are unsupported, rest on selective measurement, or come from errors of history. The paper is the standard citation for scepticism about golden-ratio claims in art and design, and was later drawn on by Mario Livio (2002).
+
+### Specifics
+
+I could not read the paper itself (the archive copy was blocked), so the content below is from secondary accounts, including a critical review by a golden-ratio enthusiast (Gary Meisner), whose description of Markowsky should be read with that bias in mind.
+
+- Naming: the term "golden ratio" dates only to the 1800s; older names include "extreme and mean ratio" and "divine proportion."
+- Great Pyramid: his measurements give a hypotenuse-to-height ratio of about 1.6195, within about 0.09% of the golden ratio, yet he rejects the link because the ancient text that describes the pyramid is ambiguous.
+- Parthenon: he argues that parts of the building fall outside the golden rectangle usually drawn around it, and that source measurements differ because of different reference points. One of his calculations divides a width of 101 ft 3.75 in (a figure Meisner's account attributes to Tractenberg and Hyman, spelled as I read it) by an apex height of 59 ft (attributed to Rossiter), giving 1.717, not 1.618.
+- Painters: he finds the claims for Leonardo da Vinci and others weak and doesn't measure major works.
+- Buildings: height divided by width of the United Nations Secretariat Building gives about 1.76 (and 1.90 to 1.92 with other heights).
+- Preference experiments: Meisner reports that Fechner's 1860s test with 10 rectangles found about 76% chose ratios near 0.618, and that Markowsky repeated it with 48 rectangles and found people prefer a range of proportions but not the golden one specifically.
+- Human body: his own family measurements gave a navel-height ratio averaging 1.63 (about 0.7% from the golden ratio), which he dismissed as within measurement uncertainty.
+- Framework: he treats measurements within about plus or minus 2% of the ratio (about 1.58 to 1.66) as the range to consider, arguing that infinitely many numbers lie near it.
+
+### Replication and criticism
+
+Mathematical and historical analysis, not an experiment. The critique from the other side (Meisner) argues that Markowsky measured the Parthenon from the wrong base, ignored other golden relationships and was too strict. Both sides use measurement tolerance as the key judgment, which is exactly why such claims are unfalsifiable by casual overlays. The balanced popular treatment (Livio, 2002) agrees with Markowsky that many claims are overstated. The experimental side is covered by Höge (1995) in this lane, who found no golden-section preference when instructions were varied.
+
+### Implications for LTF
+
+1. Do not use the golden ratio as a justification in LTF design documents, lesson copy or marketing. Any layout ratio should be justified by function (legibility, screen fit) or by a test.
+2. If a golden-ratio scale is used for convenience (see Brown 2011), say so in terms of convenience.
+3. When a contributor claims a proportion is "known to be most beautiful," ask for a test. The design KB should record that such claims are contested.
+4. For aviation content, the ratio has no role; geometry claims about airfoils or instruments need engineering sources, not aesthetic ones.
+5. This paper is a model of the evidence discipline LTF needs: check the measurements, state the tolerance, and report that a pattern fits only within a stated range.
+
+Confirmed this session: Crossref record 10.1080/07468342.1992.11973428 (author, The College Mathematics Journal 23(1), 2-19, January 1992); web-search summaries including goldennumber.net's review of the paper (Meisner, a partisan source), which gave the numbers above. The paper's own text was not read, so every number is attributed to those accounts.
+
+## hoge1995fechner
+
+Höge, Holger (1995). "Fechner's Experimental Aesthetics and the Golden Section Hypothesis Today." *Empirical Studies of the Arts*, 13(2), 131-148. doi:10.2190/uhtq-cfvd-cau2-wy1c
+
+### Core claims
+
+Gustav Fechner began experimental aesthetics ("aesthetics from below") in the 1860s with the golden section hypothesis: that the golden rectangle is the most pleasing proportion. Höge revisits the hypothesis with two experiments and finds that, whatever criteria subjects were given, there was no preference for the golden section.
+
+### Specifics
+
+From the abstract as reported by a search of the Scilit record: the golden section hypothesis fit Fechner's psychophysical approach. Berlyne had cautioned that small changes in instructions or experimental setup might shift the proportions people prefer. Höge therefore varied the verbal criteria given to subjects. One experiment used Fechner's method of production, in which subjects drew rectangles; the other used the method of choice, in which subjects sorted rectangles. Different criteria produced different proportions in the drawn and sorted material, but under both conditions no preference for the golden section was found. The abstract summary I could read does not give the number of subjects, the criteria used (for example "most pleasing" versus other wordings) or the proportions chosen, and I did not read the full paper.
+
+Related context: Roy Behrens's review of Elam (2003) says tests beginning with Fechner in 1876 point to the golden section; Meisner's account of Markowsky reports that Fechner's 1860s choice test found about 76% choosing near 0.618 among 10 rectangles. These statements are the claim that Höge's experiments qualify.
+
+### Replication and criticism
+
+Experiments on subjects, with a method-focused conclusion: the preferred shape depends on what people are asked. The result matches Markowsky's (1992) report of a wider-range preference, as described by Meisner. Limits: the paper tests rectangles in isolation, with no context, which is both a strength (control) and a weakness (real designs have content), and it tests samples whose characteristics I could not confirm. A defender of the golden section can argue that the rectangle test lacks context; an opponent can argue that the hypothesis predicted a robust preference and did not get one. The fair reading is that the claim of a universal, robust preference is not supported.
+
+### Implications for LTF
+
+1. Do not choose card, image or panel aspect ratios by appeal to the golden rectangle. Choose them by content (a sim screenshot is 16:9; a gauge is square or circular).
+2. Instruction wording changes outcomes, so in LTF's own preference tests keep wording neutral and consistent ("which is easier to read?" differs from "which is nicer?") and prefer performance tasks.
+3. Where a test is cheap, test: A/B two layouts with the same learners and task, as this literature recommends, instead of using authority.
+4. The design KB should classify golden-section aesthetics as "contested, weak evidence" and record this paper as the source.
+5. In user research, be aware that a preference result can be an artifact of the criterion in the question; the same warning applies to Likert items on LTF surveys.
+
+Confirmed this session: Crossref record 10.2190/uhtq-cfvd-cau2-wy1c (author Höge, Empirical Studies of the Arts 13(2), 131-148, July 1995, SAGE); abstract summary via the Scilit record scilit.com/publications/34b0ab391d492eed024b386a428f4257 (two experiments, criteria varied, no golden section preference). The full text was not read.
+
+## fessenden2018scrolling
+
+Fessenden, Therese (2018). "Scrolling and Attention." Nielsen Norman Group, 15 April 2018. https://www.nngroup.com/articles/scrolling-and-attention/
+
+### Core claims
+
+Users do scroll, but attention remains concentrated at the top of the page, and content closer to the top is more likely to be read. The article updates an earlier 2010 eyetracking study with new data. It answers two opposed myths: that "users never scroll" (they do, and more than before) and that the fold no longer matters (it does).
+
+### Specifics
+
+Method as reported: the x,y coordinates of over 130,000 eye fixations from 120 participants, taken from a larger eyetracking study across thousands of sites, on a 1920 by 1080 screen, compared with a 2010 study on 1024 by 768 monitors. Tasks covered news, e-commerce, blogs, FAQs, encyclopedic pages and search engine results pages. The article does not state the number of pages.
+
+Findings: 57% of viewing time was above the fold, down from 80% in 2010. 74% of viewing time fell within the first two screenfuls (up to 2160 px); the second screenful received about 17%, and the remaining 26% was spread thinly across the rest. On general pages over 42% of viewing time fell in the top 20% of the page and over 65% in the top 40%; on search results pages 47% fell in the top 20% and over 75% in the top 40%. Above the fold, over 65% of viewing time was in the top half of the viewport (over 75% on search results pages). A sharp drop in attention after the fold appeared in both 2010 and 2018. By 2018, 81% of viewing time fell within the first three screenfuls, versus 80% in the first screenful in 2010. Recommendations: reserve the top of the page for high-priority content and key calls to action, add signifiers (such as cut-off text) to avoid false floors, and test the ideal page length with real users.
+
+### Replication and criticism
+
+A large observational eyetracking dataset reported by a research group with a track record, but not peer-reviewed, and the article lists its own caveats. It could not separate the effects of bigger screens from those of design trends. The 74% figure ignores maximum page length, so it may reflect short pages or users giving up. The gaze plot is representative only; actual patterns depend on design and the user's goal. Search results pages likely reflect users focusing on top results. The comparison with 2010 uses different screen sizes. The findings concern casual browsing of public sites; they do not describe students working through a lesson they have committed to, whose scrolling behavior is likely different. Such behavior is a known gap, and the article does not address it.
+
+### Implications for LTF
+
+1. Do not assume learners will not scroll, and do not assume they will see content far below the first screens. Put the objective, the next action and any safety-relevant step near the top, and use signifiers (a visible partial next section) so scrolling is invited.
+2. Long lessons should be structured as short sections, each with its own heading and a clear summary near its start, so that the top-heavy attention pattern applies to each section.
+3. Quizzes and challenge briefings should place the question and primary action within the first screenful on a phone, which means a smaller viewport than the 1920 by 1080 used in this study.
+4. For fly mode, assume no scrolling at all: everything essential must fit in one view next to the sim.
+5. The data suggests that content below the third screenful is rarely seen by casual visitors, but LTF learners are committed; test LTF's own scroll depth through analytics, and treat these numbers as priors, not targets.
+
+Confirmed this session: full article text fetched from nngroup.com/articles/scrolling-and-attention/ (author Therese Fessenden, 15 April 2018; method, percentages, conclusions, caveats above). It is the source of the figures; I did not see the underlying dataset.
+
+## nielsen2006f
+
+Nielsen, Jakob (2006). "F-Shaped Pattern For Reading Web Content (original study)." Nielsen Norman Group, 16 April 2006. https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/
+
+### Core claims
+
+An eyetracking study found that users' dominant way of reading web pages resembles the letter F ("F for fast"). People do not read word by word, and what they see falls off with distance from the top and left of the page. The article draws conclusions for placing content and writing headings.
+
+### Specifics
+
+Method: eyetracking with 232 users viewing thousands of web pages, with a fairly consistent pattern across sites and tasks. The F has three parts: a horizontal movement across the upper part of the content (top bar); then a move down and a second horizontal movement, usually shorter (lower bar); then a vertical scan down the left side, sometimes slow and systematic and sometimes fast and spotty (the stem). Recommendations: assume users will not read word by word, especially during initial research; put the most important information in the first two paragraphs, since users will likely read more of the first paragraph than the second; start subheads, paragraphs and bullet points with information-carrying words, because the left edge is noticed most and the third word on a line is read much less often than the first two. The page notes that a later eyetracking study, 11 years on, confirmed the findings.
+
+### Replication and criticism
+
+An observational study from an applied research group, reported on the web and not peer-reviewed in the article form. The article itself qualifies the finding: the F is a rough, general shape, not a uniform pattern. Some users read a third horizontal section (an E) or only one (an inverted L). The distance between the bars varies: a product image lowered the second bar on an e-commerce page, and a longer second headline lengthened it on a search results page. Users typically read less of the second horizontal area than the first. The study gives no figures for the number of pages beyond "thousands," and the heat maps are illustrative. The pattern describes uncommitted scanning of text-heavy pages; it should not be generalized to every task. A risk in applying it is to treat the F as a template to design to; the article's own recommendations point instead at structuring text with front-loaded words and clear headings.
+
+### Implications for LTF
+
+1. Left-align text and put the key word first in headings, step labels, and bullets: "Check fuel quantity" scans better than "Now you should make sure to check the fuel quantity," where the information-carrying words come after filler. (This is a copy example only, not a procedure.)
+2. Structure lessons with clear, information-carrying subheads and short paragraphs so that scanning picks up the right items, since many learners will skim before they commit.
+3. A checklist's left edge is the scan line: put the action word or item name at the left, and the value or response at a consistent right-hand position.
+4. Do not design layouts to fit an F. Write and structure content so that a learner who follows the F still gets the point, and use the data as a description of poor-case behavior.
+5. In fly mode, where reading time is brief, apply the same principle: lead with the most important word and place the primary value at the top left.
+
+Confirmed this session: full article text fetched from nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/ (author Jakob Nielsen, published 16 April 2006; 232 users; three components, recommendations and caveats above). I did not read the 2017 follow-up.
+

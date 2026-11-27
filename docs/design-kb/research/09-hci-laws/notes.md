@@ -372,3 +372,82 @@ Use Miller for what it supports: chunking. Group related information so each gro
 
 Confirmed this session: Crossref 10.1037/h0043158 (title, author, 1956, vol. 63, issue 2, pp. 81-97); full text read at https://psychclassics.yorku.ca/Miller/ (via a fetch summary of the findings and the closing remarks); concluding paragraph also via the OpenAlex abstract record; Ma et al. abstract via Europe PMC; Alvarez and Cavanagh abstract via OpenAlex.
 
+## cowan2001magical
+
+Cowan, N. (2001). The magical number 4 in short-term memory: A reconsideration of mental storage capacity. *Behavioral and Brain Sciences*, 24(1), 87-114. doi:10.1017/s0140525x01003922
+
+### Core claims
+
+Cowan reconsiders Miller's seven. According to the abstract, Miller (1956) summarized evidence that people can remember about seven chunks in short-term memory tasks, but that number was meant more as a rough estimate and a rhetorical device than as a real capacity limit. Others have suggested a more precise limit of three to five chunks. Cowan brings together a wide variety of data suggesting that the smaller capacity limit is real, and concludes that a single, central capacity limit averaging about four chunks is implicated, along with other, non-capacity-limited sources of memory performance. He also proposes that the limit applies to the focus of attention. The article is a target article in a journal that publishes open peer commentary, so its claims were published alongside many critical responses.
+
+### Specifics
+
+Evidence type: a broad review that integrates experiments on many tasks, with a theoretical proposal. The abstract lays out the method for finding the limit: capacity limits are useful in analyses of information processing only if the boundary conditions for observing them can be described carefully. Four basic conditions allow chunks to be identified and capacity to be observed: (1) when information overload limits chunks to individual stimulus items; (2) when other steps are taken specifically to block the recoding of stimulus items into larger chunks; (3) in performance discontinuities caused by the capacity limit; and (4) in various indirect effects of the capacity limit. Under these conditions, rehearsal and long-term memory cannot be used to combine stimulus items into chunks of unknown size, and storage mechanisms that are not capacity-limited, such as sensory memory, cannot refill the capacity-limited store during recall. The paper distinguishes the pure short-term-memory capacity limit, expressed in chunks, from compound limits obtained when the number of separately held chunks is unclear (the situation in a typical digit-span test, where chunking, rehearsal and long-term memory contribute). It also discusses why pure capacity estimates fall within a narrow range.
+
+The practical meaning: when learners cannot rehearse or regroup (for instance when many unrelated items appear and disappear quickly), the number they can keep active is about three to five items, not seven; when they can group items into familiar units and rehearse, they can retain more material, but that is the effect of chunking and long-term memory, not a larger store. I did not read the main text, so I cannot report the experiments or the individual commentaries.
+
+### Replication and criticism
+
+The capacity of about four has been replicated in many tasks, but its interpretation is contested. Alvarez and Cavanagh (2004) found that visual short-term memory capacity varied from 1.6 objects for shaded cubes to 4.4 for colors across five stimulus classes, and that capacity was almost exactly predicted by the information load of each item (r-squared of .992 between visual search rate and the reciprocal of capacity); extrapolating gave an upper bound of about four or five objects, so the number depends on what the items are. Ma, Husain and Bays (2014), in a review in Nature Neuroscience, describe a proposal that working memory is a limited resource distributed flexibly among all items, so that the quality rather than the quantity of representations determines performance, which challenges both seven and four as fixed counts. Cowan's own abstract notes that the limit can only be observed under carefully stated conditions. The message is that "four" is an average under restricted conditions, not a constant to design to.
+
+### Implications for LTF
+
+Where Miller's number is a rhetorical flourish, Cowan's is a caution for novices: a beginner who does not yet have chunks for flight concepts has a small working memory for them. For LTF this supports several concrete choices. Introduce no more than about three or four new terms or values in one step, then consolidate before adding more. Keep the item the learner is acting on visible so memory is not the bottleneck. Do not require learners to hold two unrelated numbers in memory while looking at the sim and answering a quiz item. Use named chunks (a section name) so that familiar learners treat a block as one unit, and let them expand it. Avoid presenting this as "the rule of four" in the design system: use it as a prompt to check each screen for how many separate things the learner must track, and test with real beginners, since the figure depends on the material.
+
+Confirmed this session: Crossref 10.1017/s0140525x01003922 (title, author, 2001, vol. 24, issue 1, pp. 87-114); abstract via OpenAlex; Alvarez and Cavanagh abstract via OpenAlex (Crossref 10.1111/j.0963-7214.2004.01502006.x); Ma et al. abstract via Europe PMC (Crossref 10.1038/nn.3655). The article body and commentaries were not read.
+
+## newell1981mechanisms
+
+Newell, A., & Rosenbloom, P. S. (1981). Mechanisms of skill acquisition and the law of practice. In J. R. Anderson (Ed.), *Cognitive skills and their acquisition* (pp. 1-55). Hillsdale, NJ: Lawrence Erlbaum Associates.
+
+### Core claims
+
+Newell and Rosenbloom studied how practice improves performance. The abstract on a CMU-hosted record (read this session) says the chapter argues that a single power law of practice describes all the empirical practice data, presents a set of practice curves, analyzes power functions mathematically and tests three classes of functions against the curves, reviews existing models of practice, and proposes the chunking theory of learning as a mechanism rooted in modern cognitive psychology. The chapter opens with the sentence "Practice, and the performance improvement that it engenders, has long been a major topic in psychology." In the form later adopted in HCI, the law says that the time to perform a task falls as a power of the number of practice trials: big gains early, slower gains later, with no sharp plateau. Quoted by Heathcote and colleagues, the authors reason that a power function implies "a learning process in which some mechanism is slowing down the rate of learning" (p. 18), which the chunking theory explains: as people form chunks of ever larger size, each remaining improvement is rarer.
+
+### Specifics
+
+Evidence type: a theoretical and empirical synthesis with curve fitting on published data sets, from the early cognitive-science program at Carnegie Mellon. I could not read the chapter (page counts differ across records, 1-55 in one and 1-51 in another, so I leave the page range out of the source entry); the points below are from its abstract and from the precise account in Heathcote, Brown and Mewhort (2000, full text read).
+
+- The two functions compared: a power function with an asymptote and a preexperimental practice parameter (the four-parameter "general power function"), and a three-parameter exponential. The fit was by minimizing squared deviations in log(RT minus the asymptote). The authors report that the power function fit better than the exponential in every case, across a wide range of tasks.
+- The practical form: performance time T falls as T = A + B(N + E)^-beta, where N is the trial number and E accounts for prior practice (Heathcote et al.'s Equation 1). The model human processor of Card, Moran and Newell (1983) uses the law, with an exponent estimate of 0.40 and bounds of 0.20 to 0.60 as reproduced by Jastrzembski and Charness (2007).
+- Heathcote and colleagues quote one remark from the chapter: "Curve fitting without benefit of a model is notoriously a black art" (p. 23).
+- Crossman's 1959 study of cigar rolling is cited by secondary sources as an early demonstration of the power form, and the law was proposed as a psychological regularity by Snoddy in 1928; I did not verify either from a primary source.
+- Data: per Heathcote et al., all but one of the tasks in the survey used averaged data (over subjects, conditions or practice blocks).
+
+### Replication and criticism
+
+This is the most challenged claim in the lane, and see the entry on Heathcote, Brown and Mewhort (2000): the apparent power law is largely an averaging artifact, and individual learning curves are better described by exponentials. Evans, Brown, Mewhort and Heathcote (2018, Psychological Review, abstract read) state that early work favored a power law but this was shown to be an artifact of averaging over participants who are individually better described by an exponential law; their own analysis supports a delayed exponential law in a clear majority of paradigms. The chunking theory is a separate matter: it is a mechanism proposal that predicted the power law, so when the law is revised, the mechanism loses its main supporting evidence, though the idea of chunking remains independently supported (see Miller 1956 and Cowan 2001). The enduring part is the qualitative shape: rapid early improvement, then diminishing returns.
+
+### Implications for LTF
+
+For progress and practice design, use the qualitative curve and avoid the formula. Beginners improve fastest on the first handful of repetitions, so one or two practice attempts at a skill in the sim are worth much more than the tenth. Progress dashboards should not promise linear improvement, and a learner whose times plateau has not failed. Use averages with care: a group average curve looks smooth and power-like even when individuals improve in steps, so show each learner their own attempts and not only a class average. Do not display any "predicted attempts to mastery" number derived from a power-law fit. For challenges, it supports spaced short attempts with feedback rather than one long run, and it means that early difficulty and frustration are normal and expected, not a sign the learner is poorly suited.
+
+Confirmed this session: Crossref 10.4324/9780203728178-6 (2013 Psychology Press reprint volume record, pp. 12-66, ISBN 9780203728178, no author fields); citation and abstract at https://aitopics.org/doc/classics:7D0BECCD (editor J. R. Anderson, Erlbaum, Hillsdale NJ, pp. 1-55, 1981); web search showing BibBase's 1981 record (pp. 1-51); Heathcote et al. full text (see that entry); Evans et al. abstract via OpenAlex (10.1037/rev0000105).
+
+## heathcote2000power
+
+Heathcote, A., Brown, S., & Mewhort, D. J. K. (2000). The power law repealed: The case for an exponential law of practice. *Psychonomic Bulletin & Review*, 7(2), 185-207. doi:10.3758/bf03212979
+
+### Core claims
+
+The paper contests the claim that the relationship between response time and practice follows a power function. Its abstract (read in the authors' pre-print copy) says the evidence for a power law is flawed because it is based on averaged data. The authors surveyed the form of the practice function for individual learners and learning conditions in paradigms that have shaped theories of skill acquisition, fitting power and exponential functions to 40 sets of data representing 7910 learning series from 475 subjects in 24 experiments. The exponential function fit better than the power function in all the unaveraged data sets, and averaging produced a bias in favor of the power function. A new function based on the exponential, the APEX function, fit better than a power function with an extra pre-experimental practice parameter. Their conclusion: the best candidate for the law of practice is the exponential or APEX function, not the power function.
+
+### Specifics
+
+Evidence type: a quantitative survey and reanalysis of many existing data sets, with mathematical arguments about curve fitting.
+
+- Why averaging matters: it has been known for about fifty years that an average curve need not have the form of the individual curves (the paper cites Estes 1956, Sidman 1952 and Kling 1971), and recent work shows linear averaging produces a composite systematically biased toward the power function. All but one of the tasks Newell and Rosenbloom examined used averaged data.
+- Conceptual difference: an exponential implies a constant relative learning rate (proportional to what is left to learn); a power function implies a rate that slows hyperbolically with practice, so a mechanism is slowing learning. The relative learning rate of the general power function is beta/(N+E); for the exponential it is the constant alpha.
+- Two technical criticisms of Newell and Rosenbloom: (1) they compared a three-parameter exponential with a four-parameter power function, and a large preexperimental-practice parameter lets the power function mimic an exponential in a finite practice range (though with badly behaved estimates); (2) they fit by minimizing squared deviations in log(RT minus asymptote), which is undefined for any sample below the asymptote and is more problematic in noisy individual data. The authors refit a subset of Newell and Rosenbloom's data by ordinary least squares: for averaged data the power function still fit better, but for the two unaveraged series (times to win and to lose a card game) the exponential fit better.
+- The APEX function: E(RT) = A + B e^(-alpha N) N^(-beta), a four-parameter function that nests both power and exponential. Its relative learning rate is alpha + beta/N, decreasing like a power early in practice and approaching a nonzero constant later. It is used as a referee: if it beats the power function, an exponential component is supported.
+
+### Replication and criticism
+
+The result has been influential and has itself been refined. Evans, Brown, Mewhort and Heathcote (2018) summarize it as showing that the early power-law support was an artifact of averaging, then argue that even power and exponential forms both assume a steadily slowing speedup and propose a delayed exponential law that fit a clear majority of paradigms (abstract read). The authors also note a caveat from Estes (quoted in the paper, personal communication): the form of the practice law does not constrain theory very much, because many different models can mimic particular curve shapes. A secondary search summary reported different counts of data sets; the figures above are from the paper's own abstract and take priority. The tasks in the survey are speeded laboratory tasks (visual search, memory search, and the like), not rich real-world skills.
+
+### Implications for LTF
+
+The lesson is mainly about averages. LTF's dashboards and analytics will aggregate attempt times and scores across learners; the aggregate will look like a smooth power-law curve whether or not any learner's curve looks like that, so aggregate curves should not be used to tell an individual what to expect, or to design pacing for everyone. Per-learner displays should show actual attempts and be robust to step-like jumps and plateaus. For content design, the qualitative message is unchanged: early repetitions give the largest gains, and improvement slows. Do not hard-code a learning-rate model (for example to schedule review) from a power-law assumption; use learner-level data or simple rules. In user research, prefer individual trajectories over means when reporting how long it takes beginners to master a widget or task.
+
+Confirmed this session: Crossref 10.3758/bf03212979 (title, authors, 2000, vol. 7, issue 2, pp. 185-207); full text of the authors' pre-print read at https://users.cs.northwestern.edu/~paritosh/papers/KIP/power-law-repealed.pdf (abstract, introduction, practice functions and technical criticisms); Evans et al. abstract via OpenAlex (Crossref 10.1037/rev0000105).
+

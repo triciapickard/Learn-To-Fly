@@ -296,22 +296,83 @@ Textbooks and lessons are often made more engaging by adding interesting but irr
 
 **Three rival explanations.** The paper compares the idea that details distract the reader (attention is drawn away from the main points), the idea that they disrupt coherence (the thread of the argument breaks), and the idea that they prime an inappropriate organizing schema (readers organize the passage around the interesting details). A later review (Rey 2012, in this lane) lists four explanations in the literature: working memory overload, attention distraction, schema interference and coherence disruption.
 
-**Experiments 1 to 3.** The authors revised the passage to include highlighting of the main ideas (Experiment 1), a statement of learning objectives (Experiment 2) or signaling (Experiment 3). None of these reduced the seductive details effect. If distraction or lost coherence were the cause, cues pointing to the main ideas should have helped.
+**Experiments 1 to 3.** The authors revised the passage to include highlighting of the main ideas (Experiment 1), a statement of learning objectives (Experiment 2) or signaling (Experiment 3). None of these reduced the seductive details effect. Cues to the main ideas would be expected to help if distraction or lost coherence were the cause (my inference).
 
 **Experiment 4.** Placing the seductive details at the start of the passage made the effect worse; placing them at the end reduced it. This fits the schema account: details read first can set the frame that organizes the rest, while details read last cannot.
 
-**Interest.** The paper's framing, from the abstract's opening and its title, is that textbook material is often boring to students and that adding interest seems an obvious fix. The authors distinguish emotional interest (arousal from vivid material) from cognitive interest (interest arising from understanding how ideas connect), and argue the second is what supports learning. I did not read the paper's own definitions and only summarize this from its title and abstract.
+**Interest.** The title frames the theory as one of cognitive interest, as opposed to the emotional interest that vivid details create. I only know this framing from the title and abstract, not the paper's own definitions.
 
 ### Replication and criticism
 
-The effect has been heavily studied since. Rey's 2012 meta-analysis (in this lane) pooled 39 experimental effects and reports a significant effect, small to medium for retention and medium for transfer. A larger 2020 meta-analysis by Sundararajan and Adesope reports that findings on the size of the harm are mixed and moderated by factors including the type of image used for comparison, delivery format, language, subject, learner pacing, recall question type and manipulation check; its overall conclusion is that including seductive details can hinder learning (I read only its abstract through a publisher page, with no effect sizes). A 2021 experiment by Tislar and Steelman with 132 undergraduates on a plate tectonics lesson did not find a consistent detrimental effect on recall and transfer, and the effect appeared only when learning objectives were provided, so it is hard to elicit reliably (abstract via Crossref, DOI 10.1002/brb3.2322). Rey also lists evidence for and against each explanation. The overall verdict: the effect is real on average and often small, depends on what the details are and how they are placed, and Harp and Mayer's own schema-priming explanation is one of several rival accounts. Most of the base is short laboratory reading by college students.
+The effect has been heavily studied since. Rey's 2012 meta-analysis (in this lane) pooled 39 experimental effects and reports a significant effect, small to medium for retention and medium for transfer. A 2020 meta-analysis by Sundararajan and Adesope reports mixed findings on the size of the harm, moderated by factors such as delivery format, subject and learner pacing, and concludes seductive details can hinder learning (I read only its abstract, with no effect sizes). A 2021 experiment by Tislar and Steelman with 132 undergraduates on a plate tectonics lesson did not find a consistent detrimental effect on recall and transfer, and the effect appeared only when learning objectives were provided, so it is hard to elicit reliably (abstract via Crossref, DOI 10.1002/brb3.2322). Verdict: the effect is real on average but varies, and schema priming is one of several rival accounts. Most of the base is short laboratory reading by college students.
 
 ### Implications for LTF
 
 - Be wary of "fun facts", aviation trivia, historical anecdotes and decorative photographs inside the explanation of a core concept. Put them in an optional sidebar or after the lesson, not before it. Experiment 4 suggests that where trivia appears matters: before the main idea is worse than after.
-- Cues such as highlighting and a learning objective did not rescue a page with irrelevant material, so do not rely on signposting to offset clutter; remove the clutter.
-- This is a risk for a flight-sim audience that loves detail: war stories, aircraft history and exciting scenarios can be engaging but may pull the schema in the wrong direction while a beginner is learning the basic control relationships.
+- Highlighting and learning objectives did not rescue a page with irrelevant material, so remove clutter rather than signpost around it.
+- A flight-sim audience loves detail, and war stories or aircraft history may pull a beginner's schema the wrong way while they learn basic control relationships.
 - The effect is not uniformly large. Test any engagement feature with an outcome measure (a transfer-style question) before deciding it is harmless or harmful.
 - "Interest" should come from showing how ideas connect (cause and effect between pitch, power and airspeed), not from added color.
 
 Confirmed this session: ERIC record EJ576496 (https://eric.ed.gov/?id=EJ576496) for the bibliographic details and the 357 participants and four experiments; the abstract text via OpenAlex (api.openalex.org, DOI 10.1037/0022-0663.90.3.414); the Crossref record (volume 90, issue 3, pages 414-434). Tislar and Steelman's abstract was read through Crossref and OpenAlex; Sundararajan and Adesope's abstract through the Springer page; Rey's through ERIC EJ986386. The full text of Harp and Mayer was not read.
+
+## mayer2001cognitive
+
+Mayer, R. E., Heiser, J., & Lonn, S. (2001). Cognitive constraints on multimedia learning: When presenting more material results in less understanding. *Journal of Educational Psychology*, 93(1), 187-198.
+
+### Core claims
+
+The paper tests a counterintuitive idea: adding material to a multimedia lesson can lower understanding. In four experiments, college students watched an animation with narration explaining how lightning forms. Adding concurrent on-screen text, whether it summarized or duplicated the narration, made students perform worse on retention and transfer tests. Adding interesting but irrelevant details to the narration, or inserting irrelevant video clips, lowered transfer. The authors call the first result a redundancy effect and the second a coherence effect, and explain both with a dual-channel, limited-capacity theory: extra text can overload the visual channel because learners must split visual attention between two sources, and irrelevant material primes the wrong prior knowledge as an organizing schema. This is controlled laboratory work from the Santa Barbara group.
+
+### Specifics
+
+**Materials.** The opening text of the paper (read via OpenAlex) describes a 140-second multimedia explanation of how lightning storms develop, built from animation plus narration, and says earlier work by the lab showed such explanations can be highly effective in promoting understanding as measured by open-ended transfer questions.
+
+**Redundancy experiments.** In Experiment 1 students also received concurrent on-screen text that summarized the narration. In Experiment 2 the on-screen text duplicated the narration. In both, students did worse on retention and transfer than students who received no on-screen text. The explanation is that the animation and the printed words compete for the visual channel, and the learner tries to reconcile the text with the narration.
+
+**Coherence experiments.** In Experiment 1 the authors added interesting but irrelevant details to the narration. In Experiment 3 they inserted interesting but conceptually irrelevant video clips within the presentation, and in Experiment 4 before it. Transfer was lower in each case. The authors say the result fits a seductive-details hypothesis, in which inserted video and narration prime the activation of inappropriate prior knowledge as the lesson's organizing schema (the same mechanism proposed in the Harp and Mayer paper in this lane).
+
+**How later syntheses use it.** Mayer and Moreno's 2003 paper (this lane) lists this paper among the studies behind the weeding (coherence) result, with a median effect size of 0.90 across five studies, and among the redundancy studies, with a median of 0.69 across three. Kalyuga and colleagues (2003, this lane) cite it for the finding that identical visual and auditory text was less effective than the auditory text alone. De Jong (this lane) cites it as an example of the argument that two representations of the same content, such as a graph and a formula, increase extraneous load.
+
+### Replication and criticism
+
+Both effects have been replicated and meta-analyzed (Rey's 2012 meta-analysis of seductive details and the signaling and modality meta-analyses in this lane bear on the family). The redundancy result is narrow in an important way. Mayer and Moreno note that when no animation is present, learners did better with narration plus on-screen text than with narration alone, because the text does not have to compete with a picture. De Jong's review points to a later finding by Mayer and Johnson that redundant information helped when it was short and placed next to what it referred to. The coherence result depends on what counts as extraneous: the later Tislar and Steelman experiment (see the Harp and Mayer notes) did not find a consistent harm from interesting details in a text lesson. Short lessons and college samples limit generalizing, as de Jong notes.
+
+### Implications for LTF
+
+- If a lesson shows an animation with a voice-over, do not also display the same words on screen. Offer captions as an opt-in setting rather than the default, and note that for deaf and hard-of-hearing learners captions are required; the evidence here concerns hearing learners with a spoken track.
+- A static diagram with printed explanation is different: there is no competition for the visual channel from a moving picture, so text beside an image is fine.
+- Do not insert unrelated "cool" clips, music or flourishes into a lesson explaining a mechanism such as lift or the effect of trim.
+- Keep a lesson's narration restricted to what supports the objective. A funny aside from the instructor is a candidate for removal.
+
+Confirmed this session: the abstract and opening paragraphs of the paper via OpenAlex (api.openalex.org, DOI 10.1037/0022-0663.93.1.187); the Crossref record (volume 93, issue 1, pages 187-198); and how Mayer and Moreno 2003, Kalyuga and colleagues 2003 and de Jong 2010 (all read in full) describe it. The full text was not read.
+
+## rey2012review
+
+Rey, G. D. (2012). A review of research and a meta-analysis of the seductive detail effect. *Educational Research Review*, 7(3), 216-237.
+
+### Core claims
+
+Rey reviews the seductive detail effect and pools the experimental evidence. The abstract (via ERIC) defines seductive details as interesting but irrelevant information that is not needed for the instructional objective, and the seductive detail effect as the finding that people learn more deeply when such details are left out. The review covers 39 experimental effects, drawn from text passages, illustrations and other kinds of seductive details. The meta-analysis finds a significant effect that is small to medium for retention and medium for transfer. The paper also reviews moderating factors and the evidence for and against four proposed explanations, then discusses implications, limitations and future directions. It is a meta-analysis with a narrative review, a stronger form of evidence than any single experiment.
+
+### Specifics
+
+**The four explanations.** The abstract lists working memory overload, attention distraction, schema interference and coherence disruption. They are rival accounts of why irrelevant interesting material harms learning. Overload says the details use up limited capacity (the cognitive load account). Distraction says attention is pulled from the main ideas. Schema interference says the details prime an inappropriate framework around which the reader organizes the lesson (the account favored by Harp and Mayer in this lane). Coherence disruption says the details break the logical thread. Rey weighs evidence for each, and the abstract says there is evidence that both supports and challenges every explanation, so none of them is settled.
+
+**Pooled effects.** The ERIC abstract gives qualitative sizes: small to medium for retention, medium for transfer. Other secondary pages gave numeric values that disagreed with each other (they appear to mix pooled results and the largest single effects), so I report no numbers for this paper and treat any specific figure as unconfirmed until the primary article is read.
+
+**Moderators.** The review examines moderating effects. I could not confirm from a primary source which moderators it reported. The later 2020 meta-analysis by Sundararajan and Adesope, whose abstract I read, lists eight moderators: presence of seductive details, image type used in comparison, delivery format, language, subject, learner pacing, recall question type and manipulation check approach.
+
+### Replication and criticism
+
+The later Sundararajan and Adesope paper (Educational Psychology Review, 2020, DOI 10.1007/s10648-020-09522-4) describes the findings as mixed and says moderators matter, while concluding that including seductive details can hinder learning. A 2021 experiment by Tislar and Steelman (Brain and Behavior, DOI 10.1002/brb3.2322) argues that confounds and methodological problems in the field make the effect hard to elicit: with 132 undergraduates and a plate tectonics lesson, they found no consistent harm, and the effect on recall appeared only when learning objectives were supplied. Together these suggest a real but variable effect whose size depends on how "interesting" and "irrelevant" were defined and matched, which is a measurement problem similar to the ones de Jong raised for CLT (this lane). I did not confirm whether Rey tested for publication bias. Evidence strength: a meta-analysis of mostly short laboratory studies.
+
+### Implications for LTF
+
+- Treat "cut the decorative interesting stuff from core explanations" as a well-supported default, but not as a ban on engaging content. The effect is small to medium on retention and medium on transfer, so it matters most for questions that ask the learner to apply an idea in a new situation, as flight scenarios do.
+- Distinguish seductive detail from relevant interest. A dramatic story about an actual stall accident can be relevant if it illustrates the mechanism being taught and irrelevant if it only entertains. Make that call per item, and check it with a transfer question.
+- Place any entertaining but non-essential material after the core content, in an optional section, because ordering mattered in the Harp and Mayer experiment.
+- Because the causes are unsettled, do not justify a design decision by one mechanism ("it overloads working memory"); justify it by outcome testing.
+- The research measures learning after short sessions, not persistence over weeks; interesting material might keep learners going even if it costs a test point, so LTF should measure both.
+
+Confirmed this session: the ERIC record EJ986386 (https://eric.ed.gov/?id=EJ986386) for the abstract (39 effects, four explanations, effect-size qualifiers) and bibliographic details; the Crossref record for DOI 10.1016/j.edurev.2012.05.003 (volume 7, issue 3, pages 216-237); the Springer page abstract for Sundararajan and Adesope 2020; and Crossref plus OpenAlex for Tislar and Steelman 2021. The full text of Rey 2012 was not read.
