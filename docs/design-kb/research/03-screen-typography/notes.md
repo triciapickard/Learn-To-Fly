@@ -230,3 +230,37 @@ This is a single experiment, in one language and with one typeface (Arial), but 
 This is the main empirical support for setting body text larger than the long-standing web defaults. For lesson pages, aim to size body text so that it sits at the comfortable end, and do not shrink it to fit more on a screen: the evidence says small text costs comprehension. Translate the recommendation into relative, not absolute, terms: express size in rem and test x-height angle at a realistic distance, because a learner reading a second screen beside a simulator sits at a different distance from the study's 60 cm. For fly mode, assume the viewing distance is larger and size up further. Keep line spacing near the browser default to mild increase (about 1.0 to 1.4 in the study's units) and avoid very tight leading (0.8 hurt comprehension) or very loose leading. Because a larger size shortens the line in characters, check that the lesson column still holds a reasonable number of characters per line after increasing the size, and let the column grow with the type.
 
 Confirmed this session: Crossref record DOI 10.1145/2858036.2858204 (CHI '16, pages 3637-3648, 2016); read the full text of the paper (PDF at changedyslexia.org/publications/pdfs/2016-CHI-Make It Big...pdf) including abstract, method, results, discussion and limitations; a web search confirming the ACM listing.
+
+## w3c2026cssfonts
+
+World Wide Web Consortium (2026). CSS Fonts Module Level 4. W3C Working Draft, 12 November 2026. Editor: Chris Lilley. https://www.w3.org/TR/css-fonts-4/
+
+### Core claims
+
+This is the technical standard that defines how browsers choose, load and render fonts. It is a standards document, not research evidence: it states what implementations are required or recommended to do, and its value for LTF is as the vocabulary and the reliable feature set for typographic decisions in CSS. It covers font matching (family, weight, width, style), downloadable fonts through @font-face, the font-display loading policies, variable fonts through registered axes, optical sizing, x-height preservation through font-size-adjust, and OpenType feature access through font-variant properties, including numerals. The page fetched is a Working Draft, not endorsed by W3C, so details may still change, although most of the features discussed are widely implemented.
+
+### Specifics
+
+All of the following was read on the W3C page (fetched in segments, because the full text is very long) and paraphrased.
+- Status: W3C Working Draft of 12 November 2026, with earlier drafts of 1 February 2024 and 4 November 2026 listed. Editor Chris Lilley. At-risk features include font-language-override.
+- Generic families: serif, sans-serif, monospace, cursive, fantasy, math and system-ui are universal, and serif, sans-serif and monospace must always map to some font. ui-serif, ui-sans-serif, ui-monospace and ui-rounded are UI-related and may not exist on every platform.
+- Weights run from 1 to 1000 with 400 as normal and 700 as bold, and fractional weights are valid for variable fonts. Width keywords map from ultra-condensed (50%) to ultra-expanded (200%). User agents must not synthesize condensed or expanded faces. Authors can limit synthetic bold or italic with font-synthesis.
+- font-size-adjust (section 2.6): takes none or a number called the aspect value. The used size is scaled by the ratio of the specified aspect value to the actual font's, so that a fallback font with a different x-height ratio keeps the same apparent size. It affects used size and ex and ch units, not computed size or em units.
+- font-display (section 4.9): auto lets the browser decide. block has a short block period (about 3 seconds recommended) then an indefinite swap period. swap has a very short block (100 ms or less recommended) and an indefinite swap. fallback has a very short block and a short swap period (about 3 seconds), after which the fallback stays for the page's life, and is described as suited to body text. optional uses the web font only if it is available in time for first paint, and the page must not shift when it arrives.
+- unicode-range (section 4.5): a font face is used and downloaded only for the characters in its range, which allows splitting scripts across files.
+- font-variant-numeric (section 6.7): lining-nums (lnum), oldstyle-nums (onum), proportional-nums (pnum), tabular-nums (tnum), diagonal-fractions (frac), stacked-fractions (afrc), ordinal (ordn) and slashed-zero (zero). The text states that tabular numerals allow columns of numbers to line up.
+- font-optical-sizing (section 8.1): auto (default) or none. Under auto the browser may set the opsz axis to a value close to the used font size, and synthesized optical sizing is not allowed. font-variation-settings (section 8.2) gives low-level access to axes by four-letter tags, and the spec recommends the higher-level properties where they exist. Registered axes map to properties: wght to font-weight, wdth to font-width, slnt or ital to font-style, opsz to font-optical-sizing.
+
+### Replication and criticism
+
+A specification cannot be replicated, but two cautions apply. First, a Working Draft is not final and implementation status differs between browsers, so every feature should be checked against current browser support data before it is relied upon. Second, the spec says what a font can do, not what is good for readers. It contains no legibility evidence, and the choice of values (for example, a font-display policy) trades off appearance against loading speed, not readability. Where this lane's empirical papers disagree, the standard offers no arbitration. Also, the "about 3 seconds" and "100 ms" figures are recommendations to browsers and authors, not measured human thresholds.
+
+### Implications for LTF
+
+Several decisions follow directly.
+- Numerals: any value that changes or aligns (altitude, airspeed, headings, countdowns, scores) should use tabular-nums so digits do not jitter, and consider slashed-zero or a face with a clearly distinct zero for readouts where O and 0 could be confused. Old-style numerals suit running prose and do not belong in instrument widgets.
+- Loading: for body text, font-display fallback matches the spec's own guidance, so a learner sees readable text at once. Because fallback fonts have different x-heights, pair this with font-size-adjust or size-adjust metrics so the swap does not reflow the lesson. For a full-screen "fly mode" opened mid-flight, consider optional so nothing shifts.
+- Variable fonts and optical sizing: if a variable face with an opsz axis is chosen, leave font-optical-sizing at auto so small labels get sturdier letterforms. A continuous wght axis also makes it possible to tune weight per theme, but that is a design hypothesis to test, not something this spec or this lane's evidence establishes.
+- Use system-ui or a self-hosted face with a defined fallback stack, and subset with unicode-range to stay inside the bundle-size budget.
+
+Confirmed this session: fetched www.w3.org/TR/css-fonts-4/ (status, date, editors, sections 2.1.5, 2.6, 4.5, 4.9, 6.7, 8.1, 8.2), read in segments by character offset.

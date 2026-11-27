@@ -99,3 +99,39 @@ Secondary accounts such as encyclopedia entries had not been corrected at the ti
 3. For design, the practical consequence of the early work is unchanged: the eye reads in jumps and takes in information only during pauses, so lines of text, step lists and instrument readouts should be arranged so that the next piece of information sits where the next pause will land.
 
 Confirmed this session: Crossref record for DOI 10.16910/jemr.2.5.5 and full text of the article read from bop.unibe.ch/JEMR/article/download/2284/3480 (the article's own header gives volume 2, issue 5, article 5, pages 1-7). Huey (1908) full text also read to check the passages the authors discuss.
+
+## tinker1963legibility
+
+Tinker, M. A. (1963). *Legibility of Print*. Ames: Iowa State University Press.
+
+### Core claims
+
+Tinker's book is the standard summary of the first half-century of experimental legibility research, mostly his own and Donald Paterson's work at the University of Minnesota. Its method claim is that legibility of continuous print should be judged by speed of reading meaningful text with comprehension checked, supplemented by eye-movement records. Its substantive claim is that most ordinary choices (between common type faces, say) matter little, while a few matter a lot: size of type, line width with leading, all capitals, italics, and contrast between print and ground. Nonoptimal choices combine into a large loss.
+
+### Specifics
+
+Method. Visibility and distance measures give acuity-like thresholds and are, Tinker says, unsatisfactory for choosing size, face, line width or leading. His preferred tests (Chapman-Cook, Tinker) used equivalent forms, controls and comprehension checks, with very large samples: the line-width and leading studies used 1,760 readers for 10-point type, 1,900 for 11, 1,800 for 12, 2,000 for 9, 2,000 for 8 and 1,960 for 6.
+
+Type forms (Chapter 4 summary). Common type faces are equally legible; only a marked difference such as Cloister Black against Scotch Roman showed one. A sans serif face (Kabel Light) was read as fast as ordinary type but not preferred. Italic was read somewhat more slowly (96 per cent preferred lower case), and italic with marginal light or size slowed reading by more than 10 per cent. All capitals greatly retarded reading and took at least one-third more space. Boldface was read at the ordinary rate, but 70 per cent preferred ordinary lower case.
+
+Size. Eye-movement records favored 10-point over 6-point or 14-point. In reader opinion 11-point ranked first, 10 and 12 close behind, 8 and 9 last. Size cannot be judged alone, he says.
+
+Line width and leading (Chapters 6 and 7). Ten-point set solid was equally legible from 17 to 27 picas, and with 2-point leading from 14 to 31 picas. Very short lines needed more and longer fixations. A 43-pica line raised regression frequency by 56.7 per cent against a 19-pica line, which he ascribes to trouble finding the next line start. Leading mattered more for small type than for 12-point, and 8-point with 2-point leading was not read faster than 10-point set solid. He published "safety zones" per size, for example 10-point in 14-pica lines with 1 to 4 points of leading and 19-pica lines with 2 to 4 points.
+
+Contrast (Chapter 9). Black on white was much more legible than white on black, because the latter needed more fixations; three-quarters of readers preferred black on white. Reversal cost the serif face (Scotch Roman) at every size tested, while the sans serif face lost little at 10 and 14 points but did lose at 6 points. Chapter 11 shows nonoptimal choices combine, though not strictly additively.
+
+### Replication and criticism
+
+The evidence is experimental and large, but gathered on printed paper of its period, so size and line-width figures do not carry straight to screens. Dyson (2004) notes that these print findings are largely unreplicated on screens and that characters per line, type size and physical width are confounded in many studies, and she cites Lund (1999) for the criticism that some early legibility research lacks internal validity because of poorly chosen typographic material. Legge and Bigelow (2011) re-expressed Tinker's size data as visual angle and found it consistent with modern work, with the fastest reading near an x-height of about 0.21 degrees.
+
+One passage has not survived. Tinker explains the slowness of all capitals by word shape ("reading by word units") and calls word form distinctive in lower case. Larson (2005), drawing on Paap and colleagues, rejects word shape and says lower case is faster because readers have more practice with it (see larson2005science).
+
+### Implications for LTF
+
+1. Never set running text in all capitals. Keep capitals for short labels (an ident, "FLAPS"), not sentences or warnings a learner must read.
+2. Use italic rarely; it costs some speed. Bold costs none.
+3. Dark theme and fly mode: reversed print cost reading efficiency, especially at small size and with a serif face. Use light-on-dark at generous size and weight, and test it with learners rather than assuming parity with the light theme.
+4. Do not expect type face choice to fix legibility. Spend effort on size, measure, leading and contrast.
+
+Confirmed this session: Open Library record (work OL10488189W, edition OL5884652M). Full text of a scan of the 1963 book (gwern.net/doc/design/typography/1963-tinker-legibilityofprint.pdf) read with pdftotext, including summaries of Chapters 2, 4, 6, 7, 9 and 11 and Table 5.4. Dyson (2004), Legge and Bigelow (2011) and Larson (2005) read for the criticism.
+

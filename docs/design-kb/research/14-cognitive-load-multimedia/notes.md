@@ -405,3 +405,66 @@ This is the most important qualification in the lane. Reinwein (2012, Journal of
 - In fly mode, learners may be unable to read; short audio cues are plausible but unproven by this literature, because these studies did not involve concurrent flight or another demanding task.
 
 Confirmed this session: the ERIC record EJ723937 (https://eric.ed.gov/?id=EJ723937) for the abstract and the counts of effects and designs; the Crossref record for DOI 10.1016/j.learninstruc.2005.07.001 (volume 15, issue 4, pages 313-331); the Springer abstract page for Reinwein 2012 (Crossref: volume 41, issue 1, pages 1-32); and the OpenAlex abstract for Haavisto and colleagues 2023. Ginns's full text was not read.
+
+## schneider2018meta
+
+Schneider, S., Beege, M., Nebel, S., & Rey, G. D. (2018). A meta-analysis of how signaling affects learning with media. *Educational Research Review*, 23, 1-24.
+
+### Core claims
+
+Signaling (also spelled signalling) means adding cues that tell the learner what to attend to and how the material is organized, without adding content: highlighting, arrows, bold or colored key words, outlines and headings, or spoken emphasis. The signaling principle in multimedia learning predicts that cues reduce the search for relevant information and so reduce extraneous load. Schneider and colleagues pooled the experimental literature. Two independent search summaries of the abstract (the LearnTechLib record is the source they quote) give these results: 103 studies with 12,201 participants, using 139 retention measures and 70 transfer measures, with an average effect of g+ = 0.53 (95% CI 0.42 to 0.64) for retention and g+ = 0.33 (95% CI 0.22 to 0.43) for transfer. In plain terms, signaling helps retention moderately and transfer less.
+
+### Specifics
+
+**What was coded.** From the summaries: signaling mode (textual versus graphical cues) was a significant moderator, nine moderators were tested, and cognitive load, motivation, learning time and eye-tracking measures were analyzed as possible explanations.
+
+**Prior knowledge: a conflict I could not resolve.** One search summary said prior knowledge did not moderate the signaling effect, contrary to what expertise reversal would predict. A second said a later paper reads Schneider and colleagues as arguing that learners with prior knowledge are better able to use the additional information in signals. These two statements disagree, and I did not read the paper's results, so I do not state which is right. A review by Alpizar, Adesope and Wong (2020, DOI 10.1007/s11423-020-09748-7) is reported in a search summary as finding the results for prior knowledge, and for dynamic versus static signals, to be inconsistent across meta-analyses, and as finding an overall effect of d = 0.38; I did not read that paper either. A 2016 meta-analysis by Richter and colleagues is reported as finding signaling more helpful for low-prior-knowledge learners. The accounts differ, so I treat the expertise interaction as open.
+
+**Older anchor.** Mayer and Moreno (2003, in this lane) reported one experiment (an airplane-lift narrated animation with stressed key words, red and blue arrows, an outline with headings, and a map showing which part was playing) with an effect size of 0.74. The meta-analysis, with 103 studies, is a far stronger base than that single experiment, and its pooled effect is smaller.
+
+### Replication and criticism
+
+Signaling is among the better-supported multimedia principles in that a large number of studies find a positive average effect, and independent meta-analyses agree on the positive direction but not on moderators. The pooled sizes (moderate for retention, small to moderate for transfer) are well below the single-study figure from 2003, which fits the usual pattern in which early single-lab estimates shrink. Harp and Mayer (1998, in this lane) is an important boundary: highlighting, learning objectives and signaling in the text did not remove the harm caused by irrelevant seductive details, so signaling cannot compensate for clutter. The evidence is meta-analytic but drawn from short laboratory studies, and moderator analyses are exploratory.
+
+### Implications for LTF
+
+- Use signaling as a low-cost default: highlight the key instrument or control while explaining it, bold the key term at first mention, and use consistent colors for the same thing across lessons and widgets (for example, one color for target values and another for current values).
+- Cues must point at what matters. A learner who must watch an airspeed indicator for one thing needs one visible cue, not five.
+- Make signals work in both light and dark themes and not rely on color alone, which also helps color-blind learners.
+- Expect modest transfer gains: signaling will not turn a poorly structured lesson into a good one. Sequence and cut first, then signal.
+- Use headings and a progress indicator in long lessons as organizational signals, and in fly mode keep a single high-contrast cue per step.
+- Because the expertise interaction is unresolved, let experienced learners hide cues (a toggle) and watch whether they use it.
+
+Confirmed this session: the Crossref record for DOI 10.1016/j.edurev.2017.11.001 (volume 23, pages 1-24, authors as above); two separate search results quoting the abstract numbers from the LearnTechLib record (https://www.learntechlib.org/p/204443/, which I could not open directly: 403); a search summary on Alpizar and colleagues and on Richter and colleagues (not read). The full text of Schneider and colleagues was not read, and the publisher abstract was not read directly.
+
+## paas1992training
+
+Paas, F. G. W. C. (1992). Training strategies for attaining transfer of problem-solving skill in statistics: A cognitive-load approach. *Journal of Educational Psychology*, 84(4), 429-434.
+
+### Core claims
+
+This short paper did two jobs that shaped a generation of cognitive load research. First, it compared three ways of practicing statistics problems on a computer and found that studying worked-out problems produced better transfer than solving conventional problems. Second, it introduced the one-item rating of invested mental effort that became the field's default measure of cognitive load. The abstract says the study examined the effect of three computer-based training strategies on training performance, transfer performance and cognitive load. The conventional condition emphasized solving conventional problems, the worked condition the study of worked-out problems, and the completion condition the completion of partly worked-out problems. It was predicted that cognitive load would mediate the link between practice type and transfer, so that conventional practice would need more time and effort during training and give lower, more effortful transfer. With the exception of time and effort during training, the results supported this, and "the completion strategy and, in particular, the worked strategy proved to be superior to the conventional strategy for attaining transfer".
+
+### Specifics
+
+**Design.** Three practice conditions (conventional, worked, completion) in a computer-based statistics course, with measures of training performance, transfer performance and cognitive load. I did not read the participant numbers or the test details.
+
+**The rating scale.** De Jong's 2010 review (read in full, this lane) reports that Paas's questionnaire has one item asking learners for their "perceived amount of mental effort" on a 9-point scale (Paas 1992, p. 430), with end labels "very, very low mental effort" and "very very high mental effort". Later work has used the scale with 5, 7, 9, 10 and 100 points, with difficulty rather than effort wording, and once at the end rather than after each problem (de Jong). The 2019 retrospective by Sweller and colleagues (this lane) repeats that the scale has been used in many ways beyond the original and reports that a single rating after the learning phase came out higher than the average of ratings taken after each task.
+
+**What happened to effort.** De Jong notes that the paper's own conclusion about effort during training was not what the hypothesis predicted. The abstract says time and effort during training were the exceptions to support. De Jong quotes Paas as writing that the processes required during the specific instruction apparently demanded the same amount of mental effort in all conditions (p. 433). So the strongest result was on transfer, not on effort during learning.
+
+**Reliability.** De Jong reports that an analysis of the rating scale (Paas, van Merriënboer and Adam 1994) gave Cronbach's alpha values of .90 and .82 in two studies, one of them this one, and that this analysis shows the rating tracks the individual learner. He argues that high internal consistency is not the same as validity, and that no validity evidence was reported.
+
+### Replication and criticism
+
+The worked-example advantage is among the best-replicated findings in CLT. The 2019 retrospective calls the evidence very strong, with the constraints that examples are less effective for high-expertise learners and are hard to design well. The expertise reversal paper (this lane) cites this paper among worked example studies. The measure is more contested than the finding. De Jong (this lane) says the scale is sensitive in some studies and not others, that identical scores mean different things across studies, that the scale cannot distinguish types of load, and that it is rarely linked to instantaneous overload. The authors of the 2019 paper concede it gives an overall measure and cannot easily separate types. Evidence for the training result: a single controlled experiment from a computer-based course, extended by many later studies.
+
+### Implications for LTF
+
+- Practice ordering: for a new maneuver or procedure, show a complete worked demonstration, then a completion exercise (the learner fills in the missing steps or numbers), then a full attempt. This is the strongest, best-replicated practical rule in the lane for a beginner course.
+- A completion item in LTF could be a partly annotated approach with two blanks (where to start the descent, what power setting to hold) before the learner flies it in the sim.
+- If LTF wants to measure how hard learners find a step, a single quick rating ("how much mental effort did that take?", 1 to 9) after a challenge is cheap, but de Jong's critique means it should be used to compare versions of the same lesson, not to decide absolute difficulty, and not to infer which kind of load it was.
+- Collect a rating after each task rather than only at the end, since the 2019 paper reports different results for the two.
+- Do not treat low effort during practice as proof of good learning; this paper found similar effort across conditions despite different transfer.
+
+Confirmed this session: the abstract through OpenAlex (api.openalex.org, DOI 10.1037/0022-0663.84.4.429) and the University of Twente repository page (https://research.utwente.nl/en/publications/3e475ae3-2b43-45c7-83e5-7d4da2ef88b8); the Crossref record (volume 84, issue 4, pages 429-434); and the way de Jong 2010 and the 2019 retrospective (read in full) describe the paper and its scale. The full text of Paas 1992 was not read.

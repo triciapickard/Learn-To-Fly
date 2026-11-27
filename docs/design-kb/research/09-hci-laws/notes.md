@@ -451,3 +451,31 @@ The lesson is mainly about averages. LTF's dashboards and analytics will aggrega
 
 Confirmed this session: Crossref 10.3758/bf03212979 (title, authors, 2000, vol. 7, issue 2, pp. 185-207); full text of the authors' pre-print read at https://users.cs.northwestern.edu/~paritosh/papers/KIP/power-law-repealed.pdf (abstract, introduction, practice functions and technical criticisms); Evans et al. abstract via OpenAlex (Crossref 10.1037/rev0000105).
 
+## stevens1957psychophysical
+
+Stevens, S. S. (1957). On the psychophysical law. *Psychological Review*, 64(3), 153-181. doi:10.1037/h0046162
+
+### Core claims
+
+Stevens argued that the relation between the physical magnitude of a stimulus and its perceived magnitude is, for many sensory continua, a power function, not the logarithmic function that Fechner had derived from Weber's law. A secondary summary of the paper (search result, not the full text) puts the general law as equal stimulus ratios producing equal subjective ratios, a first-order approximation being a power function with an exponent that differs by continuum. He also divided continua into two classes: Class I, prothetic, continua concerned with "how much" (such as loudness), and Class II, metathetic, continua concerned with "what kind and where" (such as pitch), and he suggested the two classes differ in their psychological processes and in how just-noticeable differences relate to the subjective scale.
+
+### Specifics
+
+Evidence type: a theoretical and empirical synthesis built on direct scaling (magnitude estimation) by Stevens's laboratory and others. I could read an excerpt of the section on the two classes of continua, on the Terhardt site (http://terhardt.userweb.mwn.de/ter/ref/Stevens1957a.html), and an encyclopedic account of the law and its exponents; I did not read the whole paper.
+
+From the excerpt: four functional criteria distinguish the classes. (1) The subjective size of the just-noticeable difference is unequal on Class I continua and roughly equal on Class II. (2) Category rating scales are typically concave downward on Class I and possibly linear on Class II. (3) Time-order error is expected on Class I and generally absent on Class II (Stevens suggests calling the latter a "category effect"). (4) Hysteresis appears, for example in bisection judgments of loudness depending on the order of presentation.
+
+From the encyclopedia entry on psychophysics (https://www.encyclopedia.com/social-sciences-and-law/sociology-and-social-reform/sociology-general-terms-and-concepts/psychophysics), a secondary source, which attributes exponents to Stevens's work: Weber's law holds that the Weber fraction, delta I over I, is constant along a continuum; under good conditions it is about 1 percent for brightness, 2 percent for loudness and 20 percent for saltiness, and the law fails near absolute threshold. Fechner assumed all just-noticeable differences are equal subjective units, so sensation grows as the logarithm of the stimulus. Stevens's power law has apparent magnitude growing as a power of stimulus magnitude, with exponents that depend on the continuum and conditions: loudness 0.6 (binaural) and 0.54 (monaural); brightness 0.33 (5 degree target, dark-adapted eye) and 0.5 (point source); electric shock 3.5; and apparent length of a projected line of light 1.0. Magnitude estimation has observers assign numbers in proportion to perceived magnitude; magnitude production has them adjust the stimulus to match numbers.
+
+The upshot for display design: perceived magnitude is not proportional to physical magnitude for most continua. An exponent below 1 compresses (loudness, brightness), above 1 expands (shock), and near 1 means the perceived quantity tracks the physical one (length).
+
+### Replication and criticism
+
+Power-law scaling was widely replicated in magnitude estimation experiments, and it supplanted the logarithmic law in much of psychophysics. It has well-known critics. The encyclopedia entry lists that Fechner's equal-jnd assumption is a powerful if questionable assumption and that, historically, the log law disagreed with observers' direct loudness judgments. A search summary also reports that critics say Stevens's magnitude-estimation approach provides neither a direct test of the power law nor of the assumptions behind the method; I did not trace that criticism to a primary source. The exponents in the encyclopedia entry vary with stimulus conditions (for example two different brightness values for different targets), so no single value should be treated as a constant.
+
+### Implications for LTF
+
+LTF's instrument widgets (airspeed, altitude, vertical speed, engine gauges) and color encodings are display scales, and psychophysics says perceived change depends on the ratio of the change to the current level, not its absolute size. Practical rules: for a quantity that must be compared (two bar lengths, two needle angles), use length or position, which are perceived about proportionally (exponent near 1 for length), rather than brightness or area of a shape, which compress. For thresholds and warning states, make the change large in relative terms (a step change in hue and shape, not a slightly brighter color), and expect the same absolute change to be noticed in dim themes and bright themes differently. When animating counters or progress, expect equal steps in the displayed number to feel unequal if the quantity is logarithmic (for example speed ratios). Design the light and dark themes so that tonal steps have equal perceived steps, which in practice means testing with a perceptual color space (see the color lanes) instead of equal numeric steps. Do not cite a specific exponent in design documents.
+
+Confirmed this session: Crossref 10.1037/h0046162 (title, author, 1957, vol. 64, issue 3, pp. 153-181); excerpt from the Terhardt reference page; exponents, Weber fractions and criticisms from the encyclopedia.com psychophysics entry fetched this session; a search summary for the prothetic and metathetic classes. The paper was not read in full.
+

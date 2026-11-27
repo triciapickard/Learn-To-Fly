@@ -86,7 +86,7 @@ The authors suggest the images were tightly tied to topic and trend (a monster's
 
 ### Replication and criticism
 
-The evidence is a small within-and-between-subjects lab experiment (20 people, 10 per recall condition) using one-tailed t-tests, with Holmes charts as the only embellishment style. Borgo and colleagues (IEEE TVCG 2012, abstract and repository summaries only) used a dual-task design and found embellishments helped memory, slowed visual search and had a mixed effect on concept comprehension, so the benefit is real but not free. A later study of enhanced graphics, seen only in a search summary, reports that data-relevant enhancements helped recall of titles and themes but not specific values, and unrelated ones were remembered worse than plain charts. A 2023 replication preprint by Syeda, South, Raynor and Panavas exists (Crossref record; I could not read its results). Stephen Few wrote a critique (not read). The authors note that monitoring tasks put interpretability first, while static charts may value memorability.
+The evidence is a small within-and-between-subjects lab experiment (20 people, 10 per recall condition) using one-tailed t-tests, with Holmes charts as the only embellishment style. Borgo and colleagues (IEEE TVCG 2012, abstract and repository summaries only) used a dual-task design and found embellishments helped memory, slowed visual search and had a mixed effect on concept comprehension, so the benefit is real but not free. A later study of enhanced graphics, seen only in a search summary, reports that data-relevant enhancements helped recall of titles and themes but not specific values, and unrelated ones were remembered worse than plain charts. A 2023 replication preprint by Syeda, South, Raynor and Panavas exists (Crossref record; I could not read its results). Few's 2011 critique (read) argues the finding is narrow: simple one-sentence messages, embellishments tied to the message, one designer's charts, 20 students.
 
 ### Implications for LTF
 
@@ -94,7 +94,7 @@ This paper licenses restraint rather than ornament. LTF should not decorate char
 
 Split by context. In fly mode and in any instrument widget, where the learner reads values under workload next to the sim, use plain, high data-ink displays; the authors themselves note monitoring tasks differ. In lesson summary graphics and the end-of-lesson recap that a learner should remember weeks later, a restrained pictorial element tied to the data is defensible. Test it: because the effect rests on 20 participants, run a short comprehension and delayed-recall check on LTF's own lessons before relying on embellishment as a design principle.
 
-Confirmed this session: Crossref DOI 10.1145/1753326.1753716 (pages 2573-2582); full text read from vis.csail.mit.edu/classes/6.859/readings/pdfs/Bateman-UsefulJunk.pdf; Borgo et al. abstract via WebSearch summaries (ieeevis.org, Hertfordshire repository); Syeda et al. title and authors via Crossref (10.31219/osf.io/dferj).
+Confirmed this session: Crossref DOI 10.1145/1753326.1753716 (pages 2573-2582); full text read from vis.csail.mit.edu/classes/6.859/readings/pdfs/Bateman-UsefulJunk.pdf; Borgo et al. abstract via WebSearch summaries (ieeevis.org, Hertfordshire repository); Few's critique (webspace.science.uu.nl/~telea001/uploads/VACourse/Few11.pdf); Syeda et al. via Crossref (10.31219/osf.io/dferj).
 
 ## borkin2013what
 
@@ -453,4 +453,45 @@ Rule 3 is a good test for instrument widgets and icons: if a picture of a runway
 The satire also suggests a lesson idea: a "spot the bad chart" exercise (a truncated axis on an altitude plot) to teach learners to question displays.
 
 Confirmed this session: Crossref DOI 10.1080/00031305.1984.10483186 (TAS 38(2), 137-147), the book-chapter record 10.1007/978-1-4612-2282-8_2 and the ETS 1982 record; full text read from sites.stat.columbia.edu/gelman/communication/Wainer1984.pdf (rule titles, measures and examples; the scanned text had OCR errors, so figures were checked only where legible).
+
+## few2006information
+
+Few, S. (2006). Information dashboard design: The effective visual communication of data. Sebastopol, CA: O'Reilly Media.
+
+### Core claims
+
+Few argues that most business dashboards fail, and fail because of visual design, not technology. His working definition, first published in 2004 and quoted in his 2006 white paper: a dashboard is "a visual display of the most important information needed to achieve one or more objectives, consolidated and arranged on a single screen so the information can be monitored at a glance". From that definition he derives the design problem: put a dense array of the most important measures on one screen in a way that communicates clearly and immediately, supporting a three-step monitoring process (see the big picture; focus on the specific items that need attention; quickly drill into more detail needed to act). He is hostile to decorative widgets: gauges, meters and traffic lights that impress in a demo but are dropped within a week if they do not give people what they need.
+
+### Specifics
+
+I read Few's 2006 Perceptual Edge white paper, which previews the book, and his 2011 newsletter on the chartjunk debate. The book's text was not read; Open Library lists the 2006 O'Reilly edition (223 pages, ISBN 9780596100162) and a 2013 second edition from Analytics Press with the subtitle "Displaying Data for At-a-Glance Monitoring".
+
+The 13 common pitfalls (white paper):
+1. Exceeding the boundaries of a single screen (scrolling or splitting across screens sacrifices simultaneity of vision).
+2. Supplying inadequate context (a number needs a target or history and a qualitative state).
+3. Displaying excessive detail or precision (his example: $3.8M rather than $3,848,305.93).
+4. Expressing measures indirectly (show the variance directly, often as a percentage).
+5. Choosing inappropriate media of display (a pie whose slices cannot be read without value labels; a bar graph does the job).
+6. Introducing meaningless variety (consistency lets viewers reuse the same perceptual strategy).
+7. Using poorly designed display media (bright bars, 3-D, comparison bars not adjacent).
+8. Encoding quantitative data inaccurately (a truncated bar axis makes revenue look four times costs when it is under double).
+9. Arranging the data poorly (the top left is prime space; related items adjacent).
+10. Ineffectively highlighting what is important (when everything is prominent, nothing stands out).
+11. Cluttering the screen with useless decoration (styling a dashboard as a car dashboard or LED panel).
+12. Misusing or overusing color (do not assign meaning with red, yellow and green alone, since he says about 10 percent of males and 1 percent of females are color blind; use neutral colors and reserve color for highlighting).
+13. Designing an unappealing display (not pretty touches, but attractive display of the data itself).
+
+### Replication and criticism
+
+This is practitioner craft authority with worked examples, not experiment. The white paper was sponsored by a vendor (ProClarity) and its examples come from vendor websites. The prescriptions agree with perceptual research (position over angle, accurate scales; see Cleveland and McGill, Heer and Bostock) and with Franconeri et al. (2021), who cite Few 2004 for the minimalist aesthetic and note that evidence for decluttering is mixed. In his 2011 reply to Bateman et al. he agrees with Tufte's basic assessment but accepts embellishments that usefully support information, and argues the study's finding is narrow (simple one-sentence messages, embellishments tied to the message, one designer, 20 students). No controlled test of the 13 pitfalls as a set was found this session.
+
+### Implications for LTF
+
+LTF's learner dashboard and fly mode both fit Few's definition (a glanceable single-screen display), so his pitfalls become a review checklist:
+- Fly mode should fit on one screen with no scrolling, show only the most important two to four measures, each with context (target and acceptable band) and a direct measure (deviation from target) rather than raw values the learner must subtract.
+-- Put the thing that needs action in the most prominent position; subdue navigation and branding; use color only to flag out-of-range values and never as the sole cue.
+- Use the same chart type for the same quantity across the app; variety for its own sake costs learners effort.
+- Resist skeuomorphic decoration on charts. The exception is purposeful: an LTF instrument widget that mimics a real cockpit gauge is training the learner to read that instrument; Few himself notes that simulating a control board would be right if the purpose were training in its use. Keep such widgets separate from analytic dashboards.
+
+Confirmed this session: Open Library search and editions list for work OL8167542W (2006 O'Reilly, ISBN 9780596100162; 2013 Analytics Press edition); Few, Common Pitfalls in Dashboard Design white paper (perceptualedge.com/articles/Whitepapers/Common_Pitfalls.pdf, read in full); Few, The Chartjunk Debate newsletter (webspace.science.uu.nl copy, read in part); the book not read.
 

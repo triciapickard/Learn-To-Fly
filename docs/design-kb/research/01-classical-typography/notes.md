@@ -154,21 +154,21 @@ Theodore Low De Vinne, *The Practice of Typography: Correct Composition* (New Yo
 
 ### Core claims
 
-*Correct Composition* is one volume of De Vinne's four-volume *Practice of Typography*. It is a manual for compositors and proof-readers on spelling, abbreviations, compound words, figures and numerals, italic and capital letters, division of words, notes, indention, spacing, quotation marks, subheadings, punctuation and proof-reading. Its central argument is that consistency is a quality readers notice and demand. In the preface he says printing that passed a tolerant inspection in 1850 "does not pass now," and that "the reader of to-day is more or less a critic of style in type-setting."
+*Correct Composition* is one volume of De Vinne's four-volume *Practice of Typography*. It is a manual for compositors and proof-readers on spelling, abbreviations, numerals, italic and capital letters, division of words, spacing, punctuation and proof-reading. Its central argument is that readers notice and demand consistency. In the preface he says printing that passed a tolerant inspection in 1850 "does not pass now," and that "the reader of to-day is more or less a critic of style in type-setting."
 
-Because "there is no book of generally accepted authority that lays down a full code of explicit rules for orderly printing," each printing house that strives for consistency must make its own code, the "style-card," to guide new compositors and maintain uniformity. The book is his attempt to publish such a code for others, with the humility that different houses and different kinds of work need different rules.
+Because "there is no book of generally accepted authority that lays down a full code of explicit rules for orderly printing," each printing house that strives for consistency must make its own code, the "style-card," to guide new compositors and maintain uniformity. The book publishes such a code for others, while allowing that different houses and kinds of work need different rules.
 
 ### Specifics
 
 The spacing chapter (XII) is the most useful part for design. Its rules, all for hand-set metal type:
 
 - Composition is made more pleasing "when the spaces between words seem to be of the same width in all lines on the page." Lines thick-spaced at one side and thin at the other are "a disgrace to the printer."
-- Absolute uniformity is impossible because words cannot always be divided; the compositor must "be content with approximations to an ideal but unreached standard."
-- To make spacing seem even, the physical spaces must differ. Round letters such as o and e fill about half the type body, ascending and descending letters about three fourths, and angled letters (A, L, Y, W) leave gaps that should be counted as part of the space, so a word ending in y followed by one beginning with W takes a thinner space. He says this discrimination is impractical for small sizes and "desirable and even necessary" above twelve point, and impossible on automatic typesetting machines.
+- Absolute uniformity is impossible; the compositor must "be content with approximations to an ideal but unreached standard."
+- To make spacing seem even, the physical spaces must differ. Round letters such as o and e fill about half the type body, ascending and descending letters about three fourths, and angled letters (A, L, Y, W) leave gaps that should be counted as part of the space, so a word ending in y followed by one beginning with W takes a thinner space. This discrimination is impractical at small sizes and "desirable and even necessary" above twelve point.
 - For solid composition in lower case, the three-to-em space is the most used; the en quadrat suits wide-leaded matter. Em-quad word spaces ("pigeonholing") are "generally disapproved."
 - Capitals, being about twice as high and wide as round lower-case letters, need word spaces "twice as wide" and leads "twice as thick"; the en quadrat is the least permissible word space in capitals.
 - On division of words he says words "always appear better unbroken, but the breaking of words may not be so unsightly as the breaking up of a general uniformity of the spacing between words." He names "hounds'-teeth," irregular white gaps across lines, as "more offensive to the reader than any strangeness of division."
-- Small capitals of nine point and smaller "are dense and not easily read" for running titles; hair-spacing helps. Full capitals of the text are "much too large" for signatures.
+- Small capitals of nine point and smaller "are dense and not easily read" for running titles; hair-spacing helps.
 
 He also quotes Horace Hart's rule for divisions at Oxford: the part left at line end should suggest the part carried over.
 
@@ -181,9 +181,45 @@ De Vinne also records the fashions of his own time. A footnote notes that "sever
 ### Implications for LTF
 
 1. His "style-card" is the model for the LTF copy rulebook. A written code for units, abbreviations, capitalization, numerals and checklist wording is how consistency survives many authors. LTF's existing rules for US English, no em-dashes, and MSL/AGL labels are exactly this kind of code.
-2. Readers notice inconsistency faster than they notice errors of substance. In a lesson series, drift in how a quantity is written (unit, spacing, abbreviation) will be read as carelessness, which for a safety-adjacent subject erodes trust.
+2. Readers notice inconsistency faster than they notice errors of substance. Drift in how a quantity is written across lessons will read as carelessness, which erodes trust.
 3. Uppercase and small-cap labels need extra letterspacing and a bigger word space. That justifies CSS letter-spacing on all-caps widget labels and badges.
-4. Optical word spacing is a reminder that equal widths do not look equal; test labels at the sizes where they are shown.
-5. "Hounds'-teeth" are today's rivers in justified text, one more reason for ragged-right in narrow columns.
+4. "Hounds'-teeth" are today's rivers in justified text, one more reason for ragged-right in narrow columns.
 
 Confirmed this session: Full text of the third edition read from the archive.org scan https://archive.org/details/typogr00devipracticeofrich (title page, contents, preface, chapter XII on spacing, small capitals, divisions). Open Library lists the 1901 Century Co. edition (work OL5150673W and edition OL34122483W). Gill introduction remark read in https://archive.org/details/an-essay-on-typography-1993-eric-gill.
+
+## johnston1906writing
+
+Edward Johnston, *Writing & Illuminating, & Lettering* (New York: Macmillan; London: John Hogg, 1906; The Artistic Crafts Series of Technical Handbooks, edited by W. R. Lethaby).
+
+### Core claims
+
+Johnston's handbook is the foundation text of the modern calligraphic revival and the craft root of much twentieth-century type design. It argues that letters are best understood and made through the tool that formed them, the reed, quill or chisel, so the way to learn good lettering is to copy the best historical models with the proper tool rather than to "design" new alphabets. In his words, "To make good letters is not necessarily to 'design' them — they have been designed long ago — but it is to take the best letters we can find, and to acquire them and make them our own." He states the problem simply: "To make good letters and to arrange them well."
+
+He names the "essential qualities of Lettering" as "legibility, beauty, and character." He complains that the recent revival of printing produced many attempts at "decorative" books that show "a vagueness of intention" and "an ignorance of Letter-craft."
+
+### Specifics
+
+The book is a practical manual, with sections on tools and materials (quill, desk, ink, parchment), on forming a formal hand, on the history of letters (Roman capitals, Uncials, Half-Uncials, Italic and the Roman small letter), on illumination, and on lettering for stone and for printing. A few points matter for typographers:
+
+- Tool-first reasoning. Uncials "are true pen-forms," with "simple strokes and beautiful, rounded shapes which flow from the rightly handled reed or quill." Much of the character of historical scripts comes from how the pen is held (for example, "slanted-pen" writing).
+- The Roman small letter was produced when Italian scribes went back about three hundred years for a model. Johnston uses this as the precedent for method without imitation: one may "follow a method without imitating a style."
+- Spacing measured by the letters themselves: "The average space between two words is the width of the letter o," and writing lines are usually set about three times the height of the letter o apart, kept "as close together as is compatible with legibility," with descenders clearing ascenders of the line below.
+- Rules are tools. "Rules are only Guides and ... Methods are suggested by the work itself"; too much fitting and planning "makes the work lifeless."
+
+His preface footnote on legibility is the most reusable item: "our personal view of legibility is apt to favour custom and use unduly, for a quite bad, familiar writing may seem to us more readable than one that is far clearer in itself but unfamiliar."
+
+### Replication and criticism
+
+A craft handbook from a master teacher, not an experiment. The book was very influential among calligraphers and type designers; I did not verify specific claims of influence this session. Its historical account of letter origins reflects 1906 palaeography, so details about the dating and relationships of historical hands should be checked against later scholarship before reuse (I did not do so here).
+
+The legibility footnote anticipates what later reading research would discuss as the role of familiarity (lane 02 and lane 19 cover it); here it is craft observation only. The tool-first claim is carried forward and formalized in Noordzij's theory of the stroke (noordzij2005stroke), and the preference for the pen over the drawn outline is contested by designers who work from the screen outward; that dispute is an open design debate, not a settled finding.
+
+### Implications for LTF
+
+1. The legibility footnote is a standing warning to the LTF design team: what looks readable to people who already know the interface or the subject may not be readable to a beginner. Test lessons with true beginners, not with the team.
+2. "The width of the letter o" is a nice spacing yardstick that scales with the type, which is the logic of using `em`-based word and paragraph spacing in CSS rather than fixed pixels.
+3. Descender and ascender clearance gives a minimum floor to line height for any text face, especially in dense instrument legends and chart labels.
+4. "Rules are only guides" is a design-governance stance for a design knowledge base: treat each rule here as a default with a reason, and write down the reason so it can be overridden knowingly.
+5. The preference for historical models fits a tradition-first choice of text faces for lesson pages, with the caveat that the tradition was formed on paper.
+
+Confirmed this session: Full text of the 1906 first edition read from https://archive.org/details/writingilluminat00johnrich (title page: New York, The Macmillan Company; London, John Hogg; preface, scope, spacing section, Uncial section; quotations above). Open Library work OL2200371W lists the 1906 Macmillan edition. Archive metadata gives the author as Johnston, Edward, 1872-1944.

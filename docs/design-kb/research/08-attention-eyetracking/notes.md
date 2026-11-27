@@ -278,3 +278,55 @@ Qualifications: Burke et al. note that more recent studies at the time found tha
 5. In fly mode, assume the learner will ignore anything banner-like around the edges. Put what matters in the reading line of the task, and keep the edges quiet.
 
 Confirmed this session: Crossref record and abstract for DOI 10.1177/154193129804200504 (the SAGE page returned HTTP 403, so no full text); Burke et al. 2005 manuscript for Benway and Lane's characterization and the 11.7 and 94 percent figures; the NN/g article https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/ for the 2018 numbers.
+
+## burke2005highcost
+Burke, M., Hornof, A., Nilsen, E., & Gorman, N. (2005). High-cost banner blindness: Ads increase perceived workload, hinder visual search, and are forgotten. *ACM Transactions on Computer-Human Interaction, 12*(4), 423-445.
+
+### Core claims
+"Banner blindness" says people ignore ads; yet users complain that ads distract them. The authors resolve the contradiction with two experiments. Banner ads (animated or static) can slow visual search and raise perceived workload even though people rarely look straight at them, and they are barely remembered afterwards, with animated ads recalled no better than static ones and in places worse. In the abstract's words: "Eye tracking data reveal people rarely look directly at banners," and "animated banners are more difficult to remember than static look-alikes".
+
+### Specifics
+Experiment 1 (search for short words, two banners on screen) used four banner types: animated commercial, static commercial, cyan with flashing big text, and blank. After timed trials, participants rated workload with the NASA Task Load Index (TLX). Mean search times did not differ significantly across banner types (the numbers ranged from about 4.8 to 5.8 seconds), but flashing-text banners produced the highest rated workload, with a repeated-measures ANOVA F(3, 36) = 6.52, p < .001 (mean 160.71, against 121.44 for animated, 107.83 for static and 110.54 for blank), and were rated more frustrating and mentally demanding. One search-time effect appeared: a target sandwiched between two flashing-text banners took an average of 75 percent (4.3 seconds) longer to find.
+
+Experiment 2 (search through news headlines, with an exact-match and a harder semantic-match precue) used animated commercial, static commercial and gray-rectangle banners, 100 banner designs, and eye tracking with an LC Technologies Eyegaze system. Twenty-four undergraduates took part (in the manuscript). Results from the abstract: both animated and static commercial banners decreased search speed. Eye movements: participants looked at a banner in 11.7 percent of trials regardless of banner type, with gray rectangles (8.8 percent) almost as likely to be fixated as static (13.0) or animated (13.2) banners. Of trials with a direct banner look, 70 percent happened on the first eye movement. In the memory test, of 164 banners correctly remembered, only 10 had received a direct gaze, so participants did not directly look at 93.9 percent of the banners they "remembered". The authors read this as luck given high false-alarm rates, and signal-detection analysis showed static banners somewhat better than chance while animated banners were recognized no better than chance.
+
+The introduction reviews stimulus-driven capture by abrupt onsets (Yantis and Jonides) against goal-driven contingent orienting (Folk et al.).
+
+### Replication and criticism
+I read the author manuscript (submitted September 2004) and the Crossref abstract of the journal version; numbers could differ in the final paper. The evidence is lab experiments with student samples, a controlled task and a stylized layout, so ecological validity is limited, a point the authors partly address by moving from a precue display to free mouse movement in Experiment 2. The Experiment 1 search-time null is itself a finding: simple search was not slowed by animation, which the authors tie to participants' incentive not to look at banners. The results are consistent with the earlier Benway paper (see benway1998banner) and with later NN/g observations, but they also qualify "blindness": ads cost time and effort even without direct fixation, plausibly via peripheral processing. The authors also critique earlier studies that found no animation effect (Diaper and Waelend 2000).
+
+### Implications for LTF
+1. Peripheral animation has a cost even if learners never look at it. Avoid looping animation, shimmer or flashing text around task content; in fly mode, none.
+2. Flashing text is the worst: highest workload, and it slows finding things next to it. Never use blinking text for emphasis. Use static emphasis (weight, color, position) instead.
+3. Animation does not buy memory. If something needs to be remembered, such as a V-speed or a checklist step, repeat it as static text in the reading line and test recall, rather than animating it.
+4. Do not assume a promotional banner placed beside a lesson is "free". It can slow the learner and raise workload while not being read.
+5. In a goal-directed task people avoid banner-like regions, so help placed there will not be seen.
+
+Confirmed this session: Crossref record and abstract for DOI 10.1145/1121112.1121116; full read of the author manuscript at thoughtcrumbs.com (ToCHI04.pdf, marked "submitted, please do not cite") for Experiment 1 and 2 numbers; the journal PDF itself was not read.
+
+## nielsen2006fshaped
+Nielsen, J. (2006, April 16). F-shaped pattern for reading web content. Nielsen Norman Group Alertbox. https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/
+
+### Core claims
+Nielsen reports that when people read text-heavy web pages, their gaze often follows a rough "F": a horizontal sweep across the top of the content, a second shorter horizontal sweep a little lower, and a vertical scan down the left side. His practical conclusion is that users do not read word by word, so the most important information should come first, and each line should begin with information-carrying words. It is among the most quoted eye-tracking findings in web design.
+
+### Specifics
+The article is an industry research report, not a peer-reviewed paper. It states that the eyetracking study involved 232 users who viewed thousands of web pages; it gives no task count, page count or demographics. A later NN/g update says a study run 11 years after the original confirmed the findings.
+
+The three components of the F: (1) a top horizontal bar, usually across the upper part of the content area; (2) a lower bar, reached after moving down a bit, usually covering a shorter span than the first; (3) a stem, a vertical movement down the left side of the content, which can be a slow, systematic scan (a solid stripe on a heat map) or a faster, spottier one. Variants: a third horizontal read gives an E shape, and a single horizontal read gives an inverted L. Examples include a corporate "about us" article, an e-commerce product page (the second bar sits lower because of a product image) and a search results page.
+
+Recommendations on the page: assume users will not read word by word, because thorough reading is rare, especially in initial vendor research; put the most important information in the first two paragraphs, since users will read more of the first than the second; start subheads, paragraphs and bullets with information-carrying words, since users notice the left edge while scanning and read the third word on a line much less often. Caveats on the page: the F is "a rough, general shape", not a uniform behavior; users read less of the second horizontal area than the first; other tasks yield different patterns (for example, direct scanning when looking for prices or numbers).
+
+A follow-up by Kara Pernice, "Text Scanning Patterns: Eyetracking Evidence" (NN/g, 25 August 2019), places the F among four patterns. The F-pattern appears when users fixate on the beginnings of lines and near the top, with no subheadings or bullets; it is called the least effective. The spotted pattern (fixating on specific standout or task-matching words such as links, bold words or digits) is slightly more effective, and the layer-cake pattern (fixating mainly on headings and subheadings) is the most effective scanning method. The commitment pattern (reading nearly all content words) occurs when users are highly motivated and gives the best comprehension but takes longest. The article notes the F-pattern is mirrored in right-to-left languages and uses a heat map aggregating 47 people.
+
+### Replication and criticism
+The F is a heat-map aggregate shape, not a single person's path, and its authority rests on the NN/g dataset, whose full method I could not see. Buscher, Cutrell and Morris (2009) describe such "broad patterns" as lacking detailed quantitative analysis and then supply some: they report that the upper-left and left regions of a page attract the earliest and most attention, and that the entire right side above the fold is neglected, which is broadly compatible with the F's left-weighted shape (see buscher2009what). Pernice's 2019 text itself reframes the F as one outcome of poorly structured pages, so it is not a design target.
+
+### Implications for LTF
+1. Do not design to the F. Design so the F is not needed: add meaningful subheadings and short bullets so learners can use the layer-cake and spotted patterns, which Pernice rates as more effective.
+2. Front-load: start paragraphs, list items and headings with the key term, because the left edge and first words get the attention.
+3. Put the single most important instruction in the first lines of a lesson page and in the left-hand reading line, not in a right sidebar.
+4. For beginners who must understand, motivated reading (the commitment pattern) may happen on the pages that matter to them. Do not assume skimming everywhere, but design for both skim and read: headings, then short chunks.
+5. If LTF is ever localized for right-to-left languages, expect the pattern to mirror.
+
+Confirmed this session: WebFetch of https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/ (date, 232 users, components, recommendations, caveats) and https://www.nngroup.com/articles/text-scanning-patterns-eyetracking/ (2019 patterns, 47-person heat map, RTL); Buscher et al. 2009 full text for the comparison.
