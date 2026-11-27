@@ -415,7 +415,7 @@ Richardson's 2022 monograph applies the method of a systematic review to the who
 ::: {.rule #LEG-029 grade="A"}
 **Do not expect a change of typeface to fix a legibility problem; fix size, measure, spacing and contrast first.** Tinker found the large effects in size, line width, leading, capitals, italics and contrast, not in the choice among ordinary faces [@tinker1963legibility]; screen studies found no reliable speed gain from faces designed for screens [@boyarski1998study]; and a 16-font study found no font reliably faster across its whole sample [@wallace2022towards].
 
-*In LTF:* when a lesson or widget "reads badly", the review checks the measure (LEG-035), size (LEG-019, LEG-020), spacing (LEG-013) and contrast ({{CONTRAST}}) before anyone proposes a new font.
+*In LTF:* when a lesson or widget "reads badly", the review checks the measure (LEG-035), size (LEG-019, LEG-020), spacing (LEG-013) and contrast (LEG-041) before anyone proposes a new font.
 :::
 
 ### Preference is not performance
@@ -429,7 +429,7 @@ The dissociation between preference and performance is not a one-off. Readers in
 ::: {.rule #LEG-030 grade="A"}
 **Never choose a typeface, size or layout by stakeholder or learner preference alone; measure reading with comprehension checked.** Preference failed to predict reading performance in adults choosing among fonts [@wallace2022towards], in line-length studies [@dyson2004physical], and in readers with dyslexia [@rello2013good; @kuster2018dyslexie]. Several independent studies agree. Preference still matters for tone and for whether people stay, so record it, but separately.
 
-*In LTF:* a design review that compares two type treatments by asking "which looks better?" adds a short task test with real learners (time to read a lesson section and answer its `QuizBlock`, or time to find a value on `SpeedsPage`), counterbalanced for order ({{TEST}}).
+*In LTF:* a design review that compares two type treatments by asking "which looks better?" adds a short task test with real learners (time to read a lesson section and answer its `QuizBlock`, or time to find a value on `SpeedsPage`), counterbalanced for order (LEG-057).
 :::
 
 ### What the population results leave open
@@ -701,3 +701,77 @@ Speed alone can mislead. In the line-length studies, comprehension was often mea
 ### What this means for Learn to Fly
 
 LTF's design already respects how comprehension works: inline quizzes, ticked steps that stay visible, glossary chips, no reading timers. Keep all of it, and write it down as policy so it survives later features (LEG-046, LEG-047). The levers to pull are vocabulary and structure: define terms at first use and keep definitions reachable from quizzes and Fly mode (LEG-048), and set exact steps and values apart from prose so return visits can skim (LEG-049). Test with comprehension as well as speed (LEG-051), and keep marketing claims to clarity (LEG-050).
+
+## Dyslexia, Age and Individual Differences
+
+### Fonts designed for dyslexia
+
+Two fonts marketed to readers with dyslexia have attracted wide attention: OpenDyslexic, a free font with letters weighted toward the bottom, whose developers claim this keeps letters from appearing to flip or swap, and Dyslexie, designed by Christian Boer in 2008. Both rest on the premise that dyslexia is mainly a visual problem of letter confusion or reversal. Wery and Diliberto point out that the premise is questionable, because dyslexia is widely understood as primarily phonological [@wery2017effect]. Four independent studies have now tested the fonts.
+
+**Rello and Baeza-Yates (2013).** Forty-eight Spanish-speaking participants with a clinical diagnosis of dyslexia (ages 11 to 50, mean about 21) read 12 texts of 60 words, each in a different font, counterbalanced, while an eye tracker recorded them (46 recordings usable) [@rello2013good]. OpenDyslexic and OpenDyslexic Italic did not improve reading time or fixation duration, and were among the least preferred. The paper's abstract claims sans serif, monospaced and roman styles "significantly improved" reading, and recommends Helvetica, Courier, Arial, Verdana and Computer Modern Unicode. The data are weaker than that headline: font had a significant overall effect on reading time (chi-square(11) = 31.55, p < 0.001), but the only clear pairwise result was that Arial Italic was slower than Arial, Computer Modern Unicode and Helvetica. Serif versus sans and monospaced versus proportional did not significantly change reading time; the sans and mono claims rest on fixation durations (serif 0.26 s against 0.24 s; mono 0.22 s against 0.26 s), which are a proxy and are confounded with character width [@rello2013good]. The fonts were also not matched for x-height or spacing.
+
+**Wery and Diliberto (2017).** Twelve children aged about 9 to 12 at a school for students with dyslexia read letters, real words and nonsense words in OpenDyslexic, Arial and Times New Roman, in a single-subject alternating design with sizes adjusted to match physical letter size [@wery2017effect]. The abstract reports "no improvement in reading rate or accuracy for individual students with dyslexia, as well as the group as a whole"; every effect-size comparison of OpenDyslexic with a standard font was negative, and no child preferred it. With 12 children and no comprehension measure, the safe reading is "no benefit, possibly worse" [@wery2017effect].
+
+**Marinus and colleagues (2016).** Thirty-nine low-progress readers learning to read in English read four texts in four conditions matched for x-height [@marinus2016special]. They read 7 percent more words per minute in Dyslexie than in standard Arial, but when Arial's within-word and between-word spacing was matched to Dyslexie's, the difference was no longer significant. The authors concluded that the font's effect "is not due to its specially designed letter shapes" but to its spacing settings [@marinus2016special].
+
+**Kuster and colleagues (2018).** The largest test: 170 Dutch children with dyslexia read a text in Arial and in Dyslexie a week or two apart, counterbalanced, and 102 children with dyslexia and 45 without read word lists in Dyslexie, Arial and Times New Roman [@kuster2018dyslexie]. Font had no significant effect on speed or accuracy in either experiment (per-card F from 0.04 to 0.85 in the second). Reading got faster on the second session regardless of font (F(1,167) = 33.86), a practice effect. More children preferred Arial; in the word-list study overall preferences were Arial 38.1 percent, Times New Roman 29.9 and Dyslexie 11.6, and preference was unrelated to performance. The abstract's conclusion: "the Dyslexie font neither benefits nor impedes the reading process of children with and without dyslexia" [@kuster2018dyslexie]. The authors note limits: null results, spacing not matched separately as in Marinus, a Dutch sample in a more transparent orthography than English.
+
+::: myth
+**"Special dyslexia fonts such as OpenDyslexic and Dyslexie help readers with dyslexia."** Controlled tests found no benefit from OpenDyslexic in adolescents and adults [@rello2013good] or children [@wery2017effect], and no benefit from Dyslexie in 170 children [@kuster2018dyslexie]. The one positive result, a 7 percent speed gain, vanished when Arial's spacing was matched to Dyslexie's, showing that spacing, not letter shape, was responsible [@marinus2016special].
+:::
+
+::: {.rule #LEG-052 grade="A"}
+**Do not ship, offer or advertise a dyslexia-specific font.** Four independent studies, in three languages and across children and adults, found no benefit from OpenDyslexic or Dyslexie letter shapes, and the only positive effect was explained by spacing [@rello2013good; @wery2017effect; @kuster2018dyslexie; @marinus2016special].
+
+*In LTF:* no "dyslexia font" toggle in `/account` Preferences or anywhere else, and no claim in copy that LTF is "dyslexia-friendly" because of a typeface.
+:::
+
+### What might help: spacing and size under the reader's control
+
+The positive thread running through these studies is spacing. Marinus's matched-spacing result [@marinus2016special], the crowding evidence that spacing sets the limit on recognition [@pelli2008uncrowded], and Arditi and Cho's strong spacing effect on thresholds [@arditi2005serifs] point the same way. The evidence on extra letter spacing for struggling readers is nonetheless mixed, with some studies finding benefits and one finding none (though reduced spacing hurt fluency) [@kuster2018dyslexie], and very wide spacing does not enlarge the visual span [@legge2011print]. Pelli and Tillman also report that readers with dyslexia read at less than half their span-predicted speed [@pelli2008uncrowded], which suggests that spacing addresses only part of what makes reading hard for them. Size is the other robust lever, with larger text helping readers in general [@rello2016make; @legge2011print].
+
+Wallace and colleagues' argument that "one font does not fit all" [@wallace2022towards] supports personalization, but their own population-level null, and the upper-bound problem with best-minus-worst comparisons, mean the font family itself is the weakest of the levers. Wery and Diliberto suggest that support for decoding (sound, plain words, help with long terms) is a better use of effort for readers who struggle than a change of font [@wery2017effect].
+
+::: {.rule #LEG-053 grade="B"}
+**Offer a reading-comfort setting with text size, line spacing, and letter-plus-word spacing as its controls, applied to lessons, reference pages and Fly mode.** Spacing explained the only positive dyslexia-font result [@marinus2016special], spacing limits recognition through crowding [@pelli2008uncrowded], and larger sizes improve reading [@rello2016make]. Evidence for extra spacing is mixed [@kuster2018dyslexie], so the controls are modest and optional, with two or three steps each. Grade B.
+
+*In LTF:* add a "Reading" group beside the `ThemeToggle` in `/account` Preferences (and in a small menu on `FlyModePage`), stored like `ltf-theme`, that scales the `body-*` utilities and the spacing of `MarkdownContent` and `FlyPanel`. Because measures are in `ch` (LEG-036), the line length adapts.
+:::
+
+::: {.rule #LEG-054 grade="C"}
+**Describe reading settings as comfort options, never as clinical aids.** The evidence shows preference does not predict performance [@kuster2018dyslexie; @wallace2022towards] and that benefits for specific groups are unproven [@marinus2016special; @kuster2018dyslexie]. Claiming a benefit LTF has not measured would repeat the dyslexia-font mistake. Grade C.
+
+*In LTF:* the setting's label is "Reading comfort" or "Text size and spacing", with a plain description of what each control does.
+:::
+
+::: {.rule #LEG-055 grade="B"}
+**If a choice of font family is ever offered, make it secondary to size and spacing, and offer only conventional, well-made faces.** No font was reliably faster across a large adult sample, and individual best-font gains are inflated by noise [@wallace2022towards]; special letter shapes did not help [@kuster2018dyslexie; @wery2017effect]. Grade B.
+
+*In LTF:* the default is the product face; an alternative, if added, is one conventional serif or sans with distinct characters (LEG-022), not a novelty font.
+:::
+
+::: {.rule #LEG-056 grade="C"}
+**Support decoding of aviation vocabulary directly: give pronunciations for difficult terms, break long call signs and codes into readable groups, and keep definitions in plain words.** Dyslexia is primarily a phonological difficulty, so visual changes to letters miss the main problem [@wery2017effect]; vocabulary is the main lever on reading [@rayner2016much]. Grade C: a reasoned recommendation without a direct test in this context.
+
+*In LTF:* glossary entries in `glossary.ts` can carry a pronunciation hint for terms like ones from the phonetic alphabet; radio-call examples group characters with spaces. Verify every aviation term and phrase against the content sources before adding it.
+:::
+
+### Individual differences in testing
+
+Every study in this Part found large differences between readers, and several found practice effects as large as the effects being tested. In Kuster's study, reading speeded up on the second session regardless of font [@kuster2018dyslexie]; in Wery and Diliberto's, all lines trended upward over sessions [@wery2017effect]; in Wallace's, the second screen of text was read 39 words per minute faster than the first [@wallace2022towards]. Comparisons of faces at different x-heights or spacings measure the size or spacing, not the face [@marinus2016special; @legge2011print]. Finished typefaces differ in many ways at once, which is why Beier and Larson varied one letter at a time within a font [@beier2010design]. And Tinker's standard, a century old, still holds: measure reading of meaningful text with comprehension checked, on enough readers [@tinker1963legibility].
+
+::: {.rule #LEG-057 grade="B"}
+**Run any LTF reading test with counterbalanced order, a repeated condition, matched x-height and spacing, a comprehension check, and as many learners as can be recruited, including older ones.** Practice effects rival the effects tested [@kuster2018dyslexie; @wallace2022towards; @wery2017effect]; unmatched size or spacing masquerades as a font effect [@marinus2016special]; comprehension can diverge from speed [@dyson2004physical]; and legibility should be judged on meaningful text with comprehension checked [@tinker1963legibility]. Grade B: methodological consensus from several studies.
+
+*In LTF:* a reading test can be built on existing lessons: two variants of one lesson section, each learner reading both in counterbalanced order, timed per section, with the section's `QuizBlock` as the comprehension check. Vary one thing at a time (size, measure or face), as in Beier and Larson's within-font design [@beier2010design].
+:::
+
+::: {.rule #LEG-058 grade="C"}
+**Do not report the gap between each reader's best and worst condition as the effect of a design change.** Taking each person's fastest and slowest of several noisy measurements produces a gap even when the conditions do nothing, so such a figure is an upper bound [@wallace2022towards]. A retest of each reader's best condition is needed to estimate a real effect. Grade C: a statistical argument applied to one study's reporting, not a published finding.
+
+*In LTF:* internal reports of a type or layout test give the average difference between conditions with its uncertainty, not "learners read up to 35 percent faster in their best version".
+:::
+
+### What this means for Learn to Fly
+
+The evidence closes one door and opens another. Do not add a dyslexia font (LEG-052). Do add a modest reading-comfort setting for size, line spacing and letter and word spacing that reaches lessons, reference and Fly mode, described as a comfort option (LEG-053, LEG-054), and keep any font choice secondary (LEG-055). Support decoding with pronunciations, grouped codes and plain definitions (LEG-056), checking every aviation term against the sources. And when the team tests a type or layout change, design the test so practice, size and spacing cannot fake a result (LEG-057, LEG-058); the `QuizBlock` gives every lesson a ready comprehension check.

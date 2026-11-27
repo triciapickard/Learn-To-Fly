@@ -1665,3 +1665,140 @@ the flight. Show the beta notice once per session in fly mode, or fold it into t
 Make every lesson contain an attempt (INT-067), place critical setup in the path of the task
 (INT-066), retire first-time help once it has been used (INT-064), and treat the second-screen
 learner as a hypothesis to measure (INT-068).
+
+## Microinteractions
+
+### Saffer's four parts
+
+Saffer argues that the unit of interface craft is the microinteraction, "a contained product moment
+that revolves around a single use case" (in a reviewer's quotation of the book): a small piece of
+functionality that does one thing [@saffer2013microinteractions]. Examples reported by the reviewer
+include a mail client warning when you write to someone outside your organization, a web clipper's
+button that grays out once the clipper is installed, a "Follow" button that becomes "Follow back"
+when the other person already follows you, and a video site's tab icon that changes as the video
+buffers, plays or pauses.
+
+The book's chapters give the framework: triggers, rules, feedback, and loops and modes. A trigger
+starts the microinteraction, either manually (the person initiates it) or as a system trigger (it
+starts when conditions are met). Rules are the logic governing what can and cannot happen. Feedback
+is the response the rules produce. Loops and modes are the meta-rules: how the microinteraction
+behaves over time and what alternate states it has. Subsection titles listed for the book include,
+for manual triggers, "Bring the Data Forward", discoverability, "Invisible triggers", and control
+states and labels; for rules, limited options and smart defaults, microcopy and algorithms; and for
+modes, "spring-loaded" and "one-off" modes, with long loops under loops. The reviewer reports advice
+to start from the person's need (what, when, how often) and to do as much as possible with as little
+as possible, under an epigraph from Charles Eames that the details "make the design".
+
+The evidence is craft judgment illustrated by products, not research, and the book was known for
+this Part through its contents and one review. A fair limitation, offered by the lane notes rather
+than by a published critic, is that almost any interface event can be called a microinteraction, and
+that polish on details can distract from structure. The framework's value is as a specification
+template: it forces four questions to be answered before code is written.
+
+::: {.rule #INT-069 grade="C"}
+**Specify every small interactive moment by its trigger, its rules, its feedback and its loop before
+building it, and write the four answers where reviewers can see them.** Saffer's four-part frame is
+craft knowledge, not tested method [@saffer2013microinteractions]; its use is that each part is a
+place where behavior is otherwise left to chance.
+
+*In LTF:* for a `FlyPanel` step tick, the answers are: trigger, a tap on the row or the `Checkbox`;
+rules, any order, untick allowed, timestamp kept; feedback, check mark plus `border-go bg-go-tint`
+fill; loop, saved to `sessionStorage` for the tab, cleared after a submitted debrief. Write the same
+four lines in the comment above every new interactive component.
+:::
+
+### Triggers
+
+A manual trigger must look like what it does and show its current state. Saffer's section titles on
+control states and labels, and his examples of a button that grays when its job is done or changes
+its label to the next relevant action, describe a trigger whose appearance is driven by the rules
+[@saffer2013microinteractions]. This is the signifier principle from the chapter on affordances at
+the scale of one button [@norman2013design].
+
+::: {.rule #INT-070 grade="C"}
+**Let a trigger's label and look change with the state it controls, so the control itself always
+says what pressing it will do now.** Saffer's examples of state-dependent labels
+[@saffer2013microinteractions] and Norman's signifiers [@norman2013design] are the basis; both are
+expert guidance.
+
+*In LTF:* `Stopwatch` swaps Play and Pause, and `MarkComplete` is replaced by "Lesson complete" once
+done; both follow the rule. The `CopyButton` in `BriefTab` swaps its icon to a green check and its
+accessible name to "Copied" for 1.5 seconds, but a failed copy is silently ignored; show "Could not
+copy" in that case, since the learner will paste into the sim and find nothing.
+:::
+
+::: {.rule #INT-071 grade="C"}
+**Show the learner's relevant data at the point where they act: their last result next to the
+retry, their best tier on the card that starts the challenge.** "Bring the Data Forward" is one of
+Saffer's trigger sections [@saffer2013microinteractions]; Shneiderman's memory-load rule says not to
+make people carry information between displays [@shneiderman2016designing].
+
+*In LTF:* challenge cards on `ChallengesPage` show the best `TierBadge`, and the challenge header
+shows "Best: {tier} {n}%". Extend the same to the Debrief tab: show the learner's previous result on
+each criterion beside the radio group, read-only, so self-scoring can be compared with last time
+without pre-selecting anything (INT-051).
+:::
+
+::: {.rule #INT-072 grade="C"}
+**When the system triggers a microinteraction, say what triggered it in the same message.** A system
+trigger starts on conditions the person did not set in that moment [@saffer2013microinteractions],
+and an unexplained system action is an automation surprise in small [@sarter1995world].
+
+*In LTF:* the random-event alert in `FlyPanel` shows the event's `label` and `message` with a beep
+and "Got it". Add one line naming the trigger ("A random event from this challenge, fired by the
+timer") so a learner who forgot they started the timer is not left wondering whether the sim or
+the page raised it.
+:::
+
+### Rules and loops
+
+The rules decide what the person can and cannot do, and the loop decides what happens over time.
+Most microinteraction bugs in practice are undecided rules (can a tick be undone, does order
+matter, what happens on the second press) and undecided loops (does the state survive a refresh,
+the next session, a new version of the content). The lane's other sources supply the answers for
+the hardest cases: undo should match the person's intention [@abowd1992giving], work should be
+protected across interruptions [@tognazzini2014first], and a version change must not silently
+reinterpret saved state.
+
+::: {.rule #INT-073 grade="C"}
+**Decide, and state in the code, what each microinteraction's state does across a refresh, a new
+session, a sign-in and a content update.** Loops are Saffer's meta-rules for behavior over time
+[@saffer2013microinteractions]; protecting work is Tognazzini's principle [@tognazzini2014first].
+
+*In LTF:* `loadDebrief` discards a draft made for an older rubric version, and the server's
+"This challenge was updated" error asks for a refresh; that is a decided loop, though the discarded
+draft is lost without notice. Tell the learner when a saved draft was set aside because the rubric
+changed, and keep their notes and reflections, which do not depend on the rubric.
+:::
+
+### Feedback in proportion
+
+Saffer's chapter on feedback concerns methods and rules [@saffer2013microinteractions], and the lane
+notes draw from it the advice to make feedback proportional: a completed checklist item needs a
+small clear change, not a celebration. That agrees with Shneiderman's informative-feedback rule
+[@shneiderman2016designing] and with the Part's chapter on feedback. Lists of "delight" details
+circulate widely and have no evidence behind them beyond craft opinion.
+
+::: {.rule #INT-074 grade="C"}
+**Test any decorative or "delight" detail with real learners before making it a pattern, and drop
+it if it slows the task or distracts from the sim.** The microinteraction literature is craft
+judgment [@saffer2013microinteractions], and Hutchins, Hollan and Norman's condition for engagement
+is an interface that does not draw attention to itself [@hutchins1985direct].
+
+*In LTF:* the `tier-pop` animation on the result badge marks a rare event and is wrapped in
+`motion-safe:`, which is proportionate. Do not extend celebratory motion to ticks, quiz answers or
+lesson completion without testing; the Part on motion and perceived performance covers timing.
+:::
+
+### What this means for Learn to Fly
+
+LTF has many microinteractions and most are well made: ticks are immediate and visible, the
+checklist runner has keyboard shortcuts printed beside it, the stopwatch swaps its controls, the
+copy button confirms, the theme toggle shows its state as an ink pill with a word and an icon.
+Adopt the four-line specification (INT-069) as a comment convention for new interactive components,
+so behavior is decided before it is coded.
+
+Fix three specific gaps: the copy button's silent failure (INT-070), the random-event alert's
+missing trigger line (INT-072), and the silent discarding of a debrief draft after a rubric update
+(INT-073). Add previous per-criterion results to the Debrief tab as read-only context (INT-071).
+Keep celebration for the one rare event that earns it (INT-074).

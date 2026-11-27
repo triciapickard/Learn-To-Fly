@@ -561,3 +561,89 @@ Bringhurst's 2.1.6 extends letterspacing to long strings of digits [@bringhurst2
 LTF's eyebrows and tier badges already follow the oldest rule in this chapter (TYP-034): capitals are tracked, lowercase is not, with a few mixed-case exceptions to remove. The product also keeps capitals out of warnings and instructions, and the components carry emphasis by color, icon and border instead; that should become an explicit rule for content authors and reviewers (TYP-036), because content is where capitals creep in.
 
 The new work is in running text and in restraint. Abbreviations and identifiers are the learner's vocabulary; give them light tracking automatically and a definition on first use (TYP-037). Treat the 12 px eyebrow as a floor and use it less (TYP-038): an eyebrow above every heading is one of the generic traits the owner sees, and removing the redundant ones makes the remaining ones informative. Widen word spaces in multi-word capital labels (TYP-035). Leave numbers that must be read exactly in the mono face (TYP-039). And retire word shape from design discussions; it is a myth.
+
+## Scale and Hierarchy
+
+### Don't compose without a scale
+
+Bringhurst's section 3.1.1 is titled as an order: "Don't compose without a scale." The traditional scale of sizes, he writes, "survived with little change and few additions for 400 years," and a designer who wants another may devise one from "a modest set of distinct and related intervals" [@bringhurst2012elements]. The rule has two parts, and both matter. The sizes are few, and they are related, so that the step from one to the next is felt as a step and not as an accident.
+
+Bodoni's specimen book shows the opposite extreme and the reason for the rule. Its first volume runs roman and italic types over 144 pages from small to very large bodies, sometimes with as many as fourteen varieties of the same body in different weights of line [@bodoni1818manuale]. Updike, reading it in 1922, doubted so many near-identical kinds were needed, but approved the finely graduated sizes, which let Bodoni "place on his pages, not approximately, but exactly, the size of type he wished to employ" [@updike1922printing]. The lesson is to choose each size for a purpose and to avoid sizes so close that no reader could tell them apart.
+
+Brown's essay on modular scales gives the modern method: start from the body size and the typeface, multiply and divide by a ratio, and draw sizes from the result [@brown2011more]. He uses the golden mean, warns that the scale is "a tool and not magic," and himself improvises a sidebar size outside it. The notes for this book add a criticism: steep ratios such as the golden mean produce jumps too large at the extremes, and interfaces need intermediate sizes a steep scale does not supply. A gentle ratio and a short list of named exceptions is the practical form. Like every proportional system in the craft, it is a means of consistency, not evidence of legibility.
+
+LTF has a scale and does not use it consistently. `index.css` defines fifteen utilities from `display-xl` (64/64) down to `eyebrow` (12/16). Their steps are irregular: 12, 14, 16, 18, 20, 24, 32, 44, 64 px, ratios from about 1.11 to 1.45 between neighbors, which is not a scale in Bringhurst's sense so much as a list. Meanwhile 138 files use raw Tailwind sizes (`text-sm` 204 times, `text-2xl` 36, `text-xs` 29, `text-lg` 25, `text-xl` 19 and so on), `body-md` is never used, and 34 files use `font-bold` against 29 using the token utilities. The dossier calls this "two typographic dialects."
+
+::: {.rule #TYP-040 grade="C"}
+**Draw every text size in the product from a named type token; do not use raw size classes (`text-sm`, `text-2xl`, bracket sizes) in components or pages.** Bringhurst: "Don't compose without a scale" [@bringhurst2012elements]. Bodoni's exact graduated sizes [@bodoni1818manuale; @updike1922printing] and Brown's modular scale [@brown2011more] both treat sizes as chosen, not adjusted. Craft consensus; it is also LTF's own "tokens, not literals" rule applied to type.
+
+*In LTF:* replace the raw size classes in the lesson h1, `ModulePage` and `DashboardPage` h2s (`text-2xl font-bold`), `BriefTab` headings, `QuizBlock` prompts (`text-lg font-semibold`), `FlyModePage` and the result card with the `display-*`, `heading-*`, `body-*` and `readout-*` utilities. Add a lint rule that rejects `text-xs` through `text-6xl` outside `index.css`.
+:::
+
+::: {.rule #TYP-041 grade="C"}
+**Build the type scale from the body size and one gentle ratio, with any exception named and justified in the token file.** Brown derives sizes from the body size by a ratio and admits improvised exceptions [@brown2011more]; Bringhurst asks for "a modest set of distinct and related intervals" [@bringhurst2012elements]. Craft method with no legibility evidence behind any particular ratio.
+
+*In LTF:* rebuild the `index.css` scale from the reading size (16 or 18 px, as Part III decides) with a ratio near 1.2 to 1.25 for text and heading steps, and treat `display-lg` and `display-xl` as named display exceptions. Merge or remove styles that sit too close to each other: `body-sm` (14/20, 400) and `label` (14/20, 500) differ only in weight; `heading-sm` (16/22) sits at body size.
+:::
+
+### Hierarchy comes from content
+
+Tschichold's 1928 handbook gives the clearest account of where typographic hierarchy should come from: "Every part of a text relates to every other part by a definite, logical relationship of emphasis and value, predetermined by content" [@tschichold1995new]. The typographer expresses that relationship through type size and weight, the arrangement of lines, color and photography, and must study "how his work is read and ought to be read." The method is the reverse of styling by habit. First rank the content; then give each rank a treatment; then check that the treatments are distinguishable and that nothing outranks what it should not.
+
+Bodoni's first head of beauty, regularity as "conformity without ambiguity, variety without dissonance" [@bodoni1818manuale], is the test the result must pass. Conformity without ambiguity means the same rank looks the same everywhere: a reader who has seen one section heading recognizes the next one on another page. Variety without dissonance means the ranks differ enough to read as ranks and not so much that they clash. De Vinne's observation that readers notice inconsistency, that "the reader of to-day is more or less a critic of style in type-setting," is the reason this matters [@devinne1910practice].
+
+LTF fails the conformity test across pages. The dossier records that h2 is 24 px at 700 on app pages, 32 to 44 px at 600 to 700 on the landing page, and 20 px at 600 on the reference hub; the lesson h1 is 30 to 36 px at 700 while the `PageHeader` h1 is 32 px at 600; the 404 and error h1s are `text-3xl font-bold`. A learner moving from the curriculum to a module to a lesson to a challenge sees four different heading systems.
+
+::: {.rule #TYP-042 grade="C"}
+**Give each heading level one style per surface class (reading, interface, display), and use that style on every page of the class.** Tschichold derives hierarchy from content relationships that are the same wherever they occur [@tschichold1995new]; Bodoni's regularity requires "conformity without ambiguity" [@bodoni1818manuale]; De Vinne notes that readers notice inconsistency [@devinne1910practice]. Craft consensus.
+
+*In LTF:* on reading and interface pages, make the page title `display-md` (as `PageHeader` does) everywhere, including `LessonPage`, `NotFoundPage` and `RootErrorPage`; make section headings `heading-lg` on `ModulePage`, `DashboardPage`, `BriefTab` and in lesson block headings; make sub-headings `heading-md`. The landing page is display and may use the larger sizes.
+:::
+
+::: {.rule #TYP-043 grade="C"}
+**Before styling a page, list its elements in rank order and give adjacent ranks treatments a reader can tell apart at a glance; if two ranks cannot be told apart, merge them.** Tschichold asks the typographer to express "a definite, logical relationship of emphasis and value" [@tschichold1995new]; Updike doubted the need for many near-identical kinds of the same size [@updike1922printing]. Craft method.
+
+*In LTF:* the lesson head stacks a mono accent label ("Lesson 0.1"), the h1, a meta row, the `UnverifiedWarning`, the `SignupBanner`, a resume bar, the objectives `Card` and the mobile section `Select` before the first paragraph. Rank them. The h1 and the first paragraph are first and second; the signup prompt and resume bar are not third and fourth, and their tinted boxes should not outrank the objectives.
+:::
+
+### How large a heading
+
+Morison gives a number for the largest line on a title page: no larger than twice the text size ("If the book be set in 12-point, the title need be no larger than 24-point") [@morison1936first]. The rule was written for books, and a web page is not a title page. But its reasoning applies to any surface where reading is the main task. A heading that is far larger than the text it introduces pulls the eye away from the text and spends vertical space a reader must scroll through to begin.
+
+LTF's lesson h1 is `text-4xl` from `sm`, 36 px against a 16 px body, 2.25 times. Block headings are `text-2xl` (24 px, 1.5 times) and Markdown h3s `text-xl` (20 px, 1.25 times). That is close to Morison's ceiling and reasonable. The landing h1 at 64 px is 3.6 times `body-lg`, which is acceptable because the landing hero is a display surface whose job is to be looked at (TYP-008).
+
+::: {.rule #TYP-044 grade="C"}
+**On reading surfaces, keep the largest heading within about twice to two and a half times the body size; larger display sizes belong to display surfaces.** Morison limits the title to twice the text size in books [@morison1936first]. Craft rule adapted from print; no experiment.
+
+*In LTF:* the lesson, challenge and reference pages should use `display-md` (32 px) as the page title, which is 2 times an 16 px body and 1.8 times an 18 px body. Keep `display-lg` and `display-xl` for the landing page, the reference hub title and celebration panels.
+:::
+
+### Emphasis inside the text
+
+Inside a paragraph, hierarchy works at the scale of the word. The tradition and the evidence agree on which tools to use. Tinker found italic read somewhat more slowly than roman, and italic combined with marginal light or size slowed reading by more than 10 percent; boldface was read at the ordinary rate [@tinker1963legibility]. Dowding calls underlining as emphasis in display "a crude relic of Victorian typography" [@dowding1954finer]. On the web, underline has a second job that settles the question: it marks links, and LTF's rule is that links are always underlined. Capitals for emphasis are ruled out by TYP-036.
+
+Bold is therefore the default tool for emphasis in LTF's running text, used sparingly so it keeps its force. Italic keeps a small role for titles of works and for a term at its definition, where a slight slowing is acceptable and even useful, and only if a true italic is loaded (TYP-011).
+
+::: {.rule #TYP-045 grade="B"}
+**Emphasize words in running text with semibold weight; do not use underline (reserved for links), capitals or color alone for emphasis, and use italic only for titles and defined terms in a loaded italic face.** Tinker found italic slower and bold read at the ordinary rate [@tinker1963legibility]; Dowding rejects underline as emphasis [@dowding1954finer]. Print evidence for the speed effects; craft for the rest.
+
+*In LTF:* `Prose` already maps `strong` to `font-semibold`; apply the same in `MarkdownContent`. Make Markdown emphasis (`*text*`) render as italic only once the italic file is imported, or map it to semibold until then. Never underline non-link text.
+:::
+
+### Clarity is not meagerness
+
+Tschichold's manifesto anticipates a misreading of itself. A letterhead with no ornament and legible type, he says, is called "meagerness," and its failure shows "the hollowness of the old principles" [@tschichold1995new]. The point is that removing ornament is not the same as creating order. A page stripped of hierarchy, with every element at the same weight and size and separated only by white space, is not clear. It is undifferentiated. Clarity requires the ranks to be visible.
+
+This bears on the generic look the owner dislikes. A neutral, restrained interface with one accent and three ink levels is a common product style. Its risk is not too much decoration; it is too little hierarchy, where everything is `text-sm text-ink-2` and the reader cannot tell what matters. `text-ink-2` is the single most common color class in the product. A page where most text is secondary has no secondary text.
+
+::: {.rule #TYP-046 grade="C"}
+**Do not mistake an absence of ornament for clarity: every page must show at least three distinguishable ranks of text, and secondary styling must be used for secondary content only.** Tschichold distinguishes order from "meagerness" [@tschichold1995new]. Craft argument.
+
+*In LTF:* audit pages where most text is `text-ink-2`. On `DashboardPage`, `ChallengesPage` cards and the curriculum module rows, make the primary line `ink` at a heading style, the supporting line `ink-2`, and meta `ink-3`, so the three ink levels map to three ranks.
+:::
+
+### What this means for Learn to Fly
+
+The type scale is where LTF's classical typography most visibly falls short, and the defect is consistency, not taste. The product has a defined set of utilities and a parallel set of raw Tailwind sizes; a learner meets different heading systems on different pages. Fixing it is mechanical and worth doing early, because every later typographic decision assumes a single scale.
+
+The decisions: rebuild the scale from the reading size with one gentle ratio and named display exceptions (TYP-041); require every size to come from a token and enforce it by lint (TYP-040); give each heading level one style per surface class (TYP-042), with `display-md` as the page title on reading and interface pages (TYP-044); rank each page's elements before styling, starting with the lesson head stack (TYP-043); use semibold for emphasis and keep underline for links (TYP-045). Then check that pages show real hierarchy, not a uniform grey (TYP-046). When the scale is rebuilt, update `/dev/components` to show every type token with real text, so the scale can be reviewed as a whole.

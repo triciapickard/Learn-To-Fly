@@ -362,11 +362,7 @@ The support is moderate and mostly indirect. A 2015 experiment that varied nomin
 *In LTF:* challenge setup already fixes a `weatherPreset` (for example `WX_CALM`) and a `difficulty` rating shown as `DifficultyDots`. Allow a challenge to define two or three setup levels, and choose the level in `BriefTab` from the learner's previous results on that challenge.
 :::
 
-::: {.rule #SKL-030 grade="C"}
-**Treat any estimate of a learner's difficulty level as a heuristic, and check it against actual progress.** Functional difficulty cannot be measured directly [@guadagnoli2004challenge], so a product's estimate of where a learner sits is a guess that should be tested on data.
-
-*In LTF:* if an adaptive rule is added (for example, two consecutive Silver results raise the level), log the level with each attempt so the rule can be evaluated against later unaided results, as SKL-014 requires.
-:::
+Because functional difficulty cannot be measured directly [@guadagnoli2004challenge], any estimate of where a learner sits is a heuristic to be tested on data. If LTF adopts an adaptive rule (for example, two consecutive Silver results raise the level), the level belongs in each attempt record, so that the rule itself can be evaluated against later unaided results in the way SKL-014 requires.
 
 ### Adaptive, not fixed, increases
 
@@ -374,13 +370,13 @@ Wickens, Hutchins, Carolan and Cumming meta-analyzed 37 transfer studies of two 
 
 For increasing difficulty the result is direct. Training in which difficulty rose was successful when the increases were implemented adaptively, in response to the learner's performance, but not when difficulty rose in fixed steps. For both strategies, experienced learners benefited less, or suffered more, which the authors say is consistent with cognitive load theory. The effect sizes are not in the abstract that was read, so none is quoted here. The studies were mostly laboratory and simulated tasks, and a pattern such as "adaptive beats fixed" could also arise because adaptive schedules keep each learner near the right challenge, as the challenge point framework would predict.
 
-::: {.rule #SKL-031 grade="A"}
+::: {.rule #SKL-030 grade="A"}
 **Raise difficulty in response to each learner's results, never on a fixed schedule by lesson number.** Increasing-difficulty training transferred when increases were adaptive and failed when they came in fixed steps [@wickens2013effectiveness], which is also what the challenge point framework predicts [@guadagnoli2004challenge]. Grade A: a meta-analysis of 37 studies with a consistent account.
 
 *In LTF:* the curriculum sets difficulty by position in the course. Keep the order of topics fixed, which is a content decision, but make the conditions within a challenge adaptive (SKL-029).
 :::
 
-::: {.rule #SKL-032 grade="B"}
+::: {.rule #SKL-031 grade="B"}
 **Offer learners with prior experience a diagnostic challenge or a skip-ahead, and do not force them through supports meant for novices.** Experienced learners benefited less or suffered more from both load-reducing strategies [@wickens2013effectiveness]. The pattern matches the expertise-reversal literature on cognitive load; see Part XIV, The Science of Learning: Load and Memory.
 
 *In LTF:* the curriculum is open, so skipping is possible, but nothing invites it. A module card in `CurriculumMap` could offer "Already know this? Try the module challenge first", linking to the combined challenge, with a pass marking the lessons as reviewable rather than required.
@@ -390,13 +386,13 @@ For increasing difficulty the result is direct. Training in which difficulty ros
 
 The practical translation of the load account for a complete beginner is to reduce load first and add it later [@wulf2002principles]. Reduce load by limiting what the learner must control at once, by flying in steady conditions, and by giving frequent specific feedback. Add load by adding variation, removing prompts and introducing disturbances once the learner is stable. Lintern and colleagues found interactions consistent with this in their landing study: for some conditions transfer benefited from training without crosswind [@lintern1990display]. The interactions in that fractional factorial design deserve caution, since such designs have limited power for high-order effects, but they point the same way.
 
-::: {.rule #SKL-033 grade="B"}
+::: {.rule #SKL-032 grade="B"}
 **Start each new maneuver in calm, steady conditions with one thing to control, and add disturbances only after the learner is stable.** High-load complex tasks benefit from conditions that reduce load [@wulf2002principles], and in one landing study some conditions transferred better after training without crosswind [@lintern1990display].
 
 *In LTF:* the first challenge for each new maneuver should use the calmest `weatherPreset` available and the sim's training assistance, and the challenge description should say which disturbance a later version adds.
 :::
 
-::: {.rule #SKL-034 grade="C"}
+::: {.rule #SKL-033 grade="C"}
 **When a learner fails repeatedly, show a route to an easier version, not a failure screen.** Too much challenge overwhelms the learner and gives little usable information [@guadagnoli2004challenge]. Repeated failure at the same level is a signal that the challenge point is above the learner.
 
 *In LTF:* `ResultView` shows "Not passed yet" with review links. After two failed attempts at the same challenge, add an option to fly the lower setup level, or link to the single-skill challenge that the combined challenge depends on.
@@ -406,7 +402,7 @@ The practical translation of the load account for a complete beginner is to redu
 
 A timer, a score multiplier or a streak can make a challenge feel harder without changing the processing the learner needs. The useful difficulty, in the sense Schmidt and Bjork describe, is difficulty that makes the learner retrieve and reconstruct the response [@schmidt1992new]. The challenge levels LTF can control are the ones that change the skill: conditions in the sim, tolerance in the criteria, and how much of the procedure the page shows. The tiers in each criterion (Gold, Silver, Bronze) already work as nested tolerance bands, and a learner aiming for Gold is in effect choosing a harder version of the same task.
 
-::: {.rule #SKL-035 grade="C"}
+::: {.rule #SKL-034 grade="C"}
 **Make difficulty levels change the skill demanded (conditions, tolerance, prompts), never only a timer or a score.** Only difficulty that engages the processing the real task needs supports learning [@schmidt1992new; @guadagnoli2004challenge].
 
 *In LTF:* the optional `Stopwatch` in `FlyPanel` is labeled "Timer (optional)" and serves the random events and the learner's own timing. Keep it optional and never use elapsed time as a scored criterion unless the real task has a time standard from the aircraft's documents.
@@ -416,9 +412,9 @@ A timer, a score multiplier or a streak can make a challenge feel harder without
 
 Keep the tiered criteria, which already give the learner three tolerance bands to aim for within one setup, and keep the calm presets in early challenges. Keep `DifficultyDots` as a content-level rating, since it helps the learner choose, but do not mistake it for adaptation.
 
-Change the challenge model so that one challenge can hold two or three verified setup levels (SKL-029), each a variation in conditions rather than a different maneuver. `BriefTab` picks the level from the learner's history and states it under "Sim setup" with a plain reason ("You passed this twice in calm air, so this attempt adds a light wind"), with an override. Log the level in the attempt so that the rule can be checked (SKL-030).
+Change the challenge model so that one challenge can hold two or three verified setup levels (SKL-029), each a variation in conditions rather than a different maneuver. `BriefTab` picks the level from the learner's history and states it under "Sim setup" with a plain reason ("You passed this twice in calm air, so this attempt adds a light wind"), with an override. Log the level in the attempt so that the rule can be checked against later results.
 
-Build two routes that do not exist: a skip-ahead diagnostic for experienced learners on each `CurriculumMap` module card (SKL-032), and a step-down route in `ResultView` after repeated failure (SKL-034). Both are links between existing pages, not new pages.
+Build two routes that do not exist: a skip-ahead diagnostic for experienced learners on each `CurriculumMap` module card (SKL-031), and a step-down route in `ResultView` after repeated failure (SKL-033). Both are links between existing pages, not new pages.
 
 ## Breaking the task apart
 
@@ -438,13 +434,13 @@ The reasoning for part-task training is that a learner can concentrate on one co
 
 Wickens and colleagues' meta-analysis of 37 transfer studies tested the distinction [@wickens2013effectiveness]. Part-task training generally produced negative transfer when the parts were performed concurrently in the whole transfer task, but not when the parts were performed in sequence. That is the segmentation and fractionation distinction confirmed. A second result names the remedy: variable-priority training of the whole task, in which the learner practices the whole task while the emphasis shifts between components, was a successful technique. The authors' conclusion is that part-task training can succeed if the integrated parts are varied in the priority they are given to the learner.
 
-::: {.rule #SKL-036 grade="A"}
+::: {.rule #SKL-035 grade="A"}
 **Segment procedures by time and chain them; do not fractionate components the learner must perform together.** Part-task training transferred when parts were performed in sequence in the whole task and produced negative transfer when they were performed concurrently [@wickens2013effectiveness; @wightman1985parttask]. Grade A: a meta-analysis of 37 studies agreeing with an earlier review.
 
-*In LTF:* a takeoff lesson can teach its phases in order as separate sections in `SectionNav`, and a challenge can then chain them. Lessons that isolate one axis of control are fractionation and fall under SKL-037.
+*In LTF:* a takeoff lesson can teach its phases in order as separate sections in `SectionNav`, and a challenge can then chain them. Lessons that isolate one axis of control are fractionation and fall under SKL-036.
 :::
 
-::: {.rule #SKL-037 grade="A"}
+::: {.rule #SKL-036 grade="A"}
 **After any lesson or widget that isolates one concurrent component, follow it with whole-task practice in which the emphasis moves between components.** Variable-priority training of the whole task succeeded where separate drills of concurrent parts failed [@wickens2013effectiveness].
 
 *In LTF:* where a module teaches holding altitude and holding heading, the challenge should ask for both at once with a stated emphasis that changes across attempts ("this time, altitude first"), in `BriefTab` and at the top of `FlyPanel`, rather than two challenges that never meet.
@@ -454,13 +450,13 @@ Wickens and colleagues' meta-analysis of 37 transfer studies tested the distinct
 
 The thirteen widgets under `src/features/widgets/` are part-task trainers for reading. The airspeed indicator widget isolates one instrument; `g1000-pfd` isolates the primary flight display; `vor-cdi`, `turn-coordinator` and `angle-of-attack` isolate one quantity each; `checklist-runner` isolates one list. That is simplification and fractionation of the instrument scan, which in the sim is a concurrent task: the learner reads several instruments while controlling the airplane. The meta-analytic result says that reading an instrument well in isolation will not by itself produce a good scan. Gopher and colleagues' study, covered in "What a simulator transfers", shows the other side: a small practice task can train a component such as attention allocation when it is built from an analysis of the whole task [@gopher1994transfer].
 
-::: {.rule #SKL-038 grade="B"}
+::: {.rule #SKL-037 grade="B"}
 **Follow every single-instrument widget with practice that uses that instrument inside the whole scan, in the sim.** Isolated practice of concurrent components transfers poorly unless it is reintegrated [@wickens2013effectiveness; @wightman1985parttask]. Grade B: the evidence is about control tasks; reading instruments is an extension.
 
 *In LTF:* a lesson that uses the airspeed indicator widget should end with a "Fly it" challenge in which reading that instrument is one of the criteria among others, and the challenge's `debriefQuestions` should ask where the learner looked.
 :::
 
-::: {.rule #SKL-039 grade="C"}
+::: {.rule #SKL-038 grade="C"}
 **Build at least one widget mode that trains moving attention between instruments, not reading one.** Component practice transfers when its demands match the whole task's [@gopher1994transfer], and the scan is a whole-task demand that single-instrument widgets do not train.
 
 *In LTF:* `g1000-pfd` already draws several readouts together. A "Quiz me" mode that changes one readout at a time and asks which one changed would practice the scan as a component, with a short strategy instruction first.
@@ -470,13 +466,13 @@ The thirteen widgets under `src/features/widgets/` are part-task trainers for re
 
 A learner who has passed every single-skill challenge in a module may conclude they can fly the whole. The part-task evidence says they may not, and the dashboard can either reinforce or correct the impression. The same point applies to experienced learners: the meta-analysis found they benefited less, or suffered more, from part-task training [@wickens2013effectiveness], so a learner coming from another simulator should be able to go straight to the whole task.
 
-::: {.rule #SKL-040 grade="C"}
+::: {.rule #SKL-039 grade="C"}
 **Report part-skill results and whole-task results separately, so that passing the parts never reads as mastery of the whole.** Parts passed separately do not guarantee the concurrent whole [@wickens2013effectiveness].
 
 *In LTF:* `ModulePage` and `DashboardPage` count challenges passed per module. Mark combined challenges (C2.4, C4.7, C8.1, C8.2) as "put it together" challenges, shown in their own row, and make module completion depend on them.
 :::
 
-::: {.rule #SKL-041 grade="C"}
+::: {.rule #SKL-040 grade="C"}
 **Use the sim's own settings for simplification, and tell the learner which simplification is on.** Simplification keeps the task whole while making it easier [@wightman1985parttask], which in the sim means steady weather, reduced traffic and training assistance, and these must be removed later for the skill to be tested in its real form (SKL-020).
 
 *In LTF:* the challenge `setup` already names `assistance`, `aiTraffic`, `atc` and `crashDamage`. Show these in `BriefTab` under "Sim setup" as simplifications with a short reason, so the learner knows what will change in later challenges.
@@ -486,9 +482,9 @@ A learner who has passed every single-skill challenge in a module may conclude t
 
 Keep the sectioned lesson structure and the sequence of single-skill then combined challenges; both are segmentation done well. Keep the widgets, which are the most distinctive part of the product, and keep their "Simplified model" badge in `WidgetFrame`, which tells the learner a simplification is in use.
 
-Change two things. Combined challenges should carry more weight in how progress is reported (SKL-040): at present a module's challenge count treats C2.4 "The box" the same as C2.1 "Straight and level". And any lesson pair that fractionates control (one axis, then the other) needs a challenge that combines them with shifting emphasis (SKL-037); content review should look for fractionated pairs across `content/lessons/`.
+Change two things. Combined challenges should carry more weight in how progress is reported (SKL-039): at present a module's challenge count treats C2.4 "The box" the same as C2.1 "Straight and level". And any lesson pair that fractionates control (one axis, then the other) needs a challenge that combines them with shifting emphasis (SKL-036); content review should look for fractionated pairs across `content/lessons/`.
 
-Build a scan mode for the multi-instrument widgets (SKL-039) and connect each single-instrument widget to a challenge criterion that uses it in flight (SKL-038). Surface the simplifications already present in challenge setup (SKL-041); they are stored in YAML and invisible to the learner in the form that explains them.
+Build a scan mode for the multi-instrument widgets (SKL-038) and connect each single-instrument widget to a challenge criterion that uses it in flight (SKL-037). Surface the simplifications already present in challenge setup (SKL-040); they are stored in YAML and invisible to the learner in the form that explains them.
 
 ## What a simulator transfers
 
@@ -500,13 +496,13 @@ The analysis followed a 1990 technical report by the same team, whose abstract s
 
 The limits are large. Only a small part of the located literature could be used. The studies are mostly military, mostly with expensive devices, mostly with trainees already in a flight program. The comparison is simulator plus aircraft against aircraft alone, which says nothing about whether the simulator hours were worth their cost. And none of it concerns complete beginners on a consumer PC.
 
-::: {.rule #SKL-042 grade="B"}
+::: {.rule #SKL-041 grade="B"}
 **Advance learners on a demonstrated standard, not on pages completed.** Performance-paced simulator training was more effective on average than lock-step training in the flight-simulator meta-analysis [@hays1992flight]. Grade B: a meta-analysis of a small, mostly military set of studies, read through its abstract.
 
 *In LTF:* lessons are marked complete by the learner with "Mark lesson complete". Keep that for lessons, but make a module's "Done" state on `CurriculumMap` depend on passing its combined challenge, and use the existing but unused `locked` state of `LessonPath` and `Card` only for the final checks in Module 8.
 :::
 
-::: {.rule #SKL-043 grade="C"}
+::: {.rule #SKL-042 grade="C"}
 **Present simulator practice as a complement to instruction in an aircraft, never as a replacement for it, and recommend an instructor for real flight.** The evidence supports simulators used alongside aircraft training, not instead of it [@hays1992flight; @salas1998rational].
 
 *In LTF:* the simulation-only line at the end of every lesson ("For simulation use only. Learn to Fly is not flight instruction...") and the `DashboardPage` badge note already say this. Keep both wordings unchanged in substance.
@@ -520,19 +516,19 @@ The report's abstract summarizes the outcome. Savings in airplane time varied fr
 
 The overall numbers carry a lesson about efficiency. The PCATD group needed a mean of 47.4 hours in the airplane to finish the rating against 51.3 for the airplane group, about 4 hours saved, but the device time that produced the saving exceeded 12.5 hours and 14 hours in the two courses. The report calls this inefficient and estimates that targeting only the tasks with good transfer could have given the same saving with about 6.75 and 4.5 device hours. Its own limits: one program, unstable data in one term because of small numbers, transfer measures that were insensitive in some lessons, and instrument training for private pilots, not basic control for beginners.
 
-::: {.rule #SKL-044 grade="B"}
+::: {.rule #SKL-043 grade="B"}
 **Place each challenge immediately after the lesson that introduces its maneuver, because simulator practice pays most on new tasks.** In the PCATD study transfer was positive and substantial when new tasks were introduced and mostly absent for review of tasks already at proficiency [@taylor1997transfer]. Grade B: one well-run quasi-experiment, in instrument training.
 
 *In LTF:* lesson pages end with "Fly it" challenge cards. Keep them at the end of the introducing lesson, and make the first challenge card the primary next action after "Mark lesson complete".
 :::
 
-::: {.rule #SKL-045 grade="B"}
+::: {.rule #SKL-044 grade="B"}
 **Keep review practice short and tie it to a gap in time, not to repetition of something just mastered.** Review of tasks at proficiency gave little transfer, but review after an interval saved a fifth of airplane trials in one course [@taylor1997transfer].
 
 *In LTF:* when a learner returns after a gap, the `DashboardPage` Continue card could offer one short review challenge from an earlier module before the next new item, rather than suggesting the learner repeat a challenge passed yesterday.
 :::
 
-::: {.rule #SKL-046 grade="B"}
+::: {.rule #SKL-045 grade="B"}
 **Never state an hours saving, cost saving or percentage benefit for LTF.** The PC-trainer study found savings for some tasks, none for others and losses for a few [@taylor1997transfer], and the meta-analysis concerns military trainees on expensive devices [@hays1992flight]. No study supports a number for LTF's learners.
 
 *In LTF:* `LandingPage`, `AboutPage` and the "Questions" section must say only that research on PC-based trainers found benefits for some tasks, and must recommend instruction for real flight.
@@ -544,17 +540,13 @@ Roscoe proposed judging a training device by what it saves, accounting for time 
 
 Roscoe's claim that the curve applies to all educational experience is a postulate. Two limits follow from the definition itself: a device can show a high TER at small usage and little total value, and a TER measured against a fixed criterion says nothing about retention or about which part of the skill transferred.
 
-::: {.rule #SKL-047 grade="B"}
+::: {.rule #SKL-046 grade="B"}
 **Do not reward grinding one challenge: after consistent success, say so and offer the next skill.** Transfer from added device practice diminishes with each increment [@roscoe1971incremental], and in the PCATD study much device time went to tasks that transferred little [@taylor1997transfer].
 
 *In LTF:* the result message "Passed. Fly it again to push for a higher tier." invites repetition indefinitely. After a learner has reached Silver or Gold on every required criterion twice, `ResultView` should lead with the next challenge ("You have this. Next: ...") and offer the repeat as secondary.
 :::
 
-::: {.rule #SKL-048 grade="C"}
-**Plot each skill's results against attempts so the learner can see returns flatten.** A visible plateau gives the learner a reason to move on that a single tier badge does not [@roscoe1971incremental].
-
-*In LTF:* the per-criterion row proposed for `HistoryTab` (SKL-022) can show attempts on one axis and tier on the other, with the flat part labeled.
-:::
+A plot of each skill's results against attempts makes the flattening visible and gives the learner a reason to move on that a single tier badge does not [@roscoe1971incremental]. The per-criterion row proposed for `HistoryTab` (SKL-022) can carry it, attempts on one axis and tier on the other, with the flat part labeled.
 
 ### A game that trained attention
 
@@ -562,7 +554,7 @@ Gopher, Weil and Bareket tested whether skills from a complex computer game carr
 
 The caution is generalization. The result shows that a purpose-built game, chosen by task analysis and paired with explicit strategy instruction, helped a selected and motivated population. It does not show that any game, or any flight-simulator game, helps people fly.
 
-::: {.rule #SKL-049 grade="B"}
+::: {.rule #SKL-047 grade="B"}
 **Build practice exercises from an analysis of what flying demands, pair them with explicit strategy instruction, and say what each one trains.** A game transferred to flight when its demands were matched to the flight task by analysis and paired with attention-strategy instruction [@gopher1994transfer]. Grade B: a controlled field study in one selected population.
 
 *In LTF:* each widget's "Quiz me" mode should open with one sentence of strategy ("Check the instruments in this order, then decide") and its `WidgetFrame` title or description should name the skill it trains, not claim to be "like flying".
@@ -576,7 +568,7 @@ The caution is generalization. The result shows that a purpose-built game, chose
 
 Salas, Bowers and Rhodenizer's position paper argues that the simulation community holds mistaken or unsupported assumptions that stop it using findings from the training sciences, concerning reliance on high-fidelity simulation and poor use of simulation to teach complex skills [@salas1998rational]. Its title states the thesis: it is not how much you have but how you use it. Only the abstract was read. Secondary accounts attribute to the authors the ideas that "more is better" is an invalid assumption and that instructional design (practice, feedback, scenarios) must accompany the simulator, but those accounts are weak and are treated as leads. The claim the abstract does support, that the value of a simulator lies in how it is used, agrees with every transfer result above.
 
-::: {.rule #SKL-050 grade="C"}
+::: {.rule #SKL-048 grade="C"}
 **Wrap every sim session in instruction: an objective and briefing before, specific feedback after, and a plan for the next attempt.** A simulator's value depends on how it is used [@salas1998rational], and transfer in the PC-trainer study came from structured, proficiency-based lessons [@taylor1997transfer].
 
 *In LTF:* the Brief, Fly, Debrief tabs of `ChallengePage` are exactly this wrapper. Keep the order, keep the Debrief mandatory before a result is recorded, and add the next-attempt plan to `ResultView`.
@@ -586,9 +578,9 @@ Salas, Bowers and Rhodenizer's position paper argues that the simulation communi
 
 Keep the Brief, Fly, Debrief structure, the placement of challenges at the end of the lessons that introduce them, and the honest simulation-only and "not a pilot certificate" copy. These match the evidence better than most commercial flight-training products.
 
-Change the default after success. LTF currently invites another attempt after every pass. The diminishing-returns evidence says that after consistent success the next skill is the better use of the learner's time (SKL-047). Change progress so that a module is complete when its combined challenge is passed, not when its pages are ticked (SKL-042).
+Change the default after success. LTF currently invites another attempt after every pass. The diminishing-returns evidence says that after consistent success the next skill is the better use of the learner's time (SKL-046). Change progress so that a module is complete when its combined challenge is passed, not when its pages are ticked (SKL-041).
 
-Build the honest version of the evidence into the product's public copy: a short paragraph on `AboutPage` saying what research on simulator and PC-based training has found (benefit alongside real instruction, mostly for new tasks, none for some) with no numbers attached (SKL-046). For LTF's own future evaluation, the method to copy is Roscoe's: compare learners who used LTF with learners who did not, on instructional time to a real milestone. That is a research plan, not a claim.
+Build the honest version of the evidence into the product's public copy: a short paragraph on `AboutPage` saying what research on simulator and PC-based training has found (benefit alongside real instruction, mostly for new tasks, none for some) with no numbers attached (SKL-045). For LTF's own future evaluation, the method to copy is Roscoe's: compare learners who used LTF with learners who did not, on instructional time to a real milestone. That is a research plan, not a claim.
 
 ## Fidelity and the teaching display
 
@@ -602,19 +594,19 @@ A related randomized trial, found by search and not part of the perspective, all
 
 A weakness of the functional-correspondence idea is that it can be hard to specify without a task analysis, the kind the PCATD report describes when it matches device features to the learning requirements of each task [@taylor1997transfer].
 
-::: {.rule #SKL-051 grade="B"}
+::: {.rule #SKL-049 grade="B"}
 **For every widget and challenge, record separately what it reproduces physically and what it reproduces functionally, and design for the functional match first.** Physical resemblance is weakly tied to learning; correspondence of information and action is what the task depends on [@hamstra2014reconsidering; @salas1998rational]. Grade B: a perspective informed by a systematic review, consistent with the aviation transfer studies.
 
 *In LTF:* add two short fields to each widget's registry entry in `src/features/widgets/registry.ts` or its content description: "looks like" and "trains the decision to". Review new widgets against the second.
 :::
 
-::: {.rule #SKL-052 grade="C"}
+::: {.rule #SKL-050 grade="C"}
 **Do not spend design effort on photorealistic art or replica cockpit chrome that serves no learning goal.** Realism beyond what the task needs does not reliably improve learning [@hamstra2014reconsidering; @salas1998rational].
 
 *In LTF:* the hand-drawn SVG widgets with `fill-bezel`, `fill-sky` and `fill-ground` are at the right level: recognizable, simplified, labeled "Simplified model". A proposal for a photographic panel needs a stated learning reason.
 :::
 
-::: {.rule #SKL-053 grade="C"}
+::: {.rule #SKL-051 grade="C"}
 **Rest progress claims on checks, not on how real the practice felt.** In the medical trial the high-fidelity group overrated its own performance; realism can inflate confidence without improving skill [@hamstra2014reconsidering]. LTF's challenges are self-scored, which makes the risk sharper.
 
 *In LTF:* `DebriefForm` asks the learner to score each criterion. Add, beside each tiered criterion, a one-line "how to check this" (where in the sim or on which instrument to look), so that self-scoring refers to an observation rather than a feeling.
@@ -626,13 +618,13 @@ Lintern, Roscoe and Sivier gave the most direct evidence about training displays
 
 A later study from the same group, known only from a search summary, reports that beginners trained with a low-detail scene transferred better than those trained with a moderate-detail scene, and that augmented guidance helped transfer with the low-detail scene but degraded it with the moderate one. Treat that as secondary. The 1990 experiment is old, used one simulator, and its interactions are underpowered, so the safe conclusions are the main effects and the general principle: a training display need not copy the real one, and added guidance can help or hurt depending on what it is combined with.
 
-::: {.rule #SKL-054 grade="B"}
+::: {.rule #SKL-052 grade="B"}
 **Use pictorial rather than symbolic displays when a beginner first meets a flight concept.** Beginners trained on pictorial displays transferred better than those trained on symbolic ones [@lintern1990display]. Grade B: one quasi-transfer experiment with flight-naive participants.
 
 *In LTF:* widgets such as `traffic-pattern`, `airspace-profile` and `control-surfaces` should show the situation as a picture of the airplane and its surroundings, with the abstract symbol introduced next to the picture, not instead of it.
 :::
 
-::: {.rule #SKL-055 grade="B"}
+::: {.rule #SKL-053 grade="B"}
 **Use augmented cues (a target band, a predicted path) in early practice and plan their removal before the final check.** Predictive augmentation helped transfer in some training conditions [@lintern1990display], and transfer is measured without augmentation in the criterion condition. The interactions mean augmentation is not always helpful, so remove it on a schedule and check unaided results.
 
 *In LTF:* the airspeed indicator widget's colored arcs and any target band drawn in a widget are augmentation. Widgets in "Quiz me" mode should be able to hide target bands, and lessons late in a module should use the widget without them.
@@ -644,29 +636,21 @@ Roscoe's 1968 review of airborne displays is usually cited for two principles of
 
 The two principles recommend different designs for the same instrument. In the moving-horizon format, the horizon rotates opposite to the roll the pilot commands, which is consistent with the view through the window but not with the pilot's sense of their own airplane moving. Search results link roll-reversal errors to this ambiguity. The empirical status is mixed: one study found the moving-part principle more effective than pictorial realism, a recent study confirms the superiority of the moving-aircraft format, and other work, including extended-horizon displays, has produced mixed results. Two accepted principles, two designs, and evidence that does not settle it: principle-based display design must be checked with users.
 
-::: {.rule #SKL-056 grade="C"}
+::: {.rule #SKL-054 grade="C"}
 **Make every animated instrument widget move the same element, in the same direction, as the instrument the learner will see in the sim.** A beginner who learns a motion in a widget must not have to unlearn it in the sim; where pictorial realism and the moving-part principle conflict, the sim's own display is the tie-breaker [@roscoe1968airborne]. Grade C: the principles are expert consensus with mixed evidence, and the tie-break is a transfer argument.
 
 *In LTF:* the attitude display in `g1000-pfd` draws `fill-sky` over `fill-ground`. Its motion convention must match the sim's G1000 display, verified in the sim, and any widget that uses a different convention to explain a point (for example, an outside view of the airplane rolling) must say so in its caption.
 :::
 
-::: {.rule #SKL-057 grade="C"}
-**Add "which element moves, which way, against what reference" to the acceptance checklist for every widget.** The attitude-display dispute shows that two sound principles can disagree [@roscoe1968airborne], so motion direction must be an explicit, checked property, not an assumption.
+Because two sound principles can disagree about the same instrument [@roscoe1968airborne], motion direction has to be an explicit, checked property of every widget rather than an assumption. The acceptance question is short: which element moves, which way, and against what reference. It belongs in widget review on `/dev/widgets`, with the sim as the reference.
 
-*In LTF:* add the check to the widget section of `.claude/skills/ltf-review/references/client.md` review practice and to `/dev/widgets` review, with the sim as the reference.
-:::
-
-::: {.rule #SKL-058 grade="C"}
-**Introduce an instrument with a realistic rendering, then use labeled simplified diagrams, and label every simplification.** Pictorial realism helps the first encounter [@roscoe1968airborne; @lintern1990display]; simplified diagrams are then good teaching displays as long as the learner knows what was simplified.
-
-*In LTF:* keep the `WidgetFrame` "Simplified model" badge, and add a one-line statement of what is simplified to the "Describe this diagram" `details` content.
-:::
+Pictorial realism helps the first encounter with an instrument [@roscoe1968airborne; @lintern1990display], and simplified diagrams are good teaching displays afterward, provided the learner knows what was simplified. The `WidgetFrame` "Simplified model" badge does half of that job; a one-line statement of what is simplified, added to the "Describe this diagram" `details`, would do the rest.
 
 ### Engagement and suspension of disbelief
 
 Hamstra and colleagues name engagement and suspension of disbelief as two of the three concepts that directly shape learning [@hamstra2014reconsidering]. For a self-paced web page beside a simulator, a short, plausible scenario that sets the learner in a situation draws more engagement than an abstract exercise, and a mismatch between what the page says and what the sim shows breaks disbelief at once. The sim provides the immersion; the page's job is not to puncture it.
 
-::: {.rule #SKL-059 grade="C"}
+::: {.rule #SKL-055 grade="C"}
 **Open challenges with a short, plausible scenario, and never let the page contradict what the sim shows.** Engagement and suspension of disbelief shape learning more directly than physical resemblance [@hamstra2014reconsidering]. A briefing that names a control the sim labels differently breaks both.
 
 *In LTF:* the challenge `goal` field can carry a one-sentence scenario. Every control name and display label in `BriefTab` and `FlyPanel` must match the sim's exact wording, checked during sim verification.
@@ -674,11 +658,11 @@ Hamstra and colleagues name engagement and suspension of disbelief as two of the
 
 ### What this means for Learn to Fly
 
-Keep the widget style: hand-drawn, recognizable, simplified and labeled as such. It is both distinctive and consistent with the evidence that functional correspondence matters more than resemblance (SKL-051, SKL-052). Keep the fixed instrument tokens (`instrument`, `arc-*`, `bezel`, `sky`, `ground`) separate from page UI tokens, which keeps the teaching display recognizable in both Day and Night themes.
+Keep the widget style: hand-drawn, recognizable, simplified and labeled as such. It is both distinctive and consistent with the evidence that functional correspondence matters more than resemblance (SKL-049, SKL-050). Keep the fixed instrument tokens (`instrument`, `arc-*`, `bezel`, `sky`, `ground`) separate from page UI tokens, which keeps the teaching display recognizable in both Day and Night themes.
 
-Change the self-scoring in `DebriefForm` so that each criterion names its check (SKL-053). The overconfidence result from medical simulation is a direct warning for a product that asks learners to grade themselves.
+Change the self-scoring in `DebriefForm` so that each criterion names its check (SKL-051). The overconfidence result from medical simulation is a direct warning for a product that asks learners to grade themselves.
 
-Build the motion-direction check into widget review (SKL-056, SKL-057), a "hide target band" option for widgets in quiz mode (SKL-055), and a "looks like / trains" record for each widget (SKL-051). These are review and content tasks more than engineering tasks, and they protect the most distinctive part of the product from the one failure that would make it harmful: a widget that teaches a motion the sim contradicts.
+Build the motion-direction check into widget review (SKL-054), a "hide target band" option for widgets in quiz mode (SKL-053), and a "looks like / trains" record for each widget (SKL-049). These are review and content tasks more than engineering tasks, and they protect the most distinctive part of the product from the one failure that would make it harmful: a widget that teaches a motion the sim contradicts.
 
 ## Checklists and flight-deck documents
 
@@ -690,37 +674,37 @@ The method was mixed: interviews with line pilots from seven major U.S. carriers
 
 Several of the guidelines transfer directly to a web page used beside a simulator. In the report's numbering: avoid using the checklist to resolve discipline problems (1); standardize the names of controls and displays (3); the response should state the desired status or value, not just "checked" or "set" (4); touching the controls while running the checklist is recommended (5); the completion call should be the last item (6); a long checklist should be subdivided into shorter chunks tied to systems and functions (7); items should follow the geographical layout of the cockpit, with a pictorial flow for training (8); the most critical items should come as close to the beginning as possible so they are done before an interruption, and this takes precedence over (8) and (9) where they conflict (10); critical items may be duplicated between task checklists (11); and checklists should not be tightly coupled to other tasks, with buffers for recovery and a way to "take up the slack" (12).
 
-::: {.rule #SKL-060 grade="C"}
+::: {.rule #SKL-056 grade="C"}
 **State the target state for every checklist item; never let a bare tick stand in for the check.** Responses should portray the desired status or value, not "checked" or "set" [@degani1990checklists]. Grade C: a proposed guideline from field observation and expert synthesis.
 
 *In LTF:* `ChecklistRunner` already renders each item as `item` and `action` joined by a dotted leader, the action in mono. Keep the format, and reject content in `content/checklists.yaml` whose `action` is a generic word such as "checked" or "set".
 :::
 
-::: {.rule #SKL-061 grade="C"}
+::: {.rule #SKL-057 grade="C"}
 **Subdivide any checklist longer than a short screen into named chunks tied to a system or task, each ending in an explicit completion line.** Long lists should be chunked by system and function, and the completion call should be the last item [@degani1990checklists].
 
 *In LTF:* the longest list in `content/checklists.yaml` has 15 items. Allow `ChecklistRunner` to render sub-headings within a list, with a "Section complete" line after each, alongside the existing "Checklist complete" message.
 :::
 
-::: {.rule #SKL-062 grade="C"}
+::: {.rule #SKL-058 grade="C"}
 **Put the most consequential items first, even when that breaks a tidy grouping.** Learners, like crews, are interrupted; critical items near the start get done before the interruption, and this guideline outranks geographic order [@degani1990checklists].
 
 *In LTF:* content authors should flag the critical items of each checklist, and review should check that they come first within their chunk. The item content itself comes from the aircraft's documents.
 :::
 
-::: {.rule #SKL-063 grade="C"}
-**Order checklist items by where the learner looks in the sim, and use the panel layout as the diagram in training.** Items should follow the geographic layout of the cockpit, with a pictorial flow for training [@degani1990checklists], except where SKL-062 puts critical items first.
+::: {.rule #SKL-059 grade="C"}
+**Order checklist items by where the learner looks in the sim, and use the panel layout as the diagram in training.** Items should follow the geographic layout of the cockpit, with a pictorial flow for training [@degani1990checklists], except where SKL-058 puts critical items first.
 
 *In LTF:* a lesson that introduces a checklist can pair `ChecklistRunner` with a panel diagram that numbers each item's location, so the learner sees the flow before running it.
 :::
 
-::: {.rule #SKL-064 grade="C"}
+::: {.rule #SKL-060 grade="C"}
 **Use one name for each control and display across lessons, challenges, checklists and the glossary.** Standardized names are among the most transferable guidelines [@degani1990checklists].
 
 *In LTF:* `content/glossary.yaml` is the place to fix the canonical name. `content:validate` could warn when a checklist `item` uses a control name that is not a glossary term or alias.
 :::
 
-::: {.rule #SKL-065 grade="C"}
+::: {.rule #SKL-061 grade="C"}
 **Give every procedure a visible "resume here" point and a way to recover from falling behind.** Checklists should not be tightly coupled to other tasks, and should provide buffers and a way to take up the slack [@degani1990checklists].
 
 *In LTF:* `ChecklistRunner` highlights the current item (`aria-current="step"`, accent tint) and Backspace unticks the last one. Keep both. `FlyPanel` steps have checkboxes but no current-step highlight; add one, so a learner who looks back at the screen finds their place at once.
@@ -730,13 +714,13 @@ Several of the guidelines transfer directly to a web page used beside a simulato
 
 Gawande's trade book argues that modern work has become too complex for memory and individual expertise alone, and that a good checklist is a cheap way to catch the steps experts forget [@gawande2010checklist]. A review summarizes his design advice: good checklists are precise, practical and easy to use in difficult situations; they cover only the most critical steps; poor ones are vague, too long and treat users as unthinking. A secondary summary of the book's rules adds two styles. A do-confirm checklist has people do their work from memory and then pause to confirm it was all done; a read-do checklist is followed like a recipe, each task done as it is read. His rules begin by defining a clear pause point at which the checklist is used. These descriptions should be checked against the book before being quoted. The book's best-known story, the 1935 bomber crash that led to a pre-takeoff checklist, is the author's narrative rather than independent history, and accounts differ.
 
-::: {.rule #SKL-066 grade="C"}
+::: {.rule #SKL-062 grade="C"}
 **Label every checklist as read-do or do-confirm, and tell the learner how to use that kind.** The two styles serve different situations: read-do for sequences to follow in order, do-confirm for actions done from memory and then checked [@gawande2010checklist].
 
 *In LTF:* this is already built. `ChecklistRunner` shows a "Read-do" or "Do-verify" badge with a one-line explanation from `MODE_HELP`, and `ChecklistPage` states the mode in its description. Keep it, and keep the mode a required field.
 :::
 
-::: {.rule #SKL-067 grade="C"}
+::: {.rule #SKL-063 grade="C"}
 **Tie each checklist to a named pause point, and show that pause point on the page when it arrives.** A checklist is used at a defined moment [@gawande2010checklist], and the surgical checklist's three pause points structure its whole use [@haynes2009surgical].
 
 *In LTF:* in `FlyPanel`, a step that calls for a checklist should open the relevant `ChecklistRunner` inline under a banner naming the pause ("Pause: run the before-landing checks"), rather than linking away to `/reference/checklists/:slug`.
@@ -752,13 +736,13 @@ The design was before-and-after, which cannot rule out other changes over time, 
 **"Checklists cut deaths by 40 percent."** The figure comes from one eight-hospital before-and-after study of surgical teams [@haynes2009surgical]. A population-scale evaluation of mandated surgical checklists in Ontario found no significant reduction in death or complications, and an accompanying editorial argued that benefit depends on local adaptation and training [@haynes2009surgical]. A checklist helps when it is short, used at defined moments and adopted by the people who use it.
 :::
 
-::: {.rule #SKL-068 grade="B"}
+::: {.rule #SKL-064 grade="B"}
 **Design each checklist for real use beside the sim (short, at a defined moment, readable at a glance) and do not claim safety outcomes for it.** Checklist benefit depends on adoption and local adaptation, and the headline effect is contested [@haynes2009surgical; @degani1990checklists]. Grade B: one positive multi-site study and one null population study.
 
 *In LTF:* any lesson that explains why checklists matter should cite both the positive and the null study, and must not quote a percentage as a promise. A fly-mode checklist should fit one screen without scrolling at the `large` size.
 :::
 
-::: {.rule #SKL-069 grade="C"}
+::: {.rule #SKL-065 grade="C"}
 **Let learners add their own reminder to a challenge or checklist, kept separate from the verified items.** Local adaptation is the condition the checklist literature identifies for effective use [@haynes2009surgical; @gawande2010checklist].
 
 *In LTF:* the `DebriefForm` notes field already stores free text per attempt. A "my reminder" line shown at the top of the Fly tab on the next attempt would make that note a personal checklist item, visibly separate from the verified procedure.
@@ -772,19 +756,19 @@ The report's 19 recommendations [@degani1992typography, 31-32] include: sans-ser
 
 The author is candid about the limits. Very little of the data comes from reading in a cockpit; most experiments used college students at a desk in normal room lighting; the recommendations "are not specifications" but a baseline from "the author's subjective interpretation"; and designers should validate in a simulator with representative users. The sans-serif claim has been qualified by later screen-reading work. Screen typography for LTF as such is the business of Part IV, Typography on Screens, and Part III, Legibility and the Science of Reading; what this report adds is the operational frame.
 
-::: {.rule #SKL-070 grade="C"}
+::: {.rule #SKL-066 grade="C"}
 **Treat fly mode and every checklist view as an operating document: test its legibility at the distance, lighting and glance length of real use.** Flight-deck documents are displays whose legibility and findability are safety properties, and laboratory figures do not transfer to the operating environment without validation [@degani1992typography].
 
 *In LTF:* `FlyModeLayout` is dark with `text-xl` and `max-w-3xl`. Test it on a phone and a tablet propped beside a monitor in a dim room, with learners, before treating its sizes as settled. Do not copy the report's paper-era measurements into CSS.
 :::
 
-::: {.rule #SKL-071 grade="B"}
+::: {.rule #SKL-067 grade="B"}
 **Never stack small type, italics, color-only distinctions and low contrast in one fly-mode panel.** Sub-optimal typographic conditions combine to hurt more than any one alone, and the combined effect is not predictable from single effects [@degani1992typography]. Grade B for the interaction finding, which comes from older legibility research.
 
 *In LTF:* the `FlyPanel` step text is regular weight at `text-lg` or `text-xl`, with ticked steps shown by a `go` border and tint and a checkbox. Keep italics out of steps, keep the check mark as the non-color cue, and check the ticked state's contrast in Night.
 :::
 
-::: {.rule #SKL-072 grade="C"}
+::: {.rule #SKL-068 grade="C"}
 **Give every checklist and procedure view a text-size control and a stable, consistent position for each section.** Readers vary in age and visual conditions and designers should be conservative [@degani1992typography]; findability depends on consistent placement [@degani1992typography].
 
 *In LTF:* `ChecklistRunner` has a "Large text" toggle and `ChecklistPage` a "Full screen" control. Add the same large-text control to `FlyPanel` outside fly mode, and keep the order Goal, Steps, Timer fixed across every challenge.
@@ -792,11 +776,11 @@ The author is candid about the limits. Very little of the data comes from readin
 
 ### What this means for Learn to Fly
 
-Keep `ChecklistRunner` nearly as it is. It already shows the target state for each item (SKL-060), labels read-do and do-verify with instructions (SKL-066), highlights the current item, supports Backspace recovery and announces completion. Keep `ChecklistPage`'s verification line ("Last verified..." or "Not yet verified against the in-sim checklist"), which applies the honesty rule to the most safety-like document in the product.
+Keep `ChecklistRunner` nearly as it is. It already shows the target state for each item (SKL-056), labels read-do and do-verify with instructions (SKL-062), highlights the current item, supports Backspace recovery and announces completion. Keep `ChecklistPage`'s verification line ("Last verified..." or "Not yet verified against the in-sim checklist"), which applies the honesty rule to the most safety-like document in the product.
 
-Change `FlyPanel` to borrow what `ChecklistRunner` does: a current-step highlight, chunking for long procedures with a completion line per chunk (SKL-061, SKL-065), and inline checklists at named pause points rather than links to the reference section (SKL-067).
+Change `FlyPanel` to borrow what `ChecklistRunner` does: a current-step highlight, chunking for long procedures with a completion line per chunk (SKL-057, SKL-061), and inline checklists at named pause points rather than links to the reference section (SKL-063).
 
-Build two content checks into `content:validate`: generic actions in checklist items (SKL-060) and control names that are not in the glossary (SKL-064). Run a legibility test of fly mode with learners in real conditions (SKL-070). And when any lesson argues for checklists, give both sides of the surgical evidence (SKL-068).
+Build two content checks into `content:validate`: generic actions in checklist items (SKL-056) and control names that are not in the glossary (SKL-060). Run a legibility test of fly mode with learners in real conditions (SKL-066). And when any lesson argues for checklists, give both sides of the surgical evidence (SKL-064).
 
 ## Displays, alerts and modes
 
@@ -806,23 +790,19 @@ Wickens and Carswell state the proximity compatibility principle in one sentence
 
 The principle has a second half, given in secondary summaries, that stops it from becoming "group everything": when information must be selectively attended, it should be shown with low proximity. Close display proximity helps integration but can hurt focused attention, because the viewer has to pull one value out of a bundle. The best-known anchor, a study of object displays in which several parameters are drawn as dimensions of one shape, found that an object display gave better integration than separate bar graphs in an aircraft stall-analysis task but degraded focused attention on single dimensions, and that only well-designed emergent features aided integration. The benefit depends on the task actually being integrative, so a display serving both kinds of task must compromise or offer two views.
 
-::: {.rule #SKL-073 grade="B"}
+::: {.rule #SKL-069 grade="B"}
 **Place values the learner must compare or combine in one step together, and separate values the learner must read alone.** Close display proximity helps integration and hurts focused attention [@wickens1995proximity]. Grade B: a theoretical integration with laboratory support, mostly from simulated flight and graph tasks.
 
 *In LTF:* in `ResultView`, each criterion's label, the learner's result and the tier definition they chose belong in one row; the overall percentage stands apart. In `BriefTab` the "Sim setup" `dl` rows pair a setting with its value, which is correct.
 :::
 
-::: {.rule #SKL-074 grade="B"}
+::: {.rule #SKL-070 grade="B"}
 **Put a plain numeric readout beside any widget that encodes values in a shape.** Object displays support integration questions but degrade reading of single values [@wickens1995proximity].
 
 *In LTF:* `load-factor`, `wind-triangle` and `pitch-power` draw relationships as shapes. Each should show the key values as `readout` text beside the drawing, so a "read this one number" question does not require reading the shape.
 :::
 
-::: {.rule #SKL-075 grade="C"}
-**Do not reuse one color for unrelated groups on the same view.** Color is a display-proximity cue: items sharing a color are read as belonging together [@wickens1995proximity].
-
-*In LTF:* in fly mode the teal accent marks the stopwatch dot and links; the green `go` tint marks ticked steps. Keep each color to one meaning per view, and check `FlyModePage` and `ResultView` for accidental sharing.
-:::
+Color is itself a display-proximity cue: items that share a color are read as belonging together [@wickens1995proximity]. In fly mode the teal accent marks the stopwatch dot and links, and the green `go` tint marks ticked steps, which keeps one meaning per color. Part VI, Color: Science, Meaning and Access, covers the palette; the point here is only that a shared color on `FlyModePage` or `ResultView` makes a claim of relatedness.
 
 ### Situation awareness as a design lens
 
@@ -830,19 +810,19 @@ Endsley's model of situation awareness (SA) treats it as central to operating dy
 
 The construct is contested. Flach argued in the same journal issue that SA is a useful description but a circular explanation: the event happened because SA was lacking, and SA is judged lacking because the event happened. Dekker later argued that "losing SA" is used in investigations to blame practitioners. A recent review notes the construct still lacks a universally accepted operational definition. Endsley's reply holds that the levels are ascending, not linear stages, and that the account is not circular. The debate is unresolved, and the useful position is the narrow one: SA is a good framing for design and a risky explanation of why someone erred.
 
-::: {.rule #SKL-076 grade="C"}
+::: {.rule #SKL-071 grade="C"}
 **Structure every briefing and fly-mode view in three questions: what to look at, what it means, what happens next.** Endsley's three levels (perception, comprehension, projection) give a design lens for any display used in a dynamic task [@endsley1995toward]. Grade C: an influential model whose causal claims are contested; it is used here only as a checklist.
 
 *In LTF:* each `FlyPanel` step could carry an optional "what you should see next" line, and `QuizBlock` items can be written at each level ("which gauge", "what does it tell you", "what will it do").
 :::
 
-::: {.rule #SKL-077 grade="C"}
+::: {.rule #SKL-072 grade="C"}
 **In fly mode, show the current and next step prominently and move completed steps out of the way.** Working memory is the bottleneck in Endsley's account [@endsley1995toward], and a long list of equal-weight steps makes the learner search for their place each time they look back.
 
 *In LTF:* the `FlyPanel` list shows every step at the same size, with ticked steps tinted green. In `FlyModePage`, collapse ticked steps to one line and enlarge the current one.
 :::
 
-::: {.rule #SKL-078 grade="C"}
+::: {.rule #SKL-073 grade="C"}
 **Never claim to measure a learner's situation awareness, and never tell a learner they "lost situation awareness".** The construct lacks an agreed operational definition, and critics argue the phrase works as blame [@endsley1995toward].
 
 *In LTF:* `debriefQuestions` such as "Where did you look most of the time?" ask about observable behavior, which is the right form. Keep that, and keep "situational awareness" out of criterion labels and `ResultView` copy.
@@ -854,25 +834,25 @@ The transport-airplane alerting rule, 14 CFR 25.1322, is one of the few places a
 
 The rule requires that false and nuisance alerts be minimized. A means to suppress an attention-getting component must exist if the alerting function itself malfunctions, must not be operable by accident or habitual reflex, and must leave a clear indication that suppression is active. The color convention is red for warnings, amber or yellow for cautions, and any color except red or green for advisories; displays that cannot show these colors must use other coding. Red, amber and yellow may be used for non-alerting functions only to a limited extent and without adversely affecting alerting. The rule is consensus and accumulated experience, a floor rather than a method, and the requirement for more than one sense reflects (by inference) the weakness of color-only coding.
 
-::: {.rule #SKL-079 grade="C"}
+::: {.rule #SKL-074 grade="C"}
 **Use three levels for in-app messages during a challenge (act now, act soon, note for later), each with its own treatment, place and word.** The three-level structure orders alerts by the urgency of awareness and response [@faa2010flightcrew]. Grade C: a regulatory convention without an experiment behind it, adopted here by analogy.
 
 *In LTF:* the random-event alert in `FlyPanel` (`border-4 border-warn bg-warn-tint`, `BellRing`, pulse, beep) is the act-now level. Define act-soon and note-for-later treatments for anything else shown during a flight, and do not use the act-now treatment for them.
 :::
 
-::: {.rule #SKL-080 grade="C"}
+::: {.rule #SKL-075 grade="C"}
 **Reserve the warning red for must-act-now states, and audit every other use of it.** Limited use of alert colors elsewhere protects their meaning [@faa2010flightcrew].
 
 *In LTF:* `warn` currently colors the random-event alert, but also form errors in `FormField`, the "Not quite." quiz result, the `danger` button, the `decision` and `safety` callouts and the red play disc in `YouTubeEmbed`. The play disc and the `decision` callout have no urgency and should move off `warn`; the `BetaBanner` uses the `caution` tint for a standing advisory, which should move to a neutral or accent treatment. See Part VI, Color: Science, Meaning and Access, for the palette itself.
 :::
 
-::: {.rule #SKL-081 grade="C"}
+::: {.rule #SKL-076 grade="C"}
 **Signal every act-now alert through at least two channels, make it acknowledgeable, and never through color alone.** Warnings and cautions use at least two senses, and their cues must be acknowledgeable [@faa2010flightcrew].
 
 *In LTF:* the `FlyPanel` alert already combines a beep, a visual panel, an icon, a bold label and a "Got it" acknowledgment. Keep all of them, and keep the visual alert sufficient on its own for learners with sound off, as the `beep()` comment intends.
 :::
 
-::: {.rule #SKL-082 grade="C"}
+::: {.rule #SKL-077 grade="C"}
 **Remove an alert or nudge as soon as its condition clears, and say on the page when a type of nudge is switched off.** Alerts must be removed when the condition no longer exists, and suppression must be clearly indicated [@faa2010flightcrew].
 
 *In LTF:* if LTF later adds condition-based nudges (for example from a sim connection), a stale banner after the learner corrects is a bug. A learner who turns a nudge type off should see a small "nudges off" indicator in `FlyModePage`, removable with one action that cannot be triggered by accident.
@@ -882,19 +862,19 @@ The rule requires that false and nuisance alerts be minimized. A means to suppre
 
 Parasuraman and Riley organize the human side of automation in four terms [@parasuraman1997humans]. Use is voluntary activation or disengagement. Misuse is over-reliance, which "can result in failures of monitoring or decision biases". Disuse is neglect or underuse, "commonly caused by alarms that activate falsely". Abuse is automation designed and introduced "without due regard for the consequences for human performance", which defines the operator's role as a by-product of the automation and can promote both misuse and disuse. These follow from design and management decisions, not from operator character. Monitoring of automation depends on workload, reliability and the saliency of automation-state indicators. Disuse "often occurs because the base rate of the condition to be detected is not considered" in setting the trade-off between false alarms and misses: when the event is rare, even an accurate alarm is wrong most of the times it sounds. Lee's later review called the paper a pivotal node in automation research and concluded that automation "requires more, not less, attention to training, interface design, and interaction design".
 
-::: {.rule #SKL-083 grade="B"}
+::: {.rule #SKL-078 grade="B"}
 **Make nudges and warnings rare enough to mean something, and retire any that learners routinely dismiss.** Alarms that activate falsely produce disuse, and alert thresholds must account for the base rate of the event [@parasuraman1997humans]. Grade B: an integrative review of empirical and analytical work.
 
 *In LTF:* the `BetaBanner` and `SignupBanner` are dismissible and remembered in localStorage, which is right. Any future in-flight nudge should log dismissals so that a nudge dismissed most of the time can be removed.
 :::
 
-::: {.rule #SKL-084 grade="B"}
+::: {.rule #SKL-079 grade="B"}
 **Make challenges require reading the sim; let the page confirm, never supply, what the sim shows.** Over-reliance on an aid produces failures of monitoring [@parasuraman1997humans]. If the page gives the value the learner should be reading from the instrument, the learner stops reading the instrument.
 
 *In LTF:* the app cannot see the sim, and should say so plainly in `BriefTab`. Steps should name what to check in the sim ("confirm on the airspeed indicator"), not restate the expected reading after the first attempt (SKL-003).
 :::
 
-::: {.rule #SKL-085 grade="C"}
+::: {.rule #SKL-080 grade="C"}
 **Do not automate the learner's part of a procedure: no auto-ticking, no auto-advancing steps.** Automation introduced without regard for human performance reduces the operator to a by-product [@parasuraman1997humans].
 
 *In LTF:* `FlyPanel` and `ChecklistRunner` tick only on the learner's action, and the debrief is scored by the learner and recomputed by the server. Keep both. A future sim connection that ticks steps automatically would need a reason stronger than convenience.
@@ -906,23 +886,19 @@ Sarter and Woods showed how flexibility in automated systems creates a new class
 
 LTF has modes of its own: lesson, challenge Brief, Fly and Debrief, fly mode on a second screen, widget Explore and Quiz, Day and Night. Most are well signposted. Two weak points are fly mode, which opens in a new tab with "Back to challenge" as its only orientation, and the timer-driven random event, which changes what the screen shows without the learner acting.
 
-::: {.rule #SKL-086 grade="C"}
+::: {.rule #SKL-081 grade="C"}
 **Show the current mode and place in words, in the same position on every screen, and never change mode without a visible announcement.** Mode errors and surprises come from many modes with weak support for tracking them [@sarter1995world].
 
 *In LTF:* `FlyModePage` should show a fixed line at the top ("Fly mode · C2.1 · Step 3 of 5") readable at a glance, and the random-event alert, already announced with `role="alert"`, should name itself as an event in the challenge so it is not mistaken for an app error.
 :::
 
-::: {.rule #SKL-087 grade="C"}
-**Merge states before adding indicators; fewer modes beat better labels on many.** Proliferating modes is the root of the problem Sarter and Woods describe [@sarter1995world].
-
-*In LTF:* if fly mode and the Fly tab drift apart in behavior, merge them into one component with a size prop (as `FlyPanel large` already does) rather than adding a second set of controls. When a lesson covers the sim's autopilot, "which mode is active" should be an explicit item to observe and quiz, with mode names from the aircraft's documents.
-:::
+Since the root of the problem is the proliferation of modes [@sarter1995world], fewer modes beat better labels on many. LTF already follows this where it counts: fly mode and the Fly tab are one component, `FlyPanel`, with a `large` prop, rather than two sets of controls that could drift apart. When a lesson covers the sim's autopilot, "which mode is active" should be an explicit item to observe and quiz, with mode names from the aircraft's documents.
 
 ### Standards as a model for this book
 
 The FAA's Human Factors Design Standard compiles human-factors criteria for the agency's own systems: air traffic and technical operations, not aircraft cockpits [@ahlstrom2016human]. Its stated aim is "a single, easy-to-use source of design criteria", with notes on trade-offs between criteria, and its own warning is that it is "not a substitute for in-depth professional human factors practice" and must be tailored "to meet the needs of the system or program at hand". Only its front matter and records were read, so no numeric criterion is quoted from it.
 
-::: {.rule #SKL-088 grade="C"}
+::: {.rule #SKL-082 grade="C"}
 **Look numeric human-factors criteria up in the standard and quote them with their section, never from memory, and record the trade-offs when criteria conflict.** A design standard packages criteria for citation and review but warns that it does not replace judgment or testing [@ahlstrom2016human].
 
 *In LTF:* when fly-mode text size, alert coding or label wording needs a numeric criterion, open the relevant chapter of the standard or another verified source. Nothing in the standard is a fact about the Cessna 172.
@@ -930,11 +906,11 @@ The FAA's Human Factors Design Standard compiles human-factors criteria for the 
 
 ### What this means for Learn to Fly
 
-Keep the `FlyPanel` alert, which already meets the two-channel, acknowledgeable pattern (SKL-081), the learner-driven ticking in `FlyPanel` and `ChecklistRunner` (SKL-085), and the observable-behavior wording of debrief questions (SKL-078).
+Keep the `FlyPanel` alert, which already meets the two-channel, acknowledgeable pattern (SKL-076), the learner-driven ticking in `FlyPanel` and `ChecklistRunner` (SKL-080), and the observable-behavior wording of debrief questions (SKL-073).
 
-Change the use of red and amber across the product (SKL-080). The warning color currently means "random event in flight", "wrong quiz answer", "form error", "decision callout" and "play this video". Only the first is a must-act-now state. Move the video disc and the `decision` callout off `warn`, and the beta notice off `caution`. Change `FlyModePage` so its top line states mode, challenge and step (SKL-086), collapses completed steps and enlarges the current one (SKL-077).
+Change the use of red and amber across the product (SKL-075). The warning color currently means "random event in flight", "wrong quiz answer", "form error", "decision callout" and "play this video". Only the first is a must-act-now state. Move the video disc and the `decision` callout off `warn`, and the beta notice off `caution`. Change `FlyModePage` so its top line states mode, challenge and step (SKL-081), collapses completed steps and enlarges the current one (SKL-072).
 
-Build the three message levels as named treatments in `src/components/` (SKL-079), and use them for anything shown during a flight. Add numeric readouts beside the shape-based widgets (SKL-074). Keep alerting rare and track dismissals once any automatic nudge exists (SKL-083).
+Build the three message levels as named treatments in `src/components/` (SKL-074), and use them for anything shown during a flight. Add numeric readouts beside the shape-based widgets (SKL-070). Keep alerting rare and track dismissals once any automatic nudge exists (SKL-078).
 
 ## Error as information
 
@@ -944,13 +920,13 @@ In 1947 Fitts and Jones collected 460 accounts of errors pilots made in operatin
 
 The method was a collection of interviewed and written accounts, an early form of what became the critical incident technique. Secondary summaries name four categories of control error: operating the wrong control (substitution), failing to adjust a control properly, forgetting to operate a control, and being unable to reach a control when needed. No source gave the share of each category, so none is given here. The best-known illustration is the substitution of one control for another that looks alike, sits nearby and is used in the same phase: controls that look alike, sit close together and are used in sequence invite a predictable slip. Remedies named in the secondary summary are standardization, simplification, sequencing and interlocks. A retrospective case collection cannot give rates, since there is no count of correct operations, and is open to recall and reporting bias; its strength is as a taxonomy and an argument. Applied forty years later to driving and computer use, the taxonomy transferred well to control errors and less well to errors in reading and interpreting instruments.
 
-::: {.rule #SKL-089 grade="B"}
+::: {.rule #SKL-083 grade="B"}
 **Treat a pattern of the same learner error as a design defect to investigate before treating it as a learner deficit.** Errors repeated across operators of every experience level point to the design of controls and displays [@fitts1947analysis; @reason2000human]. Grade B: a founding case collection, a long tradition of system-based analysis and no contrary evidence in the notes.
 
 *In LTF:* log wrong answers per `QuizBlock` item and per widget quiz, and per criterion scored Not met in `DebriefForm`. Review items where many learners fail the same way as content bugs, with the same priority as a broken link.
 :::
 
-::: {.rule #SKL-090 grade="C"}
+::: {.rule #SKL-084 grade="C"}
 **Review every challenge briefing for the four control errors: can the learner pick the wrong control, set it wrongly, forget it, or be unable to find it when needed?** The categories from the 1947 analysis are a ready review checklist [@fitts1947analysis]. Where two easily confused controls are introduced, make their labels, icons and positions on the page clearly different and explain the difference in the same panel.
 
 *In LTF:* "unable to reach" has a web form: a step or briefing that has scrolled off screen in `FlyModePage`, or a checklist behind a link. Run the four questions against `BriefTab` and `FlyPanel` content during `/review-lesson`.
@@ -964,17 +940,13 @@ The person approach has two shortcomings in Reason's account. Most unsafe acts a
 
 The Swiss cheese model describes defences in layers (engineered barriers, people, procedures), each with holes that open, close and shift; an accident happens when holes in several layers momentarily line up. Active failures are unsafe acts by people at the sharp end, with direct and short-lived effects. Latent conditions are "resident pathogens" created by designers, procedure writers and managers: they produce error-provoking conditions such as time pressure and inexperience, and long-lasting holes such as untrustworthy alarms, unworkable procedures and design deficiencies. Unlike active failures, latent conditions can be found and fixed in advance. The article is a short commentary for clinicians distilling the author's industrial and aviation work; the metaphor is a communication model, not a validated predictive one.
 
-::: {.rule #SKL-091 grade="C"}
+::: {.rule #SKL-085 grade="C"}
 **Hunt for latent conditions in the product itself: ambiguous copy, inconsistent checklists, alerts that cry wolf, and any mismatch between the page and the sim.** Latent conditions are created by designers and procedure writers, persist, and can be fixed before they cause harm [@reason2000human]. Grade C: expert synthesis.
 
 *In LTF:* the `verify` callout, the "Draft · unverified" badge and `/review-lesson` already target one latent condition, unverified facts. Add the others to the content review, and treat every "Report a problem" submission from `ReportProblemDialog` as a report of a possible latent condition.
 :::
 
-::: {.rule #SKL-092 grade="C"}
-**Build learning in layers (lesson, briefing, in-flight prompt, debrief) so that no single layer has to carry the whole load.** The system approach relies on multiple overlapping defences rather than one perfect barrier [@reason2000human].
-
-*In LTF:* the lesson, `BriefTab`, `FlyPanel` and `DebriefForm` are these layers. A gap in one (a step missing from the procedure) should be caught by another (a criterion that checks it, a debrief question that asks about it), which content review can check by mapping each criterion to a lesson section and a step.
-:::
+The layered-defence idea [@reason2000human] maps onto LTF's own sequence. The lesson, `BriefTab`, `FlyPanel` and `DebriefForm` are layers, and a gap in one (a step missing from the procedure) can be caught by another (a criterion that checks it, a debrief question that asks about it). Content review can test the layering by mapping each criterion to a lesson section and a step.
 
 ### Experts slip too
 
@@ -982,19 +954,19 @@ Dismukes, Berman and Loukopoulos asked how highly experienced, trained and regul
 
 The recurrent themes include inadvertent slips while performing highly practiced tasks under normal conditions; inadequate execution of practiced normal procedures under challenging conditions; inadequate execution of non-normal procedures under challenging conditions; inadequate response to rare situations; judgment in ambiguous situations that hindsight proves wrong; and deviation from explicit guidance. The inputs are accident narratives shaped by hindsight, for one decade and one kind of operation, and the book cannot give causal estimates. Only a review of it was read.
 
-::: {.rule #SKL-093 grade="C"}
+::: {.rule #SKL-086 grade="C"}
 **Keep confirmations for routine steps in later lessons; never let "mastered" remove the check.** Experts slip on highly practiced tasks under normal conditions; fluency does not guarantee reliability [@dismukes2007limits].
 
 *In LTF:* do-verify checklists in `ChecklistRunner` are the right tool for steps the learner now does from memory, and they should remain part of challenges in Modules 4 to 8 rather than being dropped once a learner has passed the module that introduced them.
 :::
 
-::: {.rule #SKL-094 grade="C"}
+::: {.rule #SKL-087 grade="C"}
 **In any review screen, show what the learner could see at the time before showing what went wrong.** Judgments that hindsight proves wrong were often reasonable given the information available [@dismukes2007limits]; a review that starts from the outcome teaches hindsight, not judgment.
 
 *In LTF:* `debriefQuestions` should begin with what the learner saw and expected ("Where did you look most of the time?") before asking what they would change. If LTF later adds a replay or timeline, it should show the state at each moment before the verdict.
 :::
 
-::: {.rule #SKL-095 grade="B"}
+::: {.rule #SKL-088 grade="B"}
 **Describe errors by their conditions (time pressure, an ambiguous cue, an interruption), never by blame words such as careless, mistake or pilot error.** Errors are consequences of conditions, and expert performers err for reasons the person approach misses [@reason2000human; @dismukes2007limits; @fitts1947analysis]. Grade B: three independent lines of work agree.
 
 *In LTF:* `BriefTab` shows `commonMistakes` in a `safety` callout titled "Common mistakes", in the warn color. Retitle it "What tends to go wrong" or similar, move it to a neutral callout, and write each item as a condition and its effect. Keep `ResultView`'s "Not passed yet" phrasing, which names a criterion rather than the learner.
@@ -1004,7 +976,7 @@ The recurrent themes include inadvertent slips while performing highly practiced
 
 Two findings meet here. Degani and Wiener's guidelines ask for buffers and a way to take up the slack [@degani1990checklists]; Dismukes and colleagues list slips under interruption and distraction among the recurrent vulnerabilities of experts [@dismukes2007limits]. A learner at a desk will be interrupted: the sim pauses, a phone rings, the second screen sleeps. The product should assume interruption and make the return obvious. Reason's high reliability organizations train people to expect and recover from errors [@reason2000human]; the web equivalent is undo, safe retry and a clear "you were here".
 
-::: {.rule #SKL-096 grade="C"}
+::: {.rule #SKL-089 grade="C"}
 **Persist the learner's place in every flight and make it obvious on return, with undo and safe retry everywhere.** Recovery from interruption and error is a design property, not a learner virtue [@degani1990checklists; @reason2000human].
 
 *In LTF:* `FlyPanel` already saves ticks and the start time through `saveFlight` and restores them with `loadFlight`, and debrief drafts survive a refresh. Keep that. Add a visible "You were on step n" line when a flight is restored, and keep the "Keep the screen on while flying" wake-lock option.
@@ -1014,7 +986,7 @@ Two findings meet here. Degani and Wiener's guidelines ask for buffers and a way
 
 The accident review's themes include non-normal procedures under challenging conditions and inadequate response to rare situations [@dismukes2007limits], and the practice meta-analysis found practice explains least in unpredictable situations [@macnamara2014deliberate]. A course that trains only the normal flow leaves its learners unprepared for the event that does not follow it. LTF's challenges already include an engine-failure exercise (C5.5), a go-around (C4.4) and random events in three challenges.
 
-::: {.rule #SKL-097 grade="B"}
+::: {.rule #SKL-090 grade="B"}
 **Include non-normal practice in each later module, framed as rehearsing recognition and response, with every procedure taken from the aircraft's documents.** Non-normal and rare situations are recurrent vulnerabilities even for experts [@dismukes2007limits], and unpredictable tasks need varied practice [@macnamara2014deliberate; @gopher1994transfer].
 
 *In LTF:* extend `randomEvents` beyond C5.5, C6.5 and C8.1 to at least one challenge per module from Module 4 on, each event verified in the sim, and debrief each with a question about the first cue the learner noticed.
@@ -1024,7 +996,7 @@ The accident review's themes include non-normal procedures under challenging con
 
 Keep the system stance that the product already takes in its honesty features: draft badges, `verify` callouts, "Report a problem" in the footer and the beta banner, and result copy that names criteria rather than people. Keep flight-state persistence in `features/challenges/storage.ts`.
 
-Change the framing of `commonMistakes` in `BriefTab` (SKL-095): the safety callout in red with the title "Common mistakes" tells the learner the errors are theirs and dangerous, when most are ordinary consequences of conditions. Change debrief question order so that what the learner saw comes first (SKL-094).
+Change the framing of `commonMistakes` in `BriefTab` (SKL-088): the safety callout in red with the title "Common mistakes" tells the learner the errors are theirs and dangerous, when most are ordinary consequences of conditions. Change debrief question order so that what the learner saw comes first (SKL-087).
 
-Build error logging per quiz item, widget quiz and criterion (SKL-089), reviewed as content defects, and a four-question control-error review in `/review-lesson` (SKL-090). Extend non-normal events across later modules (SKL-097). Each of these makes learner errors into information about the course, which is the main lesson of eighty years of aviation human factors.
+Build error logging per quiz item, widget quiz and criterion (SKL-083), reviewed as content defects, and a four-question control-error review in `/review-lesson` (SKL-084). Extend non-normal events across later modules (SKL-090). Each of these makes learner errors into information about the course, which is the main lesson of eighty years of aviation human factors.
 

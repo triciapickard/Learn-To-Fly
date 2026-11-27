@@ -759,3 +759,79 @@ LTF's challenge data are small samples per learner, and the product currently sh
 The recommended build is modest. A dot strip of attempts per challenge (one dot per attempt, the current one in `accent`, the best as a labeled line), with a frequency sentence below it (VIZ-062 to VIZ-064). No error bars, no averages with whiskers, no "confidence" numbers. If a lesson later teaches variability (wind, touchdown scatter), it may use a played sequence of outcomes as an explainer, with a static ensemble as the reduced-motion and print default (VIZ-065). The debrief's self-scoring rubric is already the right instrument; it should not be supplemented with a confidence slider that would be read as data (VIZ-067).
 
 How much repetition a learner should do before moving on is an instructional question, covered in Part XV, Instructional Design, and Part XVI, Skill, Simulation and the Cockpit; this chapter only says how to show the evidence for that decision.
+
+## Interaction, motion and access in data graphics
+
+### Dynamic queries and how fast a graphic must answer
+
+Shneiderman presents dynamic queries as the mechanism for filtering: sliders, buttons or alphasliders coupled to rapid display update, with "less than 100 milliseconds" as the goal, and with actions that are rapid, incremental and reversible, producing no error messages [@shneiderman1996eyes]. He cites a counterbalanced within-subjects comparison with 18 chemistry students in which a dynamic-query interface to the table of elements gave faster performance and lower error rates than a form-fill-in interface (Ahlberg and colleagues, 1991, as cited in the paper). The 100 millisecond figure is the author's goal, not a measured threshold.
+
+Munzner's rule of thumb "responsiveness is required" gives three rough bands for feedback: about 0.1 seconds for perceptual processing, about 1 second for an immediate response, about 10 seconds for a brief task [@munzner2014visualization]. A slider that moves a needle belongs in the first band: the learner must feel the needle is attached to the slider. A recalculated chart after a filter change belongs in the second. Anything approaching the third needs a visible progress cue. The bands are a synthesis of older human-computer interaction work and are covered with their own evidence in Part VIII, The Quantitative Laws of Interaction.
+
+::: {.rule #VIZ-068 grade="C"}
+**Update a diagram within about a tenth of a second of the slider or control that drives it, and make every such change reversible.** Shneiderman sets under 100 ms as the goal for dynamic queries, with rapid, incremental and reversible actions, citing one small study of their benefit [@shneiderman1996eyes]; Munzner places perceptual feedback at about 0.1 s [@munzner2014visualization]. Author goals and synthesis rather than measured thresholds.
+
+*In LTF:* `RangeField` sliders (native range inputs with `accent-accent`) drive widget models synchronously; keep model computation light enough that needles and readouts follow the thumb. The `Gauge` needle's `duration-150` rotation is a smoothing transition, not a delay, and should not grow longer.
+:::
+
+::: {.rule #VIZ-069 grade="C"}
+**Give any view that takes longer than about a second to appear a visible loading state that holds its final shape.** Munzner's bands put immediate response near 1 s and brief tasks near 10 s [@munzner2014visualization].
+
+*In LTF:* lazy widgets already show `Skeleton h-72` inside their frame, which reserves space; a future chart in `HistoryTab` follows the existing `LoadingRegion` pattern with a skeleton of the chart's own height so that the page does not jump when data arrive.
+:::
+
+### History, reset and details on demand
+
+Two of Shneiderman's seven tasks are easy to forget and cheap to support [@shneiderman1996eyes]. History, keeping a record of actions for undo, replay and progressive refinement, was the one most prototypes of his day lacked. Extract, letting the user save or share a sub-collection and the query that produced it, is the other. For a learner exploring a widget, history means being able to get back to where the lesson started; for a learner reviewing results, extract means being able to keep or share a result.
+
+Details on demand is the third task that needs care in a web product, because on a desktop it is usually built on hover, which touch screens and keyboards do not have. The detail must be reachable by tap and by keyboard focus as well.
+
+::: {.rule #VIZ-070 grade="C"}
+**Give every explorable graphic a one-step way back to its starting state, and keep filter state in the URL so it can be shared and restored.** Shneiderman names history (undo, replay) and extract (saving the query) among the seven tasks and notes that most systems neglected history [@shneiderman1996eyes].
+
+*In LTF:* `WidgetFrame`'s ghost "Reset" button is the history task; every widget with sliders passes `onReset`. `ChallengesPage` keeps its filters in the query string, and the reference hub keeps `?section=`; keep both, and do the same for any future chart filter.
+:::
+
+::: {.rule #VIZ-071 grade="C"}
+**Make every detail that appears on hover also appear on tap and on keyboard focus.** Details on demand is a core task in Shneiderman's taxonomy [@shneiderman1996eyes]; WCAG 2.2 requires that anything operated by dragging also works with a single pointer without dragging [@w3c2023wcag], and the same reasoning applies to hover-only details.
+
+*In LTF:* glossary chips already open a `Popover` on click rather than on hover; a future attempt dot that reveals its date and score does the same, as a focusable button, with the detail also present in the text list below the chart.
+:::
+
+### When a chart should move
+
+Heer and Robertson tested animated transitions between related statistical graphics, such as bar to pie, stacked to grouped bars, and scatter plot time steps [@heer2007animated]. With 24 subjects screened for familiarity with data graphics, animated transitions produced significantly lower object-tracking error than instant switches in every condition of their first experiment. Staged animation (doing one kind of change, then another) beat direct animation except for scatter plot time steps, where staging increased tracking error; the authors suggest more stages give more chances to lose a target and recommend about one second per stage rather than half a second. In the second experiment, where subjects estimated a target's percentage change, animation helped for scatter plots and grouped bars, but heavily staged animation in stacked bars and donut charts increased error. They conclude it is better to minimize unnecessary motion than to do one thing at a time at any cost. More elements meant more tracking error.
+
+Their design principles, organized under Tversky and colleagues' congruence and apprehension principles, are directly usable: keep intermediate states valid data graphics, use consistent mappings from operations to transitions, never reuse a mark for a different data point, group similar transitions, minimize occlusion, favor predictable timing, prefer simple transitions (translation and expansion are easier to follow than rotation) and stage only complex changes [@heer2007animated]. The sample was modest and fairly homogeneous, and a mask removed the later state, so some of the benefit may reflect memory transfer.
+
+Tversky, Morrison and Bétrancourt reviewed animation for teaching and found the research "not encouraging" [@tversky2002animation]. Where animation seemed to win, the animated version usually carried more information than the static one, or came with interactivity or prediction that help learning on their own. Their conditions for success: animations "must be slow and clear enough for observers to perceive movements, changes, and their timing", should be schematic rather than realistic, may need arrows or highlighting to direct attention, and benefit from learner control (stop, start, replay, speed). Franconeri and colleagues reach a similar verdict for data communication: animation typically leads to confusion, and controls helped precise single-item questions but hurt the extraction of global trends [@franconeri2021science].
+
+::: {.rule #VIZ-072 grade="B"}
+**Animate a change between two states of the same chart only as a simple, valid transition of about one second per stage, with at most two stages.** Heer and Robertson found well-designed transitions improved tracking and change estimation, recommended about a second per stage, and found heavy staging could increase error [@heer2007animated]. One controlled study with 24 subjects, consistent with the broader review literature's caution [@tversky2002animation].
+
+*In LTF:* when a widget switches configuration or reveals a corrected answer in "Quiz me" mode, interpolate positions directly; if an axis must rescale, rescale first and move marks second. A needle sweeping between two readings must never pass through a value the model cannot produce. All such motion sits behind `motion-safe:` as the product already does.
+:::
+
+::: {.rule #VIZ-073 grade="B"}
+**Give every explanatory animation play, pause, step and replay controls, keep it schematic, and leave a static annotated final state on the page.** Tversky and colleagues find animation rarely beats equivalent static graphics and set slowness, schematic form, annotation and learner control as conditions for success [@tversky2002animation]; Franconeri and colleagues report animation typically confuses [@franconeri2021science]. WCAG 2.2 requires a pause, stop or hide control for automatic motion lasting more than five seconds beside other content [@w3c2023wcag].
+
+*In LTF:* `traffic-pattern` and `vor-cdi` run `requestAnimationFrame` loops; each needs a visible pause, and the paused or reduced-motion state must still show the whole pattern or needle position with labels. Never let an animation be the only carrier of a fact the quiz will ask about.
+:::
+
+### Text alternatives that state the finding
+
+A chart that a screen-reader user cannot read is not a chart for them. Lazar and colleagues' diary study of 100 blind web users listed visual items without alternative text among the recurring, mostly fixable causes of frustration [@lazar2007frustrates]. The alternative should do what the chart does: state the invariant and the finding, not describe the drawing. Bertin's external identification applies to the text alternative as much as to the visible title [@bertin2010semiology].
+
+WCAG 2.2's reflow criterion excepts maps, diagrams and data tables from the ban on two-dimensional scrolling at narrow widths [@w3c2023wcag], which allows a wide diagram to scroll sideways on a phone rather than shrink its labels, provided its text alternative carries the information for those who cannot scroll it comfortably.
+
+::: {.rule #VIZ-074 grade="B"}
+**Give every chart and diagram a text alternative that states what it shows and what it says, including the current value and any reference line.** Images without text alternatives are a recurring frustration for blind users [@lazar2007frustrates]; Bertin's identification functions define what the text must name [@bertin2010semiology]. A large diary study, descriptive, with no comparison group.
+
+*In LTF:* the existing practice is good and should be the template: the load-factor graph's `aria-label` describes the curve's shape and the current point, `AirspeedArcs` builds its label from the model's segments and flags, and `WidgetFrame` adds a "Describe this diagram" panel. A future attempt strip states "Six attempts. Best 88 percent, Gold, on 12 March. This attempt 81 percent, Silver."
+:::
+
+### What this means for Learn to Fly
+
+The widget layer already implements most of this chapter's interaction rules: synchronous slider updates through `RangeField` (VIZ-068), a `Reset` on every `WidgetFrame` (VIZ-070), click-opened `Popover`s rather than hover tooltips for glossary detail (VIZ-071), `motion-safe:` on every transition plus a global reduced-motion rule (VIZ-072), and authored `aria-label`s and "Describe this diagram" panels (VIZ-074). `AirspeedArcs` uses the reflow exception properly: it keeps an 880 px minimum width and scrolls sideways on a phone, and its `aria-label` carries every arc and flag.
+
+Two gaps remain. The continuously animated widgets (`traffic-pattern`, `vor-cdi`) need visible pause controls and a meaningful paused state (VIZ-073). And the attempt history that several chapters of this Part call for should be built with tap- and keyboard-reachable dots, a skeleton of its own height while loading, and a text alternative that states the best and the latest result (VIZ-069, VIZ-071, VIZ-074).

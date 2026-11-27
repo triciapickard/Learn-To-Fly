@@ -806,3 +806,131 @@ LTF's review process today is a code and content review (`/ltf-review`, `/review
 - Rate severity once, on the merged list, by task impact (USE-059, USE-060), and keep single-reviewer findings (USE-061).
 - Store the scenarios, criteria and merged lists in `docs/` beside the verification records in `docs/verification/`, so that rounds are comparable.
 - Route Fly mode findings into testing rather than treating inspection as sufficient (USE-062).
+
+## Usability Testing and How Many Learners
+
+### Testing is observation of real tasks
+
+Gould and Lewis's second principle is empirical measurement: intended users carry out real work with prototypes while their performance and reactions are observed, recorded and analyzed [@gould1985designing]. A usability test differs from a demonstration, an interview or a review in that the observer watches what people do, not what they say they would do. Beyer and Holtzblatt's contextual inquiry pushes the observation into the user's own setting, on a master-apprentice model in which the interviewer watches people work and asks about what they do, rather than arriving with a fixed list of questions [@beyer1998contextual]. Their method is craft authority built on field experience rather than experiment, and it is costly, but its central claim fits LTF well: what people do in context differs from what designers assume.
+
+LTF's context is unusual enough that a quiet-room test misses most of it. A beginner at home has the simulator full screen, a controller or keyboard in hand, and LTF on a phone, tablet or second monitor at some distance and angle. They glance across mid-maneuver. They are interrupted by the simulator itself. Greenberg and Buxton make the same point for evaluation generally: the method must fit the question, and context-specific use must be tested in context [@greenberg2008usability].
+
+::: {.rule #USE-063 grade="C"}
+**Test challenge and Fly mode flows with beginners at their own setup, with the simulator running, not only at a desk with the page alone.** Observation in context captures what happens in real use [@beyer1998contextual], and the method should fit the context being studied [@greenberg2008usability].
+
+*In LTF:* for `ChallengePage` and `FlyModePage`, at least part of each test round is remote or in-home, with the learner's own screen arrangement; record where the second screen sits and how often the learner looks at it.
+:::
+
+### Where "five users" comes from
+
+Two papers are the roots of the five-user rule. Virzi reported three experiments relating the share of problems found to the number of test participants, measured against the problems revealed by 12 users in the first study and 20 in the second and third [@virzi1992refining]. As described by later reviewers (the paper itself was not read for this book), it supports three claims: observing four or five participants reveals about 80% of a product's usability problems; additional participants reveal fewer and fewer new problems; and the more severe problems tend to be found by the first few participants, with three users revealing most of the severe ones [@lewis1994sample; @faulkner2003beyond]. Virzi's own stopping advice, quoted by Faulkner, was to run subjects until the number of new problems drops to an acceptable level, leaving "acceptable" to the practitioner [@faulkner2003beyond].
+
+Nielsen and Landauer modeled the finding of problems as a Poisson-type process fitted to data from 11 studies: each added test user or evaluator finds fewer new problems [@nielsen1993mathematical]. For a "medium" example, they estimated that 16 evaluations would be worth their cost and that the benefit-to-cost ratio peaked at four. Nielsen's later popular statement of the model gives the number of problems found with n users as N(1 − (1 − L)^n), where N is the total number of problems and L the proportion one user finds, with a typical L of 31% across the projects studied, so that the curve "bends around 5 users" [@nielsen1993mathematical]. With L at 31%, five users find about 85%, which is arithmetic on his figures. His practical advice in the same article is not "test five users once": with fifteen users available, run three studies of five, fixing problems between rounds.
+
+The model assumes that every problem is equally likely to be found and every participant equally likely to find it. Both assumptions are false in general, and the critiques that followed are about what happens when they fail.
+
+### What the replications found
+
+Lewis tested Virzi's three claims on an independent usability study [@lewis1994sample]. Diminishing returns were clearly supported. The 80% claim was supported only partially: it held when the average probability of detecting a problem was between 0.32 and 0.42, as in Virzi's data, and more participants are needed when it is lower. The severity claim was not supported: using behavioral categories for impact on the user's work rather than expert ratings, Lewis found no correlation between a problem's severity and how early it was discovered. His economic simulations found that only the average detection probability strongly influenced the sample size that maximized return on investment.
+
+Faulkner ran a structured test with 60 users of a web-based time-sheet application, 20 in each of three experience groups, logging every departure from the optimal path, and then drew 100 random samples at each sample size [@faulkner2003beyond]. The full group identified 45 problem areas.
+
+| Users per sample | Lowest share found | Mean share found |
+| --- | --- | --- |
+| 5 | 55% | 85.55% |
+| 10 | 82% | 94.7% |
+| 15 | 90% | 97.05% |
+| 20 | 95% | 98.4% |
+
+The mean for five users matches Nielsen's prediction closely. The spread is the point: the standard deviation at five users was 9.3 points, the 95% interval was plus or minus 18.5 points for five users against plus or minus 6.4 for ten, and some sets of five found 99% while one found 55% [@faulkner2003beyond]. Relying on any one set of five risks missing nearly half the problems. Faulkner's result is consistent with the binomial model, which predicts this variance; what it refutes is the practitioner's reading of an average as a guarantee.
+
+Spool and Schroeder's field study, reported as a two-page extended abstract, had 49 users perform the same task on four production web sites and concluded that these sites would need considerably more than five users to find 85% of their problems [@spool2001testing]. As Faulkner reports it, the first five users revealed only 35% of the problems, and the 13th and 15th users each revealed at least one new severe problem [@faulkner2003beyond]. The tasks were open-ended and goal-oriented, the kind where each user sees only a small slice of a large space of possible problems, so detection probability per user is low and the curve rises slowly.
+
+::: myth
+**"Five users find 85% of usability problems."** The figure comes from a model with a typical detection probability of 31% [@nielsen1993mathematical]. It holds on average when per-user detection is around 0.32 to 0.42 [@lewis1994sample]; individual five-user samples found anywhere from 55% to 99% in a 60-user resampling study [@faulkner2003beyond]; and on open-ended tasks on live sites the first five users found about 35% [@spool2001testing; @faulkner2003beyond]. Nielsen's own advice was several small rounds with fixes in between, not one round of five. Five is a reasonable size for a round, not a measure of coverage.
+:::
+
+::: {.rule #USE-064 grade="A"}
+**Test in repeated small rounds, about five learners each, and fix the problems found between rounds.** Diminishing returns per added participant is supported by every study in this line [@virzi1992refining; @lewis1994sample; @nielsen1993mathematical; @faulkner2003beyond], and Nielsen's recommendation is three rounds of five over one of fifteen [@nielsen1993mathematical].
+
+*In LTF:* plan each test of a flow as at least two rounds, with fixes between; a single round is a probe, not a test.
+:::
+
+::: {.rule #USE-065 grade="A"}
+**Never report a small test round as having found most of a page's problems; report it as a sample with its likely spread.** Five-user samples vary widely in coverage by chance [@faulkner2003beyond], and coverage depends on the detection probability of the task [@lewis1994sample; @spool2001testing].
+
+*In LTF:* a test report says "five learners, these problems", not "the lesson page's problems". For high-cost screens (the first lesson, the first challenge brief, Fly mode), add participants or rounds; with ten learners the lowest coverage in Faulkner's resampling rose to 82%.
+:::
+
+### Estimating how many learners a page needs
+
+Because only the average detection probability strongly drives the right sample size [@lewis1994sample], the useful practice is to estimate it. After the first round, look at what share of observed problems were seen by only one learner. If most problems were seen by most learners, detection probability is high and a few more sessions will saturate; if most were seen by one learner each, it is low and many more are needed. Narrow, scripted tasks behave like Virzi's and Faulkner's structured tests; open, exploratory tasks behave like Spool and Schroeder's live sites.
+
+LTF has both kinds. "Open the first lesson, answer the quick check, mark the lesson complete" is narrow. "Find a challenge you would like to fly and get ready to fly it" is open: the learner can filter on `ChallengesPage`, browse `CurriculumMap`, or follow "Fly it" cards from a lesson.
+
+::: {.rule #USE-066 grade="B"}
+**Size each test round from an estimate of how likely each learner is to hit each problem, and expect open-ended tasks to need many more learners than scripted ones.** Only the average detection probability strongly drives the efficient sample size [@lewis1994sample], and open-ended web tasks showed much lower per-user detection than the model's typical value [@spool2001testing].
+
+*In LTF:* scripted tasks (first lesson, first quick check, sign-up with `returnTo`) start at five learners; open tasks (choosing and preparing a challenge, using the reference hub mid-flight) start larger and use realistic goals, not prescribed clicks.
+:::
+
+::: {.rule #USE-067 grade="C"}
+**Stop a round when new sessions stop producing new serious problems, using a stated rule, not at a fixed count.** Virzi's own advice was to run participants until new problems drop to an acceptable level [@faulkner2003beyond; @virzi1992refining]; in open tasks late users still found new severe problems [@spool2001testing].
+
+*In LTF:* the default stopping rule is two consecutive sessions with no new problem rated as blocking or causing a wrong action. Keep a per-problem tally across sessions so the rule can be applied.
+:::
+
+### Severe problems do not reliably come first
+
+Virzi's claim that the severe problems show up in the first few sessions is the one claim that did not replicate: Lewis found no correlation between severity and discovery rate when severity was measured by behavioral impact [@lewis1994sample]. The evaluator-effect review found mixed results across experiments [@hertzum2001evaluator], and in Spool and Schroeder's study new severe problems appeared at the 13th and 15th users [@faulkner2003beyond]. Faulkner adds that subtle problems, the least likely to appear in small samples, can be the most serious [@faulkner2003beyond].
+
+::: {.rule #USE-068 grade="D"}
+**Do not assume that the first few sessions have surfaced the severe problems; review every session for blockers.** The claim that severe problems are found first is contested: Virzi reported it, Lewis's independent test with behavioral severity did not support it, and other data are mixed [@virzi1992refining; @lewis1994sample; @hertzum2001evaluator]. The grade reflects the conflicting evidence; the safe practice does not depend on resolving it.
+
+*In LTF:* every session is scanned for a learner who cannot find the next step in Fly mode, cannot get from the Brief tab to the Fly tab, or loses entered work, whatever the session's number.
+:::
+
+### More than one kind of beginner
+
+The model's numbers assume comparable users using the product in similar ways, a limit Nielsen himself concedes [@nielsen1993mathematical]. For more than one user group his popular article recommends three to four users per group for two groups, and three per group for three or more. Faulkner's three experience groups differed significantly in path deviations (means of 65.6, 43.7 and 19.2) [@faulkner2003beyond], so a test that recruits only one kind of user describes only that kind.
+
+::: {.rule #USE-069 grade="B"}
+**Recruit each distinct learner group separately, three or four learners per group per round.** Comparable users are an assumption of the sample-size model [@nielsen1993mathematical], and experience groups differ greatly in how they deviate from the intended path [@faulkner2003beyond].
+
+*In LTF:* at least two groups: people who have never used a flight simulator, and people who have played MSFS or other flight games. A third group, gamers new to flight simulation, is worth adding for Module 0 and the controls lessons.
+:::
+
+### What to record
+
+Faulkner's measure was cheap and comparable: a tick on a data sheet each time a participant departed from the optimal path [@faulkner2003beyond]. Lewis's severity measure was behavioral: impact on the user's work [@lewis1994sample]. Both avoid the unreliability of expert judgment. Molich's CUE studies add that test tasks, success criteria and the problem definition should be written before testing, and that usable reports matter as much as method [@molich2004comparative]. Thinking-aloud testing has its own evaluator effect when sessions are analyzed [@hertzum2001evaluator], so more than one person should analyze each session.
+
+::: {.rule #USE-070 grade="C"}
+**Record each session as task success, time, and a tally of deviations from the intended path, with each deviation classed by behavioral impact.** Deviation counts are cheap and comparable across sessions [@faulkner2003beyond], and behavioral severity avoids unreliable expert ratings [@lewis1994sample].
+
+*In LTF:* a one-page session sheet per task with columns for deviation, impact (stall, wrong action, help request, task failure), and the screen element involved, kept with the round's report.
+:::
+
+::: {.rule #USE-071 grade="B"}
+**Have at least two people analyze each test session independently before problems are listed.** The evaluator effect applies to thinking-aloud analysis as much as to inspection [@hertzum2001evaluator]. Graded B because the remedy follows from the evidence rather than being tested itself.
+
+*In LTF:* record sessions (with consent) so that a second person can analyze them; the merged list follows the same rules as an inspection merge (USE-059, USE-061).
+:::
+
+::: {.rule #USE-072 grade="C"}
+**Write tasks, success criteria and the problem definition before the first session, and narrow each round to one flow.** Testing small feature sets iteratively finds more than one broad test, and quality of method and reporting matters [@molich2004comparative].
+
+*In LTF:* one round tests one flow (landing to first lesson complete; Brief to debrief; mid-flight lookup), with the behavioral goal from USE-005 as its success criterion.
+:::
+
+### Cheap and frequent beats rare and large
+
+Krug's argument for testing "on 10 cents a day" is that testing must be simple and cheap enough that teams actually do it, often, with the whole team watching [@krug2014dont]. It is advocacy in the discount-usability tradition, and the variance results above temper it: a cheap round is a sample. But the alternative LTF faces is not a large rigorous study; it is no testing at all, which Gould and Lewis found to be the common case [@gould1985designing]. Small, frequent rounds are the practical answer, as long as their results are reported as samples.
+
+### What this means for Learn to Fly
+
+The plan has no usability testing step. The protocol below fits a small team and the public beta.
+
+- Before each phase that changes a learner-facing flow, run at least two rounds of about five learners per group, with fixes between (USE-064, USE-069), in the learner's own setup with the sim running for challenge and Fly mode flows (USE-063).
+- Write tasks, criteria and the stopping rule first (USE-072, USE-067); log deviations and behavioral impact (USE-070); have two people analyze each session (USE-071).
+- Report results as samples (USE-065), size open tasks larger (USE-066), and read every session for blockers (USE-068).
+- The beta's `ReportProblemDialog` reports are a useful supplement but not a test: they come from learners who chose to report, about problems they recognized as problems.

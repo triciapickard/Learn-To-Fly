@@ -231,7 +231,7 @@ One frame deserves review. "Gold is checkride-ready" borrows the language of a r
 ::: {.rule #DEC-019 grade="C"}
 **Review any copy that borrows real-world credentials or examinations so that its net impression stays inside the simulator.** The FTC holds firms responsible for the net impression of a design, not only its individual words [@ftc2022bringing], and a frame shapes what the reader takes away [@tversky1981framing]. Graded C.
 
-*In LTF:* revise "Gold is checkride-ready" on the landing page and anywhere `TierBadge` copy repeats it, and keep the "not a pilot certificate" sentence next to `CourseBadge` on `DashboardPage`.
+*In LTF:* revise "Gold is checkride-ready" on the landing page and anywhere else the phrase is reused, and keep the "not a pilot certificate" sentence next to `CourseBadge` on `DashboardPage`.
 :::
 
 ### What this means for Learn to Fly
@@ -299,7 +299,7 @@ Not every default is a dark pattern. The default effect is a reason to set defau
 ::: {.rule #DEC-026 grade="B"}
 **Do not forecast a large effect from a new default; plan for the smaller, variable effect the meta-analytic evidence shows.** Cross-country consent gaps overstate the effect of a default on outcomes, and default effects vary widely across studies and domains [@johnson2003defaults; @maier2022no]. Graded B.
 
-*In LTF:* if a reminder or "review tomorrow" default is ever tested, write down the expected effect as a range that includes zero before the test runs (see DEC-066).
+*In LTF:* if a reminder or "review tomorrow" default is ever tested, write down the expected effect as a range that includes zero before the test runs (see DEC-073).
 :::
 
 ### What this means for Learn to Fly
@@ -381,7 +381,7 @@ Time pressure is one of the four moderators, and Fly mode is where it is highest
 ::: {.rule #DEC-034 grade="C"}
 **Offer no menus or settings choices during a flight on `FlyModePage`; every choice is made before the learner starts flying.** Time pressure raises overload in the moderator account [@chernev2015choice], and a learner flying the sim has the least spare attention of any LTF user. Graded C.
 
-*In LTF:* `FlyPanel large` has steps, a stopwatch and "Finish and debrief". Keep it that way. The "Keep the screen on while flying" option and any timer setup belong before the flight starts, on the Fly tab.
+*In LTF:* `FlyPanel large` has steps, a stopwatch and "Finish and debrief". Keep it that way. The "Keep the screen on while flying" option and any timer setup are set before the learner starts flying, at the top of the panel, and nothing new is offered once the flight is under way.
 :::
 
 ### What this means for Learn to Fly
@@ -445,7 +445,7 @@ The definition of a nudge carries its own ethical test: no option is removed, in
 ::: {.rule #DEC-039 grade="C"}
 **Where a prompt supports a safety habit, justify it by the value of the habit, not by a claimed percentage improvement.** The evidence for average nudge effects is too weak to support a number [@maier2022no], while the habit itself (reviewing a checklist, reading the brief) is justified by the instructional content. Graded C.
 
-*In LTF:* the large "I'm set up, start flying" button at the end of `BriefTab` is a structural prompt to read the brief first. Keep it; do not add a "pilots who brief first score higher" message unless LTF's own data, collected under DEC-066, support it.
+*In LTF:* the large "I'm set up, start flying" button at the end of `BriefTab` is a structural prompt to read the brief first. Keep it; do not add a "pilots who brief first score higher" message unless LTF's own data, collected under DEC-073, support it.
 :::
 
 ### Nudging and the learner's own goals
@@ -849,3 +849,94 @@ The consequence is direct. LTF cannot detect the small effects that nudges plaus
 
 Keep the grade letters as the visible evidence record for every rule. Change the pull request template so any behavioral claim carries its evidence type and a halved effect estimate. Build a one-page experiment note (metric, sample rule, stopping date, variants, all results) and require it before any test. At current traffic, decide small details from principles and learner sessions, not from A/B tests. Apply the same discipline to what LTF tells learners about outcomes.
 
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+1. **One recommended path at every first choice.** The landing CTA goes straight to the first incomplete lesson, `LessonPath` shows a single current pin, the `DashboardPage` Continue card leads, and any future onboarding opens without a path picker. The recommendation says why it is recommended. Rules: DEC-002, DEC-022, DEC-028, DEC-030.
+2. **Full lists stay full on browse screens.** `ChallengesPage`, the airports and resources lists, the glossary and the reference rail show everything, with filters and a "Showing n of n" count. No list is cut to a rule-of-thumb length, and the jam study is not cited in design reviews. Rules: DEC-027, DEC-029, DEC-031, DEC-033.
+3. **The end of a lesson has one primary next action.** The next-lesson card or the intended challenge carries the weight; "Go deeper" and the rest stay secondary. Rule: DEC-032.
+4. **Defaults serve the learner and privacy defaults are private.** "Remember me" stays unticked, the theme defaults to "System", the terms box is unticked, quizzes and debrief rubrics render with nothing selected, and any future sharing, profile, reminder or email setting defaults to off and can be changed where it appears. Rules: DEC-020, DEC-021, DEC-023, DEC-024, DEC-025.
+5. **Gain frames, held consistently, and no loss-framed engagement copy.** Bronze is "safe" everywhere; the sign-up prompt says what an account adds; no streaks, guilt or "you'll lose" copy. Rules: DEC-014, DEC-015, DEC-068.
+6. **"Checkride-ready" is revised so the net impression stays in the simulator.** The certificate disclaimer, the simulation-only lines and the honesty signals stay visible and specific. Rules: DEC-019, DEC-058, DEC-061.
+7. **Content rules for decisions inside lessons.** Ordered cues with stopping points, no stray numbers in quiz stems, ascending numeric options, constant quiz polarity, counts with bases for any risk statement, sourced frequency (or a `verify` callout) beside incident stories, and explanations that name the tempting wrong answer. These become `/review-lesson` checks. Rules: DEC-003, DEC-008, DEC-010, DEC-012, DEC-016, DEC-017.
+8. **Exits are as easy as entries.** Sign-up, deletion and export stay in balance, with one neutral confirmation on deletion and none on export; no retention offers or surveys before leaving; a friction ledger records every deliberate obstacle. Rules: DEC-041, DEC-042, DEC-043, DEC-047.
+9. **Fly mode carries nothing that does not serve the flight.** No menus, prompts, sign-up messages, upsells or decorative numbers; the `BetaBanner` is kept off the second screen during a flight. Rules: DEC-007, DEC-034, DEC-046, DEC-063.
+10. **No documented dark pattern ships.** No timers, scarcity, false activity, confirmshaming, hidden information, obstruction or trick wording; decline options are equal in size and neutral in words; dismissed prompts stay dismissed; third-party embeds are audited. Rules: DEC-048 to DEC-055.
+11. **Disclosures are legible.** The landing simulation-only note moves to a stronger ink level after a contrast check in both themes, and every disclosure sits in the reading path near the action it qualifies. Rule: DEC-059.
+12. **A compliant baseline for any future paid feature.** Price, frequency and trial end before payment details, all fees in the first price, affirmative consent, cancellation in the same place and steps. Rule: DEC-060.
+13. **Feedback informs; rewards mark competence; comparison is with oneself.** Criterion-by-criterion debriefs, named tiers, no points for visiting, no public leaderboard. Rules: DEC-065, DEC-066, DEC-067, DEC-069.
+14. **Behavioral claims carry their evidence.** Every claimed effect is graded, halved, and tested only under a written experiment note with enough power; small details are decided from principles at current traffic; LTF's own claims to learners need LTF's own data. Rules: DEC-035, DEC-071 to DEC-077.
+15. **Every persuasive element passes the disclosure test.** The pull request states, in one sentence, what the design does to the learner's decision, and ships only if the learner would agree it serves them. Rules: DEC-038, DEC-040, DEC-070.
+16. **The self-scored debrief preview is tested before it is changed.** Rule: DEC-013.
+
+### Review checklist
+
+Run these questions against a pull request or a page. A "no" to a question marked as a requirement blocks the change until it is fixed or a written reason is accepted.
+
+**Choices and paths**
+
+- Where the learner decides what to do next, is there one recommended action, with a reason, and a short set of alternatives? (DEC-002, DEC-022)
+- Is the first-time choice free of path pickers and multi-option forks? (DEC-028, DEC-030)
+- Are browse lists complete, filterable and counted, rather than trimmed to a rule of thumb? (DEC-027, DEC-031, DEC-033)
+- Are compared options described on the same attributes in the same order, with no merged score? (DEC-004, DEC-029)
+- Does the end of a lesson have exactly one primary next action? (DEC-032)
+- Does every challenge and lesson say what "good enough" looks like before the learner starts? (DEC-001)
+
+**Numbers, frames and copy**
+
+- Is every number on the screen decision-relevant, and is the first number the one needed first? (DEC-007)
+- Are benchmarks and estimates shown as honest ranges, and do time estimates include sim time? (DEC-009, DEC-018)
+- Is the frame consistent with the rest of the flow, and free of loss, guilt or streak language? (DEC-014, DEC-015, DEC-068)
+- Does any copy borrow a real credential or examination in a way that reaches beyond the sim? (DEC-019, DEC-058)
+- Would a beginner outside the team read the consent and sign-up copy correctly? (DEC-055, DEC-057)
+
+**Lesson and quiz content**
+
+- Are decisions taught as ordered cues with a stopping point, with cues from aircraft sources only? (DEC-003)
+- Are quiz stems free of stray numbers, numeric options ascending and polarity constant within the set? (DEC-008, DEC-016)
+- Does each risk statement give a count with its base, and each incident story a sourced frequency or a `verify` callout? (DEC-010, DEC-017)
+- Does each distractor's explanation name why it is tempting? (DEC-012)
+- Does each simplified widget say what it leaves out? (DEC-006)
+
+**Defaults and consent**
+
+- Is every default the option an informed learner would pick, with privacy and contact defaults off? (DEC-020, DEC-025, DEC-026)
+- Does every quiz and rubric render with nothing selected? (DEC-021)
+- Can each default be changed with one action where it appears? (DEC-023)
+- Is consent an unticked, separate, affirmative choice? (DEC-024)
+
+**Friction and exits**
+
+- Does every exit (delete, export, unsubscribe, cancel) take no more steps than its entry, with no offer in between? (DEC-041, DEC-042)
+- Is every new friction protective, neutral and recorded in the ledger? (DEC-043, DEC-047)
+- Does each form field have a stated use and a feature that reads it? (DEC-044)
+- Does the learner keep their place and work across sign-up, log-in and errors? (DEC-045)
+- Is Fly mode free of prompts, menus and unrelated messages? (DEC-034, DEC-046, DEC-063)
+
+**Dark patterns**
+
+- Does the flow avoid nagging, obstruction, sneaking, interface interference and forced action, or give a written reason? (DEC-048)
+- Is each new control free of asymmetry, covertness, deception, hidden information and restriction, or justified in writing? (DEC-049)
+- Are decline options equal in size and form to accept, and worded neutrally? (DEC-050)
+- Are there no timers, scarcity or activity messages unless true and explained? (DEC-051)
+- Is any social proof a real, current count, with fallbacks labeled and never inflated? (DEC-036, DEC-052)
+- Has every third-party embed been audited? (DEC-053)
+- Does a dismissed prompt stay dismissed? (DEC-054)
+- Is there no hidden information, obstruction or trick wording on consent, account, data or payment screens? (DEC-055)
+- Are disclosures legible in both themes and placed near what they qualify? (DEC-059)
+- If anything is charged, does the plan screen meet the payment baseline? (DEC-060)
+- Are the honesty signals intact? (DEC-061)
+
+**Persuasion and evidence**
+
+- Does the pull request state, in one sentence, what the design does to the learner's decision, and would the learner agree? (DEC-038, DEC-070)
+- Is the targeted metric one the learner cares about, and is learning measured alongside engagement? (DEC-040, DEC-076)
+- Is a stall addressed by making the step easier before adding motivational copy? (DEC-037, DEC-062, DEC-064)
+- Is feedback informational, are rewards tied to named competence, and is comparison only with the learner's own history? (DEC-065, DEC-066, DEC-067)
+- Does each effortful step say why it matters? (DEC-069)
+- Does any claimed behavioral effect state its evidence type and a halved size, with no forecast lift from a nudge? (DEC-026, DEC-035, DEC-039, DEC-071, DEC-072)
+- If a test is proposed, is the experiment note written first, is the sample size reachable, and will every variant and null result be reported? (DEC-073, DEC-074, DEC-075)
+- Is every outcome claim made to learners backed by LTF's own data? (DEC-077)
+- Does nothing depend on behavioral priming? (DEC-011)
+- If the debrief preview changes, was the test in DEC-013 run first? (DEC-013)

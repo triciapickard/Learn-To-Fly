@@ -797,3 +797,97 @@ Expect learners to prefer the blocked version and to score lower on the mixed on
 Use variation in challenges deliberately (LRN-065). The challenge system already has presets, airports and random events. Make the first attempt at a skill standard and later attempts varied, with the Brief stating what changed.
 
 Keep progress honest (LRN-067). The dashboard's "Your progress" bars measure completion, which is fine as long as they are not presented as learning. Measures of learning belong to delayed checks, which the next chapters cover.
+
+## Meaning, cues and the myths of study
+
+### Depth of processing
+
+Craik and Lockhart proposed in 1972 that a memory trace is "a by-product of perceptual analysis" and that "trace persistence is a positive function of the depth to which the stimulus has been analyzed" [@craik1972levels]. Analysis runs from shallow features (what a word looks like, how it sounds) to meaning and association, and deeper analysis yields a more durable trace. They distinguished two kinds of rehearsal. Maintenance rehearsal, their Type I processing, repeats analyses already done and keeps an item accessible "without leading to formation of a more permanent memory trace". Type II processing analyzes the item more deeply and is the kind that improves memory. Time spent rehearsing improves memory only when it is Type II.
+
+Most of the support came from incidental learning experiments, where an orienting task forces a kind of processing and memory is then tested by surprise [@craik1972levels]. Free recall after a task that treated each word as a meaningful unit equaled that of people told to learn, and both were far better than recall after a task that treated the word structurally, such as checking its letters. Scanning a list for words denoting living things gave better surprise recognition than scanning for words containing a given letter, with about the same scanning time. The instruction to learn helped only insofar as it produced better processing. The authors built in a caution: identical orienting tasks do not have equivalent effects across paradigms, and beyond a point the processing that proves effective depends on the match between encoding and retrieval.
+
+The framework is influential and contested. Criticisms reported in secondary sources (not the paper itself) are that depth is inferred from good recall and then used to explain it, that it is hard to know what level a task induces, and that the framework describes rather than explains [@craik1972levels]. The practical consensus is that processing for meaning beats processing for surface features, and that retrieval and spacing add benefits depth alone does not capture. Dunlosky and colleagues rate self-explanation and elaborative interrogation (asking why a fact is true) moderate utility, because they had not been adequately evaluated in educational contexts [@dunlosky2013improving].
+
+### The cue must match the memory
+
+Tulving and Thomson's encoding specificity principle holds that what is stored depends on how an item was encoded, and what is stored determines which retrieval cues work [@tulving1973encoding]. A cue is effective when information about it was part of the original encoding. In the best-known demonstration, people studied a target word beside a weak associate; later, given a strong associate of the target as a cue, they often failed to produce or even recognize it, yet recalled it when given the original weak cue. Thomson later stated the principle as the effectiveness of a cue "varies directly with the extent it matches the format of the to-be-remembered information stored in memory". The paper itself was not available to this Part's research, and these details come from secondary accounts.
+
+The principle's core claim about cues is better supported than its popular corollary about physical context [@tulving1973encoding]. Critics argue that encoding-retrieval overlap is correlational and that distinctive cues may matter more, and context effects are strongest in free recall and weaker when strong cues are present. The best-known applied example, divers who learned word lists on land or underwater, did not replicate in a 2021 attempt by Murre with 16 divers (*Royal Society Open Science*): the interaction was not significant (F = 1.999, p = 0.163), and the author concluded the original effect was not reproduced.
+
+For a product, the robust version of the principle is about the cues, not the room. A learner who has only ever met a checklist item as a line of text in a lesson may not retrieve it when the cue is an indication on a sim panel. Practice should use the cues the learner will actually meet.
+
+::: myth
+**"Study in the same place you will be tested and the setting will bring the memories back."** The classic underwater-and-on-land diver study did not replicate in a 2021 attempt, and context effects shrink when good retrieval cues are present (see the evidence summarized with @tulving1973encoding). What transfers is the match between the cues present at learning and at recall, not the physical surroundings.
+:::
+
+### Learning styles
+
+The learning-styles idea is that people differ in which mode of instruction is most effective for them, usually in the "meshing" form: teach a "visual learner" visually and an "auditory learner" aurally [@pashler2008learning]. Pashler and colleagues set out what a valid test requires: classify learners by style, randomly assign each group to several methods, give all the same test, and find a crossover interaction in which the method best for one style is not best for another. The literature is enormous, but very few studies used that design, and of those that did, several found results that "flatly contradict the popular meshing hypothesis". The conclusion: "there is no adequate evidence base to justify incorporating learning-styles assessments into general educational practice". The authors are careful not to claim every version has been disproved; many have never been properly tested.
+
+A 2018 mini-review by Aslaksen and Loras in *Frontiers in Psychology* found 10 studies (13 experiments) meeting Pashler's criteria; pooled effects of matching were small and not significant (visual matching g = -0.09, auditory g = -0.27), leaning "clearly" toward no effect while noting how few studies there are. Belief remains widespread: the same review cites 93 percent of UK teachers in one survey assuming people learn better in their preferred style, and 58 percent of 114 UK academics believing in learning styles in a 2017 survey. People do have preferences and do differ in specific aptitudes [@pashler2008learning]; what lacks support is the claim that matching instruction to a preference improves learning. Dual coding gives every learner both verbal and imaginal systems and assigns no one to a type [@paivio1986mental].
+
+::: myth
+**"Find out whether each learner is visual, auditory or kinesthetic and teach them that way."** Properly designed tests of the matching hypothesis are rare and several contradict it [@pashler2008learning]; a 2018 review of the qualifying studies found no significant benefit of matching. Choose formats by the content, for every learner.
+:::
+
+### Techniques that feel productive and are not
+
+Dunlosky and colleagues rated ten techniques students use on their own [@dunlosky2013improving]. Practice testing and distributed practice were rated high utility. Elaborative interrogation, self-explanation and interleaved practice were moderate. Summarization, highlighting or underlining, the keyword mnemonic, imagery use for text learning and rereading were low: rereading and highlighting are widely used but "do not consistently boost students' performance". The ratings are expert judgments of generalizability from a 2013 literature, not a meta-analysis, and they rate techniques students choose, not techniques a product builds in. Make It Stick translates the same findings for general readers: underlining, rereading and cramming create a feeling of mastery whose gains fade, while self-testing, spacing and interleaving build durable learning [@brown2014make].
+
+::: {.rule #LRN-068 grade="B"}
+**For each procedure step, ask the learner why it is there and what would happen if it were skipped.** Processing for meaning produces more durable memory than repeating surface form [@craik1972levels], and self-explanation and elaborative interrogation are rated moderate utility [@dunlosky2013improving].
+
+*In LTF:* a "Why this step?" prompt can follow a checklist in a lesson, or be a `single` `QuizBlock` whose options are reasons. The `checklist-runner` widget can reveal each item's purpose on request.
+:::
+
+::: {.rule #LRN-069 grade="C"}
+**Write explanations around what an indication means for the airplane, not around what it looks like.** Semantic analysis yields more durable traces than structural analysis [@craik1972levels]. Graded C: the framework is contested and the application is an inference.
+
+*In LTF:* lesson copy for a gauge says what a change on it tells the pilot to do or expect, with the visual description in the widget label.
+:::
+
+::: {.rule #LRN-070 grade="B"}
+**Practice retrieval with the cues the learner will meet in the sim: an indication, a scene, a sound, a phrase.** A cue works when it was part of the original encoding, and a strong but unmatched cue can fail where a matched weak cue succeeds [@tulving1973encoding]. Graded B: the core principle is well cited; its applied forms are mixed.
+
+*In LTF:* quiz prompts can show a `g1000-pfd` or `airspeed-indicator` state and ask what it means, instead of asking for a definition. Fly mode steps should name the indication as the sim shows it.
+:::
+
+::: {.rule #LRN-071 grade="C"}
+**Use the same words for the same thing in lessons, checklists, quizzes, Fly mode and, where possible, the sim's own labels.** Retrieval depends on the match between the cue and what was encoded [@tulving1973encoding]; changing the name changes the cue. Graded C.
+
+*In LTF:* `content/glossary.yaml` is the authority (`v1.md` Section 12.4). Add a review check that checklist items and `procedure` steps use glossary terms, and note in the glossary where the sim labels a control differently.
+:::
+
+::: {.rule #LRN-072 grade="B"}
+**Do not tell learners that studying beside the sim or in a particular setting will lock in memory.** The headline physical-context study did not replicate [@tulving1973encoding], and context effects weaken when good cues are present.
+
+*In LTF:* copy about using LTF on a second screen should justify it by convenience and by showing the right cues, not by context-dependent memory.
+:::
+
+::: {.rule #LRN-073 grade="A"}
+**Do not offer learning-style assessments, "visual" or "auditory" tracks, or copy that describes learners by style.** The matching hypothesis lacks support in properly designed studies and several contradict it [@pashler2008learning]; both coding systems are present in every learner [@paivio1986mental].
+
+*In LTF:* choose diagrams for spatial content (instrument layouts, patterns) and text for logical content, for everyone. Captions, transcripts, text size and the Day and Night themes are access features, never labeled as style matching.
+:::
+
+::: {.rule #LRN-074 grade="B"}
+**Do not present highlighting, rereading or copying summaries as ways to study.** They are rated low utility and do not consistently improve performance [@dunlosky2013improving]; retrieval and spacing are the replacements.
+
+*In LTF:* a future highlight or bookmark tool is a convenience, not a study method. A "how to learn with Learn to Fly" page should recommend recall and spaced review, in a sentence each.
+:::
+
+::: {.rule #LRN-075 grade="C"}
+**Do not treat a well-explained lesson as a substitute for later retrieval.** Meaningful processing helps, but effortful retrieval and spacing add benefits that depth alone does not capture [@craik1972levels; @rowland2014effect]. Graded C.
+
+*In LTF:* a lesson rated clear and thorough in review still needs a later recall item in another lesson.
+:::
+
+### What this means for Learn to Fly
+
+Three things here are already right in LTF and worth protecting. The glossary is the authority for terms (LRN-071). The landing page and lessons make no learning-styles claims (LRN-073). The `Callout` set separates "Sim vs reality" and "In a real airplane", which keeps cues honest about which environment the learner will meet.
+
+Add "why" to procedures (LRN-068). Challenge `procedure` steps and checklists state what to do. A lesson section or a quiz should ask why, and the `checklist-runner` widget can carry each item's purpose.
+
+Make cues look like the sim (LRN-070). The widgets can render the indications a learner will see; quiz prompts built on them practice retrieval with the right cue. Fly mode copy should describe what the learner sees, in the sim's terms.
+
+Keep study advice evidence-based (LRN-074). If LTF writes a page on how to use the course, it should say: recall instead of rereading, come back after a few days, mix topics. Make It Stick shows how to say it plainly; quote no numbers from it.

@@ -674,3 +674,99 @@ The grid code LTF has is careful: zero-minimum tracks, a hanging icon in `Callou
 
 Build the template components first (lesson, reference, collection, dashboard, fly, form, landing), each with named areas, zero-minimum text tracks and token gaps. Convert collections to `auto-fit`. Then use subgrid on the card patterns where side-by-side alignment is visible: the challenge cards, the airports grid and the landing's three-card row. Write the source-order rule into the review checklist, because the lesson and challenge content is procedural and order is part of what it teaches.
 
+## Where attention goes on a page
+
+Layout decides not only what is grouped with what, but what is seen at all. Two large eyetracking datasets from one applied research group describe how attention falls on web pages: steeply down the page, and toward the left edge. Neither describes a committed learner working through a lesson, and both were reported on the web rather than in peer-reviewed form, but they are the best evidence available on where to put what matters.
+
+### Attention falls away down the page
+
+Fessenden's 2018 analysis used the coordinates of over 130,000 eye fixations from 120 participants on a 1920 by 1080 screen, drawn from a larger study across thousands of sites, and compared them with a 2010 study on 1024 by 768 monitors [@fessenden2018scrolling]. Tasks covered news, e-commerce, blogs, FAQs, encyclopedic pages and search results. People scroll more than they used to: 57% of viewing time was above the fold, down from 80% in 2010. But attention still concentrates at the top. 74% of viewing time fell within the first two screenfuls; the second screenful received about 17%, and the remaining 26% was spread thinly across the rest. On general pages over 42% of viewing time fell in the top 20% of the page and over 65% in the top 40%. Above the fold, over 65% of viewing time was in the top half of the viewport. A sharp drop in attention after the fold appeared in both studies, and by 2018, 81% of viewing time fell within the first three screenfuls [@fessenden2018scrolling].
+
+The article lists its own caveats. It could not separate bigger screens from changing design trends; the 74% figure ignores page length, so it may reflect short pages or users giving up; the 2010 comparison used different screens; and the data describe casual browsing of public sites [@fessenden2018scrolling]. Learners who have chosen a lesson and intend to finish it probably scroll further. Its recommendations still apply: reserve the top for high-priority content and key actions, add signifiers such as cut-off content so that a gap does not look like the end of the page (a "false floor"), and test page length with real users [@fessenden2018scrolling].
+
+### Attention favors the left edge
+
+Nielsen's 2006 study tracked 232 users viewing thousands of pages and found a dominant pattern resembling the letter F: a horizontal movement across the upper content, a second, usually shorter horizontal movement lower down, and a vertical scan down the left side, sometimes slow and systematic, sometimes fast and spotty [@nielsen2006f]. The recommendations follow from the shape: assume users will not read word by word on first contact; put the most important information in the first two paragraphs; start subheads, paragraphs and bullets with information-carrying words, because the left edge is noticed most and the third word on a line is read much less often than the first two. The page notes that a later study confirmed the findings [@nielsen2006f].
+
+The article itself qualifies the F. It is a rough general shape, not a uniform pattern: some users read a third horizontal band (an E) or only one (an inverted L), and the distance between bars varies with the page, as when a product image lowered the second bar [@nielsen2006f]. The pattern describes uncommitted scanning of text-heavy pages. It is a description of poor-case behavior to design against, not a template to design toward.
+
+::: myth
+**"Design the page in an F shape."** The F-pattern describes how people scan text they have not committed to read; the study's own recommendations are to front-load words and structure text so that a scanner still gets the point, not to arrange content along an F [@nielsen2006f]. The pattern varies with page design and task, so a layout built to it fits one observed case.
+:::
+
+### Line spacing for scanning
+
+Ling and van Schaik studied visual search of web pages and found that greater line spacing improved accuracy and reduced reaction times [@ling2007influence]. This seems to conflict with the finding that leading did not change reading performance [@chaparro2004reading], but search and continuous reading are different tasks and the stimuli cannot be compared, so the fair conclusion is that line spacing matters more where people scan for a target. In LTF the scanned surfaces are lists: checklists, step lists in `FlyPanel`, the speeds table, the curriculum's lesson rows, the reference search results.
+
+### The top of the lesson page
+
+Applied to LTF, the attention data raise a concrete question: what does a learner see in the first screenful of a lesson on a phone? By the code, above the first lesson block sit the `BetaBanner` (a multi-line notice on a narrow screen), the 64 px sticky `Header`, breadcrumbs (reduced to the parent on phones), the mono lesson code, the h1, the meta row, then, depending on state, the `UnverifiedWarning` for drafts, the `SignupBanner` for signed-out visitors, the resume bar, the objectives `Card`, and the sticky `MobileSectionSelect`, followed by a `mt-6` gap. Each is relevant. Together, for a signed-out learner on a draft lesson, they are likely to fill the first screen before the first sentence of teaching appears; this has not been measured and should be. The objectives box is the one element in the stack that belongs at the top by Fessenden's recommendation; the signup prompt and the resume bar compete with it.
+
+The challenge brief has the reverse problem. `BriefTab` places Goal, "Sim setup", "Recommended lessons", Procedure, "How you'll be scored" and the safety and tip `Callout`s before the large "I'm set up, start flying" button. That order follows the task, and a committed learner will scroll; but the safety callout sits near the end of a long tab, where attention is thinnest.
+
+::: {.rule #GRD-064 grade="B"}
+**Put each page's objective, its primary next action and any safety-relevant item within the first screenful at the smallest supported width.** Attention concentrates at the top of pages and drops sharply after the fold [@fessenden2018scrolling]. The data are a large observational sample of casual browsing, not learners, so B.
+
+*In LTF:* on `LessonPage` the objectives box and the first section heading should be visible on a phone without scrolling for a signed-out visitor; on `ChallengePage`, the goal, a one-line safety note if the challenge has one, and the route to the Fly tab belong at the top of the Brief.
+:::
+
+::: {.rule #GRD-065 grade="C"}
+**Set a first-screen budget for each reading template (what may sit between the page title and the first content block) and test it on a phone.** Space at the top of the page is the most viewed space there is [@fessenden2018scrolling], so each element placed there displaces content. The budget is a design convention.
+
+*In LTF:* for lessons: title, meta row and objectives, plus at most one state notice. Combine `UnverifiedWarning`, `SignupBanner` and the resume bar into a single compact notice row, choosing the most relevant one, and move the others to the completion panel or the section nav.
+:::
+
+::: {.rule #GRD-066 grade="B"}
+**Never let a gap, a full-width band or a closed panel at the bottom of the first screen look like the end of the page; show the start of what follows.** Fessenden recommends signifiers such as cut-off content to avoid false floors [@fessenden2018scrolling].
+
+*In LTF:* the landing page's alternating `canvas` and `surface` bands with `py-16 sm:py-24` padding can produce a screen that ends in empty band; check the first two screens of the landing at common phone and laptop heights, and make sure the next band's heading is visible.
+:::
+
+::: {.rule #GRD-067 grade="B"}
+**Break long pages into short sections, each opening with a heading and a sentence that states its point.** Attention is top-heavy within any scrolled region, and scanners take in headings and the first words of paragraphs [@fessenden2018scrolling; @nielsen2006f]. Short sections give each part its own top.
+
+*In LTF:* lesson sections already have headings and a `SectionNav`; set a content guideline in `content/README.md` that each section's first sentence states what the learner will do or know, and keep sections short enough that most fit within two phone screens.
+:::
+
+::: {.rule #GRD-068 grade="B"}
+**Start every heading, step, list item and button label with the word that carries its information.** The left edge is noticed most, and words beyond the first two on a line are read much less often [@nielsen2006f]. The observation is well documented, though unpublished in peer-reviewed form, so B.
+
+*In LTF:* write step labels as action first ("Set the parking brake", as a copy example only, not a procedure); write card titles and curriculum rows with the distinguishing word first. Part XXIV, Writing and Microcopy covers wording; this rule is the layout reason for it.
+:::
+
+::: {.rule #GRD-069 grade="C"}
+**Do not arrange page content to fit the F-pattern or any other gaze template; structure the text so a scanning reader still gets the point.** The F is a rough description of uncommitted scanning that varies with design and task [@nielsen2006f].
+
+*In LTF:* no template places content in two horizontal bands and a left stem by design; the lesson remains a single column with front-loaded headings, and the landing page is not rearranged around a gaze diagram.
+:::
+
+::: {.rule #GRD-070 grade="C"}
+**In lists and tables that learners scan, put the item name or action at the left edge and the value or response at one consistent position to its right.** The left edge carries the scan [@nielsen2006f], and alignment on shared edges lets the eye run down one line [@williams2014nondesigners].
+
+*In LTF:* the `checklist` block, the `FlyPanel` steps and the sim-setup `dl` in `BriefTab` (already `12rem` labels against values) follow this; extend it to the checklist pages under `/reference/checklists/:slug`, with responses aligned in one column and set in `readout` for values.
+:::
+
+::: {.rule #GRD-071 grade="B"}
+**Give scanned lists more line and row spacing than running prose.** Greater line spacing improved accuracy and reaction time in visual search of web pages [@ling2007influence]. The full paper was not read and the spacing values are unknown, so B.
+
+*In LTF:* checklist rows, `FlyPanel` steps (already `text-lg` with checkbox rows) and the curriculum's `min-h-11` link rows have room; keep row heights at or above the 44 px control size there, and do not tighten them to fit more on screen.
+:::
+
+::: {.rule #GRD-072 grade="C"}
+**Treat published scroll-depth and gaze figures as starting assumptions, and measure scroll depth and section reach on LTF's own pages before setting page lengths.** The available data describe casual browsing with stated limits [@fessenden2018scrolling]; committed learners are a different population.
+
+*In LTF:* record which lesson sections are reached (the scroll-spy in `useScrollSpy` already knows the active section, and `saveSectionMutate` stores the last section for signed-in learners) and review the distribution before changing lesson length guidance.
+:::
+
+::: {.rule #GRD-073 grade="C"}
+**Put a page's primary action where its task ends, and repeat it at the top only when the task can be done without reading the page.** Attention favors the top [@fessenden2018scrolling], but a "start" button above a procedure the learner has not read invites starting unprepared.
+
+*In LTF:* "I'm set up, start flying" at the end of `BriefTab` and "Mark lesson complete" at the end of the lesson are correctly placed. A returning learner who has read the brief needs a short route to the Fly tab near the top; the tab bar already provides it, so no second button is needed.
+:::
+
+### What this means for Learn to Fly
+
+The lesson's single column, front-loaded section headings and `SectionNav` already suit a top-heavy, left-heavy reading pattern. Keep them, and keep the completion action at the end of the lesson. The problem is the top of the lesson page: too many state elements stack between the title and the teaching. Set a first-screen budget, collapse the notices into one row, and measure on a phone what a signed-out learner sees before scrolling.
+
+In the challenge brief, move a one-line safety summary to the top when a challenge has a `safety` callout, leaving the full callout in place below. In lists, keep the left edge for action words and a consistent column for values, and keep row spacing generous. Finally, instrument section reach using the scroll-spy data the lesson page already computes, so future decisions about lesson length rest on LTF's learners, not on casual browsers.
+

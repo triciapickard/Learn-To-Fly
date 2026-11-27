@@ -820,3 +820,85 @@ Completeness second. Verification status is shown for speeds and checklists, not
 Third, the risk that grows with quality. Every improvement this book recommends to the look of LTF raises the credibility of whatever is on the page. That is the purpose when the content is verified, and a hazard when it is not. Production never seeds drafts, according to the `UnverifiedWarning` code comment, but the repository is public, and anyone running it locally sees drafts rendered in the same polished layout. AES-053 keeps the warning loud precisely because the layout around it is getting better.
 
 Finally, one copy decision. The landing page says "Bronze means you did it safely. Gold is checkride-ready." It is a good line, and it borrows the authority of a real checkride for a simulator tier. AES-061 does not forbid it; it asks that a reviewer decide whether a beginner could read it as a real-world claim, and if so, add the qualifier the `CourseBadge` already uses.
+
+## Testing appeal and trust without fooling yourself
+
+### Why a method is needed
+
+Every chapter of this Part has found a way in which judgments of appeal, ease and trust go wrong when they are collected carelessly. Ratings of beauty and ease given together collapse into one judgment [@tractinsky1997aesthetics]. Ratings before use are inferences from looks [@hassenzahl2010inference]. Polish changes task times as well as ratings, so a comparison of a finished design with a rough one tells you little [@sonderegger2010influence]. The direction of the aesthetics-usability effect depends on which manipulation is stronger [@tuch2012beautiful]. First impressions are stable but differ by age and education, and admired designs divide people [@reinecke2013predicting]. Liking moves with exposure [@montoya2017reexamination]. Credibility judgments made in seconds are biased by design and say nothing about accuracy [@robins2008aesthetics]. Desire survives failure [@norman2004emotional].
+
+These are not reasons to avoid measuring appeal and trust. They are a specification for measuring them properly. This chapter assembles that specification into a protocol LTF can run with a handful of learners, and adds the rules the earlier chapters did not cover.
+
+### Four questions, four instruments
+
+The evidence supports separating four questions and using a different instrument for each:
+
+| Question | Instrument | When |
+| --- | --- | --- |
+| First impression | 500 ms glance, one appeal rating | First-contact pages |
+| Perceived aesthetics | VisAWI-S or Lavie and Tractinsky items | After a task |
+| Usability | Completion, time, errors, abandonment | During a task |
+| Credibility | "How far would you trust this page?" with reasons | After reading |
+
+The glance test follows Lindgaard and Tuch: show each page for about 500 ms, or 50 ms with a mask, and collect one appeal rating [@lindgaard2006attention; @tuch2012role]. The aesthetics instrument is a validated multi-item scale, collected after a task so that the halo has had a chance to fade [@moshagen2010facets; @lavie2004assessing]. Usability is measured by behavior, not by asking. Credibility is asked after the person has read the page, with an open question about reasons, which is how Fogg's study collected its comments [@fogg2003how]; the reasons tell you which cues were noticed.
+
+### Sampling the right people
+
+The research samples were mostly students, and several studies showed that the population changes the answer. First impressions varied with age and education [@reinecke2013predicting]; the beauty-usability correlation differed between Japanese and Israeli raters [@tractinsky1997aesthetics]; adolescents may weigh appearance more than adults [@sonderegger2010influence]. For LTF the intended learner is a beginner who has never flown, of any adult age, often at a desk with the simulator running and a second screen beside it. Testing only with experienced simmers or with the people who built the product samples the wrong population twice: they know the domain and they know the product.
+
+### Comparing like with like
+
+When two variants are compared, the evidence asks for three controls. Equalize finish, or report which variant is more finished, because polish alone moves both ratings and performance [@sonderegger2010influence]. Report how different the variants are on each dimension, because the stronger manipulation wins [@tuch2012beautiful]. And when a variant is more novel, check that it has not lost typicality in the process, because the two suppress each other [@hekkert2003most].
+
+### Measuring complexity directly
+
+Reinecke's complexity model counted text groups, image areas and the area of text and non-text in a screenshot [@reinecke2013predicting]. A team can make a crude version of that count by hand or with a script, and use it to compare a page with its previous version or with sibling pages. Rosenholtz and colleagues' clutter measures (Feature Congestion, Subband Entropy and Edge Density) are computable from an image and capture different aspects of clutter; Feature Congestion includes color variability, which the other two do not [@rosenholtz2007measuring]. Later comparisons found no single clutter index settled, and human judgments of clutter themselves agree only moderately, and the measures were validated on photographs, maps and visualizations rather than interface screens [@rosenholtz2007measuring]. Use them to flag outliers for human review, never as a pass or fail threshold.
+
+::: {.rule #AES-062 grade="B"}
+**Recruit test participants from the intended audience, including older adults and people who have never flown, not only from experienced simmers or the team.** First impressions varied with age and education [@reinecke2013predicting], the beauty-usability link varied across cultures [@tractinsky1997aesthetics], and the age of the sample may change how much appearance matters [@sonderegger2010influence].
+
+*In LTF:* the moderated beginner session in AES-009 recruits at least some participants over 45 and some with no aviation background, and records both facts with the results.
+:::
+
+::: {.rule #AES-063 grade="B"}
+**Never use a single-item "how good does this look" or "how easy does this look" rating as evidence for a design decision.** Two single-item scales rated on the same screen correlated at 0.921, which leaves open that they measured one overall judgment [@tractinsky1997aesthetics]. Multi-item validated instruments exist and separate facets [@lavie2004assessing; @moshagen2010facets].
+
+*In LTF:* the post-lesson question in AES-005 is a monitoring signal only; design decisions use the instruments in the four-question table of this chapter.
+:::
+
+::: {.rule #AES-064 grade="C"}
+**Run every appeal, credibility and complexity check in both themes and at phone and desktop widths.** First-contact judgments form in a glance [@lindgaard2006attention], and learners land in whichever theme their system or their last choice sets. A page that is calm in Day and harsh in Night has two first impressions. This is a procedural consequence of the evidence, not a separate finding.
+
+*In LTF:* the screenshot set for any review covers Day, Night, phone and desktop; the inline theme script in `index.html` means a learner's first paint is already in their theme, so neither is secondary.
+:::
+
+::: {.rule #AES-065 grade="B"}
+**Use a computed complexity or clutter count to flag pages for review, and never as a pass or fail threshold.** Counts of text groups and image areas predicted perceived complexity well in one model [@reinecke2013predicting], and computable clutter measures capture real properties of displays, but no single index is settled and none was validated on interface screens [@rosenholtz2007measuring].
+
+*In LTF:* a script that screenshots each route and computes an edge-density or text-group count can run in design review; a page whose count jumps relative to its siblings or its previous version is looked at by a person.
+:::
+
+::: {.rule #AES-066 grade="C"}
+**Keep a baseline: record each first-contact page's glance rating, facet scores and task results before a redesign, and compare after.** Every measure in this Part is most informative as a comparison, because absolute ratings vary with samples and award-winning design itself divides raters [@reinecke2013predicting]. This is method guidance, not a tested effect.
+
+*In LTF:* store the baseline screenshots and results under `docs/` with the date and commit, next to the verification records the project already keeps in `docs/verification/`.
+:::
+
+::: {.rule #AES-067 grade="C"}
+**Ask credibility questions with an open "why", and treat the reasons as data about which cues were noticed.** Under prominence-interpretation theory a cue must be noticed and interpreted to matter, and open comments revealed which factors people used [@fogg2003how]. What people say is not proof of what changed their judgment, so the reasons guide redesign; they do not measure its effect.
+
+*In LTF:* after a participant reads a lesson, ask how far they would trust its numbers and why; if no one mentions the verification date or sources, they are not prominent enough (AES-052).
+:::
+
+### What this means for Learn to Fly
+
+LTF does not need a research lab to apply this chapter. It needs a protocol, a small recruitment habit and a place to keep results. A workable version:
+
+1. **Glance test** (15 minutes, five to eight people): the first-contact set (landing, `CurriculumPage`, Lesson 0.1, `SignupPage`, reference hub) in Day and Night at 500 ms, one appeal rating each, against the stored baseline (AES-012, AES-064, AES-066).
+2. **Task session** (30 to 45 minutes, five people who have never flown, some over 45): Lesson 0.1 including its quiz and one widget in "Quiz me" mode, then one challenge through Brief, Fly on a second screen beside the simulator, and Debrief. Record completion, time, errors and moments of visible frustration (AES-009, AES-010, AES-062).
+3. **After the task**: VisAWI-S, one ease question, and the open credibility question for the lesson (AES-026, AES-063, AES-067).
+4. **Between sessions**: the screenshot and complexity script on every route, flagging outliers for human review (AES-065).
+
+The protocol fits the project's existing practice. LTF already keeps in-sim verification records under `docs/verification/` and requires a sim verification list in pull requests that change facts; a design baseline beside them gives visual and interaction changes the same kind of evidence trail. The `/dev/components` page, which renders every component in every state, is the natural place to capture the craftsmanship screenshots in both themes.
+
+What the protocol cannot do is tell LTF what its identity should be. It can tell whether a direction is simpler, more typical in its skeleton, more trusted and easier to use than the current one, and whether a novel element is still recognized. The choice of direction belongs to the brand and identity work in Part XX, Brand Identity and Distinctiveness, and Part XXVI, The Audit and the Identity Playbook; this Part supplies the tests that direction has to pass.

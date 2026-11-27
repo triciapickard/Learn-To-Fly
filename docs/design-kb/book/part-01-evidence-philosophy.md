@@ -710,3 +710,111 @@ The last risk of craft authority is imitation. When a product admires another pr
 The product's distinctive traits are craft decisions, and so are its generic ones. The instrument and chart tokens, the hand-built widgets, the `LessonPath` and the honesty copy came from someone's judgment, not from a test; so did the rounded bordered cards, the eyebrow over every heading, and the lucide icons everywhere. The procedure in this chapter is how to decide which to keep. Separate value, claim and mechanism in every design argument (EVD-049). Default to craft consensus where no experiment applies, and let a relevant experiment overrule it (EVD-050). Constitute review around qualified judges (EVD-051), make every "feels wrong" into a fact (EVD-052), and stop debating blameless choices (EVD-053).
 
 Keep the automated checks the repository already runs (the hooks that lint, format, validate content and typecheck) and extend them to design facts that can be made certain, such as forbidding raw hex and raw Tailwind size classes where a type utility exists (EVD-054). Change the review of borrowed patterns: every pattern that resembles a common template must name the Learn to Fly principle it serves, or go (EVD-055).
+
+## What kind of problem is this? Fit, satisficing and wicked problems
+
+Evidence answers questions, and a design team's first task is to know what kind of question it faces. Some design questions have a checkable answer. Others have no final answer and no stopping rule, and must be settled by judgment and argument and revisited when circumstances change. The design theorists of the second half of the twentieth century gave precise accounts of this difference and of how to work within it. Their ideas are arguments and earn C, but they supply the procedures for decisions that no experiment can settle.
+
+### Design as changing situations into preferred ones
+
+Simon gave the widest definition of design in the literature: "Everyone designs who devises courses of action aimed at changing existing situations into preferred ones" [@simon1996sciences]. He called design "the core of all professional training" and the mark that distinguishes the professions from the sciences. An artifact, in his account, is "a meeting point, an interface in today's terms, between an inner environment, the substance and organization of the artifact itself, and an outer environment, the surroundings in which it operates". A design succeeds when the inner environment fits the outer one.
+
+Three of his ideas govern how design decisions should be made. The first is satisficing: because "real-world optimization, with or without computers, is impossible", the real decision-maker is "a satisficer, a person who accepts 'good enough' alternatives, not because less is preferred to more but because there is no choice" [@simon1996sciences]. The second is the generator-test cycle: design generates alternatives and tests them against "a whole array of requirements and constraints", often in nested cycles, with the generators implicitly defining how the problem is decomposed. The third is that process shapes style: because designers satisfice, the order of decisions and the division of labor between generating and testing shape the result, so "what we ordinarily call style may stem just as much from these decisions about the design process" as from the goals [@simon1996sciences].
+
+Simon's view has been attacked as positivist. Buchanan calls it "positivist and empiricist" while calling the book "exceptionally useful work", and Schön criticized design as problem-solving as technical rationality, though some commentators answer that this caricatures a theorist whose central point was that people cannot be perfectly rational [@simon1996sciences; @buchanan1992wicked].
+
+::: {.rule #EVD-056 grade="C"}
+**For each new component or page, write the outer environment it must fit (who uses it, on what screen, at what distance, with what in their hands, while doing what) before designing the inner one.** An artifact succeeds by fitting its inner organization to its outer environment [@simon1996sciences].
+
+*In LTF:* the outer environment of `FlyModePage` is a beginner flying the sim with a controller, glancing at a second screen at arm's length; the outer environment of `LessonPage` is the same beginner reading at a desk before flying. They are different designs.
+:::
+
+::: {.rule #EVD-057 grade="C"}
+**For choices that do not affect safety, learning or access, write the criteria first, take the first option that meets them, and record why.** Real-world optimization is impossible and satisficing is the rational course [@simon1996sciences]. Unrecorded satisficing turns into endless relitigation.
+
+*In LTF:* which lucide glyph marks a resource type, or the order of filters on `ChallengesPage`, is satisficed against written criteria; the contents of a `Callout` of type safety is not.
+:::
+
+::: {.rule #EVD-058 grade="C"}
+**Generate at least two or three alternatives for any significant layout or component, test each against the same written requirements, and record why one was chosen.** Design proceeds by generating alternatives and testing them against requirements, and the process shapes the result [@simon1996sciences]; early comparison of alternatives is what protects against premature convergence [@greenberg2008usability].
+
+*In LTF:* a new checklist page is drawn in two or three layouts, each checked against the same list (readable at arm's length, works in Day and Night, source cited for every item), before one is built.
+:::
+
+### Small stable units
+
+Simon's parable of two watchmakers explains why complex things are built from stable parts [@simon1996sciences]. Hora builds watches from stable subassemblies of about ten elements each; Tempus builds each watch as one sequence of about a thousand parts. When interrupted, Tempus's work falls apart and must restart, while Hora loses only the subassembly in hand. Systems that are hierarchical and nearly decomposable survive interruption and change.
+
+::: {.rule #EVD-059 grade="C"}
+**Build the course and the interface from small, independently complete and independently verified units, so that a failure or change in one does not unravel the rest.** Stable subassemblies survive interruption where long single chains do not [@simon1996sciences].
+
+*In LTF:* each lesson and challenge already carries its own verification status, and D-32 hides a module only as a whole; keep components equally self-contained, so that a change to `Callout` does not require editing every lesson page.
+:::
+
+### Tame and wicked problems
+
+Rittel and Webber argued that the problems of social planning are not like those of science and engineering [@rittel1973dilemmas]. Tame problems, such as solving an equation, analyzing a compound or finding checkmate in five moves, have a clear mission and a clear test of whether they have been solved. Wicked problems lack both. The authors list ten properties. There is no definitive formulation; "the formulation of a wicked problem is the problem". There is no stopping rule, so the planner stops for reasons outside the problem (time, money, patience) and says "that's good enough". Solutions are good or bad, not true or false. There is no immediate or ultimate test. Each solution is a "one-shot operation" whose consequences cannot be undone. There is no enumerable set of solutions. Each problem is essentially unique. Each can be seen as a symptom of another. A discrepancy can be explained in many ways, and the choice of explanation, driven by the analyst's world view, determines the resolution. And the planner has no right to be wrong [@rittel1973dilemmas].
+
+Buchanan carried the idea into design and observed that Rittel never explained why design problems are wicked, so the theory remains a description rather than an explanation [@buchanan1992wicked]. The distinction is still the most useful sorting tool a design team has. Questions with a checkable answer should be closed by tests, sources and review. Questions without one should be settled deliberately, with the stopping point written down.
+
+::: {.rule #EVD-060 grade="C"}
+**Sort each design question as tame (it has a checkable answer) or wicked (it has none); close tame questions with tests and sources, and for wicked ones write down the stopping point and when to revisit.** Wicked problems have no stopping rule and no final test; pretending to have finished them hides the decision [@rittel1973dilemmas; @buchanan1992wicked].
+
+*In LTF:* whether a widget draws the correct scale, or whether a lesson's numbers match their `{{vspeed.*}}` tokens, is tame; how much to explain before the first flight, or how to trade encouragement against rigor in the debrief, is wicked, and its decision record says "good enough for v1, revisit with learner data".
+:::
+
+::: {.rule #EVD-061 grade="C"}
+**Do not use the wickedness of a design question as a reason to leave a tame question open; facts, values from tokens and accessibility thresholds are checked, not argued.** Wicked problems are those without a definitive test; many design questions do have one [@rittel1973dilemmas].
+
+*In LTF:* a learner-facing aviation number is a tame question with a source, governed by the content pipeline's verification, whatever the wider design argument about the page around it.
+:::
+
+::: {.rule #EVD-062 grade="C"}
+**When explaining a problem such as drop-off, write down at least two rival explanations before choosing a fix, and do not let a single metric choose for you.** The choice of explanation determines the resolution, and world view drives the choice [@rittel1973dilemmas].
+
+*In LTF:* if learners leave Module 1 early, candidates include the sim setup being hard, the lesson length, the challenge difficulty, and simply having learned enough; each implies a different change to `ModulePage` or the lessons.
+:::
+
+### Design has no subject matter of its own
+
+Buchanan's essay argues that design is indeterminate because it "has no special subject matter of its own apart from what a designer conceives it to be"; the designer must "discover or invent a particular subject out of the problems and issues of specific circumstances" [@buchanan1992wicked]. He names four areas of design, signs, things, actions and thoughts (visual communication, material objects, activities and services, and complex systems or environments), and insists they are not categories but "places of invention shared by all designers" that interpenetrate. His method, the doctrine of placements, moves a problem from one area to another to see it differently.
+
+His example is a retail chain whose customers could not find merchandise; larger signs did not help. A consultant watched shoppers, found that they looked for familiar, representative products, and the solution was to display those products prominently: a double repositioning, from signs to action and back to signs [@buchanan1992wicked]. The essay is a conceptual argument with historical examples, and Buchanan himself warns that placements can harden into categories in the hands of disciples.
+
+::: {.rule #EVD-063 grade="C"}
+**When a design problem stalls, reposition it: treat a signage problem as an action problem, a component problem as a system problem, and look for the fix in the new placement.** Moving a problem between signs, things, actions and systems generates new perceptions of it [@buchanan1992wicked].
+
+*In LTF:* if beginners miss a label on an instrument widget, a larger label may fail as the retail chain's signs did; redesigning around what they look for first (the familiar gauge shape, the needle) may work.
+:::
+
+### Designing from misfits
+
+Alexander's first book treats design as making a form fit its context, and proposes working from failure because good fit is hard to describe and it is "the easiest thing in the world to name the specific kinds of misfit which prevent good fit" [@alexander1964notes]. His examples are a kitchen hard to clean, no place to park, a grill at eye level that spits fat, a front door you cannot find; "because they are expressed in negative form they are specific, and tangible enough to talk about". The misfits interact, so they cannot be fixed one at a time; his worked example, an Indian village of about 600 people, has 141 requirements with about 1,400 interactions among them. The formal method he built to decompose such problems failed replication and he repudiated it, but the misfit idea survives, and selecting which misfits to list remains a matter of judgment [@alexander1964notes].
+
+::: {.rule #EVD-064 grade="C"}
+**State the goals of a page or component as a list of specific, named misfits between it and its users, and design to remove them.** Misfits are specific and checkable where "good fit" is vague [@alexander1964notes].
+
+*In LTF:* the misfit list for a lesson page might read: the learner cannot find the next step; the key number is below the fold on a phone propped beside the sim; checklist text is too small at arm's length; a term is used before it is defined; a gauge washes out in Night.
+:::
+
+::: {.rule #EVD-065 grade="C"}
+**Test fixes for interacting misfits together, because removing one can create another.** Misfits interact and cannot be adjusted one at a time [@alexander1964notes].
+
+*In LTF:* enlarging `FlyPanel` text to fix legibility at arm's length can push the `Stopwatch` and "Finish and debrief" off a laptop screen; check the whole panel at the sizes learners use.
+:::
+
+### Hill climbing and the frame
+
+Norman and Verganti describe human-centered design (observation, ideation, rapid prototyping, testing) as hill climbing: it reliably improves a product toward the top of the hill it is on and cannot show whether a higher hill exists elsewhere [@norman2014incremental]. Radical change, a new frame, comes from a change of technology or of meaning, and the first version after the jump is often worse than the polished old design, so human-centered iteration is then needed to climb the new hill. They report searching for a radical innovation produced by human-centered design and failing to find one, which is suggestive rather than conclusive.
+
+::: {.rule #EVD-066 grade="C"}
+**Set aside deliberate time to question the product's frame, separate from iterative improvement, and judge an early radical prototype against its potential rather than against the polished current design.** Iterative user-centered design climbs the current hill and does not reveal others; first versions of a new frame are often worse than the refined old one [@norman2014incremental].
+
+*In LTF:* refining `LessonPage` is hill climbing; a second-screen companion that reads live sim state, or challenges scored from telemetry, would be a new frame, and its first prototype should not be rejected for being rougher than today's pages.
+:::
+
+### What this means for Learn to Fly
+
+The most useful change this chapter suggests is to the decision record. The `v1.md` Decision Log already records Problem, Decision and Reason. Add, for design decisions, three fields from this chapter: whether the question is tame or wicked (EVD-060), the misfits the decision removes (EVD-064), and for wicked questions the stopping point and when to revisit. Keep the course's modular structure, with independently verified lessons and modules hidden as wholes until verified (EVD-059). Write the outer environment into the brief for every surface used beside the sim (EVD-056), generate alternatives before building (EVD-058), and satisfice openly on the rest (EVD-057).
+
+When learner behavior surprises the team, write rival explanations before acting (EVD-062), reposition stalled problems (EVD-063), and test interacting fixes together (EVD-065). Once a year, or at the start of a version, ask whether the frame itself is right (EVD-066). The `v2.md` plan is the natural place for that question.

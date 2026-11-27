@@ -55,9 +55,9 @@ Relatedness is the hardest need for a web app used alone beside a simulator. SDT
 That leaves the quieter forms of relatedness, which cost little and carry no comparison: an instructor's voice in the copy (the plan describes the voice as a calm instructor), honest statements that a step is hard for most people, and the sense that the product's makers are present and accountable. The BetaBanner's "Report a problem" link and the visible verification dates are small but real signals that someone is listening.
 
 ::: {.rule #MOT-005 grade="C"}
-**Meet the relatedness need through an instructor's voice and honest normalizing statements before considering any social feature.** Relatedness supports internalization [@ryan2000selfdetermination], and the social features that might serve it most directly are the ones with the most mixed evidence (see MOT-020). Instructor voice as a relatedness support is a reasonable inference from the theory, not a tested intervention, so grade C.
+**Meet the relatedness need through an instructor's voice and honest normalizing statements before considering any social feature.** Relatedness supports internalization [@ryan2000selfdetermination], and the social features that might serve it most directly are the ones with the most mixed evidence (see MOT-018 and MOT-019). Instructor voice as a relatedness support is a reasonable inference from the theory, not a tested intervention, so grade C.
 
-*In LTF:* lesson and debrief copy may say "most people find the flare hard at first" where a lesson author can support it, keeps the calm-instructor voice described in `v1.md`, and keeps the "Report a problem" path in `BetaBanner` visible. Any future community feature goes through MOT-020 and MOT-055.
+*In LTF:* lesson and debrief copy may say "most people find the flare hard at first" where a lesson author can support it, keeps the calm-instructor voice described in `v1.md`, and keeps the "Report a problem" path in `BetaBanner` visible. Any future community feature goes through MOT-019, MOT-020 and MOT-067.
 :::
 
 ### What this means for Learn to Fly
@@ -205,7 +205,7 @@ Two moderators are relevant to LTF and are covered in later chapters: game ficti
 ::: {.rule #MOT-014 grade="A"}
 **Do not justify a feature by "gamification raises motivation"; any motivational mechanic needs its own hypothesis and its own test in LTF.** Three independent syntheses agree that results are mixed and context-dependent, that individual elements are rarely isolated, and that the motivational effect is the least robust [@hamari2014gamification; @koivisto2019rise; @sailer2020gamification]. The grade reflects the agreement of the syntheses on this negative point, not evidence for any mechanic.
 
-*In LTF:* a proposal for a streak, badge set or progress animation includes the one-line hypothesis and evaluation plan required by the chapter "Measuring motivation honestly" (MOT-052).
+*In LTF:* a proposal for a streak, badge set or progress animation includes the one-line hypothesis and evaluation plan required by the chapter "Measuring motivation honestly" (MOT-067).
 :::
 
 ### Novelty and the cost of removal
@@ -267,7 +267,7 @@ For LTF the conclusion is not "competition is always bad" but that the only form
 ::: {.rule #MOT-019 grade="D"}
 **If a social feature is ever added, frame it as cooperation (shared goals, helping) rather than rank, and make it opt-in and private by default.** Sailer and Homner found competition combined with collaboration particularly effective for behavioral outcomes, but as a post hoc moderator in a heterogeneous literature [@sailer2020gamification]; user reactions to competitive features vary widely [@hamari2014gamification]. The evidence is thin and partly conflicting, so grade D: a hypothesis to test, not a rule to rely on.
 
-*In LTF:* out of scope for v1 and v2. Any future proposal goes through MOT-014 and MOT-052 and names the cooperative structure.
+*In LTF:* out of scope for v1 and v2. Any future proposal goes through MOT-014 and MOT-067 and names the cooperative structure.
 :::
 
 ::: {.rule #MOT-020 grade="C"}
@@ -749,7 +749,7 @@ For LTF the most likely missing element is ability, not motivation. Opening the 
 ::: {.rule #MOT-059 grade="C"}
 **When learners stall, check ability and prompt before motivation: make the next session small, obvious and ready to start.** In the behavior model a behavior fails when motivation, ability or a prompt is missing, and ability is set by the scarcest resource at that moment [@fogg2009behavior]; self-paced mastery courses lost completers [@kulik1990effectiveness]; motivational nudges have weak average effects once publication bias is corrected [@maier2022no]. The model is untested as a whole, so grade C.
 
-*In LTF:* the Continue card on `DashboardPage` and "Continue where you left off" on the landing page already supply the prompt. Add the expected time ("About 15 minutes") from the lesson or challenge metadata, and when the next item is a challenge, put "Sim setup" one click away so the learner can prepare before launching the sim.
+*In LTF:* the Continue card on `DashboardPage` and "Continue where you left off" on the landing page already supply the prompt. Add the expected time ("About {n} minutes") from the lesson or challenge metadata, and when the next item is a challenge, put "Sim setup" one click away so the learner can prepare before launching the sim.
 :::
 
 ### Nudges are weaker than they look
@@ -825,3 +825,77 @@ Framing also governs progress copy. "3 of 12 lessons done" and "9 lessons left" 
 ### What this means for Learn to Fly
 
 LTF currently has almost no retention machinery, which is safer than most products and leaves room to do it well. The prompt it does have, the Continue card and the landing CTA, is the right kind: specific, honest and tied to the next real step. Strengthen it with time estimates and a short path to sim setup (MOT-059). Do not add social-norm counters or reminder campaigns as a substitute for making the next session easy (MOT-060). When the v2 streak arrives, build it as a gain record with a weekly window and no loss warning (MOT-061, MOT-062), which keeps it within the plan's own "no guilt messaging" requirement. Keep `SignupBanner` and "Not now" as the models for prompts (MOT-063), ban confirmshaming and false urgency outright (MOT-064), and put the five dark-pattern strategies on the review checklist (MOT-065).
+
+## Measuring motivation honestly
+
+### Engagement is not learning
+
+The classroom study in which a gamified section showed falling intrinsic motivation and lower exam scores is a warning about metrics as much as about badges: an activity measure can rise while learning falls, and the link can run through motivation [@hanus2015assessing]. The learning research makes the general point. Performance during instruction is "often an unreliable index" of whether learning has occurred; the two can dissociate in both directions, and people often mistake performance during acquisition for a guide to long-term learning [@soderstrom2015learning]. Learning, defined as what persists, therefore has to be measured after a delay. The guidance hypothesis adds that a guided pass shows the guidance working, not the skill learned, so learning should be tested without help and after a delay [@salmoni1984knowledge].
+
+For LTF, the tempting metrics are visits, lessons marked complete, time on page and attempts per week. Each is a performance or exposure measure. None says whether a learner can fly the pattern next month.
+
+::: {.rule #MOT-067 grade="B"}
+**Write a one-line hypothesis and a success metric for every motivational feature before building it, and make the metric a learning or persistence outcome, not raw activity.** Gamification reviews call for hypothesis-driven tests with consistent measures [@koivisto2019rise]; activity can rise while learning falls [@hanus2015assessing]; performance during practice is an unreliable index of learning [@soderstrom2015learning]; experiment guides insist the success criterion be agreed in advance and not short-term [@kohavi2009controlled]. Several converging sources, each indirect for LTF, so grade B.
+
+*In LTF:* the hypothesis is written in the pull request, for example "Showing per-criterion change on `ResultView` increases the share of learners who retry a challenge within a week and pass it", with the metric defined before the feature ships.
+:::
+
+::: myth
+**"If engagement goes up, the feature is working."** In the semester-long classroom comparison, the gamified section's exam scores fell, with the effect running through intrinsic motivation [@hanus2015assessing], and performance during practice can improve without learning [@soderstrom2015learning]. Engagement is at best a proxy, and for features built on extrinsic devices it can move opposite to the outcome that matters.
+:::
+
+### Power, duration and what LTF can test
+
+Controlled experiments are the best design for causal claims about a feature, but they need traffic. Kohavi and colleagues give a rule of thumb of n = 16 sigma squared over delta squared per variant for 80 percent power, and an example in which detecting a 5 percent change in revenue needed over 409,000 users [@kohavi2009controlled]. They advise running at least one or two weeks and in multiples of a week, splitting traffic evenly for power, checking the system with an A/A test, and watching for novelty and primacy effects that may require weeks and an analysis restricted to new users. A "no significant difference" result does not prove there is no difference.
+
+LTF, a free course in public beta, will not have the traffic to detect small effects of copy tweaks. That changes what it should test. It can test large differences (a result screen with per-criterion change against one without), over whole weeks, with one success metric agreed in advance. For small decisions it should decide from principle and the rules in this Part, not from underpowered tests.
+
+::: {.rule #MOT-068 grade="C"}
+**Test only large differences, run tests for whole weeks and past the novelty window, and decide small copy and styling questions from principle rather than from underpowered experiments.** Sample size grows with the inverse square of the effect to detect, novelty effects require long runs, and a null result does not prove harmlessness [@kohavi2009controlled; @koivisto2019rise]. Practitioner guidance and textbook statistics, so grade C.
+
+*In LTF:* before any test, compute the needed sample from the rule of thumb using LTF's own recent numbers. If it is out of reach, record the decision and its rationale in the pull request instead.
+:::
+
+### Measure the needs, not satisfaction
+
+The gamification reviews found that few studies used validated psychometric measures; the first found only one [@hamari2014gamification], and the larger review lists consistent instruments first in its agenda [@koivisto2019rise]. The games research provides scales aimed at the mechanism this Part cares about: the PENS measures of in-game autonomy, competence, presence and intuitive controls [@przybylski2010motivational]. Flow research suggests a short self-report of perceived challenge against perceived skill after an activity rather than inferring flow from clicks [@csikszentmihalyi2008flow]. Keller recommends evaluating motivational design with direct measures such as persistence, effort, emotion and attitude, not achievement scores alone [@keller1987development].
+
+::: {.rule #MOT-069 grade="B"}
+**When LTF measures motivation, use short need-satisfaction items (competence, autonomy, and challenge against skill) and a behavioral persistence measure, not a generic satisfaction rating.** Validated measures were rare in gamification studies and are first on the research agenda [@hamari2014gamification; @koivisto2019rise]; need-satisfaction scales were built for play [@przybylski2010motivational]; persistence and effort are the recommended direct measures [@keller1987development]. Grade B: the instruments are partly validated, mostly by their authors.
+
+*In LTF:* an optional two-question check after a debrief ("How hard was this for you?" and "How able did you feel?") on a five-point scale, stored with the attempt, plus the behavioral measure of whether the learner flew the challenge again. Keep it optional and skippable so it is not itself a nag.
+:::
+
+### Check that the mechanism moved
+
+The mindset meta-analysis found that almost half of the studies reporting manipulation checks had failed to change mindsets, and that intervention effects appeared when the check failed but not when it succeeded [@sisk2018extent]. The national trial, by contrast, pre-registered its outcomes, measured the mindset shift, used independent data collection and corroborated its result with a blinded Bayesian analysis [@yeager2019national]. The lesson generalizes. If LTF changes something on the theory that it raises perceived competence, it should check whether perceived competence moved, or it cannot know why any outcome changed.
+
+::: {.rule #MOT-070 grade="B"}
+**For any feature built on a motivational theory, measure the mechanism (for example perceived competence) as well as the outcome, and pre-register both.** Mindset interventions showed effects that did not run through mindset [@sisk2018extent], and the strongest trial in that literature pre-registered outcomes and measured the shift [@yeager2019national]; nudge literature effects shrank sharply once publication bias was corrected [@maier2022no]. Grade B.
+
+*In LTF:* the pull request for a motivational feature names the mechanism measure from MOT-069 and the outcome, and the result is recorded in `docs/` whether it is positive, null or negative.
+:::
+
+### Logs over recollection
+
+The deliberate-practice meta-analysis found that the relationship between practice and performance depended on how practice was measured: retrospective interviews gave 20 percent of variance, retrospective questionnaires 12 percent and logs kept at the time 5 percent [@macnamara2014deliberate]. The authors reason that logs are probably more accurate because people do not remember the past perfectly. Any LTF feature that shows practice totals should use logged sessions. The dashboard's "Sim time (estimated)" tile already labels itself as an estimate, which is honest; the estimate should come from logged attempts, not from a learner's recollection.
+
+::: {.rule #MOT-071 grade="B"}
+**Show practice totals only from logged activity, labeled as estimates where they are estimates.** Retrospective practice estimates inflated the practice and performance relationship compared with contemporaneous logs [@macnamara2014deliberate]. Grade B.
+
+*In LTF:* keep the "(estimated)" label on the `DashboardPage` "Sim time" tile, and compute it only from attempts and lesson metadata. Copy never implies a number of hours guarantees a level of skill, which this literature does not support.
+:::
+
+### Report what did not work
+
+The publication-bias reanalysis of nudging and the gamification reviews' worry that few negative results were published both point to the same discipline for LTF's own experiments [@maier2022no; @koivisto2019rise]. A team that only records wins will believe its features work better than they do.
+
+::: {.rule #MOT-072 grade="C"}
+**Record every motivational experiment's result, including nulls and negatives, and remove features that fail their pre-registered test (subject to MOT-016).** Selective reporting inflates apparent effects in the nudge and gamification literatures [@maier2022no; @koivisto2019rise], and experiment guides warn against reading a null as proof of harmlessness [@kohavi2009controlled]. Grade C.
+
+*In LTF:* results go into a short log under `docs/` linked from the pull request. A failed feature is retired with notice, and earned records (tiers, the `CourseBadge`) are never removed.
+:::
+
+### What this means for Learn to Fly
+
+LTF's analytics should be designed around the outcomes this Part cares about: whether learners pass challenges after earlier failures, whether they retry, whether they return after a gap, and whether they can still pass a challenge they passed weeks ago. Raw visits and "lessons completed" are context, not success. Every motivational feature arrives with a written hypothesis and metric (MOT-067), is tested only where traffic allows (MOT-068), measures the needs and persistence rather than satisfaction (MOT-069), checks the mechanism (MOT-070), and records its result whatever it is (MOT-072). The plan already gives LTF a place for this: the v2 admin "learning signals" stats page. Its first tables should be retries after failure and repeat passes after a delay, because those are closer to learning than anything a session counter shows.
