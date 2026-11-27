@@ -244,3 +244,87 @@ This is the most defensible evidence base for LTF's progression design. Gate pro
 
 Confirmed this session: Crossref record DOI 10.3102/00346543060002265; full text of the article read as PDF (typeset.io copy), including abstract, the 0.52 and 0.71 figures, moderators and discussion.
 
+## hattie2009visible
+
+Hattie (2009), "Visible learning: a synthesis of over 800 meta-analyses relating to achievement", Routledge. Read with the criticisms of Bergeron (2017, McGill Journal of Education 52(1), 237-246) and Wecker, Vogel and Hetmanek (Zeitschrift fur Erziehungswissenschaft 20(1), 21-40).
+
+### Core claims
+
+Hattie set out to build a single comparable ranking of what influences achievement in school-aged students. The publisher describes the book as the result of 15 years of research that synthesizes more than 800 meta-analyses and covers the influence of students, the home, the school, curricula, teachers and teaching strategies. Its central argument, as the publisher puts it, is that what works best for students also works best for teachers: setting challenging learning intentions, being clear about what success looks like, and using strategies that build conceptual understanding. The book presents a model of "visible teaching and visible learning" and a benchmark effect size for comparing interventions. Wikipedia's account says the book draws on 815 meta-analyses and uses Cohen's d.
+
+### Specifics
+
+Method. Effect sizes from each included meta-analysis are expressed as Cohen's d and averaged within a named "influence" (for example, feedback or class size), producing a league table. A benchmark of d = 0.40, the "hinge point," is used to divide the zone of desired effects from smaller ones. In the first edition, the secondary sources I fetched list values such as feedback 0.73, formative evaluation of programs 0.90, self-reported grades 1.44 and Piagetian programs 1.28. I could not confirm a count of influences, study totals or the 0.40 definition from a primary page this session, so treat those details as the way critics describe the method, not as confirmed facts from the book.
+
+Hattie answers critics in a 2023 chapter, "Meta-analysis and criticisms of Visible Learning"; I confirmed it exists but did not read it.
+
+### Replication and criticism
+
+This is a synthesis of meta-analyses, a "meta-meta-analysis," and it is the most criticized source in this lane. The criticisms are specific.
+
+Calculation errors. Hattie acknowledged that the common language effect size (CLE) values in the book were calculated incorrectly throughout, while the d values were correct (secondary account; Topphol, 2011 and Schulmeister and Loviscach, 2014 are cited as raising problems with study selection and statistics). Bergeron's critique (a statistician writing in the McGill Journal of Education) says some CLE values come out negative or above 100%.
+
+Conceptual problems. Bergeron argues that Hattie averages unrelated studies, treats correlations as effect sizes, converts correlations to d without checking the conditions, and uses unweighted averages. A correlation of about .196 converts to d above 0.4 yet explains under 4% of variance. The sign of an effect depends on an arbitrary choice of baseline, and effects on different outcomes, populations and durations are not directly comparable. In a simulated example Bergeron shows three effect-size formulas ranking the same three teaching methods differently. The 0.40 cutoff, he says, has no principled justification. Wecker, Vogel and Hetmanek (2016/2017) tested Hattie's data base and procedure against the methodological demands of meta-analysis; their verdict, in the abstract, is that the goal of integrating educational research broadly is visionary but cannot currently be carried out in a scientifically sound way.
+
+A further problem is use: a rank list invites teachers to drop low-ranked practices and adopt high-ranked ones without regard for context.
+
+Evidence strength: low for any single ranking position.
+
+### Implications for LTF
+
+Do not use Hattie's league table or the 0.40 line as an authority for LTF design decisions, and never quote a Hattie effect size as a fact in a design rationale. Prefer primary meta-analyses and experiments, as with Alfieri, Kulik and Shute in this lane. Use Hattie as a prompt, not a proof: he is one of many sources saying that clear learning intentions, feedback and visible success criteria matter, which the better-evidenced sources also support. If an LTF decision cites Hattie, it should also cite a primary study that makes the same point. Self-reported grades ranked near the top of Hattie's list, but Bergeron notes that is a correlation between reported and actual grades, not a gain from self-assessment; LTF can still compare self-rated confidence with measured performance.
+
+Confirmed this session: Routledge product page (publisher description, 392 pages, copyright 2009); Crossref record DOI 10.4324/9780203887332 (Visible Learning, Hattie, 2008 online) and DOI 10.4324/9781003380542-2 (the 2023 chapter); Crossref DOI 10.7202/1040816ar (Bergeron and Rivard, 2017) with the full critique read via the McGill Journal of Education page; Crossref DOI 10.1007/s11618-016-0696-0 and a web search summary of the abstract for Wecker and colleagues (full text not available); Wikipedia page for the effect size list and CLE admission.
+
+## rosenshine2012principles
+
+Rosenshine (2012), "Principles of instruction: research-based strategies that all teachers should know", American Educator 36(1), 12-19, 39. Adapted by the author from his 2010 report for the International Academy of Education.
+
+### Core claims
+
+Rosenshine distills ten instructional principles from three bodies of work that, he says, supplement and complement each other: (A) cognitive science on how working memory limits learning, (B) classroom studies of "master teachers" (those whose classes made the highest achievement-test gains), and (C) research on cognitive supports such as thinking aloud, scaffolds and models for complex tasks. The unifying idea is that novices need strong, readily accessible background knowledge, which comes from teaching in manageable amounts, modeling, guided practice, error correction and review. The most effective teachers also used hands-on activities, but always after, not before, the basic material was learned.
+
+### Specifics
+
+The ten principles as the article lists them: (1) begin a lesson with a short review of previous learning; (2) present new material in small steps with student practice after each step; (3) ask a large number of questions and check the responses of all students; (4) provide models; (5) guide student practice; (6) check for student understanding; (7) obtain a high success rate; (8) provide scaffolds for difficult tasks; (9) require and monitor independent practice; (10) engage students in weekly and monthly review.
+
+Concrete findings reported in the text. Review: effective teachers spent five to eight minutes at the start on review; in one elementary math experiment, teachers were taught to spend eight minutes a day on review and their students scored higher than those in other classrooms. Questions: the most successful teachers spent more than half of class time lecturing, demonstrating and asking questions, and asked more process questions ("explain how you found the answer"); a classroom experiment that trained teachers to ask more factual and process questions in guided practice raised scores. Models: worked examples, studied alternately with problems to solve, reduce cognitive load. Success rate: in a fourth-grade math study, 82% of answers were correct in the most successful teachers' classes versus 73% in the least successful ones, and the article says the optimal success rate "appears to be about 80 percent," showing that students are learning and still challenged. Scaffolds include modeling and thinking aloud, prompts, and tools such as cue cards or checklists, withdrawn gradually as competence grows. Independent practice should use the same material as guided practice, and long explanations at students' desks signaled that guided practice had been insufficient. Review should include overlearning, practice beyond initial mastery to reach automaticity.
+
+### Replication and criticism
+
+Evidence type: a practitioner-oriented synthesis by an eminent researcher. The master-teacher strand is correlational process-product research from the 1970s and 1980s (classrooms observed, behaviors coded, achievement gains compared), mostly in basic skills such as math and reading, so it shows what effective teachers do but cannot by itself prove cause. Some principles do have experimental support within the article (the review and questioning training studies). The cognitive-science strand rests on limited working memory, the same architecture Kirschner, Sweller and Clark use. The "80 percent" figure is described by Rosenshine as what research "suggests"; it is an observational optimum for classroom answers, not a universal rule. The article cites Miller's 1956 "seven plus or minus two" paper as suggested reading for working memory limits, a claim that should not be turned into a rule of seven items for interface design.
+
+### Implications for LTF
+
+The ten principles map well onto an LTF lesson template: a short review of the previous lesson's key facts at the top; new material in small steps with a check question after each; models and worked examples (annotated example flights, checklists done as examples) before the learner practices; guided practice in a first challenge, then independent practice in a second; and spaced weekly or monthly review quizzes pulling items from earlier modules. The 80% target is a useful tuning heuristic for quiz and challenge difficulty: if learners pass nearly everything, raise difficulty; if they fail often, the preceding explanation or guided practice was insufficient. Use it as a design aim, and measure real pass rates after launch. Process questions ("why did you pick that speed?") suit quizzes. Hands-on activity belongs after the basics are taught, which argues against dropping a beginner into the sim before they have the vocabulary. Checklists and cue cards are named as scaffolds, supporting their use in fly mode, with the plan to fade them.
+
+Confirmed this session: AFT-hosted PDF of the article (aft.org, Rosenshine.pdf) read in full text (ten principles, 17-principle sidebar, success-rate figures); web search results giving volume, issue and pages. The article was not found in Crossref, so verification is by web search.
+
+## clark1983reconsidering
+
+Clark (1983), "Reconsidering research on learning from media", Review of Educational Research 53(4), 445-459.
+
+### Core claims
+
+Clark reviews meta-analyses and other studies of whether particular media (television, film, computers, audiotutorials) improve learning, and argues that the consistent finding is that there are no learning benefits to be gained from employing any specific medium to deliver instruction. His analogy is that media are mere vehicles that deliver instruction and do not influence achievement any more than the truck that delivers groceries changes our nutrition. Apparent gains from one medium are, he argues, vulnerable to rival hypotheses: uncontrolled differences in instructional method or content, and novelty effects. He also critiques "media attribute" and "symbol system" theories, and ends with suggestions for more promising research directions (studying methods, aptitudes and tasks rather than media).
+
+### Specifics
+
+Box scores versus effect sizes. In a review of 42 adequate audiotutorial studies, 29 favored audiotutorial and 13 conventional; of 15 with significant differences, 11 favored audiotutorial. The effect size analysis, however, found only about 0.2 standard deviations, equal to roughly 1.6 points on a 100-point examination (Kulik, Kulik and Cohen 1979, as reported by Clark).
+
+Method confounding. In meta-analyses of college computerized versus conventional courses, the effect was 0.51 when different faculty taught the compared courses but dropped to 0.13 when one instructor planned and taught both (C. Kulik, Kulik and Cohen, 1980). Computer groups often saved 30 to 50 percent of lesson time, which Clark attributes to greater design effort, comparing it to racing a precision-engineered racer against the family car. Programmed instruction delivered by text or by computer gave similar effects of about 0.2, and Keller's personalized system of instruction gave about 0.5, so method explains more than medium.
+
+Novelty. In secondary-school computer studies (J. Kulik, Bangert and Williams, 1983), an average effect of 0.32 was 0.56 for studies lasting four weeks or less, 0.3 for five to eight weeks and about 0.2 beyond eight weeks. Published studies averaged larger effects (0.47) than unpublished (0.21) or dissertations (0.3), suggesting editorial bias toward newer media. Clark advises strongly against further media comparison research, because medium will inevitably be confounded with method.
+
+Media attributes. Studies of attributes such as zooming or animated arrows found they could cultivate skills for some learners; but a partial replication (Bovy, 1983) found a static isolation of cues worked even better than zooming or irising, suggesting that only the efficient isolation of relevant cues was needed. Attributes are sometimes sufficient but not necessary conditions.
+
+### Replication and criticism
+
+This is a review and argument, using the meta-analyses available by 1983 (all dating from earlier studies of film, television, early CAI). It is not itself a meta-analysis. Kozma (1994, Educational Technology Research and Development 42(2), 7-19, "Will media influence learning? Reframing the debate") answered, as his title says, by reframing the debate. Nathan and Robinson (2001, Journal of Interactive Learning Research 12(1), 69-88), which I read, argue that Clark and Kozma may agree about instructional design but rest on different views of learning and knowing, and propose treating media and method as mutually constitutive. Clark's later position (secondary account) is that apparent media benefits remain confounded with method. Clark's claim is strongest as a methodological warning about confounded comparisons, weaker as a statement that medium never matters; simulations may enable methods that were previously impossible.
+
+### Implications for LTF
+
+Do not justify design decisions by medium ("video is more engaging than text," "interactive widgets work better"). Ask what instructional method the medium enables and test the method. For LTF, a widget, an annotated diagram and a paragraph of text are vehicles, and the method (worked example, prediction prompt, feedback) is what teaches. Compare designs on method-matched controls: for example, test an interactive airspeed widget against a static diagram with the same prediction prompt and feedback. Expect any novelty gain from a flashy simulation to fade, so judge after repeated use. At the same time, take Kozma's point: a simulator such as MSFS 2024 enables practice methods that no text can, so keep the sim at the center of challenges, while checking that the instructional method around it is sound.
+
+Confirmed this session: Crossref records DOI 10.3102/00346543053004445 (Clark) and DOI 10.1007/bf02299087 (Kozma); full text of Clark's article read as PDF (typeset.io copy), including abstract, meta-analytic figures and the attribute discussion; full text of Nathan and Robinson (2001) read as PDF (education.wisc.edu).
+

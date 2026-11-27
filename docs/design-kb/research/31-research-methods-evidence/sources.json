@@ -525,16 +525,7 @@
   "publisher": "Springer International Publishing",
   "publisher_place": "",
   "edition": "",
-  "editors": [
-   {
-    "family": "Robertson",
-    "given": "Judy"
-   },
-   {
-    "family": "Kaptein",
-    "given": "Maurits"
-   }
-  ],
+  "editors": [],
   "doi": "10.1007/978-3-319-26633-6_13",
   "isbn": "",
   "url": "",

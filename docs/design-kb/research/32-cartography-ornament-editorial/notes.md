@@ -167,3 +167,117 @@ This is a design tool paper, not an experiment. Its schemes were hand-tuned and 
 Use ColorBrewer-style thinking as the rule for any chart: choose scheme type by data type first, then class count, then medium. Because LTF uses light and dark themes, each theme needs its own checked ramp rather than a flipped one. Qualitative palettes should stay short (a handful of categories), since qualitative schemes lose distinctness as the class count grows. Put the legend next to the data and keep one ramp per meaning across the app.
 
 Confirmed this session: Crossref query (DOI 10.1179/000870403235002042; also 10.1559/152304003100010929 for the catalog paper); record and abstract summary at https://pure.psu.edu/en/publications/colorbrewerorg-an-online-tool-for-selecting-colour-schemes-for-ma/; web search summary of content. I did not read the full paper.
+
+## harley1989deconstructing
+
+Harley, J. B. (1989). Deconstructing the map. *Cartographica, 26*(2), 1-20. DOI 10.3138/e635-7827-1757-9t53.
+
+### Core claims
+
+Harley argues that maps are not neutral windows on the world. The abstract (read in the full text posted by the University of Rome) says the paper draws on postmodern thinking to redefine maps as representations of power. He sets up two sets of rules behind every map: the scientific rules of measurement and drawing, and the rules governing the cultural production of the map, which are tied to values such as ethnicity, politics, religion and social class. He says cartographic discourse keeps a "double silence" about the second set: the map hides social structure beneath abstract, instrumental space, and the technical literature ignores it. The interplay of social and technical rules, he writes, produces the order of a map's features and the hierarchies of its practices.
+
+### Specifics
+
+His method is eclectic. The essay owes most to Foucault (discourse, power-knowledge, silence) and Derrida (the rhetoricity of all texts, reading in the margins for contradictions). Three arguments are developed. First, the "rule of ethnocentricity": societies centre their own territory on their world maps, and the scientific Renaissance gave cartography coordinate systems and scale yet also confirmed a myth of European centrality through projections such as Mercator's. Second, the "rules of the social order" inside map signs. Harley writes that, in European maps, the more powerful a place, the more prominent its sign: "size of symbol, thickness of line, height of lettering, hatching and shading, the addition of color" are the tools by which class and power are engineered into the image. He cites Louis Marin on the 1652 map of Paris, where churches and mansions get pictorial signs and ordinary houses only an identical point. Third, rhetoric: all maps frame a message for an audience and employ the devices of rhetoric, including appeals through "colors, decoration, typography, dedications" and invocation of authority, especially in scientific maps. The steps of making a map (selection, omission, simplification, classification, creation of hierarchies, symbolization) are inherently rhetorical. He also distinguishes external power (exercised on and with maps by patrons and states) from power internal to cartography (what map makers do when they make maps).
+
+### Replication and criticism
+
+This is a theoretical essay, not an empirical test. It was highly influential and widely criticized. Commentators found its use of postmodern theory incomplete; a search result notes that Mignolo's comments in Cartographica 26(3) respond directly. A 2015 special issue of Cartographica, "Deconstructing the Map: 25 Years On" (introduction by Rose-Redwood, with contributions including Edney's "Cartography and Its Discontents" and Krygier's reflections, confirmed in Crossref and search), set out to examine the essay's limits rather than canonize it. One critique reported in search is that Harley left the orthodox definition of a map as an image of the world untouched. A fair reading: the claim that cartographic signs carry social meaning is well supported by historical example, while the stronger claim that all cartographic knowledge is power is a philosophical position.
+
+### Implications for LTF
+
+The rule "the more powerful, the more prominent" can be turned into a design audit. Every size, weight, colour and position decision on an LTF page ranks things; make that ranking deliberate and match it to what a learner needs to do next. If a decorative element (an ornament, a hero image) is more prominent than the safety-critical callout, the page is making a claim the content does not support. Harley's point about silences is a prompt for content design: what a diagram leaves out (wind, terrain, other traffic) should be named on the page. His point that typography and decoration are rhetorical devices supports a rule that LTF's visual character (editorial feel, ornament) should be a conscious trust signal rather than a reflexive style. Avoid giving an aviation chart a borrowed authority through official-looking decoration it has not earned.
+
+Confirmed this session: Crossref query (DOI 10.3138/e635-7827-1757-9t53, Cartographica 26(2), 1-20, 1989; also 10.3138/carto.50.1.01 and 10.3138/carto.50.1.05 for the 2015 issue); full text of the essay read from https://disp.web.uniroma1.it/sites/default/files/Harley%20-%20deconstructing%20the%20map.pdf; web search for reception and the 2015 issue.
+
+## garland1994beck
+
+Garland, K. (1994). *Mr Beck's Underground Map*. Harrow Weald: Capital Transport Publishing.
+
+### Core claims
+
+Garland's book is the first full history of Henry (Harry) C. Beck's London Underground diagram. An Eye magazine review (spring 1995) describes it as a full-length history that draws on Beck's early sketches, mock-ups and correspondence, which Garland inherited. Garland, a graphic designer and friend of Beck from the 1950s until Beck's death in 1974, argues that the diagram's lasting strength came from its construction method: geometric drawing that ignores surface geography (except the river Thames), which gave a simple but comprehensive system and a unifying corporate identity, and which could expand with the network while staying true to its original design.
+
+### Specifics
+
+Dates reported in search results (London Transport Museum and other pages, not checked against primary records): a 1931 presentation drawing; resubmission in 1932 and acceptance; first pocket edition printed in January 1933 in a run of 750,000. Garland donated Beck's 1931 drawing to the London Transport Museum in 1993. The Eye review adds that Beck was dismissed as designer in 1960 in an abrupt and acrimonious break, after wanting indefinite stewardship of the diagram. It describes long captions on the design process and editions. A later research paper by Roberts, Gray and Lesnik (2016, in this lane) summarizes the technique Garland documents as three moves: non-depiction of surface detail irrelevant to journey planning; simplified line trajectories using only horizontal, vertical and 45 degree diagonal lines joined by tightly radiused corners (now called octolinearity); and expansion of the congested centre with compression of the suburbs so station names fit without interrupting the lines.
+
+### Replication and criticism
+
+Garland's book is documentary history and craft appreciation, not research, and it establishes Beck's reputation. Its design claims were later tested. Maxwell Roberts's experiments on Paris and Berlin maps found that octolinearity is not a proven gold standard (see roberts2017preference). A web search also notes that Beck's recognition grew after Garland's book, which prompted a BBC documentary. I did not find, this session, a critical review of Garland's attribution claims beyond the dismissal story told in the Eye review.
+
+### Implications for LTF
+
+Beck is the classic case that a diagram can beat a map when the task is topological: what connects to what and in what order. Many LTF explanations are of this kind: checklist flow, the sequence of a flight, the structure of a procedure. A schematic with consistent angles, even spacing, one weight for lines and clear interchange symbols will help a beginner more than a to-scale picture. But the cost named in the Roberts literature is distortion: if learners will later use a real chart, show the link between schematic and geography once, so the diagram does not replace spatial understanding. The dismissal story is also a governance lesson for a design system: a visual language that must expand over time needs a custodian and rules, or it drifts.
+
+Confirmed this session: Open Library (work OL4801324W, Garland, Mr. Beck's Underground Map, Capital Transport, 1994); Eye review https://eyemagazine.com/review/article/design-for-the-underground (read via WebFetch); web search summary on dates; Roberts et al. 2016 paper text for the three techniques.
+
+## roberts2017preference
+
+Roberts, M. J., Gray, H., & Lesnik, J. (2017). Preference versus performance: Investigating the dissociation between objective measures and subjective ratings of usability for schematic metro maps and intuitive theories of design. *International Journal of Human-Computer Studies, 98*, 109-128. DOI 10.1016/j.ijhcs.2016.06.003.
+
+### Core claims
+
+Three experiments show that how usable people say a metro map is can differ from how well they perform with it. The abstract (read in the author's accepted manuscript) says people's ratings reflect expectations and prejudices about effective design, and that the idea of octolinearity as a gold standard for usability continues to be refuted.
+
+### Specifics
+
+Experiment 1 was within-subjects: 80 subjects (28 male, 52 female, mean age 22.0) planned journeys on an official octolinear Paris Metro map and a curvilinear one, four journeys per map. The curvilinear map gave faster journey planning (63 of 80 subjects had a faster mean time with it); mean planning time was 42.4 seconds for the curvilinear map when it came first and 37.9 seconds when second, against 51.7 and 48.4 seconds for the official map. Yet preference was unrelated to performance: 38 subjects preferred the official map and 34 the curvilinear (8 were undecided), and aggregate ratings of the two did not differ significantly. Experiment 2 had 649 respondents, recruited through map-interest websites, rate nine matched London Underground designs for usability and attractiveness, and showed a clear octolinear bias, with individuals who held an octolinearity theory distinguishable from those holding a simplicity theory. Experiment 3 compared three Berlin maps optimized for simple line trajectories: journey times did not differ, yet usability ratings did.
+
+The paper also lists five design criteria Roberts proposed earlier: simplicity (simple line trajectories), coherence (parallel lines, regular shapes), balance (even density across the map, enlarging the centre), harmony (aesthetic features that may not affect usability) and topographicity (not distorting so much that confidence or journey choices suffer). It cites Guo (2011) as finding inefficient journeys 30 percent of the time in one poorly topographic region.
+
+### Replication and criticism
+
+It replicates and extends Roberts et al. (2013), per the abstract. Its own samples are small to moderate and mostly student or enthusiast, and the task was journey planning, so generalization to every schematic use is uncertain. A companion Berlin study (Roberts, Newton and Canals, Information Design Journal, preprint) found the concentric-circles design performed worse and was rated poorly, yet objective and subjective measures were again dissociated. Roberts also argued in a later Cartographic Journal paper (found in search, not read) that informal expert assessments of schematic map usability are unreliable.
+
+### Implications for LTF
+
+Do not take a preference test as evidence that a diagram works, and do not take expert taste as evidence either. For any new chart or diagram, measure time and errors on a real task, then ask for opinions. A familiar, handsome design can win ratings while slowing people down, and a strange one can be faster. This supports LTF running timed task checks in Phase 1 usability work. It also warns that beginners' ratings of an instrument widget ("this feels clear") need to be paired with whether they read it correctly under the time pressure of fly mode.
+
+Confirmed this session: Crossref (DOI 10.1016/j.ijhcs.2016.06.003: IJHCS 98, 109-128, 2017); author's accepted manuscript https://repository.essex.ac.uk/17237/1/1-s2.0-S1071581916300751-main.pdf, read for the abstract, introduction and experiment 1 results; the Berlin preprint https://repository.essex.ac.uk/26174/1/Roberts_et_al_IDJ_2016.pdf (abstract read).
+
+## jones1856grammar
+
+Jones, O. (1856). *The Grammar of Ornament*. London: Day and Son.
+
+### Core claims
+
+Jones, an architect and designer, argues that ornament can be taught as a language with rules, and that the rules can be learned from the ornament of every period and culture and then applied to new work without copying old results. He frames the book as a response to the poor state of design in his day and ends its principles with a call that no improvement can occur until artists, manufacturers and the public are better educated in art and the existence of general principles is recognized (Proposition 37, read in the 1856 text on the Internet Archive). The Metropolitan Museum's essay on the book (found by search) adds that Jones was reacting to slavish copying of published patterns, and quotes his Proposition 36 (the principles discoverable in the works of the past belong to us; not so the results).
+
+### Specifics
+
+The book prefaces its colour plates with thirty-seven numbered propositions headed "General principles in the arrangement of form and colour, in architecture and the decorative arts, which are advocated throughout this work". I read all of them. Selected rules, paraphrased from the 1856 text: decorative arts arise from, and should attend upon, architecture (1); works should possess fitness, proportion and harmony, the result of which is repose (3); construction should be decorated, but decoration should never be purposely constructed (5); beauty of form comes from lines growing out of one another in gradual undulations, with nothing that could be removed without loss (6); care for the general forms first, subdivide them with general lines, then fill the interstices with ornament that can be subdivided again for closer inspection (7); all ornament should be based on a geometrical construction (8); proportions should be multiples of a simple unit, and the most beautiful ratios are those the eye finds hardest to detect (9); harmony of form is a balance of the straight, the inclined and the curved (10); all lines should flow out of a parent stem (11); junctions of curves should be tangential (12); flowers and natural objects should not be copied but conventionalized (13).
+
+On colour: colour assists the development of form and distinguishes parts (14, 15); primary colours should be used in small quantities on small surfaces, balanced by secondary and tertiary colours on larger masses (16); Proposition 18 gives numerical balance ratios taken from Field's chromatic equivalents (for example 3 yellow, 5 red, 8 blue for the primaries), which are a nineteenth-century theory that I did not check against modern colour science; propositions 24 to 27 apply Chevreul's simultaneous contrast (light tones appear lighter, dark darker, and each colour tinges its neighbour with its complement). Propositions 28 to 33 give boundary rules: colours should never impinge on each other, and ornament on a contrasting ground should be separated by an edging of a lighter colour, of gold, white or black. The book then presents plates in chapters from Ornament of Savage Tribes and Egyptian ornament onward.
+
+### Replication and criticism
+
+This is craft authority from a 19th-century architect, and it is historically specific. Its colour theory relies on Chevreul's contrast principle (the effect Jones describes is now studied as simultaneous contrast) and on Field's ratios, which I could not verify as sound. Its cultural framework, which ranks the ornament of cultures in a progress narrative, reflects Victorian assumptions that modern readers should not adopt. Treat the principles as hypotheses about balance, hierarchy and edge separation, not as laws.
+
+### Implications for LTF
+
+Three transferable ideas. First, hierarchy in decoration: Proposition 7 describes a nested structure of large form, then main lines, then fine detail that rewards close viewing; a lesson page can do the same, with big structure legible at a glance and detail revealed on closer reading. Second, edging rules: the propositions about separating ornament from ground with a light or dark edge map directly to contrast and outline decisions for text on a pattern or gauge marks on a dial, and support giving any patterned background a quiet zone behind text. Third, restraint: ornament that cannot be removed without loss is a high bar; most LTF ornament (section dividers, empty states, a compass-rose motif) should pass the test "does it help orientation or recognition?" and be removed in fly mode. Conventionalized, not photographic, motifs fit an instrument-panel visual language.
+
+Confirmed this session: Open Library (works OL15836693W, OL24521691W); full OCR text of the 1856 edition at https://archive.org/stream/grammarornament00Jone/grammarornament00Jone_djvu.txt, propositions 1 to 37 read; Metropolitan Museum essay summarized in web search results.
+
+## dresser1873principles
+
+Dresser, C. (1873). *Principles of Decorative Design* (4th ed.). London: Cassell, Petter, Galpin & Co.
+
+### Core claims
+
+Dresser, a designer who wrote for manufacturers and working men, wrote the book as an art-education text. The preface (read in the Internet Archive scan) says its object is aiding the art education of those who seek knowledge of ornament as applied to industrial manufactures, that it attempts "simply to instruct", and that it addresses working men; the text began as lessons in the Technical Educator. He argues that ornament is not mere prettiness but a power for good or ill, to be judged by a set of principles: truth, beauty and power, with utility first. An object must first be formed as a work of utility and may then be made as beautiful as you please. An object that is unpleasant to use will in the end be set aside.
+
+### Specifics
+
+The contents list: an introductory chapter (art knowledge, historic styles; truth, beauty, power; humour in ornament), then colour, furniture and further chapters on manufactured goods. On truth, he condemns imitation of one material in another (wood graining, marbling, a carpet pattern imitating another, a jug imitating wicker) as false, and says each material can express beauty truthfully. On beauty, he says a beautiful composition has no part that could be taken away leaving the rest equally good or better, a rule close to Jones's Proposition 6. On expression, he links form to effect: sharp, angular or spiny forms are exciting, bold broad forms give repose, and "breadth" and "largeness" of treatment induce tranquillity; so the ornamentist should ask what effect each form has on the mind. Decoration should suit the room: richness for a dining room, cheerfulness for a drawing room, worth for a library, repose for a bed room; glitter must be used sparingly or it reads as vulgar. He quotes George Wilson on the compatibility of beauty and utility and uses the nautilus shell as an example. He also quotes Owen Jones's formula (Proposition 3 of the previous source) that works of the decorative arts should possess fitness, proportion and harmony, the result of which is repose.
+
+### Replication and criticism
+
+It is a craft treatise by a leading designer, with moral and class overtones that are dated (the "noble" working men, the claim that art can exalt or debase a nation). The claims about the emotional effects of forms (angular excites, broad soothes) are plausible and have echoes in later empirical aesthetics, but Dresser offers no experiments. Scholars read him as bridging Victorian ornament and early modern design: the demand that decoration follow function and material honesty anticipates later functionalism, though his own work was richly decorated.
+
+### Implications for LTF
+
+Dresser's "utility first, then beauty" ordering is the right order for fly mode: first a screen that is correct to use, then character. His statement that glitter excites and large breadth soothes supports a calm base state, with sharp or high-contrast treatment saved for warnings. The room-by-room mood idea suggests a mood map for the product: lesson reading is a library (worth, calm), challenge briefing a workshop (focus), progress a drawing room (cheerful), fly mode a bed room in the sense of repose, since it must not compete with the simulator. His material honesty can be applied to UI: do not draw a bevelled metal bezel in CSS when a flat card is what it is; a skeuomorphic gauge face is acceptable when it is a real instrument depiction, not decoration.
+
+Confirmed this session: Open Library (works OL2972475W, OL13786140W); Internet Archive catalog listing (principlesofdeco00dres, London: Cassell, Petter, & Galpin, 1873) and OCR text https://archive.org/stream/principlesofdeco00dres/principlesofdeco00dres_djvu.txt, with the fourth edition title page, preface and chapter 1 read; Gutenberg search result describing the fourth edition. The year 1873 is the archive and Open Library cataloguing, not printed on the OCR title page I read.
