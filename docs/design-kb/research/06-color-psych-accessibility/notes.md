@@ -639,3 +639,69 @@ The follow-up by Piepenbrock, Mayr and Buchner (2014; abstract confirmed) tested
 4. A/B test any dark theme against a light theme on checklist accuracy and reading speed, equating overall luminance to separate polarity from brightness.
 
 Confirmed this session: Crossref 10.1080/00140130802641635 (volume 52, issue 7, pp. 882-886); Europe PMC abstracts of this paper and of Piepenbrock, Mayr and Buchner (2014; 10.1177/0018720813515509); search summary of the Düsseldorf dissertation (not used for numbers).
+
+## piepenbrock2013positive
+
+Piepenbrock, Mayr, Mund & Buchner (2013), "Positive display polarity is advantageous for both younger and older adults", Ergonomics 56(7), 1116-1124.
+
+### Core claims
+
+The study asks whether the positive polarity advantage (dark characters on a light background beating light on dark) holds for older adults. An advantage was expected for younger adults, but the effect on older adults was ambiguous in advance. Light scatter from residues in the aging lens and vitreous humour could reverse the typical advantage of positive polarity, but age-related declines in retinal illuminance could mean brighter positive displays help compensate and lead to better performance than darker negative displays. Participants did a visual acuity test (black optotypes on white or white optotypes on black) and a proofreading task in the same polarity. A positive polarity advantage was found for both age groups, and the authors recommend positive polarity for all ages.
+
+### Specifics
+
+Evidence type: laboratory experiment with two age groups, using two tasks (visual acuity and proofreading). Confirmed from the abstract and its practitioner summary:
+
+- Manipulation: polarity, black-on-white versus white-on-black, with the same polarity used for the acuity test and the proofreading task.
+- Two hypotheses stated up front for older adults, with opposite predictions: scatter harming positive polarity versus reduced retinal illuminance favoring it.
+- Result: positive polarity better in both younger and older groups.
+- Practitioner summary: in an aging society age-related vision changes should be considered in digital displays, and dark characters on a light background lead to better legibility and are strongly recommended independent of an observer's age.
+
+Group sizes, age ranges and effect sizes are not in the abstract and I did not retrieve the full text, so they are not given.
+
+A follow-up by Piepenbrock, Mayr and Buchner (Human Factors 56(5), 942-951, 2014; Crossref 10.1177/0018720813515509) found that the positive polarity advantage in proofreading increased linearly with decreasing character size, for sizes of 8, 10, 12 and 14 points (0.22, 0.25, 0.31 and 0.34 degrees of vertical visual angle), and concluded that negative polarity should be avoided especially with small fonts, supporting the luminance explanation.
+
+### Replication and criticism
+
+Part of a consistent line of work from one group, with independent support from Dobres et al. (2017) on glance-like reading. A caveat from the group's own paper of 2009 (Buchner et al.) is that the polarity effect disappears when overall luminance is matched, so "positive polarity" may be shorthand for "brighter display". Another is that tasks were proofreading and acuity, not prolonged comfortable reading, and the studies measured performance, not preference or visual fatigue; the 2007 study found no differences in strain measures. A small group and lab context mean the findings are best treated as moderately strong evidence for a modest effect, not as a law.
+
+### Implications for LTF
+
+1. Older adult learners (a real share of people who take up flying later in life) show the same direction of effect as younger ones; a light theme is the safe default for dense text, quizzes and checklists.
+2. If LTF supports dark mode, keep small text larger and brighter in dark mode, because the penalty grows with smaller sizes. Set a minimum text size token for dark themes higher than for light.
+3. Do not assume "older users prefer dark mode for glare", which this study does not support.
+4. For fly mode, where text is read at a glance and sometimes small, prefer larger sizes in dark mode and test both polarities with representative users rather than assuming dark is better in a dark room.
+
+Confirmed this session: Crossref 10.1080/00140139.2013.790485 (volume 56, issue 7, pp. 1116-1124, four authors); Europe PMC abstract and practitioner summary; Europe PMC abstract of the 2014 Human Factors paper.
+
+## dobres2017effects
+
+Dobres, Chahine & Reimer (2017), "Effects of ambient illumination, contrast polarity, and letter size on text legibility under glance-like reading", Applied Ergonomics 60, 68-73.
+
+### Core claims
+
+The paper tests the positive polarity advantage under glance-like reading, motivated by automotive displays and other interfaces that must work under varying ambient light. Prior research suggested the advantage stems from the brighter illumination emitted by positive-polarity displays and not from the darker background of negative displays. The authors measured legibility thresholds using a lexical decision paradigm with two type sizes, two display polarities and two ambient illuminations (near-dark and daylight-like). Legibility thresholds, quantified as the time needed to read a word accurately, were highest (worse) for negative polarity under dark ambient illumination. Positive polarity in the dark, and all conditions under bright illumination, showed significantly lower thresholds (better legibility). The authors read this as consistent with the idea that brighter illumination causes pupillary contraction, which reduces optical aberrations as light enters the eye.
+
+### Specifics
+
+Evidence type: laboratory experiment with a lexical decision task (is this letter string a word?) and a threshold measure in time, a design that approximates a glance. Confirmed details from the abstract:
+
+- Factors: type size (two sizes), polarity (positive, negative), ambient illumination (near-dark, daylight-like).
+- Measure: the display time needed to read a word accurately (legibility threshold); lower is better.
+- Key interaction: negative polarity was disadvantaged specifically in dark ambient conditions; all conditions under bright illumination showed significantly reduced thresholds, so the polarity penalty was specific to the dark condition.
+- Mechanism proposed: pupillary contraction under brighter light limits optical aberrations.
+
+The abstract does not give the number of participants, the sizes in points or the thresholds in milliseconds; I do not state them.
+
+### Replication and criticism
+
+This study refines the picture from Buchner and Baumgartner (2007), who found the positive polarity advantage independent of ambient illumination for proofreading: here, for glance-like reading, the disadvantage of negative polarity is concentrated in the dark. The two are not contradictory, as the tasks differ (glance versus extended proofreading) and the mechanism proposed is the same (luminance and pupil size). It is a single-lab result, and the authors' application field is automotive glance reading; I did not find independent replications this session. The mechanism (pupil contraction) is a hypothesis consistent with the data, not directly measured in the abstract.
+
+### Implications for LTF
+
+1. It is the most relevant study in the lane for fly mode: a learner glancing at a second screen from a simulator in a dim room is a glance-reading situation under near-dark conditions. The result says light-on-dark text with a dim display is the worst combination for fast reading.
+2. In fly mode, avoid small, dim light-on-dark text; use large type, higher luminance for key values and a restrained dark surface.
+3. If a dark fly-mode theme is chosen to avoid dazzle, compensate with larger sizes and brighter text, and test the actual reading time of a checklist step at a glance, not just subjective comfort.
+4. Provide a user-controlled brightness or theme toggle inside fly mode, because the best choice depends on room light, which the app cannot sense reliably.
+
+Confirmed this session: Crossref 10.1016/j.apergo.2016.11.001 (Applied Ergonomics 60, pp. 68-73, three authors); Europe PMC abstract.

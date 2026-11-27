@@ -155,3 +155,35 @@ This is practitioner interview research, not controlled study. The evidence is a
 5. Run an interface audit before systemizing: list every distinct button, callout and card on existing lesson pages, count the variants, and merge them. The book covers how to audit an interface, though I could not confirm where in the process it places that step.
 
 Confirmed this session: Open Library search "design systems kholmatova" returned work OL38056351W (Design Systems (eBook), Alla Kholmatova, 2017, Smashing Media AG, ISBN 9783945749586); publisher page read at https://www.smashingmagazine.com/design-systems-book/ (description, contents, 288 pages, case studies, review quotes). I did not read the book.
+
+## suarez2017design
+
+Suarez, M., Anne, J., Sylor-Miller, K., Mounter, D., and Stanfield, R. (2017). *Design Systems Handbook*. Edited by N. Curtis. DesignBetter.Co (InVision).
+
+### Core claims
+
+The handbook argues that design has failed to scale because it is still bespoke, tailor-made for individual problems, and that the remedy is the one software engineering adopted decades ago: reusable components guided by clear standards. Its definition: a design system is "a collection of reusable components, guided by clear standards, that can be assembled together to build any number of applications". The opening chapter (Suarez) compares today's design situation to the software crisis of the 1960s and to Douglas McIlroy's 1968 proposal of component-based development, and says a team facing growth can hire more people, design faster, or create solutions that work for multiple problems, with only the last scaling.
+
+### Specifics
+
+Authorship and form were confirmed from search results: five practitioners, with Nathan Curtis as editor, drawn from Salesforce, Etsy, GitHub, InVision and Airbnb, in InVision's DesignBetter.Co library, with a Product Hunt launch listing dated 29 November 2017. I read a university-hosted PDF copy; I cannot vouch for its licensing, so the notes quote sparingly. Chapters: introducing design systems (Suarez), designing your design system (Anne), building (Sylor-Miller), putting into practice (Mounter), expanding (Suarez and Tahran), and the future (Stanfield).
+
+Standards and components are the two halves. Standards include naming conventions, accessibility requirements, file structure and a visual language covering color, shape, type, icons, space and motion; "without standards, decisions become arbitrary and difficult to critique". Components are reusable code, and reducing them to a single function (a button, a drop-down) makes them more reusable than complex data tables.
+
+Anne's chapter gives a process: assemble a cross-disciplinary team; choose a team model (solitary, centralized or federated, with the Salesforce Lightning team using a hybrid of central and federated); interview the internal customers; run a visual audit. The audit example is concrete: CSS Stats showed Facebook with 38 unique text colors (figure caption). It defines design tokens as the "subatomic" foundation, "name and value pairs stored as data" for colors, spacing, sizing and animation durations, with a spacing example given as SPACING_MEDIUM: 1rem. The chapter recommends metrics divisible by or multiples of 4, a modular type scale, and checking color contrast.
+
+Sylor-Miller's chapter covers code style, namespacing, and the handling of breaking changes. It tells the story of duplicating and deprecating a Tab component by creating a second one, then recommends versioning, with semantic versioning as the common standard. Mounter's chapter compares versioning the whole system against versioning by module and describes how GitHub combined versioning with semver; it also covers support channels such as a dedicated Slack channel and office-hours-style help.
+
+### Replication and criticism
+
+This is practitioner opinion with company case examples (Salesforce, Shopify Polaris, GitHub, Atlassian, LinkedIn, Airbnb). There are no controlled studies. Its framing of design debt and its claims that a system speeds work are plausible but come from the authors' own organizations, which are large product companies with dedicated teams. Whether the same approach pays off for a small team is not tested here; the Salesforce chapter itself notes a solitary model can suit a fast-moving campaign (the Pantsuit system) but may need later work to be adopted widely. The software-crisis history is a framing device, not a researched account.
+
+### Implications for LTF
+
+1. LTF is closest to the solitary or small centralized model. The handbook says to staff a system like a product: even a one-person system needs an owner, a changelog and an update routine.
+2. Do the visual audit early. Count the distinct colors, font sizes and spacing values already used in lessons and widgets, and merge them. The Facebook example shows how quickly variants accumulate.
+3. Adopt design tokens now. Name-value pairs for color, spacing and type are cheap and already consistent with the repository rule that colors and spacing come from tokens, never raw hex. Semantic names support both light and dark themes.
+4. Use spacing in multiples of 4 and a modular type scale as a starting default, then test legibility for glanceable fly mode.
+5. Plan deprecation: when a widget is redesigned, version it and keep the old one working long enough to migrate lessons, rather than duplicating under a new name.
+
+Confirmed this session: web search (Product Hunt listing and InVision announcement results) for authors, editor, publisher and launch date; text read from the university-hosted PDF at https://streaming.missioncollege.edu/mgarrett/media/gds72/gds72_resources/InVision_DesignSystemsHandbook.pdf (chapters 1 to 4 skimmed for definitions, tokens and versioning). No ISBN or DOI exists that I could confirm.

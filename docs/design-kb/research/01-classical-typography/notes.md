@@ -466,3 +466,95 @@ Reviews are mixed. Williams calls Noordzij's ideas widely circulated among type 
 4. Treat the theory as background for choosing among faces, not as a rule set for components.
 
 Confirmed this session: Publisher page https://www.hyphenpress.co.uk/products/books/978-0-907259-30-5 (translator, 1985 original, 88 pages, contents). Spiekermann's review at https://hyphenpress.co.uk/the_stroke_a_review/. Williams's review in *Amphora* read from https://journals.lib.sfu.ca/index.php/amphora/article/download/2213/1622/7247 (Hyphen, 2005, £15). Open Library work OL4869181W lists the Hyphen edition (listed there as 2006).
+
+## hochuli2008detail
+
+Jost Hochuli, *Detail in Typography: Letters, Letterspacing, Words, Wordspacing, Lines, Linespacing, Columns*, translated by Charles Whitehouse (London: Hyphen Press, 2008; 61 pages). German original *Das Detail in der Typografie*; an earlier edition appeared in 1987 and a revised German edition from Niggli in 2005.
+
+### Core claims
+
+Hochuli, a Swiss book designer born in 1933, wrote a short, pocket-sized book on what he calls micro-typography: the detail of the basic units of a text, namely letters, letterspacing, words, wordspacing, lines, linespacing and columns. A Designers Review of Books account says he coined the term in 1987 to distinguish these details from macro-typography, the layout of the page. The book's position, in that review, is that good solutions come from "intelligent designers finding appropriate solutions," not from rules applied mechanically; he does not present the book as infallible and says it does not cover every problem.
+
+### Specifics
+
+The six chapters, per Designers Review of Books, are: the reading process; the letter; the word; the line; line spacing and the column; and the qualities of type. The method is cumulative, working from the smallest elements up. A typefoundry's article on the typography of books, which names Hochuli as the source of the macro/micro distinction, describes its guidance in these qualitative terms: lines should not be so long that the eye gets lost nor so short that text feels jumpy; longer lines need looser leading; overly wide word spaces disrupt reading, so frequent hyphenation is preferable; do not vary letterspacing to justify lines.
+
+The English edition is a revision for English-language setting. Micha Weidmann's review in *Eye* (no. 69, 2008) reports that, because English words are shorter than German ones, Hochuli suggests English lines can be shorter for an even, neutral text color; and that English uses less hyphenation, which makes line breaks less flexible, so, in the reviewer's words, "an editorial designer can achieve a better result with ranged text than with justified text." The reviewer praises the logical order and concise detail but disagrees with a suggestion to use the letter x as a multiplication sign, saying a font should supply a proper multiplication sign.
+
+I found no numeric rules (percentages, character counts) from Hochuli in any account I could read, so this note does not state any.
+
+### Replication and criticism
+
+Hochuli's rules are craft judgments from a book designer, not experimental results. The reviews I fetched contain almost no criticism. The one concrete disagreement is the multiplication sign. Its authority is that of a long-practicing book designer and teacher; Kinross's imprint published it and Kinross's history and Bringhurst's manual are the companion texts the reviewers recommend (kinross2004modern, bringhurst2012elements). The book was reprinted in 2009 and, per Hyphen Press, the English edition moved to Éditions B42 in 2015.
+
+Being print-oriented and Latin-script, its guidance on hyphenation and ragged setting depends on language and on the quality of a browser's hyphenation, which is a different situation from a fixed page.
+
+### Implications for LTF
+
+1. Treat micro-typography as a checklist category in reviews: letterspacing, word spacing, line breaks, widows and orphans, and column rhythm, kept separate from page layout decisions.
+2. Because English lines can be shorter for even color, do not copy line-length rules derived from German or from long-line book settings without testing in English.
+3. His case for ranged (ragged-right) text over justified text for English supports the default of left-aligned lesson text. This repeats Gill's argument (gill1936essay) through a modern practitioner.
+4. Proper symbols matter: use a real multiplication sign or minus where the font has them, and do not substitute lookalike letters in numeric content, but let the font provide glyphs.
+5. A short book beats a long one for team adoption; an LTF type guide should be a page or two, in the same spirit.
+
+Confirmed this session: Eye review by Micha Weidmann at https://eyemagazine.com/review/article/on-a-clear-day-you-can-read-between-the-lines ; Designers Review of Books at https://designersreviewofbooks.com/2010/09/jost-hochuli-detail-in-typography/ ; Hyphen Press news pages (2008 edition, 2009 reprint, 2015 transfer to Éditions B42) found by web search on hyphenpress.co.uk; typefoundry article at https://typofonderie.com/gazette/the-typography-of-books/ ; Wikipedia at https://en.wikipedia.org/wiki/Jost_Hochuli (born 1933). Open Library work OL3067489W lists the 2008 Hyphen Press edition (ISBN 9780907259343) and the 1987 Compugraphic edition.
+
+## kinross2004modern
+
+Robin Kinross, *Modern Typography: An Essay in Critical History*, second edition (London: Hyphen Press, 2004; first edition 1992).
+
+### Core claims
+
+Kinross's book is a critical history, not a style guide. The publisher describes it as a concise tour of Western typography from about 1700, when typography began to separate from printing and become "modern," focusing on ideas, social context and technical developments rather than stylistic analysis. Its thesis is that modern typography is an attempt to communicate clearly and rationally, not merely a modernist style, and so it includes traditionalist typography as well as the avant-garde. In Matthew Carter's review in *Eye* (no. 7, 1992), Kinross dates typographic modernity to about 1700, when printing began to describe itself in manuals such as Moxon's and Fertel's, and argues that "typographers need to incorporate critical reflection into their own practice."
+
+### Specifics
+
+Contents per the publisher: Modern typography; Enlightenment origins; The nineteenth-century complex; Reaction and rebellion; Traditional values in a new world; New traditionalism; Cultures of printing: Germany; Cultures of printing: the Low Countries; New typography; Emigration of the modern; Aftermath and renewal; Swiss typography; Modernity after modernism; Examples; Postscript on reproduction; Sources: commentary; Sources: bibliography; Index. The 2004 reprint has revised text and new colour illustrations; it runs to about 270 pages.
+
+Carter's review says the heart of the book is the chapters on the New Typography, and praises: a more balanced account of the nineteenth century (William Morris's reforms alongside lithography, photography and functional typography); the sections on early twentieth-century reform, on the "new traditionalism" of Rogers and Morison and on the Monotype Corporation's influence; the chapters on Central European modernism and its emigration; the illustrations of functional print; and the chapter-by-chapter source commentary, a concise critical bibliography. He quotes Tschichold's programme "Standardization, instead of individualism" and notes Kinross's correction of a common assumption: "the Bauhaus had no fully fledged typographers." Carter's *Eye* page adds that Tschichold, with Paul Renner and Georg Trump, taught in Munich, not at the Bauhaus.
+
+### Replication and criticism
+
+A work of history and argument. Its evidence is documentary, and the question of what it proves is interpretive. Reviews of the first edition were largely admiring: Steven Heller called it "the first history of typography with a critical thesis," Alastair Johnston said it "deserves to become a classic," and Giovanni Lussu said it offered "a complete redefinition of the subject." Phil Baines wrote, "I don't agree with the basic tenets of the book, but find the story fascinating and stimulating just the same." Those quotations are from Hyphen Press's publicity page, which is selective.
+
+Carter's main reservation is brevity. He notes the book largely ignores figures such as Baskerville and Bodoni and most private presses, as a deliberate editorial choice. The book gives prominence to rational, articulate practitioners and is open about it. The reader should remember that this is a framing: the fine-printing traditions Carter says the book largely sets aside overlap with Updike's Merrymount Press work (updike1922printing) and Dowding's private-press taste (dowding1954finer).
+
+### Implications for LTF
+
+1. Use Kinross's definition as a design stance: typography is rational communication, not a style. A flight-training product earns trust through clarity and consistency rather than through a fashionable look.
+2. The book shows that the craft tradition and the modernist tradition share the aim of serving the reader and differ about means. LTF can take Warde, Morison and Gill for sustained reading and Tschichold's 1928 rules for UI chrome, as the notes on those sources suggest.
+3. "Critical reflection" supports this knowledge base's practice of recording the reason and evidence for each rule, and of marking craft opinion as such.
+4. Kinross's Swiss typography chapters are the historical bridge to grids and modern UI conventions (lane 04); read them there.
+5. When a team member says a design is "Bauhaus" or "modernist," Kinross is the reference for being precise about what that history was.
+
+Confirmed this session: Publisher page https://hyphenpress.co.uk/products/books/978-0-907259-18-3 (description, contents, 272 pages, ISBN 978-0-907259-18-3, review snippets). Matthew Carter's review at https://www.eyemagazine.com/blog/post/type-tuesday40. Open Library work OL8656922W lists the February 2004 Hyphen edition (ISBN 9780907259183). Library catalogs in web search results give 270 to 272 pages.
+
+## unger2018theory
+
+Gerard Unger, *Theory of Type Design*, edited by Christopher Burke, designed by Hansje van Halem (Rotterdam: nai010 publishers, 2018; 240 pages).
+
+### Core claims
+
+Unger, a Dutch type designer, wrote a late-career book of short chapters on how text works as a structure and how type design should respond. It is "theory" in a particular sense. A passage quoted on Underware's site has Unger saying theory should not be merely descriptive, certainly not prescriptive, but "investigative and reflective." Reviewers agree the book offers reflection, not rules. Peter Biľak's review in *Eye* (no. 98, Spring 2019) says it gives no "ready-made theories or methods" for making typefaces more effective, and that Unger believed some questions have no answers, for example that a formula for the ideal balance of positive and negative space cannot be derived. Unger urges designers to pose their own research questions and collaborate with scientists.
+
+### Specifics
+
+Both Eye and Typotheque count 25 short chapters (nai010's own description speaks of 24, so treat the count as approximate). They treat the components of type design and typography as text structure, pattern, texture, consistency or deliberate inconsistency, coherence and rhythm, with more attention to how text is organized and laid out than to individual letterforms. The Typotheque review says reading is nearly automatic and that typesetting conventions help text flow into the reader's mind, and that on spacing Unger says no formula can produce a perfect relationship between negative and positive forms, because letter shapes are too varied for simple rules.
+
+The legibility chapter, as both reviews describe it, mostly asks questions rather than answering them: whether fine details matter at small sizes, whether a high x-height aids legibility, and whether serif typefaces are more legible than sans serif ones. This is a useful honest position from a practitioner: even an expert who spent a career on legible type treats these as open.
+
+### Replication and criticism
+
+It is a practitioner's reflection, not an experiment. Reviews are positive on content and mixed on form. Biľak says that by conventional definitions of "theory" the title overstates the scope, though Unger uses the word for a scholarly basis for reflecting on practice, which he achieves well; the book may be too brief at 25 chapters for in-depth exploration; it is "not for type design students hungry for rules" but better for advanced professionals; and van Halem's decision to place all illustrations at the end of each chapter forces readers to flip back and forth. Typotheque agrees on the inaccurate title and brevity. A reader review on typography.guru is harsh, reporting that errors and inconsistencies can be found on most pages; I could not check this claim and note it only as a dissent.
+
+For LTF the importance is partly negative. Unger's refusal to give formulas for spacing and his open legibility questions are a counterweight to craft rules elsewhere in this lane: Bringhurst's 66 characters, Gill's twelve words and De Vinne's three-to-em space are conventions, not laws.
+
+### Implications for LTF
+
+1. Treat the lane's numbers (line length, word space, leading) as starting defaults to test on real learners and devices, not as settled facts. Unger's skepticism is the model.
+2. Do not choose a text face on the ground that serifs or a high x-height are "more legible." Experts in this book treat those as open questions; use lane 02 and lane 03 evidence and test with the target audience.
+3. Consistency and rhythm as organizing ideas apply to a component system: decide where the interface is deliberately consistent and where it is deliberately varied (for example, alerts versus lesson prose).
+4. Collaboration between designers and scientists is a process recommendation: when a design question can be tested with learners (for example, which numeral style is faster to read in fly mode), plan a test rather than debate.
+5. Document the reasoning behind type choices in the design system, because there are few formulas to fall back on.
+
+Confirmed this session: Biľak's review at https://www.eyemagazine.com/review/article/rules-of-engagement ; Typotheque's review at https://typotheque.com/articles/theory-of-type-design-a-book-review ; search-result extracts of Underware's essay and a typography.guru reader review; Open Library work OL21362087W lists the 2018 nai010 edition (ISBN 9789462084407, 240 pages).

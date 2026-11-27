@@ -112,7 +112,7 @@ Results (from the paper text): animation produced significantly lower error than
 
 ### Replication and criticism
 
-This is a controlled experiment with a modest, fairly homogeneous sample, tested on one visual setting with a mask that removed the later state, so the authors note better performance in predictable cases may partly reflect better memory transfer. Later work qualifies the optimism: Dragicevic et al. (2011, this lane) test timing distortions on the same task family and find slow-in slow-out helps tracking; Chevalier et al. (2016, this lane) review a decade of results and find the evidence for benefits is narrower than the enthusiasm. Tversky et al. (2002) review the earlier literature and warn that many positive findings were confounded by extra information in the animated condition. Heer and Robertson remain the standard citation for staging and simple transitions in data graphics, and their own statement that staging gains are "not overwhelming" should be kept in view.
+This is a controlled experiment with a modest, fairly homogeneous sample, tested on one visual setting with a mask that removed the later state, so the authors note better performance in predictable cases may partly reflect better memory transfer. Later work extends rather than overturns it: Dragicevic et al. (2011, this lane) test pacing on a related tracking task and find slow-in slow-out helps. Tversky et al. (2002) review the earlier literature and warn that many positive findings were confounded by extra information in the animated condition. Heer and Robertson remain the standard citation for staging and simple transitions in data graphics, and their own statement that staging gains are "not overwhelming" should be kept in view.
 
 ### Implications for LTF
 
@@ -250,3 +250,33 @@ This is the evidence for LTF's default easing: where a widget element moves from
 Two cautions. First, "ease" is not free: easing wastes the start and end of the time budget, so a transition that needs to be as short as 150 ms may be better with a gentler curve than a strong ease-in-out. The paper tested one-second transitions, so no figure from it should be applied to short interface micro-transitions. Second, for gauges that show a measured quantity, the needle should follow the data, not an easing curve that lags or overshoots it; use easing for scripted demonstrations, and direct mapping for live or simulated values.
 
 Confirmed this session: Crossref DOI 10.1145/1978942.1979233 (CHI 2011, pages 2009-2018); full text read at https://cs.au.dk/~elm/pdf/timedistort.pdf. Note that the "38%, 31%, 15%" figures are taken from the paper's count of correct answers; I did not confirm which of the paper's two analyses (generated or real data set) they describe, so treat them as indicative.
+
+## chevalier2016animations
+
+Chevalier, F., Henry Riche, N., Plaisant, C., Chalbi, A. and Hurter, C. (2016). Animations 25 years later: new roles and opportunities. *Proceedings of the International Working Conference on Advanced Visual Interfaces (AVI '16)*, 280-287.
+
+### Core claims
+
+The paper revisits Baecker and Small's 1990 taxonomy of the roles animation plays in interfaces, twenty-five years on. The authors reviewed academic publications and commercial systems and interviewed 20 professionals of various backgrounds. The result is an expanded taxonomy of 23 roles in five categories: keeping in context, teaching aid, user experience, data encoding and visual discourse. They state that the aim is to give the field a common language, guide evaluation, and spark research. It is a conceptual and survey contribution, not an experiment, and the authors say explicitly that they chose not to report published evaluation results, because mixed results and complex procedures needed more space than available and they could not summarize them accurately.
+
+### Specifics
+
+Method (from the paper): a review (a search of the ACM Digital Library and keyvis.org for papers with "animation" or "animated transition", plus examples from websites, apps and products), an iterative build of the taxonomy compared against Baecker and Small's scenarios, with minor and hybrid roles removed, and a validation step where the 20 interviewees listed at least five animation uses each, then tried to classify them using the taxonomy and suggested missing roles. They use Bétrancourt and Tversky's broad definition: any application that generates a series of frames where each frame is an alteration of the previous one.
+
+The 23 roles by category are: keeping in context (staying oriented during navigation; supporting tracking during layout changes; maintaining up to date; replaying history and summarizing); teaching aid (affordance and preview; training by demonstration; explaining how a system works; illustrating an algorithm; teaching a new representation of information); user experience (hooking the user; keeping the user engaged; providing visual comfort and aesthetics; making activity and progress visible; revealing or hiding content; providing a virtual tour; providing feedback of an input mechanism); data encoding (revealing data relationships; conveying uncertainty or randomness; encoding emotion; encoding an object attribute); and visual discourse (supporting a narrative; highlighting content; persuading and convincing).
+
+Role-specific points of use here: staged animation for complex navigation (the SpaceTree example grows a branch in three steps); animation that makes progress visible and fights boredom while a system is busy (hourglass cursors from 1985, spinning wait wheels, progress bars); and a note that once learning has taken place, a teaching animation "may not be needed anymore and its use discontinued". Evaluation advice is given per category: revisitation and multiple-object-tracking experiments for keeping in context, pre-test and post-test designs for teaching, viewing time, dropout and A/B tests for user experience, and questionnaires for possible drawbacks such as dizziness, distraction and boredom. The authors also flag that the outcomes of existing empirical studies of animation as a teaching aid are mixed, so more research is needed.
+
+### Replication and criticism
+
+A taxonomy cannot replicate, but it can be judged on coverage and usefulness. The validation was informal interviews with 20 experts, not a controlled test of the taxonomy, and the authors acknowledge that it could be refined further. Its value for a designer is as a checklist of purposes. Its weakness is that it says little about which roles have strong evidence; for that, the experimental papers in this lane (Tversky et al. 2002; Höffler and Leutner 2007; Heer and Robertson 2007; Dragicevic et al. 2011) are the better guides. The paper treats uses such as "hooking the user", "persuading" and engagement as legitimate roles, while noting that they are rarely studied, so roles with little evidence sit next to roles with strong evidence.
+
+### Implications for LTF
+
+Use the taxonomy as a design-review question: before adding motion, name the role it plays, and check the evidence for that role. For LTF the defensible roles are staying oriented (a short glide when a diagram pans or zooms), tracking during layout change (a card or checklist item that moves to a new position), revealing and hiding content (a short expand or collapse that preserves where things came from), making activity and progress visible (a progress indicator while content loads), affordance and preview (a looping hint on a widget that the learner can drag), and explaining how a system works (a lesson animation with step controls). Roles that LTF should treat with suspicion are hooking, keeping engaged and persuading, because the evidence is thin and they fit poorly with a trustworthy training product.
+
+The "teaching animation can be retired once learned" note suggests a pattern: show a demonstration animation on a learner's first encounter with a widget, then replace it with a static hint.
+
+The paper lists dizziness as a possible drawback to measure, a prompt for the reduced-motion work covered by the WCAG and vestibular sources in this lane: every role above needs a non-animated equivalent.
+
+Confirmed this session: Crossref DOI 10.1145/2909132.2909255 (AVI 2016, pages 280-287); full text read from the HAL copy https://hal-enac.archives-ouvertes.fr/hal-01322962/document. The search tool's suggested Dragicevic authorship was wrong: the authors are Chevalier, Henry Riche, Plaisant, Chalbi and Hurter.

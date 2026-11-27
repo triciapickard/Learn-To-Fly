@@ -20,9 +20,9 @@ Design consequence: a pie forces angle judgments, a bar chart allows position ju
 
 ### Replication and criticism
 
-Heer and Bostock (2010) re-ran the position-length experiment on Mechanical Turk with 50 subjects per chart. The rough shape and ranking of the position and length types were preserved. Area proved worse than angle, and both worse than position, as predicted, but angle was not worse than length; the original position-angle experiment used a different task format, so the two were never directly comparable.
+Heer and Bostock (2010) re-ran the position-length experiment on Mechanical Turk with 50 subjects per chart. The rough shape and ranking of the position and length types were preserved. Area proved worse than angle, and both worse than position, as predicted, but angle was not worse than length.
 
-Later work qualifies the ranking. McColeman, Yang, Brady and Franconeri ("Rethinking the Ranks of Visual Channels", a 2021 preprint, seen via search summary) argue that a two-value ratio judgment is a narrow baseline because real charts show many values; their experiments with 2, 4 and 8 marks did not recover the classic ranking and gave rankings that varied with mark count. Skau and Kosara (EuroVis 2016, Computer Graphics Forum 35(3)) report, per the abstract page, that angle was the weakest cue in pie and donut charts and that a donut read as accurately as a pie, which complicates the idea that pies fail because of angle.
+Later work qualifies the ranking. McColeman, Yang, Brady and Franconeri ("Rethinking the Ranks of Visual Channels", a 2021 preprint, seen via search summary) argue that a two-value ratio judgment is a narrow baseline because real charts show many values; their experiments with 2, 4 and 8 marks did not recover the classic ranking and gave rankings that varied with mark count. Simkin and Hastie (1987), as described by Spence (2005), argued the original angle task did not match how pies are read (a segment against the whole) and found pies and bars equivalent when the task was proportion of the whole. Skau and Kosara (2016) found angle the weakest cue in pies and donuts, with a donut as accurate as a pie.
 
 The evidence is laboratory experiment on one task (relative magnitude of two values). It is strong for that task and a weaker basis for a universal law of chart quality.
 
@@ -30,11 +30,11 @@ The evidence is laboratory experiment on one task (relative magnitude of two val
 
 LTF will draw airspeed against limits, altitude over time, score histories and challenge error distributions. Default to position along a common scale (dot plots, aligned bars, lines on a shared axis) wherever the learner must read a value or compare two precisely. Keep angle and area encodings for rough proportion or where the metaphor is the point, such as a round dial mimicking a cockpit instrument.
 
-A fly-mode readout glanced at beside the sim should use a single marker on a labeled scale, not a shaded cell. A progress dashboard should use an aligned row of bars on a shared baseline rather than a ring per lesson. Never rely on shade alone for a quantitative comparison, in either theme.
+A fly-mode readout glanced at beside the sim should use a single marker on a labeled scale, not a shaded cell. A progress dashboard should use an aligned row of bars on a shared baseline rather than a ring per lesson. Never rely on shade alone for a quantitative comparison.
 
 Because the ranking concerns two-value ratios, test real multi-mark charts with learners rather than deferring to it.
 
-Confirmed this session: Crossref record for DOI 10.1080/01621459.1984.10478080 (vol. 79, issue 387, pages 531-554); abstract wording from WebSearch result snippets of the paper's abstract page; Cleveland and McGill 1986 full text (vis.arc.vt.edu/~npolys/projects/safas/science.pdf); Heer and Bostock 2010 PDF (homes.cs.washington.edu/~jheer/files/2010-MTurk-CHI.pdf); WebSearch summaries for the two critiques.
+Confirmed this session: Crossref record for DOI 10.1080/01621459.1984.10478080 (vol. 79, issue 387, pages 531-554); abstract wording and the task ordering (Cornell INFO 3312 slides) from WebSearch snippets; Cleveland and McGill 1986 full text (vis.arc.vt.edu/~npolys/projects/safas/science.pdf); Heer and Bostock 2010 PDF (homes.cs.washington.edu/~jheer/files/2010-MTurk-CHI.pdf); Spence 2005 full text; WebSearch summaries for McColeman et al. and Skau and Kosara.
 
 ## heer2010crowdsourcing
 
@@ -531,7 +531,7 @@ Use rates rather than raw counts when comparing sessions of different lengths.
 
 Confirmed this session: Open Library search (work OL17664549W, New Riders 2016); publisher page peachpit.com (table of contents, ISBN-13 9780133440539, 400 pages, February 8, 2016); Cornell INFO 3312 course notes on the five qualities (info3312.infosci.cornell.edu/notes/great-viz.html); WebSearch results on the five qualities. The book was not read.
 
-## playfair1786commercial
+## playfair2005commercial
 
 Playfair, W. (2005). Playfair's Commercial and Political Atlas and Statistical Breviary (H. Wainer & I. Spence, Eds.). Cambridge: Cambridge University Press. (Original works 1786 and 1801.)
 

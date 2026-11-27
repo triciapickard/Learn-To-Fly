@@ -403,3 +403,103 @@ The within-font design is a real methodological strength, but there are limits t
 5. When testing LTF candidates, copy this method: vary one thing within a family and measure confusions, not preference.
 
 Confirmed this session: Crossref record (no pages given; pages 118-137 and all content above read from the Microsoft Research PDF of the article, microsoft.com/en-us/research/uploads/prod/2021/06/Beier-Larson-2010-Design-Improvements-for-Frequently-Misrecognized-Letters.pdf). Beier and Larson (2013) via Crossref abstract only. I did not read Beier's 2012 book *Reading Letters*.
+
+## dyson2004physical
+
+Dyson, M. C. (2004). How physical text layout affects reading from screen. *Behaviour & Information Technology*, 23(6), 377-393. DOI 10.1080/01449290410001715714.
+
+### Core claims
+
+Dyson reviews the empirical studies of how text layout affects reading from screen: line length, columns, window (screen) height and interlinear spacing, with most weight on line length because most studies tested it. Her abstract names three outcomes: a critical look at the methods, a synthesis offering "alternative interpretations of some findings", and identification of the number of characters per line as the critical variable in line length. She also notes that much of the detailed print literature (Tinker 1963 and others) remains unreplicated on screens.
+
+Her discussion says most line-length studies report faster reading with longer lines, while readers preferred moderate lengths.
+
+### Specifics
+
+Confounds. Characters per line, physical line length, type size and margin can be changed together. A figure in the paper shows, for example, that 15 cm lines in 12-point Times give about 90 characters per line and in 10-point about 100. Dyson argues many studies confounded these and that characters per line, not physical length (visual angle), is the more useful variable, because saccade size is consistent in characters, not degrees (Morrison and Rayner 1981).
+
+Line-length studies. Dyson and Kipping (1998): 48 participants read passages of about 800 words in 10-point Arial with 12-point spacing at six line lengths from 25 to 100 characters per line. Reading was faster at the longest line than at the shortest, with a trend of faster reading as lines lengthened and no other pairwise differences. Less scrolling explained part of the advantage. Readers rated the 55-character line easiest to read, though it was not read fastest, so perception did not match performance. Dyson and Haselgrove (2001), using a more elaborate multiple-choice comprehension test, found that 55 characters per line produced better comprehension than 100. Bernard et al. (2002), with 20 adults and 45, 76 and 132 characters per line in 12-point Arial, found no reading time differences, which Dyson says fails to replicate the earlier result and may reflect the extreme 132-character line. Youngman and Scharff (1998), using a search task with 27 participants, found the fastest responses at the longest line and with no margin, but readers disliked that format most.
+
+Columns. A single column of about 80 characters per line, paged, was read faster than three columns of about 25 characters or the same single column scrolled, with no difference in comprehension (18 participants), but the advantage held only for the 18 to 24 age group.
+
+Window height. Five window heights of 1 to 4 and 20 lines (Duchnicky and Kolers 1983): reading was faster with 4 and 20 lines than with fewer, with no comprehension differences.
+
+Interlinear spacing. Kolers et al. (1981) found double spacing marginally better than single, and Kruk and Muter (1984) found a larger effect, but Dyson notes the confounding with lines per screen and that there were no recent studies. In print, she cites Spencer (1968) for line lengths of no more than about 70 characters and Rayner and Pollatsek (1989) for deducing 52 characters from Tinker's work.
+
+### Replication and criticism
+
+The review is a critical synthesis by a typography researcher, not new data. Its strengths are clear identification of confounds and an explicit trade-off explanation: lines that are too short cut the information per fixation, and lines that are too long make the return sweep difficult. The studies are from the 1980s and 1990s, on small, low-resolution screens with small samples (18 to 48 participants), and comprehension was often measured only to check for a speed-accuracy trade-off. The preference and performance measures often disagree. Dyson states that studies to date have not identified an upper limit on characters per line. Modern screens and touch scrolling differ from those tested.
+
+### Implications for LTF
+
+1. Do not claim a single "ideal" line length. A measure of roughly 45 to 75 characters is a defensible default for lesson text, since readers rate moderate lines easiest (the 55-character result) and print traditions agree, but this is a preference and comprehension judgment, not a speed finding.
+2. Count characters, not pixels or rem. Set the measure with a character-based unit and let font size change it.
+3. Avoid multi-column layouts on narrow screens; the single-column result held and short columns were slower.
+5. Check comprehension, not just speed, when testing a layout change on lessons.
+
+Confirmed this session: Crossref record; full text read (PDF from stu.westga.edu/~ssynan1/literacy/Dyson.pdf, extracted with pdftotext; abstract, sections 2.6 to 2.9, 3, 4, 5, 6 and 7 read). Dyson and Haselgrove (2001) checked as a Crossref record (10.1006/ijhc.2001.0458) and through this review.
+
+## richardson2022legibility
+
+Richardson, J. T. E. (2022). *The Legibility of Serif and Sans Serif Typefaces: Reading from Paper and Reading from Screens*. Cham: Springer. DOI 10.1007/978-3-030-90984-0. ISBN 9783030909833.
+
+### Core claims
+
+This short monograph applies the method of a systematic review to one old question: are serif typefaces easier to read than sans serif ones? It is the most recent comprehensive treatment I found. The coda states the conclusion in plain terms: "there seems to be no difference in the legibility of serif typefaces and sans serif typefaces either when reading from paper or when reading from screens" (Crossref chapter abstract). The most important lesson, the author adds, is that assertions that "everybody knows" such-and-such "should be regarded simply as conjectures that might be subject to refutation through carefully designed research."
+
+The book is organized in two parts, Part I on paper and Part II on screens, each opening with a chapter on what "everybody knows" and ending with general conclusions.
+
+### Specifics
+
+I could read the book's chapter abstracts through Crossref but not the chapter text, so what follows is the scope the abstracts describe, not the study-by-study evidence.
+
+Attitudes. The Part I introduction says that 20th-century typographers "almost without exception" considered serif typefaces easier to read when printed on paper, while the dissent in the 21st century mainly came from journal editors recommending sans serif without supporting evidence. It also considers and dismisses the idea that serifs are purely decorative and superfluous for identifying letters.
+
+Evidence streams covered, as the abstracts list them. Early work on recognising single letters and words under different conditions, including visual confusions among letters and the "stripiness" of words (their horizontal autocorrelation); reading continuous text and comprehension; subjective impressions and connotations of typefaces; reading in context, including newspaper headlines and Wheildon's research programme, which "has come under extensive criticism and suffers from further issues that have not been noted in previous research"; younger and older readers, including Burt and Kerr, often cited for serifs, and Zachrisson's broader account; readers with disabilities including visual impairment, aphasia and dyslexia; and for screens, projection and PowerPoint, eye tracking, handheld devices, browsers and Bernard's research programme at Wichita State. Part I concludes by assessing the position of the latest APA Publication Manual.
+
+Concepts. The second chapter separates typefaces from fonts and legibility from readability, notes that objective methods for print were carried over to screens, and describes how typographers define type size.
+
+### Replication and criticism
+
+The book synthesizes many studies of unequal quality, so the conclusion is only as strong as the underlying studies; the framing as a systematic review is an advantage over narrative opinion, but I could not see the inclusion criteria or the number of studies. It is a single-author review, and I have not located a published critique or a replication of its conclusion. Its conclusion is consistent with the controlled experiment of Arditi and Cho (2005), which found that serif size alone made no difference to reading speed (see arditi2005serifs), and with Tinker's finding that common faces are equally legible (see tinker1963legibility). Dyson (2004) notes Lund (1999) as a critic of the validity of older legibility work. The summary of Lund's 1999 Reading PhD thesis that I found (its title is "Knowledge construction in typography: the case of legibility research and the legibility of sans serif typefaces") confirms that the thesis exists but I could not read it, so I do not report its findings. "No difference" is also not "no preference": readers do hold views about typefaces, and the book treats connotation and preference as separate from legibility.
+
+### Implications for LTF
+
+1. Treat "serif or sans" as a style decision, not a legibility one. The decision should be made for tone, language coverage, numeral design and rendering on the devices learners use.
+2. Do not accept "everybody knows" claims from stakeholders about type, from either camp, without a source. Add a design-review rule: any claim that a typeface or layout improves reading must name the study.
+3. Judge legibility with the actual task: letters, short words, running text and comprehension are different tests, and the book shows they have been conflated.
+4. The evidence for dyslexic readers and readers with age-related vision loss is thinner (the book gives them their own chapters), so provide user-adjustable size and spacing instead of guessing a single best face.
+5. Because connotation matters to perceived quality, test whether a face reads as serious enough for safety-related instruction with learners, separately from reading speed.
+
+Confirmed this session: Crossref record for the book (ISBN, publisher, year) and for each chapter's abstract (10.1007/978-3-030-90984-0_1 through _17). The Springer site required a login redirect, so book text was not read. Web search confirmed Lund's thesis title and year.
+
+## rello2013good
+
+Rello, L., & Baeza-Yates, R. (2013). Good fonts for dyslexia. In *Proceedings of the 15th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS '13)* (pp. 1-8). ACM. DOI 10.1145/2513383.2513447.
+
+### Core claims
+
+The paper presents what its authors call the first eye-tracking experiment on the effect of font type on the reading of people with dyslexia. Forty-eight participants with confirmed dyslexia read 12 short texts, each in a different font. The abstract says sans serif, monospaced and roman font styles "significantly improved the reading performance over serif, proportional and italic fonts", and the authors derive a list of "good fonts for dyslexia": Helvetica, Courier, Arial, Verdana and Computer Modern Unicode, considering both performance and preference, with Arial Italic to be avoided. A fonts specially designed for dyslexia (OpenDyslexic) did not help.
+
+### Specifics
+
+Design. A within-subject design: each participant read all 12 fonts, with texts and fonts counterbalanced. The fonts were Arial, Arial Italic, Computer Modern Unicode, Courier, Garamond, Helvetica, Myriad, OpenDyslexic, OpenDyslexic Italic, Times, Times Italic and Verdana. They also coded each font by three binary properties (italic or roman, serif or sans, monospaced or proportional).
+
+Participants. 48 people (22 female, 26 male), ages 11 to 50 (mean about 21), all with a clinical diagnosis and normal vision. Recordings with less than 75 per cent of the sample captured were dropped, leaving 46 of 48.
+
+Texts and layout. All texts came from one Spanish-language book (so participants read Spanish), were 60 words long, with average word length from 4.92 to 5.87 letters, and each was followed by a literal multiple-choice comprehension question used as a control. Layout was left-justified, 14-point black text on white, with column width no more than 70 characters. Equipment was a Tobii 1750 eye-tracker at about 60 cm. The measures were reading time, mean fixation duration and a 5-point preference rating.
+
+Results. Font type had a significant effect on reading time (chi-square(11) = 31.55, p < 0.001), but the post-hoc differences were few: Arial Italic had the longest mean reading time, significantly longer than Arial, Computer Modern Unicode and Helvetica. Mean times ranged from about 28.4 seconds (Arial) to 35.0 seconds (Arial Italic). Fixation duration varied more: Courier had the shortest mean fixation (about 0.22 s) and Arial Italic the longest (0.28 s), with 16 of 66 pairwise comparisons significant. For the grouped factors, serif versus sans serif and monospaced versus proportional did not significantly change reading time, though serif fonts had longer mean fixations (0.26 s against 0.24 s, p = 0.008) and the monospaced font shorter ones (0.22 s against 0.26 s). Italic fixations were longer (0.27 s against 0.25 s, p = 0.040) while italic reading time was not significantly different (p = 0.09). Verdana was the most preferred font and the OpenDyslexic fonts among the least preferred. Preference and reading time were barely correlated (Pearson -0.13).
+
+### Replication and criticism
+
+The experiment is controlled and well-documented, but the headline in the abstract is stronger than the reading-time data. Only one reading-time result is clear (Arial Italic is slower than three others); the claims for sans serif and monospaced fonts rest mostly on fixation duration, which is only a proxy for readability. Fixation duration is also confounded with character width: a monospaced font occupies a different footprint and may change fixation behavior regardless of readability. Texts were only 60 words in Spanish, read once, by mostly teenage and young-adult participants, so the findings may not carry to long English text. The test fonts were also not matched for x-height or spacing, which Marinus et al. (2016) later showed can account for effects attributed to letter shapes (see marinus2016special). The OpenDyslexic null result agrees with later studies (see wery2017effect and kuster2018dyslexie). The authors say sans serif styles are widely recommended by dyslexia associations without any disclosed evidence, which this paper tried to test.
+
+### Implications for LTF
+
+1. There is no evidence for a special "dyslexia font". Do not add one. Offer a user setting for font size, letter and line spacing, and a plain sans serif option instead.
+2. Avoid italic for content a learner must read, which is in line with Tinker (1963). Both studies found italic costs, though by different measures.
+3. Do not use the paper to claim sans serif or monospaced text is better for dyslexic readers; for the data, treat it as weak evidence of no strong font effect. A monospaced face is a reasonable choice for code-like strings (squawk codes, frequencies) for other reasons.
+4. If LTF reports accessibility features, describe them as options, not as clinical benefits.
+
+Confirmed this session: Crossref record; the full 8-page paper read (PDF from scispace.com/pdf/good-fonts-for-dyslexia-2debffz8dl.pdf, text extracted with pdftotext), including the abstract, methodology, Table 1 and sections 5.1 to 5.2.

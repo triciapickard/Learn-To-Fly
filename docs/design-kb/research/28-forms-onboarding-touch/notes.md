@@ -26,3 +26,31 @@ LTF fly mode will be used on a tablet or phone next to a running sim, often one-
 
 Confirmed this session: full text of the paper read from the author-hosted PDF (https://www.telerik.com/docs/default-source/blogs-docs/parhi-mobilehci06-pdf); Crossref record 10.1145/1152215.1152260 (title, authors, 2006, pages 203-210); web search summary (query "Parhi Karlson Bederson Target size study ...").
 
+## seckler2014designing
+
+Seckler, M., Heinz, S., Bargas-Avila, J. A., Opwis, K., & Tuch, A. N. (2014). Designing usable web forms: Empirical evaluation of web form improvement guidelines. Proceedings of CHI 2014, 1275-1284. ACM.
+
+### Core claims
+
+Many guideline lists exist for web forms, but before this study nobody had tested a whole set of them together against real forms. The authors took 20 published guidelines (compiled by Bargas-Avila and colleagues from the empirical literature), rebuilt three real news-site registration forms in an improved version that applied them, and compared original and improved versions in a controlled eye-tracking lab experiment. The improved forms were completed faster, needed fewer submission attempts, drew fewer fixations and saccades, and were rated more usable. The headline message is that guideline-driven form redesign has a measurable, multi-method payoff even on forms from high-traffic sites, and the gain is largest where the original form was worst.
+
+### Specifics
+
+Design: between-subjects, N = 65 (42 female, mean age 27.5, range 18 to 67), 32 on original forms and 33 on improved forms; each person filled in all three forms after a practice form. The forms came from German-language newspaper sites, chosen by screening 23 registration forms against the 20 guidelines and then picking one of rather good quality (rank 11), one medium (rank 13) and one rather poor (rank 18). The authors excluded the top third of the ranking because they had too little room to improve. They did not apply the "keep the form short" guideline, because that needs knowledge of the business. The original forms violated 9, 9 and 12 guidelines respectively. Fourteen HCI experts rated how serious the consequences of violating each guideline would be (1 to 5); the highest-rated was "never clear completed fields" and the lowest-rated included "use color to mark required fields".
+
+The guidelines themselves (Table 1 of the paper) are grouped as content, layout, input types, error handling and submission. Examples stated there: place labels above fields; do not use more than one column, one question per row; match field size to expected answer length; use radio buttons for up to four options and a drop-down for more; state required formats in advance without an extra example; show error messages after the form is sent, all together, embedded in the form, noticeable by color, icon and text, polite and explaining the fix; never clear already completed fields after an error; disable the submit button after a click; show a confirmation page saying what happens next; avoid reset buttons.
+
+Measures: submissions needed, error types, task completion time (log-transformed), keystroke-level model predictions from a form analyzer tool, eye-tracking (fixation count and duration, saccade time) with a 60 Hz SMI tracker, NASA-TLX, SUS, ASQ, the Form Usability Scale (nine items), and interviews.
+
+Results: in all three forms fewer attempts were needed to submit the improved form. Completion time improved by 25 percent (Sueddeutsche, 113 to 85 seconds), 33 percent (NZZ, 105 to 70 seconds) and 18 percent (Spiegel, 104 to 85 seconds); the difference was significant for the two worse forms (effect sizes d = .93 and 1.00) but not for the best one. The keystroke model had predicted only 7 to 23 percent. Fixations on the NZZ form fell from a mean of 155 to 96. Subjective ratings improved overall, with the strongest effects on the NZZ form. Users most often complained about missing format specifications and unclear required versus optional marking in original forms, and the authors say guidelines on format specification and on error message design had a remarkable effect on first-attempt success.
+
+### Replication and criticism
+
+This is a single lab experiment with a small, young, internal-database sample of experienced internet users, from German-language sites, and it tests the guideline set as a bundle. It cannot say which individual guideline did the work; the authors infer from interviews and error counts that format specification (guideline 13) and error message handling (17) mattered most, and that expert severity ratings did not track actual user impact well. The effect on the best-quality form was not significant, so benefits shrink as baseline quality rises. The original Bargas-Avila guideline set is a literature synthesis, and some individual rules (for example the radio-button threshold of four options, or the single-column rule) rest on only a few studies. A CHI 2013 work-in-progress version of this study exists. Later practitioner research (for instance Baymard on checkout forms, also in this lane) broadly agrees on the importance of error and format design.
+
+### Implications for LTF
+
+LTF has few forms: sign-up, sign-in, settings, and short answer or numeric entry inside challenges. The study supports a plain checklist for these. Use one column, labels above fields, state formats before the learner types (for example "Altitude in feet MSL"), keep typed text after an error, put the error beside the field in words and an icon (not color alone), and give a clear confirmation of what happens next. Mark optional fields, not required ones, when most are required. The strongest evidence is for format hints and error messages, so invest there first, especially in challenge entry fields where units and formats are easy to get wrong. Avoid captchas and reset buttons.
+
+Confirmed this session: full text read from https://research.google.com/pubs/archive/42513.pdf; Crossref record 10.1145/2556288.2557265; abstract via web search of the Google research publication page.
+

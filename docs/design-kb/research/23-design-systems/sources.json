@@ -157,5 +157,53 @@
     "verified_evidence": "Open Library search 'design systems kholmatova' returned work OL38056351W, Design Systems (eBook), Alla Kholmatova, 2017, Smashing Media AG, ISBN 9783945749586; publisher page smashingmagazine.com/design-systems-book/ read (288 pages, contents, case studies)",
     "kind": "practitioner book based on interviews",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "suarez2017design",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Suarez",
+        "given": "Marco"
+      },
+      {
+        "family": "Anne",
+        "given": "Jina"
+      },
+      {
+        "family": "Sylor-Miller",
+        "given": "Katie"
+      },
+      {
+        "family": "Mounter",
+        "given": "Diana"
+      },
+      {
+        "family": "Stanfield",
+        "given": "Roy"
+      }
+    ],
+    "year": 2017,
+    "title": "Design Systems Handbook",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "DesignBetter.Co (InVision)",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Curtis",
+        "given": "Nathan"
+      }
+    ],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search 'Design Systems Handbook DesignBetter InVision Marco Suarez Jina Anne Katie Sylor-Miller Diana Mounter Roy Stanfield' returned the InVision announcement and Product Hunt listing (launch 29 November 2017) naming the five authors and editor Nathan Curtis; PDF text read via streaming.missioncollege.edu copy",
+    "kind": "practitioner handbook (free online book)",
+    "lane": "23-design-systems"
   }
 ]
