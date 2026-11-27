@@ -401,7 +401,7 @@ Gawande, A. (2010). *The Checklist Manifesto: How to Get Things Right*. New York
 
 Gawande, a surgeon and the senior author of the Haynes surgical checklist study (also in this lane), argues in a trade book that modern work has become too complex for memory and individual expertise alone, and that a well-made checklist is a cheap tool for catching the steps even experts forget. A Globe and Mail review (fetched this session) summarizes the argument: checklists do not diminish skill, people resist them because they seem beneath experts, and good checklists encourage teamwork. The book draws its main parallels from aviation (the pilot's checklist), surgery and construction.
 
-The best-known story, as retold by the same review and by two other summaries in search results, is Boeing's Model 299 bomber of 1935: highly advanced but complicated, it crashed on a test flight, killing two crew members, and the response was a simple pre-takeoff checklist rather than more training; the plane later flew 1.8 million miles without an accident and the Army ordered 13,000 of the resulting B-17 bombers (numbers as given by the Globe and Mail review). Accounts differ on some crash details, and I treat the story as the author's narrative, not as an independent source for aviation history.
+The best-known story, as the review retells it, is Boeing's Model 299 bomber of 1935: advanced but complicated, it crashed on a test flight, killing two crew members, and the response was a simple pre-takeoff checklist rather than more training; the plane later flew 1.8 million miles without an accident and the Army ordered 13,000 of the resulting B-17 bombers (the review's numbers). Accounts differ on crash details, so I treat it as the author's narrative, not independent aviation history.
 
 ### Specifics
 
@@ -409,21 +409,21 @@ Design advice, as summarized in the Globe and Mail review: good checklists are p
 
 A search summary this session of the book's rules adds the two checklist styles Gawande distinguishes. A Do-Confirm checklist has people do their jobs from memory and experience, then pause to run the list and confirm that everything was done. A Read-Do checklist is like a recipe, in which people carry out the tasks as they check them off. His rules also begin with defining a clear pause point at which the checklist is to be used. These descriptions come from a secondary summary, so check the book before quoting them. The same summary reports that Pronovost's ICU teams improved care when clinicians created their own checklists, but I could not find a source on the line-infection study itself and do not report its numbers.
 
-The book connects to evidence only through other studies: the surgical checklist trial in eight hospitals (Haynes et al. 2009, in this lane) and the later Ontario policy evaluation. The Globe review notes that Ontario made a surgical checklist mandatory from April 2010, tracing partly to a WHO committee that Gawande led.
+The Globe review notes that Ontario made a surgical checklist mandatory from April 2010, tracing partly to a WHO committee that Gawande led.
 
 ### Replication and criticism
 
 Evidence type: popular synthesis and narrative argument by a practitioner-author, drawing on field visits, interviews and published studies. It is persuasive but anecdotal where it relies on stories such as Model 299 or individual hospital successes. The strongest quantitative claim it rests on is the Haynes study, which was a before-and-after comparison and was not reproduced in a later population-level evaluation in Ontario (Urbach et al., 2014, covered in the Haynes section: no significant reduction in death or complications; Gawande raised methodological concerns about that study, as reported by PSNet).
 
-Because the book is advocacy for a method, it understates the failure modes that Degani and Wiener document in the aviation literature: checklists that are too long, badly sequenced, or used as a disciplinary instrument. Read it as a motivation for checklist design, and use Degani and Wiener (this lane) for how to design them.
+As advocacy for a method, it may understate failure modes Degani and Wiener document: lists that are too long, badly sequenced, or used for discipline. Use it as motivation, and Degani and Wiener for design.
 
 ### Implications for LTF
 
 1. Lesson pages can use the book's central framing, with care: a few critical steps, at a defined pause point, in a form people actually use under load. LTF checklists in fly mode should follow "cover only the critical steps."
 2. Offer the two styles deliberately. A Do-Confirm pattern suits actions the learner already knows from the lesson (do first, then confirm on the page). A Read-Do pattern suits sequences the learner must follow in order. Label which kind each LTF checklist is.
 3. Define the pause point on the page itself, as in a banner "Pause: run the confirm list now," so the learner knows when to look at it.
-4. Keep lists short. The advice that poor lists are "too long" is consistent with the Degani and Wiener guideline to subdivide long checklists into chunks.
-5. Do not use the Model 299 story as proof; if a lesson mentions it, label it as a well-known account and avoid specific claims about aircraft.
-6. Any claim that checklists "save lives" should be limited to the cited studies and their limits; for LTF, the honest claim is about learner accuracy and calm, which LTF would need to measure itself.
+4. Keep lists short, consistent with the Degani and Wiener guideline to subdivide long checklists.
+5. Do not use the Model 299 story as proof; label it as a well-known account.
+6. Limit "checklists save lives" claims to the cited studies and their limits; LTF would need to measure learner accuracy itself.
 
 Confirmed this session: Open Library edition listing (Metropolitan Books, 2010, ISBN 9780805091748; work OL15436462W); Globe and Mail review https://www.theglobeandmail.com/amp/report-on-business/how-to-handle-lifes-complexities-use-a-checklist/article557999/ (fetched); search-result summaries for Do-Confirm and Read-Do and for Pronovost; Haynes and Urbach evidence as described in the Haynes section. The book itself was not read.

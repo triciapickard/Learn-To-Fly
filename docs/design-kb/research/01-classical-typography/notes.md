@@ -154,7 +154,7 @@ Theodore Low De Vinne, *The Practice of Typography: Correct Composition* (New Yo
 
 ### Core claims
 
-*Correct Composition* is the second book of De Vinne's four-volume *Practice of Typography*. It is a manual for compositors and proof-readers on spelling, abbreviations, compound words, figures and numerals, italic and capital letters, division of words, notes, indention, spacing, quotation marks, subheadings, punctuation and proof-reading. Its central argument is that consistency is a quality readers notice and demand. In the preface he says printing that passed a tolerant inspection in 1850 "does not pass now," and that "the reader of to-day is more or less a critic of style in type-setting."
+*Correct Composition* is one volume of De Vinne's four-volume *Practice of Typography*. It is a manual for compositors and proof-readers on spelling, abbreviations, compound words, figures and numerals, italic and capital letters, division of words, notes, indention, spacing, quotation marks, subheadings, punctuation and proof-reading. Its central argument is that consistency is a quality readers notice and demand. In the preface he says printing that passed a tolerant inspection in 1850 "does not pass now," and that "the reader of to-day is more or less a critic of style in type-setting."
 
 Because "there is no book of generally accepted authority that lays down a full code of explicit rules for orderly printing," each printing house that strives for consistency must make its own code, the "style-card," to guide new compositors and maintain uniformity. The book is his attempt to publish such a code for others, with the humility that different houses and different kinds of work need different rules.
 
@@ -166,7 +166,7 @@ The spacing chapter (XII) is the most useful part for design. Its rules, all for
 - Absolute uniformity is impossible because words cannot always be divided; the compositor must "be content with approximations to an ideal but unreached standard."
 - To make spacing seem even, the physical spaces must differ. Round letters such as o and e fill about half the type body, ascending and descending letters about three fourths, and angled letters (A, L, Y, W) leave gaps that should be counted as part of the space, so a word ending in y followed by one beginning with W takes a thinner space. He says this discrimination is impractical for small sizes and "desirable and even necessary" above twelve point, and impossible on automatic typesetting machines.
 - For solid composition in lower case, the three-to-em space is the most used; the en quadrat suits wide-leaded matter. Em-quad word spaces ("pigeonholing") are "generally disapproved."
-- Capital letters, being about twice as high and twice as wide, "need spaces twice as wide ... and leads twice as thick"; the en quadrat is the least permissible word space in capitals.
+- Capitals, being about twice as high and wide as round lower-case letters, need word spaces "twice as wide" and leads "twice as thick"; the en quadrat is the least permissible word space in capitals.
 - On division of words he says words "always appear better unbroken, but the breaking of words may not be so unsightly as the breaking up of a general uniformity of the spacing between words." He names "hounds'-teeth," irregular white gaps across lines, as "more offensive to the reader than any strangeness of division."
 - Small capitals of nine point and smaller "are dense and not easily read" for running titles; hair-spacing helps. Full capitals of the text are "much too large" for signatures.
 
@@ -174,9 +174,9 @@ He also quotes Horace Hart's rule for divisions at Oxford: the part left at line
 
 ### Replication and criticism
 
-Craft codification, from a leading American printer-historian. The rules are conventions, not findings, and many are tied to metal type and hand work. He is explicit that American and British houses differ (for example "fa-ther" versus "mo-ther"). The book's standing was high among practitioners: the introduction to the 1936 edition of Gill's *Essay on Typography* says De Vinne's four-volume work, "full of sound detail," was probably known to Gill and Hague, and that Morison "regarded it highly."
+Craft codification, from a leading American printer-historian. The rules are conventions, not findings, and many are tied to metal type and hand work. He is explicit that American and British houses differ (English printers divide "mo-ther," American printers "moth-er"). The book's standing was high among practitioners: the introduction to the 1936 edition of Gill's *Essay on Typography* says De Vinne's four-volume work, "full of sound detail," was probably known to Gill and Hague, and that Morison "regarded it highly."
 
-De Vinne also pushes back at the fashion of his own time. A footnote criticizes advocates of the "fifteenth-century school of typography" who use only one thin space, arguing readers find tight spacing a vexation, and he calls em-quad-spaced running titles "too uncouth for long life." That makes him a useful counterweight to Dowding's later close-spacing doctrine (dowding1954finer): the same question, how wide a word space should be, got opposite answers a half century apart, and neither rests on experiment here.
+De Vinne also records the fashions of his own time. A footnote notes that "several eminent disciples of the fifteenth-century school of typography" use only a thin space, reasoning from the early printers, and he calls em-quad-spaced running titles "too uncouth for long life." The same question, how wide a word space should be, got a different answer from Dowding half a century later (dowding1954finer), and neither rests on experiment.
 
 ### Implications for LTF
 

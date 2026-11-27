@@ -376,3 +376,32 @@ The later Sundararajan and Adesope paper (Educational Psychology Review, 2020, D
 - The research measures learning after short sessions, not persistence over weeks; interesting material might keep learners going even if it costs a test point, so LTF should measure both.
 
 Confirmed this session: the ERIC record EJ986386 (https://eric.ed.gov/?id=EJ986386) for the abstract (39 effects, four explanations, effect-size qualifiers) and bibliographic details; the Crossref record for DOI 10.1016/j.edurev.2012.05.003 (volume 7, issue 3, pages 216-237); the Springer page abstract for Sundararajan and Adesope 2020; and Crossref plus OpenAlex for Tislar and Steelman 2021. The full text of Rey 2012 was not read.
+
+## ginns2005meta
+
+Ginns, P. (2005). Meta-analysis of the modality effect. *Learning and Instruction*, 15(4), 313-331.
+
+### Core claims
+
+The modality effect is the finding that people learn better from a diagram or animation with spoken explanation than from the same graphic with the same words printed on screen. Cognitive load theory explains it by saying that splitting words and pictures across the ear and the eye uses two partly independent processors instead of overloading the visual one. Ginns applied meta-analysis to the literature. According to the ERIC abstract he analyzed 43 independent effects (39 from between-subjects designs and 4 from within-subjects designs) and found support for the instructional benefit of presenting information across modalities. Two hypothesized moderators were supported, the level of element interactivity (how many interacting pieces the learner must hold at once) and the pacing of the presentation, and there were differences between fields of study. The author notes a "strong observed modality effect under system-paced conditions" and says that should be weighed against the cost of building audio-visual material.
+
+### Specifics
+
+**Overall size.** The Reinwein 2012 abstract (which I read) reports Ginns's earlier analysis as d = 0.72 across the 43 effects. I did not read Ginns's own results section, so the overall figure is secondhand. Mayer and Moreno's 2003 paper (in this lane) reports a larger median of 1.17 across six of the lab's own experiments.
+
+**Moderators.** Pacing and element interactivity are the two named in the abstract. The abstract's wording about system-paced conditions indicates the effect was strongest when the presentation controlled the timing. A search summary describes smaller effects for self-paced or less complex material, which I could not verify in the paper. De Jong's review (this lane) reaches a compatible view: studies finding the effect used system-paced, often rapid presentation, while several studies that let learners control the pace found no effect or a reverse effect (he lists Tabbers and colleagues, Opfermann and colleagues, and others by name).
+
+**Where it fits in CLT.** The 2019 CLT retrospective (this lane) now treats modality as one of the transient-information effects. Short audiovisual pieces beat visual-only, but longer ones did not, because spoken information disappears and must be held in memory (Leahy and Sweller).
+
+### Replication and criticism
+
+This is the most important qualification in the lane. Reinwein (2012, Journal of Psycholinguistic Research 41, 1-32, DOI 10.1007/s10936-011-9180-4) re-analyzed the literature using 86 independent effects and reports an overall effect of d = 0.38, nearly half of Ginns's, falling to d = 0.20 after a trim-and-fill correction for publication bias (abstract page read this session). He also examined moderators such as pace of presentation, type of visualization and research group, and argues that the effect cannot be explained by Baddeley's working memory model or Penney's separate-streams account, so a different explanation is needed. A 2023 classroom study with fifth graders in a learner-paced setting (Haavisto and colleagues, Computers and Education 199, 104775) found video with narration beat illustrated text on retention, delayed retention and cognitive load, with no statistical difference on transfer, and concluded the benefit may not stem from avoiding cognitive overload. So: the modality effect is real in many studies, its size depends on method and publication bias, it is strongest under fast system-paced presentation, and its usual explanation is contested. Evidence: meta-analysis (Ginns), a re-analysis with bias correction (Reinwein) and a classroom experiment.
+
+### Implications for LTF
+
+- Do not assume narration is better than text for LTF. The stronger evidence is for fast, system-paced animation, which LTF should mostly avoid; for self-paced reading, printed or captioned text with a diagram next to it is a reasonable default and costs less to produce.
+- Where LTF does use an animation (airflow, a traffic pattern being flown), voice-over with a paused-by-default player and a visible step control fits the evidence better than on-screen paragraphs under the animation.
+- Always provide transcripts and captions regardless: this is an accessibility matter, not a learning-effect matter.
+- In fly mode, learners may be unable to read; short audio cues are plausible but unproven by this literature, because these studies did not involve concurrent flight or another demanding task.
+
+Confirmed this session: the ERIC record EJ723937 (https://eric.ed.gov/?id=EJ723937) for the abstract and the counts of effects and designs; the Crossref record for DOI 10.1016/j.learninstruc.2005.07.001 (volume 15, issue 4, pages 313-331); the Springer abstract page for Reinwein 2012 (Crossref: volume 41, issue 1, pages 1-32); and the OpenAlex abstract for Haavisto and colleagues 2023. Ginns's full text was not read.
