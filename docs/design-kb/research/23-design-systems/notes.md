@@ -125,3 +125,33 @@ This is practitioner craft knowledge, backed by case examples, not experiment. T
 5. Frame the design system as a product, with an owner and an update routine, or it will decay as lessons accumulate.
 
 Confirmed this session: Open Library search for "atomic design brad frost" returned work OL22297494W (Brad Frost, 2016, ISBN 9780998296609); chapters 1, 2 and 5 and the table of contents read at atomicdesign.bradfrost.com; criticism from web search results and the two Frost-linked pages above (fetched through summarizing tools, so wording is paraphrased unless in quotes).
+
+## kholmatova2017design
+
+Kholmatova, A. (2017). *Design Systems*. Smashing Media AG. (eBook record in Open Library titled "Design Systems (eBook)"; 288-page printed edition.)
+
+### Core claims
+
+Kholmatova, a former senior product designer at FutureLearn, argues that the useful part of a design system is not the component library but the shared design language behind it, and that "not all design systems are equally effective" (publisher description, https://www.smashingmagazine.com/design-systems-book/). The book is explicitly about how teams produce consistent visual and interaction output, not about tooling: it contains no code samples. It draws on 18 months of research and interviews, with case studies from Airbnb, Atlassian, Eurostar, TED and Sipgate, and aims at small and medium product teams (visual and interaction designers, UX practitioners, front-end developers).
+
+### Specifics
+
+The structure is the clearest guide to its method. Part 1, Foundations, covers design systems, design principles, functional patterns, perceptual patterns, and shared language. Part 2, Process, covers the parameters of your system, planning and practicalities, systemizing an interface (one chapter on functional patterns, one on perceptual patterns), and pattern libraries: what, why and how.
+
+Two named categories organize the interface. Functional patterns are reusable interface parts with a concrete job, such as buttons and text fields. Perceptual patterns are descriptive visual qualities such as iconography, color and typography, the layer that gives a product its recognizable feel. Shared language is what results when patterns interconnect and are named consistently so the whole team uses the same words. Principles guide how patterns are created, captured, shared and used, and a pattern library is one practice among several. A bookstore excerpt (found by search, not read in full) describes systems along three dimensions: rules strict or loose, parts modular or integrated, organization centralized or distributed. I could not confirm that framing from the book itself, so treat it as a lead.
+
+The publisher page quotes reviewers: Ethan Marcotte says the book outlines a process "not just for creating a design system, but sustaining it over time", and Amy Thibodeau of Shopify's Polaris says building a design system is as much about forming human connections as about technical solutions. These are endorsements, not findings.
+
+### Replication and criticism
+
+This is practitioner interview research, not controlled study. The evidence is a set of case studies chosen by the author, so it is vulnerable to survivorship bias: the companies interviewed had systems worth writing about. I found no independent critical review this session, only publisher and retailer pages, so I cannot say how the book has been challenged. A known limit on the approach is its deliberate narrowness: with no code and no tooling advice, it leaves open how a language becomes components and tokens, which is where Frost (see the frost2016atomic section) and the W3C token work pick up. Readers should also note that "design language" is a looser concept than a tested construct; no study cited here measures whether a stronger shared language improves product quality.
+
+### Implications for LTF
+
+1. Name the two layers separately. LTF should record functional patterns (answer option, checklist row, gauge frame) apart from perceptual patterns (the palette, type scale, spacing, icon style, and the calm tone for beginners). Changes to one layer then do not accidentally rewrite the other.
+2. Treat shared language as a deliverable. A short glossary of LTF UI terms (briefing, challenge, fly mode, callout types such as verify) would stop writers and engineers from inventing parallel names.
+3. Write design principles before components. A small set of LTF principles, such as "readable at arm's length next to a sim" and "never rely on color alone", gives a way to settle disputes.
+4. Plan the process, not just the library. A small team should decide who owns the system, how patterns are proposed, and how often they are audited, since the book frames sustaining a system as the hard part.
+5. Run an interface audit before systemizing: list every distinct button, callout and card on existing lesson pages, count the variants, and merge them. The book covers how to audit an interface, though I could not confirm where in the process it places that step.
+
+Confirmed this session: Open Library search "design systems kholmatova" returned work OL38056351W (Design Systems (eBook), Alla Kholmatova, 2017, Smashing Media AG, ISBN 9783945749586); publisher page read at https://www.smashingmagazine.com/design-systems-book/ (description, contents, 288 pages, case studies, review quotes). I did not read the book.

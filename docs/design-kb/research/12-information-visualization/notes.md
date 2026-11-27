@@ -595,3 +595,35 @@ Use titles that state the invariant and units and legends that tie each variable
 
 Confirmed this session: Open Library work OL4520539W and editions list (Esri Press 2010, ISBN 9781589482616; University of Wisconsin Press 1983); Esri Press table of contents and sample chapter PDFs (esri.com, read); WebSearch summary of the translation details.
 
+## correll2020truncating
+
+Correll, M., Bertini, E., & Franconeri, S. (2020). Truncating the y-axis: Threat or menace? Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems, 1-12. ACM.
+
+### Core claims
+
+Starting a bar chart's quantitative axis at a value other than zero is treated as one of the cardinal sins of visualization, yet advice about truncation is equivocal for other chart types and there is little empirical work on how truncation inflates judgments across encodings. The authors summarize the debate and report three crowdsourced experiments. Their abstract says truncation exaggerates effect sizes in bar charts but can be beneficial as well as harmful depending on intent; its subjective impact persists across designs, even those with explicit visual cues that truncation has taken place; and there is no clear binary of "deceptive" versus "truthful" y-axes. They suggest designers consider the scale of the meaningful effect sizes and variation they intend to communicate, whatever the encoding.
+
+### Specifics
+
+Guideline positions in the paper: Huff calls non-zero axes "gee whiz" graphs and says charts of positive values should start at zero; Brinton says the scale should normally include zero; Tufte advises, for time series, a baseline that shows the data rather than wasting space reaching down to zero; Cairo advises zero for length-encoded bar charts but not for line charts; and the Draco design tool encodes the non-zero prohibition for bars as a hard constraint. Pandey et al. earlier found truncated bars rated as showing greater differences.
+
+Experiment one (framing, bar versus line): 39 analyzed participants on a crowd platform, within subjects, 48 stimuli varying chart type (bar, line), framing (value or trend), truncation (axis starting at 0, 25 or 50 percent), slope and data size. The measure was a 5-point perceived severity rating. Truncation had a large effect (F(2,76)=89, p below 0.0001, all three levels differing); chart type had no significant effect; framing had a small one. Seventy-eight percent answered a truncation literacy item correctly.
+
+Experiment two (visual indicators): 31 analyzed participants compared standard bars, broken-axis bars and gradient-bottom bars with trend framing. No significant difference among designs: the cues did not reduce perceived severity. Experiment three (value estimation, 25 participants): perceived severity still varied with truncation; error in estimating the trend did not differ by truncation, but error in estimating individual values was higher at the 25 percent baseline. The authors conclude the bias is visual: accurate value estimates did not offset the exaggeration.
+
+Limitations they state: only two static indicator designs, context-free stimuli (no domain expertise or narrative), few truncation levels, and small crowdsourced samples of 25 to 40.
+
+### Replication and criticism
+
+This is a recent experimental paper with small samples and no independent replication found in this session. It extends earlier findings that truncated bars inflate perceived differences. It does not argue for truncation as a habit: it argues that "always start at zero" is too blunt, which agrees with Franconeri et al. (2021), who report the zero rule as contested and cite the same line of work. It is not a license to truncate bars: truncated bars looked more severe than zero-based ones regardless of cues. The rejection of a binary honest/dishonest distinction is an interpretation, and the experiments test subjective severity ratings, not decisions.
+
+### Implications for LTF
+
+Adopt a split rule. For bar charts (length encodes value) start at zero, with no break marks, because experiment two suggests break marks and gradients do not undo the exaggeration. For line charts and dot plots of quantities where the interesting range is narrow (airspeed deviation around a target, altitude within a band), a non-zero axis is acceptable but only if the axis is labeled with units and the meaningful band is drawn on the chart, such as a shaded target range, so the viewer sees the size of the effect relative to what matters.
+
+Be especially careful when a learner's own progress is shown: a truncated bar chart that makes a small improvement look dramatic would be misleading and, in a motivational product, would inflate confidence. When showing before and after, either plot from zero or state the change as a number beside the picture.
+
+In fly mode, where a deviation gauge is centered on the target, the axis is by design not zero-based; label the scale and mark the acceptable range.
+
+Confirmed this session: Crossref DOI 10.1145/3313831.3376222 (CHI 2020, pages 1-12); arXiv 1907.02035 abstract and introduction read (arxiv.org/pdf/1907.02035); experiment details from a WebFetch summary of ar5iv.labs.arxiv.org/html/1907.02035.
+

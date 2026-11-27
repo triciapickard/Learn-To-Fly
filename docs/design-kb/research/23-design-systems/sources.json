@@ -130,5 +130,32 @@
     "verified_evidence": "Open Library search 'atomic design brad frost' returned work OL22297494W, Atomic Design, Brad Frost, 2016, ISBN 9780998296609; online edition chapters 1, 2, 5 and table of contents read at atomicdesign.bradfrost.com",
     "kind": "practitioner book (design systems method)",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "kholmatova2017design",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Kholmatova",
+        "given": "Alla"
+      }
+    ],
+    "year": 2017,
+    "title": "Design Systems",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Smashing Media AG",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9783945749586",
+    "url": "https://www.smashingmagazine.com/design-systems-book/",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'design systems kholmatova' returned work OL38056351W, Design Systems (eBook), Alla Kholmatova, 2017, Smashing Media AG, ISBN 9783945749586; publisher page smashingmagazine.com/design-systems-book/ read (288 pages, contents, case studies)",
+    "kind": "practitioner book based on interviews",
+    "lane": "23-design-systems"
   }
 ]
