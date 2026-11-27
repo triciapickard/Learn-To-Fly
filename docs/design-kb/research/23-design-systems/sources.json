@@ -316,5 +316,32 @@
     "verified_evidence": "Open Library search 'designing interfaces tidwell' returned work OL8167456W, Designing interfaces, Jenifer Tidwell, 2005, O'Reilly Media, ISBN 0596008031; chapter structure confirmed from UXmatters review by Leo Frishberg (Nov 2006)",
     "kind": "expert pattern catalog (interaction design)",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "brand1994buildings",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Brand",
+        "given": "Stewart"
+      }
+    ],
+    "year": 1994,
+    "title": "How Buildings Learn: What Happens After They're Built",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Viking",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0670835153",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'how buildings learn stewart brand' returned work OL823146W, How Buildings Learn, Stewart Brand, 1994, ISBNs including 0670835153; Wikipedia summary gives Viking Press 1994, ISBN 978-0-670-83515-7",
+    "kind": "craft and observation book (architecture)",
+    "lane": "23-design-systems"
   }
 ]

@@ -307,3 +307,31 @@ The evidence is expert craft knowledge distilled from many examples, not experim
 5. Use the review's complaint about arbitrary color coding as a reminder: structural cues such as chapter colors should carry meaning, or be left out.
 
 Confirmed this session: Open Library search "designing interfaces tidwell" returned work OL8167456W (Designing interfaces, Jenifer Tidwell, 2005, O'Reilly, ISBN 0596008031); review content from https://www.uxmatters.com/mt/archives/2006/11/book-review-designing-interfaces.php; edition dates from web search listings (O'Reilly pages blocked by 403, not read directly). I did not read the book.
+
+## brand1994buildings
+
+Brand, S. (1994). *How Buildings Learn: What Happens After They're Built*. New York: Viking.
+
+### Core claims
+
+Brand argues that buildings are not finished at the moment of completion. They are used, altered and repaired for decades, and the buildings that serve people best are those that can be changed cheaply by the people inside them. He criticizes "magazine" architecture, designed for the photograph on the day it opens, and praises low-cost, modifiable buildings; MIT's Building 20 is one of his examples (https://en.wikipedia.org/wiki/How_Buildings_Learn). A fetched summary reports that he favors an evolutionary approach over design from the center out, and that Siena's Palazzo Pubblico, built in sections over 500 years, and Pier 21 in Canada, which went from cargo warehouse to ocean-liner terminal to immigration building to museum without fundamental structural change, illustrate buildings that learn.
+
+### Specifics
+
+The idea most relevant to design systems is shearing layers, which Brand adapted from architect Frank Duffy. Duffy's four layers, from *The Changing Workplace* (1992), were Shell (30 to 50 years), Services (15 years), Scenery (5 years) and Set (months, weeks or less). Brand expanded them to six, with typical lifetimes as summarized at https://en.wikipedia.org/wiki/Shearing_layers and echoed in a software blog post (https://allanmcinnes.github.io/2018/01/09/how_software_learns): Site (the legal lot, effectively eternal); Structure (foundation and load-bearing elements, 30 to 300 years); Skin (exterior surfaces, about 20 years); Services (wiring, plumbing, HVAC, elevators, 7 to 15 years); Space Plan (interior layout, about 3 years in turbulent commercial space to about 30 in quiet homes); Stuff (furniture and belongings, days to months). The key point is that layers change at different speeds, so slower layers constrain faster ones, and design that tangles layers makes every change expensive. The same summary notes that the shearing-layers concept led to pace-layering, introduced in Brand (1999), and was applied to software by Simmonds et al. (2000) and others.
+
+The software essay cited above offers a thought-experiment layering for software: programming language, structure, platform and libraries, UI look and feel (changing between major versions, six months to a year), features (weeks to months) and user configuration (hours to days). It quotes Brand's line "All buildings are predictions. All predictions are wrong." (Brand p. 178 per that essay). The BBC adapted the book as a six-part series screened in July 1997 (per the fetched Wikipedia summary).
+
+### Replication and criticism
+
+This is a craft and observation book, not a study, with examples chosen to support the thesis. Several things should be separated. The shearing-layer model is a widely adopted heuristic, not a measured law; the lifetimes in years are typical examples, and the same sources give ranges (space plan 3 to 30 years). The software essay's author warns that "software isn't like a building," that software is expected to change, and that decoupling cannot make every change easy because of trade-offs (the expression problem). Brand's judgments of named architects are opinion; the fetched summary notes criticism of Richard Rogers was removed from the UK edition but remains in the US edition. I found no academic critique of the shearing-layers model itself this session.
+
+### Implications for LTF
+
+1. Layer the LTF design system by rate of change. Slow layers: color roles, type scale, spacing tokens, the sim-adjacent layout. Medium: component shapes and widget frames. Fast: lesson copy, quiz items, and challenge briefings. Rules for slow layers should not be altered to fit a single lesson.
+2. Protect content from presentation. Lesson text in `content/` is a faster layer than the shell; MDX or Markdown components should reach it through a stable interface so a redesign of the shell does not touch every lesson.
+3. Plan for the MSFS 2024 context. The simulator's UI and the aircraft data change on their own schedule. Keep sim-specific text (button names, menu paths) in a thin layer that can be updated without rewriting lessons; the project's tokens for aircraft numbers already follow this idea.
+4. Design for being changed. Brand's "low-cost, modifiable" argument supports small, composable components over elaborate one-off widgets, and supports leaving visible ways for authors to adjust a widget's props.
+5. Do not over-invest in a launch look that is hard to adapt (the magazine building), since the project already has a second plan queued.
+
+Confirmed this session: Open Library search "how buildings learn stewart brand" returned work OL823146W (How Buildings Learn, Stewart Brand, 1994, with ISBN 0670835153 among its editions); content from fetched pages https://en.wikipedia.org/wiki/How_Buildings_Learn, https://en.wikipedia.org/wiki/Shearing_layers and https://allanmcinnes.github.io/2018/01/09/how_software_learns. I did not read the book.

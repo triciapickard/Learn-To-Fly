@@ -187,7 +187,7 @@ I read the full text of the article (a JSTOR-derived copy hosted at gwern.net).
 
 ### Replication and criticism
 
-The scale became the dominant instrument in the field, but it has been criticized repeatedly. Azoulay and Kapferer (2003, Journal of Brand Management, DOI 10.1057/palgrave.bm.2540162) argue that such scales merge several dimensions of brand identity, personality being only one, so that they do not strictly measure personality (I saw this in the abstract extract via search, not the full paper). Secondary reviews report that the five factors do not replicate cleanly across cultures, with only partial overlap in later work, and that Aaker's item pool includes demographic traits such as gender, age and class, blurring brand personality with user imagery. Romaniuk and Ehrenberg (2012, also in this lane) go further and question whether consumers attribute personality traits to brands at all. The original data are also US consumers' ratings of famous brands in the early 1990s, with names that are now dated. Evidence strength: a psychometric development study with a good analytic chain, but rating well-known brands says little about unknown brands.
+The scale became the dominant instrument in the field, but it has been criticized repeatedly. Azoulay and Kapferer (2003, Journal of Brand Management, DOI 10.1057/palgrave.bm.2540162) argue that such scales merge several dimensions of brand identity, personality being only one, so that they do not strictly measure personality (I saw this in the abstract extract via search, not the full paper). Secondary reviews report that the five factors do not replicate cleanly across cultures, with only partial overlap in later work, and that Aaker's item pool includes demographic traits such as gender, age and class, blurring brand personality with user imagery. Romaniuk and Ehrenberg (2012, also in this lane) go further and question whether consumers attribute personality traits to brands at all. The data are also US consumers' ratings of famous brands from the 1990s. Evidence strength: a careful psychometric study, but ratings of well-known brands say little about unknown ones.
 
 ### Implications for LTF
 
@@ -248,3 +248,113 @@ The framework is conceptual and has been used as the starting point for many emp
 The association taxonomy is directly usable as a checklist for LTF's identity. Product-related attributes (accurate lessons, sim-verified challenges), non-product attributes (price, appearance, who learns here, when), and symbolic benefits (feeling like a pilot) each need a deliberate statement and a place in the product. The uniqueness dimension is the useful warning: if LTF's associations (aviation, learning, blue sky) are all shared with other flight apps, there will be no differential effect. The name guidance (simple, familiar, distinctive, easy to spell and say) applies to lesson, mode and feature names as well as to the product name: "Fly mode" is simple and familiar; avoid coined feature names that a beginner must learn first. The recall versus recognition distinction matters for how LTF is found: learners who search from memory need a recallable name and phrase, while those scanning a feed need recognizable visual cues.
 
 Confirmed this session: Crossref record for DOI 10.1177/002224299305700101 (title, author, 1993, volume 57, issue 1, pages 1-22); full text read from people.duke.edu/~moorman/Marketing-Strategy-Seminar-2015/Session%203/Keller.pdf.
+
+## henderson1998guidelines
+
+Henderson, P. W., & Cote, J. A. (1998). Guidelines for selecting or modifying logos. *Journal of Marketing, 62*(2), 14-30.
+
+### Core claims
+
+The authors turn logo choice from taste into a small set of measurable design properties and then tie those properties to what a company wants a logo to achieve. Using 195 logos calibrated on 13 design characteristics, they identify three communication objectives that a logo can serve (high recognition, low investment, and high image) and state which design profile suits each (Crossref abstract for DOI 10.1177/002224299806200202). The paper is the origin of the three design dimensions, elaborateness, naturalness and harmony, that later logo research keeps using.
+
+### Specifics
+
+- Abstract-level guidance: high-recognition logos (accurate recognition created by high investment) should be very natural, very harmonious and moderately elaborate. Low-investment logos (which produce a false sense of knowing and positive affect) should be less natural and very harmonious. High-image logos (a professional look and a strong positive image) must be moderately elaborate and natural.
+- Dimension definitions, as paraphrased in a later paper by van der Lans and colleagues (Marketing Science 2009, also in this lane): elaborateness refers to a design's richness and ability to capture the essence of an object; natural designs depict commonly experienced objects; harmony refers to the congruency of the patterns and parts of a design. The same paper explains that these dimensions are made of lower-level design elements (the 2009 paper lists complexity, activeness, depth, representativeness, organicity, roundness, symmetry and balance) rated by designers, plus objective elements (repetition, proportion, parallelism).
+- Responses measured in this tradition: positive affect, shared meaning (consensus about the first meaning a logo brings to mind), subjective familiarity (feeling of having seen the logo before even with no prior exposure), and true and false recognition. The 2009 paper credits the 1998 study with showing that subjective familiarity can enhance brand choice.
+- Method as described by later authors: stimulus-level aesthetics research in which separate groups of designers and consumers rate each logo, and the ratings are averaged for each logo (the 2009 paper points out that this averaging masks individual heterogeneity).
+- A student thesis indexed in the search results summarizes the finding that medium elaborateness drew more positive attitudinal responses, and that logos that use recognizable icons such as animals, objects, characters or places are more easily recognized and learned; I treat these as secondary summaries.
+
+### Replication and criticism
+
+The three-dimension structure has been reproduced and extended. The 2009 study across ten countries found the dimensions to be similar across countries, and found responses to naturalness and harmony to be especially consistent with the 1998 and 2003 findings, with the largest differences for elaborate designs (a more negative reaction to elaborate designs in a Russian cluster). Later logo experiments, for example Luffarelli, Mukesh and Mahmood (2019, in this lane), still use the 1998 method of showing logos and collecting averaged ratings. Limitations: I could not confirm the 1998 sample (the 2009 extension used business undergraduates for recognition); logo evaluation in a lab differs from brand experience in the world; the abstract-level guidelines are not experimentally verified causal rules, since logos differ on many uncontrolled properties; and the defined "optimal" ranges are correlational patterns across 195 existing logos. I did not find a replication specifically on app icons or interface marks.
+
+### Implications for LTF
+
+LTF needs at least two kinds of marks. A product mark that should be learned quickly (the high-recognition profile: natural, harmonious, moderately elaborate) and small utility marks such as lesson-type icons, which need to be instantly readable at small sizes. The guidance suggests that a depiction of something familiar (a yoke, a wing, an instrument face) will be learned faster than an abstract shape, but a purely literal airplane silhouette would fall into a shared-category look, so moderate elaboration with a distinctive treatment is the target. "Very harmonious" translates to consistent geometry: shared corner radii, stroke weights and proportions across the mark, the instrument widgets and the lesson icons. Harmony also feeds false recognition (the sense of already knowing a logo), which is a risk for LTF: a very harmonious but generic mark may be mistaken for other aviation brands. The low-investment profile (less natural, very harmonious) matters for a new product with little marketing budget, since it can produce a feeling of familiarity; LTF should check with test participants that familiarity does not come from resemblance to a competitor's mark.
+
+Confirmed this session: Crossref record and abstract for DOI 10.1177/002224299806200202 (title, authors, 1998, volume 62, issue 2, pages 14-30); descriptions of the dimensions and findings read in the full text of van der Lans et al. 2009 (business.columbia.edu/sites/default/files-efs/pubfiles/4563/cross_national_logo.pdf) and in WebSearch extracts; the 1998 article text itself was not available.
+
+## vanderlans2009cross
+
+van der Lans, R., Cote, J. A., Cole, C. A., Leong, S. M., Smidts, A., Henderson, P. W., Bluemelhuber, C., Bottomley, P. A., Doyle, J. R., Fedorikhin, A., Moorthy, J., Ramaseshan, B., & Schmitt, B. H. (2009). Cross-national logo evaluation analysis: An individual-level approach. *Marketing Science, 28*(5), 968-985.
+
+### Core claims
+
+The paper tests whether the logo design dimensions identified by Henderson and Cote (elaborateness, naturalness and harmony) are universal and whether people respond to them in similar ways across cultures. Using data from ten countries (Argentina, Australia, China, Germany, Great Britain, India, the Netherlands, Russia, Singapore and the United States), the authors find that the dimensions are similar across countries and that responses are "relatively consistent", with minor differences across three cross-national clusters (the West, Asia and Russia). The managerial conclusion in the abstract is that firms can implement a global logo strategy, but can also optimize logos for specific countries.
+
+### Specifics
+
+I read the full text (hosted by Columbia Business School).
+
+- Stimuli and raters: consumer and designer ratings of 195 logos, the same set size as Henderson and Cote (1998). Designers rated subjective design elements (complexity, activeness, depth, representativeness, organicity, roundness, symmetry, balance), which form the three dimensions; objective elements were repetition, proportion (the ratio of width to height) and parallelism (number of parallel lines).
+- Responses: positive affect, shared meaning, subjective familiarity, true recognition and false recognition. For recognition, in each country five groups of about 30 business undergraduates viewed a subset of 39 logos for two seconds each, did a distracter task for about 10 minutes, and then viewed a booklet of 78 logos (39 targets, 39 distracters), indicating which they had seen. True recognition was the percentage correctly recognizing a target, and false recognition the percentage claiming to recognize a distracter.
+- Statistical approach: a Bayesian finite-mixture structural equation model with a concomitant variable allowing cluster probabilities to vary by country, to avoid averaging away individual-level differences.
+- Summary of results: natural designs universally increase positive affect, shared meaning, subjective familiarity and true recognition and decrease false recognition. Designs high in harmony universally increase positive affect, subjective familiarity and false recognition without affecting shared meaning or true recognition. The largest cluster differences were for elaborate designs: mostly they increased affect, familiarity and recognition (true and false) while decreasing shared meaning, but the Russian cluster responded differently (a much smaller effect on affect and a negative effect on familiarity). The authors offer a tentative explanation based on uncertainty avoidance (Arrindell et al.), which they present as a possible explanation, not a tested one.
+- The paper notes that the design dimensions explain only a modest share of true and false recognition.
+
+### Replication and criticism
+
+This is the most direct extension of the 1998 logo work and is partly a replication across populations, reaching broadly similar conclusions. Its limits are stated by its own design: student samples for the recognition test, a fixed logo set of 195 existing designs, and stimulus-level ratings by designers. The finding of "universality" concerns the structure of perceived design and the sign of the responses, not the size of the effects, so it supports the dimensions as a vocabulary and not as a precise predictor. The role of culture in the elaborate-design effect rests on a post hoc explanation and a small number of country clusters, so the result for Russia should be treated cautiously. No independent replication focused on mobile-app marks was found.
+
+### Implications for LTF
+
+For a product aimed at English-speaking beginners worldwide, the main takeaway is reassuring: a natural, harmonious mark should work with similar effects across the countries studied, so LTF need not maintain different logo versions for different regions. The practical risks sit with elaborate or highly decorative treatments, where responses vary most. If LTF later localizes, the identity (mark, color, geometry) should be held constant and variation limited to language and examples. The distinction between true and false recognition is a useful test design for LTF: show target and distracter marks (including competitor marks) in a quick-exposure test and count how often people claim to recognize a mark they have not seen; a high false-recognition rate warns of resemblance to others. The paper's two-second exposure is also a reasonable proxy for the glance a learner gives a tab icon or a share-card thumbnail.
+
+Confirmed this session: Crossref record and abstract for DOI 10.1287/mksc.1080.0462; full text read from business.columbia.edu/sites/default/files-efs/pubfiles/4563/cross_national_logo.pdf.
+
+## luffarelli2019let
+
+Luffarelli, J., Mukesh, M., & Mahmood, A. (2019). Let the logo do the talking: The influence of logo descriptiveness on brand equity. *Journal of Marketing Research, 56*(5), 862-878.
+
+### Core claims
+
+Logo descriptiveness is the extent to which a logo's textual or visual elements indicate the type of product the brand sells (for example Costa Coffee's coffee beans and the word "coffee", versus Starbucks, which does not). Across six studies (four experiments, one large survey and one secondary-data study, plus four further experiments in web appendices) the authors show that more descriptive logos improve brand evaluations, purchase intentions and brand performance. The mechanism is processing ease: descriptive logos are easier to process, which elicits stronger impressions of authenticity (authentic, trustworthy, credible), which consumers value. Two moderators matter: the effect is much weaker for familiar brands and reverses for brands whose product type has negative associations.
+
+### Specifics
+
+I read the accepted manuscript (Sussex Research Online copy).
+
+- Study 1: 180 online participants (Mechanical Turk) saw one of two fabricated logo pairs (basketball equipment, running shoes), each with a more and a less descriptive version matched in a pretest (n = 80) on symmetry, complexity, likability, familiarity and dynamism. Descriptive logos produced stronger authenticity impressions via ease of processing.
+- Study 3: 174 real logos from UK crowdfunding sites (relatively unknown startups) were rated by 1,327 people for purchase intentions and authenticity, and by a separate 1,303 people for descriptiveness, with numerous design characteristics controlled. Authenticity mediated the effect on purchase intentions, and logo type (wordmark, icon-only, mixed) did not moderate it.
+- Study 4: the benefit of the more descriptive logo shrank when participants were familiar with the brand versus unfamiliar, though the indirect effect through authenticity stayed positive (90 percent intervals above zero in both groups).
+- Study 5: 240 Prolific participants; a descriptive logo with oil drops helped an olive oil producer but hurt a palm oil producer (pretest: olive oil rated more positively than palm oil, 6.15 versus 3.95 on a nine-point scale).
+- Study 6: among 479 consumer-facing (B2C) brands in the 2013 KLD Stats data, Compustat financials were available for 423; logo descriptiveness was positively associated with gross profit (beta = .16, p = .005), and with EBITDA and net income at marginal significance (p = .071 and p = .053).
+- Practitioner implication: among the 597 brands studied in Studies 3 and 6, 41 percent of logos were descriptive and 59 percent were not.
+- The authors find no evidence that logo descriptiveness interacts with brand personality, and no substantial difference between goods and service brands.
+
+### Replication and criticism
+
+Evidence strength: a multi-study paper with experiments, a survey and archival data, which is stronger than typical logo studies, but it is observational for the profit finding (association, with controls), uses online panel participants and mostly fictional or little-known brands, and was published in a single article by one team, so independent replication is still awaited in what I found. The reversal for negatively valenced products shows boundary conditions, and the attenuation for familiar brands means the effect matters mainly early in a brand's life. My own observation is that the result sits in tension with the minimalist logo trend, and a design-press commentary (AIGA Eye on Design, listed in search results but not read) engages with this; I report only that it exists. The finding should not be read as universal advice to add literal pictures: the authors' own data show wordmark, icon and mixed forms all work.
+
+### Implications for LTF
+
+LTF is exactly the case where this paper applies most: an unfamiliar brand in a category where learners want credibility. A mark or lockup that tells people at a glance that this is about flying (a wing, yoke, instrument or runway element, or the word "fly" in the lockup) should be learned faster and read as more trustworthy than a purely abstract shape. The reversal result is a caution for any imagery that evokes negative associations of flying (a crash, a stall, a red warning) in the brand mark or in thumbnails for beginner lessons. For the in-product icon set, descriptiveness argues for literal, labeled icons (a landing-gear glyph for the gear lesson) over abstract tokens. As LTF becomes familiar, the benefit should decline, leaving room to simplify the mark later without penalty.
+
+Confirmed this session: Crossref record and abstract for DOI 10.1177/0022243719845000 (title, authors, 2019, volume 56, issue 5, pages 862-878); full text of the accepted manuscript read at scispace.com/pdf/let-the-logo-do-the-talking-the-influence-of-logo-1neqv33ydv.pdf (abstract, Studies 1, 3, 5, 6, managerial implications).
+
+## orth2008holistic
+
+Orth, U. R., & Malkewitz, K. (2008). Holistic package design and consumer brand impressions. *Journal of Marketing, 72*(3), 64-81.
+
+### Core claims
+
+Instead of studying single package elements (color, shape, typeface) one at a time, the authors treat a package as a whole and ask which kinds of overall design exist and what brand impressions each creates. Seven studies identify key types of package designs and the factors that differentiate them, and relate these holistic designs to consumer impressions of the brand (Crossref abstract for DOI 10.1509/jmkg.72.3.064). They simplify package selection into five holistic types: massive, contrasting, natural, delicate and nondescript. The paper matches types to the personality dimensions of Aaker (1997): sincere brands should have natural package designs, exciting brands contrasting designs, competent brands delicate designs, sophisticated brands natural or delicate designs, and rugged brands contrasting or massive designs.
+
+### Specifics
+
+- The abstract gives the type labels, the mapping to personality impressions and the number of studies (seven). It also says the authors discuss trade-offs among the impressions that holistic types create and illustrate findings with many real packages.
+- Later authors place the method in the same tradition as Henderson and Cote's logo work, following the earlier approach of showing stimuli to respondents and collecting ratings (Luffarelli et al. 2019 list Henderson and Cote 1998, Henderson, Giese and Cote 2004 and Orth and Malkewitz 2008 as an "established method"). A 2009 cross-national logo paper (van der Lans et al.) describes the Orth and Malkewitz work as applying the elaborateness, naturalness and harmony dimensions to wine bottle design.
+- A 2024 review of packaging research (Ghorbani and Westermann, Journal of Product and Brand Management) characterizes the study as a holistic, sender-perspective investigation: it examines how brands can manipulate package designs to convey intended value propositions, as opposed to how consumers themselves evaluate packaging.
+- The Crossref record lists 71 references.
+- I could not confirm the product categories in the seven studies from the abstract alone; indexed keywords in search results suggest wine and perfume, but I report this only as a lead.
+
+### Replication and criticism
+
+The five-type structure is cited as a foundation for later packaging work, and its link between design types and Aaker-style personality is plausible and consistent with logo research. Criticisms to bear in mind: it is a sender-perspective design (brands choose the design to produce a target impression), the tested categories are limited, the personality mapping inherits all the weaknesses of the Aaker scale (see Romaniuk and Ehrenberg 2012 and Azoulay and Kapferer 2003 in this lane), and the 2024 review argues that consumers use more criteria than a designer-defined typology, twelve in its qualitative work, including practical and symbolic ones. The mapping is based on ratings by consumers who saw static images, not on actual purchasing behavior. I found no preregistered replication.
+
+### Implications for LTF
+
+The paper shows that the overall gestalt of a design, more than individual elements, carries the impression. For LTF, this argues for judging the interface and cards as whole compositions in review (a lesson page, a briefing card), not only checking colors and fonts individually. If the intended impression is competent and sincere, the mapping points toward natural and delicate designs, meaning calm, refined, restrained compositions over contrasting, heavy or high-energy ones. Dashboards and fly mode, where the instrument widgets sit next to the sim, should avoid massive or contrasting treatments that would compete with the sim and signal bravado. Treat the map as a hypothesis for LTF's visual language and verify it by showing learners screens and asking what impression they get. Keep in mind that the personality framework underlying it has contested validity.
+
+Confirmed this session: Crossref record and abstract for DOI 10.1509/jmkg.72.3.064 (title, authors, 2008, volume 72, issue 3, pages 64-81, 71 references); statements about the paper's method read in the Luffarelli manuscript, the van der Lans paper and the Ghorbani and Westermann 2024 manuscript (strathprints.strath.ac.uk/90981/1/Ghorbani-and-Westermann-JPBM-Exploring-the-role-of-packaging-in-the-formation-of-brand-images.pdf); the article text was not available.

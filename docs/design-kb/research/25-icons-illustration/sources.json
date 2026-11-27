@@ -1,0 +1,527 @@
+[
+ {
+  "key": "mcdougall1999measuring",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "McDougall",
+    "given": "Siné J. P."
+   },
+   {
+    "family": "Curry",
+    "given": "Martin B."
+   },
+   {
+    "family": "de Bruijn",
+    "given": "Oscar"
+   }
+  ],
+  "year": 1999,
+  "title": "Measuring symbol and icon characteristics: Norms for concreteness, complexity, meaningfulness, familiarity, and semantic distance for 239 symbols",
+  "container_title": "Behavior Research Methods, Instruments, & Computers",
+  "volume": "31",
+  "issue": "3",
+  "pages": "487-519",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.3758/BF03200730",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.3758/bf03200730 (McDougall, Curry, de Bruijn 1999, BRMIC 31(3) 487-519). Full text PDF read via link.springer.com/content/pdf/10.3758/BF03200730.pdf",
+  "kind": "rating-norm study (200 raters, 239 symbols)",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "mcdougall2000exploring",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "McDougall",
+    "given": "Siné J. P."
+   },
+   {
+    "family": "de Bruijn",
+    "given": "Oscar"
+   },
+   {
+    "family": "Curry",
+    "given": "Martin B."
+   }
+  ],
+  "year": 2000,
+  "title": "Exploring the effects of icon characteristics on user performance: The role of icon concreteness, complexity, and distinctiveness",
+  "container_title": "Journal of Experimental Psychology: Applied",
+  "volume": "6",
+  "issue": "4",
+  "pages": "291-306",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/1076-898X.6.4.291",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1037/1076-898x.6.4.291, JEP:Applied 6(4) 291-306; web search returned the abstract summary (concreteness effects tied to initial grasp, complexity effects persist and relate to search)",
+  "kind": "experimental study (two experiments)",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "isherwood2007icon",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Isherwood",
+    "given": "Sarah J."
+   },
+   {
+    "family": "McDougall",
+    "given": "Siné J. P."
+   },
+   {
+    "family": "Curry",
+    "given": "Martin B."
+   }
+  ],
+  "year": 2007,
+  "title": "Icon identification in context: The changing role of icon characteristics with user experience",
+  "container_title": "Human Factors",
+  "volume": "49",
+  "issue": "3",
+  "pages": "465-476",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1518/001872007X200102",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref returned DOI 10.1518/001872007x200102 (Human Factors 49(3) 465-476); PubMed 17552310 abstract retrieved via NCBI E-utilities efetch",
+  "kind": "experimental study (30 participants, long learning series)",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "mcdougall2009whats",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "McDougall",
+    "given": "Siné"
+   },
+   {
+    "family": "Isherwood",
+    "given": "Sarah"
+   }
+  ],
+  "year": 2009,
+  "title": "What's in a name? The role of graphics, functions, and their interrelationships in icon identification",
+  "container_title": "Behavior Research Methods",
+  "volume": "41",
+  "issue": "2",
+  "pages": "325-336",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.3758/BRM.41.2.325",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref returned DOI 10.3758/brm.41.2.325 (BRM 41(2) 325-336). Full text PDF read via link.springer.com/content/pdf/10.3758/BRM.41.2.325.pdf",
+  "kind": "experimental study with regression analysis",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "wiedenbeck1999use",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Wiedenbeck",
+    "given": "Susan"
+   }
+  ],
+  "year": 1999,
+  "title": "The use of icons and labels in an end user application program: An empirical study of learning and retention",
+  "container_title": "Behaviour & Information Technology",
+  "volume": "18",
+  "issue": "2",
+  "pages": "68-82",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1080/014492999119129",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref returned DOI 10.1080/014492999119129 (BIT 18(2) 68-82); web search returned the abstract text (label-only and icon-label best in session 1; icon-only poorer, improved in session 2)",
+  "kind": "between-subjects experiment",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "rogers1989icons",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Rogers",
+    "given": "Yvonne"
+   }
+  ],
+  "year": 1989,
+  "title": "Icons at the interface: their usefulness",
+  "container_title": "Interacting with Computers",
+  "volume": "1",
+  "issue": "1",
+  "pages": "105-117",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/0953-5438(89)90010-6",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref returned DOI 10.1016/0953-5438(89)90010-6 (Rogers, ICom 1(1) 105-117); content described in McDougall et al. 1999 full text and Semantic Scholar summary",
+  "kind": "conceptual review with classification",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "gittins1986icon",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Gittins",
+    "given": "David"
+   }
+  ],
+  "year": 1986,
+  "title": "Icon-based human-computer interaction",
+  "container_title": "International Journal of Man-Machine Studies",
+  "volume": "24",
+  "issue": "6",
+  "pages": "519-543",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/S0020-7373(86)80007-4",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref returned DOI 10.1016/s0020-7373(86)80007-4 (Gittins, IJMMS 24(6) 519-543); web search returned the ScienceDirect-derived abstract",
+  "kind": "survey and classification",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "kendall2016iconic",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Kendall",
+    "given": "L. N."
+   },
+   {
+    "family": "Raffaelli",
+    "given": "Quentin"
+   },
+   {
+    "family": "Kingstone",
+    "given": "Alan"
+   },
+   {
+    "family": "Todd",
+    "given": "Rebecca M."
+   }
+  ],
+  "year": 2016,
+  "title": "Iconic faces are not real faces: enhanced emotion detection and altered neural processing as faces become more iconic",
+  "container_title": "Cognitive Research: Principles and Implications",
+  "volume": "1",
+  "issue": "1",
+  "pages": "",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1186/s41235-016-0021-8",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref returned DOI 10.1186/s41235-016-0021-8 (CRPI 1(1), article 19); Europe PMC PMC5256461 full text read",
+  "kind": "two experiments (behavior and ERP)",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "tversky2002animation",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Tversky",
+    "given": "Barbara"
+   },
+   {
+    "family": "Morrison",
+    "given": "Julie Bauer"
+   },
+   {
+    "family": "Betrancourt",
+    "given": "Mireille"
+   }
+  ],
+  "year": 2002,
+  "title": "Animation: can it facilitate?",
+  "container_title": "International Journal of Human-Computer Studies",
+  "volume": "57",
+  "issue": "4",
+  "pages": "247-262",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1006/ijhc.2002.1017",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref returned DOI 10.1006/ijhc.2002.1017 (IJHCS 57(4) 247-262); author copy PDF read at hci.stanford.edu/courses/cs448b/papers/Tversky_AnimationFacilitate_IJHCS02.pdf",
+  "kind": "selective literature review",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "mayer1990when",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Mayer",
+    "given": "Richard E."
+   },
+   {
+    "family": "Gallini",
+    "given": "Joan K."
+   }
+  ],
+  "year": 1990,
+  "title": "When is an illustration worth ten thousand words?",
+  "container_title": "Journal of Educational Psychology",
+  "volume": "82",
+  "issue": "4",
+  "pages": "715-726",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/0022-0663.82.4.715",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref returned DOI 10.1037/0022-0663.82.4.715 (JEP 82(4) 715-726); ERIC EJ440468 abstract fetched (three experiments, 300 college students, four conditions)",
+  "kind": "three experiments",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "carney2002pictorial",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Carney",
+    "given": "Russell N."
+   },
+   {
+    "family": "Levin",
+    "given": "Joel R."
+   }
+  ],
+  "year": 2002,
+  "title": "Pictorial illustrations still improve students' learning from text",
+  "container_title": "Educational Psychology Review",
+  "volume": "14",
+  "issue": "1",
+  "pages": "5-26",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1023/A:1013176309260",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref returned DOI 10.1023/a:1013176309260 (EPR 14(1) 5-26); abstract fetched from bearworks.missouristate.edu/articles-chhs/956",
+  "kind": "narrative review",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "houts2006role",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Houts",
+    "given": "Peter S."
+   },
+   {
+    "family": "Doak",
+    "given": "Cecilia C."
+   },
+   {
+    "family": "Doak",
+    "given": "Leonard G."
+   },
+   {
+    "family": "Loscalzo",
+    "given": "Matthew J."
+   }
+  ],
+  "year": 2006,
+  "title": "The role of pictures in improving health communication: A review of research on attention, comprehension, recall, and adherence",
+  "container_title": "Patient Education and Counseling",
+  "volume": "61",
+  "issue": "2",
+  "pages": "173-190",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/j.pec.2005.05.004",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref returned DOI 10.1016/j.pec.2005.05.004 (PEC 61(2) 173-190, plus erratum 10.1016/j.pec.2006.06.023); PubMed 16122896 abstract retrieved via NCBI E-utilities",
+  "kind": "narrative review",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "neurath1936international",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Neurath",
+    "given": "Otto"
+   }
+  ],
+  "year": 1936,
+  "title": "International Picture Language: The First Rules of Isotype",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Kegan Paul, Trench, Trubner & Co.",
+  "publisher_place": "London",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library work OL1207917W 'International picture language', Otto Neurath, 1936, K. Paul, Trench, Trubner & co.; Eye magazine archive article by Robin Kinross fetched (eyemagazine.com/feature/article/archive-international-picture-language)",
+  "kind": "craft treatise and manifesto",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "dreyfuss1972symbol",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Dreyfuss",
+    "given": "Henry"
+   }
+  ],
+  "year": 1972,
+  "title": "Symbol Sourcebook: An Authoritative Guide to International Graphic Symbols",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "McGraw-Hill",
+  "publisher_place": "New York",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library work OL5597060W 'Symbol sourcebook', Henry Dreyfuss, 1972, McGraw-Hill (ISBN 0442218060 edition listed); Cooper Hewitt article 'Producing the Symbol Sourcebook' by Sue Perks fetched (cooperhewitt.org/2023/05/25/producing-the-symbol-sourcebook/)",
+  "kind": "reference compendium",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "horton1994icon",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Horton",
+    "given": "William K."
+   }
+  ],
+  "year": 1994,
+  "title": "The Icon Book: Visual Symbols for Computer Systems and Documentation",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "John Wiley & Sons",
+  "publisher_place": "New York",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780471599012",
+  "url": "",
+  "verified_via": "websearch",
+  "verified_evidence": "GUIdebook record guidebookgallery.org/books/theiconbook lists Horton, William, The Icon Book, John Wiley & Sons, 1994, 432 pages, ISBN 0-4715-9901-8, with table of contents; Open Library work OL3493569W also lists it; Horton CHI 96 tutorial page fetched",
+  "kind": "design handbook",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "iso2014graphical",
+  "type": "standard",
+  "authors": [
+   {
+    "literal": "International Organization for Standardization"
+   }
+  ],
+  "year": 2014,
+  "title": "ISO 9186-1:2014 Graphical symbols - Test methods - Part 1: Method for testing comprehensibility",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "International Organization for Standardization",
+  "publisher_place": "Geneva",
+  "edition": "2",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.iso.org/standard/59226.html",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search returned ISO catalogue pages (iso.org/standard/59226.html, AFNOR and ANSI webstore previews) giving the title, scope (comprehensibility test for graphical symbols without supplementary text), review status confirmed 2019, and Parts 2 and 3 titles",
+  "kind": "international standard",
+  "lane": "25-icons-illustration"
+ },
+ {
+  "key": "nea1991symbol",
+  "type": "report",
+  "authors": [
+   {
+    "literal": "Symbol Comprehension Testing Protocol project (NEA-funded ANSI Z535.3 symbol redesign; hosted by the International Institute for Information Design)"
+   }
+  ],
+  "year": 1991,
+  "title": "Symbol Comprehension Testing Protocol",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "National Endowment for the Arts grant project",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.iiid.net/wp-content/uploads/Symbol-Comprehension-Testing-Protocol.pdf",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search located the PDF at iiid.net; full 9-page PDF downloaded and read (marked 'Produced with a grant from the National Endowment for the Arts, August 1991'); authors are not named in the document",
+  "kind": "test protocol report",
+  "lane": "25-icons-illustration"
+ }
+]
