@@ -489,3 +489,98 @@ This is the most useful single page for writing performance requirements. A sens
 The 2 to 10 second guidance is a warning against decorating short waits: a full progress bar that flashes on and off for a three second fetch is worse than a calm, small status line. For fly mode, tighten the categories: the learner is dividing attention, so aim for instant response to taps and avoid anything that needs a second look.
 
 Confirmed this session: page content fetched at https://www.nngroup.com/articles/response-times-3-important-limits/ (author Jakob Nielsen, dated January 1, 1993, with a 2014 update); Open Library lists the parent book (work OL3522752W, Academic Press 1993; Morgan Kaufmann edition OL7941012W).
+
+## maister1985psychology
+
+Maister, D. H. (1985). The psychology of waiting lines. In J. A. Czepiel, M. R. Solomon and C. F. Surprenant (Eds.), *The Service Encounter: Managing Employee/Customer Interaction in Service Businesses*. Lexington, MA: Lexington Books (D. C. Heath).
+
+### Core claims
+
+Maister, a professional-services consultant writing about queues in restaurants, airports and clinics, argues that how long a wait feels matters more than how long it is. He frames satisfaction with a service as perception minus expectation (his "First Law of Service") and observes that waiting is an experience to be managed, not only an operational cost. The chapter offers eight propositions about the psychology of waiting, each presented as the title of a section with real-world examples. It is an essay in the craft-and-observation tradition, with no experiment of its own, and it has been the most-cited non-technical source for designing waits in services and software.
+
+### Specifics
+
+I read the full essay on the author's site (https://davidmaister.com/articles/the-psychology-of-waiting-lines/), which gives these section titles in order:
+
+1. Occupied time feels shorter than unoccupied time (examples: menus and bars while waiting for a table, telephone holds with sports highlights, medical waiting rooms with weighing machines and eye charts).
+2. People want to get started (staff acknowledging seated guests; a walk-in clinic's triage nurse).
+3. Anxiety makes waits seem longer.
+4. Uncertain waits are longer than known, finite waits.
+5. Unexplained waits are longer than explained waits.
+6. Unfair waits are longer than equitable waits (order of seating, numbered queues).
+7. The more valuable the service, the longer the customer will wait.
+8. Solo waits feel longer than group waits.
+
+The introduction also gives the second law, "It's hard to plan catch-up ball": a customer who is made to wait and then served earlier than promised is happier than one who is told a short wait and then waits longer. He mentions elevator mirrors as an example of occupying time. His concluding remarks say the propositions are not exhaustive, that cultural and class differences in tolerance exist and are not explored, and that the psychology of waiting is context-specific and can be managed and researched in the manager's own setting.
+
+Later restatements: Don Norman's 2008 essay on his site (https://jnd.org/the-psychology-of-waiting-lines/) updates the essay with eight design principles, opening with "emotions dominate" and ending with the principle that the memory of an event is more important than the experience, and a shorter version appeared as "Designing waits that work" in MIT Sloan Management Review (2009). I confirmed those facts from the page only, not the full text.
+
+### Replication and criticism
+
+The propositions have mostly been tested piecemeal. A search summary reports that Jones and Peppiatt (1996) tested two of the propositions with 300 members of the public, and that other studies have found mixed support, some confirming and some refuting. I did not read those studies, so I cannot say which propositions hold up. The claim that waits are shortened by occupying time is the most consistent with the progress-bar work in this lane (Harrison et al. 2007, 2010; Myers 1985), where a visible indicator or motion changed perceived duration, but the progress bar research is on seconds, not on the minutes of a service queue. Some secondary lists of the propositions disagree on wording and order, so cite the chapter itself. The essay is persuasive on mechanism but offers no effect sizes, and many of its examples (supermarket lines, airport gates) are from a 1980s service environment.
+
+### Implications for LTF
+
+Several propositions map directly onto learning software. "Uncertain waits are longer than known, finite waits" and "unexplained waits are longer" argue for saying what is happening and roughly how long it will take ("Loading the airport chart, a few seconds"), not an anonymous spinner. "People want to get started" argues for showing something at once: the lesson title and first paragraph before the heavy widgets load. "Occupied time feels shorter" argues for putting useful content in a wait (a tip, the objective of the lesson) but only if it does not reduce clarity, and not as a trick.
+
+"Anxiety makes waits seem longer" matters for a beginner flying a simulator: a learner who is unsure whether a challenge was recorded is anxious, so confirmation after a step must be unmistakable. "Unfair waits" is the lesson for any queue-like feature (a retry limit, a locked next lesson): say why.
+
+Do not over-apply. For waits under a few seconds, the subtle propositions matter less than getting out of the way. And the essay is advice for managing perception; LTF should use it to be clear, not to disguise slowness.
+
+Confirmed this session: essay text read at https://davidmaister.com/articles/the-psychology-of-waiting-lines/; citation (editors, publisher, year) confirmed from search results; page range not confirmed so left blank in sources.json; Norman's page https://jnd.org/the-psychology-of-waiting-lines/ read for the later restatement.
+
+## galletta2004web
+
+Galletta, D. F., Henry, R., McCoy, S. and Polak, P. (2004). Web site delays: how tolerant are users? *Journal of the Association for Information Systems*, 5(1), 1-28.
+
+### Core claims
+
+The paper tests how web page loading delays affect performance, attitudes and behavioral intentions. Previous work had recommended a wide range of rules of thumb, with some saying response times should be no greater than 2 seconds and others cautioning about delays of 12 seconds or more, and a recurring suggestion that complex tasks allow longer response times. The authors ran a between-subjects experiment with fixed delays of 0, 2, 4, 6, 8, 10 and 12 seconds and report that delay mattered, but that its effects were non-linear and the explained variance was small. They describe a flattening of the decline: decreases in performance and behavioral intentions begin to flatten at delays of 4 seconds or longer, and attitudes flatten at 8 seconds or longer.
+
+### Specifics
+
+From the abstract and text (full text read this session): 196 undergraduate students were randomly assigned to one constant delay and asked to complete nine search tasks, exploring one familiar and one unfamiliar site. The dependent variables were performance, attitudes and behavioral intentions. Plots against delay suggested non-linear regression. Explained variance was in the neighborhood of 2% for performance, 5% for attitudes and 7% for behavioral intentions; restricting the analysis to the familiar site raised explained variance for attitudes and intentions to about 16%. The authors propose, from earlier work, that increasing delay hurts performance with diminishing marginal effect, and treat familiarity (the site's structure matching users' expectations) as a moderator. They call for future research on expectations, variability and feedback, and on actual purchasing behavior.
+
+The paper also summarizes earlier work on delay, which I read in the same text: Nah (the 38, 13, 7 and 3 second figures described under Nah 2004 in this lane), a study by Polak in which delay length, variability and feedback were manipulated and delay length was the most significant predictor of performance on a search task with feedback (gradually loading graphics) alleviating the effect somewhat, and older studies in which, for example, time to solution increased as response time increased.
+
+### Replication and criticism
+
+A single laboratory study with student participants, fixed delays rather than variable ones, and attitude measures collected immediately; it cannot speak to long-term loyalty or purchase. Very small explained variance means delay was one factor among many, a result that sits uneasily with the hard thresholds in popular guides. The authors themselves flag that expectations, variability and feedback were not tested. The study is also an early broadband-era result, collected when page loads of several seconds were common, so the absolute level of tolerance may have fallen since. A secondary paper I fetched (Scholz et al. 2024, arXiv 2401.03751) states that Galletta et al. showed an optimal response time of 0.5 seconds; I could not find that claim in the Galletta text I read (it tested 0 to 12 seconds in 2-second steps), so I treat that statement as unreliable.
+
+### Implications for LTF
+
+This paper is the best caution against treating "2 seconds" or "3 seconds" as a cliff. Delay costs something at every length, with diminishing marginal effect, and the effects are modest compared with other influences, so an LTF performance budget should aim at being reliably fast in the common case and avoiding long tail delays. Familiarity mattered: for the familiar site, delay explained more of the variance in attitudes and intentions (about 16%), so the delay effect was easier to see where users knew the site. Whether returning learners are less forgiving of a slow lesson page is a hypothesis LTF could test with its own data.
+
+For measurement, use field data (see the Core Web Vitals source in this lane) and compare against the learner's task, not a single number. Do not use this study to justify a progress indicator for waits of one or two seconds.
+
+Confirmed this session: Crossref DOI 10.17705/1jais.00044 (JAIS 5(1), 1-28, January 2004); full text read at https://www.gwern.net/doc/economics/advertising/2004-galletta.pdf.
+
+## google2024web
+
+Google. (2024). Web Vitals and Core Web Vitals, with "Defining the Core Web Vitals metrics thresholds". web.dev (Google Chrome team).
+
+### Core claims
+
+Core Web Vitals are the subset of Web Vitals that Google says apply to all web pages, should be measured by all site owners and appear across Google's tools. They cover three aspects of user experience: loading, interactivity and visual stability. They are an industry standard for field measurement of perceived performance, defined and revised by the Chrome team in public documents. They are not peer-reviewed research, but the threshold-setting article describes its method and cites the human-perception literature that this lane's other sources come from.
+
+### Specifics
+
+From the vitals page (published May 4, 2020, last updated October 31, 2024 per the page): the three metrics and their "good" thresholds are Largest Contentful Paint (LCP) at 2.5 seconds or less, measured from when the page first starts loading; Interaction to Next Paint (INP) at 200 milliseconds or less; and Cumulative Layout Shift (CLS) at 0.1 or less. A page passes when it meets all three at the 75th percentile of page loads, segmented by mobile and desktop. INP became a stable Core Web Vital in 2024 and replaced First Input Delay (FID), which measured only the first interaction. Metrics move through experimental, pending and stable phases, pending ones are held at least six months, and stable ones will not change more than once a year.
+
+From the INP page: INP observes the latency of all click, tap and keyboard interactions during a visit and reports a single value (usually the worst; on pages with more than 50 interactions, one of the highest is ignored per 50). An interaction has three parts: input delay, processing duration and presentation delay until the next frame is painted. Thresholds: good at or below 200 ms, needs improvement up to 500 ms, poor above 500 ms. The page's rationale: after an interaction the next painted frame should show visual feedback, and delayed feedback makes users think the page is broken and repeat clicks.
+
+From "Defining the Core Web Vitals metrics thresholds": thresholds are chosen to reflect a high-quality experience based on human perception and HCI research, to be achievable (at least 10% of origins in real-world CrUX data must meet "good"), and to set "poor" so that the worst 10 to 30% of origins fall into it, unless research suggests otherwise. The article cites Card and Newell (a 1 second immediate-response range of roughly 0.3 to 3 seconds), Miller (delays beyond about 2 seconds change how users work; control feedback within 0.1 second), Nielsen (0.1 second feels instantaneous), Michotte 1962 (perceived causality holds to about 100 ms, mixed from 100 to 200 ms and lost beyond 200 ms), and Kaaresoja et al. (visual feedback within 85 ms appeared simultaneous 75% of the time, with perceived quality dropping from 100 to 150 ms). It says that research points to 100 ms as ideal for INP and 200 ms was chosen for achievability. For LCP, candidates from 1 to 3 seconds were compared on April 2020 data; at 2.5 seconds, 42% of phone origins and 51% of desktop origins met it, and the team judged 1.5 and 2 seconds not consistently achievable. For CLS, testing showed shifts of 0.15 and above were consistently disruptive, and 0.1 was chosen over 0.05 partly because third-party embeds often cause shifts above 0.05. The 75th percentile was chosen to balance coverage against outliers.
+
+### Replication and criticism
+
+The thresholds are a mix of research and pragmatics; the article is open about the achievability criterion, which means the "good" values reflect what a large share of real sites can reach, not a proven human optimum. The INP threshold is explicitly weaker than the research ideal (100 ms). The vitals are also commercial in context: they feed Google's search page-experience signals. I did not locate independent studies of whether passing the thresholds predicts learner outcomes. Lab tools such as Lighthouse cannot measure INP, so lab scores and field scores can disagree; the page stresses that lab measurement does not replace field measurement. As web standards, the metrics will change, so any LTF document should cite the current page and date.
+
+### Implications for LTF
+
+Adopt the three vitals as the field-measured performance budget for the LTF client, measured at the 75th percentile on mobile and desktop separately, and add real-user monitoring of INP on interactive widgets, because LTF's pages are interaction-heavy. CLS is directly relevant to lesson pages with images, diagrams and late-loading widgets: reserve space for every widget and image so text does not jump while a learner reads. LCP matters for the first lesson view: render the lesson title and first paragraph before any heavy widget.
+
+INP's focus on "the next painted frame shows feedback" fits the Miller and Card constants in this lane: respond to a tap with a visible state change within roughly 100 to 200 ms, even if the full result takes longer. For fly mode, set a stricter internal target for INP than the public 200 ms good threshold, because the learner's glances are short.
+
+Do not treat the vitals as a substitute for task measures; add timing for LTF-specific moments, such as the time from opening a lesson to reading its first step.
+
+Confirmed this session: pages fetched at https://web.dev/articles/vitals (published May 4, 2020, updated October 31, 2024), https://web.dev/articles/inp, and https://web.dev/articles/defining-core-web-vitals-thresholds. No Crossref record exists; verified via direct fetch of the pages.

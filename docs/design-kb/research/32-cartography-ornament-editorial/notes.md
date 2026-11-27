@@ -97,3 +97,73 @@ It is expert essay and example, not experiment. Reviews found by search are mixe
 Every aviation diagram is a selective, simplified map and so tells white lies: a traffic pattern drawn as a neat rectangle, a pattern altitude shown at scale. LTF should say so on the page where it matters, with a short "not to scale" or "simplified" label, and should avoid pictures whose exaggeration could be mistaken for real geometry (for example, a glide cone drawn much steeper than reality). When one map could be drawn many ways, a lesson can show two renderings of the same data and name what each hides. Colour is a chapter in his book; choropleth-style heat shading of progress or scores should be built from a documented ramp and honest classes, since the class breaks alone can change the story. For misleading-chart risk in dashboards, the data-map chapter's theme (a thicket of thorny choices) is a prompt to document choices.
 
 Confirmed this session: Open Library (works OL1909721W, OL8350601W, OL28047708W, OL20081418W); University of Chicago Press course-introduction PDF for the third edition (contents and chapter 1 text) https://www.press.uChicago.edu/dam/ucp/books/pdf/course_intro/978-0-226-43592-3_course_intro.pdf, read in full; web search for the Cartographic Perspectives review snippet (I could not open the review text itself).
+
+## maceachren1995how
+
+MacEachren, A. M. (1995). *How Maps Work: Representation, Visualization, and Design*. New York: Guilford Press.
+
+### Core claims
+
+MacEachren replaces craft rules of thumb with a cognitive-semiotic framework. Guilford describes the book as a framework for understanding maps as powerful, abstract and synthetic spatial representations, and as an account of how the many representational choices in mapping affect information processing and knowledge construction. Its premise is that map design should rest on a scientific understanding of how people see and understand maps, so that symbolization choices can be justified by perception and cognition, not taste. It is the work that moved cartographic design from the craft tradition of Imhof and Robinson towards perception research and semiotics.
+
+### Specifics
+
+From the Guilford contents page (513 pages, hardcover June 1995, paperback 2004): chapter 1 argues for a scientific approach to improving map representation and design. Part I, "How Meaning Is Derived from Maps", covers an information-processing view of vision and visual cognition (chapter 2), how maps are seen (3) and how maps are understood (4, with subheadings visual array, visual description, knowledge schemata and cognitive representation). Part II, "How Maps Are Imbued with Meaning", gives a primer on semiotics (5), a functional approach to the semantics and syntactics of map signs (6) and a lexical approach to map pragmatics (7). Part III, "How Maps Are Used", covers geographic visualization ("GVIS") for facilitating visual thinking (8), relationships in space and time (9) and the question of whether we should believe what we see (10).
+
+The most reused technical contribution, per Roth's 2015 encyclopedia entry on visual variables (read in full), is the extension of Bertin's variables and the "syntactics" of matching variable to data type. MacEachren added crispness, resolution and transparency to the set (grouped earlier under "focus" for uncertainty display) and argued that colour saturation, crispness, resolution and transparency are strongly ordered variables while texture is only marginally ordered. His syntactics rates each variable as good, marginal or poor for nominal, ordinal and numerical data: unordered variables such as hue, orientation and shape suit nominal data; ordered but not quantitative variables such as value and saturation suit ordinal data; only location and size suit numbers. Roth also notes, as a result from later work (MacEachren et al. 2012), that crispness was the most effective variable for one uncertainty task, a reminder that these are tested claims.
+
+### Replication and criticism
+
+The book is a synthesis of cognitive science for cartographers, so its strength is as a map of the research more than a source of its own experiments. Publisher-quoted reviews (Environment and Planning B called it required reading for map makers; URISA Journal called it an important book on graphic representation in perception and cognition; a past president of the International Cartographic Association said it should be mandatory reading) are praise, not independent critique, and I could not retrieve a critical scholarly review this session. A web search surfaced a 2001 MacEachren essay in Information Design Journal that addresses critiques of Bertin's graphic variables and extends them to time, sound and touch, which shows the visual-variable scheme was still under revision. Roth observes that the content of visual-variable taxonomies varies considerably by scholar.
+
+### Implications for LTF
+
+This is the most directly transferable theory in the lane. The syntactics rule gives a plain table for any widget: use hue and shape only for categories (which system, which checklist item type), value or saturation for ordered states (normal, caution, warning, shown as increasing intensity), and position or size for numbers. It argues against encoding airspeed margin in hue alone. The ordering claim for saturation supports using increasing saturation to escalate urgency, with the caveat that colour-vision differences need a second cue (position, shape or label) which the accessibility lanes cover. His "information-processing view" chapters are a reminder that fly mode is seen in short glances: a design that depends on conscious search is the wrong tool. For uncertainty, crispness and transparency are available levers: a faded or soft-edged estimate (the glide range under unknown wind, for example) reads as less certain without extra text. Use the semantics and syntactics split in design reviews: separate "what does this sign mean" from "how do signs relate to each other on the page".
+
+Confirmed this session: Open Library (work OL3502929W); Guilford contents and publication page https://guilford.com/books/How-Maps-Work/Alan-MacEachren/9781572300408/contents; web search results quoting Guilford's description and reviews; SERC description https://serc.carleton.edu/resources/1051.html; Roth (2015) PDF from geography.wisc.edu for the extension of variables. I did not read the book.
+
+## brewer1997spectral
+
+Brewer, C. A. (1997). Spectral schemes: Controversial color use on maps. *Cartography and Geographic Information Systems, 24*(4), 203-220. DOI 10.1559/152304097782439231.
+
+### Core claims
+
+Cartographers had long advised against rainbow-like spectral colour schemes for mapping quantitative data, even though such schemes were common in GIS and scientific visualization. Brewer's paper, according to the abstract record at Penn State, reports recent research finding that people prefer spectral schemes and read them accurately when they are designed as multi-hue versions of diverging schemes. She concludes that cartographers should encourage spectral schemes for diverging quantitative data rather than reject them outright.
+
+### Specifics
+
+The abstract states that spectral and diverging schemes can both use light colours to emphasize a midpoint and dark colours for the high and low extremes. The design advice that follows is conditional: spectral-style colours are acceptable for data with a meaningful midpoint, as long as lightness is organized so the ends are dark and the middle is light. To help readers with red-green colour vision deficiency, the abstract says a spectral scheme can skip the yellow-greens. A related Brewer paper found in the same search (Mapping Mortality, with MacEachren, Pickle and Herrmann, 1997) evaluated colour schemes for choropleth maps and is cited as the empirical basis. Brewer also authored the earlier 1996 guidelines for diverging schemes (Crossref: Cartographic Journal 33(2), 79-86) and a 1994 chapter on colour use guidelines in Visualization in Modern Cartography, which I confirmed exist but did not read.
+
+Penn State's course page on choosing colours (courses.ems.psu.edu), which teaches Brewer's approach, presents the wider guidance: sequential schemes for low-to-high data (one hue from light to dark), diverging schemes for data around a midpoint, categorical schemes for unordered groups, and a caution that using a categorical scheme for numeric data makes a map hard to read. It says rainbow schemes are generally to be avoided because they are hard to interpret, can exaggerate small differences and work poorly for colour-blind readers, and cites a study in which doctors read medical images more accurately with sequential schemes than rainbow ones (I did not trace that study).
+
+### Replication and criticism
+
+The controversy is real and is not settled in favour of rainbows. Brewer's position is narrow: spectral schemes are defensible as diverging schemes with controlled lightness. The Penn State course page states the stronger "avoid rainbow schemes" position, giving as reasons that they are hard to interpret and can exaggerate insignificant differences. Treat the 1997 paper as qualified permission for one use case, not a general licence.
+
+### Implications for LTF
+
+If LTF ever needs a colour ramp (a skill heat map, a deviation from target altitude), default to a single-hue sequential ramp for "how much" and a lightness-controlled diverging ramp only where there is a true midpoint, such as above or below glidepath. Do not use a rainbow for ordered data. Whatever ramp is used must also carry value contrast so it survives grayscale, colour-vision differences, and both themes, and legends should be adjacent to the thing coloured.
+
+Confirmed this session: Crossref query (DOI 10.1559/152304097782439231, Cartography and Geographic Information Systems 24(4), 203-220, 1997, Brewer); abstract and record at https://pure.psu.edu/en/publications/spectral-schemes-controversial-color-use-on-maps/; Penn State course page https://courses.ems.psu.edu/maps/l5_p5.html. I did not read the full paper.
+
+## harrower2003colorbrewer
+
+Harrower, M., & Brewer, C. A. (2003). ColorBrewer.org: An online tool for selecting colour schemes for maps. *The Cartographic Journal, 40*(1), 27-37. DOI 10.1179/000870403235002042.
+
+### Core claims
+
+Choosing colour for a thematic map is harder than it looks, and most people who make maps have no training in colour design. ColorBrewer is an online tool that reduces guesswork by recommending ready-made schemes. The Penn State abstract record says it matches schemes to the number of data classes, the type of data (sequential, diverging or qualitative) and the end-use medium (screen, print, projection or photocopy), offers "learn more" tutorials, lets the user test schemes as a map and legend, and exports colours in five colour specification systems.
+
+### Specifics
+
+A web search summary of the paper reports that schemes range from 3 to 12 classes and fall into three categories: sequential, diverging and qualitative. The designers built the sequential and diverging schemes by hand-adjusting value and saturation within a hue (or between hues) and the qualitative schemes by varying hue and value, with the Munsell colour system a substantial influence. The motivating problem in the abstract summary is that thematic mapping is often done by GIS analysts without formal training in colour design. The companion paper, Brewer, Hatchard and Harrower (2003, Cartography and Geographic Information Science 30(1), 5-32, confirmed in Crossref), prints a catalog of the schemes. The tool also filters for schemes that are safe for people with colour-vision deficiency, photocopying and projectors (Penn State course page).
+
+### Replication and criticism
+
+This is a design tool paper, not an experiment. Its schemes were hand-tuned and visually evaluated rather than derived from a formal perceptual model, and the Penn State record lists over a thousand Scopus citations, showing wide uptake (the page's own count; treat as approximate). The principle that matters for LTF is that scheme type should match data type.
+
+### Implications for LTF
+
+Use ColorBrewer-style thinking as the rule for any chart: choose scheme type by data type first, then class count, then medium. Because LTF uses light and dark themes, each theme needs its own checked ramp rather than a flipped one. Qualitative palettes should stay short (a handful of categories), since qualitative schemes lose distinctness as the class count grows. Put the legend next to the data and keep one ramp per meaning across the app.
+
+Confirmed this session: Crossref query (DOI 10.1179/000870403235002042; also 10.1559/152304003100010929 for the catalog paper); record and abstract summary at https://pure.psu.edu/en/publications/colorbrewerorg-an-online-tool-for-selecting-colour-schemes-for-ma/; web search summary of content. I did not read the full paper.

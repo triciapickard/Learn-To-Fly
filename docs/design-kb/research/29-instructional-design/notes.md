@@ -196,3 +196,51 @@ Merrill gives LTF a lesson skeleton and a review checklist. Each lesson starts f
 
 Confirmed this session: Crossref record DOI 10.1007/bf02505024; Springer page for the ETR&D article (abstract with the five principles and seven models, full text paywalled and not read); full text of the Performance Improvement companion read as PDF (itgs.ict.usc.edu); the 2007 reply (Educational Psychologist) for the mention of Merrill (2002).
 
+## bloom1984sigma
+
+Bloom (1984), "The 2 sigma problem: the search for methods of group instruction as effective as one-to-one tutoring", Educational Researcher 13(6), 4-16. Read with von Hippel (2024), "Two-sigma tutoring: separating science fiction from science fact", Education Next, as the critical account.
+
+### Core claims
+
+Bloom reports that students taught one-to-one by a tutor, with formative tests and corrective work, scored about two standard deviations ("2 sigma") above students in a conventional class of about 30. Students in a mastery-learning class of about 30, using the same teacher, formative tests and corrective procedures, scored about one sigma above. He argues that most students have the potential to reach this high level of learning, that one-to-one tutoring is too costly for most societies to provide at scale, and that the "2 sigma problem" is to find group methods, practical for average teachers, that reach tutoring-level achievement. His proposed route is to combine mastery learning (about one sigma) with other alterable variables, such as improved prerequisites or teaching processes, and he reports one combination at about 1.6 sigma.
+
+### Specifics
+
+Design. The essay opens with two University of Chicago doctoral dissertations (Anania, 1982, 1983; Burke, 1984). Students were randomly assigned to conventional, mastery or tutoring conditions, with similar aptitude, prior achievement and attitudes. The teaching time was the same except for corrective work. Replications used four samples at grades four, five and eight and two subjects, probability and cartography, each limited to 11 periods over a three-week block. Using the control class standard deviation, the average tutored student was about two standard deviations above the control mean (above 98% of control students) and the average mastery student about one (above 84%). About 90% of tutored students and 70% of mastery students reached the level attained by only the top 20% of conventional students. Time on task was 65% (conventional), 75% (mastery) and over 90% (tutoring). Correlations between aptitude and final achievement fell from about +.60 under conventional teaching to +.25 under tutoring; Bloom flags that restricted range partly explains the low values.
+
+Table I, adapted from Walberg (1984), lists effect sizes for "alterable variables": tutorial instruction 2.00; reinforcement; feedback-corrective (mastery learning) 1.00; cues and explanations; student classroom participation; time on task; cooperative learning .80; graded homework; homework; higher-order questions and others lower; socioeconomic status shown for contrast. Bloom writes that no combination of mastery learning with a second variable had exceeded 2 sigma.
+
+### Replication and criticism
+
+Strong criticism. Von Hippel (2024) points out that the 2 sigma figure rests essentially on the two dissertations; that Bloom's hand-drawn Figure 1 was illustrative and not fitted to data; and that Bloom's table differs from the Walberg source he credits, where tutoring was estimated at 0.40 and not 2.00 (Bloom repeated 0.40 but labeled it "peer and cross-age remedial tutoring"). Earlier and later meta-analyses of tutoring find far smaller effects: Cohen, Kulik and Kulik (1982) found about 0.33 standard deviations across 65 studies, with only one reporting two sigma; Nickow, Oreopoulos and Quan (2020) found an average of 0.37 across randomized studies, with none of 96 producing two sigma. Kraft (2020) is cited as saying the claim anchored unrealistic expectations of effect sizes. Von Hippel's own reading is that the experiment was not just tutoring (it was a package of mastery-style instruction and corrective procedures) and that it has not been replicated. Evidence strength for the 2 sigma figure is therefore weak: two dissertations, short interventions, tests aligned to the taught material. The qualitative message, that frequent formative testing with correction helps, is better supported (see the Kulik source).
+
+### Implications for LTF
+
+Never promise "tutor-level" gains or cite 2 sigma in LTF marketing or lesson copy. Treat it as a motivational ideal, and use the realistic range (about 0.3 to 0.4 for tutoring, about 0.5 for mastery programs in the Kulik meta-analysis) when planning expectations. The design lessons that survive scrutiny are practical: LTF can replicate the feedback-corrective loop (check understanding, diagnose, reteach, parallel retest) in software, where a human tutor cannot scale. Challenge debriefs should work as the "corrective" step and a parallel challenge as the retest. Aptitude-achievement correlations shrinking under mastery are an argument for letting learners repeat until they meet the standard instead of fixed-length lessons. Because sim time is the scarce resource, a short targeted correction after each flight attempt is likely to pay off more than extra content.
+
+Confirmed this session: Crossref record DOI 10.3102/0013189x013006004; full text of Bloom's article read as PDF (gwern.net copy), including the design, the 98% and 84% figures, time on task, correlations and Table I; von Hippel's article read as PDF (educationnext.org) for the criticism and the 0.33, 0.37, 0.40 and 96-study figures.
+
+## kulik1990effectiveness
+
+Kulik, Kulik and Bangert-Drowns (1990), "Effectiveness of mastery learning programs: a meta-analysis", Review of Educational Research 60(2), 265-299.
+
+### Core claims
+
+A meta-analysis of 108 controlled evaluations of mastery learning programs in colleges, high schools and the upper elementary grades finds positive effects on examination performance. The abstract adds that the effects seem stronger for weaker students in a class, vary with the mastery procedures used, the experimental design and the course content, that mastery programs improve attitudes toward course content and instruction, may increase time on instructional tasks, and that self-paced mastery programs often reduce completion rates in college classes. The review covers two families: Bloom's Learning for Mastery (teacher-paced, group-based, formative tests with corrective instruction) and Keller's Personalized System of Instruction (PSI; self-paced, written materials, unit quizzes with restudy until mastery).
+
+### Specifics
+
+Inclusion rules required a comparison with a conventionally taught group, with a mastery criterion of at least 70% correct on quizzes, and excluded studies with unequal exposure to the criterion test. Of the 108 studies, 72 were PSI and 36 were Bloom's approach. Positive effects appeared in 96 studies, and 67 of those reported statistically significant gains, while none of the studies with negative results reported significant differences. The average effect size across 103 studies was 0.52 (standard error 0.033), meaning the average mastery student performed at about the 70th percentile of a non-mastery class. Eleven studies with follow-up examinations averaged 0.71 about eight weeks after instruction. In 13 studies reporting aptitude levels, the average effect was higher for less able students (0.61) than for more able ones (0.40), but the difference was not significant.
+
+Moderators. Group-based programs produced larger effects than self-paced ones; programs with high mastery standards beat lower standards; and locally developed tests showed larger effects than standardized ones. In PSI studies the average effect on standardized tests was 0.33 versus 0.52 on local tests; the few Bloom-style studies using standardized tests showed no significant effect. Effects were larger when control groups got less quiz feedback than the mastery group, and smaller when the comparison group had the same quizzes and feedback. The social sciences gained more than math and natural science. Time on task rose, and self-paced college courses had lower completion rates.
+
+### Replication and criticism
+
+A meta-analysis, and a sizable one, but heterogeneous: study quality varied, many PSI studies were nonrandom, and the test-alignment issue is serious. The authors themselves note that the large local-test effects are not offset by demonstrably poorer standardized-test performance, but also that the Bloom-style studies showed little or no effect on standardized tests, so the benefit may reflect closer alignment with taught material. Roughly a quarter of effect-size variance was explained by the five study features in their regression. This review finds effects of about half a standard deviation, a long way below the 1 sigma Bloom claimed for mastery learning in 1984 and the 2 sigma for tutoring.
+
+### Implications for LTF
+
+This is the most defensible evidence base for LTF's progression design. Gate progress on a demonstrated criterion and set it high: the review found high mastery standards worked better. Give learners unlimited retries with a correction between attempts. Because self-paced mastery lowered completion in college courses, LTF should add structure (suggested next steps, visible pacing, reminders) so that self-paced does not become stalled. Expect smaller gains on transfer to unfamiliar situations than on in-course tests, so in-sim challenges should include novel scenarios. Dashboard progress should present mastery per skill, not a single percent complete.
+
+Confirmed this session: Crossref record DOI 10.3102/00346543060002265; full text of the article read as PDF (typeset.io copy), including abstract, the 0.52 and 0.71 figures, moderators and discussion.
+
