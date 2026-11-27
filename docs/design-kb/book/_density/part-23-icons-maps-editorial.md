@@ -50,23 +50,63 @@ everyday conventions (close X, hamburger menu, chevrons) and each needs an acces
 
 ## Draft 3: full (about 800 words)
 
-[The full draft added: the delayed-session discrepancy between the abstract ("short-lived"
-retention gap) and one secondary account (usefulness ratings rising for icon-only), with the
-reason no conclusion is drawn; the secondary report of 60 undergraduates with an email
-program, flagged as unconfirmed; the Guastello and Vukelich citations as reported in
-McDougall and Isherwood 2009 on reliance on labels when graphics are unfamiliar; the 13
-learning blocks and the fall in mean response time from about 2.9 seconds to about 1.2
-seconds; the picture-labeling strategy that made symbols feel meaningful when the guess was
-wrong (portable file read as luggage storage); the modern-convention caveat (magnifying glass,
-gear); a paragraph on rarely met icons never leaving the early phase; and an LTF section
-naming `TypeIcon`, `Badge` status icons, the Toast tone icons, the Callout type icons, the
-`FlaskConical` beta icon, the fly-mode pill and the Stopwatch, with a worked decision for the
-hamburger `Drawer` button and for the `Describe this diagram` disclosure.]
+Icons are often defended as faster to recognize and easier to remember than words. For
+beginners learning a real application, the evidence points the other way in the first
+session. Wiedenbeck (1999) built three versions of one application interface, with buttons
+carrying text labels only, icons only, or both together, and followed novice users through
+an initial learning session and a delayed second session, recording attitudes at the end of
+each. In session 1, performance was best with the label-only and icon-label versions. The
+icon-only version was much poorer, particularly in time and in the number of references to
+help. By session 2 the icon-only users had improved to approach the other groups. Retention
+between sessions was worse for icon-only, but the effect was described as short-lived.
+Perceived ease of use was consistently better for the icon-label version than for either of
+the others.
 
-The full draft ran to about 850 words. Every added item above is a real finding, number,
-caveat or applied decision. What it also contained, and what the final text must cut, was a
-second restatement of "labels help first, icons help later" after each source, and a closing
-paragraph that summarized the section.
+Two details cannot be settled. A later paper describes the sample as 60 undergraduates with
+little computer experience using a desktop email program; that is a secondary report. One
+secondary account says usefulness ratings and performance became more positive for the
+icon-only signs in the delayed session, which sits uneasily with the "short-lived" retention
+gap. Without the full text, the safe reading is the abstract's: icon-only was never better,
+and its penalty shrank with practice. It is one application, one icon set and a modest
+sample, so effect sizes should not be carried over.
+
+The McDougall group's learning experiments explain why the label matters so much early.
+McDougall and Isherwood (2009) ran 13 blocks of identification trials; mean response time
+fell from about 2.9 seconds in the first block to roughly 1.2 seconds in later blocks. In
+early trials semantic distance (how closely the picture relates to its function) was the
+best predictor, accounting for up to 55 percent of variance, while familiarity with the
+function name became more important later and was the top accuracy predictor after the
+first blocks. Isherwood, McDougall and Curry (2007) found icon characteristics together
+accounted for up to 69 percent of variance, an upper bound across the learning series, with
+their ranking changing as people practiced. The same paper cites earlier work showing that
+people rely on text labels to get at meaning when the graphic is unfamiliar.
+
+The base rate is the warning. Across 239 real symbols rated without context, mean concept
+agreement was 15.49 percent, with a median of 2.5 percent (McDougall et al. 1999). Raters
+also used a picture-labeling strategy that made a symbol feel meaningful when the guessed
+function was wrong: a portable-file symbol was read as luggage storage. A designer's sense
+that an icon is obvious is therefore not evidence.
+
+Modern conventions shift the picture a little: a magnifying glass for search and a gear for
+settings are learned from everyday software and may be familiar to most adults. Flight
+concepts are not. And for rarely met icons, the early phase never ends: an icon seen once
+per lesson stays in the semantic-distance regime, so its label must stay.
+
+For LTF, the consequences are specific. `TypeIcon` already has a `showLabel` prop; keep it
+true wherever a challenge type appears to someone who may not know the set, because the
+Lucide stand-ins (Settings2 for setup, Repeat2 for maneuver, Route for pattern) are not close
+metaphors. `Badge` status variants pair a 12 px icon with a word, and tiers always print
+Gold, Silver or Bronze: keep both. Toast tone icons and the nine Callout type icons sit next
+to a bold title; keep the titles visible. The `FlaskConical` icon in `BetaBanner` is
+decoration for a sentence that carries the meaning, which is the right relation. Icon-only
+controls should be limited to everyday conventions (the close X on a Toast, the hamburger
+that opens the `Drawer`, chevrons in Breadcrumbs), each with an accessible name. In Fly mode,
+where the learner glances from the simulator, any control a wrong reading would cost a
+missed step carries a word.
+
+The full draft ran to about 820 words. Every added item is a real finding, number, caveat or
+applied decision. What it also contained, and what the final text must cut, was a tendency
+to restate "labels help first, icons help later" after each source.
 
 ## Verdict
 

@@ -606,3 +606,59 @@ LTF's widgets are hand-built SVGs drawn with a `viewBox` and `className="w-full"
 
 Keep the readout utilities, which already pair JetBrains Mono with tabular figures, and keep the scrolling wrapper on lesson tables. Change the numerals outside them: apply `tabular` to every live or columnar sans number (SCR-042) and stay with lining figures, since the sans face has no old-style set (SCR-043). Rebuild the lesson table styling: author-controlled numeric alignment, content-width tables, hairline rows, a lighter header (SCR-044, SCR-045). Fix the widget label scaling, the most serious small-text problem found in the code, with a measured-width scale factor in the shared SVG primitives (SCR-046), and set widget numbers in mono (SCR-047). The visualization side of these widgets is covered in Part XII, Information Visualization.
 
+## Type scales and hierarchy on screens
+
+### The modular scale and its limits
+
+Brown argues that web layouts should be built from the type outward, with measurements derived from a harmonious system tied to the typeface rather than from arbitrary or easily divisible pixel numbers [@brown2011more]. His tool is the modular scale: a sequence made by multiplying and dividing a starting number by a ratio. With the golden mean (1:1.618) and a start of 10, multiplying gives 16.180, 26.179 and 42.358, and dividing gives 6.180, 3.819 and 2.360. A double-stranded scale combines two starting values or two ratios to give more usable steps. His worked example sets body text at 18 px in Minion Pro, a measure of 497.406 px with a line height of 1.54, a 29.124 px h1, a 190 px h2 at line height 1, and a 21.178 px intro derived by subtracting scale values; a 15 px sidebar text is an improvised value outside the scale. He advises starting with the body size and the typeface and deriving the rest, calls the scale a source of educated suggestions rather than strict rules, and warns that it depends on the typeface being available.
+
+There is no empirical test of the claim that modular-scale type is more readable or more pleasing. Its justification is the craft tradition of proportional systems and the practical value of a limited set of related sizes. The notes add a criticism: ratios as steep as the golden mean produce extreme jumps at both ends (the example's 190 px heading sits far from its 18 px body) and real interfaces need sizes the scale does not generate, which is why Brown improvises. The reading evidence adds a constraint no ratio supplies: the lower end of any scale must stay above the legibility floor [@legge2011print; @rello2016make].
+
+### LTF's scale as built
+
+The project utilities define nine sizes: 12, 14, 16, 18, 20, 24, 32, 44 and 64 px. The ratios between neighbors, computed for this Part, are about 1.17, 1.14, 1.13, 1.11, 1.2, 1.33, 1.38 and 1.45: gentle and nearly even at the small end, accelerating at the display end. That shape is defensible for an interface (fine steps where labels and body text sit close together, larger jumps where display headings need contrast), even though it is not a single-ratio modular scale. The problem is not the scale; it is that the code does not use it consistently.
+
+Pages set headings with raw Tailwind sizes that sit between the utility steps: `text-3xl` (30 px) for the lesson h1 and the 404 and error h1s, `text-4xl` (36 px) for the lesson h1 from `sm` and the Fly mode h1, `text-5xl` (48 px) and `text-6xl` (60 px) for result and 404 numerals, and `text-2xl font-bold` (24 px, 700) for the section h2s on the module, challenge, dashboard and lesson block headings, where the scale's 24 px step (`heading-lg`) is weight 600. Counted together, reading and heading text in the product uses at least thirteen sizes (12, 14, 16, 18, 20, 24, 30, 32, 36, 44, 48, 60 and 64 px), before the 10 and 11 unit widget labels. `body-md` exists and is unused. The result, described in the product dossier, is that an h2 is 24 px at 700 on app pages, 32 to 44 px on the landing page and 20 px on the reference hub: the same level of the document has three appearances.
+
+::: {.rule #SCR-048 grade="C"}
+**Define one type scale of named roles and make it the only way pages set type; no raw size or weight classes for headings or reading text in page code.** A limited set of related sizes yields consistency, the practical core of the modular-scale argument [@brown2011more], and it supports the project rule that visual values come from tokens. Craft authority, graded C.
+
+*In LTF:* map every raw use to a role: lesson h1 to `display-md` (or a new `display-sm` if 32 px proves too large beside the article), section h2s to `heading-lg`, the Fly mode h1 to a Fly-specific role, result numerals to a `readout-display` role. Then add a lint rule or a review check that rejects `text-2xl` to `text-6xl` combined with `font-bold` in `src/pages` and `src/features`.
+:::
+
+::: {.rule #SCR-049 grade="C"}
+**Derive the scale from the body size, which is set by the legibility evidence, and keep the small-end steps gentle (ratios near 1.1 to 1.2) and the display steps wider.** Brown starts from the body and derives the rest [@brown2011more]; the base must clear the size floor established by the reading studies [@legge2011print; @rello2016make]; steep ratios push the small end too small. Graded C.
+
+*In LTF:* if the lesson body moves to 18 px (SCR-007), re-derive the scale from 18: the existing 14, 16, 20 and 24 px steps still work as caption, small, subhead and heading, and the 12 px step should be reserved for uppercase labels (SCR-011).
+:::
+
+::: {.rule #SCR-050 grade="C"}
+**Tie each document level to exactly one role per surface type (app page, marketing page, Fly mode), so that an h2 looks the same everywhere it appears on that kind of page.** A scale is a means of consistency [@brown2011more]; inconsistent hierarchy defeats the stable spatial frame that long screen reading needs [@mangen2013reading]. Graded C.
+
+*In LTF:* app pages (`PageHeader`, lesson, module, challenge, dashboard, reference): h1 `display-md`, h2 `heading-lg`, h3 `heading-md`. Landing page: h1 `display-lg`/`display-xl`, h2 `display-md`/`display-lg`. Fly mode: its own enlarged set (SCR-009). Write the mapping into `PageHeader` and the `MarkdownContent` heading renderers, where `h2` is currently rendered as `h3` with `text-xl font-semibold`.
+:::
+
+### Uppercase labels and tracking
+
+The `eyebrow` style (12 px, 600, uppercase, 0.08em tracking) is used above almost every section heading, table header and stat, which the dossier counts among the template-like traits of the product. On reading grounds, the case against long runs of capitals rests on practice and space, not word shape [@larson2005science], and the craft advice is to use capitals only for short labels where speed over a few characters matters more than continuous reading [@santamaria2014web]. The eyebrows are short, so they are acceptable as labels; the risk is repetition and the 12 px size, discussed in the chapter on size.
+
+::: {.rule #SCR-051 grade="C"}
+**Use uppercase tracked text only for labels of one to four words, never for sentences, headings or instructions, and do not stack an eyebrow above every heading.** Long capital runs are slower because readers are less practiced with them [@larson2005science], and capitals suit short labels [@santamaria2014web]. Graded C.
+
+*In LTF:* keep `eyebrow` for category labels ("Module 2", "Challenge C4.3") and table headers; remove it where it repeats the heading below it, and never apply `uppercase` to callout bodies, button text or Fly mode steps.
+:::
+
+::: {.rule #SCR-052 grade="C"}
+**Review every derived size at its smallest rendered use on its farthest surface before adding it to the scale.** The scale is not a proof of legibility; each step must be checked where it is used smallest [@brown2011more; @legge2011print]. Graded C.
+
+*In LTF:* the smallest uses are widget labels on phones, `Badge` text, `eyebrow` labels and `text-sm` meta text on a monitor beside the sim; check each against the angle table in the chapter on size.
+:::
+
+### Headings that wrap
+
+The base layer gives `h1` to `h4` `text-wrap: balance`, which evens out the lines of a wrapping heading so that a short last word does not hang alone. This is a sensible default for the short headings LTF writes ("Yes, you can fly a plane.", "Read a little. Try it on the page. Fly it in the sim."). The specification evidence in the notes does not cover text wrapping, so this is recorded only as a practice to keep, with the line-height caution from the chapter on the measure: the tight display line heights are acceptable only because balanced display headings are short.
+
+### What this means for Learn to Fly
+
+Keep the shape of the existing scale (gentle small steps, wider display steps) and the balanced wrapping of headings. Change the way it is used: one set of named roles, used by every page, with raw `text-*xl font-bold` headings removed and a check that keeps them out (SCR-048, SCR-050). Re-derive the scale from the 18 px body (SCR-049), give measured display values a role of their own, cut the eyebrow back to genuine labels (SCR-051), and check each step at its smallest use (SCR-052). Part II, Classical Typography, covers the print tradition of proportional scales, and Part XXI, Design Systems, Process and Craft, covers how tokens are governed.
+
