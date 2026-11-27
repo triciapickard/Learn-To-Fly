@@ -383,3 +383,98 @@ The authors list their own limitations: a relatively small number of samples, "m
 4. Because the effects came with minimal cognitive load by design, avoid garish or highly saturated colors that compete with diagrams and instrument widgets.
 
 Confirmed this session: Crossref 10.1016/j.edurev.2018.09.004 (volume 25, pp. 100-119); full text of the accepted manuscript downloaded and read (abstract, coding, Table 3, limitations); searches confirming the Plass et al. (2014) citation (Learning and Instruction 29, 128-140; Crossref 10.1016/j.learninstruc.2013.02.006).
+
+## brettel1997computerized
+
+Brettel, Viénot & Mollon (1997), "Computerized simulation of color appearance for dichromats", Journal of the Optical Society of America A 14(10), 2647-2655.
+
+### Core claims
+
+The paper proposes an algorithm that transforms a digital color image so that people with normal color vision can see approximately what it looks like to a dichromat (a person with protanopia, deuteranopia or tritanopia). The dichromat's color confusions are deduced from colorimetry, and the residual hues in the transformed image are derived from reports of unilateral dichromats (people with one normal eye and one dichromatic eye) in the literature. The authors state the result provides a means of quantifying and illustrating the residual color information available to dichromats in any digitized image, while noting that one can never be certain of another person's sensations.
+
+### Specifics
+
+Evidence type: a computational method paper from vision science, validated by matching tests with two dichromats. The abstract gives these details:
+
+- Colors are represented as vectors in a three-dimensional LMS (long, medium, short wavelength cone) space, and the simulation is a set of transformations of this space.
+- Each stimulus is replaced by its projection onto a reduced stimulus surface. That surface is defined by a neutral axis and by the LMS locations of monochromatic stimuli that normal trichromats and a given type of dichromat perceive as the same hue.
+- Anchor wavelengths: a yellow of 575 nm and a blue of 475 nm for the protan and deutan simulations, and a red of 660 nm and a blue-green of 485 nm for the tritan simulation.
+- Validation: the operation was demonstrated with a mosaic of square color patches. A protanope and a deuteranope accepted the match between the original and the appropriately transformed image, which the authors take to confirm that the reduction is colorimetrically accurate.
+
+In practice this is the algorithm that many "color blindness simulators" and browser developer-tools emulations build on, though I did not confirm in this session which specific tools implement it, so that statement is general background rather than a verified claim.
+
+### Replication and criticism
+
+The method is accepted as the standard dichromat simulation and was extended by later work, including the unified anomalous-trichromacy model of Machado and colleagues (2009; this lane). Its limits are built into the method: it simulates complete dichromacy only, whereas many people have anomalous trichromacy of varying severity; it relies on the reports of a small number of unilateral dichromats for the residual hues; and the validation involved two observers. Okabe and Ito (this lane), who are themselves protanopes, caution that simulations show only one approximation, that many color-blind people distinguish more colors than the simulation suggests, and that simulations should not be used to judge a person's abilities.
+
+### Implications for LTF
+
+1. Use simulation as a check, not as a design source: run every LTF palette (state colors, chart series, instrument widget markings, checklist statuses) through a protan, deutan and tritan simulation and look for pairs that merge.
+2. Because the simulation approximates complete dichromacy, do not conclude "passes" means safe for anomalous trichromats; also test with the severity-based model of Machado et al., and with a real color-vision-deficient reviewer where possible.
+3. Aviation-style colors are a particular risk. Red-green status pairs, amber and green or red and magenta markings on instrument widgets must carry redundancy (labels, shapes, position, patterns). Do not state in LTF content what actual aircraft displays use; cite aviation sources for that.
+4. Add simulated-vision screenshots to design review of each new widget, and keep the check in a design checklist rather than relying on memory.
+
+Confirmed this session: Crossref 10.1364/josaa.14.002647 (JOSA A volume 14, issue 10, p. 2647 start; Europe PMC gives pages 2647-2655); Europe PMC abstract (method, wavelengths, validation).
+
+## machado2009physiologically
+
+Machado, Oliveira & Fernandes (2009), "A physiologically-based model for simulation of color vision deficiency", IEEE Transactions on Visualization and Computer Graphics 15(6), 1291-1298.
+
+### Core claims
+
+The paper presents a model for simulating color vision deficiency (CVD) based on the stage theory of human color vision, derived from data in electrophysiological studies. Its distinctive claim is that it is the first model to handle normal color vision, anomalous trichromacy and dichromacy consistently in one framework. The abstract motivates the work with the statement that CVD affects approximately 200 million people worldwide, which compromises the ability to perform color and visualization tasks, and says the model was validated through an experimental evaluation involving groups of color-vision-deficient and normal-vision individuals. Applications named are feedback on how to improve visualization for people with CVD and a framework for testing hypotheses about retinal photoreceptors in CVD.
+
+### Specifics
+
+Evidence type: computational model with an experimental validation (details of group sizes were not retrievable). From the authors' tutorial page (inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html), read this session:
+
+- Severity runs from 0.0 (no deficiency) to 1.0 (the most severe, equivalent to dichromacy).
+- Simulation is a single 3-by-3 matrix multiplication applied to the RGB color, so it is cheap enough to run per pixel in a shader or per color in a stylesheet pipeline.
+- Precomputed matrices are given for protanomaly, deuteranomaly and tritanomaly in steps of 0.1 from 0.0 to 1.0; intermediate severities can be interpolated between the two nearest matrices or computed from the paper.
+- The page warns of a typesetting error in two equations of an earlier conference version, with a corrected full paper linked, and says the image examples are labeled in nanometres of spectral shift, which does not match the 0 to 1 scale; it does not explain the discrepancy.
+- A Crossref correction notice exists for the paper (IEEE TVCG 16(2), 352, 2010), so anyone implementing it should use the corrected matrices from the authors' page, not a transcription from the original article.
+
+### Replication and criticism
+
+I did not find, in the sources read this session, an independent replication of the validation; the model has nevertheless been widely implemented (for instance in open-source color libraries, whose documentation describes the severity parameter) and is a common choice for simulating anomalous trichromacy. Known limitations: a simulation of one person's physiology cannot capture the variation among individuals with the same diagnosis; the validation sample is not reported in the abstract; and the model approximates cone-level and opponent-level processing, not cortical adaptation or learned color naming. As with Brettel et al. (1997), it depicts an approximation, which Okabe and Ito warn against over-trusting.
+
+### Implications for LTF
+
+1. Use the severity-based matrices for design-time checks and for an optional "simulate color vision" developer panel in storybook-style tooling, testing at several severities (for example 0.5 and 1.0) so that anomalous trichromats, who are common, are covered along with dichromats.
+2. The one-matrix form makes it practical to include a check in automated tests that flags palette pairs whose simulated contrast collapses; the thresholds for that test need to be decided in the KB's color chapter, not copied from this paper.
+3. Do not ship any simulation to learners as a feature without validation; it could mislead a color-vision-deficient pilot candidate. It is a design tool.
+4. Note for the KB's aviation context: color vision requirements for pilot certification are regulatory matters outside this lane; LTF content should refer learners to official sources and not infer them from this paper.
+
+Confirmed this session: Crossref 10.1109/tvcg.2009.113 (volume 15, issue 6, pp. 1291-1298) and the Crossref correction record 10.1109/tvcg.2010.10; Europe PMC abstract; authors' tutorial page (matrix and severity details).
+
+## okabe2008color
+
+Okabe & Ito (2008), "Color Universal Design (CUD): How to make figures and presentations that are friendly to colorblind people", web guide on the Jfly site (jfly.uni-koeln.de/color/).
+
+### Core claims
+
+A practical guide, written by two scientists who are themselves strong protanopes, on making figures, slides and products readable by people with color vision deficiency. It is craft and lived-experience authority backed by color-vision knowledge, not a controlled study. The site states three principles plus one: choose color schemes that are easy to identify for all types of color vision; do not rely on color alone; state color names clearly where communication depends on them; and (+1) aim for visually friendly, attractive design. It is the origin of the widely used Okabe-Ito qualitative palette.
+
+### Specifics
+
+All of the following was read on the guide page this session:
+
+- Prevalence stated on the page: red-green color blindness affects roughly 8 percent of Caucasian males, 5 percent of Asian males and 4 percent of African males; tritanopia (blue-yellow) is very rare. The guide's example is that a room of 250 people should include more than ten colorblind attendees.
+- Types: trichromacy; dichromacy (protanopia, deuteranopia, tritanopia); anomalous trichromacy (a shifted cone spectrum with varying severity); total color blindness (rarer, often with severe vision loss).
+- Color rules: avoid pure red on green or on dark backgrounds (dark red can look black to protanopes); use vermilion or a light red instead of pure red; avoid low-contrast hue-only pairs; use strong differences in brightness or saturation when pairing two warm or two cool colors; avoid colors between yellow and green; use reddish purple in place of purple.
+- Redundant coding: combine color with line style, symbols (circles, triangles, squares) and hatching; label directly on a graph instead of a separate color key; thicken lines and enlarge symbols; use bold sans-serif for colored text; refer to objects by shape or position, not color name alone.
+- Tools and cautions: simulators show only one approximation of dichromat vision, many colorblind people distinguish more colors than a simulation shows, simulations must not be used to judge a person's abilities, and a colorblind reviewer is recommended.
+- The page names a palette (vermilion, bluish green, reddish purple, sky blue, blue, yellow, orange). The page text I fetched did not give hex values for the full palette; a search result listed the commonly quoted eight hex codes, but that listing is secondary and is not reproduced here.
+
+### Replication and criticism
+
+There is nothing to replicate in the experimental sense. The palette's usefulness has been tested by use in scientific publishing, and its design principle (vary luminance and hue along axes that dichromats can discriminate) matches the vision science in Brettel et al. and Machado et al. Limits: the palette gives eight categorical colors only, so it does not solve sequential or diverging scales; the page predates dark-theme web UIs, so the contrast of each palette color against a dark background has to be checked separately; and the prevalence figures are the authors' stated estimates for populations, which differ by sex and ancestry. The page's year is given as 2008 by a search summary; the fetched page did not show a date, so the year is the least certain element of the citation.
+
+### Implications for LTF
+
+1. Adopt "do not rely on color alone" as a hard rule for every status in LTF (correct and wrong answers, checklist states, instrument widget ranges). It is also WCAG 1.4.1, Level A.
+2. Use a CUD-style palette for any LTF chart with categories, and test it in both themes.
+3. Direct labels beat legends: adopt for any chart in dashboards and progress views.
+4. Avoid red text on dark backgrounds, which matters for fly mode, where dark themes and red cautions are both likely.
+
+Confirmed this session: web search result and fetch of jfly.uni-koeln.de/color/ (principles, prevalence figures, rules above); secondary listing of the palette (not used for numbers). No Crossref or Open Library record exists for a web page; verification is by web search and direct fetch.

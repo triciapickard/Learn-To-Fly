@@ -561,3 +561,37 @@ For pies and rings, the evidence suggests restraint, not prohibition: a ring tha
 
 Confirmed this session: Open Library search (work OL3774437W; Cambridge University Press 2005, ISBN 9780521855549); Spence 2005 full text (classes.engineering.wustl.edu/cse557/spring2017/readings/no-humble-pie.pdf); WebSearch summaries; Playfair's text not read.
 
+## bertin2010semiology
+
+Bertin, J. (2010). Semiology of graphics: Diagrams, networks, maps (W. J. Berg, Trans.). Redlands, CA: Esri Press. (English translation first published by University of Wisconsin Press, 1983; French original 1967.)
+
+### Core claims
+
+Bertin, a French cartographer, set out to build a theory of the graphic sign system: a rigorous account of how marks on a plane can represent information, in which graphics are treated as a language with rules, not as illustration. The book argues that good design begins with an analysis of the information (what stays constant, and how many things vary), that the visual variables available to a designer differ in what kinds of reading they support, and that a graphic should be constructed so that the variables chosen match the nature of the components they represent. Its section headings announce the program: analysis of the information, properties of the graphic system (the plane and the retinal variables), and rules of the graphic system, with later parts on diagrams, networks and maps. It is the intellectual ancestor of the "visual channels" vocabulary used by Mackinlay, Cleveland and McGill, and Munzner.
+
+### Specifics
+
+I read the Esri Press table of contents and the sample chapter (the start of Part One, analysis of the information); I did not read the retinal-variable chapters, so those details come from the table of contents and a secondary search summary.
+
+Invariant and components. Information is "a series of correspondences observed within a finite set of variational concepts, or components", all relating to an invariable common ground, the invariant. A stock-price example makes it concrete: the invariant is the closing price of stock X on the Paris exchange; the components are quantity of francs and time, so the drawing needs two visual variables, the two dimensions of the plane. Adding a second stock makes three components and requires a third variable (size variation); adding London and Paris makes four (texture added). The rule is that the drawing must employ at least as many visual variables as there are components, and that a precise definition of the invariant and components is needed to understand complex information, to choose the best representation and to word the title and legend. A six-component example (decisions in the Cuban missile crisis) cannot be perceived in one image.
+
+Titles and legends. Headings serve two functions, external identification (telling the reader the invariant and the components) and internal identification (which visual variable corresponds to which component). A drawing cannot supply all this itself.
+
+Levels of organization. Components are qualitative (nominal), ordered or quantitative. The visual variables also have levels of organization. Two rules follow: "an order will not be perceptible if the variable is not ordered; a ratio will not be perceptible if the variable is not quantitative", and the visual variables must have a level of organization at least equal to that of the components they represent. Qualitative categories are reorderable and equidistant, so a graphic should not highlight one or create a priori groups. For qualitative components Bertin names two perceptual approaches: selective (this differs from that, the beech versus the oak), which needs a selective variable, and associative (similarity, the forest), which needs an associative variable that lets categories be grouped in perception.
+
+The table of contents lists the retinal variables: size, value, texture, color, orientation and shape, plus the plane's two dimensions, and chapters on legibility rules (graphic density, angular legibility, retinal legibility), three functions of graphics (recording, communicating, processing) and the reorderable matrix for problems with more than three components.
+
+### Replication and criticism
+
+Bertin's rules come from craft reasoning and examples, not experiments. Heer and Bostock (2010) say Bertin's treatment inspired the perceptually motivated rankings of cartographers, statisticians and computer scientists, and Cleveland and McGill's experiments tested and refined the ranking for quantitative judgments; the experiments upheld position as the strongest channel but did not test his ordering of every variable. Mackinlay (1986) codified parts of Bertin's framework into expressiveness and effectiveness criteria and states his own extension is unverified. Franconeri et al. (2021) list Bertin's book among the foundational sources. The book's analysis can read as dense and prescriptive, and its examples are print-era; its rules on interactivity are absent by design.
+
+### Implications for LTF
+
+Bertin's first question is a useful gate before any LTF chart is drawn: write the invariant and the components. For a challenge debrief of altitude over time for three attempts, the invariant is altitude above ground level (AGL), and the components are time and attempt; that needs two position variables and one variable to separate attempts (hue or small multiples). If a designer cannot state the components, the chart is not ready.
+
+Match levels of organization: do not use color hue for an ordered quantity such as score (hue is not ordered), and do not use size for categories. Because qualitative categories are equidistant, do not make one lesson topic look more important by its color unless it is.
+
+Use titles that state the invariant and units and legends that tie each variable to a component (external and internal identification): "Altitude (feet MSL) by time, three attempts" beats "Your flights".
+
+Confirmed this session: Open Library work OL4520539W and editions list (Esri Press 2010, ISBN 9781589482616; University of Wisconsin Press 1983); Esri Press table of contents and sample chapter PDFs (esri.com, read); WebSearch summary of the translation details.
+
