@@ -563,7 +563,7 @@ impact.
 
 *In LTF:* the `ThemeToggle` on phones (icons only, with `aria-label`s), the widget steppers
 ("Decrease airspeed by 1 knot"), the toast dismiss X, the 44 px hamburger and the copy buttons on
-the challenge brief's sim setup list are the icon-only controls to check. The pattern in the
+the challenge brief's sim setup list (where they show no word) are the controls to check. The pattern in the
 airspeed widget is the model.
 :::
 
@@ -1425,7 +1425,7 @@ That wider audience describes most of LTF's learners on their first day. A compl
 learning a cockpit is, for the length of the course, a person with limited domain knowledge under
 mild stress, often with a second task (the simulator) competing for attention. The cognitive
 guidance is therefore the highest-value accessibility material for this product. Part XIV, The
-Science of Learning, covers load and memory, and Part XXIV, Writing and Microcopy, covers plain
+Science of Learning: Load and Memory, covers load and memory, and Part XXIV, Writing and Microcopy, covers plain
 language as a writing craft; this chapter states the accessibility requirements.
 
 The Note organizes its patterns under eight objectives: help users understand what things are and
@@ -2102,3 +2102,168 @@ Build the layers automation cannot provide: component tests for names, labels, d
 token contrast (ACC-086), a manual keyboard pass in every pull request template (ACC-087), a screen
 reader matrix (ACC-088), a link checker (ACC-090), and task sessions with disabled learners whose
 records drive triage (ACC-089).
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+1. **The target is WCAG 2.2 Level AA, plus three named AAA criteria.** Enhanced target size in Fly
+   mode, animation from interactions everywhere, and enhanced contrast for Fly mode steps. The
+   target is written into `v1.md` and `AGENTS.md`, and thresholds are applied without rounding
+   (ACC-006, ACC-007, ACC-008, ACC-009).
+2. **Accessible means conformant and usable.** A page passes only when the conformance check and a
+   task check with disabled learners both pass; defects are ranked by task failure, not by criterion
+   level (ACC-003, ACC-004, ACC-089).
+3. **Defects are written as mismatches and every widget carries a demand list.** Reviews name the
+   demand, and the first prototype of every widget includes its hardest case (ACC-001, ACC-002,
+   ACC-005, ACC-076).
+4. **There is one product.** No separate accessible mode or version; access settings have plain names
+   and sit with the other preferences (ACC-081, ACC-082, ACC-083).
+5. **Native HTML first.** Buttons, inputs, fieldsets, details and range inputs before ARIA; any
+   custom widget implements its APG pattern in full or falls back to native controls (ACC-016,
+   ACC-017, ACC-018, ACC-073, ACC-074).
+6. **Headings are the navigation.** One `h1`, a descending outline checked by content validation,
+   landmarks kept minimal and correct, route changes announced (ACC-014, ACC-015, ACC-021).
+7. **Focus is always visible and never hidden.** The global focus ring stays, its contrast is
+   computed on every ground, inputs keep a forced-colors fallback, and the document reserves scroll
+   padding for every sticky layer (ACC-028, ACC-029, ACC-040).
+8. **The root font size becomes relative.** `font-size: 16px` on `html` changes to `100%` (ACC-039).
+9. **Fly mode controls are large and simple.** `lg` buttons or larger, full-width primary actions on
+   phones, one action per step, a help link on the page (ACC-042, ACC-043, ACC-046, ACC-066).
+10. **Every drag has a tap and keyboard alternative, and widget quizzes can be answered without a
+    pointer** (ACC-044, ACC-045, ACC-075).
+11. **Every instrument states its reading and its meaning in text, from the same data that draws
+    it, and every diagram has a required authored description** (ACC-060, ACC-069, ACC-070).
+12. **Motion is conservative and controllable.** Reduced motion is honored everywhere, an in-app
+    Motion setting is added, no parallax or scroll-linked motion is used, and instrument motion
+    jumps under reduced motion (ACC-048, ACC-049, ACC-050, ACC-052).
+13. **Sound is never alone, and it can be turned off** (ACC-053).
+14. **Video ships with authored captions and a transcript** (ACC-054).
+15. **No time limits on learning.** Timers are optional and auto-dismissing messages are never the
+    only record (ACC-055, ACC-056).
+16. **Sign-in has no cognitive test.** No CAPTCHA, password managers and paste allowed, no repeated
+    entry (ACC-064, ACC-065).
+17. **Reference material is HTML first.** No PDF-only checklists or briefings (ACC-013).
+18. **Conformance is recorded, not claimed.** A dated conformance log and a public accessibility
+    statement; no compliance claims in copy without evidence (ACC-010, ACC-011).
+19. **Accessibility is part of every pull request.** Acceptance criteria in the template, automated
+    scans on every route, component tests for the common failures, a manual keyboard pass, and a
+    screen reader matrix (ACC-012, ACC-085, ACC-086, ACC-087, ACC-088).
+20. **Disabled and older learners are recruited as a standing part of testing**, and personas are
+    stand-ins only (ACC-079, ACC-084).
+
+### Review checklist
+
+Run this against a pull request or a page. Each question names the rules it checks. Whether a failed
+answer blocks release depends on whether it stops a learner finishing a task, judged under ACC-004.
+
+#### Policy and process
+
+- Does the pull request template's accessibility section have answers, not blanks? (ACC-012)
+- If the change adds or alters a public claim about accessibility, is it supported by the
+  conformance log? (ACC-010, ACC-011)
+- Is any new reference or procedure content published as HTML, with no PDF-only version? (ACC-013)
+- Was the change tested against the WCAG 2.2 additions that apply to it? (ACC-008)
+
+#### Structure and names
+
+- Does the page have one `h1`, and does the heading outline descend without skipping? (ACC-014)
+- Are `main`, labelled `nav`s and the skip link present and correct, including in Fly mode?
+  (ACC-015)
+- Is every element native where a native element exists, and is any ARIA role fully implemented?
+  (ACC-016, ACC-018)
+- Is any focusable element, or a container of one, marked `aria-hidden`? (ACC-017)
+- Does every link, button and control have a name, and does every link make sense out of context?
+  (ACC-019, ACC-020)
+- On a route change, does focus land on the `h1` and is the title announced? (ACC-021)
+- Does the source order match the visual order? (ACC-022)
+- Are live regions limited to results and errors, and quiet during continuous change? (ACC-023,
+  ACC-072)
+- Is the language declared, with translation blocked only on strings that must not change?
+  (ACC-024)
+
+#### Keyboard and focus
+
+- Can every function be reached and operated by keyboard alone? (ACC-025)
+- Does each composite widget have one tab stop with arrow-key movement inside it? (ACC-026)
+- Are selection and focus visibly different? (ACC-027)
+- Is the focus indicator visible, at 3:1 on every ground, and present in forced-colors mode?
+  (ACC-028, ACC-040)
+- Can any focused element end up under the sticky header, section picker or a toast? (ACC-029)
+- After an overlay closes or an item is removed, does focus go somewhere sensible? (ACC-030)
+- Is there any positive `tabindex`, or focus moved without a user action? (ACC-031)
+- Are disabled controls that learners need to discover kept focusable with an explanation?
+  (ACC-032)
+- Are any keyboard shortcuts supplementary, documented and switchable? (ACC-033)
+
+#### Seeing
+
+- Does every text pair meet 4.5:1 (3:1 for large text) in Day and Night, computed from tokens?
+  (ACC-034)
+- Do needles, ticks, borders, thumbs and rings meet 3:1 against their neighbors? (ACC-035)
+- Is every status, result, tier and range carried by text or shape as well as color? (ACC-036)
+- Does the copy avoid identifying things by color or position alone? (ACC-037)
+- Does the page reflow at 320 px, with only diagrams and tables scrolling in their own regions?
+  (ACC-038, ACC-077)
+- Does the page respect a larger browser default text size? (ACC-039)
+
+#### Pointer and motor
+
+- Is every target at least 24 by 24 CSS pixels or spaced to pass? (ACC-041)
+- Are frequent, sequential and Fly mode controls at the 44 px level or `lg`? (ACC-042)
+- Are primary Fly mode and debrief actions full width on phones? (ACC-043)
+- Does every drag have a tap and keyboard alternative, and can precise values be typed? (ACC-044,
+  ACC-045)
+- Is Fly mode one action per step, with nothing held down? (ACC-046)
+- Does every control's accessible name begin with its visible label, and is nothing revealed only on
+  hover? (ACC-047)
+
+#### Motion, sound, media and time
+
+- Does every animation stop under reduced motion and under the in-app setting? (ACC-048)
+- Does any motion fail the size, mismatch or distance test? (ACC-049)
+- Does any automatic motion over five seconds have a pause control? (ACC-050)
+- Does anything flash more than three times a second? (ACC-051)
+- Do instrument readings jump to their value under reduced motion? (ACC-052)
+- Is every sound paired with text and an announcement, and can it be turned off? (ACC-053)
+- Does every video have authored captions and a transcript? (ACC-054)
+- Is there any time limit on learning, or an outcome shown only in a disappearing message?
+  (ACC-055, ACC-056)
+
+#### Cognition
+
+- Are terms defined at first use and abbreviations expanded? (ACC-057)
+- Is the prose present tense, active, literal, in short single-topic paragraphs, with no double
+  negatives? (ACC-058)
+- Is each step its own item, with conditions as if/then rows? (ACC-059)
+- Does every interpreted number have a plain meaning beside it? (ACC-060)
+- Is work saved through a reload, and are only destructive actions confirmed? (ACC-061, ACC-062)
+- Does anything move or take focus without the learner asking? (ACC-063)
+- Is sign-in free of puzzles, with paste and password managers working, and is nothing asked twice?
+  (ACC-064, ACC-065)
+- Is help in the same place on every page, including Fly mode? (ACC-066)
+- Is there at most one interruption above lesson content? (ACC-067)
+- Does the lesson keep the fixed order and show the learner's location? (ACC-068)
+
+#### Widgets and diagrams
+
+- Does each instrument's text alternative state the reading and its meaning, from live state and
+  data tokens? (ACC-069)
+- Does each diagram have an authored description, and are decorative parts hidden? (ACC-070,
+  ACC-071)
+- Can the widget's quiz be answered by keyboard and screen reader? (ACC-075)
+- Were the three acceptance tasks (screen reader, keyboard, 200% zoom) run and recorded? (ACC-076)
+
+#### Testing and people
+
+- Was the new route added to the automated scan, and do component tests cover names, labels and
+  contrast? (ACC-085, ACC-086)
+- Was a manual keyboard pass recorded, and a screen reader pass in the priority matrix? (ACC-087,
+  ACC-088)
+- For a new module or widget, has a task session with disabled and older learners been run or
+  scheduled, with problems recorded by task? (ACC-079, ACC-084, ACC-089)
+- Do links resolve, and does the page load fast beside the simulator? (ACC-090)
+- Was the change reviewed against a three-person persona spectrum and, for flight flows, in the real
+  setting? (ACC-078, ACC-080)
+- Does the change keep one product for everyone, with plain setting names and honest copy?
+  (ACC-081, ACC-082, ACC-083)
