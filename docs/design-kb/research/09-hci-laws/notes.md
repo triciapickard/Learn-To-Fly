@@ -243,7 +243,7 @@ Evidence type: a systematic literature review and methodological proposal (the v
 
 ### Replication and criticism
 
-The paper is itself a critique of replication practice. Its main finding is that identical-sounding Fitts's law studies are not replications of one another. The ISO-style methodology it recommends reduces the spread but rests on few studies, as the authors admit. A critic could add that the recommendation to use effective width means that throughput partly rewards participants who accept more errors, and that the 4 percent error target is a convention, not a law. In later years the approach was extended to touch and mobile input, but I have not verified that in this session, so I leave it out. For design work the safe reading is that relative comparisons from one carefully run study are meaningful and absolute throughput from the literature is not.
+The paper is itself a critique of replication practice. Its main finding is that identical-sounding Fitts's law studies are not replications of one another. The ISO-style methodology it recommends reduces the spread but rests on few studies, as the authors admit. The 4 percent error target is a convention, not a law, and the authors present the standard as one option among three. For design work the safe reading is that relative comparisons from one carefully run study are meaningful and absolute throughput from the literature is not.
 
 ### Implications for LTF
 
@@ -263,7 +263,7 @@ The paper compares four devices for selecting text on a CRT display and conclude
 
 Evidence type: a controlled laboratory comparison from Xerox PARC. The abstract and the later reanalysis give the following.
 
-- Devices: mouse, rate-controlled isometric joystick, step keys, and text keys. The task was selection of text on a CRT display. The device named "text keys" required typing; step keys moved the cursor by increments.
+- Devices: mouse, rate-controlled isometric joystick, step keys, and text keys. The task was selection of text on a CRT display.
 - Fitts's law for the mouse: according to MacKenzie and Soukoreff's 2003 reanalysis (https://www.yorku.ca/mack/chi03a.html), the original model was MT = 1.03 + 0.096 ID, giving a throughput of 1/0.096 = 10.3 bits per second. The study used five amplitudes (1, 2, 4, 8, 16 cm) and four widths (1, 2, 4, 10 characters), producing 20 target conditions and 12 unique difficulties. The mouse had a 5 percent error rate, and error trials were excluded from the original Fitts's law model.
 - The ISO-style reanalysis: using the Shannon formulation with effective width, throughput ranged from 1.42 to 3.77 bits per second with a mean of 2.65 bits per second; removing a nominal 0.5 s grasp time from each movement time raised throughput to 4.32 bits per second. The gap between 10.3 and 2.65 bits per second for the same data illustrates how much the method matters (see Soukoreff and MacKenzie, 2004).
 - The model also uses Welford's variant, log2(A/W + 0.5), for the index of difficulty (MacKenzie 1992, read this session, says the paper used that form).
@@ -272,7 +272,7 @@ I did not find the number of participants in any source I read, so I do not stat
 
 ### Replication and criticism
 
-Later studies confirmed the mouse as an efficient pointing device and re-measured devices under ISO 9241-9. The 2003 reanalysis shows the original throughput was inflated by its calculation method: it excluded error trials, used nominal widths instead of effective widths, and treated the Welford formulation as is, so the 10.3 bits per second headline cannot be compared with modern values near 3 to 5. The paper's conclusion that the mouse is nearly minimal in time is a statement about the 1978 comparison set, not a general claim about all devices. Evidence quality: one experiment from an industrial laboratory, careful for its era, influential mainly because it demonstrated the method.
+Later studies confirmed the mouse as an efficient pointing device and re-measured devices under ISO 9241-9. The 2003 reanalysis shows how method-dependent the headline figure is: the original model excluded error trials and used the original formulation, and the ISO-style recalculation of the same data gives far lower throughput, so the 10.3 bits per second figure cannot be compared with ISO-era mouse values of 3.7 to 4.9 bits per second (Soukoreff and MacKenzie 2004). The paper's conclusion that the mouse is nearly minimal in time is a statement about the 1978 comparison set, not a general claim about all devices. Evidence quality: one experiment from an industrial laboratory, influential mainly because it demonstrated the method.
 
 ### Implications for LTF
 

@@ -42,40 +42,39 @@ Confirmed this session: Full text of the lecture as reprinted in the Armstrong r
 
 ## morison1936first
 
-Stanley Morison, *First Principles of Typography* (Cambridge: Cambridge University Press, 1936; essay first printed 1929 and 1930). Read in the 1951 Cambridge reprint included in Paul A. Bennett (ed.), *Books and Printing: A Treasury for Typophiles*.
+Stanley Morison, *First Principles of Typography* (Cambridge: Cambridge University Press, 1936; essay first printed 1929 and 1930). Read in the 1951 Cambridge reprint inside Paul A. Bennett (ed.), *Books and Printing: A Treasury for Typophiles*.
 
 ### Core claims
 
-Morison offers "an essay towards a rationale of book-typography." His definition: "Typography may be defined as the art of rightly disposing printing material in accordance with specific purpose; of so arranging the letters, distributing the space and controlling the type as to aid to the maximum the reader's comprehension of the text." From it he draws a hard corollary: typography is "the efficient means to an essentially utilitarian and only accidentally aesthetic end," so "any disposition of printing material which, whatever the intention, has the effect of coming between author and reader is wrong." In books meant to be read there is "little room for 'bright' typography," and dullness is less harmful than eccentricity.
+Morison's own note calls the piece an "essay towards a rationale of book-typography." His definition: "Typography may be defined as the art of rightly disposing printing material in accordance with specific purpose; of so arranging the letters, distributing the space and controlling the type as to aid to the maximum the reader's comprehension of the text." The corollary is blunt: typography is "the efficient means to an essentially utilitarian and only accidentally aesthetic end," so "any disposition of printing material which, whatever the intention, has the effect of coming between author and reader is wrong." In books meant to be read there is "little room for 'bright' typography."
 
-The second claim is about convention. Book typography rests on the nature of alphabetic writing and on the traditions of the society served, so "the typography of books ... requires an obedience to convention which is almost absolute." The wider the audience, the stricter the limits: an experiment suits a 50-copy tract, not one printed 50,000 times. Hence "Type design moves at the pace of the most conservative reader." A new typeface succeeds only if "very few recognize its novelty."
+The second claim concerns convention. Book typography rests on the nature of alphabetic writing and on the traditions of the society served, and demands "an obedience to convention which is almost absolute." The wider the audience, the stricter the limits: an experiment suits a 50-copy tract, not one printed 50,000 times. Hence "Type design moves at the pace of the most conservative reader."
 
 ### Specifics
 
-The essay has seven numbered parts. Its working rules, in his words and mine:
+The essay has seven numbered parts. Working rules:
 
-- Imposition (the placing of the text block on the page) is "the most important element in typography." Margins should be proportionate to the text area, leaving "decent space for thumbs and fingers." He says the vertical oblong is the normal page because a horizontal oblong forces lines to an impossible length.
-- Three composition principles: the eye cannot read many words that mix sharply contrasted thicks and thins with ease; lines beyond a certain length are disagreeable; and letter size must be related to line length. "The average line of words which the reader's eye can conveniently seize is between ten and twelve." If a small type is unavoidable, insert leads (extra line spacing) to prevent "doubling," and he defends leading against purists who called it evil.
-- His summary formula (part IV): vertical oblong pages, paragraphs of "ten to twelve consistently spaced words," a "comfortable size and familiar design" of type, lines separated enough to prevent doubling, a running title, and margins related to line length.
-- Paragraph openings: indent every paragraph after the first and make the indent "sufficient to be noticeable"; abolishing indentions is "plainly an undesirable practice."
-- Running heads in small capitals, hair-spaced; capitals "tend to defeat instantaneous recognition" when unspaced.
-- Title pages: no line larger than twice the text size ("If the book be set in 12-point, the title need be no larger than 24-point"); avoid starting lines with prepositions and conjunctions.
-- On standardization (part V) he answers critics: decoration belongs on preliminary pages, not in the text, and "the typographer's only purpose is to express, not himself, but his author."
+- Imposition, the placing of the text block on the page, is "the most important element in typography." Margins should be proportionate to the text area, with "decent space for thumbs and fingers." The vertical oblong is the normal page because a horizontal oblong drives lines to an impossible length.
+- Three composition principles: the eye cannot read many words with sharply contrasted thicks and thins with ease; lines beyond a certain length are disagreeable; letter size must relate to line length. "The average line of words which the reader's eye can conveniently seize is between ten and twelve." When small type is unavoidable, insert leads (extra line spacing) to prevent "doubling," the reading of the same line twice. He defends leading against purists.
+- His summary formula (part IV): vertical oblong pages; paragraphs of "ten to twelve consistently spaced words"; type of "comfortable size and familiar design"; lines separated enough to prevent doubling; a running title; margins related to line length.
+- Indent every paragraph after the first, by a space "sufficient to be noticeable." Abolishing indention is "plainly an undesirable practice."
+- Title pages: no line larger than twice the text size ("If the book be set in 12-point, the title need be no larger than 24-point").
+- Part V answers the charge of monotony: decoration belongs on the preliminary pages, not in the text, because "the typographer's only purpose is to express, not himself, but his author."
 
-He also exposes how publishers "drive out" a book to look longer, using wide spaces, blank pages and big initials, and he notes that "the intelligent use of leading distinguishes the expert from the inexpert printer."
+He also describes how publishers "drive out" a book to look longer, with wide spaces, blank pages and big initials.
 
 ### Replication and criticism
 
-This is craft doctrine, not experiment. Several claims were later tested (contrast, line length, leading) in legibility research that lane 02 covers; I do not state results here. Three tensions are internal. First, "familiar design" as the standard makes legibility partly circular: Edward Johnston's 1906 footnote (see johnston1906writing) warns that our view of legibility "is apt to favour custom and use unduly." Second, Morison dismisses sans serif type in effect, while Tschichold's 1928 *New Typography* took the opposite stance for different purposes (see tschichold1998new). Third, the ten-to-twelve-word line is stated as fact with no source, though Gill gives the same number independently (gill1936essay), which suggests shared workshop lore rather than two measurements.
+This is craft doctrine, not experiment. Its claims about contrast, line length and leading were later tested in legibility research (lane 02); I state no results here. Two tensions are internal. "Familiar design" as the standard makes legibility partly circular: Edward Johnston's 1906 footnote (johnston1906writing) warns that our view of legibility "is apt to favour custom and use unduly." And the ten-to-twelve-word line is asserted without a source, though Gill also gives "10-12 words per line" (gill1936essay), which looks like shared workshop lore rather than two measurements.
 
-Robin Kinross's history, as reviewed by Matthew Carter in *Eye*, places Morison and Bruce Rogers in a "new traditionalism" with Monotype's influence, and describes Kinross's aim as critical reflection on such doctrine rather than reverence (eyemagazine.com/blog/post/type-tuesday40).
+Matthew Carter's review of Robin Kinross's history places Morison and Bruce Rogers in a "new traditionalism" influenced by the Monotype Corporation, and presents Kinross's aim as critical reflection on such doctrine.
 
 ### Implications for LTF
 
-1. Morison's definition is the best one-sentence brief for lesson text: aid the reader's comprehension, nothing else. Use it to veto decorative type in lessons.
-2. His rule that wider audiences demand stricter convention applies to a beginner app: users cannot be expected to learn a new reading idiom, so lesson pages should use familiar patterns (left-aligned text, indented or spaced paragraphs, predictable headings).
-3. Imposition first, composition second: set page width, margins and text block before choosing type details. For responsive layouts, that means deciding the reading column width first.
-4. His leading defence supports generous line spacing when a column must run wide.
-5. "Doubling" is a practical failure to test for: on a narrow phone and a wide desktop, check that line returns are easy.
+1. The definition is a one-sentence brief for lesson text: aid comprehension, nothing else. Use it to veto decorative type in lessons.
+2. Wider audiences demand stricter convention. Beginners cannot be asked to learn a reading idiom, so lessons should use familiar patterns: left-aligned text, spaced paragraphs, predictable headings.
+3. Imposition before composition: set page width, margins and the reading column before choosing type details.
+4. His defence of leading supports generous line spacing when a column must run wide.
+5. Test for "doubling" on a narrow phone and a wide desktop: line returns should be easy.
 
-Confirmed this session: Full text of the essay as reprinted in *Books and Printing*, read from the Project Gutenberg mirror https://gutenberg.pglaf.org/6/3/7/3/63730/63730-0.txt (ebook 63730, publication note on the 1929 Britannica and 1930 *Fleuron* origins, all quotations). Edition data from Open Library (work OL2203812W lists the 1936 Cambridge and Macmillan editions). Kinross review at https://www.eyemagazine.com/blog/post/type-tuesday40.
+Confirmed this session: Full text of the essay as reprinted in *Books and Printing*, read from https://gutenberg.pglaf.org/6/3/7/3/63730/63730-0.txt (Gutenberg ebook 63730; the 1929 and 1930 origins note; all quotations). Editions in Open Library work OL2203812W. Carter review at https://www.eyemagazine.com/blog/post/type-tuesday40.

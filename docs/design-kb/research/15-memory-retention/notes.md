@@ -299,3 +299,92 @@ Strength: strong; it is the quantitative backbone for the testing effect. Limits
 5. In fly mode, avoid recall quizzes during a flight; place them at the briefing and debrief steps.
 
 Confirmed this session: Crossref 10.1037/a0037559; abstract via Europe PMC; full text read from the author PDF copy (counts, effect sizes, publication moderator); web search for the Adesope comparison (secondary).
+
+## kornell2008learning
+
+Kornell, N., and Bjork, R. A. (2008). Learning concepts and categories: Is spacing the "enemy of induction"? *Psychological Science*, 19(6), 585-592. doi:10.1111/j.1467-9280.2008.02127.x. Evidence type: four laboratory experiments with undergraduates.
+
+### Core claims
+
+Spacing is known to help recall, and a long-standing view held that it harms induction, because massing lets learners notice what a set of examples has in common. The authors tested that view with paintings, expecting massing to win. Instead, learning to recognize an artist's style from new paintings was better when each artist's paintings were interleaved with other artists' work than when they were presented together. Learners nevertheless judged massing to be as good or better, even after the test had shown the opposite.
+
+### Specifics
+
+Experiments 1a and 1b. UCLA undergraduates (120 in Experiment 1a, 72 in Experiment 1b) studied 72 paintings, six by each of 12 artists. In Experiment 1a, spacing was varied within each participant (six artists massed, six interleaved); in 1b it was varied between participants. After a distractor task of counting backward by 3s from 547, participants saw 48 new paintings by the same artists in four blocks and chose which artist painted each, with feedback. Spaced learning gave better test performance in both experiments (Experiment 1a: .61 versus .35 correct, d = 0.99; Experiment 1b: .59 versus .36, d = 1.28, effects computed on the first test block, which was little affected by feedback).
+
+Judgments. After the test, in Experiment 1a, 78 percent of participants did better with spaced presentations than massed, yet 78 percent said massing was as good as or better. When asked to say how each artist's paintings had been presented, participants were above chance for spaced artists (.74) but not for massed artists (.55), which led the authors to suggest that participants made metacognitive judgments from their subjective experience during study.
+
+Experiment 2. Because the first test required recalling artist names, the authors used a recognition test (familiar versus unfamiliar artist, with similar-style distractors, 80-odd participants) so name recall was not needed. Spacing still won: hit rate .77 spaced versus .67 massed (d = 0.41), with similar false alarm rates.
+
+A fourth experiment (summarized in the paper) reduced the study phase to two paintings per artist to ask whether the pattern held with fewer exemplars. The authors caution that they presented no evidence about temporal spacing without interleaving, so the benefit may reflect interleaving, which promotes discrimination among categories (their tree example: telling a maple from an oak requires learning the differences among trees).
+
+### Replication and criticism
+
+Strength: moderate to strong, with replications reported. A search summary for this session says a 2014 replication in *Frontiers in Psychology* found a medium-sized advantage of spacing over massing in inductive learning comparable to the original, and that a 2010 study extended the work to older adults (Kornell, Castel, Eich and Bjork, in *Psychology and Aging*). I did not read those papers. The stimuli are paintings and the learners students, so generalization to technical categories is untested. The interleaving versus spacing confound the authors acknowledge limits the strongest reading.
+
+### Implications for LTF
+
+1. When learners must tell similar things apart (cloud types, airspace classes, instrument faults, similar-looking sim scenes), present examples mixed, not one category at a time.
+2. Expect learners to judge blocked layouts as better. Do not use a "which layout do you prefer" survey to decide an instructional format.
+3. A pre-flight scenario drill that cycles through several situations beats a drill that repeats one situation, even though the second feels smoother.
+4. Because the paper cannot separate spacing from interleaving, treat both as justified by this evidence, not either as the proven cause.
+
+Confirmed this session: Crossref 10.1111/j.1467-9280.2008.02127.x; abstract via Europe PMC; full text read from the PDF copy at gwern.net (methods, results for Experiments 1a, 1b and 2); follow-up studies from a web search summary only.
+
+## butler2008feedback
+
+Butler, A. C., and Roediger, H. L., III (2008). Feedback enhances the positive effects and reduces the negative effects of multiple-choice testing. *Memory and Cognition*, 36(3), 604-616. doi:10.3758/MC.36.3.604. Evidence type: laboratory experiment (72 undergraduates).
+
+### Core claims
+
+Multiple-choice tests can both help and hurt: they enhance retention of tested material, but they also expose students to wrong answers (lures) that can be absorbed as false knowledge. This experiment tested whether feedback on the multiple-choice test could boost the benefit and reduce the harm. Both immediate and delayed feedback increased correct responses and reduced intrusions of lure answers on a delayed cued-recall test one week later. The authors advise that "Educators should provide feedback when using multiple-choice tests" (abstract).
+
+### Specifics
+
+Seventy-two Washington University undergraduates took part in two sessions one week apart. In session one they studied 12 prose passages (read in halves of about 200 words, 30 seconds each), reread key sentences, or did not study at all; after a 5-minute filler task they took a 42-question multiple-choice test, of which the first six were filler items and 36 counted. Questions had two, four or six alternatives. Items were assigned to three feedback conditions: no feedback, immediate feedback (the correct answer shown for 10 seconds right after each response), or delayed feedback (given at the end of the test). A control set of passage questions was never tested. In session two subjects took a cued-recall test (type the answer), first forced to answer and then free to withhold.
+
+Results. On the initial test, accuracy depended on prior study and the number of alternatives (for instance .84, .72 and .70 for restudy with two, four and six alternatives against .56, .34 and .28 with no prior study). On the final cued-recall test with forced report, proportion correct was .14 with no test, .31 with no feedback, .45 with immediate feedback and .56 with delayed feedback. Delayed feedback produced reliably more correct responses than immediate feedback, which beat no feedback. Intrusions of lure answers were .16 with no test, .24 with no feedback, .15 with immediate feedback and .14 with delayed. Feedback brought lure intrusions back down to the no-test baseline. In the delayed-feedback condition, whether students had studied the material beforehand made little difference to final recall. The authors link delayed feedback to a spacing account: a delayed feedback presentation is a spaced study trial.
+
+### Replication and criticism
+
+Strength: moderate. A single experiment with undergraduates, prose materials and a one-week delay. The delayed-feedback advantage over immediate feedback is not universal in the broader literature, and this paper's definition of delay is "at the end of the test", a few minutes, not days. Feedback timing effects vary with materials and test type. The more general result, that feedback after multiple-choice items helps and that unfeedbacked lures can be learned, is consistent with Rowland's meta-analysis, which treats feedback as a moderator of the testing effect.
+
+### Implications for LTF
+
+1. Every quiz item must be followed by feedback with the correct answer and a one-sentence reason. Quizzes with no feedback risk teaching the wrong option, especially with plausible distractors.
+2. Write distractors carefully. A lure that states a wrong aviation fact will be read; it can be remembered. Keep distractors plausible but clearly wrong once the feedback appears.
+3. Showing feedback at the end of a short block of questions rather than after each one is defensible by this evidence; test both in LTF before deciding. Do not claim that delayed feedback is proven better in general.
+4. Prefer cued-recall or short-answer items for important facts; use multiple choice mostly for scenario judgment, with feedback.
+5. In fly mode, keep feedback brief and visible without covering instruments or the checklist.
+
+Confirmed this session: Crossref 10.3758/mc.36.3.604; abstract via Crossref; full text read from the publisher's PDF (method, Tables 1 to 3).
+
+## bjork2009making
+
+Bjork, E. L., and Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. In M. A. Gernsbacher, R. W. Pew, L. M. Hough, and J. R. Pomerantz (Eds.), *Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society* (pp. 56-64). New York: Worth. Evidence type: expert essay summarizing experiments, from the originators of the concept.
+
+### Core claims
+
+Learners and teachers are easily misled about whether learning has occurred, because performance during practice is an unreliable index of learning. Conditions that speed apparent learning often fail to support long-term retention and transfer, whereas conditions that create challenges and slow apparent learning often optimize them. The authors name four "desirable difficulties" (a term from Bjork 1994): varying the conditions of learning, interleaving rather than blocking, spacing rather than massing, and using tests rather than presentations as study events. The word "desirable" matters, since many difficulties are undesirable, and a difficulty becomes undesirable if the learner lacks the background knowledge to respond to it successfully.
+
+### Specifics
+
+Learning versus performance. Performance is what we can observe and measure during instruction; learning is the more or less permanent change in knowledge or understanding and must be inferred. Learning can occur without visible performance change (latent learning in animal mazes), and performance can improve without learning (revealed after a delay or in another context).
+
+Storage and retrieval strength (Bjork and Bjork 1992). Storage strength is how entrenched and interassociated a memory is; retrieval strength is current accessibility, influenced by cues and recency. Current performance is a function of retrieval strength alone, but storage strength slows forgetting and enhances relearning. Conditions that quickly raise retrieval strength differ from those that raise storage strength, so learners who read retrieval strength as storage strength prefer worse conditions. The 2020 commentary (Bjork and Bjork, JARMAC) adds that the higher the current retrieval strength, the smaller the storage-strength gain from restudy or retrieval, so forgetting can enhance learning.
+
+Examples given. Studying in two different rooms rather than twice in one room increased recall (Smith, Glenberg and Bjork 1978); children practicing beanbag throws at varied distances beat those practicing at the fixed test distance (Kerr and Booth 1978); in a pinball-like motor task, blocked practice improved faster, but 10 days later interleaved practice was far better under random testing (Shea and Morgan 1979); learners given interleaved keystroke practice predicted their own next-day performance closely while blocked learners were markedly overconfident (Simon and Bjork 2001); interleaved volume-formula practice gave 63 percent versus 20 percent correct on new problems a week later (Rohrer and Taylor 2007). For tests as learning events, a retrieval attempt even without feedback can be considerably more effective long term than rereading, though repeated study wins in the short term.
+
+### Replication and criticism
+
+Strength: this is an expert synthesis, not an experiment; the cited experiments are strong and several are covered elsewhere in this lane. The authors note that the impact of their work on practice has been "slight", and that desirable difficulties are "typically undesired" by learners, which Bjork and Bjork (2020) repeat. The framework is a conceptual umbrella: critics can fairly say it groups together effects with distinct mechanisms. Classroom evidence for the full set is thinner than for spacing and testing, which is why Dunlosky and colleagues rated interleaving only moderate.
+
+### Implications for LTF
+
+1. Make the learning versus performance distinction a design principle: do not use in-lesson scores as the measure of learning, and do not reward a learner for a perfect blocked streak.
+2. Build in difficulty that the learner can handle. For a complete beginner, a difficulty is only desirable if prerequisite knowledge is in place, so sequence recall and mixed practice after a first explained pass.
+3. Vary the conditions of practice: change sim scenarios, airports and weather between challenges instead of repeating one setup.
+4. Tell learners once, plainly, that struggle during recall and mixed practice is expected and useful.
+5. Do not claim LTF "optimizes" learning by difficulty without measuring it.
+
+Confirmed this session: author PDF of the chapter text read (pp. 56-62 content); Open Library work OL17413396W for the book (Worth, ISBN 9781429230438, first published 2009); 2011 date and pages 56-64 from a web search summary; the proof PDF is dated 2009, so the year is uncertain between editions or printings; Bjork and Bjork (2020, JARMAC) text read from a PDF copy for the retrieval-strength statement and the quote about undesirable difficulties.
