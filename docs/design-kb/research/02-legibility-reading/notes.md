@@ -305,3 +305,34 @@ Larson (2005) notes that the Bouma (1973) paper most often cited for "bouma shap
 3. Peripheral reading is crowded. Fly mode will often be read out of the corner of the eye, where critical spacing is large. Use sparse layouts, one number per element, large gaps, and avoid strings of similar short items.
 
 Confirmed this session: Crossref record (10.1038/nn.2187; an erratum also appears); abstract via Europe PMC (PMID 18828191); full text at pmc.ncbi.nlm.nih.gov/articles/PMC2772078 read via WebFetch summary. Bouma (1970) was checked only as a bibliographic record (Nature 226, 177-178) and abstract summary at research.tue.nl; the half-eccentricity value is from secondary accounts, including this review.
+
+## larson2005science
+
+Larson, K. (2005). The science of word recognition. Microsoft Typography. https://learn.microsoft.com/typography/develop/word-recognition
+
+### Core claims
+
+Kevin Larson, a cognitive psychologist on the Microsoft ClearType team, wrote this essay to answer typographers who insisted that readers recognize words by the outline of the word shape, sometimes called the "bouma". He reviews why psychologists moved from a word shape model to a model in which the letters in a word are recognized in parallel and the letter information is then used to recognize the word. His conclusion: "Word shape is no longer a viable model of word recognition", and the legibility of a typeface should not be judged by its ability to produce a good bouma shape. It began as a talk at ATypI in Vancouver in 2003.
+
+### Specifics
+
+Three models: word shape (oldest, from Cattell 1886), serial letter recognition (Gough 1972), and parallel letter recognition, which Larson says most psychologists accept.
+
+Evidence offered for word shape, then answered. (1) Word superiority: letters are recognized better in words than alone (Reicher 1969). McClelland and Johnson (1977) found the same advantage for pronounceable pseudowords like "mave", which have no familiar shape, so the cause is regular letter combinations. (2) Lowercase is read 5 to 10 per cent faster than uppercase (Smith 1969; Fisher 1975). Larson calls this "the weakest evidence" and attributes it to practice, noting that reading speed in uppercase, and even mirror-reversed text, rises with practice (Kolers and Perkins 1975). (3) Proofreading: misspellings that keep the word shape were missed more often (13 per cent against 7, Haber and Schindler 1981), but Paap, Newsome and Noel (1984) separated word shape from letter shape and found the effect came from letter shape (for "than": "tnan", different shape, same letter shape, 19 per cent missed; "tdan", same shape, different letter shape, 8 per cent). (4) Alternating case slows reading, but Adams (1979) found that words and pseudowords were equally hurt, so it is not about word shape.
+
+Eye-movement evidence for parallel letter recognition. In moving window studies (McConkie and Rayner 1975) with 3 letters visible the rate was 207 words per minute, with 9 letters 308, and with 15 letters 340, as fast as with no window; showing the whole word did not help beyond the letter count. In boundary studies (Rayner 1975) the changed word "chart" was fixated for 210 ms when intact, 240 ms in a look-alike with shared letters ("chovt"), 280 ms for shared letters with a different shape ("chyft"), and 300 ms with matching shape and no shared letters ("ebovf"). Capitalizing "CHART" removed shape information but gave the same fixation times as the control. Larson notes that letters in common played the larger role but that shape together with shared letters still helped.
+
+Bouma. Bouma (1973) tested recognition of first and last letters of words and letter strings away from fixation, finding that letters to the right of fixation are named better, and end letters better than first letters.
+
+### Replication and criticism
+
+This is an expert essay, not a study. Its strength is that every claim traces to named experiments, and gaze-contingent window results of the kind it describes are standard in Rayner's reviews (see rayner1998eye). Beier and Larson (2010) cite Pelli and Tillman as finding letter-by-letter recognition the strongest of three operations. Weaknesses: it is not peer reviewed, it is written by a company researcher, and it leaves one door open (the boundary results still show shape helping a little). It lists Rayner (1998) as appearing in "Psychological Review" when the article is in Psychological Bulletin, a minor error to correct when citing. Tinker (1963) used the word-shape explanation for the case against all capitals, and this essay is the main correction (see tinker1963legibility). Go to the cited papers for any figure that matters.
+
+### Implications for LTF
+
+1. Do not justify design decisions by word shape. Arguments such as "capitals look like boxes, so lower case reads better" or "avoid all caps because of the loss of word shape" should be replaced with "avoid long runs of caps because readers are less practiced and they take more space".
+2. Judge a face on letter distinctness (see beier2010design): can learners tell I, l and 1, O and 0, in a readout?
+3. Mixed case in running text because readers are practiced with it; but short capital labels read by letter, so give them room.
+4. Because word spaces guide the next saccade (Pollatsek and Rayner 1982, cited here), do not remove spaces or squeeze word gaps in fly mode.
+
+Confirmed this session: WebFetch of the full page text; WebSearch for bibliographic listing; the Microsoft Research listing (microsoft.com/en-us/research/?p=754033) for the author and January 2005 date. Original papers cited by Larson were not read.

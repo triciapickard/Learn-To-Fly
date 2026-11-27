@@ -360,3 +360,42 @@ The editions are confusing: Open Library lists Wace printings in 1954, 1957 and 
 5. Hard-to-automate rules belong in a writing style guide for human authors, not in CSS.
 
 Confirmed this session: Review by Roy Johnson at https://mantex.co.uk/finer-points-in-the-spacing-and-arrangement-of-type/ (found via https://mantex.co.uk/?p=1038; 1995 revised edition, Hartley & Marks, 96 pages, ISBN 0881791199, the full-point rule and his disagreement). Grolier Club note at https://grolierclub.omeka.net/exhibits/show/100-books-typography/item/1431. Blog excerpts and reaction at https://blog.timoni.org/post/177749327/on-finer-points-in-the-spacing-and-arrangement-of. Dowding citation of Tschichold via https://en.wikipedia.org/wiki/Word_spacing. Editions per Open Library work OL2734851W.
+
+## bringhurst2012elements
+
+Robert Bringhurst, *The Elements of Typographic Style*, version 4.0 (Point Roberts, WA: Hartley & Marks, 2012; first edition 1992).
+
+### Core claims
+
+Bringhurst's book is both a style guide and a philosophy of the craft. Its first principle, widely quoted from section 1.1 ("First Principles"), is "Typography exists to honor content" (the sentence is cited to page 17 by a secondary source). The Typographica review praises its prose, shaped by the author's background as a poet, and says the book explains the meaning and outcomes of good typography more than the process. Per Wikipedia, Hermann Zapf hoped it would become "the Typographers' Bible."
+
+### Specifics
+
+Structure, from the table of contents of the web adaptation *The Elements of Typographic Style Applied to the Web* (which keeps Bringhurst's section titles): chapter 2 "Rhythm & Proportion" (2.1 Horizontal Motion, 2.2 Vertical Motion, 2.3 Blocks & Paragraphs, 2.4 Etiquette of Hyphenation & Pagination) and chapter 3 "Harmony & Counterpoint" (3.1 Size, 3.2 Numerals, Capitals & Small Caps).
+
+Section titles that read as rules:
+
+- 2.1.1 Define the word space to suit the size and natural letterfit of the font. Bringhurst: "A loosely fitted or bold face will need a larger interval between the words," and tighter letterfit at larger sizes allows tighter word spacing. The em is "a sliding measure."
+- 2.1.2 Choose a comfortable measure. For a single-column page in a serif text face at text size, about 45 to 75 characters per line, with 66 (counting letters and spaces) regarded as ideal, and about 40 to 50 for multi-column work (webtypography.net; one source cites page 26 of the book).
+- 2.1.3 Set ragged if ragged setting suits the text and page. 2.1.4 Use a single word space between sentences. 2.1.6 Letterspace all strings of capitals and small caps, and all long strings of digits.
+- 2.2.1 Choose a basic leading that suits the typeface, text and measure. "This unit is the leading, which is the distance from one baseline to the next."
+- 3.1.1 Don't compose without a scale. The traditional scale of sizes "survived with little change and few additions for 400 years"; a designer may devise another scale from "a modest set of distinct and related intervals."
+- 3.2.1 Use titling figures with full caps, and text figures in all other circumstances.
+
+Version 4.0's only new section, per Typographica, is a two-page spread on metal type.
+
+### Replication and criticism
+
+A reference book resting on craft authority and tradition, not on experiments. The rules are conventions Bringhurst collects and reasons about. Criticisms I could confirm: Meilleur's Typographica review (8 February 2013) says the book is grounded in print, mentions the web only twice, covers screen type in about two pages and treats display type little, and that it should not be a student's first or only text. Bringhurst replied in the comments that the book deliberately focuses on print.
+
+The best-known number, 66 characters, is quoted as the ideal but the line-length range should be checked against reading studies (lane 02, lane 03). A Viget article argues web line-length limits of about 75 characters are overly strict (I did not fetch it). The Designers Review of Books review of Hochuli advises using Bringhurst for practical application and Kinross for history (hochuli2008detail).
+
+### Implications for LTF
+
+1. Default lesson column: 45 to 75 characters, aiming near 66, as a starting point to be tested, since it assumes a serif text face and print. For code, checklists and tables, which are not prose, apply different limits.
+2. Use unitless line-height tied to the measure, not a fixed number of pixels. The web adaptation itself cautions that fixed leading breaks when users enlarge text and that web text often needs more space.
+3. Adopt an explicit type scale (3.1.1), documented as tokens: a small related set of sizes.
+4. Numerals: his rule is for prose and caps. LTF dashboards, tables and instrument readouts present numbers as data, so use lining, tabular figures there (my inference; see lane 03).
+5. Treat "honor content" as the rule: type decisions must never change or obscure meaning.
+
+Confirmed this session: Wikipedia at https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style (editions, Zapf, Hoefler and Frere-Jones). Section titles and quotations on https://webtypography.net/toc/ , /2.1.1, /2.1.2, /2.2.1 and /3.1.1. Typographica review at https://typographica.org/?p=10147. First-principle sentence from a web search result citing the book (page 17 via Viget). Open Library work OL854086W lists the Hartley & Marks editions; ISBN 9780881792126 also appears on a Blackwell's listing for this title.

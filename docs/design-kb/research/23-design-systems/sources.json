@@ -103,5 +103,32 @@
     "verified_evidence": "Open Library search q=isbn:0201633612 returned work OL6030812W 'Design Patterns' by Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides (Addison-Wesley); publication facts (21 Oct 1994, 395 pages, ISBN 0-201-63361-2) from fetched reference summary",
     "kind": "expert catalog (software design patterns)",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "frost2016atomic",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Frost",
+        "given": "Brad"
+      }
+    ],
+    "year": 2016,
+    "title": "Atomic Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Brad Frost",
+    "publisher_place": "Pittsburgh",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780998296609",
+    "url": "https://atomicdesign.bradfrost.com/",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'atomic design brad frost' returned work OL22297494W, Atomic Design, Brad Frost, 2016, ISBN 9780998296609; online edition chapters 1, 2, 5 and table of contents read at atomicdesign.bradfrost.com",
+    "kind": "practitioner book (design systems method)",
+    "lane": "23-design-systems"
   }
 ]

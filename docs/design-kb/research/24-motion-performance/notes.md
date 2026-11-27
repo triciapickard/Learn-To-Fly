@@ -155,3 +155,37 @@ Animations should be schematic, not realistic: a clean diagram of the horizon li
 For fly mode, where the learner glances away from the sim, an animation that plays once and disappears is the worst case. Show states, not processes, and keep any process view in the lesson page where it can be paused.
 
 Confirmed this session: Crossref DOI 10.1006/ijhc.2002.1017 (volume 57, issue 4, pages 247-262); full text read at https://hci.stanford.edu/courses/cs448b/papers/Tversky_AnimationFacilitate_IJHCS02.pdf.
+
+## hoffler2007instructional
+
+Höffler, T. N. and Leutner, D. (2007). Instructional animation versus static pictures: a meta-analysis. *Learning and Instruction*, 17(6), 722-738.
+
+### Core claims
+
+The meta-analysis pools experiments that compared learning from instructional animations with learning from static pictures, to answer the question that narrative reviews such as Tversky, Morrison and Bétrancourt (2002) left open: does animation help on average? The authors report that it does, with a medium-sized advantage, and that the size of the advantage depends on what the animation is for and how it is drawn. They state that the findings fit cognitive load theory and multimedia learning theories and have implications for instructional design. Read together with the 2002 review, the result is that animation is not useless but is not a free upgrade either: purpose and kind of knowledge decide.
+
+### Specifics
+
+Sample and effect sizes, as reported on the publisher-affiliated listing and a search summary fetched this session (the full text was not available to me, so I report only numbers that appeared in the listing):
+
+- The meta-analysis covers 26 primary studies with 76 pairwise comparisons of dynamic against static visualizations.
+- The mean weighted effect size for learning outcomes was d = 0.37 (95% confidence interval 0.25 to 0.49), described as a medium-sized advantage for animation.
+- Moderators: representational animations (those that depict the content) showed larger effects than decorational ones, with d = 0.40 (95% CI 0.26 to 0.53) reported for the representational group. Highly realistic animations such as video-based ones showed the largest effect among realism levels, d = 0.76 (95% CI 0.39 to 1.13). Effects were largest when the learning target was procedural-motor knowledge, d = 1.06 (95% CI 0.72 to 1.40).
+
+Types of comparison the paper discusses (from its title and abstract, not read in full): animation versus static picture for the same content, with learning outcome as the dependent measure. Two cautions follow from the design of such syntheses: the pooled studies differ in how equivalent the static comparison was (the problem Tversky et al. raise), and the "realistic" moderator is confounded with the kind of content, since realistic video tends to be used to teach motor procedures.
+
+A later meta-analysis, reported in a search summary I fetched, found a smaller overall effect. Berney and Bétrancourt (2016) are reported there as finding g = 0.226 across 140 pairwise comparisons, and Castro-Alonso and colleagues (2019) as finding g = 0.23 over 82 comparisons. I did not read those papers, so treat these two figures as leads to be checked before they are used in any LTF document.
+
+### Replication and criticism
+
+A meta-analysis is stronger evidence than a single experiment, but it inherits the problems of its inputs: heterogeneous designs, learners and measures, and possible publication bias. The pattern of a medium initial effect shrinking in later syntheses (per the search summary) is typical for a literature where the first reviews included studies with confounded static controls. It also fits Tversky et al.'s argument. The reasonable summary is that animation helps for procedural and motor content shown representationally, with a modest average advantage, and gives little reason to expect large gains for abstract concepts.
+
+### Implications for LTF
+
+LTF's explainers will mix two kinds of content. For procedural, motor-flavored content (how to move the yoke, how a flare looks as the runway changes, where to look during a turn), the meta-analysis supports using animation or video, and the largest reported effect is exactly for this kind of knowledge. For abstract relationships (why airspeed trades against pitch, how a pressure altimeter reads a setting), the evidence for animation over a good static diagram is weaker, so default to a labeled static diagram, and add an animation only when change over time is the point.
+
+The decorational versus representational split gives a simple review rule: if a motion does not depict the thing being taught, it is decoration and should be cut or made optional. Realistic, video-like material may help motor procedures, but LTF should avoid claiming this for its schematic widgets without testing them.
+
+The sim itself is already the realistic animation: a lesson that asks the learner to watch their own aircraft in the sim while reading is likely better than an LTF animation that imitates the sim. LTF's animations should do what the sim cannot, such as showing hidden causes (forces, airflow) or slowing a quick event.
+
+Confirmed this session: Crossref DOI 10.1016/j.learninstruc.2007.09.013 (volume 17, issue 6, pages 722-738, December 2007); abstract-level numbers read via https://www.leibniz-ipn.de/en/research/publications/instructional-animation-versus-static-pictures-a-meta-analysis and a web search summary. Full text not read; later meta-analyses mentioned only from a search summary.

@@ -95,3 +95,33 @@ A second line of criticism concerns misuse: the template makes it easy to apply 
 5. Keep a known-uses rule: promote something to a shared component only after it has appeared in several lessons, which prevents a design system filled with one-off components.
 
 Confirmed this session: Open Library search by ISBN 0201633612 returned work OL6030812W (Design Patterns, Gamma, Helm, Johnson, Vlissides, first published 1995 in that record); facts and criticisms from the fetched summary at https://en.wikipedia.org/wiki/Design_Patterns; template headings from course pages found by web search (https://people.cs.pitt.edu/~chang/231/8pattern/PATTERN01/p8.html). I did not read the book itself.
+
+## frost2016atomic
+
+Frost, B. (2016). *Atomic Design*. Pittsburgh: Brad Frost. Free online edition at https://atomicdesign.bradfrost.com/.
+
+### Core claims
+
+Frost argues that the page is the wrong unit for designing and building for the web, and that teams should instead design systems of components and then assemble pages from them. A site with tens of thousands of pages may rest on a handful of content types and layouts, so effort is driven by components, not page counts (chapter 1, https://atomicdesign.bradfrost.com/chapter-1/). He presents a style guide or pattern library as the working environment for that approach, and treats consistency, a shared vocabulary, speed after the initial investment, and the ability to survive redesigns as its payoffs.
+
+### Specifics
+
+The central model, in chapter 2 (https://atomicdesign.bradfrost.com/chapter-2/), has five stages. Atoms are basic HTML elements such as labels, inputs and buttons that cannot be broken down without ceasing to be functional. Molecules are small groups of atoms that work as a unit, such as a search form made of a label, an input and a button. Organisms are relatively complex sections built from molecules, atoms or other organisms, such as a header or a product grid. Templates are page-level layouts that show content structure. Pages are templates filled with real, representative content, which lets a team test whether the system holds up under real text and images. Frost draws the chemistry analogy from school lessons and later cautions that pushing it too far can confuse stakeholders. He says atoms in a pattern library show "all your base styles at a glance".
+
+The book has five chapters: Designing Systems, Atomic Design Methodology, Tools of the Trade, The Atomic Workflow, and Maintaining Design Systems (table of contents page). Chapter 1 lists the benefits of style guides: consistency and cohesion, shared vocabulary, education, empathetic workflow, isolated testing, speed and longevity. It also lists challenges: convincing short-term organizations to invest, treating the guide as a side project, and libraries that lack context. It criticizes large redesign cycles every three to eight years and cites a health-insurance payment flow with four distinct interface designs within five clicks.
+
+Chapter 5 covers governance (https://atomicdesign.bradfrost.com/chapter-5/). Add patterns only when another team needs the same solution; deprecate gradually; schedule regular reviews; separate makers from users; name patterns by structure rather than context ("card" over "product card"); keep documentation current; publish change logs; serve CSS and JavaScript from versioned URLs. To sell a system: make a thing, show it is useful, make it official, and treat it as a product, not a project. Frost cites Alex Schleifer's line that neglect is the biggest existential threat to any system.
+
+### Replication and criticism
+
+This is practitioner craft knowledge, backed by case examples, not experiment. The most common criticism is about the taxonomy: practitioners report that boundaries between atoms, molecules and organisms are blurry and cause friction in teams. Frost's reply, quoted by a vendor blog, is that the specific labels were never the point and are useful as a mental model (https://www.qt.io/blog/atomic-design-systems-why-the-labels-dont-matter). He also defends the hierarchical naming, saying that "components" and "modules" lack any sense of hierarchy (https://bradfrost.com/blog/link/where-atomic-design-fell-short/). The strongest claims, such as speed gains after the initial investment, are cited from examples (Mailchimp is named) and have not, to my knowledge, been tested in controlled studies; I did not find one this session.
+
+### Implications for LTF
+
+1. Use the model as vocabulary, not as folder law. LTF's `src/` structure can follow tokens, base elements (button, input), compound pieces (answer option with feedback), sections (briefing header, checklist panel), page templates, and real lessons, without arguing over molecule versus organism.
+2. The page-with-real-content stage matters for LTF: test templates with real lesson text, long aircraft names, and checklist items of very different lengths, in light and dark themes.
+3. Name by structure. "Card" and "callout" will serve better than "airspeed card" if the same shape recurs.
+4. Take chapter 5's governance rules seriously: add a shared component only when a second lesson needs it, deprecate rather than delete, and keep a changelog (the repository already keeps a `CHANGELOG.md` line rule for user-facing changes).
+5. Frame the design system as a product, with an owner and an update routine, or it will decay as lessons accumulate.
+
+Confirmed this session: Open Library search for "atomic design brad frost" returned work OL22297494W (Brad Frost, 2016, ISBN 9780998296609); chapters 1, 2 and 5 and the table of contents read at atomicdesign.bradfrost.com; criticism from web search results and the two Frost-linked pages above (fetched through summarizing tools, so wording is paraphrased unless in quotes).

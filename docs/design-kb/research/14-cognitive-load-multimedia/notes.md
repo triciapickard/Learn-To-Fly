@@ -567,7 +567,7 @@ Paivio, A. (1986). *Mental Representations: A Dual Coding Approach*. New York: O
 
 ### Core claims
 
-Paivio's book is the full statement of dual coding theory, the idea that human cognition runs on two functionally distinct symbolic systems, one specialized for language and one for nonverbal objects and events, with connections between them. Multimedia learning theory takes this as one of its foundations: Mayer and Moreno (2003, this lane) call the dual-channel assumption "a central feature of Paivio's (1986) dual-coding theory". The theory predicts that information coded in both systems is remembered better than information coded in one, because the codes have additive effects. It began as an effort to restore imagery to its place in cognitive psychology, and it is not only a theory of imagery.
+Paivio's book is the full statement of dual coding theory, the idea that human cognition runs on two functionally distinct symbolic systems, one specialized for language and one for nonverbal objects and events, with connections between them. Multimedia learning theory takes this as one of its foundations: Mayer and Moreno (2003, this lane) call the dual-channel assumption "a central feature of Paivio's (1986) dual-coding theory". The theory predicts that information coded in both systems is remembered better than information coded in one, because the codes have additive effects. It began as an effort to restore imagery to cognitive psychology but is not only about imagery.
 
 I did not read the book. This entry is built from catalog records and from a 1987 chapter by Clark and Paivio, "A Dual Coding Perspective on Encoding Processes", which reproduces the theory's structure from the 1986 book with Paivio as co-author and which I read in part.
 
@@ -593,7 +593,7 @@ The chapter cites a large experimental literature on concrete versus abstract wo
 
 - Pair a concrete visual with a verbal label for new concepts: the airspeed indicator with the words "airspeed", the pitch attitude with its name, a diagram of a traffic pattern with leg names.
 - Anchor abstract ideas (energy, stability, angle of attack) in a visible image, since concrete, imageable material is remembered better in the experiments cited.
-- The benefit of the second code depends on time to generate it. Allow self-paced viewing; do not flash an image and label for one second.
+- The second code needs time to generate, so allow self-paced viewing.
 - A picture is not automatically helpful when the words already carry the content, so pair deliberately, not decoratively.
 - Avoid "learning styles" language in LTF's UI or copy.
 
