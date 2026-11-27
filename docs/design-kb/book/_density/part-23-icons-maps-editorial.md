@@ -78,7 +78,7 @@ best predictor, accounting for up to 55 percent of variance, while familiarity w
 function name became more important later and was the top accuracy predictor after the
 first blocks. Isherwood, McDougall and Curry (2007) found icon characteristics together
 accounted for up to 69 percent of variance, an upper bound across the learning series, with
-their ranking changing as people practiced. The same paper cites earlier work showing that
+their ranking changing as people practiced. McDougall and Isherwood cite earlier work showing that
 people rely on text labels to get at meaning when the graphic is unfamiliar.
 
 The base rate is the warning. Across 239 real symbols rated without context, mean concept
