@@ -20,7 +20,7 @@ pdf_path = os.path.join(out_dir, 'sample.pdf') if sample else os.path.join(KB, '
 files = sorted(glob.glob(os.path.join(src_dir, '*.md')))
 t = time.time()
 cmd = [pypandoc.get_pandoc_path(), '--from=markdown+smart-implicit_figures', '--to=typst', '--wrap=none',
-       '--citeproc', f'--bibliography={bib}', '--metadata=link-citations:true', '--metadata=nocite:@*',
+       '--citeproc', f'--bibliography={bib}', f'--metadata-file={os.path.join(HERE, "meta.yaml")}',
        f'--lua-filter={os.path.join(HERE, "kb.lua")}', f'--template={os.path.join(HERE, "template.typ")}',
        '-o', typ_path, *files]
 r = subprocess.run(cmd, capture_output=True, text=True)

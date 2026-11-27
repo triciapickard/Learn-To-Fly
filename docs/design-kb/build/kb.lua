@@ -27,7 +27,7 @@ function Pandoc(doc)
           local key = e.identifier:gsub('^ref%-', '')
           -- let long URLs break after slashes
           e = pandoc.walk_block(e, { Link = function(l)
-            return pandoc.walk_inline(l, { Str = function(s) return pandoc.Str((s.text:gsub('([/%.])', '%1\u{200B}'))) end })
+            return pandoc.walk_inline(l, { Str = function(s) return pandoc.Str((s.text:gsub('([/%.])(.)', '%1\u{200B}%2'):gsub('([/%.])(.)', '%1\u{200B}%2'))) end })
           end })
           refs[key] = typb(e.content); ref_order[key] = i
         end
@@ -158,8 +158,8 @@ function Pandoc(doc)
     end
   end
   flush_part()
-  if toc_at then out[toc_at] = raw('#ltf-toc((\n' .. table.concat(toc, ',\n') .. ',\n))') end
-  if index_at then out[index_at] = raw('#ltf-rule-index((\n' .. table.concat(index, ',\n') .. ',\n))') end
+  if toc_at then out[toc_at] = raw('#ltf-toc((\n' .. table.concat(toc, ',\n') .. (#toc > 0 and ',' or '') .. '\n))') end
+  if index_at then out[index_at] = raw('#ltf-rule-index((\n' .. table.concat(index, ',\n') .. (#index > 0 and ',' or '') .. '\n))') end
   warn(('parts=%d chapters=%d rules=%d'):format(part_n, chap_n, #index))
   doc.blocks = out
   return doc

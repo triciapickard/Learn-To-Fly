@@ -97,7 +97,7 @@ for s in merged:
     except Exception: pass
     for a, b in (('container_title', 'container-title'), ('volume', 'volume'), ('issue', 'issue'), ('pages', 'page'), ('publisher', 'publisher'), ('publisher_place', 'publisher-place'), ('edition', 'edition'), ('doi', 'DOI'), ('isbn', 'ISBN')):
         if s.get(a): e[b] = str(s[a])
-    if s.get('url') and not s.get('doi'): e['URL'] = s['url']
+    if s.get('url') and not s.get('doi') and s['type'] not in ('book', 'chapter'): e['URL'] = s['url']
     if s.get('editors'): e['editor'] = names(s['editors'])
     if s.get('original_year'):
         try: e['original-date'] = {'date-parts': [[int(str(s['original_year'])[:4])]]}

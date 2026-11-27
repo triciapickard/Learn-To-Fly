@@ -112,7 +112,7 @@
 #let ltf-apply(body) = callout([What this means for Learn to Fly], body)
 
 #let bibentry(body) = block(width: 100%, above: 0.7em, below: 0.7em, {
-  set text(size: 8.6pt, font: serif-caption, number-type: "lining")
+  set text(size: 8.6pt, font: serif-caption, number-type: "lining", hyphenate: false)
   par(first-line-indent: 0pt, hanging-indent: 1.3em, justify: false, leading: 0.52em, body)
 })
 
