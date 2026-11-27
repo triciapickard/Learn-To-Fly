@@ -691,3 +691,71 @@ Where an LTF widget animates an instrument, the question is whose point of view 
 `DashboardPage` follows overview-filter-details already (VIZ-057). Its weak point is context: the "Stats" tiles show bare counts (VIZ-054, and VIZ-028 in the chapter on integrity). The `ChallengesPage` filter card, five `Select`s with a live "Showing n challenges of n" status, is a dynamic query in Shneiderman's sense, and its count line is the overview; keep both.
 
 For the widgets, VIZ-060 and VIZ-061 are acceptance criteria: stable readouts beside moving marks, and motion that matches the sim, checked in the sim.
+
+## Uncertainty, risk and variability
+
+### Why uncertainty is hard to show
+
+Every result a learner gets is a sample. One landing scored Silver; the next might score Bronze or Gold with nothing changed but the wind and the learner's attention. A display that shows only the latest number, or only the best, hides that spread. A display that shows the spread badly (with a notation the learner cannot read) can be worse than none.
+
+Hullman and colleagues surveyed 86 user studies of uncertainty visualization published between 1987 and 2018, coding 372 evaluation paths [@hullman2019pursuit]. Their starting point is that evaluating such displays is harder than evaluating other charts, because people have difficulty interpreting uncertainty and because "correct" behavior is hard to define. Their findings are about the field's habits. Evaluation centers on performance and satisfaction measures that assume more predictable, statistically driven judgment than the decision-making literature supports. Where studies elicited decisions, accuracy-focused goals were about twice as common as decision-quality goals. Studies tend to confirm that a new technique "works" rather than explain why, and they compare visualizations against each other while rarely including a baseline with no uncertainty shown, or plain text. Roughly 20 percent of paths concern confidence, and the authors warn about the hard-easy effect (overconfidence on difficult tasks, underconfidence on easy ones), that confidence reports are noisy, and that subjective confidence is not a linear function of statistical confidence.
+
+The survey also records what is known about one common display. Error bars lead to perceptual bias and to underweighting of uncertainty, and produce "within-the-bar" bias, in which outcomes inside the area of a bar are judged more likely than outcomes outside it [@hullman2019pursuit]. The survey is a coded review of methods, not a test of displays, and its conclusions about a mismatch between methods and real judgment are interpretive.
+
+### What to show instead
+
+Hullman, Resnick and Adar proposed hypothetical outcome plots (HOPs): an animation that shows a finite set of individual draws from a distribution, one per frame, so that viewers can infer its properties by counting and integrating rather than by decoding a statistical notation [@hullman2015hypothetical]. They tested HOPs against error bars and violin plots with 288 crowdsourced participants, 96 per display, each completing nine tasks (four about one variable, four about two, one about three), with frames advancing every 400 milliseconds and responses scored by absolute error.
+
+For two variables (the probability that B exceeds A), HOPs had much lower error than both static displays on all four tasks; for three variables, HOPs again had lower error [@hullman2015hypothetical]. For one variable the picture reversed or blurred: estimating the mean under high variance, HOPs were significantly worse; under low variance there was no difference; on single-variable probability questions results were mixed. The static displays' failure on two-variable questions is stark: with error bars and violin plots, error was never below 36 percentage points on any task, and on one task whose correct answer was 59 percent, answers clustered near 95 percent and near 23 percent. The authors list limits: a sample possibly above average in numeracy, normal distributions only, underlying rather than sampling distributions, two static comparison displays, no reasoning reports and an unvaried frame rate.
+
+A follow-up from the same lab by Kale, Nguyen, Kay and Hullman tested HOPs against error bars and line ensembles on judging which of two underlying trends more likely produced a noisy time series, and a summary reports more correct interpretations with HOPs for ambiguous examples [@hullman2015hypothetical]. It is an extension, not an independent replication. HOPs also have practical costs: they take time and attention, cannot be read at a glance and cannot be printed.
+
+Franconeri and colleagues draw the practical guidance together for lay audiences [@franconeri2021science]. Avoid error bars, which can be misread as data ranges. Show examples of discrete outcomes, simultaneously or over time. For low-numeracy risk communication, use absolute rather than relative rates, frequencies ("3 out of 10") rather than percentages, and icon arrays with the same denominator. They still warn that animation in general tends to confuse, which is why a static strip of individual outcomes is often the better form of the same idea.
+
+::: myth
+**"Error bars show people how uncertain a value is."** Error bars are the default display of uncertainty in science, and designers assume readers decode them as intended. In Hullman, Resnick and Adar's experiment, error on two-variable probability questions with error bars or violin plots was never below 36 percentage points, and answers to one question split between near 95 percent and near 23 percent when the truth was 59 [@hullman2015hypothetical]. The survey literature records within-the-bar bias and underweighting of uncertainty [@hullman2019pursuit], and Franconeri and colleagues advise lay audiences to avoid error bars because they are misread as data ranges [@franconeri2021science].
+:::
+
+::: {.rule #VIZ-062 grade="B"}
+**Show a learner's variability as their individual results, not as an error bar, interval or violin.** Error bars produced large errors on comparison questions and are subject to within-the-bar bias [@hullman2015hypothetical; @hullman2019pursuit]; Franconeri and colleagues recommend discrete outcomes for lay audiences [@franconeri2021science]. One main experiment plus a review; the direction is consistent.
+
+*In LTF:* the attempt history is a strip of dots, one per attempt, not a mean with a whisker. A spread of results within one challenge is visible as the spread of the dots.
+:::
+
+::: {.rule #VIZ-063 grade="B"}
+**State chances and rates as frequencies with a fixed denominator ("Gold in 3 of your last 10 attempts"), not as percentages or relative changes.** Franconeri and colleagues recommend absolute rates, frequencies and icon arrays with the same denominator for low-numeracy audiences [@franconeri2021science]; Hullman and colleagues recommend frequency framings for risk [@hullman2019pursuit].
+
+*In LTF:* feedback copy on `ResultView`, `HistoryTab` and the dashboard speaks in counts out of a stated number of attempts. A chart percentage stays as a score; a chance of an outcome becomes a count.
+:::
+
+::: {.rule #VIZ-064 grade="C"}
+**Say in words, beside any display of spread, what the spread means for the learner's next decision.** Hullman and colleagues recommend treating explanation as an end goal and note that heuristics vary in how people read uncertainty [@hullman2019pursuit]; Franconeri and colleagues advise integrating text as annotation [@franconeri2021science].
+
+*In LTF:* under an attempt strip, one `text-sm text-ink-2` line such as "Your last five landings range from Bronze to Gold." Any advice that follows (whether to fly it again) must come from the lesson's content, not be invented by the chart.
+:::
+
+::: {.rule #VIZ-065 grade="B"}
+**Use animated or ensemble outcome displays to compare two or three uncertain quantities, never to estimate one mean, and always provide a static version.** HOPs beat error bars and violins on two- and three-variable comparisons but were worse for estimating a mean under high variance [@hullman2015hypothetical]; animation generally confuses lay readers [@franconeri2021science]. One between-subjects experiment and a same-lab extension.
+
+*In LTF:* a lesson explaining wind variability on an approach, or the scatter of touchdown points, may cycle ghosted outcomes under a play control, with a static strip of all outcomes as the default under `prefers-reduced-motion` and in print. Never in `FlyModePage`.
+:::
+
+::: {.rule #VIZ-066 grade="C"}
+**Evaluate any uncertainty display by the decisions learners make with it, against a baseline with no uncertainty shown.** Hullman and colleagues find that evaluations favor accuracy over decision quality and rarely include a no-uncertainty or plain-text baseline [@hullman2019pursuit].
+
+*In LTF:* when testing a spread display with learners, ask a decision question ("Would you move to the next lesson?") and compare against the same page showing only the latest result.
+:::
+
+::: {.rule #VIZ-067 grade="C"}
+**Do not treat a learner's self-rated confidence as calibrated, and never display it as if it measured skill.** Confidence reports are noisy, show overconfidence on hard tasks and underconfidence on easy ones, and are not linear in statistical confidence [@hullman2019pursuit].
+
+*In LTF:* the debrief is a self-scored rubric, which is a different thing from a confidence rating; keep it criterion-based ("Met", "Not met", level choices). If a "how sure are you" input is ever added to a quiz or debrief, show it beside the scored result, never in place of it, and expect beginners to be most overconfident on the hardest challenges.
+:::
+
+### What this means for Learn to Fly
+
+LTF's challenge data are small samples per learner, and the product currently shows them as single values: a percentage and a tier on `ResultView`, a list in `HistoryTab`, the latest few in "Recent attempts". That avoids every misleading uncertainty notation, which is good, but it also hides variability that matters to a learner deciding whether a skill is reliable.
+
+The recommended build is modest. A dot strip of attempts per challenge (one dot per attempt, the current one in `accent`, the best as a labeled line), with a frequency sentence below it (VIZ-062 to VIZ-064). No error bars, no averages with whiskers, no "confidence" numbers. If a lesson later teaches variability (wind, touchdown scatter), it may use a played sequence of outcomes as an explainer, with a static ensemble as the reduced-motion and print default (VIZ-065). The debrief's self-scoring rubric is already the right instrument; it should not be supplemented with a confidence slider that would be read as data (VIZ-067).
+
+How much repetition a learner should do before moving on is an instructional question, covered in Part XV, Instructional Design, and Part XVI, Skill, Simulation and the Cockpit; this chapter only says how to show the evidence for that decision.

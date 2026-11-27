@@ -622,3 +622,91 @@ Learn to Fly already records two kinds of data that could be mistaken for resear
 The product's scale decides its methods. With a small beta audience and no third-party analytics, most fine design questions cannot be settled by A/B test, and pretending otherwise produces noise with the authority of numbers (EVD-041). The strongest evidence available cheaply is observation: a few beginners at home with the sim running (EVD-045), small usability rounds (from the previous chapter), and constant-comparison analysis of the problems learners report (EVD-046). Reserve comparative tests for large differences, and run them properly when they happen (EVD-042, EVD-043).
 
 Keep the privacy posture: masked replays, no tracking cookies, no third-party analytics. Change how the team talks about the data it has: completion and attempt data describe signed-in learners, replays over-sample errors (EVD-048). Build two templates in `docs/`: the one-paragraph study plan (EVD-047) and a contextual-inquiry note with flow and physical sketches of the learner's setup.
+
+## Weighing craft authority against experiment
+
+Much of what this book recommends comes from practitioners rather than laboratories: typographers on measure and leading, cartographers on generalization, architects and industrial designers on function and ornament. These sources earn C, and for many questions they are the best evidence that exists. The question this chapter answers is how to weigh them: when a craft rule should stand without an experiment, when an experiment should overrule it, and how to tell a reliable judge of design from a confident one.
+
+### Why craft knowledge deserves weight
+
+Schön's account of professional practice explains why experienced designers know things that experiments have not measured [@schon1983reflective]. Competent practitioners, in a line secondary accounts quote, "usually know more than they can say". Their skill is knowing-in-action, a tacit competence built by practice; when surprised, they reflect-in-action, thinking about what they are doing while they do it. Design is his central case: the designer holds a "reflective conversation with the situation", makes a move such as a sketch, sees what it implies, including what was not intended, and reframes the problem. In an interview he called a designer's internal sense of quality a "gyroscope" that develops over years. His evidence is detailed qualitative case analysis, and critics find the constructs unclear, the two kinds of reflection hard to separate, and context and power ignored; even so, the vocabulary of framing, moves and backtalk has lasted in design research and teaching [@schon1983reflective].
+
+Greenberg and Buxton make the same point from inside HCI: they cite the tacit understanding that experienced designers use when assessing designs and argue that subjective expert critique can be as legitimate as measurement [@greenberg2008usability]. Pye, a woodworker and professor of furniture design, offers a distinction that locates where such judgment is needed. In the workmanship of certainty, the result is predetermined before making starts; in the workmanship of risk, "the quality of the result is not pre-determined, but depends on the judgment, dexterity and care the maker exercises" [@pye1978nature]. Pye's book was read for this Part only through a detailed review. The distinction is an analogy when carried from physical craft to software, but it is an apt one.
+
+Craft knowledge has a second strength: resolution. Experiments vary a few factors at coarse levels. Craft rules often concern fine detail (the spacing of a label against a rule, the weight of a numeral beside a word) that no study has varied and none is likely to. On such questions the craft record is not weaker evidence than experiment; it is the only evidence.
+
+### Why craft knowledge needs checking
+
+Craft authorities make three kinds of claim, and they deserve different treatment. Some are statements of value (good design is honest; ornament should not deceive). Some are empirical claims about effects (this arrangement reads faster; this face is more legible). Some are mechanism stories, explanations of why an effect occurs (readers see word shapes). Values cannot be refuted by experiment, only argued. Empirical claims can be tested, and when tested they sometimes fail. Mechanism stories are the most often wrong, because they are invented to explain practice after the fact; the word-shape account of reading is the standard example [@larson2005science].
+
+The historical record of rule-writing shows the pattern. Owen Jones prefaced his plates of world ornament with thirty-seven propositions on form and color [@jones1856grammar]. Some are structural and still useful: proposition 7 asks for general forms first, then subdivision by general lines, then ornament that "may again be subdivided and enriched for closer inspection". His own proposition 36 states the right relation to exemplars: "The principles discoverable in the works of the past belong to us; not so the results. It is taking the end for the means." But his color propositions rest on the color theory of his day, including fixed balancing proportions, and cannot be quoted as rules without checking them against modern color science, which Part VI, Color: Science, Meaning and Access, does [@jones1856grammar]. A single source can hold durable principles and dated empirical claims side by side.
+
+Alexander's career shows a craft authority correcting himself. His first book proposed a formal mathematical procedure for decomposing a design problem; in his 1971 preface he wrote that he had found it "quite unnecessary to use such a complicated and formal way", and of the design-methods field the book helped start he was quoted saying "forget the whole thing" [@alexander1964notes]. An attempted replication of the book's computed decomposition in 2023 also failed, citing clerical errors in the appendix data [@alexander1964notes]. The idea of designing from misfits survived; the formal method did not.
+
+::: {.rule #EVD-049 grade="C"}
+**Separate every craft source's statements of value, its empirical claims and its mechanism stories, and weigh each differently: argue with values, test empirical claims, and distrust mechanism stories until checked.** Craft sources mix durable principles with dated or untested empirical claims [@jones1856grammar; @alexander1964notes], and their mechanism stories have failed when tested [@larson2005science].
+
+*In LTF:* "teal should be the single accent" is a value to argue; "readers find teal links easier to spot" is an empirical claim to check; "the eye is drawn to cool colors" is a mechanism story to distrust until evidence is shown.
+:::
+
+### The procedure for weighing
+
+Combining the two kinds of evidence follows from what each can and cannot do. Where a relevant experiment, on a comparable task and population, contradicts a craft claim about an effect, the experiment wins on that effect. Where no experiment addresses the question, or the experiments that exist used tasks far from the product's, the craft consensus stands as a C. Where the question is one of value or fit to a particular context, experiment can inform but not settle it, and argument decides. Where craft authorities disagree among themselves, the rule is graded D, and the decision must be argued from the product's own situation.
+
+::: {.rule #EVD-050 grade="C"}
+**Accept a craft rule as the default where no relevant experiment exists, and overrule it on a specific effect only when an experiment on a comparable task and population contradicts it; where craft authorities disagree, grade the rule D and argue from the product's context.** Craft knowledge holds tacit, fine-grained judgment that experiments rarely reach [@schon1983reflective; @greenberg2008usability], while its empirical claims can fail when tested [@larson2005science; @roberts2017preference].
+
+*In LTF:* on the measure of lesson text, craft consensus and legibility experiments are both available (Part II, Classical Typography, and Part III, Legibility and the Science of Reading), and the lesson article's current width, roughly 90 to 100 characters, has to answer to both.
+:::
+
+### Whose judgment counts
+
+The practical question behind craft authority is who to listen to. Hume's essay on taste is still the best account [@hume1757standard]. He grants that "beauty is no quality in things themselves: It exists merely in the mind which contemplates them", yet denies that all judgments are equal, because "the general principles of taste are uniform in human nature", and where judgments differ some "defect or perversion in the faculties" can usually be found, "from prejudice, from want of practice, or want of delicacy". His true judge has five marks: "Strong sense, united to delicate sentiment, improved by practice, perfected by comparison, and cleared of all prejudice", and "the joint verdict of such" is the standard of taste [@hume1757standard].
+
+Hume illustrates delicacy with a story from Don Quixote. Sancho's two kinsmen were asked to judge a hogshead of wine; one tasted leather, the other iron, and both were mocked until the cask was emptied and an old key on a leather thong was found at the bottom [@hume1757standard]. Their judgment was vindicated by a fact. Hume asks the obvious question himself ("where are such critics to be found? By what marks are they to be known?") and answers that these are "questions of fact, not of sentiment". Critics have charged the account with circularity, since the best art is what true judges approve and true judges are those who approve the best art; the standard interpretation still holds that Hume is not a relativist [@hume1757standard].
+
+He also leaves room for preferences that cannot be ranked. Where people differ because of blameless variations of temperament, or the manners of an age and country, no standard decides between them [@hume1757standard].
+
+::: {.rule #EVD-051 grade="C"}
+**Give design review weight to reviewers who show Hume's five marks for this product: they know the domain, have watched beginners use it, have compared it with alternatives, are not defending their own work, and notice small defects.** Judgments differ in quality, and the joint verdict of qualified judges is the best standard available [@hume1757standard]; tacit judgment develops with practice [@schon1983reflective].
+
+*In LTF:* a review panel for a lesson template includes someone who has watched beginners in the sim and someone who has looked closely at other flight courses; the author of the template is not the deciding reviewer.
+:::
+
+::: {.rule #EVD-052 grade="C"}
+**When a reviewer says something feels wrong, find the fact that makes it wrong (a contrast ratio, a misaligned baseline, a mislabeled axis, an inconsistent token, a target too small) before acting, and record it.** Fine perception is vindicated by facts, as the key in Sancho's cask vindicated the kinsmen [@hume1757standard].
+
+*In LTF:* "the dashboard stats feel heavy" becomes "the stat values use `font-mono text-2xl font-bold` where the `readout` utilities define weight 500"; the fact makes the fix checkable.
+:::
+
+::: {.rule #EVD-053 grade="C"}
+**Do not spend review time debating preferences that are blameless variations of taste within a legible, accessible, consistent system; decide once, record the decision, and move on.** Some differences of taste have no standard to decide them [@hume1757standard], and satisficing on non-critical choices is the rational course [@simon1996sciences].
+
+*In LTF:* the exact corner radius of `Card` among values that all meet the system's rules is decided once in the tokens and not reopened in every pull request.
+:::
+
+### Certainty and risk in the pipeline
+
+Pye's distinction maps onto how a team spends review effort [@pye1978nature]. Some qualities can be guaranteed mechanically: a value comes from the right token, a schema validates, a contrast ratio passes, a lint rule holds. That is the workmanship of certainty, and it should be automated so that no reviewer's attention is spent on it. Other qualities depend on judgment every time: whether a paragraph explains, whether a diagram reads at a glance, whether a page feels trustworthy to a nervous beginner. That is the workmanship of risk, and that is where human review belongs.
+
+::: {.rule #EVD-054 grade="C"}
+**Automate every check that can be made certain, and spend human review on the qualities that depend on judgment.** The workmanship of certainty can be guaranteed in advance; the workmanship of risk depends on the judgment and care exercised each time [@pye1978nature].
+
+*In LTF:* schema and content rules are already checked by `content:validate` and the editing hooks, and contrast, token use and banned characters can be checked the same way; reviewers spend their time on whether a lesson's prose, a widget's legibility at arm's length, and a page's hierarchy work for a beginner.
+:::
+
+### Copying exemplars
+
+The last risk of craft authority is imitation. When a product admires another product, it is tempted to copy its surface. Jones's proposition 36 names the error: the principles of past work belong to us, its results do not, and copying results is "taking the end for the means" [@jones1856grammar]. Buchanan's argument that design has no subject matter of its own apart from what the designer makes of a particular situation points the same way: a design is a discovered particular, not a transfer of someone else's answer [@buchanan1992wicked].
+
+::: {.rule #EVD-055 grade="C"}
+**Borrow principles from admired products, not their surfaces; for every element taken from an exemplar, state the principle it serves in this product.** Copying results rather than principles takes the end for the means [@jones1856grammar], and design answers to its particular situation [@buchanan1992wicked].
+
+*In LTF:* the ink-filled primary `Button`, the pill `ThemeToggle` and the tooltip inversion resemble a common developer-tool look, as the product context notes; each should be kept only where a principle specific to Learn to Fly justifies it.
+:::
+
+### What this means for Learn to Fly
+
+The product's distinctive traits are craft decisions, and so are its generic ones. The instrument and chart tokens, the hand-built widgets, the `LessonPath` and the honesty copy came from someone's judgment, not from a test; so did the rounded bordered cards, the eyebrow over every heading, and the lucide icons everywhere. The procedure in this chapter is how to decide which to keep. Separate value, claim and mechanism in every design argument (EVD-049). Default to craft consensus where no experiment applies, and let a relevant experiment overrule it (EVD-050). Constitute review around qualified judges (EVD-051), make every "feels wrong" into a fact (EVD-052), and stop debating blameless choices (EVD-053).
+
+Keep the automated checks the repository already runs (the hooks that lint, format, validate content and typecheck) and extend them to design facts that can be made certain, such as forbidding raw hex and raw Tailwind size classes where a type utility exists (EVD-054). Change the review of borrowed patterns: every pattern that resembles a common template must name the Learn to Fly principle it serves, or go (EVD-055).

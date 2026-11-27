@@ -735,3 +735,93 @@ Clark's review of media comparisons warns that apparent gains from a new medium 
 ### What this means for Learn to Fly
 
 LTF is unusually well placed here, because its game is a full flight simulator that supplies fantasy, presence and challenge without any work on the web side. The risk is the opposite of most products: adding decoration where the real thing is already present. Keep the scenario-led briefs and the aviation framing (Brief, Fly, Debrief; "Fly mode"; the POH-style reference rail), which are intrinsic to the skill. Do not add mascots, story arcs or reward cartoons (MOT-055). Move aviation trivia and stories out of core lesson text (MOT-056). Use prediction prompts and widgets to raise curiosity from the content itself (MOT-057), and judge widgets by the method they carry (MOT-058). The largest motivational gain on this axis is probably friction removal in Module 0 and Fly mode (MOT-054), since the needs model ties competence and presence to controls that the learner can master quickly.
+
+## Habits, return visits and honest persuasion
+
+### Why learners stall
+
+A self-paced course has a known weakness. In the mastery-learning meta-analysis, self-paced mastery programmes often reduced completion rates in college classes, even while mastery approaches raised examination performance overall (an average effect of 0.52 across 103 studies, and 0.71 on follow-up examinations about eight weeks later in 11 studies) [@kulik1990effectiveness]. Group-paced programmes produced larger effects than self-paced ones. LTF is entirely self-paced, so the risk is not that learners dislike it but that they drift.
+
+Fogg's behavior model is a useful diagnostic for drift [@fogg2009behavior]. A behavior happens only when motivation, ability and a prompt (originally "trigger") converge at the same moment; if it does not happen, at least one is missing. Motivation and ability trade off: high motivation can compensate for a hard task and an easy task needs little motivation. Ability is a function of the person's scarcest resource at that moment, so "your weakest link determines what makes a behavior hard to do". The model is a heuristic, widely cited, with no experiment testing its full predictions, and its constructs are broad enough to explain any failure afterward. It is also double-edged: the same model that helps remove friction from a good habit can be used to prompt someone when motivation is high and judgment low.
+
+For LTF the most likely missing element is ability, not motivation. Opening the sim, setting up a challenge and finding the right lesson is a lot of work for a weeknight. Making the next session small and obvious is the first lever.
+
+::: {.rule #MOT-059 grade="C"}
+**When learners stall, check ability and prompt before motivation: make the next session small, obvious and ready to start.** In the behavior model a behavior fails when motivation, ability or a prompt is missing, and ability is set by the scarcest resource at that moment [@fogg2009behavior]; self-paced mastery courses lost completers [@kulik1990effectiveness]; motivational nudges have weak average effects once publication bias is corrected [@maier2022no]. The model is untested as a whole, so grade C.
+
+*In LTF:* the Continue card on `DashboardPage` and "Continue where you left off" on the landing page already supply the prompt. Add the expected time ("About 15 minutes") from the lesson or challenge metadata, and when the next item is a challenge, put "Sim setup" one click away so the learner can prepare before launching the sim.
+:::
+
+### Nudges are weaker than they look
+
+A large meta-analysis of nudging had reported a moderate average effect (d = 0.43). Maier and colleagues reanalyzed it with a publication-bias correction and found that "no evidence for the effectiveness of nudges remains": the adjusted overall estimate was d = 0.04 or 0.11 depending on the analysis [@maier2022no]. Information nudges (telling people what others do) adjusted to 0.00, assistance nudges to 0.01, and structure nudges (defaults and other changes to the decision environment) to 0.12, which the authors treat as undecided. Heterogeneity in almost every category means some nudges might work even if the average is near zero, and the authors later said the overall result is better described as undecided than as evidence against nudging.
+
+The implication is a budget rule. Messages such as "most learners finish Module 0 in a week" are information nudges, the category with the weakest evidence. Effort spent on making steps simpler and clearer is a better bet than effort spent on motivational messaging.
+
+::: {.rule #MOT-060 grade="B"}
+**Do not rely on social-norm or reminder messages to raise return visits; spend the effort on simpler steps and clearer next actions.** After correcting for publication bias, the average nudge effect was near zero, information nudges showed evidence against an effect, and structure nudges were undecided [@maier2022no]. A reanalysis whose conclusion depends on the bias model, so grade B.
+
+*In LTF:* no "X learners are flying this now" counters on `ChallengesPage` or the landing page. If a structural nudge (for example a default reminder setting in v2) is used, it is tested with the expectation of a null result.
+:::
+
+### Streaks and loss frames
+
+A streak counts consecutive days of activity and resets when a day is missed. Its pull comes from loss: the longer the streak, the more there is to lose. Tversky and Kahneman showed that the same outcomes described as gains or as losses reverse preferences. When a disease programme was framed as lives saved, 72 percent chose the sure option; framed as deaths, only 22 percent did [@tversky1981framing]. People tend to be risk averse for gains and risk seeking for losses. A Many Labs 2 replication reproduced the framing effect at about half its original strength, so the original magnitude is an overestimate, but the direction is reliable. The first gamification review adds that removing earned points and badges could harm users, possibly through loss aversion [@hamari2014gamification].
+
+A streak is a loss frame applied to the learner's own behavior, and in SDT terms it works at the introjected level, through guilt at breaking it [@ryan2000selfdetermination]. For a hobby learned around sim sessions, often weekly, a daily streak also measures the wrong thing. `v2.md` plans a streak on the practice page ("days practised in a row", priority P1, "no guilt messaging") with practice reminders on the dashboard only and no email. That specification already removes the worst of the pattern. The rules below set what else it needs.
+
+::: {.rule #MOT-061 grade="B"}
+**If a streak is shown, present it as a gain record (days practiced, best run) with no warning of loss, no reset alarm and no penalty, and never make it the most prominent element on a page.** Loss frames shift choices toward risk and pressure [@tversky1981framing]; losing earned game elements can harm users [@hamari2014gamification]; guilt-based reasons are introjected, controlled motivation [@ryan2000selfdetermination]. The framing evidence is replicated at reduced size; its application to streaks is an inference, so grade B.
+
+*In LTF:* the v2 `/practice` streak shows "Practiced 4 of the last 7 days" or "Longest run: 9 days" rather than a flame and a countdown. No copy says "Don't lose your streak", and missing a day produces no message.
+:::
+
+::: {.rule #MOT-062 grade="C"}
+**Count practice in weeks rather than days for a course used around simulator sessions.** Sporadic users may not engage with a persistent daily game layer [@hamari2014gamification], and spacing practice over time is itself beneficial for learning [@bjork2009making]. Grade C: an application to LTF's usage pattern.
+
+*In LTF:* the v2 practice summary uses a weekly window; the v2 "refresher suggestion" (offered when a skill has not been flown for a while) is the better return prompt, because it is tied to a skill rather than to a calendar.
+:::
+
+### Reminders without nagging
+
+Gray and colleagues' taxonomy of dark patterns names five strategies: nagging (repeated redirection, such as a notification prompt that offers only "Not Now" and "OK"), obstruction, sneaking, interface interference, and forced action [@gray2018dark]. Nagging is the one motivational features slide into. A reminder that repeats after being declined, or a banner that returns after dismissal, crosses from prompt to pressure. Fogg's own reading is that a reminder after a missed session is a signal and a guilt message is a dark pattern [@fogg2009behavior].
+
+`SignupBanner` on `LessonPage` is a good model of a non-nagging prompt: it is small, sits in a `bg-surface-sunken` strip, has a dismiss control, and stays dismissed (`ltf-signup-banner-dismissed` in localStorage). The completion panel's "Not now" for visitors gives a real decline without shaming.
+
+::: {.rule #MOT-063 grade="C"}
+**Ask for any reminder or notification permission once, in context, with a decline that is as easy as accepting, and never ask again after a decline unless the learner opens the setting.** Nagging is a defined dark pattern [@gray2018dark], regulators list repeated prompts among tactics that subvert choice [@ftc2022bringing], and guilt prompts are the manipulative use of the behavior model [@fogg2009behavior]. Taxonomy and regulatory guidance, so grade C.
+
+*In LTF:* keep the `SignupBanner` dismissal behavior and the "Not now" button. The v2 practice reminders, which are dashboard-only, are set in the Preferences section of `/account`, with the off state as default or as an equally weighted choice.
+:::
+
+### No confirmshaming, no false urgency
+
+Mathur and colleagues crawled 11,286 shopping sites and found 1,818 dark-pattern instances, including countdown timers, low-stock messages and confirmshaming (decline buttons worded to shame, such as "No thanks, I don't want to learn") [@mathur2019dark]. They found 157 deceptive countdown timers on 140 sites. Luguri and Strahilevitz measured effects in randomized experiments: mild dark patterns more than doubled sign-ups for a dubious service (11.3 percent in control to 25.8 percent) and aggressive ones nearly quadrupled it (41.9 percent), with a strong backlash against the aggressive version; less educated respondents were more susceptible to mild patterns [@luguri2021shining]. Scarcity and "act now" countdowns had no significant effect. The FTC's staff report lists fake timers, false scarcity and buried choices among the practices it treats as deceptive and recommends that firms look beyond click-through to whether people understand what they agreed to [@ftc2022bringing].
+
+For a free course these findings matter less for sales than for trust. LTF's honesty devices (`BetaBanner`, `DraftBadge`, "Last verified" lines, the not-a-certificate wording) are part of its identity. One confirmshaming button would undo them.
+
+::: {.rule #MOT-064 grade="B"}
+**Never use confirmshaming, false urgency, fake activity counts or guilt in any prompt to sign up, return or continue.** These patterns are widespread [@mathur2019dark], they measurably move decisions and provoke backlash when strong [@luguri2021shining], and regulators treat them as deceptive [@ftc2022bringing]. The effect evidence is from a simulated service offer, so grade B for transfer to a course.
+
+*In LTF:* decline buttons read "Not now" or "Skip", never "No, I'll stay grounded". There are no countdowns on any page. The dashboard's "All caught up" message, which points to the roadmap or a retry for a better tier, is the model tone for an empty state.
+:::
+
+::: {.rule #MOT-065 grade="C"}
+**Review every motivational or retention feature against the five dark-pattern strategies (nagging, obstruction, sneaking, interface interference, forced action) and require a written reason for any match.** The taxonomy was built for exactly this review and its authors recommend it as a checklist [@gray2018dark]; the characteristics in the crawl study (asymmetric, covert, deceptive, hides information, restrictive) give a second screen [@mathur2019dark]. A qualitative taxonomy, so grade C.
+
+*In LTF:* add the five strategies to the pull request checklist for any change to `DashboardPage`, `SignupBanner`, the completion panel, reminders or the account Data section (deleting an account must stay as easy as creating one).
+:::
+
+### Framing progress
+
+Framing also governs progress copy. "3 of 12 lessons done" and "9 lessons left" describe the same state, but the second frames it as a remaining burden. Tversky and Kahneman's lesson for an instructional product is to choose the frame that matches the true message and hold it, not to pick whichever frame drives behavior [@tversky1981framing].
+
+::: {.rule #MOT-066 grade="C"}
+**Describe progress as what is done and what is next, never as what is left to lose or still owed.** Gain and loss descriptions of the same outcome move choices differently [@tversky1981framing], and loss frames work through pressure [@ryan2000selfdetermination]. Grade C: the application to progress copy is untested.
+
+*In LTF:* keep `CurriculumMap`'s "n lessons · n challenges · about h" and the `ProgressBar` `aria-valuetext` in gain form. Do not add "You're 80% of the way, don't stop now" or "3 lessons overdue".
+:::
+
+### What this means for Learn to Fly
+
+LTF currently has almost no retention machinery, which is safer than most products and leaves room to do it well. The prompt it does have, the Continue card and the landing CTA, is the right kind: specific, honest and tied to the next real step. Strengthen it with time estimates and a short path to sim setup (MOT-059). Do not add social-norm counters or reminder campaigns as a substitute for making the next session easy (MOT-060). When the v2 streak arrives, build it as a gain record with a weekly window and no loss warning (MOT-061, MOT-062), which keeps it within the plan's own "no guilt messaging" requirement. Keep `SignupBanner` and "Not now" as the models for prompts (MOT-063), ban confirmshaming and false urgency outright (MOT-064), and put the five dark-pattern strategies on the review checklist (MOT-065).

@@ -719,3 +719,81 @@ Add a recall format (LRN-053). The four `QuizBlock` types are mostly recognition
 Use `correctFirstTry` as an authoring signal (LRN-056). It shows which items most learners miss; those items or their sections need rewriting.
 
 Separate retrieval from the score. The lesson completion panel ("Finished reading and trying the questions?" and "Mark lesson complete") should not present an in-lesson quiz result as proof of learning; the five-minute result is the one that misleads. The plan says the completion screen shows the score and suggests reviewing missed sections (`v1.md` Section 17.3); if it does, it should frame the score as practice and point to a later review. And keep recall out of the cockpit (LRN-060): the Brief and Debrief tabs are the right moments.
+
+## Interleaving, variation and desirable difficulty
+
+### Learning is not what you see during practice
+
+Bjork and Bjork state the problem that unites this chapter: learners and teachers are easily misled about whether learning has occurred, because performance during practice is an unreliable index of learning [@bjork2009making]. Performance is what can be observed during instruction; learning is the relatively permanent change that supports later retention and transfer, and it must be inferred. The two dissociate in both directions. Learning can occur without visible change in performance, and performance can improve without learning, which is revealed after a delay or in another context [@soderstrom2015learning]. Conditions that speed apparent progress often fail to support long-term retention and transfer, while conditions that slow apparent progress often optimize them.
+
+The Bjorks explain this with two strengths of a memory [@bjork2009making]. Storage strength is how entrenched and interconnected a memory is; retrieval strength is how accessible it is right now, driven by cues and recency. Current performance reflects retrieval strength alone, but storage strength slows forgetting and speeds relearning. Conditions that raise retrieval strength quickly (massing, rereading, blocked practice) differ from those that build storage strength, so a learner who reads present fluency as durable learning will prefer the worse conditions. In a 2020 commentary they add that the higher the current retrieval strength, the smaller the storage gain from another study or retrieval, so some forgetting before review makes the review worth more.
+
+They name four desirable difficulties: varying the conditions of learning, interleaving rather than blocking, spacing rather than massing, and using tests rather than presentations as study events [@bjork2009making]. The adjective carries the weight. Many difficulties are undesirable, and a difficulty becomes undesirable when the learner lacks the background to respond to it successfully. Critics can fairly say the framework groups effects with distinct mechanisms, and the classroom base is thinner for interleaving than for spacing and testing.
+
+### Interleaving
+
+Rohrer and Taylor tested two features of the standard mathematics practice set, which concentrates on the lesson just taught in blocks of one problem type [@rohrer2007shuffling]. In the first experiment, 66 undergraduates learned to count permutations of letter sequences with repeated letters. Students who spread the same practice problems across two sessions a week apart scored 74 percent on a test a week later, against 49 percent for students who massed them and 46 percent for a lighter massed group, although accuracy during the later practice session was about equal (83 against 82 percent). In the second experiment, 18 undergraduates learned to find the volumes of four obscure solids. Blockers did four problems on one solid in a row; Mixers did the same problems in a mixed order. During practice, Blockers scored higher (89 against 60 percent, d = 1.06). On the test a week later the pattern reversed: Mixers 63 percent, Blockers 20 percent (d = 1.34). The authors read this as mixing forcing learners to choose which procedure applies, not merely execute the one just taught, and note that the blocked format is also the default of computer-aided instruction.
+
+The samples are small, the tasks artificial and the retention interval one week, so the sizes are probably larger than a real course would see [@rohrer2007shuffling]. The direction has classroom support reported elsewhere, and Dunlosky and colleagues rated interleaving moderate utility in 2013 because the evidence base was still small [@dunlosky2013improving]. The practice-phase reversal is the important part: blocked practice looks better while it is happening.
+
+### Interleaving for telling things apart
+
+A long-standing view held that massing helps induction, because seeing examples of one category together reveals what they share. Kornell and Bjork tested it with paintings [@kornell2008learning]. Undergraduates studied 72 paintings, six by each of 12 artists, with some artists' paintings presented together and others interleaved with other artists' work. On new paintings by the same artists, interleaved presentation gave better identification (.61 against .35 correct in Experiment 1a, d = 0.99; .59 against .36 in Experiment 1b, d = 1.28). A recognition version that did not require recalling names still favored interleaving (hit rate .77 against .67, d = 0.41).
+
+The metacognitive result is as striking as the learning one. In Experiment 1a, 78 percent of participants did better with interleaved presentation, yet 78 percent judged massing as good as or better, after the test had shown otherwise [@kornell2008learning]. The authors also built a case where massing wins: word puzzles that each hide a linking word were solved and remembered better when massed (.34 against .22), because interleaving made them nearly impossible to solve. They call it contrived, and they caution that their design cannot separate spacing from interleaving; the benefit may come from interleaving's support for discrimination between categories (telling a maple from an oak requires learning the differences among trees).
+
+### Varying the conditions
+
+The Bjorks' examples of varied practice come from verbal and motor learning [@bjork2009making]. Studying in two different rooms rather than twice in one room increased recall. Children practicing beanbag throws at varied distances beat children who practiced only at the distance they were tested on. In a pinball-like motor task, blocked practice improved faster but, ten days later, interleaved practice was far better under random testing. Learners given interleaved keystroke practice predicted their next-day performance closely, while blocked learners were markedly overconfident. Soderstrom and Bjork's review integrates these motor and verbal literatures; its specifics in the sources behind this Part come from secondary accounts, but its abstract states the central claim that people "often mistakenly interpret their performance during acquisition as a reliable guide to long-term learning" [@soderstrom2015learning].
+
+::: {.rule #LRN-061 grade="B"}
+**Once each type of problem has been taught, mix types in practice sets and challenge sequences instead of stacking several of one kind.** Mixed practice scored lower during practice and far higher a week later [@rohrer2007shuffling]; the technique is rated moderate utility because the classroom base is still limited [@dunlosky2013improving].
+
+*In LTF:* review quizzes and challenge suggestions should draw from several earlier topics. A "mixed practice" set at the end of a module (one climb, one descent, one turn, one level-off item) is better than five items on the last lesson.
+:::
+
+::: {.rule #LRN-062 grade="B"}
+**When learners must tell similar things apart, present the examples interleaved, not one category at a time.** Interleaved exemplars improved classification of new cases in several experiments [@kornell2008learning]. The design does not separate spacing from interleaving, so treat both as supported.
+
+*In LTF:* the `sectional-legend` widget, airspace classes in `airspace-profile`, and look-alike instrument indications in `vor-cdi` and `turn-coordinator` are discrimination tasks. Their quiz modes should mix categories in each run.
+:::
+
+::: {.rule #LRN-063 grade="A"}
+**Never choose an instructional format by learners' stated preference or by their accuracy during practice.** Learners judged massing as good as or better than interleaving after doing worse with it [@kornell2008learning], predicted that rereading would beat testing [@roediger2006testenhanced; @karpicke2011retrieval], and blocked practice inflates in-practice accuracy while lowering later performance [@rohrer2007shuffling; @bjork2009making].
+
+*In LTF:* a satisfaction survey or a "which version did you like?" test cannot decide between a blocked and a mixed review set. Decide on a delayed measure (see "Measuring learning, not performance").
+:::
+
+::: {.rule #LRN-064 grade="C"}
+**Tell learners once, in plain words, that mixed and recall practice feels harder and works better, then do not repeat it.** Desirable difficulties are "typically undesired" by learners, who read effort as failure [@bjork2009making; @brown2014make]. Graded C: no study here tests the message itself.
+
+*In LTF:* one sentence in the first mixed review ("These questions jump between topics on purpose. It feels harder and helps you remember.") in the calm-instructor voice the plan sets. Not a banner, not on every set.
+:::
+
+::: {.rule #LRN-065 grade="B"}
+**Vary the conditions of repeated practice: change the airport, runway, weather or starting state between attempts at the same skill.** Varied practice beat constant practice at the tested condition and improved later performance in motor tasks [@bjork2009making; @soderstrom2015learning].
+
+*In LTF:* challenges already support random events and presets. When the learner retries a challenge they have passed, offer a variant setup from `content/presets.yaml` rather than the identical one, and say so in the Brief.
+:::
+
+::: {.rule #LRN-066 grade="B"}
+**Add difficulty only after a first explained pass, and only of a kind the learner can respond to.** A difficulty is desirable only when the learner has the background to meet it [@bjork2009making]; worked examples first, then mixed and varied practice [@kalyuga2003expertise].
+
+*In LTF:* the first challenge of a skill keeps the default setup and no random events; variation and events arrive in later challenges of the module.
+:::
+
+::: {.rule #LRN-067 grade="B"}
+**Do not reward streaks or within-session accuracy as signs of progress.** Blocked practice and massing raise accuracy during practice without raising learning [@rohrer2007shuffling; @soderstrom2015learning].
+
+*In LTF:* `QuizPanel`'s "Quiz complete: n of m correct" is fine as feedback in the moment; do not carry it into `DashboardPage` stats or progress. If streaks are ever added for motivation (see the Part on motivation), they should count days of practice, not runs of correct answers.
+:::
+
+### What this means for Learn to Fly
+
+LTF's structure is blocked by default: a lesson teaches one topic, its quizzes test that topic, and its challenge practices it. That is right for first exposure (LRN-066) and wrong as the only form of practice. Add mixing after the first pass (LRN-061, LRN-062): end-of-module mixed sets, widget quiz modes that draw from several categories, and challenge suggestions that return to earlier skills.
+
+Expect learners to prefer the blocked version and to score lower on the mixed one (LRN-063). Say so once (LRN-064), and never let a preference survey or an in-session score decide the format.
+
+Use variation in challenges deliberately (LRN-065). The challenge system already has presets, airports and random events. Make the first attempt at a skill standard and later attempts varied, with the Brief stating what changed.
+
+Keep progress honest (LRN-067). The dashboard's "Your progress" bars measure completion, which is fine as long as they are not presented as learning. Measures of learning belong to delayed checks, which the next chapters cover.

@@ -596,3 +596,81 @@ LTF is mobile-first in its class usage and has one excellent container-aware com
 
 Second, move collection grids to intrinsic `auto-fit` tracks and make the lesson's right rail conditional on space rather than on the `xl` breakpoint. Third, give every image and widget a declared ratio, so that loading states and loaded states occupy the same box. None of this requires a new visual language; it makes the existing one hold at the widths and sizes learners actually use.
 
+## CSS Grid and the page shell
+
+The typographic grid finally has a native implementation. The CSS Grid Layout specification defines "a two-dimensional grid-based layout system, optimized for user interface design," in which items are placed into fixed or flexible slots of a predefined grid [@atkins2025css]. For a product team it is the most authoritative source in this Part on what the platform does, with the caveat that the edition read is a Candidate Recommendation Draft that "may change at any time," and that the specification says nothing about which browsers support which features.
+
+### The model
+
+A grid container (`display: grid`) "establishes an independent grid formatting context for its contents." Grid lines divide it and can be referenced by number or by author-defined name; a track is "a generic term for a grid column or grid row"; a cell is the intersection of one row and one column; a grid area holds one or more items and can be named with `grid-template-areas` [@atkins2025css]. The `fr` unit is "a fraction of the leftover space in the grid container." `minmax(min, max)` bounds a track's size. Inside `repeat()`, `auto-fill` creates as many tracks as fit and keeps empty ones, while `auto-fit` collapses empty repeated tracks to zero, so the filled tracks stretch [@atkins2025css].
+
+Track sizing runs in five steps (initialize sizes, resolve intrinsic sizes, maximize tracks, expand flexible tracks, expand stretched auto tracks), and each track carries a base size and a growth limit. Intrinsic keywords (`min-content`, `max-content`, `auto`, `fit-content()`) let content size the tracks. Gaps are treated as extra empty fixed tracks during sizing and appear only between tracks, never before the first or after the last [@atkins2025css]. Level 2 adds subgrid, by which nested grids "participate in the sizing of their parent grids" and adopt the parent's lines, so that content inside a card can align with content in neighboring cards [@atkins2025css].
+
+The specification also places grid against flexbox. Flexbox is single-axis and "focuses on space distribution within an axis," working bottom-up from the items; grid "enforces 2-dimensional alignment, uses a top-down approach to layout, allows explicit overlapping of items" [@atkins2025css]. That is Gerstner's distinction in code: a grid is a programme decided before the content arrives, while a flex row arranges whatever it is given.
+
+### Visual order and source order
+
+The specification's strongest warning concerns order. Placement properties can rearrange content visually, but they are "not a substitute for correct source ordering"; "grid placement only affects the visual presentation," and "with great power comes great responsibility" [@atkins2025css]. Source order is what speech output, sequential keyboard navigation and non-CSS user agents follow. `grid-auto-flow: dense` lets auto-placement backfill earlier holes, "which can reorder items visually" [@atkins2025css]. In a product where order often is meaning (a checklist, a procedure, a lesson sequence), visual reordering is a correctness risk, not a styling choice.
+
+LTF has one instance worth examining. The landing stats row is a `dl` in which each stat's label comes first in the source and its value is moved before it visually with `order-first`. The term-then-description order is the correct one for a definition list and is what a screen reader announces; the visual reversal changes nothing that a keyboard user meets, since the items are not focusable. Reordering inside one item, where neither order changes the meaning, is the defensible case. Reordering between items is not.
+
+### How LTF uses grid today
+
+The code already follows several of the specification's best practices. Text tracks use a zero minimum: the lesson shell's `minmax(0,1fr)`, the landing hero's `minmax(0,7fr)_minmax(0,5fr)` and the dashboard's `minmax(0,2fr)_minmax(0,1fr)` all prevent long words, code or tables from forcing a track wider than its share, and the lesson `article` adds `min-w-0`. `Callout` uses a small two-track grid (`grid-cols-[20px_1fr]`) to hang its icon outside the text, a typographic detail grid makes easy. The challenge brief's sim-setup `dl` uses `sm:grid-cols-[12rem_1fr]` so labels and values align in two columns.
+
+What it does not use is just as clear: no `grid-template-areas`, no named lines, no `subgrid`, and only one `auto-fit` (in `KeyNumbers`). Every multi-column collection is a fixed count per breakpoint. Two consequences are visible in the code. On `ChallengesPage`, the filter card's five `Select`s sit in `sm:grid-cols-2 lg:grid-cols-5`, so between 640 and 1023 px they fall into rows of two, two and one, leaving the fifth control alone. And the challenge cards in the three-up grid have titles of different lengths, so their meta rows (`DifficultyDots`, minutes, ICAO, badges) start at different heights from card to card; the row of cards has aligned outer edges but misaligned contents.
+
+::: {.rule #GRD-056 grade="C"}
+**Use CSS Grid for two-dimensional regions and flexbox for single-axis rows.** The specification itself contrasts grid's top-down two-dimensional alignment with flexbox's within-axis distribution [@atkins2025css]. A standard's description of its own purpose, so C.
+
+*In LTF:* page shells, card collections, the dashboard, form layouts and the challenge brief's label-value lists are grids; button groups, the `Header` nav, meta rows, badge rows and the `ThemeToggle` are flex rows. The current code mostly follows this; keep it as the rule.
+:::
+
+::: {.rule #GRD-057 grade="C"}
+**Lay out collections of like items with `repeat(auto-fit, minmax(<minimum card width>, 1fr))` instead of fixed column counts per breakpoint.** `auto-fit` creates as many tracks as fit and collapses empty ones, so the column count follows the space [@atkins2025css]. Set the minimum from the card's content, wrapped in `min(100%, …)` so a single card never overflows a narrow screen.
+
+*In LTF:* convert the `ChallengesPage` card grid, the airports grid, the resources list, the landing "What you need" row and the dashboard stats tiles to this pattern, using the `KeyNumbers` grid as the model.
+:::
+
+::: {.rule #GRD-058 grade="C"}
+**Implement each named page template as one grid with named areas, in one layout component.** Named areas make the template readable in code and mirror the design grid [@atkins2025css]; one component per template is how the programme of GRD-002 becomes enforceable [@gerstner2007designing].
+
+*In LTF:* the lesson shell (`nav`, `main`, `aside` areas), the reference section layout (rail and panel), the dashboard (progress, next, stats, recent) and Fly mode should each be a layout component with `grid-template-areas`, replacing the inline class strings in `LessonPage`, `ReferenceSections` and `DashboardPage`.
+:::
+
+::: {.rule #GRD-059 grade="C"}
+**Never use grid placement, `order` or `dense` packing to make visual order differ from source order between items; allow reordering only inside a single item where neither order changes the meaning.** The specification warns that placement is "not a substitute for correct source ordering" and that dense packing reorders items visually [@atkins2025css]. Order is meaning in checklists and procedures.
+
+*In LTF:* the landing stats `order-first` (value shown before its label within one `dl` item) is acceptable. A `FlyPanel` step list, a `checklist` block, the `LessonPath` and the curriculum order must render in source order at every width, and no collection grid uses `grid-auto-flow: dense`.
+:::
+
+::: {.rule #GRD-060 grade="C"}
+**Use subgrid to align the internal rows (title, meta, body, action) of cards that sit side by side, with a fallback that still reads correctly.** Subgrid lets nested grids adopt their parent's lines so content aligns across siblings [@atkins2025css]. Check current browser support before relying on it; the specification does not cover support.
+
+*In LTF:* give challenge cards, airport cards and the landing's three "What you need" cards a shared row template (`grid-template-rows: subgrid` across title, meta and footer) so meta rows and actions line up across a row. Without subgrid support the cards fall back to their current stacked layout.
+:::
+
+::: {.rule #GRD-061 grade="C"}
+**Set gaps with spacing tokens and let text size its own tracks; never give a text container a fixed height.** Gaps are sizing tracks in their own right, and intrinsic keywords let content set track size [@atkins2025css]. Fixed heights clip text when it wraps, is translated or is enlarged.
+
+*In LTF:* `gap-*` classes already come from the 4 px scale; apply the spacing roles from GRD-030. Audit for fixed `h-*` on elements that contain text (stat tiles, card headers, badges in the `Badge` `h-6` and tier `h-7` cases, which are single-line by design and should truncate or wrap deliberately).
+:::
+
+::: {.rule #GRD-062 grade="C"}
+**Give every track that holds text a zero minimum (`minmax(0, …)` or `min-width: 0` on the item).** Grid items default to a minimum of their content size, so a long word, code span or table can push a track past its share; the intrinsic sizing steps of the algorithm make this explicit [@atkins2025css].
+
+*In LTF:* the lesson, landing and dashboard grids already do this; make it part of every template component so new layouts inherit it. Tables inside `MarkdownContent` already sit in a focusable scroll region, which is the right companion.
+:::
+
+::: {.rule #GRD-063 grade="C"}
+**Choose a collection's minimum item width so that the number of items never leaves a single orphan in the last row at common widths, or let the orphan span the row.** `auto-fit` collapses empty tracks so remaining items stretch, which avoids lonely items at the end of a row [@atkins2025css]; a fixed two-column grid with an odd number of items does not.
+
+*In LTF:* the five challenge filters at `sm:grid-cols-2` leave the fifth `Select` alone between 640 and 1023 px. Use an `auto-fit` grid with a minimum near the widest filter label, or let the last control span both columns.
+:::
+
+### What this means for Learn to Fly
+
+The grid code LTF has is careful: zero-minimum tracks, a hanging icon in `Callout`, aligned label-value rows in the brief. Keep those patterns and make them defaults by moving them into template components. What LTF has not yet used is the part of CSS Grid that turns a layout into a programme: named areas, shared lines across rows, `auto-fit` collections and subgrid alignment inside cards.
+
+Build the template components first (lesson, reference, collection, dashboard, fly, form, landing), each with named areas, zero-minimum text tracks and token gaps. Convert collections to `auto-fit`. Then use subgrid on the card patterns where side-by-side alignment is visible: the challenge cards, the airports grid and the landing's three-card row. Write the source-order rule into the review checklist, because the lesson and challenge content is procedural and order is part of what it teaches.
+

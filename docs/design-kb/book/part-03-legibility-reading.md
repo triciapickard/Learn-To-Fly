@@ -566,3 +566,138 @@ A narrower line costs little speed in the middle range and adults find short lin
 ### What this means for Learn to Fly
 
 The lesson page is the main fix. Its 800 px article cap sets prose wider than the product's own measure token, and with a move to `body-lg` the cap would hold about the right number of characters only by accident. Put lesson prose on `max-w-measure` (LEG-035, LEG-036) and leave the wide column for widgets and tables. Keep LTF's line heights (LEG-037), its single-column reading pages (LEG-038) and the Fly mode design that shows every step at once in a short, large measure (LEG-039, LEG-040). When testing any width change, measure comprehension as well as speed, because the two diverge in this literature.
+
+## Contrast, Polarity and Reading in the Dark
+
+### Contrast feeds the visual span
+
+Contrast between letters and ground is one of the three properties that set the visual span. In Legge and colleagues' contrast experiments, the span explained 96 to 99.6 percent of the variance in reading speed across contrast conditions [@legge2007case]. The critical contrast, below which reading slows, is about 5 to 10 percent for normally sighted readers at good sizes [@legge2007case]. Ordinary interface text is far above that, which is why normally sighted readers tolerate moderate contrast loss at comfortable sizes. The reserve is what disappears when the text is also small, far away, seen off-axis, reversed or read by an older or low-vision reader, because the budget is shared (LEG-012).
+
+WCAG 2.2's contrast minimum is built around that reserve. Success Criterion 1.4.3 requires a contrast ratio of at least 4.5:1 for text and 3:1 for large-scale text (18 point, or 14 point bold) [@w3c2023wcag]. The Understanding document explains the 4.5:1 figure as 3:1 (the minimum in earlier ISO and ANSI standards for standard text) multiplied by about 1.5 to compensate for the contrast sensitivity loss typical of about 20/40 acuity, which it links to typical acuity at about age 80; the enhanced 7:1 level relates to about 20/80 vision [@w3c2023wcag]. The thresholds are not rounded: 4.499:1 fails. The ratio is a consensus engineering measure, criticized by the developer of a rival method for ignoring font size and weight and for its behavior with dark colors; those criticisms are not independently validated, and WCAG 2.x remains the operative standard [@w3c2023wcag].
+
+### LTF's text tokens, measured
+
+The ratios below were computed for this Part from the hex values in `tokens.css` with the WCAG relative-luminance formula; they are arithmetic on the tokens, not rendered measurements, and do not include transparency or anti-aliasing.
+
+| Text token on ground | Day | Night |
+| --- | --- | --- |
+| `ink` on `canvas` | 16.6:1 | 15.5:1 |
+| `ink-2` on `surface` | 7.1:1 | 7.8:1 |
+| `ink-3` on `surface-sunken` | 4.7:1 | 6.2:1 |
+| `ink-3` on `surface-raised` | 5.5:1 | 4.6:1 |
+| `ink-3` on `accent-tint` | 4.9:1 | 4.3:1 |
+| `accent` on `surface-sunken` | 4.7:1 | 10.8:1 |
+
+Every listed pair passes 4.5:1 except Night `ink-3` on `accent-tint` (about 4.3:1), which would fail if that combination were used; the files read for this Part did not show it in use, but the `current` Card and active `ReferenceSections` rail both use `accent-tint` fills, so it is one class away. Several pairs (Day `ink-3` and `accent` on `surface-sunken`, Night `ink-3` on `surface-raised`) pass with little margin. Passing is the floor. The span evidence argues for reserve, especially for small text, which `ink-3` usually is.
+
+::: {.rule #LEG-041 grade="C"}
+**Hold every text color and ground pair to WCAG 2.2 contrast (4.5:1 for text, 3:1 for large text) in both themes, computed from the final composited colors and never rounded up.** This is the accessibility standard LTF is audited against [@w3c2023wcag]. Grade C: a consensus standard whose thresholds are justified by vision research but not themselves tested as optima.
+
+*In LTF:* add the token-pair table to the design-system tests so that a token change that drops a pair below 4.5:1 fails CI. Forbid `text-ink-3` on `bg-accent-tint` in Night (about 4.3:1) or adjust one of the tokens. Check text over `bg-canvas/95` with `backdrop-blur` in the sticky `Header`, where the composited ground depends on what scrolls beneath.
+:::
+
+::: {.rule #LEG-042 grade="B"}
+**Give small text, and any text read at a distance or in a glance, contrast well above the minimum: use `ink` or `ink-2`, not `ink-3`, for anything a learner needs to act on.** Contrast is one input to the visual span, which tracks reading speed [@legge2007case]; the minimum assumes typical viewing and protects mainly against moderate acuity loss [@w3c2023wcag]; and costs from small size, reversal and low contrast compound [@tinker1963legibility; @degani1992typography]. Grade B.
+
+*In LTF:* `text-ink-3` is used for quiet notes (the landing "You can start without an account" line), locked states and reference rail numbers. Keep it for content that is repeated elsewhere or decorative, and move instructions, form hints and widget readout labels to `ink-2` or `ink`.
+:::
+
+### Dark on light, light on dark
+
+Tinker's tests found black print on white much more legible than white on black, because reversed print needed more fixations, and three-quarters of readers preferred black on white [@tinker1963legibility]. The cost depended on the face and size: reversal slowed the serif face (Scotch Roman) at every size tested, while a sans serif lost little at 10 and 14 points but did lose at 6 points [@tinker1963legibility]. Degani recommends black on white for most flight-deck documents and advises avoiding white on black in normal operations; where it is used, it should carry little text, in large type and a sans serif [@degani1992typography].
+
+These are paper results. A screen in a dark room is a different situation, and Degani himself describes the problem of eyes moving between a lit document and a dark scene [@degani1992typography]. The learner beside a simulator at night faces that problem: a bright white tablet next to a dark sim scene forces the eye to readapt at every glance. A dark Fly mode is a reasonable answer to that, as LTF already decided. What the print evidence warns against is assuming that reversed text reads as well as dark text at the same size and weight. It does not, especially when small.
+
+::: {.rule #LEG-043 grade="B"}
+**In the Night theme and Fly mode, compensate for reversed polarity with size and weight: keep reading text at `text-sm` or larger, weight 400 or heavier, and in `ink` or `ink-2`.** Reversed print needed more fixations and cost more at small sizes, though a sans serif lost little at ordinary sizes [@tinker1963legibility]; flight-deck guidance limits reversed text to little text in large type [@degani1992typography]. Grade B: consistent print evidence, untested on modern screens.
+
+*In LTF:* LTF's Night greys are near-neutral and its sans face matches the condition where reversal cost least. Keep that, and do not use `text-xs` for content in Night, or `ink-3` for anything in Fly mode. Test lesson reading in Night with learners rather than assuming parity with Day.
+:::
+
+::: {.rule #LEG-044 grade="C"}
+**Keep Fly mode dark by default and avoid large bright areas on it, including banners and images.** A reader alternating between a lit document and a dark scene must readapt at each glance, a problem Degani raises for flight decks, and his guidance is to avoid large pure-white panels in that situation [@degani1992typography]. Grade C: a review's recommendation, not a tested threshold.
+
+*In LTF:* `FlyModeLayout` forces `data-theme='dark'` unless the reader chose Day, which fits. The `BetaBanner` appears above Fly mode; in Night its `bg-caution-tint` is dark amber, which is acceptable, but it should be dismissible there as everywhere. Any future image or diagram in Fly mode uses the dark instrument palette, not a white card.
+:::
+
+### Older eyes and difficult light
+
+Degani notes a 50 percent reduction in retinal illumination at age 50 compared with age 20, and that most laboratory subjects in the studies behind his recommendations were probably young recruits [@degani1992typography]. Rayner reports that older readers make longer fixations and shorter saccades [@rayner1998eye]. Wallace and colleagues found reading speed fell 1.51 words per minute per year of age across their sample [@wallace2022towards]. The flight-sim hobby and adult flight training both include many older learners, and Fisk and colleagues argue that age-related changes in vision are systematic enough to design for from the start, and that doing so helps younger users too [@fisk2009designing].
+
+::: {.rule #LEG-045 grade="B"}
+**Treat readers over 50 as a normal case when setting size, contrast and spacing floors, not as an edge case.** Retinal illumination falls substantially with age [@degani1992typography]; older readers fixate longer and read more slowly [@rayner1998eye; @wallace2022towards]; and most legibility data come from young participants [@degani1992typography; @beier2010design]. Design guidance for older adults treats these changes as systematic [@fisk2009designing]. Grade B.
+
+*In LTF:* the floors in LEG-018, LEG-042 and LEG-043 are set with older readers in mind. Recruit at least some learners over 50 for any reading test (see the chapter on dyslexia, age and individual differences).
+:::
+
+### What this means for Learn to Fly
+
+LTF's palette passes the WCAG minimum almost everywhere, and its decisions (near-neutral greys, a sans face, a dark Fly mode, fixed high-contrast instrument colors such as `instrument-text` on `instrument` at about 16:1) suit the evidence. Keep them. Change three things: forbid the one failing pair (Night `ink-3` on `accent-tint`) and put the token table under test (LEG-041); move action-bearing text off `ink-3` (LEG-042); and add size and weight floors for Night and Fly mode (LEG-043). Design the floors for older eyes (LEG-045). The dark Fly mode is right; keep bright areas out of it (LEG-044).
+
+## Speed, Comprehension and Re-reading
+
+### What limits reading speed
+
+Skilled readers already average 200 to 400 words per minute, and eye movements account for no more than about 10 percent of reading time [@rayner2016much]. The main bottleneck is not getting visual input onto the retina but recognizing words and combining them into meaning [@rayner2016much]. Rayner and colleagues' review for the public, written in response to apps that promised reading at up to 1,000 words per minute by flashing one word at a time, concludes that there is a trade-off between speed and accuracy, and that it is unlikely readers can double or triple their speed (for example from around 250 to 500 to 750 words per minute) while understanding as well as at normal speed [@rayner2016much]. Skimming gets through text faster with moderate comprehension when gist is the goal. The way to read faster with high comprehension is to become a more skilled language user, chiefly through vocabulary [@rayner2016much].
+
+Rapid serial visual presentation (RSVP), the one-word-at-a-time display those apps use, removes eye movements and with them the ability to look back. Removing re-reading tends to make comprehension worse [@rayner2016much]. Schotter, Tran and Rayner tested the claim that regressions are wasteful and found the opposite: when readers could not re-read, comprehension suffered [@rayner2016much]. RSVP speeds can be very high in the laboratory (1,171 words per minute against 303 for static text in one study) [@legge2007case], but those are presentation rates, not rates of understanding. Claims of prodigious readers fail when tested; such readers generally already know the topic, and without prior knowledge they recall little [@rayner2016much]. The review is a narrative synthesis, but its conclusion matches decades of eye-movement work and is not contested in the sources read here.
+
+::: myth
+**"Speed reading, or showing one word at a time, lets you read much faster with full understanding."** The evidence shows a trade-off between speed and comprehension; eye movements take no more than about 10 percent of reading time, so speeding up visual input does little; and preventing re-reading harms comprehension [@rayner2016much]. High RSVP presentation rates are not rates of understanding [@legge2007case].
+:::
+
+::: {.rule #LEG-046 grade="A"}
+**Do not build speed-reading, word-at-a-time, auto-scrolling or other paced-text features for lessons, briefs or checklists.** Speed gains come at the cost of comprehension, the bottleneck is language not vision, and removing re-reading harms understanding [@rayner2016much]. The conclusion rests on a large, consistent literature reviewed by its leading researchers.
+
+*In LTF:* no "speed mode", no teleprompter view in Fly mode, no auto-advancing steps. The learner controls when the next step appears, as `FlyPanel` already does with checkboxes.
+:::
+
+### Re-reading is part of reading
+
+Regressions are 10 to 15 percent of saccades in skilled reading [@rayner1998eye], more when text is hard, and the evidence above shows they serve comprehension. For a beginner reading a procedure, looking back is part of understanding. The interface should make it easy: the text stays where it was, and nothing a learner might need to re-read disappears while they act on it.
+
+::: {.rule #LEG-047 grade="B"}
+**Keep the text a learner is answering or acting on visible and re-readable: quizzes do not hide the lesson, steps do not disappear when ticked, and briefs stay one tap away during a challenge.** Inability to re-read impairs comprehension [@rayner2016much], and regressions are a normal and frequent part of reading [@rayner1998eye]. Grade B: the comprehension finding is direct, the interface application is an inference.
+
+*In LTF:* `QuizBlock` sits inline in the lesson, so the text above stays scrollable; keep it that way and never present lesson quizzes in a modal. In the challenge `Tabs`, the Fly tab should offer a way back to the Brief without losing step state (the `?tab=` URL state allows this). Ticked `FlyPanel` steps stay visible with `border-go bg-go-tint`.
+:::
+
+### Vocabulary is the lever
+
+If language skill sets reading speed, then a beginner's reading speed in aviation is set by aviation vocabulary. Rayner and colleagues identify vocabulary and broad exposure as the reliable route to faster reading with comprehension: knowing the words, and enough context to anticipate the next ones [@rayner2016much]. Cattell's familiarity data point the same way [@cattell1886time]. LTF cannot make learners better readers in general, but it controls the vocabulary of its own lessons: how many new terms each page introduces, whether each is defined where it first appears, and whether the same word is used for the same thing everywhere (LEG-006).
+
+::: {.rule #LEG-048 grade="B"}
+**Define every aviation term where it first appears in a lesson, keep its definition one tap away on every later page, and introduce few new terms per section.** Vocabulary is the main lever on reading speed with comprehension [@rayner2016much], and unfamiliar words take longer to read [@cattell1886time; @rayner1998eye]. Grade B: the vocabulary effect is robust; the "few per section" guidance is an inference without a measured limit.
+
+*In LTF:* the lesson glossary chips ("Terms in this lesson" in the right rail on `xl`, below the content otherwise) and their `Popover` definitions are the right mechanism. Make sure each chip's term also appears in bold or defined in the sentence of first use, and surface the same `Popover` for terms in `QuizBlock` and Fly mode.
+:::
+
+### Reading for gist and reading for action
+
+Skimming works when the goal is gist [@rayner2016much]. Learners returning to a lesson to look something up are skimming, and a learner glancing at Fly mode mid-flight is searching for one line. Both are legitimate kinds of reading, and they need different support from a first reading: headings that name the content, key terms that stand out, and exact details (a checklist step, a value) set apart from prose so they can be found without reading paragraphs.
+
+::: {.rule #LEG-049 grade="B"}
+**Structure every lesson for return visits: descriptive section headings, a short objective list, key terms marked, and exact steps and values set apart from the prose rather than embedded in it.** Skimming yields gist at reduced comprehension [@rayner2016much], so anything that must be recalled exactly should not depend on careful reading of paragraphs. Grade B.
+
+*In LTF:* the lesson objectives `Card` ("In this lesson you will"), the `SectionNav` rail and heading blocks already serve this. Put procedures in `checklist` blocks or ordered lists and values in `KeyNumbers` or tables with `{{vspeed.*}}` tokens, not inside sentences.
+:::
+
+::: {.rule #LEG-050 grade="C"}
+**Promise clarity, not speed, in LTF's copy about its lessons.** The evidence does not support claims that a design or method makes reading or learning dramatically faster [@rayner2016much]. Grade C: an honesty rule drawn from the evidence.
+
+*In LTF:* landing copy such as "Lesson 0.1 takes five minutes" states an estimate, which is fine; avoid phrases like "learn twice as fast" or "speed through ground school".
+:::
+
+### Measure understanding, not only speed
+
+Speed alone can mislead. In the line-length studies, comprehension was often measured only to check for a trade-off, yet the one study with a demanding comprehension test found a difference speed did not show [@dyson2004physical]. Wallace and colleagues found comprehension flat while speed varied [@wallace2022towards]. And faster reading with lower understanding is the speed-reading failure itself [@rayner2016much]. Rello and colleagues deliberately measured fixation duration and comprehension rather than reading time, because speed was not their goal [@rello2016make].
+
+::: {.rule #LEG-051 grade="B"}
+**When testing any change to lesson typography or layout, measure comprehension (for example the lesson's own quiz) as well as reading time, and treat a speed gain with a comprehension loss as a failure.** Speed and comprehension trade off [@rayner2016much], and comprehension measures detected effects that speed did not [@dyson2004physical]. Grade B.
+
+*In LTF:* the `QuizBlock` results for a lesson are a ready comprehension measure. A layout experiment compares first-attempt quiz accuracy as well as time on section.
+:::
+
+### What this means for Learn to Fly
+
+LTF's design already respects how comprehension works: inline quizzes, ticked steps that stay visible, glossary chips, no reading timers. Keep all of it, and write it down as policy so it survives later features (LEG-046, LEG-047). The levers to pull are vocabulary and structure: define terms at first use and keep definitions reachable from quizzes and Fly mode (LEG-048), and set exact steps and values apart from prose so return visits can skim (LEG-049). Test with comprehension as well as speed (LEG-051), and keep marketing claims to clarity (LEG-050).

@@ -726,3 +726,97 @@ The second gap is people. Stanford guidelines 3 and 4 ask for visible expertise 
 The third is the visible polish of lessons themselves. The Robins and Holmes result says a learner will judge the credibility of a lesson within seconds from its look. The craftsmanship defects listed in the chapter on aesthetic facets (two heading dialects, inlined card variants, a wide measure) are therefore credibility defects on lesson pages, and fixing them is part of making correct content believed.
 
 One existing pattern is already right: the `BetaBanner` copy ("Lessons and challenges are still being checked in the sim, so you may hit rough edges or content that changes. Report a problem") is a clear, honest statement with a contact path, which is guidelines 5 and 8 in practice. The next chapter argues that this kind of honesty matters more, not less, as the design gets better.
+
+## Calibrated trust: polish that does not lie
+
+### The amelioration effect works on wrong content too
+
+The credibility evidence in the previous chapter has an uncomfortable corollary. If a designed page is judged more credible than the same content stripped of design, within about three seconds and before anyone reads carefully [@robins2008aesthetics], then design raises the credibility of content regardless of whether the content is correct. Robins and Holmes did not test whether their participants could judge accuracy; their result is a bias in fast judgments, and the participants who read carefully took about three times as long. Beauty makes correct content more believable and makes incorrect content more believable by the same mechanism.
+
+For most websites that is a commercial fact. For a product that teaches procedures a learner will carry into a simulator, and that some learners may one day carry further, it is an ethical constraint. The goal is not maximum trust. It is trust that matches how far the content has actually been checked: calibrated trust.
+
+### Misuse and disuse
+
+Parasuraman and Riley's analysis of automation gives a vocabulary for what goes wrong when trust is not calibrated [@parasuraman1997humans]. Use is the voluntary engagement of automation. Misuse is over-reliance, which "can result in failures of monitoring or decision biases." Disuse is neglect or underuse, "commonly caused by alarms that activate falsely." Abuse is the automation of functions by designers and managers "without due regard for the consequences for human performance." The authors argue that these are not operator character flaws but consequences of design and management decisions. Factors that affect how well people monitor automation include workload, the reliability and consistency of the automation, and the conspicuousness of indicators of its state. Disuse often follows when alarm thresholds are set without considering the base rate of the condition they detect [@parasuraman1997humans].
+
+LTF is not an automated system in the sense of that paper, and the transfer from professional operators to learners using consumer software is an analogy. But the two failure modes map onto a teaching product closely. Misuse is a learner trusting the app's numbers or pass mark more than the simulator in front of them, or more than the content's verification status justifies. Disuse is a learner who has learned to ignore the app's warnings because too many of them were noise.
+
+### Realism that persuades without informing
+
+Smallman and St. John describe a related trap in display design: naive realism, the misplaced faith in people's ability to extract information from realistic displays [@smallman2005naive]. Users and designers prefer highly realistic displays that they believe are intuitive, even when those displays produce worse performance. The authors' evidence comes from a program of Navy display work. Realistic 3-D perspective views were poor for precise judgments of relative position and distance. In change-detection tasks, users rarely detected changes that happened during interruptions, and a tool that listed changes in a table improved response times by as much as 80 percent and reduced misses to zero, while an instant-replay tool, which kept the realism of time, was less useful than no tool. Users rated realistic 3-D ship and aircraft icons as preferable, while abstract symbols produced consistently better identification [@smallman2005naive].
+
+The remedy the authors propose has three parts: simplify and caricature reality, quietly supplement what perception misses, and gently inform users of likely error. They are explicit that they are not arguing for sparse displays; caricatured icons maximized both performance and preference in their own work. They also note that realism is not always wrong: where the detailed experience is part of the task, fidelity can matter [@smallman2005naive]. The evidence is mostly from military tasks with trained operators, so its application to learners reading a cockpit diagram is an inference.
+
+Naive realism is the aesthetic-usability effect seen from the display designer's side. A photoreal cockpit looks impressive, is preferred, and is believed to be clear. Those three judgments are not evidence that it teaches.
+
+### Honesty as a design property
+
+Rams's sixth principle is that good design is honest: it does not overstate innovation, power or value, and does not make promises it cannot keep [@rams2026ten]. His principles are expert opinion tied to industrial design, with no empirical test behind them, and the dating and wording vary across sources. They are useful here as a statement of the value that calibrated trust serves.
+
+Gray and colleagues' taxonomy of dark patterns gives the negative case [@gray2018dark]. One of their five strategies is interface interference, manipulating the interface so that certain actions are privileged over others, and one of its subtypes is aesthetic manipulation: visual emphasis, false hierarchy and disguised content used against the user's interest. The taxonomy is qualitative, built from 118 artifacts shared by practitioners, so it describes kinds of manipulation, not their prevalence. Part XIX, Decisions, Persuasion and Dark Patterns, treats the whole taxonomy. For this chapter, aesthetic manipulation is the specific danger: visual quality used to make something look more settled, more certain or more endorsed than it is.
+
+::: {.rule #AES-053 grade="C"}
+**Never let visual polish signal a level of verification that has not happened: unverified content must look visibly and consistently different from verified content.** Design raises judged credibility in seconds regardless of content accuracy [@robins2008aesthetics], and good design does not make promises it cannot keep [@rams2026ten]. The experimental half of this rule is graded evidence; the obligation it draws is a value, hence C.
+
+*In LTF:* keep `UnverifiedWarning` ("Unverified content: not for learning use", `border-2 border-warn bg-warn-tint`) and `DraftBadge` ("Draft · unverified") as the loud and quiet forms; never restyle drafts to look finished for screenshots or previews; keep the dashed `verify` callout visually distinct from every published callout type.
+:::
+
+::: {.rule #AES-054 grade="C"}
+**Make every honesty statement the product makes consistent with every other.** Calibrated trust needs one account of how far the content has been checked; two accounts that disagree teach the learner that neither is exact. This follows from the calibration argument and Stanford guideline 8 on showing review status [@fogg2002stanford].
+
+*In LTF:* the `BetaBanner` says lessons and challenges "are still being checked in the sim"; `AboutPage` says "Everything that is open has been flown and checked in MSFS 2024". Reconcile them, for example by saying in the banner that open content has been checked and the site itself is new.
+:::
+
+::: {.rule #AES-055 grade="C"}
+**Keep warnings rare enough to mean something, and retire any warning or nudge that learners routinely dismiss.** Disuse of alerts is commonly caused by false alarms, and alert thresholds must take the base rate of the condition into account [@parasuraman1997humans]. The source is an integrative review of professional automation, so its transfer to a learning app is an analogy.
+
+*In LTF:* the random-event alert on the Fly tab (`border-4 border-warn`, `warning-pulse`, beep) is a training event, so its frequency is set by the challenge design and stated in the brief; `warn` styling is reserved for real problems; dismissal of `BetaBanner`, `SignupBanner` and toasts is logged if analytics are ever added, as a signal to retire.
+:::
+
+::: {.rule #AES-056 grade="C"}
+**State the limits of the app's own checks wherever the app scores, confirms or advises.** Over-reliance on automated aids leads to monitoring failures, and the conspicuousness of an aid's state affects how well people monitor it [@parasuraman1997humans]. LTF cannot see the simulator; a learner who forgets that may trust a self-scored tier over what actually happened.
+
+*In LTF:* `DebriefForm` already opens with a `note` callout, "Score what you flew", saying scores are self-assessed and suggesting the sim's replay; that model is right. Carry the same statement onto the result card in `ResultView`, where the tier is celebrated, and keep challenge steps asking the learner to read values in the sim rather than copy them from the app.
+:::
+
+::: {.rule #AES-057 grade="B"}
+**Teach with simplified, caricatured instrument and cockpit drawings, and use real simulator screenshots for orientation (where to look), not for explanation.** Users preferred realistic displays that produced worse performance, while caricatured symbols maximized both performance and preference [@smallman2005naive]. The evidence is from military display tasks with trained operators; for learners it is an inference, though a well-founded one.
+
+*In LTF:* the hand-built widgets (`Gauge`, `Tape`, the `g1000-pfd`, the sectional legend) are caricatures by construction and stay so; the three Module 0 sim-settings screenshots are the right use of photographs; no photoreal panel replaces a widget.
+:::
+
+::: {.rule #AES-058 grade="B"}
+**Do not accept "this looks great" or "this looks just like the real thing" as evidence that a display teaches.** Preference for realistic displays is high and is a poor guide to performance [@smallman2005naive]; desire and usability can conflict [@norman2004emotional]. Pair every display review with a task: read a value, detect a change, name a state.
+
+*In LTF:* a widget review includes a short task in "Quiz me" mode with a beginner, and the result is recorded with the review.
+:::
+
+::: {.rule #AES-059 grade="C"}
+**Label every simplification as a simplification, at the place the learner meets it.** Gently informing users of likely error is part of the remedy for naive realism [@smallman2005naive], and honest design does not overstate what a product is [@rams2026ten]. A simplified diagram mistaken for the real panel misleads by omission.
+
+*In LTF:* keep the "Simplified model" badge in every `WidgetFrame` header; extend the same honesty to lesson images that crop or annotate the sim, with a caption that says what was changed.
+:::
+
+::: {.rule #AES-060 grade="C"}
+**Never use visual emphasis, hierarchy or polish to steer a learner against their own interest.** Aesthetic manipulation (visual emphasis, false hierarchy, disguised content) is a named form of interface interference in the dark-patterns taxonomy [@gray2018dark]. The taxonomy is qualitative; the rule is a design ethic.
+
+*In LTF:* "Not now" on `SignupBanner` and the decline actions in any dialog are visually honest secondary buttons, not low-contrast text; destructive actions (`danger`, `bg-warn`) stay behind confirmation, as in the account deletion `Dialog`.
+:::
+
+::: {.rule #AES-061 grade="C"}
+**Make every badge, tier and celebration say what it is and, where a learner could misread it, what it is not.** Honest design does not overstate value [@rams2026ten], and celebration sits at the reflective level where a product shapes how people see themselves [@norman2004emotional]. A simulator achievement presented like a qualification invites exactly the misuse calibrated trust is meant to prevent.
+
+*In LTF:* keep the `CourseBadge` statement ("It is not a pilot certificate and has no value for real-world flying") and the simulation-only line on every lesson; the Gold tier copy ("checkride-ready") on the landing page is reviewed against this rule, since it borrows a real-world standard.
+:::
+
+### What this means for Learn to Fly
+
+The dossier names "honesty as UI" as one of LTF's distinctive traits, and this chapter's evidence says it is also one of its most important. LTF already has most of the parts of a calibrated-trust system: `DraftBadge` and `UnverifiedWarning` as quiet and loud forms of "not checked", `verify` callouts that block publication, "Last verified" lines on speeds and checklists, the "Simplified model" badge on widgets, the `CourseBadge` disclaimer, the simulation-only line, and the beta banner. The work left is to make the system consistent and complete.
+
+Consistency first. The `BetaBanner` and the `AboutPage` give different accounts of how far the open content has been checked (AES-054). Each is honest in intent; together they are confusing. One sentence fixes it.
+
+Completeness second. Verification status is shown for speeds and checklists, not for lessons (AES-047 in the previous chapter). The Debrief form says plainly that scores are self-assessed ("Score what you flew"), but the result card that follows, with its `TierBadge` and `tier-pop`, does not repeat it, and that is the moment the learner remembers (AES-056). The "Simplified model" badge covers widgets; lesson images that annotate sim screenshots have no equivalent (AES-059).
+
+Third, the risk that grows with quality. Every improvement this book recommends to the look of LTF raises the credibility of whatever is on the page. That is the purpose when the content is verified, and a hazard when it is not. Production never seeds drafts, according to the `UnverifiedWarning` code comment, but the repository is public, and anyone running it locally sees drafts rendered in the same polished layout. AES-053 keeps the warning loud precisely because the layout around it is getting better.
+
+Finally, one copy decision. The landing page says "Bronze means you did it safely. Gold is checkride-ready." It is a good line, and it borrows the authority of a real checkride for a simulator tier. AES-061 does not forbid it; it asks that a reviewer decide whether a beginner could read it as a real-world claim, and if so, add the qualifier the `CourseBadge` already uses.

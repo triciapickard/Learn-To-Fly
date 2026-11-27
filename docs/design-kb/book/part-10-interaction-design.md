@@ -1523,3 +1523,145 @@ Keep what is already right: steps can be ticked in any order (INT-060), the debr
 sim's pause state and says scores are self-assessed (INT-059, INT-061), and copy mostly speaks in the
 learner's terms (INT-058). Add the evaluation side to challenge briefs (INT-056) and the look,
 means, next pattern to Fly-tab steps where content allows (INT-062).
+
+## Goals, Excise and the Active User
+
+### Goal-directed design
+
+Cooper and colleagues define interaction design as concerned first with the design of behavior,
+and say user goals "can best be understood as narratives" [@cooper2014about]. They argue that
+interaction design is "very much a design discipline, quite different from science and engineering",
+and that "there is no such thing as an objectively good user interface": quality depends on who the
+user is, what they are doing and why. The method they call Goal-Directed Design combines principles,
+patterns and processes, with personas and scenarios as its modeling tools. The table of contents
+(the body chapters were not read) shows the ideas most relevant here: "Optimizing for
+Intermediates", with sections on "Perpetual Intermediates" and "Designing for Three Levels of
+Experience"; "Reducing Work and Eliminating Excise", which sets goal-directed tasks against excise
+tasks; "Platform and Posture"; and "Orchestration and Flow". The book also credits Moggridge and
+Verplank with coining "interaction design" while working on the GRiD Compass laptop in the
+mid-1980s. It is consultancy method and craft knowledge, not research.
+
+Excise, as the chapter heading frames it, is work the product demands that does not serve the
+person's goal. For LTF the learner's goal is to be able to fly a maneuver in the sim, not to
+complete a lesson, so any tap, banner or form that adds effort without advancing that goal is
+excise. The personas method behind the book is widely used and its evidence is mixed; there are
+methodological critiques (Chapman and Milham) and studies of how designers actually use personas
+(Matthews, Judge and Whittaker), whose conclusions were not read and are not reported here
+[@cooper2014about].
+
+::: {.rule #INT-063 grade="C"}
+**For every step a learner must take, name the flying goal it serves; remove or merge any step that
+serves none.** This is the excise test from Goal-Directed Design [@cooper2014about], expert method
+rather than measured effect. Shneiderman's rule on reducing short-term memory load points the same
+way: do not make people carry information from one display to another
+[@shneiderman2016designing].
+
+*In LTF:* the top of `LessonPage` can stack, before the first content block, an `UnverifiedWarning`,
+a `SignupBanner`, a resume bar and the objectives `Card`, with the `BetaBanner` above the header.
+Only the objectives serve the flying goal directly. Collapse the account and beta notices into one
+dismissible line, and show the resume bar only when the saved section is not the first, as
+`ResumeLink` already does.
+:::
+
+::: {.rule #INT-064 grade="C"}
+**Design for the returning learner who knows the basics: show first-time guidance once, make it
+dismissible, and never repeat an explanation the learner has already dismissed.** Cooper's "perpetual
+intermediates" is the idea that most users are neither beginners nor experts for long
+[@cooper2014about]; Shneiderman's universal-usability rule asks for explanations for novices and
+shortcuts for experts in the same design [@shneiderman2016designing]. Raskin rejects the
+beginner-expert split altogether, arguing for one interface that habits can form on
+[@raskin2000humane]; the two positions agree on not maintaining two separate interfaces.
+
+*In LTF:* the `BetaBanner` and `SignupBanner` already remember dismissal (`ltf-beta-banner`,
+`ltf-signup-banner-dismissed`). Apply the same to the `ChecklistRunner` help line ("Space ticks an
+item, Backspace unticks the last one") once a learner has used the keys, and to the random-event
+explanation in `FlyPanel` once a learner has seen an event.
+:::
+
+### Active users
+
+Carroll and Rosson described a pattern from IBM user studies: new users do not read manuals or
+finish set-up; they start using the system at once to get their task done, even though learning
+first would save them time later [@carroll1987paradox]. The paradox is a design principle: design
+for the person who acts with limited knowledge and learns from what happens, not for an idealized
+learner who studies first. The chapter was not read, only descriptions of it; Nielsen's account says
+later studies confirmed the pattern, and "users never read" is an overstatement, since people do
+consult help once stuck, especially when it is short and at the point of need.
+
+The most cited design response from the same program is the training-wheels interface, described
+in the chapter on affordances: blocking typical error states made new users faster and better at
+learning, and the control group spent almost a quarter of its time recovering from errors the
+restricted interface prevented [@carroll1984training].
+
+::: {.rule #INT-065 grade="B"}
+**Put the first real task on the first screen, and attach explanation to the action, at the moment
+it is needed, rather than before it.** Active users start doing before learning
+[@carroll1987paradox], and restricting early function to the essentials speeds learning
+[@carroll1984training]. The first source is observational; the second is a small controlled
+experiment.
+
+*In LTF:* the landing CTA "Start lesson 0.1" goes straight to the lesson with no account and no
+onboarding, and the hero note "You can start without an account" removes the expected barrier. Keep
+both. In lessons, place a widget or quiz early, before long explanation; the landing's own promise is
+"Read a little. Try it on the page. Fly it in the sim."
+:::
+
+::: {.rule #INT-066 grade="C"}
+**Put anything the learner must not miss in the path of the task, not in a panel they are expected
+to read first.** Because active users skip set-up and instructions [@carroll1987paradox], a critical
+step placed in a "read this first" block will be skipped by the people who most need it.
+
+*In LTF:* a sim setting that a challenge depends on belongs in the Brief's "Sim setup" list and again
+as the first Fly step, not only in an introductory paragraph. The `safety` and `tip` callouts beside
+"I'm set up, start flying" are in the path; keep critical content there and in the steps themselves.
+:::
+
+### Drama and the arc of a lesson
+
+Laurel proposed that drama, read through Aristotle's analysis of dramatic form, is a useful model
+for interface design [@laurel1991computers]. Designers create imaginary worlds that extend thinking,
+feeling and action; representation has real consequences; and the aim is engagement from a
+first-person point of view. Her account draws on plot structure (complication to resolution, with
+discovery, surprise and reversal) and on constraints that limit what people are likely to consider
+doing. Her earlier chapter, cited by Hutchins, Hollan and Norman, describes the first-person feeling
+of direct engagement, and they borrow her analogy: an audience at a well-staged play suspends
+disbelief, and the user of a model-world interface can suspend belief that the objects are artifacts
+of a program [@hutchins1985direct]. The book is a conceptual argument known here through summaries;
+a review in Science Fiction Studies, also known through a summary, criticizes it for a one-way model
+that fails to engage with the specificity of either medium.
+
+::: {.rule #INT-067 grade="C"}
+**Give each lesson and challenge a visible arc: a stated goal at the start, a point where the learner
+tries something that may not work, and an end that confirms what was achieved.** Laurel's dramatic
+structure [@laurel1991computers] and Shneiderman's closure rule [@shneiderman2016designing] both
+argue for it; both are expert frameworks. Do not add characters or narrative theatrics; the arc is
+structural.
+
+*In LTF:* lessons open with "In this lesson you will" and end with "Finished reading and trying the
+questions?" and "Mark lesson complete"; challenges move from Brief to Fly to Debrief. The middle is
+the weak point: a lesson whose blocks are all `markdown` has no attempt. Require at least one
+`quiz` or `widget` block between the objectives and the completion panel.
+:::
+
+::: {.rule #INT-068 grade="C"}
+**Write any persona or scenario as a labeled hypothesis tied to real evidence, and revise it when
+evidence arrives.** Personas are central to Goal-Directed Design [@cooper2014about], and their
+evidence base is mixed, with published methodological critiques. A persona that is not tied to
+interviews or analytics is a guess with a name.
+
+*In LTF:* the product's working persona (a beginner who has never flown, at a desktop with a
+controller and a second screen) comes from the project's plan, not from research with learners. Mark it as a hypothesis in design documents,
+and test the second-screen assumption: how many learners actually open `FlyModePage`?
+:::
+
+### What this means for Learn to Fly
+
+LTF already does the hardest part of goal-directed design: the first screen leads to the first task,
+with no account, no tour and no settings. Protect that (INT-065). The excise to remove is at the top
+of lesson pages, where up to four notices can precede the content (INT-063), and in fly mode, where
+`FlyModeLayout` still renders the `BetaBanner` above the challenge on a screen whose only job is
+the flight. Show the beta notice once per session in fly mode, or fold it into the page footer there.
+
+Make every lesson contain an attempt (INT-067), place critical setup in the path of the task
+(INT-066), retire first-time help once it has been used (INT-064), and treat the second-screen
+learner as a hypothesis to measure (INT-068).

@@ -76,7 +76,7 @@ LTF already has a legible skeleton. The path exists in `content/modules.yaml` an
 
 What to keep: `LessonPath` as the one drawing of the course, the code labels (`L0.1`, `C4.3`, `M0`) as landmarks, the separate `FlyModeLayout`.
 
-What to change: remove `BetaBanner` from `FlyModeLayout` or replace it there with a one-line text mention in the footer area of the page (NAV-006). Give the last lesson of each module a next step that crosses into the module's challenge or the next module (NAV-003). Treat the dashboard as the main node of the signed-in product (NAV-001, and the chapter on orientation): today it is reachable only through `UserMenu` on desktop and the drawer on phones, so a signed-in learner's main junction has no persistent landmark in the header.
+What to change: remove `BetaBanner` from `FlyModeLayout` or replace it there with a one-line text mention in the footer area of the page (NAV-006). Give the last lesson of each module a next step that crosses into the module's challenge or the next module (NAV-003). Treat the dashboard as the main node of the signed-in product (NAV-001; see also the chapter "Orientation on every page"): today it is reachable only through `UserMenu` on desktop and the drawer on phones, so a signed-in learner's main junction has no persistent landmark in the header.
 
 What to build: nothing new is needed for the map itself. The work is discipline: the order of published lessons never changes, each district keeps its opening, and no new accent mark competes with the existing landmarks (NAV-002, NAV-004).
 
@@ -99,7 +99,7 @@ On a website, a decision point is any place where the learner has to choose what
 ::: {.rule #NAV-008 grade="C"}
 **Design every page for a first-time visitor who knows none of the product's or aviation's vocabulary.** A design guideline derived from the Arthur and Passini tradition is to design for the first-time visitor, because repeat visitors can lean on experience [@arthur1992wayfinding]. LTF's audience makes the rule stronger than it is for most products: a complete beginner is a first-time visitor to the domain as well as to the site.
 
-*In LTF:* labels such as "Brief", "Debrief", "Fly mode" and "kneeboard" are aviation framing and part of LTF's identity (product-context, distinctive traits). They are fine as names, but each needs a plain description where it first appears: the `ChallengePage` tab list should show what each tab is for on a first visit, and the "The kneeboard" heading on the reference hub needs a line saying it is a printable sheet of key numbers.
+*In LTF:* labels such as "Brief", "Debrief", "Fly mode" and "kneeboard" are aviation framing and among LTF's most distinctive traits. They are fine as names, but each needs a plain description where it first appears: the `ChallengePage` tab list should show what each tab is for on a first visit, and the "The kneeboard" heading on the reference hub needs a line saying it is a printable sheet of key numbers.
 :::
 
 ::: {.rule #NAV-009 grade="C"}
@@ -164,7 +164,7 @@ Pirolli and Card proposed that people looking for information behave like animal
 
 Three ideas carry most of the weight [@pirolli1999information]. **Information scent** is the value a person estimates for a source before visiting it, judged from cues such as labels, summaries and images, together with what the person already knows. **Information patches** are clusters of information, in space or time; the forager decides whether to stay in a patch or move to another. The **information diet** is the choice of which sources to pursue at all, given that the value of information depends on the task it serves. In the precursor paper the patch decision followed Charnov's marginal value theorem: leave a patch when the rate of gain in it falls to the average rate available across the environment. The diet decision ranked items by profitability, expected gain per unit of handling time. The theory assumes people satisfice, taking an option that is good enough, rather than optimizing perfectly.
 
-The first empirical illustrations were small. The precursor work used time-coded video of four researchers working for an hour each with Scatter/Gather, a document-clustering browser, and the authors suggested from the theory that ordering cluster titles by probability of relevance would raise the rate of gain [@pirolli1999information]. Fu and Pirolli later reported that the 1999 analysis found ACT-IF's scent-based rankings of Scatter/Gather clusters correlated well with the clusters users actually chose [@fu2007snifact]. A glossary summary of the theory notes its limits: its applicability is not fully understood, building such models is complex, and in practice information foraging is used mostly as a design perspective rather than a validated predictive tool.
+The first empirical illustrations were small. The precursor work used time-coded video of four researchers working for an hour each with Scatter/Gather, a document-clustering browser, and the authors suggested from the theory that ordering cluster titles by probability of relevance would raise the rate of gain [@pirolli1999information]. Fu and Pirolli later reported that the 1999 analysis found ACT-IF's scent-based rankings of Scatter/Gather clusters correlated well with the clusters users actually chose [@fu2007snifact]. A glossary summary of the theory notes its limits [@pirolli1999information]: its applicability is not fully understood, building such models is complex, and in practice information foraging is used mostly as a design perspective rather than a validated predictive tool.
 
 ### What the Web models found
 
@@ -262,7 +262,7 @@ Zaphiris ran a smaller replication of Kiger's structures as Web link hierarchies
 
 ### What the confounds change
 
-The direction is replicated; the details have known weaknesses. Miller and Kiger held the bottom nodes identical across structures, which forced unnatural categories in some conditions and confounds category soundness with depth [@larson1998web]. Their participants studied the hierarchies at length and received feedback, so their results describe trained, best-case performance, not a first visit [@miller1981depth]. In the replication record of Miller's study, Snowberry, Parkinson and Sisson found that memory span did not predict performance but visual scanning did, especially in the deepest trees, and that when the 64 items were grouped into coherent categories the broad flat structure did better than when they were random [@miller1981depth]. So the quality of the categories carries as much weight as the shape. One student review called Miller's study statistically inconclusive, while the abstract describes a clear U; the strength of the original effect is uncertain.
+The direction is replicated; the details have known weaknesses. Miller and Kiger held the bottom nodes identical across structures, which forced unnatural categories in some conditions and confounds category soundness with depth [@larson1998web]. Their participants studied the hierarchies at length and received feedback, so their results describe trained, best-case performance, not a first visit [@miller1981depth]. In the replication record of Miller's study, Snowberry, Parkinson and Sisson found that memory span did not predict performance but visual scanning did, especially in the deepest trees, and that when the 64 items were grouped into coherent categories the broad flat structure did better than when they were random [@miller1981depth]. So the quality of the categories carries as much weight as the shape. One student review called Miller's study statistically inconclusive, while the abstract describes a clear U; the strength of the original effect is uncertain [@miller1981depth].
 
 ::: myth
 **"Menus and navigation bars should hold seven items, plus or minus two."** The claim stretches G. A. Miller's 1956 paper, which concerned the span of immediate memory and of absolute judgment on one stimulus dimension, measured in chunks and bits, and which gives no rule for lists or menus [@miller1956magical]. Items on a screen can be re-read, so memory span does not limit them. The Web study with the best results used 16 and 32 items per page, and memory span did not predict search time [@larson1998web]. Miller himself closed the paper by suspecting the many sevens were "a pernicious, Pythagorean coincidence" [@miller1956magical].
@@ -281,7 +281,7 @@ The direction is replicated; the details have known weaknesses. Miller and Kiger
 ::: {.rule #NAV-023 grade="B"}
 **Prefer a broad level of up to about 16 to 32 well-labeled items over adding a level, provided the page can be scanned without scrolling past the group.** Two-level structures with 16 and 32 items per page beat a three-level structure of eights [@larson1998web], and links per page over 2 to 16 did not slow users when depth stayed low [@zaphiris2000depth]. The grade is B: one well-designed Web study and one small replication; the upper bound is the largest breadth tested, not a recommended target.
 
-*In LTF:* 22 modules on one `/learn` page fall inside the tested range if each row stays one line of code and title with its summary, as the `<details>` summary in `CurriculumMap` does. The 179-term glossary and 30-challenge list exceed it and need grouping or filters (see NAV-024 and the chapter "Organizing and labeling the content").
+*In LTF:* 22 modules on one `/learn` page fall inside the tested range if each row stays one line of code and title with its summary, as the `<details>` summary in `CurriculumMap` does. The 179-term glossary and 30-challenge list exceed it and need grouping or filters (see NAV-024 and the chapter "Organizing the content").
 :::
 
 ::: {.rule #NAV-024 grade="B"}
@@ -415,7 +415,7 @@ Nielsen's analysis of 249 usability problems from 11 projects supports this from
 ::: {.rule #NAV-035 grade="B"}
 **Call each page and section by exactly one name, and use that name in the header link, the page title, the `h1`, the breadcrumb and any search result.** Rosenfeld and colleagues define labeling as a system that must be consistent across navigation elements [@rosenfeld2015information], and consistency was the largest single explanation of usability problems in Nielsen's database [@nielsen1994enhancing]. The grade is B because the supporting analysis is indirect and single-rater.
 
-*In LTF:* most routes comply: "Learn" is the header link, the `PageHeader` title and the document title; "Module 0: Getting started" appears in the breadcrumb and the document title. Two gaps. The challenge breadcrumb ends with the code alone ("C4.3") while the page title and `h1` give code and title; show both. And the reference hub's `h1` is "What do you need to know?" while the header link, breadcrumb and document title say "Reference"; keep the question as a subtitle but make "Reference" visible as the page name.
+*In LTF:* most routes comply: "Learn" is the header link, the `PageHeader` title and the document title; "Module 0: Getting started" appears in the breadcrumb and the document title. Two gaps. The challenge breadcrumb ends with the code alone ("C4.3") while the page title and `h1` give code and title; show both. And the reference hub's `h1` is "What do you need to know?", with "Reference" only as the eyebrow above it, while the header link, breadcrumbs and document title say "Reference"; a screen reader user moving by headings hears the question, not the page name. Make the `h1` read "Reference" and keep the question as the large subtitle.
 :::
 
 ### Writing the label itself
@@ -603,3 +603,79 @@ What to keep: `Header`, `Breadcrumbs`, `RouteAnnouncer`, `usePageTitle`, `SkipLi
 What to change: add "Lesson n of m" (NAV-046); group support sections under one heading (NAV-049); add a global `scroll-padding-top` (NAV-050); fix the `index.html` title (NAV-051); surface the dashboard for signed-in learners (NAV-052).
 
 What to build: a trunk-test pass in design review for every new page template (NAV-046), run by printing or screenshotting the page and circling the five answers.
+
+## Lookup, learning and berrypicking
+
+A course invites the assumption that learners read it once, in order, from the first lesson to the last. They do not. They reopen an earlier lesson before a challenge, look up a term halfway through a paragraph, jump from a disappointing score to the section that explains it, and move between the browser and the simulator many times in one session. Two models from information science describe this behavior and what an interface must do to support it.
+
+### Berrypicking
+
+Bates contrasted the classic information retrieval model, in which a user states one query, matches it against a database and receives one set of results, with what searchers actually do [@bates1989design]. In her berrypicking model the query itself evolves as the searcher learns from what they find, and the need is met not by one best set but by a series of selections gathered bit by bit, like picking scattered berries rather than harvesting a bush. The model differs from the classic one in four respects: the nature of the query (evolving, not fixed), the nature of the process (a bit-at-a-time path), the range of search techniques used and the territory searched.
+
+She describes six widely used techniques, drawn from earlier studies of scholars [@bates1989design]: footnote chasing, or backward chaining through references; citation searching, or forward chaining to later work that cites a known item; the journal run, reading through a central journal; area scanning, browsing materials shelved next to ones already found; subject searches in bibliographies and indexing services; and author searching. Evidence she cites includes Stenstrom and McBride, who found that over 87 percent of social science faculty said they used abstracting journals only occasionally, rarely or never, while 69 percent relied on footnote chasing. For each technique she lists design features: for chaining, simple jumps in any direction without "returning to go"; for journal runs, easy moves between contents lists and articles; for area scanning, the ability to browse a classification at several levels of generality and to "jump the rails" of the scheme.
+
+The model is an argument from earlier studies of mostly academic searchers, not an experiment, and Bates notes that much of the evidence comes from social scientists and humanists [@bates1989design]. It makes design suggestions but reports no tested interface. It remains widely taught and built upon, and its emphasis on evolving needs and browsing anticipates the exploratory search framework below.
+
+### Lookup is not learning
+
+Marchionini separated lookup (fact retrieval and known-item search) from two richer activities, learning and investigating, which together he called exploratory search [@marchionini2006exploratory]. A literature review summarizes lookup as depending on well-defined queries that retrieve discrete facts or documents, and learning and investigating as requiring browsing, several iterations and the assessment of many potentially relevant results. Exploratory search, in this account, blends querying with browsing to satisfy complex needs, and its tools must move beyond predictable fact retrieval.
+
+The framework is conceptual and contested at the margins [@marchionini2006exploratory]. Experimental studies often define exploratory search indirectly through task attributes; Savolainen has argued that the distinctions are unnecessary and that existing information-seeking models cover them; White and Roth treat exploratory search as both a problem context and a process, with a two-phase model of exploratory browsing followed by focused searching. The core distinction, that a person who needs a fact and a person who is learning a topic need different interfaces, is not in dispute.
+
+LTF holds both activities in one product. A learner mid-flight who needs a speed or a checklist item is doing lookup and needs a direct answer in one step. A learner starting a new topic is learning and needs an overview, related material and room to browse. The reference section and Fly mode are lookup surfaces; lessons, modules and the dashboard are learning surfaces.
+
+::: {.rule #NAV-053 grade="C"}
+**Give every lesson at least four independent ways in: the course map, the continue path, search, and cross-links from related content.** Berrypicking searchers use several techniques and change them as they go [@bates1989design], and Rosenfeld and colleagues treat findability through some combination of browsing, searching and asking as a critical success factor [@rosenfeld2015information]. A single route serves only the learner whose need matches it. Craft consensus from models of search behavior.
+
+*In LTF:* lessons are reachable from `/learn` and `ModulePage`, the dashboard Continue card and landing CTA, `PrevNext`, glossary term pages ("lessons" backlinks), challenge Briefs ("Recommended lessons") and `ResultView` review links. The missing way in is search (NAV-044).
+:::
+
+::: {.rule #NAV-054 grade="C"}
+**Link backward to what a page assumes and forward to what builds on it, in both directions, generated from the same data.** Backward and forward chaining are two of the most used search techniques in Bates's account, and her design feature for them is simple jumps in any direction [@bates1989design]. Craft rule derived from the model.
+
+*In LTF:* glossary terms already link to related terms and to lessons that use them (forward from the term). Lessons link to their terms through "Terms in this lesson" chips with "Open in the glossary" (backward). Lessons do not show their `prerequisites` (backward chaining is missing, see NAV-007), and lessons do not show which later lessons build on them. Generate both lists from frontmatter.
+:::
+
+::: {.rule #NAV-055 grade="C"}
+**On every item page, show its neighbors in the same group, so a learner can scan sideways without returning to the list.** Area scanning, browsing items collocated with one already found, is one of Bates's six techniques, and she recommends browsing a classification at several levels and jumping its rails [@bates1989design]. Craft rule.
+
+*In LTF:* `ChecklistPage` links the previous and next checklist by title, and `PrevNext` does the same for lessons. `GlossaryPage` is one A to Z page, so a term's neighbors are already on screen around its anchor. `AirportPage` has no sideways links; add previous and next airport by ICAO code.
+:::
+
+::: {.rule #NAV-056 grade="C"}
+**Design lookup surfaces to answer a known-item question in one step, and design learning surfaces for overview and browsing; do not mix the two on one screen.** Marchionini's distinction between lookup and exploratory learning [@marchionini2006exploratory] matches Rosenfeld and colleagues' split between exact and ambiguous schemes [@rosenfeld2015information]. Craft consensus from a conceptual framework.
+
+*In LTF:* the reference hub opens on the search box ("What do you need to know?"), the "Most looked up" chips and the kneeboard: a lookup surface. `SpeedsPage` puts the answer in a large table with `font-mono text-2xl font-bold` values and a sticky `KeyNumbers` panel. Keep lesson prose and widgets off the speeds page; link to the lesson that explains each speed instead.
+:::
+
+::: {.rule #NAV-057 grade="C"}
+**When an outcome reveals a gap, route the learner to the specific section that fills it, not only to a retry.** The berrypicker's goal evolves with what they find [@bates1989design]; a failed challenge changes the learner's need from "fly it again" to "understand this one step." The interface should respond to the new goal. Craft rule.
+
+*In LTF:* `ResultView` does this: each criterion with a linked lesson section shows "Review {code} {title}", which opens `/learn/{module}/{lesson}#{section}`. Extend it to every rubric criterion that has a lesson behind it, and when an attempt does not pass, place the review links above the action to fly again.
+:::
+
+::: {.rule #NAV-058 grade="C"}
+**Do not judge learning pages by time to answer; judge them by understanding, quiz results and returns.** Exploratory search is defined by browsing and iteration, not by speed to a fact [@marchionini2006exploratory]. A metric designed for lookup will reward a learning page for being thin.
+
+*In LTF:* time on `LessonPage` and the number of sections visited are not failure signals. Quiz results in `QuizBlock`, lesson completion and challenge tiers are the outcome measures for lessons; time to answer belongs to the reference search and `SpeedsPage`.
+:::
+
+### Lookup beside the simulator
+
+Fly mode is the extreme case of lookup: the learner is flying, the need is a single item, and the cost of a failed lookup is a lost step in the procedure. Today `FlyModePage` shows the challenge's goal and steps and links back to the challenge; it has no route to the checklist or key numbers the challenge uses, and the learner who needs one must leave Fly mode or open another tab. `ChecklistPage` has its own large-type, full-screen mode for a second screen.
+
+::: {.rule #NAV-059 grade="C"}
+**On a second-screen flying view, offer lookup only, and make each lookup one step to the item the current task needs, without leaving the view.** Lookup needs a direct answer [@marchionini2006exploratory], information belongs where the decision is made [@arthur1992wayfinding], and the cost of each glance is high (NAV-021). Craft rule, untested for this setting.
+
+*In LTF:* add to `FlyModePage` a short, fixed row of links to the checklists and key numbers that the challenge's Brief already references, opening as an overlay or a panel within `FlyModeLayout` (with a single close control) rather than a route change that loses the stopwatch. Do not add search there.
+:::
+
+### What this means for Learn to Fly
+
+LTF supports more berrypicking than most course sites: glossary backlinks, challenge-to-lesson recommendations, criterion review links, and a reference hub that is built for lookup. The missing pieces are the backward links from lessons (prerequisites), forward links to later lessons, sideways links on airport pages, lessons in search, and one-step lookups inside Fly mode.
+
+What to keep: the glossary's `related` and `lessons` links; "Recommended lessons" in `BriefTab`; "Review {code} {title}" in `ResultView`; the lookup-first reference hub.
+
+What to change: render prerequisites and "used later in" lists on lessons (NAV-054); add neighbors to airport pages (NAV-055); lead with the review link after a low score (NAV-057).
+
+What to build: a one-step lookup row in Fly mode (NAV-059), and outcome measures for learning pages that are not time-based (NAV-058).

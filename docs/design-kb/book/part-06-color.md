@@ -567,3 +567,95 @@ Reinecke and colleagues predicted visual appeal from 500 ms exposures to 450 web
 **Change.** Replace the red `bg-warn` play disc on the landing video with a neutral or accent fill (COL-040). Keep `caution` and `tier-bronze` out of any brand use (COL-042). Express any "friendlier" or "calmer" request as lightness and chroma, then check contrast (COL-039).
 
 **Build.** When new widgets are drawn, set a widget palette brief: a small set of clear, moderately warm colors per widget, each labeled, each above the non-text contrast floor against the widget's fixed ground (COL-043). Record the reason for each color in the widget's code comment in terms of role, never mood.
+
+## Color Vision Deficiency: Simulation and Redundancy
+
+### Who is affected
+
+Color vision deficiency is common enough that every LTF screen will be seen by people who have it. Okabe and Ito's guide gives red-green deficiency at roughly 8 percent of Caucasian males, 5 percent of Asian males and 4 percent of African males, with tritanopia (blue-yellow) very rare; their illustration is that a room of 250 people should include more than ten color-blind attendees [@okabe2008color]. Machado and colleagues open their paper with the estimate that color vision deficiency affects about 200 million people worldwide [@machado2009physiologically]. Population surveys reported alongside that work put red-green deficiency at about 8 percent of European men and about 0.4 percent of women, and a 2025 global meta-analysis found lower pooled rates across all populations, so the familiar 8 percent figure belongs to Northern European men rather than to everyone [@machado2009physiologically]. The rates differ by sex and ancestry, and none of these sources describes LTF's audience, which is unmeasured.
+
+The types matter for design. Normal vision is trichromatic. Dichromats lack one cone class: protanopes the L cones, deuteranopes the M cones, tritanopes the S cones. Anomalous trichromats have all three cone classes but one with a shifted sensitivity, at varying severity, and they are the larger group. Total color blindness is rarer and often comes with severe vision loss [@okabe2008color]. The genotyped dichromats who made the CIE cone fundamentals possible are the same population, seen from the measurement side [@stockman2000spectral].
+
+### Simulating dichromacy
+
+Brettel, Viénot and Mollon gave the standard method for showing a trichromat roughly what a dichromat sees [@brettel1997computerized]. Colors are represented in LMS cone space, and each is projected onto a reduced surface defined by the neutral axis and by monochromatic anchor stimuli that trichromats and that type of dichromat perceive as the same hue: a 575 nm yellow and a 475 nm blue for protan and deutan simulations, a 660 nm red and a 485 nm blue-green for tritan. The residual hues come from reports of unilateral dichromats, people with one normal and one dichromatic eye. In validation, a protanope and a deuteranope each accepted the match between an original mosaic of color patches and its transformed version [@brettel1997computerized]. The authors note that one can never be certain of another person's sensations.
+
+The method's limits are built in. It simulates complete dichromacy only, it relies on a few unilateral dichromats for the residual hues, and its validation used two observers [@brettel1997computerized].
+
+### Simulating severity
+
+Machado, Oliveira and Fernandes extended simulation to anomalous trichromacy in one framework [@machado2009physiologically]. Their model is based on the stage theory of color vision, cone signals followed by opponent processing, derived from electrophysiological data, and models deficiency as a shift in the spectral absorption of a cone pigment. The practical output is one 3 by 3 matrix per type and severity, multiplied by each pixel's RGB vector; severity runs from 0.0 (normal) to 1.0 (equivalent to dichromacy), with precomputed matrices at steps of 0.1 and interpolation between them as a fast approximation [@machado2009physiologically]. The model was validated with groups of color-deficient and normal-vision participants, whose sizes are not given on the authors' page.
+
+Implementers need four warnings. Two equations in the conference version contain a typo, and a 2010 correction notice exists for the journal article, so matrices must come from the authors' corrected material, not a transcription [@machado2009physiologically]. The authors' image captions give severity in nanometers of spectral shift while the matrix table uses the 0 to 1 scale, without explaining the mapping. A widely used library implementing the model describes its tritanomaly matrices as an approximation by the shift paradigm that does not model tritanopia. And neither the authors' page nor that library says whether the RGB input must be linear or gamma-encoded, which a developer has to settle before trusting results.
+
+Okabe and Ito, as protanopes, add the user's caution: simulators show one approximation, many color-blind people distinguish more colors than a simulation suggests, simulations must not be used to judge a person's abilities, and a color-blind reviewer is recommended [@okabe2008color].
+
+### LTF's status colors under simulation
+
+The following was computed this session by applying the Machado severity 1.0 matrices to linearized sRGB values of LTF tokens (the linear choice is an assumption, for the reason just given), then measuring Euclidean distance in Oklab between the two colors of each pair. Larger distances mean more distinct; the "normal" column is the unsimulated distance.
+
+| Pair | Normal | Protan | Deutan |
+| --- | --- | --- | --- |
+| Day `go` / `warn` | 0.28 | 0.10 | 0.08 |
+| Night `go` / `warn` | 0.26 | 0.17 | 0.07 |
+| Day `caution` / `warn` | 0.13 | 0.10 | 0.02 |
+| `arc-green` / `arc-red` | 0.36 | 0.24 | 0.08 |
+| `display-magenta` / `display-cyan` | 0.31 | 0.18 | 0.05 |
+
+Two results stand out. Under the deutan simulation, Day `caution` (#945a00) and `warn` (#b71824) almost merge (distance 0.02, from 0.13), and their luminance ratio to each other is only 1.17:1. And `display-magenta` and `display-cyan` in the G1000 widget, clearly distinct to normal vision, nearly merge for a simulated deuteranope (0.05 from 0.31). The red-green pairs fall to a quarter or a third of their normal separation. The tritan simulation, not shown, left all of these pairs distinct. These are design-check numbers from an approximate model with an assumed input encoding, not a measurement of anyone's vision.
+
+::: {.rule #COL-045 grade="C"}
+**Never use color as the only visual means of conveying information, indicating an action, prompting a response or distinguishing an element.** This is WCAG 2.2 success criterion 1.4.1, Level A [@w3c2024wcag], and the first practical principle of Color Universal Design [@okabe2008color]; the prevalence of deficiency and the collapse of red-green pairs under simulation are the reasons [@machado2009physiologically]. Grade C: a standards requirement, with no experiment behind the rule itself.
+
+*In LTF:* the product's existing provisions are the model: `Badge` status variants add a 12 px icon (Check, TriangleAlert, OctagonAlert), tiers always print their word, status icons carry sr-only text, links are always underlined, and `ProgressBar` carries `aria-valuetext`. Keep every one; the Day `caution` and `warn` pair depends entirely on its different icons (triangle against octagon) and words.
+:::
+
+::: {.rule #COL-046 grade="C"}
+**Check every screen and widget that uses color to carry meaning under protan, deutan and tritan simulation, at full and at partial severity, in both themes.** Dichromat simulation shows complete loss [@brettel1997computerized]; the severity model covers the more common anomalous trichromats [@machado2009physiologically]. Checking at an intermediate severity (for example 0.5) as well as 1.0 matters because deficiency is often partial. Grade C: a tool-based practice.
+
+*In LTF:* add simulated views to review for `/dev/components` and `/dev/widgets`, and attach them to any PR that changes `tokens.css` or a widget's colors.
+:::
+
+::: {.rule #COL-047 grade="C"}
+**Fix a pair that merges under simulation by adding a second cue (shape, label, position, line style or pattern), not by retuning hue alone.** Okabe and Ito's redundant coding (line styles, symbols, hatching, direct labels, thicker lines and larger symbols) works for every type of color vision, while a retuned hue helps one type and may hurt another [@okabe2008color]. Grade C.
+
+*In LTF:* for the `display-magenta` and `display-cyan` collapse in the G1000 widget, give the two elements different line styles or direct text labels in the drawing; do not shift the hues away from what the simulator shows.
+:::
+
+::: {.rule #COL-048 grade="C"}
+**Avoid pure red on dark backgrounds and on green, avoid colors between yellow and green, and use strong lightness or saturation differences when pairing two warm or two cool colors.** Dark red can look black to protanopes, and these are the specific confusions Okabe and Ito list for figure design; they recommend vermilion or a light red in place of pure red and reddish purple in place of purple [@okabe2008color]. Grade C: practitioner authority grounded in lived experience and consistent with the simulation models.
+
+*In LTF:* the Night `warn` (#ff8880) is already a light red rather than a pure red, at 7.98:1 on the Night `canvas`, which follows the advice. The fixed `arc-red` (#ef4444) on the `bezel` grey is only 3.60:1, and on `instrument` 5.09:1; where a red mark sits on dark bezel parts of a gauge, give it a light keyline or a distinctive shape.
+:::
+
+::: {.rule #COL-049 grade="C"}
+**Label colored elements directly where they are drawn instead of relying on a separate color key.** Direct labels remove the need to match a color across space and work for every type of color vision [@okabe2008color]; the chief virtue claimed for rainbow color maps in key-based lookup is a reminder that a key ties accuracy to color matching [@borland2007rainbow]. Grade C.
+
+*In LTF:* the `AirspeedArcs` legend sits below the band as a separate key; where space allows, label the bands at their ends on the band itself, and keep the legend as a fallback. Dashboard charts, if added, label lines at their ends rather than in a legend box.
+:::
+
+::: {.rule #COL-050 grade="C"}
+**Do not describe LTF as "colorblind safe"; say that it was checked with simulation and does not depend on color alone, and include a color-deficient reviewer when one is available.** Simulations approximate, many deficient viewers see more than the simulation shows, and simulations cannot certify a person's experience [@okabe2008color; @brettel1997computerized]. Grade C.
+
+*In LTF:* the accessibility statement, if one is written, uses the cautious wording. No simulation feature is shipped to learners as a tool for judging their own vision, which could mislead a learner thinking about pilot medical standards; those are regulatory matters for official sources.
+:::
+
+::: {.rule #COL-051 grade="C"}
+**Implement simulation from the corrected published matrices, record the input encoding chosen, and test the code against known outputs.** The original equations had a typo, a correction notice exists, severity scales are inconsistently labeled, and the input encoding is unspecified [@machado2009physiologically]. Grade C.
+
+*In LTF:* if the token script gains a simulation check, it states in a comment that it applies the severity matrices to linearized sRGB (or to encoded values, whichever is chosen), and flags pairs whose simulated Oklab distance falls below a threshold set by review.
+:::
+
+::: {.rule #COL-052 grade="C"}
+**For categorical colors in charts, use a palette designed for color vision deficiency, such as the Okabe-Ito set, and test each color against the theme grounds.** The Okabe-Ito palette (vermilion, bluish green, reddish purple, sky blue, blue, yellow, orange, with black) varies hue and lightness along axes dichromats can discriminate [@okabe2008color]; ColorBrewer offers schemes filtered as colorblind safe on the basis of the same research group's evaluation [@harrower2003colorbrewer]. The palette was designed for figures on white, so contrast against a dark theme must be checked separately. Hex values should be taken from the guide itself, not from secondary listings.
+
+*In LTF:* if the dashboard gains a chart of attempts by challenge type, the series colors come from such a palette, with direct labels, rather than from the status tokens.
+:::
+
+### What this means for Learn to Fly
+
+**Keep.** The redundancy the product already has: icons and words on every status, tier words, underlined links, legends with words and distinct shapes, and the `Callout` titles. The fact that `QuizBlock` marks results with two different icons as well as words means its red-green pair survives the simulation.
+
+**Change.** The Day `caution` and `warn` pair is the most fragile in the product: nearly equal in luminance (1.17:1) and nearly merged in the deutan simulation. Since the two states mean different things (act soon against act now), keep their icons distinct in every component, and do not use the two tokens as adjacent fills without words (for example in the `PasswordStrengthMeter`) (COL-045, COL-047). In the G1000 widget, separate magenta and cyan elements by line style or label (COL-047, COL-031).
+
+**Build.** Add simulated-view screenshots (protan, deutan and tritan at severity 0.5 and 1.0) to the e2e visual checks for `/dev/components` and `/dev/widgets`, and a token-pair simulation check to the token script (COL-046, COL-051). The axe tests in `e2e/a11y.spec.ts` do not detect color-only meaning, so this check is additive.

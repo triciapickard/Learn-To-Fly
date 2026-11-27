@@ -1080,3 +1080,195 @@ button, `PasswordStrengthMeter` as the only positive indicator, and `QuizBlock`'
 per quiz question (FRM-039). Add on-leave checks only to the signup password and email if
 testing shows people submit and fail on them (FRM-031). Do not cite the Etre percentages in
 LTF documents.
+
+## Taking mistakes back: drafts, undo and modes
+
+### Recovery is an intention, not a command
+
+Abowd and Dix argue that undo should be regarded "not as a system command to be implemented,
+but as a user intention to be supported by the system" [@abowd1992giving]. The question to ask
+of a design is what the person is trying to recover, not what a button does. They distinguish
+backward recovery, which restores a previous state, from forward recovery, which moves on from
+the present state toward the goal, and they note that in open systems an action may already
+have changed the world; their example is a cockpit navigator who cannot ask the pilot to back
+the plane up. Two properties support recovery whatever its form: visibility (people can see
+the effects of what they did) and commensurate effort (what is easy to do should be easy to
+undo). The paper is analytical, built on formal models, and cites a study of a word processor
+in which even expert users could neither predict nor recognize what undo would do. It offers a
+checklist, adapted from Young and Whittington, of four things a person must be able to answer
+about any undo: which stream of activity it applies to, what counts as a unit, which unit will
+be affected, and what exactly is restored.
+
+LTF has no general undo button, and does not need one. Its recovery paths are forward and
+local. A learner who ticks the wrong step in `FlyPanel` taps it again and it unticks. In
+`ChecklistRunner`, Backspace unticks the last item, a keyboard path the runner documents in
+its own help line ("Space ticks an item, Backspace unticks the last one."). In `QuizBlock`,
+changing an answer clears the old result and "Change your answer and check again." invites a
+retry. In the ordering question, items move up and down one place at a time with buttons, so
+any move is reversed by the opposite button. All of these meet the commensurate-effort test.
+
+::: {.rule #FRM-040 grade="C"}
+**Make every frequent action reversible with the same effort it took: a second tap unticks,
+the opposite button reverses a move, a changed answer clears its old result.** Commensurate
+effort and visible effects are the properties that let people recover by themselves
+[@abowd1992giving]. The source is an analysis, not an experiment.
+
+*In LTF:* keep tap-to-untick in `FlyPanel`, Backspace in `ChecklistRunner`, and the up and
+down buttons in ordering questions. Any new interactive widget states, in its dev page entry,
+how each action is reversed.
+:::
+
+### Never lose work
+
+The W3C cognitive accessibility patterns include letting users go back without losing work,
+and avoiding data loss and timeouts [@seemanhorwitz2021making]. Bargas-Avila's guidelines ask
+that completed fields never be cleared after an error [@bargasavila2010simple]. For LTF the
+risk is highest where input is long or produced under effort: a debrief after a flight, a set
+of checklist ticks made while flying, a reflection typed on a phone.
+
+The product already treats this seriously. `DebriefForm` saves its draft on every change, and
+its own comment says drafts survive a refresh and a detour through log-in. `FlyPanel` saves
+the tick state of every step on each change. `QuizBlock` restores the last stored answer when
+the lesson is reopened. On a successful submit the debrief and flight drafts are cleared,
+which is the right moment, because the attempt now exists on the server.
+
+::: {.rule #FRM-041 grade="C"}
+**Save what the learner enters as they enter it, so that a refresh, a lost connection, a
+sign-in detour or a closed tab never costs them their work; clear the draft only when the
+server has accepted it.** Avoiding data loss and letting users go back without losing work are
+listed cognitive accessibility patterns [@seemanhorwitz2021making], and never clearing
+completed fields is one of the 20 form guidelines [@bargasavila2010simple].
+
+*In LTF:* keep the `saveDebrief` and `saveFlight` drafts in `features/challenges/storage.ts`.
+Extend the same treatment to `ReportProblemDialog`, which keeps its description only in
+component state, so a refresh or a closed tab loses what the learner typed.
+:::
+
+### Say so before the point of no return
+
+Abowd and Dix's analysis implies that irreversibility is a property people must be able to
+predict [@abowd1992giving]. LTF has a few one-way actions: submitting a challenge attempt
+(which records a scored result in History), deleting the account, and resetting a stopwatch or
+a checklist during a flight. The delete dialog states plainly that "This cannot be undone" and
+asks for a typed confirmation. The others say nothing.
+
+A confirmation dialog is the usual answer, and it is the wrong one for anything frequent,
+because people learn to dismiss it without reading. Friction is justified where it protects
+the learner from a loss they cannot reverse, as long as the wording is neutral and they can
+proceed [@thaler2018nudge]. For frequent actions, the better tools are placement (keep the
+one-way control away from the frequent one) and a short undo window after the action.
+
+::: {.rule #FRM-042 grade="C"}
+**State before any one-way action what will be permanent, and use a confirmation dialog only
+for rare, destructive actions; for frequent ones, offer a short undo after the fact
+instead.** Irreversibility must be predictable to be managed [@abowd1992giving], and friction
+is acceptable only where it protects the person from an irreversible loss
+[@thaler2018nudge].
+
+*In LTF:* the `DebriefForm` submit area says, above the button, that the attempt will be saved
+to History and cannot be edited afterward (if that is how the server behaves). The `Stopwatch`
+and `ChecklistRunner` resets get a `Toast` with "Undo" for a few seconds rather than a
+dialog.
+:::
+
+### Slips predict where errors will happen
+
+Norman's analysis of about a thousand collected slips sorts them by where the path from
+intention to action breaks [@norman1981categorization]. Three of his categories map directly
+onto LTF screens. **Capture errors** happen when a sequence being performed resembles a more
+familiar one, which takes over. **Description errors** happen when the intended target is
+specified too loosely, so a similar neighbor gets the action. **Mode errors** happen when the
+person misclassifies the current state and does what would be right in the state they assume.
+The method is naturalistic (collected reports, not experiments), so the frequencies are not
+prevalence estimates, but the categories have stayed in use for four decades.
+
+Description errors are a layout problem. In `ChecklistRunner` the header row holds "Large
+text" and "Reset" as adjacent ghost `sm` buttons with similar weight; in the `Stopwatch` the
+"Pause" and "Reset" pills sit side by side. A learner glancing from the sim who means to pause
+can reset the timer, and nothing confirms or undoes it.
+
+::: {.rule #FRM-043 grade="C"}
+**Keep destructive or resetting controls physically apart from frequent ones, and make them
+look different in shape or label, not only in color.** Similar neighbors invite description
+errors [@norman1981categorization]; position and distinct form, not label alone, separate
+them.
+
+*In LTF:* in `ChecklistRunner` move "Reset" to the end of the list or into an overflow, away
+from "Large text". In `Stopwatch` separate "Reset" from "Pause" with space at least equal to a
+pill's width, and give it the undo `Toast` from FRM-042.
+:::
+
+Capture errors are a content problem. A learner who has practiced a procedure will run the
+practiced version even after a lesson changes one step. Norman's account predicts this and
+offers no defense except monitoring: a slip is caught only when something makes the
+discrepancy visible [@norman1981categorization].
+
+::: {.rule #FRM-044 grade="C"}
+**When a procedure a learner has already practiced changes, mark the changed step visibly the
+next time they see it.** Capture errors arise when a familiar sequence takes over from a
+similar new one [@norman1981categorization], so the product, not the learner, must surface the
+difference.
+
+*In LTF:* when a challenge's `procedure` changes between versions and the learner has a past
+attempt, `FlyPanel` and `BriefTab` mark the changed step with a `Badge` reading "Changed". The
+debrief already detects a changed rubric ("This challenge was updated"); this extends the idea
+to steps.
+:::
+
+### Modes need more than a color
+
+Sellen, Kurtenbach and Buxton ran two experiments on mode errors in a vi-like text-editing
+task, with twelve experts and twelve novices, a concurrent distractor task on a second
+computer, and a measure of "resume time" from finishing the distractor to the first editing
+action [@sellen1992prevention]. A foot pedal that the person held down to stay in insert mode
+produced significantly fewer mode errors than keyboard switching, and turning the whole screen
+pink in insert mode also helped. The mode-switching method accounted for about three times as
+much variance as the visual feedback (15.6 against 4.8 percent under liberal error scoring).
+The pedal also gave faster resume times, and the visual feedback had no effect on resume
+time. The authors conclude that mode states the user maintains by their own action prevent
+errors better than states the system maintains. The sample is small, the hardware unusual and
+the task narrow, so the numbers should not be carried to touch screens; the direction is the
+transferable part.
+
+LTF has modes. `WidgetFrame` has an Explore or "Quiz me" pill toggle that changes what a
+widget's controls do. `ChecklistRunner` labels its mode with a `Badge` reading "Read-do" or
+"Do-verify", which is a word plus a variant color. The challenge page has a Fly tab and a
+separate fly mode screen. None of these is a user-maintained state, and none should be: a
+press-and-hold for a whole flight is impractical. The lesson for LTF is the second half of the
+result: color alone was the weakest signal, so every mode must announce itself in words and
+in the layout.
+
+::: {.rule #FRM-045 grade="B"}
+**Show every mode with a word and a change in layout or shape, never by a color change alone;
+reserve hold-to-act controls for brief, risky modes.** User-maintained mode states prevented
+errors better than system-maintained ones, and a color change was the weakest cue tested
+[@sellen1992prevention]. Mode errors are a recognized slip category
+[@norman1981categorization].
+
+*In LTF:* the `WidgetFrame` "Quiz me" state adds a heading or banner inside the canvas
+("Quiz: set the needle to..."), not only a filled pill. `ChecklistRunner` keeps its word
+badge. If LTF ever adds a scored mode to fly mode, it shows "Scored" as text in the title bar,
+not as a tint.
+:::
+
+::: {.rule #FRM-046 grade="B"}
+**Test any screen with a mode by interrupting the tester (switch to the simulator, then
+back) and measuring how long they take to act correctly on return.** Resume time after an
+interruption revealed mode confusion that error counts alone did not
+[@sellen1992prevention].
+
+*In LTF:* add a "switch away for 30 seconds, then continue" step to usability sessions for
+`FlyModePage`, `WidgetFrame` quiz mode and `ChecklistRunner`, and note the time to the first
+correct action.
+:::
+
+### What this means for Learn to Fly
+
+Keep the forward, local recovery paths (tap again, Backspace, opposite button, change and
+check again) and the draft saving in `features/challenges/storage.ts`. Keep the delete
+dialog's explicit "This cannot be undone". Change three things. State irreversibility before
+the debrief submit (FRM-042). Separate reset controls from frequent ones in `ChecklistRunner`
+and `Stopwatch`, and give both an undo `Toast` rather than a dialog (FRM-042, FRM-043). Make
+the `WidgetFrame` quiz state announce itself in words inside the canvas (FRM-045). Build the
+"Changed" step badge for procedures a learner has practiced (FRM-044). Add an interruption
+step to every usability session that involves a mode (FRM-046).

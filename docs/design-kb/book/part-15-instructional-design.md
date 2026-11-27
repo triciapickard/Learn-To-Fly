@@ -6,7 +6,7 @@ The evidence in this field is uneven, and the grades say so. A few claims rest o
 
 ## Guidance Before Discovery
 
-The most consequential choice in a beginner's course is how much the learner is told and shown before being asked to perform. LTF's audience has, in the words of its own plan, "never flown", and works beside a full flight simulator that will let them do anything at all. Few settings tempt a designer more toward "go and explore". The evidence says that for beginners, that is the weakest option.
+The most consequential choice in a beginner's course is how much the learner is told and shown before being asked to perform. LTF's audience, as its own product documents put it, has "never flown", and works beside a full flight simulator that will let them do anything at all. Few settings tempt a designer more toward "go and explore". The evidence says that for beginners, that is the weakest option.
 
 ### What the discovery meta-analysis found
 
