@@ -503,3 +503,68 @@ The experiment is controlled and well-documented, but the headline in the abstra
 4. If LTF reports accessibility features, describe them as options, not as clinical benefits.
 
 Confirmed this session: Crossref record; the full 8-page paper read (PDF from scispace.com/pdf/good-fonts-for-dyslexia-2debffz8dl.pdf, text extracted with pdftotext), including the abstract, methodology, Table 1 and sections 5.1 to 5.2.
+
+## wery2017effect
+
+Wery, J. J., & Diliberto, J. A. (2017). The effect of a specialized dyslexia font, OpenDyslexic, on reading rate and accuracy. *Annals of Dyslexia*, 67(2), 114-127. DOI 10.1007/s11881-016-0127-1.
+
+### Core claims
+
+OpenDyslexic is a free font whose letters have heavier strokes toward the bottom. Its developers claim this keeps letters from looking upside down or swapped, helps readers tell letters apart and reduces errors and effort. Wery and Diliberto tested the claim with children with dyslexia, comparing OpenDyslexic with Arial and Times New Roman. The abstract reports "no improvement in reading rate or accuracy for individual students with dyslexia, as well as the group as a whole", that none of the participants preferred the font, and that "there may be no benefit for translating print materials to this font".
+
+### Specifics
+
+Design. A single-subject alternating treatment design, in which each child reads under all three fonts across repeated short probes, with the order of fonts randomized. Three tasks: letter naming, real-word reading and nonsense-word reading, each as a one-minute timed reading from randomized lists (seven lists per task). Measures were correct items per minute (fluency) and correct over attempted (accuracy).
+
+Participants. Twelve children were enrolled, 11 completed all three probes (one child's nonsense-word data were excluded because articulation interfered with scoring). They were aged about 9 to 12 and a half, in grades 3 to 6, at an independent school for students with dyslexia in the southeastern United States, with a confirmed dyslexia diagnosis or a phonological processing or decoding disability and normal vision. Nominal sizes were Arial 12, Times New Roman 12 and OpenDyslexic 10, adjusted to match physical letter size.
+
+Analysis. Visual analysis of graphs plus a nonparametric effect size, the improvement rate difference (IRD), with confidence intervals. All lines trended upward over sessions (a practice effect) and overlapped heavily, with no font showing a stronger trend.
+
+Results. Every IRD comparing OpenDyslexic with a standard font was negative, meaning OpenDyslexic did worse: for fluency, from about -50 per cent (letter naming, versus Arial) to about -89 per cent (word reading, versus Arial); for accuracy, from about -54 per cent to -76 per cent. Arial and Times New Roman did not differ in a practically meaningful way. Some children called OpenDyslexic "new" or "different", none preferred it.
+
+The authors also argue the font rests on a questionable premise: that dyslexia is mainly a problem of letter reversal or visual perception, rather than a phonological one.
+
+### Replication and criticism
+
+This is a small single-case study with 12 children in one school, comprehension not measured, and fonts that differed in nominal size. The authors state single-case results need replication across independent studies before a practice counts as evidence-based, and they call for more research. The result lines up with the other studies of dyslexia-specific fonts: Rello and Baeza-Yates (2013) found OpenDyslexic did not significantly reduce reading time or fixations in Spanish-reading adolescents and adults, and Kuster et al. (2018) found no benefit of the related Dyslexie font in 170 Dutch children with dyslexia (see rello2013good and kuster2018dyslexie). The paper says it is the first peer-reviewed study of a dyslexia font with English readers. The IRD values are large negative numbers, but they are overlap measures from a small sample and I would not quote them as the size of harm; the safe reading is "no benefit, possibly worse".
+
+### Implications for LTF
+
+1. Do not ship a dyslexia-specific font as an accessibility feature or advertise it as helping learners with dyslexia. The evidence does not support it and one study found it did worse.
+2. A reading-support setting for LTF should instead offer size, letter and word spacing and line spacing, with a standard high-quality sans serif default (see marinus2016special).
+3. Phonological support (audio, glossary, plain words, chunking of long terms and call signs) is a better use of effort than font changes for learners who struggle with decoding.
+4. If any user feature is justified by "some learners prefer it", say it is a preference option.
+
+Confirmed this session: Crossref record (published online March 2016, print volume July 2017); abstract via Europe PMC (PMID 26993270); full text read at pmc.ncbi.nlm.nih.gov/articles/PMC5629233 via WebFetch summary (participants, design, IRD results, limitations).
+
+## marinus2016special
+
+Marinus, E., Mostard, M., Segers, E., Schubert, T. M., Madelaine, A., & Wheldall, K. (2016). A special font for people with dyslexia: Does it work and, if so, why? *Dyslexia*, 22(3), 233-244. DOI 10.1002/dys.1527.
+
+### Core claims
+
+The Dyslexie font, created by the Dutch designer Christian Boer in 2008, received worldwide media attention as a help for readers with dyslexia although (the abstract says) "there is barely any empirical evidence for the efficacy of Dyslexie". This study asked two questions: is Dyslexie more effective than a commonly used sans serif font, Arial, and if so, can its large spacing settings explain the difference? The answer: low-progress readers read 7 per cent more words per minute in Dyslexie than in standard Arial, but when Arial's within-word and between-word spacing was matched to Dyslexie's, the difference was no longer significant. The authors concluded that the efficacy of the font is not due to its specially designed letter shapes but to its particular spacing settings.
+
+### Specifics
+
+Participants and design. 39 low-progress readers who were learning to read in English read four different texts in four font conditions. All were matched on letter display size (x-height). The conditions differed in how closely they matched spacing: standard Arial, Dyslexie, and versions in which Arial's spacing was adjusted toward Dyslexie's, within words and between words. The abstract does not give the age range or the exact text lengths, and I did not read the full paper.
+
+Measure. Reading speed in words per minute for each text, compared across conditions.
+
+Result. Dyslexie gave about 7 per cent more words per minute than standard Arial. With matched spacing the difference was not significant.
+
+Additional point from a secondary account. Kuster et al. (2018) summarize this study as also finding that the letters of Dyslexie are less distinct from one another than those of Arial, which contradicts the designer's claim that his shapes make letters more different. That detail comes from Kuster et al., not from the abstract, and I did not verify it in the original.
+
+### Replication and criticism
+
+The sample is small (39) and the abstract reports no preference data or comprehension measure, so the study shows a spacing effect on speed in low-progress readers, not a general benefit. It is consistent with the crowding literature, which says spacing, not letter shape, limits legibility at small sizes (see pelli2008uncrowded and arditi2005serifs). Kuster et al. (2018) later tested 170 Dutch children with dyslexia on text and 102 on word lists and found no benefit from Dyslexie even without matched spacing (see kuster2018dyslexie), and Wery and Diliberto (2017) found none for OpenDyslexic. The Marinus result is therefore best read as: where an advantage exists, spacing is the likely cause. There is also a distinction between statistical significance and meaning: a 7 per cent gain is modest, and was removed by controlling for spacing.
+
+### Implications for LTF
+
+1. When someone asks for a "dyslexia-friendly mode", the evidence points to spacing, not a novel typeface. A setting that adds letter spacing, word spacing and line spacing in the lesson reading view is cheap and is the thing most likely to help low-progress readers.
+2. Test any spacing preset with the actual readers LTF serves before promising a benefit; this study measured speed only in low-progress English readers.
+3. Compare typefaces at equal x-height and equal spacing in any internal test, since otherwise the difference being measured may be the spacing.
+4. Spacing should respect the limit that very wide spacing does not help (see legge2011print).
+5. Offer the spacing control in fly mode too, where crowding in the periphery is worse.
+
+Confirmed this session: Crossref record; full abstract via Europe PMC (PMID 27194598). The full paper was not accessible. The Kuster et al. (2018) account of this study was read at pmc.ncbi.nlm.nih.gov/articles/PMC5934461.
