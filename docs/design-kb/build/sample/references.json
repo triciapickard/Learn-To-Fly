@@ -1,0 +1,65 @@
+[
+ {
+  "id": "fitts1954information",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Fitts",
+    "given": "Paul M."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1954
+    ]
+   ]
+  },
+  "title": "The information capacity of the human motor system in controlling the amplitude of movement",
+  "container-title": "Journal of Experimental Psychology",
+  "volume": "47",
+  "issue": "6",
+  "page": "381-391",
+  "DOI": "10.1037/h0055392"
+ },
+ {
+  "id": "tinker1963legibility",
+  "type": "book",
+  "author": [
+   {
+    "family": "Tinker",
+    "given": "Miles A."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1963
+    ]
+   ]
+  },
+  "title": "Legibility of Print",
+  "publisher": "Iowa State University Press",
+  "publisher-place": "Ames"
+ },
+ {
+  "id": "bringhurst1992elements",
+  "type": "book",
+  "author": [
+   {
+    "family": "Bringhurst",
+    "given": "Robert"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1992
+    ]
+   ]
+  },
+  "title": "The Elements of Typographic Style",
+  "publisher": "Hartley & Marks",
+  "publisher-place": "Point Roberts, WA"
+ }
+]
