@@ -454,16 +454,15 @@ Erik Spiekermann's review (originally in German, *Text* no. 11, 2006; English by
 
 ### Replication and criticism
 
-This is a theory from a master teacher, supported by diagrams and argument, not by experiments on readers. Its claim that the word image is the primary unit of reading is exactly the kind of statement lane 02 must test; the reading-research literature has contested "word shape" claims, so do not use this book as evidence for them.
+This is a theory from a master teacher, supported by diagrams and argument, not by experiments on readers. Its claim that the word image is the primary unit of reading is the kind of statement lane 02 must test; I do not rely on it here.
 
-Reviews are mixed. Williams calls Noordzij's ideas widely circulated among type designers but finds the book assumes and leaves out too much, skips letter anatomy, and is "mechanical and limiting rather than expansive," as if trying to "freeze a beautiful living thing." Spiekermann finds the style demanding and sometimes provocative, values the challenge to accepted "facts," and says he cannot simply believe all the theories. Hyphen Press quotes a reviewer who does not know whether the theory is right but finds the remarks worth reading. One page records another review by Jan Middendorp in *Eye* (no. 59, 2006), which I did not read.
+Reviews are mixed. Williams calls Noordzij's ideas widely circulated among type designers but finds the book assumes and leaves out too much, skips letter anatomy, and is "mechanical and limiting rather than expansive," as if trying to "freeze a beautiful living thing." Spiekermann finds the style demanding and sometimes provocative, values the challenge to accepted "facts," and says he cannot simply believe all the theories. Hyphen Press quotes a reviewer who does not know whether the theory is right but finds the remarks worth reading.
 
 ### Implications for LTF
 
 1. The strongest usable idea is that white space is part of the letterform: spacing between letters, words and lines shapes legibility as much as stroke shapes. Do not tighten tracking or line-height merely to fit more on a screen.
 2. Rhythm and contrast across a line matter more than the beauty of single letters: judge candidate faces by setting real lesson sentences, not by a specimen of single glyphs.
-3. Because the word image claim is untested here, do not design around word shape (for example, avoiding all-caps for words on the ground that it destroys shape) without checking the legibility lane.
-4. The stroke model explains why broad-nib faces have a built-in contrast direction; when choosing a text face for sustained reading, check that its stress and rhythm look consistent in your actual sizes.
-5. Treat the theory as background for choosing among faces, not as a rule set for components.
+3. Because the word-image claim is untested here, do not design around word shape (for example, banning all-caps because it "destroys shape") without checking lane 02.
+4. Treat the theory as background for choosing among faces, not as a rule set for components.
 
 Confirmed this session: Publisher page https://www.hyphenpress.co.uk/products/books/978-0-907259-30-5 (translator, 1985 original, 88 pages, contents). Spiekermann's review at https://hyphenpress.co.uk/the_stroke_a_review/. Williams's review in *Amphora* read from https://journals.lib.sfu.ca/index.php/amphora/article/download/2213/1622/7247 (Hyphen, 2005, £15). Open Library work OL4869181W lists the Hyphen edition (listed there as 2006).

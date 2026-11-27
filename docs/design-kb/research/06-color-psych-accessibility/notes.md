@@ -502,7 +502,7 @@ Read this session on w3.org/TR/WCAG22 and w3.org/WAI/WCAG22/Understanding/contra
 
 ### Replication and criticism
 
-The ratio is widely implemented and testable, and meeting it is the legal and procurement baseline in many jurisdictions (I did not verify the legal specifics this session, so I do not list laws). It is also criticized. The documentation of the Accessible Perceptual Contrast Algorithm (see somers2022apca) argues the ratio has no model of font size and weight, overstates contrast for dark colors, can pass pairs that are hard to read and does not suit dark mode; those are claims by a rival method's developer, not independent validation. The Understanding document itself says the ratios are thresholds with no rounding and that the formula assumes typical flare, which implies they are engineering approximations. The W3C WCAG 3 draft dated 10 September 2026, which I read, states that the contrast algorithm for WCAG 3 is yet to be determined and does not mention APCA, so WCAG 2.x remains the operative standard.
+The ratio is simple to implement and test, and it is the contrast measure in the current Recommendation (legal uptake is not verified here and no laws are named). It is also criticized. The documentation of the Accessible Perceptual Contrast Algorithm (see somers2022apca) argues the ratio has no model of font size and weight, overstates contrast for dark colors, can pass pairs that are hard to read and does not suit dark mode; those are claims by a rival method's developer, not independent validation. The Understanding document itself says the ratios are thresholds with no rounding and that the formula assumes typical flare, which implies they are engineering approximations. The W3C WCAG 3 draft dated 10 September 2026, which I read, states that the contrast algorithm for WCAG 3 is yet to be determined and does not mention APCA, so WCAG 2.x remains the operative standard.
 
 ### Implications for LTF
 
@@ -544,3 +544,98 @@ The status is contested. The WCAG 3 working draft (10 September 2026) leaves the
 4. Re-check the status of WCAG 3 every time the color chapter is revised; the contrast algorithm is expected to change.
 
 Confirmed this session: WebFetch of github.com/Myndex/SAPC-APCA, github.com/Myndex/apca-w3 and the WhyAPCA documentation page; WebSearch summaries for status and criticism (secondary, flagged above); WebFetch of w3.org/TR/wcag-3.0 for the 2026 draft status. No Crossref record applies; the year 2022 is that of the library version 0.1.9 and the repository copyright range 2019 to 2022.
+
+## legge1987psychophysics
+
+Legge, Rubin & Luebker (1987), "Psychophysics of reading, V. The role of contrast in normal vision", Vision Research 27(7), 1165-1177.
+
+### Core claims
+
+The paper asks how contrast affects reading rate and what role contrast sensitivity plays. Measuring reading rate as a function of the contrast and character size of text in people with normal vision, the authors found that reading rates were highest, at about 350 words per minute, for letters from 0.25 to 2 degrees in size, and that within this range reading was very tolerant to contrast reduction. For 1-degree letters, reading rate decreased by less than a factor of two for a tenfold reduction in contrast. The results were very similar for white-on-black and black-on-white text. Reading declined more rapidly for very small (under 0.25 degree) and very large (over 2 degrees) letters. Because people with low vision usually need large characters, high contrast is especially important for them. Taking 35 words per minute as a threshold for reading, the authors built a contrast-sensitivity function for reading and related its shape to that of sine-wave grating contrast sensitivity.
+
+### Specifics
+
+Evidence type: psychophysical laboratory experiment (reading rate by rapid serial presentation methods used in this series, which I did not confirm here, so the procedure is not described). Specific numbers confirmed from the abstract:
+
+- Peak reading rate about 350 words per minute.
+- Range of letter sizes with best performance: 0.25 to 2 degrees.
+- Contrast tolerance: for 1-degree letters, a tenfold reduction in contrast cut reading rate by less than a factor of two.
+- No major difference between white-on-black and black-on-white.
+- Threshold criterion for the reading CSF: 35 words per minute.
+- Rapid decline outside the 0.25 to 2 degree range.
+
+A companion paper in the series, "Psychophysics of reading, VI. The role of contrast in low vision" (Rubin and Legge, 1989, Vision Research 29(1), 79-91; Crossref record confirmed, abstract not read), extends the question to low vision, and the abstract of this paper itself says high contrast is particularly important for people with low vision.
+
+### Replication and criticism
+
+This is an early, careful psychophysics result that is cited as the basis for the idea that contrast matters much less for normal-sighted readers of reasonably sized text than it does for low vision, and for the "reading CSF". It used a small number of subjects typical of psychophysics (the abstract does not give the number) and high-quality display conditions of the 1980s. It does not test glare, ambient light, small sizes at the edge of acuity, or reading while attending to another task. The claim that polarity made little difference is for the conditions tested and has to be set beside the later display-polarity studies in this lane (Buchner and Baumgartner, Piepenbrock et al., Dobres et al.), which find a positive-polarity advantage for proofreading and brief reading at small sizes.
+
+### Implications for LTF
+
+1. Normal-sighted learners reading comfortably sized text are tolerant of moderate contrast reductions, so a 4.5:1 minimum is not a matter of aesthetics; it is a protection for low-vision learners and for difficult viewing conditions. This is a reason to hold the WCAG floor and not to treat "slightly low contrast" as harmless.
+2. Letter size matters at both ends: very small and very large text read slower. Large display of key numbers (for example in fly mode) should remain within a moderate size range, which the abstract states in degrees of visual angle (0.25 to 2 degrees); LTF must convert to CSS pixels using an assumed viewing distance, a calculation that belongs in the typography lane.
+3. For any reading task in dim light, do not extrapolate from this paper, whose tests used polarity and display conditions different from a sim cockpit; use the display-polarity studies instead.
+4. Use "reading rate drops sharply below a size threshold" as a justification for a minimum font size token in all widgets.
+
+Confirmed this session: Crossref 10.1016/0042-6989(87)90028-9 (volume 27, issue 7, pp. 1165-1177) and the Crossref record of the companion paper 10.1016/0042-6989(89)90175-2; Europe PMC abstract (all numbers).
+
+## buchner2007text
+
+Buchner & Baumgartner (2007), "Text-background polarity affects performance irrespective of ambient illumination and colour contrast", Ergonomics 50(7), 1036-1063.
+
+### Core claims
+
+A series of experiments tested whether dark text on a light background (positive polarity) or light text on a dark background (negative polarity) produces better proofreading performance. Proofreading was consistently better with positive polarity. The advantage was independent of ambient lighting (darkness versus typical office illumination) and of chromaticity (black and white versus blue and yellow). A final experiment showed that color contrast (red text on a green background) could not compensate for a lack of luminance contrast. Physiological measures of effort and strain (breathing rate, heart rate, heart rate variability, skin conductance) and self-reported mood, fatigue, arousal, eyestrain, headache, muscle strain and back pain did not vary with the independent variables, which the authors read as showing that participants worked equally hard in all conditions, so the performance difference is not an effort trade-off.
+
+### Specifics
+
+Evidence type: a multi-experiment human-factors laboratory study. From the abstract:
+
+- Task: proofreading, a performance measure sensitive to legibility under sustained attention.
+- Manipulations: polarity (dark on light versus light on dark), ambient illumination (dark room versus office lighting), chromaticity (achromatic versus blue and yellow) and, in the final experiment, color contrast versus luminance contrast (red on green).
+- Outcome: positive polarity better in every test; red-green color contrast without luminance contrast did not rescue performance.
+- Controls: physiological and subjective strain measures flat across conditions, ruling out a hidden effort cost.
+
+Sample sizes and effect sizes were not available to me this session, so I cannot state them.
+
+### Replication and criticism
+
+The result has been replicated and refined by the same Düsseldorf group, and in a refined form by others. Buchner, Mayr and Brandt (2009; this lane) tested whether the advantage is caused by polarity or by the higher overall display luminance of positive displays, and found that at equal luminance the polarity advantage vanished, suggesting luminance rather than polarity itself. Piepenbrock et al. (2013, 2014; this lane) showed the advantage in younger and older adults and with smaller characters, and Dobres et al. (2017; this lane) found that dark ambient illumination interacts with polarity at glance-like reading. So the practical finding (positive polarity helps proofreading) is robust in these experiments, while the mechanism is debated. The paper's own result that ambient illumination did not interact with polarity is qualified by the later glance-reading work. The tests used proofreading, which is a demanding visual task and not the casual reading of lesson text.
+
+### Implications for LTF
+
+1. Dark mode is not intrinsically less legible per se, but the evidence says light-on-dark text is read less accurately in sustained proofreading-like tasks, so LTF's default theme for long-form lesson text should lean to dark text on a light background, with a high-quality dark theme as an option.
+2. The red-on-green result is a direct warning: equal-luminance color pairs are not a substitute for luminance contrast. Do not use hue alone to separate text and background in any widget.
+3. Nothing in this paper suggests dark rooms demand dark themes; its darkness condition did not remove the positive polarity advantage.
+4. If LTF ever tests dark mode with its own users, use a proofreading-style or checklist-accuracy measure and equate luminance, following the later studies.
+
+Confirmed this session: Crossref 10.1080/00140130701306413 (volume 50, issue 7, pp. 1036-1063); Europe PMC abstract; abstracts of Buchner et al. 2009, Piepenbrock et al. 2013 and 2014, and Dobres et al. 2017 for the follow-up claims.
+
+## buchner2009advantage
+
+Buchner, Mayr & Brandt (2009), "The advantage of positive text-background polarity is due to high display luminance", Ergonomics 52(7), 882-886.
+
+### Core claims
+
+This short paper tests an explanation for the positive polarity advantage found earlier (reading dark letters on a light background is better than light on dark). The hypothesis is that the advantage arises because overall display luminance is typically higher for positive-polarity displays. The authors manipulated text-background polarity and overall display luminance independently. They report no positive polarity advantage when overall display luminance was equivalent for positive and negative polarity displays; there was only an effect of display luminance, with better performance for higher-luminance displays. The abstract's practical conclusion is that readability of text on computer screens is better when overall luminance is high, as in positive-polarity displays, and that display polarity per se does not affect readability.
+
+### Specifics
+
+Evidence type: a single factorial laboratory experiment (the abstract does not give sample size or the measure, which the earlier studies of this group made proofreading performance, so I do not state it here).
+
+- Design: polarity (positive/negative) crossed with overall display luminance (high/low), so that a negative-polarity display could be as bright overall as a positive one.
+- Result: only the main effect of luminance; no polarity effect at matched luminance.
+- Reasoning: higher overall luminance implies a brighter display, which (in the group's later work) the authors link to pupil constriction and sharper retinal images. A dissertation summary from the same group, found in search results, describes pupil sizes smaller and proofreading better with positive polarity, but I did not read that source in detail.
+
+### Replication and criticism
+
+The follow-up by Piepenbrock, Mayr and Buchner (2014; abstract confirmed) tested the display-luminance hypothesis by crossing polarity with character size (8, 10, 12 and 14 pt, equal to 0.22, 0.25, 0.31 and 0.34 degrees of vertical visual angle) and found a positive polarity advantage that increased linearly as characters got smaller, consistent with luminance improving perception of detail; it recommends avoiding negative polarity with small fonts. Dobres et al. (2017) explain their result in terms of pupillary contraction under bright light reducing optical aberrations. A criticism that applies to this literature: tests used proofreading or lexical decision tasks, with dark-adapted or office-lit participants, and a stylized luminance manipulation, so generalizing to a dark cockpit with a monitor beside the learner is an inference. Also, the abstract claims polarity per se has no effect, which is a strong claim from one experiment.
+
+### Implications for LTF
+
+1. The finding turns the polarity question into a luminance question: a dark theme with a brighter, higher-contrast text layer is not penalized in principle, but the usual dark theme (dimmer overall) is.
+2. For a dark theme, raise the weight, size and luminance of small text, and avoid thin small gray text on near-black, rather than switching to a light theme.
+3. A fly-mode theme can be dark for glare and comfort reasons, but its text should be larger and brighter than a daylight equivalent, since the small-size penalty is the best-supported risk.
+4. A/B test any dark theme against a light theme on checklist accuracy and reading speed, equating overall luminance to separate polarity from brightness.
+
+Confirmed this session: Crossref 10.1080/00140130802641635 (volume 52, issue 7, pp. 882-886); Europe PMC abstracts of this paper and of Piepenbrock, Mayr and Buchner (2014; 10.1177/0018720813515509); search summary of the Düsseldorf dissertation (not used for numbers).
