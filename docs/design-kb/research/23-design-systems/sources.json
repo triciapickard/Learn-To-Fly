@@ -258,5 +258,36 @@
     "verified_evidence": "Crossref works query 'case against user interface consistency Grudin 1989' returned DOI 10.1145/67933.67934, CACM 32(10) 1164-1173, Oct 1989; full text read from Microsoft Research PDF",
     "kind": "argued essay with worked examples",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "ozok2000measuring",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Ozok",
+        "given": "A. Ant"
+      },
+      {
+        "family": "Salvendy",
+        "given": "Gavriel"
+      }
+    ],
+    "year": 2000,
+    "title": "Measuring consistency of web page design and its effects on performance and satisfaction",
+    "container_title": "Ergonomics",
+    "volume": "43",
+    "issue": "4",
+    "pages": "443-460",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/001401300184332",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query 'Measuring consistency of web page design ... Ozok Salvendy' returned DOI 10.1080/001401300184332, Ergonomics 43(4) 443-460, 2000; abstract summary read at pure.johnshopkins.edu record (four groups of 10 participants, error rate partly supported)",
+    "kind": "small between-subjects experiment",
+    "lane": "23-design-systems"
   }
 ]

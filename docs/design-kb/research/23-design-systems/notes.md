@@ -247,3 +247,33 @@ The paper is an argued essay with worked examples, not an experiment. It reinter
 5. Weigh learning against use. Fly mode may be used repeatedly under load, so repeated-use speed can matter more than first-impression familiarity.
 
 Confirmed this session: Crossref works/10.1145/67933.67934 (title, author, CACM 32(10) 1164-1173, October 1989, 52 references); full text read from the Microsoft Research copy at https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/the-case-against-user-interface-consistency.pdf. The Grudin and Norman statement is from a search summary only.
+
+## ozok2000measuring
+
+Ozok, A. A., and Salvendy, G. (2000). Measuring consistency of web page design and its effects on performance and satisfaction. *Ergonomics*, 43(4), 443-460. https://doi.org/10.1080/001401300184332
+
+### Core claims
+
+Ozok and Salvendy ask two questions that Grudin's essay left open: how can the consistency of web pages be measured, and does more consistency actually improve user performance and satisfaction? They hypothesized that consistent designs would improve both, and that overall consistency would be explained by three elements: physical consistency, communicational consistency and conceptual consistency. The results, as summarized in the Johns Hopkins repository record (https://pure.johnshopkins.edu/en/publications/measuring-consistency-of-web-page-design-and-its-effects-on-perfo-3/), only partly supported the performance hypothesis.
+
+### Specifics
+
+Design: a four-group between-subjects experiment with ten participants per group (40 in total), as reported in the abstract summaries I could read (publisher page blocked; the abstract text itself was not available to me, so wording here is a paraphrase). Measures were error rate, performance time and satisfaction.
+
+Findings reported: the hypothesis was partially supported for error rate but not for satisfaction or performance time. All three consistency elements contributed to overall consistency, and physical and communicational consistency interacted with each other, while conceptual consistency did not interact with them. In other words, how pages look and how they talk to the user are tied together, and whether the underlying concepts are consistent behaves separately.
+
+Related work by the same authors, confirmed by Crossref titles and a university record. A 2001 paper in *Behaviour and Information Technology* 20(6), 433-447, is titled "How consistent is your web design?". A 2003 paper in the same journal, 22(3), 155-163, reports "The effect of language inconsistency on performance and satisfaction in using the Web: results from three experiments". Ozok's Purdue doctoral dissertation, "Guidelines for Design and Measurement of Interface Consistency on the World Wide Web" (advisor Salvendy), is summarized on the Purdue repository (https://docs.lib.purdue.edu/dissertations/AAI3037621) as developing a questionnaire reduced from 125 items to 94 across nine factors, with four experiments on 140 subjects, internal reliability of 0.81 and interrater reliability of 0.75, and 25 guidelines derived from 20 tasks. Those figures are from a paraphrased abstract; I did not see the dissertation. The same record says consistent linguistic design lowered task time and error rates, so language consistency has some support beyond the 2000 paper.
+
+### Replication and criticism
+
+This is a small experiment (10 per cell), and a partial result: error rate improved, satisfaction and speed did not significantly follow. Small samples make the non-significant outcomes weak evidence of no effect. The study sits between two camps: the consistency advocates cited by Grudin (see the grudin1989case section) and Grudin's own view that consistency is context-bound. Its three-element structure (physical, communicational, conceptual) is a useful measurement scheme but has not, to my knowledge, been independently replicated; I did not search for replications beyond the same authors' follow-ups. The dissertation's later figures show reliability numbers for the questionnaire but come from a different, larger body of work.
+
+### Implications for LTF
+
+1. Expect the main benefit of consistency to be fewer errors, not faster or happier use. For LTF this fits checklist and quiz screens: consistent control placement should reduce mis-taps and misreads, which matter more than speed.
+2. Separate three audits. Physical: layout, color and type of equal things match. Communicational: labels, button text and feedback wording follow one vocabulary (the project's tokens and copy rules already cover part of this). Conceptual: the same idea always maps to the same structure, such as "step" and "lesson" meaning one thing.
+3. Because the dissertation record reports benefits of consistent language, give copy review the same weight as visual review. A consistent callout vocabulary (note, warning, verify) is a design-system element.
+4. Do not treat a consistency score as a quality score. The study shows a partial relationship; keep usability tests with real beginners as the arbiter.
+5. When two lessons legitimately differ, document why, so that a deliberate exception is not mistaken for drift later.
+
+Confirmed this session: Crossref works query (title, authors, Ergonomics 43(4) 443-460, DOI 10.1080/001401300184332; companion papers 10.1080/01449290110092260 and 10.1080/0144929031000107081); abstract summary read at the Johns Hopkins repository page and Purdue dissertation record linked above; the publisher page returned 403, so the full abstract was not read.
