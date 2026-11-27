@@ -67,7 +67,7 @@ A second limit is that scanning patterns describe where eyes go, not what reader
 ::: {.rule #WRT-005 grade="C"}
 **Do not format a warning as a skimmable fragment.** Front-loading makes a point findable, but scanning readers skip what looks like routine list content, and the F-pattern follow-up describes skipped content as the failure the pattern signals [@nielsen2006f]. A warning that must be read should be a full sentence with its consequence, set apart by position and component rather than by being one more bullet.
 
-*In LTF:* safety content goes in a `Callout` of type `safety`, as one or two full sentences that state the consequence, not as a bullet inside a step list. In Fly mode, the random-event alert (`border-4 border-warn`) carries one sentence and one action.
+*In LTF:* safety content goes in a `Callout` of type `safety`, as one or two full sentences that state the consequence, not as a bullet inside a step list. In Fly mode, the random-event alert (`border-4 border-warn`) should carry one sentence and one action.
 :::
 
 ### Credibility is read before content
@@ -353,7 +353,7 @@ Kimble's appellate opinion revision opened with a summary of the crucial facts, 
 ::: {.rule #WRT-027 grade="B"}
 **Put a one- or two-sentence summary of the point at the top of every long page.** Readers preferred revisions that opened with a summary [@kimble2016proof], and the inverted pyramid and summaries are standard guidance [@nielsen1997how; @seemanhorwitz2021making]. The supporting studies measured preference and bundled changes.
 
-*In LTF:* the lesson `summary` field ("How the course works, how challenges are flown and scored, and what Learn to Fly is (and is not).") should render as the `PageHeader` description, and every challenge `goal` should open with the task in its first sentence, as C1.1's does ("Find and operate the Skyhawk's main controls and instruments…").
+*In LTF:* the lesson `summary` field ("How the course works, how challenges are flown and scored, and what Learn to Fly is (and is not).") should render as visible text under the lesson h1, and every challenge `goal` should open with the task in its first sentence, as C1.1's does ("Find and operate the Skyhawk's main controls and instruments…").
 :::
 
 ### What this means for Learn to Fly
@@ -434,7 +434,7 @@ Jarrett and Gaffney's forms book makes the same point positively: instructions b
 
 ### Glance reading in Fly mode
 
-Fly mode is the place where every rule in this chapter is tested hardest. The learner is flying, looks at the page for a second or two, and looks back. Degani's review of flight-deck documentation treats such pages as displays in the full human-factors sense: findability and legibility are safety properties, and the review cites accident reports in which a crew spent minutes looking for a procedure they believed was in the wrong place [@degani1992typography]. The review's numbers are for paper at arm's length and cannot be copied into CSS, but its direction is clear: one canonical name and position for each procedure, and no stacking of small type, italics and low contrast.
+Fly mode is where every rule about instructions is tested hardest. The learner is flying, looks at the page for a second or two, and looks back. Degani's review of flight-deck documentation treats such pages as displays in the full human-factors sense: findability and legibility are safety properties, and the review cites a case in which a crew spent about three minutes looking for a smoke procedure because they believed it was in the wrong section [@degani1992typography]. The review's numbers are for paper at arm's length and cannot be copied into CSS, but its direction is clear: one canonical name and position for each procedure, and no stacking of small type, italics and low contrast.
 
 For writing, glance reading means each step must be recoverable from its first words, a message must fit one line, and nothing the learner needs mid-flight should be in a paragraph.
 
@@ -446,7 +446,7 @@ For writing, glance reading means each step must be recoverable from its first w
 
 ### What this means for Learn to Fly
 
-The challenge YAML format already contains the pieces this chapter asks for: `goal`, `setup`, `procedure` and `criteria`, with each procedure step a string. Strengthen the procedure format. Each step is one action (WRT-030); steps whose result shows in the sim carry a checkpoint and, where useful, a recovery (WRT-031); groups of steps end in a completion line (WRT-032). A schema change could make this explicit by allowing a step to be an object with `do`, `see` and `ifNot` fields, rendered in `FlyPanel` as one line with an expandable check. That is a product decision with a plan entry, not something to slip in.
+The challenge YAML format already contains the pieces these rules need: `goal`, `setup`, `procedure` and `criteria`, with each procedure step a string. Strengthen the procedure format. Each step is one action (WRT-030); steps whose result shows in the sim carry a checkpoint and, where useful, a recovery (WRT-031); groups of steps end in a completion line (WRT-032). A schema change could make this explicit by allowing a step to be an object with `do`, `see` and `ifNot` fields, rendered in `FlyPanel` as one line with an expandable check. That is a product decision with a plan entry, not something to slip in.
 
 In lessons, reach a "Try" early (WRT-029), keep critical setup at the step that needs it (WRT-028), and fix widgets that need operating instructions rather than writing the instructions (WRT-033). In `checklists.yaml`, use `note` to state the target state where the source supports it (WRT-031). In `FlyModePage`, enforce the one-glance rule with a review prompt that flags any step string longer than a set length (WRT-034); the length should be chosen by testing on a phone beside the sim, not copied from this Part.
 
@@ -572,7 +572,7 @@ The label should match what happens. A label that says "Save" and also publishes
 
 Consistency is the heuristic that explained the most usability problems in Nielsen's analysis [@nielsen1994enhancing], and the federal guidelines' rule of one term for one thing applies to actions as much as to nouns [@plain2011federal]. If the same action has several labels, the learner must work out whether they are the same action. LTF's sign-up action currently appears as "Sign up" in the `Header`, "Sign up free" in `LessonParts.tsx`, "Create a free account" on the landing page, and "Sign up (free) to save your progress and challenge scores." in the `SignupBanner`. The log-in action is "Log in" everywhere, which is right.
 
-Podmajersky's voice chart, discussed in the next chapter, has a row for vocabulary (preferred and avoided words) precisely to settle questions like this before they multiply [@podmajersky2019strategic].
+Podmajersky's voice chart, discussed in the chapter on voice and tone, has a row for vocabulary (preferred and avoided words) precisely to settle questions like this before they multiply [@podmajersky2019strategic].
 
 ::: {.rule #WRT-045 grade="B"}
 **Use one label for each action across the product, and record it in the vocabulary list.** Consistency was the largest single explainer of usability problems in Nielsen's analysis [@nielsen1994enhancing], and the federal guidelines require one term for one thing [@plain2011federal]. The analysis shows frequency, not effect size.
@@ -832,3 +832,108 @@ LTF's content pipeline is well placed to add writing checks, because every lesso
 
 None of these replaces the aviation accuracy review that `/review-lesson` performs. A lesson can be perfectly clear and wrong; another can be correct and unreadable. The two reviews answer different questions and both are needed before `published: true`.
 
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+1. **Reading modes decide format.** Reference pages, the Brief, the Fly tab, `FlyModePage`, buttons and messages are written for a scanning reader with a task; lesson explanations are continuous prose under front-loaded headings (WRT-001, WRT-004).
+2. **The first words carry the information.** Headings, steps, criteria labels, quiz options and paragraphs start with the words that distinguish them (WRT-002, WRT-023).
+3. **No hype below the landing hero.** Lessons, Briefs, quiz feedback and Fly mode state what the learner will do, without promotional language (WRT-006, WRT-052).
+4. **Warnings are full sentences in a `safety` `Callout`.** They are never a bullet in a step list, and their negations are spelled out (WRT-005, WRT-019).
+5. **One written standard.** `content/README.md` (or a linked style page) opens with the outcome test from the Plain Writing Act, lists the adopted plain language rules with LTF examples, names the exceptions and includes the testing step (WRT-007, WRT-050).
+6. **Restructure before rewording.** A failing section is fixed by moving the point first, splitting topics and moving exceptions out, before any word swaps (WRT-008, WRT-010).
+7. **One register for beginners and reference.** `SpeedsPage`, `KeyNumbers` and later modules keep the plain voice of L0.1 (WRT-009).
+8. **Technical terms are kept, glossed once per page, and used consistently.** `glossary.yaml` and the glossary chips are the system; sim labels are the canonical names; slashes between alternatives are replaced by words (WRT-011, WRT-020, WRT-059).
+9. **Sourced wording is never "plained".** Checklist items, radio phraseology, limits and quoted regulation keep their source wording, with plain explanation beside them (WRT-012, WRT-060).
+10. **Sentence rules are defaults, not lint errors.** Short familiar words, verbs over nouns, active voice where the reader must act, positive form and main idea first (WRT-013, WRT-014, WRT-015, WRT-016, WRT-017).
+11. **A fixed modal scale.** "Must" only with a cited source; "should" for technique; "can" for options; "need" for sim requirements (WRT-018).
+12. **Headings work out of context.** `SectionNav`, the mobile section `Select` and `PageHeader` titles state the topic or action; lookup surfaces use the learner's question or task (WRT-021, WRT-022).
+13. **Lists follow meaning.** Numbers for ordered steps, bullets otherwise, a lead-in line for every list, parallel items (WRT-024).
+14. **Openings carry the point.** No welcome text, previews or anecdotes before the first idea or action; objectives are a short verb-first list; the `summary` and challenge `goal` state the point first (WRT-025, WRT-026, WRT-027).
+15. **Instructions sit at the point of action and the learner acts early.** Critical setup is repeated where it is needed, and each lesson reaches a "Try" within its first two sections (WRT-028, WRT-029).
+16. **Steps have one action, one pattern, a checkpoint and a recovery.** Groups end with a completion line; most consequential steps come early in LTF's own flows; sourced checklist order is not changed (WRT-030, WRT-031, WRT-032).
+17. **Interface instructions are a design smell.** A widget or form that needs instructions is relabeled or redesigned first (WRT-033).
+18. **Fly mode is one-glance text.** One short line per step, one sentence for the goal, one line and one action per alert (WRT-034, WRT-041).
+19. **Messages state cause and action.** Callers of `ErrorState` pass cause-specific messages; invalid input states the accepted values; a message catalog in the style guide holds the standard wording (WRT-035, WRT-036, WRT-040).
+20. **Form messages appear beside the field, after the learner finishes, and persist.** No validation while typing; no success ticks on simple fields (WRT-037).
+21. **Every quiz item has an explanation that names the correct answer and its reason, and verdicts are calm.** "Correct." replaces "Correct!" (WRT-038, WRT-039, WRT-053).
+22. **Messages and wrong answers are counted.** The most frequent is the next design fix (WRT-042, WRT-065).
+23. **Every control has a visible label.** Icon-only controls are limited to universal conventions with accessible names (WRT-043).
+24. **Buttons say what they do, and each action has one label.** A vocabulary list in the style guide fixes the labels for sign up, continue and debrief first (WRT-044, WRT-045).
+25. **"Select" in the interface, physical verbs in the sim; descriptive link text; sentence case; one page-title format.** The `index.html` default title loses its em dash (WRT-046, WRT-047, WRT-048, WRT-049).
+26. **A voice chart with named tone moments.** Warmth on the landing hero, `CourseBadge`, course completion and Gold results; firmness in safety content; neutral elsewhere; "easy", "just" and "simply" avoided (WRT-050, WRT-051, WRT-052).
+27. **Aviation names stay; jokes get a literal body; stock phrases go.** The 404 keeps its heading and gains a literal explanation (WRT-054).
+28. **Honesty statements share one template.** Beta, draft, unverified, not-a-certificate and simulation-only messages state the limit, then what it means (WRT-055).
+29. **Accessibility of language is checked per page.** Clear-content patterns, no reliance on memory, numbers through tokens with units and sourced meaning, abbreviations spelled out on each page, people-first and bias-free wording (WRT-056, WRT-057, WRT-058, WRT-059, WRT-060).
+30. **Readability scores are author reports only.** No gate, no learner display, non-prose excluded (WRT-061).
+31. **Beginners read before publishing.** Paraphrase tests for key explanations, a narrated Brief-and-Fly read for each challenge, cloze tests where sections keep failing, recorded in `docs/verification/` (WRT-062, WRT-063, WRT-064).
+32. **Copy is judged by learning, not clicks.** Quiz and challenge outcomes are the measures; no A/B tests on safety or procedure wording (WRT-065).
+
+### Review checklist
+
+Run these questions against a pull request that adds or changes learner-facing text (lessons, challenges, checklists, glossary, components with copy, messages) or against a page. A "no" needs a reason recorded in the pull request. Aviation accuracy is reviewed separately with `/review-lesson`; this list is about the writing.
+
+#### Reading and structure
+
+- Does each heading, step, criterion label and quiz option still make sense, and differ from its neighbors, when everything after its second word is covered? (WRT-002)
+- Is lookup and procedure content in lists, tables or steps, and explanatory content in short paragraphs? (WRT-001, WRT-004)
+- Is every warning a full sentence in a `safety` `Callout`, with its consequence and a spelled-out "not"? (WRT-005, WRT-019)
+- Is there any promotional or encouraging hype in a lesson, Brief, quiz or Fly mode text? (WRT-006)
+- Do lesson headings work alone in `SectionNav`, and do lookup headings use the learner's question or task? (WRT-021, WRT-022)
+- Does each paragraph have one topic stated in its first sentence, and are paragraphs over five sentences or sentences over 25 words justified? (WRT-023)
+- Are ordered steps numbered, unordered items bulleted, every list introduced by a lead-in line, and items parallel? (WRT-024)
+- Does the page open with the idea or action, with no welcome, preview or anecdote first, and are objectives a short verb-first list? (WRT-025, WRT-026)
+- Does a long page start with a one- or two-sentence summary, and does a challenge `goal` state the task first? (WRT-027)
+
+#### Plain language and words
+
+- Is the text clear, concise, well organized and right for a beginner in this subject? (WRT-007)
+- If a section was revised, was it restructured before it was reworded, and were exceptions moved out of the main line? (WRT-008, WRT-010)
+- Is the register the same as the rest of the course, with technical terms kept and padding removed? (WRT-009, WRT-013)
+- Is each technical term glossed at its first use on this page and then used without synonyms? (WRT-011, WRT-020)
+- Is any checklist item, radio call, limit or quotation reworded from its source? (WRT-012)
+- Has dense source phrasing been rewritten for a beginner while keeping the fact exact? (WRT-014)
+- Are actions in verbs, subjects and verbs close, and the active voice used wherever the reader must act? (WRT-015, WRT-016)
+- Does each instruction say what to do before what not to do, and the main case before exceptions? (WRT-017)
+- Does every "must" have a cited source, and are "should", "can" and "need" used on the fixed scale? (WRT-018)
+- Are there slashes between alternatives? (WRT-020)
+
+#### Instructions and Fly mode
+
+- Is every instruction placed where the learner needs it, and does the lesson reach a "Try" within its first two sections? (WRT-028, WRT-029)
+- Does each step have one action, with every step in the list following the same verb-first or object-first pattern? (WRT-030)
+- Do steps with visible results say what the learner should see and what to do if they do not? (WRT-031)
+- Do step groups end with a completion line, without reordering sourced checklist items? (WRT-032)
+- Does any widget or form rely on instructions that a better label would remove? (WRT-033)
+- Can each Fly mode step and alert be read in one glance, with one action per alert? (WRT-034, WRT-041)
+
+#### Messages and feedback
+
+- Does each error message say what happened in the learner's terms and what to do, without blame, codes or alarm, and is the `ErrorState` default replaced where the cause is known? (WRT-035)
+- Does each input error state the accepted values or format? (WRT-036)
+- Do form messages appear beside the field after the learner finishes it, persist until fixed, and avoid success ticks on simple fields? (WRT-037)
+- Does every quiz item have an explanation that names the correct answer and its reason, and is the verdict calm? (WRT-038, WRT-039)
+- Does each empty state say why it is empty and what fills it, and each confirmation what happens and whether it can be undone? (WRT-040)
+- Does each new message have a stable identifier so its frequency can be counted? (WRT-042)
+
+#### Labels, voice and inclusion
+
+- Does every control a beginner must get right have a visible text label? (WRT-043)
+- Does every button name its action and object, match what it does, and use the label in the vocabulary list? (WRT-044, WRT-045)
+- Does the text say "select" for interface actions and physical verbs only for sim controls? (WRT-046)
+- Does every link name its destination? (WRT-047)
+- Are headings, buttons and titles in sentence case, with capitals only for proper nouns, abbreviations and quoted labels? (WRT-048)
+- Does the page title follow "Page title · Learn to Fly", with no em dash? (WRT-049)
+- Does the copy match the voice chart, with tone shifts only in the named moments, no "easy", "just" or "simply", and no exclamation marks outside celebrations? (WRT-050, WRT-051, WRT-052, WRT-053)
+- Are metaphors limited to headings with a literal body, and stock training phrases replaced? (WRT-054)
+- Does any statement of a product limit follow the honesty template? (WRT-055)
+- Does the text follow the clear-content patterns, show what the task depends on rather than referring back, and give numbers through tokens with units? (WRT-056, WRT-057, WRT-058)
+- Is each abbreviation spelled out at its first use on this page? (WRT-059)
+- Is the text free of gendered defaults, stereotypes and pity language, with exempt sourced terms left alone? (WRT-060)
+
+#### Testing
+
+- If a readability score is reported, is it used only to flag outlier sections for the author? (WRT-061)
+- Has a key explanation been paraphrase-tested with beginners, and has a new challenge's Brief and Fly tab been read aloud by one? (WRT-062, WRT-063)
+- For a section that keeps failing, has a cloze test been run? (WRT-064)
+- Is the change judged by quiz and challenge outcomes rather than clicks? (WRT-065)

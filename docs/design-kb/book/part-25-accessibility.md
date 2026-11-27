@@ -1214,3 +1214,195 @@ chips, breadcrumbs, the toast dismiss) against the 24 px floor (ACC-041).
 Build a drag-alternative assertion into `widgets.test.tsx` for every widget (ACC-044), and a number
 entry in widget quiz modes where an exact value is asked for (ACC-045). Add a measured target-size
 check to the component tests, which is cheaper than finding small targets in an audit.
+
+## Motion, time, sound and media
+
+### Who motion hurts
+
+Val Head defines a vestibular disorder as "any disease, damage, or injury to the vestibular
+system", the inner ear and brain system that controls balance and eye movements, and notes that
+animation can also affect people with epilepsy and migraine sensitivities [@head2015designing]. The
+population figure usually quoted comes from Agrawal and colleagues' analysis of the 2001 to 2004
+National Health and Nutrition Examination Survey: about 35.4% of US adults aged 40 and older showed
+vestibular dysfunction on a modified Romberg balance test, rising steeply with age
+[@agrawal2009disorders]. That is a measure of a balance deficit, not of sensitivity to screen
+motion, and it must not be quoted as the share of users that animation will make ill. It does
+support a proportionate claim: a large minority of adults, especially older ones, have a measurable
+vestibular deficit, and LTF's learners are adults.
+
+LTF has a further reason for caution. A flight simulator is itself a visually induced motion
+environment, so a learner who reaches LTF after a session in the sim may already be at the edge of
+discomfort. Part XXII, Motion and Perceived Performance, covers motion design as a whole; this
+chapter covers the access requirements.
+
+### What triggers symptoms, and what the standard requires
+
+Head's interviews with two people with vestibular conditions, and her review of sites they found
+difficult, produced three factors that make an animation likely to trigger symptoms: the size of the
+movement relative to the screen (a full-screen wipe more than a small button rotation; opacity,
+color and blur changes are unlikely to be a problem), mismatched direction and speed (exaggerated
+parallax, scrolljacking, motion unrelated to the direction or speed of scrolling), and the virtual
+distance covered (large zooms through space) [@head2015designing]. Two interviewees cannot
+establish thresholds; the factors are a reasoned synthesis, graded accordingly. Her interviewees did
+not want all animation removed.
+
+WCAG has three criteria. 2.2.2 Pause, Stop, Hide (A) requires a way to pause, stop or hide content
+that moves automatically, lasts more than five seconds and sits beside other content; auto-updating
+content has no five-second allowance [@w3c2023wcag]. 2.3.1 Three Flashes or Below Threshold (A)
+forbids anything that flashes more than three times in any one second unless the flash is below the
+general and red flash thresholds. 2.3.3 Animation from Interactions (AAA) requires that motion
+animation triggered by interaction can be disabled unless it is essential [@w3c2024wcag]. The
+Understanding page defines motion animation as adding steps between states to create the illusion
+of movement, and excludes color, blur and opacity changes that do not alter perceived size, shape or
+position; "essential" means removing the motion would fundamentally change the information or
+function.
+
+::: {.rule #ACC-048 grade="C"}
+**Honor `prefers-reduced-motion: reduce` for every non-essential animation, and also offer an in-app
+motion setting that persists, for learners who have not set the operating system preference.**
+Animation from interactions can be disabled under 2.3.3, with the media query as a sufficient
+technique [@w3c2024wcag]; Head recommends a user-facing control as well [@head2015designing].
+Grade C: AAA in the standard, adopted here as a requirement (ACC-009).
+
+*In LTF:* the global rule in `index.css` sets animation and transition durations to 0.01 ms under
+`reduce`, components add `motion-safe:`, and `e2e/a11y.spec.ts` asserts that no animation is running
+under reduced motion. Keep all of it. Add a "Motion" choice beside the theme in `/account`
+Preferences and in the header menu, stored like `ltf-theme`, that sets a `data-motion` attribute the
+same CSS honors.
+:::
+
+::: {.rule #ACC-049 grade="C"}
+**Judge every proposed animation by its size relative to the viewport, its match to the learner's
+own movement, and the distance it appears to travel; do not use parallax, scrolljacking, scroll-linked
+motion or full-screen transitions anywhere.** These are Head's three trigger factors and the
+patterns her interviewees found worst [@head2015designing], and the 2.3.3 Understanding page names
+parallax as a vestibular trigger [@w3c2024wcag]. Grade C.
+
+*In LTF:* the current motion vocabulary is small and local (200 ms `fade-in`, `pop-in` at 0.98 to 1
+scale, 8 px `rise-in`, `slide-in-*` for the `Drawer`), which is low risk by all three factors. The
+`Drawer`'s slide covers 320 px, the largest movement in the product; under reduced motion it should
+appear without sliding, which the global rule already ensures.
+:::
+
+::: {.rule #ACC-050 grade="C"}
+**Give any animation that starts by itself and runs longer than five seconds beside other content a
+visible pause control, and give every lesson demonstration a static equivalent.** This is 2.2.2
+Pause, Stop, Hide [@w3c2023wcag]; a demonstration is a teaching aid and not essential in the
+standard's sense [@w3c2024wcag]. Grade C.
+
+*In LTF:* the `shimmer` skeleton animation (1.4 s, infinite) runs only while content loads and stops
+under reduced motion; if a load ever takes longer than five seconds, the skeleton should stop
+shimmering rather than loop. Any future animated widget demonstration (a traffic pattern being flown,
+a turn being drawn) must start paused or carry a pause button, and the widget's static state plus
+"Describe this diagram" must teach the same point.
+:::
+
+::: {.rule #ACC-051 grade="C"}
+**Never flash anything more than three times in a second, and signal urgency with a slow change of
+size, border or color rather than a blink.** This is 2.3.1, a Level A criterion [@w3c2024wcag], and
+Head notes animation can affect people with epilepsy [@head2015designing]. Grade C.
+
+*In LTF:* the Fly mode random event uses `warning-pulse`, a 1.2 s ring that expands to 8 px and
+never animates the text, inside `motion-safe:`. That is the right pattern: under one cycle a second,
+no change to the text, and off under reduced motion, where the thick `border-4 border-warn` and the
+`BellRing` icon still carry the alert.
+:::
+
+::: {.rule #ACC-052 grade="C"}
+**In instrument widgets, treat the value as essential and the motion between values as decoration:
+under reduced motion, move needles, tapes and pointers straight to the new value.** Essential means
+the information would change if the motion were removed [@w3c2024wcag]; the reading changes, the
+easing does not. Grade C.
+
+*In LTF:* the shared `Gauge` primitive rotates its needle with CSS, which the global
+reduced-motion rule covers if the rotation is a transition. Check `Tape` the same way, and check that no widget uses JavaScript animation
+(which a CSS media query does not stop; script must read the preference itself
+[@w3c2024wcag]) for needle movement without reading the preference through
+`matchMedia`.
+:::
+
+### Sound must never be the only channel
+
+Fisk and colleagues' guidance for older adults covers auditory perception thresholds and speech
+perception as part of designing for aging users [@fisk2009designing]; its specific numbers were not
+checked for this Part, so the conclusion drawn here is qualitative: a quiet or high-pitched tone is a
+weak warning for an older learner. The universal design principles ask that essential information
+be presented in more than one mode [@connell1997principles].
+In Fly mode there is a second problem: the simulator's own audio, often through a headset, competes
+with anything the browser plays.
+
+::: {.rule #ACC-053 grade="C"}
+**Pair every sound with visible text and an announcement to assistive technology, and never make a
+sound the only sign that something happened.** Perceptible information requires more than one mode
+[@connell1997principles], and aging hearing is part of the human factors case for designing
+warnings carefully [@fisk2009designing]. Grade C.
+
+*In LTF:* the random event in `FlyPanel` plays two short beeps through Web Audio and, at the same
+time, shows a `role="alert"` panel with the event label and message, which is the right triple. Keep
+it. Offer a way to turn the beep off in the same preferences as motion, since a learner on a headset
+may not want sounds from a second device.
+:::
+
+### Captions and transcripts
+
+WCAG 1.2.2 Captions (Prerecorded, A) requires captions for prerecorded audio in synchronized media,
+and the Understanding page says captions include speaker identification and meaningful non-speech
+sound [@w3c2023wcag]. Microsoft's standard example of solving for one and extending to many is
+captions: made for deaf and hard of hearing people, used by anyone watching in an open office
+[@microsoft2017inclusive]. Horton and Quesenbery's chapter on accessible media adds transcripts
+[@horton2013web]. A learner flying beside the sim with its audio up is a captions user too.
+
+::: {.rule #ACC-054 grade="C"}
+**Caption every video with speaker identification and the non-speech sounds that matter (engine,
+warning tones, radio), and publish a text transcript beside it.** This is 1.2.2 and its Understanding
+page [@w3c2023wcag], with transcripts as the accessible media practice [@horton2013web]. Grade C.
+
+*In LTF:* the landing hero's `YouTubeEmbed` ("A 75-second tour of the lessons, diagrams and
+challenges") loads the privacy-enhanced player on click. Confirm the video has authored captions,
+not automatic ones, and add a "Read the transcript" link under the caption line. Every future lesson
+`video` block should require a transcript field in the content schema, so the validator can enforce
+it.
+:::
+
+### Time limits and timed messages
+
+The universal design principles ask designers to let users set their own pace
+[@connell1997principles], and the cognitive accessibility guidance lists avoiding data loss and
+timeouts among its patterns [@seemanhorwitz2021making].
+
+::: {.rule #ACC-055 grade="C"}
+**Never put a time limit on a lesson, quiz, challenge or form; where timing is part of practice, make
+the timer optional, visible and learner-controlled.** Learners should set their own pace
+[@connell1997principles], and timeouts are a named barrier for people with cognitive disabilities
+[@seemanhorwitz2021making]. Grade C.
+
+*In LTF:* the Fly tab's "Timer (optional)" `Stopwatch` with Start, Pause and Reset is the right
+design; the challenge is never failed by the clock. Keep it that way if scoring ever adds time
+criteria: the time should be recorded and scored by the rubric, not enforced by the page.
+:::
+
+::: {.rule #ACC-056 grade="C"}
+**Never let an auto-dismissing message be the only record of an outcome; anything a learner may
+need to read later stays on the page or in a place they can return to.** Auto-dismissal is a
+timeout on reading, and avoiding data loss and timeouts is a cognitive accessibility pattern
+[@seemanhorwitz2021making]. Grade C.
+
+*In LTF:* success and info `Toast`s dismiss after 6 s, while errors persist with `role="alert"`.
+That split is sound, provided every success toast confirms something also visible elsewhere (the
+"Completed" badge after "Mark lesson complete", the saved state on `/account`). Pause the 6 s timer
+while the toast has focus or the pointer is over it.
+:::
+
+### What this means for Learn to Fly
+
+Keep the global reduced-motion rule, the `motion-safe:` variants, the e2e assertion that nothing
+animates under reduced motion, the non-blinking `warning-pulse`, and the beep that is always paired
+with an alert panel. Together they cover the motion criteria for everything that runs today.
+
+Change two defaults. Add an in-app Motion setting (ACC-048) and a sound toggle (ACC-053), stored
+like the theme, so that learners without operating system preferences are covered. Stop the loading
+shimmer after five seconds (ACC-050).
+
+Build captions and transcript requirements into the content schema for `video` blocks (ACC-054), a
+pause control and static equivalent into any future animated demonstration (ACC-050), and a rule in
+the widget review that needle and tape motion jumps under reduced motion (ACC-052).

@@ -614,3 +614,117 @@ Contrast was computed for this Part for a few of these fixed pairs: `arc-yellow`
 
 The dashboard is the other application. When LTF adds richer progress graphics, decide first whether each one records, communicates or processes, then pick variables by data type (ICO-052) and schemes by ColorBrewer logic (ICO-054).
 
+## Map craft: layers, clutter and honest simplification
+
+### Quiet grounds and small bright areas
+
+Eduard Imhof, professor of cartography at the Swiss Federal Institute of Technology in Zurich from 1925 to 1965, argued that a map must be designed, not merely drafted: the cartographer chooses what to show, how strongly and in what visual register, so that a very large amount of terrain data reads as something simple [@imhof2007cartographic]. A reviewer of the 2007 edition quotes the book's page 359 to the effect that only simplicity gives a lasting impression. The book's sixteen chapters run from a history of relief depiction and a theory of color to contour lines, shading, hachures, area tinting and, in chapter 14, the "interplay of elements", the techniques the reviewer calls classic for keeping layered elements such as contour lines and text clear [@imhof2007cartographic]. Chapter 6 includes exacting tables such as minimum type sizes for spot-height values by map scale.
+
+Tufte reproduces Imhof's rules of color composition from page 72 of the 1982 English edition [@tufte1990envisioning; @imhof2007cartographic]. The first: pure, bright or very strong colors are unbearable when they stand unrelieved over large adjacent areas, but can be used sparingly on or between dull background tones. The third: large background colors should be muted, grayish or neutral so that smaller bright areas stand out. The fourth: a picture with two or more large enclosed areas of different color falls apart, and unity comes from interweaving the colors of one area through the other; Tufte footnotes that this fourth rule is pushed too far toward a general aesthetic theory, noting that Mondrian violates it [@tufte1990envisioning]. Ordnance Survey's cartography guide, outside this bibliography, independently summarizes the same approach: strong saturated colors in small areas, quiet base colors that give way to smaller brighter ones.
+
+Imhof's book is craft authority from the Swiss national-map tradition, with plates of the Alps and advice tied to print reproduction; its rules on relief lighting are conventions for perceiving terrain, not UI rules [@imhof2007cartographic]. Later empirical cartographers tested parts of the color and symbol advice and kept the broad principles: restraint with saturation, tonal separation of layers, simplicity.
+
+::: {.rule #ICO-057 grade="C"}
+**Keep large areas of any diagram or page in muted, low-saturation tones, and spend strong color only on small areas the learner must act on.** Strong colors are unbearable over large adjacent areas but work sparingly against dull grounds, and large backgrounds should be muted so small bright areas stand out [@imhof2007cartographic; @tufte1990envisioning]. Craft rule from print cartography; the principle has been kept by later empirical work.
+
+*In LTF:* the warm-neutral `canvas` and `surface` grounds and the single teal accent already follow this. In widgets, `fill-chart-land` and the hill and water tints are the quiet ground, and `chart-magenta` and `chart-blue` are lines and small symbols. Do not fill a large area with `accent-tint`, `warn-tint` or an arc color; tints mark a single card or row, not a band.
+:::
+
+::: {.rule #ICO-058 grade="C"}
+**Give every label in a diagram a clear plane of its own: a halo or knockout behind the text, and no line running through it.** Imhof's interplay-of-elements chapter is the craft source for keeping layered lines and lettering separately legible [@imhof2007cartographic].
+
+*In LTF:* the `Label` primitive in `shared/svg.tsx` already paints a 4-unit `--color-surface` stroke behind 13-unit semibold text (`paintOrder="stroke"`): keep it as the only way widgets set text over drawings. `ChartText` in the sectional should get the same halo against `chart-land`, and leader lines stop short of the label.
+:::
+
+::: {.rule #ICO-059 grade="C"}
+**Set the minimum rendered size of diagram labels by the smallest frame they will be shown in, not by the drawing's own coordinates.** Imhof's minimum-size tables tie label size to scale and viewing distance, and a scaled SVG shrinks its type with the frame [@imhof2007cartographic].
+
+*In LTF:* the sectional chart is drawn on a 720 by 480 coordinate grid with `ChartText` sizes from 8 to 13 units. On a 375 px phone, with the page gutter and the `WidgetFrame` padding, the drawing renders at a little under half scale, so the 8-unit and 10-unit labels come out at roughly 3.5 to 4.5 px (an estimate computed for this Part from the viewBox and layout classes, not measured on a device). Either the widget switches to a simplified phone layout with fewer, larger labels, or labels are sized in screen pixels.
+:::
+
+### Every added element adds noise
+
+Tufte's chapter on layering and separation borrows from Josef Albers the observation that two elements placed together create a third visual effect, written as 1 + 1 = 3 or more: incidental white paths, vibration and patterns that carry no information [@tufte1990envisioning]. The noise of 1 + 1 = 3 is directly proportional to the light-dark contrast between figure and ground, so on white grounds a range of lighter colors minimizes incidental clutter. Grids should be gray and delicate, because dark grid lines are chartjunk, and in a look-up table the grid should still be muted relative to the data. Thinning two sides of each block on a map line pair stops vibration. Tufte ties this to practice: signal enhancement through noise reduction can reduce viewer fatigue and improve the accuracy of readings from a computer interface, a flight-control display or a medical instrument. One of his cautionary examples is an index in a manual for flying small aircraft whose entries have no page numbers and vibrate visually [@tufte1990envisioning].
+
+On color, Tufte's first principle is "do no harm". He lists four uses of color (to label, to measure, to imitate reality, to enliven), says that more than 20 or 30 colors frequently produce negative returns for encoding abstract information, and recommends a palette drawn from nature, especially lighter blues, yellows and grays, with spot highlights of strong color [@tufte1990envisioning]. This is an essay by a recognized authority, not an experiment, and some of its claims are contested; the "no decoration" stance in particular is a strong default rather than a tested law (see the chapter on ornament).
+
+::: {.rule #ICO-060 grade="C"}
+**Subtract before adding: mute grids, ticks, rules and borders relative to the data, and add a border, shadow or tint only when it separates something the learner needs separated.** Every added element creates incidental visual activity in proportion to its contrast, and muting structure relative to data reduces it [@tufte1990envisioning].
+
+*In LTF:* inside widgets, tick marks and grid lines use the translucent ink strokes already in `Chart.tsx` (`stroke-chart-ink/30`), never full ink. On pages, the dossier counts roughly 116 `rounded-md` and `rounded-lg` uses and many hand-inlined `rounded-lg border border-line bg-surface p-4 shadow-1` cards; a card inside a card, or a bordered card on a bordered panel, is the 1 + 1 = 3 problem. One container edge per level of grouping.
+:::
+
+### Clutter has a measurable cost, even for experts
+
+The strongest aviation-specific evidence in this Part is an experiment on chart clutter. Chandra and Grayhem, of a US Department of Transportation human factors group, had 47 professional pilots find specific pieces of information on high-fidelity current charts and on modified charts that split a cluttered procedure onto several simpler images, for approach and departure procedures, shown one at a time on a monitor [@chandra2013evaluation]. Pilots were just over 6 seconds faster with modified approach charts and almost 3 seconds faster with modified departure charts, consistently across the airports used. The authors' clutter metric simply counted the visual elements in a depiction, each with equal weight: one current approach image had 142 elements, a modified single-path image 22. After removing slow outliers (responses over 60 seconds, 1.8 percent of trials), element count correlated with response time at 0.87 for approaches and 0.88 for departures, with a regression slope of 66 milliseconds per element and an intercept of 8.5 seconds [@chandra2013evaluation]. The authors read this as serial visual search.
+
+Accuracy was at least 90 percent on most questions, but two questions about "at or below" altitude constraints scored 64 and 55 percent, and the authors suggest pilots may have misread them because they violated routine expectations, because the graphic depiction was misread, or because altitude constraints are inherently complex [@chandra2013evaluation]. The study's own limits: the task was finding one specific item, whereas charts are also used for planning and orientation; pilots did not have to find the right chart among several; and the costs of splitting (more pages to carry and find) were not studied. It is one experiment, with prototype charts. It describes display behavior only, and nothing in it is flight procedure guidance for this book.
+
+Rosenholtz, Li and Nakano proposed computable measures of clutter (Feature Congestion, Subband Entropy and Edge Density), framing clutter as a stand-in for the number of items competing for attention, and reported that color variability matters to clutter [@rosenholtz2007measuring]. Later comparisons found no single index clearly best and moderate agreement among human judges, and the measures were validated on photographs, maps and visualizations rather than on interface screens, so they support a review aid, not a threshold [@rosenholtz2007measuring].
+
+::: {.rule #ICO-061 grade="B"}
+**Give every diagram an element budget, and remove or move to a separate view any element the current question does not need.** Time to find information rose by about 66 milliseconds per visual element, nearly linearly (r about 0.87), for professional pilots using approach and departure charts, and splitting cluttered charts saved several seconds per look-up [@chandra2013evaluation]. One experiment with experts; beginners are likely to pay at least as much, but that is untested.
+
+*In LTF:* count the marks on each widget at its default state and record the count in the widget's test file. The drawn sectional shows only the features its current hotspot needs, with the others toggled off or faded. Fly mode panels carry the lowest budget of all: if a hundred extra elements would cost several seconds of search for a professional, the learner glancing away from the sim cannot afford them.
+:::
+
+::: {.rule #ICO-062 grade="B"}
+**Give extra design attention and deliberate testing to information that is subtle or that violates expectations, not only to information that is dense.** The worst accuracy in the chart study came on constraint questions whose wording or depiction ran against routine expectations, not on the most cluttered charts [@chandra2013evaluation].
+
+*In LTF:* where a lesson or quiz depends on a qualifier ("at or below", "not above", "until") the qualifier is set in words, in the text and in the diagram label, never carried by a symbol that looks like its opposite. `/review-lesson` adds these items to its sim verification list.
+:::
+
+::: {.rule #ICO-063 grade="C"}
+**Use a simple clutter measure, such as an edge-density score on screenshots, to flag screens far busier than their siblings, and send flagged screens to human review rather than failing them automatically.** Clutter is partly measurable, color variability adds to it, but no index is settled and none has a validated threshold for interfaces [@rosenholtz2007measuring].
+
+*In LTF:* the Playwright screenshots already taken for end-to-end tests could feed such a check for `LessonPage`, `ChallengePage` and `FlyModePage`, with the result as a review note.
+:::
+
+### Every map tells white lies
+
+Mark Monmonier's argument is that distortion is unavoidable, and that this is why readers need skepticism [@monmonier2018how]. A map must distort reality to put a three-dimensional world on a flat sheet, its symbols are almost always larger than the features they represent, and it must be selective to avoid hiding critical information in a fog of detail; he calls this the cartographic paradox, that an accurate map has to tell white lies. Because readers tolerate white lies, serious ones are easy to slip in. A single map is one of an indefinitely large number that could be made from the same data. He also warns that software lets people without cartographic training produce maps that look respectable, with crisp type and uniform symbols, while using an inappropriate projection or misleading symbols [@monmonier2018how]. The book is essay and example, its examples partly dated, and its purpose is critical literacy, not deception.
+
+J. B. Harley pushed further: maps are not neutral windows but representations shaped by social rules as well as technical ones, and cartographic discourse keeps a "double silence" about the social rules [@harley1989deconstructing]. In European maps, he writes, the more powerful a place, the more prominent its sign: "size of symbol, thickness of line, height of lettering, hatching and shading, the addition of color" are the means by which rank is built into the image. All maps also use the devices of rhetoric, including "colors, decoration, typography, dedications" and appeals to authority, especially scientific maps, and the steps of mapmaking (selection, omission, simplification, classification, hierarchy, symbolization) are inherently rhetorical [@harley1989deconstructing]. The essay is theory, influential and much criticized, including in a 2015 special issue revisiting it; the claim that map signs carry social meaning is well supported by historical example, while the claim that all cartographic knowledge is power is a philosophical position [@harley1989deconstructing].
+
+::: {.rule #ICO-064 grade="C"}
+**Label every simplified diagram as simplified, and mark "not to scale" wherever a learner could mistake its geometry for the real thing.** Every map distorts and selects, readers accept white lies without noticing, and a clean-looking drawing borrows credibility it may not have earned [@monmonier2018how; @harley1989deconstructing].
+
+*In LTF:* `WidgetFrame` shows a "Simplified model" badge when `simplified` is set, and the airspace profile says "Simplified and not to scale" in text. Make the flag mandatory in the widget registry: every widget declares whether it is to scale, and any widget that is not shows the badge and a "not to scale" line.
+:::
+
+::: {.rule #ICO-065 grade="C"}
+**Name on the page what a diagram leaves out when the omission matters to the learner's decision.** What a map omits is part of its message, and selection and omission are rhetorical acts, not neutral ones [@harley1989deconstructing; @monmonier2018how].
+
+*In LTF:* a traffic-pattern or airspace diagram that omits wind, terrain or other traffic says so in its caption ("No wind shown"), in the same plain words the lesson uses.
+:::
+
+::: {.rule #ICO-066 grade="C"}
+**Make the visual prominence of each element match its importance to what the learner must do next.** Size, weight, lettering height, shading and color rank the things on a page whether or not the designer intends it [@harley1989deconstructing; @bertin2010semiology].
+
+*In LTF:* on `LessonPage` a safety `Callout` is never visually quieter than a decorative element beside it, and on `ChallengePage` the "I'm set up, start flying" button is the most prominent action on the Brief tab. A hero image, ornament or illustration is never the most prominent thing on a page whose job is instruction.
+:::
+
+### Judge a map by its job
+
+Arthur Robinson's *The Look of Maps* (1952) argued that map design should be judged by function and by more objective standards than the draftsman's taste, examining three visual components: lettering, structure (how lines, areas and symbols are built into a visual whole) and color [@robinson1952look]. It contains no maps. Robinson said that showing how to do things would make it a textbook, that using real maps as negative examples would harm cooperation and friendship, and that special-purpose maps should not be judged out of context. Many consider the book to have turned cartographic research toward communication and design theory; its individual prescriptions are best treated as hypotheses that later perceptual research tested [@robinson1952look; @maceachren1995how].
+
+::: {.rule #ICO-067 grade="C"}
+**Review every chart-like diagram against a stated reading task, and check its lettering, its structure (what sits above what) and its color separately.** Robinson's three components cover most of what can be evaluated visually in a map, and judging by function rather than taste is his central stance [@robinson1952look].
+
+*In LTF:* each widget's test file states its reading task ("find the downwind leg and say which way you turn"; "read the current speed against the arcs"), and the review uses three questions: is every label legible and placed consistently, is the layer order clear, and is every color doing a job?
+:::
+
+::: {.rule #ICO-068 grade="C"}
+**Teach what goes wrong with constructed examples, not by ridiculing a real chart, a real product or a real pilot.** Robinson kept real maps out of his book for this reason, judging that negative examples harm cooperation and are unfair out of context [@robinson1952look].
+
+*In LTF:* lessons that show a misread display or a common error use an LTF-drawn example in the widget style, never a screenshot of someone else's mistake or an identifiable real-world incident used for effect.
+:::
+
+### What this means for Learn to Fly
+
+The drawn sectional (`sectional-legend/Chart.tsx`) is the most map-like thing in LTF and the best test of this chapter. Its token set (`chart-land`, `chart-hills`, `chart-water`, `chart-city`, `chart-blue`, `chart-magenta`, `chart-ink`) already follows Imhof's ladder: quiet tints for areas, saturated blue and magenta for thin lines and symbols (ICO-057). Two improvements follow. Give `ChartText` the same halo as `Label` (ICO-058), and fix the small-label problem on phones (ICO-059), probably with a simplified phone layout that drops secondary labels, which also cuts the element count (ICO-061).
+
+The `traffic-pattern` and `airspace-profile` widgets are white lies by design, and LTF already labels the airspace profile "Simplified and not to scale". Make that labeling a registry property for all widgets (ICO-064) and add omission captions (ICO-065).
+
+On pages, the card-on-card habit is the 1 + 1 = 3 problem (ICO-060). The lesson page stacks a `SignupBanner`, a resume bar, an objectives `Card` and then blocks that are themselves bordered cards (`QuizBlock`, `WidgetFrame`, Callouts). Each is reasonable; together they make a page of boxes. Removing the border from one level of that stack (for example, letting the objectives sit as a list under a rule rather than in a tinted card) would make the remaining boxes mean something.
+
