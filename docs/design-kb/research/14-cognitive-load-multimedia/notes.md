@@ -447,17 +447,15 @@ This short paper did two jobs that shaped a generation of cognitive load researc
 
 ### Specifics
 
-**Design.** Three practice conditions (conventional, worked, completion) in a computer-based statistics course, with measures of training performance, transfer performance and cognitive load. I did not read the participant numbers or the test details.
-
 **The rating scale.** De Jong's 2010 review (read in full, this lane) reports that Paas's questionnaire has one item asking learners for their "perceived amount of mental effort" on a 9-point scale (Paas 1992, p. 430), with end labels "very, very low mental effort" and "very very high mental effort". Later work has used the scale with 5, 7, 9, 10 and 100 points, with difficulty rather than effort wording, and once at the end rather than after each problem (de Jong). The 2019 retrospective by Sweller and colleagues (this lane) repeats that the scale has been used in many ways beyond the original and reports that a single rating after the learning phase came out higher than the average of ratings taken after each task.
 
-**What happened to effort.** De Jong notes that the paper's own conclusion about effort during training was not what the hypothesis predicted. The abstract says time and effort during training were the exceptions to support. De Jong quotes Paas as writing that the processes required during the specific instruction apparently demanded the same amount of mental effort in all conditions (p. 433). So the strongest result was on transfer, not on effort during learning.
+**What happened to effort.** Time and effort during training were the exceptions to support in the abstract. De Jong quotes Paas as writing that the processes required during the specific instruction apparently demanded the same amount of mental effort in all conditions (p. 433). The strongest result was on transfer, not on effort during learning.
 
-**Reliability.** De Jong reports that an analysis of the rating scale (Paas, van Merriënboer and Adam 1994) gave Cronbach's alpha values of .90 and .82 in two studies, one of them this one, and that this analysis shows the rating tracks the individual learner. He argues that high internal consistency is not the same as validity, and that no validity evidence was reported.
+**Reliability.** De Jong reports that a 1994 analysis of the scale gave Cronbach's alpha values of .90 and .82 in two studies, one of them this one. He argues that high consistency is not validity and that no validity evidence was reported.
 
 ### Replication and criticism
 
-The worked-example advantage is among the best-replicated findings in CLT. The 2019 retrospective calls the evidence very strong, with the constraints that examples are less effective for high-expertise learners and are hard to design well. The expertise reversal paper (this lane) cites this paper among worked example studies. The measure is more contested than the finding. De Jong (this lane) says the scale is sensitive in some studies and not others, that identical scores mean different things across studies, that the scale cannot distinguish types of load, and that it is rarely linked to instantaneous overload. The authors of the 2019 paper concede it gives an overall measure and cannot easily separate types. Evidence for the training result: a single controlled experiment from a computer-based course, extended by many later studies.
+The worked-example advantage is among the best-replicated findings in CLT. The 2019 retrospective calls the evidence very strong, with the constraints that examples are less effective for high-expertise learners and are hard to design well. The expertise reversal paper (this lane) cites this paper among worked example studies. The measure is more contested than the finding: de Jong says identical scores mean different things across studies and the scale cannot distinguish types of load, and the 2019 authors concede it gives an overall measure. Evidence for the training result: a single controlled experiment from a computer-based course, extended by many later studies.
 
 ### Implications for LTF
 
@@ -465,6 +463,5 @@ The worked-example advantage is among the best-replicated findings in CLT. The 2
 - A completion item in LTF could be a partly annotated approach with two blanks (where to start the descent, what power setting to hold) before the learner flies it in the sim.
 - If LTF wants to measure how hard learners find a step, a single quick rating ("how much mental effort did that take?", 1 to 9) after a challenge is cheap, but de Jong's critique means it should be used to compare versions of the same lesson, not to decide absolute difficulty, and not to infer which kind of load it was.
 - Collect a rating after each task rather than only at the end, since the 2019 paper reports different results for the two.
-- Do not treat low effort during practice as proof of good learning; this paper found similar effort across conditions despite different transfer.
 
 Confirmed this session: the abstract through OpenAlex (api.openalex.org, DOI 10.1037/0022-0663.84.4.429) and the University of Twente repository page (https://research.utwente.nl/en/publications/3e475ae3-2b43-45c7-83e5-7d4da2ef88b8); the Crossref record (volume 84, issue 4, pages 429-434); and the way de Jong 2010 and the 2019 retrospective (read in full) describe the paper and its scale. The full text of Paas 1992 was not read.

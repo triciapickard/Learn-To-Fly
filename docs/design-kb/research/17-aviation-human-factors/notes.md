@@ -446,7 +446,7 @@ Moving part, as described: the moving element on a display should correspond wit
 
 The two principles can pull in opposite directions, which is the practical interest. In the moving-horizon format the horizon rotates opposite to the roll the pilot commands, which is consistent with a picture of the world through the window but not with the pilot's sense of their own aircraft moving. Search results link roll-reversal errors to the ambiguity of this display, citing Johnson and Roscoe (1972), Previc and Ercoline (1999) and Roscoe (1968).
 
-The Oregon page also lists other display principles in the teaching canon (need, legibility, display integration and proximity, predictive aiding, discriminability); it attributes only the moving-part principle to Roscoe and pictorial realism to a later source, so I attribute only the moving-part principle to Roscoe on that evidence.
+The Oregon page lists other teaching-canon display principles (need, legibility, integration, predictive aiding, discriminability) but attributes only the moving-part principle to Roscoe, so I attribute only that one on this evidence.
 
 ### Replication and criticism
 
@@ -459,8 +459,8 @@ The attribution of principles is itself unsettled. Search results this session s
 1. Where LTF draws an instrument widget, the first question is whose point of view the motion shows. If a widget animates an instrument, show the same motion the real instrument shows, in the same direction, or make the difference explicit. A beginner who learns an instrument in a widget must not unlearn it in the sim.
 2. Where there is a conflict between realism and an intuitive moving-part mapping (for example, a widget that shows a world rotating versus an aircraft rotating), pick the one that matches what the sim actually shows, and test with first-time learners, because the evidence above is mixed.
 3. Add a "which way does it move" check to the widget acceptance list, covering direction of motion and what the reference is.
-4. Use pictorial realism for first-time explanations (draw the instrument as it appears), then move to simplified diagrams, labeling the simplification.
-5. Because a dispute exists even among experts, do not state "the" correct design for any instrument widget as a rule in the KB; record the tradeoff.
+4. Use pictorial realism for first-time explanations, then simplified diagrams, labeling the simplification.
+5. Because experts dispute it, record the tradeoff rather than stating "the" correct instrument design.
 6. Specific instrument behavior is aircraft knowledge, taken from the sim and its documentation, not from this paper.
 
 Confirmed this session: Crossref record https://api.crossref.org/works/10.1177/001872086801000402 (title, author, Human Factors 10(4), 321-332, August 1968, abstract); Semantic Scholar listing for the same DOI; University of Oregon course page https://darkwing.uoregon.edu/~mauro/psy410/Human%20Factors%20in%20Information%20Displays.htm (fetched); search-result summaries on attitude indicator research. The paper was not read.
@@ -481,20 +481,20 @@ Provenance: the FAA page says the December 2016 revision (version 4.1.0 on the p
 
 Topics, per the NASA record: automation, maintenance, displays and printers, controls and visual indicators, alarms, alerts and voice output, input devices, workplace design, system security, safety, the environment, anthropometry and human-computer interface. A GlobalSpec listing found by search gives 753 pages for the 2016 edition; I did not verify this against the document.
 
-Design stance worth noting: the HFDS packages human-factors knowledge as criteria that can be cited in requirements and used in evaluation checklists, and its authors state the limits of that approach (judgment is still needed, and criteria are tailored). It also records tradeoffs between criteria, which is a reminder that single-criterion rules conflict in practice.
+The HFDS packages human-factors knowledge as criteria that can be cited in requirements and evaluation checklists, states the limits of that approach, and records tradeoffs between criteria, a reminder that single-criterion rules conflict in practice.
 
 ### Replication and criticism
 
 Evidence type: a government design standard compiled from the human-factors literature and prior guidance, which makes it a source of consensus criteria, not original research. Its authority comes from process and review, and its individual criteria are only as strong as their sources. A standard written for FAA operators, controllers and technicians, working in rooms with fixed equipment, does not automatically apply to a consumer web app used by beginners in a living room.
 
-I did not find published criticism in this session, and I did not search for it. The fetch limit means the specific statements in the document are unverified here.
+I did not search for published criticism, and the document's specific statements are unverified here.
 
 ### Implications for LTF
 
 1. Treat standards as a model for how the Design KB itself should work: every rule should be traceable to a source, tailored to LTF's context, accompanied by notes on tradeoffs, and usable as a review checklist. The KB's own rules should carry the same warning the HFDS gives: not a substitute for professional judgment and user testing.
 2. Use the HFDS as a source to look up, not to paraphrase from memory. When the KB needs a numeric criterion for, say, text size, alert coding or label wording, open the standard's relevant chapter and quote it with section number, or cite a different verified source.
-3. Because the HFDS covers displays, alerts, controls and human-computer interface in a single document, it is a candidate reference for LTF's fly-mode screen design review. Phase 2 of the KB should fetch the relevant chapters in a way that handles the 10 MB size.
-4. Copy the tailoring idea: LTF needs its own "design standard" document for tokens, alert levels and checklist formats, with exceptions recorded.
+3. It covers displays, alerts, controls and human-computer interface in one document, so it is a candidate reference for fly-mode review; a later phase should read the relevant chapters in full.
+4. Copy the tailoring idea: LTF needs its own design standard for tokens, alert levels and checklist formats, with exceptions recorded.
 5. Do not use FAA operational standards as if they were aircraft facts. They concern human-factors criteria for systems; they say nothing about how to fly the Cessna 172.
 
 Confirmed this session: DOT ROSA P record https://rosap.ntl.bts.gov/view/dot/71693 (title, report number DOT/FAA/HF-STD-001B, 30 December 2016, abstract); FAA HFDS pages https://hf.tc.faa.gov/publications/2016-12-human-factors-design-standard/ and https://hf.tc.faa.gov/hfds/ (author, version, purpose, scope, replaced guide); NASA standards record https://standards.nasa.gov/node/1717; search results for GlobalSpec. The PDF full text was not read.

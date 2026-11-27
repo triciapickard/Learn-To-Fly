@@ -193,13 +193,13 @@ Edward Johnston, *Writing & Illuminating, & Lettering* (New York: Macmillan; Lon
 
 ### Core claims
 
-Johnston's handbook is the foundation text of the modern calligraphic revival and the craft root of much twentieth-century type design. It argues that letters are best understood and made through the tool that formed them, the reed, quill or chisel, so the way to learn good lettering is to copy the best historical models with the proper tool rather than to "design" new alphabets. In his words, "To make good letters is not necessarily to 'design' them — they have been designed long ago — but it is to take the best letters we can find, and to acquire them and make them our own." He states the problem simply: "To make good letters and to arrange them well."
+Johnston's handbook argues that letters are best understood and made through the tool that formed them, the reed, quill or chisel, so the way to learn good lettering is to copy the best historical models with the proper tool rather than to "design" new alphabets. In his words, "To make good letters is not necessarily to 'design' them — they have been designed long ago — but it is to take the best letters we can find, and to acquire them and make them our own." He states the problem simply: "To make good letters and to arrange them well."
 
 He names the "essential qualities of Lettering" as "legibility, beauty, and character." He complains that the recent revival of printing produced many attempts at "decorative" books that show "a vagueness of intention" and "an ignorance of Letter-craft."
 
 ### Specifics
 
-The book is a practical manual, with sections on tools and materials (quill, desk, ink, parchment), on forming a formal hand, on the history of letters (Roman capitals, Uncials, Half-Uncials, Italic and the Roman small letter), on illumination, and on lettering for stone and for printing. A few points matter for typographers:
+The book is a practical manual, with sections on tools and materials (quill, desk, ink, parchment), on forming a formal hand, on the history of letters (Roman capitals, Uncials, Half-Uncials, Italic and the Roman small letter), on illumination, and a chapter on inscriptions in stone. A few points matter for typographers:
 
 - Tool-first reasoning. Uncials "are true pen-forms," with "simple strokes and beautiful, rounded shapes which flow from the rightly handled reed or quill." Much of the character of historical scripts comes from how the pen is held (for example, "slanted-pen" writing).
 - The Roman small letter was produced when Italian scribes went back about three hundred years for a model. Johnston uses this as the precedent for method without imitation: one may "follow a method without imitating a style."
@@ -210,14 +210,14 @@ His preface footnote on legibility is the most reusable item: "our personal view
 
 ### Replication and criticism
 
-A craft handbook from a master teacher, not an experiment. The book was very influential among calligraphers and type designers; I did not verify specific claims of influence this session. Its historical account of letter origins reflects 1906 palaeography, so details about the dating and relationships of historical hands should be checked against later scholarship before reuse (I did not do so here).
+A craft handbook, not an experiment. Its historical account of letter origins reflects 1906 palaeography, so check dates and relationships of historical hands against later scholarship before reuse; I did not.
 
-The legibility footnote anticipates what later reading research would discuss as the role of familiarity (lane 02 and lane 19 cover it); here it is craft observation only. The tool-first claim is carried forward and formalized in Noordzij's theory of the stroke (noordzij2005stroke), and the preference for the pen over the drawn outline is contested by designers who work from the screen outward; that dispute is an open design debate, not a settled finding.
+The legibility footnote anticipates what later reading research would discuss as the role of familiarity (lane 02 and lane 19 cover it); here it is craft observation only. The tool-first claim is carried forward and formalized in Noordzij's theory of the stroke (noordzij2005stroke).
 
 ### Implications for LTF
 
 1. The legibility footnote is a standing warning to the LTF design team: what looks readable to people who already know the interface or the subject may not be readable to a beginner. Test lessons with true beginners, not with the team.
-2. "The width of the letter o" is a nice spacing yardstick that scales with the type, which is the logic of using `em`-based word and paragraph spacing in CSS rather than fixed pixels.
+2. "The width of the letter o" is a yardstick that scales with the type, which suggests (my inference) em-based spacing in CSS rather than fixed pixels.
 3. Descender and ascender clearance gives a minimum floor to line height for any text face, especially in dense instrument legends and chart labels.
 4. "Rules are only guides" is a design-governance stance for a design knowledge base: treat each rule here as a default with a reason, and write down the reason so it can be overridden knowingly.
 5. The preference for historical models fits a tradition-first choice of text faces for lesson pages, with the caveat that the tradition was formed on paper.

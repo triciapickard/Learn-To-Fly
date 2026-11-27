@@ -297,3 +297,65 @@ The result is consistent with Faulkner's structured test with 60 users, where th
 Different LTF pages need different test sizes. A narrow scripted flow (open lesson one, answer the quiz, reach the result) behaves like the classic fixed-task case and will surface most of its problems in a few sessions. An open-ended area, such as free exploration of challenges, the dashboard or lesson search, behaves like Spool and Schroeder's sites and needs more learners and more sessions. Do not stop a round at the fifth learner when the fifth is still finding new problems; stop on a rule such as "two consecutive sessions with no new serious problem". Give open-ended sessions realistic goals, not only prescribed clicks.
 
 Confirmed this session: Crossref DOI 10.1145/634067.634236 (CHI '01 Extended Abstracts, pp. 285-286); Semantic Scholar record giving the full title "Testing web sites: five users is nowhere near enough"; Dblp-derived search summary (49 users, four production web sites, considerably more than five users for 85%); Faulkner (2003) full text for the 35% figure and the 13th and 15th user finding; search summary of Woolrych and Cockton (2001). Not read: the paper itself.
+
+## shneiderman2016designing
+
+Shneiderman, B., Plaisant, C., Cohen, M., Jacobs, S., & Elmqvist, N. (2016). Designing the user interface: Strategies for effective human-computer interaction (6th ed.). Pearson. (First edition by Shneiderman 1987.)
+
+### Core claims
+
+Shneiderman's textbook is the standard university text on interface design. Its best-known contribution to design practice is the "Eight Golden Rules of Interface Design", first published in 1985 and presented in the sixth edition in Section 3.3.4, within the chapter "Guidelines, Principles, and Theories". The rules are a compact checklist of experience-based heuristics, a close cousin of Nielsen's ten, aimed at interactive systems in general and, in Shneiderman's framing, at giving users a sense of mastery and control. The book also treats universal usability, design processes, interaction styles, and information search and data visualization as separate parts (table of contents from Pearson's listing, via search).
+
+### Specifics
+
+Evidence type: textbook and craft synthesis by recognized researchers; the rules are expert-derived rules of thumb, not experimental findings. I read the rules as published by the author's own university page (cs.umd.edu/users/ben/goldenrules.html), which cites the sixth edition, Section 3.3.4. I did not read the book itself.
+
+The rules, with the page's explanations in my words:
+1. Strive for consistency: the same action sequences, terminology and visual conventions in similar situations. Exceptions such as confirming a delete or hiding passwords should be understandable and few.
+2. Seek universal usability: design for diverse users (experience, age, disability, culture, technology); explanations for novices and shortcuts for experts both improve a design.
+3. Offer informative feedback: every action should produce some response, modest for frequent minor actions and more substantial for infrequent major ones.
+4. Design dialogs to yield closure: group action sequences into parts with a beginning, middle and end, and give feedback at the end of a group (a confirmation page after checkout) so users feel accomplishment.
+5. Prevent errors: design so serious mistakes are hard to make (for example by disabling inappropriate menu items); when errors occur, give simple, specific recovery guidance and leave the state unchanged or explain how to restore it.
+6. Permit easy reversal of actions: reversibility reduces anxiety and encourages exploration, for single actions, data entry or groups of actions.
+7. Keep users in control: experienced users want to feel in charge and dislike surprises, tedious data entry, difficulty getting information and inability to reach their desired result.
+8. Reduce short-term memory load: the page says people can hold about seven plus or minus two chunks in short-term memory, and advises against making users carry information from one display to another (re-entering phone numbers, hiding site locations, splitting forms).
+
+The page notes that others, including Jakob Nielsen and Jeff Johnson, have expanded the rules since 1985. Overlap with Nielsen's ten is large: consistency, feedback, error prevention, reversal (user control and freedom), memory load (recognition rather than recall). What is distinct is rule 4 (closure) and rule 2 (universal usability).
+
+### Replication and criticism
+
+The rules are not an empirical result and have not been tested as a set. They are accepted because they reflect repeated observation and agree with other lists (ISO 9241-110, Nielsen). One element is shaky: the "seven plus or minus two" figure in rule 8. Cowan (2001), whose abstract I read via Europe PMC, argues that Miller's number was "more of a rough estimate and a rhetorical device than a real capacity limit" and that the evidence suggests a central capacity limit averaging about four chunks. The advice to reduce memory load survives, but the number should not be quoted as a design limit; lane 09 covers the details. Another criticism, general to guideline lists, is stated by Smith and Mosier: guidelines must be tailored and often rest on judgment.
+
+### Implications for LTF
+
+Use rule 4 (closure) as the shape of an LTF lesson: a clear start, a middle and a visible end that tells the learner what they achieved, such as a completed checklist or a finished challenge debrief. Use rule 6 for the progress and quiz parts: let learners retake a quiz, revisit a lesson, and undo a mis-entered answer without penalty. Rule 3 applies to widgets: a simulated control should respond to every input, with bigger responses for bigger actions. Rule 8 supports keeping the checklist and the current step on screen in fly mode instead of asking the learner to remember what the lesson said, without quoting any number for the limit. Rule 2 means designing for both a first-time learner and a returning one who wants to skip ahead.
+
+Confirmed this session: cs.umd.edu/users/ben/goldenrules.html (rules and Section 3.3.4 attribution); Open Library record /works/OL15842384W and ISBN 9780134380384 edition record (Pearson, 616 pages, authors list, sixth edition); search results for the Pearson table of contents; Europe PMC abstract of Cowan (2001), Crossref DOI 10.1017/s0140525x01003922.
+
+## norman2013design
+
+Norman, D. A. (2013). The design of everyday things (Revised and expanded edition). Basic Books. (Originally The Psychology of Everyday Things, 1988.)
+
+### Core claims
+
+Norman argues that people's frustration with ordinary objects, doors, switches, stove controls, comes from design that ignores human psychology, not from user stupidity. Bad designs hide the controls, link controls to functions arbitrarily, give no feedback and demand too much memorization. Good design makes the right action discoverable and the result understandable. The revised edition (which says the world changed in the 25 years since the original) keeps the science, adds the concept of signifiers and new final chapters, and recasts the argument about error as "Human Error? No, Bad Design".
+
+### Specifics
+
+Evidence type: a synthesis of cognitive psychology and design practice, with examples and Norman's own observation. It is a canonical craft and theory text, not an experimental report. I did not have the book text; the points below are from the publisher and author pages listed in the confirmation line.
+
+Principles and concepts named in those pages: affordances (what an object allows a person to do) and signifiers (perceptible signals of what can be done). In his preface, Norman says affordances cause confusion for virtual objects and that signifiers are more important to designers; he quotes "Signifiers are signs, perceptible signals of what can be done." Mapping (how controls relate to effects, with a note in the preface that what is a natural mapping varies by culture); feedback (informing people about the results of actions); conceptual models (the mental model people form of how something works); constraints (physical, cultural, semantic and logical limits that guide use; forcing functions split into lock-in and lock-out); knowledge in the head versus in the world (how much people must remember versus how much the environment shows them).
+
+Error: slips (action-based or memory lapses) are distinguished from mistakes (rule-based, knowledge-based, or memory lapses); these are linked to the seven-stage model of action. The preface lists design advice as: make things visible, exploit natural relationships between controls and function, use constraints intelligently, provide feedback, reduce memorization demands (summary on nngroup.com, not Norman's own words).
+
+Process: human-centered design is an iterative cycle of observation, idea generation, prototyping and testing; Norman says it suits incremental innovation, not radical innovation, and proposes activity-centered design as a variant.
+
+### Replication and criticism
+
+It is a theory and craft book, so the question is not replication but influence and refinement. Norman himself revised the concept of affordances (borrowed from Gibson's ecological psychology) because designers misused it for on-screen elements; he now stresses signifiers. In the revised edition, the "human error is design error" position is sharpened by the slip and mistake taxonomy. Critics of such books note that the examples (doors, switches) are intuitive but offer limited quantitative guidance, and that applying the principles requires user observation, which Norman himself prescribes. I did not verify specific published critiques this session.
+
+### Implications for LTF
+
+Two parts apply directly. First, the gulf between what the learner wants to do and what the screen lets them do: every LTF control (a widget knob, a next button, a toggle between light and dark) needs a visible signifier and visible feedback. Second, error: when a learner enters a wrong answer or follows a checklist step wrongly, treat it as a design signal rather than a user failure; separate slips (they knew, but pressed the wrong control) from mistakes (they misunderstood), because the remedies differ (constraints and confirmation for slips; better explanation for mistakes). Widget interaction in the sim-side fly mode should use natural mapping: a widget that depicts the sim's control should match the sim's layout and direction of movement. Keep knowledge in the world: on-screen checklists and labels, not memorized lessons.
+
+Confirmed this session: publisher and author descriptions at www.jnd.org/books/the-design-of-everyday-things-revised-and-expanded/, jnd.org/preface-design-of-everyday-things-revised-edition/ (preface content), nngroup.com/books/design-everyday-things-revised/; Open Library ISBN 9780465050659 record (Basic Books, 2013, Revised and Expanded Edition). I did not read the book text.
