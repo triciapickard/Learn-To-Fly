@@ -377,3 +377,38 @@ Pair the display with a plain frequency sentence, as Franconeri et al. advise. M
 
 Confirmed this session: Crossref DOI 10.1371/journal.pone.0142444 (PLOS ONE 10(11), e0142444); PLOS ONE article page abstract and results summarized via WebFetch (journals.plos.org/plosone/article?id=10.1371/journal.pone.0142444, first 100,000 characters); Kale et al. via Crossref (10.1109/tvcg.2018.2864909) and WebSearch excerpts.
 
+## borland2007rainbow
+
+Borland, D., & Taylor, R. M., II. (2007). Rainbow color map (still) considered harmful. IEEE Computer Graphics and Applications, 27(2), 14-17.
+
+### Core claims
+
+Borland and Taylor argue that the rainbow color map, the sweep through the spectral hues (violet, blue, cyan, green, yellow, orange, red) used to turn numbers into colors, is rarely the best choice for pseudocolor displays. Their phrase, as quoted by the 2023 rebuttal I read, is that the map's "characteristics of confusing the viewer, obscuring the data and actively misleading interpretation make it a poor choice for visualization". Search summaries of the abstract give the three problems as: no perceptual ordering of the hues, uncontrolled luminance variation, and the creation of apparent gradients or boundaries not in the data. They show the problem on simple data sets and recommend alternatives for several display categories, with a luminance-varying map such as grayscale suggested where detail and sharp features matter. A search summary reports their survey of IEEE Visualization proceedings from 2001 to 2005 found about half of pseudocoloring papers (51 percent, with a higher share outside medical imaging) used the rainbow. It is a viewpoint piece, not an experiment.
+
+### Specifics
+
+What I could confirm of the content comes from the 2023 reply (Ware, Stone and Szafir, IEEE CG&A 43(3), 88-93, read in full), which restates the three standard critiques:
+1. The rainbow is not monotonic in luminance, which can distort the shapes people infer from the data (shape-from-shading needs luminance variation; a face rendered in a rainbow looks unnatural).
+2. It is not perceptually uniform, which can distort the perception of data variation (the number of just-noticeable differences between steps varies along the map).
+3. It partitions data into distinct colored bands that create false divisions (hue banding).
+
+The 2023 article adds mechanisms. The classic HSV rainbow, a simple interpolation in RGB, performs poorly on perceived distance between quantities and is extremely nonuniform in how much data it communicates at different points, especially between cyan and green. Feature-resolving power depends mostly on luminance variation (lightness L* gradient), so flat spots in the luminance profile mean poor ability to see small features. The authors add that full rainbows are very hard to make accessible to people with severe color blindness.
+
+Alternatives named in the sources: grayscale, perceptually designed multi-hue maps such as Viridis and Magma, Batlow, Turbo (smooth, symmetric luminance profile), and Paraview's Uniform.
+
+### Replication and criticism
+
+The anti-rainbow position became close to dogma, and in 2023 three authors who had each written against rainbows (Ware, Stone, Szafir) published "Rainbow Colormaps Are Not All Bad" in the same magazine. Their argument: experimental evidence on the rainbow's utility is mixed. Rainbow maps have repeatedly been the most accurate in studies where a value must be read using a key; they may draw attention to global structure and help people reason about relationships between distributions (citing Reda and Szafir 2021 and Reda et al. 2021, which I did not read). They say the critiques hold for the classic map but can be mitigated by designs such as Turbo. A cited study (Liu and Heer 2018) found well-designed multi-hue maps can raise accuracy over single-hue ones. They do not defend the classic HSV rainbow, and note that rainbow use fell in the visualization literature but not in domain science.
+
+The evidence is expert argument in 2007 and mixed experiments afterward; a practical reading is to avoid the classic rainbow and test the task.
+
+### Implications for LTF
+
+Do not use a rainbow or jet gradient for any continuous quantity in LTF (for example, a heat map of how closely a learner held altitude over time, or a map of wind speeds). Use a single-hue ramp with monotonic lightness, or a perceptually designed multi-hue map such as Viridis, and check it in light and dark themes since a ramp that ends in a near-black value disappears on a dark background.
+
+When a quantity must be read exactly, add a labeled key, or better, direct labels or numbers; the 2023 article's point that rainbows are good for key-based lookup is a reminder that the key matters more than the hue sequence.
+
+For the categorical case (phases of flight), a small set of distinguishable hues is appropriate; this is a different use from the continuous map the critique addresses. Never encode good or bad solely as red versus green.
+
+Confirmed this session: Crossref DOI 10.1109/mcg.2007.323435 (vol. 27, issue 2, pages 14-17); abstract-level summary from WebSearch (ui.adsabs.harvard.edu listing and search snippets); the 2023 rebuttal PDF read in full (repository.library.noaa.gov/view/noaa/58953); the 2007 full text could not be retrieved (university copy blocked by a script challenge).
+

@@ -280,3 +280,65 @@ Two lessons. First, device comparison by Fitts's law is a tool for explaining wh
 
 Confirmed this session: Crossref 10.1080/00140137808931762 (title, authors, 1978, vol. 21, issue 8, pp. 601-613); abstract via OpenAlex; reanalysis facts from https://www.yorku.ca/mack/chi03a.html; additional context from https://www.yorku.ca/mack/hci1992.html and the Xerox report of the keystroke-level model. Full text of the 1978 paper not read.
 
+## card1980keystroke
+
+Card, S. K., Moran, T. P., & Newell, A. (1980). The keystroke-level model for user performance time with interactive systems. *Communications of the ACM*, 23(7), 396-410. doi:10.1145/358886.358895
+
+### Core claims
+
+The keystroke-level model (KLM) predicts how long an expert user will take to execute a routine task with a given method on an interactive system, by listing the low-level operations in the method and summing standard times for them. The central idea, in the authors' own words from the report version, is that "the time for an expert to do a task on an interactive system is simply the time it takes to do the keystrokes", an idea they call a little too simplistic, so the model adds operators for pointing, homing, drawing, mental preparation and system response. The model is built for designers: write down the method, code it, sum the times. It deliberately addresses only one aspect of performance, how long error-free routine tasks take experts, and not errors, learning, recall, fatigue or acceptability.
+
+### Specifics
+
+Evidence type: an engineering model validated against an experiment. I read the earlier Xerox PARC report version of the paper (Report SSL-79-1, AIP Memo 122, March 1979, scanned PDF at the CMU library site), not the CACM article itself, so the page numbers and any changes in the published version are unconfirmed.
+
+Operators and times (Figure 1 of the report):
+- K, a keystroke or button press: time depends on typing skill. Best typist (135 words per minute) 0.08 s; good (90 wpm) 0.12 s; average skilled (55 wpm) 0.20 s; average non-secretary (40 wpm) 0.28 s; typing random letters 0.50 s; complex codes 0.75 s; worst typist 1.20 s.
+- P, pointing to a target on a display with a mouse: 1.10 s on average (range 0.8 to 1.5 s by Fitts's law), not including the button press that often follows (0.2 s).
+- H, homing the hands on the keyboard or another device: 0.40 s.
+- D(nD, lD), drawing nD straight segments of total length lD cm on a 0.56 cm grid: 0.9 nD + 0.16 lD s, flagged by the authors as a very restricted operator.
+- M, mentally preparing to execute physical actions: 1.35 s, estimated from the experiment.
+- R(t), system response: an input parameter, counted only when it makes the user wait; a response shorter than the 1.35 s M can be overlapped with it.
+
+Heuristic rules for placing M (Figure 2): Rule 0 inserts Ms before all Ks that are not part of an argument string and before Ps that select commands; Rule 1 deletes an M if the next operator is fully anticipated (PMK becomes PK); Rule 2 deletes Ms inside a cognitive unit such as a command name; Rule 3 deletes the M before a redundant terminator; Rule 4 deletes the M before a K that ends a constant string, but keeps it for a variable string. The principle is to place an M wherever a decision must be made, except where the decision can overlap other operations. The authors say the rules are crude heuristics, and applying them is ambiguous ("fully anticipated" and "cognitive unit" are judgment calls).
+
+Worked example: replacing a five-letter word on a line-oriented editor (POET) came to 8.4 s (4 M plus 15 K at 0.2 s), against 6.2 s on a display editor with mouse (DISPED), a difference of about two seconds.
+
+Validation: predictions were tested against data from 28 users, on 10 systems, over 14 task types. The abstract reports a root-mean-square prediction error of 21 percent for individual tasks, and much better for collections of tasks. The report also gives simplified versions (keystrokes only; prorated mental time; constant operator time), which trade ease for accuracy.
+
+### Replication and criticism
+
+KLM became the commonest GOMS-family tool. John and Kieras (1996, Crossref-verified, abstract read) compare four GOMS variants, KLM, the original GOMS, NGOMSL and CPM-GOMS, on one task. Limits are built in: expert, error-free, sequential, routine execution; M placement is subjective; operator times were measured on 1970s text editors and hardware; the 21 percent error is for single tasks. A single average M of 1.35 s hides large variation, and later work (not read here) refined it. Treat the numbers as historical.
+
+### Implications for LTF
+
+KLM is useful as a thinking method for fly mode and checklists, not for its constants. Count what a learner must do to complete a step: a pointing movement, a key press, moving a hand between devices (homing), and a decision. Each decision (M) costs more than a keystroke, so remove decisions first: preselect the next item, default the answer, keep the next action in the same place. Homing is the hidden cost for LTF specifically: a learner moving a hand from yoke or throttle to a mouse or phone pays a homing cost on every step, so do not alternate between devices. Use KLM-style counting in design reviews to compare two layouts in operator counts, and do not publish milliseconds.
+
+Confirmed this session: Crossref 10.1145/358886.358895 (CACM 23(7), 396-410, 1980); report SSL-79-1 pages 1-5 (title, abstract) and 8-13 (operator table, examples, rules) read at https://iiif.library.cmu.edu/file/Newell_box00072_fld05090_doc0005/Newell_box00072_fld05090_doc0005.pdf; John and Kieras abstract via OpenAlex (10.1145/235833.236054).
+
+## card1983psychology
+
+Card, S. K., Moran, T. P., & Newell, A. (1983). *The psychology of human-computer interaction*. Hillsdale, NJ: Lawrence Erlbaum Associates. ISBN 0898592437.
+
+### Core claims
+
+The book aims to lay a scientific foundation for an applied psychology concerned with the people who use interactive computer systems (Routledge's description of the 1983 volume). It presents results from the Applied Information-Processing Psychology Project at Xerox PARC, and its method is to describe the user as an information processor with measurable parameters, analyze tasks into goals, operators, methods and selection rules (the GOMS model), and give designers engineering models, among them the keystroke-level model, that predict performance before a system is built. John and Kieras (1996) say that since this book, the GOMS model has been one of the most widely known theoretical concepts in HCI.
+
+### Specifics
+
+Evidence type: a canonical research monograph (488 pages in the current Routledge listing) that synthesizes experiments, models and applied analyses. Structure per the publisher's table of contents: Part I, Science Base (The Human Information-Processor); Part II, Text-Editing (system and user variability, an exercise in task analysis, the GOMS model of manuscript editing, extensions of the GOMS analysis, models of devices for text selection); Part III, Engineering Models (the keystroke-level model, the unit-task level of analysis); Part IV, Extensions and Generalizations (an exploration into circuit design, cognitive skill, applying psychology to design reprise).
+
+GOMS stands for Goals, Operators, Methods and Selection rules (as summarized by encyclopedic and course sources found by search, and by John and Kieras). Its main application in the book is text editing, though the authors extended it to other tasks.
+
+The Model Human Processor (MHP) describes three interacting subsystems (perceptual, cognitive, motor), each with memories and a processor. I could not read the 1983 text, so the figures below are the "typical [bounds]" values as reproduced in a later paper by Jastrzembski and Charness, who cite Card et al. (1986) as the source (https://pmc.ncbi.nlm.nih.gov/articles/PMC4591021/, Table 1); the 1983 book may differ in detail. Perceptual processor cycle time 100 ms [50 to 200]; cognitive processor cycle time 70 ms [25 to 170]; motor processor cycle time 70 ms [30 to 100]; visual image store decay 200 ms [90 to 1000], capacity 17 letters; auditory image store decay 1500 ms, capacity 5 letters; working memory pure capacity 3 chunks [2.5 to 4.2], effective capacity 7 chunks [5 to 9], decay 7 seconds [5 to 226] for the general case; Fitts's law slope 100 ms/bit [70 to 120]; power law of practice exponent 0.40 [0.20 to 0.60]. Proctor and Schneider (2018) add that the MHP includes an Information Theory Principle specified as Hick's law. The same reproduced table lists two variable-rate principles: perceptual cycle time varies inversely with stimulus intensity, and cognitive cycle times decrease with greater task effort, practice, expertise and automaticity.
+
+### Replication and criticism
+
+The MHP's numbers come from best and worst individual performers across studies, so the bounds are wide; Jastrzembski and Charness re-estimated them for older adults and found slower values (for example perceptual cycle 178 ms, motor 146 ms, cognitive 118 ms, and a Fitts slope of 175 ms/bit), which shows the figures vary with population. The idea of effective working-memory capacity of seven chunks sits against Cowan's four (see that entry). GOMS and the KLM are limited to expert, error-free, routine performance and say little about learning or understanding. The book's influence is not in doubt, but it is a modeling program, not a body of independently replicated laws.
+
+### Implications for LTF
+
+The book is the source of the idea that interface decisions can be reasoned about with a small set of human constants. LTF should use the structure, not the numbers: a goal (complete the pre-flight check), operators (look, read, tap, say, key), methods (step through the list) and selection rules (skip if already done). A well-made lesson or challenge briefing makes the method the same every time, so that learners chunk it. Because the working-memory capacity in the MHP is small for new material, a beginner holding a briefing in memory while operating the sim is at the limit, so briefings should be short and be displayed beside the sim rather than memorized. The population in these studies was adults using text editors, which differs from the audience for flight training.
+
+Confirmed this session: Open Library work OL5911100W (Card, 1983, Erlbaum, ISBN 0898592437); publisher description and table of contents at https://www.routledge.com/The-Psychology-of-Human-Computer-Interaction/Card-Moran-Newell/p/book/9780898598599; MHP values from the PMC article above (first 100,000 of 228,000 characters); Proctor and Schneider (2018) for the Hick's law principle; John and Kieras (1996) abstract. The book itself was not read.
+

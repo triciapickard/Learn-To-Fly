@@ -314,9 +314,9 @@ Experiments 1a and 1b. UCLA undergraduates (120 in Experiment 1a, 72 in Experime
 
 Judgments. After the test, in Experiment 1a, 78 percent of participants did better with spaced presentations than massed, yet 78 percent said massing was as good as or better. When asked to say how each artist's paintings had been presented, participants were above chance for spaced artists (.74) but not for massed artists (.55), which led the authors to suggest that participants made metacognitive judgments from their subjective experience during study.
 
-Experiment 2. Because the first test required recalling artist names, the authors used a recognition test (familiar versus unfamiliar artist, with similar-style distractors, 80-odd participants) so name recall was not needed. Spacing still won: hit rate .77 spaced versus .67 massed (d = 0.41), with similar false alarm rates.
+Experiment 2. Because the first test required recalling artist names, the authors used a recognition test (familiar versus unfamiliar artist, with similar-style distractors, 80 undergraduates) so name recall was not needed. Spacing still won: hit rate .77 spaced versus .67 massed (d = 0.41), with similar false alarm rates.
 
-A fourth experiment (summarized in the paper) reduced the study phase to two paintings per artist to ask whether the pattern held with fewer exemplars. The authors caution that they presented no evidence about temporal spacing without interleaving, so the benefit may reflect interleaving, which promotes discrimination among categories (their tree example: telling a maple from an oak requires learning the differences among trees).
+An additional experiment cut the study phase to two paintings per artist, to rule out that induction was finished early, and found the same pattern. The authors also built a case where massing wins: in 12 sets of six words that each hide one linking word (for example the blanks in ___ cracker, ___ wood, ___ ant gave "fire"), 20 undergraduates remembered more target words after massed than spaced presentation (.34 versus .22, d = 0.65), because spacing made the problems nearly impossible to solve. They call this contrived, and note that massing can help when learners must discover a rule. The authors caution that they presented no evidence about temporal spacing without interleaving, so the benefit may reflect interleaving, which promotes discrimination among categories (their tree example: telling a maple from an oak requires learning the differences among trees).
 
 ### Replication and criticism
 
@@ -329,7 +329,7 @@ Strength: moderate to strong, with replications reported. A search summary for t
 3. A pre-flight scenario drill that cycles through several situations beats a drill that repeats one situation, even though the second feels smoother.
 4. Because the paper cannot separate spacing from interleaving, treat both as justified by this evidence, not either as the proven cause.
 
-Confirmed this session: Crossref 10.1111/j.1467-9280.2008.02127.x; abstract via Europe PMC; full text read from the PDF copy at gwern.net (methods, results for Experiments 1a, 1b and 2); follow-up studies from a web search summary only.
+Confirmed this session: Crossref 10.1111/j.1467-9280.2008.02127.x; abstract via Europe PMC; full text read from the PDF copy at gwern.net (methods, results for Experiments 1a, 1b, 2, the additional experiment and the word-set experiment); follow-up studies from a web search summary only.
 
 ## butler2008feedback
 
@@ -361,7 +361,7 @@ Confirmed this session: Crossref 10.3758/mc.36.3.604; abstract via Crossref; ful
 
 ## bjork2009making
 
-Bjork, E. L., and Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. In M. A. Gernsbacher, R. W. Pew, L. M. Hough, and J. R. Pomerantz (Eds.), *Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society* (pp. 56-64). New York: Worth. Evidence type: expert essay summarizing experiments, from the originators of the concept.
+Bjork, E. L., and Bjork, R. A. (2009). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. In M. A. Gernsbacher, R. W. Pew, L. M. Hough, and J. R. Pomerantz (Eds.), *Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society*. New York: Worth. (Often cited as 2011.) Evidence type: expert essay summarizing experiments, from the originators of the concept.
 
 ### Core claims
 
@@ -387,4 +387,4 @@ Strength: this is an expert synthesis, not an experiment; the cited experiments 
 4. Tell learners once, plainly, that struggle during recall and mixed practice is expected and useful.
 5. Do not claim LTF "optimizes" learning by difficulty without measuring it.
 
-Confirmed this session: author PDF of the chapter text read (pp. 56-62 content); Open Library work OL17413396W for the book (Worth, ISBN 9781429230438, first published 2009); 2011 date and pages 56-64 from a web search summary; the proof PDF is dated 2009, so the year is uncertain between editions or printings; Bjork and Bjork (2020, JARMAC) text read from a PDF copy for the retrieval-strength statement and the quote about undesirable difficulties.
+Confirmed this session: author PDF of the chapter text read (pp. 56-62 content); Open Library work OL17413396W for the book (Worth, ISBN 9781429230438, first published 2009); the chapter PDF carries a 2009 production date and starts on page 56; the commonly used 2011 date could not be confirmed as a separate edition (a web search found only the 2009 and 2015 editions); Bjork and Bjork (2020, JARMAC) text read from a PDF copy for the retrieval-strength statement and the quote about undesirable difficulties.

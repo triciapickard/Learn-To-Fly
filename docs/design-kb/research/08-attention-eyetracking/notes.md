@@ -165,3 +165,35 @@ This is a synthesis of many studies, and the evidence base is strong for the cla
 5. The authors say monitor framing induces a central bias, so do not assume that a centrally placed element is read just because it is there.
 
 Confirmed this session: Crossref record for DOI 10.1167/11.5.5; full text of the paper (PDF copy, 23 pages) with numeric checks on ROC range, 15 percent, tangent point, sandwich and tea making; PMC3134223 summary (also fetched).
+
+## greene2012reconsidering
+Greene, M. R., Liu, T., & Wolfe, J. M. (2012). Reconsidering Yarbus: A failure to predict observers' task from eye movement patterns. *Vision Research, 62*, 1-8.
+
+### Core claims
+Yarbus's 1967 figure is often read as showing that an observer's task can be seen in their scanpath. Greene, Liu and Wolfe tested that directly. A classifier fed summary eye-movement features could identify which image and which observer a record came from at above-chance rates, but it could not identify which task the observer was performing, and human judges looking at overlaid scanpaths also failed. The authors conclude, in the words of the fetched PMC text, that "static scan paths alone do not appear to be adequate to infer complex mental states of an observer."
+
+### Specifics
+Method (PMC3526937): 64 grayscale Time Life photographs from 1930 to 1979, each with at least two people, displayed at 24 by 24 degrees on a 21-inch CRT. Eye movements were recorded with an EyeLink 1000 at 1000 Hz, right eye, with calibration error of 1 degree or less. Four tasks: memory, guessing the decade, judging how well the people know each other, and judging wealth. Seven summary features: number of fixations, mean fixation duration, mean saccade amplitude, percentage of the image covered by fixations (1 degree fovea), and the dwell-time share on faces, bodies and objects. A linear discriminant classifier with leave-one-out cross-validation decoded image, participant and task.
+
+Results, as reported in the paper:
+- Experiment 1 (16 observers, 10 s per image): image 33 percent correct against 1.5 percent chance; participant 26 percent against 6.3 percent; task 27.1 percent against 25 percent chance. The "people" task was best at 42 percent and memory worst at 18 percent.
+- Experiment 2 (8 new observers rating how well each image suited each task): the lack of task decoding did not depend on image suitability. With the 37 images that had no ambiguity flags, task decoding was 26.6 percent (p = 0.31), and high-agreement and low-agreement subsets were both 24.6 percent.
+- Experiment 3 (16 observers, 60 s viewing, 20 images): participant 42.8 percent, image 54.4 percent, task 25.9 percent (p = 0.70).
+- Experiment 4 (humans judging overlaid scanpaths, about 10 observers, 100 trials per condition): 26.3 percent correct at 10 s and 27.5 percent at 60 s, no better than chance.
+- Using only the first second, the first two seconds or the last eight seconds did not rescue task decoding (about 25 to 27 percent).
+
+Three classifiers gave the same null result for task. Image and observer were decodable, so the features carried information; task information was what was missing.
+
+### Replication and criticism
+The authors list reasons for the gap with Yarbus: task effects may only appear within one observer and one image; the labels on Yarbus's figure may flatter the differences; summary statistics discard the temporal structure of scanpaths; and instructions may not change viewing much unless the information is needed. Their own limits: each observer saw each image once, features were summaries, and samples were modest.
+
+The result has been qualified since. A web search summary (not read in full) reports that Borji and Itti (2014, "Defending Yarbus", Journal of Vision) decoded task slightly but significantly above chance using aggregate features and a boosting classifier; that Hsiao and Cottrell reanalyzed the same data with stronger algorithms and predicted task; and that Bahle, Mills and Dodd (2017) found humans could deduce task from eye movements alone. Tatler et al. (2010) had found that instruction shifts gaze for one portrait (see yarbus1967eye). The net position is that task shapes gaze but the signal in simple summary statistics from mixed pictures is weak, and strong claims in either direction need care.
+
+### Implications for LTF
+1. Do not promise "we can tell what the learner is thinking from where they look". Even in a lab with research-grade trackers and well-chosen tasks, task identification from summary gaze features was no better than chance.
+2. If LTF ever adds gaze-based adaptation, treat it as unreliable inference and prefer explicit signals such as answers and time on step.
+3. Check within-subject, within-page comparisons, not pooled ones, if gaze studies are run on LTF pages. The positive Yarbus-style evidence comes from comparing the same viewer and picture under different instructions.
+4. Be wary of "people looked at X, so they wanted X" in heat-map reports; a different task gives a different map.
+5. Gaze alone does not reveal the learner's intention, so teach what to look for explicitly and ask.
+
+Confirmed this session: Crossref record for DOI 10.1016/j.visres.2012.03.019; full text and results from PMC3526937 (fetched summary of the paper); the later-work paragraph is from a web search summary only and is flagged as such.

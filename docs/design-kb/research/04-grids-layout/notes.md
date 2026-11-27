@@ -374,3 +374,87 @@ Expert craft, with no experiment. The article contains no outside critique (comm
 
 Confirmed this session: fetched the full article at alistapart.com/article/more-meaningful-typography (issue 327, 3 May 2011 on the page; a web search listing gave 21 April 2011, so I give the year only); quotations and calculations above taken from that fetch. I checked the arithmetic of the six ratio steps by hand.
 
+## chaparro2004reading
+
+Chaparro, Barbara S.; Baker, J. Ryan; Shaikh, A. Dawn; Hull, Spring; Brady, Laurie (2004). "Reading Online Text: A Comparison of Four White Space Layouts." *Usability News* (Software Usability Research Laboratory, Wichita State University), volume 6, July 2004.
+
+### Core claims
+
+Whitespace is often defended as a design virtue, but there is little experimental evidence on what it does for reading online. This study varied two kinds of whitespace in online text, the margins around the text and the leading (space between lines), and measured reading performance and preference. From the abstract as reported by the Embry-Riddle research portfolio: margins improved reading speed and comprehension compared with a no-margin version, readers generally preferred text with margins, and leading did not measurably change reading performance but did shape preference.
+
+### Specifics
+
+Design: four conditions created by manipulating margins surrounding the text and the leading. Measures: reading performance (speed and comprehension) and subjective preference. The authors are from Wichita State University, and the paper appeared in an online usability bulletin that is listed as peer-reviewed in the portfolio record. The page I could read gave only the abstract. I could not retrieve the full text because the host (psychology.wichita.edu) was not reachable from this session, so I cannot report the sample size, the particular margin widths or leading values, the passages used, the statistics or the effect sizes. Any later use of this study should open the original and add those.
+
+A 2005 follow-up by Chaparro, Shaikh and Baker (*Usability News* 7, "Reading online text with a poor layout: is performance worse?") compared text with and without an enhanced layout (headers, indentation, figure placement). Its abstract reports that reading speed and comprehension were not affected by layout, though participants were more satisfied with the enhanced layout and found it less fatiguing to read. Together the two studies show that structural spacing around a text block can matter for comprehension, while finer layout polish affects mainly satisfaction.
+
+### Replication and criticism
+
+Evidence strength is modest: a small-lab usability experiment published in a trade bulletin, with details I could not check. Related findings point in different directions. Bernard, Chaparro and Thomasson (2000, same group) framed their question against a view attributed to Jared Spool's team that sites with more whitespace did worse at helping users find information (Spool et al., 1998), and a web-search summary of the body text of the McMullin et al. paper (not the abstract, which I read separately) describes Bernard et al. as finding no difference in search time but a preference for enough whitespace to separate information units. I could not confirm that second-hand description against the original. McMullin and colleagues (2002, see this lane) found better comprehension for text surrounded by whitespace than for text surrounded by meaningless information. The picture is therefore consistent on comprehension and preference and inconsistent on speed and search. Whitespace is not a single variable: margins, leading and group separation behave differently, and "more" is not always better. The classic craft claim (whitespace directs attention and gives the eye a rest) is supported in part.
+
+### Implications for LTF
+
+1. Give lesson text real margins. On phones, keep a side gutter of at least 16 px, and on larger screens limit the text column so that margins grow with the viewport.
+2. Do not rely on leading changes alone to improve comprehension. Choose line height for legibility and consistency (see typography lanes) and treat it as a preference setting.
+3. Whitespace should separate groups (instruction, rationale, quiz) more than it separates every line; this fits Gestalt proximity and keeps pages short.
+4. Test density choices with learners in LTF's own context: reading a lesson with the sim open on another screen or window is a different task from reading a standalone web page.
+5. Do not cite these studies as proof that "more whitespace is always better." The evidence supports margins and grouping, not unlimited emptiness, and the dashboard and fly-mode views may need denser layouts.
+
+Confirmed this session: Embry-Riddle portfolio records for the 2004 study (portfolio.erau.edu/en/publications/reading-online-text-a-comparison-of-four-white-space-layouts/; authors, Usability News volume 6, July 2004, abstract) and for the 2005 follow-up (.../reading-online-text-with-a-poor-layout-is-performance-worse/); the record for Bernard, Chaparro and Thomasson (2000); web-search summaries of works.bepress.com/barbara-chaparro/115 and 116. The full texts were not readable.
+
+## mcmullin2002effects
+
+McMullin, Jess; Varnhagen, Connie K.; Heng, Pheng; Apedoe, Xornam (2002). "Effects of Surrounding Information and Line Length on Text Comprehension from the Web." *Canadian Journal of Learning and Technology*, 28(1), Winter 2002. doi:10.21432/t27607
+
+### Core claims
+
+The paper tests two page features that web developers can change easily, line length and the amount of whitespace surrounding text, and asks whether they affect comprehension of web text. Its abstract states that "Comprehension was affected by whitespace" and that participants were not affected by line length. The authors conclude that reading from the web is not the same as reading print, with implications for instructional web design.
+
+### Specifics
+
+Participants were undergraduate university students who read text on the web and answered comprehension questions. The two manipulated variables were line length and the surroundings of the text. The whitespace comparison is between text surrounded by whitespace and text surrounded by "meaningless information" (clutter that is not part of the message). The result was better comprehension when the information was surrounded by whitespace than when it was surrounded by meaningless information. The abstract page I could read does not give the number of participants, the line lengths tested, the comprehension scores or the statistics, so I do not report them. The journal is open access from the University of Alberta Libraries (DOI above), but I read only the article's abstract page this session.
+
+The study sits within a small group of early web-reading experiments, alongside the Wichita State usability studies on margins and leading (see chaparro2004reading), and adds an interpretation: whitespace may help not because empty space is pleasant but because it removes competing material from the vicinity of the text. That reading is mine; the abstract supports only the comparison.
+
+### Replication and criticism
+
+A single experiment on a student sample, using comprehension questions on web text. The line-length null result is a limitation: it applies to the range tested, which I could not confirm, and a null result with a small sample does not show that line length never matters. Other lab work in this lane reaches different conclusions about related layout variables (for example, left-aligned text and wider line spacing helped visual search in Ling and van Schaik, 2007). Its tested comparison, whitespace versus meaningless surrounding information, is closer to a clutter manipulation than to a pure whitespace manipulation, so it is relevant to Rosenholtz-style clutter work as well. Readers should not generalize from undergraduate comprehension tasks to learners practicing a procedure.
+
+### Implications for LTF
+
+1. The most defensible reading is about clutter near the text: keep sidebars, ads-like promotional blocks, badges and unrelated widgets away from the paragraph a learner is reading. LTF has no ads, but progress banners, streak counters and "next lesson" prompts could play the same role if placed beside body text.
+2. In the lesson template, put persistent chrome (progress, navigation) at the edges and keep the reading column clear.
+3. Comprehension questions after a lesson (LTF quizzes) are an honest test of the layout. When trialing layout variants, use the same quiz items for each variant, as this study did with comprehension questions, instead of judging by preference.
+4. Do not infer from the null result that line length is unimportant; use the typography lanes for measure guidance, and test LTF's own column width.
+5. Fly mode content competes with the sim for attention; keep surrounding information minimal there.
+
+Confirmed this session: Crossref record 10.21432/t27607 (authors, 28(1), 15 February 2002, University of Alberta Libraries); the journal's abstract page cjlt.ca/index.php/cjlt/article/view/26584 (undergraduates, whitespace effect, no line-length effect, conclusion). I did not read the full text.
+
+## ling2007influence
+
+Ling, Jonathan; van Schaik, Paul (2007). "The influence of line spacing and text alignment on visual search of web pages." *Displays*, 28(2), 60-67. doi:10.1016/j.displa.2007.04.003
+
+### Core claims
+
+The study asks how text presentation affects online behavior and preferences, with the goal of producing design guidelines for web pages. According to the abstract in the Teesside University repository, varying the presentation significantly affected task performance. Greater line spacing improved accuracy and reduced reaction times. Left-aligned text performed better than justified text, although participants preferred justified text. The authors discuss implications and offer web design recommendations.
+
+### Specifics
+
+The task is visual search of web pages, a scanning task, not continuous reading. The independent variables are line spacing and text alignment (left-aligned versus justified); the dependent measures are accuracy, reaction time and preference. I read only the abstract and the bibliographic record (volume 28, issue 2, pages 60-67, published April 2007, Elsevier, 20 Scopus citations at the time of the record). I could not retrieve the full text from this session, so I do not report the participant count, the spacing values (such as single or double spacing), the pages used or the statistics. A web-search summary of a second mirror says double spacing produced the faster, more accurate search, but I treat that as unverified until the paper is read.
+
+The same authors published a related experiment in 2006 (*International Journal of Human-Computer Studies* 64(5), 395-404) on font type and line length. Its abstract on the Teesside portal says that font choice had little effect, that longer lines helped scanning in the visual search task, and that shorter lines produced better subjective ratings in both experiments. This is a useful pair: it shows the typical pattern in this literature, where performance and preference disagree.
+
+### Replication and criticism
+
+Experimental evidence, but of a narrow task. Visual search for a target on a page is not comprehension of a lesson, so extrapolation to reading is weak. The mismatch between measured performance (left-aligned better) and stated preference (justified liked) is an important result in itself: users' preferences are not a reliable guide to what helps them. I know of no large replication; the finding about justified text agrees with widely repeated craft advice against justification on narrow web columns, which is a separate line of evidence (uneven word spacing). The line-spacing effect appears to conflict with the Wichita State finding that leading did not affect reading performance (see chaparro2004reading), but the tasks differ (search versus reading) and I could not compare the stimuli, so I would not call it a contradiction.
+
+### Implications for LTF
+
+1. Default to left-aligned, ragged-right text everywhere in LTF. Do not offer justified text as an option unless user testing says otherwise.
+2. Use generous line spacing in lists the learner scans (checklists, step lists, tables of V-speeds as a display pattern, with numbers coming from tokens), where visual search is the dominant task. Dense lists penalize accuracy.
+3. Treat user preference with caution in design research: if learners say they like a layout, check the performance measure (time to find a step, errors) too. Build a small A/B or task test into the challenge flow where feasible.
+4. For fly mode, which is scanned quickly while attention is on the sim, line spacing and left alignment matter more than for lessons.
+5. Keep the settings simple; offering "text spacing" and alignment preferences is an accessibility feature, but the default should be the performance-favored one.
+
+Confirmed this session: Crossref record 10.1016/j.displa.2007.04.003 (authors, Displays 28(2), 60-67, April 2007, Elsevier); Teesside University repository page research.tees.ac.uk/en/publications/the-influence-of-line-spacing-and-text-alignment-on-visual-search/ (abstract summary, citations); the Teesside page for the 2006 line-length paper; web-search summaries (dblp record, Bohrium mirror). The full text was not read.
+

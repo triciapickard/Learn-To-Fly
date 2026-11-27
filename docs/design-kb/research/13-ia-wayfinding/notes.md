@@ -423,3 +423,97 @@ This is a conceptual framework, not an experiment, and the same literature revie
 - Do not measure the whole product by time-to-answer. Exploratory pages are better judged on understanding, quiz results and return visits.
 
 Confirmed this session: Crossref record for DOI 10.1145/1121949.1121979 (title, author Gary Marchionini, vol. 49 issue 4, pages 41-46, April 2006, abstract); web searches returning the ACM abstract page; arXiv review "Unexplored Frontiers: A Review of Empirical Studies of Exploratory Search" (arxiv.org/html/2312.13695v2) read via fetch for the taxonomy summary and critiques; web search result describing the special-issue introduction. The ACM full text and the UNC-hosted PDF were not accessible.
+
+## rosenfeld2015information
+
+Rosenfeld, L., Morville, P., & Arango, J. (2015). *Information Architecture: For the Web and Beyond* (4th ed.). Sebastopol, CA: O'Reilly Media. Book (practitioner textbook; craft authority built on three earlier editions, the first published in 1998).
+
+### Core claims
+
+The authors present information architecture (IA) as the structural design of shared information environments, and treat findability as a critical success factor for usability: if people cannot find what they need through some combination of browsing, searching and asking, the system fails. The fourth edition widens the scope from websites to digital products across devices. Its argument is that good IA is an integrated system of organization, labeling, navigation and search, supported by metadata and controlled vocabularies, built from research into context, content and users.
+
+### Specifics
+
+I read the publisher's preview (front matter, table of contents and the opening of Chapter 2) but not the full chapters.
+
+- Four working definitions in Chapter 2: the structural design of shared information environments; the synthesis of organization, labeling, search and navigation systems; the art and science of shaping information products to support usability, findability and understanding; and an emerging discipline and community of practice.
+- Terms: the authors distinguish information from data (facts in highly structured databases) and from knowledge (in people's heads), placing information in "the messy middle," where there is often no single right answer. They define structuring (granularity of information "atoms" and their relations), organizing (grouping into meaningful categories) and labeling (what to call the categories and navigation elements).
+- Structure of the book: Part I introduces IA (the problems it addresses, definitions, Design for Finding, Design for Understanding); Part II covers Organization Systems (Chapter 6), Labeling Systems (7), Navigation Systems (8), Search Systems (9) and Thesauri, Controlled Vocabularies and Metadata (10); Part III covers Research (11), Strategy (12) and Design and Documentation (13).
+- Chapter 6 sections include organization schemes and organization structures; Chapter 8 includes placemaking, embedded navigation systems and supplemental navigation systems; Chapter 9 includes "Does Your Product Need Search?"; Chapter 10 includes faceted classification and polyhierarchy; Chapter 11 frames research as context, content and users.
+- Secondary summaries of the book's organization schemes list exact schemes (alphabetical, chronological, geographical) as objective and mutually exclusive, and ambiguous schemes (topic, task, audience, metaphor, hybrid) as subjective; one summary reports the book's view that ambiguous schemes, though harder to build, often serve users better. I could not confirm that wording against the book.
+
+### Replication and criticism
+
+This is craft and expert opinion, not experimental evidence, though it synthesizes research methods (card sorting, usability testing, log analysis). The authors themselves took the fourth edition beyond the web (the subtitle changed to "For the Web and Beyond"), a response to the earlier web-centric framing. I found no independent evaluation of the framework this session. Research elsewhere in this lane (information foraging, berrypicking, the vocabulary problem) is consistent with the book's emphasis on labels and multiple routes to content.
+
+### Implications for LTF
+
+- Use the four systems as an audit frame for the LTF site: organization (modules, lessons, challenges, glossary), labeling (names consistent across menu, page title and breadcrumb), navigation (global, local, in-lesson, "next"), and search.
+- Decide scheme by purpose: a beginner course is naturally task or sequence based, which is an ambiguous scheme, but reference material (V-speeds, checklists, glossary) works best with exact schemes such as alphabetical or by phase of flight, so learners can look up known items.
+- Ask the book's own question before building: does a product of LTF's size need search? A course of a few dozen lessons may serve most learners with good organization and a glossary, with search added for glossary and checklists.
+- Treat metadata as an asset: tag lessons with aircraft system, phase of flight and skill, to drive related-lesson links and the dashboard.
+- Keep sitemaps and a content model as living documents; the book's final chapter on design and documentation covers sitemaps, wireframes, content inventory and style guides.
+
+Confirmed this session: Open Library work OL17316790W (4th edition, O'Reilly, Sebastopol, ISBN 9781491911686); Google Books record via fetch (authors, publisher, three-part description, 486 pages in that listing, date September 9, 2015); publisher preview PDF (api.pageplace.de preview of ISBN 9781491913550) read for the table of contents, preface and Chapter 2 definitions; web search summaries of the organization schemes taxonomy. Page counts differ across catalogs (461 in Open Library) so no page count is recorded.
+
+## spencer2009card
+
+Spencer, D. (2009). *Card Sorting: Designing Usable Categories*. Brooklyn, NY: Rosenfeld Media. Book (practitioner guide to a research method).
+
+### Core claims
+
+Spencer presents card sorting as a practical technique for discovering how people group and label content, and gives a complete process: choose the method, content and participants, make the cards, run the sort, analyze the data and apply the results. A reviewer summarizes her central message as that card sorting is a tool, and "you are the one who is doing the thinking": it informs decisions but does not replace them.
+
+### Specifics
+
+All details come from reviews and listings, since the book itself was not accessible.
+
+- Content: a review in the Designer's Review of Books describes an under-200-page book that covers only card sorting, beginning with brief chapters on theory and benefits, then following the stages of a sort. Four preparation chapters cover choosing the method, choosing the content, choosing participants and making cards; one chapter covers managing the sort; the final four cover analysis and reporting.
+- Methods compared: open and closed sorts, individual and group sorts, and in-person and software-based sorts. A retailer description adds hybrid sorts and remote sessions.
+- Open versus closed (general definitions reported by a summary source): in an open sort participants create their own categories and names, which is generative; in a closed sort they place cards in predefined categories, which tests whether the names work.
+- Content chapter: how to select representative items from a site with thousands of pages, how to handle a mix of content and functionality, and how to write card labels that do not steer people toward particular groups. The reviewer calls it the most valuable chapter and attributes the failure of his first sort to not following this advice.
+- Analysis: a spreadsheet technique Spencer refined over several projects (offered as a free download), with only cursory treatment of statistical methods.
+
+### Replication and criticism
+
+The book is craft advice from a practitioner, not research. The Designer's Review of Books rated it 3.5 stars, called it practical and a "fail-proof recipe" for those new to the method, and said experienced practitioners would find little groundbreaking; it noted thin theory and statistics. Independent evidence on how many participants a sort needs comes from Tullis and Wood (see the nielsen2004card section). My own caution, not taken from the sources: results depend on which cards are chosen, participants do not experience the product while sorting, and a sort shows groupings, not task success, so pair it with usability tasks.
+
+### Implications for LTF
+
+- Run an open card sort with beginners, using one card per lesson and glossary term, to see whether they group lessons the way the syllabus does and what they call the groups. Use their labels to check module names.
+- Use a closed sort (or a tree test, a related technique) after any restructuring to check that learners can place lessons in the proposed modules.
+- Write cards in learner language and avoid aviation jargon that gives away the answer or biases the grouping.
+- Pick cards representatively for a large set instead of testing all pages at once; LTF could test one module at a time.
+- Remember Spencer's caution: the designer does the thinking. Sorting results should inform, not dictate, the curriculum order, which depends on pedagogy and safety sequencing the sort cannot see.
+
+Confirmed this session: Open Library work OL19833289W (title, author, 2009, Rosenfeld Media, Brooklyn, ISBN 9781933820026); fetched Designer's Review of Books review (designersreviewofbooks.com, 2009) for structure and content; web search summaries of the Rosenfeld Media listing and retailer description for methods and publication details. The publisher page and the book itself returned errors or were not accessible.
+
+## nielsen2004card
+
+Nielsen, J. (2004, July 18). Card sorting: How many users to test. Nielsen Norman Group. Web article reporting a study by Tullis and Wood.
+
+### Core claims
+
+Nielsen reports a study by Tom Tullis and Larry Wood of Fidelity Investments that used resampling to answer how many participants a card sorting study needs. His conclusion is that card sorting needs more users than traditional usability testing, and that 15 is the number to aim for in most projects.
+
+### Specifics
+
+- Data: Tullis and Wood had 168 users complete a card sort. They then drew random subsets of different sizes and compared each subset's similarity scores with the full-sample results, presenting the work at the 2004 UPA conference.
+- Correlation with the full-sample result by number of users: 5 users, 0.75; 15 users, 0.90; 30 users, 0.95; 60 users, 0.98. Nielsen estimates about 0.93 at 20 users. Gains flatten after about 15.
+- Recommendations: Tullis and Wood recommend 20 to 30 users. Nielsen recommends 15 for most projects and 30 for large, well-funded ones, and says his teams have had good results with as few as 12 when participants were hard to recruit.
+- Contrast: Nielsen says traditional usability testing needs about 5 users, while card sorting is a generative method that needs more participants to reach stable results.
+- Caveats from Nielsen: it is a single study (he would like replications with other companies and information spaces), the analysis was purely quantitative and ignored participants' comments, and numeric similarity scores should not be the only basis for an architecture. He recommends iterating with usability evaluations of a draft design, which are cheaper than enlarging card sorts.
+
+### Replication and criticism
+
+I found no replication this session, and Nielsen himself asks for one. The sample is a single company's content, which limits generalizing to a learning product. The resampling method measures stability of similarity scores, not whether the resulting architecture works. Nielsen is a respected usability authority; the article is expert commentary on someone else's study and reports no method for the study beyond what is given above.
+
+### Implications for LTF
+
+- Budget about 15 beginner participants for an open sort of the course structure; a pilot of 5 can find gross problems but should not set the final structure.
+- Because LTF's target is complete beginners, recruit people who have never flown, not simulation enthusiasts who already know the terms; their groupings differ.
+- Add a qualitative pass: ask participants to explain groupings, and read comments, since numbers alone can mislead.
+- After restructuring, run quick usability tasks ("find where to learn about the flaps") on a prototype, as Nielsen advises.
+- Re-run small sorts when the syllabus doubles, not every release.
+
+Confirmed this session: fetched nngroup.com/articles/card-sorting-how-many-users-to-test/ (author Jakob Nielsen, July 18, 2004; Tullis and Wood study details, correlation table and recommendations). The original Tullis and Wood paper was not read.

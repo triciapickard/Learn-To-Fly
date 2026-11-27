@@ -1,0 +1,477 @@
+[
+  {
+    "key": "shneiderman1983direct",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Shneiderman",
+        "given": "Ben"
+      }
+    ],
+    "year": 1983,
+    "title": "Direct Manipulation: A Step Beyond Programming Languages",
+    "container_title": "Computer",
+    "volume": "16",
+    "issue": "8",
+    "pages": "57-69",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1109/mc.1983.1654471",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Direct manipulation Shneiderman 1983' returned DOI 10.1109/mc.1983.1654471, title 'Direct Manipulation: A Step Beyond Programming Languages', Computer 16(8) 57-69, August 1983. Full text also read (PDF at cl.cam.ac.uk/~pr10/iui/shneiderman83.pdf).",
+    "kind": "foundational theory and observation article",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "hutchins1985direct",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Hutchins",
+        "given": "Edwin L."
+      },
+      {
+        "family": "Hollan",
+        "given": "James D."
+      },
+      {
+        "family": "Norman",
+        "given": "Donald A."
+      }
+    ],
+    "year": 1985,
+    "title": "Direct Manipulation Interfaces",
+    "container_title": "Human-Computer Interaction",
+    "volume": "1",
+    "issue": "4",
+    "pages": "311-338",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15327051hci0104_2",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1207/s15327051hci0104_2, Hutchins, Hollan, Norman, Human-Computer Interaction 1(4) 311-338, December 1985. Full text read (PDF at vis.csail.mit.edu/classes/6.859/readings/pdfs/Hutchins-DirectManipulationInterfaces.pdf).",
+    "kind": "cognitive theory paper",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "gaver1991technology",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Gaver",
+        "given": "William W."
+      }
+    ],
+    "year": 1991,
+    "title": "Technology Affordances",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '91)",
+    "volume": "",
+    "issue": "",
+    "pages": "79-84",
+    "publisher": "ACM",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/108844.108856",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1145/108844.108856, 'Technology affordances', Gaver, CHI '91, pages 79-84. Full text read (PDF at perso.lisn.upsaclay.fr/mbl/Stanford/CS477/papers/Gaver-CHI1991.pdf).",
+    "kind": "conceptual framework paper",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "norman2013design",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Norman",
+        "given": "Donald A."
+      }
+    ],
+    "year": 2013,
+    "title": "The Design of Everyday Things",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Basic Books",
+    "publisher_place": "New York",
+    "edition": "Revised and expanded edition",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780465072996",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'design of everyday things norman' gave work OL1879162W; its editions list shows Basic Books, 2013, ISBN 9780465072996 (OL50499571M) and a 'Revised and Expanded Edition' (OL25726927M). Publisher table of contents PDF (toc.library.ethz.ch), Google Books page (Basic Books, 5 Nov 2013, 368 pages) and jnd.org book page also read.",
+    "kind": "synthesis and craft treatise",
+    "lane": "11-interaction-design",
+    "original_year": 1988
+  },
+  {
+    "key": "raskin2000humane",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Raskin",
+        "given": "Jef"
+      }
+    ],
+    "year": 2000,
+    "title": "The Humane Interface: New Directions for Designing Interactive Systems",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Addison-Wesley",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780201379372",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'humane interface raskin' gave work OL8020001W; edition OL7407271M lists Addison-Wesley Professional, March 29, 2000, ISBN 9780201379372. Content read only via raskincenter.org/jef/humane-interface/ and a course notes PDF at cs.brown.edu/courses/cs092/2005/bell.raskin.pdf.",
+    "kind": "expert design opinion",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "sellen1992prevention",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Sellen",
+        "given": "Abigail J."
+      },
+      {
+        "family": "Kurtenbach",
+        "given": "Gordon P."
+      },
+      {
+        "family": "Buxton",
+        "given": "William A. S."
+      }
+    ],
+    "year": 1992,
+    "title": "The Prevention of Mode Errors Through Sensory Feedback",
+    "container_title": "Human-Computer Interaction",
+    "volume": "7",
+    "issue": "2",
+    "pages": "141-164",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15327051hci0702_1",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1207/s15327051hci0702_1, Sellen, Kurtenbach, Buxton, Human-Computer Interaction 7(2) 141-164, June 1992. Full text read (Microsoft Research PDF sellen-kurtenbach-buxton-1992.pdf).",
+    "kind": "controlled experiment (two experiments)",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "cooper2014about",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Cooper",
+        "given": "Alan"
+      },
+      {
+        "family": "Reimann",
+        "given": "Robert"
+      },
+      {
+        "family": "Cronin",
+        "given": "David"
+      },
+      {
+        "family": "Noessel",
+        "given": "Christopher"
+      }
+    ],
+    "year": 2014,
+    "title": "About Face: The Essentials of Interaction Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Wiley",
+    "publisher_place": "Indianapolis",
+    "edition": "4th edition",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781118766576",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'about face essentials of interaction design cooper' gave work OL19332786W; edition OL26790816M lists Wiley, Sep 2, 2014, ISBN 9781118766576, 720 pages. Publisher front-matter sample (table of contents, foreword, introduction) read from content.e-bookshelf.de.",
+    "kind": "practitioner method and pattern book",
+    "lane": "11-interaction-design",
+    "original_year": 1995
+  },
+  {
+    "key": "tognazzini2014first",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Tognazzini",
+        "given": "Bruce"
+      }
+    ],
+    "year": 2014,
+    "title": "First Principles of Interaction Design (Revised & Expanded)",
+    "container_title": "AskTog",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Bruce Tognazzini",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://asktog.com/atc/principles-of-interaction-design/",
+    "verified_via": "websearch",
+    "verified_evidence": "WebSearch for the title returned asktog.com/atc/principles-of-interaction-design/; WebFetch of that page returned the full list of principles, dated 5 March 2014, copyright 1978-2014 Tognazzini.",
+    "kind": "expert principle list with case studies",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "reason1990human",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Reason",
+        "given": "James"
+      }
+    ],
+    "year": 1990,
+    "title": "Human Error",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Cambridge University Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780521314190",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'human error reason' gave work OL2687468W with edition OL1871488M, Cambridge University Press, 1990, 302 pages. Cambridge University Press listing (found via WebSearch) gives paperback ISBN 9780521314190. Chapter list from a bookseller listing. Reason (2000) BMJ paper read in full for the framework.",
+    "kind": "theoretical synthesis",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "norman1981categorization",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Norman",
+        "given": "Donald A."
+      }
+    ],
+    "year": 1981,
+    "title": "Categorization of Action Slips",
+    "container_title": "Psychological Review",
+    "volume": "88",
+    "issue": "1",
+    "pages": "1-15",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0033-295x.88.1.1",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Categorization of action slips Norman 1981' returned DOI 10.1037/0033-295x.88.1.1, Psychological Review 88(1) 1-15, January 1981. Full text read from a PDF copy at ocw.tudelft.nl.",
+    "kind": "theory built on collected slip reports",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "abowd1992giving",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Abowd",
+        "given": "Gregory D."
+      },
+      {
+        "family": "Dix",
+        "given": "Alan J."
+      }
+    ],
+    "year": 1992,
+    "title": "Giving Undo Attention",
+    "container_title": "Interacting with Computers",
+    "volume": "4",
+    "issue": "3",
+    "pages": "317-342",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/0953-5438(92)90021-7",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1016/0953-5438(92)90021-7, 'Giving undo attention', Abowd and Dix, Interacting with Computers 4(3) 317-342, December 1992. Full text read (alandix.com/academic/papers/undo92/undo.pdf).",
+    "kind": "formal and conceptual analysis",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "suchman1987plans",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Suchman",
+        "given": "Lucy A."
+      }
+    ],
+    "year": 1987,
+    "title": "Plans and Situated Actions: The Problem of Human-Machine Communication",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Cambridge University Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'plans and situated actions suchman' gave work OL4962782W; editions list Cambridge University Press, 1987 (OL2379491M, OL7737289M). The 1985 Xerox PARC report version (ISL-6) was read in full from cs.colby.edu/courses/J16/cs267/papers/Suchman-PlansAndSituatedActions.pdf; the 1987 book itself was not read.",
+    "kind": "ethnographic study and theory",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "norman1986cognitive",
+    "type": "chapter",
+    "authors": [
+      {
+        "family": "Norman",
+        "given": "Donald A."
+      }
+    ],
+    "year": 1986,
+    "title": "Cognitive Engineering",
+    "container_title": "User Centered System Design: New Perspectives on Human-Computer Interaction",
+    "volume": "",
+    "issue": "",
+    "pages": "31-62",
+    "publisher": "Lawrence Erlbaum Associates",
+    "publisher_place": "Hillsdale, NJ",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Norman",
+        "given": "Donald A."
+      },
+      {
+        "family": "Draper",
+        "given": "Stephen W."
+      }
+    ],
+    "doi": "10.1201/9780367807320-3",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Norman Cognitive engineering 1986' returned DOI 10.1201/9780367807320-3, 'Cognitive Engineering', container 'User Centered System Design', pages 31-62 (CRC reissue record; a second record 10.1201/b15703-3 also appears). Original publisher Lawrence Erlbaum, Hillsdale NJ, confirmed in WebSearch results. Open Library work OL16641021W lists User centered system design, Norman and Draper, 1986.",
+    "kind": "theoretical framework chapter",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "saffer2013microinteractions",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Saffer",
+        "given": "Dan"
+      }
+    ],
+    "year": 2013,
+    "title": "Microinteractions: Designing with Details",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "O'Reilly Media",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781449342685",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'microinteractions saffer' gave work OL17316791W; edition OL25891170M lists O'Reilly Media, 2013, ISBN 9781449342685. Google Books page fetched: O'Reilly Media, April 30, 2013, 170 pages, chapter list.",
+    "kind": "practitioner craft book",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "dourish2001where",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Dourish",
+        "given": "Paul"
+      }
+    ],
+    "year": 2001,
+    "title": "Where the Action Is: The Foundations of Embodied Interaction",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "MIT Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780262041966",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'where the action is dourish' gave work OL9207460W; edition OL9598242M lists The MIT Press, October 1, 2001, ISBN 9780262041966. Author page dourish.com/embodied/ fetched; a full review PDF (dcs.gla.ac.uk/~matthew/papers/WhereTheActionIs.pdf) read.",
+    "kind": "theoretical synthesis",
+    "lane": "11-interaction-design"
+  },
+  {
+    "key": "laurel1991computers",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Laurel",
+        "given": "Brenda"
+      }
+    ],
+    "year": 1991,
+    "title": "Computers as Theatre",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Addison-Wesley",
+    "publisher_place": "Reading, MA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'computers as theatre laurel' gave work OL3922230W; edition OL1866818M lists Addison-Wesley Pub., 1991, 211 pages. Google Books page fetched (Addison-Wesley Pub., 1991, 211 pages); place Reading, MA taken from a search summary of a review's citation.",
+    "kind": "conceptual design theory",
+    "lane": "11-interaction-design"
+  }
+]

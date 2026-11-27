@@ -326,7 +326,7 @@ Federal Aviation Administration. (2010). Flightcrew alerting, 14 CFR 25.1322 (fi
 
 ### Core claims
 
-This is a regulatory standard for how alerts on a transport-category airplane flight deck must be designed. It is not a training document and nothing in it is a flying procedure. It matters here because it is one of the few places where a design convention for alerting is written as a rule: three priority levels, a mandatory color convention, a requirement to minimize false and nuisance alerts, and a requirement that alerts be easy to detect and understand under all foreseeable conditions. The paragraph summaries below are from the Cornell Legal Information Institute text of the section as fetched this session; I paraphrase except where a short phrase is quoted.
+This is a regulatory standard for how alerts on a transport-category airplane flight deck must be designed. It is not a training document and nothing in it is a flying procedure. It is one of the few places where an alerting convention is written as a rule: three priority levels, a mandatory color convention, a duty to minimize false and nuisance alerts, and a requirement that alerts be easy to detect and understand under all foreseeable conditions. The summaries below paraphrase the Cornell Legal Information Institute text fetched this session.
 
 ### Specifics
 
@@ -340,22 +340,22 @@ Paragraph (d), false and nuisance alerts: the alerting function must minimize th
 
 Paragraph (e), color convention: the text begins "Red for warning alert indications"; caution is amber or yellow; advisory is any color except red or green. On displays that cannot show these colors, visual coding techniques and other alerting elements must distinguish the levels.
 
-Paragraph (f), color elsewhere: red, amber and yellow may be used for non-alerting functions but only to a limited extent and without adversely affecting flightcrew alerting. A search summary this session adds that the 2010 final rule text was harmonized with the European Aviation Safety Agency, and that commenters on the proposal raised concerns about reserving the three colors for alerting. I did not read the preamble.
+Paragraph (f), color elsewhere: red, amber and yellow may be used for non-alerting functions but only to a limited extent and without adversely affecting flightcrew alerting. A search summary adds that the 2010 final rule was harmonized with the European Aviation Safety Agency. I did not read the preamble.
 
 ### Replication and criticism
 
-Evidence type: a regulation. It represents consensus and accumulated accident experience, not a controlled experiment, and it applies to a specific class of airplane. A related FAA human-factors guideline, as quoted in a search summary, says evaluations should verify that colors are distinguishable under expected lighting (red looks red, amber looks amber). That is guidance from the FAA human factors group, not from the rule.
+Evidence type: a regulation, representing consensus and accumulated experience, not a controlled experiment, for one class of airplane. FAA human-factors guidance quoted in a search summary says evaluations should verify colors are distinguishable under expected lighting; that is not in the rule itself.
 
-Limits and caveats: the rule is a floor for certification, not a full alert design method; it says what an alert must do, not how to compose it. The color convention is cultural and regulated in aviation, but red is not universal for danger. Color-only coding fails for color-blind users, which is why the rule requires redundant senses for warnings and cautions and says other coding is needed on monochrome displays. I have not found a challenge to the three-tier structure in the sources I read.
+Caveats: the rule is a certification floor, not an alert design method; it says what an alert must do, not how to compose it. My own inference is that the requirement for multiple senses and for other coding on monochrome displays reflects the weakness of color-only coding. I have not found a challenge to the three-tier structure in the sources I read.
 
 ### Implications for LTF
 
-1. Use three levels, and only three, for in-app messages in fly mode and challenges: must-act-now, act-soon, and note-for-later. Give each level a distinct visual treatment and a distinct place on the page.
-2. Reserve red (or the dark-theme equivalent) for must-act-now. If red is used for decoration, errors in forms, or progress, the real warning loses meaning. The rule's paragraph (f) is the model: limit red, amber and yellow elsewhere in the UI. Check this against the token palette in `tokens.css`, and keep it in both light and dark themes.
-3. Never rely on color alone: pair each level with a word, an icon shape and, where sound is on, a sound. The rule requires at least two senses for the top two levels; in a web page this means text plus icon plus optional audio.
-4. Minimize false and nuisance alerts. A nudge that is wrong or irrelevant should be rare and easy to turn off, but the off switch should not be so easy that it is hit by accident (paragraph (d)), and when a nudge type is off the page should say so.
-5. Remove an alert when its condition clears (paragraph (a)). A stale "you are too fast" banner after the learner has corrected is a design bug.
-6. Warnings must be acknowledgeable. Offer a dismiss control that does not hide the underlying state.
-7. These are display-design principles only. They imply nothing about what the real aircraft's warnings are or what to do about them; any such content must come from the aircraft documentation.
+1. Use three levels for in-app messages in fly mode and challenges: must-act-now, act-soon, note-for-later, each with a distinct visual treatment and place on the page.
+2. Reserve red (or its dark-theme equivalent) for must-act-now. If red also decorates form errors or progress, the real warning loses meaning (paragraph (f)). Audit the `tokens.css` palette in both themes.
+3. Never rely on color alone: pair each level with a word, an icon shape and, where sound is on, a sound.
+4. Minimize false and nuisance alerts; make nudges easy to turn off but not by accident, and say on the page when a type is off (paragraph (d)).
+5. Remove an alert when its condition clears. A stale "too fast" banner after the learner has corrected is a design bug.
+6. Offer a dismiss control that does not hide the underlying state.
+7. These are display principles only; real aircraft warnings and responses come from aircraft documentation.
 
 Confirmed this session: text of 14 CFR 25.1322 fetched from https://www.law.cornell.edu/cfr/text/14/25.1322 (paragraph-by-paragraph summary; I did not obtain a verbatim copy); web search listing for the 2 November 2010 Federal Register final rule (https://www.govinfo.gov/content/pkg/FR-2010-11-02/pdf/2010-27629.pdf, title "Flightcrew Alerting", pages 67201-67210) and FAA AC 25-11B listing; the AC itself returned 403 and was not read.

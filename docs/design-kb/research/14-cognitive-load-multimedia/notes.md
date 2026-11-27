@@ -250,3 +250,34 @@ For a beginner, simply being dropped into a sim challenge and told to fly a patt
 - Avoid long chains of unguided practice flights with the same structure.
 
 Confirmed this session: Crossref record and abstract for DOI 10.1207/s15516709cog1202_4 (Cognitive Science 12(2), 257-285); a PhilArchive and search summary of the abstract; and the full texts of the 2019 retrospective, Chandler and Sweller 1991, Kalyuga and colleagues 2003 and de Jong 2010 for how they describe it. The 1988 article itself was not read.
+
+## mayer2021multimedia
+
+Mayer, R. E. (2021). *Multimedia Learning* (3rd ed.). Cambridge University Press. (First edition 2001, second edition 2009.)
+
+### Core claims
+
+Mayer's book is the standard statement of the cognitive theory of multimedia learning (CTML) and of the design principles that follow from it. Its thesis, in the author's words from the preface, is that "people learn better from words and pictures than from words alone". The book reviews principles of design based on experiments by Mayer and colleagues, supplemented with evidence from elsewhere, and grounds them in a theory of how people learn from words and pictures. The third edition reviews 15 principles drawn from more than 200 experimental studies (publisher description). It is a research synthesis by the field's leading figure, so it reports one program with a strong theoretical commitment.
+
+### Specifics
+
+**Structure (from the published table of contents).** Section 1 introduces the promise of multimedia learning, the science of learning, instruction and assessment, and the multimedia principle (chapter 5). Section 2, "reducing extraneous processing", covers coherence, signaling, redundancy, spatial contiguity and temporal contiguity. Section 3, "managing essential processing", covers segmenting, pre-training and modality. Section 4, "fostering generative processing", covers personalization, voice, image, embodiment, immersion and generative activity. Chapter 20 summarizes the principles.
+
+**Three kinds of processing.** The third edition uses a triarchic model: extraneous processing (does not serve the instructional goal), essential processing (needed to acquire the essential information) and generative processing (aimed at making sense of the material and motivating effort). This extends the earlier extraneous, essential and holding scheme in the 2003 Mayer and Moreno paper in this lane.
+
+**Growth of the evidence base (preface).** The author reports 45 experimental comparisons involving transfer tests in the first edition (2001), 93 in the second (2009) and 201 in the third. The number of principles grew from seven to 12 to 15. Six original principles were kept (coherence, redundancy, spatial contiguity, temporal contiguity, modality, multimedia); six were added in the second edition (signaling, segmenting, pre-training, personalization, voice, image); three in the third (embodiment, immersion, generative activity). One original principle, individual differences, was recast as a boundary condition, "the idea that design principles that are effective for beginners may not be effective for more experienced learners". Transfer-test performance is the main outcome throughout; the third edition adds process measures such as eye-tracking, log files and EEG.
+
+### Replication and criticism
+
+The preface is candid about limits: "most research still focuses on learning in short-term studies with immediate tests in laboratory environments involving college students", with a need for longer-term studies in authentic settings. The base is largely the author's own laboratory, though the book cites a growing number of meta-analyses of individual principles (the modality and signaling analyses are in this lane), and independent work has found smaller or conditional effects (see Ginns 2005 and the Reinwein reanalysis discussed there). De Jong (this lane) argues that results for modality in particular depend on fast, system-paced presentation. De Jong notes that CTML's "essential processing" maps loosely onto CLT's germane load. I have not read the main chapters, only the front matter and preface, so the chapter-level evidence is not summarized here.
+
+### Implications for LTF
+
+This book is the best single source for a design-principles checklist, but LTF should adopt it as a set of defaults to test, not rules.
+- Extraneous processing: cut decoration (coherence), cue what matters (signaling), do not read out on-screen text (redundancy), keep labels beside their referents and pair narration with its visual in time.
+- Essential processing: break animated or multi-step explanations into learner-paced segments, teach the names of parts before explaining systems (pre-training), and use narration with visuals where listening is possible (modality).
+- Generative processing: a conversational tone (personalization) and prompts that ask the learner to explain or summarize (generative activity) are the book's suggestions for motivating effort. For LTF, a "say it back" quiz question after a procedure fits this.
+- The individual differences condition is the book's own version of expertise reversal: guidance that helps beginners may not help experienced learners, so an LTF module for returning pilots may need a lighter version.
+- The preface's note that most evidence is short, immediate and from college students applies to LTF's multi-week audience; LTF should collect its own delayed-test data.
+
+Confirmed this session: read the front matter and preface of the third edition (Cambridge University Press, https://assets.cambridge.org/97813166/38088/frontmatter/9781316638088_frontmatter.pdf, which gives the 2021 copyright, the edition history and ISBNs 9781107187504 hardback and 9781316638088 paperback), and the table of contents (https://assets.cambridge.org/97811071/87504/toc/9781107187504_toc.pdf). Open Library lists the work (OL1837843W for the 2001 first edition; a 2020 edition record carries the same ISBNs). Chapter text was not read.

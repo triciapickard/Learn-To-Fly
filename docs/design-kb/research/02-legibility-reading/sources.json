@@ -1,0 +1,651 @@
+[
+  {
+    "key": "cattell1886time",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Cattell",
+        "given": "James McKeen"
+      }
+    ],
+    "year": 1886,
+    "title": "The time it takes to see and name objects",
+    "container_title": "Mind",
+    "volume": "os-XI",
+    "issue": "41",
+    "pages": "63-65",
+    "publisher": "Oxford University Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1093/mind/os-xi.41.63",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Cattell time it takes to see and name objects 1886' returned DOI 10.1093/mind/os-xi.41.63, Mind os-XI(41), 63-65, 1886. Full 3-page text read from the Zenodo copy of the article (zenodo.org/records/1707687).",
+    "kind": "foundational laboratory experiment report (short note)",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "huey1908psychology",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Huey",
+        "given": "Edmund Burke"
+      }
+    ],
+    "year": 1908,
+    "title": "The Psychology and Pedagogy of Reading: With a Review of the History of Reading and Writing and of Methods, Texts, and Hygiene in Reading",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Macmillan",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'psychology and pedagogy of reading huey' returned work OL153495W; edition OL7179370M lists Macmillan, New York, 1908, 469 pages. Full text of the 1908 Cornell scan read via archive.org item cu31924030589554.",
+    "kind": "foundational synthesis and review of early reading research",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "wade2009javal",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wade",
+        "given": "Nicholas J."
+      },
+      {
+        "family": "Tatler",
+        "given": "Benjamin W."
+      }
+    ],
+    "year": 2009,
+    "title": "Did Javal measure eye movements during reading?",
+    "container_title": "Journal of Eye Movement Research",
+    "volume": "2",
+    "issue": "5",
+    "pages": "1-7",
+    "publisher": "MDPI",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.16910/jemr.2.5.5",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Did Javal measure eye movements during reading Wade Tatler' returned DOI 10.16910/jemr.2.5.5, JEMR 2(5), 2009. Full text read from bop.unibe.ch/JEMR/article/download/2284/3480 (header reads 2(5):5, 1-7).",
+    "kind": "historical correction (peer-reviewed history-of-science article)",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "tinker1963legibility",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Tinker",
+        "given": "Miles A."
+      }
+    ],
+    "year": 1963,
+    "title": "Legibility of Print",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Iowa State University Press",
+    "publisher_place": "Ames, Iowa",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'legibility of print tinker' returned work OL10488189W; edition OL5884652M lists Iowa State University Press, Ames, 1963, 329 pages. Full text of a scan of the 1963 book (Gwern.net PDF, text extracted with pdftotext) read this session, including the chapter summaries.",
+    "kind": "book-length research summary",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "rayner1998eye",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Rayner",
+        "given": "Keith"
+      }
+    ],
+    "year": 1998,
+    "title": "Eye movements in reading and information processing: 20 years of research",
+    "container_title": "Psychological Bulletin",
+    "volume": "124",
+    "issue": "3",
+    "pages": "372-422",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0033-2909.124.3.372",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1037/0033-2909.124.3.372, Psychological Bulletin 124(3), 372-422, 1998. Abstract read via Europe PMC (PMID 9849112). Figures taken from Rayner 2009 (PMC2906818) and Clifton et al. 2016 (clok.uclan.ac.uk/26495), not from the 1998 full text.",
+    "kind": "authoritative narrative review",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "rayner2016much",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Rayner",
+        "given": "Keith"
+      },
+      {
+        "family": "Schotter",
+        "given": "Elizabeth R."
+      },
+      {
+        "family": "Masson",
+        "given": "Michael E. J."
+      },
+      {
+        "family": "Potter",
+        "given": "Mary C."
+      },
+      {
+        "family": "Treiman",
+        "given": "Rebecca"
+      }
+    ],
+    "year": 2016,
+    "title": "So much to read, so little time: How do we read, and can speed reading help?",
+    "container_title": "Psychological Science in the Public Interest",
+    "volume": "17",
+    "issue": "1",
+    "pages": "4-34",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/1529100615623267",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1177/1529100615623267, PSPI 17(1), 4-34, 2016. Abstract read via Europe PMC (PMID 26769745); APS summary pages (psychologicalscience.org/publications/speed_reading.html and the APS Observer report) fetched.",
+    "kind": "evidence review for the public",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "legge2007case",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Legge",
+        "given": "Gordon E."
+      },
+      {
+        "family": "Cheung",
+        "given": "Sing-Hang"
+      },
+      {
+        "family": "Yu",
+        "given": "Deyue"
+      },
+      {
+        "family": "Chung",
+        "given": "Susana T. L."
+      },
+      {
+        "family": "Lee",
+        "given": "Hye-Won"
+      },
+      {
+        "family": "Owens",
+        "given": "Daniel P."
+      }
+    ],
+    "year": 2007,
+    "title": "The case for the visual span as a sensory bottleneck in reading",
+    "container_title": "Journal of Vision",
+    "volume": "7",
+    "issue": "2",
+    "pages": "9",
+    "publisher": "Association for Research in Vision and Ophthalmology",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1167/7.2.9",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref DOI record 10.1167/7.2.9 (Journal of Vision 7(2), article 9, 2007; authors match). Author manuscript read at pmc.ncbi.nlm.nih.gov/articles/PMC2729064.",
+    "kind": "experimental and theoretical psychophysics paper",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "legge2011print",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Legge",
+        "given": "Gordon E."
+      },
+      {
+        "family": "Bigelow",
+        "given": "Charles A."
+      }
+    ],
+    "year": 2011,
+    "title": "Does print size matter for reading? A review of findings from vision science and typography",
+    "container_title": "Journal of Vision",
+    "volume": "11",
+    "issue": "5",
+    "pages": "8",
+    "publisher": "Association for Research in Vision and Ophthalmology",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1167/11.5.8",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1167/11.5.8, Journal of Vision 11(5), article 8, 2011. Full text read at pmc.ncbi.nlm.nih.gov/articles/PMC3428264 (Europe PMC abstract also fetched).",
+    "kind": "review plus new survey data",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "pelli2008uncrowded",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Pelli",
+        "given": "Denis G."
+      },
+      {
+        "family": "Tillman",
+        "given": "Katharine A."
+      }
+    ],
+    "year": 2008,
+    "title": "The uncrowded window of object recognition",
+    "container_title": "Nature Neuroscience",
+    "volume": "11",
+    "issue": "10",
+    "pages": "1129-1135",
+    "publisher": "Springer Nature",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1038/nn.2187",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1038/nn.2187, Nature Neuroscience 11(10), 1129-1135, 2008 (an erratum 10.1038/nn1208-1463b also exists). Abstract via Europe PMC (PMID 18828191) and full text at pmc.ncbi.nlm.nih.gov/articles/PMC2772078.",
+    "kind": "review of experiments (perception science)",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "larson2005science",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Larson",
+        "given": "Kevin"
+      }
+    ],
+    "year": 2005,
+    "title": "The science of word recognition",
+    "container_title": "Microsoft Typography",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Microsoft",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://learn.microsoft.com/typography/develop/word-recognition",
+    "verified_via": "websearch",
+    "verified_evidence": "WebSearch 'Larson The Science of Word Recognition Microsoft Typography' returned learn.microsoft.com/typography/develop/word-recognition; full page text read via WebFetch. Microsoft Research listing (microsoft.com/en-us/research/?p=754033) gives author Kevin Larson, January 2005. The page says it began as a talk at ATypI, September 2003.",
+    "kind": "expert synthesis by a reading psychologist (not peer reviewed)",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "arditi2005serifs",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Arditi",
+        "given": "Aries"
+      },
+      {
+        "family": "Cho",
+        "given": "Jianna"
+      }
+    ],
+    "year": 2005,
+    "title": "Serifs and font legibility",
+    "container_title": "Vision Research",
+    "volume": "45",
+    "issue": "23",
+    "pages": "2926-2933",
+    "publisher": "Elsevier",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.visres.2005.06.013",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1016/j.visres.2005.06.013, Vision Research 45(23), 2926-2933, 2005. Abstract via Europe PMC (PMID 16099015); full text read at pmc.ncbi.nlm.nih.gov/articles/PMC4612630.",
+    "kind": "controlled experiment",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "beier2010design",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Beier",
+        "given": "Sofie"
+      },
+      {
+        "family": "Larson",
+        "given": "Kevin"
+      }
+    ],
+    "year": 2010,
+    "title": "Design improvements for frequently misrecognized letters",
+    "container_title": "Information Design Journal",
+    "volume": "18",
+    "issue": "2",
+    "pages": "118-137",
+    "publisher": "John Benjamins",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1075/idj.18.2.03bei",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1075/idj.18.2.03bei, Information Design Journal 18(2), 2010 (Crossref gave no pages). Pages 118-137 and full text read from the Microsoft Research PDF of the article.",
+    "kind": "controlled experiments on letter variants",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "dyson2004physical",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Dyson",
+        "given": "Mary C."
+      }
+    ],
+    "year": 2004,
+    "title": "How physical text layout affects reading from screen",
+    "container_title": "Behaviour & Information Technology",
+    "volume": "23",
+    "issue": "6",
+    "pages": "377-393",
+    "publisher": "Taylor & Francis",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/01449290410001715714",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1080/01449290410001715714, BIT 23(6), 377-393, 2004. Full text read (PDF fetched from stu.westga.edu/~ssynan1/literacy/Dyson.pdf and extracted with pdftotext; header matches).",
+    "kind": "critical review of empirical studies",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "richardson2022legibility",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Richardson",
+        "given": "John T. E."
+      }
+    ],
+    "year": 2022,
+    "title": "The Legibility of Serif and Sans Serif Typefaces: Reading from Paper and Reading from Screens",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Springer",
+    "publisher_place": "Cham",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/978-3-030-90984-0",
+    "isbn": "9783030909833",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1007/978-3-030-90984-0 returned this title and subtitle, author John T. E. Richardson, Springer, 2022, ISBN 9783030909833 (print), 9783030909840 (online). All chapter abstracts (10.1007/978-3-030-90984-0_1 to _17) read via Crossref; book text itself was not accessible.",
+    "kind": "systematic review (monograph)",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "rello2013good",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Rello",
+        "given": "Luz"
+      },
+      {
+        "family": "Baeza-Yates",
+        "given": "Ricardo"
+      }
+    ],
+    "year": 2013,
+    "title": "Good fonts for dyslexia",
+    "container_title": "Proceedings of the 15th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS '13)",
+    "volume": "",
+    "issue": "",
+    "pages": "1-8",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/2513383.2513447",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1145/2513383.2513447 (ASSETS 2013, 1-8, 21 Oct 2013). Full 8-page paper read (PDF from scispace.com/pdf/good-fonts-for-dyslexia-2debffz8dl.pdf).",
+    "kind": "within-subject eye-tracking experiment",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "wery2017effect",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wery",
+        "given": "Jessica J."
+      },
+      {
+        "family": "Diliberto",
+        "given": "Jennifer A."
+      }
+    ],
+    "year": 2017,
+    "title": "The effect of a specialized dyslexia font, OpenDyslexic, on reading rate and accuracy",
+    "container_title": "Annals of Dyslexia",
+    "volume": "67",
+    "issue": "2",
+    "pages": "114-127",
+    "publisher": "Springer",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/s11881-016-0127-1",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1007/s11881-016-0127-1, Annals of Dyslexia 67(2), 114-127 (published online 18 Mar 2016, print July 2017). Abstract via Europe PMC (PMID 26993270); full text read at pmc.ncbi.nlm.nih.gov/articles/PMC5629233.",
+    "kind": "single-subject experiment",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "marinus2016special",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Marinus",
+        "given": "Eva"
+      },
+      {
+        "family": "Mostard",
+        "given": "Michelle"
+      },
+      {
+        "family": "Segers",
+        "given": "Eliane"
+      },
+      {
+        "family": "Schubert",
+        "given": "Teresa M."
+      },
+      {
+        "family": "Madelaine",
+        "given": "Alison"
+      },
+      {
+        "family": "Wheldall",
+        "given": "Kevin"
+      }
+    ],
+    "year": 2016,
+    "title": "A special font for people with dyslexia: Does it work and, if so, why?",
+    "container_title": "Dyslexia",
+    "volume": "22",
+    "issue": "3",
+    "pages": "233-244",
+    "publisher": "Wiley",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1002/dys.1527",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1002/dys.1527, Dyslexia 22(3), 233-244, 2016. Full abstract read via Europe PMC (PMID 27194598).",
+    "kind": "controlled experiment",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "kuster2018dyslexie",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Kuster",
+        "given": "Sanne M."
+      },
+      {
+        "family": "van Weerdenburg",
+        "given": "Marjolijn"
+      },
+      {
+        "family": "Gompel",
+        "given": "Marjolein"
+      },
+      {
+        "family": "Bosman",
+        "given": "Anna M. T."
+      }
+    ],
+    "year": 2018,
+    "title": "Dyslexie font does not benefit reading in children with or without dyslexia",
+    "container_title": "Annals of Dyslexia",
+    "volume": "68",
+    "issue": "1",
+    "pages": "25-42",
+    "publisher": "Springer",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/s11881-017-0154-6",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1007/s11881-017-0154-6, Annals of Dyslexia 68(1), 25-42 (online 4 Dec 2017, print April 2018). Abstract via Europe PMC (PMID 29204931); full text read at pmc.ncbi.nlm.nih.gov/articles/PMC5934461.",
+    "kind": "two controlled experiments",
+    "lane": "02-legibility-reading"
+  },
+  {
+    "key": "wallace2022towards",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wallace",
+        "given": "Shaun"
+      },
+      {
+        "family": "Bylinskii",
+        "given": "Zoya"
+      },
+      {
+        "family": "Dobres",
+        "given": "Jonathan"
+      },
+      {
+        "family": "Kerr",
+        "given": "Bernard"
+      },
+      {
+        "family": "Berlow",
+        "given": "Sam"
+      },
+      {
+        "family": "Treitman",
+        "given": "Rick"
+      },
+      {
+        "family": "Kumawat",
+        "given": "Nirmal"
+      },
+      {
+        "family": "Arpin",
+        "given": "Kathleen"
+      },
+      {
+        "family": "Miller",
+        "given": "Dave B."
+      },
+      {
+        "family": "Huang",
+        "given": "Jeff"
+      },
+      {
+        "family": "Sawyer",
+        "given": "Ben D."
+      }
+    ],
+    "year": 2022,
+    "title": "Towards individuated reading experiences: Different fonts increase reading speed for different individuals",
+    "container_title": "ACM Transactions on Computer-Human Interaction",
+    "volume": "29",
+    "issue": "4",
+    "pages": "1-56",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/3502222",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1145/3502222, ACM TOCHI 29(4), 1-56, 2022 (article 38). Full text read (PDF from jeffhuang.com/papers/Readability_TOCHI22.pdf, extracted with pdftotext; header matches).",
+    "kind": "large remote experiment (crowdsourced)",
+    "lane": "02-legibility-reading"
+  }
+]

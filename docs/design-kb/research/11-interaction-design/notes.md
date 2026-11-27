@@ -339,7 +339,7 @@ Confirmed this session: Open Library record (Cambridge University Press, 1987, w
 
 ## norman1986cognitive
 
-Norman, D. A. (1986). Cognitive engineering. In D. A. Norman & S. W. Draper (Eds.), User centered system design: New perspectives on human-computer interaction (pp. 31-61). Lawrence Erlbaum Associates.
+Norman, D. A. (1986). Cognitive engineering. In D. A. Norman & S. W. Draper (Eds.), User centered system design: New perspectives on human-computer interaction (pp. 31-62). Lawrence Erlbaum Associates.
 
 ### Core claims
 
@@ -363,7 +363,7 @@ The seven stages are a usable audit for LTF's challenge briefings. For each step
 
 The goal-to-intention gap from the 2023 paper applies to beginners who do not yet have the vocabulary to turn "I want to land" into intentions; progressive lesson structure should provide that vocabulary before challenges ask for it. LTF's wording, icons and diagrams are the system image of the whole training, so one consistent vocabulary across lessons, widgets and challenges is needed.
 
-Confirmed this session: Crossref records for the chapter (DOI 10.1201/9780367807320-3, pages 31-62, and a later reissue DOI 10.1201/b15703-3); search results confirming Lawrence Erlbaum, Hillsdale, 1986, pp. 31-61; RPI lecture page cs.rpi.edu/academics/courses/spring97/GHMI/lectures/norman2.html; wikibooks page on the seven stages; arXiv abstract 2309.14459; Hutchins et al. (1985) full text for the gulf definitions. The chapter itself was not read.
+Confirmed this session: Crossref records for the chapter (DOI 10.1201/9780367807320-3, pages 31-62 (search summaries give 31-61), and a later reissue DOI 10.1201/b15703-3); search results confirming Lawrence Erlbaum, Hillsdale, 1986; RPI lecture page cs.rpi.edu/academics/courses/spring97/GHMI/lectures/norman2.html; wikibooks page on the seven stages; arXiv abstract 2309.14459; Hutchins et al. (1985) full text for the gulf definitions. The chapter itself was not read.
 
 ## saffer2013microinteractions
 

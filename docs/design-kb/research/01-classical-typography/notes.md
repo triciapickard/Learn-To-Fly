@@ -78,3 +78,36 @@ Matthew Carter's review of Robin Kinross's history places Morison and Bruce Roge
 5. Test for "doubling" on a narrow phone and a wide desktop: line returns should be easy.
 
 Confirmed this session: Full text of the essay as reprinted in *Books and Printing*, read from https://gutenberg.pglaf.org/6/3/7/3/63730/63730-0.txt (Gutenberg ebook 63730; the 1929 and 1930 origins note; all quotations). Editions in Open Library work OL2203812W. Carter review at https://www.eyemagazine.com/blog/post/type-tuesday40.
+
+## gill1936essay
+
+Eric Gill, *An Essay on Typography* (London: Sheed & Ward, 1931; second, re-set edition 1936). Read in the Boston: David R. Godine photo-lithographic reprint of the 1936 text, with an introduction by Christopher Skelton.
+
+### Core claims
+
+Gill writes about typography "as it is affected by the conditions of the year 1931," when industrialism had won an almost complete victory over handicraft. His thesis is that two worlds now stand apart, the power of the machine and the humanity of the craftsman, and that each should stop imitating the other: "Handicrafts standards are as absurd for mechanised industry as machine standards are absurd for the craftsman." The book applies that idea to letters and books.
+
+His best-known specific claim is in the chapter "The Procrustean Bed" (the composing stick that forces lines to equal length): even spacing between words matters more than equal line length. Lines of unequal length are not in themselves objectionable, uneven spacing is, so it is better to sacrifice the neat right edge. In the 1936 preface he admits that the 1930 text was imperfect and that he rewrote much of it.
+
+### Specifics
+
+The measure argument is the most usable part. Gill lists the faults of the extremes. A very wide measure involves too much movement of the eye and head and risks "doubling" unless lines are separated by leads. A very narrow measure, narrow in relation to the type, cuts phrases and words up, because "Practised readers do not read letter by letter or even word by word, but phrase by phrase." He reports that "the consensus of opinion favours an average of 10-12 words per line" and that at fifteen or more words equal length and even spacing can both be had, but "the best length for reading is not more than 12 words."
+
+Because a ten-to-twelve-word line is short for a compositor, equal length and even spacing conflict. His resolution: choose even spacing, let the right edge be ragged, and compromise only so far as the spacing stays visibly even. He calls equal line length "a laudable appetite" that "has become somewhat of a Superstition," and says a page of equal lines "partakes too much of the ideas of those who regard books as things to be looked at rather than read."
+
+The book is also an object lesson: Skelton's introduction says the 1936 edition was hand-set in Gill's own Joanna, in 12 point with 3 point leading, printed at Pigotts, and that it was the first use of Joanna. The first two pages of the justification chapter are set justified to demonstrate the argument, and the rest is unjustified, with ampersands, contractions such as "tho'" and paragraph marks instead of indents.
+
+### Replication and criticism
+
+Craft opinion, with no experiment. Gill's reasoning has been partly absorbed (ragged-right setting is common) and partly questioned. Skelton's introduction makes the most pointed assessment: the case for close word spacing "has long since been recognised," but Gill's own pages need as many word breaks as ordinary setting, "some of them very dubious," and "if Gill had used the same treatment with justified setting, one wonders whether any unevenness of word spacing would be noticeable." Skelton also notes Gill's habitual disparagement of the industrial system, a bias to bear in mind: his preference for the hand is a moral position as well as a typographic one.
+
+The ten-to-twelve-word figure matches Morison's (morison1936first) without citation by either; treat it as workshop consensus. Whether ragged-right is more readable than justified is an empirical question for lane 02 and lane 03.
+
+### Implications for LTF
+
+1. Browsers justify poorly without good hyphenation, so lesson text should default to left-aligned, ragged-right. That is the practical descendant of Gill's argument.
+2. Gill supplies a measure budget in words, not characters: roughly 10–12 words per line is a craft target for lesson columns, to be checked against lane 02 and lane 03 evidence before it becomes a rule.
+3. His warning on narrow measures bears on phone layouts and side panels: when the column gets narrow, fewer words per line cuts phrases apart, so allow reflow rather than shrinking the type.
+4. Even spacing matters most in short, high-stakes text such as checklist items and quiz stems; avoid forced justification and stretched spaces there.
+
+Confirmed this session: Introduction, preface, "The Theme", "Lettering" and "The Procrustean Bed" text read from the archive.org copy https://archive.org/details/an-essay-on-typography-1993-eric-gill (full text via archive.org download). Skelton's remarks, Joanna and 1936 printing details come from that edition's "Publishing History". Open Library work OL1178647W lists the Dent and Godine editions.
