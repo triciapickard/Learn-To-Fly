@@ -516,7 +516,7 @@ The mechanism explains both ends. Short lines cut the characters available per f
 ::: {.rule #LEG-035 grade="B"}
 **Set lesson prose to a measure of about 45 to 75 characters per line, and never wider than about 80.** Readers prefer moderate lines, one study found better comprehension at 55 than at 100 characters, print tradition sits around 52 to 70, and long print lines raise regressions [@dyson2004physical; @tinker1963legibility; @bernard2003effects]. This is a preference and comprehension judgment, not a speed optimum: on screens, longer lines were often read as fast or faster [@dyson2004physical]. Hence B.
 
-*In LTF:* the lesson `article` is capped at `max-w-[800px]`, which the dossier estimates at roughly 90 to 100 characters of 16 px Instrument Sans (not measured). `Prose` already uses `max-w-measure`, the `container-measure` token at 68ch. Apply `max-w-measure` to lesson paragraphs, lists and `Callout` bodies; let `WidgetFrame`, tables and images use the full 800 px column.
+*In LTF:* the lesson `article` is capped at `max-w-[800px]`, which measurement of the shipped font over the lesson text puts at about 111 characters of 16 px Instrument Sans (Part XXVI, The Audit and the Identity Playbook, reports the measurement). `Prose` already uses `max-w-measure`, the `container-measure` token at 68ch. Apply `max-w-measure` to lesson paragraphs, lists and `Callout` bodies; let `WidgetFrame`, tables and images use the full 800 px column.
 :::
 
 ::: {.rule #LEG-036 grade="B"}
@@ -785,7 +785,7 @@ The decisions below follow from the rules above. Each names what to keep, change
 **Lesson reading surface**
 
 1. Lesson body text moves from the inherited 16/26 to `body-lg` (18/29) in `MarkdownContent`, `Callout` bodies and `QuizBlock` explanations, matching `Prose` (LEG-019).
-2. Lesson paragraphs, lists and Callouts are capped at `max-w-measure` (68ch); widgets, tables and images keep the 800 px column (LEG-035, LEG-036).
+2. Lesson paragraphs, lists and Callouts are capped at a character-based measure; widgets, tables and images keep the 800 px column (LEG-035, LEG-036). The existing `max-w-measure` token is 68ch, and because the `ch` unit is the width of the zero, which is wide in Instrument Sans, 68ch holds about 100 average characters. The token's value therefore has to come down before it is applied to lessons; Part XXVI, The Audit and the Identity Playbook, measures this and gives the ruling.
 3. Line heights stay in the 1.3 to 1.7 band; `text-sm leading-5` is not used for paragraphs (LEG-037).
 4. Lesson text stays single-column and ragged right (LEG-004, LEG-038).
 5. Sentences are written for one forward pass, with terms defined at first use and glossary `Popover`s reachable from quizzes and Fly mode (LEG-002, LEG-048).

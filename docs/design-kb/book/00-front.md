@@ -46,7 +46,7 @@ Pages, components and tokens are named as they are in the code: `LessonPage`, `C
 
 It states no aircraft number, speed, limit or flight procedure as fact. Those belong to the product's content pipeline and its verification process. Where a design example needs one, the text refers to it generically or by content token.
 
-It does not replace testing with learners. Many rules rest on studies of people and tasks unlike a beginner learning to fly beside a simulator. The grades, and the limits stated inside each rule, say how far the evidence reaches. Where the product can find out cheaply by watching five people use a page, that observation outranks an inference from a distant experiment.
+It does not replace testing with learners. Many rules rest on studies of people and tasks unlike a beginner learning to fly beside a simulator. The grades, and the limits stated inside each rule, say how far the evidence reaches. Where the product can find out cheaply by watching a handful of learners use a page, that observation outranks an inference from a distant experiment. A handful is a practical round size, not a coverage figure: Parts I and IX explain why no fixed number of participants finds a fixed share of problems.
 
 ### Using it in review
 
