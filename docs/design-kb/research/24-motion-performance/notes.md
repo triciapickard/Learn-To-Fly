@@ -280,3 +280,93 @@ The "teaching animation can be retired once learned" note suggests a pattern: sh
 The paper lists dizziness as a possible drawback to measure, a prompt for the reduced-motion work covered by the WCAG and vestibular sources in this lane: every role above needs a non-animated equivalent.
 
 Confirmed this session: Crossref DOI 10.1145/2909132.2909255 (AVI 2016, pages 280-287); full text read from the HAL copy https://hal-enac.archives-ouvertes.fr/hal-01322962/document. The search tool's suggested Dragicevic authorship was wrong: the authors are Chevalier, Henry Riche, Plaisant, Chalbi and Hurter.
+
+## myers1985importance
+
+Myers, B. A. (1985). The importance of percent-done progress indicators for computer-human interfaces. *Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '85)*, 11-17.
+
+### Core claims
+
+Myers argues that any computer system has operations that cannot finish instantly, and that a "percent-done progress indicator", a graphic that fills as a task advances, is better than a static busy picture such as an hourglass because it shows how fast the task is going and whether the program has crashed. The paper reports a formal experiment in which people preferred systems with progress indicators. It also reports a failed attempt to replicate an earlier finding: that people prefer constant to variable response time, and that progress indicators reverse this. The abstract states plainly that those results were not statistically significant, and that no significant preference for constant response time was shown, contrary to previously published results.
+
+### Specifics
+
+Design guidance in the paper: show progress graphically rather than as a number, because a graphic is quicker to assimilate when an exact value is not needed, implies that only an approximate estimate is available, and fits in a small space. If a program crashes, a progress indicator that is updated by the program stops moving, so it also tells the user the program is still running. For programs that cannot estimate how long they will run, "random progress" (dots, a moving "busy bee", a changing pattern) at least shows the system has not crashed. Where a process has several passes, the indicator can be divided into sections.
+
+Experiment: forty-eight unpaid volunteers, mostly computer science graduate students, about one fifth computer novices. Each used two versions of a forms-based query system for a simulated transportation database, answering eight questions requiring about 14 queries. Each query was followed by a delay that was either a constant 10 seconds or random from 1 to 17 seconds (empirical mean 8.601 seconds), with or without a progress indicator. After each version, participants completed a 10-item semantic differential questionnaire (for example anxious to relaxed, bored to excited, scored 1 to 9), then a comparison questionnaire. Sessions took about 40 minutes.
+
+Results (from the paper): the difference between progress indicators and none was highly significant (p = 0.0006). On the comparison questionnaire, 86.1% of the subjects liked progress indicators, with a mean usefulness rating of 2.94 on a scale where 1 was "Very Useful" and 9 "Useless, Annoying". There was no significant preference for constant over variable response time (p = 0.046 as printed in the scan, which I could not reconcile with the stated non-significance, so I do not rely on it; without indicators, p = 0.1497). The pattern in the means went in the hypothesized direction (constant better without a progress bar, variable slightly better with one) but was not significant. Participants rated their second version lower than the first, which the author attributes to boredom with the long response times.
+
+Interpretation: observation suggested that with an indicator participants watched the screen, and without one they looked around the room and noticed results in peripheral vision. Myers lists the messages a progress display conveys, following Miller (1968): the request was heard, accepted, interpreted and is being worked on. He argues that indicators matter most for novices, who may panic and think the computer has crashed, and that people dislike idle waiting partly because they cannot plan another task when the wait is of unknown length.
+
+### Replication and criticism
+
+A single experiment with a small convenience sample of computer-literate students and an artificial task; the preference result is robust in the sense that it is consistent with decades of practice, but the effect measured is a rating of attitude, not task performance. The failed replication of the constant-versus-variable response time effect is a useful historical note: it shows that "predictable beats fast" is a hypothesis tied to context, and the author himself says the earlier Miller experiment varied the rate at which characters appeared, a different situation. Harrison et al. (2007, 2010, this lane) extended the research from "have an indicator" to "how the indicator behaves changes perceived duration". Nielsen's response-time guidance and Nah (2004) later gave thresholds for when an indicator is needed at all. Those later sources are separate in this lane.
+
+### Implications for LTF
+
+The paper supports a simple rule: if a step takes long enough that the learner would wonder whether anything is happening, show that it is happening. For LTF this means any operation that can exceed a second or two (loading a lesson's heavy interactive widget, saving progress, checking an answer against the server) needs visible feedback that something was received, and a determinate indicator when LTF can compute a fraction. For work with unknown length, a looping indicator is better than nothing, but it should not claim a percentage it does not have.
+
+The finding on novices matters for a beginner audience: they are the people most likely to assume a freeze means a crash, and a learner who fears they broke the lesson is a learner who leaves. In fly mode the same rule applies, with stricter conditions: any state the learner is waiting on (for example a checklist step being saved) needs an immediate acknowledgment and no spinner that keeps moving after the work is done.
+
+The paper's other lesson is about method: the headline claim (people prefer indicators) is well supported while the more interesting claim failed to replicate. Treat claims in the design literature by their individual support.
+
+Confirmed this session: Crossref DOI 10.1145/317456.317459 (CHI '85 proceedings, pages 11-17) and 10.1145/1165385.317459 (SIGCHI Bulletin 16(4)); full text read at https://www.cs.cmu.edu/~bam/papers/percentdoneCHI85.pdf (scan with OCR errors, hence the unreliable printed p value noted above).
+
+## harrison2007rethinking
+
+Harrison, C., Amento, B., Kuznetsov, S. and Bell, R. (2007). Rethinking the progress bar. *Proceedings of the 20th Annual ACM Symposium on User Interface Software and Technology (UIST '07)*, 115-118.
+
+### Core claims
+
+Progress bars usually map linearly to work done, but real processes are multi-stage and variable, so bars accelerate, decelerate or pause, and humans perceive time non-linearly. The paper reports an experiment that identifies which progress behaviors make a process seem shorter or longer, even though the real duration is identical, and suggests design considerations. The theoretical frame is duration neglect and peak-and-end effects from the psychology of retrospective judgment: people judge an experience largely by its salient moments and its end, not its total length.
+
+### Specifics
+
+Nine progress functions, all 5.5 seconds long: linear (baseline); early pause (a large pause around 25%); late pause (around 75%); slow wavy (three large steps separated by pauses); fast wavy (many small quick steps); power (accelerating); inverse power (decelerating); fast power (rapidly accelerating); and inverse fast power (rapidly decelerating). Two bars ran one after the other on screen, and the participant said which felt faster or that they were equal; a replay button was available. All 45 trials (36 unique pairs plus 9 self-pairs) took under 15 minutes. Twenty-two participants from two computer research labs (14 male, 8 female, mean age about 37) did it in their offices. Bars were 600 by 50 pixels.
+
+Results (from the paper): a strong order effect, with the first bar seen preferred as faster in 376 of 990 comparisons (38%), the second in 262 (26%), and no preference in 352 (36%). After controlling for order with a logistic regression, the nine functions clustered into three groups: three perceived as slower than linear (slow wavy, fast wavy and late pause, the functions with pauses near the end), four near linear, and two perceived as faster than linear (power and fast power, both accelerating, with the fastest progress near the end). Differences between groups were significant at the 0.05 level. The authors read this as peak and end effects: pauses lengthen perceived time, accelerating progress is favored, and both effects are exaggerated near the end. Early pause was about as preferred as linear.
+
+Design suggestions: for processes with known stable progress (copying a file) leave bars alone; for dynamic or roughly estimated processes, compensate for the aversion to late pauses by caching progress early, and downplay progress at the beginning then accelerate toward the end; for multi-stage processes, put slow or variable stages first, since users tolerate stalls at the start more than at the end.
+
+### Replication and criticism
+
+A small lab study, fifteen minutes per person, with very short (5.5 second) bars and a research-lab sample, so scaling to minutes-long waits is an assumption. A related experimental result by the same lead author (Harrison, Yeo and Hudson 2010) used 5 and 15 second bars and found the visual-effect results similar at both. The deeper ethical question is whether manipulating perceived duration is honest. Harrison et al. frame it as making real waits feel better, not as hiding failures; a bar that accelerates at the end while the work is stalled would cross the line. The Gizmodo and broadcast coverage of the later study treated it as a trick, which is the reading LTF should avoid. I did not locate an independent replication in this session.
+
+### Implications for LTF
+
+If LTF shows a determinate progress bar for loading a heavy lesson or a simulation checker, keep it honest: map it to real work, and if stages vary, order them so the slow or variable work comes first and the bar does not stall near 100%. Never hold a bar at 99% while waiting. If total time is unknown, use an indeterminate indicator, not a fake percentage. Because accelerating bars are perceived as faster, a gentle ease-in is acceptable when it reflects real work, but a fabricated schedule that does not is a dark pattern, and the decision-and-dark-patterns lane of this knowledge base should be checked before using it.
+
+For short waits under a second or two, a progress bar is probably worse than a skeleton or no indicator at all, since a flash of a bar draws attention to a delay that would otherwise pass unnoticed.
+
+Confirmed this session: Crossref DOI 10.1145/1294211.1294231 (UIST '07, pages 115-118); full text read at https://chrisharrison.net/projects/progressbars/ProgBarHarrison.pdf and the author's project page. I did not find an independent replication.
+
+## harrison2010faster
+
+Harrison, C., Yeo, Z. and Hudson, S. E. (2010). Faster progress bars: manipulating perceived duration with visual augmentations. *Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '10)*, 1545-1548.
+
+### Core claims
+
+This note extends the 2007 work from how a progress bar moves to how it looks. The authors propose two visual augmentations that make bars seem faster without changing real duration: a pulsating fill color and animated ribbing that moves backwards, against the direction of progress. They rank variants with head-to-head comparisons against standard solid-color bars, then measure the size of the effect. Their abstract reports that backwards-moving, decelerating ribbing had the strongest effect and, in a final experiment, reduced perceived duration among participants by 11%.
+
+### Specifics
+
+Study 1 (pulsating): 20 participants (7 female, mean age 23) compared five pulsation behaviors, each a 5-second bar whose fill varied sinusoidally between light blue and blue at a starting frequency of 1.1 Hz and an end frequency of 1.1 (constant), 1.17 and 1.25 Hz (slow and fast increasing), or 0.95 and 0.8 Hz (slow and fast decreasing). The most preferred behavior, fast increasing, had a mean preference score of 0.21; behaviors with increasing frequency were significantly preferred over constant or decreasing ones.
+
+Study 2 (ribbing): the same participants compared seven ribbing behaviors on a bar moving right at 128 pixels per second, with ribbing moving at 0, 7.8, 15.6 or 31.3 mm per second in various directions and accelerations. Backwards-moving ribbing was significantly preferred over still or forward ribbing (p < 0.001), and decelerating or accelerating ribbing over still ribbing; backwards decelerating had the highest average preference (0.34 against 0.29 for backwards accelerating). The authors invoke induced motion (motion judged relative to its surroundings) to explain why ribbing moving against the bar's direction creates an illusion of greater speed.
+
+Study 3: 10 participants (5 female, mean age 19) compared a solid bar, the best pulsating bar and the best ribbed bar at 5 and 15 seconds. At 15 seconds, both augmented bars were significantly preferred over the solid bar (p < 0.05); at 5 seconds only the pulsating bar approached significance (p < 0.1).
+
+Study 4: 16 participants (6 female, mean age 22) used a method-of-adjustment procedure in which the duration of the ribbed bar was adjusted until it felt equal to a solid bar. A 5-second solid bar felt equal to a 5.61-second ribbed bar (12.2% longer) and a 15-second bar to a 16.75-second ribbed bar (11.7% longer), a significant effect (p < 0.001). The authors speculate the effect may scale to longer durations, and note an upward trend at 15 seconds that might mean a larger effect.
+
+### Replication and criticism
+
+Four small experiments with young participants (mean ages 19 to 23), all on short bars, in one lab. The 11% figure is an average effect on a perceptual measure, not a measure of satisfaction or abandonment in the field. The note is a four-page CHI note, and the authors flag that scaling to longer durations needs more tests. A later literature on perceived duration of spinners and progress bars (not read this session) would be the place to look for field replications. The authors are explicit that ribbed bars "appear" faster when in fact they are not, which makes the ethical caveat from the 2007 paper relevant here too.
+
+### Implications for LTF
+
+The augmentation has a cost-benefit profile LTF can use without any deception: an indeterminate loading indicator with motion against the direction of travel is a known way to reduce perceived wait. But the benefit is about 11% of a perceived wait, so it is a polish item, not a substitute for being faster. Spend effort first on avoiding the wait (preloading the next lesson step, caching), then on honest feedback, and only then on perceptual tuning.
+
+Two cautions for a learner audience. First, animated stripes are decorative motion, and they must stop for users who prefer reduced motion (see WCAG 2.3.3 in this lane); a static filled bar with a text label is the fallback. Second, in fly mode, continuous looping motion at the edge of vision is a distraction; use a quiet, small, static or slow indicator there.
+
+Confirmed this session: Crossref DOI 10.1145/1753326.1753556 (CHI '10, pages 1545-1548); full text read at https://chrisharrison.net/projects/progressbars2/ProgressBarsHarrison.pdf.

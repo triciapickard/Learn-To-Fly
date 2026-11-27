@@ -547,7 +547,7 @@ The Dyslexie font, created by the Dutch designer Christian Boer in 2008, receive
 
 ### Specifics
 
-Participants and design. 39 low-progress readers who were learning to read in English read four different texts in four font conditions. All were matched on letter display size (x-height). The conditions differed in how closely they matched spacing: standard Arial, Dyslexie, and versions in which Arial's spacing was adjusted toward Dyslexie's, within words and between words. The abstract does not give the age range or the exact text lengths, and I did not read the full paper.
+Participants and design. 39 low-progress readers who were learning to read in English read four different texts in four font conditions. All were matched on letter display size (x-height). The four conditions differed in how closely spacing was matched, and the abstract names standard Arial, Dyslexie, and Arial with within-word and between-word spacing matched to Dyslexie's. The abstract does not give the age range or the exact text lengths, and I did not read the full paper.
 
 Measure. Reading speed in words per minute for each text, compared across conditions.
 
@@ -557,7 +557,7 @@ Additional point from a secondary account. Kuster et al. (2018) summarize this s
 
 ### Replication and criticism
 
-The sample is small (39) and the abstract reports no preference data or comprehension measure, so the study shows a spacing effect on speed in low-progress readers, not a general benefit. It is consistent with the crowding literature, which says spacing, not letter shape, limits legibility at small sizes (see pelli2008uncrowded and arditi2005serifs). Kuster et al. (2018) later tested 170 Dutch children with dyslexia on text and 102 on word lists and found no benefit from Dyslexie even without matched spacing (see kuster2018dyslexie), and Wery and Diliberto (2017) found none for OpenDyslexic. The Marinus result is therefore best read as: where an advantage exists, spacing is the likely cause. There is also a distinction between statistical significance and meaning: a 7 per cent gain is modest, and was removed by controlling for spacing.
+The sample is small (39) and the abstract reports no preference data or comprehension measure, so the study shows a spacing effect on speed in low-progress readers, not a general benefit. It is consistent with the crowding literature, which says spacing, not letter shape, limits legibility at small sizes (see pelli2008uncrowded and arditi2005serifs). Kuster et al. (2018) later tested 170 Dutch children with dyslexia on text and 102 on word lists and found no benefit from Dyslexie over Arial, though they adjusted size and line spacing rather than matching letter and word spacing as Marinus did (see kuster2018dyslexie), and Wery and Diliberto (2017) found none for OpenDyslexic. The Marinus result is therefore best read as: where an advantage exists, spacing is the likely cause. There is also a distinction between statistical significance and meaning: a 7 per cent gain is modest, and was removed by controlling for spacing.
 
 ### Implications for LTF
 
@@ -568,3 +568,64 @@ The sample is small (39) and the abstract reports no preference data or comprehe
 5. Offer the spacing control in fly mode too, where crowding in the periphery is worse.
 
 Confirmed this session: Crossref record; full abstract via Europe PMC (PMID 27194598). The full paper was not accessible. The Kuster et al. (2018) account of this study was read at pmc.ncbi.nlm.nih.gov/articles/PMC5934461.
+
+## kuster2018dyslexie
+
+Kuster, S. M., van Weerdenburg, M., Gompel, M., & Bosman, A. M. T. (2018). Dyslexie font does not benefit reading in children with or without dyslexia. *Annals of Dyslexia*, 68(1), 25-42. DOI 10.1007/s11881-017-0154-6.
+
+### Core claims
+
+Two experiments tested the claim that the Dyslexie font, designed for people with dyslexia, eases reading for children with and without dyslexia. Three questions: does the font make reading faster or more accurate, do children prefer it, and is preference related to performance? The abstract concludes that "the Dyslexie font neither benefits nor impedes the reading process of children with and without dyslexia".
+
+### Specifics
+
+Experiment 1 (text). 170 Dutch children with dyslexia (100 boys, 70 girls, aged 7 years 4 months to 12 years 4 months) read a short-sentence text card, once in Arial and once in Dyslexie, one to two weeks apart, in counterbalanced order (85 children per order). Dyslexia was defined by the Dutch protocol: word-reading below the 10th percentile, or below the 16th percentile with spelling below the 10th. The authors adjusted size and line spacing to offset Dyslexie's larger letters and extra interline space: Arial at body size 13 with 1.35 line spacing, Dyslexie at 12 with 1.0. Measures were reading time and errors, then a preference question. Result: font had no significant effect on speed at either session (F below 1 each time) and none on accuracy; a repetition effect on speed was significant (F(1,167) = 33.86). More children preferred Arial (in the Arial-first group 44.7 per cent Arial against 37.6 per cent Dyslexie, in the Dyslexie-first group 61.9 per cent against 20.2 per cent), and preference was largely unrelated to performance.
+
+Experiment 2 (word lists). 102 children with dyslexia (grades 2 to 6) and 45 without (grades 2 to 4) read three cards of the Three Minute Test in Dyslexie, Arial and Times New Roman, in three orders, one to two weeks apart, with x-height matched as closely as possible. Children without dyslexia read more words correctly (F(1,140) = 44.2), but font had no significant effect on any card (per-card F from 0.04 to 0.85, all p at least .44). Overall preferences: Arial 38.1 per cent, Times New Roman 29.9, Dyslexie 11.6; preference was unrelated to performance.
+
+Context they cite. Marinus et al. (2016) found a 7 per cent gain with Dyslexie that vanished when spacing was matched. Two master's studies (de Leeuw 2010; Pijpker 2013) found no overall speed effect. Typographic critics (Gianotten 2014, 2015) dispute the designer's claims; in Table 1 of the paper Dyslexie's relative x-height is 63 per cent of capital height against 67 for Times New Roman and 73 for Arial. Studies of extra letter spacing are mixed: Perea et al. (2012) and Zorzi et al. (2012) suggest a benefit, van den Boer and Hakvoort (2015) found none and found reduced spacing hurt fluency.
+
+### Replication and criticism
+
+This is the largest direct test of a dyslexia font I found, with two designs, and the results agree with Wery and Diliberto (2017) and Rello and Baeza-Yates (2013) for OpenDyslexic. Limits the authors name: much of the evidence is null findings, which are statistically weaker; letter and word spacing was not matched separately as in Marinus; matching x-height and body size perfectly was not possible; Experiment 1 used one text card and Experiment 2 only word lists; groups in Experiment 2 were unequal in age and size; preference was one question; and the sample was Dutch, a more transparent orthography than English. Marinus et al.'s spacing result is the one positive finding that could still stand, but it came from a smaller sample (39).
+
+### Implications for LTF
+
+1. The decision is stable across three independent studies: no dyslexia-specific font. Remove "dyslexia font" from any feature list.
+2. Preference is not performance: a child's preferred font did not predict reading. So an LTF "choose your font" setting should be sold as comfort, not as a performance setting.
+3. Expect large individual differences and practice effects: reading time dropped on the second session regardless of font. In LTF experiments with fonts, counterbalance order and include a repeat, or practice will look like an effect.
+4. For readers with decoding problems, spacing options are the more promising lever (see marinus2016special), but evidence is mixed, so keep controls modest and optional.
+
+Confirmed this session: Crossref record (published online December 2017, print April 2018); abstract via Europe PMC (PMID 29204931); full text read at pmc.ncbi.nlm.nih.gov/articles/PMC5934461 via WebFetch summary. Statements about de Leeuw, Pijpker, Gianotten and others are the paper's own account of them, not read in the originals.
+
+## wallace2022towards
+
+Wallace, S., Bylinskii, Z., Dobres, J., Kerr, B., Berlow, S., Treitman, R., Kumawat, N., Arpin, K., Miller, D. B., Huang, J., & Sawyer, B. D. (2022). Towards individuated reading experiences: Different fonts increase reading speed for different individuals. *ACM Transactions on Computer-Human Interaction*, 29(4), article 38, 1-56. DOI 10.1145/3502222.
+
+### Core claims
+
+The paper asks how much reading speed can change from font choice alone, for adults reading short passages on everyday devices. The abstract's answer: reading speed "increased by 35% when comparing fastest and slowest fonts without affecting reading comprehension", and the large spread across fonts suggests "one font does not fit all". The authors also report that preference does not predict speed even when font size is controlled, and they argue that digital reading apps should let fonts be individuated per reader. A useful side result: font size was normalized by human perception, not by nominal size.
+
+### Specifics
+
+Fonts. Sixteen fonts in four groups (common PDF fonts, newsprint, web, and "readability" fonts), 13 sans serif and three serif, with Times at 16 px as the reference. A perceptual task with participants set a size for each font to match the reference, because nominal sizes of different fonts look different.
+
+Participants and method. 500 crowdworkers were recruited on Mechanical Turk, aged 18 to 71, each paid $5. After filtering 30 per cent, 352 remained (46.1 per cent female). Reading speed was measured in words per minute on passages of paragraph length; speeds outside 100 to 650 were treated as unreliable. Comprehension was checked with questions and scored near 90 per cent (median), "relatively flat" across fonts. Each participant read in five fonts: their most preferred font (from pairwise preference rated with Elo scores), Times and Noto Sans as baselines, and two or three others.
+
+Population-level results. With all 352 participants, font was not a significant predictor of speed in the mixed-effects model: no set of fonts was consistently faster across the whole sample. Other effects were significant: non-fiction was read 11.6 WPM faster than fiction, speed fell 1.51 WPM per year of age, the second screen of text was read 39 WPM faster than the first, and low topic familiarity was slower (271 WPM against 283). For the 118 participants aged 35 or older, font was significant (p = 0.01), the age effect grew to 2.6 WPM per year, and EB Garamond and Montserrat were faster fonts while Avant Garde and Open Sans were slow (EB Garamond averaged 312 WPM, Open Sans 254).
+
+Individual-level results. Participants read 14 per cent faster in their fastest font (314 WPM on average) than in their most preferred font (275), and 35 per cent faster in their fastest than in their slowest font (232) among the five tested. The preferred font was the fastest 20 per cent of the time and also the slowest 20 per cent of the time, which is chance for five fonts; 73 per cent of participants believed their preferred font would be the most effective. The authors report that 76 per cent of participants had a large effect size (Cohen's d above 0.8) of font on speed, but state that this analysis stretches the method (within-participant data, few points) and is "a rough sanity check".
+
+### Replication and criticism
+
+The study is large and open (materials released), but remote and uncontrolled: screen size, viewing distance and device varied, which the authors list as a limitation, as is a convenience sample (mostly in their 20s and 30s, US-based, English only, excluding reported reading disabilities). The population-level null and the large individual-level gain need to be read together. Taking each person's fastest and slowest of five noisy measurements will always give a gap even if fonts did nothing, so the 35 per cent is an upper bound on the font effect, not an estimate of it; the authors' own chance-level finding about preferred fonts and their caveat about Cohen's d point the same way. This is my reading, not a statement in the paper, and a repeat test of each person's fastest font on a second occasion is what would settle it. The comprehension scores were flat, so speed gains were not skimming. Boyarski et al.'s earlier result (cited in the paper) that people prefer one font but read faster in another is reproduced.
+
+### Implications for LTF
+
+1. Preference is a poor guide to reading performance. Do not choose LTF typefaces by a stakeholder poll or by "which one looks best"; use a quick task test with real learners.
+2. The population finding supports a sensible default and little more: there is no big-win font for all adults, so pick a well-made humanist or neo-grotesque sans or a readable serif and spend design effort elsewhere. The age 35 and over signal (a serif and a geometric face faster, one open sans slow) is a hypothesis to test for LTF's older hobbyist pilots, not a rule.
+3. If personalization is offered, make font size and spacing the primary controls; font family is a secondary comfort setting.
+4. Normalize by x-height or perceived size when comparing fonts in internal tests (see legge2011print); nominal size misleads.
+5. Remote A/B tests of speed with passages, as this paper did, are feasible for LTF lesson copy: use paragraph-length passages, time per screen, a comprehension check and counterbalanced order.
+
+Confirmed this session: Crossref record; full text read (PDF from jeffhuang.com/papers/Readability_TOCHI22.pdf, extracted with pdftotext; abstract, Introduction, Sections 3 to 6 and 7.3 read).

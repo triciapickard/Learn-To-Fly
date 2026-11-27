@@ -231,5 +231,32 @@
     "verified_evidence": "Fetched https://www.designtokens.org/tr/2025.10/format/ and /resolver/: both titled 2025.10, Final Community Group Report dated 28 October 2025, 'not a W3C Standard nor on the W3C Standards Track'",
     "kind": "technical specification (community group report)",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "grudin1989case",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Grudin",
+        "given": "Jonathan"
+      }
+    ],
+    "year": 1989,
+    "title": "The case against user interface consistency",
+    "container_title": "Communications of the ACM",
+    "volume": "32",
+    "issue": "10",
+    "pages": "1164-1173",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/67933.67934",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query 'case against user interface consistency Grudin 1989' returned DOI 10.1145/67933.67934, CACM 32(10) 1164-1173, Oct 1989; full text read from Microsoft Research PDF",
+    "kind": "argued essay with worked examples",
+    "lane": "23-design-systems"
   }
 ]

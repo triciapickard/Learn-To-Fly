@@ -193,7 +193,7 @@ Edward Johnston, *Writing & Illuminating, & Lettering* (New York: Macmillan; Lon
 
 ### Core claims
 
-Johnston's handbook argues that letters are best understood and made through the tool that formed them, the reed, quill or chisel, so the way to learn good lettering is to copy the best historical models with the proper tool rather than to "design" new alphabets. In his words, "To make good letters is not necessarily to 'design' them — they have been designed long ago — but it is to take the best letters we can find, and to acquire them and make them our own." He states the problem simply: "To make good letters and to arrange them well."
+Johnston's handbook argues that letters are best understood and made through the tool that formed them, the reed, quill or chisel, so the way to learn good lettering is to copy the best historical models with the proper tool rather than to "design" new alphabets. In his words, to make good letters "is not necessarily to 'design' them," because "they have been designed long ago"; it is "to take the best letters we can find, and to acquire them and make them our own." He states the problem simply: "To make good letters and to arrange them well."
 
 He names the "essential qualities of Lettering" as "legibility, beauty, and character." He complains that the recent revival of printing produced many attempts at "decorative" books that show "a vagueness of intention" and "an ignorance of Letter-craft."
 
@@ -232,7 +232,7 @@ Giambattista Bodoni, *Manuale tipografico* (Parma: Presso la Vedova, 1818; two q
 
 The *Manuale* is a printer's specimen book that doubles as a manifesto. It displays the typefaces Bodoni cut and cast at Parma, and its preface states what he thought made type beautiful. Bodoni says there are "four different heads" under which the beauties of type are derived. I could confirm the wording of only the first two and part of a third from the translated preface as quoted on the Lawson Archive: regularity, "conformity without ambiguity, variety without dissonance"; "a second and not minor value ... from sharpness and definition, neatness and finish"; and the polish of a well-cast letter, which "should shine like a mirror on its face." A catalogue summary lists the four principles as uniformity of design, sharpness and neatness, good taste, and charm, but that is a paraphrase and I could not confirm the original wording of the last two.
 
-He also praises "the beautiful contrast as between light and shade" produced by a well-cut pen, which explains the high thick-to-thin contrast of his roman letters.
+He also praises "the beautiful contrast as between light and shade" produced by a well-cut pen; the Lawson Archive article ties this to the crisp contrast of his letters.
 
 ### Specifics
 

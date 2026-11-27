@@ -217,3 +217,33 @@ This is a standard-like technical specification, not research, and it is recent 
 5. Check tooling before adopting the format. LTF is one React app, so the immediate gain is naming discipline, not interchange.
 
 Confirmed this session: both specification pages fetched and read at https://www.designtokens.org/tr/2025.10/format/ (first 100,000 of 114,563 characters, which covered the abstract, status, concepts, naming rules, types) and https://www.designtokens.org/tr/2025.10/resolver/. Facts above come from those fetches (summarized by the fetch tool; quotes are short and from the spec).
+
+## grudin1989case
+
+Grudin, J. (1989). The case against user interface consistency. *Communications of the ACM*, 32(10), 1164-1173. https://doi.org/10.1145/67933.67934
+
+### Core claims
+
+Grudin argues that consistency is an unreliable guide for interface design and that "designers would often do better to focus on users' work environments" (abstract, read in the full text). His reasoning is that treating consistency as the primary goal pulls attention toward measurable properties of the interface and away from users and their tasks, and that on close inspection the dimensions along which one might argue for consistency "shift or disappear". He says this is not a case for randomness: the supporting studies are not wrong but more context-bound than recognized.
+
+### Specifics
+
+The paper opens by citing the case for consistency: Shneiderman's first "golden rule" (strive for consistency), Smith and Mosier's guidelines compendium in which over 60 guidelines have "consistent" in the title, and Polson's summary of experiments reporting large positive transfer from consistency. It then says the term has never been pinned down: Reisner wrote in 1981 that it was unclear what consistency means or how to identify its absence, and a two-day workshop of 15 experts in 1988 could not produce a definition.
+
+Three senses of consistency are distinguished. Internal consistency is a design agreeing with itself (layout, command naming, selection techniques), which designers control and which is reported to help initial learning. External consistency is agreement with other interfaces the user knows, which may conflict with internal consistency. Analogic consistency is correspondence to the world outside computers (compass arrows on cursor keys), which aids first learning but, as Carroll is cited, must break down somewhere if technology is to offer an advantage.
+
+Five design exercises carry the argument. (1) Function key layout: an ISO proposal put the four arithmetic operations in the top row in the order learned; of 24 interface professionals given the task, a plurality (8) produced that solution, but putting the plus key above Enter, the frequently used keys, minimizes movement, so the best design violates consistency. (2) Cursor keys: all 24 experts chose the star arrangement as most appealing to novices, and about half thought it best, yet studies cited by Grudin favor the inverted T. (3) Menu defaults: "last item accessed", "most frequent" and "most likely next" each fail in some task; for irreversible global operations a default of Cancel is correct, so no rule, consistently applied, produces good defaults. (4) Abbreviating 20 command names: the best strategy (truncation, vowel deletion, single letter) depends on how the abbreviations are used. (5) Printing a folder: implementers argued for printing a list of pointers because it was consistent with the system architecture, while most people expected the documents to print. He calls this a snare, "the most available consistency".
+
+### Replication and criticism
+
+The paper is an argued essay with worked examples, not an experiment. It reinterprets the empirical consistency literature rather than overturning it, noting that most studies measured learning, recall and transfer, not skilled performance. Grudin's claim is best read as "consistency is not a sufficient design goal", not "consistency has no value". A search result describes Grudin and Norman (1993) as citing this paper for the point that violating consistency can improve performance in good systems; I saw this only in a search summary. The keyboard examples are dated.
+
+### Implications for LTF
+
+1. Do not make consistency the goal of the LTF design system; make learner tasks the goal and use consistency as a tool. Ask, for each pattern, which task it serves, such as reading a briefing, checking a checklist item against the sim, or answering a quiz.
+2. Distinguish internal consistency (all LTF widgets behave alike) from external consistency (similar to the sim's own displays, familiar flight apps, platform conventions). Where they conflict for an instrument widget, a learner who will meet the real cockpit instrument may be better served by external correspondence, and a verified aviation source should decide.
+3. Defaults should follow the most likely next action. Safe defaults for irreversible actions (resetting progress, discarding quiz attempts) should favor the cautious choice even where other menus default differently.
+4. Do not mirror the data model in the interface. A lesson's database structure should not determine how its screens are grouped; group by what the learner is trying to do.
+5. Weigh learning against use. Fly mode may be used repeatedly under load, so repeated-use speed can matter more than first-impression familiarity.
+
+Confirmed this session: Crossref works/10.1145/67933.67934 (title, author, CACM 32(10) 1164-1173, October 1989, 52 references); full text read from the Microsoft Research copy at https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/the-case-against-user-interface-consistency.pdf. The Grudin and Norman statement is from a search summary only.

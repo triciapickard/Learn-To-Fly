@@ -373,3 +373,110 @@ This study failed to reproduce the advantage of long lines seen in Dyson and Kip
 Because preference and performance diverge here, do not decide the lesson text width by asking learners what feels comfortable and do not treat a wide line as an error that costs speed: the data do not show a speed penalty in the medium to long range. The sensible policy is a moderate measure (a number of characters per line that sits between the 45 and 76 of this study and the 55 of Dyson and Haselgrove) for continuous lesson text, chosen mainly because it is what readers say they like and what supported better comprehension in one study. Adults found a narrow line easier to concentrate on, and fly mode is a divided-attention context, so a narrower column there is a low-risk choice. Do not stretch prose to the full width of a wide desktop display, and do not shrink it so far that learners must scroll through a very long page of short lines, since adults in this study judged the short line to need more scrolling than the full width. Test any width decision on LTF's own quizzes and lessons instead of copying a number.
 
 Confirmed this session: Crossref record DOI 10.1177/154193120304701112 (Proceedings of the HFES Annual Meeting 47(11), 1375-1379, October 2003, authors Bernard, Fernandez, Hull, Chaparro); HFI page humanfactors.com/newsletters/reading_text_online.asp; erau.edu portfolio record for the Shaikh and Chaparro (2005) study; Dyson (2004) full text. The publisher page returned HTTP 403.
+
+## rutter2017web
+
+Rutter, R. (2017). Web Typography: A handbook for designing beautiful and effective responsive typography. Brighton: Ampersand Type.
+
+### Core claims
+
+Rutter, a designer who started the site webtypography.net in 2005 to apply Robert Bringhurst's rules to the web, argues in this book that web typography should be practised by everyone who builds pages, and that good typography is about reading, not decoration. The book is a craft handbook: it combines typographic theory with CSS and OpenType implementation detail. The publisher's blurb opens with the line "Typography is what comes between the author and the reader". Its table of contents (confirmed on book.webtypography.net) moves from setting type to be read (how we read, the em, line length, text size, line spacing, alignment and hyphenation, responsive paragraphs) through typographic detail (symbols, ligatures, hierarchy and scale, numerals and tables, tracking and kerning, vertical rhythm) to choosing and using fonts (how fonts render on screens, web fonts). For this lane the most useful parts are the two excerpts published on A List Apart, on numerals and on tables.
+
+### Specifics
+
+This evidence is craft authority, not experiment. I read the two A List Apart excerpts (October 2017) and the book's contents page, not the full book.
+- Numerals: lining numerals sit on the baseline at one height, like capitals. Old-style numerals have a varying rhythm like lowercase. Lining figures draw the eye, so in running text they can feel like shouting, whereas old-style figures sit comfortably in prose. Lining numerals suit all-caps headings and places where readers scan, compare or search for data, such as lists and tables. Georgia ships only with old-style figures, Times New Roman only with lining. The CSS is font-variant-numeric: oldstyle-nums or lining-nums, with the older font-feature-settings tags onum and lnum as a fallback behind @supports.
+- Sub and superscripts: use sub and sup elements, and for fonts with purpose-built glyphs the font-variant-position property.
+- Tables ("designed to be read, not looked at"): size columns to their content and do not stretch tables full width; remove borders, fills and zebra striping and use alignment and white space instead, citing Tschichold on tables not looking like nets; left-align text columns and right-align numbers, with headings matching their data; when decimal precision varies, align on the decimal point (the CSS Text Level 4 text-align with a string value, with patchy support); use tabular lining numerals for numeric tables with font-variant-numeric: lining-nums tabular-nums, or a monospaced font; pad cells with less space on top than below and reduce line height in cells; on small screens, either use a condensed or a slightly smaller font (not both) with horizontal scrolling, or linearize into stacked blocks.
+
+### Replication and criticism
+
+These are expert recommendations. The tables chapter echoes Tufte and Tschichold and the numerals advice reflects craft convention, not controlled studies. One of its more distinctive claims, that lining figures help scanning and tables, is plausible but the excerpts I read cite no experimental evidence for it. His rule against zebra striping runs against a common practice, and he gives a reasoned argument (banding emphasizes alternate rows) rather than a measurement. Browser support for features such as decimal alignment was patchy when he wrote, and some details of the CSS will have changed since 2017. Treat the work as a source of well-reasoned defaults and vocabulary that LTF should check against its own readers.
+
+### Implications for LTF
+
+The numeral rules are directly usable. Use tabular lining numerals in every table, checklist value, performance figure and live instrument readout, so columns line up and changing values do not jitter; use old-style figures, if at all, only in running lesson prose, and only in a typeface that has them. Right-align numeric columns and align on the decimal point when precision varies, so that reading across a quiz or checklist table is quick. Avoid zebra striping and heavy gridlines in reference tables; separate rows with spacing and, where needed, hairline rules. On a phone, offer horizontal scrolling or a stacked layout for wide data tables. Because LTF's content mixes prose with numbers (speeds, altitudes, frequencies), set the numeral style at the component level, not globally, using font-variant-numeric on the relevant classes.
+
+Confirmed this session: Open Library record (Web Typography, Richard Rutter, first published 2017, publisher Ampersand Type, ISBN 9780995664203, work key OL27054557W); book.webtypography.net contents page; A List Apart excerpts "Web Typography: Numerals" and "Web Typography: Designing Tables to be Read, Not Looked At" at alistapart.com (fetched and read).
+
+## santamaria2014web
+
+Santa Maria, J. (2014). On Web Typography. New York: A Book Apart.
+
+### Core claims
+
+Santa Maria, a designer and co-founder of the A Book Apart imprint, wrote a short book on adapting the craft of typography to screens. The chapter excerpt published on A List Apart, "How We Read", argues that reading is a personal and context-dependent experience, so typography must work across the reader's circumstances, which designers cannot control. It separates legibility (text can be decoded) from readability (the reader wants to keep reading), and argues that poor typography can make readers abandon text that is technically legible. The book's publisher description says it covers how typography shapes the way we read and how to adapt the craft's practice for screens, and the contents begin with How We Read and How Type Works.
+
+### Specifics
+
+This is a craft book, and I read the publisher descriptions and the single published excerpt, not the full text.
+- Claims about reading in the excerpt (as summarized from the A List Apart page): eyes move in saccades along a line with brief fixations between them, and only a few characters are seen clearly in each fixation. The excerpt says letters carry more identifying features in their upper halves. It says readers recognize words partly by their overall outline, which is the word-shape account. It cites Zuzana Licko for the idea that readers read best what they read most, so unfamiliar typefaces slow reading. It says uppercase words form blocky similar rectangles and are harder to read quickly. It admits that research on reading is only partly settled.
+- Advice: design for readers, not for your own habits; type size and spacing choices add up; good typography is noticed least. The excerpt names no studies, speaking only of "many studies".
+- Publication facts confirmed through Open Library: first published 2014, A Book Apart, New York, 142 pages in the listed edition.
+
+### Replication and criticism
+
+The word-shape claim is the contested part. Experimental psychologists reviewed the evidence from the old word-shape model and concluded that letters, not outlines, are the unit: Larson's review for Microsoft's typography group (read this session) argues that the supposed evidence for word shape, such as lowercase speed and the word superiority effect, has better explanations in letter recognition and practice, and that the work of Bouma that is often cited does not support the outline account. Sheedy and colleagues (2005) found that individual letters were more legible than words at threshold, which they read as favoring letter-based identification. A reader of the excerpt's comment thread, Kevin Larson, raised the same point and recommended Beier's book on letters (per the fetched summary). The top-half claim is also incomplete, as the same commenter noted. The author's reply was that findings vary and that typography has exceptions. The all-caps claim is better supported by practice effects than by outlines. These are reasons to read the excerpt as craft opinion, partly out of date on the science.
+
+### Implications for LTF
+
+Use the book for its framing, not its science. The distinction between legibility and readability is a useful vocabulary for LTF reviews: a checklist can be legible and still tiring to read. Avoid justifying decisions with the word-shape idea; if an LTF writer proposes all-lowercase labels or distinctive silhouettes because "readers see word shapes", point to the evidence for letter-based recognition. The reading-familiarity argument has some support in the craft tradition and in the practice-effect explanation of why lowercase is read faster, and it favors using a familiar, conventional text face for lessons and saving distinctive faces for headings or branding. Avoid long runs of all caps; use them only for short labels such as annunciator-style warnings, where speed over a few characters matters more than continuous reading.
+
+Confirmed this session: Open Library record (On web typography, Jason Santa Maria, A Book Apart, New York, 2014, ISBN 9781937557065, work OL32922580W); A List Apart excerpt "How We Read" (alistapart.com/article/how-we-read/), publisher description via search results (A Book Apart and O'Reilly pages); Larson's word-recognition paper at learn.microsoft.com/en-us/typography/develop/word-recognition.
+
+## brown2011more
+
+Brown, T. (2011). More meaningful typography. A List Apart, issue 327, 3 May 2011. https://alistapart.com/article/more-meaningful-typography/
+
+### Core claims
+
+Brown, a type-industry practitioner, argues that web layouts should be built from the type outward instead of from boxes inward. Instead of picking arbitrary or easily divisible pixel numbers, a designer should derive measurements from a harmonious system tied to meaningful ratios and to the typeface actually used, and the tool he proposes is the modular scale. He presents this as compatible with grids and responsive design, treats the scale as a source of educated suggestions and not strict rules, and warns that the whole system depends on the chosen typeface being available. It is an essay by a practitioner, a piece of craft authority with no experimental evidence behind it.
+
+### Specifics
+
+All details come from the article page (fetched this session).
+- Modular scale: a sequence made by multiplying and dividing a starting number by a ratio. Brown uses the golden mean (1:1.618). From a start of 10, multiplying gives 16.180, 26.179 and 42.358, and dividing gives 6.180, 3.819 and 2.360. A double-stranded scale combines two starting values or two ratios to give more usable numbers. He points to a calculator at modularscale.com.
+- Worked example (a page set in Minion Pro with Myriad Pro Condensed): body text 18 px, a main column (measure) of 497.406 px with a line-height of 1.54, a 29.124 px h1, a 190 px h2 at line-height 1, and a 21.178 px intro derived by subtracting scale values ("comment math"). A 15 px sidebar text in Minion Pro Caption is an improvised value outside the scale.
+- Optical sizes: Brown uses a caption cut of the typeface for small text, an early example of choosing a face by the size it is meant for.
+- Advice: begin with the body text size and the typeface and derive the rest; use text-rendering: optimizeLegibility on headings, watching performance; avoid very tight or loose line spacing and tune line-height to text density; use a reset stylesheet for consistency.
+- Responsive design: scales do not preclude grid-based or responsive design. Use smaller scale numbers as grid column widths, build a carefully measured reference layout and convert values to percentages, and avoid widths tied to common viewport sizes.
+- Caveats: the measurements depend on the typeface; if the web font fails to load, fallback fonts take over, so he recommends baseline fonts first and then enhancement. He says some values were improvised and writes that modular scales are a tool and not magic. The browser notes in the article are outdated.
+
+### Replication and criticism
+
+There is no empirical test of the claim that modular-scale type is more readable or more pleasing. Its justification is the long craft tradition of proportional systems in book design and the practical argument that a limited set of related sizes yields consistency. Critics of rigid scales point out that ratios such as the golden mean produce steep jumps at the extremes (the article's own 190 px headline sits far from the 18 px body) and that real interfaces need sizes that the scale does not generate, which is why Brown himself improvises. The piece predates fluid type techniques such as viewport-relative sizing, which solve a problem the article handles with fixed pixel values converted to percentages. Its warning about web-font failure remains relevant, and it anticipates what the CSS Fonts specification now supports through font-display and size adjustment. The physical-size evidence (Legge and Bigelow; Rello and colleagues) shows that the lower end of any scale must stay above a legibility floor, regardless of how elegant the ratios are.
+
+### Implications for LTF
+
+A modular scale is a good way to define LTF's type tokens: a small number of sizes (for example caption, body, lesson subhead, title) generated from a single ratio, so that every component draws from the same list, which supports the project rule that colors and spacing come from tokens and never raw literals. Choose a gentler ratio than the golden mean for an interface with dense widgets, because steep ratios make the small end too small or the large end too large. Set the base size from the evidence on legibility (the body size must clear the floor established by the reading studies in this lane), then derive the rest. Keep the scale in relative units so that user text-size settings scale everything together. Remember that the scale is a means of consistency, not a proof of legibility, and review each derived size at its smallest rendered use, for example in instrument-widget labels. Define the fallback font stack and metrics first, as Brown advises, so that a failed font load does not break layouts.
+
+Confirmed this session: fetched alistapart.com/article/more-meaningful-typography/ (author, date, issue number, modular-scale numbers, example values, caveats). No catalog or DOI exists for the article, so verification is by web retrieval of the publisher's page.
+
+## marcotte2009fluid
+
+Marcotte, E. (2009). Fluid grids. A List Apart, issue 279, 3 March 2009. https://alistapart.com/article/fluidgrids/
+
+### Core claims
+
+Marcotte, the author who later named responsive web design, described how he built a fluid layout for a client from a fixed visual grid, and argued that designers often rely on a "minimum screen resolution" assumption to justify fixed widths. His method is a single formula, target divided by context equals result, which converts pixel-based comp values into relative ones: ems for type and percentages for widths and margins. The article is a short craft essay from a practitioner, and it is the origin of an approach that lets text sizes and line lengths scale with the reader's settings and the window instead of being locked in pixels.
+
+### Specifics
+
+All details are from the article page (fetched this session).
+- Type: divide the target pixel size by the parent's font size to get an em value. For example, 24 px divided by 16 px is 1.5em for the h1, and 14 px divided by 16 px is 0.875em for a list.
+- Layout: divide a target width or margin by the containing width to get a percentage. In his example the page is 988 px wide, so a 700 px title becomes 70.85% (700 divided by 988), and a 144 px margin becomes 14.575%. When an element sits inside a new container, that container becomes the new context, so 700 px inside an 844 px entry becomes 82.938%.
+- Base: set the body to font normal at 100% so the browser's default size (usually 16 px) is the base, and size children in ems so they scale with user text-size settings.
+- Measure: he sets a maximum width of 61.75em (988 divided by 16), which keeps line lengths in check while scaling with text size. This is an early example of expressing the measure in the type's own unit.
+- Context for the choice of relative units: pixel-sized fonts were a problem because Internet Explorer largely refused to resize them.
+- Example grid: seven columns of 124 px with 20 px gutters on 988 px.
+- Stated limits: fixed-size content such as images and Flash is the main unresolved challenge; browsers round sub-pixel percentages differently (Internet Explorer rounds up, so he subtracts a pixel for that browser); each nested container needs its context recalculated; the formulas assume a 16 px default; and vertical rhythm and fluid line-height are not addressed.
+
+### Replication and criticism
+
+No experiment was conducted, but the design was adopted widely, which is a kind of practical validation, and Marcotte went on to formalize the approach in his later work. The technique's weak point, which commenters raised, is cascading context: when ancestors change the font size, the divisor changes. Modern CSS has since added units and functions (rem, ch, clamp, viewport units) that remove most of the arithmetic, so the method is now of historical and conceptual interest more than of practical use. The central idea, that sizes should be proportional to something the reader controls, has been supported by the reading research in this lane: the Rello and colleagues' results on size and Legge and Bigelow's angular-size account both imply that a fixed pixel size cannot be right for all viewing distances. The article does not claim readability benefits for fluid type, and none are established here.
+
+### Implications for LTF
+
+Adopt the principle, with modern tools. Set body text and spacing in relative units (rem and em) so that a learner's browser or operating-system text setting enlarges everything coherently, and express the lesson measure in characters (the ch unit) or em, so that the column tracks the type size instead of the window. Do not fix text sizes in pixels, because the right physical size depends on viewing distance, which differs between a phone, a laptop and a monitor beside a simulator. Use a clamp-style fluid range for display headings, with a hard floor for body text so that fluidity never pushes it below the legibility threshold. Test the layout at 200% text size and at narrow widths. Keep a single base font size token from which everything derives.
+
+Confirmed this session: fetched alistapart.com/article/fluidgrids/ (author, date, issue number, formulas, example numbers, limits). No catalog or DOI exists for the article, so verification is by web retrieval of the publisher's page.
