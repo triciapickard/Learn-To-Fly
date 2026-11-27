@@ -818,3 +818,85 @@ Norman and Verganti describe human-centered design (observation, ideation, rapid
 The most useful change this chapter suggests is to the decision record. The `v1.md` Decision Log already records Problem, Decision and Reason. Add, for design decisions, three fields from this chapter: whether the question is tame or wicked (EVD-060), the misfits the decision removes (EVD-064), and for wicked questions the stopping point and when to revisit. Keep the course's modular structure, with independently verified lessons and modules hidden as wholes until verified (EVD-059). Write the outer environment into the brief for every surface used beside the sim (EVD-056), generate alternatives before building (EVD-058), and satisfice openly on the rest (EVD-057).
 
 When learner behavior surprises the team, write rival explanations before acting (EVD-062), reposition stalled problems (EVD-063), and test interacting fixes together (EVD-065). Once a year, or at the start of a version, ask whether the frame itself is right (EVD-066). The `v2.md` plan is the natural place for that question.
+
+## Function, meaning and honesty
+
+The design philosophy most often invoked in product work is functionalism: decide what a thing is for, and its form will follow. The phrase is older and stranger than its use suggests, and the people who examined it most closely found that function settles less than the slogan claims. This chapter traces the idea from Sullivan through Pye and Papanek to Krippendorff's argument that what matters is what a thing means to its users, and then to the oldest strand, Ruskin's insistence that a made thing must not deceive. All of it is craft theory and earns C.
+
+### Form ever follows function
+
+Sullivan's 1896 essay treats the steel-framed office building as "a problem to be solved", on the principle that "it is of the very essence of every problem that it contains and suggests its own solution" [@sullivan1896tall]. He lists the practical conditions first: a basement for plant, a ground floor of stores or banks needing area and light, tier upon tier of identical offices ("an office being similar to a cell in a honey-comb"), and an attic for machinery. Then the famous line: "form ever follows function, and this is the law. Where function does not change, form does not change." The common slogan, "form follows function", is a compression.
+
+The essay is not a plea for plain utility. It adds a second requirement, introduced with "We must now heed the imperative voice of emotion": the building's chief characteristic is height, so "it must be tall, every inch of it tall", "a proud and soaring thing" [@sullivan1896tall]. Ochshorn's modern critique finds the relation often true for building elements, but argues that Sullivan's biological analogies do not hold and that his writing uses a few functional considerations to justify a preferred form while overlooking others; on that reading, the formula is a justification of a formal preference, not a neutral analysis [@sullivan1896tall].
+
+Pye goes further, calling "form follows function" fuzzy and unhelpful, according to the review through which his book was read here [@pye1978nature]. Many techniques together impose hardly any limit on a design's shape, so function does not determine form. What a device produces is a result, concrete and measurable, and requirements always conflict, so every design is arbitrary to a degree and there is no perfect design, "only a practical balance". Economy, not physics, sets most of the limits [@pye1978nature].
+
+::: {.rule #EVD-067 grade="C"}
+**Write down the practical conditions a component must meet before drawing it, and treat them as constraints on form, not as a derivation of it.** Stating conditions first is Sullivan's method [@sullivan1896tall]; function underdetermines form, and requirements conflict, so the result is a balance that must be chosen [@pye1978nature].
+
+*In LTF:* an instrument widget's conditions (shows the current value, shows the target range, legible at arm's length on a laptop, works in both themes, usable without color) are written in the brief; they rule out many designs and still leave the choice among the rest to judgment.
+:::
+
+::: {.rule #EVD-068 grade="C"}
+**Give elements with the same function the same form everywhere, and elements with different functions forms that can be told apart.** Where function does not change, form should not change [@sullivan1896tall]. The rule is a consistency principle from craft, not a finding, hence C.
+
+*In LTF:* every "current step" marker shares the `LessonPath` current-pin form; every safety `Callout` looks the same; a value from the aircraft data file is always set in the mono `readout` style. The current mix of `display-*` utilities and raw `text-2xl font-bold` for headings with the same function breaks this rule.
+:::
+
+::: {.rule #EVD-069 grade="C"}
+**Count the feeling a page gives a nervous beginner as part of its function, and write it into the brief.** Sullivan's "voice of emotion" is a second requirement beside utility [@sullivan1896tall], and Papanek calls aesthetic value "an inherent part of function" [@papanek1972design].
+
+*In LTF:* the brief for the first lesson states that the learner should finish feeling capable, and copy, pace and density on `LessonPage` and in `QuizBlock` feedback ("Not quite.") are judged against that as well as against accuracy.
+:::
+
+### The function complex
+
+Papanek's polemic opens with the charge that there are "professions more harmful than industrial design, but only a very few of them", and argues that designers bear moral responsibility for what they make [@papanek1972design]. His positive tool is the "function complex", six aspects by which he says any design can be evaluated. Method: the honest use of tools, processes and materials, "never making the material seem that which it is not". Use: does it work? Need: genuine needs, as against manipulated wants. Telesis: fit to the conditions of its time and the order in which it operates. Association: the psychological conditioning that predisposes people for or against a form. Aesthetics: a tool for shaping form and color that should be demystified. He rejects the choice between looking good and working as "barricades erected between what are really just two of the many aspects of function".
+
+The model is craft theory, untested, and its parts overlap (association with aesthetics, need with use). The book's tone is hyperbolic and some figures in it are unsourced, so its statistics should not be quoted [@papanek1972design]. As a review lens, though, it is unusually complete.
+
+::: {.rule #EVD-070 grade="C"}
+**Before publishing a lesson, widget or challenge, review it against Papanek's six aspects: honest method, use, real need, fit to its context, the right associations, and aesthetics as part of function.** The function complex is a checklist for evaluating any design [@papanek1972design].
+
+*In LTF:* need asks whether streaks or badges serve learning or only flatter the app; telesis asks whether a page fits a learner flying MSFS 2024 with a keyboard, yoke or controller; association asks whether it reads as flight training rather than a game or a corporate dashboard.
+:::
+
+### Meaning before function
+
+Krippendorff argues that design has turned from asking how an artifact functions to asking what it means to the people who deal with it, on the axiom that people act not on the physical qualities of things but on what those things mean to them [@krippendorff2006semantic]. Designers therefore need "second-order understanding", an understanding of others' understanding, gained by watching what people do, by dialogue and by involving them. Use passes through three stages, recognition, exploration and unproblematic reliance. Designers can build several "semantic layers" for users with different competence, as a photocopier has layers for copying, clearing jams, servicing and factory repair. The book's methods for measuring meaning (semantic differentials, free association, story analysis) are proposals, not validated procedures, and the book was known here through secondary accounts [@krippendorff2006semantic].
+
+::: {.rule #EVD-071 grade="C"}
+**Before launch, ask beginners what they think an unfamiliar element does or means, and treat mismatches as design defects.** People act on what things mean to them, and designers need second-order understanding of that meaning [@krippendorff2006semantic].
+
+*In LTF:* ask what the tier rings, the "Simplified model" badge, the "Draft · unverified" badge and the challenge-type icons mean before assuming they communicate; test any coined name for a drill or mode the same way.
+:::
+
+::: {.rule #EVD-072 grade="C"}
+**Organize content depth in explicit layers (what to do, why, and the reference and source behind it), each designed for a different level of competence.** Semantic layers let one artifact serve users of different competence [@krippendorff2006semantic].
+
+*In LTF:* `FlyPanel` carries the "what to do" layer, the lesson body carries "why", and `/reference` with its sources carries the third; a `Callout` of type real-world or sim marks a move between layers.
+:::
+
+### Honesty
+
+Ruskin's Lamp of Truth lists three architectural deceits: suggesting a mode of structure or support other than the true one; painting surfaces to represent a material other than the real one; and using cast or machine-made ornament [@ruskin1849seven]. He concludes: "we can command an honest architecture: the meagreness of poverty may be pardoned, the sternness of utility respected; but what is there but scorn for the meanness of deception?" His hostility to machine production does not transfer to software, whose accuracy depends on generated, consistent values. His first two deceits transfer exactly. Rams makes honesty one of his ten principles: good design "does not make promises it cannot keep" [@rams2026ten].
+
+::: {.rule #EVD-073 grade="C"}
+**Never let a visual element present itself as something it is not: label simplified models as models, keep screenshots real, and avoid surface treatments that imitate physical instruments the learner cannot use.** Suggesting a false structure or a false material is a deceit [@ruskin1849seven], and honest design does not promise what it cannot deliver [@rams2026ten].
+
+*In LTF:* keep the "Simplified model" badge on every `WidgetFrame` and the "not a pilot certificate" and "For simulation use only" lines; do not add skeuomorphic bezels or glass to page UI, and keep the fixed `bezel` and `instrument` colors inside gauge drawings, as the token rules already require.
+:::
+
+### Understandable and thorough
+
+Rams's principles, formulated by his own account in the late 1970s out of concern for "an impenetrable confusion of forms, colours and noises", include two more that apply directly to a teaching product [@rams2026ten]. Good design makes a product understandable, clarifying its structure and ideally making it self-explanatory. And good design is thorough down to the last detail: nothing is arbitrary or left to chance, and care and accuracy are respect for the user. Rams called them "theses, mind you, not rules!", their dating is loose, and no study shows that following them improves digital learning products [@rams2026ten]. They are expert values, and graded as such.
+
+::: {.rule #EVD-074 grade="C"}
+**Treat detail errors as design defects: a wrong digit, a misaligned label or an inconsistent token repeated across pages is a failure of the design, not of proofreading.** Good design is thorough to the last detail, and care is respect for the user [@rams2026ten]; a small flaw multiplied across many surfaces is multiplied in effect [@pye1978nature].
+
+*In LTF:* a detail pass on every template (`LessonPage`, `ChallengePage`, `SpeedsPage`) checks alignment, token use and the source of every value; aviation numbers are never typed into page code, only rendered from tokens.
+:::
+
+### What this means for Learn to Fly
+
+The product's honesty is its most distinctive trait, and this chapter's strongest advice is to protect it: the "Simplified model" badge, the `verify` callouts that block publication, the "Last verified" line, the beta banner, the "not a pilot certificate" sentence (EVD-073). Keep all of them. Change the inconsistencies that break same-function, same-form: two type dialects for headings, hand-inlined card styles alongside `Card`, bold mono values beside a `readout` scale defined at weight 500 (EVD-068). Write the practical conditions and the intended feeling into every component brief (EVD-067, EVD-069), review new content against the function complex (EVD-070), and ask learners what unfamiliar marks mean before relying on them (EVD-071). Make the three layers of depth explicit in how `FlyPanel`, lessons and `/reference` divide content (EVD-072), and run a detail pass on each template (EVD-074).

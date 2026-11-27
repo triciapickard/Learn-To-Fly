@@ -1802,3 +1802,203 @@ Fix three specific gaps: the copy button's silent failure (INT-070), the random-
 missing trigger line (INT-072), and the silent discarding of a debrief draft after a rubric update
 (INT-073). Add previous per-criterion results to the Debrief tab as read-only context (INT-071).
 Keep celebration for the one rare event that earns it (INT-074).
+
+## Attention and the Companion Screen
+
+### One thing at a time
+
+Raskin built his account of interface design on the locus of attention: attention works like a
+spotlight that lights one thing at a time, and stimuli outside it are mostly ignored
+[@raskin2000humane]. With repetition, actions become habits performed without conscious attention.
+For most software that is a theory of efficiency. For LTF it is a description of the use case. The
+learner's locus of attention during a challenge is the sim; the companion screen is outside it,
+consulted in glances. Everything on that screen must be readable in a glance, stable between glances
+and silent unless something matters.
+
+Hutchins, Hollan and Norman list an unobtrusive interface among the conditions for direct
+engagement: an interface that is noticed puts the user in a third-person relation to the task
+[@hutchins1985direct]. Dourish draws the same line with Heidegger's distinction between a tool that
+is ready-to-hand (used so fluently that attention is on the task, as with a hammer) and one that is
+present-at-hand (the tool itself becomes the object of attention) [@dourish2001where]. His book is a
+philosophical synthesis, read here through a review that criticizes it for focusing almost entirely
+on the ready-to-hand mode and neglecting how people move between the two. That gap is exactly LTF's
+design problem: the companion screen should be ready-to-hand during the flight and become
+present-at-hand, deliberately, when the learner stops to reflect.
+
+Endsley's model names attention and working memory as the bottlenecks on situation awareness
+[@endsley1995toward]. Whatever the debates about the construct, the practical inference is
+uncontroversial: keep what the learner must hold in mind on screen, and keep the screen from
+competing with the sim.
+
+::: {.rule #INT-075 grade="C"}
+**On the companion screen, keep one stable layout: the current and next step always in the same
+place, completed items out of the way, and nothing that moves or reflows between glances.** The
+locus of attention [@raskin2000humane] and working-memory limits [@endsley1995toward] are the basis;
+both are theory and expert argument.
+
+*In LTF:* `FlyModePage` renders the challenge header, then `FlyPanel large` with an alert slot at the
+top, steps, then the timer. When a random event fires, the alert is inserted above "Steps" and
+pushes the whole list down. Reserve the alert's space (or overlay it at a fixed position) so the
+steps do not move, and keep a ticked step in place, dimmed, rather than reflowing the list.
+:::
+
+::: {.rule #INT-076 grade="C"}
+**Allow no dialogs, popovers or overlays on the companion screen during a flight, except one rare
+alert that the challenge itself defines.** An interface that draws attention to itself breaks
+engagement [@hutchins1985direct], and the ready-to-hand tool is the one not noticed
+[@dourish2001where].
+
+*In LTF:* `FlyModeLayout` already strips the header and footer. It still renders the `BetaBanner`;
+dismissing it is one more thing to do while flying. Hide it in fly mode after its first showing in
+the session, and keep any future sign-up prompt, toast or glossary popover off `FlyModePage`.
+:::
+
+### Alerts that keep their meaning
+
+Parasuraman and Riley organize the human side of automation under use, misuse, disuse and abuse
+[@parasuraman1997humans]. Disuse, the neglect of automation, is "commonly caused by alarms that
+activate falsely", and it occurs because the base rate of the condition is not considered when the
+trade-off between false alarms and misses is set. Misuse is over-reliance, which produces failures
+of monitoring. Abuse is automating functions without regard for the consequences for human
+performance, which can reduce the operator to a by-product of the automation. Among the factors that
+affect monitoring, the paper names the saliency of automation state indicators. It is an integrative
+review of empirical work; the body was not read, and its findings are reported here at the level of
+the abstract. A later review by Lee found it a pivotal paper and concluded that automation "requires
+more, not less, attention to training, interface design, and interaction design".
+
+Sellen and colleagues add the sensory side: sound and touch can carry state when vision is busy,
+and Monk's mode-contingent sound cut mode errors by a third [@sellen1992prevention]. A sound is a
+strong signal because it reaches a person whose eyes are elsewhere, which is also why it wears out
+fastest when it fires for nothing.
+
+::: {.rule #INT-077 grade="B"}
+**Fire an alert only for an event that requires the learner to act, keep every alert rare, and
+retire any prompt that learners routinely dismiss without acting.** False alarms produce disuse
+[@parasuraman1997humans]; the review integrates many studies, though the mechanism is reported here
+from its abstract. A sound or a pulse is worth something only while it means something.
+
+*In LTF:* `FlyPanel`'s random event (red `border-4 border-warn`, `warning-pulse`, a two-tone beep,
+`role="alert"`) is the only loud signal in the product and should stay the only one. If the product
+records dismissals, log "Got it" taps with time-to-dismiss; an event dismissed in under a second
+without a change in the learner's flight is a candidate for review.
+:::
+
+::: {.rule #INT-078 grade="C"}
+**Do not automate the checks the learner is meant to perform: no auto-ticking, auto-advancing or
+auto-scoring of what happens in the sim.** Over-reliance on automation degrades monitoring, and
+automating without regard for human performance reduces the person to pressing "next"
+[@parasuraman1997humans]. Since LTF cannot see the sim [@suchman1987plans], any automatic tick would
+also be false.
+
+*In LTF:* steps in `FlyPanel` and items in `ChecklistRunner` are ticked only by the learner, and the
+debrief is self-scored; keep it so. A future sim-data integration should confirm what the learner
+reports, not replace the report.
+:::
+
+### Checklist design on the second screen
+
+Degani and Wiener's NASA report on flight-deck checklists is the strongest source on how procedures
+should be laid out for a person whose attention is divided [@degani1990checklists]. They observed 42
+crews over 72 flights and about 140 flight hours at one carrier, interviewed pilots from seven
+carriers, and reviewed incident and accident reports. They found the checklist to be "a generator and
+coordinator of many cockpit tasks", and the printed page "only the outer shell of the problem". Their
+16 proposed guidelines are, in their words, "not specifications" and may conflict. The most
+transferable: standardize names for controls and displays; responses should state the desired
+status or value, not only "checked" or "set"; touch the controls while running the checklist; make
+the completion call the last item; subdivide a long checklist into smaller task-related chunks;
+sequence items by the physical layout of the cockpit, with a pictorial flow for training; put the
+most critical items as near the beginning as possible so they are done before an interruption, which
+takes precedence over layout order where the two conflict; and do not couple checklists tightly to
+other tasks, leaving buffers to recover. The report is a mixed-method technical report from one
+carrier, and the guidelines are proposals.
+
+These are human-factors guidelines for how a list is structured, not aviation procedures. The items
+themselves, and their order in a real aircraft, come from the aircraft's documents and LTF's
+verified content.
+
+::: {.rule #INT-079 grade="C"}
+**Break any procedure longer than a screen into task-sized groups, end each group with a visible
+completion line, and put the most consequential items first.** These are Degani and Wiener's
+guidelines on chunking, completion calls and critical-first ordering [@degani1990checklists];
+critical-first outranks neat grouping when they conflict.
+
+*In LTF:* `FlyPanel` renders `challenge.procedure` as one flat numbered list. Allow procedure content
+to carry group headings, show "Group complete" at the end of each, and give content authors the
+critical-first rule in `content/README.md`.
+:::
+
+::: {.rule #INT-080 grade="C"}
+**Write each checklist response as the state the learner should see, not as "checked" or "done".**
+Degani and Wiener's guideline that responses portray the desired status or value
+[@degani1990checklists] turns a tick from a memory aid into a check. A bare checkbox should not stand
+in for the check itself.
+
+*In LTF:* `ChecklistRunner` items and Fly-tab steps should read as item plus state (the form of
+"Control, position"), with the state text coming from verified content. The `Checkbox` records that
+the learner confirmed the state; the words carry what the state is.
+:::
+
+::: {.rule #INT-081 grade="C"}
+**Order on-screen steps the way the learner's eyes and hands move through the sim's cockpit, unless a
+critical item must come earlier.** Degani and Wiener recommend sequencing by the cockpit's physical
+layout, with a pictorial flow for training [@degani1990checklists]. Matching the order of the page
+to the order of the panel removes a translation the learner would otherwise do in working memory.
+
+*In LTF:* a checklist-runner lesson can pair the list with a panel diagram that lights the region of
+the current item, using the `g1000-pfd` or a panel widget; the order itself is content and must be
+verified against the aircraft documents.
+:::
+
+### Coupling, reflection and help
+
+Dourish's design principles include that users, not designers, manage coupling (how closely the
+system is bound to their activity), and that embodied interaction turns action into meaning
+[@dourish2001where]. The review that reports them also notes Dourish gives principles rather than
+rules, which some designers find disappointing. The application for LTF is in two parts. During a
+flight the learner should control how closely the app tracks them (a timer they choose to start,
+ticks they choose to make). After a flight the app should become an object of attention on purpose:
+breakdowns, in the phenomenological account, are where a tool becomes visible, and the debrief is
+the planned breakdown.
+
+How much help to give during practice is the one place in this Part where the evidence is genuinely
+contested. Salmoni, Schmidt and Walter separated the temporary effect of feedback on performance
+from its lasting effect on learning, and proposed the guidance hypothesis: feedback on every trial
+helps performance during practice but can create dependence that hurts retention when feedback is
+removed [@salmoni1984knowledge]. Later work was mixed. Wulf and Shea found that for complex skills,
+learners given full concurrent feedback learned at least as well as those given less, so the
+hypothesis holds best for simple tasks and does not justify withholding feedback from beginners on
+complex ones.
+
+::: {.rule #INT-082 grade="C"}
+**Make the debrief the moment the app asks for full attention: after the flight, not during it, with
+the questions that turn the flight into something learned.** Dourish's present-at-hand mode and the
+idea of breakdown as a site of learning are philosophical design rationale [@dourish2001where], not
+evidence of learning gains.
+
+*In LTF:* the Debrief tab, its "Reflect" questions and the criterion-by-criterion `ResultView` are
+this moment. Keep fly mode free of reflection prompts, and keep "Finish and debrief" as the explicit
+transition on the Fly tab; on `FlyModePage`, which has no such button, add "Done flying? Debrief on
+your main screen".
+:::
+
+::: {.rule #INT-083 grade="D"}
+**Offer an optional reduced-help mode for learners who want to test themselves, but do not reduce
+feedback by default for beginners on complex maneuvers.** The guidance hypothesis predicts that
+constant feedback can create dependence [@salmoni1984knowledge], but replication is mixed and the
+strongest qualification, for complex skills, points the other way. Do not claim any number of
+attempts or feedback frequency is optimal without testing.
+
+*In LTF:* a "Fly without steps" option on `FlyModePage` (steps collapsed, timer only) would let a
+returning learner test retention, with the Debrief as the check. The default stays full steps.
+:::
+
+### What this means for Learn to Fly
+
+`FlyModePage` and `FlyModeLayout` are the product's most distinctive interaction and its most
+demanding. The dark, large-type, headerless layout is right. The changes this chapter asks for are:
+a stable layout in which the random-event alert does not push the steps (INT-075); the beta notice
+shown once and then gone in fly mode (INT-076); the alert kept as the product's only loud signal and
+measured for false alarms (INT-077); procedures grouped with completion lines and critical items
+first (INT-079); step text written as target states (INT-080) in cockpit order (INT-081); and an
+explicit hand-off to the debrief from fly mode (INT-082). Keep every tick a learner action
+(INT-078), and treat a reduced-help mode as an option to test, never a default (INT-083).

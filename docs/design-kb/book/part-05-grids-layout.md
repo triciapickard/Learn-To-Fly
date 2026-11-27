@@ -731,7 +731,7 @@ The challenge brief has the reverse problem. `BriefTab` places Goal, "Sim setup"
 ::: {.rule #GRD-068 grade="B"}
 **Start every heading, step, list item and button label with the word that carries its information.** The left edge is noticed most, and words beyond the first two on a line are read much less often [@nielsen2006f]. The observation is well documented, though unpublished in peer-reviewed form, so B.
 
-*In LTF:* write step labels as action first ("Set the parking brake", as a copy example only, not a procedure); write card titles and curriculum rows with the distinguishing word first. Part XXIV, Writing and Microcopy covers wording; this rule is the layout reason for it.
+*In LTF:* write step labels as action first ("Close the dialog", not "Now you should close the dialog"); write card titles and curriculum rows with the distinguishing word first. Part XXIV, Writing and Microcopy covers wording; this rule is the layout reason for it.
 :::
 
 ::: {.rule #GRD-069 grade="C"}
@@ -769,4 +769,92 @@ The challenge brief has the reverse problem. `BriefTab` places Goal, "Sim setup"
 The lesson's single column, front-loaded section headings and `SectionNav` already suit a top-heavy, left-heavy reading pattern. Keep them, and keep the completion action at the end of the lesson. The problem is the top of the lesson page: too many state elements stack between the title and the teaching. Set a first-screen budget, collapse the notices into one row, and measure on a phone what a signed-out learner sees before scrolling.
 
 In the challenge brief, move a one-line safety summary to the top when a challenge has a `safety` callout, leaving the full callout in place below. In lists, keep the left edge for action words and a consistent column for values, and keep row spacing generous. Finally, instrument section reach using the scroll-spy data the lesson page already computes, so future decisions about lesson length rest on LTF's learners, not on casual browsers.
+
+## Layout beside the simulator
+
+Fly mode is the one LTF screen that is not read the way web pages are read. It sits on a phone, tablet or second monitor beside a running simulator, it is glanced at between moments of attention to the sim, and it may be read from arm's length or further. None of the studies in this Part tested that situation. What they offer is a set of mechanisms (attention falls away with scrolling, clutter slows search, bounded regions group, close display proximity supports integration, small targets cause errors) whose consequences are sharper here than anywhere else in the product.
+
+### The context
+
+The simulator supplies a dense, cluttered visual field. The clutter research treats clutter as the effective number of items competing for attention [@rosenholtz2007measuring], and the second screen adds to that count every time the learner looks at it. The design goal is a second screen that is quiet by contrast: few items, few colors, large type, and nothing that changes position. Comprehension was better when text was surrounded by space rather than unrelated material [@mcmullin2002effects]; in Fly mode, anything not needed for the current step is unrelated material.
+
+Scrolling is a poor fit for glances. The scroll data show attention concentrating on the first screen and dropping sharply after it, for people who are looking at nothing else [@fessenden2018scrolling]. A learner whose eyes return to the second screen for a moment needs to find the current step where it was last time, without scrolling to it.
+
+Reading distance changes the human scale. Le Corbusier's idea of a measure tied to the body [@lecorbusier1954modulor] becomes, for a screen at arm's length beside a monitor, a type and control scale larger than the phone scale used in lessons. Brown's advice to choose the base from the conditions of reading [@brown2011more] applies: the Fly mode base should be chosen by testing legibility at the real distance, not by enlarging the lesson layout.
+
+### Regions and proximity
+
+Common region is the cheapest way to make a glance land in the right place [@palmer1992common]. A few clearly bounded regions, one per task (the current step, the timer, an alert), let the eye go to a region rather than search a field of text. The proximity compatibility principle adds the rule for what goes in each region: items used together in one judgment belong together; items read on their own stand apart, because bundling costs focused attention [@wickens1995proximity]. A step and its checkbox are one judgment; the stopwatch is its own reading.
+
+The left-edge and front-loading findings apply with more force when reading time is short: the step's action word goes first, and the most important reading sits top left in its region [@nielsen2006f]. Generous row spacing helps search accuracy [@ling2007influence], and a learner looking for the next unticked step is searching.
+
+### Targets
+
+Fly mode is operated by touch or a mouse while attention is divided. WCAG 2.2 sets a minimum target of 24 by 24 CSS pixels at Level AA, with exceptions where spacing keeps a 24 px circle around each target clear of its neighbors, and an enhanced 44 by 44 CSS pixel target at Level AAA; the Understanding document recommends larger targets for frequently used controls, actions that cannot easily be undone and steps in a sequential task [@w3c2024wcag]. The 24 px floor is a deliberately low compromise. The best-known empirical anchor, Parhi and colleagues' study of one-handed thumb use, found that error rates stopped improving at about 9.2 mm for discrete targets and 9.6 mm for serial ones, in a sample of 20 young, mostly inexperienced participants on a 2005-era device [@parhi2006target]. The two sources agree on direction: controls tapped repeatedly in a sequential task, which is what a checklist tick and a "next step" button are, should be well above the floor.
+
+### Fly mode as built
+
+`FlyModeLayout` drops the header and footer, defaults to the dark theme unless the learner chose light, and sets `text-xl` on a `max-w-3xl` (768 px) column with `px-4 py-6`. `FlyModePage` stacks a "Back to challenge" link, the mono challenge code, an `text-4xl` h1, the goal at `text-2xl`, then `FlyPanel large`: an h2 at `text-3xl`, the step rows with `Checkbox` and large copy, the `text-5xl` mono stopwatch in an ink pill, the random-event alert (`border-4 border-warn bg-warn-tint`, a pulse and a beep), "Keep the screen on while flying" and "Finish and debrief". The `BetaBanner` appears above all of it, as on every page.
+
+The direction is right: one column, large type, dark ground, no navigation chrome. Four layout problems follow from the evidence. The column is a single 768 px stack, so on a landscape tablet or a monitor the title, goal and stopwatch push the step list down and the screen's width goes unused; the current step can leave the viewport as steps are ticked. The `BetaBanner` is non-task material at the top of the most attention-constrained screen. The random-event alert appears in the flow of the panel, so its arrival can move the content around it. And `Checkbox` is a 20 px control; whether the whole step row is the target is not stated in the dossier and should be checked, because the row, not the box, has to carry the 44 px target.
+
+::: {.rule #GRD-074 grade="C"}
+**Fit everything Fly mode needs for the current step (the step, its control, the timer and any alert) in one viewport at every supported device size, with no scrolling required.** Attention falls sharply below the first screen even for undivided readers [@fessenden2018scrolling]; a glance from the sim cannot include scrolling. The application to a divided-attention screen is an inference, so C.
+
+*In LTF:* in `FlyModePage`, keep the current step in view by design: show the current and next steps prominently, collapse completed steps to a one-line summary, and keep the stopwatch in a fixed region rather than above the list.
+:::
+
+::: {.rule #GRD-075 grade="C"}
+**Give Fly mode its own type and spacing base, chosen by testing legibility at the real reading distance beside a simulator, not by scaling up the lesson layout.** A scale's base should come from the conditions of reading [@brown2011more], and the human scale for a screen at arm's length differs from a phone's [@lecorbusier1954modulor].
+
+*In LTF:* define the `fly-*` strand from GRD-014 with its base set by a test at the distance learners actually use, then replace `text-xl`, `text-2xl`, `text-3xl`, `text-4xl` and `text-5xl` in `FlyModeLayout`, `FlyModePage` and `FlyPanel large` with it.
+:::
+
+::: {.rule #GRD-076 grade="B"}
+**Show nothing in Fly mode that the current task does not need: no banners, no promotional or account elements, and no navigation beyond the way back.** Clutter near content harms comprehension and slows search [@mcmullin2002effects; @rosenholtz2007measuring], and the simulator already fills the learner's visual field. Two independent lines of evidence, applied by inference, so B.
+
+*In LTF:* hide `BetaBanner` in `FlyModeLayout` (the beta notice is shown on the challenge page the learner came from), keep the "Back to challenge" link small and at the top edge, and keep "Keep the screen on while flying" as a one-time note, not a persistent row.
+:::
+
+::: {.rule #GRD-077 grade="B"}
+**Divide Fly mode into a few clearly bounded regions, one per task, and put in each region only what is used together.** Bounded regions group strongly [@palmer1992common], and close display proximity supports integration while separation supports focused reading [@wickens1995proximity].
+
+*In LTF:* three regions: the step list (step text and its tick together), the timer (read on its own), and a reserved alert region. Each is a surface that reads clearly against the Night `canvas` (GRD-032). The challenge code and title shrink to a single header line.
+:::
+
+::: {.rule #GRD-078 grade="B"}
+**Make every repeatedly used Fly mode control at least 44 by 44 CSS pixels, with clear space between adjacent controls, and never smaller than 24 by 24.** WCAG 2.2 sets 24 px as the AA minimum and 44 px as the AAA target, recommending larger targets for frequent and sequential actions [@w3c2024wcag]; a thumb-use experiment found errors stopped improving at about 9.2 to 9.6 mm [@parhi2006target]. A standard plus one small experiment, so B.
+
+*In LTF:* make each `FlyPanel` step row the tap target for its `Checkbox` (the 20 px box alone is below the floor), keep "Finish and debrief" at the `lg` 48 px control size, and space adjacent stopwatch controls so their targets do not touch. Part XI, Forms, Onboarding and Touch covers target sizing in general.
+:::
+
+::: {.rule #GRD-079 grade="C"}
+**Use the width of a landscape screen for Fly mode by placing its regions side by side, rather than centering a narrow column.** Responsive layouts adapt structure to the viewing context, not only width [@marcotte2010responsive]; a single stack wastes the space that would keep every region in view.
+
+*In LTF:* replace the `max-w-3xl` stack with a Fly template that is one column on portrait phones and two regions (steps beside timer and alert) when the viewport is wider than tall, chosen with an orientation or container condition.
+:::
+
+::: {.rule #GRD-080 grade="C"}
+**Select the glanceable layout by the learner's stated intent, not by screen width alone.** Marcotte treats different viewing contexts as the thing a layout responds to [@marcotte2010responsive]; a laptop beside the sim and a laptop at a desk have the same width and different needs.
+
+*In LTF:* keep Fly mode as an explicit route (`/challenges/:slug/fly`) entered by a deliberate action; do not switch a lesson or brief into the Fly layout automatically at some width.
+:::
+
+::: {.rule #GRD-081 grade="C"}
+**Keep every Fly mode element in a fixed position for the whole session; content changes, positions do not.** Predictable placement is the grid's core benefit [@mullerbrockmann1981grid], and breaking it in a product interface harms usability where learners return to the same control repeatedly [@samara2023making].
+
+*In LTF:* the current step, the tick, the stopwatch and "Finish and debrief" stay where they are as steps are ticked; ticked steps collapse above without moving the current step's region.
+:::
+
+::: {.rule #GRD-082 grade="C"}
+**Reserve a fixed region for alerts so that an alert's arrival never moves other content.** Content that shifts under a divided-attention user breaks the predictable positions that layout exists to provide [@samara2023making; @mullerbrockmann1981grid].
+
+*In LTF:* render the random-event alert (`border-4 border-warn bg-warn-tint`) in a reserved region of the Fly template, empty and quiet when no event is active, so the step list does not jump when it appears. Its motion and sound are covered in Part XXII, Motion and Perceived Performance.
+:::
+
+### What this means for Learn to Fly
+
+Keep Fly mode's existing choices: an explicit route, no header or footer, the dark default, large mono stopwatch digits, a single action to finish. Change its layout from a centered narrow stack into a template with three fixed regions (steps, timer, alert), side by side on landscape screens and stacked on portrait phones, with the current step always in view and completed steps collapsing. Remove the `BetaBanner` from `FlyModeLayout`. Give Fly mode its own type and spacing strand, and set its base by testing at real distance beside a running sim.
+
+Then check targets: every step row is the tap target for its tick, repeated controls are at least 44 px, and no small controls touch. Fly mode is also the best candidate in the product for a short usability test, because its conditions (divided attention, distance, a busy primary display) differ from anything the published studies covered. A test with a handful of learners flying a real challenge, measuring missed and mistaken ticks, would settle more than any further reading.
 

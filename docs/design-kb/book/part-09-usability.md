@@ -934,3 +934,93 @@ The plan has no usability testing step. The protocol below fits a small team and
 - Write tasks, criteria and the stopping rule first (USE-072, USE-067); log deviations and behavioral impact (USE-070); have two people analyze each session (USE-071).
 - Report results as samples (USE-065), size open tasks larger (USE-066), and read every session for blockers (USE-068).
 - The beta's `ReportProblemDialog` reports are a useful supplement but not a test: they come from learners who chose to report, about problems they recognized as problems.
+
+## Measuring Usability: Tasks, Questionnaires and Their Limits
+
+### Ratings and performance come apart
+
+The three components of usability are measured differently, and the evidence that they must be measured separately is strong. In three experiments on schematic metro maps, Roberts, Gray and Lesnik found that how usable people said a map was could differ from how well they used it [@roberts2017preference]. In the first, 80 participants planned journeys on the official octolinear Paris Metro map and on a curvilinear alternative. The curvilinear map was faster (63 of 80 had a faster mean time with it; mean planning times were 42.4 and 37.9 seconds for the curvilinear map, depending on order, against 51.7 and 48.4 for the official one), yet preference was unrelated to performance: 38 preferred the official map, 34 the curvilinear, 8 were undecided, and aggregate ratings did not differ. In the third, three Berlin maps gave equal journey times but different usability ratings. Ratings, the authors conclude, reflect expectations and prejudices about what effective design looks like [@roberts2017preference].
+
+The aesthetics literature points the same way from another side. Tractinsky, Katz and Ikar had 124 students use one of several simulated cash machines in which aesthetics and real usability were manipulated independently [@tractinsky2000what]. The usability manipulation worked (23.5 seconds per task against 37.5 in the poor condition), and aesthetics did not affect completion time or errors; yet after use, only the aesthetics manipulation affected perceived usability. Under high aesthetics, ratings did not drop even when real usability was poor. Hassenzahl and Monk reanalyzed the beauty-usability link across four datasets and argued it has been overplayed: with little experience, people infer usability from an overall judgment of goodness that beauty colors, and the effect is indirect [@hassenzahl2010inference]. Tuch and colleagues manipulated both factors independently with 80 participants on an online shop, using a strong usability manipulation, and found the reverse: aesthetics did not affect perceived usability before or after use, while poor usability lowered perceived beauty [@tuch2012beautiful].
+
+The direction of the aesthetics effect is contested and depends on how strong each manipulation is. What is not contested is the practical conclusion: a rating of how usable something feels is not a measure of how usable it is.
+
+::: {.rule #USE-073 grade="B"}
+**Judge usability from task performance (success, errors, time, deviations), and treat ratings as a separate measure of satisfaction, never as evidence that a flow works.** Ratings and performance dissociated in three map experiments [@roberts2017preference], and perceived usability followed aesthetics rather than real usability in a cash-machine experiment [@tractinsky2000what].
+
+*In LTF:* a learner saying "this is clear" about a `FlyPanel` layout or a lesson page is recorded, but the decision rests on whether they completed the task and how often they deviated.
+:::
+
+::: {.rule #USE-074 grade="B"}
+**Choose between alternative diagrams and widgets by measuring reading accuracy and time on a real task, then ask for opinions.** Preference for a familiar or handsome design can coexist with slower use [@roberts2017preference].
+
+*In LTF:* before changing an instrument widget (the airspeed dial and tape, the G1000 PFD, the VOR CDI), give beginners a reading task with both versions, timed, and count misreadings; for Fly mode, use a brief glance and recall format.
+:::
+
+### Polish as a confound
+
+If aesthetics can bias ratings, it can bias tests. Sonderegger and Sauer gave 60 adolescents functionally identical simulations of a mobile phone that differed only in visual design [@sonderegger2010influence]. The appealing version was rated more usable (6.14 against 5.32) and was also used faster (147.7 against 198.5 seconds) with fewer errors per trial (2.0 against 4.8). The sample was adolescents with a simulated phone, and a related study by the same authors is reported to have found longer completion times with the more attractive product, so the direction of performance effects is not settled. Tuch and colleagues' results run the other way for ratings [@tuch2012beautiful]. The finding to act on is narrow: when two variants differ in finish, finish may drive the result.
+
+::: {.rule #USE-075 grade="D"}
+**When comparing two design variants in a test, give them the same level of visual finish, or the comparison measures polish as well as design.** An appealing but functionally identical prototype was rated more usable and used faster in one experiment [@sonderegger2010influence], while another found no aesthetics effect on perceived usability [@tuch2012beautiful]; the evidence conflicts, and equal finish removes the question.
+
+*In LTF:* test a rough sketch against a rough sketch, and a polished build against a polished build; never a new mockup against the shipped `LessonPage`.
+:::
+
+::: {.rule #USE-076 grade="B"}
+**Fix interaction problems before polishing, and do not expect visual refinement to compensate for a frustrating flow.** With a strong usability manipulation, poor usability lowered perceived beauty and aesthetics did not raise perceived usability [@tuch2012beautiful]; where aesthetics did lift ratings, it did not change errors or time [@tractinsky2000what].
+
+*In LTF:* the identity work in other Parts of this book (type, color, the horizon line) follows, not replaces, fixing the problems this Part's reviews and tests find on `LessonPage`, `ChallengePage` and `FlyModePage`.
+:::
+
+### The System Usability Scale
+
+Brooke's System Usability Scale (SUS) is a ten-item questionnaire that gives a single score from 0 to 100 for the perceived usability of a system [@brooke1996sus]. It was designed to be "quick and dirty": cheap, usable on small samples, and independent of technology. Each statement is answered on a five-point scale from strongly disagree to strongly agree, and the statements alternate positive and negative wording, from "I think that I would like to use this system frequently" to "I needed to learn a lot of things before I could get going with this system". Scoring subtracts 1 from each odd item's response and subtracts each even item's response from 5, sums the ten converted values and multiplies by 2.5 [@brooke1996sus].
+
+The benchmark data come from later work. A current benchmark across about 500 studies gives the average score as 68, places a raw 74 near the 70th percentile and a score above 80.3 in the top 10%, and treats below 51 as failing [@brooke1996sus]. Bangor, Kortum and Miller analyzed nearly ten years of SUS data from many products at different development stages and concluded that SUS is a quick, robust measure; later papers report that their data showed SUS sensitive to interface type and to changes made to a product [@bangor2008empirical]. Their 2009 follow-up added an adjective rating to nearly 1,000 SUS surveys and found it correlated strongly with the SUS score (r = 0.822), with a long-run mean near 70 [@bangor2008empirical]. Items 4 and 10 measure learnability and the other eight usability; SUS can be given to as few as two users, but small samples give imprecise estimates [@brooke1996sus].
+
+Three limits matter most. SUS is not diagnostic: it gives a number without reasons. Its correlation with task performance is modest (about r = .24, around 6% of variance) [@brooke1996sus]. And users can give high scores while meeting serious problems [@bangor2008empirical].
+
+::: myth
+**"A SUS score of 68 means the system is 68% usable, and anything above 70 passes."** SUS scores are not percentages; the benchmark source stresses that they should be read as percentile ranks [@brooke1996sus]. The 68 average is the mean of a mixed set of about 500 studies, not a pass mark, and fixed cut-offs such as 70 are citing authors' conveniences that the benchmark data do not establish as thresholds [@bangor2008empirical].
+:::
+
+::: {.rule #USE-077 grade="C"}
+**If LTF uses SUS, give the standard ten items unchanged, after a defined task, naming Learn to Fly as the system, and report a percentile with a confidence interval rather than a raw score.** Changed wording voids the benchmarks, scores are not percentages, and small samples are imprecise [@brooke1996sus; @bangor2008empirical].
+
+*In LTF:* in a beta test, "this system" is replaced by "Learn to Fly" in the instructions, so learners do not rate the simulator. With five learners, report the interval, which will be wide.
+:::
+
+::: {.rule #USE-078 grade="B"}
+**Use SUS to compare the same task and the same learner group across releases, not to compare LTF with other products or to certify a design.** SUS is sensitive to changes made to a product [@bangor2008empirical], but it explains little of task performance and carries no diagnosis [@brooke1996sus].
+
+*In LTF:* track SUS for "complete Lesson 0.1" and "fly and debrief the first challenge" across releases, and pair each administration with one open question ("What was the most confusing thing?") to get the reasons SUS cannot give.
+:::
+
+### Experiments at LTF's scale
+
+Randomized controlled experiments on live traffic (A/B tests) are the strongest design for establishing that a change causes a difference in behavior, and Kohavi and colleagues' guide distills practice at very large sites [@kohavi2009controlled]. They advise agreeing a single overall evaluation criterion in advance, validating the system with an A/A test, running in whole weeks, and splitting traffic evenly for power. Their rule of thumb for sample size, n = 16σ²/Δ² per variant for 80% power, implies very large numbers for small effects: their example of detecting a 5% change in revenue needs over 409,000 users. They warn that underpowered tests are a common mistake and that "no significant difference" does not prove no difference.
+
+Kaptein and Robertson's critique of statistical practice in HCI names three problems: confusing the probability of the data given the null hypothesis with the probability of the null given the data, neglecting statistical power, and not interpreting effect sizes [@kaptein2012rethinking]. They argue findings should be judged by the size and practical importance of effects, not by significance alone.
+
+::: {.rule #USE-079 grade="B"}
+**Before running an A/B test on LTF, compute the sample needed to detect the smallest effect worth acting on, and if LTF's traffic cannot supply it, decide from principles and qualitative testing instead.** Small effects need very large samples, and underpowered tests are a common, misleading mistake [@kohavi2009controlled].
+
+*In LTF:* button wording, colors and small layout changes on the landing page or `LessonPage` are decided by the rules in this book and by test sessions, not by an underpowered split test. If a test is run, it compares large differences (a new lesson structure against the old), with one agreed success measure.
+:::
+
+::: {.rule #USE-080 grade="C"}
+**Report every quantitative comparison as a difference with an interval in units LTF cares about, against a smallest effect worth acting on set in advance, and never report "no difference" from an underpowered study.** Significance alone says little about practical importance [@kaptein2012rethinking], and a null result from an underpowered test is not evidence of no effect [@kohavi2009controlled].
+
+*In LTF:* "Two more of ten learners finished the first challenge brief unaided (interval wide; below the threshold of three we set)" is a usable result; "not significant" is not.
+:::
+
+### What this means for Learn to Fly
+
+LTF has no measurement program yet, which means it can start with the right habits rather than unlearn the wrong ones.
+
+- Make task performance the primary measure for every flow (USE-073), and measure diagram and widget changes with reading tasks (USE-074).
+- Compare variants at equal finish (USE-075) and fix interaction problems before polish (USE-076). This orders the work between this Part and the identity Parts.
+- If SUS is adopted for the beta, administer it as USE-077 describes, track it per task over releases (USE-078) and pair it with one open question.
+- Do not run A/B tests of details at beta traffic (USE-079); report comparisons with effect sizes and intervals (USE-080).
+- The landing page's live stats and the dashboard's "Stats" tiles are product metrics, not usability measures; completion counts say how many finished, not how many struggled.

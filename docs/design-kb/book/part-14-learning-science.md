@@ -817,7 +817,7 @@ The principle's core claim about cues is better supported than its popular corol
 For a product, the robust version of the principle is about the cues, not the room. A learner who has only ever met a checklist item as a line of text in a lesson may not retrieve it when the cue is an indication on a sim panel. Practice should use the cues the learner will actually meet.
 
 ::: myth
-**"Study in the same place you will be tested and the setting will bring the memories back."** The classic underwater-and-on-land diver study did not replicate in a 2021 attempt, and context effects shrink when good retrieval cues are present (see the evidence summarized with @tulving1973encoding). What transfers is the match between the cues present at learning and at recall, not the physical surroundings.
+**"Study in the same place you will be tested and the setting will bring the memories back."** The classic underwater-and-on-land diver study did not replicate in a 2021 attempt, and context effects shrink when good retrieval cues are present [@tulving1973encoding]. What transfers is the match between the cues present at learning and at recall, not the physical surroundings.
 :::
 
 ### Learning styles
@@ -891,3 +891,83 @@ Add "why" to procedures (LRN-068). Challenge `procedure` steps and checklists st
 Make cues look like the sim (LRN-070). The widgets can render the indications a learner will see; quiz prompts built on them practice retrieval with the right cue. Fly mode copy should describe what the learner sees, in the sim's terms.
 
 Keep study advice evidence-based (LRN-074). If LTF writes a page on how to use the course, it should say: recall instead of rereading, come back after a few days, mix topics. Make It Stick shows how to say it plainly; quote no numbers from it.
+
+## Measuring learning, not performance
+
+### Why the obvious measures mislead
+
+Every chapter in the memory half of this Part ends at the same warning. An immediate test favored rereading over retrieval, while a test two days later reversed it [@roediger2006testenhanced]. Blocked practice scored 89 percent during practice and 20 percent a week later, against 60 and 63 percent for mixed practice [@rohrer2007shuffling]. Massed presentation felt as good or better to learners who did worse with it [@kornell2008learning]. Soderstrom and Bjork's review generalizes the point: the primary goal of instruction is "relatively permanent changes in comprehension, understanding, and skills", and performance during instruction "is often an unreliable index" of whether those changes have occurred [@soderstrom2015learning]. The Bjorks put it as a rule of measurement: learning "can only be measured at a delay" (in their 2020 commentary, as quoted in the lane notes for @soderstrom2015learning).
+
+The research base itself shares the weakness. Mayer's preface to the third edition of *Multimedia Learning* says that "most research still focuses on learning in short-term studies with immediate tests in laboratory environments involving college students" and calls for longer studies in authentic settings [@mayer2021multimedia]. De Jong makes the same point about cognitive load studies with minutes of study time and no replay [@dejong2010cognitive]. LTF's learners study over weeks, beside a simulator, with full control of pace. The laboratory defaults in this Part are the best available starting point; LTF's own delayed data is the only way to know whether they hold.
+
+### What a learning product can observe
+
+LTF can see several kinds of evidence, and they are not equal.
+
+Immediate performance is what a learner does in the lesson or flight that taught it: the first `QuizBlock` answer in a section, the `QuizPanel` score, a challenge attempt right after its lesson. It reflects retrieval strength and is inflated by recency, blocking and repetition [@bjork2009making]. It is useful for finding confusing content, not for judging learning.
+
+Delayed performance is the same knowledge or skill tested after a gap, ideally in a later session: a recall item from Lesson 2.2 asked at the start of Lesson 2.4, or the first attempt at a challenge revisited after a week. This is the measure the testing and spacing literatures use [@roediger2006testenhanced; @cepeda2008spacing].
+
+Transfer performance is the knowledge applied in a new situation: a scenario question that was not asked before, a challenge at a different airport or with a random event. Seductive details harm transfer more than retention [@rey2012review], signaling helps transfer less than retention [@schneider2018meta], and the original worked-example effect was limited to problems of the same structure [@sweller1985use]. Transfer is where design differences show most and where many effects are smallest; it is the measure that matters for flying.
+
+Self-report covers ratings of effort, confidence or preference. Effort ratings are relative at best [@dejong2010cognitive], and confidence and preference point the wrong way in several studies [@roediger2006testenhanced; @karpicke2011retrieval; @kornell2008learning]. Self-reports are useful as data about the learner's beliefs, which can themselves be a target for feedback.
+
+### Comparing versions
+
+The heterogeneity in this literature is large. Rowland's testing-effect meta-analysis found that 18 percent of effects favored restudy [@rowland2014effect]; seductive-detail harm varies with format and pacing [@rey2012review]; the modality effect shrinks with learner pacing [@dejong2010cognitive]. An average effect is a reason to adopt a default, not a guarantee for a particular lesson. When LTF has a choice that matters (a mixed review set or a blocked one, a narrated widget or a printed one, an anecdote in a lesson or not), the useful question is which version produces better delayed and transfer results for LTF's learners.
+
+That requires two things the product mostly lacks today. The first is a delayed item to measure with: a recall question placed in a later lesson, or a revisited challenge. The second is persistent data: `quizStore.ts` keeps answers in `sessionStorage`, with signed-in answers recorded on the server per its comment, and `v1.md` Section 17.3 records first answers for analytics. Those first answers are the right raw material if they are kept across sessions and linked to the item.
+
+### Showing learners the gap between feeling and knowing
+
+Because learners misjudge their own learning, the measurement can be turned toward them. Make It Stick's "avoid illusions of knowing" theme supports a simple feature: ask the learner to predict how they will do before a set, then show the result beside the prediction [@brown2014make]. Roediger and Karpicke's repeated-study group predicted the best one-week recall and had the worst [@roediger2006testenhanced]; showing a learner that gap once is a direct way to make the case for retrieval. No study in the sources behind this Part tests the feature itself, so it is a candidate, not a proven method.
+
+### Honest claims
+
+Several of the sources warn against the claims learning products like to make. The testing effect is moderate and varies widely, so "learn x percent faster" is not supportable [@rowland2014effect]. Bahrick's permastore result is specific to school-learned language, so "you will never forget" is not either [@bahrick1984semantic]. Expanding intervals are not established as best [@cepeda2006distributed]. And desirable difficulty is a claim to measure, not a slogan: a product that says it "optimizes difficulty" should show the delayed data [@bjork2009making].
+
+::: {.rule #LRN-076 grade="A"}
+**Measure learning with delayed checks, and report them separately from in-lesson results.** Immediate performance and delayed retention dissociate and can reverse [@roediger2006testenhanced; @rohrer2007shuffling; @soderstrom2015learning]; learning can only be inferred at a delay.
+
+*In LTF:* the `DashboardPage` "Your progress" section can keep completion bars, and add a separate, plainly labeled line such as "Remembered after a week" built from delayed review items. Never merge the two into one number.
+:::
+
+::: {.rule #LRN-077 grade="B"}
+**Treat a challenge pass as evidence of performance on that day, and follow it with a check of understanding.** Problems can be solved, even repeatedly, without learning their structure [@chandler1991cognitive; @sweller1988cognitive], and performance during practice is an unreliable index of learning [@soderstrom2015learning].
+
+*In LTF:* after a passed challenge, the `DebriefForm` or `ResultView` can ask one question about why the procedure works. The tier badge stays a record of the flight, not of learning.
+:::
+
+::: {.rule #LRN-078 grade="B"}
+**Decide between two versions of a lesson, widget or practice set by delayed and transfer results, not by immediate scores or preference.** Effects in this literature vary widely between studies [@rowland2014effect; @rey2012review], and immediate measures and preferences point the wrong way [@kornell2008learning; @karpicke2011retrieval].
+
+*In LTF:* any experiment on lesson design uses a recall or scenario item in a later lesson as its outcome. Completion rate is a secondary measure to watch, not the deciding one.
+:::
+
+::: {.rule #LRN-079 grade="C"}
+**Offer learners a prediction before a review set and show it beside the result.** Learners overestimate what rereading and massing do for them [@roediger2006testenhanced; @kornell2008learning]; showing the gap is a direct counter [@brown2014make]. Graded C: the feature itself is untested here.
+
+*In LTF:* an optional "How many do you think you will get?" before a mixed review, with the result shown as "You predicted 3, you got 2", never as a grade.
+:::
+
+::: {.rule #LRN-080 grade="B"}
+**Make no quantitative claims about learning gains, retention or memory in product or marketing copy.** The underlying effects are moderate, variable and mostly measured in short laboratory studies [@rowland2014effect; @mayer2021multimedia]; long-retention findings are specific to their material [@bahrick1984semantic].
+
+*In LTF:* the landing page's stats row counts modules, lessons and challenges; keep it to counts of things that exist. Copy may say "spaced review helps you remember" and no more.
+:::
+
+::: {.rule #LRN-081 grade="C"}
+**Keep each learner's first attempt at every review item, with its date, as the primary learning record.** The first retrieval attempt is the learning event and the measurement [@roediger2006testenhanced]; later attempts after feedback measure re-exposure [@rowland2014effect]. Graded C: a data-design inference.
+
+*In LTF:* extend the `StoredAnswer` shape in `quizStore.ts` (which already has `firstAnswer` and `correctFirstTry`) with a timestamp, and persist it on the server for signed-in learners, so delayed checks can be compared with first exposure.
+:::
+
+### What this means for Learn to Fly
+
+LTF's progress model today is about completion and flight results: lessons marked complete, `ProgressBar` and `ProgressRing` by module, challenge tiers and percentages, attempts and "Gold results" in the dashboard stats. None of these measures whether something is remembered later. That is acceptable as long as nothing in the interface says otherwise. Keep completion as completion and tiers as flight records (LRN-077), and add a separate delayed measure when spaced review exists (LRN-076).
+
+Build the data before the feature (LRN-081). Persisting first answers with dates for signed-in learners turns every existing `QuizBlock` into a potential delayed check, as soon as items are reused in later lessons.
+
+Use delayed and transfer items to settle design arguments (LRN-078). Many choices in this Part are graded B, C or D because the evidence is short-term or contested. LTF can resolve some of them for its own learners at low cost.
+
+Keep claims modest (LRN-080). The beta banner, the "Draft · unverified" badges and the "not a pilot certificate" line show that honesty is already a trait of the product. Apply the same standard to claims about learning.

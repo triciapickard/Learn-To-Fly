@@ -1272,3 +1272,258 @@ and `Stopwatch`, and give both an undo `Toast` rather than a dialog (FRM-042, FR
 the `WidgetFrame` quiz state announce itself in words inside the canvas (FRM-045). Build the
 "Changed" step badge for procedures a learner has practiced (FRM-044). Add an interruption
 step to every usability session that involves a mode (FRM-046).
+
+## Onboarding: the active user and training wheels
+
+### The paradox of the active user
+
+Carroll and Rosson, working from user studies at IBM's User Interface Institute in the early
+1980s, described a pattern that every onboarding designer meets: new users do not read the
+manual or finish setup first; they start using the system at once to get their task done
+[@carroll1987paradox]. The paradox is that a little time spent learning up front would save
+time later, and people still do not spend it, because their motivation is the task, not the
+system. The chapter's lesson for designers is to stop designing for an idealized learner who
+studies first and to design for an active user who, in the words of one account of the
+argument, "acts on the system with limited knowledge of it". The chapter itself was not
+available for this Part; it is known from Nielsen's column on it and a lecture note, and
+Nielsen's account says later studies confirmed the pattern without citing them in the text.
+Taken literally, "users never read" is an overstatement: people do consult help once stuck,
+especially when it is short and sits at the point of need.
+
+LTF's learners are active users in the strongest sense. They have a simulator open, a
+controller in hand and a reason to be there, and many will try the airplane before finishing a
+lesson. The product's current entry already respects this: the landing page's primary action,
+"Start lesson 0.1", goes straight to the first lesson, and the hero note says Lesson 0.1 takes
+five minutes.
+
+### What the Minimal Manual showed
+
+The design response from the same research program is the best experimental evidence in this
+Part for how to teach a new system. Carroll and colleagues built a "minimal manual" for a word
+processor around four principles: focus on real tasks from the start, slash the verbiage,
+support recognizing and recovering from errors, and guide exploration
+[@carroll1987minimal]. They cut a commercial training manual to 45 pages, less than a quarter
+of its length, by removing repetition, previews, reviews, practice exercises, the index, the
+welcome introduction and the troubleshooting appendix. A learner quoted in the paper wanted
+"to do something, not learn how to do everything".
+
+In the first experiment, with 19 novices, the minimal-manual group needed 40 percent less
+learning time and completed 2.7 times as many performance subtasks as the group using the
+standard self-instruction manual. In the second, with 32 office workers who had little
+computer experience, minimal-manual learners completed 58 percent more subtasks and achieved
+93 percent more per unit time on the first three tasks. They also made 20 percent fewer
+errors, spent 10 percent less time recovering and used the recommended recovery methods 60
+percent more often, though those error differences were not statistically significant. The
+samples were small, the system was a 1980s word processor, and the two manuals differed in
+many ways at once, so the paper cannot say which feature produced the gain. Carroll has said
+there is no deductive theory of minimalist instruction, which puts the weight on testing.
+
+::: {.rule #FRM-047 grade="B"}
+**Make the first screen of a first run a real task, with explanation attached to the action
+rather than placed before it.** Task-first, low-verbiage instruction cut learning time and
+raised task completion in two experiments with novices [@carroll1987minimal], and new users
+act before they read [@carroll1987paradox]. The samples were small and the manipulation
+bundled, so the evidence supports the approach, not any one feature of it.
+
+*In LTF:* keep "Start lesson 0.1" as the landing page's primary action, and keep Lesson 0.1
+built around a first action in the sim within its first minutes. Do not add a welcome
+introduction, a "how to use this course" section or a preview of the curriculum before that
+action.
+:::
+
+::: {.rule #FRM-048 grade="B"}
+**Give every procedure step its checkpoint (what the learner should now see) and its recovery
+(what to do if they do not).** Explicit support for error recognition and recovery is one of
+the four minimalist principles, and it is how a learner coordinates the instructions with the
+system in front of them [@carroll1987minimal].
+
+*In LTF:* add optional `expect` and `ifNot` fields to challenge `procedure` steps in the
+content schema, rendered under each step in `FlyPanel` and `BriefTab` in `text-ink-2`. Their
+content follows the aviation-facts rules: sourced, tokenized, and marked with a `verify`
+callout until checked in the sim.
+:::
+
+### Training wheels
+
+Carroll and Carrithers tested a different response to novice errors: instead of explaining
+the system, make the troublesome parts of it unreachable [@carroll1984training]. Their
+training-wheels word processor blocked typical and troublesome error states. Learners using it
+learned faster, achieved more and did better on a comprehension post-test than learners on
+the full system, and the control group spent almost a quarter of its time recovering from the
+error states the training interface had blocked. A companion paper in Human Factors reported
+two further experiments, one on learning by doing and one on learning from the manual, in
+which the restricted version again improved learning efficiency. Only the abstracts were
+available for this Part, so secondary figures that circulate about the study (sample size,
+speed advantage, number of blocked errors) are left out. The design risk follows from the idea
+itself: blocking a function frustrates someone who needs it, so the interface must show what
+is unavailable and why. No controlled study of that cost was found.
+
+LTF already has the vocabulary for this. `LessonPath` and `Card` have a `locked` state (a
+dashed ring on the path). `WidgetFrame` carries a "Simplified model" badge, which tells the
+learner that the widget is a reduced version of the real thing. What the product does not yet
+do is restrict a widget's controls in early lessons and say when they open.
+
+::: {.rule #FRM-049 grade="B"}
+**In early lessons, show only the controls the current step needs, and label anything held
+back with what unlocks it.** Blocking common error states made novices learn faster and
+better, and the control group lost almost a quarter of its time to the errors that were
+blocked [@carroll1984training]. The evidence is strong for the principle and weak for any
+particular implementation.
+
+*In LTF:* widgets used in Module 0 and Module 1 accept a `controls` prop that limits which
+inputs are live; held-back inputs render disabled with `aria-disabled` and a one-line reason
+("Opens in Lesson 1.3"). The `locked` state on `LessonPath` always says what unlocks it.
+:::
+
+### When guidance turns into noise
+
+Guidance that helps a beginner can hurt someone who already knows the material. Kalyuga,
+Ayres, Chandler and Sweller reviewed experiments showing that techniques "highly effective with
+inexperienced learners can lose their effectiveness and even have negative consequences when
+used with more experienced learners" [@kalyuga2003expertise]. Integrated text that novices
+needed became redundant for more experienced trainees, who did better with the diagram alone;
+worked examples that beat problem solving for novices lost their advantage and then reversed as
+experience grew; gradual fading from examples into problems beat an abrupt switch. The
+mechanism they propose is that experts must reconcile the guidance with what they already know,
+and redundant information "is frequently difficult to ignore". The review comes from the
+theory's own proponents, many studies use subjective effort ratings, and full reversals are
+rarer than simple disappearance of the benefit.
+
+LTF's audience includes long-time sim players, student pilots and returning learners
+alongside true beginners. For them, a mandatory walkthrough is not neutral: it costs time and
+attention that the evidence says may make learning worse.
+
+::: {.rule #FRM-050 grade="B"}
+**Fade guidance as the learner progresses, and give experienced learners a way to skip or
+collapse it.** Novice-oriented guidance loses its benefit and can reverse for more
+experienced learners, and redundant explanation is hard to ignore [@kalyuga2003expertise].
+
+*In LTF:* any first-run help, coach mark or setup screen has a visible skip. Callouts that
+repeat material from an earlier lesson collapse to their title after the learner has completed
+that lesson. Later checklists in `ChecklistRunner` show items without the explanatory hints
+that the first exposure carried.
+:::
+
+### What practitioner analysis says about tours and coach marks
+
+Kendrick's Nielsen Norman Group analysis of mobile onboarding argues that onboarding adds
+interaction cost and strains memory, and that teams should avoid creating it whenever possible
+and fix the usability problems instead [@kendrick2020mobileapp]. It sorts first-run help into
+three components. Deck-of-cards tutorials (a carousel of explanatory screens) did not improve
+task performance in earlier NN/g research that the article cites; if one is used it needs a
+highly visible skip, few cards and one concept per card. Interactive walkthroughs are worth it
+only when the workflow is new or unfamiliar. Coach marks (overlays pointing at controls) are
+often nice to have rather than needed, and should be timely and unobtrusive; one weather app
+is criticized for highlighting every interaction on a single screen. The article reports no
+study numbers or sample sizes and the earlier research method was not read, so its
+recommendations are expert judgment. They agree with the older experimental line from
+Carroll.
+
+::: myth
+**"New users need a product tour before they start."** The experimental evidence points the
+other way: novices learned faster from task-first material with the preview and welcome
+sections removed [@carroll1987minimal], new users skip up-front material anyway
+[@carroll1987paradox], and carousel tutorials did not improve task performance in the testing
+that practitioner analysis cites [@kendrick2020mobileapp].
+:::
+
+::: {.rule #FRM-051 grade="C"}
+**Do not put a carousel tutorial or a tour of the site's sections in front of the first
+task.** Deck-of-cards tutorials did not help task performance in the research cited by
+practitioner analysis, and walkthroughs are justified only for unfamiliar workflows
+[@kendrick2020mobileapp].
+
+*In LTF:* the planned onboarding screen "Your flight bag" (v1.md Section 20.13, a card per
+site area with "Next" moving a highlight) is a tour of this kind and should not be built
+before the first lesson. The same information belongs where each area is first used: the
+"Fly it" challenge card in a lesson, the Reference link from a lesson glossary chip.
+:::
+
+::: {.rule #FRM-052 grade="C"}
+**Use at most one coach mark per screen, on first use only, attached to the one control that
+is not self-explanatory, and never show it again once dismissed.** Coach marks should be
+timely and unobtrusive, and highlighting every interaction on a screen is the named failure
+[@kendrick2020mobileapp]; repeating a dismissed prompt is nagging [@gray2018dark].
+
+*In LTF:* the one candidate is `FlyModePage` on its first open: a single dismissible tip on
+the step checkboxes ("Tap a step when it's done. Tap again to undo."). Store the dismissal
+like `ltf-beta-banner`.
+:::
+
+### Confidence comes from doing
+
+Bandura's account of self-efficacy ranks its sources by dependability: performance
+accomplishments (the person's own successes) first, then watching others succeed, then verbal
+persuasion, then physiological state [@bandura1977selfefficacy]. Persuasion produces weaker
+expectations than success because it provides no experience to rest on, and it is easily
+undone by a failure. The evidence comes from small clinical studies of phobia treatment, and
+the ranking rests partly on later work not reviewed here, but the direction is consistent with
+the minimal-manual results: people who do real tasks early finish more of them.
+
+For onboarding this means the goal of a first run is a first real success, as early as the
+course allows, and not reassurance. LTF's landing headline ("Yes, you can fly a plane.") is a
+persuasion line, which is fine as a promise on a marketing page; the product's job is to make
+it true within the first lesson.
+
+::: {.rule #FRM-053 grade="B"}
+**Design the first run to end in a real, noticeable success the learner achieved, and do not
+substitute encouragement copy for it.** Mastery experiences are the most dependable source of
+self-efficacy and persuasion the weakest [@bandura1977selfefficacy].
+
+*In LTF:* the first completion of a Module 0 lesson or challenge shows what the learner did
+(the steps ticked, the time flown) in the completion panel, not a generic "Great job!". Keep
+encouragement in the landing hero, where it is a promise, and out of result screens, where it
+should be a record.
+:::
+
+### The planned onboarding, measured against the evidence
+
+The plan describes a five-screen `/welcome` flow (v1.md Section 20.13, decision D-27) that is
+not in the code: a welcome screen with an illustration; Learn to Fly settings (controller,
+panel, theme); an optional sim setup that repeats Lesson 0.2; the "Your flight bag" tour; and
+an account offer for signed-out visitors. Several of its features match the evidence well. It
+is never forced, deep links bypass it, every screen can be skipped to Lesson 0.1 with
+defaults, choices are saved and carried into a new account, and it can be run again from the
+account page. Those choices answer FRM-011, FRM-050 and FRM-054.
+
+Three parts conflict with the evidence in this chapter. The welcome screen and the tour are
+the up-front explanation that the minimal manual removed and that practitioner analysis
+advises against (FRM-047, FRM-051). The account offer on screen 5 asks before the learner has
+anything to save, which FRM-006 places at "Mark lesson complete" instead. The settings screen
+is the strongest part, because the panel choice changes lesson content, but it could equally
+be asked the first time a lesson depends on it, with the default stated. Changing the plan is
+the owner's decision, so any of these departures needs a Decision Log entry in `v1.md`.
+
+::: {.rule #FRM-054 grade="C"}
+**Make every first-run step skippable straight to the first lesson with sensible defaults,
+and measure how many learners skip it before keeping it.** Practitioner analysis recommends a
+visible skip and measuring use of first-run help [@kendrick2020mobileapp], and active users
+will skip it regardless [@carroll1987paradox].
+
+*In LTF:* if any `/welcome` screen is built, log skip and completion per screen (without
+identifying learners) and review after the first month of beta. A screen that most learners
+skip is removed or moved into the lesson where its content is needed.
+:::
+
+::: {.rule #FRM-055 grade="C"}
+**Put any step that is critical to safety or to the simulator setup inside the task that
+needs it, never only in a "read me first" screen.** Learners skip up-front material to get to
+the task [@carroll1987paradox], so anything placed there will be missed by the people who need
+it.
+
+*In LTF:* the sim assistance settings that Module 0 depends on live in Lesson 0.2, where the
+plan already puts them, and the planned onboarding screen 3 links to that lesson rather than
+holding its own copy. A challenge whose setup matters shows it in the `BriefTab` "Sim setup"
+list before "I'm set up, start flying".
+:::
+
+### What this means for Learn to Fly
+
+Keep the direct "Start lesson 0.1" entry, the account-optional first lesson, the `locked`
+state on `LessonPath` and the "Simplified model" badge on `WidgetFrame`. Change the content
+model so procedure steps carry a checkpoint and a recovery line (FRM-048), and so early
+widgets can hold back controls with a stated unlock (FRM-049). Collapse repeated callouts for
+learners who have passed the lesson that introduced them (FRM-050). Add one first-use tip to
+`FlyModePage` and nothing else (FRM-052). Before building `/welcome`, record a decision on the
+welcome screen, the tour and the position of the account offer (FRM-051, FRM-006), and
+instrument whatever is built (FRM-054).

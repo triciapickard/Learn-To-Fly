@@ -750,3 +750,103 @@ Keep: per-attempt history in `HistoryTab`; "Best: TierBadge n%" on the challenge
 Change: if attempt charts are added to `DashboardPage` or `ResultView`, follow LAW-049 (individual points, no fitted line) and LAW-048 (no predictions). Review result copy against LAW-050.
 
 Build: an analytics note that course-wide learning curves are aggregates and will look smoother than any learner's experience, so they inform content review, not individual pacing (LAW-051).
+
+## Response time and the pace of the conversation
+
+### "Response time to what?"
+
+Robert Miller's 1968 paper is usually cited as the origin of the response-time limits in design guidance, but what it contributes is a question [@miller1968response]. Writing from IBM, he set out to bring order to a literature that, in the abstract's words, abounds in controversy about the limits of system response time, and named the main obstacle as the question "Response time to what?" Different human purposes and actions have different acceptable or useful response times. Rather than one limit, the paper classifies kinds of transaction; Shneiderman describes it as "a lucid analysis of response time issues and a list of 17 situations in which response times might differ" [@shneiderman1984response]. The paper's own table of categories could not be read for this book, so its values are not reported here.
+
+Shneiderman's 1984 review of the experimental and field literature drew three conclusions in its abstract: frequent users prefer response times under a second for most tasks; productivity rises as response time falls, but error rates rise with response times that are too short or too long; and users "pick up the pace" of the system [@shneiderman1984response]. He reports Miller's "frequently mentioned 2-second limit" as appropriate for many tasks, while noting that for actions like turning a car's wheel, pressing a key or changing a television channel people expect a response within a tenth of a second. Expectations, he argues, depend on previous experience, on enormous variation between individuals and tasks, and on adaptation: people change how they work when the system is slow. Field studies of programmers counted more interactions per hour at shorter response times (from about 200 to 340 per hour as response time fell from 3.0 to 0.5 seconds in one study), but Shneiderman cautions that these count interactions, not productivity; a laboratory study found that response times of 0, 5 and 10 seconds made no difference to novices or experienced programmers debugging a short program. Delays may or may not raise error rates between 3 and 15 seconds, and probably raise them above 15 seconds if people must stay at the keyboard. He found little evidence that very short response times reduce errors.
+
+### Control and conversation
+
+Dabrowski and Munson reviewed four decades of this work and proposed dropping the search for one table of acceptable delays [@dabrowski2011years]. Interactions, they suggest, fall into two kinds. In control tasks the user is directly steering something, and immediate response is needed for optimal performance. In conversational tasks the exchange is turn-taking, and some delay may even be necessary to keep the pacing of the conversation; where and how long such delays should be depends on task complexity and expectations, and they call for research on the limits of delay detection. This is a reorganizing hypothesis from a review, known here from its abstract, but it is the most useful frame for deciding where speed matters.
+
+::: {.rule #LAW-053 grade="C"}
+**Classify each interaction as control or conversational, and keep every control interaction local and immediate, with no network round trip between input and visible feedback.** Control tasks need immediate response; conversational tasks tolerate, and may benefit from, consistent short delays [@dabrowski2011years; @miller1968response; @shneiderman1984response]. The scheme is a review's proposal, not a tested law, hence C.
+
+*In LTF:* control interactions are slider drags in widgets, checklist and step ticks, quiz option selection, tab switches, `ThemeToggle` and the `Stopwatch`; they update in the client first. Conversational interactions are loading a lesson, submitting a debrief (the server recomputes the tier), signing in and saving account settings; they may wait, with a state shown.
+:::
+
+### The three limits as a convention
+
+Nielsen's widely quoted limits put the categories into numbers [@nielsen1993response]. At about 0.1 second users feel the system reacts instantaneously, the limit for the feeling of directly manipulating objects, and no feedback is needed beyond showing the result. At about 1 second they notice the delay but their flow of thought stays uninterrupted; the 2014 update adds that delays over a second should show the computer is working. At about 10 seconds they reach the limit of attention on the dialogue; longer operations need a percent-done indicator and a clearly signposted way to interrupt, and are acceptable mainly at natural breaks in the task. The article cites Miller (1968) and Card and colleagues (1991) as its sources.
+
+Card, Robertson and Mackinlay's 1991 paper gives the engineering origin of the same three constants [@card1991information]. To keep the illusion of animation the screen must be repainted at least every 0.1 second, and their system's "Governor" lowered rendering quality (for example leaving off text during motion) when the cycle time grew too long. An unprepared response to a stimulus takes about a second, so agents gave status feedback at intervals no longer than that, and animations that preserve object constancy were designed to take about a second. A unit task should take about 10 seconds (the paper says 5 to 30). These are order-of-magnitude constants drawn from cognitive science, a decade apart, not thresholds with confidence intervals.
+
+The limits could not be traced to explicit statements in Miller's paper, and the field evidence shows far more variation than three fixed values imply [@shneiderman1984response; @dabrowski2011years]. They are a convenient budget, safe to use when labeled as convention.
+
+::: {.rule #LAW-054 grade="C"}
+**Show a visible response to every tap, click and key press within about a tenth of a second, even when the full result takes longer.** The 0.1 second limit for the feeling of direct manipulation is an expert convention grounded in perceptual constants [@nielsen1993response; @card1991information]. Google's interaction metric treats 100 ms as the research ideal and sets its "good" threshold at 200 ms for achievability [@google2024web].
+
+*In LTF:* every `Button` shows its pressed state (`active:shadow-press`) and, for slow actions, the `loading` spinner; ticks in `FlyPanel` and `ChecklistRunner` update local state first; `useUpdateLessonProgress` keeps its optimistic update and rollback. Interaction to Next Paint on lesson and fly-mode pages is monitored in the field.
+:::
+
+::: {.rule #LAW-055 grade="C"}
+**Keep page and step transitions within about a second, and show a loading state that preserves layout whenever they may take longer.** Up to about a second the flow of thought is preserved; beyond it users should be told the system is working [@nielsen1993response; @card1991information]. A convention, hence C.
+
+*In LTF:* lazy-loaded routes show `PageSkeleton` inside a `LoadingRegion`; widgets show `Skeleton h-72` while their chunk loads. Skeletons reserve the space the real content will take, so the lesson text does not jump when a widget arrives (Google's layout-shift metric measures this) [@google2024web].
+:::
+
+### Long waits: tell the truth about progress
+
+Myers's 1985 experiment gave 48 volunteers two versions of a query system with delays that were constant (10 seconds) or random (1 to 17 seconds), with or without a percent-done indicator [@myers1985importance]. The preference for progress indicators was highly significant, and 86.1 percent of participants liked them. The paper also failed to replicate an earlier result that people prefer constant to variable response time. Myers argues that indicators matter most for novices, who may think the computer has crashed, and that idle waiting is unpleasant partly because people cannot plan around a wait of unknown length.
+
+Harrison and colleagues showed that how a bar moves changes perceived duration: in 5.5 second trials, bars that paused near the end felt slower than linear ones and accelerating bars felt faster, consistent with peak-and-end effects [@harrison2007rethinking]. A later note found that backwards-moving ribbing reduced perceived duration by about 11 percent [@harrison2010faster]. Both raise an ethical line: tuning a bar so a real wait feels better is acceptable; making a stalled process look like progress is not.
+
+::: {.rule #LAW-056 grade="B"}
+**For any operation that may take more than a few seconds, show honest progress (a percent-done bar only when the fraction is real) and a way to cancel or carry on elsewhere.** Progress indicators were strongly preferred in a controlled study, especially by novices [@myers1985importance]; waits beyond about 10 seconds need percent-done feedback and an interrupt [@nielsen1993response]; pauses near the end of a bar lengthen perceived time [@harrison2007rethinking]. Never hold a bar at the end while the work has stalled.
+
+*In LTF:* LTF has few long operations today. If one is added (an export, a large sync, a generated report), it uses a determinate `ProgressBar` with `aria-valuetext` only when the client knows the fraction, an indeterminate indicator otherwise, and a "Cancel" or "Keep reading while this finishes" option.
+:::
+
+### Patience after failure
+
+Nah's study is often quoted for a "2 second" tolerance, but what it measured was how long people waited when a link did not work [@nah2004study]. In the account given by Galletta and colleagues, people with feedback (a status bar) waited on average 38 seconds after the first broken link before giving up, against 13 seconds without; on later attempts they waited 7 and 3 seconds. Feedback prolongs patience, and patience shrinks with each failure. Galletta's own experiment with 196 students and fixed delays of 0 to 12 seconds found that delay hurt performance, attitudes and intentions, but non-linearly and with small explained variance (about 2, 5 and 7 percent), with declines flattening from about 4 seconds for performance and intentions and about 8 for attitudes [@galletta2004web]. Delay costs something at every length, with diminishing marginal effect; there is no cliff.
+
+::: myth
+**"Users abandon a page after 2 seconds," and its cousin, "the 400 ms Doherty threshold for productivity."** The 2 second figure comes from patience with broken links, not from waiting for pages that load [@nah2004study], and delay effects in a controlled study were real but modest and non-linear [@galletta2004web]. The 400 ms figure, attributed to a 1982 IBM report, could not be traced to a primary or scholarly source; only vendor and design-blog pages repeat it [@dabrowski2011years]. Neither belongs in an LTF document as a research finding.
+:::
+
+::: {.rule #LAW-057 grade="B"}
+**When a load or save fails or hangs, switch quickly from a spinner to a plain statement of what happened and a retry or a way to continue without it.** Patience after a failure is short and shrinks with each retry, and feedback extends it [@nah2004study]; delay hurts with diminishing effect rather than at a threshold [@galletta2004web]. The figures come from single laboratory studies, hence B.
+
+*In LTF:* `ErrorState` ("Something went wrong", "Try again") covers page loads. A widget that fails to load inside `WidgetFrame` shows its error boundary with the "Describe this diagram" text still available, so the lesson can continue. A failed `useUpdateLessonProgress` rolls back the optimistic state and should also raise an error `Toast` so the learner knows the completion was not saved.
+:::
+
+### Pace, consistency and the beat after feedback
+
+Two of Shneiderman's points bear on learning screens [@shneiderman1984response]. Very fast responses are not automatically better: he found little evidence of fewer errors under a second and warned of hasty work at a fast pace. And users adapt to the system's pace, so variation itself unsettles. Myers's failure to replicate the preference for constant response time is a reason to grade the consistency claim as contested [@myers1985importance].
+
+::: {.rule #LAW-058 grade="C"}
+**Do not auto-advance a learner immediately after feedback; let them read the result and move on themselves.** There is little evidence that very short responses reduce errors, and fast pacing can encourage hasty decisions [@shneiderman1984response]; in conversational exchanges some delay may help pacing [@dabrowski2011years].
+
+*In LTF:* `QuizBlock` shows "Correct!" or "Not quite." with the explanation and waits; no quiz, checklist or debrief step moves on by itself. Success and info `Toast`s auto-dismiss at 6 seconds, which is acceptable because they are confirmations; errors persist.
+:::
+
+::: {.rule #LAW-059 grade="D"}
+**Prefer consistent response times to ones that are sometimes instant and sometimes slow, but do not slow fast paths to achieve it.** Users adapt to a system's pace and variability is reported to unsettle them [@shneiderman1984response], but a controlled study failed to find a significant preference for constant over variable delay [@myers1985importance]. Contested, hence D; the safe reading is to remove slow outliers, not to add delay.
+
+*In LTF:* performance work targets the slow tail (the 75th percentile and above in field data) on lesson and challenge pages before shaving the median [@google2024web].
+:::
+
+### Measure in the field
+
+Google's Core Web Vitals give a field-measured budget: Largest Contentful Paint at 2.5 seconds or less, Interaction to Next Paint at 200 ms or less, Cumulative Layout Shift at 0.1 or less, each at the 75th percentile of page loads, segmented by mobile and desktop [@google2024web]. The threshold article is open that the "good" values reflect what a large share of real sites can reach, not a proven human optimum: research pointed to 100 ms for interaction feedback, and 200 ms was chosen for achievability. The metrics are defined and revised by one vendor.
+
+::: {.rule #LAW-060 grade="C"}
+**Measure interaction latency, load time and layout shift on real learners' devices, and set a stricter internal interaction target for fly mode than the public threshold.** Field measurement is the stated basis of the vitals and lab tests do not replace it [@google2024web]; response-time research urges measuring real delays rather than relying on laboratory thresholds [@dabrowski2011years]. The thresholds themselves are a vendor's pragmatic choices, hence C.
+
+*In LTF:* real-user monitoring records INP, LCP and CLS by route; fly mode's internal INP target is closer to the 100 ms research ideal than to the 200 ms "good" line, because the learner's glances are short.
+:::
+
+### What this means for Learn to Fly
+
+LTF's architecture is already biased the right way: content and quizzes are checked in the client (`checkQuizAnswer` in `shared/quiz.ts`), progress uses optimistic updates, the landing page renders from static fallback data while the API loads, and flight state for a challenge lives in session or local storage (`features/challenges/storage.ts`), so ticking a step never waits for the network.
+
+Keep: local-first control interactions (LAW-053, LAW-054); skeletons that reserve space (LAW-055); persistent error toasts with `role="alert"`; success toasts that dismiss themselves.
+
+Change: surface failed optimistic saves to the learner (LAW-057); add field measurement by route (LAW-060). Motion tokens (`fade-in`, `pop-in` and `rise-in` at 200 ms, `tier-pop` at 400 ms) sit inside the one-second object-constancy budget [@card1991information]; keep transitions under it.
+
+Build: a written performance budget for the client that cites the vitals as current vendor thresholds with their date, and the 0.1, 1 and 10 second limits as conventions, with no "Doherty threshold" (the myth above). The motion and perceived-performance Part of this book covers animation timing and progress display in more depth.

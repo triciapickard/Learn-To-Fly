@@ -679,3 +679,167 @@ What to keep: the glossary's `related` and `lessons` links; "Recommended lessons
 What to change: render prerequisites and "used later in" lists on lessons (NAV-054); add neighbors to airport pages (NAV-055); lead with the review link after a low score (NAV-057).
 
 What to build: a one-step lookup row in Fly mode (NAV-059), and outcome measures for learning pages that are not time-based (NAV-058).
+
+## Global navigation, menus and small screens
+
+The global navigation bar is the one piece of structure every page shares, which makes it both the most powerful wayfinding device in a product and the one most often overloaded. The questions are what goes in it, how it opens when there is more to show than fits, and how it survives a phone.
+
+### What belongs in the bar
+
+Krug's list of persistent elements gives the bar its job: site ID, the main sections, a way home and, on most sites, search [@krug2014dont]. The shape evidence from the depth studies favors a short top level over long, well-grouped hub pages (NAV-025) [@kiger1984depth; @zaphiris2000depth]. Together they argue for a bar that names the districts and nothing else, with every district's contents laid out on its hub.
+
+Power and colleagues add a reason that is easy to overlook. In task-based tests with 32 blind users on 16 sites, only 50.4 percent of the 1,383 problems observed were covered by any WCAG 2.0 success criterion, and a review of the study lists an overly complex information architecture among the problem types the guidelines do not cover, together with content found where users do not expect it and content not found where they do [@power2012guidelines]. The 50.4 percent figure depends on coding choices and should be read as an order of magnitude. The lesson is that a structure can pass an accessibility audit and still defeat the people who depend on it most, and that simplicity of structure is itself an accessibility property.
+
+::: {.rule #NAV-060 grade="C"}
+**Keep the global bar to the product's districts plus account controls, and add an item only when a new district is created, never for a content type inside one.** Persistent navigation names the sections [@krug2014dont]; a short top level over broad hubs is the shape the depth studies favor [@kiger1984depth]; and over-complex architecture is one of the problems accessibility guidelines miss [@power2012guidelines]. Craft consensus.
+
+*In LTF:* `PRIMARY_NAV` holds three items (Learn, Challenges, Reference), followed by `ThemeToggle` and account controls. Keep it at three, plus the signed-in dashboard item of NAV-052. Glossary, Checklists, Airports and Resources are content types inside Reference and stay there.
+:::
+
+### Menus that open
+
+When a section has more entries than a bar can show, designers reach for a dropdown. Nielsen and Li argue that large two-dimensional panels, mega menus, work better on sites with many options, because they show all choices at once without scrolling, support grouping through layout and typography, and avoid the short-term memory load of ordinary dropdowns that hide most options [@nielsen2017mega]. They give precise guidance for hover-opened panels: wait for the pointer to rest for 0.5 seconds before showing hover-dependent content, display the panel within 0.1 second, keep it visible until the pointer has been outside both the bar item and the panel for 0.5 seconds, then remove it in under 0.1 second; the best implementations detect a pointer moving toward the panel and keep it open, which solves the "diagonal problem." They add that a mega menu should contain nothing more complex than a click, should not hide the search box, and should have a plain fallback: each top-level item should link to an ordinary page listing all its options in accessible HTML.
+
+Their accessibility notes are specific [@nielsen2017mega]: dynamic elements must be coded for screen readers; magnifier users may see only part of a menu, so groups need strong borders; tiny targets cause touch errors; and finicky show-and-hide behavior hurts people with motor impairments. The article reports that user testing shows mega menus work but gives no design, participant count or metrics, and no experimental basis for the timing values. Treat them as defensible defaults for large sites.
+
+For a product of LTF's size, the right conclusion from the same article is that a menu is unnecessary. The benefit Nielsen and Li claim for mega menus, all options visible at once and grouped, is exactly what a hub page provides, without hover mechanics, timing thresholds or a second interaction to learn.
+
+::: {.rule #NAV-061 grade="C"}
+**Show a section's contents on its hub page rather than in a dropdown or mega menu, until the product has more top-level destinations than a hub page can show.** Mega menus are recommended because they show all options at once with grouping [@nielsen2017mega], which a hub page does without hover mechanics; their own authors recommend a plain page listing every option as the accessible fallback. Craft consensus.
+
+*In LTF:* the header links go straight to `/learn`, `/challenges` and `/reference`, each a hub. Do not add dropdowns to them. If a menu is ever needed, build it from the hub's own data so the two cannot diverge.
+:::
+
+::: {.rule #NAV-062 grade="C"}
+**Never make navigation depend on hover; open any panel on click or tap, and if hover opening is added for pointers, follow the published delay and dwell values.** Hover menus fail on touch screens and are hard for people with motor impairments, and Nielsen and Li's timing values (0.5 second rest before opening, display within 0.1 second, 0.5 second grace on leaving) exist to tame them [@nielsen2017mega]. Expert guidance without reported experiments.
+
+*In LTF:* learners use tablets and phones beside the simulator. The `UserMenu` (a Radix `DropdownMenu`) and the glossary `Popover` chips open on click or tap; keep it that way, and keep tooltips (`Tooltip`) for supplementary text only, never for navigation.
+:::
+
+### Search in the bar
+
+Krug includes search among the persistent elements [@krug2014dont], and Nielsen and Li warn against hiding the search box inside a menu [@nielsen2017mega]. Whether a product needs global search depends on its content and tasks (NAV-044) [@rosenfeld2015information]. LTF's lookup content lives in Reference, and its search box lives on the reference hub, with "/" focusing it from anywhere on that page. A learner on a lesson page who wants a term must either use the glossary chips or go to Reference first.
+
+::: {.rule #NAV-063 grade="C"}
+**Keep the search entry point visible, never inside a menu, and once search covers lessons, reach it from every page.** Search is a persistent element in Krug's list [@krug2014dont], it should not be hidden in a menu [@nielsen2017mega], and berrypicking learners switch to search mid-task [@bates1989design]. Craft consensus.
+
+*In LTF:* today the search box is visible on `/reference` only. When lessons are added to the index (NAV-044), add a compact search control to `Header` that opens the same `ReferenceSearch` (and make "/" open it from any page, not only the hub). Until then, the header's Reference link is the search entry point, and its label should stay "Reference."
+:::
+
+### The same structure on a phone
+
+Below the `md` breakpoint LTF's header collapses its three links into a 44 px hamburger that opens a 320 px right-hand `Drawer`, with the same three `PRIMARY_NAV` items and, below a rule, Dashboard and Account (signed in) or Log in and Sign up. The `ThemeToggle` stays in the bar. Consistency across sizes matters for the same reason it matters across pages: the same thing should be called and placed the same way [@nielsen1994enhancing].
+
+::: {.rule #NAV-064 grade="C"}
+**On small screens, keep the same navigation items in the same order and with the same labels as on large screens, and keep the current-location marker visible in the collapsed menu.** Consistency ("same thing, same way") was the most frequent explanation of usability problems in Nielsen's analysis [@nielsen1994enhancing], and the you-are-here indicator is one of the persistent elements [@krug2014dont]. Craft consensus.
+
+*In LTF:* the `Drawer` reuses `PRIMARY_NAV` and `navLinkClasses`, so labels, order and the active underline match the desktop bar. Keep it that way. One difference matters: on phones the breadcrumb shows only the parent ("‹ Module 3"), so the drawer is the only place the full section is visible. Leave the active underline on in the drawer, and consider naming the current section beside the hamburger on lesson pages.
+:::
+
+::: {.rule #NAV-065 grade="C"}
+**Make every navigation target at least 24 by 24 CSS pixels, and size primary navigation for touch beside the simulator at 44 pixels high.** WCAG 2.2 success criterion 2.5.8 sets a 24 by 24 CSS pixel minimum for pointer targets, with exceptions for spacing, inline text and equivalents [@w3c2023wcag], and Nielsen and Li note that tiny targets cause touch errors in menus [@nielsen2017mega]. The 24-pixel floor is a standard; the larger size for LTF's second-screen use is a craft choice.
+
+*In LTF:* header links are `min-h-11` (44 px) and the hamburger is `size-11`. Breadcrumb links are inline `text-sm` and fall under the inline-text exception, but on phones the single parent link is the main way up, so give it a 44 px tall hit area. The glossary chips (`min-h-8`, 32 px) pass the minimum.
+:::
+
+### The footer as supplemental navigation
+
+Rosenfeld and colleagues distinguish embedded navigation from supplemental navigation such as site maps and indexes [@rosenfeld2015information]. A footer is the usual home for supplemental navigation: it is where people look when the main bar did not offer what they wanted. LTF's footer (`FOOTER_NAV`) holds About, Disclaimer, Privacy, Terms and Roadmap, plus the simulation-only disclaimer.
+
+::: {.rule #NAV-066 grade="C"}
+**Use the footer as a compact site index: repeat the hubs and the most used destinations inside them, below the legal and project links.** Supplemental navigation gives a second route to content when embedded navigation fails [@rosenfeld2015information], and berrypicking learners use whichever route is nearest [@bates1989design]. Craft consensus.
+
+*In LTF:* add a short index to `Footer`: Learn, Challenges, Reference, and under Reference the Glossary, Checklists, Speeds, Airports and Resources. That gives every page a one-step route to each reference page, which the header deliberately does not.
+:::
+
+### What this means for Learn to Fly
+
+LTF's global navigation is already the small, honest kind the evidence favors: three districts, direct links to hubs, no hover menus, the same items in the phone drawer. The decisions here are mostly about holding the line as content grows (no new header items for content types, no dropdowns) and about two additions: a dashboard item for signed-in learners and, once lessons are searchable, a search control in the header.
+
+What to keep: three `PRIMARY_NAV` items linking to hubs; the `Drawer` reusing the same items and classes; click-to-open menus and popovers; 44 px header targets.
+
+What to change: give the phone breadcrumb parent a 44 px hit area (NAV-065); add a reference index to the footer (NAV-066).
+
+What to build: a header search control and site-wide "/" shortcut once lessons are indexed (NAV-063).
+
+## Researching the structure
+
+Every rule in this Part leaves something to test. The menu studies fix the shape but not the labels; the scent models predict choices from words but were not fitted to LTF's words; the vocabulary problem says the team's words are probably wrong without saying which ones. The methods below are how a small team finds out, cheaply and before learners do.
+
+### Card sorting
+
+Spencer's book is a practical guide to card sorting: choosing the method, the content and the participants, making the cards, running the sort, analyzing the data and applying the results [@spencer2009card]. A reviewer summarizes its central message as that card sorting is a tool and "you are the one who is doing the thinking": it informs decisions but does not replace them. The methods it compares are open and closed sorts, individual and group sorts, and in-person and software-based sorts, with hybrid sorts and remote sessions also covered. In an open sort participants create and name their own groups, which is generative; in a closed sort they place cards into predefined groups, which tests whether the names work.
+
+The reviewer singled out the chapter on choosing content as the most valuable: how to select representative items from a large site, how to handle a mix of content and functions, and how to write card labels that do not steer people toward particular groups; he attributed the failure of his own first sort to ignoring that advice [@spencer2009card]. Analysis in the book centers on a spreadsheet technique Spencer refined over several projects, with only cursory treatment of statistics. The book is craft advice, not research; the review rated it 3.5 stars, practical for newcomers and thin on theory. Beyond the sources, a caution applies to any sort: results depend on which cards are chosen, participants do not use the product while sorting, and a sort shows groupings, not task success.
+
+::: {.rule #NAV-067 grade="C"}
+**Before naming or regrouping modules, run an open card sort with beginners using one card per lesson, written in plain language that does not give away the grouping.** Open sorts reveal how people group content and what they call the groups, and card wording that steers participants is the most common way sorts fail [@spencer2009card]. The vocabulary problem predicts that the participants' names will differ from the team's [@furnas1987vocabulary]. Craft method.
+
+*In LTF:* write each card from the lesson's summary, not its title, so that aviation terms in titles ("Slow flight", "Stalls") do not hand the answer to the sorter. Test one course at a time; Course 1 (M0 to M8) is the first candidate.
+:::
+
+::: {.rule #NAV-068 grade="C"}
+**Use sort results to set labels and groupings, never the order of the course.** Spencer's point that the designer does the thinking [@spencer2009card] matters doubly for a course, whose sequence encodes prerequisites and safety progression that a sort cannot see. Craft rule.
+
+*In LTF:* a sort may show that beginners group "Ground operations" with "Getting started"; that can inform the module's title and summary, but the order in `modules.yaml` stays a curriculum decision, recorded in the plan.
+:::
+
+### How many participants
+
+Nielsen reported a resampling study by Tullis and Wood, who had 168 users complete a card sort and then compared random subsets of different sizes with the full-sample result [@nielsen2004card]. The correlation with the full result was 0.75 for 5 users, 0.90 for 15, 0.95 for 30 and 0.98 for 60; Nielsen estimated about 0.93 for 20. Gains flatten after about 15. Tullis and Wood recommended 20 to 30 users; Nielsen recommended 15 for most projects and 30 for large ones, and said his teams had good results with as few as 12 when participants were hard to recruit. He contrasted this with usability testing, where about 5 users are typical, because card sorting is generative and needs more people for stable results.
+
+His caveats are part of the finding [@nielsen2004card]. It is one study of one company's content, and he asked for replications; the analysis was purely quantitative and ignored participants' comments; similarity scores should not be the only basis for an architecture; and iterating with usability evaluations of a draft design is cheaper than enlarging a card sort. The resampling method measures how stable the similarity scores are, not whether the resulting structure works.
+
+::: {.rule #NAV-069 grade="B"}
+**Plan about 15 participants for a card sort that will set structure, and treat a sort of 5 as a pilot that finds gross problems only.** In Tullis and Wood's resampling of 168 users, 15 participants correlated 0.90 with the full result and 5 only 0.75 [@nielsen2004card]. The grade is B: one study of one information space, unreplicated, measuring stability rather than quality.
+
+*In LTF:* 15 beginners is a realistic recruiting target for a free course in public beta. If only 8 to 12 can be found, run the sort and confirm the structure with a task test (NAV-071) rather than drawing firm conclusions from the similarity matrix.
+:::
+
+::: {.rule #NAV-070 grade="C"}
+**Recruit people who match the audience's knowledge: for LTF, adults who have never flown, not instructors, pilots or experienced simulator users.** Groupings and names depend on what participants already know [@furnas1987vocabulary], and the sample in Nielsen's report was a single company's users on its own content [@nielsen2004card]. Experts sort by the domain's categories, which is the vocabulary the course is meant to teach. Craft rule.
+
+*In LTF:* the beta's "Report a problem" channel and the landing page reach people already interested in flying; screen for "never flown and never used a flight simulator" when recruiting for structure tests.
+:::
+
+::: {.rule #NAV-071 grade="C"}
+**After any restructuring, confirm it with task-based tests of findability (a tree test or first-click test, then a usability test of the real pages), measuring success, time and lostness.** Card sorts show groupings, not task success [@spencer2009card]; Nielsen recommends iterating with usability evaluation of a draft design [@nielsen2004card]; and Larson and Czerwinski's lostness measure, comparing pages visited with pages required, distinguished structures that time alone did not [@larson1998web]. Craft method with a quantified measure.
+
+*In LTF:* typical tasks: "find where you learn what the flaps do", "find the checklist to use before landing", "find the challenge you failed last week." Run them on a prototype of the grouped `/learn` page before Course 2 is published (NAV-022).
+:::
+
+::: {.rule #NAV-072 grade="C"}
+**Read what participants say about their groupings and choices, not only the numbers.** Nielsen names the purely quantitative analysis of the Tullis and Wood study as a limitation and warns against basing an architecture on similarity scores alone [@nielsen2004card]. Craft rule.
+
+*In LTF:* ask each sorter to name each group and say why one or two cards went where they did. The reasons often reveal a mislabeled lesson faster than the matrix does.
+:::
+
+### Watch behavior; do not ask about it
+
+Interview data are weak evidence about navigation. A review of the wayfinding literature cites Golledge for the finding that most people are unaware of their wayfinding strategies and find them hard to report [@arthur1992wayfinding], which limits the interview methods behind Lynch's own study [@lynch1960image]. Observed behavior (where people click, when they back up, where they give up) is what the foraging models were fitted to [@fu2007snifact].
+
+::: {.rule #NAV-073 grade="B"}
+**Learn how learners navigate by observing them on tasks, not by asking them how they navigate.** People are largely unaware of their wayfinding strategies and report them poorly [@arthur1992wayfinding], while models fitted to observed link choices and site leaving predicted behavior [@fu2007snifact]. The grade is B: the self-report finding is reported in a review, and the observational models are validated on real data.
+
+*In LTF:* in a usability session, give a goal and watch; ask about reasons only after the task. In beta feedback, a learner's description of where they "expected" something is a useful clue, but the fix should be confirmed by watching someone else do the task.
+:::
+
+### Inspection before testing
+
+A small team can inspect before it tests. Nielsen and Molich showed that single evaluators found only 20 to 51 percent of known problems across four interfaces, while pooled groups did much better: five evaluators found 55 to 90 percent depending on the interface, with curves flattening near ten [@nielsen1990heuristic]. Evaluators must work independently and compare notes only afterwards. The figures come from four small cases scored against the authors' own problem lists, and later work shows overlap between evaluators varies, so they are a guide, not a constant.
+
+::: {.rule #NAV-074 grade="B"}
+**Have three to five reviewers walk each new page's navigation independently against this Part's checklist, and merge their findings only after each has written them down.** Individual evaluators find a minority of problems, and independent pooling raises the share sharply [@nielsen1990heuristic]. The grade is B: four quasi-experiments, widely cited, with later qualifications about how much evaluators overlap.
+
+*In LTF:* the checklist at the end of this Part is the inspection list. Include at least one reviewer who is not on the content team and one who has used the simulator, since domain knowledge changes what is found.
+:::
+
+### What this means for Learn to Fly
+
+The research program LTF needs is small and cheap: one open card sort of Course 1 with about 15 beginners, a tree test of the grouped `/learn` page before Course 2 ships, label tests for module titles and tab names, and a habit of independent inspection for new pages. None of it needs special tools beyond a card-sorting service or a shared spreadsheet and a screen recorder.
+
+What to keep: the beta's "Report a problem" channel as a source of leads, not conclusions.
+
+What to change: stop settling labels in review discussion alone (NAV-034, NAV-067).
+
+What to build: the sort (NAV-067, NAV-069, NAV-070), the tree test with lostness (NAV-071), and independent inspection against the checklist (NAV-074), with results kept in `docs/` beside the design decisions they settle.

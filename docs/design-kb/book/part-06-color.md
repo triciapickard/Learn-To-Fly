@@ -659,3 +659,90 @@ Two results stand out. Under the deutan simulation, Day `caution` (#945a00) and 
 **Change.** The Day `caution` and `warn` pair is the most fragile in the product: nearly equal in luminance (1.17:1) and nearly merged in the deutan simulation. Since the two states mean different things (act soon against act now), keep their icons distinct in every component, and do not use the two tokens as adjacent fills without words (for example in the `PasswordStrengthMeter`) (COL-045, COL-047). In the G1000 widget, separate magenta and cyan elements by line style or label (COL-047, COL-031).
 
 **Build.** Add simulated-view screenshots (protan, deutan and tritan at severity 0.5 and 1.0) to the e2e visual checks for `/dev/components` and `/dev/widgets`, and a token-pair simulation check to the token script (COL-046, COL-051). This check is additive to the axe runs in `e2e/a11y.spec.ts`, not a replacement for them.
+
+## Contrast: Standards, Models and Reading
+
+### The WCAG ratio
+
+The Web Content Accessibility Guidelines are the standard LTF will be audited against, and version 2.2 (first published October 2023, republished December 2024) is the current Recommendation [@w3c2024wcag]. Its color requirements are four success criteria:
+
+| Criterion | Level | Requirement |
+| --- | --- | --- |
+| 1.4.3 Contrast (Minimum) | AA | 4.5:1 for text, 3:1 for large text |
+| 1.4.6 Contrast (Enhanced) | AAA | 7:1 for text, 4.5:1 for large text |
+| 1.4.11 Non-text Contrast | AA | 3:1 for UI components, states and needed graphics |
+| 1.4.1 Use of Color | A | color not the only visual means |
+
+Large-scale text is at least 18 point, or 14 point bold [@w3c2024wcag]; Carbon's documentation states the same split in pixels, treating text below 24 px as small [@ibm2026carbon]. The ratio is (L1 + 0.05) / (L2 + 0.05), where L1 is the relative luminance of the lighter color and L2 of the darker, so ratios run from 1:1 to 21:1. Relative luminance for sRGB is 0.2126 R + 0.7152 G + 0.0722 B on linearized channels, and the 0.05 term models typical viewing flare [@w3c2024wcag]. The thresholds are not rounded: 4.499:1 fails 4.5:1. Exceptions cover inactive components, pure decoration, invisible text and logotypes.
+
+The Understanding document gives the rationale. A ratio of 3:1 is the minimum recommended for standard text by ISO 9241-3 and ANSI-HFES-100-1988. The 4.5:1 level compensates for the loss of contrast sensitivity that accompanies acuity of about 20/40, estimated at about 1.5 times, so 3 times 1.5 gives 4.5; 7:1 relates to about 20/80 vision [@w3c2024wcag]. The document links 20/40 acuity to typical acuity at about age 80, and states that hue matters less than light-dark difference.
+
+The ratio is a threshold built on approximations: a fixed flare term, a single luminance model, no account of size beyond the large-text split, and no account of weight or polarity. Those are the openings its critics use.
+
+### What reading tolerates, and who needs the margin
+
+Legge, Rubin and Luebker measured reading rate as a function of contrast and character size in normal vision [@legge1987psychophysics]. Reading was fastest, at about 350 words per minute, for letters between 0.25 and 2 degrees, and within that range it was very tolerant of contrast loss: for 1-degree letters, a tenfold reduction in contrast reduced reading rate by less than a factor of two. Results were very similar for white-on-black and black-on-white text. Reading declined faster for letters smaller than 0.25 or larger than 2 degrees, and because people with low vision usually need large characters, high contrast is especially important for them; the authors took 35 words per minute as a reading threshold to build a contrast-sensitivity function for reading [@legge1987psychophysics].
+
+The finding cuts against complacency rather than for it. Normal readers at comfortable sizes cope with low contrast, which is why low-contrast grey text often passes informal review. The people the 4.5:1 floor protects are the ones whose contrast sensitivity is reduced: older readers, readers with low vision, and anyone reading on a dim screen or in glare.
+
+::: {.rule #COL-053 grade="C"}
+**Give all text at least 4.5:1 contrast against its actual background, and large text at least 3:1, computed on the final composited token pair in both themes, without rounding.** This is WCAG 2.2 success criterion 1.4.3 [@w3c2024wcag], whose 4.5:1 level is derived from the contrast-sensitivity loss that accompanies 20/40 acuity. Grade C: a standard, with a rationale from vision research but no experiment that tests the threshold itself.
+
+*In LTF:* computed this session, every declared text token passes on every ground in both themes (Day `ink-3` is the tightest at 4.73:1 on `surface-sunken`; Night `ink-3` at 4.61:1 on `surface-raised`). Tight margins mean that a new ground (a tint, a hover fill) must be checked before `text-ink-3` is used on it.
+:::
+
+::: {.rule #COL-054 grade="C"}
+**Give every boundary or mark needed to identify a control, its state or a meaningful part of a graphic at least 3:1 contrast against its neighbors.** This is WCAG 2.2 success criterion 1.4.11 [@w3c2024wcag]; Carbon applies the same 3:1 to graphical elements, data visualizations and focus states [@ibm2026carbon]. Decorative borders are exempt, which is why the quiet `line` token is acceptable for card edges.
+
+*In LTF:* computed this session, Day `accent-line` (#009ca5) is 3.07:1 on `canvas` and 3.33:1 on `surface`, passing, but 2.88:1 on `surface-sunken`, failing. Where the teal line marks the active tab, the active section in `SectionNav`, the active nav item or the done part of `LessonPath` on a sunken ground, use `accent` (4.72:1 on `surface-sunken`) instead. Input borders use `line-strong` (3.95:1 on `surface` in Day, 4.58:1 in Night), which passes; keep them on that token.
+:::
+
+::: {.rule #COL-055 grade="C"}
+**Aim for 7:1 for safety-relevant text that a learner reads at a glance, such as Fly mode steps, alert labels and checklist items.** WCAG's enhanced level of 7:1 corresponds to roughly 20/80 vision [@w3c2024wcag], and glance reading in dim surroundings is where light-on-dark text performs worst [@dobres2017effects]. The standard does not address dim-room viewing, so this is a target set for LTF's use, graded C.
+
+*In LTF:* in the Night theme that `FlyModeLayout` applies by default, `ink` (#ecebe9) on `canvas` is 15.48:1 and `warn` is 7.98:1, both above 7:1; `ink-2` is 8.61:1 and `ink-3` 5.93:1. Fly mode text therefore uses `ink` or `ink-2`, never `ink-3`.
+:::
+
+::: {.rule #COL-056 grade="B"}
+**Treat contrast near the minimum as a risk for low-vision and older readers, not as harmless because the text looks readable.** Normal readers at comfortable sizes tolerate large contrast reductions [@legge1987psychophysics], so a designer's own impression is a poor test; the floor exists for readers whose contrast sensitivity is reduced [@w3c2024wcag]. Grade B: the reading-rate tolerance is measured, and the protective purpose follows from the standard's rationale.
+
+*In LTF:* do not lower `ink-2` or `ink-3` contrast for a "softer" look. The most common color class in the product is `text-ink-2` (266 uses), so its contrast governs most supporting text on every page.
+:::
+
+### APCA: a proposed successor
+
+The Accessible Perceptual Contrast Algorithm, developed by Andrew Somers and Myndex Research, is proposed as a replacement for the WCAG 2 ratio [@somers2022apca]. Its premise is that readability depends on font size and weight, on polarity (dark on light against light on dark) and on perceived lightness contrast, which one luminance ratio cannot represent. Its output is a signed lightness contrast, Lc, from roughly −108 to +106, the sign encoding polarity, intended so that the same Lc represents the same perceived contrast anywhere in the range. The published library (algorithm 0.0.98G-4g, library 0.1.9, July 2022) uses an exponent of 2.4, separate text and background exponents, sRGB weights, a black threshold and scalers [@somers2022apca]. The author's guidance levels are roughly Lc 90 preferred and Lc 75 minimum for body text, Lc 60 for content text at larger sizes, Lc 45 for headlines, Lc 30 for placeholder-like text and Lc 15 as a floor for non-text, with a lookup table from size and weight to required Lc; for dark mode the documentation advises staying below Lc 90 for large fonts.
+
+Its status is contested. The documentation itself says APCA is in beta, that WCAG 2 and perceptual models will disagree, and that readers must judge suitability for their region [@somers2022apca]. The WCAG 3 working draft dated 10 September 2026 states that its contrast algorithm is yet to be determined and does not mention APCA [@w3c2024wcag]. Commentators argue that adopting APCA instead of WCAG 2 creates legal risk because only the WCAG 2 ratios are in force; the specific Lc thresholds are not validated in a peer-reviewed study that the research for this book could confirm. The criticisms of the WCAG ratio that APCA's documentation makes (no model of size and weight, overstated contrast for dark colors, unsuitability for dark mode) come from a rival method's developer.
+
+::: {.rule #COL-057 grade="D"}
+**Use APCA only as an advisory second check on dark-theme and thin or small text, and when it disagrees with WCAG 2.2, take the stricter result.** The WCAG 2 ratio is the standard in force, and APCA is an unvalidated beta whose thresholds are its author's guidance [@w3c2024wcag; @somers2022apca]. The rule is graded D because whether APCA predicts readability better than the ratio is contested and untested in the sources found.
+
+*In LTF:* the token script may report Lc for Night text pairs and for `text-sm` meta text as information, with no gate on it. Re-check the WCAG 3 status whenever this Part is revised.
+:::
+
+::: {.rule #COL-058 grade="C"}
+**Compute contrast automatically from the token files for every declared text and ground pair in both themes, and fail the build on a miss.** Contrast must be computed on the actual values, without rounding, and a theme change can silently break a pair [@w3c2024wcag]; a design system's own claims of compliance should be verified rather than inherited [@ibm2026carbon]. Grade C.
+
+*In LTF:* the token comments say contrast figures for every pair live in `tokens.json`, which does not exist in the repository. Replace that promise with a generated table from `tokens.css` and a test that fails when any declared pair drops below its threshold.
+:::
+
+::: {.rule #COL-059 grade="C"}
+**Check text on tinted fills as its own pair, never by assuming that a token which passes on `surface` also passes on a tint.** Tints raise the background luminance in Day and lower it in Night, so each text-on-tint combination has its own ratio [@w3c2024wcag]. Grade C.
+
+*In LTF:* computed this session, Day `accent` on `accent-tint` is 4.86:1 (passing with little room) and Day `caution` on `caution-tint` is 4.93:1; Night `warn` on `warn-tint` is 6.02:1. The `Callout` titles and `Badge` labels that use these pairs pass, but a lighter `accent` or a darker tint would break them first.
+:::
+
+### Contrast in instrument drawings
+
+The widgets are graphics, so 1.4.11 governs their meaningful parts, and their fixed colors were computed this session against the fixed `instrument` ground (#100f0e). `arc-white` reaches 17.48:1, `arc-yellow` 12.50:1, `arc-green` 8.40:1, `display-cyan` 10.60:1, `display-magenta` 7.83:1 and `arc-red` 5.09:1, all above 3:1. The `sky` fill (#2563c9) is 3.38:1 and `ground` (#7a4d24) 2.66:1 against `instrument`, but those are areas, not marks; what matters is that marks drawn on them pass. `instrument-text` (#ecebe9) is 4.76:1 on `sky` and 6.05:1 on `ground`, so labels drawn on the attitude fills pass the text minimum. On the sectional chart, `chart-blue` (6.08:1) and `chart-magenta` (6.33:1) on `chart-land` pass comfortably.
+
+The weak point is between marks rather than against the ground: `arc-green` and `arc-red` are only 1.65:1 against each other, and `arc-yellow` and `arc-green` 1.49:1. Where bands abut, the distinction is carried by hue alone, which is the case COL-045 forbids unless labels or position also carry it. In `AirspeedArcs` they do (worded legend, red line drawn as a different shape), and that redundancy must be preserved in every gauge.
+
+### What this means for Learn to Fly
+
+**Keep.** The ink ladder and status tokens, which pass on every declared ground in both themes; the focus ring, which uses `accent` (5.03:1 on Day `canvas`, 10.30:1 on Night `canvas`) and so exceeds the 3:1 that focus indicators need; input borders on `line-strong`.
+
+**Change.** Stop using `accent-line` for meaningful marks on `surface-sunken` in Day (COL-054). Remove the reference to a nonexistent `tokens.json` contrast table from the `tokens.css` comment and replace it with generated numbers (COL-058). Keep `text-ink-3` off tints and raised surfaces unless the pair is checked (COL-053, COL-059).
+
+**Build.** The contrast gate in the token script, run in CI for Day and Night: every text token on every ground and tint it is used on, every non-text indicator on its neighbor, with WCAG thresholds as failures and APCA as information only (COL-057, COL-058). Add the widget marks to it, pairing each fixed mark color with the fixed ground it is drawn on.

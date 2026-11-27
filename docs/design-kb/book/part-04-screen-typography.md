@@ -432,3 +432,67 @@ The one place face design measurably matters is small size. Sheedy's threshold s
 
 Keep Instrument Sans for prose: its x-height is at the screen-face mean, the serif question is not a reason to change it, and nothing in the evidence says another face would be read faster (SCR-030). Keep JetBrains Mono as the face for "everything you measure", which the token comment in `tokens.css` already states; it is also the face with the distinct zero, I, l and 1. Change the convention for identifiers in running text: set them in mono, ideally automatically for every aircraft token the content renderer expands (SCR-029). Move widget tick labels and small readouts to the mono face at semibold (SCR-031). Write the confusable-pair test into the review checklist and run it on any proposed face (SCR-028). Treat a future display face as a brand decision limited to display sizes (SCR-032), which is where Part XX, Brand Identity and Distinctiveness, takes the question further.
 
+## Web fonts: loading, fallback and metrics
+
+### What the browser does while a font loads
+
+A web font is a resource the page must fetch before it can draw text in that face. Until it arrives, the browser either hides the text, draws it in a fallback face, or does some of each. The CSS Fonts Module Level 4 defines the policy through the `font-display` descriptor, and the Working Draft of 12 November 2026 gives five values [@w3c2026cssfonts]:
+
+- `auto` lets the browser decide.
+- `block` has a short block period (about 3 seconds is recommended), during which text is invisible, then an indefinite swap period.
+- `swap` has a very short block period (100 ms or less recommended) and an indefinite swap period: fallback text appears almost at once, and the web font replaces it whenever it arrives, however late.
+- `fallback` has a very short block period and a short swap period (about 3 seconds); if the font has not arrived by then, the fallback stays for the life of the page. The specification describes it as suited to body text.
+- `optional` uses the web font only if it is available in time for first paint, and the page must not shift when it arrives.
+
+These durations are recommendations to browsers and authors, not measured human thresholds, and a Working Draft can change, although the features described are widely implemented [@w3c2026cssfonts]. The design consequence is a choice between two failures: invisible text (`block`) or text that changes face, and possibly size and line breaks, while the reader is reading (`swap`). `fallback` and `optional` bound the second failure in time.
+
+The cost of a late swap is measured by the Core Web Vitals, which Google defines as the field metrics for loading, interactivity and visual stability [@google2024web]. Cumulative Layout Shift (CLS) is "good" at 0.1 or less; Largest Contentful Paint (LCP) at 2.5 seconds or less; Interaction to Next Paint at 200 ms or less; a page passes when it meets all three at the 75th percentile of page loads, separately for mobile and desktop. The thresholds mix research on perception with achievability: the threshold article chose 2.5 seconds for LCP because faster values were not consistently achievable across real sites. A font swap that changes line breaks in a paragraph the learner has begun to read moves everything below it, which is layout shift in the most literal sense, and a heading drawn in a late web font can be the largest contentful element whose paint time LCP records.
+
+### Fallback metrics
+
+Fallback faces have different proportions. X-height fractions vary by a factor of two across roman faces [@legge2011print], so the same `font-size` in the fallback and the web font can produce visibly different sizes and line lengths. The CSS Fonts specification provides `font-size-adjust`, which takes an aspect value (an x-height-to-size ratio) and scales the used size of whichever face is drawing so that a fallback with a different x-height keeps the same apparent size; it affects the used size and the `ex` and `ch` units, not the computed size or `em` [@w3c2026cssfonts]. Brown's essay on modular scales gives the craft version of the same warning: the whole system of measurements depends on the chosen typeface being available, fallback fonts take over when the web font fails, and the designer should start from baseline fonts and enhance from there [@brown2011more].
+
+### What LTF does now
+
+LTF self-hosts both faces through the `@fontsource-variable` packages imported in `src/main.tsx`, with no Google Fonts link and no preconnect, and `vite.config.ts` forbids inlining fonts as data URLs so the content security policy can keep `font-src 'self'`. The installed package CSS declares `font-display: swap` for every face. Instrument Sans is split by `unicode-range` into a latin and a latin-ext face; JetBrains Mono into six subsets (latin, latin-ext, cyrillic, cyrillic-ext, greek and vietnamese), of which a browser fetches only those whose ranges the page's text uses [@w3c2026cssfonts]. The latin upright files are about 30 KB (Instrument Sans) and 40 KB (JetBrains Mono) as woff2 in the installed packages. The project's size check, `scripts/check-bundle-size.ts`, budgets initial JavaScript at 250 KB gzipped and does not count fonts.
+
+The fallback stacks are `system-ui, -apple-system, 'Segoe UI', sans-serif` for `font-sans` and `ui-monospace, SFMono-Regular, Menlo, monospace` for `font-mono`. The specification notes that `system-ui` is one of the universal generic families and that `ui-monospace` and the other `ui-*` families may not exist on every platform [@w3c2026cssfonts]. No `font-size-adjust` or metric override is declared, so the fallback draws at its own x-height and widths, which differ by platform. Under `swap`, a learner on a slow connection reads the opening of a lesson in the system face and sees it reflow into Instrument Sans whenever the file arrives.
+
+::: {.rule #SCR-033 grade="C"}
+**Load body faces with `font-display: fallback`, and use `optional` on surfaces opened in the middle of a task, so that text never changes face after the reader has started reading it.** The specification describes `fallback` as suited to body text and defines `optional` as the policy under which the page must not shift [@w3c2026cssfonts]; late swaps produce layout shift [@google2024web]. A standards-based policy, graded C.
+
+*In LTF:* the packages' CSS hard-codes `swap`, so LTF must declare its own `@font-face` rules (pointing at the same self-hosted files) or override the descriptor, with `fallback` for the main app and `optional` for `FlyModeLayout`, which a learner opens on a second screen mid-flight and which must never reflow under a glance.
+:::
+
+::: {.rule #SCR-034 grade="C"}
+**Match the fallback face's metrics to the web font (with `font-size-adjust` or equivalent metric overrides) so that the swap, if it happens, changes neither apparent size nor line breaks.** Fallbacks differ in x-height [@legge2011print]; `font-size-adjust` holds apparent size constant across faces [@w3c2026cssfonts]; unbounded swaps that move text count against the visual stability metric [@google2024web]. Graded C.
+
+*In LTF:* Instrument Sans's aspect value is 0.51 (its x-height on a 1,000-unit em, measured for this Part) and JetBrains Mono's 0.55. Declaring `font-size-adjust: 0.51` on the root sans text and `0.55` on mono text keeps fallback text at the same apparent size. Note that `font-size-adjust` also rescales the `ch` unit, which is one more reason to set the measure in em (SCR-018).
+:::
+
+::: {.rule #SCR-035 grade="C"}
+**Design and review every page in its fallback fonts as well as its web fonts; the page must be fully usable, with hierarchy intact and nothing clipped, if the web fonts never load.** The design system should depend on the fallback first and the web font as an enhancement [@brown2011more], and the generic families are the only faces the specification guarantees [@w3c2026cssfonts]. Craft authority, graded C.
+
+*In LTF:* add a development toggle (or a test project in Playwright) that blocks the two font files, and review `LessonPage`, `FlyModePage`, `SpeedsPage` and the landing hero with it. Check in particular that `readout` values in the `ui-monospace` fallback still align (fallback monospace faces are fixed-width, so tabular alignment survives) and that `display-xl` headings in `system-ui` do not overflow their `max-w-[12ch]`.
+:::
+
+::: {.rule #SCR-036 grade="C"}
+**Load only the styles, axes and character subsets the product uses, and count font bytes in the performance budget.** `unicode-range` limits each face to the characters in its range so unused subsets are never fetched [@w3c2026cssfonts], and font bytes compete with the content whose paint time LCP measures [@google2024web]. Graded C.
+
+*In LTF:* the current imports are already lean (upright weight axes, unicode-range subsets). Adding the italic axis for SCR-024 adds one file per subset; extend `scripts/check-bundle-size.ts` or a separate check to report total woff2 bytes for the latin subsets, so the cost of a new style or face is visible in review.
+:::
+
+::: {.rule #SCR-037 grade="C"}
+**Measure layout shift and largest-paint time on lesson pages in the field, at the 75th percentile, separately for mobile and desktop, and treat a font-caused shift above the good threshold as a defect.** Core Web Vitals define "good" as CLS at or below 0.1 and LCP at or below 2.5 seconds at the 75th percentile [@google2024web]. The thresholds are partly pragmatic, chosen so that enough real sites can meet them, and are not proven optima for learning, so C.
+
+*In LTF:* the lesson h1 (`text-3xl font-bold sm:text-4xl`) is a likely largest element at the top of `LessonPage`; with `swap`, its paint and the first paragraph's line breaks both depend on the font arriving. Instrument the page with real-user measurement before and after SCR-033 and SCR-034.
+:::
+
+### Text that must not wait
+
+Two parts of LTF have stricter needs than the average page. Fly mode is opened during a flight, and its content is a list of steps and a stopwatch; a reflow there moves the checkbox a learner is about to tap. And the theme script in `index.html` already shows the project's own pattern for avoiding a flash: it sets `data-theme` before first paint from local storage and the operating-system setting. Typography should follow the same principle. Anything that changes how text is drawn (theme, text-size preference from SCR-015, face choice) is applied before first paint, and anything that cannot be known before first paint (a font that has not arrived) is allowed to change nothing that the reader can see.
+
+### What this means for Learn to Fly
+
+Keep self-hosting, the `font-src 'self'` policy and the unicode-range subsets. Change the loading policy from the packages' `swap` to `fallback` for the app and `optional` for Fly mode by declaring LTF's own `@font-face` rules (SCR-033). Add `font-size-adjust` with the measured aspect values 0.51 and 0.55 so that a fallback draws at the same apparent size (SCR-034). Add a fonts-blocked review mode and put it in the review checklist (SCR-035). Count font bytes alongside the JavaScript budget (SCR-036), and add real-user CLS and LCP measurement to lesson pages (SCR-037), which also serves Part XXII, Motion and Perceived Performance. Apply any text-size preference with the same early script that applies the theme.
+

@@ -615,7 +615,7 @@ LTF's lesson h1 is `text-4xl` from `sm`, 36 px against a 16 px body, 2.25 times.
 ::: {.rule #TYP-044 grade="C"}
 **On reading surfaces, keep the largest heading within about twice to two and a half times the body size; larger display sizes belong to display surfaces.** Morison limits the title to twice the text size in books [@morison1936first]. Craft rule adapted from print; no experiment.
 
-*In LTF:* the lesson, challenge and reference pages should use `display-md` (32 px) as the page title, which is 2 times an 16 px body and 1.8 times an 18 px body. Keep `display-lg` and `display-xl` for the landing page, the reference hub title and celebration panels.
+*In LTF:* the lesson, challenge and reference pages should use `display-md` (32 px) as the page title, which is 2 times a 16 px body and 1.8 times an 18 px body. Keep `display-lg` and `display-xl` for the landing page, the reference hub title and celebration panels.
 :::
 
 ### Emphasis inside the text
@@ -647,3 +647,89 @@ This bears on the generic look the owner dislikes. A neutral, restrained interfa
 The type scale is where LTF's classical typography most visibly falls short, and the defect is consistency, not taste. The product has a defined set of utilities and a parallel set of raw Tailwind sizes; a learner meets different heading systems on different pages. Fixing it is mechanical and worth doing early, because every later typographic decision assumes a single scale.
 
 The decisions: rebuild the scale from the reading size with one gentle ratio and named display exceptions (TYP-041); require every size to come from a token and enforce it by lint (TYP-040); give each heading level one style per surface class (TYP-042), with `display-md` as the page title on reading and interface pages (TYP-044); rank each page's elements before styling, starting with the lesson head stack (TYP-043); use semibold for emphasis and keep underline for links (TYP-045). Then check that pages show real hierarchy, not a uniform grey (TYP-046). When the scale is rebuilt, update `/dev/components` to show every type token with real text, so the scale can be reviewed as a whole.
+
+## Figures, Symbols and the House Style Card
+
+### Two kinds of figures
+
+Bringhurst's section 3.2.1 sets the classical rule for numerals: "Use titling figures with full caps, and text figures in all other circumstances" [@bringhurst2012elements]. Titling (lining) figures stand on the baseline at cap height; text (old-style) figures have ascenders and descenders like lowercase and sit in a line of prose without standing out. The rule was written for books, where numbers are mostly dates and page references inside sentences.
+
+Rutter's web handbook, which grew out of a project to apply Bringhurst to the web, adapts the rule for data. Lining figures draw the eye, so in running text they can feel like shouting, while old-style figures sit comfortably in prose; lining figures suit all-caps headings and places where readers scan, compare or search for data, such as lists and tables [@rutter2017web]. The CSS Fonts specification supplies the controls (`lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `slashed-zero` and others in `font-variant-numeric`) and states that tabular numerals allow columns of numbers to line up [@w3c2026cssfonts]. None of this is experimental: the claim that lining figures help scanning is plausible craft reasoning without a cited test.
+
+The second distinction is width. Proportional figures have widths fitted to their shapes (a 1 narrower than a 0); tabular figures share one width, so digits in successive rows line up and a changing value does not shift sideways. A readout that changes in place, such as a timer, a live score preview or a slider value, jitters if its figures are proportional, because each new digit has a different width.
+
+LTF's faces settle some of these choices by what they contain. Inspection of the shipped Instrument Sans file for this book found only `pnum` and `tnum` among its figure features, with default figure widths varying from 0.391 em (the 1) to 0.666 em (the 0), so Instrument Sans figures are proportional unless the `tabular` utility is applied, and the face offers no alternative old-style figures to switch to. JetBrains Mono sets every glyph at 0.6 em, so its figures are tabular by construction. The product's split, "Instrument Sans for everything you read, JetBrains Mono for everything you measure," therefore already gives tabular figures to the values it puts in mono.
+
+::: {.rule #TYP-047 grade="C"}
+**Set every number that is compared, aligned or updated in place (table values, readouts, scores, timers, slider values, stat tiles) in tabular figures, either in the mono face or with `tabular-nums`.** Rutter assigns lining figures to data and tables [@rutter2017web]; the CSS Fonts specification states that tabular numerals let columns line up [@w3c2026cssfonts]; Bringhurst's titling-figure rule is the print precedent [@bringhurst2012elements]. Craft consensus and a standards fact.
+
+*In LTF:* the `readout-*` utilities already apply `tabular-nums` in JetBrains Mono, and `Stopwatch` digits are mono. Check the values that are not: `ProgressBar` and `ProgressRing` labels, the `DebriefForm` live score preview, widget slider values and `KeyNumbers`, and apply `readout` or the `tabular` utility where they are Instrument Sans.
+:::
+
+::: {.rule #TYP-048 grade="C"}
+**In running prose, set ordinary numbers in the text face, and switch to the mono face only for identifiers and values the learner must read exactly or copy.** Bringhurst keeps text figures for "all other circumstances" than capitals [@bringhurst2012elements], and Rutter notes that data-style figures stand out in prose [@rutter2017web]. Changing face mid-sentence makes a number louder than its sentence. Craft consensus.
+
+*In LTF:* lesson Markdown uses `code` (`bg-surface-sunken font-mono`) for inline code; keep that for genuine code and for values a learner types into the sim. Ordinary numbers in a sentence ("three checks", "the second turn") stay in Instrument Sans. Speeds rendered from `{{vspeed.*}}` tokens are values a learner must read exactly and may reasonably render in `readout` style; decide once, in the token renderer, and apply it everywhere.
+:::
+
+### Weight and alignment of numbers
+
+The dossier records that bold mono is common in pages (Dashboard stat tiles, `SpeedsPage` KIAS cells at `font-mono text-2xl font-bold`, the result card at `font-mono text-5xl font-bold`) although the `readout` utilities are weight 500. That is the same two-dialect problem as the headings, at the scale of figures. A reader who sees speeds bold on one page and medium on another will wonder whether the difference means something. De Vinne's observation that readers notice inconsistency faster than they notice errors of substance applies with special force to numbers [@devinne1910practice].
+
+Rutter's table rules give the alignment: left-align text columns and right-align numbers, with headings matching their data, and align on the decimal point when precision varies [@rutter2017web]. Right alignment lets the reader compare magnitudes by the position of the leftmost digit.
+
+::: {.rule #TYP-049 grade="C"}
+**Right-align numeric columns and their headers, align on the decimal point where precision varies, left-align text columns, and give readouts one weight per size from the tokens.** Rutter's table guidance [@rutter2017web]; De Vinne on consistency [@devinne1910practice]. Craft consensus.
+
+*In LTF:* the `MarkdownContent` table sets `text-left` on the whole table; add a right-aligned numeric column option (GFM already supports column alignment with `:---:` syntax in the source). Replace `font-mono text-2xl font-bold` and `font-mono text-5xl font-bold` with sized `readout` tokens (adding a `readout-xl` if needed) at one weight.
+:::
+
+### The right symbol
+
+Hochuli's English edition was criticized by one reviewer on a single point: a suggestion to use the letter x as a multiplication sign. The reviewer argued that a font should supply a proper multiplication sign [@hochuli2008detail]. The notes for this book turn that into a general rule: use a real multiplication sign or minus where the font has them, do not substitute lookalike letters in numeric content, and let the font provide the glyphs. LTF's fonts do have them. The shipped Instrument Sans and JetBrains Mono files both contain the multiplication sign (U+00D7), the minus sign (U+2212), the en dash (U+2013) and the degree sign (U+00B0), as inspected for this book.
+
+LTF's content uses them inconsistently. A search of the lesson Markdown found the multiplication sign 50 times and a letter x between numbers 3 times, in runway dimensions ("2,441 x 70 ft" and similar). The project rule already requires an en dash for ranges.
+
+::: {.rule #TYP-050 grade="C"}
+**Use the true glyph for each symbol (× for dimensions and multiplication, − for negative values, – for ranges, ° for degrees) and never a lookalike letter or hyphen.** Hochuli's reviewer argues that a font should supply a proper multiplication sign rather than an x [@hochuli2008detail]. Craft consensus; both LTF faces contain these glyphs.
+
+*In LTF:* replace the three "x" dimensions in lesson content with ×, and add `content:validate` checks for a letter x between digits, for a hyphen-minus before a digit where a minus is meant, and for a hyphen in numeric ranges.
+:::
+
+### Quotation marks
+
+The lesson Markdown in LTF uses straight typewriter quotes throughout: a search for this book found about 4,256 straight double quotes and 677 straight apostrophes inside words, and no curly quotes. The renderer (`react-markdown` with `remark-gfm`) does not convert them, so learners see typewriter marks. In a product whose identity depends on care, typewriter quotes are a small but constant sign of carelessness, the kind of drift De Vinne says the modern reader notices [@devinne1910practice].
+
+Dowding goes further than form. "The use of quotation marks never improves a text setting," he writes; where they are needed, use single quotes, and at display sizes make them two sizes smaller than the body [@dowding1954finer]. That is a book-setting taste, and for LTF it would be wrong. Quotation marks carry meaning in flight training: they show where a spoken radio call begins and ends, and where a label is quoted exactly as it appears on the panel. A beginner needs to see those boundaries. The craft sensibility survives in a narrower form: use the marks where they carry meaning, render them properly, and keep one convention.
+
+::: {.rule #TYP-051 grade="C"}
+**Render typographic (curly) quotation marks and apostrophes in all learner-facing text automatically, so authors can type straight quotes.** De Vinne records that readers have become critics of style in typesetting [@devinne1910practice]; Dowding treats quotation marks as a matter of careful setting [@dowding1954finer]. Craft consensus.
+
+*In LTF:* add a smart-quotes step to the content pipeline (in `scripts/lib/parseLesson.ts` or as a remark plugin in `MarkdownContent`) that converts straight quotes outside code spans, and apply the same conversion to YAML-sourced strings such as checklist and glossary text.
+:::
+
+::: {.rule #TYP-052 grade="C"}
+**Mark quoted speech, such as radio calls, and labels quoted from the panel in one consistent way across all content, and do not drop quotation marks where they mark the boundary of words the learner must say or find.** Dowding's rule against quotation marks is a book-setting taste [@dowding1954finer]; in instruction, the boundary of a quoted phrase is content. Craft reasoning against a craft authority.
+
+*In LTF:* the traffic-pattern widget sets its radio call as an italic paragraph inside quotes, and lessons quote calls in plain text. Choose one treatment for radio calls (for example, curly double quotes in the text face, no italic) and one for panel labels (for example, the label in the case the sim shows, without quotes), write them into the style card, and apply them in lessons, challenges and widgets.
+:::
+
+### The style card
+
+De Vinne's *Correct Composition* is, at bottom, an argument for a written house code. "There is no book of generally accepted authority that lays down a full code of explicit rules for orderly printing," he says, so each printing house that strives for consistency must make its own, the "style-card," to guide new compositors and maintain uniformity [@devinne1910practice]. Printing that passed a tolerant inspection in 1850 "does not pass now," and "the reader of to-day is more or less a critic of style in type-setting." His book publishes such a code for others, while allowing that different houses and kinds of work need different rules (English printers divide "mo-ther," American printers "moth-er").
+
+Hochuli's advice points the same way from the other end. Hard-to-automate rules belong in a writing style guide for human authors, not in CSS, and a short guide is more likely to be adopted than a long one [@hochuli2008detail]. Dowding's micro rules, which his reviewers found hard to reproduce in digital layout tools [@dowding1954finer], are the cautionary case: a rule that only a specialist can apply by hand will not survive many authors.
+
+LTF already has the beginning of a style card. AGENTS.md requires US English, second person, no em dashes in learner-facing text, an en dash in ranges, knots, feet, nautical miles and inHg, and MSL or AGL on every altitude; aircraft numbers come from `{{vspeed.*}}` and `{{aircraft.*}}` tokens in `content/aircraft.yaml`. That is exactly De Vinne's kind of code. What it lacks is coverage of the typographic details in this chapter, and enforcement for those details.
+
+::: {.rule #TYP-053 grade="C"}
+**Keep one written style card for numbers, units, symbols, abbreviations, capitalization and quotation, and enforce every rule on it that a machine can check in `content:validate`.** De Vinne's "style-card" is the historical model for keeping uniformity across many compositors [@devinne1910practice]; Hochuli argues for short guides and leaving hand rules to authors [@hochuli2008detail]; Dowding's hard-to-automate rules show what happens otherwise [@dowding1954finer]. Craft consensus.
+
+*In LTF:* extend `content/README.md` with a typographic section covering: × for dimensions, − for negatives, en dash for ranges, a no-break space between value and unit, one form for each unit abbreviation, curly quotes (rendered), the radio-call and panel-label treatments, abbreviation definitions on first use, and capitalization of headings. Add validator checks for each machine-checkable item, starting with those in TYP-031 and TYP-050.
+:::
+
+### What this means for Learn to Fly
+
+LTF's numerals are in better shape than its headings. The decision to put measured values in JetBrains Mono gives them tabular figures and clear identity, and the `readout` utilities exist. The remaining figure work is to apply tabular figures to the Instrument Sans values that change or align (TYP-047), to keep ordinary prose numbers in the text face (TYP-048), to align numeric columns and settle one weight per readout size (TYP-049).
+
+The symbol and quotation work is in content, and it is where the product looks most careless at close range: typewriter quotes in every lesson and a few lookalike multiplication signs. Fix the quotes in the pipeline, not by hand (TYP-051), give radio calls and panel labels one treatment each (TYP-052), and use the true glyphs the fonts already contain (TYP-050). Then write it all down, short, in `content/README.md`, and let the validator enforce it (TYP-053). That is the cheapest way to make many authors' lessons look like one hand set them.
