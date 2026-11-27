@@ -681,7 +681,7 @@ Rutter's table rules give the alignment: left-align text columns and right-align
 ::: {.rule #TYP-049 grade="C"}
 **Right-align numeric columns and their headers, align on the decimal point where precision varies, left-align text columns, and give readouts one weight per size from the tokens.** Rutter's table guidance [@rutter2017web]; De Vinne on consistency [@devinne1910practice]. Craft consensus.
 
-*In LTF:* the `MarkdownContent` table sets `text-left` on the whole table; add a right-aligned numeric column option (GFM already supports column alignment with `:---:` syntax in the source). Replace `font-mono text-2xl font-bold` and `font-mono text-5xl font-bold` with sized `readout` tokens (adding a `readout-xl` if needed) at one weight.
+*In LTF:* the `MarkdownContent` table sets `text-left` on the whole table; add a right-aligned numeric column option (GFM already supports right alignment with a trailing colon in the delimiter row of the source table). Replace `font-mono text-2xl font-bold` and `font-mono text-5xl font-bold` with sized `readout` tokens (adding a `readout-xl` if needed) at one weight.
 :::
 
 ### The right symbol

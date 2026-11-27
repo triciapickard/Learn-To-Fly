@@ -161,7 +161,7 @@ The challenge YAML format already has the parts of a designed practice activity.
 ::: {.rule #SKL-013 grade="C"}
 **Write every challenge as a complete designed practice activity: goal, criteria, likely errors, a coaching tip, a reflection prompt and a route back to the lesson.** With no teacher present, the content must carry the design that deliberate practice assumes a teacher supplies [@ericsson1993role; @macnamara2014deliberate]. Grade C: the requirement follows from the definition, not from an experiment.
 
-*In LTF:* make `commonMistakes`, `tips`, `debriefQuestions` and at least one `reviewLink` required fields in the challenge schema in `@shared/schemas/`, so that `content:validate -- --strict` fails a challenge that lacks them.
+*In LTF:* make `commonMistakes`, `tips`, `debriefQuestions` and at least one `reviewLink` required fields in the challenge schema in `@shared/schemas/`, so that strict content validation fails a challenge that lacks them.
 :::
 
 ### What this means for Learn to Fly
