@@ -164,3 +164,87 @@ The "advertising seldom persuades" position is contested. Advocates of the persu
 For a product whose ads, social previews and share cards are tiny, the publicity view argues for making every outward-facing piece instantly attributable and memorable rather than argumentative. Concretely, LTF's share cards, lesson thumbnails and email headers should be recognizable as LTF before any text is read: consistent frame, mark, type and color. Inside the product, the same principle applies to onboarding: rather than persuading a beginner with claims about teaching quality, show a short, branded, successful first experience (a first lesson, a first quiz result) that builds familiarity and assurance. The warning is for copywriting: avoid long persuasive pages to win new learners and prefer short, repeated, distinctive messages. Because the evidence is about advertising, not about the product experience, it should not be used to justify skipping real product quality or honest instruction.
 
 Confirmed this session: Crossref records for DOI 10.2501/jar-42-4-7-18 (title, authors, 2002, volume 42, issue 4; page field inconsistent) and for the 1997 nudging paper; abstract text read on warc.com/content/article/jar/brand-advertising-as-creative-publicity/en-gb/77314; full text not read.
+
+## aaker1997dimensions
+
+Aaker, J. L. (1997). Dimensions of brand personality. *Journal of Marketing Research, 34*(3), 347-356.
+
+### Core claims
+
+Aaker defines brand personality as "the set of human characteristics associated with a brand" and argues it can be described by five dimensions, found by factor analysis of how people rate well-known brands on human traits: Sincerity, Excitement, Competence, Sophistication and Ruggedness. She develops a 42-item Brand Personality Scale and claims it is reliable, valid and generalizable across product categories. The paper also argues that brand personality serves a symbolic or self-expressive function, in contrast to product attributes, which serve a utilitarian function, and that consumers imbue brands with human traits (animism).
+
+### Specifics
+
+I read the full text of the article (a JSTOR-derived copy hosted at gwern.net).
+
+- Item pool: 309 candidate traits were assembled from psychology personality scales, marketers' scales and original qualitative work, then reduced to 114 traits.
+- Study 1 sample: 631 respondents (about 55 percent of 1,200 questionnaires mailed to a national panel, with a sample intended to represent the US population) rated a subset of 37 brands on the 114 traits using a Likert scale of how well each trait describes the brand. The brands included symbolic, utilitarian and mixed categories, with Levi's jeans included in every subset as a control.
+- Analysis: principal components analysis of the 114 by 114 correlation matrix of traits across the 37 brands. A five-factor solution explained 92 percent of the variance in brand personality, and was chosen on scree, interpretability and stability across subsamples (for example male versus female, younger versus older).
+- Dimensions and typical brands named in the paper: Sincerity (Hallmark cards), Excitement (MTV), Competence (The Wall Street Journal), Sophistication (Guess jeans), Ruggedness (Nike tennis shoes). The final scale has 15 facets (four each for Sincerity and Excitement, three for Competence, two each for Sophistication and Ruggedness) with three traits per facet, giving 45 traits, then 42 after the test-retest step dropped three.
+- Reliability: test-retest correlations for the five dimensions were between .74 and .77; Cronbach's alphas were .93 (Sincerity), .95 (Excitement), .93 (Competence), .91 (Sophistication) and .90 (Ruggedness).
+- Confirmation: a second independent sample of 180 respondents rated 20 brands in 10 categories on the 42 traits. A confirmatory factor analysis with correlated factors gave CFI .98, GFI .91, AGFI .86 and RMSR .07.
+- Comparison with the human Big Five: Sincerity, Excitement and Competence resemble Agreeableness, Extroversion and Conscientiousness, whereas Sophistication and Ruggedness do not map to any of the five human dimensions. Aaker suggests these two tap aspirations people desire but do not necessarily have.
+
+### Replication and criticism
+
+The scale became the dominant instrument in the field, but it has been criticized repeatedly. Azoulay and Kapferer (2003, Journal of Brand Management, DOI 10.1057/palgrave.bm.2540162) argue that such scales merge several dimensions of brand identity, personality being only one, so that they do not strictly measure personality (I saw this in the abstract extract via search, not the full paper). Secondary reviews report that the five factors do not replicate cleanly across cultures, with only partial overlap in later work, and that Aaker's item pool includes demographic traits such as gender, age and class, blurring brand personality with user imagery. Romaniuk and Ehrenberg (2012, also in this lane) go further and question whether consumers attribute personality traits to brands at all. The original data are also US consumers' ratings of famous brands in the early 1990s, with names that are now dated. Evidence strength: a psychometric development study with a good analytic chain, but rating well-known brands says little about unknown brands.
+
+### Implications for LTF
+
+For LTF the useful reading is that personality is a tool for choosing the voice and visual character of the product, not a proven driver of purchase. If LTF wants to be seen as Competence (the paper's highest-correlating traits are reliable, responsible, dependable and efficient) with a trace of Sincerity (domestic, honest, genuine, cheerful), then copy, error messages, checklist wording and color should consistently support that: calm tone, no hype, no gamified bravado. Ruggedness cues (tough, strong, outdoorsy) and Excitement cues (daring, spirited, imaginative) may feel at odds with a safety-minded beginner audience, though they could be applied sparingly for challenge success states. The scale can be repurposed as a lightweight audit: have five to ten beginners rate LTF screens on a handful of these traits to see if the perceived character matches the intended one. Do not treat the five-factor structure as a guarantee that the audience will perceive LTF in these terms, and do not use the scale to predict conversion.
+
+Confirmed this session: Crossref record for DOI 10.2307/3151897 (title, author, 1997, volume 34, issue 3, page 347); full text read via gwern.net/doc/economics/1997-aaker.pdf (abstract, definition, samples, statistics, discussion); WebSearch extracts for the 2003 critique and cross-cultural replication.
+
+## romaniuk2012brands
+
+Romaniuk, J., & Ehrenberg, A. (2012). Do brands lack personality? *Marketing Theory, 12*(3), 333-339.
+
+### Core claims
+
+This seven-page commentary asks two questions about the brand personality concept: do consumers see brands as having human traits (the "brand as human" idea), and is there a consistent consumer view of a brand that gives it a distinct personality that separates it from competitors (the "brand personality as metaphor" idea)? Based on their own empirical evidence, the authors answer no to both. The Crossref abstract states that respondents rarely attribute personality-based traits to a brand (the examples given are "Charming" and "Helpful") and that there is little evidence of distinct brand personalities for competing brands. They conclude that the value of brand personality to consumers choosing brands, and to marketers designing brand strategy, is questionable.
+
+### Specifics
+
+- Type of evidence: a commentary replying to another paper ("Brand Relationship and Personality Theory: Metaphor or Consumer Perceptual Reality?"), using the authors' own prior data on brand perceptions; the abstract gives no sample sizes or numbers, and I did not obtain the full text, so none are reported.
+- The two tests proposed are well suited to a design context: (1) incidence, that is, how often respondents attach human-trait descriptors to brands when given a free choice; and (2) distinctiveness, that is, whether the traits attached differ between competing brands.
+- The finding of little brand-to-brand differentiation in personality echoes the same research group's earlier work on perceived brand differentiation (Romaniuk, Sharp and Ehrenberg 2007, in this lane) and on image attributes, where perceptions of competing brands in a category tended to be similar.
+- The commentary has only five references per the Crossref record, so it is an argument piece, not a literature review.
+
+### Replication and criticism
+
+The paper is a short expert commentary, so its evidence strength is moderate at best, and it comes from the group that also champions distinctiveness over differentiation, so it is not an independent test. The opposing view is represented by Aaker (1997) and by the brand relationship literature (Fournier 1998, also in this lane), where consumers readily attribute personality-like traits and relationship roles to brands in depth interviews; the difference may partly be one of method (forced, scaled ratings versus free responses, interviews versus pick-any surveys). Azoulay and Kapferer (2003) criticize Aaker from a different angle: that the scales do not measure personality in a strict sense, which is compatible with the claim that personality is not what drives brand perception. There is no consensus that has overturned either side.
+
+### Implications for LTF
+
+This commentary is a useful brake on over-investing in brand personality work. For a small product, a detailed personality brief ("LTF is a friendly, confident, adventurous instructor") may not be perceived by learners at all, and what they will notice instead is whether the product is clear, calm and easily recognized. A practical approach for LTF: write a simple tone-of-voice guide with a few concrete rules (second person, no jargon without explanation, no exclamation marks in safety-related text) instead of a personality essay, and then test whether new learners can describe the product in their own words after a first session. If most descriptions use plain functional terms (clear, easy, step by step) rather than human traits, that is consistent with this paper's finding and suggests that recognizability and clarity should take precedence over persona work. For the mascot or character question, the paper offers no support for adding one purely to inject personality.
+
+Confirmed this session: Crossref record for DOI 10.1177/1470593112451380 (title, authors, 2012, volume 12, issue 3, pages 333-339, abstract, 5 references); full text not read.
+
+## keller1993conceptualizing
+
+Keller, K. L. (1993). Conceptualizing, measuring, and managing customer-based brand equity. *Journal of Marketing, 57*(1), 1-22.
+
+### Core claims
+
+Keller defines customer-based brand equity as "the differential effect of brand knowledge on consumer response to the marketing of the brand". A brand has positive equity when consumers react more favorably to an element of the marketing mix than they would to the same element attributed to a fictitiously named or unnamed version of the product. Brand knowledge is the key: it has two components, brand awareness (recall and recognition) and brand image (the set of associations held in memory). Equity arises when the consumer is aware of the brand and holds some favorable, strong and unique associations. The paper's memory framework is an associative network model in which nodes are linked with different strengths.
+
+### Specifics
+
+I read the full text (a copy hosted by Duke University).
+
+- Brand awareness: brand recognition is the ability to confirm prior exposure when the brand is given as a cue; brand recall is the ability to generate the brand from memory when given the category or other cue. Their relative importance depends on whether choices are made at the point of purchase (recognition) or before (recall).
+- Types of associations, ordered by increasing scope: attributes, benefits and attitudes. Attributes are product-related (the physical composition or service requirements) or non-product-related. Keller lists four non-product-related attributes: price information, packaging or product appearance information, user imagery (who uses it) and usage imagery (where and in what situations it is used). Benefits are functional, experiential or symbolic. Brand attitudes are overall evaluations, typically modeled as a function of beliefs about attributes and benefits.
+- Three dimensions of associations that matter: favorability, strength and uniqueness. Strength depends on the amount and quality of processing at encoding; uniqueness is whether the association is shared with competitors.
+- Brand identities: the paper defines a brand by Kotler's formulation as a name, term, sign, symbol or design, and calls individual components "brand identities" (name, logo, symbol and so on). It emphasizes the brand name but states that similar criteria apply to the logo or symbol.
+- Choice criteria for a name: simple, familiar and distinctive. Ease of comprehension, pronunciation and spelling help encoding; mnemonic factors and vivid words help learning; a familiar word helps recall while a more unusual word can help recognition (the paper cites past work that high-frequency words are easier to recall while low-frequency words can be easier to recognize). A "flicker perception" test (how quickly a name can be perceived when exposed briefly) is mentioned as used by researchers.
+- Identities should be chosen to be mutually reinforcing, but the paper states that although careful identity choice can contribute significantly, "the primary input comes from supporting marketing activities".
+
+### Replication and criticism
+
+The framework is conceptual and has been used as the starting point for many empirical studies, rather than being a hypothesis that has been replicated or refuted. Critiques focus on measurement: how to quantify favorability, strength and uniqueness, and on its reliance on consumers' stored associations, which the Ehrenberg-Bass tradition reads as too attitude-oriented (see Romaniuk and Sharp, 2003, in this lane, who find that the number of associations rather than their kind relates to loyalty). Keller himself notes in the paper that remarkably little empirical research had at that point examined brand name and logo considerations, and calls for more research on how names, logos, symbols and slogans contribute to equity. The paper is a canonical academic framework, strong on structure, but not empirical evidence.
+
+### Implications for LTF
+
+The association taxonomy is directly usable as a checklist for LTF's identity. Product-related attributes (accurate lessons, sim-verified challenges), non-product attributes (price, appearance, who learns here, when), and symbolic benefits (feeling like a pilot) each need a deliberate statement and a place in the product. The uniqueness dimension is the useful warning: if LTF's associations (aviation, learning, blue sky) are all shared with other flight apps, there will be no differential effect. The name guidance (simple, familiar, distinctive, easy to spell and say) applies to lesson, mode and feature names as well as to the product name: "Fly mode" is simple and familiar; avoid coined feature names that a beginner must learn first. The recall versus recognition distinction matters for how LTF is found: learners who search from memory need a recallable name and phrase, while those scanning a feed need recognizable visual cues.
+
+Confirmed this session: Crossref record for DOI 10.1177/002224299305700101 (title, author, 1993, volume 57, issue 1, pages 1-22); full text read from people.duke.edu/~moorman/Marketing-Strategy-Seminar-2015/Session%203/Keller.pdf.

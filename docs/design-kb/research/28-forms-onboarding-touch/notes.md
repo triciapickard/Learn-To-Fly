@@ -134,3 +134,27 @@ The practical lesson is not a number but a behavior: people tap slightly away fr
 
 Confirmed this session: full text read from https://static.siplab.org/papers/chi2011-understanding_touch.pdf (abstract, studies, engineering section, conclusions), project page https://siplab.org/projects/Understanding_Touch; Crossref records 10.1145/1978942.1979308 and 10.1145/1753326.1753413.
 
+## henze2011100
+
+Henze, N., Rukzio, E., & Boll, S. (2011). 100,000,000 taps: Analysis and improvement of touch performance in the large. Proceedings of MobileHCI 2011, 133-142. ACM.
+
+### Core claims
+
+Lab studies of touch had small samples, often fewer than 30 people. The authors instead published a tapping game on the Android Market and recorded where players touched, to study error rates by target size and screen position and to test whether systematic touch offsets can be corrected. They found error rates rise sharply as targets shrink, errors are higher near the screen border than in the center, and touches are systematically skewed (on the phones they analyzed, toward a point in the lower right of the screen, consistent with right-handed thumb use). A compensation function that shifts touch positions, derived from 75 percent of the data and tested on an update of the game, reduced the error rate by 7.79 percent. The study is a large-scale observational and quasi-experimental field study with inherently low internal validity, which the authors state openly.
+
+### Specifics
+
+The game, "Hit It!", asked players to touch circles that appeared on screen, with a time limit that shrank, three stages of levels, scores, badges and high-score lists as motivation. It was published October 31, 2010. Data came from 91,731 installations that provided meaningful data (from 99,749 total) and 120,626,225 touch events. The sample was strongly Western (48.31 percent had a US English locale, 9.68 percent British English). Analysis used the four most common devices of the four most common resolutions (an HTC Wildfire, LG Optimus One, Samsung Galaxy S and Sony Ericsson Xperia X10), normalizing target size to millimeters. Only single-target micro levels were used for error analysis, the first level was dropped as practice, and only players with at least a hundred micro levels counted.
+
+Findings: the error rate decreased with target size; below 15 mm error rose dramatically and jumped to over 40 percent for targets smaller than 8 mm. For targets under 12 mm, error at the screen border was much higher than at the center (on the HTC Wildfire, 31.68 percent at the border against 17.59 percent in the center), which the authors say corresponds to making a target about 3 mm larger (8 mm to 11 mm) to compensate. Touch offsets were systematic: for the Samsung Galaxy S the touches were skewed toward a position about 1.33 cm left of and 2.12 cm above the lower-right corner, and the other phones showed a similar skew. Shift vectors from 30 by 30 screen areas, applied to the 25 percent of data held out for testing, cut errors by about 3.1 to 4.1 percent in simulation; the live test, an independent-measures experiment with 12,201 installations and 15,326,444 touch events, gave the 7.79 percent figure.
+
+### Replication and criticism
+
+The authors compare with Parhi and colleagues: for a 10.89 mm circle (equivalent to a 7.7 mm square), Parhi found a 5 percent error rate and Perry and colleagues 12.3 percent, against 14.19 to 18.86 percent here. They attribute the higher rate to time pressure, not seeing the next target in advance and the animated background. So absolute numbers should not be compared across studies, but the shape of the size-error curve and the importance of position agree. The authors note they did not know how participants held their phones and that right-handed versus left-handed offsets would be an interesting follow-up. The sample is skewed toward Western Android gamers on 2010-era phones with small screens, and the task is rapid reaction, not careful form filling. Later work from other groups on large-scale touch data exists; I did not read it this session.
+
+### Implications for LTF
+
+This study supports two design rules and cautions against over-reading the numbers. First, treat small targets as risky in a way that scales steeply: errors are modest for targets above roughly the mid-teens in millimeters in this task, and climb quickly below that. LTF should lean toward the larger end for controls the learner taps often, especially when the learner is not looking at the device (fly mode with eyes on the sim). Second, place important buttons away from the extreme edges, or enlarge them there, because edge targets are harder to hit; combine with the thumb-region advice from the Parhi study. The paper also shows that touch offsets are consistent, so a hit area slightly offset toward the usual error direction (down and toward the thumb) is a defensible refinement, but only validate that on the real tablets LTF users own. Do not use the game-derived millimeter figures as thresholds; use them to justify a generous size and spacing policy.
+
+Confirmed this session: full text read from the published PDF at https://typeset.io/pdf/100-000-000-taps-analysis-and-improvement-of-touch-4jul17t16a.pdf (abstract, study, results, discussion); Crossref record 10.1145/2037373.2037395 (title 100,000,000 taps, subtitle analysis and improvement of touch performance in the large; pages 133-142); web search summary of the abstract.
+

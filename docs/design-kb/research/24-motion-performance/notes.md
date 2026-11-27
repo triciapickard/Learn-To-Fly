@@ -370,3 +370,32 @@ The augmentation has a cost-benefit profile LTF can use without any deception: a
 Two cautions for a learner audience. First, animated stripes are decorative motion, and they must stop for users who prefer reduced motion (see WCAG 2.3.3 in this lane); a static filled bar with a text label is the fallback. Second, in fly mode, continuous looping motion at the edge of vision is a distraction; use a quiet, small, static or slow indicator there.
 
 Confirmed this session: Crossref DOI 10.1145/1753326.1753556 (CHI '10, pages 1545-1548); full text read at https://chrisharrison.net/projects/progressbars2/ProgressBarsHarrison.pdf.
+
+## nah2004study
+
+Nah, F. F.-H. (2004). A study on tolerable waiting time: how long are Web users willing to wait? *Behaviour & Information Technology*, 23(3), 153-163.
+
+### Core claims
+
+The study asks two questions about waiting for a web page: what effect does feedback have on users' tolerable waiting time, and how long will users wait for a page to download before abandoning it? According to the abstract as summarized in the search results fetched this session, feedback prolongs tolerable waiting time, and the tolerable waiting time for information retrieval is approximately 2 seconds. The paper became a standard citation for the claim that web users tolerate only a couple of seconds, and (more reliably) for the claim that a visible indicator makes people wait longer.
+
+### Specifics
+
+I could not obtain the full text or the publisher abstract page this session (the publisher, repository and aggregator pages refused the fetch), so I confirm only these items.
+
+- The abstract-level findings above, from search summaries of the abstract.
+- The conference version of the work (AMCIS 2003, same title) is described in a search summary as listing competing hypotheses about the tolerable wait, including thresholds of 2, 4, 10, 15 and 30 seconds, that the experiment was designed to test.
+- A later paper that reviews delay studies (Galletta, Henry, McCoy and Polak 2004, Journal of the Association for Information Systems 5(1), read in full this session) describes Nah's experiment: subjects were given ten links of which only seven worked. Subjects given feedback (a status bar) waited on average 38 seconds after clicking the first non-working link before giving up, while those without feedback waited 13 seconds. In subsequent attempts, subjects waited 3 seconds without feedback and 7 seconds with feedback. Galletta and colleagues conclude from this that patience does not seem to last forever. This is a secondary account of the 2003 version, so the numbers should be checked against the 2004 article before they are quoted as findings of the published paper.
+- A blog-style review, also found in search results and treated with caution, describes the design as an "infinite links" task with and without a feedback bar, with wait times dropping on repeated attempts and the feedback group waiting significantly longer across attempts, and gives the author's estimate of acceptable waiting time as 2 to 4 seconds. I did not confirm that range from a primary source, so I do not rely on it.
+
+### Replication and criticism
+
+The central caveat is what the experiment measures: how long people waited before giving up when a link was broken, not how long they were willing to wait for a working page that eventually loaded. The "2 seconds" figure is therefore a statement about patience under an uncertain outcome and not a general threshold for acceptable load time. It is cited that way by later work (a 2008 paper cites it for the claim that very short delays make consumers abandon a site), which stretches the finding. The large drop in patience from the first to the later attempts (38 to 7 seconds with feedback, per the secondary account) shows that tolerance depends on repeated experience and trust. Galletta et al. (2004) tested fixed delays of 0, 2, 4, 6, 8, 10 and 12 seconds with 196 undergraduates and found that performance and behavioral intention declines began to flatten at about 4 seconds or longer and attitudes at about 8 seconds or longer, with only small explained variance (about 2%, 5% and 7% for performance, attitudes and intentions), so effects of delay exist but are modest and non-linear. Neither study measures real purchasing or abandonment in the field.
+
+### Implications for LTF
+
+The two usable lessons are (1) an honest indicator extends patience, which supports showing progress or status for any operation that may exceed a couple of seconds, and (2) patience after a failure is short and shrinks on each retry, so error handling for a failed save or load needs to be fast: show the failure, say what happened, and offer a retry rather than a spinner that runs on. For a learner doing a lesson, a broken or hung interactive widget is exactly the "non-working link" case: after a few seconds, switch from "loading" to "this is taking longer than expected" with a plain-text option to continue without the widget.
+
+LTF should not quote "2 seconds" as a validated universal rule. When writing performance budgets for the app, use measured field data for the actual audience (see the Core Web Vitals source in this lane) and treat the thresholds in Miller, Card and Nielsen as perceptual categories (instant, flow-preserving, attention-holding) rather than as tolerances.
+
+Confirmed this session: Crossref DOI 10.1080/01449290410001669914 (BIT 23(3), 153-163, author Fiona Fui-Hoon Nah); abstract-level findings from search summaries (publisher page https://www.tandfonline.com/doi/abs/10.1080/01449290410001669914 returned 403 to fetch); the 38, 13, 7 and 3 second figures and the Galletta et al. figures were read in the Galletta et al. full text at https://www.gwern.net/doc/economics/advertising/2004-galletta.pdf.

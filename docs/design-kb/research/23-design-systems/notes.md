@@ -277,3 +277,33 @@ This is a small experiment (10 per cell), and a partial result: error rate impro
 5. When two lessons legitimately differ, document why, so that a deliberate exception is not mistaken for drift later.
 
 Confirmed this session: Crossref works query (title, authors, Ergonomics 43(4) 443-460, DOI 10.1080/001401300184332; companion papers 10.1080/01449290110092260 and 10.1080/0144929031000107081); abstract summary read at the Johns Hopkins repository page and Purdue dissertation record linked above; the publisher page returned 403, so the full abstract was not read.
+
+## tidwell2005designing
+
+Tidwell, J. (2005). *Designing Interfaces: Patterns for Effective Interaction Design*. O'Reilly Media. (Second edition 2010; third edition 2019 with Brewer and Valencia.)
+
+### Core claims
+
+Tidwell applies Alexander's pattern idea to interaction design: instead of a rulebook of guidelines, a reference of nearly 100 recurring interface solutions, each explained with an example, the situation in which to use it, the reasoning, and how to build it. The premise, set out in the preface (as the UXmatters reviewer describes it), is that interaction designers solve the same problems repeatedly across web, desktop and enterprise software and benefit from a shared vocabulary of solutions. The patterns are meant to be adapted, not copied.
+
+### Specifics
+
+Details below come from a published review (Leo Frishberg, UXmatters, November 2006, https://www.uxmatters.com/mt/archives/2006/11/book-review-designing-interfaces.php) and search-result listings of the O'Reilly pages, because the O'Reilly pages themselves returned 403 errors to my fetches.
+
+The first edition has a preface, nine chapters, references and an index. The chapters: (1) What Users Do, twelve user behavior patterns; (2) Organizing the Content, eight patterns; (3) Getting Around, eleven navigation and wayfinding patterns; (4) Organizing the Page, twelve page-layout patterns; (5) Doing Things, ten action and command patterns; (6) Showing Complex Data, covering information graphics; (7) Getting Input from Users; (8) Builders and Editors, nine patterns; (9) Making it Look Good, covering visual style. The review mentions Button Groups, Progress Indicator, Command History and Macros as example patterns. Search results give the second edition as December 2010 at 575 pages.
+
+Every pattern uses the same subheadings: Title, Example, What, Use when, Why, How, Examples. The review calls the "how" sections recipe-like. The chapters are self-contained, so the book works as a reference rather than a sequential text. Dearden and Finlay (see the dearden2006pattern section) describe Tidwell's earlier pattern collection (1998) as including "go back to a safe place", which they present as an interaction pattern: give users a clearly identifiable way to return to a known state such as a home page.
+
+### Replication and criticism
+
+The evidence is expert craft knowledge distilled from many examples, not experiment. The reviewer's weaknesses list is useful: Chapter 5 covers only a fraction of possible action and command patterns, other chapters are not exhaustive, the color-coded chapter edges are arbitrary, and the book does not address whether interaction patterns are culturally bound as architectural patterns may be. Dearden and Finlay's broader criticism applies: HCI pattern collections have generated many patterns with much duplication and little evaluation of whether using them improves outcomes, and organization by interface element (as in this book) differs from organization by user activity. Because the first edition dates from 2005, its web and desktop examples predate touch-first and mobile conventions.
+
+### Implications for LTF
+
+1. Use the seven-part pattern format for LTF's internal pattern notes: Title, Example (screenshot), What, Use when, Why, How, Examples. It is short enough to write for each widget and callout.
+2. Borrow the grouping logic. Tidwell separates what users do (behavior), organizing content, navigation, page layout, actions, data display, input, and style. An LTF pattern catalog could mirror this: lesson reading, quiz and challenge input, progress display, instrument displays, and fly mode.
+3. Patterns for safe exploration and recovery matter for a beginner audience: always a visible way to return to the lesson start or last safe screen, and undo for quiz answers before submission. The "safe place" pattern fits fly mode, where a learner may need to leave a step quickly.
+4. Do not treat pattern names as evidence. A pattern is a documented practice, not a tested guarantee. LTF should validate chosen patterns (for example how to show a multi-step checklist) with beginners.
+5. Use the review's complaint about arbitrary color coding as a reminder: structural cues such as chapter colors should carry meaning, or be left out.
+
+Confirmed this session: Open Library search "designing interfaces tidwell" returned work OL8167456W (Designing interfaces, Jenifer Tidwell, 2005, O'Reilly, ISBN 0596008031); review content from https://www.uxmatters.com/mt/archives/2006/11/book-review-designing-interfaces.php; edition dates from web search listings (O'Reilly pages blocked by 403, not read directly). I did not read the book.

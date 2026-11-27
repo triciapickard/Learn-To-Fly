@@ -289,5 +289,32 @@
     "verified_evidence": "Crossref works query 'Measuring consistency of web page design ... Ozok Salvendy' returned DOI 10.1080/001401300184332, Ergonomics 43(4) 443-460, 2000; abstract summary read at pure.johnshopkins.edu record (four groups of 10 participants, error rate partly supported)",
     "kind": "small between-subjects experiment",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "tidwell2005designing",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Tidwell",
+        "given": "Jenifer"
+      }
+    ],
+    "year": 2005,
+    "title": "Designing Interfaces: Patterns for Effective Interaction Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "O'Reilly Media",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0596008031",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'designing interfaces tidwell' returned work OL8167456W, Designing interfaces, Jenifer Tidwell, 2005, O'Reilly Media, ISBN 0596008031; chapter structure confirmed from UXmatters review by Leo Frishberg (Nov 2006)",
+    "kind": "expert pattern catalog (interaction design)",
+    "lane": "23-design-systems"
   }
 ]
