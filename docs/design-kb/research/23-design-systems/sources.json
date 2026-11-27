@@ -430,5 +430,37 @@
     "verified_evidence": "Open Library search 'coordinating user interfaces for consistency' returned work OL16583253W (Jakob Nielsen, Academic Press, 1989, ISBN 012518400X); Crossref returned chapter DOIs with prefix 10.1016/b978-0-08-050315-8 (1989); contents confirmed at nngroup.com/jakob/constbook.html",
     "kind": "edited volume (corporate case studies on consistency)",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "vignelli1970graphics",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Vignelli",
+        "given": "Massimo"
+      },
+      {
+        "family": "Noorda",
+        "given": "Bob"
+      }
+    ],
+    "year": 2014,
+    "title": "New York City Transit Authority Graphics Standards Manual",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Standards Manual, LLC",
+    "publisher_place": "Brooklyn, NY",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://standardsmanual.com/products/nycta-graphics-standards-manual-full-size-edition",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search and fetch of standardsmanual.com (2014 reissue of the 1970 manual by Vignelli and Noorda of Unimark, 356 pages on publisher page), Core77 and Untapped New York articles (Unimark hired 1966 and 1968, manual issued 1970)",
+    "kind": "corporate graphics standards manual (reissue)",
+    "lane": "23-design-systems",
+    "original_year": 1970
   }
 ]

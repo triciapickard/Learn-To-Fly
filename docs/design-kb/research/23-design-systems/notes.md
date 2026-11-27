@@ -427,3 +427,33 @@ This is expert opinion and corporate case study (Apple, IBM, Digital, Lotus, GE)
 5. Put tooling in the process. The book's chapters on generation tools support using linting and token checks in LTF's CI to enforce what people forget.
 
 Confirmed this session: Crossref returned chapter records for the volume (DOI prefix 10.1016/b978-0-08-050315-8; e.g. 10.1016/b978-0-08-050315-8.50007-9 for the executive summary, 1989, Elsevier); Open Library search returned work OL16583253W (Jakob Nielsen, Academic Press, 1989, ISBN 012518400X); contents and lessons from https://www.nngroup.com/jakob/constbook.html; preface from the NN/g page above. I did not read the book.
+
+## vignelli1970graphics
+
+Vignelli, M., and Noorda, B. (Unimark International) (1970). *New York City Transit Authority Graphics Standards Manual*. Reissued 2014 by Standards Manual, LLC, Brooklyn (full-size edition).
+
+### Core claims
+
+The manual is a pre-digital design system: a specification that lets many people, over many years, make signs that look and behave as one. Massimo Vignelli and Bob Noorda of Unimark International wrote it for the New York City Transit Authority, which hired Unimark in 1966 to advise on signage and maps; the work took about four years, with Unimark rehired in 1968 and the manual issued in 1970 (https://www.untappedcities.com/10-fun-facts-about-the-nyc-transit-authority-graphics-standard/). It matters to this lane because it has what design-system writers still argue for: a small set of parts, rules for combining them, and a document that lets non-designers apply the rules.
+
+### Specifics
+
+All details below are from secondary sources (a publisher page and journalism); I did not see the manual. Facts about the reissue come from the publisher (https://standardsmanual.com/products/nycta-graphics-standards-manual-full-size-edition): published 2014 by Standards Manual, LLC, made from scans of the Vignelli family's copy, 10 by 10 inches, with the typeface redrawn as "NYCTA Standard Medium" by Nick Sherman. The publisher lists the page count as 356, a trade article gives 364 for the original (https://www.core77.com/posts/27612/The-Standards-Manual-A-Veritable-Grail-of-Visual-Communication-Available-for-30-Days-via-Kickstarter), and a search snippet gave 176; I could not reconcile these, so I do not state a page count.
+
+Rules reported by the Untapped New York article: the manual called for black signs on white (around 1973 signs switched to white on black to improve legibility amid graffiti, according to the article); signs came in three prescribed sizes, 1 by 2 feet for information, 1 by 4 for direction and 1 by 8 for station identification, all built from 1-foot square panels; the manual specified word spacing, letter spacing, leading and the number of lines per sign. The black stripe at the top of signs originally marked the metal channels that held signs, and later became a graphic element. The original typeface was Standard Medium, not Helvetica; Helvetica Medium became the official MTA signage typeface in December 1989, per the same article, and Vignelli's first use of Helvetica on NYCTA work was the 1972 subway map.
+
+Before the manual, a Unimark report in 1966 was largely ignored and the Authority built signs in-house, which Vignelli called "the biggest mess in the world" (as quoted by the article). The manual was rediscovered in 2012 in the basement of Pentagram's New York office, and the 2014 Kickstarter for the reissue reportedly exceeded its $108,000 goal within hours (Core77).
+
+### Replication and criticism
+
+This is a craft artifact and a historical case, not a study. The secondary sources are admiring. The evidence that the system worked is that the sign language survived for decades and was later updated, but the sources I read give no usability measurements, and they disagree on details such as the Helvetica date and the page count. The manual also shows what rigid standardization costs: the original black-on-white rule was reversed in practice around 1973, and a standards document needs maintenance as conditions (graffiti, new agencies) change; Michael Hertz Associates updated the manual in 1989 to unify MTA agencies.
+
+### Implications for LTF
+
+1. Build small kits with strict rules. The three sign sizes made from one unit panel are the same idea as a spacing token and a grid: a few sizes that combine, so a layout cannot drift. LTF cards, callouts and instrument frames should come in a limited set of sizes built on one spacing unit.
+2. Specify the boring details. Word spacing, letter spacing, line counts: LTF should state line-length limits, heading lengths and the number of lines in a checklist item, since they keep text glanceable.
+3. Test the rule against the environment. The switch to white on black shows that a standard can be wrong in situ. LTF's themes should be checked in the conditions of use, such as a dim room beside a monitor, not only on the designer's screen.
+4. Keep a living manual. Updates (1989) show that a standards document has a maintenance cost; LTF's changelog and decision log should be treated as part of the system.
+5. Make the document usable by others: LTF's knowledge base should let authors and future Claude agents produce correct output.
+
+Confirmed this session: the publisher page (standardsmanual.com full-size edition and About pages), a Core77 article and the Untapped New York article were fetched; Unimark's Wikipedia page confirmed 1965 founding and a systems-and-standardization philosophy. Page-count figures conflict across sources and are left unresolved. Verified by web search, since the manual is not in Open Library and Crossref has no record.
