@@ -850,3 +850,165 @@ Keep: local-first control interactions (LAW-053, LAW-054); skeletons that reserv
 Change: surface failed optimistic saves to the learner (LAW-057); add field measurement by route (LAW-060). Motion tokens (`fade-in`, `pop-in` and `rise-in` at 200 ms, `tier-pop` at 400 ms) sit inside the one-second object-constancy budget [@card1991information]; keep transitions under it.
 
 Build: a written performance budget for the client that cites the vitals as current vendor thresholds with their date, and the 0.1, 1 and 10 second limits as conventions, with no "Doherty threshold" (the myth above). The motion and perceived-performance Part of this book covers animation timing and progress display in more depth.
+
+## Perceived magnitude: Weber, Fechner and Stevens
+
+### From Weber's fraction to Fechner's logarithm
+
+The oldest quantitative laws in this Part concern how large a stimulus seems. Weber's law holds that the just-noticeable difference in a stimulus is a constant fraction of its level: the fraction, delta I over I, is constant along a continuum. Under good conditions it is about 1 percent for brightness, 2 percent for loudness and 20 percent for saltiness, and the law fails near the absolute threshold (figures from an encyclopedic account of Stevens's work, a secondary source) [@stevens1957psychophysical]. Fechner assumed that every just-noticeable difference is an equal unit of sensation, which makes sensation grow with the logarithm of the stimulus. That assumption is powerful and questionable, and historically the logarithmic law disagreed with observers' direct judgments of loudness [@stevens1957psychophysical].
+
+### Stevens's power law
+
+Stevens argued that for many sensory continua perceived magnitude is a power function of physical magnitude, not a logarithm: equal stimulus ratios produce equal subjective ratios, with an exponent that differs by continuum [@stevens1957psychophysical]. The exponents attributed to his work in the secondary account include about 0.6 for binaural loudness and 0.54 for monaural, 0.33 for brightness of a 5 degree target to the dark-adapted eye and 0.5 for a point source, 3.5 for electric shock, and 1.0 for the apparent length of a projected line. An exponent below one compresses (doubling the stimulus less than doubles the sensation); an exponent near one, as for length, is close to proportional; an exponent above one expands. The two brightness values show that the exponent depends on conditions, not only on the continuum.
+
+Stevens also divided continua into two classes [@stevens1957psychophysical]. Prothetic continua concern "how much", such as loudness; metathetic continua concern "what kind and where", such as pitch. On the first, the subjective size of the just-noticeable difference is unequal, category rating scales are typically concave downward and time-order errors are expected; on the second, just-noticeable differences are roughly equal in subjective size, category scales are possibly linear and time-order error is generally absent.
+
+### Replication and criticism
+
+Magnitude-estimation experiments replicated power-law scaling widely, and it supplanted the logarithmic law in much of psychophysics. Critics argue that magnitude estimation tests neither the power law nor its own assumptions directly; that criticism was not traced to a primary source here. The exponents vary with stimulus conditions, so no single value should be treated as a constant, and this Part's research read only an excerpt of the paper and an encyclopedic account of the exponents [@stevens1957psychophysical]. The grades below reflect that.
+
+::: {.rule #LAW-061 grade="B"}
+**Encode any quantity the learner must compare by position or length, not by brightness, area or color intensity.** Apparent length grows roughly in proportion to physical length, while brightness grows with a compressive exponent well below one [@stevens1957psychophysical]. The exponents come from a secondary account and vary with conditions, so the rule is a direction, graded B.
+
+*In LTF:* `ProgressBar`, the module bars on `DashboardPage`, the `AirspeedArcs` band and the tape in the g1000-pfd widget carry quantity by length or position along a scale. Do not encode a quantity by the lightness of a fill or by the area of a circle; `ProgressRing` is acceptable because it reads as arc length, but a number beside it carries the exact value.
+:::
+
+::: {.rule #LAW-062 grade="B"}
+**Make a warning or threshold state a large relative change in more than one channel (hue, shape, word), not a slightly brighter or darker version of the normal state.** A just-noticeable difference is a fraction of the current level, so the same absolute change is noticed differently at different levels [@stevens1957psychophysical]; perceived brightness is compressed, so small lightness steps are weak signals.
+
+*In LTF:* the random-event alert in `FlyPanel` already changes border width (`border-4`), color (`border-warn bg-warn-tint`), icon (`BellRing`) and text, and adds a beep; status `Badge`s add an icon and a word to the color. Keep that pattern for every state change the learner must notice.
+:::
+
+::: {.rule #LAW-063 grade="C"}
+**Check tonal steps in the Day and Night themes by perceived difference, not by equal numeric steps.** Perceived magnitude is not linear in physical intensity, and the same physical step is noticed differently at different levels [@stevens1957psychophysical]. The application to theme design is an inference; the color Part of this book covers the measurement method.
+
+*In LTF:* the ink levels `ink`, `ink-2` and `ink-3` and the surface levels `canvas`, `surface`, `surface-raised` and `surface-sunken` are checked in both themes for whether adjacent levels look distinct; in the Day theme `ink-2` (#595856) and `ink-3` (#6a6967) are close, and the pair should be reviewed for whether the distinction is visible at all.
+:::
+
+### Scales on instrument widgets
+
+The widgets in `src/features/widgets/` draw dials, tapes and arcs whose purpose is to teach the learner to read real instruments. They are display scales, and the psychophysics bears on how a change on them is perceived. A needle's angle and a tape's position are read as position along a scale, which is the favorable case. Fixed instrument colors (`arc-white`, `arc-green`, `arc-yellow`, `arc-red`) mark ranges by hue and position together. What the widgets teach about which ranges mean what is aviation content and comes from the lesson and `content/aircraft.yaml` tokens, not from this Part.
+
+::: {.rule #LAW-064 grade="C"}
+**When a widget animates a number or a needle, move it at a rate proportional to the change in the quantity, and keep the exact value in text.** Equal displayed steps can feel unequal when the underlying perception is compressive [@stevens1957psychophysical], and a smooth proportional motion keeps the display tied to the quantity; the exact value in text removes the need to judge magnitude by eye. An inference from the psychophysics, hence C.
+
+*In LTF:* `Gauge` and `Tape` in `shared/svg.tsx` rotate or translate in proportion to the modeled value; `RangeField` and widget readouts show the value in `readout` mono beside the drawing, and the "Describe this diagram" text states it for screen readers.
+:::
+
+::: {.rule #LAW-065 grade="C"}
+**Do not cite a specific psychophysical exponent or Weber fraction in LTF design documents.** The values depend on stimulus conditions (two different brightness exponents for two targets) and come here from a secondary source [@stevens1957psychophysical]. Use the direction: length is near proportional, brightness compresses, relative change is what is noticed.
+
+*In LTF:* token comments in `tokens.css` and widget specs justify encodings by these directions, never by a number such as "brightness exponent 0.33".
+:::
+
+### What this means for Learn to Fly
+
+The product's quantitative displays mostly use the favorable channels already. Progress is length (`ProgressBar`), the lesson path's completed connector is length along a line (`LessonPath`), difficulty is a count of dots (`DifficultyDots`, read as number, with "3 of 5" text), and tiers carry a word as well as a color.
+
+Keep: length and position encodings; words and icons beside every status color; exact values in mono beside every drawn scale.
+
+Change: review the `ink-2` and `ink-3` pair for a perceptible difference in both themes (LAW-063); make sure no future chart encodes a learner's score by fill lightness or bubble area (LAW-061).
+
+Build: nothing new; this chapter's rules join the review checklist below.
+
+## Decision list and review checklist
+
+### Decisions this Part settles
+
+1. **Laws are cited by effect and condition, never as slogans, and no borrowed constant becomes a specification.** Reviews say what effect applies and why the conditions hold; bits per second, milliseconds per operator and items in memory stay out of tokens, comments and specs (LAW-001, LAW-002, LAW-009, LAW-065).
+2. **Fly mode is the reference case for sizing and placing controls.** Every size decision is made for a novice with divided attention and an imprecise hand (LAW-003, LAW-007, LAW-016).
+3. **Size scale.** 24 by 24 CSS pixels is the floor for any target; 44 is the minimum for primary, repeated and sequential controls, so `md` (40 px) is not used for them; fly-mode primary controls are at least 48 px and preferably 64 px, with full-width rows (LAW-005, LAW-011, LAW-012).
+4. **Hit areas equal visible areas.** Whole rows are targets; adjacent targets have real gaps; edge controls get larger hit areas (LAW-008, LAW-013, LAW-014).
+5. **Selections commit on release** (LAW-015).
+6. **Destructive actions are separated by distance and protected by confirmation or undo**, starting with the `Stopwatch` and `ChecklistRunner` Reset buttons (LAW-017).
+7. **No steering on fly-mode screens; every drag has a non-drag alternative; drags clamp rather than cancel; no cascading menus** (LAW-019 to LAW-024).
+8. **Choices are mapped compatibly, kept in stable positions, and the expected action is primary.** Options are not cut or split to speed decisions, and quiz difficulty is tuned by wording, not option count (LAW-025 to LAW-030).
+9. **Navigation stays two levels deep with broad, grouped, well-labeled levels; ordered content is flat.** No click budgets; navigation changes are judged by task success, lostness and, separately, preference (LAW-031 to LAW-036).
+10. **`FlyPanel` adopts the `ChecklistRunner` method**: one tick model, Space and Backspace, a highlighted current step that advances, operator counts in reviews of frequent tasks (LAW-037 to LAW-041).
+11. **What the learner acts on stays visible; new material arrives in small, named chunks; numbers are grouped and copyable** (LAW-042 to LAW-046).
+12. **Progress displays show the learner's own attempts, make no predictions, and treat plateaus as normal** (LAW-047 to LAW-052).
+13. **Control interactions are local and respond within about 0.1 second; transitions within about a second with layout-preserving skeletons; long operations show honest progress; failures are stated quickly with a retry; no auto-advance after feedback; latency is measured in the field with a stricter fly-mode target** (LAW-053 to LAW-060).
+14. **Quantities are encoded by length or position, warnings by large multi-channel changes, and theme tonal steps are checked perceptually** (LAW-061 to LAW-064).
+
+### Review checklist
+
+Run these questions against a pull request or a page. Each names the rules it checks.
+
+**Citing the laws**
+
+- Does any comment, document or description quote a law by name without stating the effect and why its conditions apply? (LAW-001)
+- Does it state a constant from the literature (bits per second, ms per bit, seconds per operator, seven items, 400 ms) as a target? (LAW-002, LAW-009, LAW-065)
+- If speed is the justification, is there either a qualitative rule from this Part or a within-study comparison on LTF's own layout? (LAW-004, LAW-010)
+
+**Pointing and touch**
+
+- Are the most frequent and time-critical controls the largest and nearest to the learner's current focus? (LAW-005)
+- Was any frequent control shrunk to make room, instead of being wrapped or moved? (LAW-006)
+- Does every pointer target meet 24 by 24 CSS pixels, and every primary, repeated or sequential control 44 by 44? On fly-mode screens, at least 48? (LAW-011, LAW-012)
+- Is the whole visible control the hit target, with no dead padding? (LAW-007, LAW-008)
+- Do adjacent targets have real gaps, and are edge targets inset or enlarged? (LAW-013, LAW-014)
+- Does any handler act on pointerdown, mousedown or touchstart? (LAW-015)
+- Is a destructive or progress-losing action next to a frequent one, or without confirmation or undo? (LAW-017)
+- Can the value being set or the step being acted on be seen while a finger is on the control? (LAW-018)
+- On fly-mode screens: are controls few, fixed in position, reachable by keyboard, and does anything reflow when state changes? (LAW-016)
+
+**Steering and drags**
+
+- Does any task require the pointer to stay inside a long or narrow corridor? (LAW-019)
+- Does a custom drag keep tracking and clamp when the pointer leaves the control? (LAW-020)
+- Does every drag have a tap, button or key alternative? (LAW-021)
+- Are repeated or teaching-relevant values available as one-tap presets? (LAW-022)
+- Are there hover-opened flyouts or cascading submenus? (LAW-023)
+- Is there any slider, drag or swipe on `FlyModePage` or `FlyPanel`? (LAW-024)
+
+**Choices and navigation**
+
+- Is each control placed where its effect is? (LAW-025)
+- Does any list, nav or rail reorder by recommendation or recency? (LAW-026)
+- Is there exactly one visually primary action, and is it the one most learners take? (LAW-027)
+- Were options removed or split across screens to "reduce choices"? (LAW-028)
+- Does the description say what the learner looks for and how they find it, rather than counting items? (LAW-029)
+- Is quiz difficulty being tuned by option count? (LAW-030)
+- Does the change add a navigation level? Is a long level grouped on the page instead? (LAW-031, LAW-032)
+- Were labels tested before a structure change, and were success, lostness and preference measured separately? (LAW-033, LAW-034)
+- Is a click budget being used as a criterion? (LAW-035)
+- Is ordered content (steps, lessons, checklists) shown flat and numbered? (LAW-036)
+
+**Operators and methods**
+
+- For a change to a frequent task, is there an operator count for the old and new method? Were decisions removed first? (LAW-037)
+- Can a fly-mode step be completed without changing device, with a single key? (LAW-038)
+- Does focus or the current-step highlight move to the next item automatically? (LAW-039)
+- Is any time estimate derived from operator arithmetic? (LAW-040)
+- Does the same task work the same way everywhere it appears? (LAW-041)
+
+**Memory**
+
+- Must the learner remember anything the screen could show? (LAW-042, LAW-046)
+- Are related items grouped under stable, reused names? (LAW-043)
+- How many new terms and values does this section introduce? (LAW-044)
+- Are digit strings grouped and copyable? (LAW-045)
+
+**Practice and progress**
+
+- Does the design encourage short repeated attempts after the first? (LAW-047)
+- Does any display predict progress, fit a curve or schedule from a learning-rate model? (LAW-048)
+- Do progress displays show the learner's own attempts, not averages? (LAW-049, LAW-051)
+- Does copy treat a plateau or lower score as failure, or claim a skill stage? (LAW-050, LAW-052)
+
+**Response time**
+
+- Is the interaction control or conversational, and does every control interaction update locally with no network round trip? (LAW-053)
+- Is there visible feedback within about 0.1 second for every tap and key? (LAW-054)
+- Do transitions that may exceed a second show a skeleton that reserves space? (LAW-055)
+- Do operations that may exceed a few seconds show honest progress and a way out? (LAW-056)
+- Does a failure switch quickly to a plain message with a retry, and is a failed optimistic save reported? (LAW-057)
+- Does anything auto-advance after feedback? (LAW-058)
+- Does performance work target slow outliers, and is latency measured in the field with a fly-mode target? (LAW-059, LAW-060)
+
+**Magnitude and scales**
+
+- Are compared quantities encoded by length or position? (LAW-061)
+- Is every warning state a large change in more than one channel? (LAW-062)
+- Are adjacent tonal levels perceptibly different in both themes? (LAW-063)
+- Do animated readouts move in proportion and show the exact value in text? (LAW-064)

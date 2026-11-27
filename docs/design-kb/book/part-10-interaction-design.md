@@ -2002,3 +2002,198 @@ measured for false alarms (INT-077); procedures grouped with completion lines an
 first (INT-079); step text written as target states (INT-080) in cockpit order (INT-081); and an
 explicit hand-off to the debrief from fly mode (INT-082). Keep every tick a learner action
 (INT-078), and treat a reduced-help mode as an option to test, never a default (INT-083).
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+The decisions below are stated as settled policy for LTF. Each names the rules that carry its
+evidence and grade; where a decision rests mostly on grade C rules, it is a reasoned default that
+learner testing may revise.
+
+1. **Widgets are direct-manipulation worlds.** The object is always visible, the control sits on or
+   beside what it moves, every change is immediate and reversible, and "Reset" returns to the start.
+   Each widget shows the quantity the learner judges and is framed by lesson text saying what to
+   notice. (INT-001, INT-003, INT-004, INT-005, INT-007)
+2. **Tables and lists stay tables and lists.** Lookup and comparison content is not turned into
+   icons or cards. (INT-002)
+3. **Results are reported, not praised.** Copy states the measured outcome; "Nice work!" and similar
+   verdicts are removed. (INT-006, INT-017)
+4. **Interactive and static surfaces look different.** Interactive cards are links built from
+   `Card interactive` with a hover change and an arrow or chevron; static cards have none of these.
+   Hand-inlined card markup is replaced by `Card`. (INT-008, INT-009, INT-014)
+5. **Conventions stay; cockpit styling stays inside widget drawings.** Underlined links, labeled
+   icons, chevrons and tab underlines are kept; instrument tokens never style page controls; hidden
+   horizontal scroll gets a visible cue. (INT-011, INT-012, INT-013)
+6. **Locked and disabled controls always say why.** (INT-016, INT-040)
+7. **Every action gets local feedback within about a tenth of a second, and every sequence ends
+   visibly.** Response-time budgets are measured in tests. The Fly tab and the checklist runner gain
+   visible end states. (INT-018, INT-019, INT-020)
+8. **Progress indicators are honest.** Determinate only when the fraction is known, never stalled
+   near the end, never shaped to deceive. (INT-021, INT-022)
+9. **Outcomes persist where the action happened.** Toasts duplicate, never replace, an inline state;
+   errors stay until handled. (INT-023, INT-024)
+10. **Modes are few, named in words at a fixed place, and tested with an interruption.** Widget quiz
+    mode gets an in-canvas label; fly mode shows whether the timer is running and events are armed;
+    the visitor branch of "Mark lesson complete" is labeled for what it does; practice never feeds a
+    score. (INT-025, INT-027, INT-028, INT-029, INT-030, INT-031)
+11. **Risky modes are held, not latched.** (INT-026)
+12. **Learner errors are content defects until shown otherwise.** First-try accuracy is reported per
+    quiz item and widget quiz and reviewed; copy never blames; quizzes distinguish slips from
+    mistakes; changed steps in practiced procedures are marked. (INT-033, INT-034, INT-035, INT-037)
+13. **The challenge keeps independent layers of defense.** Brief, Fly and Debrief each stand alone.
+    (INT-036)
+14. **Errors say what happened, what to do and whether it may be bigger; validation happens on blur;
+    quiz answers are checked on request.** (INT-038, INT-039)
+15. **Undo replaces "Are you sure?".** Confirmation is kept only for irreversible actions and must
+    not be a reflex click; the checklist "Reset" gains undo; irreversible submits say so. (INT-041,
+    INT-042, INT-043, INT-044, INT-046)
+16. **Learner work survives interruption and the second screen.** Flight state syncs for signed-in
+    learners, and fly mode says where ticks are stored until it does. (INT-045, INT-047)
+17. **Consequences are previewed before commitment.** The debrief score preview stays beside submit.
+    (INT-048)
+18. **Defaults are deliberate, documented and learner-serving.** Private by default, no pre-selected
+    answers, blanks explained, recommendations labeled, layout never adapts by usage, no settings
+    tour before the first lesson. (INT-049, INT-050, INT-051, INT-052, INT-053, INT-054, INT-055)
+19. **One interface vocabulary, in the learner's terms.** An interface glossary is kept beside the
+    aviation glossary and content is checked against it. (INT-057, INT-058)
+20. **The app designs for its own blindness.** Steps say what the learner should see, give a way back
+    in, are tickable in any order, and every score says it is self-assessed. (INT-056, INT-059,
+    INT-060, INT-061, INT-062)
+21. **Excise is removed and the first task comes first.** Lesson-top notices collapse into one line;
+    first-time help retires after use; critical setup lives in the path of the task; each lesson has
+    at least one attempt between objectives and completion. (INT-063, INT-064, INT-065, INT-066,
+    INT-067)
+22. **Personas are hypotheses.** The second-screen learner is measured, not assumed. (INT-068)
+23. **Every new interactive component carries a trigger, rules, feedback and loop comment.** The copy
+    button reports failure, system-triggered alerts name their trigger, discarded drafts are
+    announced, previous results are shown read-only beside new choices, and celebration is reserved
+    for rare events. (INT-069, INT-070, INT-071, INT-072, INT-073, INT-074)
+24. **Fly mode is ready-to-hand.** Stable layout, no overlays except the challenge's own alert, the
+    alert kept rare and measured, no automated ticks, grouped critical-first procedures written as
+    target states in cockpit order, and a hand-off to the debrief. (INT-075 to INT-082)
+25. **Reduced help is an option, not a default.** (INT-083)
+26. **Aviation content in any of the above comes from verified content tokens.** No rule here
+    supplies a number, a mode name or a procedure. (INT-032, INT-080, INT-081)
+
+### Review checklist
+
+Run these questions against a pull request or a page. A "no" is a finding; cite the rule ID.
+
+#### Direct manipulation and signifiers
+
+- Does each widget show its object continuously, respond to every input at once, and return to its
+  start with "Reset"? (INT-001)
+- Is information that people compare or look up still a table or list? (INT-002)
+- Does the widget display the quantity the learner is asked to judge, such as a rate or a relation?
+  (INT-003)
+- Is the control on, or directly beside, the output it changes? (INT-004)
+- Is the widget framed by text that says what to try and what to notice? (INT-005)
+- Does result copy report a measurement rather than a verdict? (INT-006)
+- Does a complex widget open with a reduced first layer? (INT-007)
+- Does every possible action have a visible cue on its element? (INT-008)
+- Does any non-interactive element have a hover state, pointer cursor, chevron or pill shape?
+  (INT-009)
+- Does a grabbed control show its range and stops? (INT-010)
+- Are icons labeled with words where a beginner must find them? (INT-011)
+- Does the change follow web conventions, and does any sideways scroll have a visible cue? (INT-012)
+- Is cockpit styling confined to widget drawings? (INT-013)
+- Do controls with different effects differ in shape and position, and do same-effect controls look
+  the same? (INT-014)
+- Is any sound reserved for rare events, and backed by a visible state? (INT-015)
+- Does every locked or disabled control say why and when it opens? (INT-016)
+
+#### Feedback and time
+
+- Is the feedback proportionate to the action? (INT-017)
+- Does every multi-step sequence end in a visible completion state? (INT-018)
+- Does the pressed control change state locally within about 0.1 s, before any server reply?
+  (INT-019)
+- Does each event type meet its time budget, and is that measured? (INT-020)
+- Is any progress indicator determinate only when the fraction is known? (INT-021)
+- Does any bar stall near its end or misrepresent real work? (INT-022)
+- Is every success shown persistently where the action happened, not only in a toast? (INT-023)
+- Do errors stay visible beside what failed until handled? (INT-024)
+
+#### Modes
+
+- Has every mode on the page been listed, and could any be removed? (INT-025)
+- Is a costly mode held rather than latched? (INT-026)
+- Is any mode marked by color alone? (INT-027)
+- Is the current mode named in words at a fixed place? (INT-028)
+- Does anything change mode as a side effect without saying so? (INT-029)
+- Was the mode tested with a switch to the sim and back, with resume time noted? (INT-030)
+- Is practice kept in a different frame from anything scored? (INT-031)
+- Does content about sim modes ask the learner which mode is active, with verified names? (INT-032)
+
+#### Error
+
+- Does feedback offer a correction for slips and an explanation for mistakes? (INT-033)
+- Are changed steps in practiced procedures marked? (INT-034)
+- Is there a path for clustered wrong answers to become content review tickets? (INT-035)
+- Does each layer of the challenge flow stand alone? (INT-036)
+- Is learner-facing copy free of blame words? (INT-037)
+- Does each error message say what happened, what to do and whether it may be bigger, and keep the
+  learner's input? (INT-038)
+- Is validation on blur, with persistent messages, and are quiz answers checked only on request?
+  (INT-039)
+- Are serious errors prevented by design, with the reason shown beside any disabled action? (INT-040)
+
+#### Undo and work
+
+- For each reversible control, are its unit and what it restores clear on screen? (INT-041)
+- Is the effort to undo no greater than the effort to do? (INT-042)
+- Is a confirmation dialog used where undo would serve? (INT-043)
+- Does every irreversible action say so beside its button? (INT-044)
+- Does learner input survive a refresh, sign-in, closed tab and device change, or does the screen say
+  where it is kept? (INT-045)
+- Does every reset name its scope? (INT-046)
+- Can a learner on the companion screen recover in one action? (INT-047)
+- Is a consequence previewed before commitment? (INT-048)
+
+#### Defaults
+
+- Is every pre-set value a documented decision? (INT-049)
+- Does any default serve the product at the learner's expense? (INT-050)
+- Is any quiz, rubric or self-assessment answer pre-selected, and is the treatment of blanks stated?
+  (INT-051)
+- Is each default the learner's most likely value, easy to replace and not labeled "Default"?
+  (INT-052)
+- Does any layout rearrange itself by usage? (INT-053)
+- Is a recommended value worded as a recommendation? (INT-054)
+- Does the change ask for a choice that a default could have handled? (INT-055)
+
+#### Models and goals
+
+- Does each challenge step say what the learner will see and how they know it went well? (INT-056)
+- Is each control, procedure and state named the same everywhere? (INT-057)
+- Is the copy in the learner's terms, not the system's? (INT-058)
+- Does any instruction assume the previous step succeeded in the sim? (INT-059)
+- Can the learner enter a procedure at any step? (INT-060)
+- Does every score or result say what the app can and cannot check? (INT-061)
+- Is guidance ordered as look, means, next, without claims about measuring awareness? (INT-062)
+- Can every required step be tied to a flying goal? (INT-063)
+- Is first-time guidance dismissible and retired once used? (INT-064)
+- Is the first real task on the first screen, with explanation at the point of need? (INT-065)
+- Is anything critical placed only in a "read first" block? (INT-066)
+- Does each lesson have an attempt between its goal and its end? (INT-067)
+- Is any persona or scenario labeled as a hypothesis with its evidence? (INT-068)
+
+#### Microinteractions and the companion screen
+
+- Does the new component document its trigger, rules, feedback and loop? (INT-069)
+- Does each trigger's label change with its state, and does it report failure? (INT-070)
+- Is the learner's relevant data shown where they act, without pre-selecting? (INT-071)
+- Does each system-triggered event say what triggered it? (INT-072)
+- Is the state's behavior across refresh, session, sign-in and content update decided and
+  communicated? (INT-073)
+- Has any "delight" detail been tested, and does it stay out of the sim's way? (INT-074)
+- Does the fly-mode layout stay still between glances? (INT-075)
+- Does any dialog, banner, toast or popover appear on the companion screen during a flight? (INT-076)
+- Is every alert rare, actionable and measured for dismissals? (INT-077)
+- Does the app tick, advance or score anything the learner should check? (INT-078)
+- Are long procedures grouped, critical-first and closed by completion lines? (INT-079)
+- Is each step written as a target state? (INT-080)
+- Are steps in cockpit order unless a critical item must come first? (INT-081)
+- Is reflection kept for the debrief, with an explicit hand-off from fly mode? (INT-082)
+- Is any reduced-help mode optional, with full help as the default? (INT-083)

@@ -51,7 +51,7 @@ The volume also stresses large individual differences in spatial ability, which 
 ::: {.rule #NAV-004 grade="C"}
 **Keep a few landmarks on every page, always in the same place, and keep them rare enough to stay distinctive.** Lynch's landmarks are reference points a person does not enter, memorable because at least one aspect is unique in context [@lynch1960image]. Golledge's anchors play the same role in memory [@golledge1999wayfinding]. A landmark only works if it is in the same place each time and if there are few of them; a page full of distinctive marks has none.
 
-*In LTF:* the landmarks are the fin-and-stripe `Logo` at the top left of `Header`, the active-section underline (`shadow-[inset_0_-3px_0_var(--color-accent-line)]`), the mono code label on lessons and challenges, and the "current" ink pin in `LessonPath`. Do not add a second accent-colored mark to the header, and do not move the code label below the title on some pages and above it on others.
+*In LTF:* the landmarks are the fin-and-stripe `Logo` at the top left of `Header`, the active-section underline (a 3 px inset in `accent-line`), the mono code label on lessons and challenges, and the "current" ink pin in `LessonPath`. Do not add a second accent-colored mark to the header, and do not move the code label below the title on some pages and above it on others.
 :::
 
 ::: {.rule #NAV-005 grade="C"}
@@ -843,3 +843,127 @@ What to keep: the beta's "Report a problem" channel as a source of leads, not co
 What to change: stop settling labels in review discussion alone (NAV-034, NAV-067).
 
 What to build: the sort (NAV-067, NAV-069, NAV-070), the tree test with lostness (NAV-071), and independent inspection against the checklist (NAV-074), with results kept in `docs/` beside the design decisions they settle.
+
+## Decision list and review checklist
+
+The decisions below are what this Part settles for LTF. Each is tied to the rules that justify it; a pull request that departs from one should say which rule it overrides and why. The checklist that follows is written as questions a reviewer can answer from a page, a screenshot or a diff.
+
+### Decisions this Part settles
+
+#### Structure and shape
+
+1. The course hierarchy stays at two levels below `/learn`: module, then lesson. Courses become headed groups on the one `/learn` page, never a route of their own (NAV-022, NAV-023, NAV-024, NAV-027).
+2. The global bar holds three districts (Learn, Challenges, Reference) plus, for signed-in learners, a visible dashboard item. Content types inside Reference never get header items (NAV-025, NAV-052, NAV-060).
+3. Hubs, not menus, show each district's contents. No dropdown or mega menu is added to the header, and no navigation opens on hover (NAV-012, NAV-061, NAV-062).
+4. Each lesson has one home in `modules.yaml`; published lessons are never reordered; reference items may have many parents (NAV-001, NAV-042).
+5. The course is organized by sequence; reference material by exact schemes (alphabetical, phase of flight, identifier) (NAV-040).
+
+#### Labels and search
+
+6. Every lesson, glossary term and checklist is indexed under several names, and lessons join the reference search index as a sixth kind (NAV-033, NAV-044, NAV-053).
+7. One name per page across header, `h1`, breadcrumb, document title and search: the challenge breadcrumb shows code and title, and the reference hub's `h1` reads "Reference" (NAV-035, NAV-051).
+8. Labels name destinations: "Go deeper" and "Fly it" headings are renamed, the "Priority" filter becomes "Core or bonus", and the glossary empty-state hint suggests plain words (NAV-014, NAV-037, NAV-043).
+9. Unpublished modules are not links (NAV-017).
+10. Module titles and tab names are label-tested with beginners before Course 1 is fully published, and zero-result searches are logged without account identifiers (NAV-034, NAV-039).
+
+#### Orientation and decision points
+
+11. The lesson header shows "Lesson n of m" beside the code, and lessons render their prerequisites as links (NAV-007, NAV-018, NAV-046).
+12. The end of `LessonPage` leads with completion and one next step; the last lesson of a module points to the module's challenge or the next module (NAV-003, NAV-009, NAV-016).
+13. A global `scroll-padding-top` matches the sticky stack at every breakpoint (NAV-050).
+14. Support sections at the end of a lesson sit under one `h2` (NAV-049).
+15. The `index.html` default title uses the "·" separator (NAV-051).
+
+#### Fly mode and lookup
+
+16. Fly mode keeps one exit, adds a fixed row of one-step lookups for the checklists and key numbers the challenge uses, gains a current-step marker in `FlyPanel`, and drops the `BetaBanner` (NAV-006, NAV-010, NAV-011, NAV-021, NAV-059).
+17. Lessons link backward (prerequisites) and forward (later lessons that build on them), generated from frontmatter; airport pages get previous and next (NAV-054, NAV-055).
+18. `ResultView` places lesson review links above the action to fly again when an attempt does not pass (NAV-057).
+
+#### Research and review
+
+19. No review accepts or rejects a design on click count (NAV-028, NAV-029).
+20. Structure changes are tested: an open card sort of Course 1 with about 15 people who have never flown, a tree test with lostness before Course 2 ships, success and time measured beside preference (NAV-026, NAV-031, NAV-067, NAV-069, NAV-070, NAV-071).
+21. New page templates get a trunk test and independent inspection by three to five reviewers against the checklist below (NAV-046, NAV-074).
+
+### Review checklist
+
+Run these questions against a page or pull request. A "no" is a finding; cite the rule.
+
+#### Place and path
+
+- Can a reviewer, from this page alone, point to the site, the page name, the section, the page's place in the section and the way back to the hub? (NAV-046)
+- Is the current location marked at every visible level of navigation, with more than color? (NAV-047, NAV-005)
+- Does the page open like the other pages of its district (code label, eyebrow, breadcrumb position)? (NAV-002, NAV-004)
+- Does every page below a hub have breadcrumbs that mirror the structure, ending in the unlinked current page? (NAV-048)
+- If the page starts a different kind of activity (timed, full screen, in-sim), is the edge marked and is there a labeled way back? (NAV-006)
+
+#### Decisions
+
+- For each decision point on the page, is the information that decision needs on the same screen, next to the control? (NAV-007)
+- Is there one primary next action, with other options visibly secondary? (NAV-009, NAV-015)
+- Does the end of the page (lesson, result, empty search) offer a strong next step? (NAV-003, NAV-016)
+- Is the size of each patch shown before entry and the position inside it during the visit? (NAV-018)
+- Is a fixed procedure shown as an ordered list with the current step marked? (NAV-010)
+
+#### Labels
+
+- Could a first-time learner predict each link's destination from its words alone? (NAV-014, NAV-038)
+- Do sibling labels differ in their first words? (NAV-036)
+- Is every aviation term or abbreviation in a navigation label accompanied by its plain meaning on first use? (NAV-008, NAV-037)
+- Is the page called the same thing in the header, `h1`, breadcrumb, document title and search? (NAV-035, NAV-051)
+- Does every link deliver what its label promises, with no links to unready pages? (NAV-017)
+- Were new labels tested with beginners, or is a test planned? (NAV-034)
+
+#### Structure
+
+- Is every destination within two levels of its hub? (NAV-022, NAV-027)
+- If a list got longer, was it grouped on the same page instead of split into a new level? (NAV-023, NAV-024)
+- Does a change to `content/modules.yaml` come with matching checks of `CurriculumMap`, the landing curriculum preview, breadcrumbs and page titles? (NAV-013)
+- Does the content use the right scheme (sequence for the course, exact for reference)? (NAV-040)
+- Do new lessons, checklists and terms carry aliases and facets, and are cross-links generated from data? (NAV-033, NAV-041)
+- Does each lesson still have exactly one home? (NAV-042)
+- Do filters use learner words, show a count, live in the URL and offer a clear-all? (NAV-043)
+
+#### Ways in and lookup
+
+- Can this content be reached from the map, the continue path, search and at least one cross-link? (NAV-053)
+- Are backward and forward links present, and neighbors visible? (NAV-054, NAV-055)
+- Is a lookup surface answering a known-item question in one step, without lesson material mixed in? (NAV-056)
+- Does search cover every item of the kinds it claims to cover, and is a miss logged? (NAV-039, NAV-044)
+- Are the surfaced "most used" items based on data? (NAV-032)
+
+#### Global navigation and devices
+
+- Was a header item added? If so, is it a new district? (NAV-060)
+- Does any navigation open on hover or depend on a tooltip? (NAV-062)
+- Is the search entry point visible and outside any menu? (NAV-063)
+- Do the phone drawer items match the desktop bar in labels and order, with the current marker visible? (NAV-064)
+- Are navigation targets at least 24 by 24 CSS pixels, and primary ones 44 px high? (NAV-065)
+- Can a focused element or anchor target land under a sticky bar? (NAV-050)
+- Does the heading outline have one `h1` and no skipped levels? (NAV-049)
+- Does the footer still index the hubs and reference pages? (NAV-066)
+
+#### Fly mode
+
+- Does any screen used while flying offer more than the next needed choice and one exit? (NAV-011)
+- Is each glance answered by one cue in a fixed position that does not move when the list changes? (NAV-021)
+- Is every lookup one step, without leaving the view? (NAV-059)
+
+#### Evidence
+
+- Is the change justified by task success, time or lostness rather than click count or preference alone? (NAV-026, NAV-028, NAV-031)
+- If the structure changed, was it card-sorted or tree-tested with people who have never flown, at a sample size the result can bear? (NAV-067, NAV-069, NAV-070, NAV-071, NAV-072)
+- Did the evidence come from watching learners do tasks rather than asking them how they navigate? (NAV-073)
+- Did several reviewers inspect independently before merging findings? (NAV-074)
+- Does a longer path consist of obvious, cheap steps? (NAV-029, NAV-030)
+- Do sort results set labels and grouping while the course order stays a curriculum decision? (NAV-068)
+- Is label position separated from wording when judging which labels work? (NAV-019, NAV-020)
+- Is each landmark still rare, and the main path still visible as a line? (NAV-001, NAV-004)
+- Is a learning page judged on understanding, not time to answer? (NAV-058)
+- Is the overview hub the most connected page in its district? (NAV-012)
+- Does the dashboard stay reachable from a visible item when signed in? (NAV-052)
+- Are outcomes that reveal a gap routed to the lesson section behind them? (NAV-057)
+- Is each page usable with route knowledge alone? (NAV-003)
+- Is the first-time visitor served without prior vocabulary? (NAV-008)
+- Is the page usable by those who do not decode spatial cues? (NAV-005)

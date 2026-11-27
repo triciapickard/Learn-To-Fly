@@ -1527,3 +1527,220 @@ learners who have passed the lesson that introduced them (FRM-050). Add one firs
 `FlyModePage` and nothing else (FRM-052). Before building `/welcome`, record a decision on the
 welcome screen, the tour and the position of the account offer (FRM-051, FRM-006), and
 instrument whatever is built (FRM-054).
+
+## Touch targets: size, spacing and position
+
+### Distance and size: the law underneath
+
+Fitts showed in 1954 that the time to make an aimed movement grows with the distance to the
+target and shrinks with its width, with both inside a logarithm, across stylus tapping, disc
+transfer and pin transfer tasks [@fitts1954information]. The regularity is among the most
+replicated results in human movement science; its information-theory interpretation is much
+weaker than the regularity itself. MacKenzie's review moved the law into HCI and refined it,
+recommending the Shannon form of the index of difficulty, log2(A/W + 1), and an "effective
+width" computed from where people actually land rather than from the drawn size of the target
+[@mackenzie1992fitts]. Two of his observations matter for design. Reducing a target's width
+costs more time than an equal increase in distance, which breaks the model's neat symmetry.
+And throughput figures varied so widely between studies (about 1.1 to 13.7 bits per second
+across six device comparisons) that the law is a tool for comparing layouts within one study,
+not a source of absolute numbers.
+
+Effective width is the idea to carry into LTF. It says that the target a person can reliably
+hit is defined by their scatter, and scatter grows when attention is divided, when the hand is
+cold or tired, or when the device sits at an awkward angle. A learner tapping a tablet beside
+the simulator is in all three conditions at once.
+
+::: {.rule #FRM-056 grade="A"}
+**Make the controls a learner uses most often both large and close to where their hand or
+pointer already is, and size them for degraded precision, not best-case aim.** Movement time
+rises with distance over width, and shrinking a target costs more than lengthening the move
+[@fitts1954information; @mackenzie1992fitts]. Use the law qualitatively; its absolute
+constants are unstable across studies.
+
+*In LTF:* in `FlyPanel`, the step list and "Finish and debrief" are the frequent targets; keep
+them in one column under the thumb or cursor rather than spread across the width of
+`max-w-3xl`. Do not quote bits-per-second figures in design documents.
+:::
+
+### What the touch studies found
+
+Several independent touch studies agree on the shape of the size and error relationship,
+though not on its numbers.
+
+Parhi, Karlson and Bederson tested one-handed thumb use on a small device with 20 right-handed
+participants, most of whom rarely used touchscreens [@parhi2006target]. For discrete targets
+(a button, radio or checkbox) at five sizes from 3.8 to 11.5 mm, surrounded by distractors with
+zero spacing, task time fell with every size step, while error rates stopped improving
+between 9.6 and 11.5 mm. A box of 9.1 by 8.9 mm enclosed 95 percent of hits on a 9.6 mm
+target anywhere on screen. For serial entry on a numeric keypad, errors were higher at 5.8 mm
+than at 9.6 mm and above. The authors concluded that 9.2 mm suffices for discrete targets and
+9.6 mm for serial ones, and that error rates were higher in serial tasks. The sample was small,
+young and mostly male, the device a 2005-era PDA used standing.
+
+Henze, Rukzio and Boll published a tapping game and analyzed over 120 million touch events from
+more than 91,000 installations [@henze2011100]. Error rose sharply as targets shrank: below
+about 15 mm error climbed steeply, and it exceeded 40 percent for targets under 8 mm. For
+targets under 12 mm, error at the screen border was much higher than in the center (31.68
+against 17.59 percent on one phone), about the same as making the target 3 mm smaller. Touches
+were systematically offset, toward the lower right on the phones analyzed, and a correction
+function cut errors by 7.79 percent in a live test. The authors compare their figures with
+Parhi's and attribute their higher error rates to time pressure and an animated game, so the
+absolute numbers do not transfer; the shape of the curve and the border effect do.
+
+Holz and Baudisch showed why touch is imprecise [@holz2011understanding]. People aim by
+aligning visual features on top of the finger, such as the nail, with the target, while the
+screen senses the contact patch underneath. A model based on that projected view cut error
+offsets to 1.6 mm from 4 mm for the contact-area model, and supported 4.9 mm targets for 95
+percent reliability against 7.9 mm. Those figures describe a lab touchpad with an overhead
+camera, not a phone as sold. The transferable finding is that touch error depends on finger
+angle and is systematic, not random.
+
+Sears and Shneiderman, working on 1980s hardware, showed that much of touch's poor reputation
+came from committing a selection at the instant the finger lands [@sears1991high]. With
+stabilized input and selection on lift-off, people matched the mouse for targets down to a few
+pixels. Even so, selection was fastest and least error-prone for the largest targets, and the
+authors proposed "gravity", enlarging the selectable area around a target, as future work.
+
+::: {.rule #FRM-057 grade="A"}
+**Treat touch target size as a steep curve: errors rise quickly as targets shrink, so lean
+toward the large end for anything tapped often.** Lab studies of thumb tapping
+[@parhi2006target], a field study of over 120 million taps [@henze2011100] and studies of
+finger posture [@holz2011understanding] and selection strategy [@sears1991high] agree that
+larger targets cut errors, though their absolute thresholds differ with task and device.
+
+*In LTF:* the frequent touch targets are fly-mode steps, quiz options, rubric choices and the
+`Stopwatch` controls. Size them from the 44 px floor in FRM-058 upward, not down to it.
+:::
+
+### The standards: a floor, not a target
+
+WCAG 2.2 sets Target Size (Minimum), level AA, at 24 by 24 CSS pixels, with exceptions for
+undersized targets spaced so that a 24 px circle centered on each does not touch another
+target, for functions available through another conforming control, for links inside a
+sentence, for browser-drawn controls and for essential presentations [@w3c2024wcag]. The
+Understanding document says sufficient spacing can work as well as larger size, and gives a row
+of 20 px buttons with 4 px margins as a pass and the same row with no gaps as a fail. Target
+Size (Enhanced), level AAA, asks for 44 by 44 CSS pixels and recommends larger targets for
+frequent controls, actions that are hard to undo, edge-of-screen controls and steps in a
+sequence. The document does not explain how 44 was derived. A CSS pixel is not a fixed
+physical length on phones, so 24 px is only roughly 6 mm, well below the 9 to 10 mm the thumb
+study found.
+
+::: myth
+**"44 pixels is the scientifically established minimum touch target."** WCAG's AAA figure of
+44 CSS pixels comes with no stated derivation [@w3c2024wcag], CSS pixels vary in physical size
+across devices, and the empirical studies report thresholds in millimeters that depend on task,
+grip and time pressure [@parhi2006target; @henze2011100]. Use 44 px as a practical house
+standard, not as a measured boundary.
+:::
+
+::: {.rule #FRM-058 grade="B"}
+**Never ship a pointer target smaller than 24 by 24 CSS pixels unless it meets WCAG's spacing
+or inline exception, and make every frequently used or touch-first control at least 44 by
+44.** The 24 px floor is the AA requirement [@w3c2024wcag]; the larger figure is supported in
+direction by the touch studies [@parhi2006target; @henze2011100], though its exact value is a
+convention.
+
+*In LTF:* `Button` `sm` is 32 px and is used for the header "Log in" and "Sign up", the
+`SignupBanner` dismiss, `ChecklistRunner` "Large text" and "Reset", and the `QuizBlock`
+ordering arrows. It passes AA; on touch layouts these uses move to `md` with a 44 px
+`min-h-11` hit area, as the header nav links and quiz option labels already have. The
+`PasswordInput` "Show" toggle (32 px) and the `ThemeToggle` segments (32 px) get the same
+treatment on touch.
+:::
+
+### Hit area larger than the drawing
+
+Because aim is offset and scatter grows under divided attention, the clickable area can be
+larger than what is drawn, which is Sears and Shneiderman's "gravity" idea
+[@sears1991high] and the practical consequence of Holz and Baudisch's offsets
+[@holz2011understanding]. LTF already uses this in `Checkbox`, whose whole label is the hit
+target around a 20 px box, and in `QuizBlock`, whose option labels are `min-h-11` bordered
+rows.
+
+::: {.rule #FRM-059 grade="B"}
+**Where a control must look small, make its hit area larger than its drawing, extending into
+its label or padding.** An enlarged selectable area was proposed as a fix for touch
+imprecision [@sears1991high], and systematic aim offsets make the drawn edge an unreliable
+boundary [@holz2011understanding].
+
+*In LTF:* keep the whole-label hit target in `Checkbox` and `RadioGroup`. Give icon-only ghost
+buttons (dismiss X, ordering arrows) a transparent padding that brings the hit area to 44 px
+without enlarging the icon.
+:::
+
+### Space between targets
+
+Parhi's discrete targets were packed with zero spacing between neighbors, a deliberate choice
+to resemble real layouts, and errors still improved only at the larger sizes
+[@parhi2006target]. WCAG's spacing exception rests on the same logic: what matters is whether
+the touch lands on a neighbor [@w3c2024wcag].
+
+::: {.rule #FRM-060 grade="B"}
+**Leave visible space between adjacent tap targets, and never place two actions edge to edge
+when either one is destructive.** Errors were measured with zero spacing between targets
+[@parhi2006target], and spacing can substitute for size under WCAG 2.2 [@w3c2024wcag].
+
+*In LTF:* the ordering arrows in `QuizBlock` sit side by side at `sm`; separate them by at least
+8 px, or stack them vertically. `Stopwatch` pills keep a gap at least equal to their height.
+:::
+
+### Edges and grips
+
+Henze found that edge targets are harder to hit [@henze2011100]. Parhi found a right-leaning
+hit bias in the rightmost column and recommended that targets on that edge, for right-handed
+users, extend to the screen edge [@parhi2006target]. The two agree once the target is allowed
+to grow: a control at an edge either runs to the edge, so a stray touch still lands on it, or
+moves inward.
+
+Grip assumptions are where touch design most often goes wrong. Hoober's field observation of
+1,333 people using phones in public found grips split 49 percent one-handed, 36 percent cradled
+and 15 percent two-handed among people touching the screen, with frequent switching between
+grips [@hoober2013how]. The article became the origin of the popular "thumb zone" reach
+diagrams, and its page now carries the author's 2017 comment saying those reach drawings and
+the claim about touch locations were inaccurate and should be ignored.
+
+::: myth
+**"Put primary actions in the thumb zone."** The reach diagrams came from rough informal
+sampling, and their author later said they were inaccurate and should be ignored
+[@hoober2013how]. His own data show grips vary and change every few seconds, so there is no
+safe region of the screen for one hand.
+:::
+
+::: {.rule #FRM-061 grade="B"}
+**At a screen edge, either let the target run to the edge or move it inward; never put a
+small target near the border.** Error rates are higher at the border [@henze2011100], and
+right-edge targets benefit from extending to the edge [@parhi2006target].
+
+*In LTF:* the `Toast` dismiss X at the bottom right and the `Drawer` close control are the
+edge targets; give both a 44 px hit area and at least 8 px inset.
+:::
+
+::: {.rule #FRM-062 grade="C"}
+**Do not design for a one-handed thumb zone; place controls so they work with either hand and
+any grip, and keep destructive ones out of easy accidental reach.** Grips vary and change
+often, the reach maps were withdrawn by their author, and he advised against placing
+dangerous functions where they are hit by accident [@hoober2013how].
+
+*In LTF:* test fly mode and the lesson page with left-handed testers as well as right-handed
+ones. Do not mirror layouts by handedness; keep one layout that works for both.
+:::
+
+::: {.rule #FRM-063 grade="B"}
+**Make keys for serial entry (keypads, steppers pressed repeatedly) larger than one-off
+buttons.** Error rates were higher in serial than discrete tapping, and the authors recommended
+nothing under 9.6 mm for data entry [@parhi2006target].
+
+*In LTF:* if numeric entry in fly mode ever uses on-screen steppers or a keypad, use `Button`
+`lg` (48 px) with gaps, not `sm`.
+:::
+
+### What this means for Learn to Fly
+
+Keep the 44 px header nav, the `min-h-11` quiz options, the whole-label `Checkbox` hit area, the
+`h-11` `RangeField` track and the 48 px `lg` buttons. Change the touch-facing uses of `Button`
+`sm`, the 32 px `PasswordInput` toggle and the 32 px `ThemeToggle` segments to 44 px hit areas
+(FRM-058, FRM-059). Separate the quiz ordering arrows and the stopwatch pills (FRM-060). Inset
+edge controls (FRM-061). Add a component test that measures the rendered hit area of every
+interactive element on `/dev/components` against 24 px, and of the fly-mode controls against
+44 px, so the policy is enforced in CI rather than by review.

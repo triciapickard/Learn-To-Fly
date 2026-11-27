@@ -900,3 +900,156 @@ Rams's principles, formulated by his own account in the late 1970s out of concer
 ### What this means for Learn to Fly
 
 The product's honesty is its most distinctive trait, and this chapter's strongest advice is to protect it: the "Simplified model" badge, the `verify` callouts that block publication, the "Last verified" line, the beta banner, the "not a pilot certificate" sentence (EVD-073). Keep all of them. Change the inconsistencies that break same-function, same-form: two type dialects for headings, hand-inlined card styles alongside `Card`, bold mono values beside a `readout` scale defined at weight 500 (EVD-068). Write the practical conditions and the intended feeling into every component brief (EVD-067, EVD-069), review new content against the function complex (EVD-070), and ask learners what unfamiliar marks mean before relying on them (EVD-071). Make the three layers of depth explicit in how `FlyPanel`, lessons and `/reference` divide content (EVD-072), and run a detail pass on each template (EVD-074).
+
+## Less, more and the difficult whole: simplicity and ornament
+
+No argument in design is older or more often settled by slogan than the one about ornament and simplicity. "Less is more", "less but better" and "less is a bore" are each a compressed position from a real argument, and each has been carried into digital product design without the argument. This chapter restores the arguments, shows where they agree, and marks where they conflict. Almost none of it has been tested on users, so the rules are C where the authorities agree and D where they do not.
+
+### Ornament as waste
+
+Loos's lecture "Ornament and Crime", first given in Vienna in 1910 though often dated 1908, argues that the progress of culture means removing ornament from objects of daily use [@loos1910ornament]. Its economic claim is that ornament is "wasted labour and hence wasted health", and now also "wasted material", adding up to wasted capital. It also claims that the absence of ornament is a mark of advanced humanity, and its framing treats children, non-European peoples and criminals as earlier stages of one development. That premise is a colonial and racial hierarchy, not a finding; its ethnological and criminological claims, including an unsourced figure about tattooed prisoners, should not be repeated. Canales and Herscher trace the essay's force to nineteenth-century criminal anthropology and show how, promoted by Le Corbusier in the 1920s, it helped move architecture toward the functionalism later summarized as "less is more" [@loos1910ornament].
+
+Two of Loos's points survive the removal of his premises. Decoration costs labor to produce and attention to read. And ornament tied to a moment dates, so it must be redone. Both are economic arguments, and both bear on a product that has to be maintained in two themes across many pages.
+
+::: {.rule #EVD-075 grade="C"}
+**Keep the surfaces learners work on (the lesson body, Fly mode, checklists, the debrief) plain and durable, adding no decoration that costs reading attention or will date.** Ornament costs labor and attention and dates with fashion [@loos1910ornament]; useful products should be neutral and restrained, leaving room for the user [@rams2026ten]. Cite Loos for these economic points only, never for his premises.
+
+*In LTF:* no background textures, gradients or decorative illustration behind `MarkdownContent`, `FlyPanel` or the checklist runner; plain surfaces also keep Day and Night consistent with less work.
+:::
+
+### As little design as possible
+
+Rams's tenth principle gives his motto: good design is "as little design as possible", summarized as "Less, but better", concentrating on the essential and not burdening products with non-essentials [@rams2026ten]. His fifth, unobtrusiveness, says products that fulfill a purpose are like tools rather than decoration or art, so their design should be neutral and restrained. Critics note that unobtrusiveness can slide into monotony, and that the principles are best read as ten principles for the industrial design of long-lived household products [@rams2026ten]. That domain is close to a tool used beside a simulator and far from a landing page that has to persuade a beginner.
+
+Maeda's short book on simplicity ends with the summary law "Simplicity is about subtracting the obvious, and adding the meaningful" [@maeda2006laws]. Its other laws, as a reader's summary gives them, include "The simplest way to achieve simplicity is through thoughtful reduction", "Organization makes a system of many appear fewer", "Savings in time feel like simplicity", and "Some things can never be made simple". The book is craft aphorism with no measurement of simplicity, and reviewers have been sharp. Dorin finds it overcomplicated for its subject and disputes its claim that an insurmountable challenge motivates students, observing that many need large tasks broken into sub-goals; he notes that simplifying can remove needed features, so a thing should be simple but not too simple. Tannen argues that simplicity and complexity are not opposites: making something simpler often relocates its complexity, as an automatic transmission moves complexity from the driver into the machine, and a single rotary controller in a car interface became confusing for being mechanically simple [@maeda2006laws].
+
+::: {.rule #EVD-076 grade="C"}
+**When proposing to simplify a page or component, state where the removed complexity goes (a link, a later lesson, a reference entry, the system itself) and check that the learner can still reach it.** Simplifying often relocates complexity rather than removing it [@maeda2006laws].
+
+*In LTF:* moving explanation out of `FlyPanel` is right only if the "why" sits one step away in the lesson or `/reference`; "make it simpler" without that statement is not a proposal.
+:::
+
+::: {.rule #EVD-077 grade="C"}
+**Never simplify a checklist, limit, procedure or warning by dropping a required item; reduce presentation, not content.** Simplifying can remove needed features, and some things cannot be made simple [@maeda2006laws]; good design is thorough to the last detail [@rams2026ten].
+
+*In LTF:* a shortened checklist view in Fly mode shows every item of the source checklist; brevity comes from type, spacing and grouping, not omission.
+:::
+
+::: {.rule #EVD-078 grade="C"}
+**Break large learning tasks into visible sub-goals rather than presenting them as one formidable challenge.** Reviewers of the simplicity literature observe that many learners need large tasks broken into sub-goals [@maeda2006laws]; stable small units resist interruption [@simon1996sciences]. The evidence here is craft observation, hence C; the learning-science case is made in Part XV, Instructional Design.
+
+*In LTF:* the `LessonPath` pins, the `SectionNav` and the challenge "Steps" list already do this; keep sub-goals visible on every long page.
+:::
+
+### Less is a bore
+
+Venturi's *Complexity and Contradiction in Architecture* is the strongest answer to the purist line [@venturi1966complexity]. Against Mies's "Less is more" it set "Less is a bore", and against the either-or of orthodox modernism it set a "both-and" architecture of richness and ambiguity. Its central concept, according to Jencks, is "the obligation toward the difficult whole": unity should come from multiplicity, which takes effort, not from suppressing difference. It also praises the double-functioning element, one element doing two jobs. Venturi later said there was nothing he wanted to take back "except maybe the term 'Less is a bore'". Critics note that the book analyzes elements closely but not the difficult whole it calls for, and, crucially for design, that it argues from the observer's richness of experience with no measurement of how occupants respond [@venturi1966complexity].
+
+Venturi and Rams are not simply opposed. Rams writes for tools; Venturi writes for places people inhabit and look at. A flight course has both. The cockpit is itself a difficult whole, many instruments read together, and a teaching page that strips the panel to one gauge may teach that gauge and fail to teach the scan.
+
+::: {.rule #EVD-079 grade="D"}
+**Allow richness, texture and identity on orientation surfaces (landing, curriculum, dashboard, reference hub) while keeping working surfaces plain, and test whether the richness helps or distracts.** Purist authorities argue for restraint everywhere [@rams2026ten; @loos1910ornament]; Venturi argues that richness and contradiction serve experience [@venturi1966complexity]. The craft authorities conflict and neither side measured users, hence D.
+
+*In LTF:* the reference "kneeboard", the POH-style numbered rail and the landing page are where identity can thicken; `LessonPage` and `FlyModePage` stay restrained.
+:::
+
+::: {.rule #EVD-080 grade="C"}
+**Design any page that shows many parts (progress, a full panel, a module overview) so that it still reads as one coherent picture, with a clear primary structure that the parts hang from.** The obligation toward the difficult whole asks for unity from multiplicity [@venturi1966complexity]; general forms first, then subdivision, then detail for closer inspection [@jones1856grammar].
+
+*In LTF:* `DashboardPage` stacks a completion panel, a Continue card, progress bars, Next up, stats and recent attempts; its hierarchy should make "where am I and what next" the single primary reading.
+:::
+
+::: {.rule #EVD-081 grade="C"}
+**Let one element serve two purposes only when both are real, and never let the doubling blur the distinction between a safety instruction and anything else.** Double-functioning elements can enrich a design [@venturi1966complexity], but a safety-critical cue must stay unmistakable [@sullivan1896tall].
+
+*In LTF:* a section heading that is also a `SectionNav` anchor is a good double function; a decorative use of the `warn` color, or a safety `Callout` styled like a tip, is not.
+:::
+
+### Decorate the construction
+
+Jones's fifth proposition offers the reconciliation craft has long used: "Construction should be decorated. Decoration should never be purposely constructed" [@jones1856grammar]. Ornament that grows out of the thing's own structure is part of it; ornament added for its own sake is not. Ruskin puts the same discipline as a judgment of quality: "Ornament cannot be overcharged if it be good, and is always overcharged when it is bad" [@ruskin1849seven].
+
+::: {.rule #EVD-082 grade="C"}
+**Draw the product's ornament and identity from its own structure and subject (the horizon line, instrument forms, chart conventions, the lesson path) and add none that is unrelated to them.** Construction should be decorated, decoration never purposely constructed [@jones1856grammar]; good ornament is judged by its quality, not its quantity [@ruskin1849seven].
+
+*In LTF:* the teal `accent-line` reused as nav underline, tab underline, lesson-path connector and progress fill is decorated construction; generic stock icons and uniform rounded cards are not, and identity work in Part XX, Brand Identity and Distinctiveness, should start from the first kind.
+:::
+
+::: myth
+**"Less is more" (or "form follows function") settles how a page should look.** Sullivan's formula came with a demand for emotional expression and has been read as a justification of preferred forms [@sullivan1896tall]; function underdetermines form [@pye1978nature]; Rams wrote his principles for long-lived household products and called them theses, not rules [@rams2026ten]; and Venturi's reply shows the slogan is one side of an unsettled argument [@venturi1966complexity]. None of these positions was tested on users.
+:::
+
+### What this means for Learn to Fly
+
+The product's present restraint (warm-neutral grounds, one accent, no illustration on the landing page) is defensible on the working surfaces and is a choice, not a conclusion, elsewhere. Keep the lesson body, Fly mode, checklists and debrief plain (EVD-075). Treat the landing and orientation surfaces as the place where the product's genericness can be addressed, with identity drawn from its own construction (EVD-079, EVD-082), and test whether it helps. Require every simplification proposal to say where complexity goes and never to drop a required item (EVD-076, EVD-077). Give the dashboard a single primary reading (EVD-080). Audit uses of status colors and callout types for blurred double functions (EVD-081).
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+1. **Design decisions carry evidence like content does.** Every consequential design change cites rule IDs, states the kind and strength of its evidence, and lands in the `v1.md` Decision Log when it departs from the plan; the undocumented departures listed in the product context (body face, missing display face, ink and teal palette, dropped livery direction) get retrospective entries. EVD-001, EVD-002, EVD-004, EVD-006.
+2. **Grades describe evidence, not importance.** Mandatory requirements may be C; importance is decided in decision lists. EVD-005.
+3. **Research claims are screened before use.** Single studies are leads; the six flags are checked; league-table effect sizes are not cited as authority. EVD-007, EVD-008, EVD-012, EVD-024.
+4. **Every learner study is planned in writing first**, with one measure, a stopping rule and the smallest worthwhile effect, and reports all variants and measures. EVD-009, EVD-010, EVD-011, EVD-018, EVD-047.
+5. **Results are reported as effects with intervals in product units**, wide intervals are ties, non-significance is never proof of harmlessness, and subgroup claims are tested directly. EVD-013 to EVD-017.
+6. **No fine-detail A/B tests at beta scale.** Comparative tests are reserved for large differences and run to the standard of EVD-042 and EVD-043. EVD-041.
+7. **Learner observation is the first evidence gap to close.** Small repeated usability rounds per learner group, in context with the sim running, with two independent reviewers and written problem criteria, judged on learning as well as navigation. EVD-025, EVD-026 to EVD-029, EVD-031, EVD-045.
+8. **Preference is logged, performance is measured.** Ratings never stand in for task results; first-impression effects are not relied on. EVD-033, EVD-034, EVD-036.
+9. **Widgets stay simplified, labeled models**; screenshots serve orientation only; change states are shown as explicit lists. EVD-037, EVD-038, EVD-073.
+10. **No learning-style features.** EVD-040.
+11. **Stored progress data and session replays are convenience samples.** EVD-048.
+12. **Review is done by qualified judges on judgment-dependent qualities**, with certain checks automated and blameless taste choices decided once. EVD-051 to EVD-054.
+13. **Borrowed patterns must name the Learn to Fly principle they serve**, or be replaced. EVD-055, EVD-082.
+14. **Design questions are sorted tame or wicked**, and decision records for design gain fields for misfits and, for wicked questions, a stopping point. EVD-060 to EVD-062, EVD-064.
+15. **Same function, same form.** The two heading dialects, hand-inlined cards and bold mono values are brought onto one system. EVD-068, EVD-074.
+16. **The honesty traits are kept and protected.** EVD-073.
+17. **Working surfaces stay plain; identity thickens on orientation surfaces, tested.** EVD-075, EVD-079, EVD-080.
+
+### Review checklist
+
+Run these questions against a pull request, a design note or a page.
+
+- Does every research claim say what kind of source it is and how strong its evidence is for this product's learners and setting? (EVD-001, EVD-002, EVD-021)
+- Is each rule applied within its stated conditions? (EVD-003)
+- For each cited study: sample, effect size with uncertainty, replication status? (EVD-004, EVD-007)
+- Does the cited work raise several of the six flags? (EVD-008, EVD-012)
+- Is a grade being treated as a measure of importance? (EVD-005)
+- If a grade or rule changed, is the new evidence cited and the book updated first? (EVD-006)
+- For any test: was the plan written before the data, and are all variants and measures reported? (EVD-009, EVD-010, EVD-047)
+- Is any exploratory pattern presented as a prediction? (EVD-011)
+- Are results stated as effects with intervals in product units, not p values alone? (EVD-013, EVD-014)
+- Is a wide interval or a non-significant result being read as "no effect" or "harmless"? (EVD-015, EVD-016)
+- Is a group difference inferred from significant against non-significant? (EVD-017)
+- Was the smallest worthwhile effect set in advance? (EVD-018)
+- Does a before-and-after claim rule out history, testing, selection and the other threats? Could a pretest have changed the result? (EVD-019, EVD-020)
+- Is a medium being credited for what a method does, or a novelty gain judged too early? (EVD-022, EVD-023)
+- Does a citation rest on a league-table effect size? (EVD-024)
+- Were surfaces used beside the sim evaluated with the sim running? (EVD-025, EVD-045)
+- Did at least two reviewers find problems independently, against written tasks and criteria? (EVD-026, EVD-027, EVD-032)
+- Did testing stop on a no-new-problems rule, per learner group, with every session scanned for severe failures? (EVD-028, EVD-029)
+- Were alternatives compared as sketches before a prototype was tested? (EVD-030, EVD-058)
+- Was learning measured as well as usability? (EVD-031)
+- Is preference or attractiveness standing in for performance? (EVD-033, EVD-034, EVD-036)
+- Are conventional controls conventional, and novelty spent on content? (EVD-035)
+- Are diagrams simplified and labeled, and changes shown as lists? (EVD-037, EVD-038, EVD-073)
+- Does a rule rest on an unchecked mechanism story? Does anything match instruction to learning styles? (EVD-039, EVD-040)
+- Is the test feasible at the product's scale, with one agreed measure, an A/A check, whole weeks and load time recorded? (EVD-041 to EVD-043)
+- Does the method fit the stated question? Are qualitative themes presented as hypotheses? (EVD-044, EVD-046)
+- Are progress data or replays being generalized? (EVD-048)
+- Are value, empirical claim and mechanism separated in the design argument, and is craft overruled only by a relevant experiment? (EVD-049, EVD-050)
+- Are the reviewers qualified, is each "feels wrong" tied to a fact, and is blameless taste being relitigated? (EVD-051 to EVD-053)
+- Is a check that could be automated being done by hand? (EVD-054)
+- Does a borrowed pattern name the principle it serves? (EVD-055)
+- Is the outer environment written down, and are minor choices satisficed against criteria? (EVD-056, EVD-057)
+- Do components stay self-contained? (EVD-059)
+- Is the question tame or wicked, with a stopping point recorded for the wicked, and were rival explanations considered? (EVD-060 to EVD-062)
+- Was a stalled problem repositioned, and are goals written as misfits tested together? (EVD-063 to EVD-065)
+- Is an early radical prototype being judged against a polished baseline? (EVD-066)
+- Are practical conditions and the intended feeling in the brief? (EVD-067, EVD-069)
+- Do same-function elements share one form? (EVD-068)
+- Was the function complex reviewed, and did learners say what unfamiliar marks mean? (EVD-070, EVD-071)
+- Are the do, why and reference layers distinct? (EVD-072)
+- Has a detail pass checked alignment, tokens and the source of every value? (EVD-074)
+- Are working surfaces plain, and does every simplification say where complexity goes without dropping a required item? (EVD-075 to EVD-078)
+- Is richness confined to orientation surfaces and tested, and does a many-part page read as one whole? (EVD-079, EVD-080)
+- Does any double-function element blur a safety cue, and is ornament drawn from the product's own construction? (EVD-081, EVD-082)

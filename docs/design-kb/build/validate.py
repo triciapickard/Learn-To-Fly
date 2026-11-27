@@ -69,7 +69,7 @@ def check(fn, all_ids):
     n = wc(t)
     if meta and n < meta['floor']: probs.append(f'{n} words, floor is {meta["floor"]}')
     if '—' in t: probs.append(f'{t.count(chr(0x2014))} em-dashes')
-    if re.search(r'(?<![-<!|:])---?(?![->|:])', re.sub(r'^\|.*$|^:?-+.*$', '', t, flags=re.M)): probs.append('"--" or "---" used in prose')
+    if re.search(r'(?<![-<!|:])---?(?![->|:])', re.sub(r'`[^`\n]*`', '', re.sub(r'^\|.*$|^:?-+.*$', '', t, flags=re.M))): probs.append('"--" or "---" used in prose')
     if re.search(r'\[\^', t): probs.append('footnotes are not allowed')
     if re.search(r'\]\(#', t): probs.append('links to headings are not allowed')
     if re.search(r'<(div|span|br|img|table)\b', t): probs.append('raw HTML')

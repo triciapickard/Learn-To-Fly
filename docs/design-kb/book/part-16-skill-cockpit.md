@@ -1000,3 +1000,80 @@ Change the framing of `commonMistakes` in `BriefTab` (SKL-088): the safety callo
 
 Build error logging per quiz item, widget quiz and criterion (SKL-083), reviewed as content defects, and a four-question control-error review in `/review-lesson` (SKL-084). Extend non-normal events across later modules (SKL-090). Each of these makes learner errors into information about the course, which is the main lesson of eighty years of aviation human factors.
 
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+1. **Learning is measured unaided and later.** A guided pass is evidence that the guidance works, not that the learner has learned. The attempt record stores whether the procedure was visible, and any claim about lesson effectiveness uses unaided, delayed results (SKL-014, SKL-015, SKL-020, SKL-051).
+2. **Facts live in the lesson; challenges ask for their use.** After a first pass, `FlyPanel` and `FlyModePage` offer a mode with the steps hidden, recorded with the attempt (SKL-003, SKL-019, SKL-024). Quizzes include application items (SKL-004).
+3. **No stages, no hours, no promised outcomes.** The product never labels a learner with a skill stage, never puts hours on learning, never uses the 10,000-hour idea and never states an hours, cost or percentage benefit for LTF (SKL-002, SKL-012, SKL-045). Simulator practice is presented as a complement to real instruction (SKL-042).
+4. **Progress headlines skills, not volume.** `DashboardPage` leads with improvement on named criteria; attempt counts are secondary, and the estimated sim-time tile is replaced by logged time or removed (SKL-010, SKL-011). Trend views treat a flattening curve as normal (SKL-005).
+5. **Every challenge is a designed practice activity.** Goal, criteria, likely errors framed as conditions, a tip, a reflection prompt and a review link are required by the schema (SKL-007, SKL-013, SKL-088). An optional per-attempt goal is collected in `BriefTab` (SKL-008).
+6. **Feedback starts rich and thins.** Early attempts get criterion-by-criterion feedback with one highlighted focus; after consistent passes the learner can practice in sets with a summary, and `HistoryTab` shows per-criterion patterns (SKL-021, SKL-022, SKL-023).
+7. **Instruction names effects and stays short in flight.** Steps describe what the learner should see, not body movements, and one action per step (SKL-026, SKL-027). Complex challenges link a demonstration clip (SKL-025).
+8. **Difficulty adapts to the learner.** A challenge can hold two or three verified setup levels; the first attempt is calm and simple, and the level rises after a pattern of success and falls after repeated failure (SKL-029, SKL-030, SKL-032, SKL-033). Difficulty changes conditions, tolerance or prompts, never only a timer (SKL-034). Experienced learners get a diagnostic route (SKL-031).
+9. **Block first, then mix and vary.** New maneuvers are practiced in a block, then combined challenges mix them, with varied setups on repeat attempts and earlier material returning at intervals (SKL-016, SKL-017, SKL-018).
+10. **Parts are reintegrated and reported separately.** Fractionated lessons are followed by whole-task practice with shifting emphasis; single-instrument widgets lead to challenges that use the instrument in the scan; combined challenges carry module completion (SKL-035 to SKL-041).
+11. **Challenges follow the lesson that introduces them, and the product moves learners on.** After consistent success `ResultView` leads with the next skill; review is short and tied to a gap (SKL-043, SKL-044, SKL-046).
+12. **Widgets are judged by functional match and motion direction.** Each records what it looks like and what decision it trains; motion matches the sim; augmentation is planned for removal; pictures come before symbols (SKL-049, SKL-050, SKL-052, SKL-053, SKL-054). Widget exercises carry a strategy sentence and name what they train (SKL-047).
+13. **Checklists keep the `ChecklistRunner` model.** Target state per item, read-do or do-verify labels, current-item highlight, chunking with completion lines, critical items first, panel order, canonical names, pause points shown in flight, personal reminders kept separate (SKL-056 to SKL-065). No safety outcome is claimed (SKL-064).
+14. **Fly mode is an operating document.** It is tested with learners in real conditions, avoids stacked typographic handicaps, offers a text-size control, shows mode and place at a glance, and collapses completed steps (SKL-066 to SKL-068, SKL-072, SKL-081).
+15. **Alerts have three levels, and red means act now.** Only must-act-now states use `warn`; alerts use two channels, are acknowledgeable, clear with their condition and stay rare (SKL-074 to SKL-078). The page confirms what the sim shows and never automates the learner's part (SKL-079, SKL-080).
+16. **Learner errors are information about the course.** Wrong answers and failed criteria are logged and reviewed as content defects; briefings are reviewed for the four control errors; copy names conditions, not blame; review screens show what the learner could see first (SKL-083 to SKL-088). Flights survive interruption (SKL-089), and non-normal practice appears in every later module (SKL-090, SKL-009).
+
+### Review checklist
+
+Run these questions against a pull request that touches lessons, challenges, widgets, fly mode, the dashboard or learner-facing copy. A "no" is a finding unless the pull request explains why.
+
+#### Lessons and quizzes
+
+- Does each new block serve a named phase of the component it teaches, and does an early procedure appear with the situation it serves? (SKL-001, SKL-006)
+- Does each quiz section include at least one application item, and one item from earlier material where a gap is likely? (SKL-004, SKL-017)
+- Is every control instruction worded by its visible effect rather than a body movement? (SKL-026)
+- If the pull request cites a learning principle, does its evidence come from complex tasks, or is that limit stated? (SKL-028)
+- Does any lesson argue for checklists or simulators with a number presented as a promise? (SKL-045, SKL-064)
+
+#### Challenges
+
+- Does the challenge have goal, criteria, likely errors written as conditions, a tip, a reflection prompt and at least one review link? (SKL-007, SKL-013, SKL-088)
+- Does it come right after the lesson that introduces its maneuver, and start in calm, simple conditions? (SKL-032, SKL-043)
+- If it fractionates a concurrent skill, is there a whole-task challenge with shifting emphasis after it? (SKL-035, SKL-036)
+- Do its difficulty levels change conditions, tolerance or prompts rather than a timer or score? (SKL-029, SKL-034)
+- Has it been reviewed for wrong-control, wrong-setting, forgotten-control and cannot-find errors? (SKL-084)
+- If it adds a random event, is the event verified in the sim, varied, and debriefed by asking for the first cue noticed? (SKL-009, SKL-090)
+- Does every control name match the sim and the glossary? (SKL-055, SKL-060)
+
+#### Fly mode and checklists
+
+- Is each step one action and its target, with the current step highlighted and completed steps collapsed? (SKL-027, SKL-061, SKL-072)
+- Can the learner hide the steps, and is that recorded? (SKL-024)
+- Does the screen show mode, challenge and step in a fixed place? (SKL-081)
+- Does any panel combine small type, italics, color-only meaning and low contrast? (SKL-067)
+- Does every checklist item state a target state, is the list chunked with completion lines, and are critical items first? (SKL-056, SKL-057, SKL-058)
+- Is each checklist labeled read-do or do-verify, and opened inline at its pause point? (SKL-062, SKL-063)
+- Was the view checked at real distance and lighting, with a text-size control available? (SKL-066, SKL-068)
+
+#### Alerts and automation
+
+- Is red used only for must-act-now states? (SKL-075)
+- Does every act-now alert use two channels, carry a word and an icon, and accept acknowledgment? (SKL-076)
+- Does every alert clear with its condition, and does a switched-off nudge type show as off? (SKL-077)
+- Is the new nudge rare, and are its dismissals logged? (SKL-078)
+- Does the page supply a value the learner should read from the sim, or tick or advance anything without the learner? (SKL-079, SKL-080)
+
+#### Widgets
+
+- Does the widget record what it looks like and what decision it trains? (SKL-049)
+- Does its motion match the sim: which element moves, which way, against what reference? (SKL-054)
+- Does a shape-based widget show plain numeric readouts beside the shape? (SKL-070)
+- Are augmented cues removable in quiz mode, and is there a strategy sentence before quiz mode starts? (SKL-047, SKL-053)
+- Is a single-instrument widget connected to a challenge criterion that uses the instrument in flight? (SKL-037)
+
+#### Progress, results and copy
+
+- Does the dashboard or result view headline skills rather than hours or attempt counts, and is any time shown logged rather than estimated? (SKL-010, SKL-011)
+- Does any copy label a stage, attach hours to learning, promise mastery or claim situation awareness was measured or lost? (SKL-002, SKL-012, SKL-073)
+- After consistent success, does `ResultView` lead with the next skill? After repeated failure, does it offer an easier route? (SKL-033, SKL-046)
+- Does feedback highlight one focus, and is a multi-attempt summary available? (SKL-022, SKL-023)
+- Do error messages describe conditions rather than the learner, and do review screens show what the learner could see before the verdict? (SKL-087, SKL-088)
+- Is any claim of learning effectiveness based on unaided, delayed results rather than guided passes, satisfaction or how real the practice felt? (SKL-014, SKL-015, SKL-051)

@@ -496,3 +496,49 @@ Two parts of LTF have stricter needs than the average page. Fly mode is opened d
 
 Keep self-hosting, the `font-src 'self'` policy and the unicode-range subsets. Change the loading policy from the packages' `swap` to `fallback` for the app and `optional` for Fly mode by declaring LTF's own `@font-face` rules (SCR-033). Add `font-size-adjust` with the measured aspect values 0.51 and 0.55 so that a fallback draws at the same apparent size (SCR-034). Add a fonts-blocked review mode and put it in the review checklist (SCR-035). Count font bytes alongside the JavaScript budget (SCR-036), and add real-user CLS and LCP measurement to lesson pages (SCR-037), which also serves Part XXII, Motion and Perceived Performance. Apply any text-size preference with the same early script that applies the theme.
 
+## Variable axes, weights and optical size
+
+### What a variable font offers
+
+A variable font stores a continuous design space instead of a set of separate files. The CSS Fonts specification maps its registered axes to ordinary properties: `wght` to `font-weight`, `wdth` to `font-width`, `slnt` or `ital` to `font-style`, and `opsz` to `font-optical-sizing` [@w3c2026cssfonts]. Weights run from 1 to 1000, with 400 as normal and 700 as bold, and fractional weights are valid for variable fonts. `font-variation-settings` gives low-level access to any axis by its four-letter tag, and the specification recommends the higher-level properties wherever they exist. Under `font-optical-sizing: auto`, the default, the browser may set the `opsz` axis to a value close to the used font size, so small text gets sturdier, more open letterforms and large text finer ones; synthesized optical sizing is not allowed. User agents must not synthesize condensed or expanded faces.
+
+The specification states what fonts can do, not what is good for readers, and it contains no legibility evidence [@w3c2026cssfonts]. The notes for this lane say the same about the most tempting use of a weight axis, tuning weight per theme so that light text on a dark ground looks as heavy as dark text on light: it is a design hypothesis to test, not something the specification or the lane's evidence establishes. The reading evidence on weight is narrow. Sheedy and colleagues found that increased stroke width improved threshold legibility, but only at the thinnest width tested [@sheedy2005text], so more weight is not generally better; it rescues text that is already too thin.
+
+### What LTF loads and uses
+
+Read from the installed packages for this Part: the Instrument Sans file LTF imports has a single axis, `wght`, from 400 to 700. The package also ships a width-axis file that LTF does not import. There is no `opsz` axis, so `font-optical-sizing` has no effect on LTF's sans text, and the same outlines are used from the 12 px `eyebrow` to the 64 px `display-xl`. The JetBrains Mono file has a `wght` axis from 100 to 800.
+
+The code uses weights through two routes. The project utilities fix weight per role: 700 for `display-xl` and `display-lg`, 600 for `display-md` and the `heading-*` styles, 500 for `label` and all `readout-*` styles, 400 for body. Pages also apply `font-semibold` (about 163 uses) and `font-bold` (about 94) directly, and bold mono is common on pages (the KIAS cells on `SpeedsPage` are `font-mono text-2xl font-bold`, the result percentage `font-mono text-5xl font-bold`, dashboard stats `font-mono text-2xl font-bold`), although the `readout` utilities are weight 500. The same kind of value, a measured number, is therefore drawn at 500 in some places and 700 in others, with no rule for which.
+
+::: {.rule #SCR-038 grade="C"}
+**Control font axes through the high-level properties (`font-weight`, `font-style`, `font-width`, `font-optical-sizing`) and use `font-variation-settings` only for an unregistered axis.** The specification recommends the high-level properties where they exist [@w3c2026cssfonts]. A standards recommendation, graded C.
+
+*In LTF:* no `font-variation-settings` appears in `src/styles/index.css` today; keep it that way, and if a width axis is ever imported for condensed labels, set it with `font-width`.
+:::
+
+::: {.rule #SCR-039 grade="C"}
+**Use a fixed set of four weights (400 body, 500 labels and readouts, 600 headings and emphasis, 700 display and alerts), each tied to a role in the type tokens, and do not apply weight classes directly in pages.** Fractional and arbitrary weights are available in a variable font [@w3c2026cssfonts], but more weight helps legibility only where strokes are too thin [@sheedy2005text], so extra weights add inconsistency without a reading benefit. Graded C.
+
+*In LTF:* decide one weight for measured values. The evidence offers no reason to prefer 500 or 700 for legibility at 24 px and above, so choose by hierarchy: a `readout-display` utility at 700 for the hero values (KIAS cells, result percentage, stopwatch), and `readout` at 500 everywhere else. Replace page-level `font-mono ... font-bold` with those utilities.
+:::
+
+::: {.rule #SCR-040 grade="C"}
+**When a face is chosen or replaced, prefer one with an optical-size axis if small labels and large display type must share it, and leave `font-optical-sizing` at `auto`.** Under `auto` the browser matches the `opsz` axis to the used size, giving small text sturdier forms [@w3c2026cssfonts]; whether that improves reading has not been tested in this lane, so the rule is a selection preference, graded C.
+
+*In LTF:* Instrument Sans has no `opsz` axis, so its small sizes are compensated only by weight and tracking (the `eyebrow` style at 600 and 0.08em). This is not a reason to change face (SCR-030) but it is a criterion for any future face, including a display face.
+:::
+
+::: {.rule #SCR-041 grade="C"}
+**Never use a weight the loaded font does not contain; load the axis range the styles need so that the browser does not synthesize bold or italic.** A synthesized style is drawn from outlines designed for another style, as LTF's italics already are (see the chapter on rendering); the weight scale itself (1 to 1000, with 400 normal and 700 bold) says nothing about which weights a given file contains [@w3c2026cssfonts]. Graded C.
+
+*In LTF:* Instrument Sans covers 400 to 700 and JetBrains Mono 100 to 800, so the four weights of SCR-039 are all real; a `font-extrabold` (800) on sans text, or any `font-light`, would fall outside the sans axis and should fail review.
+:::
+
+### Weight, polarity and the dark theme
+
+The tempting fix for thin-looking light text on the Night canvas is a different weight in Night than in Day. The polarity research in the next-to-last chapter of this Part supports larger and brighter small text in dark themes [@buchner2009advantage; @piepenbrock2013positive], but it does not test weight shifts. A per-theme weight adjustment is cheap to build with a variable `wght` axis and should be treated as an experiment: compare reading time and quiz accuracy for the 14 px meta text and the widget labels in Night with and without a small weight increase, rather than adjusting by eye.
+
+### What this means for Learn to Fly
+
+Keep the variable files and the 400 to 700 sans range; they cover every weight the product needs. Change the weight vocabulary: four role-based weights through the type utilities (SCR-039), one decision for measured values instead of the current mix of 500 and 700 mono, and no direct `font-bold` or `font-semibold` on page elements once the utilities exist. Use only high-level axis properties (SCR-038), never weights outside the loaded axis (SCR-041), and weigh optical sizing in any future face choice (SCR-040). Run the Night-theme weight test before adding any theme-dependent weight.
+
