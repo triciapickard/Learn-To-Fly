@@ -1,0 +1,490 @@
+[
+  {
+    "key": "imhof2007cartographic",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Imhof",
+        "given": "Eduard"
+      }
+    ],
+    "year": 2007,
+    "title": "Cartographic Relief Presentation",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "ESRI Press",
+    "publisher_place": "Redlands, CA",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Steward",
+        "given": "H. J."
+      }
+    ],
+    "doi": "",
+    "isbn": "9781589480261",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'Cartographic Relief Presentation Imhof' returned work OL17999406W (ESRI Press, 2007, isbn 9781589480261) and OL16378666W (De Gruyter 1982); Youngblood review in Cartographic Perspectives 65 (2010) confirms ESRI Press, Redlands, 2007, 436 p., ISBN 9781589480261, ed. H. J. Steward, from the 1965 German Kartographische Gelandedarstellung",
+    "kind": "craft treatise (relief and map design)",
+    "lane": "32-cartography-ornament-editorial",
+    "original_year": 1982
+  },
+  {
+    "key": "robinson1952look",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Robinson",
+        "given": "Arthur H."
+      }
+    ],
+    "year": 1952,
+    "title": "The Look of Maps: An Examination of Cartographic Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "University of Wisconsin Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780299009502",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library works OL4822994W and OL10558566W (The Look of Maps, University of Wisconsin Press, 1952, isbn 9780299009502); Esri ArcUser article esri.com/news/arcuser/1010/lookofmaps.html describes the 1952 original and the 2010 Esri Press reissue",
+    "kind": "craft/expert-opinion treatise",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "bertin2010semiology",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Bertin",
+        "given": "Jacques"
+      }
+    ],
+    "year": 2010,
+    "title": "Semiology of Graphics: Diagrams, Networks, Maps",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Esri Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL4520539W (Semiologie graphique, Bertin, with Univ. of Wisconsin Press and de Gruyter editions); Esri Press contents PDF (semiology-graphics-diagrams-networks-maps.pdf) shows the 2010 edition of the English translation by William J. Berg, Part One and Part Two contents; Roth 2015 confirms 1967 French original and 1983 English translation",
+    "kind": "theory of graphic sign systems",
+    "lane": "32-cartography-ornament-editorial",
+    "original_year": 1967
+  },
+  {
+    "key": "monmonier2018how",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Monmonier",
+        "given": "Mark"
+      }
+    ],
+    "year": 2018,
+    "title": "How to Lie with Maps",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "University of Chicago Press",
+    "publisher_place": "Chicago",
+    "edition": "3rd",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780226435923",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library works OL28047708W (2018) and OL20081418W (3rd edition, isbn 9780226435923) and OL1909721W (1991); University of Chicago Press course-introduction PDF 978-0-226-43592-3 shows the third edition contents and chapter 1",
+    "kind": "expert essay with examples",
+    "lane": "32-cartography-ornament-editorial",
+    "original_year": 1991
+  },
+  {
+    "key": "maceachren1995how",
+    "type": "book",
+    "authors": [
+      {
+        "family": "MacEachren",
+        "given": "Alan M."
+      }
+    ],
+    "year": 1995,
+    "title": "How Maps Work: Representation, Visualization, and Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Guilford Press",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780898625899",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL3502929W (How maps work, Guilford Press, 1995); Guilford contents page guilford.com/books/How-Maps-Work/Alan-MacEachren/9781572300408/contents lists hardcover ISBN 9780898625899, June 9, 1995, 513 pages and the full table of contents",
+    "kind": "synthesis of cognitive science and semiotics for cartography",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "brewer1997spectral",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Brewer",
+        "given": "Cynthia A."
+      }
+    ],
+    "year": 1997,
+    "title": "Spectral Schemes: Controversial Color Use on Maps",
+    "container_title": "Cartography and Geographic Information Systems",
+    "volume": "24",
+    "issue": "4",
+    "pages": "203-220",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1559/152304097782439231",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Brewer Spectral schemes controversy in the cartographic use of color' returned DOI 10.1559/152304097782439231, Brewer, 1997, Cartography and Geographic Information Systems 24(4) 203-220; Penn State record pure.psu.edu/en/publications/spectral-schemes-controversial-color-use-on-maps/ gives the abstract",
+    "kind": "design-guideline article drawing on empirical studies",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "harrower2003colorbrewer",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Harrower",
+        "given": "Mark"
+      },
+      {
+        "family": "Brewer",
+        "given": "Cynthia A."
+      }
+    ],
+    "year": 2003,
+    "title": "ColorBrewer.org: An Online Tool for Selecting Colour Schemes for Maps",
+    "container_title": "The Cartographic Journal",
+    "volume": "40",
+    "issue": "1",
+    "pages": "27-37",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1179/000870403235002042",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Brewer Harrower ColorBrewer.org an online tool for selecting colour schemes for maps' returned DOI 10.1179/000870403235002042 (Cartographic Journal 40(1) 27-37, 2003); Penn State record pure.psu.edu/en/publications/colorbrewerorg-an-online-tool-for-selecting-colour-schemes-for-ma/ confirms volume, pages and abstract",
+    "kind": "design tool paper",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "harley1989deconstructing",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Harley",
+        "given": "J. B."
+      }
+    ],
+    "year": 1989,
+    "title": "Deconstructing the Map",
+    "container_title": "Cartographica",
+    "volume": "26",
+    "issue": "2",
+    "pages": "1-20",
+    "publisher": "University of Toronto Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3138/e635-7827-1757-9t53",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Harley Deconstructing the map Cartographica 1989' returned DOI 10.3138/e635-7827-1757-9t53, Cartographica 26(2) 1-20; full text read from disp.web.uniroma1.it copy",
+    "kind": "theoretical essay",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "garland1994beck",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Garland",
+        "given": "Ken"
+      }
+    ],
+    "year": 1994,
+    "title": "Mr Beck's Underground Map",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Capital Transport Publishing",
+    "publisher_place": "Harrow Weald",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781854141682",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL4801324W (Mr. Beck's Underground Map, Ken Garland, Capital Transport Publishing, 1994, isbn 9781854141682); Eye magazine review eyemagazine.com/review/article/design-for-the-underground (Capital Transport) read",
+    "kind": "design history",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "roberts2017preference",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Roberts",
+        "given": "Maxwell J."
+      },
+      {
+        "family": "Gray",
+        "given": "Hannah"
+      },
+      {
+        "family": "Lesnik",
+        "given": "Jennifer"
+      }
+    ],
+    "year": 2017,
+    "title": "Preference versus performance: Investigating the dissociation between objective measures and subjective ratings of usability for schematic metro maps and intuitive theories of design",
+    "container_title": "International Journal of Human-Computer Studies",
+    "volume": "98",
+    "issue": "",
+    "pages": "109-128",
+    "publisher": "Elsevier BV",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.ijhcs.2016.06.003",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.ijhcs.2016.06.003 returned Roberts, Gray, Lesnik, IJHCS 98, 109-128, issued 2017-02; accepted manuscript read at repository.essex.ac.uk/17237",
+    "kind": "experiments (three studies)",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "jones1856grammar",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Jones",
+        "given": "Owen"
+      }
+    ],
+    "year": 1856,
+    "title": "The Grammar of Ornament",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Day and Son",
+    "publisher_place": "London",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://archive.org/stream/grammarornament00Jone/grammarornament00Jone_djvu.txt",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library works OL15836693W (1856) and OL24521691W (Day and Son); Internet Archive OCR text of the 1856 first edition read, propositions 1 to 37 and list of plates; Metropolitan Museum essay confirms London: Day and Son, 1856",
+    "kind": "craft treatise (ornament and colour)",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "dresser1873principles",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Dresser",
+        "given": "Christopher"
+      }
+    ],
+    "year": 1873,
+    "title": "Principles of Decorative Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Cassell, Petter, Galpin & Co.",
+    "publisher_place": "London",
+    "edition": "4th",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://archive.org/stream/principlesofdeco00dres/principlesofdeco00dres_djvu.txt",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library works OL2972475W and OL13786140W (Principles of decorative design, Christopher Dresser, Cassell, Petter, Galpin, 1873); Internet Archive scan (catalogued 1873) title page reads Fourth Edition, Cassell, Petter, Galpin & Co., London Paris & New York; preface and chapter 1 read",
+    "kind": "craft treatise (design education)",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "gombrich1979sense",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Gombrich",
+        "given": "E. H."
+      }
+    ],
+    "year": 1979,
+    "title": "The Sense of Order: A Study in the Psychology of Decorative Art",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Phaidon",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL686188W (The sense of order, E. H. Gombrich, 1979, Phaidon); Kirkus and New York Review of Books (Zerner, 28 June 1979) reviews read via web fetch",
+    "kind": "scholarly essay in the psychology of art",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "tufte1990envisioning",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Tufte",
+        "given": "Edward R."
+      }
+    ],
+    "year": 1990,
+    "title": "Envisioning Information",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Graphics Press",
+    "publisher_place": "Cheshire, CT",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780961392116",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL2824011W (Envisioning Information, Graphics Press, 1990, isbn 9780961392116); scanned copy read (title page: Graphics Press, Cheshire, Connecticut, copyright 1990)",
+    "kind": "expert essay with examples",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "chandra2013evaluation",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Chandra",
+        "given": "Divya C."
+      },
+      {
+        "family": "Grayhem",
+        "given": "Rebecca"
+      }
+    ],
+    "year": 2013,
+    "title": "Evaluation of a Technique to Simplify Depictions of Visually Complex Aeronautical Procedures for NextGen",
+    "container_title": "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
+    "volume": "57",
+    "issue": "1",
+    "pages": "86-90",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/1541931213571021",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Chandra Grayhem simplifying instrument procedure depictions clutter' returned DOI 10.1177/1541931213571021, Proc. HFES 57(1) 86-90, 2013; full text read from rosap.ntl.bts.gov/view/dot/11978",
+    "kind": "experiment (47 pilots)",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "smallman2005naive",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Smallman",
+        "given": "Harvey S."
+      },
+      {
+        "family": "St. John",
+        "given": "Mark"
+      }
+    ],
+    "year": 2005,
+    "title": "Naive Realism: Misplaced Faith in Realistic Displays",
+    "container_title": "Ergonomics in Design",
+    "volume": "13",
+    "issue": "3",
+    "pages": "6-13",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/106480460501300303",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Smallman St. John Naive realism' returned DOI 10.1177/106480460501300303, Ergonomics in Design 13(3) 6-13, 2005; full text read in a PDF copy",
+    "kind": "review of experiments (human factors position paper)",
+    "lane": "32-cartography-ornament-editorial"
+  },
+  {
+    "key": "white2003editing",
+    "type": "book",
+    "authors": [
+      {
+        "family": "White",
+        "given": "Jan V."
+      }
+    ],
+    "year": 2003,
+    "title": "Editing by Design: For Designers, Art Directors, and Editors",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Allworth Press",
+    "publisher_place": "",
+    "edition": "3rd",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781581159387",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library works OL4230902W (Editing by design, Jan V. White, 1974, Bowker) and OL25678516W / OL21896097W (2003 editions, isbn 9781581159387); Wikipedia and a university course page confirm editions 1974, 1982, 2003, 2020",
+    "kind": "craft handbook",
+    "lane": "32-cartography-ornament-editorial",
+    "original_year": 1974
+  }
+]

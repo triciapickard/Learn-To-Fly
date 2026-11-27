@@ -356,3 +356,111 @@ Evidence type: a design model built on cognitive load theory and skill acquisiti
 
 Confirmed this session: Crossref record DOI 10.4135/9781412964012.n26 (chapter, authors, 2008, SAGE); full text of the chapter read as PDF from the Open Universiteit repository (research.ou.nl); web search for the meta-analysis record (Crossref DOI 10.1007/s10984-021-09373-y).
 
+## wiggins2005understanding
+
+Wiggins and McTighe (2005), Understanding by Design, expanded 2nd edition, ASCD (first edition 1998). Read with the ASCD white paper "Understanding by Design framework" (McTighe and Wiggins, 2012).
+
+### Core claims
+
+The book's thesis is that good curriculum and lesson design works backward from the results wanted. Designers decide first what learners should understand and be able to transfer, then what evidence would show it, and only then what to teach. The authors name two "twin sins" of traditional design: activity-oriented teaching ("hands-on without being minds-on") and "coverage," marching through content without a guiding purpose. Their target is understanding, shown by learners using their learning on their own in new situations (transfer). The ASCD white paper adds that Understanding by Design (UbD) is guided by evidence from two streams, theoretical research in cognitive psychology and student achievement studies, and that it does not offer a rigid process or prescriptive recipe.
+
+### Specifics
+
+Three stages. Stage 1, identify desired results: what should learners know, understand and be able to do; which enduring understandings and transfer goals; which essential questions. Because there is more content than time, this stage forces priorities. Stage 2, determine acceptable evidence: "think like an assessor" before designing lessons, using performance tasks (applying learning to a new, authentic situation) plus other evidence such as quizzes, observations and work samples. Stage 3, plan learning experiences and instruction: the enabling knowledge and skills needed, the activities that equip learners, and the sequence and resources. Alignment is the key test: Stage 1 content must be what Stage 2 assesses and Stage 3 teaches. The stages are a logic of design, not necessarily the order in which design happens.
+
+Six facets of understanding, used as indicators and assessment design prompts: explain, interpret, apply, shift perspective, empathize, and self-assess. The white paper adds that not all facets are used each time and that performance tasks are culminating performances for a unit, not daily lessons; daily lessons build the knowledge and skills, as practice does in athletics.
+
+WHERETO (the Stage 3 checklist,): W, ensure learners understand where the unit is headed and why; H, hook and hold attention; E, equip learners with experiences, tools and knowledge; R, give opportunities to rethink, reflect and revise; E, build in evaluation and self-assessment; T, tailor to individual needs; O, organize to optimize deep understanding and not superficial coverage. The book includes a "misconception alert" that WHERETO, like the six facets, is an analytic tool for checking a design and not a recipe for constructing it, and likens Bloom's taxonomy to a way of judging assessment items for cognitive difficulty, not a prescribed teaching sequence. The W element also means learners should see their final performance obligations and the judging criteria early, with rubrics distributed on day one in the book's example.
+
+### Replication and criticism
+
+Evidence type: a craft framework from practitioners and curriculum consultants, widely used in schools and teacher education. Evidence for it is not experimental in the main text. A search this session found no rigorous meta-analysis of UbD's effectiveness. A compilation of studies hosted by an author's site is promotional and reports no effect sizes. Critiques are conceptual: a 2022 essay in To Improve the Academy (McCreary, seen only in a search summary) argues that objectives-first, means-ends logic can narrow what a course offers. Fixing assessment before activities has strong logical appeal but is a design principle, not a tested intervention. Merrill starts from whole tasks, not abstract objectives; the views are compatible if the whole task is the Stage 2 performance.
+
+### Implications for LTF
+
+Backward design is a good authoring discipline for LTF's lessons and challenges. For each module, write the transfer goal first (what a learner can do in the sim without prompts), then define the challenge that proves it (the Stage 2 performance task, with criteria visible to the learner), then write the teaching content only as needed to prepare for that challenge. Content that does not prepare the learner for the performance is coverage and can be cut. The W element suggests every lesson page opens with "what you will be able to do, and how it will be judged," and fly mode shows the same criteria. The "evaluate" element supports end-of-challenge self-rating compared with the measured result. Reserve the full performance task for the end of a module. Cite UbD as a design discipline, not as proof of learning effects.
+
+Confirmed this session: ASCD product page (authors, ISBN 978-1-4166-0035-0, 370 pages); full text of the second edition read as a PDF scan (andymatuschak.org copy; copyright page shows 2005, ASCD, ISBN 1-4166-0035-3, expanded 2nd edition), including the WHERETO section and the preface; ASCD white paper (files.ascd.org) and a chapter excerpt (ubc.ca); web search for evidence and criticism.
+
+## krathwohl2002revision
+
+Krathwohl (2002), "A revision of Bloom's taxonomy: an overview", Theory Into Practice 41(4), 212-218. An account by a co-author of the original (Bloom and colleagues, 1956) and lead co-editor of the revision (Anderson, Krathwohl and colleagues, 2001, "A taxonomy for learning, teaching, and assessing", Longman).
+
+### Core claims
+
+The paper explains what the 2001 revision kept and changed. The original Taxonomy of Educational Objectives (1956, Handbook I, cognitive domain) is a framework for classifying statements of what students are expected to learn. It began as a way for faculty at different universities to share test items measuring the same objective, and Bloom hoped it would also serve as a common language about learning goals, a way to check the congruence of objectives, activities and assessments, and a panorama of educational possibilities. The revision splits the old single dimension into two: a Knowledge dimension (the noun in an objective) and a Cognitive Process dimension (the verb). Together they form a Taxonomy Table for classifying any objective and checking a unit's balance.
+
+### Specifics
+
+The original six categories were Knowledge, Comprehension, Application, Analysis, Synthesis and Evaluation, ordered from simple to complex and concrete to abstract and assumed to be a cumulative hierarchy (each category prerequisite to the next). The author reports that the original was eventually translated into 22 languages, and that analyses of curricula and tests with it repeatedly showed a heavy emphasis on recall.
+
+In the original, "Knowledge" was dual: it carried both a noun aspect (subject matter) and a verb aspect (recall). The revision removes that anomaly. Knowledge dimension, four categories: A, Factual (terminology, specific details); B, Conceptual (classifications, principles and generalizations, theories and models); C, Procedural (subject-specific skills and algorithms, techniques and methods, criteria for choosing procedures); D, Metacognitive (strategic knowledge, knowledge about cognitive tasks, self-knowledge), a new category.
+
+Cognitive Process dimension, six verbs: Remember (recognizing, recalling), Understand (interpreting, exemplifying, classifying, summarizing, inferring, comparing, explaining), Apply (executing, implementing), Analyze (differentiating, organizing, attributing), Evaluate (checking, critiquing), Create (generating, planning, producing). Changes: Knowledge became Remember, Comprehension became Understand (the original group had rejected "understand" as ambiguous, but teacher usage prevailed), Synthesis became Create and swapped places with Evaluation, and subcategories became gerunds. The revision puts its main emphasis on the 19 specific cognitive processes, not the six headings.
+
+On hierarchy: the revised dimension is still described as a hierarchy of complexity, but the strict requirement was relaxed so categories can overlap. Understand was broadened so that Explaining is more complex than Executing (an Apply process). The author says that if one located each category's center of complexity, they would form a simple-to-complex scale, and says the hierarchy would probably be supported empirically as well as the original (citing a chapter of the 2001 book, which I did not read).
+
+Taxonomy Table: knowledge types as rows, cognitive processes as columns; an objective is placed in the cell or cells that match its noun and verb. Example: "write original compositions that analyze patterns and relationships of ideas" lands in cells for Analyze and Create, both based on Conceptual Knowledge. The paper shows, with a unit from the revision book, how a teacher's four objectives distribute across cells and how a table can reveal over-emphasis on remembering.
+
+### Replication and criticism
+
+Evidence type: a framework derived by expert consensus (groups of measurement specialists in 1949 to 1956 and again in the 1990s), not an empirical finding. Krathwohl himself concedes overlap between categories in the revision, which weakens the original's cumulative-hierarchy assumption. Wiggins and McTighe (the backward design source in this lane) caution that the taxonomy is a way to judge assessment items and objectives for cognitive difficulty, not a prescribed teaching sequence. I make no claim about learning outcomes, because the taxonomy classifies objectives and is not an instructional method with effect sizes.
+
+### Implications for LTF
+
+Use the Taxonomy Table as an authoring and review tool. Each LTF lesson and challenge objective should name its knowledge type (factual, conceptual, procedural, metacognitive) and its process (remember, understand, apply, and so on). A table of a module's objectives will show if quizzes only test Remember: expect procedural objectives at Apply (fly the pattern), conceptual ones at Understand or Analyze, and metacognitive ones at Evaluate (judge your own approach). Quiz items should match the objective's cell: do not test an Apply objective with a recall question. In-sim challenges are natural Apply and Create-level assessments for procedural knowledge. Do not order lessons by taxonomy level.
+
+Confirmed this session: Crossref record DOI 10.1207/s15430421tip4104_2 (title, author, 2002, volume 41, issue 4, pages 212-218); full text of the article read as PDF (copy hosted at ocw.metu.edu.tr): Tables 1 to 3, the Taxonomy Table, the worked examples; ERIC abstract for the article via search results; the Wiggins and McTighe text for the caution.
+
+## duchastel1972effects
+
+Duchastel and Merrill (1972), "The effects of behavioral objectives on learning: a review of empirical studies", Tech Memo No. 45, Florida State University Computer-Assisted Instruction Center (ERIC ED066909). Published in revised form in Review of Educational Research 43(1), 1973, 53-69. Read in the context of Mager's Preparing Instructional Objectives (1962; 3rd edition, Center for Effective Performance, 1997).
+
+### Core claims
+
+Robert Mager's short book popularized the idea that instruction should begin with clearly stated, behavioral objectives. Duchastel and Merrill ask the empirical question that the movement's critics (they cite Atkin, Eisner and Ebel) had raised: does telling students the objectives help them learn? They review more than twenty-five studies (28 in all, 18 of them published since 1970) and conclude that the evidence is mixed and complex. They stress that they examined only one function of objectives, providing them to students, and warn against overgeneralizing to the other two functions they identify: giving direction for teaching and curriculum development, and guiding evaluation.
+
+### Specifics
+
+Mager's scheme, as summarized on a University of Washington instructional design page: a useful objective has (1) a description of an observable performance, (2) the important conditions under which it occurs (what the learner will and will not be given, such as "given a list of..." or "without using references"), and (3) a criterion, the acceptable level, such as speed, accuracy or quality ("without error"). The Open Library record lists the third edition (1997, 193 pages).
+
+The review groups the studies. Group 1, general effect: advance knowledge of objectives improved posttest performance in five of ten studies and improved retention in two of three. Group 2, interaction with type of learning: only two of seven studies found one. In one, objectives helped knowledge acquisition but not comprehension. In the other, objectives interfered with a problem-solving task but not a discrimination task. Group 3, learner characteristics: interactions with reasoning ability, personality characteristics and state anxiety. Group 4, time: coupled with complete learner control, objectives reduced learning time; alone, they had no effect or increased it.
+
+Rationales. The authors view objectives as orienting stimuli, in the family of questions and advance organizers (Rothkopf, Frase, Ausubel), which activate inspection behaviors that determine what is learned. Hypothesized functions: directing attention to relevant versus incidental content, giving organization to the material like an advance organizer, supporting self-management of time, giving the learner a standard against which to compare performance, and sustaining reinforcement as learners see themselves mastering objectives. They list practical problems that may explain null results: students may ignore objectives, and objectives vary in specificity, in how behavioral they are and in number; a list so long and detailed that students are overwhelmed defeats its own purpose.
+
+### Replication and criticism
+
+Evidence type: a narrative review of small, mostly short experiments, many of them unpublished dissertations or conference papers; the authors say practical conclusions are hard to draw. A later review by Melton (1978, Review of Educational Research) attempted to resolve the conflicting claims; I confirmed it exists but did not read it. Conceptual critics, led by Eisner, argued that fixing outcomes in advance narrows education and that not all outcomes can be predicted (a position known through a search summary, which I did not verify against Eisner's text). The review does not say objectives are useless; it says presenting them to learners has no reliable general effect, while their value for planning and evaluation is a separate question that this review leaves open. Mager's own scheme is craft authority, not experimental evidence.
+
+### Implications for LTF
+
+Writing objectives in Mager's three-part form is worth it for LTF's authoring because it forces testable outcomes: performance ("fly a stabilized final approach"), conditions (given what weather, aids, help), criterion (within what tolerances, a number that must come from a cited source). The criterion part must follow the project rule on aviation facts: never invent tolerances. But do not assume that displaying a list of objectives at the top of every page improves learning. This review found inconsistent effects, and an overlong list may overwhelm. Keep the visible list short (two or three items), connect it to the challenge criteria and quiz items so learners see that the objectives are used, and prefer the "what you will be able to do" framing over a taxonomy-word list. Vague verbs (know, understand) should be rewritten as observable actions in the authoring checklist.
+
+Confirmed this session: ERIC full text of the tech memo (files.eric.ed.gov ED066909): abstract, group counts, rationales and problems; Crossref DOI 10.2307/1170121 for the 1973 RER version (title, year, volume, first page) and DOI 10.2307/1170086 for Melton; University of Washington page for Mager's three components; Open Library record for Mager's third edition.
+
+## gagne1985conditions
+
+Gagné (1985), The Conditions of Learning and Theory of Instruction, 4th edition, Holt, Rinehart and Winston, New York (first edition 1965). I could not read this book. Everything below comes from open secondary accounts fetched this session, and the claims are limited to points on which they agree.
+
+### Core claims
+
+Gagné's theory links two things: different kinds of learning outcome require different internal and external conditions, and instruction should be designed to support the internal processes of learning that information-processing psychology describes. Learning outcomes are classified into categories, each with its own conditions. Instruction is then arranged as a sequence of "events" that support the internal processes, in an order that follows how a learner takes in, stores and uses information. The theory was developed in the 1960s and 1970s, with roots in military and industrial training, and the nine events were later formalized in the textbook Principles of Instructional Design with Briggs and Wager (a secondary account; I did not verify authorship details).
+
+### Specifics
+
+Five categories of learning outcome, as the secondary accounts list them: intellectual skills (knowing how to do something procedurally, which Gagné treats as a hierarchy that builds from discrimination through concepts and rule use to problem solving), verbal information (knowing that something is the case), cognitive strategies (the learner's internal management of attention, learning and thinking), motor skills (coordinated physical movements) and attitudes (internal states that influence choices of action). One account lists the intellectual-skills levels as discrimination, concrete concepts, rule using and problem solving; another description of the hierarchy in the literature includes defined concepts and higher-order rules, so the exact number of levels differs between secondary accounts.
+
+Conditions. Internal conditions include existing memory schemata, information-processing capacity (working memory, attention control) and motivation. External conditions are what the designer controls in the environment.
+
+The nine events, with the internal process each is said to support (from the Simply Psychology summary; the LibreTexts chapter lists the same events with differently worded purposes): (1) gain attention (reception); (2) inform learners of the objective (expectancy); (3) stimulate recall of prior learning (retrieval to working memory); (4) present the content (selective perception); (5) provide learning guidance (semantic encoding); (6) elicit performance (responding); (7) provide feedback (reinforcement); (8) assess performance (retrieval); (9) enhance retention and transfer (generalization). Sources group them into three phases: preparing for learning (events 1 to 3), instruction and performance (4 to 7), and assessment and transfer (8 and 9). One source reports that not every lesson needs all nine events.
+
+### Replication and criticism
+
+Evidence type: a theory of instruction from a prominent researcher, built on an information-processing model and a classification of outcomes, with empirical support mainly indirect (from research on component processes), not from experiments testing the whole nine-event sequence. I did not find a controlled test of the full sequence this session. Criticisms listed in the secondary summaries: the sequence can read as rigid and linear, it is teacher-centric, it fits creative or open-ended fields poorly, it is lesson-level with little about spacing practice across weeks, and real objectives often straddle the categories. The LibreTexts chapter notes that van Merriënboer (1997) argued complex cognitive skills span several domains, so content does not always fall in one category. Merrill (2002, in this lane) found similar principles among many theories, and Gagné's events anticipate several of them: activation of prior knowledge, demonstration, application with feedback and transfer.
+
+### Implications for LTF
+
+Use the nine events as a checklist for a standard lesson page, not as a mandatory template. Many map onto features LTF already plans: a hook (gain attention), a "what you will be able to do" line (objective), a recall prompt (prior learning), the content, a guided example, a try-it widget or challenge (elicit performance), feedback, a short quiz (assess) and a transfer prompt ("now try it at a different airport"). Classify each module's outcomes before choosing methods: attitudes (for example, a safety mindset) and cognitive strategies (how to scan the instruments) need different treatment from verbal information (a definition) or motor skills (stick and rudder control, which practice in the sim addresses). Because the secondary sources agree that events need not all appear every time, short lessons may omit some; the checklist should flag, not require. Treat the nine-event order as one reasonable default, since it has no strong direct experimental support.
+
+Confirmed this session: Open Library editions record for the 4th edition (1985, Holt, Rinehart and Winston, New York, ISBN 0030636884, 361 pages); LibreTexts chapter "Robert Gagné and the systematic design of instruction" and the Simply Psychology summary fetched for the lists above; web search for the events and process labels. The book itself was not read.
+

@@ -1,0 +1,640 @@
+[
+  {
+    "key": "morkes1997concise",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Morkes",
+        "given": "John"
+      },
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      }
+    ],
+    "year": 1997,
+    "title": "Concise, SCANNABLE, and Objective: How to Write for the Web",
+    "container_title": "Nielsen Norman Group",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Nielsen Norman Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched nngroup.com article: title, authors Morkes and Nielsen, date 1997, three studies with 81 users, Table 1 and 2 results",
+    "kind": "experiment (usability study, industry report)",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "nielsen1997how",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      }
+    ],
+    "year": 1997,
+    "title": "How Users Read on the Web",
+    "container_title": "Nielsen Norman Group",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Nielsen Norman Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.nngroup.com/articles/how-users-read-on-the-web/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched nngroup.com page: title, author, date 30 September 1997, 79% scan and 16% word by word, eight guidelines",
+    "kind": "industry research summary",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "nielsen2006fshaped",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      }
+    ],
+    "year": 2006,
+    "title": "F-Shaped Pattern For Reading Web Content (Original Study)",
+    "container_title": "Nielsen Norman Group",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Nielsen Norman Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched nngroup.com page: author, 16 April 2006, eyetracking of 232 users; follow-up by Pernice (2017) fetched at nngroup.com/articles/f-shaped-pattern-reading-web-content/",
+    "kind": "eyetracking study (industry report)",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "krug2014dont",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Krug",
+        "given": "Steve"
+      }
+    ],
+    "year": 2014,
+    "title": "Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "New Riders",
+    "publisher_place": "",
+    "edition": "3rd",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780321965516",
+    "url": "https://www.pearson.com/en-ca/subject-catalog/p/don-t-make-me-think-revisited-a-common-sense-approach-to-web-usability/P200000000385/9780133597264",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL21163225W 'Don't Make Me Think, Revisited' by Steve Krug (New Riders, 2013/2014); Pearson catalog page lists New Riders, 23 Dec 2013 release, 2014 copyright, 3rd edition, 13 chapters",
+    "kind": "craft treatise (practitioner book)",
+    "lane": "26-writing-microcopy",
+    "original_year": 2000
+  },
+  {
+    "key": "strunk2000elements",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Strunk",
+        "given": "William, Jr."
+      },
+      {
+        "family": "White",
+        "given": "E. B."
+      }
+    ],
+    "year": 2000,
+    "title": "The Elements of Style",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Longman",
+    "publisher_place": "New York",
+    "edition": "4th",
+    "editors": [],
+    "doi": "",
+    "isbn": "020530902X",
+    "url": "https://en.wikisource.org/wiki/The_Elements_of_Style",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL38285W The Elements of Style, Strunk and White; web search of Berkeley library catalog and Pearson listing for ISBN 020530902X, 4th edition, New York: Longman, 2000; Wikisource transcription of the original rules",
+    "kind": "style handbook (craft authority)",
+    "lane": "26-writing-microcopy",
+    "original_year": 1918
+  },
+  {
+    "key": "orwell1946politics",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Orwell",
+        "given": "George"
+      }
+    ],
+    "year": 1946,
+    "title": "Politics and the English Language",
+    "container_title": "Horizon",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched Orwell Foundation page: published Horizon, April 1946; six rules, four devices, questions list quoted. Volume and pages appear only in Wikipedia so left blank",
+    "kind": "essay (craft authority)",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "flesch1948new",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Flesch",
+        "given": "Rudolf"
+      }
+    ],
+    "year": 1948,
+    "title": "A new readability yardstick",
+    "container_title": "Journal of Applied Psychology",
+    "volume": "32",
+    "issue": "3",
+    "pages": "221-233",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/h0057532",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1037/h0057532: A new readability yardstick, Flesch, Journal of Applied Psychology 32(3) 221-233, 1948; PubMed 18867058 agrees (no abstract)",
+    "kind": "readability formula paper",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "kincaid1975derivation",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Kincaid",
+        "given": "J. Peter"
+      },
+      {
+        "family": "Fishburne",
+        "given": "Robert P., Jr."
+      },
+      {
+        "family": "Rogers",
+        "given": "Richard L."
+      },
+      {
+        "family": "Chissom",
+        "given": "Brad S."
+      }
+    ],
+    "year": 1975,
+    "title": "Derivation of New Readability Formulas (Automated Readability Index, Fog Count and Flesch Reading Ease Formula) for Navy Enlisted Personnel",
+    "container_title": "Research Branch Report 8-75",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Naval Technical Training Command, Research Branch",
+    "publisher_place": "Millington, TN",
+    "edition": "",
+    "editors": [],
+    "doi": "10.21236/ada006655",
+    "isbn": "",
+    "url": "https://stars.library.ucf.edu/istlibrary/56",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.21236/ada006655 (DTIC, Feb 1975, report RBR-8-75); full report read via UCF STARS copy",
+    "kind": "technical report with regression study",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "redish2000readability",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Redish",
+        "given": "Janice"
+      }
+    ],
+    "year": 2000,
+    "title": "Readability formulas have even more limitations than Klare discusses",
+    "container_title": "ACM Journal of Computer Documentation",
+    "volume": "24",
+    "issue": "3",
+    "pages": "132-137",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/344599.344637",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/344599.344637: Redish, ACM Journal of Computer Documentation 24(3) 132-137, Aug 2000; abstract summary on utah.edu JCD bibliography",
+    "kind": "commentary / literature review",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "redish2012letting",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Redish",
+        "given": "Janice (Ginny)"
+      }
+    ],
+    "year": 2012,
+    "title": "Letting Go of the Words: Writing Web Content that Works",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Morgan Kaufmann",
+    "publisher_place": "",
+    "edition": "2nd",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780123859303",
+    "url": "https://shop.elsevier.com/books/letting-go-of-the-words/redish/978-0-12-385930-3",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library works OL16617636W (2012, Morgan Kaufmann) and OL7940258W (2007); Elsevier shop page lists 2nd edition, 15 August 2012, ISBN 9780123859303",
+    "kind": "craft treatise (practitioner book)",
+    "lane": "26-writing-microcopy",
+    "original_year": 2007
+  },
+  {
+    "key": "shneiderman1982designing",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Shneiderman",
+        "given": "Ben"
+      }
+    ],
+    "year": 1982,
+    "title": "Designing computer system messages",
+    "container_title": "Communications of the ACM",
+    "volume": "25",
+    "issue": "9",
+    "pages": "610-611",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/358628.358639",
+    "isbn": "",
+    "url": "https://www.cs.umd.edu/~ben/papers/Shneiderman1982Designing.pdf",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/358628.358639: Shneiderman, Communications of the ACM 25(9) 610-611, Sept 1982; full two-page article read from cs.umd.edu PDF",
+    "kind": "short practitioner paper reporting experiments",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "carroll1987minimal",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Carroll",
+        "given": "John M."
+      },
+      {
+        "family": "Smith-Kerker",
+        "given": "Penny L."
+      },
+      {
+        "family": "Ford",
+        "given": "James R."
+      },
+      {
+        "family": "Mazur-Rimetz",
+        "given": "Sandra A."
+      }
+    ],
+    "year": 1987,
+    "title": "The Minimal Manual",
+    "container_title": "Human-Computer Interaction",
+    "volume": "3",
+    "issue": "2",
+    "pages": "123-153",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15327051hci0302_2",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1207/s15327051hci0302_2: Human-Computer Interaction 3(2) 123-153, 1987; full text read",
+    "kind": "experiment (two between-subjects experiments)",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "dubay2004principles",
+    "type": "report",
+    "authors": [
+      {
+        "family": "DuBay",
+        "given": "William H."
+      }
+    ],
+    "year": 2004,
+    "title": "The Principles of Readability",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Impact Information",
+    "publisher_place": "Costa Mesa, CA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://files.eric.ed.gov/fulltext/ED490073.pdf",
+    "verified_via": "websearch",
+    "verified_evidence": "ERIC API record ED490073 'The Principles of Readability', DuBay, 2004, with abstract; full text downloaded from files.eric.ed.gov and read",
+    "kind": "literature review",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "plain2011federal",
+    "type": "report",
+    "authors": [
+      {
+        "literal": "Plain Language Action and Information Network"
+      }
+    ],
+    "year": 2011,
+    "title": "Federal Plain Language Guidelines, March 2011, Revision 1, May 2011",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "Revision 1",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.fai.gov/sites/fai/files/2016-12-22-Federal-Rulemaking-VAAR-FederalPLGuidelines.pdf",
+    "verified_via": "websearch",
+    "verified_evidence": "Full PDF read from fai.gov mirror; web search results confirm March 2011 / Rev. 1 May 2011 edition and PLAIN as author (plainlanguage.gov archive, digital.gov listing)",
+    "kind": "government standard of practice (guidelines)",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "uscongress2010plain",
+    "type": "standard",
+    "authors": [
+      {
+        "literal": "United States Congress"
+      }
+    ],
+    "year": 2010,
+    "title": "Plain Writing Act of 2010 (Public Law 111-274)",
+    "container_title": "Public Law 111-274, 124 Stat. 2861",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.govinfo.gov/content/pkg/PLAW-111publ274/html/PLAW-111publ274.htm",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched govinfo.gov PLAW-111publ274 text: sections 2 to 7, definition of plain writing, enacted 13 October 2010; STATUTE-124-Pg2861 listing found by web search",
+    "kind": "statute",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "govuk2026writing",
+    "type": "webpage",
+    "authors": [
+      {
+        "literal": "Government Digital Service"
+      }
+    ],
+    "year": 2026,
+    "title": "Writing to GOV.UK standards: Use clear language and A to Z style guide",
+    "container_title": "GOV.UK Content and publishing guidance",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/writing-guidelines/clear-language/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched guidance.publishing.service.gov.uk clear-language page and A to Z style guide page (November 2026); web search confirms research-basis statement",
+    "kind": "government style guide",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "kimble2016proof",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Kimble",
+        "given": "Joseph"
+      }
+    ],
+    "year": 2016,
+    "title": "The Proof Is in the Reading: Solid Evidence That Plain Language Works Best",
+    "container_title": "Michigan Bar Journal",
+    "volume": "",
+    "issue": "",
+    "pages": "52-54",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.michbar.org/file/barjournal/article/documents/pdf4article2972.pdf",
+    "verified_via": "websearch",
+    "verified_evidence": "Downloaded and read the column PDF on michbar.org (October 2016, starts p. 52); web search found Cooley Law School Benchmark Winter 2016 listing with this exact title; volume unconfirmed so left blank",
+    "kind": "review of four empirical studies (author is an advocate)",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "oppenheimer2006consequences",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Oppenheimer",
+        "given": "Daniel M."
+      }
+    ],
+    "year": 2006,
+    "title": "Consequences of erudite vernacular utilized irrespective of necessity: Problems with using long words needlessly",
+    "container_title": "Applied Cognitive Psychology",
+    "volume": "20",
+    "issue": "2",
+    "pages": "139-156",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1002/acp.1178",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1002/acp.1178: Oppenheimer, Applied Cognitive Psychology 20(2) 139-156, 2006; abstract summaries found by web search; ScienceDaily release fetched",
+    "kind": "experiment (five experiments)",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "podmajersky2019strategic",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Podmajersky",
+        "given": "Torrey"
+      }
+    ],
+    "year": 2019,
+    "title": "Strategic Writing for UX: Drive Engagement, Conversion, and Retention with Every Word",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "O'Reilly Media",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781492049395",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL21343012W Strategic Writing for UX, Podmajersky, O'Reilly Media, 2019, ISBN 9781492049395; UXmatters review and VTEX guide fetched",
+    "kind": "craft treatise (practitioner book)",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "seemanhorwitz2021making",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Seeman-Horwitz",
+        "given": "Lisa"
+      },
+      {
+        "family": "Montgomery",
+        "given": "Rachael Bradley"
+      }
+    ],
+    "year": 2021,
+    "title": "Making Content Usable for People with Cognitive and Learning Disabilities",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "World Wide Web Consortium",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Seeman-Horwitz",
+        "given": "Lisa"
+      },
+      {
+        "family": "Montgomery",
+        "given": "Rachael Bradley"
+      }
+    ],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.w3.org/TR/coga-usable/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched w3.org/TR/coga-usable: title, 29 April 2021, W3C Working Group Note, editors, eight objectives and pattern titles",
+    "kind": "standards-body guidance note",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "microsoft2024bias",
+    "type": "webpage",
+    "authors": [
+      {
+        "literal": "Microsoft"
+      }
+    ],
+    "year": 2024,
+    "title": "Bias-free communication (Microsoft Writing Style Guide)",
+    "container_title": "Microsoft Writing Style Guide",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://learn.microsoft.com/en-us/style-guide/bias-free-communication",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched learn.microsoft.com/en-us/style-guide/bias-free-communication: page metadata ms.date 2024-04-18, term tables and rules",
+    "kind": "industry style guide",
+    "lane": "26-writing-microcopy"
+  },
+  {
+    "key": "gowers1954complete",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Gowers",
+        "given": "Ernest"
+      }
+    ],
+    "year": 1954,
+    "title": "The Complete Plain Words",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "His Majesty's Stationery Office",
+    "publisher_place": "London",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL4899374W The complete plain words, Sir Ernest Gowers, first published 1954, publishers include H.M.S.O.; Wikipedia article fetched for publication history",
+    "kind": "craft treatise (practitioner book)",
+    "lane": "26-writing-microcopy"
+  }
+]
