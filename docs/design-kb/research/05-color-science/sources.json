@@ -1,0 +1,504 @@
+[
+ {
+  "key": "newton1704opticks",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Newton",
+    "given": "Isaac"
+   }
+  ],
+  "year": 1704,
+  "title": "Opticks: or, A Treatise of the Reflexions, Refractions, Inflexions and Colours of Light",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Sam. Smith and Benj. Walford",
+  "publisher_place": "London",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://archive.org/details/bim_eighteenth-century_opticks-or-a-treatise-_newton-sir-isaac_1704",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'Opticks Newton' returned works OL31832178W (Dover reprint, 1952) and OL19091121W (1730, printed for W. Innys). I read the OCR full text of the 1704 first printing at archive.org item bim_eighteenth-century_opticks-or-a-treatise-_newton-sir-isaac_1704, whose title page reads 'Printed for Sam. Smith and Benj. Walford, Printers to the Royal Society, at the Prince's Arms in St. Paul's Church-yard', London, and located Book I Part II (colour circle and centre-of-gravity rule).",
+  "kind": "primary scientific treatise (experimental optics)",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "young1802theory",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Young",
+    "given": "Thomas"
+   }
+  ],
+  "year": 1802,
+  "title": "The Bakerian Lecture. On the theory of light and colours",
+  "container_title": "Philosophical Transactions of the Royal Society of London",
+  "volume": "92",
+  "issue": "",
+  "pages": "12-48",
+  "publisher": "The Royal Society",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1098/rstl.1802.0004",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works?query.bibliographic='Young On the theory of light and colours 1802 Philosophical Transactions' returned DOI 10.1098/rstl.1802.0004, 'II. The Bakerian Lecture. On the theory of light and colours', Phil. Trans. R. Soc. Lond. 92, pp. 12-48, The Royal Society (Crossref lists no author; Thomas Young is confirmed by the Wellcome Collection catalogue 'The Bakerian lecture: on the theory of light and colours / by Thomas Young' and by Mollon 2002 Phil. Trans. A, which quotes 'Young 1802a').",
+  "kind": "primary scientific paper",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "helmholtz1924treatise",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Helmholtz",
+    "given": "Hermann von"
+   }
+  ],
+  "year": 1924,
+  "original_year": 1867,
+  "title": "Helmholtz's Treatise on Physiological Optics",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Optical Society of America",
+  "publisher_place": "",
+  "edition": "Translated by J. P. C. Southall from the third German edition",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'Treatise on Physiological Optics Helmholtz' returned work OL12361818W, 'Helmholtz's treatise on physiological optics', first published 1924 by The Optical Society of America, and OL95302W 'Handbuch der physiologischen Optik' (Voss, 1867). Web search confirmed the English version was translated by J. P. C. Southall from the third German edition (1909-1911), published 1924-25; Wade 2021 (doi 10.1080/0964704X.2021.1904182) says volume 2 treats the sensations of vision.",
+  "kind": "translation of a handbook of physiology and psychophysics of vision",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "hurvich1957opponent",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Hurvich",
+    "given": "Leo M."
+   },
+   {
+    "family": "Jameson",
+    "given": "Dorothea"
+   }
+  ],
+  "year": 1957,
+  "title": "An opponent-process theory of color vision",
+  "container_title": "Psychological Review",
+  "volume": "64",
+  "issue": "6, Pt. 1",
+  "pages": "384-404",
+  "publisher": "American Psychological Association",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/h0041403",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query 'Hurvich Jameson opponent' returned DOI 10.1037/h0041403, 'An opponent-process theory of color vision.', Psychological Review 64(6, Pt.1), 384-404, Nov 1957, APA. Method and context confirmed via yorku.ca/eye/huecan.htm and Shevell & Martin 2017 (PMC6022826).",
+  "kind": "experimental psychophysics and theory",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "stockman2000spectral",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Stockman",
+    "given": "Andrew"
+   },
+   {
+    "family": "Sharpe",
+    "given": "Lindsay T."
+   }
+  ],
+  "year": 2000,
+  "title": "The spectral sensitivities of the middle- and long-wavelength-sensitive cones derived from measurements in observers of known genotype",
+  "container_title": "Vision Research",
+  "volume": "40",
+  "issue": "13",
+  "pages": "1711-1737",
+  "publisher": "Elsevier",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/s0042-6989(00)00021-3",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1016/s0042-6989(00)00021-3, Vision Research 40(13), 1711-1737, June 2000, Elsevier. Content confirmed via Stockman 2019 'Cone fundamentals and CIE standards' (UCL discovery eprint 10079410) and a web search of the abstract.",
+  "kind": "experimental psychophysics with genotyped observers",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "smith1931cie",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Smith",
+    "given": "T."
+   },
+   {
+    "family": "Guild",
+    "given": "J."
+   }
+  ],
+  "year": 1931,
+  "title": "The C.I.E. colorimetric standards and their use",
+  "container_title": "Transactions of the Optical Society",
+  "volume": "33",
+  "issue": "3",
+  "pages": "73-134",
+  "publisher": "IOP Publishing",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1088/1475-4878/33/3/301",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1088/1475-4878/33/3/301, Transactions of the Optical Society 33(3), 73-134, 1931, IOP Publishing; ADS record 1931TrOS...33...73S and a NIST citation confirm authors T. Smith and J. Guild. Standard background confirmed from Wikipedia 'CIE 1931 color space' and Stockman 2019.",
+  "kind": "standards exposition by the authors of the standard",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "macadam1942visual",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "MacAdam",
+    "given": "David L."
+   }
+  ],
+  "year": 1942,
+  "title": "Visual sensitivities to color differences in daylight",
+  "container_title": "Journal of the Optical Society of America",
+  "volume": "32",
+  "issue": "5",
+  "pages": "247-274",
+  "publisher": "Optica Publishing Group",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1364/josa.32.000247",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1364/josa.32.000247, Journal of the Optical Society of America 32(5), 247, May 1942, Optica Publishing Group (pages 247-274 per the Optica issue listing). Abstract details confirmed by web search; ellipse conventions confirmed on Wikipedia 'MacAdam ellipse'.",
+  "kind": "experimental psychophysics (color matching variability)",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "munsell1907color",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Munsell",
+    "given": "Albert H."
+   }
+  ],
+  "year": 1907,
+  "original_year": 1905,
+  "title": "A Color Notation: A Measured Color System, Based on the Three Qualities Hue, Value and Chroma",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Geo. H. Ellis Co.",
+  "publisher_place": "Boston",
+  "edition": "2nd edition, revised and enlarged",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://archive.org/details/acolornotationam26054gut",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'A Color Notation Munsell' returned works OL1560367W (1905) and OL32858853W (1907, Munsell Color Co.). I read the full Project Gutenberg text (EBook 26054, archive.org item acolornotationam26054gut), whose title page reads '2nd Edition Revised & Enlarged, Geo. H. Ellis Co., Boston, 1907', copyright 1905 by A. H. Munsell.",
+  "kind": "color order system and teaching manual",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "chevreul1872principles",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Chevreul",
+    "given": "Michel Eugene"
+   }
+  ],
+  "year": 1872,
+  "original_year": 1839,
+  "title": "The Principles of Harmony and Contrast of Colours, and Their Applications to the Arts",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Bell & Daldy",
+  "publisher_place": "London",
+  "edition": "Third edition, translated by Charles Martel",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://archive.org/details/principlesofharm1872chev",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search returned works OL24976705W ('The principles of harmony and contrast of colours, and their applications to the arts', 1839) and OL20044613W. I read the OCR full text of the third English edition translated by Charles Martel (archive.org item principlesofharm1872chev, Chevreul's preface and Part I on simultaneous contrast).",
+  "kind": "craft and experimental treatise on contrast",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "albers1963interaction",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Albers",
+    "given": "Josef"
+   }
+  ],
+  "year": 1963,
+  "title": "Interaction of Color",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Yale University Press",
+  "publisher_place": "New Haven",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.albersfoundation.org/alberses/teaching/interaction-of-color",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'Interaction of Color Albers' returned work OL2286161W 'Interaction of Colour', Josef Albers, first published 1963, Yale University Press. Contents and history confirmed at albersfoundation.org/alberses/teaching/interaction-of-color (1963 Yale edition, 1971 pocket edition, 1972 German edition).",
+  "kind": "art-school pedagogy with plates",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "berlin1969basic",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Berlin",
+    "given": "Brent"
+   },
+   {
+    "family": "Kay",
+    "given": "Paul"
+   }
+  ],
+  "year": 1969,
+  "title": "Basic Color Terms: Their Universality and Evolution",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "University of California Press",
+  "publisher_place": "Berkeley",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'Basic Color Terms Berlin Kay' returned works OL64565W and OL43005024W, 'Basic Color Terms', Brent Berlin and Paul Kay, University of California Press, 1969. Contents and criticism confirmed via Wikipedia 'Basic Color Terms', Regier & Kay 2009 and Roberson, Davies & Davidoff 2000 abstracts found by web search.",
+  "kind": "cross-language survey (linguistic anthropology)",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "fairchild2013color",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Fairchild",
+    "given": "Mark D."
+   }
+  ],
+  "year": 2013,
+  "title": "Color Appearance Models",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "John Wiley & Sons",
+  "publisher_place": "",
+  "edition": "3rd edition",
+  "editors": [],
+  "doi": "",
+  "isbn": "9781119967033",
+  "url": "https://www.wiley-vch.de/en/areas-interest/engineering/color-appearance-models-978-1-119-96703-3",
+  "verified_via": "websearch",
+  "verified_evidence": "Open Library search returned Fairchild's Color Appearance Models (works OL2691720W, 1998, and OL2691721W, 2005). The third edition (Wiley, August 2013, 472 pages, ISBN 978-1-119-96703-3) and its full table of contents were confirmed on the Wiley-VCH product page wiley-vch.de/en/areas-interest/engineering/color-appearance-models-978-1-119-96703-3.",
+  "kind": "textbook and reference",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "hunt2011measuring",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Hunt",
+    "given": "R. W. G."
+   },
+   {
+    "family": "Pointer",
+    "given": "M. R."
+   }
+  ],
+  "year": 2011,
+  "title": "Measuring Colour",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "John Wiley & Sons",
+  "publisher_place": "",
+  "edition": "4th edition",
+  "editors": [],
+  "doi": "",
+  "isbn": "9781119975373",
+  "url": "https://www.wiley-vch.de/en/areas-interest/engineering/measuring-colour-978-1-119-97537-3",
+  "verified_via": "websearch",
+  "verified_evidence": "Open Library search 'Measuring Colour Hunt Pointer' returned works OL21460407W and OL16652145W (Wiley, 2011). The fourth edition (Wiley, September 2011, ISBN 978-1-119-97537-3) and its chapter list were confirmed on the Wiley-VCH product page wiley-vch.de/en/areas-interest/engineering/measuring-colour-978-1-119-97537-3.",
+  "kind": "textbook and reference",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "sharma2005ciede2000",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Sharma",
+    "given": "Gaurav"
+   },
+   {
+    "family": "Wu",
+    "given": "Wencheng"
+   },
+   {
+    "family": "Dalal",
+    "given": "Edul N."
+   }
+  ],
+  "year": 2005,
+  "title": "The CIEDE2000 color-difference formula: Implementation notes, supplementary test data, and mathematical observations",
+  "container_title": "Color Research & Application",
+  "volume": "30",
+  "issue": "1",
+  "pages": "21-30",
+  "publisher": "Wiley",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1002/col.20070",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1002/col.20070, Color Research & Application 30(1), 21-30, Wiley (online 2004, issue dated February 2005). I downloaded and read the full text PDF from hajim.rochester.edu/ece/sites/gsharma/papers/CIEDE2000CRNAFeb05.pdf.",
+  "kind": "numerical analysis and test data for a standard formula",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "ottosson2020perceptual",
+  "type": "webpage",
+  "authors": [
+   {
+    "family": "Ottosson",
+    "given": "Björn"
+   }
+  ],
+  "year": 2020,
+  "title": "A perceptual color space for image processing",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://bottosson.github.io/posts/oklab/",
+  "verified_via": "websearch",
+  "verified_evidence": "Fetched bottosson.github.io/posts/oklab/ (HTML title 'A perceptual color space for image processing', published 23 Dec 2020 per the page). Follow-up facts confirmed from the Smashing Magazine interview with Ottosson (Oct 2024), the Wikipedia 'Oklab color space' search result and a Chris Lilley W3C workshop slide deck.",
+  "kind": "author's technical blog post introducing Oklab",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "harrower2003colorbrewer",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Harrower",
+    "given": "Mark"
+   },
+   {
+    "family": "Brewer",
+    "given": "Cynthia A."
+   }
+  ],
+  "year": 2003,
+  "title": "ColorBrewer.org: An online tool for selecting colour schemes for maps",
+  "container_title": "The Cartographic Journal",
+  "volume": "40",
+  "issue": "1",
+  "pages": "27-37",
+  "publisher": "Taylor & Francis",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1179/000870403235002042",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1179/000870403235002042, The Cartographic Journal 40(1), 27-37, June 2003, Informa UK Limited. Abstract and context confirmed via a web search (Penn State Pure record) and colorbrewer2.org and Wikipedia 'ColorBrewer'.",
+  "kind": "tool description from the cartographer who built the schemes",
+  "lane": "05-color-science"
+ },
+ {
+  "key": "machado2009physiologically",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Machado",
+    "given": "Gustavo M."
+   },
+   {
+    "family": "Oliveira",
+    "given": "Manuel M."
+   },
+   {
+    "family": "Fernandes",
+    "given": "Leandro A. F."
+   }
+  ],
+  "year": 2009,
+  "title": "A physiologically-based model for simulation of color vision deficiency",
+  "container_title": "IEEE Transactions on Visualization and Computer Graphics",
+  "volume": "15",
+  "issue": "6",
+  "pages": "1291-1298",
+  "publisher": "IEEE",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1109/tvcg.2009.113",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1109/tvcg.2009.113, IEEE Transactions on Visualization and Computer Graphics 15(6), 1291-1298, Nov 2009, IEEE; a correction is listed as DOI 10.1109/tvcg.2010.10. Method and matrices confirmed on the authors' page inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html and the colour-science library documentation.",
+  "kind": "computational model with user validation",
+  "lane": "05-color-science"
+ }
+]

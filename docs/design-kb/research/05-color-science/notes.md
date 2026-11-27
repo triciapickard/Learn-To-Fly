@@ -1,0 +1,142 @@
+# Lane 05: Color science (research notes)
+
+Order of sections follows the history of the subject: light and the eye first, then standards and measurement, then color order and appearance, then tools that matter to a web app today.
+
+## newton1704opticks
+
+Newton, Isaac. 1704. Opticks (first edition, London, printed for Sam. Smith and Benj. Walford). Evidence type: experimental treatise by the founder of the subject; primary source.
+
+### Core claims
+
+Newton argued that the colors seen when a prism spreads sunlight are not something the glass adds to white light. White sunlight is a mixture of rays that differ in how strongly they bend (their "refrangibility"), and each ray has its own color that no later refraction or reflection changes. The central claim for color science is Proposition VII of Book I, Part II: all the colors in the universe that are made by light, and do not depend on the power of imagination, are either the colors of homogeneal lights or compounds of them. He adds a physiological point that is easy to miss: mixed rays do not alter each other's color-making power, but their actions combine in the "Sensorium" to produce a sensation of a mean color between their proper colors.
+
+### Specifics
+
+I read the OCR text of the 1704 printing (archive.org item cited in sources.json). Four specifics are directly confirmed there.
+
+First, the order of the spectrum. Newton describes the separated rays, from the end where the most refrangible rays fall to the other end, as tinged with the series violet, indigo, blue, green, yellow, orange, red, with all the intermediate degrees in continual succession. The seven names are labels on a continuum, and he says there are as many degrees of color as there are sorts of rays differing in refrangibility.
+
+Second, immutability. Light of one color, isolated and sent through further prisms, stays that color. Objects viewed in such light (he lists paper, red lead, indigo, gold, grass, violets) appear entirely in the color of the light, differing only in how strongly they reflect it.
+
+Third, the color circle and mixing rule (Book I, Part II, Proposition VI, Problem III). Newton divides a circle's circumference into seven arcs, proportioned to the intervals of the musical octave, and assigns red, orange, yellow, green, blue, indigo and violet to them in order. For a mixture, place a small circle at the center of gravity of each arc, sized in proportion to the amount of that color, and find the common center of gravity Z. The direction of Z from the circle's center gives the hue, and the distance gives the fullness, with the center itself meaning white. His worked example (violet 1, indigo 1, blue 2, green 3, yellow 5, orange 6, red 10 parts) gives an orange verging a little toward red, with a little less than half the fullness of pure orange.
+
+Fourth, limits he admits. He considers the rule accurate enough for practice but not mathematically accurate. He could never produce a perfect white by mixing only two primary colors, and did not know whether three at equal distances would do. Red and violet mixtures give a purple, which is not a spectral color.
+
+### Replication and criticism
+
+The prism results were replicated widely. Helmholtz in 1852 repeated Brewster's experiments with tighter controls and found that the results did not diverge from Newtonian predictions (Wade 2021, doi 10.1080/0964704X.2021.1904182). What did not survive was the view that the three-fold character of mixing lies in light. Mollon (2002) argues that eighteenth-century writers treated trivariance as physics, and that Young's insight was to assign it to the eye. Newton's center-of-gravity rule is an early form of additive mixing, but it needs three receptor classes and linear algebra to be made exact; Maxwell and Helmholtz supplied those. One source I found says the count of seven was chosen somewhat arbitrarily.
+
+### Implications for LTF
+
+Hue is a continuum that people sort into named categories, so a UI that relies on a viewer separating "orange" from "yellow" at a glance asks for a categorical judgment on a continuous variable; give a second cue such as a label or shape. Mixtures of lights (screens) behave roughly as Newton described, so a display cannot show colors outside the triangle of its primaries. Newton's "fullness" axis is the ancestor of chroma: a color diluted with white is a different object from a darker color, and theme ramps must treat them separately. In a lesson on reading an instrument display, do not teach color names as if they were physical properties; the seen color depends on lighting and monitor.
+
+Confirmed this session: read the OCR full text of the 1704 first printing at archive.org (bim_eighteenth-century_opticks-or-a-treatise-_newton-sir-isaac_1704), including Book I Part II Propositions VI and VII and the passage on immutable colors; Open Library search "Opticks Newton" (OL31832178W, OL19091121W); Mollon 2002 (vision.psychol.cam.ac.uk); Wade 2021 (discovery.dundee.ac.uk).
+
+## young1802theory
+
+Young, Thomas. 1802. The Bakerian Lecture. On the theory of light and colours. Philosophical Transactions of the Royal Society of London 92, 12-48. Evidence type: theoretical argument from the physics of waves, with no new color experiment.
+
+### Core claims
+
+The lecture was delivered in November 1801 and printed in 1802. Its main business is the wave theory of light and interference, but it contains the first clear argument that the three-fold character of color mixing belongs to the eye, not to light. Light, in Young's view, is a continuum of vibration frequencies. If every frequency needed its own receptor, the retina would need an unlimited number of tuned particles at every point. He proposed instead a small, fixed number of broadly tuned receptor types. This is the origin of trichromacy as a physiological hypothesis.
+
+### Specifics
+
+The key sentence, reproduced in Mollon (2002) and Wade (2021) from the 1802 text, reads: "Now, as it is almost impossible to conceive each sensitive point of the retina to contain an infinite number of particles, each capable of vibrating in perfect unison with every possible undulation, it becomes necessary to suppose the number limited, for instance, to the three principal colours, red, yellow, and blue." Three details matter.
+
+The three colors named in 1802 are red, yellow and blue, not the red, green and violet that popular accounts attribute to Young. I could not confirm from any source I read that he later changed the triplet, so the LTF reference book should say that the 1802 lecture names red, yellow and blue and treat the red, green, violet version as a later reformulation unless a source is found. The Royal Society's blog gives the same wording.
+
+The receptors are broadly tuned. Mollon quotes Young as saying each particle can be put in motion "less or more forcibly, by undulations differing less or more from a perfect unison". That is already the idea of overlapping spectral sensitivity curves, a feature of real cone pigments.
+
+The argument is by elimination and by economy, not by measurement. Young did not measure a cone, and the lecture contains no color-matching data. Mollon notes that in the eighteenth century many scientists concluded there must be only three kinds of light, and quotes Maxwell (1871) crediting Young as the first who looked for the explanation of three primaries "not in the nature of light, but in the constitution of man". Mollon adds that modern opsins, segregated in different cones, have peak sensitivities near 420, 530 and 560 nm (citing Dartnall et al. 1983).
+
+### Replication and criticism
+
+The hypothesis was later confirmed in the sense that matters: there are three cone classes with overlapping sensitivities. The Wikipedia account of the Young-Helmholtz theory dates direct confirmation in human retinas to Dartnall, Bowmaker and Mollon in 1983, by microspectrophotometry on single cones. The idea was not new in kind: George Palmer proposed a similar three-particle retina in 1777 and 1786, with red, yellow and blue rays, a quarter century before Young (Wikipedia on Palmer and on the Young-Helmholtz theory). Priority is therefore contested, and the red, yellow, blue triplet is the classical painters' primaries, not a measured result. Wade (2021) reports that Helmholtz did not initially embrace Young's suggestion and became an ardent proponent after Maxwell's color-disc work of 1855. The theory also has a known gap that Hering later exploited: three cone signals do not by themselves explain why red and green, or yellow and blue, never appear together; see the Hurvich and Jameson entry.
+
+### Implications for LTF
+
+For a beginner audience the practical point is that color is made by the viewer's three-channel visual system, so any pilot-training color code must be checked against how three channels respond, not against color names. Two lights that look the same on one monitor can differ in spectrum (metamers), so a green that matches the sim on your screen may not match on a pilot's second monitor. For the "fly mode" next to the sim, Young's economy argument implies you should never encode a quantity in tiny hue differences: the system carries three broad signals, and small differences in the middle of the spectrum are the first to be lost under glare or an aging lens.
+
+Confirmed this session: Crossref record doi 10.1098/rstl.1802.0004; Mollon (2002) full text PDF read (section 5, with the Young 1802a quotation and the Maxwell 1871 quotation); Wade (2021) full text PDF (discovery.dundee.ac.uk); Royal Society blog (royalsociety.org, 2015); Wikipedia "Young-Helmholtz theory"; Project Gutenberg's copy of the lecture (ebook 79490) was down for maintenance, so the primary text was not read directly.
+
+## helmholtz1924treatise
+
+Helmholtz, Hermann von. 1924. Helmholtz's Treatise on Physiological Optics, translated by J. P. C. Southall from the third German edition (Optical Society of America). German original: Handbuch der physiologischen Optik, 1867. Evidence type: encyclopedic synthesis of physics, physiology and psychology of vision; I read secondary accounts, not the Treatise itself.
+
+### Core claims
+
+Helmholtz's Handbuch is the nineteenth-century summation of vision science and the place where trichromatic theory became a working framework for color. Wade (2021) describes the three volumes as dealing with the physics, physiology and psychology of vision in turn: volume 1 the anatomy and optics of the eye, volume 2 the sensations of vision (principally color and contrast phenomena), volume 3 perception, including eye movements and binocular vision. For color, Helmholtz took Young's suggestion of three receptor types, supported it with color-mixing measurements and color-blindness cases, and set it against the opposing view of Ewald Hering.
+
+### Specifics
+
+Publication history, as far as I could confirm. The Handbuch appeared as a single volume in 1867 (Leipzig, L. Voss), after its three parts had been issued separately in 1856, 1860 and 1866; the color material sits in the second part. The English Treatise was translated by Southall from the third German edition (edited by Nagel, Gullstrand and von Kries, 1909 to 1911) and published in 1924 and 1925. A search result notes that the third edition was based on Helmholtz's text from the first edition of 1867, not on the revised second edition of 1896, so the 1867 wording reaches English readers only through that route.
+
+Wade (2021) gives several concrete points about the color work. In 1852 Helmholtz repeated and tightened David Brewster's experiments on the analysis of sunlight into three spectral components and found that results did not diverge from Newtonian predictions. By the time of the Handbuch's second part he had examined several color-blind observers and had used Maxwell's color wheel. In that part he distinguished additive from subtractive mixing. His speculative sensitivity curves for three kinds of fibres (volume 2 of the 1867 text, figure 21) are captioned in the Southall translation as "taken to indicate something like the degree of excitation of the three kinds of fibres, No. 1 for red-sensitive fibres, No. 2 for the green-sensitive fibres, and No. 3 for the violet-sensitive fibres" (Helmholtz 1924b, 143, as quoted by Wade). The curves overlap, not separate bands.
+
+Wade states that Helmholtz did not initially embrace Young's suggestion and became an ardent proponent after Maxwell (1855) supplied more detailed support using the color disc. A search result summarizing a paper by Heesen (2015) argues that the Handbuch of 1860 gives Maxwell too little credit and that the idea of coterminal response curves has a clearer line to Maxwell; I could not open that paper, so treat the priority dispute as reported, not confirmed.
+
+### Replication and criticism
+
+The three-cone core was confirmed physiologically in the twentieth century (Dartnall, Bowmaker and Mollon in 1983, per the Wikipedia history of the theory). The theory has a known blind spot: trichromacy alone does not explain why reddish greens and yellowish blues are never seen, which Hering pressed. The Helmholtz and Hering dispute was both scientific and personal; Turner (1994, as cited by Wade) is the standard history. Shevell and Martin (2017) summarize it in one line: Helmholtz criticized Hering's reliance on introspection and hypothetical neural mechanisms, and Hering criticized Helmholtz's physicalism. The modern resolution, set out in the Hurvich and Jameson entry, is a two-stage model with three cone types followed by opponent processing. Wade also notes that Helmholtz's results rested almost entirely on his own observations.
+
+### Implications for LTF
+
+The two-stage lesson from Helmholtz and Hering is the one a designer needs: color is encoded first in three overlapping cone signals and then recoded as light and dark, red against green, and yellow against blue. A cockpit-style interface that places red and green markers side by side in the same size, brightness and position works against the second stage for color-deficient viewers; add a second cue. For lesson copy, avoid saying "red, green and blue cones" as if they were colored receptors; the cones respond to broad bands, and the names are shorthand.
+
+Confirmed this session: Open Library search (OL12361818W for the 1924 OSA Treatise, OL95302W for the Handbuch, OL10462633W for the 1962 Dover edition); Wade (2021) full text PDF from discovery.dundee.ac.uk, including the volume contents, the 1852 Brewster paper and the quoted caption; web search on the Handbuch's publication history and the Southall translation; Shevell and Martin (2017) at PMC6022826. The Treatise text itself was not opened.
+
+## hurvich1957opponent
+
+Hurvich, Leo M., and Dorothea Jameson. 1957. An opponent-process theory of color vision. Psychological Review 64(6, Part 1), 384-404. Evidence type: psychophysical experiments plus a quantitative theory; the foundation for the second stage of modern color vision models.
+
+### Core claims
+
+Hurvich and Jameson, working at Eastman Kodak, gave Ewald Hering's opponent-colors idea a quantitative footing. Hering had observed that some hue pairs never appear in the same place at once: reddish greens and yellowish blues are not seen, though yellowish greens and bluish reds occur (yorku.ca/eye/opponent.htm). He also noted that staring at a red patch and then at white produces a greenish afterimage. His hypothesis was that signals from the three cone types feed later neural stages that work in opposing pairs: red against green, yellow against blue, and, as a non-opponent channel, black against white. Hurvich and Jameson's contribution was a method, hue cancellation, that measures the strength of each opponent response at each wavelength, and a theory that links those measurements to the three cone signals.
+
+### Specifics
+
+Hue cancellation rests on the observation that mixing red and green lights gives yellow, not a reddish green, and mixing yellow and blue gives white, not a yellowish blue. As stated on the York University vision pages, in their view "Red and green cancel each other as do yellow and blue." The procedure, as described there and in Shevell and Martin (2017):
+
+1. For each observer, find unique red, green, yellow and blue.
+2. Show a monochromatic test light. If it is not itself a unique hue, the observer adds a cancelling light until one of the perceived hues disappears. For short wavelengths the observer adds green to cancel redness; in the middle of the spectrum unique red cancels green and unique blue cancels yellow; for long wavelengths unique green cancels red.
+3. The amount of cancelling light needed is the measure of the strength of the hue being cancelled, called its chromatic valence.
+4. Plot valence against wavelength to get the opponent curves. The plus or minus sign given to each curve is arbitrary and only shows that the two processes oppose each other.
+
+Illustrative values from the same pages, for the observer shown: at 450 nm the blue valence is about minus 1.0 and the red valence about 0.2, which is why 450 nm looks violet or purple; at 550 nm both yellow and green valences are large, so it looks greenish yellow. A hue is unique when the valences of the other two hues are zero. No single wavelength gives unique red, since even 700 nm looks slightly yellow and needs a little blue to cancel it.
+
+### Replication and criticism
+
+Opponent processing is supported by neural recordings; the York page says electrophysiological responses that mirrored opponency were found in the 1950s, and that opponency is no longer questioned as a feature of visual processing. The strong claim that the psychophysical hue axes are the neural axes is contested. Shevell and Martin (2017) state that these experiments "do not explain unique hues" while showing that Hering's interactions exist, that unique-hue settings vary between observers (especially for blue, red and green), and that unique hues do not line up with the cone-opponent axes found in the retina and thalamus. They also argue against hue-named cells: in their words, there are no "red-green" or "blue-yellow" cells. The yellow-blue equilibrium locus is dog-leg shaped, not straight, which suggests cone signals combine nonlinearly. One source I found gives a range of 490 to 555 nm for unique green across people.
+
+### Implications for LTF
+
+The opponent model has direct design consequences. First, it is the reason text legibility should be set by luminance contrast, the black-white channel, and not by hue difference: the black-white channel does not depend on hue at all. Second, never use red against green as the only distinction in a status indicator, checklist state or quiz result; pair hue with a shape or label. Blue and yellow are the safer opponent pair for red-green deficient viewers, which also suits a blue-and-amber instrument palette. Third, Hering's afterimage observation is a reason to keep large saturated flashes out of a dark full-screen fly mode used next to the sim: a bright patch followed by a dark view leaves a complementary ghost.
+
+Confirmed this session: Crossref records for doi 10.1037/h0041403 and the 1955 paper (10.1364/JOSA.45.000602); yorku.ca/eye/opponent.htm and yorku.ca/eye/huecan.htm and yorku.ca/eye/handj.htm; Shevell and Martin, "Color opponency: tutorial", JOSA A 34(7), 1099-1108 (PMC6022826). The 1957 paper's abstract was not retrievable (PsycNet page did not load), so the specifics above come from these accounts.
+
+## stockman2000spectral
+
+Stockman, Andrew, and Lindsay T. Sharpe. 2000. The spectral sensitivities of the middle- and long-wavelength-sensitive cones derived from measurements in observers of known genotype. Vision Research 40(13), 1711-1737. Evidence type: psychophysical measurements on genotyped observers; basis of the CIE physiologically relevant standards.
+
+### Core claims
+
+The paper estimates the spectral sensitivities of the L (long-wavelength) and M (middle-wavelength) cones from observers who lack one of those cone types, so the missing cone cannot contaminate the measurement. Because the observers were genotyped, the photopigment each one carried was known. The result, together with S-cone data, became the "cone fundamentals" that the CIE sanctioned in 2006 (technical report 170-1, with luminous efficiency and XYZ versions in 170-2 of 2015) as physiologically relevant standards for modeling mean normal color vision. I read it only through a search abstract and Stockman's 2019 review (UCL eprint 10079410).
+
+### Specifics
+
+Observers and method. The search abstract says M-cone data came from nine protanopes (who lack L cones) and L-cone data from 20 deuteranopes (who lack M cones). Stockman's 2019 review gives the numbers as nine protanopes, twenty-two deuteranopes and three S-cone monochromats (who lack both M and L cones). I cannot reconcile 20 and 22 from what I read, so the reference book should cite the paper's own abstract for the count. In the review's account, the male dichromats were chosen so that each had only a single opsin gene on the X chromosome, which means their longer-wavelength photopigment was known.
+
+The logic of fundamentals. Photon absorption by a cone is all-or-nothing, so a single cone cannot signal wavelength (the response is "univariant"); light is thus represented by three numbers, and lights with equal cone responses must match (metamers). Every set of color matching functions, whether for real or imaginary primaries, is a linear transformation of the cone fundamentals. Stockman and Sharpe therefore need only one reliable set of color matching functions to transform. The review says the CIE chose the Stiles and Burch 10-degree matching functions, and prints the transformation from their r, g, b functions to the l, m, s fundamentals as a three-by-three matrix with first row 2.846201, 11.092490, 1, second row 0.168926, 8.265895, 1, third row 0, 0.010600, 1. The 2-degree fundamentals use the same transformation, adjusted for macular and photopigment densities suited to a 2-degree field. XYZ versions follow by a further linear step; the review gives the 2-degree matrix as rows 1.94735469, -1.41445123, 0.36476327; 0.68990272, 0.34832189, 0; and 0, 0, 1.93485343.
+
+Polymorphism. The commonest naturally occurring shift in L-cone pigment is about 3 nm, caused by alanine replacing serine at position 180 of the L opsin gene; the CIE L-cone fundamental incorporates a mix of the two variants (review). One citing source gives the CIE fundamentals' peaks as 570, 543 and 442 nm for L, M and S; Mollon (2002) gives pigment peaks near 420, 530 and 560 nm. The difference is expected: the fundamentals describe sensitivity to light entering the eye, so lens and macular filtering shift them.
+
+### Replication and criticism
+
+This is the most secure current estimate of mean cone sensitivities, in Stockman's own assessment, which comes from an author of the standard and should be read that way. His review also criticizes the older CIE 1931 functions as unsuitable for physiological modeling, because they were reconstructed from relative matching data using the 1924 V(lambda) function, which underestimates luminance at short wavelengths, and notes that the widely used Smith and Pokorny cone fundamentals inherit that flaw. The standards describe a mean observer; individual differences in lens density, macular pigment, photopigment density and opsin position all matter and are not captured.
+
+### Implications for LTF
+
+Three practical points. LTF should not promise exact color agreement between the sim, the web page and the pilot's other monitor: matching depends on the observer and the display spectra, and wide-gamut screens with narrow primaries expose differences. Second, tools that work in cone-like spaces (Oklab, for example, begins with an LMS-style matrix; see the Oklab entry) are building on this physiological picture. Third, the polymorphism and dichromat data are a reminder that some trainees have different cone sensitivities from the mean; see the Machado entry for simulating that.
+
+Confirmed this session: Crossref record doi 10.1016/s0042-6989(00)00021-3; a web search returning the paper's abstract details (nine protanopes, 20 deuteranopes) and citing papers on position 180; Stockman (2019) full text PDF from discovery.ucl.ac.uk (matrices, observer counts, criticism of the 1931 data); a CIE 170-1 search result. The original paper's full text was not opened.

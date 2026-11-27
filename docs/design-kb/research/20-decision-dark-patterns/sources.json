@@ -1,0 +1,590 @@
+[
+ {
+  "key": "tversky1974judgment",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Tversky",
+    "given": "Amos"
+   },
+   {
+    "family": "Kahneman",
+    "given": "Daniel"
+   }
+  ],
+  "year": 1974,
+  "title": "Judgment under Uncertainty: Heuristics and Biases",
+  "container_title": "Science",
+  "volume": "185",
+  "issue": "4157",
+  "pages": "1124-1131",
+  "publisher": "American Association for the Advancement of Science",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1126/science.185.4157.1124",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1126/science.185.4157.1124 returned title, authors Tversky and Kahneman, 1974, Science 185(4157) 1124-1131. Full text read from sites.stat.washington.edu/peter/498.Sp16/Tversky.pdf",
+  "kind": "experimental review article (foundational)",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "tversky1981framing",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Tversky",
+    "given": "Amos"
+   },
+   {
+    "family": "Kahneman",
+    "given": "Daniel"
+   }
+  ],
+  "year": 1981,
+  "title": "The Framing of Decisions and the Psychology of Choice",
+  "container_title": "Science",
+  "volume": "211",
+  "issue": "4481",
+  "pages": "453-458",
+  "publisher": "American Association for the Advancement of Science",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1126/science.7455683",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned 10.1126/science.7455683, Science 211(4481) 453-458, 1981. Full text read from csc2.ncsu.edu copy of the article",
+  "kind": "experimental article (foundational)",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "johnson2003defaults",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Johnson",
+    "given": "Eric J."
+   },
+   {
+    "family": "Goldstein",
+    "given": "Daniel G."
+   }
+  ],
+  "year": 2003,
+  "title": "Do Defaults Save Lives?",
+  "container_title": "Science",
+  "volume": "302",
+  "issue": "5649",
+  "pages": "1338-1339",
+  "publisher": "American Association for the Advancement of Science",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1126/science.1091721",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned 10.1126/science.1091721, Science 302(5649) 1338-1339, 2003. Companion paper Johnson and Goldstein 2004 Transplantation 78:1713-1716 read in full from dangoldstein.com",
+  "kind": "short empirical report with cross-country data",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "simon1955behavioral",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Simon",
+    "given": "Herbert A."
+   }
+  ],
+  "year": 1955,
+  "title": "A Behavioral Model of Rational Choice",
+  "container_title": "The Quarterly Journal of Economics",
+  "volume": "69",
+  "issue": "1",
+  "pages": "99-118",
+  "publisher": "Oxford University Press",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.2307/1884852",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned 10.2307/1884852, QJE 69(1), 1955. Reprint text of the article read in a Competition Policy International 2010 reprint (competitionpolicyinternational.com)",
+  "kind": "theoretical paper (foundational)",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "iyengar2000when",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Iyengar",
+    "given": "Sheena S."
+   },
+   {
+    "family": "Lepper",
+    "given": "Mark R."
+   }
+  ],
+  "year": 2000,
+  "title": "When choice is demotivating: Can one desire too much of a good thing?",
+  "container_title": "Journal of Personality and Social Psychology",
+  "volume": "79",
+  "issue": "6",
+  "pages": "995-1006",
+  "publisher": "American Psychological Association",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/0022-3514.79.6.995",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1037/0022-3514.79.6.995 returned title, authors, JPSP 79(6) 995-1006, 2000. Full text read from faculty.washington.edu copy",
+  "kind": "field and laboratory experiments",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "scheibehenne2010can",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Scheibehenne",
+    "given": "Benjamin"
+   },
+   {
+    "family": "Greifeneder",
+    "given": "Rainer"
+   },
+   {
+    "family": "Todd",
+    "given": "Peter M."
+   }
+  ],
+  "year": 2010,
+  "title": "Can There Ever Be Too Many Options? A Meta-Analytic Review of Choice Overload",
+  "container_title": "Journal of Consumer Research",
+  "volume": "37",
+  "issue": "3",
+  "pages": "409-425",
+  "publisher": "Oxford University Press",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1086/651235",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned 10.1086/651235, JCR 37(3) 409-425, 2010. Abstract and counts read at edoc.unibas.ch/48789",
+  "kind": "meta-analysis",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "chernev2015choice",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Chernev",
+    "given": "Alexander"
+   },
+   {
+    "family": "Böckenholt",
+    "given": "Ulf"
+   },
+   {
+    "family": "Goodman",
+    "given": "Joseph"
+   }
+  ],
+  "year": 2015,
+  "title": "Choice overload: A conceptual review and meta-analysis",
+  "container_title": "Journal of Consumer Psychology",
+  "volume": "25",
+  "issue": "2",
+  "pages": "333-358",
+  "publisher": "Wiley",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/j.jcps.2014.08.002",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1016/j.jcps.2014.08.002 returned title, authors, J Consumer Psychology 25(2) 333-358 (issued online 2014). Abstract figures confirmed via Kellogg research page and web search",
+  "kind": "meta-analysis and conceptual review",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "thaler2008nudge",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Thaler",
+    "given": "Richard H."
+   },
+   {
+    "family": "Sunstein",
+    "given": "Cass R."
+   }
+  ],
+  "year": 2008,
+  "title": "Nudge: Improving Decisions About Health, Wealth, and Happiness",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Yale University Press",
+  "publisher_place": "New Haven",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780300122237",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library work OL3936258W (Nudge, Thaler and Sunstein, first published 2008); edition record isbn/9780300122237 lists Yale University Press, April 28, 2008, 304 pages. Definition confirmed at archive.blogs.harvard.edu/nudge/what-is-a-nudge",
+  "kind": "trade book proposing a policy framework",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "kahneman2011thinking",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Kahneman",
+    "given": "Daniel"
+   }
+  ],
+  "year": 2011,
+  "title": "Thinking, Fast and Slow",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Farrar, Straus and Giroux",
+  "publisher_place": "New York",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780374275631",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library work OL15992072W; edition record isbn/9780374275631 lists Farrar, Straus and Giroux, New York, 2011, 499 pages, 1st ed.",
+  "kind": "trade book synthesizing decades of research",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "gigerenzer2011heuristic",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Gigerenzer",
+    "given": "Gerd"
+   },
+   {
+    "family": "Gaissmaier",
+    "given": "Wolfgang"
+   }
+  ],
+  "year": 2011,
+  "title": "Heuristic Decision Making",
+  "container_title": "Annual Review of Psychology",
+  "volume": "62",
+  "issue": "",
+  "pages": "451-482",
+  "publisher": "Annual Reviews",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1146/annurev-psych-120709-145346",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned 10.1146/annurev-psych-120709-145346, Annu Rev Psychol 62:451-482, 2011. Full text read via typeset.io copy of the Annual Reviews article",
+  "kind": "review article",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "openscience2015estimating",
+  "type": "article-journal",
+  "authors": [
+   {
+    "literal": "Open Science Collaboration"
+   }
+  ],
+  "year": 2015,
+  "title": "Estimating the reproducibility of psychological science",
+  "container_title": "Science",
+  "volume": "349",
+  "issue": "6251",
+  "pages": "aac4716",
+  "publisher": "American Association for the Advancement of Science",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1126/science.aac4716",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1126/science.aac4716 returned title, Science 349(6251), 2015. Headline numbers confirmed in the abstract on discovery.dundee.ac.uk and research-portal.uu.nl via web search",
+  "kind": "large-scale replication project",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "maier2022no",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Maier",
+    "given": "Maximilian"
+   },
+   {
+    "family": "Bartoš",
+    "given": "František"
+   },
+   {
+    "family": "Stanley",
+    "given": "T. D."
+   },
+   {
+    "family": "Shanks",
+    "given": "David R."
+   },
+   {
+    "family": "Harris",
+    "given": "Adam J. L."
+   },
+   {
+    "family": "Wagenmakers",
+    "given": "Eric-Jan"
+   }
+  ],
+  "year": 2022,
+  "title": "No evidence for nudging after adjusting for publication bias",
+  "container_title": "Proceedings of the National Academy of Sciences",
+  "volume": "119",
+  "issue": "31",
+  "pages": "e2200300119",
+  "publisher": "National Academy of Sciences",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1073/pnas.2200300119",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned 10.1073/pnas.2200300119, PNAS 119(31), 2022. Results tables read at pmc.ncbi.nlm.nih.gov/articles/PMC9351501",
+  "kind": "re-analysis (letter) using robust Bayesian meta-analysis",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "thaler2018nudge",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Thaler",
+    "given": "Richard H."
+   }
+  ],
+  "year": 2018,
+  "title": "Nudge, not sludge",
+  "container_title": "Science",
+  "volume": "361",
+  "issue": "6401",
+  "pages": "431",
+  "publisher": "American Association for the Advancement of Science",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1126/science.aau9241",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned 10.1126/science.aau9241, Science 361(6401) 431, 2018. Abstract and framing confirmed at ui.adsabs.harvard.edu/abs/2018Sci...361..431T/abstract via web search",
+  "kind": "one-page opinion essay by an established author",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "gray2018dark",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Gray",
+    "given": "Colin M."
+   },
+   {
+    "family": "Kou",
+    "given": "Yubo"
+   },
+   {
+    "family": "Battles",
+    "given": "Bryan"
+   },
+   {
+    "family": "Hoggatt",
+    "given": "Joseph"
+   },
+   {
+    "family": "Toombs",
+    "given": "Austin L."
+   }
+  ],
+  "year": 2018,
+  "title": "The Dark (Patterns) Side of UX Design",
+  "container_title": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems",
+  "volume": "",
+  "issue": "",
+  "pages": "1-14",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/3173574.3174108",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned 10.1145/3173574.3174108, CHI 2018, pages 1-14. Full text read from par.nsf.gov/servlets/purl/10057203",
+  "kind": "qualitative corpus analysis",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "mathur2019dark",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Mathur",
+    "given": "Arunesh"
+   },
+   {
+    "family": "Acar",
+    "given": "Gunes"
+   },
+   {
+    "family": "Friedman",
+    "given": "Michael J."
+   },
+   {
+    "family": "Lucherini",
+    "given": "Eli"
+   },
+   {
+    "family": "Mayer",
+    "given": "Jonathan"
+   },
+   {
+    "family": "Chetty",
+    "given": "Marshini"
+   },
+   {
+    "family": "Narayanan",
+    "given": "Arvind"
+   }
+  ],
+  "year": 2019,
+  "title": "Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites",
+  "container_title": "Proceedings of the ACM on Human-Computer Interaction",
+  "volume": "3",
+  "issue": "CSCW",
+  "pages": "1-32",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/3359183",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned 10.1145/3359183, PACM HCI 3(CSCW) 1-32, 2019. Full text read from arxiv.org/abs/1907.07032 (PDF fetched)",
+  "kind": "large-scale measurement study",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "luguri2021shining",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Luguri",
+    "given": "Jamie"
+   },
+   {
+    "family": "Strahilevitz",
+    "given": "Lior Jacob"
+   }
+  ],
+  "year": 2021,
+  "title": "Shining a Light on Dark Patterns",
+  "container_title": "Journal of Legal Analysis",
+  "volume": "13",
+  "issue": "1",
+  "pages": "43-109",
+  "publisher": "Oxford University Press",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1093/jla/laaa006",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned 10.1093/jla/laaa006, Journal of Legal Analysis 13(1) 43-109, 2021. Abstract and study figures read at academic.oup.com/jla/article/13/1/43/6180579",
+  "kind": "two large online experiments plus legal analysis",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "ftc2022bringing",
+  "type": "report",
+  "authors": [
+   {
+    "literal": "Federal Trade Commission"
+   }
+  ],
+  "year": 2022,
+  "title": "Bringing Dark Patterns to Light: Staff Report",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Federal Trade Commission, Bureau of Consumer Protection",
+  "publisher_place": "Washington, DC",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.ftc.gov/reports/bringing-dark-patterns-light",
+  "verified_via": "websearch",
+  "verified_evidence": "Publisher page ftc.gov/reports/bringing-dark-patterns-light lists the September 2022 staff report; full PDF (ftc.gov/system/files/ftc_gov/pdf/P214800 Dark Patterns Report 9.14.2022 - FINAL.pdf) downloaded and read",
+  "kind": "regulator staff report",
+  "lane": "20-decision-dark-patterns"
+ },
+ {
+  "key": "fogg2009behavior",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Fogg",
+    "given": "B. J."
+   }
+  ],
+  "year": 2009,
+  "title": "A behavior model for persuasive design",
+  "container_title": "Proceedings of the 4th International Conference on Persuasive Technology",
+  "volume": "",
+  "issue": "",
+  "pages": "1-7",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/1541948.1541999",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned 10.1145/1541948.1541999, Persuasive '09, pages 1-7, 2009. Model components confirmed on behaviormodel.org (motivation, ability, prompts pages) and the ACM abstract via web search",
+  "kind": "conceptual model paper",
+  "lane": "20-decision-dark-patterns"
+ }
+]

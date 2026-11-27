@@ -1,0 +1,616 @@
+[
+ {
+  "key": "yarbus1967eye",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Yarbus",
+    "given": "Alfred L."
+   }
+  ],
+  "year": 1967,
+  "title": "Eye Movements and Vision",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Plenum Press",
+  "publisher_place": "New York",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library work OL13258180W lists Eye movements and vision, New York: Plenum Press, 1967, by Alfred L. Yarbus, translated from the Russian by Basil Haigh, translation editor Lorrin A. Riggs; Tatler et al. 2010 (PMC3563050) describes the 1967 English book",
+  "kind": "founding experimental monograph (single-observer eye-movement recordings)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "posner1980orienting",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Posner",
+    "given": "Michael I."
+   }
+  ],
+  "year": 1980,
+  "title": "Orienting of attention",
+  "container_title": "Quarterly Journal of Experimental Psychology",
+  "volume": "32",
+  "issue": "1",
+  "pages": "3-25",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1080/00335558008248231",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic 'Posner Orienting of attention 1980' returned DOI 10.1080/00335558008248231, Quarterly Journal of Experimental Psychology 32(1) 3-25, with abstract",
+  "kind": "experimental paper (spatial cueing)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "kahneman1973attention",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Kahneman",
+    "given": "Daniel"
+   }
+  ],
+  "year": 1973,
+  "title": "Attention and Effort",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Prentice-Hall",
+  "publisher_place": "Englewood Cliffs, NJ",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780130505187",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library work OL7198970W lists Attention and effort, Englewood Cliffs, N.J.: Prentice-Hall, 1973, ISBN 0130505188 / 9780130505187, 246 pages; Princeton Kahneman archive table of contents and Bruya & Tang 2018 (Frontiers in Psychology) confirm content",
+  "kind": "theoretical monograph (capacity model of attention)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "theeuwes1992perceptual",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Theeuwes",
+    "given": "Jan"
+   }
+  ],
+  "year": 1992,
+  "title": "Perceptual selectivity for color and form",
+  "container_title": "Perception & Psychophysics",
+  "volume": "51",
+  "issue": "6",
+  "pages": "599-606",
+  "publisher": "Springer",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.3758/bf03211656",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.3758/bf03211656, Perception & Psychophysics 51(6) 599-606, 1992; Europe PMC record PMID 1620571 supplied the abstract",
+  "kind": "experiments (visual search, attention capture by salient distractors)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "itti1998model",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Itti",
+    "given": "Laurent"
+   },
+   {
+    "family": "Koch",
+    "given": "Christof"
+   },
+   {
+    "family": "Niebur",
+    "given": "Ernst"
+   }
+  ],
+  "year": 1998,
+  "title": "A model of saliency-based visual attention for rapid scene analysis",
+  "container_title": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+  "volume": "20",
+  "issue": "11",
+  "pages": "1254-1259",
+  "publisher": "IEEE",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1109/34.730558",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1109/34.730558, IEEE TPAMI 20(11) 1254-1259, 1998; full text of the 6-page paper downloaded and read",
+  "kind": "computational model paper",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "tatler2011eye",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Tatler",
+    "given": "Benjamin W."
+   },
+   {
+    "family": "Hayhoe",
+    "given": "Mary M."
+   },
+   {
+    "family": "Land",
+    "given": "Michael F."
+   },
+   {
+    "family": "Ballard",
+    "given": "Dana H."
+   }
+  ],
+  "year": 2011,
+  "title": "Eye guidance in natural vision: Reinterpreting salience",
+  "container_title": "Journal of Vision",
+  "volume": "11",
+  "issue": "5",
+  "pages": "5",
+  "publisher": "ARVO",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1167/11.5.5",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1167/11.5.5, Journal of Vision 11(5) article 5, 2011; PMC3134223 and the authors' PDF (cs.utexas.edu/~dana/Tatler.pdf) read",
+  "kind": "critical review",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "greene2012reconsidering",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Greene",
+    "given": "Michelle R."
+   },
+   {
+    "family": "Liu",
+    "given": "Tommy"
+   },
+   {
+    "family": "Wolfe",
+    "given": "Jeremy M."
+   }
+  ],
+  "year": 2012,
+  "title": "Reconsidering Yarbus: A failure to predict observers' task from eye movement patterns",
+  "container_title": "Vision Research",
+  "volume": "62",
+  "issue": "",
+  "pages": "1-8",
+  "publisher": "Elsevier",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/j.visres.2012.03.019",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref record for DOI 10.1016/j.visres.2012.03.019 returned Vision Research 62, 1-8, June 2012; PMC3526937 full text read",
+  "kind": "experiments (classification of task from scanpaths)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "rensink1997see",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Rensink",
+    "given": "Ronald A."
+   },
+   {
+    "family": "O'Regan",
+    "given": "J. Kevin"
+   },
+   {
+    "family": "Clark",
+    "given": "James J."
+   }
+  ],
+  "year": 1997,
+  "title": "To see or not to see: The need for attention to perceive changes in scenes",
+  "container_title": "Psychological Science",
+  "volume": "8",
+  "issue": "5",
+  "pages": "368-373",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1111/j.1467-9280.1997.tb00427.x",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1111/j.1467-9280.1997.tb00427.x, Psychological Science 8(5) 368-373, with abstract; scanned PDF (Villanova course copy) read",
+  "kind": "experiments (flicker paradigm)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "simons1999gorillas",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Simons",
+    "given": "Daniel J."
+   },
+   {
+    "family": "Chabris",
+    "given": "Christopher F."
+   }
+  ],
+  "year": 1999,
+  "title": "Gorillas in our midst: Sustained inattentional blindness for dynamic events",
+  "container_title": "Perception",
+  "volume": "28",
+  "issue": "9",
+  "pages": "1059-1074",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1068/p281059",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1068/p281059, Perception 28(9) 1059-1074, with abstract; Simons 2010 i-Perception (PMC3563049) read for the original results and later replication",
+  "kind": "experiment (inattentional blindness)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "benway1998banner",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Benway",
+    "given": "Jan Panero"
+   }
+  ],
+  "year": 1998,
+  "title": "Banner blindness: The irony of attention grabbing on the World Wide Web",
+  "container_title": "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
+  "volume": "42",
+  "issue": "5",
+  "pages": "463-467",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1177/154193129804200504",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1177/154193129804200504, Proceedings of the HFES Annual Meeting 42(5) 463-467, 1998, with abstract",
+  "kind": "experiments (conference paper)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "burke2005highcost",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Burke",
+    "given": "Moira"
+   },
+   {
+    "family": "Hornof",
+    "given": "Anthony"
+   },
+   {
+    "family": "Nilsen",
+    "given": "Erik"
+   },
+   {
+    "family": "Gorman",
+    "given": "Nicholas"
+   }
+  ],
+  "year": 2005,
+  "title": "High-cost banner blindness: Ads increase perceived workload, hinder visual search, and are forgotten",
+  "container_title": "ACM Transactions on Computer-Human Interaction",
+  "volume": "12",
+  "issue": "4",
+  "pages": "423-445",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/1121112.1121116",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query returned DOI 10.1145/1121112.1121116, ACM TOCHI 12(4) 423-445, 2005, with abstract; author manuscript (thoughtcrumbs.com/publications/ToCHI04.pdf) read",
+  "kind": "experiments with eye tracking",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "nielsen2006fshaped",
+  "type": "webpage",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   }
+  ],
+  "year": 2006,
+  "title": "F-shaped pattern for reading web content",
+  "container_title": "Nielsen Norman Group Alertbox",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Nielsen Norman Group",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/",
+  "verified_via": "websearch",
+  "verified_evidence": "WebFetch of the NN/g page returned the article dated 16 April 2006 describing 232 users and the three parts of the F pattern; later NN/g article by Pernice (25 August 2019, Text scanning patterns: eyetracking evidence) also read",
+  "kind": "industry research report (eye tracking, method partly reported)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "nielsen2010eyetracking",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   },
+   {
+    "family": "Pernice",
+    "given": "Kara"
+   }
+  ],
+  "year": 2010,
+  "title": "Eyetracking Web Usability",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "New Riders",
+  "publisher_place": "Berkeley, CA",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780321498366",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library edition record lists Eyetracking web usability, New Riders, 2010, ISBN 9780321498366, 437 pages; Peachpit product page (peachpit.com/title/0321498364) gives copyright 2010, ISBN-13 978-0-321-49836-6, authors Nielsen and Pernice; NN/g book page read",
+  "kind": "industry research book (large eye-tracking study)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "pan2004determinants",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Pan",
+    "given": "Bing"
+   },
+   {
+    "family": "Hembrooke",
+    "given": "Helene A."
+   },
+   {
+    "family": "Gay",
+    "given": "Geri K."
+   },
+   {
+    "family": "Granka",
+    "given": "Laura A."
+   },
+   {
+    "family": "Feusner",
+    "given": "Matthew K."
+   },
+   {
+    "family": "Newman",
+    "given": "Jill K."
+   }
+  ],
+  "year": 2004,
+  "title": "The determinants of web page viewing behavior: An eye-tracking study",
+  "container_title": "Proceedings of the Eye Tracking Research & Applications Symposium (ETRA 2004)",
+  "volume": "",
+  "issue": "",
+  "pages": "147-154",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/968363.968391",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref record for DOI 10.1145/968363.968391 lists six authors, ETRA 2004, pages 147-154; Penn State Pure page gave the abstract summary",
+  "kind": "eye-tracking experiment (conference paper)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "buscher2009what",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Buscher",
+    "given": "Georg"
+   },
+   {
+    "family": "Cutrell",
+    "given": "Edward"
+   },
+   {
+    "family": "Morris",
+    "given": "Meredith Ringel"
+   }
+  ],
+  "year": 2009,
+  "title": "What do you see when you're surfing? Using eye tracking to predict salient regions of web pages",
+  "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '09)",
+  "volume": "",
+  "issue": "",
+  "pages": "21-30",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/1518701.1518705",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref record for DOI 10.1145/1518701.1518705 lists CHI 2009, pages 21-30; full 10-page PDF (dfki.de copy) read",
+  "kind": "eye-tracking experiment (conference paper)",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "djamasbi2010generation",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Djamasbi",
+    "given": "Soussan"
+   },
+   {
+    "family": "Siegel",
+    "given": "Marisa"
+   },
+   {
+    "family": "Tullis",
+    "given": "Tom"
+   }
+  ],
+  "year": 2010,
+  "title": "Generation Y, web design, and eye tracking",
+  "container_title": "International Journal of Human-Computer Studies",
+  "volume": "68",
+  "issue": "5",
+  "pages": "307-323",
+  "publisher": "Elsevier",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/j.ijhcs.2009.12.006",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref record for DOI 10.1016/j.ijhcs.2009.12.006 lists IJHCS 68(5) 307-323, 2010; journal-version PDF from the first author's WPI page read",
+  "kind": "survey plus eye-tracking study",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "wickens2003attentional",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Wickens",
+    "given": "Christopher D."
+   },
+   {
+    "family": "Goh",
+    "given": "Juliana"
+   },
+   {
+    "family": "Helleberg",
+    "given": "John"
+   },
+   {
+    "family": "Horrey",
+    "given": "William J."
+   },
+   {
+    "family": "Talleur",
+    "given": "Donald A."
+   }
+  ],
+  "year": 2003,
+  "title": "Attentional models of multitask pilot performance using advanced display technology",
+  "container_title": "Human Factors",
+  "volume": "45",
+  "issue": "3",
+  "pages": "360-380",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1518/hfes.45.3.360.27250",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref record for DOI 10.1518/hfes.45.3.360.27250 lists Human Factors 45(3) 360-380, 2003, with abstract; Kotseruba & Tsotsos 2021 (arXiv 2104.05677) read for the SEEV formulation",
+  "kind": "simulator experiments plus model",
+  "lane": "08-attention-eyetracking"
+ },
+ {
+  "key": "holmqvist2011eye",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Holmqvist",
+    "given": "Kenneth"
+   },
+   {
+    "family": "Nyström",
+    "given": "Marcus"
+   },
+   {
+    "family": "Andersson",
+    "given": "Richard"
+   },
+   {
+    "family": "Dewhurst",
+    "given": "Richard"
+   },
+   {
+    "family": "Jarodzka",
+    "given": "Halszka"
+   },
+   {
+    "family": "van de Weijer",
+    "given": "Joost"
+   }
+  ],
+  "year": 2011,
+  "title": "Eye Tracking: A Comprehensive Guide to Methods and Measures",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Oxford University Press",
+  "publisher_place": "Oxford",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780199697083",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library work OL16360873W lists Eye tracking, Oxford: Oxford University Press, 2011, ISBN 9780199697083, 537 pages; Lund University research portal record read for the description",
+  "kind": "methods textbook",
+  "lane": "08-attention-eyetracking"
+ }
+]

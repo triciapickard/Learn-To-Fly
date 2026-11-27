@@ -1,0 +1,620 @@
+[
+  {
+    "key": "fitts1967human",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Fitts",
+        "given": "Paul M."
+      },
+      {
+        "family": "Posner",
+        "given": "Michael I."
+      }
+    ],
+    "year": 1967,
+    "title": "Human performance",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Brooks/Cole",
+    "publisher_place": "Belmont, CA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search.json q=fitts posner human performance returned work OL6554807W 'Human performance' first published 1967 (Brooks/Cole, Belmont, Calif., 162 pages, per editions.json) and OL29344953W listing Fitts and Posner as authors; Anderson 1982 full text cites 'Fitts & Posner, 1967' for the practice power law.",
+    "kind": "textbook synthesis of skill-learning research (three-phase model)",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "anderson1982acquisition",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Anderson",
+        "given": "John R."
+      }
+    ],
+    "year": 1982,
+    "title": "Acquisition of cognitive skill",
+    "container_title": "Psychological Review",
+    "volume": "89",
+    "issue": "4",
+    "pages": "369-406",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0033-295x.89.4.369",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1037/0033-295x.89.4.369 returned matching title, authors, journal, volume, issue, pages and year. Full text also read (scanned PDF, Gwern.net 1982-anderson-2.pdf) including abstract.",
+    "kind": "cognitive theory paper (ACT) on declarative to procedural skill",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "ericsson1993role",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Ericsson",
+        "given": "K. Anders"
+      },
+      {
+        "family": "Krampe",
+        "given": "Ralf T."
+      },
+      {
+        "family": "Tesch-Römer",
+        "given": "Clemens"
+      }
+    ],
+    "year": 1993,
+    "title": "The role of deliberate practice in the acquisition of expert performance",
+    "container_title": "Psychological Review",
+    "volume": "100",
+    "issue": "3",
+    "pages": "363-406",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0033-295x.100.3.363",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1037/0033-295x.100.3.363 returned matching title, authors, journal, volume, issue, pages and year. Violin study details confirmed through the full text of Macnamara & Maitra 2019 (PMC6731745) and web search summary of the abstract.",
+    "kind": "theory with two retrospective studies of musicians (deliberate practice)",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "macnamara2014deliberate",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Macnamara",
+        "given": "Brooke N."
+      },
+      {
+        "family": "Hambrick",
+        "given": "David Z."
+      },
+      {
+        "family": "Oswald",
+        "given": "Frederick L."
+      }
+    ],
+    "year": 2014,
+    "title": "Deliberate practice and performance in music, games, sports, education, and professions: A meta-analysis",
+    "container_title": "Psychological Science",
+    "volume": "25",
+    "issue": "8",
+    "pages": "1608-1618",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/0956797614535810",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/0956797614535810 returned matching title, authors, journal, volume, issue, pages and year. Abstract in Crossref; full text read from the author-hosted PDF (88 studies, 111 samples, 11,135 participants).",
+    "kind": "meta-analysis of observational studies",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "schmidt1992new",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Schmidt",
+        "given": "Richard A."
+      },
+      {
+        "family": "Bjork",
+        "given": "Robert A."
+      }
+    ],
+    "year": 1992,
+    "title": "New conceptualizations of practice: Common principles in three paradigms suggest new concepts for training",
+    "container_title": "Psychological Science",
+    "volume": "3",
+    "issue": "4",
+    "pages": "207-218",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1111/j.1467-9280.1992.tb00029.x",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1111/j.1467-9280.1992.tb00029.x returned matching title, authors, journal, volume, issue, pages and year. Crossref abstract matched; full text read from the Bjork Lab PDF (bjorklab.psych.ucla.edu Schmidt_RBjork_1992.pdf).",
+    "kind": "theoretical review of laboratory experiments (learning versus performance)",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "salmoni1984knowledge",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Salmoni",
+        "given": "Alan W."
+      },
+      {
+        "family": "Schmidt",
+        "given": "Richard A."
+      },
+      {
+        "family": "Walter",
+        "given": "Charles B."
+      }
+    ],
+    "year": 1984,
+    "title": "Knowledge of results and motor learning: A review and critical reappraisal",
+    "container_title": "Psychological Bulletin",
+    "volume": "95",
+    "issue": "3",
+    "pages": "355-386",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0033-2909.95.3.355",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1037/0033-2909.95.3.355 returned matching title, authors, journal, volume, issue, pages and year. Web searches returned secondary summaries of the abstract and the guidance hypothesis; full text not read.",
+    "kind": "literature review proposing the guidance hypothesis",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "wulf2002principles",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wulf",
+        "given": "Gabriele"
+      },
+      {
+        "family": "Shea",
+        "given": "Charles H."
+      }
+    ],
+    "year": 2002,
+    "title": "Principles derived from the study of simple skills do not generalize to complex skill learning",
+    "container_title": "Psychonomic Bulletin & Review",
+    "volume": "9",
+    "issue": "2",
+    "pages": "185-211",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3758/bf03196276",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.3758/bf03196276 returned matching title, authors, journal, volume, issue, pages and year. Full text read from a PDF copy (coachingvb.com) including the abstract.",
+    "kind": "narrative review of motor-learning experiments",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "hays1992flight",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Hays",
+        "given": "Robert T."
+      },
+      {
+        "family": "Jacobs",
+        "given": "John W."
+      },
+      {
+        "family": "Prince",
+        "given": "Carolyn"
+      },
+      {
+        "family": "Salas",
+        "given": "Eduardo"
+      }
+    ],
+    "year": 1992,
+    "title": "Flight simulator training effectiveness: A meta-analysis",
+    "container_title": "Military Psychology",
+    "volume": "4",
+    "issue": "2",
+    "pages": "63-74",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15327876mp0402_1",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1207/s15327876mp0402_1 returned matching title, authors, journal, volume, issue, pages and year. Related 1990 NTSC report found in Crossref (10.21236/ada228733). Findings taken from web search summaries of the abstracts; full text not accessible.",
+    "kind": "meta-analysis of flight simulator training studies",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "wightman1985parttask",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wightman",
+        "given": "Dennis C."
+      },
+      {
+        "family": "Lintern",
+        "given": "Gavan"
+      }
+    ],
+    "year": 1985,
+    "title": "Part-task training for tracking and manual control",
+    "container_title": "Human Factors",
+    "volume": "27",
+    "issue": "3",
+    "pages": "267-283",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/001872088502700304",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/001872088502700304 returned matching title, authors, journal, volume, issue, pages and year. Crossref abstract matched; full text not read.",
+    "kind": "narrative review of part-task training experiments",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "taylor1997transfer",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Taylor",
+        "given": "Henry L."
+      },
+      {
+        "family": "Lintern",
+        "given": "Gavan"
+      },
+      {
+        "family": "Hulin",
+        "given": "Charles L."
+      },
+      {
+        "family": "Talleur",
+        "given": "Donald"
+      },
+      {
+        "family": "Emanuel",
+        "given": "Thomas"
+      },
+      {
+        "family": "Phillips",
+        "given": "Stanley"
+      }
+    ],
+    "year": 1997,
+    "title": "Transfer of training effectiveness of personal computer-based aviation training devices",
+    "container_title": "DOT/FAA/AM-97/11",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Federal Aviation Administration, Office of Aviation Medicine",
+    "publisher_place": "Washington, DC",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://rosap.ntl.bts.gov/view/dot/57582",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search 'Taylor Lintern Hulin Talleur Emanuel Phillips transfer of training effectiveness personal computer aviation training device' returned the FAA report page rosap.ntl.bts.gov/view/dot/57582; the full PDF was downloaded and read (report no. DOT/FAA/AM-97/11, May 1997). The journal version is Crossref 10.1207/s15327108ijap0904_1 (Int. J. Aviation Psychology 9(4) 319-335, 1999), not read.",
+    "kind": "transfer-of-training field experiment (government technical report)",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "gopher1994transfer",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Gopher",
+        "given": "Daniel"
+      },
+      {
+        "family": "Weil",
+        "given": "Mark"
+      },
+      {
+        "family": "Bareket",
+        "given": "Tal"
+      }
+    ],
+    "year": 1994,
+    "title": "Transfer of skill from a computer game trainer to flight",
+    "container_title": "Human Factors",
+    "volume": "36",
+    "issue": "3",
+    "pages": "387-405",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/001872089403600301",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/001872089403600301 returned matching title, authors, journal, volume, issue, pages and year. Crossref returned the full abstract (10 h of game training, Israeli Air Force cadets, two game groups vs matched no-game group).",
+    "kind": "field experiment with control group",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "wickens2013effectiveness",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wickens",
+        "given": "Christopher D."
+      },
+      {
+        "family": "Hutchins",
+        "given": "Shaun"
+      },
+      {
+        "family": "Carolan",
+        "given": "Thomas"
+      },
+      {
+        "family": "Cumming",
+        "given": "John"
+      }
+    ],
+    "year": 2013,
+    "title": "Effectiveness of part-task training and increasing-difficulty training strategies: A meta-analysis approach",
+    "container_title": "Human Factors",
+    "volume": "55",
+    "issue": "2",
+    "pages": "461-470",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/0018720812451994",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/0018720812451994 returned matching title, authors, journal, volume, issue, pages and year. Crossref returned the full structured abstract (37 transfer studies); published online 2012-07-20, print April 2013.",
+    "kind": "meta-analysis of 37 transfer studies",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "lintern1990display",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Lintern",
+        "given": "Gavan"
+      },
+      {
+        "family": "Roscoe",
+        "given": "Stanley N."
+      },
+      {
+        "family": "Sivier",
+        "given": "Jonathan E."
+      }
+    ],
+    "year": 1990,
+    "title": "Display principles, control dynamics, and environmental factors in pilot training and transfer",
+    "container_title": "Human Factors",
+    "volume": "32",
+    "issue": "3",
+    "pages": "299-317",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/001872089003200304",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/001872089003200304 returned matching title, authors, journal, volume, issue, pages and year. Crossref returned the full abstract (64 flight-naive participants, fractional factorial quasi-transfer design).",
+    "kind": "quasi-transfer experiment with beginners",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "roscoe1971incremental",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Roscoe",
+        "given": "Stanley N."
+      }
+    ],
+    "year": 1971,
+    "title": "Incremental transfer effectiveness",
+    "container_title": "Human Factors",
+    "volume": "13",
+    "issue": "6",
+    "pages": "561-567",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/001872087101300607",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/001872087101300607 returned matching title, authors, journal, volume, issue, pages and year. Crossref returned the abstract; companion Povenmire & Roscoe 1973 found at 10.1177/001872087301500605.",
+    "kind": "methodological proposal (transfer effectiveness ratio)",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "salas1998rational",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Salas",
+        "given": "Eduardo"
+      },
+      {
+        "family": "Bowers",
+        "given": "Clint A."
+      },
+      {
+        "family": "Rhodenizer",
+        "given": "Lori"
+      }
+    ],
+    "year": 1998,
+    "title": "It is not how much you have but how you use it: Toward a rational use of simulation to support aviation training",
+    "container_title": "International Journal of Aviation Psychology",
+    "volume": "8",
+    "issue": "3",
+    "pages": "197-208",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15327108ijap0803_2",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1207/s15327108ijap0803_2 returned matching title, authors, journal, volume, issue, pages and year. UCF STARS record stars.library.ucf.edu/facultybib1990/2436 gave the abstract content; full text not read.",
+    "kind": "expert position paper",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "hamstra2014reconsidering",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Hamstra",
+        "given": "Stanley J."
+      },
+      {
+        "family": "Brydges",
+        "given": "Ryan"
+      },
+      {
+        "family": "Hatala",
+        "given": "Rose"
+      },
+      {
+        "family": "Zendejas",
+        "given": "Benjamin"
+      },
+      {
+        "family": "Cook",
+        "given": "David A."
+      }
+    ],
+    "year": 2014,
+    "title": "Reconsidering fidelity in simulation-based training",
+    "container_title": "Academic Medicine",
+    "volume": "89",
+    "issue": "3",
+    "pages": "387-392",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1097/acm.0000000000000130",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1097/acm.0000000000000130 returned matching title, authors, journal, volume, issue, pages and year. Abstract-level description read at mayoclinic.elsevierpure.com/en/publications/reconsidering-fidelity-in-simulation-based-training.",
+    "kind": "perspective article informed by a systematic review",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "guadagnoli2004challenge",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Guadagnoli",
+        "given": "Mark A."
+      },
+      {
+        "family": "Lee",
+        "given": "Timothy D."
+      }
+    ],
+    "year": 2004,
+    "title": "Challenge point: A framework for conceptualizing the effects of various practice conditions in motor learning",
+    "container_title": "Journal of Motor Behavior",
+    "volume": "36",
+    "issue": "2",
+    "pages": "212-224",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3200/jmbr.36.2.212-224",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.3200/jmbr.36.2.212-224 returned matching title, authors, journal, volume, issue, pages and year. Abstract text seen via the McMaster experts record found by web search; definitions from secondary summaries.",
+    "kind": "theoretical framework",
+    "lane": "16-skill-simulation"
+  },
+  {
+    "key": "dreyfus1986mind",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Dreyfus",
+        "given": "Hubert L."
+      },
+      {
+        "family": "Dreyfus",
+        "given": "Stuart E."
+      }
+    ],
+    "year": 1986,
+    "title": "Mind over machine: The power of human intuition and expertise in the era of the computer",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Free Press",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0029080606",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search.json q=dreyfus mind over machine returned work OL4299942W 'Mind Over Machine' first published 1986; editions.json shows Free Press, New York, 1986, 231 pages, ISBN 0029080606. Co-authorship by Stuart Dreyfus and the five-stage content confirmed through Pena's review (PMC2887319) and a web search for the 1980 Dreyfus report.",
+    "kind": "philosophical account of expertise (five-stage model)",
+    "lane": "16-skill-simulation"
+  }
+]
