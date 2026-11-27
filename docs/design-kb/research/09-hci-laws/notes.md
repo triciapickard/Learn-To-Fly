@@ -479,3 +479,116 @@ LTF's instrument widgets (airspeed, altitude, vertical speed, engine gauges) and
 
 Confirmed this session: Crossref 10.1037/h0046162 (title, author, 1957, vol. 64, issue 3, pp. 153-181); excerpt from the Terhardt reference page; exponents, Weber fractions and criticisms from the encyclopedia.com psychophysics entry fetched this session; a search summary for the prothetic and metathetic classes. The paper was not read in full.
 
+## miller1968response
+
+Miller, R. B. (1968). Response time in man-computer conversational transactions. In *Proceedings of the December 9-11, 1968, Fall Joint Computer Conference, Part I (AFIPS '68)* (pp. 267-277). ACM. doi:10.1145/1476589.1476628
+
+### Core claims
+
+Miller, writing from IBM in Poughkeepsie, set out to bring order to a literature that, as the abstract puts it, abounds in controversy about the limits of "system response time" to a user's command or inquiry at a terminal. Two semantic issues, he says, prevent resolution. The main one is the question "Response time to what?" The implication is that different human purposes and actions have different acceptable or useful response times. Rather than naming one limit, the paper classifies kinds of user-computer transaction and discusses what response time each kind calls for. Later authors treat it as the origin of the response-time limits that are now quoted in UX guidance, but the sources I could confirm describe the contents only at second hand.
+
+### Specifics
+
+Evidence type: a conceptual and taxonomic paper based on the author's experience and the literature, not an experiment. The paper's full text was not accessible to me (it is closed access in DBLP's listing). What I confirmed:
+
+- The abstract (via OpenAlex, quoted above) with the two semantic issues.
+- Shneiderman (1984, full text read this session) says Miller's review "presents a lucid analysis of response time issues and a list of 17 situations in which response times might differ," and that the principles of closure, short-term memory limitations and chunking still apply. Shneiderman also refers to "the frequently mentioned 2-second limit" from Miller as seeming appropriate for many tasks, while noting that for some actions, such as turning a car's wheel, pressing a typewriter key or changing a television channel, users expect responses within a tenth of a second, and a 2-second delay would be unsettling. He also says that people can detect 8 percent of changes in a 2- or 4-second response time according to Miller.
+- Nielsen's article on the three response-time limits (separate entry; fetched this session) says the basic advice has stayed about the same for decades, citing Miller (1968) and Card et al. (1991), and lists Miller's paper in its references.
+- Search results describing the 1-second and 10-second thresholds as Miller's come from secondary web pages of uneven quality and were not used for claims here. I could not reproduce Miller's table of response-time categories, so I do not list its values.
+
+### Replication and criticism
+
+The paper is a source of frameworks, not data, so replication does not apply. The field's later empirical work, summarized by Shneiderman (1984) and Dabrowski and Munson (2011), found much more variation than a fixed table implies: expectations depend on experience with the task, the individual, and adaptation to the system's speed. Quoting Miller as having established precise thresholds overstates what a taxonomy can show, and I could not verify the precise numbers he proposed. Treat "0.1 s, 1 s, 10 s" as the convention presented by Nielsen, who cites Miller among his sources, and not as findings I could verify in this paper.
+
+### Implications for LTF
+
+The portable idea is "response time to what?" Different LTF events deserve different budgets: a tap on a checklist item or a quiz option should respond visibly almost instantly, because it is a control action the learner expects to behave like a physical switch; loading a lesson page or submitting a quiz is a conversational step where a short wait is acceptable if it is acknowledged; a long operation, such as generating a progress report or a very long page, needs progress feedback. In fly mode, where the learner's attention is divided, slow responses are especially costly because the learner must hold their place while waiting, so keep control actions instant and local (update the UI before the server confirms, then reconcile) and show a clear state when a save is pending. For vocabulary, avoid saying that Miller "proved" any figure; cite Nielsen's limits as a convention and measure LTF's own response times.
+
+Confirmed this session: Crossref 10.1145/1476589.1476628 (title, author, 1968, ACM Press, first page 267); abstract via OpenAlex; page range 267-277 and venue from a web search result showing the ACM DL record; Miller-related statements from Shneiderman's full text (https://www.cs.umd.edu/users/ben/papers/Shneiderman1984Response.pdf) and Nielsen's page (https://www.nngroup.com/articles/response-times-3-important-limits/). The original paper was not read.
+
+## shneiderman1984response
+
+Shneiderman, B. (1984). Response time and display rate in human performance with computers. *ACM Computing Surveys*, 16(3), 265-285. doi:10.1145/2514.2517
+
+### Core claims
+
+Shneiderman reviews the theory and experimental results on display rates, response-time expectations and attitudes, user productivity and variability. His abstract states that the results indicate frequent users prefer response times of less than a second for most tasks, that productivity does increase as response time decreases, but that error rates increase with too short or too long a response time, and that users "pick up the pace" of the system while the profile of commands may change with the speed of the system. He says a predictive model remains out of reach, and that decomposing the concerns helps clarify the issues.
+
+### Specifics
+
+Evidence type: a narrative review of field studies and experiments, read in full text this session (author-hosted PDF). Contents relevant to the lane:
+
+- Theory: Miller's (1968) list of 17 situations in which response times might differ; short-term memory limits and chunking (citing Miller 1956 and noting that the value of seven is contested but serves as a good estimate); and the argument that "response time to what" is the central question. Users expect different speeds in different situations: a tenth of a second for turning a car wheel, pressing a key on a typewriter, piano or telephone, or changing a television channel; the frequently mentioned 2-second limit for many tasks; longer waits where users are accustomed to them.
+- Three factors shaping expectation: previous experience; enormous variation among individuals and tasks (task, familiarity, personality, cost, age, mood, culture, time of day, noise, perceived pressure); and adaptation, in that users change working style (fewer interactions, filling long delays with other tasks, daydreaming or planning). The review says delays may or may not raise error rates in the range of 3 to 15 seconds but probably raise them above 15 seconds if people must remain at the keyboard.
+- Variability: when load builds, early users become unhappy as response times deteriorate, and two installers introduced a "response time choke" to make response uniform. Users who rush while response is short may make more errors.
+- Programmer studies: these focus on interactions per hour and are field studies. Thadhani (1981) found on one IBM system that interactions per hour rose from approximately 200 to 340 as response time was reduced from 3.0 to 0.5 seconds; Lambert (1984) found 161 versus 258 interactions per hour with mean response times of 2.22 and 0.84 seconds. Shneiderman cautions that these measure interactions per hour, not productivity, and do not reveal how work habits changed. Dannenbring (1983) found that changing response time from 0 to 5 to 10 seconds did not affect performance time or satisfaction for novices or experienced programmers debugging a 25-line BASIC program.
+- Think time: Boies (1974) found that as response time rose from 1 to 10 seconds, user think time rose from about 15 to 24 seconds.
+- Display rate: rates faster than human reading speed (10 to 30 characters per second) may be counterproductive when the full text must be read and comprehended; for tasks that do not require reading, faster display speeds the work but may lead to more errors.
+- The Doherty and Kelisky (1979) claim that longer response times lead to slower work, emotional upset and more errors seems true for very long times (over 15 seconds), but Shneiderman says there is little evidence that fewer errors occur at very short response times (under 1 second).
+
+### Replication and criticism
+
+Shneiderman's review is itself the critical apparatus. The field studies are confounded (they count system-measured interactions, not task completion), laboratory studies conflict with each other (a study with novices found no effect of 0, 5 and 10 seconds), and the review ends with a long agenda of unanswered questions. Dabrowski and Munson (2011, separate entry) cover the following decades, and conclude that tasks divide into control and conversational types.
+
+### Implications for LTF
+
+Take three practical messages. First, speed matters most for experienced, repetitive work (checklist stepping, repeated quiz-and-retry) and matters less for a beginner reading a lesson, who may wait without harm. Second, extremely fast responses are not automatically better: the review reports no evidence for fewer errors under 1 second and warns of hasty decisions at a fast pace, so in a challenge or quiz, do not hurry the learner with instant auto-advance; leave a beat after feedback to let them read it. Third, users adapt to the system's pace, so consistent response times beat variable ones: avoid pages that are sometimes instant and sometimes slow, since variation itself unsettles users. Do not use the review's interaction counts as LTF targets.
+
+Confirmed this session: Crossref 10.1145/2514.2517 (title, author, 1984, vol. 16, issue 3, pp. 265-285); full text read from https://www.cs.umd.edu/users/ben/papers/Shneiderman1984Response.pdf (abstract and the sections on theory, expectations, programming tasks, session length and the researcher's agenda; the text extraction garbled some numbers, which I omitted).
+
+## nielsen1993response
+
+Nielsen, J. (1993; updated 2014). Response times: The 3 important limits. Nielsen Norman Group. https://www.nngroup.com/articles/response-times-3-important-limits/ (excerpted from J. Nielsen, *Usability Engineering*, Academic Press, 1993)
+
+### Core claims
+
+Nielsen's short article states three time limits that, he says, are fixed by human perception and so have stayed about the same for decades: about 0.1 second, 1 second and 10 seconds. At 0.1 second, users feel that the system is reacting instantaneously, which is the limit for the feeling of directly manipulating objects in the interface, and no special feedback is needed beyond showing the result. At 1.0 second, users notice a delay but their flow of thought stays uninterrupted; no special feedback is needed between 0.1 and 1.0 seconds, but users lose the feeling of operating directly on the data. At 10 seconds, the limit for keeping the user's attention focused on the dialogue; for longer delays users will want to perform other tasks, and they need feedback indicating when the computer expects to be done. The article cites Miller (1968) and Card et al. (1991) as sources and says the advice has not changed in thirty years (46 in the 2014 update).
+
+### Specifics
+
+Evidence type: an expert's summary, written by a researcher with an established reputation, based on the literature and on his own usability consulting. The article is a practitioner synthesis, not a study. What the page I read states:
+
+- Limit 1: 0.1 second. The 2014 update frames it as users feeling they are directly manipulating UI objects (for example selecting from a list).
+- Limit 2: 1.0 second. Users notice the delay; feedback is not strictly required but users lose the feeling of working directly with the data. The 2014 update adds that delays over one second should show that the computer is working, such as by changing the cursor.
+- Limit 3: 10 seconds. Beyond it, users lose focus; longer waits need feedback about when the computer expects to finish. The update says operations slower than 10 seconds need a percent-done indicator and a clearly signposted way to interrupt, and that delays beyond this are acceptable mainly at natural task breaks.
+- Feedback guidance: for unknown amounts of work, show running progress such as the name of each database being searched, and a spinner only as a last resort; for known work over about 10 seconds, use a percent-done indicator, ideally a graphic progress bar, which reassures users, shows roughly how long to wait and gives them something to look at. For roughly 2 to 10 seconds a full percent-done indicator may be excessive and cause distracting flicker, so a busy cursor with a rapidly changing number in a small corner field is a common alternative.
+- Caveats: most web browsers give poor progress bars; animations should be timed to a real-time clock, not to processor speed; and responses can be so fast that users cannot keep up with them.
+
+### Replication and criticism
+
+The limits are widely quoted and mostly consistent with perception research, but the article is not itself evidence and cites only two works. Shneiderman's (1984) review shows much larger variation than three fixed limits suggest: expectations depend on prior experience, the task, the individual and adaptation, and later work (Dabrowski and Munson, 2011) argues that the useful split is between control tasks, where immediate response matters, and conversational tasks, where some delay can be appropriate. I could not trace the 0.1, 1 and 10 second values to explicit statements in Miller (1968), whose full text I could not read, so the figures should be treated as a widely used convention with an expert's authority, not as experimentally derived thresholds. The Nielsen Norman Group is a long-standing usability research and consulting firm with a track record, and the article states its basis openly.
+
+### Implications for LTF
+
+These limits are a convenient engineering budget and are safe to use as such, provided they are labeled as convention. Concretely: input to visual feedback within about 0.1 second for every tap, key press and toggle (checklist ticks, answer selection, theme switch), using optimistic local updates; page or lesson transitions within about 1 second so the learner's train of thought is kept, with a skeleton or a clear loading state if more; anything that can exceed several seconds (a long content load, a simulator-data sync) needs an explicit state and a way to cancel. In fly mode, where the learner is looking at the sim and glances back, the cost of a stalled or ambiguous screen is a lost place; show a stable, visible "saved" or "waiting" indicator that does not move other content. Animations should be quick and tied to real time. Avoid claiming that a specific millisecond figure is "the" threshold in design documents; say "about 0.1 s, 1 s, 10 s (Nielsen's convention)".
+
+Confirmed this session: page content fetched at https://www.nngroup.com/articles/response-times-3-important-limits/ (the limits, the 2014 update, feedback guidance and the Miller and Card citations); Open Library works for the book *Usability Engineering* (Nielsen, 1993, Academic Press; OL3522752W, ISBN 0125184050); Crossref records for the book's Elsevier ebook chapters (ISBN 9780125184069). The book's response-time section was not read.
+
+## dabrowski2011years
+
+Dabrowski, J., & Munson, E. V. (2011). 40 years of searching for the best computer system response time. *Interacting with Computers*, 23(5), 555-564. doi:10.1016/j.intcom.2011.05.008
+
+### Core claims
+
+The authors survey four decades of work on system response time and argue that it is the wrong question to look for one task- or expectation-based table of acceptable delays. Their abstract says system response time has been a topic of interest and controversy since the late 1960s, with studies measuring accuracy and error rates at different response times, performance speed and command efficiency, changes in how users interact, physiological reactions, and satisfaction and anxiety. The common practice has been to propose response-time guidelines based on task complexity or the type of interaction. They suggest that instead interactions fall into two categories: control tasks, for which immediate response times are necessary for optimal user performance, and conversational tasks, for which some delays may be necessary to maintain the optimal pacing of the ongoing conversation. The location and duration of those delays depend on both task complexity and user expectations, and further research is needed on the limits of delay detection and on how to place inter-task delays.
+
+### Specifics
+
+Evidence type: a literature review with a proposed reorganization of the field. I read the abstract through OpenAlex; I did not read the full paper, so I cannot report its tables, study counts or numerical limits, and I do not. What the abstract establishes:
+
+- Scope: more than 40 years of response-time studies beginning in the late 1960s, covering accuracy and errors, speed of performance and efficiency of commands, how interaction patterns change with system speed, physiological reactions (the abstract says how "their bodies reacted"), and emotions such as satisfaction, anxiety and annoyance.
+- Typology: control tasks (the user is directly steering something, so lag disrupts performance) against conversational tasks (a turn-taking exchange, where pacing matters and a pause may even help).
+- Open questions named: the limits of delay detection and the location and duration of delays between tasks.
+
+This typology matches the reading in Shneiderman (1984) that the right response time depends on what the user is doing and has adapted to, and it extends Miller's (1968) "response time to what?"
+
+### Replication and criticism
+
+It is a review and a proposal, not a replicated finding. The two-category scheme is a reorganizing hypothesis that the authors themselves say needs more research, especially on delay detection. The paper's strength is breadth, summarizing a literature in which field studies, laboratory studies and surveys give conflicting results; its weakness, from an LTF standpoint, is that the literature covers terminals, desktop software and early web use, not touch interfaces beside a flight simulator. Quoted thresholds in popular design sources (for example a "400 ms" figure attributed to a 1982 IBM report by Doherty and Thadani) could not be traced here to a primary or scholarly source; in this session, web search returned only vendor and design-blog pages for that figure, and a scholarly route to it was not found. For that reason the 400 ms "Doherty threshold" should not appear in LTF documents as a research finding until someone reads the IBM report.
+
+### Implications for LTF
+
+This is the best frame for deciding where to spend effort on speed. Classify each LTF interaction. Control tasks: dragging a slider in a widget, scrubbing a timeline, rotating an instrument face, tapping a checklist step. These need immediate, local response (no network round trip in the loop), because lag changes the learner's behavior and ruins the direct-manipulation feel. Conversational tasks: submitting a quiz answer, opening the next lesson, asking for feedback on a challenge attempt. Here a short deliberate pause can help, since an instantaneous reply can feel like the system did not consider the answer, and pacing can aid learning; but it must be consistent. In fly mode, the learner is in a control-like loop with the sim and a conversational one with the app, so keep the app's role conversational and calm and keep the controls instantaneous. Also, measure real delays in LTF rather than rely on lab thresholds: instrument interaction-to-feedback time on real devices.
+
+Confirmed this session: Crossref 10.1016/j.intcom.2011.05.008 (title, authors Dabrowski and Munson, 2011, vol. 23, issue 5, pp. 555-564); abstract via OpenAlex (api.openalex.org/works/doi:10.1016/j.intcom.2011.05.008); a web search (results listing a ScienceDirect record). The full text was not read.
+

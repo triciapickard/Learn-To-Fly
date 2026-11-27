@@ -388,3 +388,131 @@ Strength: this is an expert synthesis, not an experiment; the cited experiments 
 5. Do not claim LTF "optimizes" learning by difficulty without measuring it.
 
 Confirmed this session: author PDF of the chapter text read (pp. 56-62 content); Open Library work OL17413396W for the book (Worth, ISBN 9781429230438, first published 2009); the chapter PDF carries a 2009 production date and starts on page 56; the commonly used 2011 date could not be confirmed as a separate edition (a web search found only the 2009 and 2015 editions); Bjork and Bjork (2020, JARMAC) text read from a PDF copy for the retrieval-strength statement and the quote about undesirable difficulties.
+
+## craik1972levels
+
+Craik, F. I. M., and Lockhart, R. S. (1972). Levels of processing: A framework for memory research. *Journal of Verbal Learning and Verbal Behavior*, 11(6), 671-684. doi:10.1016/S0022-5371(72)80001-X. Evidence type: theoretical framework paper reviewing earlier experiments.
+
+### Core claims
+
+The authors argue against the dominant multistore view (sensory store, short-term store, long-term store) as an account of why some things are remembered longer. They propose that the memory trace is "a by-product of perceptual analysis" and that "trace persistence is a positive function of the depth to which the stimulus has been analyzed" (introduction). Analysis runs from shallow sensory and structural features through phonemic features to semantic and associative elaboration, and deeper analysis yields a more durable trace. Holding items in mind for a short time can be done by continued processing at one level without producing a durable trace.
+
+### Specifics
+
+Two kinds of rehearsal. Maintenance, which the authors call Type I processing, repeats analyses already carried out and merely prolongs an item's high accessibility "without leading to formation of a more permanent memory trace". Type II processing involves deeper analysis of the stimulus and is the kind that should improve memory. They predict memory will improve with total study time only when Type II processing is used, so the "total time hypothesis" breaks down under Type I processing.
+
+Evidence they reinterpret. Most of the support comes from incidental learning experiments, where an orienting task forces a particular kind of processing and retention is then tested unexpectedly. They cite Hyde and Jenkins (1969) and Johnston and Jenkins (1971): with lists of highly associated word pairs, free recall after an orienting task that used the word as a semantic unit equaled that of an intentional control group, and both were substantially superior to a group whose task treated the word structurally (checking letters or estimating the number of letters). Mandler (1967) found incidental learning during categorization gave recall similar to a group told that recall would be tested. They also cite work in which processing sentences to a semantic level gave substantially better recall than nonsemantic processing, and Schulman (1971), in which scanning a word list for semantically defined targets (words denoting living things) gave better unexpected recognition than structurally defined targets (words containing the letter A), with scanning time about the same. The authors read the pattern as memory performance being a positive function of the level of processing required by the orienting task, and note that the instruction to learn helps only insofar as it leads to more effective processing.
+
+A caution built in. The authors say identical orienting tasks do not seem to have equivalent effects across paradigms, and that beyond a certain stage the form of processing that proves effective depends on the interaction between the encoding and the retrieval situation.
+
+### Replication and criticism
+
+Strength: influential framework; a mixed theory. Criticism, from a search result summary for this session and not from the paper itself, is that "depth" is inferred from good recall and then used to explain that recall (a circularity criticism attributed to Baddeley, 1978 and Nelson, 1977), that it is hard to be sure what level a given task induces, and that the framework describes but does not explain why deeper processing helps. Encoding-retrieval match accounts (Tulving and Thomson, in this lane) are a major alternative or complement. A 2002 retrospective in the journal Memory (PubMed 12396643) reviews the legacy and common criticisms. The practical consensus in learning science is that meaning-based processing beats surface processing for retention, but that effortful retrieval and spacing add benefits not captured by depth alone, as seen in the testing and spacing sources in this lane.
+
+### Implications for LTF
+
+1. Do not let learners rely on copying or repeating text (maintenance rehearsal). For checklists, ask them to explain why each step is there and what would happen if it were skipped; that is semantic processing.
+2. Write explanations around meaning (what an indication means), not appearance.
+3. Self-explanation prompts ("in your own words, why do we do this before takeoff?") fit this framework; Dunlosky and colleagues rated the technique moderate.
+4. Avoid claiming "deeper learning" as a product benefit without defining it; the construct is contested.
+5. Do not treat depth as a replacement for retrieval practice. A deeply processed item still fades unless it is retrieved again later.
+
+Confirmed this session: Crossref 10.1016/s0022-5371(72)80001-x (authors, year, volume, issue, pages); full text of the article read from a PDF copy hosted at psych205.stanford.edu; criticisms and the 2002 retrospective from a web search summary only.
+
+## bahrick1984semantic
+
+Bahrick, H. P. (1984). Semantic memory content in permastore: Fifty years of memory for Spanish learned in school. *Journal of Experimental Psychology: General*, 113(1), 1-29. doi:10.1037/0096-3445.113.1.1. Evidence type: cross-sectional field study of long-term retention.
+
+### Core claims
+
+Bahrick tested how much school-learned Spanish people retained across a retention interval of up to 50 years, and found that retention follows a three-part pattern. It declines steeply for the first few years, then remains stable for decades, then shows a final decline. A large part of what was learned remained accessible for over 50 years without use or rehearsal. He called this stable portion "permastore". How much reaches permastore depends on the level of original training, grades received and the method of testing, and appears unaffected by ordinary interference.
+
+### Specifics
+
+Sample and measures. Retention was tested in 733 individuals (abstract, confirmed via Europe PMC). They took tests of reading comprehension, recall and recognition of vocabulary and grammar, plus a questionnaire on the level of original training, grades received and rehearsal during the retention interval in the form of reading, writing, speaking or listening to Spanish.
+
+Analysis. Multiple regression showed retention throughout the 50 years was predictable from the level of original training. The great majority of subjects rehearsed so little that the data showed no significant rehearsal effects.
+
+Retention curve. Memory curves "decline exponentially for the first 3-6 years" of the retention interval. After that retention remained unchanged for periods of up to 30 years before showing a final decline.
+
+Life spans. The abstract reports a discontinuous life-span distribution of learned responses: one portion with life spans of 0 to 6 years, and the other with life spans in excess of 25 years, and none with life spans of 6 to 25 years. The author reads this as suggesting a discrete transition into permastore during the extended period of original training. He concludes that analysis of successive relearning over extended periods is essential to understand how permanent semantic memory content is acquired.
+
+The abstract does not say whether the same people were followed over time or different people were tested at different intervals; check the full text before relying on either reading.
+
+### Replication and criticism
+
+Strength: moderate. A large and unusual sample, but training histories gathered by questionnaire and natural, uncontrolled rehearsal. A secondary account found by search says that Bahrick and Phelps (1987) and a 1993 paper by Bahrick and colleagues cite the 1984 work as showing that a portion of acquired knowledge lasts more than 25 years under minimal rehearsal; I did not read those papers. A later critique described in a search result locates the end of the decline closer to year 6 and the plateau lasting up to 35 years, so the exact boundaries differ by source. Cepeda and colleagues (2008, this lane) note in a footnote that Bahrick and colleagues (1993) did not observe a nonmonotonic gap effect, probably because their largest gap-to-delay ratio was only 0.15. This is a result about school-learned language material; it should not be transferred to procedures that are never used.
+
+### Implications for LTF
+
+1. The result is the strongest case for the value of original depth of training: what is learned thoroughly, in multiple sessions over a long period, can last decades. For core knowledge that LTF teaches (basic control effects, standard terms), design for thorough initial learning with repeated spaced retrieval over weeks, not a single pass.
+2. Do not claim "you will never forget" or promise decades of retention; the study is of a particular population and material.
+3. Even without rehearsal, much remained, so returning learners should be offered a quick check, not forced to restart.
+4. Expect the steepest loss in the first months: schedule the earliest reviews soonest.
+5. Because training level predicted retention, lesson series that go to a performance criterion across several sessions are better than single-session coverage.
+
+Confirmed this session: Crossref 10.1037/0096-3445.113.1.1 (title, author, year, volume, issue, pages); abstract fetched via Europe PMC (PMID 6242406 record); later work and critiques from a web search summary only.
+
+## soderstrom2015learning
+
+Soderstrom, N. C., and Bjork, R. A. (2015). Learning versus performance: An integrative review. *Perspectives on Psychological Science*, 10(2), 176-199. doi:10.1177/1745691615569000. Evidence type: integrative literature review.
+
+### Core claims
+
+The primary goal of instruction is long-term learning: "relatively permanent changes in comprehension, understanding, and skills" that support retention and transfer. What can be observed during instruction is performance, "which is often an unreliable index" of whether learning has occurred (abstract). The review documents that the two can dissociate in both directions: learning without performance change (the classic finding), and performance improvement without learning (the converse, shown more recently), and that some manipulations push learning and performance in opposite directions. It also reviews metacognition research suggesting people often mistake performance during acquisition for a reliable guide to long-term learning.
+
+### Specifics
+
+Scope. The review covers motor-learning and verbal-learning domains. Its history section begins with foundational work on the learning-performance distinction, which a secondary account lists as latent learning, overlearning and fatigue.
+
+Manipulations that help later but hurt now. According to secondary accounts (a blog summary and a university page, not the paper), the review treats distributed versus massed practice, variability of practice and retrieval practice as the central cases. Spacing or interleaving slows short-term performance gains yet improves long-term learning and transfer to new response patterns. In motor learning, varied practice can hurt performance during acquisition while supporting generalization. In verbal learning, testing improves later recall more than rereading, even though rereading can look better on an immediate test, and even failed retrieval attempts can enhance later learning. These are consistent with primary sources in this lane (Roediger and Karpicke 2006; Rohrer and Taylor 2007; Bjork and Bjork 2009), but the specifics above for this review are from secondary accounts only.
+
+Theory. The secondary accounts say the review relates findings to the Bjorks' "new theory of disuse" (storage strength is gained most when retrieval strength is low), schema theory for varied practice, the reloading idea for spacing, and desirable difficulties. Bjork and Bjork (2020, JARMAC; text read this session) describe the learning-performance distinction as "time-honored", note that learning "can only be measured at a delay" and cite Soderstrom and Bjork (2015) as a review of the linked motor-skills research.
+
+Metacognition. The abstract says people "often mistakenly interpret their performance during acquisition as a reliable guide to long-term learning". The paper's abstract does not give numbers; I did not read the full text this session.
+
+### Replication and criticism
+
+Strength: an authoritative review by senior researchers in the field, not a meta-analysis. Because the review integrates motor and verbal literatures, individual effects differ in size and reliability. Evidence cited by the review for each manipulation has its own replication record: spacing and testing have large literatures (Cepeda 2006; Rowland 2014, this lane), interleaving has a smaller applied base (Dunlosky and colleagues rated it moderate). The Bjorks themselves note that difficulties are desirable only if the learner can respond to them: if background knowledge is missing, they become undesirable, so the principle does not mean "make it harder" in general. The paper's central claim is, in addition, partly definitional (learning is defined as what persists), which makes it hard to falsify as a whole, though the specific dissociations are testable and have been tested.
+
+### Implications for LTF
+
+1. Treat in-lesson accuracy and speed as performance, not learning. Dashboards should separate "did well just now" from "still remembers after a delay", for example by showing results of delayed reviews.
+2. Do not optimize a lesson's completion rate or immediate quiz score at the expense of later retention. A friction-free lesson can be less effective.
+3. In challenges, vary conditions (weather, airport, aircraft state) across attempts instead of repeating the identical setup until it is mastered.
+4. Present difficulty as a feature in plain language, once, to counter the learner's intuition that struggling means failing.
+5. Because the underlying principle applies to motor skills too, tell learners that practice in the sim should vary and be spaced, not only repeated back to back.
+
+Confirmed this session: Crossref 10.1177/1745691615569000 (title, authors, year, volume, issue, pages, abstract); a blog summary and a UCLA-hosted description page fetched as secondary accounts; Bjork and Bjork (2020) text read from a PDF copy. The review's full text was not obtained.
+
+## tulving1973encoding
+
+Tulving, E., and Thomson, D. M. (1973). Encoding specificity and retrieval processes in episodic memory. *Psychological Review*, 80(5), 352-373. doi:10.1037/h0020071. Evidence type: laboratory experiments plus theory.
+
+### Core claims
+
+The paper proposes the encoding specificity principle: what is stored is determined by how the item was encoded, and what is stored determines which retrieval cues are effective. A retrieval cue works when information about it was present in the original encoding of the item. The practical consequence is that the same item can be recallable with one cue and not with another, and that a "better" cue (for example a strong associate of the target) can be worse than a cue that matches the learning context.
+
+### Specifics
+
+I could not obtain the paper's text or abstract this session. What follows is from secondary accounts fetched or returned by search and is stated at that level of confidence.
+
+The principle. Matching the encoding context at recall helps retrieval of episodic memories; retrieval is better when information present at encoding, including context, is available at test (Lancaster University psychology glossary and a reference article).
+
+Recognition failure of recallable words. In the best known demonstration, participants studied word pairs with a weak cue beside the target (for example a cue like "train" next to the word "black"). Later, shown a strong associate of the target as a cue ("white"), they often could not produce or recognize the target, but they could recall it when given the original weak cue. A search summary reports this pattern as "recognition failure of recallable words", reproduced by minor variations of the same procedure, and cites Watkins and Tulving (1975) and Wiseman and Tulving (1975) as later work. A 1984 Citation Classic commentary by Thomson on the earlier 1970 paper states the principle as: the effectiveness of a retrieval cue "varies directly with the extent it matches the format of the to-be-remembered information stored in memory". Thomson adds that the cited 1973 paper was one of three on the subject, had been cited about 600 times by 1984, and that colleagues first fiercely disputed the results and then called them obvious.
+
+Practical offshoots. The same commentary says its author's later research extended the principle to memory for objects and persons and that the work informed a recommendation of the Australian Law Reform Commission on identification procedures.
+
+### Replication and criticism
+
+Strength: a highly cited principle, with a mixed record for its popular corollary, context-dependent memory. A secondary reference article summarizes critiques: Nairne (2002) argues that encoding-retrieval overlap is correlational, and that distinctive cues may matter more; Higham argues forced-report guessing may inflate results; Postman (1975) reported results that failed to support the principle; and context effects are strongest in free recall and weaker when strong retrieval cues are present. The best-known applied example, Godden and Baddeley's 1975 study of divers learning word lists on land or underwater, did not replicate in a 2021 preregistered-style attempt by Murre with 16 divers: the interaction was not significant (F = 1.999, p = 0.163), and the author concluded the original effect was not reproduced (Royal Society Open Science, PMC8568063, read this session). The principle's core claim about cues and encoding is therefore better supported than the claim that changing the physical environment hurts recall.
+
+### Implications for LTF
+
+1. Reduce reliance on one context. If a learner only ever practices a checklist in the lesson page, the cues that trigger recall may be absent in the sim. Vary the format of practice (lesson page, fly mode panel, sim screenshot cue) so the knowledge is cued by what the learner will actually see.
+2. Write quiz cues that look like the real situation (an indication, a scenario, a radio phrase), not abstract definitions.
+3. Do not promise that studying in the same place as the sim "locks in" memory. The physical-context evidence is contested (see the diver replication).
+4. Test recall with the cue types learners will meet in flight, not only with the cue types used during teaching.
+5. Keep terminology consistent between lessons, checklists and the sim UI, so the cue wording matches what was encoded.
+
+Confirmed this session: Crossref 10.1037/h0020071 (title, authors, year, volume, issue, pages); secondary accounts via web search and a Wikipedia article fetch (principle, criticisms); a 1984 Citation Classic PDF at garfield.library.upenn.edu; the diver replication read at PMC8568063. The 1973 paper itself was not read.

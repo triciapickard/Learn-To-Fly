@@ -465,3 +465,69 @@ The worked-example advantage is among the best-replicated findings in CLT. The 2
 - Collect a rating after each task rather than only at the end, since the 2019 paper reports different results for the two.
 
 Confirmed this session: the abstract through OpenAlex (api.openalex.org, DOI 10.1037/0022-0663.84.4.429) and the University of Twente repository page (https://research.utwente.nl/en/publications/3e475ae3-2b43-45c7-83e5-7d4da2ef88b8); the Crossref record (volume 84, issue 4, pages 429-434); and the way de Jong 2010 and the 2019 retrospective (read in full) describe the paper and its scale. The full text of Paas 1992 was not read.
+
+## sweller1985use
+
+Sweller, J., & Cooper, G. A. (1985). The use of worked examples as a substitute for problem solving in learning algebra. *Cognition and Instruction*, 2(1), 59-89.
+
+### Core claims
+
+The paper reports the first demonstration of what became known as the worked example effect. The abstract says the researchers studied the knowledge needed to solve algebra manipulation problems, and ways to hasten its acquisition, in a series of five experiments. They hypothesized that, as in other domains, algebra problem-solving skill requires a large number of schemas, and that schema acquisition is retarded by conventional problem-solving search. Worked examples, they proposed, would let novices acquire schemas faster than solving problems would. The 2019 CLT retrospective (this lane) credits this paper with first reporting the worked example effect, in the domain of algebra. The evidence is a series of experiments with students, not a theoretical argument.
+
+### Specifics
+
+**Experiment 1: what expertise looks like.** Year 9 students, Year 11 students and university mathematics students took part. The more experienced students had a better cognitive representation of algebraic equations than the less experienced ones, measured by their ability to recall equations and to distinguish perceptually similar equations on the basis of solution mode.
+
+**Experiments 2 to 5: worked examples.** The abstract reports that worked examples, as expected, required considerably less time to process than conventional problems. Subsequent problems similar to the initial ones were also solved more rapidly, and the decreased solution time was accompanied by a decrease in the number of mathematical errors.
+
+**Boundary stated by the authors.** Both findings (faster and more accurate) were specific to problems identical in structure to the initial ones. The authors concluded that for novice problem solvers, general algebra rules are reflected in only a limited number of schemas, and that abstraction of general rules from schemas may occur only with considerable practice and exposure to a wider range of schemas. This is a statement about near transfer: the benefit covered problems of the same type, not far transfer to different structures.
+
+**Theory.** The reason offered is the one in Sweller's 1988 paper (this lane): conventional problem solving by means-ends search uses working memory on the gap between the current state and the goal, leaving little for noticing the structure of the problem, whereas a worked example directs attention to problem states and solution steps. Chandler and Sweller (1991, this lane) summarize the worked-example results of this paper and a 1987 follow-up as showing more rapid learning than from solving a large number of problems.
+
+### Replication and criticism
+
+The worked example effect is among the best-replicated effects in instructional psychology. In the 2019 retrospective the authors describe the empirical evidence as very strong but with constraints: examples are less effective for high-expertise learners, and the design of good worked examples is difficult (for example, they should not require learners to mentally integrate separate sources). The expertise reversal paper (this lane) reports that, with experience, studying worked examples lost its advantage and solving problems became superior (Kalyuga and colleagues 2001). Paas 1992 (this lane) found worked examples superior for transfer in statistics. The retrospective also reports a reverse effect with low element interactivity material, which limits the effect to complex material. The criticism from this paper's own boundary is about transfer distance: early results concern problems of the same structure, so a plan built only on worked examples may not produce flexible skill.
+
+### Implications for LTF
+
+- For any procedure (a normal takeoff roll, a stabilized approach, a trim sequence), show a full worked example before asking the learner to do it. The result is faster and more accurate performance on similar tasks.
+- Choose examples that vary in surface features (different runways, winds and aircraft weights) over time. The paper's own boundary suggests that abstraction needs exposure to a wider range of cases, so one worked example will not produce a general rule.
+- Pair examples with practice on structurally similar items soon after, since benefits were specific to similar problems.
+- Fade examples as skill grows (see Kalyuga and colleagues 2003 in this lane), moving to completion tasks and then full challenges.
+- Do not drop beginners into open-ended problem solving in the sim on the assumption that struggle teaches. The effect found here is that it teaches less per hour than studying solved problems.
+
+Confirmed this session: the abstract through OpenAlex (api.openalex.org, DOI 10.1207/s1532690xci0201_3); the Crossref record (volume 2, issue 1, pages 59-89); and how the 2019 retrospective, Chandler and Sweller 1991 and Kalyuga and colleagues 2003 (all read in full) describe it. The full text of the 1985 paper was not read.
+
+## cowan2001magical
+
+Cowan, N. (2001). The magical number 4 in short-term memory: A reconsideration of mental storage capacity. *Behavioral and Brain Sciences*, 24(1), 87-114.
+
+### Core claims
+
+Cowan's target article is the standard correction to the popular "seven plus or minus two" rule. The abstract says Miller (1956) summarized evidence that people can remember about seven chunks in short-term memory tasks, but that this number "was meant more as a rough estimate and a rhetorical device than as a real capacity limit". Cowan brings together a wide range of data suggesting that a smaller, real limit of three to five chunks exists, and that a single central capacity limit averaging about four chunks is implicated alongside other sources of memory that are not capacity-limited. The article is a target review in a journal that prints open peer commentary, so the full text also contains many replies, some of which disagree. It is a theoretical synthesis of experiments, not a single study, and its strength comes from agreement across many procedures.
+
+### Specifics
+
+**Chunk, not item.** A chunk is a unit that is familiar and bound together in long-term memory. The limit is in chunks, which is why expertise matters: a pilot who recognizes a traffic-pattern configuration holds one chunk where a beginner holds many pieces. The paper's introduction describes Miller's own emphasis: his central concern was how grouping or "chunking" can increase effective capacity, and Miller suggested the number seven might be a coincidence.
+
+**Four conditions for seeing the pure limit.** Capacity can be observed (1) when information overload limits chunks to individual stimulus items, (2) when steps are taken to block recoding of items into larger chunks (for example, preventing rehearsal), (3) in performance discontinuities caused by the limit, and (4) in various indirect effects. Under these conditions rehearsal and long-term memory cannot combine items into chunks of unknown size.
+
+**Pure versus compound.** The article distinguishes a pure capacity estimate (in chunks) from compound short-term memory estimates, which are higher because strategies, long-term memory and time-limited stores contribute. Miller's seven plus or minus two is described as valid as a commonly observed compound limit for materials that allow some recoding.
+
+**Numbers.** The conclusion states that the evidence strongly suggests a mean memory capacity in adults of three to five chunks, with individual scores ranging from about two up to about six chunks. The article proposes a capacity limit for the focus of attention.
+
+**Opposing views.** Cowan lists seven commonly held views against his thesis, including that the true limit is still Miller's 7 plus or minus 2, that memory is limited by elapsed time rather than item count, that there is no separate short-term memory at all, that there are no capacity limits per se but only scheduling constraints on performance, that there are separate limits for different material types, and that limits exist but are entirely task specific. He argues the evidence favors the four-chunk thesis, within boundary conditions.
+
+### Replication and criticism
+
+The article itself is contested in print. One of the published commentaries argues that the empirical data do not unequivocally support a consistent fixed capacity of four chunks, proposing instead that capacity is limited by the precision of specifying the temporal and spatial context of items, and that short-term memory is continuous with long-term memory. Others in the same issue propose a brain-based account tied to consciousness, and another comments on the difficulty of determining capacity from psychophysical experiments alone. So the status is: the idea that seven plus or minus two is a hard limit is widely regarded as wrong or at least wrongly generalized, a smaller limit of about four is supported by many paradigms, and its exact nature remains debated. The paper also warns that the limit can be observed only in carefully constrained circumstances; in other circumstances strategies increase what is recalled. This is why cognitive load theory (see the 2019 CLT retrospective in this lane, which cites Miller and others) says the limits apply to novel information and effectively vanish for organized knowledge held in long-term memory.
+
+### Implications for LTF
+
+- Do not cite "7 plus or minus 2" as a rule for menu length, number of nav items or checklist length. Miller's number was a rough estimate of recall for strings of items, not a design limit for visible lists; the lists a learner can see do not need to be held in memory.
+- The relevant limit for beginners is on how many new, unfamiliar, interacting things they must hold at once while reasoning. That number is small (the paper's three to five chunks is for carefully tested material), so introduce new concepts one or two at a time and let them become chunks before combining them.
+- A memory-aid checklist for use in fly mode should show the current item and perhaps the next, not the whole list in equal weight.
+- Group related readings into chunks that match cockpit layout (for example, power, pitch and trim as one relationship once learned) and teach them as units.
+- Do not turn the 3-to-5 figure into a hard rule in design specs: the paper itself says it depends on controlled conditions and individual scores range from about 2 to about 6.
+
+Confirmed this session: read the abstract, introduction and conclusion of the target article and the start of several commentaries in a PDF copy from the author's Missouri site (https://memory.psych.missouri.edu/assets/doc/articles/2001/cowan-bbs-2001.pdf), and the Crossref record for DOI 10.1017/S0140525X01003922 (volume 24, issue 1, pages 87-114). The body of the target article between introduction and conclusion was not read in full.

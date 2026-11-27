@@ -274,3 +274,66 @@ Albers offers demonstrations, not data, so there is nothing to replicate in the 
 Albers gives the best pedagogical template for teaching color to beginners: show the effect, then explain. An LTF page about how color behaves in a cockpit or in the app could present interactive pairs, where the same swatch sits on two different backgrounds and a slider changes the background. That would make context effects experiential, in line with the book's method. For designers, the book's main message is a testing rule: never approve a color in isolation; place it on every surface where it will appear, in both themes, next to its neighbors, and look at it for a long time on a real display, not a swatch chart. Finally, because the book teaches that appearance depends on neighbors, avoid quizzes that ask learners to identify a color name from a single swatch on a variable background; use labeled, side-by-side choices.
 
 Confirmed this session: Open Library search (OL2286161W); albersfoundation.org/alberses/teaching/interaction-of-color (fetched; structure, method, quotation, editions); web searches on the plate counts (Met, NGA, Neue Galerie, foundation) and the exercises; albersfoundation.org "One Color Becomes Two" workshop page (title and description only). The book itself was not read.
+
+## berlin1969basic
+
+Berlin, Brent, and Paul Kay. 1969. Basic Color Terms: Their Universality and Evolution. Berkeley: University of California Press. Evidence type: cross-language survey (linguistic anthropology) with a strong evolutionary hypothesis; heavily contested since.
+
+### Core claims
+
+Berlin and Kay claimed that the way languages divide the color space is not arbitrary. Every language has some basic color terms, those with certain properties of use and meaning, and the sets of terms across languages follow a constrained order. In the strong form, languages add basic terms in a fixed sequence, so that if a language has a term from a later stage it has the terms of all earlier stages. They proposed a universal inventory of eleven basic color categories, from which the eleven or fewer basic terms of any language are drawn. The implication is that color categories rest partly on shared perceptual facts.
+
+### Specifics
+
+Evidence base. A search result summarizing the work says Berlin and Kay studied 20 languages experimentally and drew on the literature for 78 more.
+
+The stages as listed on Wikipedia: Stage I has two terms, dark-cool and light-warm (black and white in the standard reading); Stage II adds red; Stage III adds green or yellow; Stage IV has both green and yellow; Stage V adds blue; Stage VI adds brown; Stage VII adds purple, pink, orange or gray, and has eight or more terms. English has eleven.
+
+Later development. Kay and McDaniel (1978, Language 54(3)) argued that the constraints on color lexicons come from the structure and function of the visual system; this comes from a search summary, and Wikipedia lists the paper without detail. The World Color Survey (Kay and Richard Cook) later gathered data from many more languages.
+
+### Replication and criticism
+
+The original claim has been revised, not abandoned. Berlin and Kay themselves loosened the ordering in later publications, and critics have too. The World Color Survey analyses found anomalies that require modification of the original schema, though a review judged that they hardly invalidate the basic formulation in any serious way. Specific criticisms from the search results: Saunders and van Brakel argued that the methods and cultural assumptions are flawed (Wikipedia also names Saunders 2000 and Levinson 2000); some languages have terms for non-color concepts such as dryness or freshness; deciding what counts as a "basic" term may be too discretionary, and English "orange" is a case in point; and the perceived clustering on which universality rests may be spurious.
+
+The linguistic-relativity side is documented by Roberson, Davies and Davidoff (2000, Journal of Experimental Psychology: General 129(3), 369-398, "Color categories are not universal"). They tried to replicate and extend Rosch Heider's 1972 work on the Dani using Berinmo speakers in Papua New Guinea, whose language has five basic color terms. Categorical perception effects appeared for both English and Berinmo speakers but only at the boundaries of the speakers' own linguistic categories, which the authors read as evidence that having words for categories influences recognition and judgment. Regier and Kay (2009, Trends in Cognitive Sciences 13(10), 439-446) take a middle route: the Whorf hypothesis is "half right", since naming affects color perception mainly in the right visual field (processed by the language-dominant left hemisphere), while cross-language naming reflects both universal tendencies and local convention. Gilbert and colleagues (PNAS 2006) found the lateralized effect; Drivonikou and colleagues (PNAS 2007) found left-field effects too. The debate is not settled. Treat Berlin and Kay as a hypothesis supported as a tendency, not a law.
+
+### Implications for LTF
+
+LTF's learners are largely English readers, many of them second-language readers, and the sim and the cockpit use color names. Three consequences. Name the colors you use in lessons with basic English terms (red, green, yellow, blue, orange, purple, pink, brown, gray, black, white) rather than "teal" or "amber"; terms outside the basic set are less reliably shared, and a learner may not know which swatch is meant. Do not assume the terms map the same way in every learner's first language, since category boundaries differ across languages (the Berinmo result above); give a label, icon or position along with the color, especially in any quiz asking which indicator is "the green one". Third, in a categorical palette, remember that the basic inventory is eleven terms and that two of them are black and white, so few hues can be named reliably.
+
+Confirmed this session: Open Library search (OL64565W, OL43005024W); Wikipedia "Basic Color Terms" (fetched; stages and critics); web search summaries on the 20 and 78 languages, revisions and critiques; web search results for Roberson, Davies and Davidoff 2000 (Essex repository abstract) and Regier and Kay 2009 with the PNAS 2006 and 2007 follow-ups. The book itself was not read.
+
+## fairchild2013color
+
+Fairchild, Mark D. 2013. Color Appearance Models, 3rd edition. Wiley-IS&T Series in Imaging Science and Technology. Evidence type: authoritative textbook and survey by a leading researcher (professor of color science at the Rochester Institute of Technology, who directed its Munsell Color Science Laboratory for about twelve years, per the publisher page).
+
+### Core claims
+
+Colorimetry tells you when two stimuli match under one set of conditions; it does not tell you how a color will look when the surround, the adaptation state, the luminance or the viewing mode changes. Color appearance models try to predict appearance across such changes. Fairchild's book teaches the vision science, the vocabulary, the phenomena a model must account for, the main models and their tests, and the applications in imaging. The publisher description says the third edition adds and expands sections, including an updated review of color appearance and many of the most widely used models.
+
+### Specifics
+
+I did not read the book; the table of contents and description come from the Wiley-VCH page (472 pages, August 2013, ISBN 978-1-119-96703-3). The chapters, with the contents most relevant to this lane:
+
+1. Human Color Vision (eye optics, retina, visual signal processing, color vision deficiencies).
+2. Psychophysics (scales, threshold and matching techniques, experiment design).
+3. Colorimetry (tristimulus values, color matching functions, chromaticity diagrams, CIE color spaces, color difference specification).
+4. Color Appearance Terminology (hue, brightness and lightness, colorfulness and chroma, saturation, related and unrelated color).
+5. Color Order Systems (requirements, Munsell, NCS, color naming).
+6. Color Appearance Phenomena: simultaneous contrast; the Bezold-Brucke, Abney, Helmholtz-Kohlrausch, Hunt, Stevens and Helson-Judd effects; the Bartleson-Breneman equations; discounting the illuminant; color constancy.
+7. Viewing Conditions. 8. Chromatic Adaptation, and 9. Chromatic Adaptation Models (von Kries, Retinex, CAT02).
+10 to 16. Models: CIELAB ("why not just CIELAB"), Nayatani, Hunt, RLAB, ATD, LLAB, IPT, CIECAM97s and CIECAM02 (with CAM02-UCS).
+17. Testing Color Appearance Models (corresponding-colors data, magnitude estimation, CIE activities).
+18 to 21. Color rendering and color difference, device-independent color imaging (gamut mapping, ICC), image appearance modeling (S-CIELAB, iCAM) and a new chapter on high-dynamic-range color space.
+
+Definitions that matter for a designer, from searches on the effects named in chapter 6: the Hunt effect is an increase in the colorfulness of a color with increasing luminance (first described by R. W. G. Hunt in 1952); the Helmholtz-Kohlrausch effect is that a saturated stimulus looks brighter than a less saturated or achromatic one; the Bezold-Brucke effect is a change in perceived hue with intensity, with most colors looking less red or green and more blue or yellow as illumination increases. The search results gave no definition of the Stevens effect, so I do not describe it.
+
+### Replication and criticism
+
+The evidence is varied: classic psychophysics for the phenomena, corresponding-colors experiments and magnitude estimation for model tests, and committee work in the CIE. No single model is accepted as complete; that is why the book devotes a chapter to testing and why it asks "why not use just CIECAM02". Problems with CIECAM02 are documented outside the book: search results describe a "yellow-blue" problem and a "purple" problem, both from negative values in the adaptation space under extreme blue adaptation, which the revised CAM16 (Li and colleagues, Color Research and Application, 2017) was designed to fix; follow-up notes still report edge cases. Ottosson (2020) calls CAM16-UCS numerically poorly behaved and not scale invariant, and Lilley's W3C slides call it numerically unstable and non-invertible; both write as implementers, not as testers of perceptual accuracy. A 2002 Color and Imaging Conference paper, "The performance of CIECAM02" (Li, Luo, Hunt, Moroney and colleagues), is one evaluation.
+
+### Implications for LTF
+
+Two practical reasons to know this book. First, the phenomena list is a checklist for theme design. Simultaneous contrast and the Hunt and Bezold-Brucke effects mean the same CSS color will look different on a bright and a dim screen, and in a dark room next to a lit sim monitor. LTF cannot control that, so it should avoid depending on subtle hue distinctions and should test palettes at both bright and dim display settings. Second, appearance-model machinery is too heavy for runtime use in a web app; CSS gives oklab and oklch (see the Oklab entry) instead. Use this book to justify why viewing conditions matter, then use simpler tools. The vocabulary of chapter 4 (lightness, chroma, colorfulness, saturation) gives precise terms where UI copy would say "bright" or "vivid".
+
+Confirmed this session: Wiley-VCH product page (fetched; edition, table of contents, description); Open Library search (OL2691720W, OL2691721W for earlier editions); web searches on the Hunt, Helmholtz-Kohlrausch and Bezold-Brucke definitions, on CIECAM02 and CAM16 problems, and on Crossref for "The performance of CIECAM02" (doi 10.2352/cic.2002.10.1.art00007). The book itself was not read.

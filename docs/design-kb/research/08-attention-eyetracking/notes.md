@@ -330,3 +330,84 @@ The F is a heat-map aggregate shape, not a single person's path, and its authori
 5. If LTF is ever localized for right-to-left languages, expect the pattern to mirror.
 
 Confirmed this session: WebFetch of https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/ (date, 232 users, components, recommendations, caveats) and https://www.nngroup.com/articles/text-scanning-patterns-eyetracking/ (2019 patterns, 47-person heat map, RTL); Buscher et al. 2009 full text for the comparison.
+
+## nielsen2010eyetracking
+Nielsen, J., & Pernice, K. (2010). *Eyetracking Web Usability*. Berkeley, CA: New Riders.
+
+### Core claims
+The book reports a multi-year eye-tracking study of how people look at websites and turns it into design guidance on page layout, navigation, site elements, image selection and advertising, illustrated with gaze plots and heat maps. Its publisher descriptions say it confirms many established web design conventions and reports new user behaviors for the first time. The signature findings include the F-shaped reading pattern, that users focus on bulleted lists, and that promotional content in the right column of a page may get little or no attention (the publisher's example is an "About Us" page heat map in which the rightmost promotional column received no attention). It is craft and industry research at large scale, not peer-reviewed science, and it should be read that way.
+
+### Specifics
+Scale: the NN/g and Peachpit pages describe a three-year study with about 1.5 million instances of users looking at websites. The NN/g page does not give a participant count. A reviewer (Cennydd Bowles, a practitioner, early 2010) and a search summary of an academic citation both give 300 participants, with the latter stating ages 18 to 64; I treat the 300 as secondary. The Peachpit product page gives the copyright year as 2010, publication date 4 December 2009 and ISBN-13 978-0-321-49836-6, and notes the book is no longer in print. Open Library lists a 2010 edition from New Riders with that ISBN.
+
+Coverage, from the publisher descriptions: where users look and what they skip, with chapters on layout, navigation menus, site elements, images and advertising. The related articles by Nielsen (2006) and Pernice (2019) that I read give the book's most-cited patterns (see nielsen2006fshaped) and the NN/g banner blindness article by Pernice (see benway1998banner) covers advertising findings. I did not have the book's text and so do not list its individual guidelines.
+
+### Replication and criticism
+The study is large, but its documentation is thin by academic standards, and the criticisms I found are about method and scope. Bowles's review praises the size, the well-designed test script and a few useful findings (busy layouts dilute attention from key information; "a link is a promise"), and criticizes: generalizing from a 300-person study is limited, as eye tracking needs site-specific tasks; the heat maps date from late 2005 and lab work seems to have finished by mid-2006, years before publication; only informational sites were studied, with web apps excluded because eye tracking struggled with dynamic elements such as Ajax and drop-downs; tests apparently used Internet Explorer 6 with no browser choice, which may change navigation behavior; the book acknowledges little outside research. He concludes that eye tracking mostly confirms long-standing design principles. That is one practitioner's opinion, though a specific one.
+
+Independent academic work is consistent with parts of the findings but with different emphasis. Buscher et al. (2009) found strong attention to the left and top of pages and neglect of the right side above the fold in a controlled 20-participant study, and found differences by task (see buscher2009what). Pan et al. (2004) found gaze varied with gender and viewing order (see pan2004determinants). So the right-column neglect is supported in more than one source, whereas precise percentages of attention by region should be treated as site-dependent.
+
+### Implications for LTF
+1. Use the book for hypotheses, not rules. The consistent, replicated points (left and top attract more; right rail is neglected; bullets and subheads are scanned) are safe defaults. Specific thresholds or percentages from NN/g should be re-tested on LTF's own pages.
+2. Put lesson content in the main column and not in a right rail. If LTF has a sidebar of tips, expect it to be skipped, and make sure nothing necessary lives only there.
+3. Make links and buttons keep promises. "A link is a promise" suggests labels must say exactly what happens next ("Start the pre-flight lesson", not "Go").
+4. The data are from desktop informational sites around 2005. Mobile use, apps, dark mode and a fly-mode second-screen context are outside it. Run small in-house tests with task scripts instead of importing findings wholesale.
+5. Because gaze is task-specific, write test tasks that mirror real LTF jobs: find the next lesson, read a V-speed, start a challenge.
+
+Confirmed this session: Peachpit product page (https://www.peachpit.com/title/0321498364: publisher, copyright 2010, ISBN-13, description); NN/g book page (https://nngroup.com/books/eyetracking-web-usability: 1.5 million instances, about us heat map); Open Library edition list for work OL15473984W; Bowles's review via fetch. The book itself was not read.
+
+## pan2004determinants
+Pan, B., Hembrooke, H. A., Gay, G. K., Granka, L. A., Feusner, M. K., & Newman, J. K. (2004). The determinants of web page viewing behavior: An eye-tracking study. In *Proceedings of the Eye Tracking Research & Applications Symposium (ETRA 2004)* (pp. 147-154). ACM.
+
+### Core claims
+Early web eye-tracking studies often reported a single "how people view pages" pattern. Pan and colleagues asked what actually determines gaze on a web page: the individual viewer, the kind of site, the order in which pages are seen, or the task. Their answer, from the abstract as summarized by Penn State's research portal, is that gender, viewing order and the interaction between page order and site type affected eye movements, while task instructions did not have a significant effect. Their scanpath analysis found that more complex page designs produced more variation in how different subjects scanned the same page.
+
+### Specifics
+Sample and stimuli: 30 subjects viewed 22 web pages from 11 popular websites (abstract, as reported in a web search). The study was a conference paper at ETRA 2004 in San Antonio, March 22 to 24, 2004. Buscher, Cutrell and Morris (2009) give extra detail about the design: the study looked at the dependency of scanpaths (repetitive sequences of fixations and saccades) on viewer gender, type of site (business, news, search, shopping), viewing order of pages and task. They found significant differences in all variables except task.
+
+I could not retrieve the full text, so I do not report effect sizes, the eye tracker, how fixations were defined, or the details of the scanpath metric. The summary above relies on the abstract text from the Penn State portal and on Buscher et al.'s description.
+
+### Replication and criticism
+Task is the main point of controversy. Buscher et al. point out that Pan et al. "used a weak task differentiation: remembering what was on a Web page vs. no specific task at all" (their related work section), and that in later work on web search, using stronger tasks (informational versus navigational search), Pan's group again saw little difference in gaze behavior. In contrast, Buscher et al.'s own study with 20 participants and clearer tasks (information foraging versus page recognition) found gaze patterns that differed by task, with the center-left region most important for foraging and the top-left for recognition, so Pan's null on task should not be generalized. It also sits uneasily with the broader literature, from Yarbus onward, that gaze depends on task (see yarbus1967eye), though that literature mostly concerns pictures, not web pages.
+
+Greene et al. (2012) add that task decoding from gaze can be weak (see greene2012reconsidering). I treat the Pan result as evidence that task effects on page-level gaze patterns can be small and depend on how different the tasks really are, not as evidence that task is irrelevant.
+
+The paper has been well cited (Penn State's portal lists 259 Scopus citations), and its design choice of using real popular sites raises ecological validity but reduces control: page content, layout and familiarity vary together. Heat maps of 2004 pages are also dated.
+
+### Implications for LTF
+1. Do not assume that one gaze pattern describes all learners. Gender, order effects and page type shifted viewing in this study, so a single "average heat map" hides variation. Where a layout matters, test with a mix of learners.
+2. Page order and novelty matter: the first page viewed is not like the fifth. For an onboarding flow, evaluate the first screens separately from later ones.
+3. Complex pages produce more variable scanning, so more learners will find different things. If the goal is a consistent first look (for example, to a safety note), reduce visual complexity.
+4. Don't over-read a null on task. If LTF tests whether a task framing changes behavior, use tasks that really differ (find a number versus read for understanding), as Buscher et al.'s critique implies.
+5. Treat a single eye-tracking sample of 30 as hypothesis-generating. LTF's own tests will be smaller still.
+
+Confirmed this session: Crossref record for DOI 10.1145/968363.968391 (six authors, ETRA 2004, pp. 147-154); the Penn State Pure page (pure.psu.edu) for the abstract summary and the Scopus count; Buscher et al. 2009 full text for their description of the study. Full text of Pan et al. not read.
+
+## buscher2009what
+Buscher, G., Cutrell, E., & Morris, M. R. (2009). What do you see when you're surfing? Using eye tracking to predict salient regions of web pages. In *Proceedings of CHI '09* (pp. 21-30). ACM.
+
+### Core claims
+The paper measures where on web pages people look, in the first second and over a whole task, for two kinds of task, and builds a simple model that predicts which page elements will receive attention from features of the page's code and rendering. Its general finding is that the left and top of the page attract the earliest and most attention, and the right side above the fold is largely neglected. It also introduces "fixation impact" for mapping gaze to page elements.
+
+### Specifics
+I read the full paper. Twenty participants (10 male, aged 18 to 69, mean 33.0) viewed 361 distinct web pages (2,126 page views) while doing information-foraging tasks (eight tasks across four topics plus two free browsing tasks, each about five minutes) and a page-recognition task in which they rated familiarity with pages they had seen and 12 others. Pages were shown in Internet Explorer 7; the area above the fold was 996 by 716 pixels. Eye tracking used a Tobii x50 at 50 Hz with 0.5 degree accuracy. A fixation was detected after steady gaze within a 50 pixel radius for at least 100 ms.
+
+Fixation impact: each fixation is treated as a 2 degree circle (about 66 pixels there, matching the fovea). A Gaussian with volume 1 is laid over that circle and the fraction falling on each page element is multiplied by the fixation duration, so an element that fully covers the circle gets the whole duration. Three measures: median fixation impact, viewing frequency (percent of viewers who looked at an element) and median time to first fixation. Regions were a 3 by 3 grid above the fold plus everything below.
+
+Findings: "the entire right side above the fold is neglected" for both task types. Participants took about 3 seconds to fixate the three right-side regions in foraging tasks and about 2 seconds in recognition tasks, and the median fixation impact there was 0. The four upper-left regions generally attracted the most attention. In the first second of foraging, center-left drew the most and earliest attention; in recognition the top-left did. Below the fold, fixation impact over the full task was large for foraging, which they attribute to in-depth reading.
+
+Prediction: features were 44 binary HTML element names, three abstract features (DOM tree depth, "logo" in image name, link to the site home page) and 12 rendering features (size, aspect ratio, ten position flags). Element size ranked top for information gain. Linear regression on the top 10 features gave a correlation of 0.50 (10-fold cross validation); a pruned decision tree classifying whether an element got any fixation impact had Kappa 0.59, precision 75 percent and recall 53 percent; the combination of the two gave a correlation of 0.69.
+
+### Replication and criticism
+This is a conference paper with a modest sample, drawn from one participant pool and a particular browser and screen, with 2009-era pages. Its authors note that the prediction models were purposely simple and fail on pages with unusual layouts, giving Wikipedia, where images often sit at the far right, as an example. It quantifies what NN/g only illustrated: the left-and-top bias and right-side neglect, with timing data and visible task dependence. It criticizes earlier work (for example Pan et al., 2004) for a weak task manipulation and for lacking quantitative analysis (see pan2004determinants).
+
+Methodologically, the paper shows how arbitrary definitions can be: its fixation is 50 pixels and 100 ms, while Djamasbi et al. (2010) define a fixation as a gaze longer than 300 ms (see djamasbi2010generation). Comparisons across eye-tracking studies need those definitions aligned.
+
+### Implications for LTF
+1. Place the lesson's primary content in the upper-left to center-left of the main page. Assume anything above the fold on the far right will take seconds to be fixated and may be ignored.
+2. Size matters most: big elements are looked at. Make the key diagram or instrument widget the largest element, rather than relying on color alone.
+3. Recognition and finding differ: for a returning learner re-finding a lesson, the top-left carries identity (logo, title), so keep lesson titles and navigation consistent there.
+4. Test above-the-fold content in the first seconds. Because the first second is spent on expected locations, put the lesson title and the first instruction where they are expected, not in a novel position.
+5. If LTF measures attention, weight by fixation duration, map to named elements and fix the fixation definition in the protocol.
+
+Confirmed this session: Crossref record for DOI 10.1145/1518701.1518705; full text read from a PDF copy (dfki.de), including methods, results and the prediction numbers.

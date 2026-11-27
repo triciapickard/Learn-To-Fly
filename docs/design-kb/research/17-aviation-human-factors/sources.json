@@ -1,0 +1,463 @@
+[
+  {
+    "key": "degani1992typography",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Degani",
+        "given": "Asaf"
+      }
+    ],
+    "year": 1992,
+    "title": "On the Typography of Flight-Deck Documentation",
+    "container_title": "NASA Contractor Report 177605",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "NASA Ames Research Center (San Jose State University Foundation)",
+    "publisher_place": "Moffett Field, CA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://ntrs.nasa.gov/citations/19930010781",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search found NTRS record 19930010781 (NASA CR-177605, Degani, December 1992, contract NCC2-327). Fetched the NTRS PDF scan and read the title page, contents, Summary, Sections 1, 2, 3.9-3.11, 4, 5 and the 19-item List of Design Recommendations.",
+    "kind": "technical report, literature review (design recommendations)",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "degani1990checklists",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Degani",
+        "given": "Asaf"
+      },
+      {
+        "family": "Wiener",
+        "given": "Earl L."
+      }
+    ],
+    "year": 1990,
+    "title": "Human Factors of Flight-Deck Checklists: The Normal Checklist",
+    "container_title": "NASA Contractor Report 177549",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "NASA Ames Research Center (University of Miami)",
+    "publisher_place": "Moffett Field, CA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://ntrs.nasa.gov/citations/19910017830",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search found NTRS record 19910017830. Fetched the NTRS PDF scan and read the report documentation page (NASA CR-177549, May 1990, contract NCC2-377, 72 pages), contents, Summary, Section 1 and Appendix A (16 proposed guidelines).",
+    "kind": "technical report, field study and design guidelines",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "fitts1947analysis",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Fitts",
+        "given": "Paul M."
+      },
+      {
+        "family": "Jones",
+        "given": "Richard E."
+      }
+    ],
+    "year": 1947,
+    "title": "Analysis of Factors Contributing to 460 \"Pilot-Error\" Experiences in Operating Aircraft Controls",
+    "container_title": "Memorandum Report TSEAA-694-12",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Aero Medical Laboratory, Air Material Command",
+    "publisher_place": "Dayton, OH",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://books.google.com/books/about/Analysis_of_Factors_Contributing_to_460.html?id=XjgrygAACAAJ",
+    "verified_via": "websearch",
+    "verified_evidence": "Google Books record id XjgrygAACAAJ lists Fitts and Jones, 1947, 64 pages, Army Air Forces Headquarters, Air Material Command, Engineering Division, with the 460-errors description. Wright State abstract of Flach, Larish and Weinstein 1989 confirms the Fitts and Jones taxonomy. The 1947 text itself was not accessible (DTIC 403).",
+    "kind": "foundational technical report, critical-incident analysis",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "wickens1995proximity",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wickens",
+        "given": "Christopher D."
+      },
+      {
+        "family": "Carswell",
+        "given": "C. Melody"
+      }
+    ],
+    "year": 1995,
+    "title": "The proximity compatibility principle: Its psychological foundation and relevance to display design",
+    "container_title": "Human Factors",
+    "volume": "37",
+    "issue": "3",
+    "pages": "473-494",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1518/001872095779049408",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1518/001872095779049408 returned this title, authors Wickens and Carswell, Human Factors 37(3) 473-494, September 1995, with the abstract.",
+    "kind": "theoretical review with experimental evidence",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "endsley1995toward",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Endsley",
+        "given": "Mica R."
+      }
+    ],
+    "year": 1995,
+    "title": "Toward a theory of situation awareness in dynamic systems",
+    "container_title": "Human Factors",
+    "volume": "37",
+    "issue": "1",
+    "pages": "32-64",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1518/001872095779049543",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1518/001872095779049543 returned this title, author Endsley, Human Factors 37(1) 32-64, March 1995, with the abstract.",
+    "kind": "theoretical model",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "sarter1995world",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Sarter",
+        "given": "Nadine B."
+      },
+      {
+        "family": "Woods",
+        "given": "David D."
+      }
+    ],
+    "year": 1995,
+    "title": "How in the world did we ever get into that mode? Mode error and awareness in supervisory control",
+    "container_title": "Human Factors",
+    "volume": "37",
+    "issue": "1",
+    "pages": "5-19",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1518/001872095779049516",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1518/001872095779049516 returned this title, authors Sarter and Woods, Human Factors 37(1) 5-19, March 1995, with the abstract.",
+    "kind": "empirical studies and analysis, human-automation interaction",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "parasuraman1997humans",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Parasuraman",
+        "given": "Raja"
+      },
+      {
+        "family": "Riley",
+        "given": "Victor"
+      }
+    ],
+    "year": 1997,
+    "title": "Humans and automation: Use, misuse, disuse, abuse",
+    "container_title": "Human Factors",
+    "volume": "39",
+    "issue": "2",
+    "pages": "230-253",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1518/001872097778543886",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1518/001872097778543886 returned this title, authors Parasuraman and Riley, Human Factors 39(2) 230-253, June 1997, with the full abstract. Crossref also returned Lee 2008 (10.1518/001872008x288547) reviewing the paper.",
+    "kind": "integrative review and taxonomy",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "haynes2009surgical",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Haynes",
+        "given": "Alex B."
+      },
+      {
+        "family": "Weiser",
+        "given": "Thomas G."
+      },
+      {
+        "family": "Berry",
+        "given": "William R."
+      },
+      {
+        "family": "Lipsitz",
+        "given": "Stuart R."
+      },
+      {
+        "family": "Breizat",
+        "given": "Abdel-Hadi S."
+      },
+      {
+        "family": "Dellinger",
+        "given": "E. Patchen"
+      },
+      {
+        "family": "Herbosa",
+        "given": "Teodoro"
+      },
+      {
+        "family": "Joseph",
+        "given": "Sudhir"
+      },
+      {
+        "family": "Kibatala",
+        "given": "Pascience L."
+      },
+      {
+        "family": "Lapitan",
+        "given": "Marie Carmela M."
+      },
+      {
+        "family": "Merry",
+        "given": "Alan F."
+      },
+      {
+        "family": "Moorthy",
+        "given": "Krishna"
+      },
+      {
+        "family": "Reznick",
+        "given": "Richard K."
+      },
+      {
+        "family": "Taylor",
+        "given": "Bryce"
+      },
+      {
+        "family": "Gawande",
+        "given": "Atul A."
+      }
+    ],
+    "year": 2009,
+    "title": "A surgical safety checklist to reduce morbidity and mortality in a global population",
+    "container_title": "New England Journal of Medicine",
+    "volume": "360",
+    "issue": "5",
+    "pages": "491-499",
+    "publisher": "Massachusetts Medical Society",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1056/NEJMsa0810119",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1056/NEJMsa0810119 returned this title, 15 authors, NEJM 360(5) 491-499, 29 January 2009. Harvard Gazette report and PSNet summary fetched for sample size, sites and results.",
+    "kind": "multi-site before-and-after field study",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "reason2000human",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Reason",
+        "given": "James"
+      }
+    ],
+    "year": 2000,
+    "title": "Human error: Models and management",
+    "container_title": "BMJ",
+    "volume": "320",
+    "issue": "7237",
+    "pages": "768-770",
+    "publisher": "BMJ Publishing Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1136/bmj.320.7237.768",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned DOI 10.1136/bmj.320.7237.768 (BMJ 320(7237) 768-770, 18 March 2000). PMC1117770 full text fetched and read.",
+    "kind": "expert synthesis, short commentary",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "faa2010flightcrew",
+    "type": "standard",
+    "authors": [
+      {
+        "literal": "Federal Aviation Administration"
+      }
+    ],
+    "year": 2010,
+    "title": "Flightcrew alerting",
+    "container_title": "Code of Federal Regulations, Title 14, section 25.1322 (final rule 75 FR 67201)",
+    "volume": "",
+    "issue": "",
+    "pages": "25.1322",
+    "publisher": "U.S. Government",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.law.cornell.edu/cfr/text/14/25.1322",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched the Cornell Legal Information Institute page for 14 CFR 25.1322 and read paragraphs (a) to (f). A web search returned the Federal Register final rule 2010-27629 'Flightcrew Alerting' (2 November 2010, pages 67201-67210).",
+    "kind": "regulation (alert design requirements)",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "dismukes2007limits",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Dismukes",
+        "given": "R. Key"
+      },
+      {
+        "family": "Berman",
+        "given": "Benjamin A."
+      },
+      {
+        "family": "Loukopoulos",
+        "given": "Loukia D."
+      }
+    ],
+    "year": 2007,
+    "title": "The Limits of Expertise: Rethinking Pilot Error and the Causes of Airline Accidents",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Ashgate",
+    "publisher_place": "Aldershot, England",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned works OL36773752W and OL13669841W (Dismukes, Berman, Loukopoulos, Ashgate, 2007). Flight Safety Foundation Aero Safety World May 2007 review (pp. 53-54) fetched and read: 364 pp., 19 accidents 1991-2000.",
+    "kind": "book-length accident analysis",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "gawande2010checklist",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Gawande",
+        "given": "Atul"
+      }
+    ],
+    "year": 2010,
+    "title": "The Checklist Manifesto: How to Get Things Right",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Metropolitan Books",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780805091748",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL15436462W; edition listing shows Metropolitan Books, 2010, ISBN 9780805091748, 209 pages. Globe and Mail review fetched.",
+    "kind": "trade book (practitioner synthesis)",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "roscoe1968airborne",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Roscoe",
+        "given": "Stanley N."
+      }
+    ],
+    "year": 1968,
+    "title": "Airborne displays for flight and navigation",
+    "container_title": "Human Factors",
+    "volume": "10",
+    "issue": "4",
+    "pages": "321-332",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/001872086801000402",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/001872086801000402 returned this title, author Roscoe, Human Factors 10(4) 321-332, August 1968, with the abstract.",
+    "kind": "review paper, display principles",
+    "lane": "17-aviation-human-factors"
+  },
+  {
+    "key": "ahlstrom2016human",
+    "type": "standard",
+    "authors": [
+      {
+        "family": "Ahlstrom",
+        "given": "Vicki"
+      }
+    ],
+    "year": 2016,
+    "title": "Human Factors Design Standard",
+    "container_title": "DOT/FAA/HF-STD-001B",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Federal Aviation Administration William J. Hughes Technical Center",
+    "publisher_place": "Atlantic City International Airport, NJ",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://rosap.ntl.bts.gov/view/dot/71693",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched DOT ROSA P record rosap.ntl.bts.gov/view/dot/71693 (DOT/FAA/HF-STD-001B, 30 December 2016, abstract), FAA page hf.tc.faa.gov/publications/2016-12-human-factors-design-standard/ (author Vicki Ahlstrom) and NASA standards record standards.nasa.gov/node/1717.",
+    "kind": "government design standard",
+    "lane": "17-aviation-human-factors"
+  }
+]

@@ -495,3 +495,39 @@ LTF's learner dashboard and fly mode both fit Few's definition (a glanceable sin
 
 Confirmed this session: Open Library search and editions list for work OL8167542W (2006 O'Reilly, ISBN 9780596100162; 2013 Analytics Press edition); Few, Common Pitfalls in Dashboard Design white paper (perceptualedge.com/articles/Whitepapers/Common_Pitfalls.pdf, read in full); Few, The Chartjunk Debate newsletter (webspace.science.uu.nl copy, read in part); the book not read.
 
+## cairo2016truthful
+
+Cairo, A. (2016). The truthful art: Data, charts, and maps for communication. San Francisco, CA: New Riders.
+
+### Core claims
+
+Cairo, a journalism and visualization professor, writes for designers, journalists and anyone who will become "a data worker" (the publisher's words). The book is a sequel to his The Functional Art and argues that making a good chart is as much about reasoning with data as about drawing. Its organizing idea is five qualities of great visualizations: truthful, functional, beautiful, insightful and enlightening. Truthfulness comes first, and is framed as honest, thorough research and avoidance of self-deception, such as cherry-picking a time window. The book then teaches the statistical and design basics a practitioner needs to meet those qualities, including uncertainty, distributions, change, relationships, maps, and confidence and significance.
+
+### Specifics
+
+Structure (publisher table of contents, 400 pages, February 2016): Part I Foundations (what we talk about when we talk about visualization; the five qualities of great visualizations). Part II Truthful (the truth continuum; of conjectures and uncertainty). Part III Functional (basic principles of visualization; exploring data with simple charts; visualizing distributions; revealing change; seeing relationships; mapping data; confidence and significance). Part IV Practice (on creativity and innovation), with an epilogue.
+
+The five qualities, as summarized by a Cornell course page (secondary account, not the book): truthful (based on honest, thorough research); functional (accurate depictions that let the viewer do something, such as compare values, spot trends or estimate proportions); beautiful (aesthetically pleasing in a way that invites exploration, so beauty is part of communication rather than decoration); insightful (reveals evidence that would be hard to see otherwise); enlightening (changes our understanding of the world for the better). The same page says each quality is a spectrum and that designers must make deliberate trade-offs. A secondary source adds that Cairo describes the qualities as interrelated and ordered, with truthfulness first.
+
+Principles attributed to the book in that secondary account: do not obscure data (truthful design need not show all complexity but should not hide it); do not truncate axes, except where zero is not a meaningful reference point and the start does not distort perceived magnitude; let form follow function by choosing the graphic from the task; use rates rather than raw counts when population confounds a map; match chart type to the relationship (a scatterplot, not a map, for two variables); do not imply causation from correlation; and design for both spontaneous insight and knowledge-building insight that develops over time, often through interactive dashboards.
+
+Franconeri et al. (2021) cite Cairo and Klein (2018) for a font of human-silhouette icons for pictorial risk displays.
+
+### Replication and criticism
+
+The book is a craft and teaching text by an experienced practitioner; its evidence is the examples and the research it draws on, not original experiments, and I could not read its full text this session, so detail beyond the contents and the five qualities is secondary. The five-quality framework is a values statement, not a testable theory: two designers can disagree on whether a chart is "enlightening". Its advice on axes sits in a live debate that Franconeri et al. also report: some designers hold that a bar axis must start at zero, while others argue it depends on context. Cairo's position as relayed (zero unless it is not meaningful) is a middle path, not a settled finding.
+
+### Implications for LTF
+
+Use the five qualities as a short review rubric for LTF visuals, with truthfulness as a gate: a chart that cannot be defended as honest (cropped axis, selective window, a learner trend drawn from two points) does not ship, however attractive.
+
+Function means tying the chart to the task the learner is about to perform: a lesson chart exists so the learner can compare their airspeed with the target band, not to decorate. State that task in the caption and choose the form from it.
+
+Beauty here is not ornament: for LTF it means consistent type, restrained color and clear composition in both themes.
+
+The distinction between spontaneous insight (a learner sees at once that her approach was too fast) and knowledge-building insight (a pattern across ten flights) maps neatly onto LTF's two surfaces: the post-challenge debrief and the progress dashboard. Design each for its kind of insight.
+
+Use rates rather than raw counts when comparing sessions of different lengths.
+
+Confirmed this session: Open Library search (work OL17664549W, New Riders 2016); publisher page peachpit.com (table of contents, ISBN-13 9780133440539, 400 pages, February 8, 2016); Cornell INFO 3312 course notes on the five qualities (info3312.infosci.cornell.edu/notes/great-viz.html); WebSearch results on the five qualities. The book was not read.
+

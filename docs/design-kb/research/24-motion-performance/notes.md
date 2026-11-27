@@ -1,0 +1,95 @@
+# Lane 24: Motion, time and performance in interfaces
+
+Evidence notes for the Learn to Fly Design Knowledge Base. One section per source, in sources.json order.
+
+## thomas1981illusion
+
+Thomas, F. and Johnston, O. (1981). *Disney Animation: The Illusion of Life*. New York: Abbeville Press.
+
+### Core claims
+
+The book is a craft treatise by two of Disney's senior animators, written after decades of studio practice. Its central claim is that convincing movement is not a matter of drawing accuracy but of a small set of repeatable techniques that make the audience believe a drawn character has weight, intention and personality. Those techniques are usually summarized as twelve basic principles of animation, and the book organizes its account of Disney's process around them. It is a history and a teaching text in non-technical language, built on the authors' memory of what worked in the studio from the 1930s onward, not on controlled experiments.
+
+### Specifics
+
+A secondary account of the book (Wikipedia, "Twelve basic principles of animation", fetched this session) lists the twelve as: squash and stretch (deformation conveys weight and flexibility while volume stays constant in realistic work); anticipation (a preparatory movement readies the audience for an action); staging (placement, light and camera direct attention to what matters and strip unnecessary detail); straight ahead action and pose to pose (two ways of building a movement, often combined); follow through and overlapping action (loose parts keep moving after the main motion stops and move at different rates); slow in and slow out (more frames near the start and end of a motion, fewer in the middle); arcs (natural motion follows curved paths, mechanical motion is the exception); secondary action (supporting movement that adds life without pulling attention from the main action); timing (the number of frames an action takes sets its speed and conveys weight, mood and personality); exaggeration (pushing past literal reality, with restraint); solid drawing (volume and weight in forms); and appeal (the quality that makes a character interesting to watch).
+
+Publication facts confirmed this session: first published by Abbeville Press in 1981, with the 1981 edition regarded as having the best image quality; a revised edition appeared in 1995 from Hyperion under the inverted title *The Illusion of Life: Disney Animation*. Open Library lists the 1981 first edition and a collector's edition from Abbeville. Page counts differ between catalogs, so I do not quote one.
+
+The principles reach interface designers through intermediaries: Lasseter (1987) carries them into 3D computer animation and Chang and Ungar (1993) into user interfaces.
+
+### Replication and criticism
+
+There is nothing to replicate: the book states craft knowledge. Its authority comes from the quality of the films it explains and from the fact that generations of animators have used the vocabulary. Caveats from the secondary account: the principles were written for hand-drawn character animation, exaggeration needs restraint so it does not confuse the viewer, and secondary action should be dropped when it competes with the main action. Empirical work on interface animation (Tversky, Morrison and Bétrancourt 2002; Bederson and Boltman 1999; Heer and Robertson 2007, all in this lane) shows that attractive animation does not by itself improve comprehension, so craft quality is necessary but not sufficient evidence that an interface animation helps a learner. Treat the twelve principles as a source of hypotheses to test, not as proof.
+
+### Implications for LTF
+
+Three principles translate cleanly into a lesson and challenge app. Anticipation: a widget that is about to change (a gauge needle, a panel opening) should give a short cue before the change, so a beginner who is glancing between the sim and the browser is not surprised. Slow in and slow out: movement that eases rather than snapping reads as physical, which suits instrument-like widgets such as an airspeed needle or an attitude indicator, where the motion itself is part of the lesson. Staging: at any moment one thing should move, and the rest should stay still, so attention goes where the lesson wants it. Squash and stretch, exaggeration and appeal are mostly risky for a serious training tool: playful deformation on a checklist item would undercut trust.
+
+For fly mode, where the learner is flying and glancing at the screen, the lesson of timing is to keep any change slow enough to be read and quiet enough not to pull the eye from the sim. Decorative animation belongs in the lesson-reading context, not in fly mode. Never use motion to carry information that is not also available statically.
+
+Confirmed this session: Crossref has no record for the book; Open Library work OL2924612W (https://openlibrary.org/works/OL2924612W) lists Abbeville Press 1981 editions and ISBN 0896592332 for the collector's edition; Wikipedia pages "Disney Animation: The Illusion of Life" and "Twelve basic principles of animation" fetched for edition history and the list of principles. I did not read the book itself.
+
+## lasseter1987principles
+
+Lasseter, J. (1987). Principles of traditional animation applied to 3D computer animation. *ACM SIGGRAPH Computer Graphics*, 21(4), 35-44.
+
+### Core claims
+
+Lasseter argues that the arrival of reliable keyframe animation systems would let more people make computer animation and, unfortunately, more bad computer animation, much of it because users did not know the principles hand-drawn animators had used for over fifty years. The paper's abstract says it describes the principles of traditional two-dimensional hand drawn animation and their application to 3D computer animation, and that understanding them is essential to good computer animation and should also matter to the designers of the animation systems. It is a practitioner paper by a Pixar animator, with examples drawn from the films *Luxo Jr.* and *The Adventures of Andre and Wally B.*
+
+### Specifics
+
+The paper (full text read this session from a scanned copy) lists the principles it treats: squash and stretch, timing, anticipation, staging, follow through and overlapping action, straight ahead and pose-to-pose action (keyframing), slow in and out, arcs, exaggeration, secondary action, and appeal. Definitions it gives:
+
+- Squash and stretch defines the rigidity and mass of an object by distorting its shape during an action; the rule is that, however much an object squashes or stretches, its volume stays constant. A hinged object like the lamp in *Luxo Jr.* can squash without deforming.
+- Timing is the speed of an action and "gives meaning to movement". It reflects weight and size and can carry emotional meaning. He says the animator should spend enough time, but no more, on the anticipation, the action and the reaction, because too much time loses attention and too little means the movement finishes before the audience notices it. The faster the movement, the more important it is that the audience can still read it.
+- Anticipation is the preparation for an action. The amount of anticipation affects the speed of the action that follows: if the audience expects something, the action can be much faster without losing them. His example is a zip-off in *Andre and Wally B.* where the action itself lasts only three or four frames, but the anticipation lasts long enough that the audience knows what is coming.
+- Staging is presenting an idea so it is completely and unmistakably clear; he says only one idea should be seen by the audience at a time.
+- Slow in and slow out concerns the spacing of the in-between frames between extreme poses; mathematically, he says, it refers to second and third order continuity of motion. In 3D systems it is achieved by adjusting the tension, direction or bias and continuity of splines, and he warns that splines can overshoot at extremes when there is a large change over few frames.
+
+He makes a point that matters for software: designers of animation systems should understand the principles, because the tools shape what animators can easily do.
+
+### Replication and criticism
+
+This is expert opinion and craft description, with no experimental test. Its influence is enormous in the animation industry, and the principles became the standard vocabulary of computer character animation. Chang and Ungar (1993, this lane) explicitly adapt them to user interfaces, and later empirical HCI work (Tversky et al. 2002; Heer and Robertson 2007; Dragicevic et al. 2011) tests whether animated transitions actually help comprehension, with mixed results: motion that is well staged and eased helps in some tasks and not in others. The principles were developed for storytelling and character, so their transfer to information tasks is plausible but unproven in general.
+
+### Implications for LTF
+
+The most useful items are timing and anticipation as a pair. A transition should be slow enough to be followed and carry a cue that tells the learner it is about to happen, such as a highlight on the element that will change. Staging tells us to animate one thing at a time on a lesson page. Slow in and slow out gives a rule for easing curves on every moving widget. Lasseter's spline overshoot warning is a direct caution for instrument widgets: an easing curve that overshoots can briefly show a wrong value (an airspeed needle passing the true value), which in a training tool teaches the wrong thing. Use non-overshooting easing on any widget that shows a real quantity.
+
+Confirmed this session: Crossref returned DOI 10.1145/37402.37407 for volume 21 issue 4 pages 35-44 (the DOI 10.1145/37401.37407 appears in some BibTeX records, but Crossref's record is the one used here); full text read from https://www.ics.uci.edu/~fowlkes/class/ics162/exercises/lasseter.pdf and the SIGGRAPH education summary page https://education.siggraph.org/static/HyperGraph/animation/character_animation/principles/prin_trad_anim.htm.
+
+
+## chang1993animation
+
+Chang, B.-W. and Ungar, D. (1993). Animation: from cartoons to the user interface. *Proceedings of the 6th Annual ACM Symposium on User Interface Software and Technology (UIST '93)*, 45-55.
+
+### Core claims
+
+User interfaces are built from static presentations and handle change badly: icons expand into windows in one instant, menus pop up where nothing existed a moment before, and moved objects vanish in one place and appear in another. The authors argue that this forces users to compare the old and new screens and deduce the connection, which pulls attention from the task. Cartoon animation solves the same problem, because its audience follows even bizarre events without being startled. The paper tests that idea by applying cartoon techniques in the interface of the Self programming language, with the aim of offloading the interpretation of change to the perceptual system. The claimed benefits are cognitive (the user keeps thinking about the task) and affective (less surprise and unease).
+
+### Specifics
+
+Source of the principles: the authors state they draw on Thomas and Johnston's treatise. They group them as solidity, exaggeration and reinforcement.
+
+- Solidity. Objects should move continuously and as if they have mass. Dragging an outline instead of the object destroys that. Motion must keep up with the cursor, and the Self interface was tuned to hold 20 to 30 frames per second during interactive movement.
+- Motion blur. Cartoonists' rule of thumb, as the paper reports it: if an object moves more than half its size (or alternatively its full size) between two frames, add motion blur, because otherwise the eye sees two objects, one flashing out and another in (temporal aliasing). Self draws a stippled trail the color and width of the object between old and new positions. The authors note higher frame rates reduce but do not remove the need.
+- Arrivals and departures. Objects fly in, grow from a point or dissolve in, and leave the opposite way. Pop-up menus become "grow-up" menus that expand from the button and shrink back.
+- Anticipation. A small, quick contrary movement before the object moves by itself (not when the user drags it) draws the eye and prepares the user.
+- Slow in and slow out. Movement leaves a pose slowly, goes faster in the middle and ends slowly; the authors say this gives weight, reduces surprise and, without it, "movement feels artificial and dead". They stress these motions are still quite fast.
+- Arcs for non-interactive movement; follow through (objects wiggle briefly when they stop or are hit).
+
+Section 4 lists where interfaces differ from cartoons, and this is the most reusable part. A cartoon is passive and an interface is interactive, so the techniques are not imposed on objects the user is moving directly. The user must regain control immediately if they want to move on; animation should be "as fast as it can be while still preserving legibility", and the authors say that done well it can speed an interface up (moving an object across the screen in only two frames with motion blur). Surprise gags and wackiness should not transfer: anticipation that misleads would be disturbing in an interface.
+
+### Replication and criticism
+
+This is a design-research paper describing one system, not a controlled experiment. It reports no user study in the text I read; the claims of reduced cognitive load and increased pleasantness are argued, not measured. Later experiments qualify them. Tversky, Morrison and Bétrancourt (2002) find that informational animations often fail to beat equivalent static graphics, and Bederson and Boltman (1999) and Heer and Robertson (2007) find that animated transitions can help in specific, measurable tasks. The paper has been widely cited as the origin of the claim that interface animation should preserve object identity across states, which later work on animated transitions tests directly. The Self interface also used 1993-era colormap tricks, so the frame-rate figures should not be read as current targets.
+
+### Implications for LTF
+
+The strongest transferable rule is the purpose test: animation exists to show how the old state relates to the new one. On an LTF lesson page, a panel that opens, a checklist item that completes or a quiz answer that is revealed should change continuously enough that the learner sees what moved where, not flash. The second is the speed rule: as fast as legibility allows. Use short transitions, so that the learner is never waiting for the interface; never block input on a decorative animation, and let a click cancel a running one.
+
+The paper's warnings about wackiness map onto the aviation setting: bounce, wiggle and follow through are fine for a small reward cue in lesson reading, but should not appear on instrument widgets where a wiggling needle would look like turbulence or a fault. Anticipation must never mislead; do not animate toward a wrong answer. For fly mode, use only the minimal cues: a quick fade or slide that preserves identity, with no motion that is not triggered by the learner or by a real data change.
+
+Confirmed this session: Crossref DOI 10.1145/168642.168647 (title, authors, UIST proceedings, pages 45-55, 1993); full text read at https://bibliography.selflanguage.org/_static/animation.pdf.

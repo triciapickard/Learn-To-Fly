@@ -304,7 +304,7 @@ Shneiderman, B., Plaisant, C., Cohen, M., Jacobs, S., & Elmqvist, N. (2016). Des
 
 ### Core claims
 
-Shneiderman's textbook is the standard university text on interface design. Its best-known contribution to design practice is the "Eight Golden Rules of Interface Design", first published in 1985 and presented in the sixth edition in Section 3.3.4, within the chapter "Guidelines, Principles, and Theories". The rules are a compact checklist of experience-based heuristics, a close cousin of Nielsen's ten, aimed at interactive systems in general and, in Shneiderman's framing, at giving users a sense of mastery and control. The book also treats universal usability, design processes, interaction styles, and information search and data visualization as separate parts (table of contents from Pearson's listing, via search).
+Shneiderman's textbook is the standard university text on interface design. Its best-known contribution to design practice is the "Eight Golden Rules of Interface Design", first published in 1985 and presented in the sixth edition in Section 3.3.4, within the chapter "Guidelines, Principles, and Theories". The rules are a compact checklist of experience-based heuristics, a close cousin of Nielsen's ten, aimed at interactive systems in general. Pearson's contents listing (seen in search results) shows chapters on usability of interactive systems, universal usability, and guidelines, principles and theories, plus later parts on design issues such as information search and data visualization.
 
 ### Specifics
 
@@ -320,11 +320,11 @@ The rules, with the page's explanations in my words:
 7. Keep users in control: experienced users want to feel in charge and dislike surprises, tedious data entry, difficulty getting information and inability to reach their desired result.
 8. Reduce short-term memory load: the page says people can hold about seven plus or minus two chunks in short-term memory, and advises against making users carry information from one display to another (re-entering phone numbers, hiding site locations, splitting forms).
 
-The page notes that others, including Jakob Nielsen and Jeff Johnson, have expanded the rules since 1985. Overlap with Nielsen's ten is large: consistency, feedback, error prevention, reversal (user control and freedom), memory load (recognition rather than recall). What is distinct is rule 4 (closure) and rule 2 (universal usability).
+The page notes that others, including Jakob Nielsen and Jeff Johnson, have expanded the rules since 1985. Overlap with Nielsen's ten is large (consistency, feedback, error prevention, reversal, memory load); closure and universal usability are the distinctive rules.
 
 ### Replication and criticism
 
-The rules are not an empirical result and have not been tested as a set. They are accepted because they reflect repeated observation and agree with other lists (ISO 9241-110, Nielsen). One element is shaky: the "seven plus or minus two" figure in rule 8. Cowan (2001), whose abstract I read via Europe PMC, argues that Miller's number was "more of a rough estimate and a rhetorical device than a real capacity limit" and that the evidence suggests a central capacity limit averaging about four chunks. The advice to reduce memory load survives, but the number should not be quoted as a design limit; lane 09 covers the details. Another criticism, general to guideline lists, is stated by Smith and Mosier: guidelines must be tailored and often rest on judgment.
+The rules are not an empirical result and have not been tested as a set. They are accepted because they reflect repeated observation and agree with other lists (ISO 9241-110, Nielsen). One element is shaky: the "seven plus or minus two" figure in rule 8. Cowan (2001), whose abstract I read via Europe PMC, argues that Miller's number was "more of a rough estimate and a rhetorical device than a real capacity limit" and that the evidence suggests a central capacity limit averaging about four chunks. The advice to reduce memory load survives, but the number should not be quoted as a design limit; lane 09 covers the details. Smith and Mosier (1986) add a caution general to guideline lists: they must be tailored and often rest on judgment.
 
 ### Implications for LTF
 
@@ -346,16 +346,102 @@ Evidence type: a synthesis of cognitive psychology and design practice, with exa
 
 Principles and concepts named in those pages: affordances (what an object allows a person to do) and signifiers (perceptible signals of what can be done). In his preface, Norman says affordances cause confusion for virtual objects and that signifiers are more important to designers; he quotes "Signifiers are signs, perceptible signals of what can be done." Mapping (how controls relate to effects, with a note in the preface that what is a natural mapping varies by culture); feedback (informing people about the results of actions); conceptual models (the mental model people form of how something works); constraints (physical, cultural, semantic and logical limits that guide use; forcing functions split into lock-in and lock-out); knowledge in the head versus in the world (how much people must remember versus how much the environment shows them).
 
-Error: slips (action-based or memory lapses) are distinguished from mistakes (rule-based, knowledge-based, or memory lapses); these are linked to the seven-stage model of action. The preface lists design advice as: make things visible, exploit natural relationships between controls and function, use constraints intelligently, provide feedback, reduce memorization demands (summary on nngroup.com, not Norman's own words).
+Error: slips (action-based or memory lapses) are distinguished from mistakes (rule-based, knowledge-based, or memory lapses); these are linked to the seven-stage model of action. The NN/g book page lists the advice as: make things visible, exploit natural relationships between controls and function, use constraints intelligently, provide feedback, reduce memorization demands (a summary, not Norman's own words).
 
 Process: human-centered design is an iterative cycle of observation, idea generation, prototyping and testing; Norman says it suits incremental innovation, not radical innovation, and proposes activity-centered design as a variant.
 
 ### Replication and criticism
 
-It is a theory and craft book, so the question is not replication but influence and refinement. Norman himself revised the concept of affordances (borrowed from Gibson's ecological psychology) because designers misused it for on-screen elements; he now stresses signifiers. In the revised edition, the "human error is design error" position is sharpened by the slip and mistake taxonomy. Critics of such books note that the examples (doors, switches) are intuitive but offer limited quantitative guidance, and that applying the principles requires user observation, which Norman himself prescribes. I did not verify specific published critiques this session.
+It is a theory and craft book, so the question is not replication but influence and refinement. Norman's preface says affordances are confusing when applied to virtual objects, which is why he added signifiers. In the revised edition, the "human error is design error" position is sharpened by the slip and mistake taxonomy. I did not verify specific published critiques this session, and the principles give qualitative guidance rather than numbers, so they need user observation to apply.
 
 ### Implications for LTF
 
 Two parts apply directly. First, the gulf between what the learner wants to do and what the screen lets them do: every LTF control (a widget knob, a next button, a toggle between light and dark) needs a visible signifier and visible feedback. Second, error: when a learner enters a wrong answer or follows a checklist step wrongly, treat it as a design signal rather than a user failure; separate slips (they knew, but pressed the wrong control) from mistakes (they misunderstood), because the remedies differ (constraints and confirmation for slips; better explanation for mistakes). Widget interaction in the sim-side fly mode should use natural mapping: a widget that depicts the sim's control should match the sim's layout and direction of movement. Keep knowledge in the world: on-screen checklists and labels, not memorized lessons.
 
 Confirmed this session: publisher and author descriptions at www.jnd.org/books/the-design-of-everyday-things-revised-and-expanded/, jnd.org/preface-design-of-everyday-things-revised-edition/ (preface content), nngroup.com/books/design-everyday-things-revised/; Open Library ISBN 9780465050659 record (Basic Books, 2013, Revised and Expanded Edition). I did not read the book text.
+
+## krug2014dont
+
+Krug, S. (2014). Don't make me think, revisited: A common sense approach to web usability (3rd ed.). New Riders. (First edition 2000.)
+
+### Core claims
+
+Krug's short, popular book argues for a single guiding idea, which he calls his first law of usability and which is also its title: a page should not make the user think. A second claim is that how people actually use the Web is different from how designers imagine they do: users scan rather than read, settle for "good enough" choices (he calls this satisficing), and muddle through. The third is practical: usability testing should be so simple, cheap and frequent that teams really do it. The preface of the third edition says the basic principles are unchanged since 2000 because "usability is about people and how they understand and use things, not about technology". It is a craft book by a consultant, not a research report.
+
+### Specifics
+
+Evidence type: practitioner craft authority, based on the author's testing and consulting experience; it gives no experimental data. I read the publisher's sample pages (contents, preface and Chapter 4, plus the index).
+
+Contents (third edition, 216 pages per the publisher and Open Library): guiding principles ("Don't make me think!", "How we really use the Web: scanning, satisficing, and muddling through", "Billboard Design 101: designing for scanning, not reading", "Animal, vegetable, or mineral?: why users like mindless choices", "Omit needless words"); navigation and the home page; testing ("Usability testing on 10 cents a day: keeping testing simple, so you do enough of it"); and larger concerns (mobile, courtesy, accessibility). The preface says the second edition added three chapters, and the publisher says the third edition has updated examples and a new chapter on mobile usability.
+
+Chapter 4 (read in full from the sample) states Krug's second law of usability: it does not matter how many times you have to click, as long as each click is a mindless, unambiguous choice. He argues the "number of clicks" rule (some sites stipulate three, four or five) is a poor metric, and that what counts is how hard each click is, in the thought required and the uncertainty about whether the choice is right. He offers a rule of thumb, which he hedges with "might be something like", that three mindless, unambiguous clicks equal one click requiring thought, with exceptions where users repeat the same path or pages load slowly. A footnote credits Pirolli and Card's information foraging research for the "scent of information". Guidance when a choice is genuinely hard should be brief, timely and unavoidable; his example is the "LOOK RIGHT" marking on London street corners.
+
+The index points to material I did not read: scanning pages (pp. 22 to 23), satisficing (pp. 24 to 25, indexed alongside Gary Klein), the "average user" as a myth, do-it-yourself usability testing (p. 115) and the "reservoir of goodwill".
+
+### Replication and criticism
+
+Krug's claims are craft assertions. Some are consistent with independent research (scanning behavior; satisficing as a decision style) but I did not verify the research behind them in this lane; lane 08 covers scanning and eye tracking. The click-count claim is worth flagging as debunking material: the book itself argues against the "three-click rule", saying difficulty per click matters more, and gives a hedged exchange rate rather than a measured one. The "usability testing on 10 cents a day" advice is cheap-testing advocacy in the discount-usability tradition; Faulkner, Spool and Schroeder, and Hertzum (this lane) show small tests vary a lot by chance and by evaluator. The book was written for the Web of 2000 to 2013, so its navigation and forms examples may not map to a learning app.
+
+### Implications for LTF
+
+Apply the "mindless choice" test to every LTF screen: at each fork (start lesson, continue, skip, retry, open fly mode) the learner should be able to answer "which one?" without thinking, because the labels and grouping are unambiguous. Drop any internal rule such as "everything within three clicks" and replace it with a check that each step is self-evident and signals progress. Use brief, timely, unavoidable help at the point of need, such as a one-line prompt beside the control a learner must find on the sim, not a separate help page. Treat the book as inspiration for the testing routine (frequent, small, whole team watching), while checking its claims about scanning against the eye-tracking lane before baking them into layout rules.
+
+Confirmed this session: publisher sample pages (ptgmedia.pearsoncmg.com/images/9780321965516/samplepages/0321965515.pdf, read as text: contents, preface, Chapter 4, index); informit.com listing (3rd edition, New Riders, 216 pages, ISBN 978-0-13-359727-1); Open Library record for ISBN 9780321965516 (Pearson Education, 2014, 216 pages); search results listing the chapter titles.
+
+## iso2018ergonomics
+
+International Organization for Standardization. (2018). Ergonomics of human-system interaction, Part 11: Usability: Definitions and concepts (ISO 9241-11:2018). ISO. (Second edition; replaces ISO 9241-11:1998.)
+
+### Core claims
+
+ISO 9241-11 is the international standard that defines usability. Usability is "the extent to which a system, product or service can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use" (the definition as quoted in ISO 9241-110:2020, clause 3.6, which cites 9241-11:2018, 3.1.1). The standard treats usability as an outcome of use: it depends on who the users are, what they are trying to do and where, and so can differ for different users, goals and contexts. It gives a framework and does not prescribe methods for design or evaluation.
+
+### Specifics
+
+Evidence type: a consensus standard, not research. I could not buy or read the standard itself. The content below is from (a) ISO 9241-110:2020, which reproduces several 9241-11 definitions with clause numbers and which I read in the free preview, and (b) search results on the ISO, AFNOR and BSI catalogue records.
+
+Definitions as quoted in the 110 preview, with their 9241-11:2018 clause numbers. Usability (3.1.1) as above, with a note that the "specified" users, goals and context refer to the particular combination under consideration; the word "usability" is also used as a qualifier for the knowledge, activities and design attributes that contribute to it. Context of use (3.1.15): the combination of users, goals and tasks, resources and environment, where the environment includes technical, physical, social, cultural and organizational parts. Goal (3.1.10): the intended outcome. Task (3.1.11): a set of activities undertaken to achieve a specific goal (goals are independent of the means; tasks describe particular means). User (3.1.7): the person who interacts with the system, including those who operate it, use its output, or support it. User experience (3.2.3): the combination of the user's perceptions and responses resulting from the use and anticipated use of a system, product or service. Use error (3.3.3): a user action or lack of action that leads to a result different from that intended by the manufacturer or expected by the user; the term is chosen to avoid implying blame on the user.
+
+The three components, as ISO 9241-110 (clause 4.4) restates them: effectiveness is the accuracy and completeness with which users achieve specified goals; efficiency is the resources used in relation to the results achieved; satisfaction is the extent to which the user's physical, cognitive and emotional responses to use meet the user's needs and expectations.
+
+Structure (from the catalogue records): the main clauses are outcomes of use (effectiveness, efficiency, satisfaction) and usability in a context of use (specified users, goals, contexts), with an annex on measurement of the three components. The record for the standard shows it was last reviewed and confirmed in 2023 and that it cancels and replaces the 1998 edition.
+
+### Replication and criticism
+
+A standard is not replicated; it is revised and challenged. The 2018 edition is a revision of a 1998 text. One natural mapping of the three components to measures (my suggestion, not the standard's text): task success and errors for effectiveness, time or effort for efficiency, questionnaires such as the SUS for satisfaction. The 2018 edition also defines user experience as a related concept. I did not verify published criticism of the definition this session. A limit worth stating: because the definition is relative to "specified" users, goals and contexts, a usability claim without a stated context is empty.
+
+### Implications for LTF
+
+Write the LTF usability goals in this form: for complete beginners (specified users), completing the first lesson and its in-sim challenge (specified goals), on a desktop browser next to a running flight sim (specified context), with a stated share succeeding unaided (effectiveness), within a stated time (efficiency), and rating the experience on a standard questionnaire (satisfaction). Record the context of use for each page: fly mode has a different context (divided attention, partial screen, hands on the controls) from a lesson page read at a desk, so its targets differ. Use the standard's neutral term "use error" in analysis, which keeps the focus on design rather than on the learner. Specific numeric targets for LTF are product decisions, not something the standard supplies.
+
+Confirmed this session: free preview of ISO 9241-110:2020 (cdn.standards.iteh.ai sample PDF, read as text, clauses 3.1 to 3.11 and 4.4); web search of ISO, AFNOR and BSI records for ISO 9241-11:2018 (replaces 1998 edition; reviewed 2023; clause structure). Not read: the standard itself (paywalled; iso.org page returned an access error).
+
+## iso2020ergonomics
+
+International Organization for Standardization. (2020). Ergonomics of human-system interaction, Part 110: Interaction principles (ISO 9241-110:2020). ISO. (Second edition; replaces ISO 9241-110:2006.)
+
+### Core claims
+
+ISO 9241-110:2020 sets out seven interaction principles, with general design recommendations under each, that apply to the analysis, design and evaluation of interactive systems independent of any interaction technique. It is the standards counterpart to Nielsen's ten heuristics. The seven are: suitability for the user's tasks, self-descriptiveness, conformity with user expectations, learnability, controllability, use error robustness and user engagement. The order does not imply priority, and the standard says applying a single recommendation does not mean a principle is fully satisfied.
+
+### Specifics
+
+Evidence type: consensus standard. Read from the free preview (the full document is paywalled), which includes the foreword, introduction, scope, definitions, clause 4 in full and the table of contents of clause 5.
+
+Definitions of the seven principles (clause 4.1, paraphrased): suitability for the task, the functions and interactions are based on the task, not the technology; self-descriptiveness, the system presents information where needed so its capabilities and use are immediately obvious without unnecessary interactions; conformity with user expectations, behavior is predictable from the context of use and accepted conventions; learnability, the system supports discovery, allows exploration, minimizes the need for learning and supports learning when needed; controllability, users keep control of the interface and interactions, including speed, sequence and individualization; use error robustness, the system helps avoid errors, treats identifiable errors tolerantly and helps recovery; user engagement, functions and information are presented in an inviting and motivating way that supports continued interaction.
+
+Recommendations are grouped (Table 1): suitability (identifying suitability for a task; optimizing effort; defaults supporting the task); self-descriptiveness (presence and obviousness of information; clear indication of processing status); conformity (appropriate behavior and responses; internal and external consistency; changes in the context of use); learnability (discovery, exploration, retention); controllability (interruption by the user, flexibility, individualization); use error robustness (avoidance, tolerance, recovery); engagement (motivating the user, trustworthiness, increasing involvement). Annex A is an informative checklist.
+
+Changes from 2006: individualization was merged into controllability, user engagement is new, and other principles and recommendations were revised. The recommendations are described as derived from ergonomics research and from heuristic guidance including Bastien, Dzida, Molich, Nielsen and Tognazzini. The standard notes that principles overlap and that trade-offs are needed: its smart-watch example gives conformity with expectations higher priority because the display cannot support self-descriptiveness.
+
+Scope limits: the standard excludes marketing, aesthetics and corporate identity, and says it does not cover the specifics of every application domain, naming safety-critical systems, collaborative work and AI features.
+
+### Replication and criticism
+
+As a standard it is revised through committee, not tested. Its content converges with Nielsen (1994), Shneiderman and Norman, which is an argument for robustness of the shared ideas but also means the lists are not independent evidence of each other: all draw on the same earlier heuristics. The addition of user engagement in 2020 reflects a shift toward motivation, which earlier lists lacked and which has no strong empirical grounding in this document.
+
+### Implications for LTF
+
+Use the seven principles as the vocabulary for LTF design reviews alongside Nielsen's ten, since they add two things the Nielsen list lacks: learnability as its own principle (discovery, exploration and retention map onto lesson design), and user engagement (motivation, trustworthiness). Trustworthiness matters for a teaching product that touches aviation: the standard's category, with the scope note that safety-critical domains are not covered, is a reason to keep LTF's content verification visible. Use "suitability for the task" to keep widgets tied to what the learner is doing in the sim, not to what is technically easy to render. Use the checklist in Annex A only after obtaining the full standard.
+
+Confirmed this session: read the free preview of ISO 9241-110:2020 (cdn.standards.iteh.ai/samples/75258/83c8cf072187487686645aad04eff40e/ISO-9241-110-2020.pdf, 13 pages as text); web search of ISO and iteh records (second edition, replaces 2006). Not read: clause 5 recommendations in full.

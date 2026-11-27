@@ -135,3 +135,72 @@ One passage has not survived. Tinker explains the slowness of all capitals by wo
 
 Confirmed this session: Open Library record (work OL10488189W, edition OL5884652M). Full text of a scan of the 1963 book (gwern.net/doc/design/typography/1963-tinker-legibilityofprint.pdf) read with pdftotext, including summaries of Chapters 2, 4, 6, 7, 9 and 11 and Table 5.4. Dyson (2004), Legge and Bigelow (2011) and Larson (2005) read for the criticism.
 
+
+## rayner1998eye
+
+Rayner, K. (1998). Eye movements in reading and information processing: 20 years of research. *Psychological Bulletin*, 124(3), 372-422. DOI 10.1037/0033-2909.124.3.372.
+
+### Core claims
+
+This is the standard review of how the eyes behave during reading and other visual tasks, written by the researcher who, with George McConkie, built the modern field. The abstract says the review covers music reading, typing, visual search and scene perception but puts its main emphasis on reading as an example of cognitive processing. Reading topics are (a) the characteristics of eye movements, (b) the perceptual span, (c) integration of information across saccades, (d) eye movement control, and (e) individual differences, including dyslexia. The basic theme, in the abstract's words, is that eye movement data reflect moment-to-moment cognitive processes in the tasks examined.
+
+The practical meaning: reading is not a smooth sweep. It is a series of pauses (fixations) separated by rapid jumps (saccades), information is taken in during pauses, and how long the eyes stay on a word depends on how hard the word is to process.
+
+### Specifics
+
+I could read only the abstract of the 1998 paper this session. The figures below come from Rayner's later summary in the Journal of Eye Movement Research (2009), which states that it draws on his 1998 and 2009 reviews, and from the Clifton et al. (2016) tribute paper.
+
+Fixations and saccades. Average fixation duration is about 200 to 250 ms, with some under 100 ms and some over 500 ms. Saccades average about 7 to 9 letter spaces in alphabetic writing, with some under one letter space and some over 20. Readers make regressions (backward saccades) about 10 to 15 per cent of the time and skip about 25 to 30 per cent of words, short words far more often than long ones. Larson (2005) gives saccade durations of 20 to 35 ms.
+
+Perceptual span. The span extends about 3 to 4 letter spaces to the left of fixation and 14 to 15 to the right (Rayner 2009). Clifton et al. report that the first experiments used the moving window technique (McConkie and Rayner 1975), in which only a set number of characters around the fixated letter are shown and the rest are masked. Smaller windows slowed reading and disturbed eye movements, with shrinking the window on the right hurting more than on the left. The asymmetry reversed for Hebrew and for right-to-left text, so it follows reading direction. The boundary technique (Rayner 1975) changes a word during the saccade that crosses an invisible boundary, and showed that letter information from the next word helps reading.
+
+Individual differences. The abstract names dyslexia as one topic. Rayner (2009) notes that older readers have longer fixations, shorter saccades, and more skipping and regressions.
+
+### Replication and criticism
+
+The core findings have been replicated for decades across languages and methods, and gaze-contingent experiments overturned the idea (Goodman, Hochberg) that reading is mainly top-down guessing, since experienced readers look at most words (Clifton et al. 2016). The open arguments are about mechanism. Clifton et al. describe the debate over whether information from the next word influences the current fixation (parafoveal-on-foveal effects), which models that assume strictly serial attention shifts, such as E-Z Reader, did not predict. The authors say such effects are elusive in experiments and may be partly measurement error. The review is a narrative synthesis by an interested party, not a meta-analysis, and the numbers are averages for skilled adults that shift with text difficulty, reader skill and language.
+
+### Implications for LTF
+
+1. Plan for pauses. With saccades of about 7 to 9 characters and an average of one regression in every seven to ten jumps, LTF text will be re-read when it is hard. Put one idea per sentence and avoid sentences that force a re-read in lessons.
+2. The span favors the right. Put the informative word early in a heading or label, so the first pause on it is enough for a glance at fly mode. Short words are skipped, so do not hang meaning on them (for example "not", "no") without emphasis.
+3. Word spaces guide targeting (see Larson 2005). Do not break or hyphenate words in narrow columns, and do not set text in letter-spaced capitals.
+4. Because eye movements track processing difficulty, unfamiliar aviation text will cost more time and re-reading; do not time-limit a first reading of a briefing.
+
+Confirmed this session: Crossref record; abstract via Europe PMC (PMID 9849112). Numbers cross-read in Rayner (2009), "Eye movements in reading: Models and data", JEMR 2(5) (pmc.ncbi.nlm.nih.gov/articles/PMC2906818), and in Clifton et al. (2016), J. Memory and Language (clok.uclan.ac.uk/26495). The 1998 full text was not accessible.
+
+## rayner2016much
+
+Rayner, K., Schotter, E. R., Masson, M. E. J., Potter, M. C., & Treiman, R. (2016). So much to read, so little time: How do we read, and can speed reading help? *Psychological Science in the Public Interest*, 17(1), 4-34. DOI 10.1177/1529100615623267.
+
+### Core claims
+
+This long review for the public asks whether speed reading works. Its answer, from the abstract: there is a trade-off between speed and accuracy, and it is unlikely that readers can double or triple their speed (for example from around 250 to 500-750 words per minute) while understanding as well as at normal speed. If thorough understanding is not the goal, speed reading or skimming gets through text faster with moderate comprehension. The way to keep high comprehension and get through text faster is to practice reading and become a more skilled language user, for example through larger vocabulary, because language skill is at the heart of reading speed.
+
+The paper also serves as a short, authoritative description of what reading involves, and of why gadgets that speed up visual input do not help much. It was the last paper the first author worked on; Clifton et al. (2016) say he proposed it after the 2014 launch of the Spritz app, which claimed reading at up to 1,000 words per minute by showing one word at a time, and that the first draft was submitted days before he died.
+
+### Specifics
+
+I could read the abstract, the APS summary pages and the APS Observer report this session, not the full text. The details below are limited to what those sources state.
+
+Reading rate. Skilled readers already average 200 to 400 words per minute (APS Observer). Eye movements account for no more than about 10 per cent of the time spent reading (APS Observer), so the main bottleneck is not getting visual input onto the retina but recognizing words and combining them into meaning.
+
+Rapid serial visual presentation (RSVP). Many speed-reading products present one word at a time. The APS summary says these programs limit or change functions that depend on vision or aid comprehension. Removing the ability to go back and reread tends to make comprehension worse (APS Observer). Clifton et al. add that Schotter, Tran and Rayner (2014) tested the claim that regressions are harmful and found the opposite: inability to re-read impaired comprehension.
+
+Claims about prodigious readers. Extreme claims fail when tested, and such readers generally already know the topic; without prior knowledge they recall little and struggle with substantive questions (APS Observer). Skimming works when the goal is gist.
+
+Practice and vocabulary. The one reliable route to better reading is reading for comprehension. Broad exposure builds vocabulary and context that help readers anticipate upcoming words.
+
+### Replication and criticism
+
+This is a narrative evidence review of a large literature, not a new experiment, so its strength depends on the studies it summarizes. Its conclusion matches decades of eye-movement work (see rayner1998eye) and is not contested in the sources I read. A commentary by David A. Balota accompanies the paper (named in the APS Observer report). Gains from training are described as modest, and trained speed readers who gained speed generally lost comprehension (APS summary). Because I did not read the full text, I cannot say which individual studies it leans on, and I do not repeat figures I could not confirm.
+
+### Implications for LTF
+
+1. Do not build features that promise faster learning by faster reading. No word-at-a-time flashers, no speed-read modes. For beginners, comprehension, not rate, is the constraint.
+2. Allow re-reading. Briefings should stay on screen and be scrollable or revisitable, and quizzes should never remove the lesson text during answering. The review's finding that forced forward-only reading hurts comprehension supports a visible "back" and easy re-reading in step lists.
+3. Language skill drives reading speed. For a beginner audience, define terms at first use, keep a glossary within one tap, and reuse the same vocabulary across lessons. That is the lever the review identifies, and it is something LTF controls.
+4. Use skimming on purpose. Headings, key terms and short summaries support gist reading, which is how learners will use lesson pages when they return to look something up. Details needed for exact recall (for example a checklist step) belong in short, set-apart lines, not buried in paragraphs.
+5. Set honest expectations in marketing copy: LTF should claim clarity, not speed-reading style gains.
+
+Confirmed this session: Crossref record; abstract read via Europe PMC (PMID 26769745); APS pages psychologicalscience.org/publications/speed_reading.html and psychologicalscience.org/observer/speed-reading-promises-are-too-good-to-be-true-scientists-find-2; Clifton et al. (2016) at clok.uclan.ac.uk/26495 for the Spritz background. Full text (Sage) returned an access block.

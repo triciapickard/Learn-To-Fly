@@ -223,3 +223,70 @@ The legibility footnote anticipates what later reading research would discuss as
 5. The preference for historical models fits a tradition-first choice of text faces for lesson pages, with the caveat that the tradition was formed on paper.
 
 Confirmed this session: Full text of the 1906 first edition read from https://archive.org/details/writingilluminat00johnrich (title page: New York, The Macmillan Company; London, John Hogg; preface, scope, spacing section, Uncial section; quotations above). Open Library work OL2200371W lists the 1906 Macmillan edition. Archive metadata gives the author as Johnston, Edward, 1872-1944.
+
+## bodoni1818manuale
+
+Giambattista Bodoni, *Manuale tipografico* (Parma: Presso la Vedova, 1818; two quarto volumes, with a *Discorso* by his widow and a *Prefazione* by Bodoni). English translation of the preface: H. V. Marrot (London: Elkin Mathews, 1925).
+
+### Core claims
+
+The *Manuale* is a printer's specimen book that doubles as a manifesto. It displays the typefaces Bodoni cut and cast at Parma, and its preface states what he thought made type beautiful. Bodoni says there are "four different heads" under which the beauties of type are derived. I could confirm the wording of only the first two and part of a third from the translated preface as quoted on the Lawson Archive: regularity, "conformity without ambiguity, variety without dissonance"; "a second and not minor value ... from sharpness and definition, neatness and finish"; and the polish of a well-cast letter, which "should shine like a mirror on its face." A catalogue summary lists the four principles as uniformity of design, sharpness and neatness, good taste, and charm, but that is a paraphrase and I could not confirm the original wording of the last two.
+
+He also praises "the beautiful contrast as between light and shade" produced by a well-cut pen, which explains the high thick-to-thin contrast of his roman letters.
+
+### Specifics
+
+Bodoni died in 1813; the 1818 edition was published five years later. Daniel Berkeley Updike, reading it in 1922, records that it was completed by Bodoni's widow and Luigi Orsi, who had been Bodoni's foreman for twenty years, that only 290 copies were printed, and that the widow wrote she could not sell them for less than 120 francs. The first volume holds roman and italic Latin types over 144 pages, running from small to very large bodies, sometimes with as many as fourteen varieties of the same body in different weights of line. Updike doubts so many near-identical kinds were needed, but approves the finely graduated sizes, which let Bodoni "place on his pages, not approximately, but exactly, the size of type he wished to employ." The second volume holds Greek, exotic, German and Russian types, borders, mathematical and astronomical signs and music.
+
+Updike's judgments: the work is "probably the most elaborate specimen that the world has ever seen" and "the acme of Bodoni's late, chilly, dry manner." He distinguishes an early period of old-style types with profuse decoration from a later one of his own designs and "unadorned typography." He traces the "classical" look to Grandjean's thin straight serif, to Baskerville's modelled types and to enthusiasm for antiquity.
+
+### Replication and criticism
+
+The preface is a statement of taste by a printer selling his skill, so it has no empirical standing. Critics have attacked both its claims and its type. An unattributed web essay I fetched calls the *Manuale* "a brilliant and circumstantial sales talk," faults Bodoni's faces for "excessive contrast" and "hairline serifs" that needed wide spacing, extra leading and the best paper, and calls him a creature of fashion. I could not identify its author, so treat that account as low-weight. Morison's rule that the eye cannot easily read many words made of strongly contrasted thicks and thins (morison1936first) and Updike's own list that bans hair-line types (updike1922printing) point the same way, as does a web excerpt of Dowding saying modern faces need generous leading and narrow measures (dowding1954finer). All three are craft opinion, not measured results. The related experimental questions on contrast and legibility sit in lanes 02 and 03.
+
+### Implications for LTF
+
+1. "Regularity" as conformity without ambiguity and variety without dissonance is a compact statement of what a component library should do: consistent rhythm with controlled variation.
+2. The graduated size range, exact sizes rather than approximate ones, supports an explicit type scale in the design tokens, with each size chosen for a purpose rather than adjusted ad hoc.
+3. High-contrast "Didone" faces carry luxury and fashion connotations and have fragile hairlines; for a training product used on many screens and in dim rooms, restrict them to large display or avoid them.
+4. "Sharpness and definition" is a rendering requirement: icons, gauge ticks and hairline rules must remain crisp at 1x pixel densities; test them there.
+
+Confirmed this session: Updike's chapter XIX in the OCR text at https://archive.org/details/PrintingTypes (1818 edition, 290 copies, Orsi, descriptions of the volumes). Preface quotations from https://alexanderslawsonarchive.com/bodoni%E2%80%93the-anatomy-of-a-type-part-1/ (read via a fetch). Marrot translation details from an Oak Knoll catalogue entry (found by web search) and Open Library (work OL4189010W lists the 1818 Parma edition; OL4189009W lists the Marrot translation). Unattributed critique at https://www.typeseeds.com/articles/bodonimorris.html.
+
+## tschichold1995new
+
+Jan Tschichold, *The New Typography: A Handbook for Modern Designers* (Berkeley: University of California Press, 1995; translated by Ruari McLean, with an introduction by Robin Kinross). German original *Die neue Typographie*, Berlin, 1928.
+
+### Core claims
+
+The book is the programmatic statement of the New Typography. Its opening position, in the excerpt I read: "The essence of the New Typography is clarity." That clarity is set against an old typography whose aim was "beauty," and it is justified by the volume of print competing for attention: the "extraordinary amount of print" demands "the greatest economy of expression." Tschichold's method is that visible form should be developed "out of the functions of the text," with "form" created from function as in technology and nature. He names the function of printed text as communication, emphasis ("word value") and the logical sequence of contents.
+
+From that follow his two main rules. Reject the central axis, which he calls an "artificial, invisible backbone" imposed from outside and illogical because readers start at one side of a line. And prefer asymmetry: "Asymmetry is the rhythmic expression of functional design," more logical and "far more optically effective than symmetry." Ornament is rejected as "an ignorant tendency that our century must repress."
+
+### Specifics
+
+The reader excerpt (Armstrong, *Graphic Design Theory*, pages 35 to 38) gives these concrete points:
+
+- Hierarchy comes from content: "Every part of a text relates to every other part by a definite, logical relationship of emphasis and value, predetermined by content." The typographer expresses it through type size and weight, arrangement of lines, color and photography, and must study "how his work is read and ought to be read."
+- Asymmetry is not chaos: "A striving for order can, and must, also be expressed in asymmetrical form." It gives unlimited scope for variation, unlike the single central-axis form.
+- The New Typography "encourages 'standardization' in the construction of units, as in building."
+- Objectivity is not poverty. A letterhead with no ornament and legible type is called "meagerness," and its failure shows "the hollowness of the old principles."
+- A redesign example: a newspaper advertisement criticized for ornaments, seven kinds of type and sizes and centered design is redone with no ornament and five type sizes or faces, "good legibility."
+
+The reader's headnote adds context. Tschichold, then twenty-one, saw the 1923 Bauhaus exhibition at Weimar, advocated the new typography for a decade, and was later imprisoned by the Nazis and escaped to Basel. The headnote says he then "turned back to the classical typography of his early training" and sensed "an element of fascism" in the movement's purifying order.
+
+### Replication and criticism
+
+A manifesto and handbook, not an experiment. Its claims about optical effectiveness are assertions. Tschichold himself revised them: a digest of *The Form of the Book* reports that in later essays he said book typography has no "new" rules, only centuries-old principles (tschichold1991form). Another detail from that digest conflicts with Eye's dating of the same essays, so treat essay dates there with caution.
+
+Robin Kinross, via Matthew Carter's review in Eye, calls the chapters on the new typography "the heart of the book," records Tschichold's programme "Standardization, instead of individualism," and corrects a common assumption: "the Bauhaus had no fully fledged typographers" (Tschichold, with Renner and Trump, taught in Munich). Kinross also treats the movement as one tradition among others rather than the only rational one (kinross2004modern). Updike and Morison reached opposite conclusions about sans serif and convention (updike1922printing, morison1936first).
+
+### Implications for LTF
+
+1. Ask of every screen what its communication, emphasis and sequence are, then make size, weight and position carry exactly that. This is a usable design-review question.
+2. App screens, dashboards and widgets resemble the advertising and display work in Tschichold's examples more than book pages. His rules (asymmetry, left alignment, no ornament, few sizes) fit those surfaces better than lesson prose; this is my judgement.
+3. "Standardization" is the rationale for design tokens and shared components.
+4. His warning about meagerness applies to minimal dashboards: removing everything is not clarity.
+5. The excerpt's limit of five sizes in the redesigned advertisement is not a rule for LTF, but the idea of a small, deliberate set of sizes is.
+
+Confirmed this session: Reader excerpt text of "The New Typography" read from https://openlab.citytech.cuny.edu/langecomd3504fa2019/files/2018/10/Tschichold_NewTypo.pdf (quotations and headnote). Edition details (McLean translation, Kinross introduction, University of California Press 1995) from a web search of catalogue records; Open Library work OL8063615W lists the 1998 and 2006 printings. Carter review at https://www.eyemagazine.com/blog/post/type-tuesday40; essay digest at https://www.artequalswork.com/posts/form-of-the-book/.

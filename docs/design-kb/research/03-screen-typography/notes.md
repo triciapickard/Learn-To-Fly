@@ -264,3 +264,32 @@ Several decisions follow directly.
 - Use system-ui or a self-hosted face with a defined fallback stack, and subset with unicode-range to stay inside the bundle-size budget.
 
 Confirmed this session: fetched www.w3.org/TR/css-fonts-4/ (status, date, editors, sections 2.1.5, 2.6, 4.5, 4.9, 6.7, 8.1, 8.2), read in segments by character offset.
+
+## mangen2013reading
+
+Mangen, A., Walgermo, B. R., & Bronnick, K. (2013). Reading linear texts on paper versus computer screen: Effects on reading comprehension. International Journal of Educational Research, 58, 61-68.
+
+### Core claims
+
+Mangen and colleagues at the National Centre for Reading Education and Research (University of Stavanger) compared comprehension of two long linear texts, one narrative and one expository, read either on paper or as PDFs on a computer screen. Norwegian tenth graders who read on paper scored significantly higher on the reading comprehension test than those who read the same texts on screen, even after controlling for their reading ability, vocabulary and sex. The authors explain this with navigation and spatial memory: paper offers fixed, tangible spatial cues to where information sits in the text, whereas scrolling on a screen gives an unstable, less tangible sense of the text as a whole. The paper was widely cited as early evidence for a screen disadvantage in school-age reading and in assessment.
+
+### Specifics
+
+All details were read in the full text of the paper (PDF at educacion.udd.cl).
+- Participants: 72 tenth graders (43% female), aged 15 or 16, from two urban schools in Norway, a homogeneous middle-class sample.
+- Pretests: reading comprehension (one narrative and one expository text, 1,400 to 1,600 words each, one from the Norwegian reading centre and one a PISA example text), a word-chain test of word reading (74 chains, 4 minutes) and a 24-item synonym vocabulary test.
+- Main survey, four weeks later: a new comprehension test with one narrative and one expository text (1,400 to 2,000 words across the two texts). Students were randomized to read on screen as PDFs, or on A4 paper. Both groups answered the questions on screen, within a one-hour limit. The students could look back at the text while answering, and those on screen could scroll and switch between the PDF and the questions.
+- Display and print: 15-inch LCD monitors at 1280 by 1024 pixels and 60 Hz, with the PDF in Adobe Reader; the paper version used black 14 point Times New Roman at 100% scale.
+- Analysis: a sequential multiple regression, entering vocabulary, word reading and the pretest first, then sex, then a dummy variable for reading modality. Adding modality increased explained variance by 4% (p = .025), with total explained variance 42% and a standardized coefficient for modality of .216 (p = .025). Vocabulary was the strongest predictor.
+- Genre: contrary to the authors' prediction, there was no significant difference in the effect of medium between the narrative and expository texts (F(1,70) = .142, p = .707).
+- Table 1 of the paper shows 25 students in the paper group and 47 in the computer group, with pretest scores that did not differ.
+
+### Replication and criticism
+
+This is a single randomized study with a fairly small sample, which gave a modest effect (a 4% increment in explained variance). The group sizes of 25 and 47 are unequal despite randomization, which the paper does not explain in the passages read here. The authors acknowledge that they have no data on whether students on screen actually scrolled, so the scrolling explanation is a hypothesis. PDFs on a school LCD are a narrow stand-in for modern reading interfaces (reflowing text, mobile devices, adjustable size). The finding that the effect did not differ by genre contrasts with the later meta-analysis by Delgado and colleagues (2018), which found the paper advantage for informational texts and mixed texts but not for narrative-only texts, though the meta-analysis authors urged caution because few narrative-only comparisons exist. The meta-analysis, which cites this paper, found a small pooled advantage for paper, so this study is consistent with the overall direction, but the individual study alone cannot establish a general law.
+
+### Implications for LTF
+
+The paper's most useful idea for LTF is not the paper-versus-screen contrast itself but the proposed mechanism: readers build a spatial map of a text, and scrolling weakens it. Several practical consequences follow for lesson pages. Give long lessons a visible structure so that the reader can keep an overview: a persistent section outline, stable headings, and a progress marker that shows where the current section sits in the whole lesson. Keep related content close together so that the learner does not have to remember where a number appeared, for example by repeating the key speeds or a checklist in the place where they are used rather than only in a table earlier on the page. Avoid infinite scroll for lesson content, and prefer chunked sections with consistent positions for recurring elements (objective, steps, check-your-understanding). Make look-back easy, since students in this study could look back at the text while answering: quiz questions on a lesson should let a learner see the relevant passage, for instance with a link that scrolls to and highlights it. Consider a print or PDF summary of each lesson for learners who prefer paper. The study used continuous prose, so it says little about interactive widgets, but it supports not hiding key facts behind navigation.
+
+Confirmed this session: Crossref record DOI 10.1016/j.ijer.2012.12.002 (International Journal of Educational Research 58, 61-68, January 2013); read the full text of the paper (educacion.udd.cl PDF copy) including abstract, methods, results and discussion.

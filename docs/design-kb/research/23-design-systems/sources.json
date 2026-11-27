@@ -1,0 +1,68 @@
+[
+  {
+    "key": "alexander1977pattern",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Alexander",
+        "given": "Christopher"
+      },
+      {
+        "family": "Ishikawa",
+        "given": "Sara"
+      },
+      {
+        "family": "Silverstein",
+        "given": "Murray"
+      }
+    ],
+    "year": 1977,
+    "title": "A Pattern Language: Towns, Buildings, Construction",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Oxford University Press",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0195019199",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'a pattern language alexander' returned work OL3923600W (Christopher Alexander, Sara Ishikawa, Murray Silverstein and others, first published 1977) and edition OL5059163M (Oxford University Press, 1977, ISBN 0195019199)",
+    "kind": "craft treatise and pattern catalogue (architecture)",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "dearden2006pattern",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Dearden",
+        "given": "Andy"
+      },
+      {
+        "family": "Finlay",
+        "given": "Janet"
+      }
+    ],
+    "year": 2006,
+    "title": "Pattern languages in HCI: A critical review",
+    "container_title": "Human-Computer Interaction",
+    "volume": "21",
+    "issue": "1",
+    "pages": "49-102",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15327051hci2101_3",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query.bibliographic 'Pattern Languages in HCI A Critical Review Dearden Finlay' returned DOI 10.1207/s15327051hci2101_3, Human-Computer Interaction 21(1) 49-102, 2006; full text read at eprints.leedsbeckett.ac.uk/id/eprint/953",
+    "kind": "critical literature review",
+    "lane": "23-design-systems"
+  }
+]
