@@ -282,9 +282,9 @@ Challenge answers and account forms in LTF should validate sparingly. Validate u
 
 Confirmed this session: full article fetched and read at https://alistapart.com/article/inline-validation-in-web-forms/ (study design, results, timing and display findings, author caveats and comments); author's talk slides at https://static.lukew.com/MIX10_WebForms_Lukew_03152010.pdf repeat the same Etre figures and the participant quote.
 
-## baymard2024inline
+## scott2024inline
 
-Baymard Institute (Scott, E.). (2024, January 9). Inline form validation: 31% of sites have none and many more get it wrong. Baymard Institute research article.
+Scott, E. (2024, January 9). Inline form validation. Baymard Institute research article.
 
 ### Core claims
 
