@@ -1406,3 +1406,571 @@ shimmer after five seconds (ACC-050).
 Build captions and transcript requirements into the content schema for `video` blocks (ACC-054), a
 pause control and static equivalent into any future animated demonstration (ACC-050), and a rule in
 the widget review that needle and tape motion jumps under reduced motion (ACC-052).
+
+## Cognitive accessibility and the complete beginner
+
+### Why this is the center of LTF's access work
+
+The W3C's Cognitive and Learning Disabilities Accessibility Task Force published "Making Content
+Usable for People with Cognitive and Learning Disabilities" as a Working Group Note in April 2021.
+It is supplemental guidance: following it is not required for WCAG conformance, and the Note says it
+does not imply W3C Membership endorsement [@seemanhorwitz2021making]. Its argument is that people
+with cognitive, learning and neurodivergent conditions meet barriers the WCAG criteria mostly do not
+address. The groups it names include intellectual disabilities, specific learning disabilities,
+dyslexia, dyscalculia, ADHD and autism, and it adds a wider audience: people with mental health
+issues, age-related forgetfulness, temporary stress, limited technical knowledge, or limited
+familiarity with the language or culture.
+
+That wider audience describes most of LTF's learners on their first day. A complete beginner
+learning a cockpit is, for the length of the course, a person with limited domain knowledge under
+mild stress, often with a second task (the simulator) competing for attention. The cognitive
+guidance is therefore the highest-value accessibility material for this product. Part XIV, The
+Science of Learning, covers load and memory, and Part XXIV, Writing and Microcopy, covers plain
+language as a writing craft; this chapter states the accessibility requirements.
+
+The Note organizes its patterns under eight objectives: help users understand what things are and
+how to use them; help users find what they need; use clear and understandable content; help users
+avoid mistakes and know how to correct them; help users focus; ensure processes do not rely on
+memory; provide help and support; and support adaptation and personalization
+[@seemanhorwitz2021making]. Its evidence is task force consensus built from user research reviews,
+expert consultation and public comment, and several of its numbers are rules of thumb whose
+underlying studies were not confirmed.
+
+### Clear content
+
+The Note's clear content patterns are specific. Use common words, and explain jargon within one
+click; the Note says the most common 1,500 words are what people with severe language impairments
+are most likely to know. Use present tense, active voice and direct address. Avoid double negatives
+and nested clauses. Use literal language and explain figures of speech. Keep text succinct, with
+paragraphs of around 50 words or fewer, one topic each, and lists for three or more items. Use
+unambiguous date formats and avoid Roman numerals. Put each instruction step in its own bullet or
+number and use if/then tables for conditionals. Pair numbers with plain concepts, such as cold, warm
+or hot [@seemanhorwitz2021making]. Horton and Quesenbery's chapter on plain language adds a caution
+that matters for a technical course: write for the audience and do not oversimplify
+[@horton2013web].
+
+::: {.rule #ACC-057 grade="C"}
+**Define every aviation term and abbreviation at its first use in each lesson, and make its
+definition reachable in one action from anywhere it appears.** Explaining jargon within one click
+is a clear content pattern [@seemanhorwitz2021making]. Grade C.
+
+*In LTF:* the glossary chips in the lesson's right rail and below `xl`, each opening a `Popover` with
+the definition, are this pattern. Extend it: the first use of a glossary term in lesson prose should
+itself be a chip or link to the same definition, so a learner does not have to look across to the
+rail. Expand abbreviations such as IAS or ATIS in words at first use even when a chip exists.
+:::
+
+::: {.rule #ACC-058 grade="C"}
+**Write lesson prose in present tense, active voice and second person, with literal wording,
+paragraphs of about 50 words or fewer on one topic each, and no double negatives in quiz stems or
+answers.** These are the Note's clear content patterns [@seemanhorwitz2021making]; its 50-word figure
+is a rule of thumb, not a measured threshold. Grade C.
+
+*In LTF:* `AGENTS.md` already requires second person and US English. Add the paragraph length and
+double negative checks to the content review in `.claude/skills/ltf-review/references/content.md`;
+quiz stems such as "Which of these is not...?" are the commonest source of double negatives once an
+option also contains "not".
+:::
+
+::: {.rule #ACC-059 grade="C"}
+**Put each procedure step in its own numbered item, one action per item, and present conditional
+steps as if/then rows rather than as branching sentences.** Separate steps and if/then tables are
+named patterns [@seemanhorwitz2021making]. Grade C.
+
+*In LTF:* the `checklist` block, the challenge brief's Procedure and the `FlyPanel` "Steps" list
+already render one step per numbered item. Where a lesson says "if the engine does X, do Y,
+otherwise Z", use a two-column table or a `decision` `Callout` with one row per condition.
+:::
+
+::: {.rule #ACC-060 grade="C"}
+**Pair every number a learner must interpret with a plain statement of what it means in the
+situation, next to the number.** Pairing numbers with plain concepts is a clear content pattern
+[@seemanhorwitz2021making], and dyscalculia is among the conditions the Note names. Grade C.
+
+*In LTF:* the airspeed widget's `ReservedText` line, which states the meaning of the current band
+under the dial, is this pattern. Every widget that shows a reading should have one, and the
+`KeyNumbers` panel on `/reference/speeds` should give each value a short "what it is for" line
+rather than the bare token value.
+:::
+
+### Avoiding mistakes and recovering from them
+
+Under the mistakes objective, the Note asks that controls and content do not move unexpectedly,
+that users can go back without losing work, that forms ask for as little as possible, mark required
+fields and accept many input formats, and that errors are easy to undo, with a summary before
+submission [@seemanhorwitz2021making]. The universal design principle of tolerance for error asks
+for warnings, fail-safe features and the isolation of hazards [@connell1997principles].
+
+::: {.rule #ACC-061 grade="C"}
+**Save a learner's work as they go (quiz answers, Fly mode ticks, debrief choices, form drafts), so
+that a refresh, a lost connection or a step back never discards it.** Going back without losing work
+and avoiding data loss are named patterns [@seemanhorwitz2021making]. Grade C.
+
+*In LTF:* challenge flight state and debrief drafts are already kept in session or local storage by
+`features/challenges/storage.ts`. Extend the same treatment to answered quiz blocks in a lesson
+(so a learner who reloads a long lesson keeps their checked answers) and to the "Report a problem"
+form.
+:::
+
+::: {.rule #ACC-062 grade="C"}
+**Confirm only destructive or irreversible actions, say exactly what will be lost in the
+confirmation, and make every other action reversible instead.** Tolerance for error asks for
+warnings and fail-safe features [@connell1997principles], and making errors easy to undo is a
+cognitive pattern [@seemanhorwitz2021making]. Grade C.
+
+*In LTF:* the account deletion `Dialog` ("Delete your account?") and the `danger` button variant,
+which sits behind a confirmation, follow this. Resetting a widget ("Reset") and unticking a step are
+reversible and correctly need no confirmation. A future "reset my progress" action needs the same
+dialog as account deletion.
+:::
+
+::: {.rule #ACC-063 grade="C"}
+**Never move content or controls the learner did not ask to move: no layout shift as data loads, no
+auto-advancing steps, and no focus changes the learner did not trigger.** Controls and content that
+do not move unexpectedly are the first pattern under avoiding mistakes [@seemanhorwitz2021making],
+and the APG discourages setting focus without a user action [@w3c2026authoring]. Grade C.
+
+*In LTF:* the widgets' `ReservedText` reserves space for the longest variant of a changing line so
+that the layout does not jump as values change; keep that pattern. The landing page renders from
+static fallback data while the API loads, which avoids a shift when live counts arrive, provided the
+fallback strings are the same length class as the live ones.
+:::
+
+### Memory, authentication and repeated entry
+
+WCAG 2.2 moved two cognitive patterns into the normative standard. 3.3.8 Accessible Authentication
+(Minimum, AA) forbids a cognitive function test, such as remembering a password or solving a puzzle,
+in an authentication step, unless an alternative, a mechanism (password managers, paste), object
+recognition or personal content applies [@w3c2023wcag]. 3.3.7 Redundant Entry (A) addresses being
+asked again for information already given. In screen reader survey #10 (December 2023 to January 2024), CAPTCHA was the
+most problematic item by a notable margin [@webaim2026screen]. The cognitive guidance asks for processes
+that do not rely on memory and a login that does not depend on it [@seemanhorwitz2021making].
+
+::: {.rule #ACC-064 grade="B"}
+**Keep sign-in and sign-up free of CAPTCHA and puzzles, allow paste and password managers in every
+password field, and never require a learner to transcribe a code from one place to another.** This is
+3.3.8 [@w3c2023wcag]; CAPTCHA tops screen reader users' list of problems [@webaim2026screen], and
+memory-free login is a cognitive pattern [@seemanhorwitz2021making]. Grade B: the requirement is a
+standard, and the harm is documented in a large survey.
+
+*In LTF:* `/login` and `/signup` use `autoComplete="email"`, `"current-password"` and
+`"new-password"`, which lets password managers fill them, and "Remember me for 30 days" reduces how
+often a learner must log in. Keep both, and keep any future bot protection invisible (rate limiting
+on the server) rather than a challenge on the page. The account deletion dialog's
+`current-password` field is a re-authentication and passes for the same reason.
+:::
+
+::: {.rule #ACC-065 grade="C"}
+**Never ask a learner to enter the same information twice in one process; prefill or offer to reuse
+what they already gave.** This is 3.3.7 Redundant Entry [@w3c2023wcag], and processes that do not
+rely on memory are a cognitive objective [@seemanhorwitz2021making]. Grade C.
+
+*In LTF:* the debrief form asks the learner to score criteria they ticked as steps in the Fly tab;
+where a Fly tab tick corresponds to a rubric criterion, the debrief can show it ("You ticked this
+step in flight") without deciding the score for them. Sign-up asks for the password once, with a Show and
+Hide button inside `PasswordInput`, instead of a confirmation field; keep it that way.
+:::
+
+### Focus, help and familiar structure
+
+The Note's patterns for helping users focus include limiting interruptions, and its help objective
+asks for help that is easy to find. WCAG 2.2's 3.2.6 Consistent Help (A) concerns help offered in a
+consistent place [@w3c2023wcag; @seemanhorwitz2021making]. Fisk and colleagues' interface guidance
+for older adults covers getting lost in a system, navigation aids, depth versus breadth, and error
+recovery with help in context [@fisk2009designing]. And Power and colleagues' reviewers listed two
+problems WCAG 2.0 missed that are really cognitive: content not where users expect it, and an
+overly complex information architecture [@power2012guidelines].
+
+::: {.rule #ACC-066 grade="C"}
+**Put the way to get help in the same place on every page, including Fly mode, and keep it reachable
+after banners are dismissed.** This is 3.2.6 [@w3c2023wcag] and the help objective of the cognitive
+guidance [@seemanhorwitz2021making]. Grade C.
+
+*In LTF:* "Report a problem" appears in the `BetaBanner` and in the `Footer`. `FlyModeLayout` has no
+footer, and the banner is dismissible, so a learner in Fly mode who dismissed the banner has no help
+route. Add a small "Report a problem" link at the end of `FlyModePage`, in the same relative position
+as the footer link.
+:::
+
+::: {.rule #ACC-067 grade="C"}
+**Show at most one dismissible interruption above lesson content at a time, and keep dismissals
+remembered.** Limiting interruptions is a pattern for helping users focus
+[@seemanhorwitz2021making]. Grade C.
+
+*In LTF:* in a preview of a draft lesson, a signed-out learner can see the `BetaBanner`, the
+`UnverifiedWarning`, the `SignupBanner` and the resume bar stacked above the objectives. The beta and
+signup banners are both dismissible and remembered in localStorage, which is right; show the signup
+prompt only after the first lesson is completed rather than at its top.
+:::
+
+::: {.rule #ACC-068 grade="B"}
+**Give every lesson the same predictable order of parts, and keep the course navigation shallow,
+with the learner's location always shown.** Content in unexpected places and over-complex
+architecture were problems blind users met that guidelines did not cover [@power2012guidelines],
+and navigation aids and recovery from getting lost are central to design for older adults
+[@fisk2009designing]. Grade B: an observational study and a human factors synthesis.
+
+*In LTF:* `LessonPage` already fixes the order (objectives, blocks, "Fly it", "Go deeper", glossary,
+completion panel, prev and next), and `Breadcrumbs` plus `SectionNav` show location. Keep the order
+fixed in the renderer rather than in authors' hands, and keep the course two levels deep (module,
+lesson).
+:::
+
+### What this means for Learn to Fly
+
+Keep the glossary chips, the fixed lesson order, the one-step-per-item checklists and procedures,
+the `ReservedText` pattern, password manager support and storage of challenge drafts. Each is a
+cognitive accessibility pattern already built.
+
+Change the interruptions on a lesson's first screen (ACC-067), add a help link to Fly mode
+(ACC-066), and save quiz answers across reloads (ACC-061). Make first uses of glossary terms in prose
+link to their definitions (ACC-057).
+
+Build the clear content checks (paragraph length, double negatives, unexpanded abbreviations,
+conditional steps written as prose) into the content review skill and, where they can be detected
+mechanically, into `content:validate` (ACC-058, ACC-059). Give every widget reading and every key
+number a plain meaning line (ACC-060).
+
+## Accessible instruments, diagrams and widgets
+
+### Where the guidelines say least
+
+LTF's most distinctive content is also its hardest to make accessible: 13 hand-built SVG widgets
+(an airspeed dial and tape, a G1000 primary flight display, a VOR and CDI, a sectional chart legend,
+a traffic pattern, a wind triangle and others), each with Explore and Quiz me modes. Power and
+colleagues found that guidelines cover only about half of blind users' problems
+[@power2012guidelines], and interactive custom widgets are where that gap is widest: the APG says
+its examples do not work around gaps in browser or assistive technology support, and that mobile and
+touch support is not yet documented [@w3c2026authoring]. Images without text alternatives and
+conflicts between the screen reader and the web application were both leading frustrations in
+Lazar and colleagues' diary study [@lazar2007frustrates].
+
+There is also a new temptation. In the 2026 screen reader survey, 60.1% of respondents use AI to
+generate image descriptions or alternative text and 49.7% for detailed descriptions of complex
+images [@webaim2026screen]. That shows real demand for descriptions, not a reason to leave them out:
+a generated description of a gauge can name the shapes and miss the meaning, and in a course where
+the meaning is the lesson, LTF must author it.
+
+### What a text alternative for an instrument says
+
+A text alternative for a photograph describes what is in it. A text alternative for an instrument
+must state what it reads and what that means, because that is what a sighted learner takes from
+it. "Airspeed indicator" is a name, not an alternative. "Airspeed indicator showing [the current
+reading] knots, in [the named band]" is an alternative, provided the number and the range come from the widget's
+state and the aircraft data, not from the author's memory.
+
+::: {.rule #ACC-069 grade="B"}
+**Give every instrument drawing a text alternative that states its current reading and what the
+reading means in the lesson, generated from the same state that draws it and updated whenever it
+changes.** Missing text alternatives are among the most common failures on the web
+[@webaim2026million] and among the leading frustrations of blind users [@lazar2007frustrates];
+the universal design principles ask for essential information in more than one mode
+[@connell1997principles]. Grade B.
+
+*In LTF:* the airspeed widget does this: the dial is `role="img"` with `aria-label` "Round airspeed
+indicator showing" followed by the spoken reading, the slider's `aria-valuetext` carries the same
+reading, and `ReservedText` states the band's meaning on screen. Every widget must follow the same
+pattern, and the reading text must use the `{{vspeed.*}}` and `{{aircraft.*}}` data rather than
+literal numbers, so that the alternative can never disagree with the drawing.
+:::
+
+::: {.rule #ACC-070 grade="C"}
+**Give every diagram an authored long description that explains what the diagram teaches, not only
+what it shows, and make it available on the page beside the diagram.** Horton and Quesenbery's
+accessible media chapter calls for text alternatives for media [@horton2013web], and screen reader
+users' heavy use of AI for complex image descriptions shows the need is unmet elsewhere
+[@webaim2026screen]. Grade C.
+
+*In LTF:* `WidgetFrame` already ends with a "Describe this diagram" `details` element holding the
+widget's description. Make the description a required field in the widget registry and in the
+content schema for `widget` blocks, so that `content:validate --strict` fails a lesson whose widget
+has none. The three lesson images (Module 0 sim settings screenshots) need alt text that names the
+setting shown and its value.
+:::
+
+::: {.rule #ACC-071 grade="C"}
+**Hide purely decorative graphics from assistive technology (`alt=""` or `aria-hidden` on the SVG),
+and never hide a graphic that carries information.** Decorative images need empty alternatives so
+they are skipped [@lazar2007frustrates], and hidden elements must never be focusable
+[@w3c2023aria]. Grade C.
+
+*In LTF:* lucide icons beside text are `aria-hidden`, which is correct. The `LessonPath` connector
+and pins are `aria-hidden` inside an `ol` labelled "Lesson path", with state given as text; keep
+that. In widgets, a drawn bezel or a background terrain is decorative, while a needle, a course bar
+or a chart symbol is not.
+:::
+
+### Announcing changes
+
+When a learner moves a slider, the reading changes many times a second. Announcing each value
+floods a screen reader and makes the slider unusable; announcing none leaves a learner who changed
+the value through a stepper button without feedback. ARIA's live region properties give authors the
+means (`aria-live`, `aria-atomic`, `aria-relevant`, `aria-busy`) [@w3c2023aria], and the
+slider's `aria-valuetext` is the value assistive technology reports for the focused control
+[@w3c2023aria].
+
+::: {.rule #ACC-072 grade="C"}
+**Let the focused control speak its own value through `aria-valuetext`, and use a polite live region
+only for consequences elsewhere on the widget (a band change, a quiz result), announced once the
+value settles.** ARIA provides both mechanisms [@w3c2023aria]; announcing every intermediate value
+is the misuse the live-region rule (ACC-023) warns against. Grade C.
+
+*In LTF:* every widget has an sr-only `aria-live="polite"` message region. Check each one for when it
+updates: a message on every `onChange` of a range input is too often; a message when the band, the
+quiz state or a discrete mode changes is right. A short debounce (a few hundred milliseconds after
+the last change) is a reasonable default to test with screen reader users.
+:::
+
+### Building the controls
+
+The APG patterns define, for each kind of widget, its role, name, value and keyboard behavior
+[@w3c2026authoring]. For a slider, that means a role, a current value and range, a human-readable
+value text and the keyboard behavior the pattern specifies. The native `input type="range"` provides
+all of it in every browser, which is why the first rule of ARIA prefers it [@w3c2023aria].
+
+::: {.rule #ACC-073 grade="C"}
+**Use the native range input for every continuous value, styled as needed; build a custom slider,
+knob or bug only when the native element cannot express the interaction, and then implement the APG
+slider pattern in full and test it with a screen reader before it ships.** Native first is the
+first rule of ARIA [@w3c2023aria], and the APG defines the custom pattern [@w3c2026authoring].
+Grade C.
+
+*In LTF:* the eight native range or number inputs in the widgets are the right base. A heading bug
+on a directional gyro or an altimeter setting knob, if added, is the case that might justify a custom
+control; even then, a native range input beside the drawing (as in the airspeed widget) is usually
+simpler and more robust than making the drawing itself focusable.
+:::
+
+::: {.rule #ACC-074 grade="B"}
+**Where a custom widget behaves differently in a screen reader than its native equivalent, replace
+it with the native control rather than adding ARIA to compensate.** Conflicts between screen readers
+and web applications were a leading frustration [@lazar2007frustrates], and "No ARIA is better than
+Bad ARIA" [@w3c2026authoring]. Grade B: the frustration is documented by users; the remedy is
+standards guidance.
+
+*In LTF:* the Explore and Quiz me toggle and the "Show" view switcher are buttons with
+`aria-pressed`; if testing shows either announcing confusingly in JAWS or NVDA, a native radio group
+is the fallback.
+:::
+
+### Quiz modes and the extreme case
+
+Each widget's Quiz me mode asks the learner to set or identify something, and the quiz checks the
+widget's state. Newell and colleagues' argument that the extreme case belongs in the first design
+[@newell2011user] applies sharply here: a quiz that can only be answered by dragging a needle to a
+position on a dial is a quiz a screen reader user cannot take.
+
+::: {.rule #ACC-075 grade="C"}
+**Make every widget quiz answerable by keyboard and screen reader through the same state the drawing
+shows, and state the question and result in text.** The extreme case belongs in the first design
+[@newell2011user], and every function must be keyboard operable [@w3c2026authoring]. Grade C.
+
+*In LTF:* the airspeed quiz checks the widget's `ias` value, which the range input and steppers can
+set, and reports the answer as text ("{n} KIAS"); `QuizPanel` reports results in a polite region.
+That is the model. A quiz that asks the learner to "tap the hotspot" on the sectional legend must
+also offer the hotspots as a list of buttons.
+:::
+
+::: {.rule #ACC-076 grade="C"}
+**Write each widget's acceptance criteria as tasks for three people: a screen reader user who reads
+the value and its meaning, a keyboard-only user who sets a value and completes the quiz, and a
+learner with low vision who reads every label at 200% zoom.** This puts the extreme cases in the
+definition of done [@newell2011user] and uses the capability and demand method to choose them
+[@clarkson2003inclusive]. Grade C.
+
+*In LTF:* add the three tasks to the widget section of `.claude/skills/ltf-review/references/client.md`
+and to the widget pull request checklist, and record the result for each widget in the conformance
+log.
+:::
+
+### The two-dimensional exception, used narrowly
+
+The reflow criterion excepts diagrams and maps from its no-sideways-scroll rule [@w3c2023wcag]. A
+large SVG such as the G1000 primary flight display can legitimately need more width than a phone
+offers. The exception allows the diagram to scroll; it does not excuse the text around it.
+
+::: {.rule #ACC-077 grade="C"}
+**When a widget is too wide for the screen, scale the drawing or let only the drawing scroll inside a
+focusable region, and keep its controls, labels, readings and description in the normal reflowing
+flow.** The reflow exception covers the diagram, not its surrounding content [@w3c2023wcag]. Grade C.
+
+*In LTF:* `WidgetFrame`'s `p-4` canvas is the region that may scroll; the header, the mode toggle,
+"Reset", the steppers and "Describe this diagram" must stay within 320 px.
+:::
+
+### What this means for Learn to Fly
+
+Keep the airspeed widget's pattern as the reference for all widgets: a `role="img"` drawing with a
+spoken reading, a native range input with `aria-valuetext`, stepper buttons, an on-screen meaning
+line, a polite message region, a quiz that checks state, and "Describe this diagram".
+
+Change the live regions that update on every slider step (ACC-072), and raise the widget steppers
+to the 44 px level (ACC-042). Check that the sectional legend's hotspots have a list or button
+alternative (ACC-075).
+
+Build three things into the pipeline: a required description field for every widget and widget
+block (ACC-070), a rule that widget readings come from the aircraft data tokens (ACC-069), and the
+three-person acceptance tasks in the widget review checklist (ACC-076).
+
+## Designing with disabled learners
+
+### Recognize exclusion, solve for one, learn from diversity
+
+Microsoft's inclusive design method has three principles: recognize exclusion, solve for one and
+extend to many, and learn from diversity [@microsoft2017inclusive]. Recognizing exclusion means
+noticing where an interaction shuts someone out, on the argument that exclusion happens when
+designers solve problems with their own biases. Solving for one starts from a person with a
+permanent disability and extends the solution across the persona spectrum to people with temporary
+and situational limits. Learning from diversity treats disabled people as the experts in
+adaptation, under the slogan "nothing about us without us". The method's evidence is case studies
+from Microsoft products, not controlled tests, and "solve for one, extend to many" is a plausible
+hypothesis rather than a law; a solution for one group is not guaranteed to be best for another, a
+limit the user-sensitive inclusive design literature stresses [@newell2011user].
+
+Holmes's book carries the same method with more argument and fewer techniques. Her advice, as
+reviewers draw it out, is to recognize exclusion first, to offer varied ways to participate ("one
+size fits one" rather than one solution for all), to accept imperfection and keep improving, and to
+design for inclusion early [@holmes2018mismatch]. One reviewer called it "part manifesto, part
+manual" and a little short on technical detail; it is a frame for a team's attention, not a
+specification.
+
+::: {.rule #ACC-078 grade="C"}
+**Review every new flow against a persona spectrum of three: a permanent limitation, a temporary one
+and a situational one, chosen for that flow.** This is the persona spectrum of Microsoft's method
+[@microsoft2017inclusive] and Holmes's permanent, temporary and situational mismatches
+[@holmes2018mismatch]. Grade C: an industry method without controlled evidence.
+
+*In LTF:* for Fly mode, use a learner with one arm, a learner with a wrist injury and a learner with
+one hand on a yoke. For a lesson, use a learner with low vision, a learner with eye strain after two
+hours in the sim and a learner reading a tablet in glare. For the debrief form, use a learner with
+dyslexia, a learner who is tired and a learner who is not a native English reader.
+:::
+
+### Not by simulation
+
+The Microsoft training unit warns that simulating impairments with blindfolds and earplugs is
+misleading, and that empathy comes from learning how people actually adapt [@microsoft2017inclusive].
+Horton and Quesenbery's personas are, by the authors' own account, only stand-ins for real people
+[@horton2013web]. Newell and colleagues recommend ethnography and techniques from professional
+theatre, including actors playing out open-ended scenarios for an audience of designers, as ways to
+build understanding without reducing users to invented personas [@newell2011user]. The practical
+objection to all of these is cost: watching real users is slower than running a checker.
+
+::: myth
+**"Wearing a blindfold for an afternoon shows a designer what blind users experience."** Simulation
+captures the shock of sudden loss, not the skills of someone who has adapted, and Microsoft's
+inclusive design guidance warns that it misleads [@microsoft2017inclusive]. Petrie and Kheir found
+that blind and sighted users met largely different problems and rated their severity differently
+[@petrie2007relationship]; a sighted designer under a blindfold is still a sighted designer.
+:::
+
+::: {.rule #ACC-079 grade="C"}
+**Test with disabled learners, and use personas and scenario walkthroughs only to prepare for and
+interpret those sessions, never as a substitute for them.** Simulation misleads
+[@microsoft2017inclusive], personas are stand-ins [@horton2013web], and empathy methods work with
+real users [@newell2011user]. Grade C.
+
+*In LTF:* a small set of LTF learner personas, detailed in the way Horton and Quesenbery's
+eight are (for example a low vision learner using zoom, a screen reader user, a learner with ADHD flying beside the lessons, a learner
+with a tremor using a trackball) can sit in `docs/` for design reviews, each marked as a stand-in,
+with the date of the last real session that tested its assumptions.
+:::
+
+::: {.rule #ACC-080 grade="C"}
+**Run walkthroughs in the real setting: the simulator running, a controller or yoke in one hand, the
+second screen at arm's length, room light as the learner has it.** Newell and colleagues argue for
+scenarios grounded in real use over abstract personas [@newell2011user], and Microsoft's situational
+spectrum is defined by context [@microsoft2017inclusive]. Grade C.
+
+*In LTF:* the challenge flow (Brief on the desktop, Fly mode on a tablet, Debrief back on the
+desktop) is the scenario to walk through first, because it crosses devices and attention states.
+:::
+
+### Social acceptability and a single product
+
+Shinohara and Wobbrock interviewed 20 people with disabilities (eleven blind, three with low vision,
+four deaf or hard of hearing, one deaf-blind, one with cerebral palsy) in sessions of 60 to 90
+minutes [@shinohara2011shadow]. Assistive devices sometimes marked their users as disabled;
+functional access took priority over self-consciousness; and two misperceptions pervaded their
+experience: that assistive devices functionally eliminate a disability, and that disabled people
+would be helpless without them. Participants felt self-conscious when a design drew attention to
+difference (a phone that spoke aloud, for example) and valued devices that let them access what
+everyone else could. The authors conclude that accessibility should be built into mainstream
+technology and, where that is not possible, that assistive technology should be designed for social
+acceptability. The sample was small, mostly blind and recruited locally, and the authors call for
+work with other disabilities; the finding is qualitative evidence, not a measured effect.
+
+::: {.rule #ACC-081 grade="B"}
+**Never build a separate "accessible version" or mode with different content, fewer features or a
+different look; put every access feature into the one product every learner uses.** Participants
+valued access to what everyone else had and felt self-conscious when design marked difference
+[@shinohara2011shadow], and equitable use asks for the same means of use for all and no segregation
+of any group [@connell1997principles]. Grade B: a qualitative study consistent with a consensus
+principle.
+
+*In LTF:* there is one lesson path, one progress model, one badge system and one set of widgets for
+every learner, and access comes from the same pages working with a keyboard, a screen reader, zoom
+and reduced motion. Keep it that way. A future "text only" view of a widget is acceptable only as a
+view every learner can open, not as a replacement offered to some.
+:::
+
+::: {.rule #ACC-082 grade="B"}
+**Name access settings by what they change (Display, Text size, Motion, Sound), never by a
+disability or as "accessibility mode", and place them with the other preferences.** A setting that
+announces a disability draws attention to difference, which Shinohara and Wobbrock's participants
+found uncomfortable [@shinohara2011shadow]; treating age or ability as a spectrum of settings rather
+than a user segment follows Fisk and colleagues' caution that age is a blunt proxy for ability
+[@fisk2009designing]. Grade B.
+
+*In LTF:* the `ThemeToggle`'s "Day", "System" and "Night" are good names. The new Motion and Sound
+settings (ACC-048, ACC-053) and any text size control belong beside it in `/account` Preferences and
+in the header menu, with plain names.
+:::
+
+::: {.rule #ACC-083 grade="C"}
+**In copy and design documents, never imply that assistive technology removes every barrier or that
+a disabled learner is helpless without it, and do not describe disabled learners as a special
+category of "user".** These are the two misperceptions Shinohara and Wobbrock found
+[@shinohara2011shadow], and Holmes argues that treating inclusion as charity widens the gap it means
+to close [@holmes2018mismatch]. Grade C.
+
+*In LTF:* an accessibility statement should describe what works and what does not, plainly (for example, "the
+G1000 widget's drawing is not fully described yet; its readings are"), not promise that a screen
+reader makes everything usable. Design notes in `v1.md` and `v2.md` should say "learners using a
+screen reader", not "disabled users".
+:::
+
+### Older learners as a normal case
+
+Fisk and colleagues' primer starts from the premise that age-related changes in sensation,
+perception, cognition and movement are systematic enough to design for from the start, and that
+doing so helps younger users too [@fisk2009designing]. Its own chapter asking how to define an
+older adult shows that the category is a judgment call. LTF teaches adults of any age a new skill, so
+aging eyes, hands and hearing are part of its normal audience, not an edge case. The book's instructional design chapter (chunking
+complex tasks, practice, feedback) also maps directly onto lesson sequencing, which Part XV,
+Instructional Design, covers.
+
+::: {.rule #ACC-084 grade="C"}
+**Recruit older adults as a standing part of every usability session, and treat their difficulties
+as findings about the design rather than about age.** Age-related change is systematic enough to
+plan for, and designing for it helps younger users too [@fisk2009designing]; exclusion is a design
+outcome [@holmes2018mismatch]. Grade C.
+
+*In LTF:* include at least one learner over 60 in each round of task testing, using a mouse or
+trackball at a normal desktop distance, and record text size, contrast and target problems
+separately from content problems.
+:::
+
+### What this means for Learn to Fly
+
+Keep the single product: one lesson path, one progress model, one set of widgets, access built into
+each (ACC-081). Keep plain setting names like "Day" and "Night" (ACC-082).
+
+Change the way reviews are framed: use a three-person persona spectrum per flow (ACC-078) and walk
+through challenges in the real setting with the sim running (ACC-080). Write the accessibility
+statement in honest, specific terms (ACC-083).
+
+Build a recruiting habit. LTF needs a short list of learners who use screen readers, keyboards or
+switches, magnification, and older learners, who can be paid to try new modules before they are
+published (ACC-079, ACC-084). The sessions need not be large; the evidence in this Part says the
+problems they find are the ones no checklist will.

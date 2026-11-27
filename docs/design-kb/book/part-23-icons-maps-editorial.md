@@ -728,3 +728,296 @@ The `traffic-pattern` and `airspace-profile` widgets are white lies by design, a
 
 On pages, the card-on-card habit is the 1 + 1 = 3 problem (ICO-060). The lesson page stacks a `SignupBanner`, a resume bar, an objectives `Card` and then blocks that are themselves bordered cards (`QuizBlock`, `WidgetFrame`, Callouts). Each is reasonable; together they make a page of boxes. Removing the border from one level of that stack (for example, letting the objectives sit as a list under a rule rather than in a tinted card) would make the remaining boxes mean something.
 
+## Ornament: when decoration earns its place
+
+### A grammar, not a pattern book
+
+Owen Jones prefaced the color plates of *The Grammar of Ornament* (1856) with thirty-seven numbered propositions, "General principles in the arrangement of form and colour, in architecture and the decorative arts" [@jones1856grammar]. He wrote against the slavish copying of published patterns in his day; Proposition 36 says, in substance, that the principles discoverable in the works of the past belong to us, but not the results, and Proposition 37 ends with a call for better education of artists, manufacturers and the public in general principles [@jones1856grammar]. The propositions most useful for an interface, paraphrased from the 1856 text, are these. Decorative arts arise from and should attend upon architecture (1). Works should possess fitness, proportion and harmony, the result of which is repose (3). Construction should be decorated, but decoration should never be purposely constructed (5). Beauty of form comes from lines growing out of one another in gradual undulations, with nothing that could be removed without loss (6). Care for the general forms first, subdivide them with general lines, then fill the interstices with ornament that can itself be subdivided for closer inspection (7). All ornament should be based on a geometrical construction (8). Flowers and natural objects should not be copied but conventionalized (13) [@jones1856grammar].
+
+On color, Jones says primary colors should be used in small quantities on small surfaces, balanced by secondary and tertiary colors on larger masses (16), a rule close to Imhof's a century later. Propositions 24 to 27 apply Chevreul's simultaneous contrast, and 28 to 33 give boundary rules: colors should never impinge on each other, and ornament on a contrasting ground should be separated by an edging of a lighter color, of gold, white or black [@jones1856grammar]. Proposition 18 gives numerical balance ratios from Field's chromatic equivalents, a nineteenth-century theory not checked against modern color science, and none of its numbers should be used. The book's cultural framework ranks the ornament of cultures in a Victorian progress narrative that a modern reader should not adopt [@jones1856grammar]. Its principles are hypotheses about balance, hierarchy and edge separation, not laws.
+
+::: {.rule #ICO-069 grade="C"}
+**Attach ornament only to an element that already exists for a structural reason; never add an element in order to decorate it.** Jones's fifth proposition, that construction should be decorated but decoration never purposely constructed, is the oldest statement of this test [@jones1856grammar]. Craft authority.
+
+*In LTF:* the teal "horizon line" passes: it decorates real structure (the active nav item, the active tab, the `LessonPath` connector between completed stops, the progress fill, link underlines). A decorative divider, background pattern or illustrated band added between landing sections, with no content or navigation job, fails.
+:::
+
+::: {.rule #ICO-070 grade="C"}
+**Test every decorative element by removing it: if the page loses nothing a learner needs or recognizes, leave it out.** Jones and Dresser both define a beautiful composition as one from which nothing can be removed without loss [@jones1856grammar; @dresser1873principles].
+
+*In LTF:* the 24 px icons heading the landing "What you need" cards and the `FlaskConical` in `BetaBanner` are removable without loss of meaning; they stay only if they carry identity (once the custom icon set exists) and go first when a page is too busy.
+:::
+
+::: {.rule #ICO-071 grade="C"}
+**Separate any patterned or tinted ground from text and symbols with a quiet edge or zone.** Jones's boundary propositions call for an edging of a lighter or darker color between ornament and a contrasting ground, the craft ancestor of halos and knockouts [@jones1856grammar; @imhof2007cartographic].
+
+*In LTF:* if a texture or motif is ever added (a faint chart grid, a contour pattern on a hero band), text never sits directly on it: a `surface` panel or a `Label`-style halo sits between them, and in Night the zone is redrawn, not inverted.
+:::
+
+::: {.rule #ICO-072 grade="C"}
+**Take principles from historical and admired work, never its results: do not copy another product's motifs, livery or ornament.** Jones's Proposition 36 distinguishes the principles that belong to everyone from the results that belong to their makers [@jones1856grammar].
+
+*In LTF:* the instrument and chart drawing style is derived from how real instruments and charts work, which is a principle; it should not become a copy of a particular avionics maker's screens or of the sim's own interface art. The tail-fin mark is LTF's own.
+:::
+
+### Utility first, then character
+
+Christopher Dresser wrote *Principles of Decorative Design* as art education for those who make manufactured goods; its preface says it attempts "simply to instruct" [@dresser1873principles]. His order is utility first: an object must first be formed as a work of utility and may then be made as beautiful as you please, and an object that is unpleasant to use will in the end be set aside. On truth, he condemns imitating one material in another (wood graining, marbling, a jug imitating wicker). On expression, he links form to effect: sharp, angular or spiny forms are exciting, while bold, broad forms and "breadth" of treatment give repose, so the ornamentist should ask what effect each form has on the mind. Decoration should suit the room, richness for a dining room, worth for a library, repose for a bedroom, and glitter must be used sparingly or it reads as vulgar [@dresser1873principles]. The claims about emotional effects of forms are plausible but untested in the book, and its moral and class framing is dated.
+
+::: {.rule #ICO-073 grade="C"}
+**Keep the base state of every screen calm (broad, quiet forms and few strong contrasts) and reserve sharp, high-contrast, angular treatment for warnings.** Dresser ties angular and glittering forms to excitement and broad treatment to repose, and cautions that glitter used freely reads as vulgar [@dresser1873principles]. Craft claim; consistent with the regular-base principle below.
+
+*In LTF:* the warm neutrals and single accent are the calm base. The red `bg-warn` 64 px play disc on `YouTubeEmbed` is the one place a warning color is used for something that is not a warning; replace it with `ink` or the accent so that red keeps its meaning (see also ICO-018).
+:::
+
+::: {.rule #ICO-074 grade="C"}
+**Do not imitate a material the interface is not made of; draw bezels, metal and depth only where a real instrument is being depicted.** Dresser counts imitation of one material in another as a failure of truth [@dresser1873principles].
+
+*In LTF:* page UI stays flat (cards are `surface` with a 1 px line or soft shadow, which is what they are). The `fill-bezel` body of the G1000 widget is acceptable because it depicts a real instrument; the same bezel treatment on a page card, toast or button would not be.
+:::
+
+### Order, and the breaks in it
+
+Ernst Gombrich's *The Sense of Order* extends his study of pictorial representation to decoration [@gombrich1979sense]. A Kirkus review summarizes the central argument: decoration arises from an innate sense of spatial order, balancing economy (quick comprehension, simplicity, predictability) against intellectual enjoyment (variety, complexity, surprise), so that it sits between monotony and confusion. Henri Zerner's review reports Gombrich's three activities of the decorative artist: framing (defining and emphasizing the field), filling (its content) and linking (connecting elements into networks). Drawing on Popper, Gombrich argues that we assume continuity and regularity and notice breaks in them, so the sense of order is a prerequisite for perceiving disorder. He observes that repetition can strip a motif of its representational meaning, and a review by Anthony Storr adds that excess order can drain meaning altogether [@gombrich1979sense]. Zerner finds the arguments heavily qualified, thinks the split between decorative and symbolic art reflects a Western classical tradition, and says Gombrich underestimates how fast patterns acquire social meaning. The core claim about expectation and deviation is consistent with later perception research, which this Part did not review.
+
+::: {.rule #ICO-075 grade="C"}
+**Give every ornament one of three jobs (framing a field, filling it, or linking elements) and remove any that has none.** Gombrich's framing, filling and linking describe what decoration does; ornament doing none of them is surplus [@gombrich1979sense].
+
+*In LTF:* `Card` and panel borders frame; the drawn sectional fills its `WidgetFrame`; the `LessonPath` connector and the curriculum path link. A second border inside a card, a background tint behind a heading that already has a rule, or a decorative icon over a heading has no job.
+:::
+
+::: {.rule #ICO-076 grade="C"}
+**Keep the base layout regular (aligned grid, consistent spacing, one card style) so that a warning or a current state can break the pattern and be seen.** People assume regularity and notice deviations from it, so an interface already full of irregular ornament leaves an alert nothing to break [@gombrich1979sense].
+
+*In LTF:* the `border-4 border-warn` random-event alert and the single ink "current" pin in `LessonPath` work because the rest is regular. Do not add competing irregular elements (rotated badges, mixed card radii, ad hoc tints) that dilute them. The bracket radii in the code (`rounded-[2px]`, `[3px]`, `[4px]`) should be folded into the token radii.
+:::
+
+::: {.rule #ICO-077 grade="C"}
+**Do not repeat a decorative motif or badge on every item in a sequence; mark only the items that differ.** Repetition can strip a motif of its meaning, so a badge on every step stops meaning anything [@gombrich1979sense].
+
+*In LTF:* curriculum rows show "Bonus" only on bonus lessons and "Up next" only on the next module, which is right. If completed lessons each get a check, the check is a state, not ornament; a decorative airplane glyph on every row would be ornament repeated into noise.
+:::
+
+### The embellishment debate
+
+The minimalist position has its most famous modern statement in Tufte, whose "do no harm" color principle and 1 + 1 = 3 analysis argue against non-data decoration [@tufte1990envisioning]. Its extreme ancestor is Adolf Loos's lecture "Ornament and Crime" (1910, often dated 1908), which argues that ornament is wasted labor, material and capital, and that its absence is a mark of cultural progress [@loos1910ornament]. Loos's economic point, that decoration costs production and reading time and dates quickly, is worth keeping. His premises are not: the essay ranks children, non-European peoples and criminals as earlier stages of one human development, a colonial and racial hierarchy rather than science, and its figures are unsourced [@loos1910ornament].
+
+The experimental evidence complicates minimalism without overturning it. Bateman and colleagues showed 20 students 14 embellished charts by the designer Nigel Holmes and plain versions with the same data, titles and labels [@bateman2010useful]. Accuracy in describing the charts was no worse for the embellished ones, and description of the chart's value message was better. Recall after 12 to 22 days was significantly better for the embellished charts on subject, categories, trend and value message, and plain charts needed more prompting. Participants preferred the Holmes charts, and 40 percent of viewing time went to embellishment or dual-coded regions without making description slower [@bateman2010useful]. The sample was small, with ten people per recall condition, one embellishment style and one-tailed tests, and the authors do not advocate embellishment as a principle [@bateman2010useful]. A later dual-task study by Borgo and colleagues, outside this bibliography, found embellishments helped memory but slowed visual search. Borkin and colleagues found that observers agree about which visualizations are memorable, and that color and a human-recognizable object raise memorability [@borkin2013what]. Memorability is a one-second recognition measure, not comprehension, and a replication on scientific visualizations found the "dense and colorful" result did not transfer cleanly [@borkin2013what].
+
+::: {.rule #ICO-078 grade="D"}
+**Use embellishment that is tied to the content only where memory of the gist matters more than speed (recaps, share cards, the landing page), and never in explanations or Fly mode.** Embellished charts were recalled better weeks later without losing description accuracy, but the sample was small, memorability is not comprehension, and the minimalist case against non-data decoration remains strong for reading tasks [@bateman2010useful; @borkin2013what; @tufte1990envisioning].
+
+*In LTF:* a module-completion card or the `CourseBadge` roundel may carry illustration tied to what was learned. The lesson body, `QuizBlock`, the widgets and everything in `FlyModePage` stay plain.
+:::
+
+::: myth
+**"Ornament is waste, and any decoration harms comprehension."** The modernist case descends from Loos, whose argument rests on discredited premises and unsourced figures [@loos1910ornament]. Data-tied embellishment did not reduce description accuracy and improved long-term recall in a small experiment [@bateman2010useful]. Decoration has costs in search time and attention, but its effects depend on what it is tied to and where it is used, not on its existence.
+:::
+
+### What this means for Learn to Fly
+
+The dossier records that LTF's landing page uses no illustration and that its identity rests on type, the teal line and the lesson path card; it also lists rounded cards, eyebrows and stock icons among the generic signals. Read through this chapter, the problem is not too much ornament but ornament of the wrong kind: generic structure repeated (cards, eyebrows) instead of meaningful ornament attached to structure (ICO-069).
+
+LTF's one true ornament, the horizon line, is a model case: a single motif, attached to structure, doing linking and state jobs, in one color (ICO-069, ICO-075). Extend it before inventing anything else. A second candidate is drawn from the widget style: the compass rose, tick scales and chart contours already exist as SVG primitives (`Compass` in `shared/svg.tsx`). Used sparingly as framing devices (a tick scale as a section rule on the reference hub, a contour texture on the kneeboard band, always behind a quiet zone per ICO-071), they would make pages recognizably LTF's without decorating lesson bodies.
+
+Two audits follow. First, dashed lines now mean three things: the `verify` callout that blocks publication, a locked `LessonPath` pin, and the `EmptyState` and `ErrorState` box. One line style with three meanings is the ornament version of the problem in ICO-018; keep dashed for "not yet available" (locked, verify) and give empty and error states a different frame. Second, the red play disc (ICO-073). Both are small changes that make the base more regular and the signals more meaningful (ICO-076).
+
+## Editorial design: the lesson as a publication
+
+### Design as clarification
+
+Jan White, a magazine art director who worked at *Architectural Forum* and *House & Home* before decades as a consultant and teacher, argued in *Editing by Design* (first edition 1974) that editors and designers share one task: revealing the core of each message plainly and compellingly [@white2003editing]. His thesis, as summarized from the first edition onward, is that design is a clarifying tool, not a decorative one. A student reading of the book describes it as built on the interdependence of the editor and designer roles, pairing product-making (design) with storytelling (writing supported by design), and moving from general principles of multi-page media to specifics such as type and color [@white2003editing]. Its first chapter treats a publication as a physical object, how readers hold it, how pages fold, and which areas of a spread are most and least valuable. White frames his suggestions as options rather than rules, because editorial decisions are subjective. The book's text could not be read for this Part, so his specific rules are not given; it is craft authority, in print since 1974, and its advice about spreads and folds does not transfer literally to scrolling pages. What transfers is the stance that one person, or one process, owns both the words and the layout.
+
+::: {.rule #ICO-079 grade="C"}
+**Write one brief per lesson, shared by the writer and the designer, that names the one thing the learner must take from the page and what they will see first.** Editorial design treats editor and designer as partners in revealing the core of a message, and design as clarification of that core [@white2003editing].
+
+*In LTF:* lesson front matter already has objectives ("In this lesson you will"). Add a single `focus` line (the one idea) and a `firstSeen` line (the first block after the objectives), and review the lesson's first screen against them. A diagram is specified in the brief by the writer who knows what must be understood and drawn by whoever knows how to make it readable (ICO-039).
+:::
+
+::: {.rule #ICO-080 grade="C"}
+**Ask of every visual element on a lesson page "what does this clarify?", and remove it if the answer is nothing.** If design is clarification, an element that clarifies nothing is ornament and must pass the removal test [@white2003editing; @jones1856grammar].
+
+*In LTF:* this applies to the eyebrow labels over headings as much as to pictures. On `LessonPage`, the mono "Lesson 0.1" label clarifies position in the course; a decorative eyebrow over each block heading would not.
+:::
+
+### A stable template, with controlled variety
+
+Gombrich's trade-off between economy and intellectual enjoyment, with decoration placed between monotony and confusion, is a design target for a sequence of lessons [@gombrich1979sense]. Economy says each lesson should look and behave the same, so that the learner's sense of order does the work of navigation: the objectives are always in the same place, the section rail always on the left, the completion panel always at the end. Enjoyment says something should vary, or every lesson becomes the same gray column. The solution editorial designers use is to fix the frame and vary the content blocks: the template is constant, and the rhythm within it changes with a widget, a quiz, a callout, a figure.
+
+Jones's seventh proposition describes the nested structure that makes this work at the scale of one page: care for the general forms first, subdivide them with general lines, then fill the interstices with detail that can be subdivided again for closer inspection [@jones1856grammar]. A page built this way is legible at a glance (headings, sections, the one diagram) and rewards close reading (the labels in the diagram, the callout text). Tufte makes the related argument that complexity is not the enemy of clear display: confusion and clutter are failures of design, not attributes of information, and the aim is design strategies that reveal detail [@tufte1990envisioning].
+
+::: {.rule #ICO-081 grade="C"}
+**Keep the lesson template fixed (the order of header, objectives, section rail, blocks and completion panel) and vary only the sequence of content blocks inside it.** Predictable structure gives economy of comprehension and variety within it keeps attention, between the poles of monotony and confusion [@gombrich1979sense]. Craft and art-historical argument, consistent with the perceptual evidence on regularity.
+
+*In LTF:* `LessonPage` already fixes the order; keep `UnverifiedWarning`, `SignupBanner`, resume bar and objectives in that sequence on every lesson. Variety comes from `LessonRenderer` blocks. A lesson that needs a different top (a video first, say) is a template change for all lessons or none.
+:::
+
+::: {.rule #ICO-082 grade="C"}
+**Build each lesson page in three levels: structure readable at a glance, sections readable in a scan, and detail that rewards close reading.** Jones's nested hierarchy of general forms, main lines and fine detail, and Tufte's argument that good design reveals detail rather than hiding it, describe the same structure [@jones1856grammar; @tufte1990envisioning].
+
+*In LTF:* the glance level is the h1, the objectives and the `SectionNav` titles; the scan level is the block headings (`h2 mt-12 mb-3 text-2xl font-bold`, which should move to a `heading-*` token per the typography Parts) and figure captions; the close level is the paragraph text, widget labels and glossary popovers.
+:::
+
+### Small multiples
+
+For a wide range of problems, Tufte argues, small multiples are the best design solution, because constancy of design puts the emphasis on changes in the data, not changes in the data frames [@tufte1990envisioning]. The same drawing repeated at several states lets the eye compare directly, which is exactly what animation does badly (see the chapter on realism and motion) [@tversky2002animation].
+
+::: {.rule #ICO-083 grade="C"}
+**Show a comparison of states as small multiples: the same diagram, at the same size and scale, repeated side by side with only the compared variable changing.** Constant design puts the emphasis on the data changes, and static frames permit the comparison and reinspection that animation does not [@tufte1990envisioning; @tversky2002animation].
+
+*In LTF:* a lesson comparing three flap settings or four stages of a pattern uses one widget primitive rendered three or four times in a row (stacked on phones), with one shared legend. `WidgetFrame` could take a `multiples` prop that renders a model at listed states without the explore controls.
+:::
+
+### Order tells a story
+
+Isotype practice treated ordering as a choice with meaning: sort by size, by time or by place, and each order tells a different story [@neurath1936international]. The same is true of every list in an interface. A progress list sorted by completion tells the learner how far they have come; sorted by curriculum order, it tells them what comes next; sorted by recent activity, it tells them what they were doing.
+
+::: {.rule #ICO-084 grade="C"}
+**Decide the order of every list and table by the story the learner needs from it, and state the order when it is not obvious.** Ordering by size, time or place tells different stories, and the choice should be deliberate [@neurath1936international].
+
+*In LTF:* the curriculum and module pages keep course order (what comes next). Dashboard "Recent attempts" keeps time order. The challenges list, with five `Select` filters, should show its sort in the `role="status"` line ("Showing n challenges of n, in course order").
+:::
+
+### A mood for each part of the product
+
+Dresser's advice that decoration suit the room (richness for dining, worth for a library, repose for a bedroom) translates into a mood map for a product with distinct areas [@dresser1873principles]. Lesson reading is the library: worth and calm, long measures of quiet text. A challenge briefing is a workshop: focus, clear steps. Progress and the dashboard are the drawing room: some cheer, the tier colors and the `tier-pop`. Fly mode is the bedroom in Dresser's sense of repose, because it must not compete with the simulator for attention.
+
+::: {.rule #ICO-085 grade="C"}
+**Assign each product area a mood and an ornament budget, and keep Fly mode the plainest screen in the product.** Decoration should suit the use of the space, with glitter sparing and repose where attention must rest [@dresser1873principles; @chandra2013evaluation].
+
+*In LTF:* lessons (calm, no ornament in the body), challenge Brief (focused, structure only), dashboard and debrief (the one place for celebratory motion and tier color), landing page (the place for identity ornament), `FlyModePage` (no ornament, no decorative icons, the lowest element budget, ICO-061).
+:::
+
+### Authority, earned or borrowed
+
+Harley's point that maps use decoration, typography and invocations of authority as rhetoric applies to any page that presents facts [@harley1989deconstructing]. An official-looking seal, a chart-like border or a technical typeface makes a page look authoritative whether or not its content has been checked. Monmonier adds that software lets anyone produce material with crisp type and uniform symbols that looks respectable while being wrong [@monmonier2018how]. For a product that teaches a safety-adjacent skill to beginners, the risk is real: a beginner cannot judge content and will judge the look.
+
+LTF has an unusual answer already in place: honesty as UI. The dossier lists the "Draft · unverified" badge, "Last verified" lines on the speeds page, the `verify` callout that blocks publication, the public-beta banner, and the statement that the course badge "is not a pilot certificate". These are trust signals that are earned, because they are tied to a verification process, and they are worth more than any decorative authority.
+
+::: {.rule #ICO-086 grade="C"}
+**Never borrow authority with official-looking decoration (seals, certificate borders, chart-like frames); earn it with visible verification marks tied to a real check.** Decoration and typography are rhetorical devices that confer authority, and polished presentation can make unchecked material look respectable [@harley1989deconstructing; @monmonier2018how].
+
+*In LTF:* the `CourseBadge` wings roundel keeps its disclaimer and never uses certificate-style borders, signatures or seal motifs. Reference and speeds pages show "Last verified" with the date. Chart-styled frames are used only for content that is in fact a chart drawing.
+:::
+
+### Captions that say what to notice
+
+A caption is the editorial link between a picture and the text. The evidence on linked pictures says the link raises attention and recall [@houts2006role], and the evidence on signaling says cues that point at the relevant part help retention [@schneider2018meta]. Put together, a caption should do more than name the picture: it should say what to look at.
+
+::: {.rule #ICO-087 grade="B"}
+**Write each figure caption as a pointer to what the learner should notice, in the lesson's words, not as a title for the picture.** Pictures closely linked to captions raise attention and recall, and cues that direct attention to the relevant part improve retention [@houts2006role; @schneider2018meta].
+
+*In LTF:* "The sim's assistance settings" is a title; "Turn off the assists highlighted in teal before your first lesson" is a caption (an illustrative form; the actual setting names come from the verified lesson). The same applies to `WidgetFrame` titles and to the "Describe this diagram" text, which should start with what the diagram shows changing.
+:::
+
+### What this means for Learn to Fly
+
+LTF lessons are already structured like an editorial product: fixed header, objectives, section rail, blocks, completion panel, previous and next. What they lack is the editorial process around them. The dossier notes two typographic dialects (raw `text-2xl font-bold` on app pages, `display-*` and `heading-*` tokens on landing and `PageHeader`) and a lesson measure wider than the system's 68ch; those are typographic matters for other Parts, but they are also the symptom of no single owner for word-and-picture decisions (ICO-079). A lesson brief with a focus line, a stable template (ICO-081), a three-level hierarchy (ICO-082), small multiples for comparisons (ICO-083) and captions that point (ICO-087) would make the lessons read as one publication.
+
+The mood map (ICO-085) also settles where the identity work from the brand Part should go: the landing page and the dashboard can carry ornament and illustration; lessons carry the horizon line and the widget drawing style; Fly mode carries nothing extra.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+#### Icons
+
+1. Every icon a beginner meets carries a visible word; icon plus label is the default on challenge cards, meta rows, the theme toggle, callouts, badges and tiers (ICO-008, ICO-001).
+2. Icon-only controls are limited to close, menu, expand or collapse, back, external link, play, copy and search, each with an accessible name and a tooltip (ICO-012, ICO-011).
+3. Nothing in the Brief tab, the Fly tab or `FlyModePage` depends on an icon alone, and Fly mode uses heavier strokes, `lg` buttons and no `ink-3` icons (ICO-009, ICO-013, ICO-015).
+4. LTF writes an icon policy and an icon register before drawing custom icons; the register extends `challengeTypeMeta` with meaning, class, source and test fields and renders as one sheet in `DevComponentsPage` (ICO-011, ICO-021, ICO-006).
+5. The custom challenge-type set is drawn as a language with a written vocabulary and grammar, one stroke and size table, and pictures chosen for closeness to the function, then tested between groups against the Lucide stand-ins with an 85 percent bar set in advance (ICO-002, ICO-016, ICO-017, ICO-024 to ICO-027).
+6. One picture has one meaning: TriangleAlert stays the caution status icon and the emergency type gets its own glyph; no icon is reused for a second meaning (ICO-018, ICO-004).
+7. Icons for flight concepts appear only after the lesson that teaches the word, and keep permanent labels (ICO-003, ICO-028, ICO-007).
+8. Counts are shown by repeating a unit, as `DifficultyDots` does (ICO-019); the brand mark is never a control or status (ICO-022).
+9. Meaningful icon and SVG strokes meet 3:1; `accent-line` never draws a meaningful stroke on `surface-sunken` in Day (ICO-014).
+
+#### Pictures and diagrams
+
+10. Lesson pictures are explanative, tagged with their function in content, and decorational pictures stay out of lesson bodies and above all out of the opening screen (ICO-031, ICO-034, ICO-035, ICO-036).
+11. Widgets signal the active part, sit directly after the paragraph that introduces them, use the lesson's words in labels, and are tested by a reading task, not by preference (ICO-037, ICO-038, ICO-029).
+12. The widget style stays schematic and flat; realistic screenshots are for orientation only (ICO-041, ICO-074).
+13. Change over time is shown with static frames, small multiples or learner-driven widgets; nothing autoplays (ICO-046, ICO-047, ICO-083).
+14. Every widget declares whether it is to scale; those that are not show "Simplified model" and "not to scale", and captions name what is omitted (ICO-064, ICO-065, ICO-044).
+15. Each widget has an element budget and a stated reading task in its test file; Fly mode has the lowest budget (ICO-061, ICO-067, ICO-085).
+16. Variables follow data type (hue and shape for categories, value for order, position for quantity), and instrument and chart colors are never repurposed (ICO-049, ICO-052, ICO-054, ICO-055).
+17. Diagram labels have a halo and a minimum rendered size; the sectional chart gets a phone layout (ICO-058, ICO-059).
+
+#### Ornament and editorial
+
+18. The horizon line is the model ornament: attached to structure, one color, doing linking and state jobs; new ornament must frame, fill or link and pass the removal test (ICO-069, ICO-070, ICO-075).
+19. The red play disc on `YouTubeEmbed` changes to a non-warning color; dashed borders are kept for "not yet available" and empty and error states get a different frame (ICO-073, ICO-018, ICO-076).
+20. Embellishment tied to content is allowed only on recap, share and landing surfaces (ICO-078).
+21. Each lesson has a brief with a focus line, a fixed template and a three-level hierarchy; captions point at what to notice (ICO-079, ICO-081, ICO-082, ICO-087).
+22. Each area has a mood and an ornament budget: lessons calm, Brief focused, dashboard cheerful, landing for identity, Fly mode plainest (ICO-085).
+23. Authority is earned by verification marks, never borrowed with official-looking decoration (ICO-086).
+24. A named custodian owns the icon register, the widget primitives and the diagram vocabulary (ICO-045).
+
+### Review checklist
+
+Run these questions against a pull request or a page. Each names the rule it checks.
+
+#### Icons and symbols
+
+- Does every new or changed icon have a visible word next to it, or is it on the icon-only safe list with an accessible name and tooltip? (ICO-008, ICO-012)
+- Is any meaning in the Brief tab, Fly tab or Fly mode carried by an icon alone? (ICO-009)
+- Is the icon in the register, with its meaning sentence, class, source and test record? (ICO-021, ICO-024, ICO-030)
+- Was the picture chosen for how closely it points at the function rather than for realism? (ICO-002)
+- Is an icon for a flight term used before the lesson that teaches the term? (ICO-003)
+- Is this the same drawing, size and stroke used everywhere else for this meaning, taken from the shared definition? (ICO-004, ICO-017)
+- Does this picture already mean something else elsewhere in the product? (ICO-018)
+- Does it look distinct from its neighbors when viewed in the set at its real size? (ICO-006)
+- Is its detail suited to the task, minimal if it is scanned for among many? (ICO-005)
+- Does each meaningful stroke meet 3:1 on its ground in both themes, and is the target at least 24 px (44 px in Fly mode)? (ICO-014, ICO-015)
+- If it shows a count, is it a repeated unit or a printed number rather than a growing picture? (ICO-019)
+- Does the change use the brand mark as a control, status or bullet? (ICO-022)
+- If it is arbitrary, is it on the arbitrary-symbol list with a word? (ICO-023, ICO-007)
+- If preference feedback is cited as support, is there also a task measure? (ICO-029)
+- Does each icon do a job a word alone does less well, or is it ornament over a heading? (ICO-010)
+- For a chart or instrument symbol, was an established convention looked up and its source recorded? (ICO-020)
+
+#### Pictures, widgets and diagrams
+
+- What job does each picture do, and is any of them only decorational? (ICO-034, ICO-031)
+- Is anything decorative placed before or among the lesson's core explanation, especially at the top? (ICO-035, ICO-036)
+- Does the widget highlight the part being discussed, and do its labels use the text's words? (ICO-037, ICO-038)
+- Does the quiz test the understanding the picture teaches rather than its labels? (ICO-033)
+- Does the diagram start simple for a newcomer, with a compact form for review pages? (ICO-032)
+- Did a content expert set what it must show, and did beginners check what it appears to show? (ICO-039)
+- Is a sequence or flow drawn in the shared schematic vocabulary (pins, one connector, one weight)? (ICO-043)
+- If an animated and a static version are being compared, do they carry the same information and controls? (ICO-048)
+- Are estimated or model values drawn softer and labeled as estimates? (ICO-053)
+- Was the screen run through the clutter check, and was any flag reviewed by a person? (ICO-063)
+- Is the picture calm and schematic, without frightening imagery for safety content? (ICO-040, ICO-041)
+- Is a realistic screenshot being used to explain how something works rather than where to look? (ICO-041)
+- Does anything animate without learner control, or animate where frames would do? (ICO-046, ICO-047)
+- When states change, is the change also printed as text? (ICO-042)
+- How many elements does the diagram show at its default state, and is each needed for its reading task? (ICO-061, ICO-067)
+- Are subtle qualifiers and expectation-violating facts set in words? (ICO-062)
+- Is each component on its own variable, with hue only for categories and position for quantities? (ICO-049, ICO-050, ICO-051, ICO-052)
+- Is a color ramp of the right type, lightness-ordered, checked in each theme, not a rainbow, and labeled directly? (ICO-054, ICO-055, ICO-056)
+- Is an instrument or chart color used for anything other than its real meaning? (ICO-052)
+- Are large areas muted and strong color confined to small areas? (ICO-057)
+- Does every label have a clear plane and a legible rendered size on a phone? (ICO-058, ICO-059)
+- Is the diagram marked simplified or not to scale where it should be, and does its caption name what it omits? (ICO-064, ICO-065, ICO-044)
+- Does visual prominence match what the learner must do next? (ICO-066)
+- Does a teaching example of an error use a constructed example? (ICO-068)
+
+#### Ornament and editorial
+
+- Is each decorative element attached to real structure, and does it frame, fill or link? (ICO-069, ICO-075)
+- Would the page lose anything if the element were removed? (ICO-070, ICO-080)
+- Is text separated from any pattern or tint by a quiet zone? (ICO-071)
+- Does the change add a second border, an extra tint or a card inside a card? (ICO-060)
+- Does it use a warning color, sharp form or high-contrast treatment for something that is not a warning? (ICO-073)
+- Does it imitate a material, or copy another product's motifs? (ICO-074, ICO-072)
+- Does it make the base layout less regular (new radius, new card style, ad hoc tint)? (ICO-076)
+- Is a badge or motif repeated on every item instead of marking the ones that differ? (ICO-077)
+- Is embellishment confined to recap, share or landing surfaces? (ICO-078)
+- Does the lesson keep the fixed template order and the three-level hierarchy, and does its first screen match the brief's focus? (ICO-079, ICO-081, ICO-082)
+- Is a comparison shown as small multiples with constant design? (ICO-083)
+- Is the order of each list chosen and, where unclear, stated? (ICO-084)
+- Does the screen stay within its area's mood and ornament budget, with Fly mode plainest? (ICO-085)
+- Does any element borrow authority (seals, certificate borders, chart-styled frames) that the content has not earned? (ICO-086)
+- Do captions say what to notice? (ICO-087)
+- Who is the custodian for the visual vocabulary this change extends, and have they reviewed it? (ICO-045, ICO-016)
