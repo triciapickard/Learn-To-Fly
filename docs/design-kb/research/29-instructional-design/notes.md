@@ -140,3 +140,33 @@ The six functions double as a design checklist for a lesson or challenge. Recrui
 
 Confirmed this session: Crossref record DOI 10.1111/j.1469-7610.1976.tb00381.x (title, authors, 1976, volume 17, issue 2, pages 89-100); full text read as PDF (copy at sachafund.wordpress.com): sample, task, scoring agreement, Tables 1 to 3 and the six functions; Hendrick essay fetched for the critique only.
 
+## mayer2004should
+
+Mayer (2004), "Should there be a three-strikes rule against pure discovery learning? The case for guided methods of instruction", American Psychologist 59(1), 14-19.
+
+### Core claims
+
+Mayer's thesis is that there is enough research evidence to make any reasonable person skeptical of pure discovery as a preferred method of instruction, whether it is practiced under cognitive or social constructivism. He separates two things that are often fused. Constructivism as a theory of learning (learners actively build knowledge) is not at issue. What he attacks is the "constructivist teaching fallacy," his term for the inference that because learning is active, teaching must make learners behaviorally active (hands-on work, discussion, free exploration). He wants the activity to be cognitive (selecting, organizing and integrating knowledge), not merely behavioral. His closing recommendation: guided discovery, curricular focus and cognitive activity, not unstructured exploration and activity as an end in itself.
+
+### Specifics
+
+Method. This is a narrative historical review of three research literatures, each with a "strike." He defines pure discovery (the student gets problems with little or no guidance), guided discovery (the student gets the problem plus hints, direction, coaching, feedback or modeling) and expository methods (the student gets the problem with the answer).
+
+Strike one, discovery of problem-solving rules (1950s and 1960s). Craig (1956) had students find a rule such as "odd initial sound"; a guided group, told what to attend to, learned more efficiently and transferred as well as the pure discovery group. Kittel (1957) compared pure discovery, guided discovery and expository groups: pure discovery did worst and guided discovery best on immediate retention, delayed retention and transfer. Gagné and Brown (1961), with series-sum problems, found that guided discovery took the most learning time but produced the best transfer. Shulman and Keislar's 1966 summary found guided discovery generally more effective than pure discovery.
+
+Strike two, conservation strategies (1970s). Studies by Gelman, Wallach and Sprott, Beilin and Brainerd showed children learning conservation concepts through guided practice, concrete demonstrations of reversibility, or even simple right-or-wrong feedback; Mayer notes that Brainerd observed little research had directly compared self-discovery with parallel tutoring, and effects in Inhelder, Sinclair and Bovet's self-discovery studies were small by comparison.
+
+Strike three, LOGO programming (1980s). Papert's call for hands-on discovery produced studies: Kurland and Pea's students with more than 50 hours of pure-discovery LOGO could write simple programs but held many incorrect conceptions; Pea and Kurland found hands-on LOGO exploration no better on planning tests than no programming; Fay and Mayer (1994) found a guided group, given modeling of design concepts, hints and feedback, wrote more elegant programs and planned better. Reviewers concluded that mediated instruction is a prerequisite for LOGO's transfer.
+
+Mechanism. Active learning needs two cognitive processes: selecting relevant incoming information and integrating it with prior knowledge. Pure discovery can fail the first, because learners may never come into contact with the to-be-learned principle. Expository methods can fail the second if they discourage sense-making. Guided discovery meets both. The warning line he draws is that "constructivism = hands-on activity" is a formula for educational disaster, but not that constructivism is wrong.
+
+### Replication and criticism
+
+Evidence type: a selective narrative review by an author who is a leading voice in multimedia learning, drawing on small experiments from the 1950s to the 1980s using artificial tasks (he acknowledges the "old-fashioned horse-race design"). It is not a systematic review, and a selection effect is possible. It was followed by a meta-analysis (Alfieri and colleagues, 2011, in this lane) that reached the same broad verdict with a fully described search: unassisted discovery lost to explicit instruction, and enhanced discovery beat other instruction. Kirschner, Sweller and Clark (2006) argued a related case from cognitive load theory, and Hmelo-Silver and colleagues replied that problem-based and inquiry learning are scaffolded. Mayer himself concedes guided discovery is not a single method: the hard part is knowing how much and what kind of guidance to supply, and he allows that in some cases direct instruction works while in others "some mixture of guidance and exploration" is needed. The paper's Figure 1 is a useful simple frame: it separates cognitive activity from behavioral activity.
+
+### Implications for LTF
+
+This source gives LTF a clean test for any interactive widget or challenge: is the activity cognitive (the learner must select, organize or integrate) or only behavioral (clicking, dragging, flying around)? A drag-the-slider widget earns its place only if the learner must predict, explain or connect what changes. In challenges, avoid the pure-discovery pattern ("fly and notice"); use guided discovery: set a goal, point attention at the relevant cue (for example, the airspeed trend), give hints, then feedback. Because guided discovery took longer yet transferred best in the Gagné and Brown study, do not judge lessons only by completion time. Do not build group-discussion features expecting learning gains; guidance still matters. In the sim, free practice is fine after guided practice, as a consolidation step.
+
+Confirmed this session: Crossref record DOI 10.1037/0003-066x.59.1.14; full text read as PDF (csun.edu copy), including abstract, the three strikes, the definitions and the concluding section.
+

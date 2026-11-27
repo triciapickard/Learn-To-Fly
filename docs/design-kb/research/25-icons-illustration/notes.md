@@ -209,3 +209,101 @@ I found no direct replication. Notes on scope: the stimuli were four expressions
 This is evidence that simple, high-contrast marks are read faster and more reliably at a glance, which supports spare, bold glyphs for anything used in fly mode, where a learner's eyes dart between a simulator screen and the app. It supports using a small number of schematic characters or mascots for tone (a calm face on a mistake message) rather than photographic faces. It also argues for keeping contrast high in both light and dark themes: the study varied contrast and complexity separately, and both mattered. Do not stretch it: it does not show that cartoons teach better, and it says nothing about aviation content. Treat it as perceptual support for a visual style, to be backed by comprehension testing for meaning.
 
 Confirmed this session: Crossref DOI record; Europe PMC full text PMC5256461 read (abstract, background, Experiment 1 methods); the Experiment 2 and discussion sections were read only in outline.
+
+## tversky2002animation
+
+Tversky, B., Morrison, J. B., & Betrancourt, M. (2002). Animation: can it facilitate? *International Journal of Human-Computer Studies*, 57(4), 247-262.
+
+### Core claims
+
+Graphics are assumed to help comprehension, learning, memory and inference. The authors argue that this holds only for carefully designed graphics, and they give two principles that separate good graphics from merely attractive ones. The Congruence Principle: the structure and content of the external representation should correspond to the structure and content of the concept it is meant to convey. The Apprehension Principle: the representation should be readily and accurately perceived and comprehended. By congruence, animation ought to be ideal for showing change over time. Yet the research they review does not support the enthusiasm: where animated graphics beat static ones, closer inspection shows the animated versions carried more information, or allowed interactivity or prediction that the static versions did not. Animations often fail the Apprehension Principle, being too fast or too complex to perceive accurately, and because people often conceive continuous events as discrete steps.
+
+### Specifics
+
+This is a selective review of studies that compared animated with static graphics for teaching complex systems (mechanical, biological, physical, computational). It sorts the evidence in three groups. First, incomparable content: studies where the static comparison lacked information that the animation showed (for example, a circulatory system lesson where the animated heart included blood pathways and the static one did not, or a physics lesson whose static picture omitted the fact needed to understand inertia). Second, incomparable procedures: animation conditions that also allowed interactivity or required prediction, both known to help learning on their own. Third, outright failures to find a benefit: instruction on computer procedures such as learning a graphics editor, where any graphic beat none but animated did not beat static or text; a study of help systems in which animation users finished the training task faster but did the later test more slowly, and after a week text learners improved while animation learners declined; and a lesson on algorithms where animation was no better than static diagrams plus predictions.
+
+Their account of why animation fails: movements can be too fast (the paper's example is paintings that portray galloping horses' legs wrongly because the real motion was too fast to be perceived accurately), people's mental models of motion are often wrong, and many continuous events are conceived as sequences of steps, so a series of static frames can match the mental model better than a movie. Frames also allow comparison and reinspection, while animations are fleeting. Interactivity (stop, start, replay, zoom, control of speed) may overcome these problems. Design advice is explicit: animations should lean toward the schematic and away from the realistic, be slow and clear enough for viewers to perceive changes and timing, and may need annotation such as arrows or highlights to direct attention to critical changes.
+
+Caveats: the conclusions are limited to animations that teach complex systems; real-time animation that conveys changes or reorientations in space and time (walks through an environment, a fill bar) is described as the most promising use, though rarely tested in controlled experiments.
+
+### Replication and criticism
+
+This is an expert review, not a meta-analysis, and it reached its verdict by critiquing individual studies; defenders of animation have argued for conditions where it helps (for example, when the dynamics themselves are the thing to be learned). The paper itself concedes that animation may convey the subtle microsteps and the manner of change better, "whether animations are more effective than static graphics for these subtle aspects of change over time is unknown." It was written in 2002; interactive, learner-paced animation has since become the norm in educational software, which fits the authors' own recommendation. Treat the "static diagrams are as good" result as strongest for complex systems and weakest for motion where timing matters.
+
+### Implications for LTF
+
+Many flight ideas are changes over time: how pitch affects airspeed, what an instrument needle does in a turn. This paper argues for step-by-step static diagrams as the default, with arrows to show direction of change and sequence, and for animation only where timing is the lesson. Where LTF does animate (an interactive widget), give the learner control: pause, replay, scrub, slow speed, and a way to compare before and after side by side. Schematic beats realistic: a stripped diagram of an attitude change is a better teaching tool than a detailed 3D rendering. Make animated and static versions informationally equivalent when testing which teaches better, or the result means nothing. Keep any ambient animation out of fly mode, where it would compete for attention with the simulator.
+
+Confirmed this session: author copy PDF read (hci.stanford.edu/courses/cs448b/papers/Tversky_AnimationFacilitate_IJHCS02.pdf, abstract, sections 1 to 4); Crossref DOI record.
+
+## mayer1990when
+
+Mayer, R. E., & Gallini, J. K. (1990). When is an illustration worth ten thousand words? *Journal of Educational Psychology*, 82(4), 715-726.
+
+### Core claims
+
+Illustrations do not help learning automatically. This paper, a foundation of the multimedia-learning tradition, argues that explanative illustrations (pictures that show how a system works, not only what it looks like) improve learning from science text under particular cognitive conditions. The ERIC abstract names four: the accompanying text must suit the illustration, the test must be one that can reveal what the illustration taught (transfer of understanding rather than memory for facts), the illustration must be explanative, and the learners must have relatively little prior knowledge of the subject. Under those conditions illustrations help; outside them they may not.
+
+### Specifics
+
+The abstract reports three experiments with 300 college students in total, using illustrations of mechanical devices. A secondary account lists the devices as brakes, a pump and a generator. The same secondary sources describe the manipulation as comparing text alone with text plus a labeled picture of the device's parts (static), a labeled picture of the major actions or steps, or a dynamic version showing the device in its "off" and "on" states with both parts and steps labeled. Findings, as summarized by later authors: students learning from text with illustrations did better on transfer tests than students reading text alone, and the benefit was larger for learners with low prior knowledge, with little or no benefit for high-knowledge learners. The effect on transfer, rather than on memory for the text's surface facts, is the main point; it was tested with creative problem-solving questions (for example, how to fix a malfunctioning device) rather than only recall questions.
+
+Important design detail from the secondary literature: the pictures that worked showed the cause-and-effect chain, parts together with their actions, labeled where the text described them. Picture and text were close together and integrated. I did not read the paper's results tables, so I give no effect sizes.
+
+### Replication and criticism
+
+This work was the starting point for a long series of experiments by Mayer and colleagues, which later became principles of multimedia learning (for example, that words and pictures together beat words alone, and that integrated, nearby pictures and text beat separated ones). The low-prior-knowledge result has been echoed as the "expertise reversal" idea: what helps novices can get in the way of experts. Critics note that the original materials were short, laboratory texts about mechanical systems and that the transfer tests were designed to fit the illustrations. College students, not trainee pilots; single-session testing; no delayed measures in the version I could confirm. Treat it as strong evidence for explanative diagrams in short expository lessons, and weaker evidence for ornamental or mood-setting pictures, which the paper's conditions exclude.
+
+### Implications for LTF
+
+It is a direct argument for LTF's core approach, interactive visual explanations in lessons for complete beginners, because beginners are exactly the low-prior-knowledge audience for whom explanative illustration pays off. The conditions give a design checklist. Does the diagram show how something works (the forces, the control inputs, the instrument response) or just what it looks like? Is it next to the sentence it explains and labeled with the same words? Does the quiz test understanding that the picture teaches (what happens when you pull back) rather than recall of the diagram's labels? As learners progress and prior knowledge grows, consider letting them collapse diagrams, or use a simpler version in review pages, since the benefit shrinks for experienced learners. Decorative cockpit photographs should not be defended on the grounds of this paper.
+
+Confirmed this session: Crossref DOI record; ERIC EJ440468 abstract (fetched, summarized by the fetch tool: three experiments, 300 college students, four conditions); web search returning secondary descriptions of the conditions, devices and prior-knowledge result. The paper's full text and tables were not available.
+
+## carney2002pictorial
+
+Carney, R. N., & Levin, J. R. (2002). Pictorial illustrations still improve students' learning from text. *Educational Psychology Review*, 14(1), 5-26.
+
+### Core claims
+
+A review for teachers and researchers arguing that well-designed illustrations generally improve performance on tasks based on text. Studies from the 1970s and 1980s found it, and research of the 1990s continued to support it. The review extends the discussion to other media and technology, and asks why, when and for whom pictures help, not only whether and by how much. It offers "tenets for teachers" for conventional and less conventional textbook illustrations, according to the abstract on the author's institutional repository.
+
+### Specifics
+
+What I confirmed is limited to the abstract, bibliographic data and secondary descriptions. The paper builds on a functional typology of text illustrations from earlier work by Levin, described by secondary sources as four conventional functions (decorational, representational, organizational and interpretational) and a less conventional fifth, transformational. In those secondary descriptions: decorational pictures bear little relation to the text and are expected to have little effect on learning; representational pictures depict content from the text; organizational pictures give a structural framework for text content; interpretational pictures help clarify a difficult or abstract passage; transformational pictures include mnemonic components designed to improve recall. The abstract's key claim is the function-first approach: a picture's value depends on what it does in relation to the text, and the same photograph can be useless as decoration and useful as a diagram.
+
+Another secondary source describes the paper as a quantitative review of studies published between 1990 and 2002; I could not verify this and the abstract describes it as a review of research, so I do not rely on it. I have no effect sizes from the paper and give none.
+
+### Replication and criticism
+
+The review is a counterweight to a skeptical reading of the illustration literature (the title "still improve" signals a rebuttal of doubts), and it sits in the same tradition as Mayer's multimedia work. It is a narrative review by authors who have long worked on pictorial mnemonic strategies, which means it is probably friendly to its subject. Later work, noted by search results though not read in full, has studied decorative or "seductive" illustrations that may attract interest while also harming or not helping learning; the decorational category is the one most often found to have the weakest effect. The distinction made here, between pictures that carry content and pictures that decorate, is now widely used in instructional design, and it has held up better than any single effect size.
+
+### Implications for LTF
+
+Use the function-first test before commissioning any illustration: what job is this picture doing? A cutaway showing airflow over a wing is representational or interpretational, and earns its space. A stock photograph of a sunset behind a wing is decorational, and should be judged on mood alone and kept small, away from the explanation. Organizational pictures (a flow diagram of a pre-flight sequence) suit checklist lessons. Transformational pictures (mnemonic imagery) are worth considering for memorizing items that have no natural picture, such as a sequence of steps. Put each picture's function in the content front matter or review checklist, so a reviewer can ask whether it helps and cut those that do not. Keep decorative art out of fly mode and out of quizzes, where it can distract or imply meaning.
+
+Confirmed this session: Crossref DOI record; abstract from bearworks.missouristate.edu/articles-chhs/956; web search results giving the typology in secondary sources. The article's full text was not available.
+
+## houts2006role
+
+Houts, P. S., Doak, C. C., Doak, L. G., & Loscalzo, M. J. (2006). The role of pictures in improving health communication: A review of research on attention, comprehension, recall, and adherence. *Patient Education and Counseling*, 61(2), 173-190.
+
+### Core claims
+
+A review of peer-reviewed studies in health education, psychology, education and marketing journals, with no limit on the time period searched. Its conclusions, from the abstract: pictures closely linked to written or spoken text, compared with text alone, markedly increase attention to and recall of health education information. Pictures can improve comprehension when they show relationships among ideas or spatial relationships. Pictures can change adherence to health instructions, but emotional response to pictures affects whether they increase or decrease the target behavior. All patients can benefit, and patients with low literacy skills are especially likely to benefit; those with very low literacy can be helped by spoken directions plus take-home pictures as reminders, or pictures plus very simply worded captions.
+
+### Specifics
+
+The abstract lists seven recommendations for educators, which are the most reusable part: (1) ask how pictures can support key points; (2) minimize distracting details in pictures; (3) use simple language together with pictures; (4) closely link pictures to text or captions; (5) include people from the intended audience in designing the pictures; (6) have health professionals, not artists, plan the pictures; and (7) evaluate pictures' effects by comparing response to materials with and without pictures. The review is organized by outcome (attention, comprehension, recall, adherence). It also warns that pictures can mislead: emotional reactions, culturally unfamiliar styles or ambiguous details can send the learner somewhere other than the intended action.
+
+A secondary summary found in the search notes that within each recommendation the specific suggestions are not strongly supported empirically or theoretically. That limitation applies to the details of picture selection more than to the headline finding that linked pictures aid attention and recall. An erratum for the paper exists (Patient Education and Counseling 64(1-3), 393-394, found through Crossref); I did not read what it corrected, so check it before quoting figures from the full text.
+
+### Replication and criticism
+
+This is a narrative review of mixed-quality studies, so its strongest claims are the ones supported by many designs (attention and recall). The comprehension claim is conditional on pictures that show relationships or spatial layout rather than decorating. It has been heavily cited in health-literacy work and in design of instructions, but the evidence is health education, not flight training, and the audience (patients with varied literacy) differs from adult hobbyists learning to fly. The recommendation to have content experts plan pictures rather than artists is an opinion supported by cases where artists' details misled; it should not be read as a license to ignore visual craft.
+
+### Implications for LTF
+
+The seven recommendations map well onto LTF's practice. Content experts (a certified instructor or a verified source) decide what a picture must show; designers then make it clear and simple. Keep details in pictures to what supports the key point. Put each picture next to the sentence it explains, with a short caption in plain words. Include beginners in review: a five-person "what do you think this shows?" check catches misreadings that a team of pilots will not. Compare lesson versions with and without a picture where the learning matters. Pictures that show relationships and spatial layout (a pattern around an airport, relative positions of controls) have the strongest support. The caution on emotion is relevant to safety content: a dramatic image of a mistake may increase worry rather than correct action.
+
+Confirmed this session: PubMed record 16122896 abstract retrieved through NCBI E-utilities (full abstract and recommendations); Crossref DOI record and erratum entry; web search returning the secondary summary on the strength of the recommendations. The full text was not available.
