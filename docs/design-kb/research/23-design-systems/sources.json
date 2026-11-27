@@ -343,5 +343,34 @@
     "verified_evidence": "Open Library search 'how buildings learn stewart brand' returned work OL823146W, How Buildings Learn, Stewart Brand, 1994, ISBNs including 0670835153; Wikipedia summary gives Viking Press 1994, ISBN 978-0-670-83515-7",
     "kind": "craft and observation book (architecture)",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "govuk2025design",
+    "type": "webpage",
+    "authors": [
+      {
+        "literal": "Government Digital Service"
+      },
+      {
+        "literal": "Central Digital and Data Office"
+      }
+    ],
+    "year": 2025,
+    "title": "Government design principles (with GOV.UK Design System contribution criteria)",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "GOV.UK",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.gov.uk/guidance/government-design-principles",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched gov.uk/guidance/government-design-principles (first published 3 April 2012, last updated 2 April 2025, eleven principles, publishers GDS and CDDO) and design-system.service.gov.uk/community/ and /community/contribution-criteria/ (criteria Useful, Unique, Usable, Consistent, Versatile)",
+    "kind": "government design guidance",
+    "lane": "23-design-systems"
   }
 ]

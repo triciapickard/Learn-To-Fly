@@ -335,3 +335,33 @@ This is a craft and observation book, not a study, with examples chosen to suppo
 5. Do not over-invest in a launch look that is hard to adapt (the magazine building), since the project already has a second plan queued.
 
 Confirmed this session: Open Library search "how buildings learn stewart brand" returned work OL823146W (How Buildings Learn, Stewart Brand, 1994, with ISBN 0670835153 among its editions); content from fetched pages https://en.wikipedia.org/wiki/How_Buildings_Learn, https://en.wikipedia.org/wiki/Shearing_layers and https://allanmcinnes.github.io/2018/01/09/how_software_learns. I did not read the book.
+
+## govuk2025design
+
+Government Digital Service and Central Digital and Data Office (2025, updated 2 April 2025). *Government design principles*, with the contribution rules of the *GOV.UK Design System*. https://www.gov.uk/guidance/government-design-principles and https://design-system.service.gov.uk/community/
+
+### Core claims
+
+The principles page, first published 3 April 2012 by the Government Digital Service and updated on 2 April 2025, sets out how UK government digital services should be designed. They are guidance rather than a rulebook. The one most relevant to this lane is "Be consistent, not uniform": use the same language and design patterns wherever possible so people become familiar with services, treat patterns as shared guidance, and change them when better methods or user needs emerge. The GOV.UK Design System is the practical system built on that stance: a shared set of components and patterns maintained with contributions from across government and reviewed against stated criteria.
+
+### Specifics
+
+The page now lists eleven principles; the eleventh, minimizing environmental impact, was added on 2 April 2025, and an earlier update on 10 September 2019 added illustrative blog posts. The principles, as titled: Start with user needs; Do less; Design with data; Do the hard work to make it simple; Iterate, then iterate again; This is for everyone; Understand context; Build digital services, not websites; Be consistent, not uniform; Make things open, it makes things better; Minimise environmental impact.
+
+Selected content. "Do the hard work to make it simple": making something look simple is easier than making it simple to use, and "it's always been that way" is not a reason to leave complexity in place. "Iterate": start small, release early, test with real users, move from alpha to beta to live, and be willing to scrap a prototype that is not working. "Be consistent, not uniform": consistency is by shared patterns and language, with explicit permission to deviate where circumstances differ, and teams should explain why they use a pattern.
+
+The Design System community pages describe a contribution process. Proposals for new components or patterns must be Useful (evidence that many teams or services would benefit, such as screenshots or links to versions used in different services) and Unique (not duplicating an existing item, and showing evidence of improvement if it replaces one). Before publication, a contribution must be Usable (tested in user research with a representative sample of users, including people with disabilities, with tested contexts stated), Consistent (reusing existing styles and components, following the GOV.UK style guide and the GOV.UK Frontend coding standards), and Versatile (flexible enough for a range of services and tested across browsers, assistive technologies and devices). The team reviews proposals against these criteria. The community overview also describes an always-on continuous research programme, a monthly catch-up with show-and-tell, workshops where changes affect service teams, and feedback through GitHub discussions.
+
+### Replication and criticism
+
+These are organizational documents backed by the practice of a large public-sector team, not experiments. They report their method only loosely: the pages say decisions use research and data but do not publish the studies. The stated criteria are checklists applied by reviewers, so their quality depends on the reviewers. A known tension is between "consistent" and "versatile": a component that serves every service may fit none perfectly, which echoes Grudin's argument (see the grudin1989case section) that consistency should serve users' tasks. The principles also reflect the aims of a public service that people are obliged to use, so they do not transfer unchanged to an optional learning product.
+
+### Implications for LTF
+
+1. Adopt "Be consistent, not uniform" as LTF's consistency rule. Shared patterns by default, deviation allowed with a written reason, which answers Grudin's task-first critique without abandoning a design system.
+2. Copy the contribution criteria as a gate for new LTF components: Useful (needed by at least two lessons or challenges, with links), Unique (not duplicating an existing one), Usable (checked with at least a few real beginners, plus a keyboard and screen-reader pass), Consistent (uses tokens and existing parts), Versatile (works in light and dark themes and on phone-width screens).
+3. Test across contexts and state them. LTF's contexts are a desktop browser beside the sim, a phone or tablet, and print or offline; record which a component was tested in.
+4. "This is for everyone" and "Understand context" suggest designing fly mode for glanceable reading in poor light, with large type and no reliance on color alone.
+5. Publish decisions and their reasons. The openness principle suggests a short public changelog and a record of design decisions, which suits the repository's Decision Log habit.
+
+Confirmed this session: the principles page (https://www.gov.uk/guidance/government-design-principles; dates, eleven principles, selected sections) and the Design System community and contribution-criteria pages (https://design-system.service.gov.uk/community/ and /community/contribution-criteria/) were fetched this session through a summarizing tool, so wording outside quotation marks is paraphrase.
