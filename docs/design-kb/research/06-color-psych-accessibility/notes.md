@@ -555,7 +555,7 @@ The paper asks how contrast affects reading rate and what role contrast sensitiv
 
 ### Specifics
 
-Evidence type: psychophysical laboratory experiment (reading rate by rapid serial presentation methods used in this series, which I did not confirm here, so the procedure is not described). Specific numbers confirmed from the abstract:
+Evidence type: psychophysical laboratory experiment measuring reading rate (the abstract does not describe the presentation method or the number of subjects, so I do not). Specific numbers confirmed from the abstract:
 
 - Peak reading rate about 350 words per minute.
 - Range of letter sizes with best performance: 0.25 to 2 degrees.
@@ -568,7 +568,7 @@ A companion paper in the series, "Psychophysics of reading, VI. The role of cont
 
 ### Replication and criticism
 
-This is an early, careful psychophysics result that is cited as the basis for the idea that contrast matters much less for normal-sighted readers of reasonably sized text than it does for low vision, and for the "reading CSF". It used a small number of subjects typical of psychophysics (the abstract does not give the number) and high-quality display conditions of the 1980s. It does not test glare, ambient light, small sizes at the edge of acuity, or reading while attending to another task. The claim that polarity made little difference is for the conditions tested and has to be set beside the later display-polarity studies in this lane (Buchner and Baumgartner, Piepenbrock et al., Dobres et al.), which find a positive-polarity advantage for proofreading and brief reading at small sizes.
+This is an early psychophysics result, and I found no replication or critique of it in this session's searches. It reports a reading contrast-sensitivity function and the tolerance of normal vision to reduced contrast. From the abstract alone, it does not test glare, ambient light, small sizes at the edge of acuity, or reading while attending to another task. The claim that polarity made little difference is for the conditions tested and has to be set beside the later display-polarity studies in this lane (Buchner and Baumgartner, Piepenbrock et al., Dobres et al.), which find a positive-polarity advantage for proofreading and brief reading at small sizes.
 
 ### Implications for LTF
 
@@ -600,7 +600,7 @@ Sample sizes and effect sizes were not available to me this session, so I cannot
 
 ### Replication and criticism
 
-The result has been replicated and refined by the same Düsseldorf group, and in a refined form by others. Buchner, Mayr and Brandt (2009; this lane) tested whether the advantage is caused by polarity or by the higher overall display luminance of positive displays, and found that at equal luminance the polarity advantage vanished, suggesting luminance rather than polarity itself. Piepenbrock et al. (2013, 2014; this lane) showed the advantage in younger and older adults and with smaller characters, and Dobres et al. (2017; this lane) found that dark ambient illumination interacts with polarity at glance-like reading. So the practical finding (positive polarity helps proofreading) is robust in these experiments, while the mechanism is debated. The paper's own result that ambient illumination did not interact with polarity is qualified by the later glance-reading work. The tests used proofreading, which is a demanding visual task and not the casual reading of lesson text.
+The result has been replicated and refined by the same Düsseldorf group, and in a refined form by others. Buchner, Mayr and Brandt (2009; this lane) tested whether the advantage is caused by polarity or by the higher overall display luminance of positive displays, and found that at equal luminance the polarity advantage vanished, suggesting luminance rather than polarity itself. Piepenbrock et al. (2013, 2014; this lane) showed the advantage in younger and older adults and with smaller characters, and Dobres et al. (2017; this lane) found that dark ambient illumination interacts with polarity at glance-like reading. So the practical finding (positive polarity helps proofreading) is robust in these experiments, while the mechanism is the question later papers address. The paper's own result that ambient illumination did not interact with polarity is qualified by the later glance-reading work. The tests used proofreading, which is a demanding visual task and not the casual reading of lesson text.
 
 ### Implications for LTF
 
@@ -621,9 +621,9 @@ This short paper tests an explanation for the positive polarity advantage found 
 
 ### Specifics
 
-Evidence type: a single factorial laboratory experiment (the abstract does not give sample size or the measure, which the earlier studies of this group made proofreading performance, so I do not state it here).
+Evidence type: a single factorial laboratory experiment (the abstract does not give the sample size or the performance measure, so I do not state them).
 
-- Design: polarity (positive/negative) crossed with overall display luminance (high/low), so that a negative-polarity display could be as bright overall as a positive one.
+- Design: polarity (positive or negative) manipulated independently of overall display luminance, so that a negative-polarity display could be as bright overall as a positive one.
 - Result: only the main effect of luminance; no polarity effect at matched luminance.
 - Reasoning: higher overall luminance implies a brighter display, which (in the group's later work) the authors link to pupil constriction and sharper retinal images. A dissertation summary from the same group, found in search results, describes pupil sizes smaller and proofreading better with positive polarity, but I did not read that source in detail.
 
