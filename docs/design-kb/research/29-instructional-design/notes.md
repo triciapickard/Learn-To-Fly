@@ -444,7 +444,7 @@ Gagné (1985), The Conditions of Learning and Theory of Instruction, 4th edition
 
 ### Core claims
 
-Gagné's theory links two things: different kinds of learning outcome require different internal and external conditions, and instruction should be designed to support the internal processes of learning that information-processing psychology describes. Learning outcomes are classified into categories, each with its own conditions. Instruction is then arranged as a sequence of "events" that support the internal processes, in an order that follows how a learner takes in, stores and uses information. The theory was developed in the 1960s and 1970s, with roots in military and industrial training, and the nine events were later formalized in the textbook Principles of Instructional Design with Briggs and Wager (a secondary account; I did not verify authorship details).
+Gagné's theory links two things: different kinds of learning outcome require different internal and external conditions, and instruction should be designed to support the internal processes of learning that information-processing psychology describes. Learning outcomes are classified into categories, each with its own conditions. Instruction is then arranged as a sequence of "events" that support the internal processes, in an order that follows how a learner takes in, stores and uses information. The first edition appeared in 1965, and the nine events were later formalized in the textbook Principles of Instructional Design with Briggs and Wager (a secondary account; I did not verify authorship details).
 
 ### Specifics
 
