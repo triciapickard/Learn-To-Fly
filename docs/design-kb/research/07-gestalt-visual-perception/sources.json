@@ -1,0 +1,403 @@
+[
+ {
+  "key": "Wertheimer1923",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Wertheimer",
+    "given": "Max"
+   }
+  ],
+  "year": 1923,
+  "title": "Untersuchungen zur Lehre von der Gestalt II",
+  "container": "Psychologische Forschung",
+  "publisher": "",
+  "volume": "4",
+  "issue": "",
+  "pages": "301-350",
+  "edition": "English translation \"Laws of organization in perceptual forms\" in Ellis (ed.), A Source Book of Gestalt Psychology, 1938, pp. 71-88",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Founder of Gestalt psychology; this paper is the original statement of the grouping laws (proximity, similarity, good continuation, closure).",
+  "caveats": "Laws were demonstrated with phenomenological demonstrations, not quantified experiments; later work (Kubovy, Palmer) quantified them. Laws are ceteris paribus and can conflict."
+ },
+ {
+  "key": "Koffka1935",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Koffka",
+    "given": "Kurt"
+   }
+  ],
+  "year": 1935,
+  "title": "Principles of Gestalt Psychology",
+  "container": "",
+  "publisher": "Harcourt, Brace (London: Routledge and Kegan Paul, 1935)",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "One of the three founders of Gestalt psychology; the systematic textbook statement of the school.",
+  "caveats": "Theory of isomorphism and field forces is not supported by modern neuroscience; the descriptive laws remain useful."
+ },
+ {
+  "key": "Rubin1915",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Rubin",
+    "given": "Edgar"
+   }
+  ],
+  "year": 1915,
+  "title": "Synsoplevede Figurer: Studier i psykologisk Analyse",
+  "container": "",
+  "publisher": "Gyldendalske Boghandel",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "German translation Visuell wahrgenommene Figuren, 1921 (Gyldendalske Boghandel); Danish title spelling varies between Synsoplevede and Synsoplevende",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Danish psychologist who introduced the figure-ground distinction and the vase/faces reversible figure.",
+  "caveats": "Descriptive and phenomenological; modern work (Peterson, Wagemans et al. 2012) shows figure-ground is not strictly pre-attentive and is influenced by meaning."
+ },
+ {
+  "key": "Arnheim1954",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Arnheim",
+    "given": "Rudolf"
+   }
+  ],
+  "year": 1954,
+  "title": "Art and Visual Perception: A Psychology of the Creative Eye",
+  "container": "",
+  "publisher": "University of California Press",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "New version, expanded and revised, 1974 (UC Press now sells it as Second Edition)",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Gestalt psychologist and art theorist; the canonical application of Gestalt perception to visual composition.",
+  "caveats": "Based on analysis of artworks and Gestalt theory, not controlled experiments; claims about visual weight and force are interpretive."
+ },
+ {
+  "key": "Palmer1992",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Palmer",
+    "given": "Stephen E."
+   }
+  ],
+  "year": 1992,
+  "title": "Common region: A new principle of perceptual grouping",
+  "container": "Cognitive Psychology",
+  "publisher": "",
+  "volume": "24",
+  "issue": "3",
+  "pages": "436-447",
+  "edition": "",
+  "doi": "10.1016/0010-0285(92)90014-S",
+  "url": "",
+  "verified": "web",
+  "authority": "Palmer is a leading vision scientist (UC Berkeley, author of Vision Science, 1999).",
+  "caveats": "Lab displays of simple dots and shapes; effect strength in complex interfaces is inferred."
+ },
+ {
+  "key": "Palmer1994",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Palmer",
+    "given": "Stephen"
+   },
+   {
+    "family": "Rock",
+    "given": "Irvin"
+   }
+  ],
+  "year": 1994,
+  "title": "Rethinking perceptual organization: The role of uniform connectedness",
+  "container": "Psychonomic Bulletin & Review",
+  "publisher": "",
+  "volume": "1",
+  "issue": "1",
+  "pages": "29-55",
+  "edition": "",
+  "doi": "10.3758/BF03200760",
+  "url": "",
+  "verified": "web",
+  "authority": "Palmer and Rock, two leading perception researchers, propose uniform connectedness as the earliest organizing principle.",
+  "caveats": "Claim that UC precedes all other grouping was criticized (Peterson & Gibson commentary, same journal 1994, 1(4), 509-514) on grounds of figure-ground and recognition evidence."
+ },
+ {
+  "key": "Wagemans2012I",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Wagemans",
+    "given": "Johan"
+   },
+   {
+    "family": "Elder",
+    "given": "James H."
+   },
+   {
+    "family": "Kubovy",
+    "given": "Michael"
+   },
+   {
+    "family": "Palmer",
+    "given": "Stephen E."
+   },
+   {
+    "family": "Peterson",
+    "given": "Mary A."
+   },
+   {
+    "family": "Singh",
+    "given": "Manish"
+   },
+   {
+    "family": "von der Heydt",
+    "given": "Rüdiger"
+   }
+  ],
+  "year": 2012,
+  "title": "A century of Gestalt psychology in visual perception: I. Perceptual grouping and figure-ground organization",
+  "container": "Psychological Bulletin",
+  "publisher": "",
+  "volume": "138",
+  "issue": "6",
+  "pages": "1172-1217",
+  "edition": "",
+  "doi": "10.1037/a0029333",
+  "url": "",
+  "verified": "web",
+  "authority": "Peer-reviewed centenary review by seven leading vision scientists in a top review journal.",
+  "caveats": "Review, not new data. Documents that several classic laws lack quantitative parameters."
+ },
+ {
+  "key": "Wagemans2012II",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Wagemans",
+    "given": "Johan"
+   },
+   {
+    "family": "Feldman",
+    "given": "Jacob"
+   },
+   {
+    "family": "Gepshtein",
+    "given": "Sergei"
+   },
+   {
+    "family": "Kimchi",
+    "given": "Ruth"
+   },
+   {
+    "family": "Pomerantz",
+    "given": "James R."
+   },
+   {
+    "family": "van der Helm",
+    "given": "Peter A."
+   },
+   {
+    "family": "van Leeuwen",
+    "given": "Cees"
+   }
+  ],
+  "year": 2012,
+  "title": "A century of Gestalt psychology in visual perception: II. Conceptual and theoretical foundations",
+  "container": "Psychological Bulletin",
+  "publisher": "",
+  "volume": "138",
+  "issue": "6",
+  "pages": "1218-1252",
+  "edition": "",
+  "doi": "10.1037/a0029334",
+  "url": "",
+  "verified": "web",
+  "authority": "Companion centenary review covering Prägnanz, simplicity, holism, and Gestalt theory versus modern computation.",
+  "caveats": "Review; Prägnanz remains hard to define operationally."
+ },
+ {
+  "key": "Gibson1979",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Gibson",
+    "given": "James J."
+   }
+  ],
+  "year": 1979,
+  "title": "The Ecological Approach to Visual Perception",
+  "container": "",
+  "publisher": "Houghton Mifflin",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Founder of ecological psychology; source of the concept of affordance and optic-flow perception.",
+  "caveats": "Anti-representational stance is contested (Marr, Ullman); the concept of affordance was later reinterpreted by Norman for design."
+ },
+ {
+  "key": "Fechner1860",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Fechner",
+    "given": "Gustav Theodor"
+   }
+  ],
+  "year": 1860,
+  "title": "Elemente der Psychophysik",
+  "container": "",
+  "publisher": "Breitkopf und Härtel",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "2 vols.; English translation of vol. 1 only: Elements of Psychophysics, Holt, Rinehart and Winston, 1966 (trans. H. E. Adler)",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Founder of psychophysics; formalized Weber's law into the logarithmic Weber-Fechner law.",
+  "caveats": "The logarithmic law fits mid-range intensities only; Stevens' power law fits many continua better. Published 1860, within the 250-year window."
+ },
+ {
+  "key": "Stevens1957",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Stevens",
+    "given": "S. S."
+   }
+  ],
+  "year": 1957,
+  "title": "On the psychophysical law",
+  "container": "Psychological Review",
+  "publisher": "",
+  "volume": "64",
+  "issue": "3",
+  "pages": "153-181",
+  "edition": "",
+  "doi": "10.1037/h0046162",
+  "url": "",
+  "verified": "web",
+  "authority": "Harvard psychophysicist; the standard source for the power law of sensation.",
+  "caveats": "Magnitude estimation is subject to context and range effects; exponents vary across studies and individuals (Poulton, 1989 critique)."
+ },
+ {
+  "key": "Biederman1987",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Biederman",
+    "given": "Irving"
+   }
+  ],
+  "year": 1987,
+  "title": "Recognition-by-components: A theory of human image understanding",
+  "container": "Psychological Review",
+  "publisher": "",
+  "volume": "94",
+  "issue": "2",
+  "pages": "115-147",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Influential cognitive-neuroscience theory of object recognition from edge-based volumetric primitives (geons).",
+  "caveats": "Viewpoint-dependent theories (Tarr, Bülthoff) dispute the viewpoint invariance claim; the geon count of about 36 is a model estimate."
+ },
+ {
+  "key": "Ramachandran1988",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Ramachandran",
+    "given": "V. S."
+   }
+  ],
+  "year": 1988,
+  "title": "Perception of shape from shading",
+  "container": "Nature",
+  "publisher": "",
+  "volume": "331",
+  "issue": "",
+  "pages": "163-166",
+  "edition": "",
+  "doi": "10.1038/331163a0",
+  "url": "",
+  "verified": "web",
+  "authority": "Leading perception neuroscientist; demonstrated the light-from-above assumption and global single-light-source shading interpretation.",
+  "caveats": "Later work (Adams et al. 2004) shows the light prior is adaptable by experience; a slight leftward bias also reported (Sun & Perona 1998)."
+ },
+ {
+  "key": "Bar2006",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Bar",
+    "given": "Moshe"
+   },
+   {
+    "family": "Neta",
+    "given": "Maital"
+   }
+  ],
+  "year": 2006,
+  "title": "Humans prefer curved visual objects",
+  "container": "Psychological Science",
+  "publisher": "",
+  "volume": "17",
+  "issue": "8",
+  "pages": "645-648",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Peer-reviewed study from a Harvard neuroscience lab; widely cited for curvature preference.",
+  "caveats": "The threat-avoidance explanation is questioned; later work suggests curvature is intrinsically pleasant, and effects are modest and context dependent."
+ },
+ {
+  "key": "Ware2000",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Ware",
+    "given": "Colin"
+   }
+  ],
+  "year": 2000,
+  "title": "Information Visualization: Perception for Design",
+  "container": "",
+  "publisher": "Morgan Kaufmann",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "4th ed., 2019 (Elsevier lists 19 December 2019)",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Perception scientist (University of New Hampshire) who systematically translates vision research into design guidelines.",
+  "caveats": "Guidelines synthesize lab findings; individual recommendations vary in strength of evidence."
+ }
+]

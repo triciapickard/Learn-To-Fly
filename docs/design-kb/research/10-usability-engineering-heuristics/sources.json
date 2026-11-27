@@ -1,0 +1,515 @@
+[
+ {
+  "key": "Gould1985",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Gould",
+    "given": "John D."
+   },
+   {
+    "family": "Lewis",
+    "given": "Clayton"
+   }
+  ],
+  "year": 1985,
+  "title": "Designing for usability: key principles and what designers think",
+  "container": "Communications of the ACM",
+  "publisher": "",
+  "volume": "28",
+  "issue": "3",
+  "pages": "300-311",
+  "edition": "",
+  "doi": "10.1145/3166.3170",
+  "url": "",
+  "verified": "web",
+  "authority": "Gould was an IBM Research human factors scientist who led the usability work on the 1984 Olympic Message System; Lewis is a cognitive scientist and HCI researcher. The paper set out the three principles that became the basis of user-centered design.",
+  "caveats": "Principles are widely endorsed but the paper's designer survey is small and dated. Later work shows that iterating well is harder than the paper implies (see CUE studies)."
+ },
+ {
+  "key": "Nielsen1993Usability",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   }
+  ],
+  "year": 1993,
+  "title": "Usability Engineering",
+  "container": "",
+  "publisher": "Academic Press",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Nielsen is a former Sun Microsystems distinguished engineer and co-founder of Nielsen Norman Group; this is the standard textbook of discount usability engineering.",
+  "caveats": "Written for 1990s desktop software; some numbers (five users, severity scale) were later contested or refined. Many claims rest on Nielsen's own studies."
+ },
+ {
+  "key": "Nielsen1990Heuristic",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   },
+   {
+    "family": "Molich",
+    "given": "Rolf"
+   }
+  ],
+  "year": 1990,
+  "title": "Heuristic evaluation of user interfaces",
+  "container": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '90)",
+  "publisher": "ACM",
+  "volume": "",
+  "issue": "",
+  "pages": "249-256",
+  "edition": "",
+  "doi": "10.1145/97243.97281",
+  "url": "",
+  "verified": "web",
+  "authority": "Nielsen and Molich are HCI researchers who introduced heuristic evaluation; the paper is among the most cited in usability.",
+  "caveats": "Experiments used small interfaces and mostly student evaluators. Later comparisons (CUE studies, Cockton and Woolrych) found heuristic evaluation produces many false alarms and inconsistent results."
+ },
+ {
+  "key": "Nielsen1994Heuristics",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   }
+  ],
+  "year": 1994,
+  "title": "Enhancing the explanatory power of usability heuristics",
+  "container": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '94)",
+  "publisher": "ACM",
+  "volume": "",
+  "issue": "",
+  "pages": "152-158",
+  "edition": "",
+  "doi": "10.1145/191666.191729",
+  "url": "",
+  "verified": "web",
+  "authority": "Nielsen's factor analysis of real usability problems produced the widely used ten heuristics.",
+  "caveats": "The ten heuristics explain only part of the variance in real problems; the paper itself says no short list explains all problems."
+ },
+ {
+  "key": "Nielsen1993Model",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   },
+   {
+    "family": "Landauer",
+    "given": "Thomas K."
+   }
+  ],
+  "year": 1993,
+  "title": "A mathematical model of the finding of usability problems",
+  "container": "Proceedings of INTERCHI '93 (INTERACT '93 and CHI '93)",
+  "publisher": "ACM",
+  "volume": "",
+  "issue": "",
+  "pages": "206-213",
+  "edition": "",
+  "doi": "10.1145/169059.169166",
+  "url": "",
+  "verified": "web",
+  "authority": "Landauer was a cognitive psychologist at Bellcore; the paper gives the basis for the five-user guideline.",
+  "caveats": "Assumes every problem is equally findable and independent across users. Spool and Schroeder (2001), Woolrych and Cockton (2001) and Faulkner (2003) show five users can find far fewer problems on complex sites."
+ },
+ {
+  "key": "Krug2000",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Krug",
+    "given": "Steve"
+   }
+  ],
+  "year": 2000,
+  "title": "Don't Make Me Think: A Common Sense Approach to Web Usability",
+  "container": "",
+  "publisher": "New Riders",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "3rd ed. (Don't Make Me Think, Revisited), 2014",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Krug is an independent usability consultant whose short book is among the best-selling web usability texts and a standard introduction for practitioners.",
+  "caveats": "Experience-based, not empirical research; claims about scanning and satisficing are consistent with eye-tracking studies but Krug supplies no data."
+ },
+ {
+  "key": "Norman1988",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Norman",
+    "given": "Donald A."
+   }
+  ],
+  "year": 1988,
+  "title": "The Psychology of Everyday Things (revised as The Design of Everyday Things)",
+  "container": "",
+  "publisher": "Basic Books",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "Revised and expanded ed., 2013",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Norman is a cognitive scientist and a founder of cognitive-science-informed design; the book popularized gulfs of execution and evaluation and the slip versus mistake distinction (drawn from Reason and Rasmussen).",
+  "caveats": "Error taxonomy comes from Reason (1990) and earlier work, applied informally to design. The affordance concept is covered by lane 11."
+ },
+ {
+  "key": "Lewis1986Error",
+  "type": "chapter",
+  "authors": [
+   {
+    "family": "Lewis",
+    "given": "Clayton"
+   },
+   {
+    "family": "Norman",
+    "given": "Donald A."
+   }
+  ],
+  "year": 1986,
+  "title": "Designing for error",
+  "container": "User Centered System Design: New Perspectives on Human-Computer Interaction",
+  "publisher": "Lawrence Erlbaum Associates",
+  "volume": "",
+  "issue": "",
+  "pages": "411-432",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Two leading cognitive scientists in HCI; the chapter is the classic statement of designing user interfaces so errors are prevented, detectable and reversible.",
+  "caveats": "Chapter number not confirmed; pages confirmed by secondary citation only. Principles are a design framework, not empirically tested in the chapter."
+ },
+ {
+  "key": "Brooke1996",
+  "type": "chapter",
+  "authors": [
+   {
+    "family": "Brooke",
+    "given": "John"
+   }
+  ],
+  "year": 1996,
+  "title": "SUS: a quick and dirty usability scale",
+  "container": "Usability Evaluation in Industry",
+  "editors": [
+   {
+    "family": "Jordan",
+    "given": "Patrick W."
+   },
+   {
+    "family": "Thomas",
+    "given": "B."
+   },
+   {
+    "family": "Weerdmeester",
+    "given": "Bruce A."
+   },
+   {
+    "family": "McClelland",
+    "given": "Ian L."
+   }
+  ],
+  "publisher": "Taylor and Francis",
+  "volume": "",
+  "issue": "",
+  "pages": "189-194",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Brooke developed SUS at Digital Equipment Corporation in 1986; it is the most widely used short usability questionnaire.",
+  "caveats": "Brooke himself described it as quick and dirty; the score is not a percentage, and it measures perceived usability rather than task success."
+ },
+ {
+  "key": "Bangor2008",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Bangor",
+    "given": "Aaron"
+   },
+   {
+    "family": "Kortum",
+    "given": "Philip T."
+   },
+   {
+    "family": "Miller",
+    "given": "James T."
+   }
+  ],
+  "year": 2008,
+  "title": "An empirical evaluation of the System Usability Scale",
+  "container": "International Journal of Human-Computer Interaction",
+  "publisher": "",
+  "volume": "24",
+  "issue": "6",
+  "pages": "574-594",
+  "edition": "",
+  "doi": "10.1080/10447310802205776",
+  "url": "",
+  "verified": "web",
+  "authority": "Bangor, Kortum and Miller analyzed about a decade of SUS data from many products; the paper supplied the commonly used adjective-rating and acceptability mapping.",
+  "caveats": "Data come mainly from telecom products and interactive voice response systems. Later work by Sauro and Lewis recommends curved grading around a mean near 68."
+ },
+ {
+  "key": "Grossman2009",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "Grossman",
+    "given": "Tovi"
+   },
+   {
+    "family": "Fitzmaurice",
+    "given": "George"
+   },
+   {
+    "family": "Attar",
+    "given": "Ramtin"
+   }
+  ],
+  "year": 2009,
+  "title": "A survey of software learnability: metrics, methodologies and guidelines",
+  "container": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '09)",
+  "publisher": "ACM",
+  "volume": "",
+  "issue": "",
+  "pages": "649-658",
+  "edition": "",
+  "doi": "10.1145/1518701.1518803",
+  "url": "",
+  "verified": "web",
+  "authority": "Autodesk Research and University of Toronto researchers; a systematic survey of how learnability had been defined and measured across CHI and TOCHI.",
+  "caveats": "A survey of the literature plus one small user study of the new question-suggestion protocol; guidelines come from AutoCAD-style complex software, not websites."
+ },
+ {
+  "key": "Ceaparu2004",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Ceaparu",
+    "given": "Irina"
+   },
+   {
+    "family": "Lazar",
+    "given": "Jonathan"
+   },
+   {
+    "family": "Bessiere",
+    "given": "Katie"
+   },
+   {
+    "family": "Robinson",
+    "given": "John"
+   },
+   {
+    "family": "Shneiderman",
+    "given": "Ben"
+   }
+  ],
+  "year": 2004,
+  "title": "Determining causes and severity of end-user frustration",
+  "container": "International Journal of Human-Computer Interaction",
+  "publisher": "",
+  "volume": "17",
+  "issue": "3",
+  "pages": "333-356",
+  "edition": "",
+  "doi": "10.1207/s15327590ijhc1703_3",
+  "url": "",
+  "verified": "web",
+  "authority": "University of Maryland HCIL researchers led by Ben Shneiderman; an early large empirical study of frustration with computers.",
+  "caveats": "Time-lost figures are self-reported, from a 2002-2003 era of dial-up and pop-ups; categories of causes have shifted."
+ },
+ {
+  "key": "Bastien1993",
+  "type": "report",
+  "authors": [
+   {
+    "family": "Bastien",
+    "given": "J. M. Christian"
+   },
+   {
+    "family": "Scapin",
+    "given": "Dominique L."
+   }
+  ],
+  "year": 1993,
+  "title": "Ergonomic criteria for the evaluation of human-computer interfaces",
+  "container": "INRIA Technical Report RT-0156",
+  "publisher": "Institut National de Recherche en Informatique et en Automatique",
+  "volume": "",
+  "issue": "",
+  "pages": "79",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "INRIA ergonomists; the criteria are the main European alternative to Nielsen's heuristics and underpin the ergonomic criteria approach.",
+  "caveats": "Criteria are more granular than most practitioners use; the HAL record (inria-00070012) was confirmed in search."
+ },
+ {
+  "key": "GerhardtPowals1996",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Gerhardt-Powals",
+    "given": "Jill"
+   }
+  ],
+  "year": 1996,
+  "title": "Cognitive engineering principles for enhancing human-computer performance",
+  "container": "International Journal of Human-Computer Interaction",
+  "publisher": "",
+  "volume": "8",
+  "issue": "2",
+  "pages": "189-211",
+  "edition": "",
+  "doi": "10.1080/10447319609526147",
+  "url": "",
+  "verified": "web",
+  "authority": "Drexel University doctoral work applying cognitive science to ten explicit display principles, tested experimentally.",
+  "caveats": "Single experimental task and small student samples; the principles are less cited and less tested than Nielsen's heuristics."
+ },
+ {
+  "key": "Molich2008CUE4",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Molich",
+    "given": "Rolf"
+   },
+   {
+    "family": "Dumas",
+    "given": "Joseph S."
+   }
+  ],
+  "year": 2008,
+  "title": "Comparative usability evaluation (CUE-4)",
+  "container": "Behaviour and Information Technology",
+  "publisher": "",
+  "volume": "27",
+  "issue": "3",
+  "pages": "263-281",
+  "edition": "",
+  "doi": "10.1080/01449290600959062",
+  "url": "",
+  "verified": "web",
+  "authority": "Molich is a Danish usability consultant and co-author of heuristic evaluation; Dumas wrote standard usability testing texts. CUE studies are the main evidence on evaluator reliability.",
+  "caveats": "Teams were volunteers evaluating one hotel site; the finding of low overlap does not mean evaluations are useless."
+ },
+ {
+  "key": "ISO9241-11",
+  "type": "standard",
+  "authors": [
+   {
+    "literal": "International Organization for Standardization"
+   }
+  ],
+  "year": 1998,
+  "title": "ISO 9241-11:2018 Ergonomics of human-system interaction, Part 11: Usability: Definitions and concepts",
+  "container": "",
+  "publisher": "ISO",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "2nd ed., 2018 (first edition 1998)",
+  "doi": "",
+  "url": "https://www.iso.org/standard/63500.html",
+  "verified": "memory",
+  "authority": "International standard giving the most widely accepted definition of usability.",
+  "caveats": "Standard text is paywalled; the definition wording is quoted widely. URL not verified this session."
+ },
+ {
+  "key": "Tognazzini2014",
+  "type": "web",
+  "authors": [
+   {
+    "family": "Tognazzini",
+    "given": "Bruce"
+   }
+  ],
+  "year": 1992,
+  "title": "First Principles of Interaction Design (Revised and Expanded)",
+  "container": "AskTog",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "revised 2014; earlier version in Tog on Interface, Addison-Wesley, 1992",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Tognazzini was an early member of Apple's human interface group and later at Sun and Nielsen Norman Group.",
+  "caveats": "Expert checklist without experiments; exact principle count and URL not confirmed."
+ },
+ {
+  "key": "Smith1986",
+  "type": "report",
+  "authors": [
+   {
+    "family": "Smith",
+    "given": "Sidney L."
+   },
+   {
+    "family": "Mosier",
+    "given": "Jane N."
+   }
+  ],
+  "year": 1986,
+  "title": "Guidelines for Designing User Interface Software",
+  "container": "MITRE Corporation report ESD-TR-86-278",
+  "publisher": "MITRE Corporation / US Air Force Electronic Systems Division",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "MITRE human factors researchers; the most extensive early compendium of UI guidelines.",
+  "caveats": "Guideline count (about 944) and report number not confirmed this session; written for character-based terminals."
+ },
+ {
+  "key": "Apple1987",
+  "type": "book",
+  "authors": [
+   {
+    "literal": "Apple Computer, Inc."
+   }
+  ],
+  "year": 1987,
+  "title": "Human Interface Guidelines: The Apple Desktop Interface",
+  "container": "",
+  "publisher": "Addison-Wesley",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Apple's official interface guidelines for Macintosh developers; an early corporate style guide.",
+  "caveats": "Platform-specific; principle list recalled from memory, not confirmed this session."
+ }
+]

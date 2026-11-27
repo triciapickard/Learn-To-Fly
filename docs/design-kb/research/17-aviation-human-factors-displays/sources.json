@@ -1,0 +1,405 @@
+[
+ {
+  "key": "Fitts1947",
+  "type": "report",
+  "authors": [
+   {
+    "family": "Fitts",
+    "given": "Paul M."
+   },
+   {
+    "family": "Jones",
+    "given": "Richard E."
+   }
+  ],
+  "year": 1947,
+  "title": "Analysis of factors contributing to 460 \"pilot-error\" experiences in operating aircraft controls",
+  "container": "Memorandum Report TSEAA-694-12, Aero Medical Laboratory, Air Materiel Command, Wright Field, Dayton, OH (reprinted in Sinaiko, ed., Selected Papers on Human Factors in the Design and Use of Control Systems, Dover, 1961)",
+  "publisher": "Aero Medical Laboratory",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Fitts founded engineering psychology in the US Army Air Forces aviation psychology program; this report reframed 'pilot error' as design-induced error.",
+  "caveats": "Critical incident sample of reports and interviews, not a count of all errors; control designs are of 1940s aircraft. Companion report 'Psychological aspects of instrument display I' (TSEAA-694-12A, 1947) covers instrument misreading.",
+  "confidence": "high"
+ },
+ {
+  "key": "Degani1992",
+  "type": "report",
+  "authors": [
+   {
+    "family": "Degani",
+    "given": "Asaf"
+   }
+  ],
+  "year": 1992,
+  "title": "On the typography of flight-deck documentation",
+  "container": "NASA Contractor Report 177605",
+  "publisher": "NASA Ames Research Center",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "https://ntrs.nasa.gov/citations/19930010781",
+  "verified": "web",
+  "authority": "Degani is a NASA Ames human factors researcher; the report is a literature review of typography research applied to cockpit manuals, ending in graphical design recommendations.",
+  "caveats": "Based on print and 1980s CRT evidence; some recommendations (resolution, font choice) are dated for modern screens. A 2024 PACDEFF paper revisits it for digital documents.",
+  "confidence": "high"
+ },
+ {
+  "key": "Degani1993",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Degani",
+    "given": "Asaf"
+   },
+   {
+    "family": "Wiener",
+    "given": "Earl L."
+   }
+  ],
+  "year": 1993,
+  "title": "Cockpit checklists: concepts, design, and use",
+  "container": "Human Factors",
+  "publisher": "",
+  "volume": "35",
+  "issue": "2",
+  "pages": "345-359",
+  "edition": "",
+  "doi": "10.1177/001872089303500209",
+  "url": "",
+  "verified": "web",
+  "authority": "Degani and Wiener (Univ. of Miami, NASA Ames) wrote the standard field-study treatment of airline checklists; it extends their 1990 NASA report on the normal checklist.",
+  "caveats": "Based on airline field observation and interviews, not controlled experiments; airline two-crew jets, not single-pilot light aircraft.",
+  "confidence": "high"
+ },
+ {
+  "key": "Burian2006",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "Burian",
+    "given": "Barbara K."
+   }
+  ],
+  "year": 2006,
+  "title": "Design guidance for emergency and abnormal checklists in aviation",
+  "container": "Proceedings of the Human Factors and Ergonomics Society 50th Annual Meeting",
+  "publisher": "Human Factors and Ergonomics Society",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "https://humansystems.arc.nasa.gov/flightcognition/Publications/EA_Checklist_Design.pdf",
+  "verified": "web",
+  "authority": "Burian is a NASA Ames researcher who led the Emergency and Abnormal Situations study of airline checklists.",
+  "caveats": "Guidance for abnormal and emergency checklists, which differ from normal checklists; exact items in the paper should be checked against the PDF before quoting.",
+  "confidence": "medium"
+ },
+ {
+  "key": "Haynes2009",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Haynes",
+    "given": "Alex B."
+   },
+   {
+    "family": "Weiser",
+    "given": "Thomas G."
+   },
+   {
+    "family": "Berry",
+    "given": "William R."
+   },
+   {
+    "family": "Lipsitz",
+    "given": "Stuart R."
+   },
+   {
+    "family": "Breizat",
+    "given": "Abdel-Hadi S."
+   },
+   {
+    "family": "Dellinger",
+    "given": "E. Patchen"
+   },
+   {
+    "family": "Gawande",
+    "given": "Atul A."
+   }
+  ],
+  "year": 2009,
+  "title": "A surgical safety checklist to reduce morbidity and mortality in a global population",
+  "container": "New England Journal of Medicine",
+  "publisher": "",
+  "volume": "360",
+  "issue": "5",
+  "pages": "491-499",
+  "edition": "",
+  "doi": "10.1056/NEJMsa0810119",
+  "url": "",
+  "verified": "web",
+  "authority": "Peer-reviewed multicenter WHO study that carried the aviation checklist idea into medicine.",
+  "caveats": "Before-and-after design without a concurrent control group; Urbach et al. 2014 (NEJM 370:1029-1038) found no significant change in Ontario hospitals after mandated adoption, so effect depends on how well the checklist is implemented. The author list shown is partial (the paper has more authors).",
+  "confidence": "high"
+ },
+ {
+  "key": "Endsley1995",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Endsley",
+    "given": "Mica R."
+   }
+  ],
+  "year": 1995,
+  "title": "Toward a theory of situation awareness in dynamic systems",
+  "container": "Human Factors",
+  "publisher": "",
+  "volume": "37",
+  "issue": "1",
+  "pages": "32-64",
+  "edition": "",
+  "doi": "10.1518/001872095779049543",
+  "url": "",
+  "verified": "web",
+  "authority": "Endsley (former USAF chief scientist) defined the dominant three-level model of situation awareness.",
+  "caveats": "Criticized as circular and as too information-processing centered (Flach 1995; Dekker); SA measures such as SAGAT freeze the task and may disturb it.",
+  "confidence": "high"
+ },
+ {
+  "key": "Wickens1995",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Wickens",
+    "given": "Christopher D."
+   },
+   {
+    "family": "Carswell",
+    "given": "C. Melody"
+   }
+  ],
+  "year": 1995,
+  "title": "The proximity compatibility principle: Its psychological foundation and relevance to display design",
+  "container": "Human Factors",
+  "publisher": "",
+  "volume": "37",
+  "issue": "3",
+  "pages": "473-494",
+  "edition": "",
+  "doi": "10.1518/001872095779049408",
+  "url": "",
+  "verified": "web",
+  "authority": "Wickens is the leading engineering psychologist on display design; this paper states one of his central display principles.",
+  "caveats": "Some follow-up experiments gave mixed results, especially for space proximity versus color proximity, and benefits of integration depend on task.",
+  "confidence": "high"
+ },
+ {
+  "key": "Sarter1995",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Sarter",
+    "given": "Nadine B."
+   },
+   {
+    "family": "Woods",
+    "given": "David D."
+   }
+  ],
+  "year": 1995,
+  "title": "How in the world did we ever get into that mode? Mode error and awareness in supervisory control",
+  "container": "Human Factors",
+  "publisher": "",
+  "volume": "37",
+  "issue": "1",
+  "pages": "5-19",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Leading cognitive systems engineering researchers; paper synthesizes cockpit automation studies of mode awareness.",
+  "caveats": "Based on survey and simulator studies of 1990s glass cockpits; later automation is more transparent but mode confusion persists (see NASA analyses of recent accidents).",
+  "confidence": "high"
+ },
+ {
+  "key": "Bainbridge1983",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Bainbridge",
+    "given": "Lisanne"
+   }
+  ],
+  "year": 1983,
+  "title": "Ironies of automation",
+  "container": "Automatica",
+  "publisher": "",
+  "volume": "19",
+  "issue": "6",
+  "pages": "775-779",
+  "edition": "",
+  "doi": "10.1016/0005-1098(83)90046-8",
+  "url": "",
+  "verified": "web",
+  "authority": "Bainbridge was a leading UK cognitive ergonomist; this is among the most cited papers in human factors.",
+  "caveats": "A conceptual argument from process control, not an experiment; vigilance claims rest on 1940s-70s studies.",
+  "confidence": "high"
+ },
+ {
+  "key": "Wiener1980",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Wiener",
+    "given": "Earl L."
+   },
+   {
+    "family": "Curry",
+    "given": "Renwick E."
+   }
+  ],
+  "year": 1980,
+  "title": "Flight-deck automation: promises and problems",
+  "container": "Ergonomics",
+  "publisher": "",
+  "volume": "23",
+  "issue": "10",
+  "pages": "995-1011",
+  "edition": "",
+  "doi": "10.1080/00140138008924809",
+  "url": "https://ntrs.nasa.gov/citations/19800017542",
+  "verified": "web",
+  "authority": "Wiener (Miami) and Curry (NASA Ames) wrote the first major human factors critique of airline cockpit automation.",
+  "caveats": "Predates glass cockpits; an earlier NASA TM 81206 version exists and may differ from the journal text.",
+  "confidence": "high"
+ },
+ {
+  "key": "Hutchins1995",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Hutchins",
+    "given": "Edwin"
+   }
+  ],
+  "year": 1995,
+  "title": "How a cockpit remembers its speeds",
+  "container": "Cognitive Science",
+  "publisher": "",
+  "volume": "19",
+  "issue": "3",
+  "pages": "265-288",
+  "edition": "",
+  "doi": "",
+  "url": "https://courses.ischool.berkeley.edu/i290-3/s05/papers/How_a_cockpit_remembers_its_speeds.pdf",
+  "verified": "web",
+  "authority": "Hutchins is a cognitive anthropologist (UC San Diego) and founder of distributed cognition; based on ethnography of airline cockpits.",
+  "caveats": "Ethnographic case study of one aircraft type (MD-80); generalizes by argument, not by statistics.",
+  "confidence": "high"
+ },
+ {
+  "key": "Reason1990",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Reason",
+    "given": "James"
+   }
+  ],
+  "year": 1990,
+  "title": "Human error",
+  "container": "",
+  "publisher": "Cambridge University Press",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Reason (Univ. of Manchester) is the foundational theorist of human error and organizational accidents.",
+  "caveats": "The Swiss cheese picture was popularized in his 1997 Managing the Risks of Organizational Accidents; critics (Dekker, Hollnagel) say it implies linear causation. Details from memory.",
+  "confidence": "high"
+ },
+ {
+  "key": "FAA2010AC251322",
+  "type": "standard",
+  "authors": [
+   {
+    "literal": "Federal Aviation Administration"
+   }
+  ],
+  "year": 2010,
+  "title": "Advisory Circular AC 25.1322-1, Flightcrew alerting",
+  "container": "",
+  "publisher": "US Department of Transportation, FAA",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_25.1322-1.pdf",
+  "verified": "web",
+  "authority": "The US regulator's acceptable means of compliance for 14 CFR 25.1322, which fixes warning, caution and advisory color conventions.",
+  "caveats": "Applies to transport-category aircraft; the Cessna 172 follows Part 23 (AC 23.1311-1C for electronic displays) but uses the same red/amber convention in practice. Section-level wording could not be read this session.",
+  "confidence": "medium"
+ },
+ {
+  "key": "Roscoe1968",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Roscoe",
+    "given": "Stanley N."
+   }
+  ],
+  "year": 1968,
+  "title": "Airborne displays for flight and navigation",
+  "container": "Human Factors",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Roscoe was a founder of aviation psychology and display research (Illinois, later NMSU); source of the principles of pictorial realism and the moving part.",
+  "caveats": "Citation and content from memory, not re-verified by search this session. Principles are argued from experiments in the 1950s-60s and are debated for some display types.",
+  "confidence": "medium"
+ },
+ {
+  "key": "Dekker2002",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Dekker",
+    "given": "Sidney"
+   }
+  ],
+  "year": 2002,
+  "title": "The field guide to understanding human error",
+  "container": "",
+  "publisher": "Ashgate",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "3rd ed., CRC Press, 2014 (retitled 'The Field Guide to Understanding Human Error')",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Dekker is a pilot and professor of human factors and safety science.",
+  "caveats": "A position book (the 'new view'); critics say it can understate individual accountability. Details from memory.",
+  "confidence": "medium"
+ }
+]

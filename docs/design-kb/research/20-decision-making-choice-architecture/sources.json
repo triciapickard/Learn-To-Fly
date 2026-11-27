@@ -1,0 +1,515 @@
+[
+ {
+  "key": "Simon1955",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Simon",
+    "given": "Herbert A."
+   }
+  ],
+  "year": 1955,
+  "title": "A behavioral model of rational choice",
+  "container": "The Quarterly Journal of Economics",
+  "publisher": "",
+  "volume": "69",
+  "issue": "1",
+  "pages": "99-118",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Simon (Nobel 1978) founded bounded rationality; this is the paper that replaced the omniscient economic actor with a cognitively limited chooser.",
+  "caveats": "Satisficing as a term appears in Simon 1956 (Psychological Review 63(2):129-138). Descriptive model, not an empirically tested effect size; later work (Schwartz et al. 2002 maximizer scale) operationalized it with mixed results. Bibliographic details not re-confirmed by search this session (search budget exhausted); DOI removed."
+ },
+ {
+  "key": "Simon1971",
+  "type": "chapter",
+  "authors": [
+   {
+    "family": "Simon",
+    "given": "Herbert A."
+   }
+  ],
+  "year": 1971,
+  "title": "Designing organizations for an information-rich world",
+  "container": "Computers, communications, and the public interest",
+  "publisher": "Johns Hopkins Press",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "editors": [
+   {
+    "family": "Greenberger",
+    "given": "Martin"
+   }
+  ],
+  "authority": "Simon, Nobel laureate and cognitive scientist; this chapter is the origin of the attention economy idea.",
+  "caveats": "A conceptual essay with no experiments. Page range from memory; confirm before citing pages. Bibliographic details not re-confirmed by search this session (search budget exhausted); DOI removed."
+ },
+ {
+  "key": "Tversky1974",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Tversky",
+    "given": "Amos"
+   },
+   {
+    "family": "Kahneman",
+    "given": "Daniel"
+   }
+  ],
+  "year": 1974,
+  "title": "Judgment under uncertainty: Heuristics and biases",
+  "container": "Science",
+  "publisher": "",
+  "volume": "185",
+  "issue": "4157",
+  "pages": "1124-1131",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Founding paper of the heuristics and biases program by two of the most cited decision researchers; Kahneman won the 2002 Nobel in economics.",
+  "caveats": "Anchoring is robust and replicates widely; representativeness and availability are descriptive labels that critics (Gigerenzer) call vague. Specific numbers come from small student samples. Bibliographic details not re-confirmed by search this session (search budget exhausted); DOI removed."
+ },
+ {
+  "key": "Kahneman1979",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Kahneman",
+    "given": "Daniel"
+   },
+   {
+    "family": "Tversky",
+    "given": "Amos"
+   }
+  ],
+  "year": 1979,
+  "title": "Prospect theory: An analysis of decision under risk",
+  "container": "Econometrica",
+  "publisher": "",
+  "volume": "47",
+  "issue": "2",
+  "pages": "263-291",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "One of the most cited papers in economics; defines reference dependence and loss aversion.",
+  "caveats": "Core patterns replicated across countries (Ruggeri et al. 2020, Nature Human Behaviour). Loss aversion as a general law is contested (Gal and Rucker 2018, Journal of Consumer Psychology 28(3):497-516). Bibliographic details not re-confirmed by search this session (search budget exhausted); DOI removed."
+ },
+ {
+  "key": "Tversky1981",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Tversky",
+    "given": "Amos"
+   },
+   {
+    "family": "Kahneman",
+    "given": "Daniel"
+   }
+  ],
+  "year": 1981,
+  "title": "The framing of decisions and the psychology of choice",
+  "container": "Science",
+  "publisher": "",
+  "volume": "211",
+  "issue": "4481",
+  "pages": "453-458",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Source of the Asian disease problem; the canonical demonstration that logically equivalent descriptions change choices.",
+  "caveats": "Gain/loss framing replicates but effects are typically smaller than the original; moderated by wording and context (Kuhberger 1998 meta-analysis). Bibliographic details not re-confirmed by search this session (search budget exhausted); DOI removed."
+ },
+ {
+  "key": "Johnson2003",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Johnson",
+    "given": "Eric J."
+   },
+   {
+    "family": "Goldstein",
+    "given": "Daniel"
+   }
+  ],
+  "year": 2003,
+  "title": "Do defaults save lives?",
+  "container": "Science",
+  "publisher": "",
+  "volume": "302",
+  "issue": "5649",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Columbia decision scientists; the most cited demonstration of default effects in public policy.",
+  "caveats": "Country comparisons are correlational and measure registration, not actual donation; actual donation depends on health-system factors and family consent. Later work suggests opt-out registration rates overstate real effects. Volume/page details not confirmed this session; DOI and page range removed."
+ },
+ {
+  "key": "Jachimowicz2019",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Jachimowicz",
+    "given": "Jon M."
+   },
+   {
+    "family": "Duncan",
+    "given": "Shannon"
+   },
+   {
+    "family": "Weber",
+    "given": "Elke U."
+   },
+   {
+    "family": "Johnson",
+    "given": "Eric J."
+   }
+  ],
+  "year": 2019,
+  "title": "When and why defaults influence decisions: A meta-analysis of default effects",
+  "container": "Behavioural Public Policy",
+  "publisher": "",
+  "volume": "3",
+  "issue": "2",
+  "pages": "159-186",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Peer-reviewed meta-analysis of 58 studies by leading default researchers.",
+  "caveats": "Authors include the originators of default research; heterogeneity is large and two studies show negative effects. Reported publication-bias checks were limited."
+ },
+ {
+  "key": "Iyengar2000",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Iyengar",
+    "given": "Sheena S."
+   },
+   {
+    "family": "Lepper",
+    "given": "Mark R."
+   }
+  ],
+  "year": 2000,
+  "title": "When choice is demotivating: Can one desire too much of a good thing?",
+  "container": "Journal of Personality and Social Psychology",
+  "publisher": "",
+  "volume": "79",
+  "issue": "6",
+  "pages": "995-1006",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Peer-reviewed in the top social psychology journal; the origin of the jam study.",
+  "caveats": "The supermarket study was not cleanly replicated and the meta-analysis of Scheibehenne et al. 2010 found a mean effect near zero. Treat as a hypothesis about conditions, not a law. Bibliographic details not re-confirmed by search this session (search budget exhausted); DOI removed."
+ },
+ {
+  "key": "Scheibehenne2010",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Scheibehenne",
+    "given": "Benjamin"
+   },
+   {
+    "family": "Greifeneder",
+    "given": "Rainer"
+   },
+   {
+    "family": "Todd",
+    "given": "Peter M."
+   }
+  ],
+  "year": 2010,
+  "title": "Can there ever be too many options? A meta-analytic review of choice overload",
+  "container": "Journal of Consumer Research",
+  "publisher": "",
+  "volume": "37",
+  "issue": "3",
+  "pages": "409-425",
+  "edition": "",
+  "doi": "10.1086/651235",
+  "url": "",
+  "verified": "web",
+  "authority": "Meta-analysis of 50 experiments from a Max Planck group; the standard skeptical reference on choice overload.",
+  "caveats": "Chernev et al. 2015 argue that moderators were not modeled adequately and the effect is real under certain conditions."
+ },
+ {
+  "key": "Chernev2015",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Chernev",
+    "given": "Alexander"
+   },
+   {
+    "family": "Bockenholt",
+    "given": "Ulf"
+   },
+   {
+    "family": "Goodman",
+    "given": "Joseph"
+   }
+  ],
+  "year": 2015,
+  "title": "Choice overload: A conceptual review and meta-analysis",
+  "container": "Journal of Consumer Psychology",
+  "publisher": "",
+  "volume": "25",
+  "issue": "2",
+  "pages": "333-358",
+  "edition": "",
+  "doi": "10.1016/j.jcps.2014.08.002",
+  "url": "",
+  "verified": "web",
+  "authority": "Peer-reviewed meta-analysis from a leading consumer psychology journal; the main rebuttal and refinement of Scheibehenne et al.",
+  "caveats": "Authors previously argued choice overload is real; heterogeneity remains large. Moderators were coded post hoc."
+ },
+ {
+  "key": "Mertens2022",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Mertens",
+    "given": "Stephanie"
+   },
+   {
+    "family": "Herberz",
+    "given": "Mario"
+   },
+   {
+    "family": "Hahnel",
+    "given": "Ulf J. J."
+   },
+   {
+    "family": "Brosch",
+    "given": "Tobias"
+   }
+  ],
+  "year": 2022,
+  "title": "The effectiveness of nudging: A meta-analysis of choice architecture interventions across behavioral domains",
+  "container": "Proceedings of the National Academy of Sciences",
+  "publisher": "",
+  "volume": "119",
+  "issue": "1",
+  "pages": "e2107346118",
+  "edition": "",
+  "doi": "10.1073/pnas.2107346118",
+  "url": "",
+  "verified": "web",
+  "authority": "Largest nudge meta-analysis to date, published in PNAS.",
+  "caveats": "Maier et al. 2022 and Szaszi et al. 2022 show the headline effect shrinks sharply after correcting for publication bias."
+ },
+ {
+  "key": "Maier2022",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Maier",
+    "given": "Maximilian"
+   },
+   {
+    "family": "Bartos",
+    "given": "Frantisek"
+   },
+   {
+    "family": "Stanley",
+    "given": "T. D."
+   },
+   {
+    "family": "Shanks",
+    "given": "David R."
+   },
+   {
+    "family": "Harris",
+    "given": "Adam J. L."
+   },
+   {
+    "family": "Wagenmakers",
+    "given": "Eric-Jan"
+   }
+  ],
+  "year": 2022,
+  "title": "No evidence for nudging after adjusting for publication bias",
+  "container": "Proceedings of the National Academy of Sciences",
+  "publisher": "",
+  "volume": "119",
+  "issue": "31",
+  "pages": "e2200300119",
+  "edition": "",
+  "doi": "10.1073/pnas.2200300119",
+  "url": "",
+  "verified": "web",
+  "authority": "Peer-reviewed reanalysis letter in PNAS by meta-science methodologists.",
+  "caveats": "The authors' own rejoinder concedes the finding is 'undecided' overall, not evidence of absence; Data Colada criticized pooling heterogeneous interventions."
+ },
+ {
+  "key": "DellaVigna2022",
+  "type": "article",
+  "authors": [
+   {
+    "family": "DellaVigna",
+    "given": "Stefano"
+   },
+   {
+    "family": "Linos",
+    "given": "Elizabeth"
+   }
+  ],
+  "year": 2022,
+  "title": "RCTs to scale: Comprehensive evidence from two nudge units",
+  "container": "Econometrica",
+  "publisher": "",
+  "volume": "90",
+  "issue": "1",
+  "pages": "81-116",
+  "edition": "",
+  "doi": "10.3982/ECTA18709",
+  "url": "",
+  "verified": "web",
+  "authority": "Berkeley economists analysing every trial of two major US nudge units, a rare unbiased sample.",
+  "caveats": "Outcomes are mostly take-up and compliance in government settings; generalization to learning apps is indirect."
+ },
+ {
+  "key": "Mathur2019",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Mathur",
+    "given": "Arunesh"
+   },
+   {
+    "family": "Acar",
+    "given": "Gunes"
+   },
+   {
+    "family": "Friedman",
+    "given": "Michael J."
+   },
+   {
+    "family": "Lucherini",
+    "given": "Elena"
+   },
+   {
+    "family": "Mayer",
+    "given": "Jonathan"
+   },
+   {
+    "family": "Chetty",
+    "given": "Marshini"
+   },
+   {
+    "family": "Narayanan",
+    "given": "Arvind"
+   }
+  ],
+  "year": 2019,
+  "title": "Dark patterns at scale: Findings from a crawl of 11K shopping websites",
+  "container": "Proceedings of the ACM on Human-Computer Interaction (CSCW)",
+  "publisher": "",
+  "volume": "3",
+  "issue": "CSCW",
+  "pages": "Article 81",
+  "edition": "",
+  "doi": "10.1145/3359183",
+  "url": "",
+  "verified": "web",
+  "authority": "Princeton computer scientists; first large-scale measurement of dark patterns on the web.",
+  "caveats": "Covers shopping sites only; automated detection finds a lower bound; counts instances not harm."
+ },
+ {
+  "key": "Luguri2021",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Luguri",
+    "given": "Jamie"
+   },
+   {
+    "family": "Strahilevitz",
+    "given": "Lior Jacob"
+   }
+  ],
+  "year": 2021,
+  "title": "Shining a light on dark patterns",
+  "container": "Journal of Legal Analysis",
+  "publisher": "",
+  "volume": "13",
+  "issue": "1",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "University of Chicago law scholars; the key experimental evidence that dark patterns work and who they harm.",
+  "caveats": "US online samples with a hypothetical-feeling service; page range from memory. Volume/page details not confirmed this session; DOI and page range removed."
+ },
+ {
+  "key": "Sunstein2022",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Sunstein",
+    "given": "Cass R."
+   }
+  ],
+  "year": 2022,
+  "title": "Sludge audits",
+  "container": "Behavioural Public Policy",
+  "publisher": "",
+  "volume": "6",
+  "issue": "4",
+  "pages": "654-673",
+  "edition": "",
+  "doi": "10.1017/bpp.2019.32",
+  "url": "",
+  "verified": "web",
+  "authority": "Co-author of Nudge and former head of the US Office of Information and Regulatory Affairs.",
+  "caveats": "Policy framework rather than empirical study; first online 2020. Sunstein's own earlier nudge claims are among those discounted by Maier et al."
+ },
+ {
+  "key": "Gigerenzer2011",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Gigerenzer",
+    "given": "Gerd"
+   },
+   {
+    "family": "Gaissmaier",
+    "given": "Wolfgang"
+   }
+  ],
+  "year": 2011,
+  "title": "Heuristic decision making",
+  "container": "Annual Review of Psychology",
+  "publisher": "",
+  "volume": "62",
+  "issue": "",
+  "pages": "451-482",
+  "edition": "",
+  "doi": "10.1146/annurev-psych-120709-145346",
+  "url": "",
+  "verified": "web",
+  "authority": "Gigerenzer directs the Max Planck ABC group; this is the standard review of the fast-and-frugal program.",
+  "caveats": "Advocacy for ecological rationality; the recognition heuristic and less-is-more claims have drawn serious critique (Pachur, Todd, Gigerenzer et al. debate in JDM 2011)."
+ }
+]

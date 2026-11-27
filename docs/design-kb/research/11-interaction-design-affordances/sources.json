@@ -1,0 +1,432 @@
+[
+ {
+  "key": "Norman1988",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Norman",
+    "given": "Donald A."
+   }
+  ],
+  "year": 1988,
+  "title": "The Psychology of Everyday Things (revised as The Design of Everyday Things)",
+  "container": "",
+  "publisher": "Basic Books",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "Revised and expanded ed., 2013",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Norman is a cognitive scientist, co-founder of Nielsen Norman Group and former Apple VP; this is the canonical text on usability of everyday objects.",
+  "caveats": "Norman himself retracted his 1988 loose use of 'affordance' in favor of 'signifier' (2013). Examples are mostly physical products; transfer to screens is by analogy."
+ },
+ {
+  "key": "Norman1999",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Norman",
+    "given": "Donald A."
+   }
+  ],
+  "year": 1999,
+  "title": "Affordance, conventions, and design",
+  "container": "interactions",
+  "publisher": "",
+  "volume": "6",
+  "issue": "3",
+  "pages": "38-43",
+  "edition": "",
+  "doi": "10.1145/301153.301168",
+  "url": "",
+  "verified": "web",
+  "authority": "Short essay by the author who popularized the term in HCI, correcting the field's misuse of it.",
+  "caveats": "Opinion essay, not empirical. Distinction between real and perceived affordance was itself criticized by Hartson and McGrenere & Ho as incomplete."
+ },
+ {
+  "key": "Gibson1979",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Gibson",
+    "given": "James J."
+   }
+  ],
+  "year": 1979,
+  "title": "The Ecological Approach to Visual Perception",
+  "container": "",
+  "publisher": "Houghton Mifflin",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Gibson was a leading perceptual psychologist; this book coined and defined 'affordance' (first sketched in a 1977 chapter, 'The theory of affordances').",
+  "caveats": "Gibson's affordances are about the physical environment and need no mental representation; extending them to software is contested. Ecological psychology itself has critics in cognitive science."
+ },
+ {
+  "key": "Gaver1991",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "Gaver",
+    "given": "William W."
+   }
+  ],
+  "year": 1991,
+  "title": "Technology affordances",
+  "container": "Proceedings of CHI '91 (ACM)",
+  "publisher": "ACM",
+  "volume": "",
+  "issue": "",
+  "pages": "79-84",
+  "edition": "",
+  "doi": "10.1145/108844.108856",
+  "url": "",
+  "verified": "web",
+  "authority": "Gaver is a Royal College of Art / Goldsmiths interaction design researcher; this is the first major HCI paper to develop affordances beyond Norman's usage.",
+  "caveats": "Conceptual paper with illustrative examples, no experiments."
+ },
+ {
+  "key": "Hartson2003",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Hartson",
+    "given": "H. Rex"
+   }
+  ],
+  "year": 2003,
+  "title": "Cognitive, physical, sensory, and functional affordances in interaction design",
+  "container": "Behaviour & Information Technology",
+  "publisher": "",
+  "volume": "22",
+  "issue": "5",
+  "pages": "315-338",
+  "edition": "",
+  "doi": "10.1080/01449290310001592587",
+  "url": "",
+  "verified": "web",
+  "authority": "Hartson is a Virginia Tech HCI professor and usability engineering author; the paper is a widely cited (hundreds of citations) response to Norman's 1999 essay.",
+  "caveats": "Conceptual framework; not tested empirically. Terms are used differently from Norman's later 'signifier' vocabulary."
+ },
+ {
+  "key": "McGrenere2000",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "McGrenere",
+    "given": "Joanna"
+   },
+   {
+    "family": "Ho",
+    "given": "Wayne"
+   }
+  ],
+  "year": 2000,
+  "title": "Affordances: Clarifying and evolving a concept",
+  "container": "Proceedings of Graphics Interface 2000",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "179-186",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "HCI researchers from UBC; the standard reconciliation of Gibson's and Norman's definitions.",
+  "caveats": "Conceptual; proposes a framework (e.g. degrees of affordance, separating affordance from information that specifies it)."
+ },
+ {
+  "key": "Carroll1987",
+  "type": "chapter",
+  "authors": [
+   {
+    "family": "Carroll",
+    "given": "John M."
+   },
+   {
+    "family": "Rosson",
+    "given": "Mary Beth"
+   }
+  ],
+  "year": 1987,
+  "title": "Paradox of the active user",
+  "container": "Interfacing Thought: Cognitive Aspects of Human-Computer Interaction",
+  "editors": [
+   {
+    "family": "Carroll",
+    "given": "John M."
+   }
+  ],
+  "publisher": "MIT Press",
+  "volume": "",
+  "issue": "",
+  "pages": "80-111",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Carroll and Rosson were IBM research scientists and founders of scenario-based design; the chapter is a foundational, much cited account of why users skip manuals.",
+  "caveats": "Based on 1980s word-processor studies; modern help systems differ, but Nielsen later reaffirmed the behavior."
+ },
+ {
+  "key": "Kieras1984",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Kieras",
+    "given": "David E."
+   },
+   {
+    "family": "Bovair",
+    "given": "Susan"
+   }
+  ],
+  "year": 1984,
+  "title": "The role of a mental model in learning to operate a device",
+  "container": "Cognitive Science",
+  "publisher": "",
+  "volume": "8",
+  "issue": "3",
+  "pages": "255-273",
+  "edition": "",
+  "doi": "10.1207/s15516709cog0803_3",
+  "url": "",
+  "verified": "web",
+  "authority": "Kieras (Univ. of Michigan) is a leading cognitive modeler of HCI; this is a classic controlled experiment on device models.",
+  "caveats": "Small laboratory studies with an artificial control panel; later work shows model benefits depend on model type and task."
+ },
+ {
+  "key": "Gentner1983",
+  "type": "book",
+  "authors": [],
+  "editors": [
+   {
+    "family": "Gentner",
+    "given": "Dedre"
+   },
+   {
+    "family": "Stevens",
+    "given": "Albert L."
+   }
+  ],
+  "year": 1983,
+  "title": "Mental Models",
+  "container": "",
+  "publisher": "Lawrence Erlbaum Associates",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Edited volume that established mental models as a research field, with chapters by Norman, Kieras, Gentner and others.",
+  "caveats": "Mental model is a loosely defined construct; critics note it is hard to falsify."
+ },
+ {
+  "key": "Cooper1995",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Cooper",
+    "given": "Alan"
+   }
+  ],
+  "year": 1995,
+  "title": "About Face: The Essentials of User Interface Design",
+  "container": "",
+  "publisher": "IDG Books (later Wiley)",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "4th ed. (with Reimann, Cronin, Noessel), Wiley, 2014",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Cooper created Visual Basic's prototype and originated personas and goal-directed design.",
+  "caveats": "Personas are a design tool, not validated empirical method; critics (Chapman & Milham 2006) argue personas lack rigor and can be invented. Data-grounded personas are advised."
+ },
+ {
+  "key": "Saffer2013",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Saffer",
+    "given": "Dan"
+   }
+  ],
+  "year": 2013,
+  "title": "Microinteractions: Designing with Details",
+  "container": "",
+  "publisher": "O'Reilly Media",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Saffer is a veteran interaction designer and author of Designing for Interaction (2006).",
+  "caveats": "Practitioner framework, not empirical."
+ },
+ {
+  "key": "Raskin2000",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Raskin",
+    "given": "Jef"
+   }
+  ],
+  "year": 2000,
+  "title": "The Humane Interface: New Directions for Designing Interactive Systems",
+  "container": "",
+  "publisher": "Addison-Wesley",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Raskin started the Macintosh project at Apple and wrote the standard critique of modes.",
+  "caveats": "Some positions (e.g. quasimodes, zoomable interfaces, elimination of applications) did not become mainstream; the mode-error argument is well supported."
+ },
+ {
+  "key": "BeaudouinLafon2000",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "Beaudouin-Lafon",
+    "given": "Michel"
+   }
+  ],
+  "year": 2000,
+  "title": "Instrumental interaction: An interaction model for designing post-WIMP user interfaces",
+  "container": "Proceedings of CHI 2000 (ACM)",
+  "publisher": "ACM",
+  "volume": "",
+  "issue": "",
+  "pages": "446-453",
+  "edition": "",
+  "doi": "10.1145/332040.332473",
+  "url": "",
+  "verified": "web",
+  "authority": "Beaudouin-Lafon is a professor at Université Paris-Saclay and ACM CHI Academy member.",
+  "caveats": "Model with design-space metrics; validated through prototypes rather than controlled studies."
+ },
+ {
+  "key": "Victor2006",
+  "type": "web",
+  "authors": [
+   {
+    "family": "Victor",
+    "given": "Bret"
+   }
+  ],
+  "year": 2006,
+  "title": "Magic Ink: Information software and the graphical interface",
+  "container": "worrydream.com",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "http://worrydream.com/MagicInk/",
+  "verified": "memory",
+  "authority": "Victor is a respected interface researcher (formerly Apple, Dynamicland); essay widely cited in design circles.",
+  "caveats": "Long essay by an individual, not peer-reviewed; argues a position, partly manifesto."
+ },
+ {
+  "key": "Suchman1987",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Suchman",
+    "given": "Lucy A."
+   }
+  ],
+  "year": 1987,
+  "title": "Plans and Situated Actions: The Problem of Human-Machine Communication",
+  "container": "",
+  "publisher": "Cambridge University Press",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "2nd ed. 2007 as Human-Machine Reconfigurations",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Suchman is an anthropologist at Xerox PARC; the book founded the situated-action approach in HCI.",
+  "caveats": "Based on ethnography of copier users; debate with cognitive-planning views (e.g. Vera & Simon 1993) continues."
+ },
+ {
+  "key": "Wensveen2004",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "Wensveen",
+    "given": "Stephan A. G."
+   },
+   {
+    "family": "Djajadiningrat",
+    "given": "J. P."
+   },
+   {
+    "family": "Overbeeke",
+    "given": "C. J."
+   }
+  ],
+  "year": 2004,
+  "title": "Interaction frogger: a design framework to couple action and function through feedback and feedforward",
+  "container": "Proceedings of DIS 2004 (ACM)",
+  "publisher": "ACM",
+  "volume": "",
+  "issue": "",
+  "pages": "177-184",
+  "edition": "",
+  "doi": "10.1145/1013115.1013140",
+  "url": "",
+  "verified": "web",
+  "authority": "Authors from the Delft/Eindhoven tangible-interaction group.",
+  "caveats": "Framework illustrated by prototypes; not broadly tested. DOI and pages come from a single bibliographic record (dblp), not cross-checked on the ACM page."
+ },
+ {
+  "key": "Hutchins1985",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Hutchins",
+    "given": "Edwin L."
+   },
+   {
+    "family": "Hollan",
+    "given": "James D."
+   },
+   {
+    "family": "Norman",
+    "given": "Donald A."
+   }
+  ],
+  "year": 1985,
+  "title": "Direct manipulation interfaces",
+  "container": "Human-Computer Interaction",
+  "publisher": "",
+  "volume": "1",
+  "issue": "4",
+  "pages": "311-338",
+  "edition": "",
+  "doi": "10.1207/s15327051hci0104_2",
+  "url": "",
+  "verified": "web",
+  "authority": "UCSD cognitive scientists; introduced the gulfs of execution and evaluation and the notion of directness.",
+  "caveats": "Conceptual analysis; directness is not always better (e.g. for repetitive or abstract tasks)."
+ }
+]

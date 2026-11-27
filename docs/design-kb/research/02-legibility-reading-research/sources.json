@@ -1,0 +1,482 @@
+[
+ {
+  "key": "Javal1879",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Javal",
+    "given": "Louis Emile"
+   }
+  ],
+  "year": 1879,
+  "title": "Essai sur la physiologie de la lecture",
+  "container": "Annales d'oculistique",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "Series of articles 1878-1879",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "French ophthalmologist who first described the saccadic, fixation-based nature of reading eye movements; founder of the modern study of reading physiology.",
+  "caveats": "Original observations used direct observation and a listening device, not recording; later instrumented work (Dodge, Huey, Buswell) refined the numbers. Volume and pages not confirmed; not verified by search this session."
+ },
+ {
+  "key": "Huey1908",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Huey",
+    "given": "Edmund Burke"
+   }
+  ],
+  "year": 1908,
+  "title": "The Psychology and Pedagogy of Reading",
+  "container": "",
+  "publisher": "Macmillan",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "American psychologist whose book was the first comprehensive scientific synthesis of reading research, including early eye-movement recording and legibility studies.",
+  "caveats": "Early 20th-century methods and small samples; the word-shape account of reading was later challenged by letter-based models. Not re-verified by search this session."
+ },
+ {
+  "key": "Tinker1963",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Tinker",
+    "given": "Miles A."
+   }
+  ],
+  "year": 1963,
+  "title": "Legibility of Print",
+  "container": "",
+  "publisher": "Iowa State University Press",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "University of Minnesota psychologist who, with Donald Paterson, ran roughly three decades of controlled studies of type size, line width, leading, case, color and typeface; the canonical summary of print legibility research.",
+  "caveats": "Speed-of-reading measures on paper with print-era typefaces; effects between common text typefaces were small; modern screens and variable fonts were not studied. Dated stimuli."
+ },
+ {
+  "key": "Bouma1970",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Bouma",
+    "given": "Herman"
+   }
+  ],
+  "year": 1970,
+  "title": "Interaction effects in parafoveal letter recognition",
+  "container": "Nature",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Dutch vision researcher at Philips IPO whose short paper established the spacing-based law of visual crowding.",
+  "caveats": "Bibliographic details beyond author, year, title and journal were not confirmed this session and were removed. The half-the-eccentricity figure is an approximation refined by later work; crowding zones are elongated and task dependent."
+ },
+ {
+  "key": "Rayner1998",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Rayner",
+    "given": "Keith"
+   }
+  ],
+  "year": 1998,
+  "title": "Eye movements in reading and information processing: 20 years of research",
+  "container": "Psychological Bulletin",
+  "publisher": "",
+  "volume": "124",
+  "issue": "3",
+  "pages": "372-422",
+  "edition": "",
+  "doi": "10.1037/0033-2909.124.3.372",
+  "url": "",
+  "verified": "web",
+  "authority": "Leading eye-movement researcher in reading; this is the most-cited review of the field.",
+  "caveats": "Mostly alphabetic text on screens in lab conditions; numeric values are population averages with wide individual and task variation. Some model details superseded by E-Z Reader and SWIFT work."
+ },
+ {
+  "key": "Rayner2016",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Rayner",
+    "given": "Keith"
+   },
+   {
+    "family": "Schotter",
+    "given": "Elizabeth R."
+   },
+   {
+    "family": "Masson",
+    "given": "Michael E. J."
+   },
+   {
+    "family": "Potter",
+    "given": "Mary C."
+   },
+   {
+    "family": "Treiman",
+    "given": "Rebecca"
+   }
+  ],
+  "year": 2016,
+  "title": "So much to read, so little time: How do we read, and can speed reading help?",
+  "container": "Psychological Science in the Public Interest",
+  "publisher": "",
+  "volume": "17",
+  "issue": "1",
+  "pages": "4-34",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Five senior cognitive scientists of reading review the evidence on reading speed and speed reading for the Association for Psychological Science.",
+  "caveats": "A review, not new data. Concerns skilled adult readers of prose; speed-reading conclusions should not be over-applied to scanning of interfaces."
+ },
+ {
+  "key": "Legge2011",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Legge",
+    "given": "Gordon E."
+   },
+   {
+    "family": "Bigelow",
+    "given": "Charles A."
+   }
+  ],
+  "year": 2011,
+  "title": "Does print size matter for reading? A review of findings from vision science and typography",
+  "container": "Journal of Vision",
+  "publisher": "",
+  "volume": "11",
+  "issue": "5",
+  "pages": "8",
+  "edition": "",
+  "doi": "10.1167/11.5.8",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3428264",
+  "verified": "web",
+  "authority": "Legge is the leading vision scientist of reading (Univ. of Minnesota); Bigelow is a type designer (Lucida, Wingdings) and scholar. The paper reconciles typographic points with visual angle.",
+  "caveats": "Review; most data from lab reading of short sentences at fixed distance; real-world viewing distance varies."
+ },
+ {
+  "key": "Bigelow2019",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Bigelow",
+    "given": "Charles"
+   }
+  ],
+  "year": 2019,
+  "title": "Typeface features and legibility research",
+  "container": "Vision Research",
+  "publisher": "",
+  "volume": "165",
+  "issue": "",
+  "pages": "162-172",
+  "edition": "",
+  "doi": "10.1016/j.visres.2019.05.003",
+  "url": "",
+  "verified": "web",
+  "authority": "Type designer (Lucida, Wingdings) and scholar who reviews more than a century of experiments on typeface features.",
+  "caveats": "Review. Bibliographic details confirmed by search but the full text could not be read (fetch tools were blocked), so notes describe the literature it reviews and mark which statements are not traced to this paper."
+ },
+ {
+  "key": "Arditi2005",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Arditi",
+    "given": "Aries"
+   },
+   {
+    "family": "Cho",
+    "given": "Jianna"
+   }
+  ],
+  "year": 2005,
+  "title": "Serifs and font legibility",
+  "container": "Vision Research",
+  "publisher": "",
+  "volume": "45",
+  "issue": "23",
+  "pages": "2926-2933",
+  "edition": "",
+  "doi": "10.1016/j.visres.2005.06.013",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4612630",
+  "verified": "web",
+  "authority": "Arditi is a low-vision researcher (Lighthouse International); a controlled test of the classic serif-versus-sans question.",
+  "caveats": "Small sample (few normally sighted participants plus two with low vision); letter strings and RSVP-style tasks rather than long text."
+ },
+ {
+  "key": "Beier2010",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Beier",
+    "given": "Sofie"
+   },
+   {
+    "family": "Larson",
+    "given": "Kevin"
+   }
+  ],
+  "year": 2010,
+  "title": "Design improvements for frequently misrecognized letters",
+  "container": "Information Design Journal",
+  "publisher": "",
+  "volume": "18",
+  "issue": "2",
+  "pages": "118-137",
+  "edition": "",
+  "doi": "",
+  "url": "https://www.microsoft.com/en-us/research/uploads/prod/2021/06/Beier-Larson-2010-Design-Improvements-for-Frequently-Misrecognized-Letters.pdf",
+  "verified": "web",
+  "authority": "Beier is a typographer and researcher at the Royal Danish Academy (author of Reading Letters); Larson is a Microsoft typography researcher.",
+  "caveats": "Tested single-letter recognition at distance and short exposure; benefits in continuous text are smaller."
+ },
+ {
+  "key": "Pelli2008",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Pelli",
+    "given": "Denis G."
+   },
+   {
+    "family": "Tillman",
+    "given": "Katharine A."
+   }
+  ],
+  "year": 2008,
+  "title": "The uncrowded window of object recognition",
+  "container": "Nature Neuroscience",
+  "publisher": "",
+  "volume": "11",
+  "issue": "10",
+  "pages": "1129-1135",
+  "edition": "",
+  "doi": "10.1038/nn.2187",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2772078",
+  "verified": "web",
+  "authority": "Pelli is a leading psychophysicist (NYU) who defined critical spacing and critical print size research.",
+  "caveats": "A review and synthesis; mechanistic claims about two-stage models remain debated."
+ },
+ {
+  "key": "Buchner2007",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Buchner",
+    "given": "Axel"
+   },
+   {
+    "family": "Baumgartner",
+    "given": "Nina"
+   }
+  ],
+  "year": 2007,
+  "title": "Text-background polarity affects performance irrespective of ambient illumination and colour contrast",
+  "container": "Ergonomics",
+  "publisher": "",
+  "volume": "50",
+  "issue": "",
+  "pages": "1036-1063",
+  "edition": "",
+  "doi": "10.1080/00140130701306413",
+  "url": "",
+  "verified": "web",
+  "authority": "Experimental psychologists at Heinrich Heine University Dusseldorf; the main controlled demonstration of the positive-polarity advantage.",
+  "caveats": "Proofreading tasks in the lab; later work (Buchner, Mayr and Brandt 2009; Dobres et al. 2017) attributes the effect to display luminance and pupil size; the advantage shrinks at larger sizes and is not a reason to ban dark themes."
+ },
+ {
+  "key": "Dobres2016",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Dobres",
+    "given": "Jonathan"
+   },
+   {
+    "family": "Chahine",
+    "given": "Nadine"
+   },
+   {
+    "family": "Reimer",
+    "given": "Bryan"
+   },
+   {
+    "family": "Gould",
+    "given": "David"
+   },
+   {
+    "family": "Mehler",
+    "given": "Bruce"
+   },
+   {
+    "family": "Coughlin",
+    "given": "Joseph F."
+   }
+  ],
+  "year": 2016,
+  "title": "Utilising psychophysical techniques to investigate the effects of age, typeface design, size and display polarity on glance legibility",
+  "container": "Ergonomics",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "10.1080/00140139.2015.1137637",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5213401",
+  "verified": "web",
+  "authority": "MIT AgeLab and Monotype team; glance legibility with exposure-time thresholds.",
+  "caveats": "Automotive display context with two typefaces; volume, issue and pages not confirmed and removed. Typeface names are not confirmed here (a humanist sans and a square grotesque, per the abstract summary)."
+ },
+ {
+  "key": "Dobres2018",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Dobres",
+    "given": "Jonathan"
+   },
+   {
+    "family": "Wolfe",
+    "given": "Benjamin"
+   },
+   {
+    "family": "Chahine",
+    "given": "Nadine"
+   },
+   {
+    "family": "Reimer",
+    "given": "Bryan"
+   }
+  ],
+  "year": 2018,
+  "title": "The effects of visual crowding, text size, and positional uncertainty on text legibility at a glance",
+  "container": "Applied Ergonomics",
+  "publisher": "",
+  "volume": "70",
+  "issue": "",
+  "pages": "240-246",
+  "edition": "",
+  "doi": "10.1016/j.apergo.2018.03.007",
+  "url": "",
+  "verified": "web",
+  "authority": "MIT AgeLab and MIT vision science group, extending glance legibility to line spacing and crowding.",
+  "caveats": "Lexical decision on word arrays at a glance; not continuous reading."
+ },
+ {
+  "key": "Dyson2001",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Dyson",
+    "given": "Mary C."
+   },
+   {
+    "family": "Haselgrove",
+    "given": "Mark"
+   }
+  ],
+  "year": 2001,
+  "title": "The influence of reading speed and line length on the effectiveness of reading from screen",
+  "container": "International Journal of Human-Computer Studies",
+  "publisher": "",
+  "volume": "54",
+  "issue": "4",
+  "pages": "585-612",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Dyson (University of Reading) is the main researcher on screen text layout; wrote Legibility (2023).",
+  "caveats": "Late-1990s monitors and window sizes; findings on speed versus preference are mixed."
+ },
+ {
+  "key": "Wallace2022",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Wallace",
+    "given": "Shaun"
+   },
+   {
+    "family": "Bylinskii",
+    "given": "Zoya"
+   },
+   {
+    "family": "Dobres",
+    "given": "Jonathan"
+   },
+   {
+    "family": "Kerr",
+    "given": "Bernard"
+   },
+   {
+    "family": "Berlow",
+    "given": "Sam"
+   },
+   {
+    "family": "Treitman",
+    "given": "Rick"
+   },
+   {
+    "family": "Kumawat",
+    "given": "Nirmal"
+   },
+   {
+    "family": "Arpin",
+    "given": "Kathleen"
+   },
+   {
+    "family": "Miller",
+    "given": "Dave B."
+   },
+   {
+    "family": "Huang",
+    "given": "Jeff"
+   },
+   {
+    "family": "Sawyer",
+    "given": "Ben D."
+   }
+  ],
+  "year": 2022,
+  "title": "Towards individuated reading experiences: Different fonts increase reading speed for different individuals",
+  "container": "ACM Transactions on Computer-Human Interaction",
+  "publisher": "",
+  "volume": "29",
+  "issue": "4",
+  "pages": "38",
+  "edition": "",
+  "doi": "10.1145/3502222",
+  "url": "https://jeffhuang.com/papers/Readability_TOCHI22.pdf",
+  "verified": "web",
+  "authority": "Peer-reviewed study (n = 352) by Adobe, MIT, Brown and UCF researchers.",
+  "caveats": "Online, uncontrolled displays and devices; speed differences did not track stated preference; individual-level stability of the best font needs retesting."
+ }
+]

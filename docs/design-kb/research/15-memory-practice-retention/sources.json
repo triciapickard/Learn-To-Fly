@@ -1,0 +1,463 @@
+[
+ {
+  "key": "Murre2015",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Murre",
+    "given": "Jaap M. J."
+   },
+   {
+    "family": "Dros",
+    "given": "Joeri"
+   }
+  ],
+  "year": 2015,
+  "title": "Replication and analysis of Ebbinghaus' forgetting curve",
+  "container": "PLoS ONE",
+  "publisher": "",
+  "volume": "10",
+  "issue": "",
+  "pages": "e0120644",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Murre is a memory researcher at the University of Amsterdam; the paper replicates Ebbinghaus's 1885 savings experiment with modern analysis.",
+  "caveats": "Single-participant design (as in the original), nonsense syllables; the curve shape for meaningful, rich material is flatter and varies with learning depth. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Bjork2011",
+  "type": "chapter",
+  "authors": [
+   {
+    "family": "Bjork",
+    "given": "Elizabeth L."
+   },
+   {
+    "family": "Bjork",
+    "given": "Robert A."
+   }
+  ],
+  "year": 2011,
+  "title": "Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning",
+  "container": "Psychology and the real world: Essays illustrating fundamental contributions to society",
+  "publisher": "Worth Publishers",
+  "volume": "",
+  "issue": "",
+  "pages": "56-64",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Robert Bjork (UCLA) originated the desirable-difficulties framework (1994) and the new theory of disuse (Bjork & Bjork 1992).",
+  "caveats": "A framework synthesizing many experiments rather than one test; not every difficulty is desirable, and difficulty helps only if the learner can succeed with effort. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Roediger2006",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Roediger",
+    "given": "Henry L."
+   },
+   {
+    "family": "Karpicke",
+    "given": "Jeffrey D."
+   }
+  ],
+  "year": 2006,
+  "title": "Test-enhanced learning: Taking memory tests improves long-term retention",
+  "container": "Psychological Science",
+  "publisher": "",
+  "volume": "17",
+  "issue": "3",
+  "pages": "249-255",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Roediger is a leading memory scientist (Washington University in St. Louis); this paper is a landmark demonstration of the testing effect with educational materials.",
+  "caveats": "Lab studies with college students and short prose passages; effect sizes shrink when criterion is very easy or feedback is absent for hard items. Rowland 2014 meta-analysis supports the overall effect. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Karpicke2011",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Karpicke",
+    "given": "Jeffrey D."
+   },
+   {
+    "family": "Blunt",
+    "given": "Janell R."
+   }
+  ],
+  "year": 2011,
+  "title": "Retrieval practice produces more learning than elaborative studying with concept mapping",
+  "container": "Science",
+  "publisher": "",
+  "volume": "331",
+  "issue": "6018",
+  "pages": "772-775",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Karpicke (Purdue) is a leading retrieval-practice researcher; published in Science.",
+  "caveats": "Undergraduate science text; later work shows concept mapping can help when students are trained and when materials are complex, so the gap is not universal. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Cepeda2006",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Cepeda",
+    "given": "Nicholas J."
+   },
+   {
+    "family": "Pashler",
+    "given": "Harold"
+   },
+   {
+    "family": "Vul",
+    "given": "Edward"
+   },
+   {
+    "family": "Wixted",
+    "given": "John T."
+   },
+   {
+    "family": "Rohrer",
+    "given": "Doug"
+   }
+  ],
+  "year": 2006,
+  "title": "Distributed practice in verbal recall tasks: A review and quantitative synthesis",
+  "container": "Psychological Bulletin",
+  "publisher": "",
+  "volume": "132",
+  "issue": "3",
+  "pages": "354-380",
+  "edition": "",
+  "doi": "10.1037/0033-2909.132.3.354",
+  "url": "",
+  "verified": "web",
+  "authority": "Meta-analysis of 839 assessments from 317 experiments in 184 articles, by leading spacing researchers.",
+  "caveats": "Mostly verbal recall of word lists and facts, short retention intervals in most studies; sparse data at long intervals."
+ },
+ {
+  "key": "Cepeda2008",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Cepeda",
+    "given": "Nicholas J."
+   },
+   {
+    "family": "Vul",
+    "given": "Edward"
+   },
+   {
+    "family": "Rohrer",
+    "given": "Doug"
+   },
+   {
+    "family": "Wixted",
+    "given": "John T."
+   },
+   {
+    "family": "Pashler",
+    "given": "Harold"
+   }
+  ],
+  "year": 2008,
+  "title": "Spacing effects in learning: A temporal ridgeline of optimal retention",
+  "container": "Psychological Science",
+  "publisher": "",
+  "volume": "19",
+  "issue": "11",
+  "pages": "1095-1102",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Large web-based experiment (1,354 participants) mapping gap by retention interval; same group as the 2006 meta-analysis.",
+  "caveats": "Trivia facts, one review session; the 'percent of retention interval' rule is an approximation, not a law, and complex skills may differ. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Dunlosky2013",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Dunlosky",
+    "given": "John"
+   },
+   {
+    "family": "Rawson",
+    "given": "Katherine A."
+   },
+   {
+    "family": "Marsh",
+    "given": "Elizabeth J."
+   },
+   {
+    "family": "Nathan",
+    "given": "Mitchell J."
+   },
+   {
+    "family": "Willingham",
+    "given": "Daniel T."
+   }
+  ],
+  "year": 2013,
+  "title": "Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology",
+  "container": "Psychological Science in the Public Interest",
+  "publisher": "",
+  "volume": "14",
+  "issue": "1",
+  "pages": "4-58",
+  "edition": "",
+  "doi": "10.1177/1529100612453266",
+  "url": "",
+  "verified": "web",
+  "authority": "Monograph by five prominent cognitive and educational psychologists reviewing ten study techniques.",
+  "caveats": "Ratings depend on the amount of evidence in classroom contexts; some techniques (interleaving, self-explanation) were rated moderate partly for lack of evidence, not for lack of promise."
+ },
+ {
+  "key": "Rohrer2007",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Rohrer",
+    "given": "Doug"
+   },
+   {
+    "family": "Taylor",
+    "given": "Kelli"
+   }
+  ],
+  "year": 2007,
+  "title": "The shuffling of mathematics problems improves learning",
+  "container": "Instructional Science",
+  "publisher": "",
+  "volume": "35",
+  "issue": "6",
+  "pages": "481-498",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Rohrer (University of South Florida) leads classroom interleaving research.",
+  "caveats": "Small samples in the original; later classroom trials (Rohrer, Dedrick and colleagues, 2014 onward) replicate benefits in math, but gains are smaller for very novice learners and for dissimilar categories. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Pashler2008",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Pashler",
+    "given": "Harold"
+   },
+   {
+    "family": "McDaniel",
+    "given": "Mark"
+   },
+   {
+    "family": "Rohrer",
+    "given": "Doug"
+   },
+   {
+    "family": "Bjork",
+    "given": "Robert"
+   }
+  ],
+  "year": 2008,
+  "title": "Learning styles: Concepts and evidence",
+  "container": "Psychological Science in the Public Interest",
+  "publisher": "",
+  "volume": "9",
+  "issue": "3",
+  "pages": "105-119",
+  "edition": "",
+  "doi": "10.1111/j.1539-6053.2009.01038.x",
+  "url": "",
+  "verified": "web",
+  "authority": "Commissioned review by four senior learning scientists; the standard citation for the lack of evidence behind learning-style matching.",
+  "caveats": "Does not claim people have no preferences or abilities; claims no evidence for the matching (meshing) hypothesis. Later surveys find the belief remains widespread among teachers."
+ },
+ {
+  "key": "Kluger1996",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Kluger",
+    "given": "Avraham N."
+   },
+   {
+    "family": "DeNisi",
+    "given": "Angelo"
+   }
+  ],
+  "year": 1996,
+  "title": "The effects of feedback interventions on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory",
+  "container": "Psychological Bulletin",
+  "publisher": "",
+  "volume": "119",
+  "issue": "2",
+  "pages": "254-284",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Highly cited meta-analysis (131 studies, 607 effect sizes) showing feedback can hurt as well as help.",
+  "caveats": "Includes workplace and lab tasks, not only education; moderators are complex and some are based on few studies. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Butler2008",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Butler",
+    "given": "Andrew C."
+   },
+   {
+    "family": "Roediger",
+    "given": "Henry L."
+   }
+  ],
+  "year": 2008,
+  "title": "Feedback enhances the positive effects and reduces the negative effects of multiple-choice testing",
+  "container": "Memory & Cognition",
+  "publisher": "",
+  "volume": "36",
+  "issue": "3",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Experiments on feedback timing and multiple-choice questions by a leading testing-effect lab.",
+  "caveats": "Single lab setting with art-history passages; timing effects on the final test are modest and interact with how much time passes. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Bloom1984",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Bloom",
+    "given": "Benjamin S."
+   }
+  ],
+  "year": 1984,
+  "title": "The 2 sigma problem: The search for methods of group instruction as effective as one-to-one tutoring",
+  "container": "Educational Researcher",
+  "publisher": "",
+  "volume": "13",
+  "issue": "6",
+  "pages": "4-16",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Bloom is the originator of mastery learning (1968) and the taxonomy of educational objectives.",
+  "caveats": "VanLehn (2011, Educational Psychologist 46(4):197-221) found human tutoring effect near d=0.79 rather than 2.0, and step-based tutoring systems near d=0.76; the 2-sigma figure is an overestimate. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Haladyna2002",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Haladyna",
+    "given": "Thomas M."
+   },
+   {
+    "family": "Downing",
+    "given": "Steven M."
+   },
+   {
+    "family": "Rodriguez",
+    "given": "Michael C."
+   }
+  ],
+  "year": 2002,
+  "title": "A review of multiple-choice item-writing guidelines for classroom assessment",
+  "container": "Applied Measurement in Education",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Measurement scholars who synthesized 31 guidelines from textbooks and empirical studies.",
+  "caveats": "Many guidelines rest on expert consensus more than experiments; research is stronger for some (three options, avoiding all-of-the-above) than others. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Taylor2020",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Taylor",
+    "given": "Alice"
+   },
+   {
+    "family": "Sanson",
+    "given": "Matthew"
+   },
+   {
+    "family": "Burnell",
+    "given": "Rebecca"
+   },
+   {
+    "family": "Wade",
+    "given": "Kimberley A."
+   },
+   {
+    "family": "Garry",
+    "given": "Maryanne"
+   }
+  ],
+  "year": 2020,
+  "title": "Disfluent difficulties are not desirable difficulties: The (lack of) effect of Sans Forgetica on memory",
+  "container": "Memory",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Independent experiments testing a font marketed as improving memory; supports the broader failed replications of Diemand-Yauman et al. 2011 (Rummer et al. 2016).",
+  "caveats": "Tests one font and mostly short word or text lists; does not rule out benefits in other settings. DOI not confirmed this session, left empty."
+ },
+ {
+  "key": "Settles2016",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "Settles",
+    "given": "Burr"
+   },
+   {
+    "family": "Meeder",
+    "given": "Brendan"
+   }
+  ],
+  "year": 2016,
+  "title": "A trainable spaced repetition model for language learning",
+  "container": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+  "publisher": "Association for Computational Linguistics",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "https://aclanthology.org/P16-1174/",
+  "verified": "memory",
+  "authority": "Duolingo researchers describing half-life regression fit to millions of real learner logs, with open data.",
+  "caveats": "Vocabulary items only; the model predicts recall probability, and engagement benefits are reported by the vendor. DOI not confirmed this session, left empty."
+ }
+]

@@ -1,0 +1,599 @@
+[
+ {
+  "key": "Elliot2014ColorPsych",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Elliot",
+    "given": "Andrew J."
+   },
+   {
+    "family": "Maier",
+    "given": "Markus A."
+   }
+  ],
+  "year": 2014,
+  "title": "Color psychology: Effects of perceiving color on psychological functioning in humans",
+  "container": "Annual Review of Psychology",
+  "publisher": "",
+  "volume": "65",
+  "issue": "",
+  "pages": "95-120",
+  "edition": "",
+  "doi": "10.1146/annurev-psych-010213-115035",
+  "url": "",
+  "verified": "web",
+  "authority": "Elliot is the leading experimental color-psychology researcher (Color-in-Context Theory); the Annual Review is a peer-reviewed state-of-the-field venue.",
+  "caveats": "Written by authors of the key studies, so it is partly self-reviewing. Explicitly says the field is young and that boundary conditions and real-world generalizability need work before applied recommendations. Several headline effects reviewed (red and performance, red and attraction) have had failed replications."
+ },
+ {
+  "key": "Elliot2007Red",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Elliot",
+    "given": "Andrew J."
+   },
+   {
+    "family": "Maier",
+    "given": "Markus A."
+   },
+   {
+    "family": "Moller",
+    "given": "Arlen C."
+   },
+   {
+    "family": "Friedman",
+    "given": "Ron"
+   },
+   {
+    "family": "Meinhardt",
+    "given": "Jörg"
+   }
+  ],
+  "year": 2007,
+  "title": "Color and psychological functioning: The effect of red on performance attainment",
+  "container": "Journal of Experimental Psychology: General",
+  "publisher": "",
+  "volume": "136",
+  "issue": "1",
+  "pages": "154-168",
+  "edition": "",
+  "doi": "10.1037/0096-3445.136.1.154",
+  "url": "",
+  "verified": "memory",
+  "authority": "Peer-reviewed series of experiments in a top general psychology journal; the founding study of the red-impairs-performance literature.",
+  "caveats": "Small samples by modern standards (roughly 24-70 per experiment from memory). Later direct replications by Steele and others failed; a 2020 meta-analysis reports a small negative effect of red but with likely bias. Treat as a hypothesis, not a design rule. Bibliographic details from memory, not web-confirmed this session (search budget exhausted)."
+ },
+ {
+  "key": "Steele2014Replication",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Steele",
+    "given": "Kenneth M."
+   }
+  ],
+  "year": 2014,
+  "title": "Failure to replicate the Mehta and Zhu (2009) color-priming effect on anagram solution times",
+  "container": "Psychonomic Bulletin & Review",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "10.3758/s13423-013-0548-3",
+  "url": "https://link.springer.com/content/pdf/10.3758/s13423-013-0548-3.pdf",
+  "verified": "web",
+  "authority": "Peer-reviewed replication report by a psychologist at Appalachian State University; the standard citation for the failure of the blue/red cognitive-mode effect.",
+  "caveats": "Tests one effect (Mehta & Zhu 2009), not red-and-performance generally. Volume, issue and pages not confirmed this session and left blank; DOI is taken from the confirmed Springer URL."
+ },
+ {
+  "key": "Palmer2010Ecological",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Palmer",
+    "given": "Stephen E."
+   },
+   {
+    "family": "Schloss",
+    "given": "Karen B."
+   }
+  ],
+  "year": 2010,
+  "title": "An ecological valence theory of human color preference",
+  "container": "Proceedings of the National Academy of Sciences",
+  "publisher": "",
+  "volume": "107",
+  "issue": "19",
+  "pages": "8877-8882",
+  "edition": "",
+  "doi": "10.1073/pnas.0906172107",
+  "url": "",
+  "verified": "web",
+  "authority": "Palmer is a leading perception scientist at UC Berkeley; peer-reviewed in PNAS with quantitative model comparison.",
+  "caveats": "Correlational (r about .8 reported at the level of average ratings from US and Berkeley students); causal direction (do associations cause preference?) is argued, not proven. Samples were mostly young, US-based. Later work (Schloss, Lai et al.) refines it."
+ },
+ {
+  "key": "Jonauskaite2020Universal",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Jonauskaite",
+    "given": "Domicele"
+   },
+   {
+    "family": "Mohr",
+    "given": "Christine"
+   }
+  ],
+  "year": 2020,
+  "title": "Universal patterns in color-emotion associations are further shaped by linguistic and geographic proximity",
+  "container": "Psychological Science",
+  "publisher": "",
+  "volume": "31",
+  "issue": "10",
+  "pages": "1245-1260",
+  "edition": "",
+  "doi": "10.1177/0956797620948810",
+  "url": "",
+  "verified": "web",
+  "authority": "Large cross-cultural study (4,598 participants, 30 nations, 22 languages) in a top psychology journal.",
+  "caveats": "Measures stated associations with color words, not behavior or emotion induced by seeing color. Mostly university-student samples. Author list shortened here (the paper has many co-authors); complete from the DOI before print."
+ },
+ {
+  "key": "Whitfield1990Critical",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Whitfield",
+    "given": "T. W. A."
+   },
+   {
+    "family": "Wiltshire",
+    "given": "T. J."
+   }
+  ],
+  "year": 1990,
+  "title": "Color psychology: A critical review",
+  "container": "Genetic, Social, and General Psychology Monographs",
+  "publisher": "",
+  "volume": "116",
+  "issue": "4",
+  "pages": "385-411",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "A monograph-length critical review of the pre-1990 color psychology literature by experimental psychologists; the canonical skeptical review.",
+  "caveats": "Dated; predates most modern work. Page range from memory. Its methodological critiques (uncontrolled lightness/saturation, tiny samples, no replication) still apply."
+ },
+ {
+  "key": "Valdez1994Effects",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Valdez",
+    "given": "Patricia"
+   },
+   {
+    "family": "Mehrabian",
+    "given": "Albert"
+   }
+  ],
+  "year": 1994,
+  "title": "Effects of color on emotions",
+  "container": "Journal of Experimental Psychology: General",
+  "publisher": "",
+  "volume": "123",
+  "issue": "4",
+  "pages": "394-409",
+  "edition": "",
+  "doi": "10.1037/0096-3445.123.4.394",
+  "url": "",
+  "verified": "memory",
+  "authority": "Peer-reviewed, controlled study of Munsell-specified colors on the pleasure-arousal-dominance (PAD) scales; the best-known evidence that brightness and saturation, not hue, drive emotion ratings.",
+  "caveats": "Ratings of small color patches by American undergraduates; not about interface contexts. Findings on hue effects are weak and not consistently replicated."
+ },
+ {
+  "key": "Labrecque2012Exciting",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Labrecque",
+    "given": "Lauren I."
+   },
+   {
+    "family": "Milne",
+    "given": "George R."
+   }
+  ],
+  "year": 2012,
+  "title": "Exciting red and competent blue: The importance of color in marketing",
+  "container": "Journal of the Academy of Marketing Science",
+  "publisher": "",
+  "volume": "40",
+  "issue": "5",
+  "pages": "711-727",
+  "edition": "",
+  "doi": "10.1007/s11747-010-0245-y",
+  "url": "",
+  "verified": "memory",
+  "authority": "Peer-reviewed marketing study linking logo colors to Aaker brand-personality dimensions.",
+  "caveats": "Student/online samples, ratings of fictitious brands; effects are modest and context dependent. Not evidence for learning outcomes."
+ },
+ {
+  "key": "Gorn2004Waiting",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Gorn",
+    "given": "Gerald J."
+   },
+   {
+    "family": "Chattopadhyay",
+    "given": "Amitava"
+   },
+   {
+    "family": "Sengupta",
+    "given": "Jaideep"
+   },
+   {
+    "family": "Tripathi",
+    "given": "Shashank"
+   }
+  ],
+  "year": 2004,
+  "title": "Waiting for the web: How screen color affects time perception",
+  "container": "Journal of Marketing Research",
+  "publisher": "",
+  "volume": "41",
+  "issue": "2",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "web",
+  "authority": "Peer-reviewed marketing-psychology study on screen background color and perceived download time.",
+  "caveats": "Small lab studies; no known strong replication. DOI and page range not confirmed, left blank. A figure of 53% faster perceived download circulates in blogs; not traced to the paper."
+ },
+ {
+  "key": "Cardosi1999Guidelines",
+  "type": "report",
+  "authors": [
+   {
+    "family": "Cardosi",
+    "given": "Kim"
+   },
+   {
+    "family": "Hannon",
+    "given": "Dan"
+   }
+  ],
+  "year": 1999,
+  "title": "Guidelines for the use of color in ATC displays",
+  "container": "",
+  "publisher": "Federal Aviation Administration, Office of Aviation Research (DOT/FAA/AR-99/52)",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "https://rosap.ntl.bts.gov/view/dot/8735",
+  "verified": "web",
+  "authority": "US Department of Transportation human-factors report that synthesizes research into guidelines for color on safety-critical displays.",
+  "caveats": "Written for air traffic control displays, not cockpits or learning apps; I could not read the full text, so specifics below are from the standard color-coding literature it summarizes and are marked approximate. FAA-HF-STD-010A (2020) now supersedes for ATC."
+ },
+ {
+  "key": "Okabe2002Color",
+  "type": "web",
+  "authors": [
+   {
+    "family": "Okabe",
+    "given": "Masataka"
+   },
+   {
+    "family": "Ito",
+    "given": "Kei"
+   }
+  ],
+  "year": 2002,
+  "title": "Color Universal Design (CUD): How to make figures and presentations that are friendly to colorblind people",
+  "container": "",
+  "publisher": "J*FLY, University of Tokyo (jfly.uni-koeln.de/color)",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "2008 revision",
+  "doi": "",
+  "url": "https://jfly.uni-koeln.de/color/",
+  "verified": "memory",
+  "authority": "Authored by a Univ. of Tokyo medical-genetics researcher and designer working with color-blind scientists; source of the widely used 8-color CUD palette.",
+  "caveats": "Not peer reviewed; a practical guide. Palette recommendations were checked by simulation and by color-blind participants but not formal trials."
+ },
+ {
+  "key": "Machado2009Physiologically",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Machado",
+    "given": "Gustavo M."
+   },
+   {
+    "family": "Oliveira",
+    "given": "Manuel M."
+   },
+   {
+    "family": "Fernandes",
+    "given": "Leandro A. F."
+   }
+  ],
+  "year": 2009,
+  "title": "A physiologically-based model for simulation of color vision deficiency",
+  "container": "IEEE Transactions on Visualization and Computer Graphics",
+  "publisher": "",
+  "volume": "15",
+  "issue": "6",
+  "pages": "1291-1298",
+  "edition": "",
+  "doi": "10.1109/TVCG.2009.113",
+  "url": "",
+  "verified": "web",
+  "authority": "Peer-reviewed; the model behind most CVD simulators in browsers and design tools.",
+  "caveats": "A simulation approximates the average case; severity varies and simulators do not show individual experience. Validated with a small user study."
+ },
+ {
+  "key": "Wong2011Color",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Wong",
+    "given": "Bang"
+   }
+  ],
+  "year": 2011,
+  "title": "Points of view: Color blindness",
+  "container": "Nature Methods",
+  "publisher": "",
+  "volume": "8",
+  "issue": "6",
+  "pages": "441",
+  "edition": "",
+  "doi": "10.1038/nmeth.1618",
+  "url": "",
+  "verified": "web",
+  "authority": "Wong (Broad Institute) wrote the Nature Methods Points of View series on visual communication for scientists.",
+  "caveats": "One-page column; practical guidance, not an experiment. Full text is paywalled; details below come from excerpts and memory."
+ },
+ {
+  "key": "Legge1987Contrast",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Legge",
+    "given": "Gordon E."
+   },
+   {
+    "family": "Rubin",
+    "given": "Gary S."
+   },
+   {
+    "family": "Luebker",
+    "given": "Andrew"
+   }
+  ],
+  "year": 1987,
+  "title": "Psychophysics of reading. V. The role of contrast in normal vision",
+  "container": "Vision Research",
+  "publisher": "",
+  "volume": "27",
+  "issue": "7",
+  "pages": "1165-1177",
+  "edition": "",
+  "doi": "10.1016/0042-6989(87)90028-9",
+  "url": "",
+  "verified": "web",
+  "authority": "Legge's lab at Minnesota is the central source for quantitative reading and contrast research; peer-reviewed psychophysics.",
+  "caveats": "Small number of young normally sighted readers; rapid-serial-style drifting text; measures reading speed, not comprehension or comfort over long sessions."
+ },
+ {
+  "key": "Piepenbrock2013Polarity",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Piepenbrock",
+    "given": "Cosima"
+   },
+   {
+    "family": "Mayr",
+    "given": "Susanne"
+   },
+   {
+    "family": "Buchner",
+    "given": "Axel"
+   }
+  ],
+  "year": 2013,
+  "title": "Positive display polarity is advantageous for both younger and older adults",
+  "container": "Ergonomics",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "10.1080/00140139.2013.790485",
+  "url": "",
+  "verified": "web",
+  "authority": "Peer-reviewed human-factors experiments from Düsseldorf; the main empirical basis for 'dark text on light is better for reading'.",
+  "caveats": "Online first 2013 (DOI confirmed by search); print volume, issue and pages not confirmed. A 2014 follow-up in Ergonomics by the same group argues the advantage is due to display luminance. Tests used acuity and proofreading in normal room light; not long reading sessions in dark rooms."
+ },
+ {
+  "key": "W3C2023WCAG22",
+  "type": "standard",
+  "authors": [
+   {
+    "literal": "World Wide Web Consortium"
+   }
+  ],
+  "year": 2023,
+  "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+  "container": "",
+  "publisher": "W3C Recommendation",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "https://www.w3.org/TR/WCAG22/",
+  "verified": "memory",
+  "authority": "The international standard for web accessibility, including contrast success criteria 1.4.1, 1.4.3, 1.4.6, 1.4.11.",
+  "caveats": "The WCAG 2 luminance contrast ratio is known to overstate contrast for some dark-mode pairs and to understate it for some mid-tones; APCA (Somers) is a proposed alternative for WCAG 3 draft but not a standard."
+ },
+ {
+  "key": "NNg2020DarkMode",
+  "type": "web",
+  "authors": [
+   {
+    "literal": "Nielsen Norman Group"
+   }
+  ],
+  "year": 2020,
+  "title": "Dark mode: How users think about it and issues to avoid",
+  "container": "Nielsen Norman Group",
+  "publisher": "Nielsen Norman Group",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "https://www.nngroup.com/articles/dark-mode/",
+  "verified": "web",
+  "authority": "Nielsen Norman Group is a long-established usability research consultancy; the piece summarizes user research and literature on dark mode. Author attribution from memory, URL confirmed.",
+  "caveats": "Practitioner synthesis, not peer reviewed. The individual author of the article could not be confirmed this session, so it is credited to the organization. URL confirmed by search."
+ },
+ {
+  "key": "Mehta2009Blue",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Mehta",
+    "given": "Ravi"
+   },
+   {
+    "family": "Zhu",
+    "given": "Rui (Juliet)"
+   }
+  ],
+  "year": 2009,
+  "title": "Blue or red? Exploring the effect of color on cognitive task performances",
+  "container": "Science",
+  "publisher": "",
+  "volume": "323",
+  "issue": "5918",
+  "pages": "1226-1229",
+  "edition": "",
+  "doi": "10.1126/science.1169144",
+  "url": "",
+  "verified": "memory",
+  "authority": "Published in Science; the most widely cited claim that red favors detail-oriented tasks and blue favors creative tasks.",
+  "caveats": "Failed direct replication (Steele 2014) and other null results. Bibliographic details from memory; web confirmation was blocked when the search budget ran out. Treat the effect as unreliable."
+ },
+ {
+  "key": "Legge1990Luminance",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Legge",
+    "given": "Gordon E."
+   },
+   {
+    "family": "Parish",
+    "given": "David H."
+   },
+   {
+    "family": "Luebker",
+    "given": "Andrew"
+   },
+   {
+    "family": "Wurm",
+    "given": "Lee H."
+   }
+  ],
+  "year": 1990,
+  "title": "Psychophysics of reading. XI. Comparing color contrast and luminance contrast",
+  "container": "Journal of the Optical Society of America A",
+  "publisher": "",
+  "volume": "7",
+  "issue": "10",
+  "pages": "2002-2010",
+  "edition": "",
+  "doi": "10.1364/JOSAA.7.002002",
+  "url": "",
+  "verified": "memory",
+  "authority": "Same Minnesota lab; direct test of whether chromatic contrast can substitute for luminance contrast in reading. A search result listed a file named for this paper at the lab site, which confirms it exists; volume, pages and DOI are from memory.",
+  "caveats": "Small lab samples of young readers. Confirm volume, pages and DOI before print."
+ },
+ {
+  "key": "Brettel1997Computerized",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Brettel",
+    "given": "Hans"
+   },
+   {
+    "family": "Viénot",
+    "given": "Françoise"
+   },
+   {
+    "family": "Mollon",
+    "given": "John D."
+   }
+  ],
+  "year": 1997,
+  "title": "Computerized simulation of color appearance for dichromats",
+  "container": "Journal of the Optical Society of America A",
+  "publisher": "",
+  "volume": "14",
+  "issue": "10",
+  "pages": "2647-2655",
+  "edition": "",
+  "doi": "10.1364/JOSAA.14.002647",
+  "url": "",
+  "verified": "memory",
+  "authority": "Peer-reviewed vision-science paper by Mollon, a leading color-vision researcher; the basis of most dichromacy simulators.",
+  "caveats": "Bibliographic details from memory, not web-confirmed (search budget exhausted). Based on reports of unilateral dichromats; simulation shows the average case."
+ },
+ {
+  "key": "Madden2000Managing",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Madden",
+    "given": "Thomas J."
+   },
+   {
+    "family": "Hewett",
+    "given": "Kelly"
+   },
+   {
+    "family": "Roth",
+    "given": "Martin S."
+   }
+  ],
+  "year": 2000,
+  "title": "Managing images in different cultures: A cross-national study of color meanings and preferences",
+  "container": "Journal of International Marketing",
+  "publisher": "",
+  "volume": "8",
+  "issue": "4",
+  "pages": "90-107",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Peer-reviewed cross-national study of color meaning and preference in eight countries; widely cited in international marketing. Note: the second author's name is Hewett (the brief wrote Hewitt).",
+  "caveats": "Bibliographic details from memory, not web-confirmed. Student samples, color-word and color-chip ratings; dated. Doi left blank."
+ }
+]

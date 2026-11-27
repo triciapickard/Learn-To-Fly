@@ -1,0 +1,419 @@
+[
+ {
+  "key": "Treisman1980",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Treisman",
+    "given": "Anne M."
+   },
+   {
+    "family": "Gelade",
+    "given": "Garry"
+   }
+  ],
+  "year": 1980,
+  "title": "A feature-integration theory of attention",
+  "container": "Cognitive Psychology",
+  "publisher": "",
+  "volume": "12",
+  "issue": "1",
+  "pages": "97-136",
+  "edition": "",
+  "doi": "10.1016/0010-0285(80)90005-5",
+  "url": "",
+  "verified": "memory",
+  "authority": "Treisman was a leading cognitive psychologist of attention; this is the founding paper of feature integration theory.",
+  "caveats": "Strict serial/parallel dichotomy was later softened (Duncan & Humphreys 1989; Wolfe's Guided Search). Search slopes form a continuum, not two classes."
+ },
+ {
+  "key": "Wolfe2017Five",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Wolfe",
+    "given": "Jeremy M."
+   },
+   {
+    "family": "Horowitz",
+    "given": "Todd S."
+   }
+  ],
+  "year": 2017,
+  "title": "Five factors that guide attention in visual search",
+  "container": "Nature Human Behaviour",
+  "publisher": "",
+  "volume": "1",
+  "issue": "3",
+  "pages": "Article 0058",
+  "edition": "",
+  "doi": "10.1038/s41562-017-0058",
+  "url": "https://www.nature.com/articles/s41562-017-0058",
+  "verified": "web",
+  "authority": "Wolfe (Harvard Medical School/Brigham and Women's) is the leading visual search researcher; this is a review by him and Horowitz.",
+  "caveats": "Review, mostly lab displays with simple stimuli; effects of weights of the five factors in real interfaces are not quantified."
+ },
+ {
+  "key": "Yarbus1967",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Yarbus",
+    "given": "Alfred L."
+   }
+  ],
+  "year": 1967,
+  "title": "Eye Movements and Vision",
+  "container": "",
+  "publisher": "Plenum Press",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "English translation by Basil Haigh of the 1965 Russian original",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Pioneering Soviet eye-movement researcher; the book is the classic demonstration that gaze depends on the observer's task.",
+  "caveats": "Tiny sample (one or few observers, mostly one), qualitative traces. Task decoding from gaze replicated only partly: Greene et al. 2012 failed with simple statistics; Borji & Itti 2014 and Haji-Abolhassani & Clark 2014 succeeded with better classifiers."
+ },
+ {
+  "key": "Itti1998",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Itti",
+    "given": "Laurent"
+   },
+   {
+    "family": "Koch",
+    "given": "Christof"
+   },
+   {
+    "family": "Niebur",
+    "given": "Ernst"
+   }
+  ],
+  "year": 1998,
+  "title": "A model of saliency-based visual attention for rapid scene analysis",
+  "container": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+  "publisher": "",
+  "volume": "20",
+  "issue": "11",
+  "pages": "1254-1259",
+  "edition": "",
+  "doi": "10.1109/34.730558",
+  "url": "",
+  "verified": "memory",
+  "authority": "Koch (Caltech) and Itti (USC) created the canonical computational bottom-up saliency model, building on Koch and Ullman 1985.",
+  "caveats": "Bottom-up only; predicts fixations on free-viewing natural images modestly and poorly when a task is set (Henderson et al. 2007; Foulsham & Underwood 2008). Deep models later outperform it."
+ },
+ {
+  "key": "Posner1980",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Posner",
+    "given": "Michael I."
+   }
+  ],
+  "year": 1980,
+  "title": "Orienting of attention",
+  "container": "Quarterly Journal of Experimental Psychology",
+  "publisher": "",
+  "volume": "32",
+  "issue": "1",
+  "pages": "3-25",
+  "edition": "",
+  "doi": "10.1080/00335558008248231",
+  "url": "",
+  "verified": "memory",
+  "authority": "Posner is a founder of cognitive neuroscience of attention; paper introduced the spatial cueing paradigm.",
+  "caveats": "Robust and widely replicated; effects are tens of milliseconds, lab paradigm with simple targets."
+ },
+ {
+  "key": "Simons1999",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Simons",
+    "given": "Daniel J."
+   },
+   {
+    "family": "Chabris",
+    "given": "Christopher F."
+   }
+  ],
+  "year": 1999,
+  "title": "Gorillas in our midst: Sustained inattentional blindness for dynamic events",
+  "container": "Perception",
+  "publisher": "",
+  "volume": "28",
+  "issue": "9",
+  "pages": "1059-1074",
+  "edition": "",
+  "doi": "10.1068/p281059",
+  "url": "",
+  "verified": "memory",
+  "authority": "Peer-reviewed experiments by two established vision researchers; among the most cited demonstrations of inattentional blindness.",
+  "caveats": "Robustly replicated (Simons & Chabris 2010; Drew, Vo & Wolfe 2013 with radiologists). Exact noticing percentages and sample size not confirmed this session. Noticing depends heavily on task difficulty and similarity of the unexpected object; inattentional amnesia is an alternative interpretation (Wolfe 1999)."
+ },
+ {
+  "key": "Rensink1997",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Rensink",
+    "given": "Ronald A."
+   },
+   {
+    "family": "O'Regan",
+    "given": "J. Kevin"
+   },
+   {
+    "family": "Clark",
+    "given": "James J."
+   }
+  ],
+  "year": 1997,
+  "title": "To see or not to see: The need for attention to perceive changes in scenes",
+  "container": "Psychological Science",
+  "publisher": "",
+  "volume": "8",
+  "issue": "5",
+  "pages": "368-373",
+  "edition": "",
+  "doi": "10.1111/j.1467-9280.1997.tb00427.x",
+  "url": "",
+  "verified": "memory",
+  "authority": "Introduced the flicker paradigm for change blindness; Rensink is a leading vision scientist.",
+  "caveats": "Robust. Change blindness in real-world displays is smaller when the change is relevant to the task or central of interest."
+ },
+ {
+  "key": "Mack1998",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Mack",
+    "given": "Arien"
+   },
+   {
+    "family": "Rock",
+    "given": "Irvin"
+   }
+  ],
+  "year": 1998,
+  "title": "Inattentional Blindness",
+  "container": "",
+  "publisher": "MIT Press",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Book-length synthesis of the authors' 1990s experiments that established the term and phenomenon.",
+  "caveats": "Interpretation (blindness versus rapid forgetting, 'inattentional amnesia', Wolfe 1999) is debated; the phenomenon itself is not."
+ },
+ {
+  "key": "Nielsen2006F",
+  "type": "web",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   }
+  ],
+  "year": 2006,
+  "title": "F-shaped pattern for reading web content",
+  "container": "Nielsen Norman Group Alertbox",
+  "publisher": "Nielsen Norman Group",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "Updated by Pernice 2017 as 'F-shaped pattern of reading on the web: misunderstood, but still relevant (even on mobile)'",
+  "doi": "",
+  "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/",
+  "verified": "web",
+  "authority": "Nielsen is a founder of usability engineering; the study used eyetracking of 232 users (as reported by NN/g). Pernice, NN/g, wrote the 2017 clarification.",
+  "caveats": "Heat maps aggregate many users; individual users do not read in an F. Pernice 2017 stresses F is a symptom of poor formatting, not a goal. Not peer reviewed; sample reported by NN/g itself. Other layouts produce other patterns (layer-cake, spotted, commitment)."
+ },
+ {
+  "key": "Benway1998",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Benway",
+    "given": "Jan Panero"
+   },
+   {
+    "family": "Lane",
+    "given": "David M."
+   }
+  ],
+  "year": 1998,
+  "title": "Banner blindness: Web searchers often miss 'obvious' links",
+  "container": "Internetworking",
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "edition": "",
+  "doi": "",
+  "url": "",
+  "verified": "memory",
+  "authority": "Rice University HCI researchers who first described and named banner blindness in a usability study.",
+  "caveats": "Small early usability study, 1998 web; participant counts and proportions not confirmed. Published in the newsletter Internetworking; volume and issue not confirmed and left blank. Later eyetracking supports reduced fixation of banner-like items with task dependence (Drèze & Hussherr 2003; Resnick & Albert 2014)."
+ },
+ {
+  "key": "Rosenholtz2007",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Rosenholtz",
+    "given": "Ruth"
+   },
+   {
+    "family": "Li",
+    "given": "Yuanzhen"
+   },
+   {
+    "family": "Nakano",
+    "given": "Lisa"
+   }
+  ],
+  "year": 2007,
+  "title": "Measuring visual clutter",
+  "container": "Journal of Vision",
+  "publisher": "",
+  "volume": "7",
+  "issue": "2",
+  "pages": "17, 1-22",
+  "edition": "",
+  "doi": "10.1167/7.2.17",
+  "url": "",
+  "verified": "web",
+  "authority": "Rosenholtz (MIT) is a leading researcher on peripheral vision and crowding; paper defines Feature Congestion and Subband Entropy clutter measures.",
+  "caveats": "Validated mainly against search performance with maps and scenes; later work (Rosenholtz 2011, Levi 2008) links clutter to crowding. Not tested on modern flat interfaces."
+ },
+ {
+  "key": "Buscher2009",
+  "type": "paper",
+  "authors": [
+   {
+    "family": "Buscher",
+    "given": "Georg"
+   },
+   {
+    "family": "Cutrell",
+    "given": "Edward"
+   },
+   {
+    "family": "Morris",
+    "given": "Meredith Ringel"
+   }
+  ],
+  "year": 2009,
+  "title": "What do you see when you're surfing? Using eye tracking to predict salient regions of web pages",
+  "container": "Proceedings of CHI 2009, ACM",
+  "publisher": "ACM",
+  "volume": "",
+  "issue": "",
+  "pages": "21-30",
+  "edition": "",
+  "doi": "",
+  "url": "https://www.microsoft.com/en-us/research/publication/what-do-you-see-when-youre-surfing-using-eye-tracking-to-predict-salient-regions-of-web-pages/",
+  "verified": "web",
+  "authority": "Peer-reviewed CHI paper from Microsoft Research on large-scale web page eye tracking.",
+  "caveats": "Peer reviewed, small sample (20 participants, 361 pages, 2,126 page views), 2009 desktop pages, one browser and tracker. Authors note average heat-map analysis hides layout-specific behavior. DOI not confirmed and left blank."
+ },
+ {
+  "key": "Lavie1995",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Lavie",
+    "given": "Nilli"
+   }
+  ],
+  "year": 1995,
+  "title": "Perceptual load as a necessary condition for selective attention",
+  "container": "Journal of Experimental Psychology: Human Perception and Performance",
+  "publisher": "",
+  "volume": "21",
+  "issue": "3",
+  "pages": "451-468",
+  "edition": "",
+  "doi": "10.1037/0096-1523.21.3.451",
+  "url": "",
+  "verified": "memory",
+  "authority": "Lavie (UCL) proposed load theory, a leading account of early versus late selection.",
+  "caveats": "Debated: definition of 'load' can be circular (Benoni & Tsal 2010); effects of high load on distractor processing replicated widely but not universally. Working-memory load has the opposite effect."
+ },
+ {
+  "key": "Wickens2003",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Wickens",
+    "given": "Christopher D."
+   },
+   {
+    "family": "Goh",
+    "given": "Juliana"
+   },
+   {
+    "family": "Helleberg",
+    "given": "John"
+   },
+   {
+    "family": "Horrey",
+    "given": "William J."
+   },
+   {
+    "family": "Talleur",
+    "given": "Donald A."
+   }
+  ],
+  "year": 2003,
+  "title": "Attentional models of multitask pilot performance using advanced display technology",
+  "container": "Human Factors",
+  "publisher": "",
+  "volume": "45",
+  "issue": "3",
+  "pages": "360-380",
+  "edition": "",
+  "doi": "10.1518/hfes.45.3.360.27250",
+  "url": "",
+  "verified": "memory",
+  "authority": "Wickens is a leading aviation human factors scholar; paper introduces the SEEV (Salience, Effort, Expectancy, Value) model tested on pilots.",
+  "caveats": "SEEV is descriptive; coefficients fit per task. Specific sample sizes and correlations of the 2003 paper not confirmed this session and not quoted. Tested in aviation and driving simulation, not web pages. Expectancy and value tended to predict better than salience."
+ },
+ {
+  "key": "Healey2012",
+  "type": "article",
+  "authors": [
+   {
+    "family": "Healey",
+    "given": "Christopher G."
+   },
+   {
+    "family": "Enns",
+    "given": "James T."
+   }
+  ],
+  "year": 2012,
+  "title": "Attention and visual memory in visualization and computer graphics",
+  "container": "IEEE Transactions on Visualization and Computer Graphics",
+  "publisher": "",
+  "volume": "18",
+  "issue": "7",
+  "pages": "1170-1188",
+  "edition": "",
+  "doi": "10.1109/TVCG.2011.127",
+  "url": "",
+  "verified": "memory",
+  "authority": "Survey by a visualization scientist and a vision scientist linking preattentive features, change blindness and design practice.",
+  "caveats": "Preattentive claims are for brief displays with a single feature difference; feature conjunctions and clutter erode them."
+ }
+]
