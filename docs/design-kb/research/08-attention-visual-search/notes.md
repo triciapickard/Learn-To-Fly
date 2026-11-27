@@ -155,6 +155,8 @@ Verification note for the whole lane: this session the web search budget ran out
 - Crowding in the periphery makes dense panels hard to read at a glance, so separate instrument widgets with space.
 - Fly mode, glanced at in the periphery, needs lower clutter than study pages.
 - Grouping and consistent alignment lower perceived clutter at the same item count.
+- Compare Day and Night themes separately; a theme with more luminance contrast variation may score as more cluttered even with identical content.
+- Set a clutter budget per screen type (study, challenge, fly mode) and check new components against it before shipping.
 
 ## Buscher2009
 **Core claims.** Buscher, Cutrell and Morris (CHI 2009) ran an eye-tracking study in which 20 users viewed 361 web pages while doing information foraging tasks and a page recognition task. They describe where on a page attention goes, how it depends on task and demographics, and build a model that predicts how much attention individual page elements (DOM elements) receive. They also introduce "fixation impact", a way to map gaze to page elements that weights each fixation by its duration and by the element's distance from the fixation, motivated by vision research. (This section was written from the full paper PDF.)
@@ -211,6 +213,8 @@ Verification note for the whole lane: this session the web search budget ran out
 - Use motion rarely and deliberately since it dominates attention.
 - Make differences large and test them in both Day and Night themes, where luminance and hue contrast change.
 - Because of change blindness, highlight what changed when a value updates.
+- When a chart or gauge uses several encoded dimensions, test it with a 200 ms flash: if a viewer cannot name the odd item in that time, the feature choice is not doing preattentive work and needs more contrast or fewer competing features.
+- Treat feature interference as a design risk: a strongly varying background luminance in a widget can mask a hue-coded warning, so keep widget backgrounds flat.
 
 ## Lane synthesis
 **Where the sources agree.** Every source in the lane agrees that attention is scarce and selective: people perceive what they attend to and little else. Bottom-up salience (Treisman, Itti, Healey and Enns) is real, but it is one of several factors (Wolfe and Horowitz), and task, expectation and value (Yarbus, Wickens, Benway and Lane) often outweigh it. Unattended things, even large ones, go unnoticed (Simons and Chabris, Rensink, Mack and Rock), and the more the primary task demands, the less spills over to everything else (Lavie). Real-page eye tracking (Nielsen and Pernice, Buscher and colleagues) shows that users scan more than they read, with early attention biased to the top left and the content column, little attention to the right third of a page, and avoidance of anything that looks like an advertisement. Clutter, measured as variability of color, contrast and orientation (Rosenholtz), makes search slower and is separate from item count.

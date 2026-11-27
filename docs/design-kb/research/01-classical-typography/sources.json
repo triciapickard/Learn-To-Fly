@@ -66,7 +66,7 @@
   "edition": "English edition 1991, trans. Hajo Hadeler, ed. Robert Bringhurst; German original: Ausgewählte Aufsätze über Fragen der Gestalt des Buches und der Typographie, Birkhäuser, 1975",
   "doi": "",
   "url": "",
-  "verified": "web",
+  "verified": "memory",
   "authority": "Collected late essays by Tschichold on page construction, margins, type and book design, presenting the mature classical position.",
   "caveats": "Page-canon geometry is a design heuristic, not empirically validated for reading; claims of historical use in medieval manuscripts are contested.",
   "confidence": "high"
