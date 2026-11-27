@@ -340,5 +340,35 @@ The MHP's numbers come from best and worst individual performers across studies,
 
 The book is the source of the idea that interface decisions can be reasoned about with a small set of human constants. LTF should use the structure, not the numbers: a goal (complete the pre-flight check), operators (look, read, tap, say, key), methods (step through the list) and selection rules (skip if already done). A well-made lesson or challenge briefing makes the method the same every time, so that learners chunk it. Because the working-memory capacity in the MHP is small for new material, a beginner holding a briefing in memory while operating the sim is at the limit, so briefings should be short and be displayed beside the sim rather than memorized. The population in these studies was adults using text editors, which differs from the audience for flight training.
 
-Confirmed this session: Open Library work OL5911100W (Card, 1983, Erlbaum, ISBN 0898592437); publisher description and table of contents at https://www.routledge.com/The-Psychology-of-Human-Computer-Interaction/Card-Moran-Newell/p/book/9780898598599; MHP values from the PMC article above (first 100,000 of 228,000 characters); Proctor and Schneider (2018) for the Hick's law principle; John and Kieras (1996) abstract. The book itself was not read.
+Confirmed this session: Open Library work OL5911100W (Card, 1983, Erlbaum, ISBN 0898592437); publisher description and table of contents at https://www.routledge.com/The-Psychology-of-Human-Computer-Interaction/Card-Moran-Newell/p/book/9780898598599; MHP values from the PMC article above, which is Jastrzembski and Charness (2007), Crossref 10.1037/1076-898x.13.4.224, *Journal of Experimental Psychology: Applied* 13(4), 224-248 (first 100,000 of 228,000 characters); Proctor and Schneider (2018) for the Hick's law principle; John and Kieras (1996) abstract. The book itself was not read.
+
+## miller1956magical
+
+Miller, G. A. (1956). The magical number seven, plus or minus two: Some limits on our capacity for processing information. *Psychological Review*, 63(2), 81-97. doi:10.1037/h0043158
+
+### Core claims
+
+Miller observed that two very different measures, the span of absolute judgment (how many categories of a single stimulus dimension, such as pitch or loudness, a person can reliably identify) and the span of immediate memory (how many items can be repeated back), both landed near seven. He argued that this "bottleneck" can be stretched in two ways: by judging stimuli on several dimensions at once, and by recoding input into larger units, which he called chunks. The paper's closing section is explicitly skeptical about the number itself: he proposes to withhold judgment about whether anything deep lies behind the many sevens, and suspects it is only "a pernicious, Pythagorean coincidence" (quoted from the paper's final paragraph, as reproduced in the abstract record and at https://psychclassics.yorku.ca/Miller/). The paper is an essay on information theory in psychology, not a report of one experiment.
+
+### Specifics
+
+Evidence type: a theoretical review that draws on earlier experiments by others, with Miller's synthesis. Findings reported on the Classics in the History of Psychology copy:
+
+- Absolute judgment of one dimension: pitch about 2.5 bits (roughly six categories); loudness 2.3 bits (about five); saltiness 1.9 bits (about four); position of a point in an interval 3.25 bits; size of squares 2.2 bits; other single-dimension results from 1.6 bits (curvature) to 3.3 bits (direction). Across unidimensional variables the mean was 2.6 bits with a standard deviation of 0.6, about 6.5 categories, within a total range of 3 to 15 categories.
+- Multiple dimensions raise capacity but with diminishing returns: dot position in a square 4.6 bits (about 24 positions), colors of equal luminance about 3.6 bits, six auditory variables of five values each 7.2 bits (about 150 categories), and accuracy on each dimension falls as dimensions are added.
+- Subitizing: counting up to five or six dots is essentially error-free, which Miller does not equate with absolute judgment.
+- Immediate memory: decimal digits carry about 3.3 bits each, a span of seven digits holds about 23 bits, and English words about 10 bits each. Hayes found a span of about nine for binary digits and about five for monosyllabic words. Absolute judgment is limited by bits; immediate memory is limited by chunks. The span in chunks stays roughly constant while bits per chunk can grow.
+- Recoding: in Smith's demonstration, binary digits recoded in pairs (base four) or triples (octal) let people recall far more; spans were nine for binary digits and seven for octal digits, and Smith drilling himself reached 24 binary digits with 2:1 recoding, 36 with 3:1 and about 40 with 4:1 and 5:1.
+
+Note what the paper does not say: it does not give a design rule for lists, menus, page elements or navigation. The 1956 paper's units are bits and chunks, and the limit applies to memory span and to judging a single physical dimension.
+
+### Replication and criticism
+
+Cowan (2001, separate entry) argues that seven was meant "more as a rough estimate and a rhetorical device than as a real capacity limit" and that the pure capacity is about four chunks. Others put capacity in terms of resource and quality instead of item count (Ma, Husain and Bays, 2014, abstract read), and Alvarez and Cavanagh (2004) found visual memory capacity ranging from 1.6 objects for shaded cubes to 4.4 for colors depending on information load. Shneiderman (1984) calls the value of seven contested by later researchers but a good estimate. In UI practice the paper has been stretched into a rule that menus, tab bars or lists must hold seven plus or minus two items; no result in the paper supports that, and the memory-span finding does not apply to items displayed on screen and available for re-reading.
+
+### Implications for LTF
+
+Use Miller for what it supports: chunking. Group related information so each group is one unit, and teach learners chunks that they will reuse (for example, a named checklist section or a recurring flow) so that a larger amount fits in working memory. Do not use "7 plus or minus 2" to cap the number of nav items, lesson cards or answer options; those are visible, not remembered. Do use it as a reason not to require learners to remember unstructured sequences while operating the sim: a spoken or typed number (frequency, squawk code, heading) in chunks of two or three digits is easier to hold than a long string, and a fly-mode screen should keep the number visible instead of asking learners to recall it. Avoid giving the figure "seven" in learner-facing copy.
+
+Confirmed this session: Crossref 10.1037/h0043158 (title, author, 1956, vol. 63, issue 2, pp. 81-97); full text read at https://psychclassics.yorku.ca/Miller/ (via a fetch summary of the findings and the closing remarks); concluding paragraph also via the OpenAlex abstract record; Ma et al. abstract via Europe PMC; Alvarez and Cavanagh abstract via OpenAlex.
 

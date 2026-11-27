@@ -281,3 +281,37 @@ This book is the best single source for a design-principles checklist, but LTF s
 - The preface's note that most evidence is short, immediate and from college students applies to LTF's multi-week audience; LTF should collect its own delayed-test data.
 
 Confirmed this session: read the front matter and preface of the third edition (Cambridge University Press, https://assets.cambridge.org/97813166/38088/frontmatter/9781316638088_frontmatter.pdf, which gives the 2021 copyright, the edition history and ISBNs 9781107187504 hardback and 9781316638088 paperback), and the table of contents (https://assets.cambridge.org/97811071/87504/toc/9781107187504_toc.pdf). Open Library lists the work (OL1837843W for the 2001 first edition; a 2020 edition record carries the same ISBNs). Chapter text was not read.
+
+## harp1998seductive
+
+Harp, S. F., & Mayer, R. E. (1998). How seductive details do their damage: A theory of cognitive interest in science learning. *Journal of Educational Psychology*, 90(3), 414-434.
+
+### Core claims
+
+Textbooks and lessons are often made more engaging by adding interesting but irrelevant material, such as vivid facts or illustrations. Harp and Mayer tested whether this helps. Across four experiments with 357 undergraduates, students who read science passages containing such "seductive details" recalled fewer main ideas and generated fewer problem-solving transfer solutions than students who read the same passages without them. The title's theory is that the damage comes from cognitive rather than emotional interest. The authors argue seductive details interfere "by priming inappropriate schemas around which readers organize the material, rather than by distracting the reader or by disrupting the coherence of the passage" (abstract, as retrieved through OpenAlex). The paper is a set of controlled laboratory experiments, with a competing-hypotheses design.
+
+### Specifics
+
+**Design.** The abstract defines seductive details as interesting but irrelevant adjuncts. In each experiment readers got expository passages with or without them, then were tested on recall of main ideas and on transfer (problem-solving) questions. The ERIC record confirms 357 undergraduate participants across four experiments.
+
+**Three rival explanations.** The paper compares the idea that details distract the reader (attention is drawn away from the main points), the idea that they disrupt coherence (the thread of the argument breaks), and the idea that they prime an inappropriate organizing schema (readers organize the passage around the interesting details). A later review (Rey 2012, in this lane) lists four explanations in the literature: working memory overload, attention distraction, schema interference and coherence disruption.
+
+**Experiments 1 to 3.** The authors revised the passage to include highlighting of the main ideas (Experiment 1), a statement of learning objectives (Experiment 2) or signaling (Experiment 3). None of these reduced the seductive details effect. If distraction or lost coherence were the cause, cues pointing to the main ideas should have helped.
+
+**Experiment 4.** Placing the seductive details at the start of the passage made the effect worse; placing them at the end reduced it. This fits the schema account: details read first can set the frame that organizes the rest, while details read last cannot.
+
+**Interest.** The paper's framing, from the abstract's opening and its title, is that textbook material is often boring to students and that adding interest seems an obvious fix. The authors distinguish emotional interest (arousal from vivid material) from cognitive interest (interest arising from understanding how ideas connect), and argue the second is what supports learning. I did not read the paper's own definitions and only summarize this from its title and abstract.
+
+### Replication and criticism
+
+The effect has been heavily studied since. Rey's 2012 meta-analysis (in this lane) pooled 39 experimental effects and reports a significant effect, small to medium for retention and medium for transfer. A larger 2020 meta-analysis by Sundararajan and Adesope reports that findings on the size of the harm are mixed and moderated by factors including the type of image used for comparison, delivery format, language, subject, learner pacing, recall question type and manipulation check; its overall conclusion is that including seductive details can hinder learning (I read only its abstract through a publisher page, with no effect sizes). A 2021 experiment by Tislar and Steelman with 132 undergraduates on a plate tectonics lesson did not find a consistent detrimental effect on recall and transfer, and the effect appeared only when learning objectives were provided, so it is hard to elicit reliably (abstract via Crossref, DOI 10.1002/brb3.2322). Rey also lists evidence for and against each explanation. The overall verdict: the effect is real on average and often small, depends on what the details are and how they are placed, and Harp and Mayer's own schema-priming explanation is one of several rival accounts. Most of the base is short laboratory reading by college students.
+
+### Implications for LTF
+
+- Be wary of "fun facts", aviation trivia, historical anecdotes and decorative photographs inside the explanation of a core concept. Put them in an optional sidebar or after the lesson, not before it. Experiment 4 suggests that where trivia appears matters: before the main idea is worse than after.
+- Cues such as highlighting and a learning objective did not rescue a page with irrelevant material, so do not rely on signposting to offset clutter; remove the clutter.
+- This is a risk for a flight-sim audience that loves detail: war stories, aircraft history and exciting scenarios can be engaging but may pull the schema in the wrong direction while a beginner is learning the basic control relationships.
+- The effect is not uniformly large. Test any engagement feature with an outcome measure (a transfer-style question) before deciding it is harmless or harmful.
+- "Interest" should come from showing how ideas connect (cause and effect between pitch, power and airspeed), not from added color.
+
+Confirmed this session: ERIC record EJ576496 (https://eric.ed.gov/?id=EJ576496) for the bibliographic details and the 357 participants and four experiments; the abstract text via OpenAlex (api.openalex.org, DOI 10.1037/0022-0663.90.3.414); the Crossref record (volume 90, issue 3, pages 414-434). Tislar and Steelman's abstract was read through Crossref and OpenAlex; Sundararajan and Adesope's abstract through the Springer page; Rey's through ERIC EJ986386. The full text of Harp and Mayer was not read.

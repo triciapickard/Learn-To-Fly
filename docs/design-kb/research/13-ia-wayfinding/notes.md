@@ -517,3 +517,97 @@ I found no replication this session, and Nielsen himself asks for one. The sampl
 - Re-run small sorts when the syllabus doubles, not every release.
 
 Confirmed this session: fetched nngroup.com/articles/card-sorting-how-many-users-to-test/ (author Jakob Nielsen, July 18, 2004; Tullis and Wood study details, correlation table and recommendations). The original Tullis and Wood paper was not read.
+
+## krug2014dont
+
+Krug, S. (2014). *Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability* (3rd ed.). Berkeley, CA: New Riders. Book (practitioner primer; first edition 2000). Craft authority and expert opinion.
+
+### Core claims
+
+Krug's organizing idea is that a page should be self-evident, or at least self-explanatory, so that the user does not have to stop and puzzle over it. The publisher's description of the book says the sites that offer the best, easiest and most intuitive experience are the ones people visit again and again, and that the guide distills his on-the-job experience into the dos and don'ts of good Web design. On navigation he argues that users need constant, cheap answers to a handful of orientation questions, and that most people scan pages quickly instead of reading them.
+
+### Specifics
+
+I could not read the book. The points below come from the publisher description in Open Library, the author's site, and secondary summaries of the chapters, so the chapter numbering and wording should be checked against the book before they are quoted.
+
+- Scanning: a chapter titled "Billboard Design 101" argues that users treat pages like billboards at driving speed, so designers should make great billboards.
+- Mindless choices: a chapter on choices argues that the number of clicks matters less than whether each click is an obvious, unambiguous choice. The rule of thumb attributed to Krug is that three mindless clicks equal one click that requires thought. This is a statement about effort per step, not a limit on the number of steps.
+- Persistent navigation: summaries list the elements to include on every page: site ID, page name, sections (primary navigation), local navigation, "you are here" indicators and search.
+- The trunk test: imagine being blindfolded in a car trunk and dropped on a random page of a site. You should be able to say what site it is, what page you are on, what the major sections are, what options you have at this level, where you are in the scheme of things and how to search. The practical version is to print a random page, squint and circle those items. It matters because search results and shared links often land people on interior pages.
+- Editions: Open Library records the first edition in 2000 (New Riders), a second in 2005 and the third, "Revisited," in 2014 with mobile material added. The author's site says the book first appeared in 2000, has sold more than 700,000 copies in 15 languages, and that the third edition broadened it beyond the web to mobile and desktop apps and other things people use. The site's page header lists a fourth edition, an inconsistency I could not resolve.
+
+### Replication and criticism
+
+Krug's advice is opinion informed by a consultant's usability testing experience, not research; its claims are plausible and widely adopted, but the "three mindless clicks" rule is not an experimentally derived number, and I found no source for it beyond secondary summaries. It is consistent with Porter's 2003 finding that click counts do not predict success and with the information foraging idea that users follow scent, but it does not itself prove either. Porter's study is also a useful warning against reading Krug as endorsing a click budget. The trunk test is a heuristic walk-through, not a validated instrument, and I found no study of its reliability. Some tests (such as whether users scan) have been backed by eye tracking and usability studies from other groups, which I did not review in this lane.
+
+### Implications for LTF
+
+- Apply the trunk test to a sample of LTF pages, especially lesson pages reached from search engines or shared links: can a learner tell the site, the module, the lesson, what comes next and how to get back to the course map? Build it into design review.
+- Keep persistent orientation on every lesson page: a site mark, the lesson title and its place in the module (for example "Lesson 3 of 8"), a way back to the course map, and search for the glossary.
+- Design lessons for scanning: short headings, key terms in bold, one idea per block, with the "billboard" principle applied to the key instruction of each step.
+- Make each choice obvious. In fly mode, the choices should be so unambiguous that the learner never has to think about where to tap while their attention is on the sim.
+- Beware of the old "happy talk" and filler on lesson intros; cut it.
+
+Confirmed this session: Open Library work OL8578577W (publisher description; editions: 1st 2000, 2nd 2005, 3rd 2014 Revisited, New Riders, ISBN 9780321965516); fetched sensible.com/dont-make-me-think/ (edition and sales statements); web search summaries of chapters and the trunk test (secondary accounts, not the book); Porter (2003) and NN/g (2019) for the click-count findings.
+
+## kalbach2007designing
+
+Kalbach, J. (2007). *Designing Web Navigation: Optimizing the User Experience*. Sebastopol, CA: O'Reilly Media. Book (practitioner reference grounded in human information behavior research).
+
+### Core claims
+
+Kalbach's book is a full treatment of how to design navigation for large, information-rich sites. One reviewer summarizes it as framing navigation around people instead of technology: good navigation depends on how people find information and how you guide them. The publisher's overview describes it as thoroughly rewritten for the web of its time and aimed at navigation systems for large sites with a business purpose, while noting the principles also apply to small sites.
+
+### Specifics
+
+I could not access the publisher's chapter pages, so the confirmed content comes from search listings and reviews.
+
+- Structure: three parts. Part I, Foundations, opens with two chapters giving a broad, theoretical view of web navigation and human information behavior, followed by three chapters on specific navigation elements. Part II, a process, begins with a chapter on evaluating navigation before design work (Chapter 6) and then moves through design phases beginning with understanding the problem (Chapter 7). Part III covers special topics: integrating navigation and search, navigation for social classification and tagging services, and navigation in rich web applications (Chapter 13).
+- Concepts: a publisher press release lists "information scent" and "information shape" among its topics and says the book includes an entire chapter on tagging. An excerpt advises providing enough scent for visitors to navigate effectively without overwhelming them.
+- Reviewer observations: reviews gathered on the author's site call it thorough and well researched, with full-color diagrams and real-site case studies and accessibility sidebars; critics note that the tagging chapter felt like an afterthought, that experienced practitioners may find little new, and that the book's layout (long lines, low-contrast headers) was weak. One critic said it was geared a little too much to "2006-era navigation" instead of principles.
+- Details: O'Reilly lists the book as August 2007; catalogs give page counts from 394 to 456, so none is recorded here.
+
+### Replication and criticism
+
+This is a synthesis and craft reference, not an experiment; its research basis is the usability and human factors literature it cites (the information scent concept comes from Pirolli and Card). The reviews are mostly positive, with the main criticisms about production quality and a dated example base, not about the principles. Because some examples assume a 2000s web, treat the specific design patterns (for example tag clouds) as period-bound.
+
+### Implications for LTF
+
+- The book supports designing navigation around human information behavior: LTF's learners will move between lesson, quiz, glossary and sim. Plan each of these as a place with a clear way in and out.
+- Information scent and "information shape" (the book's name for how the structure of a site looks to a user) are practical lenses. Check the breadth and depth of the course map so the shape is visible: how many modules, how many lessons in each.
+- Coordinate navigation and search: a lesson page should offer both a path (next, previous, up) and a search for the glossary.
+- If LTF later adds tagging of lessons or user notes, the book's tagging chapter would be the starting reference, but its examples are dated, so verify against current practice.
+
+Confirmed this session: Open Library work OL8167698W (title, author, O'Reilly, 2007 editions with ISBN 9780596528102); web search results summarizing the O'Reilly listing and press release (August 2007, scope, scent and shape, tagging chapter), part structure from O'Reilly page titles, and reviews on experiencinginformation.com (fetched). The book itself and O'Reilly chapter pages were not readable.
+
+## nielsen2017mega
+
+Nielsen, J., & Li, A. (2017, March 26). Mega menus work well for site navigation. Nielsen Norman Group. Web article (expert guidelines; testing method not reported).
+
+### Core claims
+
+Nielsen and Li argue that large two-dimensional dropdown panels, "mega menus," help users on sites with many options because they let users see all choices at once, support grouping through layout and typography, and avoid the scrolling and memory demands of ordinary dropdowns. They state that user testing shows mega menus work, with the caveat that it is always best to test.
+
+### Specifics
+
+- Definition: a mega menu is an expandable menu showing many options in a two-dimensional panel divided into groups, with all options visible without scrolling, opened by hover, click or tap.
+- Why it beats regular dropdowns: regular dropdowns hide most options and force reliance on short-term memory, handle grouping poorly and have limited support for icons or images.
+- Timing for hover menus: keep the pointer stationary for 0.5 seconds before showing hover-dependent content; display the mega menu within 0.1 second; keep it visible until the pointer has been outside the navbar item and the dropdown for 0.5 seconds; then remove it in under 0.1 second. The best implementations detect when the pointer is moving toward the dropdown and keep it open, solving the "diagonal problem."
+- Grouping and labels: group options into related sets, ideally informed by card sorting; keep medium granularity; use concise, distinct labels that start with the most information-carrying word and use base verbs ("shop," not "shopping"); avoid made-up terms; order groups by workflow or importance, with the most important at top left in left-to-right languages; show each choice only once.
+- Simplicity: avoid widgets more complex than a click; do not hide the search box inside a mega menu.
+- Accessibility: code dynamic elements for screen readers; magnifier users may see only part of a menu, so use strong borders; tiny targets cause touchscreen errors; finicky show and hide hurts users with motor impairments. A simple fallback is to make each top-level item link to a regular page listing all options in accessible HTML.
+- Examples: five annotated screenshots (DaveRamsey.com, Nova Scotia, GameStop, JohnLewis.com, Moleskine). Good ones had distinct groups or images that helped comparison; weak ones had labels that were not front-loaded and were hard to tell apart.
+
+### Replication and criticism
+
+The article's testing claim has no reported design, participant count or metrics, and the examples are illustrations, so this is expert opinion built on NN/g's experience. The timing numbers are practical guidelines, not published experimental thresholds. A related NN/g article on the 3-click rule recommends mega menus over cascading dropdowns but reports no new experiment. Treat the advice as a defensible default for large sites, not proof that mega menus outperform alternatives in every context.
+
+### Implications for LTF
+
+- LTF is small: with a handful of modules, a mega menu is likely unnecessary. A single page listing all modules and lessons with clear grouping (the "all options visible" benefit without hover mechanics) achieves the same goal.
+- If a menu is used, apply the label rules: front-load the key word, use plain verbs and nouns a beginner would use ("Take off," "Land"), keep each item once.
+- Do not rely on hover. Learners may use tablets next to the sim, so open on click or tap and keep targets large.
+- Keep search visible and out of menus, and give the menu a plain-HTML fallback for screen readers.
+- Fly mode should have no menus at all beyond a clear exit; the timing and diagonal problems are exactly the kind of fiddly interaction that is costly beside a flight sim.
+
+Confirmed this session: fetched nngroup.com/articles/mega-menus-work-well/ (authors Jakob Nielsen and Angie Li, March 26, 2017; guidelines, timing, accessibility, examples); fetched nngroup.com/articles/3-click-rule/ (2019) for the mega menu recommendation. No DOI.
