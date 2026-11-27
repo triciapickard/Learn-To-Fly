@@ -1,0 +1,39 @@
+# Lane 27: Accessibility standards and research
+
+Notes for the Learn to Fly Design Knowledge Base. Each section covers one source and ends with what was actually confirmed in this session.
+
+## w3c2023wcag
+
+W3C, Web Content Accessibility Guidelines (WCAG) 2.2. W3C Recommendation, the page read this session is dated 12 December 2024. Editors: Campbell, Adams, Bradley Montgomery, Cooper, Kirkpatrick.
+
+### Core claims
+
+WCAG 2.2 is the international technical standard for making web content usable by people with disabilities. It organizes requirements under four principles: content must be Perceivable, Operable, Understandable and Robust. Under those principles sit 13 guidelines, and under the guidelines sit testable success criteria (SC), each assigned to conformance level A (lowest), AA or AAA (highest). Most laws and procurement rules that cite WCAG ask for level AA. WCAG 2.2 extends WCAG 2.1 (June 2018) and is designed so that content that conforms to 2.2 also conforms to 2.1. The standard is deliberately technology-neutral: it states outcomes ("the focus indicator is visible") and leaves techniques to separate, non-normative documents (Understanding WCAG and Techniques for WCAG). The central claim is that accessibility can be specified as pass/fail criteria that authors, testers and regulators can all apply to the same page.
+
+### Specifics
+
+Nine criteria are new in 2.2: 2.4.11 Focus Not Obscured (Minimum, AA), 2.4.12 Focus Not Obscured (Enhanced, AAA), 2.4.13 Focus Appearance (AAA), 2.5.7 Dragging Movements (AA), 2.5.8 Target Size (Minimum, AA), 3.2.6 Consistent Help (A), 3.3.7 Redundant Entry (A), 3.3.8 Accessible Authentication (Minimum, AA) and 3.3.9 Accessible Authentication (Enhanced, AAA). Criterion 4.1.1 Parsing was removed. By one count of the table of contents the principles hold 29, 34, 21 and 3 criteria respectively, 87 in total, but that tally came from a fetch tool summary and should be rechecked before it is quoted.
+
+The criteria most relevant to a lesson and widget app, with the thresholds confirmed from the W3C Understanding pages:
+
+- 1.4.3 Contrast (Minimum, AA): text and images of text need at least 4.5:1; large-scale text (18 point, or 14 point bold) needs at least 3:1.
+- 1.4.11 Non-text Contrast (AA): visual information needed to identify a control, its states (including focus indicators) and graphical objects needed to understand content must reach at least 3:1 against adjacent colors. The threshold is strict, so 2.999:1 fails. Disabled controls and hover effects are excluded, and controls identified by visible text need no contrasting boundary.
+- 1.4.10 Reflow (AA): content must work without two-dimensional scrolling at a width equivalent to 320 CSS pixels for vertically scrolling content and a height of 256 CSS pixels for horizontally scrolling content. The Understanding page ties 320 pixels to a 1280-pixel viewport at 400% zoom. Exceptions cover content that needs two-dimensional layout, such as maps, diagrams, video, games, and data tables (but headings and search near a table must still reflow).
+- 2.2.2 Pause, Stop, Hide (A): moving, blinking or scrolling content that starts automatically, lasts more than five seconds and sits alongside other content needs a mechanism to pause, stop or hide it. Auto-updating content needs control with no five-second exception. Essential activities are exempt.
+- 2.4.11 Focus Not Obscured (Minimum, AA): a focused component must not be entirely hidden by author-created content. Sticky headers, footers and cookie banners are the named hazards; the Understanding page suggests CSS scroll padding, making notifications modal, or closing non-essential notifications.
+- 2.5.8 Target Size (Minimum, AA): pointer targets must be at least 24 by 24 CSS pixels, unless a spacing rule is met (a 24-pixel circle centered on each undersized target must not intersect another target), an equivalent control exists, the target is inline in a sentence, the size is set by the user agent, or the presentation is essential.
+- 2.5.7 Dragging Movements (AA): anything that relies on dragging must be operable with a single pointer without dragging, unless dragging is essential.
+- 3.3.8 Accessible Authentication (Minimum, AA): no cognitive function test (remembering a password, solving a puzzle) at any authentication step unless an alternative, a supporting mechanism (password managers, paste), object recognition or personal content applies.
+- 1.2.2 Captions (Prerecorded, A): captions for prerecorded audio in synchronized media, including non-speech audio needed to understand the content such as speaker identification and meaningful sound effects.
+
+Conformance requires meeting all criteria at the chosen level for full pages, and conformance claims are about whole pages or processes, not isolated components.
+
+### Replication and criticism
+
+WCAG is a consensus standard, not an experiment, so "replication" means field evidence about whether conformance helps users. Power et al. (2012, also in this lane) found that the majority of problems blind users hit on tested sites were not covered by WCAG 2.0 success criteria as written, and about half of the problems that were covered were still hard to attribute to a single criterion. Petrie and Kheir (2007) found accessibility problems and usability problems overlapped only partly. The WebAIM Million reports (also in this lane) show that even basic WCAG failures such as low contrast text and missing alternative text remain on the great majority of home pages. Critics also note that criteria can be satisfied technically while remaining unusable (a conforming but badly ordered page), that the AAA level is explicitly not meant as a blanket requirement, and that cognitive and learning disabilities are less well covered than sensory and motor ones, which is why the W3C maintains separate supplementary guidance (COGA, also in this lane). Several 2.2 additions (target size, dragging, authentication, focus not obscured) came directly from gaps in mobile, motor and cognitive coverage found after 2.1.
+
+### Implications for LTF
+
+Treat WCAG 2.2 AA as the floor for every LTF page and widget, and write the thresholds above into design tokens and the review checklist. Concretely: body and label text at 4.5:1 or better in both light and dark themes; instrument widget outlines, dial ticks, slider thumbs and focus rings at 3:1 or better against their backgrounds; every button, chip and stepper at least 24 by 24 CSS pixels (aim larger for the fly-mode controls a learner taps with a mouse while their hands are partly on a yoke or throttle). Any draggable instrument, for example a slider that sets a heading bug or a flap lever, needs a click, tap or keyboard alternative. Sticky lesson headers and the fly-mode toolbar must not hide the focused element, so use scroll-padding. Animated instrument demos that run longer than five seconds need a visible pause control, and autoplaying loops should respect the reduced-motion preference. Any video of sim footage needs captions that include non-speech cues such as warning tones. Login must allow password managers and paste. Reflow at 320 CSS pixels must hold for lesson prose; wide panel layouts may use the two-dimensional exception for diagrams only, not for the surrounding text.
+
+Confirmed this session: fetched https://www.w3.org/TR/WCAG22/ (first 100,000 characters: status, editors, principles, new criteria, 1.4.3 values) and the Understanding pages for target-size-minimum, focus-not-obscured-minimum, accessible-authentication-minimum, dragging-movements, non-text-contrast, reflow, pause-stop-hide and captions-prerecorded under https://www.w3.org/WAI/WCAG22/Understanding/.

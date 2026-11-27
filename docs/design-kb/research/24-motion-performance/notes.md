@@ -220,3 +220,33 @@ LTF has two places where viewpoint change is real: moving between sections of a 
 The result also sets a ceiling on what to claim: the animation helped rebuild the layout, not learn relationships. A glide on a chart helps a learner remember where things are, but quizzing on the relationships needs other design (retrieval practice, worked examples), covered elsewhere in the knowledge base. Treat any transition longer than about a second with suspicion, since the study's own framing is that transitions are response time. In fly mode, skip the glide: the learner needs the new information immediately.
 
 Confirmed this session: Crossref returned the IEEE proceedings record (DOI 10.1109/infvis.1999.801854, pages 28-35) and a 2003 reprint; the open technical report HCIL TR 98-11 (CS-TR-3964, September 1998) read in full at https://www.cs.umd.edu/projects/hcil/jazz/learn/papers/CS-TR-3964.pdf, with the abstract also found on drum.lib.umd.edu. Numbers above come from that technical report; the conference version may differ in minor details.
+
+## dragicevic2011temporal
+
+Dragicevic, P., Bezerianos, A., Javed, W., Elmqvist, N. and Fekete, J.-D. (2011). Temporal distortion for animated transitions. *Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '11)*, 2009-2018.
+
+### Core claims
+
+Slow-in/slow-out pacing (the "ease" in "ease-in-out") has long been an informal design guideline for animated transitions, but the authors say no empirical data existed to support it. They test object tracking under four pacing strategies of the same total duration: constant speed, slow-in/slow-out, fast-in/fast-out, and an adaptive technique that slows the visually complex parts of the animation. Their abstract reports that slow-in/slow-out outperformed the other techniques, with technique differences depending on the type of visual transition. The authors explain the advantage as predictability, not as extra time to decipher complex moments.
+
+### Specifics
+
+Pacing profiles: the paper defines pacing as a time remapping of a constant-rate animation. Slow-in/slow-out is a smooth acceleration at the start and deceleration at the end; the paper writes it as a piecewise quadratic ease. The supposed benefits are that the gradual start helps users begin tracking and the gradual stop lets them predict where the object will end. Fast-in/fast-out is the reverse. Adaptive speed allocates frames according to a measure of visual complexity (how many distractors are near the target).
+
+Study: twelve paid university students, each using all four techniques in a Latin square order, after a short warm-up of two trials; the session lasted about 45 minutes on average. The task was to track a single target point in an animated point cloud (dark gray 16-pixel squares in an 800 by 800 area) and click its final position, with an error metric normalized against the error expected from a random answer. All animations lasted one second, which the authors describe as a common duration for transitions. They used a generated data set and a real data set, and three distractor profiles describing where in the animation the visually complex part occurs (at the extremes, in the middle, or over the whole animation, labeled de, dm and do in the paper).
+
+Results (from the paper text): there was a significant effect of technique on error; slow-in/slow-out was significantly better than the other techniques for all distractor profiles. Across all trials, the share of fully correct answers was highest for slow-in/slow-out (38%), then constant speed (31%), fast-in/fast-out (15%) and adaptive speed (14%) in one analysis. Adaptive speed worked best only when complexity was at the extremes, where it reduces to slow-in/slow-out; constant speed was better than adaptive and fast-in/fast-out for the other distractor profiles. Participants complained of overshooting the target as it stopped with the other pacings. The authors link this to smooth pursuit eye movement: they estimate that around 30% of a one-second animation is spent in the visuomotor response to the motion (about 100 ms for the open-loop response, 100 ms to detect termination and 100 ms to slow the eye to rest), so predictability matters.
+
+Recommendation: for short-duration transitions that show state changes, use slow-in/slow-out pacing. The paper does not address whether to animate at all, and refers readers to Tversky et al. (2002) for that.
+
+### Replication and criticism
+
+A well-controlled experiment, but small (twelve students), with a single task (tracking one target), abstract stimuli (identical squares), and one duration. The authors list limitations: they did not test several simultaneous targets, participants started the transition themselves by pressing a key (so they knew when it would begin, which favors tracking), and they did not use an eye tracker. They hypothesize a third principle, keeping velocity variations low, which would make slow-in/slow-out a special case. Their results should hold for slightly different durations, but not for very different durations because of ceiling and floor effects. The finding agrees in direction with the craft claims of Thomas and Johnston, Lasseter and Chang and Ungar, and with Heer and Robertson's recommendation, but those sources did not test it.
+
+### Implications for LTF
+
+This is the evidence for LTF's default easing: where a widget element moves from one place to another over about a second, use an ease-in-out curve. The study measured tracking of an item the user expects, so it fits user-initiated moves (a click that moves a marker or reveals a panel). It does not support slow easing on a notification or a value that changes by itself while the learner looks at the sim.
+
+Two cautions. First, "ease" is not free: easing wastes the start and end of the time budget, so a transition that needs to be as short as 150 ms may be better with a gentler curve than a strong ease-in-out. The paper tested one-second transitions, so no figure from it should be applied to short interface micro-transitions. Second, for gauges that show a measured quantity, the needle should follow the data, not an easing curve that lags or overshoots it; use easing for scripted demonstrations, and direct mapping for live or simulated values.
+
+Confirmed this session: Crossref DOI 10.1145/1978942.1979233 (CHI 2011, pages 2009-2018); full text read at https://cs.au.dk/~elm/pdf/timedistort.pdf. Note that the "38%, 31%, 15%" figures are taken from the paper's count of correct answers; I did not confirm which of the paper's two analyses (generated or real data set) they describe, so treat them as indicative.

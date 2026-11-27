@@ -433,3 +433,37 @@ Its judgments of other designers' work are one practitioner's craft opinion and 
 5. Prefer faces from designers who document their spacing and metrics, so rendering across platforms is predictable.
 
 Confirmed this session: Google Books record (G. Fraser, 1986, 219 pages, ISBN 0860920852; description) at https://books.google.com/books/about/Letters_of_Credit.html?id=FpTgAAAAMAAJ ; Goodreads page at https://www.goodreads.com/en/book/show/445607.Letters_of_Credit ; biography at https://en.wikipedia.org/wiki/Walter_Tracy ; spacing write-up at https://github.com/n8willis/kernall/blob/master/tracy.md. Open Library work OL5262363W lists the Gordon Fraser and Godine editions. The Christian Science Monitor review could not be fetched (403); only its summary appeared in search results.
+
+## noordzij2005stroke
+
+Gerrit Noordzij, *The Stroke: Theory of Writing*, translated by Peter Enneson (London: Hyphen Press, 2005; reprinted 2009; Dutch original 1985; 88 pages).
+
+### Core claims
+
+Noordzij, a Dutch type designer who taught lettering at the Royal Academy in The Hague, sets out "a genuine theory of all writing, done with any kind of generating tool," as Owen Williams quotes him. The Hyphen Press description says the theory covers Western and non-western scripts, begins with the white space around letters, and describes how strokes form using simple geometry. It is explicitly not about calligraphic art or beautiful forms, and aims to reconnect written and typographic letters.
+
+Three ideas carry the theory. White space, not the black stroke, is the principal element in perceiving letterforms. Letterforms develop entirely from the stroke made by a tool. And the word image, not the single letter, is the primary visual unit of reading and writing, so legibility depends on rhythm and contrast across a word more than on the ideal shape of each character.
+
+### Specifics
+
+The contents, per the publisher, are: The white of the word; The stroke; The orientation of the front; The word; The invention of the word; The consolidation of the word; The great break; Changes in contrast; Technique; plus a translator's note and index.
+
+Williams's review in *Amphora* gives the taxonomy. Noordzij distinguishes two kinds of mark-making, continuous (strokes stay on the page) and interrupted (the pen is lifted). Both are divided by three forms of contrast: translation, in which the broad-edged pen's angle is held constant; rotation, in which the angle changes; and expansion, in which contrast arises from pressure with a pointed flexible pen. Williams says none of these distinctions is new in itself but that the matrix bridges two schools of penmanship. The book ends with an application of the theory to sans serif letterforms.
+
+Erik Spiekermann's review (originally in German, *Text* no. 11, 2006; English by Robin Kinross on the Hyphen Press site) draws consequences for designers: reading and writing belong together and reading is not the decoding of separate characters; "Rhythm and contrast are more important for legibility than an imaginary form of the characters"; and a form "doesn't change when one turns it through 90 or 180 degrees," so d, b, q and p are told apart by their place in a sequence of black and white, not by form alone. As a type designer, he says, "I do not only design the black strokes, but also the white spaces that these strokes define." Spiekermann also reports Noordzij challenging the idea that the *romain du roi* was a purely constructed typeface.
+
+### Replication and criticism
+
+This is a theory from a master teacher, supported by diagrams and argument, not by experiments on readers. Its claim that the word image is the primary unit of reading is exactly the kind of statement lane 02 must test; the reading-research literature has contested "word shape" claims, so do not use this book as evidence for them.
+
+Reviews are mixed. Williams calls Noordzij's ideas widely circulated among type designers but finds the book assumes and leaves out too much, skips letter anatomy, and is "mechanical and limiting rather than expansive," as if trying to "freeze a beautiful living thing." Spiekermann finds the style demanding and sometimes provocative, values the challenge to accepted "facts," and says he cannot simply believe all the theories. Hyphen Press quotes a reviewer who does not know whether the theory is right but finds the remarks worth reading. One page records another review by Jan Middendorp in *Eye* (no. 59, 2006), which I did not read.
+
+### Implications for LTF
+
+1. The strongest usable idea is that white space is part of the letterform: spacing between letters, words and lines shapes legibility as much as stroke shapes. Do not tighten tracking or line-height merely to fit more on a screen.
+2. Rhythm and contrast across a line matter more than the beauty of single letters: judge candidate faces by setting real lesson sentences, not by a specimen of single glyphs.
+3. Because the word image claim is untested here, do not design around word shape (for example, avoiding all-caps for words on the ground that it destroys shape) without checking the legibility lane.
+4. The stroke model explains why broad-nib faces have a built-in contrast direction; when choosing a text face for sustained reading, check that its stress and rhythm look consistent in your actual sizes.
+5. Treat the theory as background for choosing among faces, not as a rule set for components.
+
+Confirmed this session: Publisher page https://www.hyphenpress.co.uk/products/books/978-0-907259-30-5 (translator, 1985 original, 88 pages, contents). Spiekermann's review at https://hyphenpress.co.uk/the_stroke_a_review/. Williams's review in *Amphora* read from https://journals.lib.sfu.ca/index.php/amphora/article/download/2213/1622/7247 (Hyphen, 2005, £15). Open Library work OL4869181W lists the Hyphen edition (listed there as 2006).
