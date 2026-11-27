@@ -180,3 +180,115 @@ The study is a deliberate improvement on Valdez and Mehrabian (1994), whose stim
 4. Since the experiment was in the dark with 1.5 m viewing, extrapolating to a laptop used next to a bright monitor is speculative. Any LTF claim about emotional effect should be labeled as such.
 
 Confirmed this session: Crossref 10.1007/s00426-017-0880-8 (volume 82, issue 5, pp. 896-914, published online 2017, print 2018); Europe PMC abstract; full text PDF downloaded and read (apparatus, stimuli, results and discussion).
+
+## labrecque2012exciting
+
+Labrecque & Milne (2012), "Exciting red and competent blue: the importance of color in marketing", Journal of the Academy of Marketing Science 40(5), 711-727 (online 2011).
+
+### Core claims
+
+The paper argues that color is an under-studied lever in marketing and that hue, saturation and value shape how consumers perceive a brand. Per the abstract as summarized by the publisher-indexed page, the authors drew on aesthetics, color psychology and associative learning, and report four studies. The central finding that circulated widely is that red logos are rated as more "exciting" and blue logos as more "competent" on Aaker's brand personality scale, which the paper presents as evidence that colors communicate brand meaning.
+
+### Specifics
+
+Evidence type: consumer-research experiments (rating tasks with students and online panels), a marketing journal paper, not a perception or psychophysics study. From the abstract (colab.ws/articles/10.1007/s11747-010-0245-y): Study 1 maps hues onto brand personality dimensions; Study 2 examines how saturation and value strengthen those personality traits; Study 3 shows marketers can use color strategically to alter brand personality and purchase intent; Study 4 finds that color affects how likable and familiar a brand seems. Secondary descriptions (a business-school thesis that tested red and blue logos, read via the search results) report the same mapping of blue to Competence and red to Excitement, and a partial relationship of bright colors such as yellow and orange to excitement in logos. I was unable to retrieve the full text, so sample sizes, the exact set of colors, effect sizes and the statistical tests are not given here, and nothing below should be quoted as a number.
+
+The paper's framing is of association and fit: brand personality is rated against the color of a stimulus logo, and the authors emphasize the congruence of color with intended brand meaning.
+
+### Replication and criticism
+
+This is a perception-of-brands study, so it measures ratings of imagery, not behavior or performance. It uses color as an independent variable with limited control over spectral properties and display conditions, a general weakness Elliot (2015) lists for the field. It has been very widely cited in practitioner material, much of which overstates it into "blue means trust" rules. I did not find, in the sources I retrieved, either a preregistered replication or a contradicting study, so its status is "plausible association in rating studies, not tested for behavioral consequences". The related finding that color associations are learned and context dependent (Elliot and Maier's color-in-context theory; Palmer and Schloss on ecological valence) implies that a logo-color-personality mapping should vary across cultures and categories, so the original US-based mapping is not a universal law.
+
+### Implications for LTF
+
+1. If LTF builds a brand identity, a blue-leaning palette can be defended as appearing "competent" to US adults in rating studies. The case is weak, so do not use it to override legibility or accessibility constraints.
+2. Do not copy "brand color psychology charts" into the KB as rules. Such charts descend from papers like this one but strip the context.
+3. For in-lesson UI, brand-personality arguments are irrelevant; what matters is whether the state color is discriminable and legible (see the CVD and contrast sources).
+4. If the team wants evidence about trust in a flight-training product, the right test is an A/B comparison with LTF's own audience, not a citation.
+
+Confirmed this session: Crossref 10.1007/s11747-010-0245-y (volume 40, issue 5, pp. 711-727, print year 2012; Crossref lists the online date as 2011); abstract summary and study list from colab.ws/articles/10.1007/s11747-010-0245-y; secondary descriptions from search results (thesis summaries). Full text was not accessible, so details beyond the abstract are marked unconfirmed.
+
+## mehta2009blue
+
+Mehta & Zhu (2009), "Blue or red? Exploring the effect of color on cognitive task performances", Science 323(5918), 1226-1229.
+
+### Core claims
+
+The paper tries to reconcile an inconsistent literature in which some studies found that blue or green yields better cognitive performance than red and others found the opposite. The authors propose that the answer depends on the task: red induces avoidance motivation and so improves performance on detail-oriented tasks, whereas blue induces approach motivation and so improves performance on creative tasks. They also report a process account, that activation of these alternative motivations mediates the color effect.
+
+### Specifics
+
+Evidence type: six reported experiments, all with small to moderate samples, published in a high-profile general science journal. From the abstract: Study 1 (n = 69) showed that red versus blue induced avoidance versus approach motivation; Studies 2 and 3 (n = 208 and n = 118) showed that red enhanced a detail-oriented task while blue enhanced a creative task; the results were replicated in product design (Study 4, n = 42) and persuasive message evaluation (Study 5, n = 161); Study 6 (n = 68) indicated that the effects occur outside individuals' consciousness; and process evidence suggested the motivations mediate the effect. The paper helped to popularize the idea of "red for focus, blue for creativity" in design and workplace-color advice.
+
+Notice a tension with Elliot et al. (2007): that line found red harmful to a test performance, whereas Mehta and Zhu found it helpful for detail-oriented tasks. The two are reconciled by task type, but the reconciliation itself is a flexible theory, a point that matters when judging replication (see below).
+
+### Replication and criticism
+
+Steele (2014) ran a direct replication of one anagram experiment, using the same anagrams, instructions and colors, with more than three times as many participants, and found no color-priming effect even though the power was sufficient (Europe PMC abstract). Elliot's 2015 review cites that failure as non-supportive evidence. Gnambs (2020) reviews the related red-performance literature and finds limited evidence. Beyond the replications, the general critique of this body of work (Elliot, 2015) applies: small samples, uncontrolled viewing conditions and device-level color specification. I did not find a replication of the creativity (blue) arm this session, so its status is "not independently confirmed here". The safest reading is that this paper is a hypothesis-generating study whose headline claim has at least one clear failed direct replication.
+
+### Implications for LTF
+
+1. Do not select a background color for lesson pages on the grounds that "blue helps creativity" or "red improves attention to detail". For checklists and procedural drills in LTF, the detail-orientation claim would be the tempting one, and it has no reliable support.
+2. Do not recolor error or caution states to "boost accuracy". Use conventional signal colors with redundancy (icons, text, position).
+3. If LTF wants to test whether a calm versus a high-alert tinted background affects checklist accuracy, run a properly powered preregistered experiment, and treat the original effect sizes with suspicion because they shrank on replication.
+4. Keep the KB entry as a "debunk-or-unsettled" marker so future writers do not cite it as settled.
+
+Confirmed this session: Crossref 10.1126/science.1169144 (volume 323, issue 5918, pp. 1226-1229); Europe PMC abstract with study sample sizes; Steele (2014) abstract on Europe PMC (PMID 24222366) and Elliot (2015) full text for the replication context.
+
+## steele2014failure
+
+Steele (2014), "Failure to replicate the Mehta and Zhu (2009) color-priming effect on anagram solution times", Psychonomic Bulletin & Review 21(3), 771-776.
+
+### Core claims
+
+A single-author brief report that directly replicates one of the experiments in Mehta and Zhu (2009). The original reported that anagrams of avoidance-motivation words were solved faster on red backgrounds and approach-motivation anagrams faster on blue backgrounds. The replication used the same anagrams, instructions and colors, with more than triple the number of participants, and the results did not show the color-priming effects, even though statistical power was sufficient to detect them. The abstract concludes that the results call into question the existence of the color-priming effect on anagram solution.
+
+### Specifics
+
+Evidence type: a pre-specified close (direct) replication in a lab setting. What is confirmed from the abstract: it is a direct replication of one experiment, not of all six; the materials were matched to the original; the sample was more than three times larger; the power was described as sufficient to detect the original effect. A search result describing a poster from the same lab reports 263 participants against the original's 69, but I read that only in a search summary, so treat the exact count as unconfirmed. The article was published online in 2013 and in print volume 21, issue 3, in 2014 (Crossref lists both dates).
+
+The paper is useful as a template of how a replication should be reported in this field: same stimuli, same dependent variable, larger N, and a statement of power. Elliot's 2015 review cites it among the non-supportive findings when discussing the red-blue approach-avoidance literature.
+
+### Replication and criticism
+
+By its nature this paper is itself a replication. A single failed replication cannot show that the original effect is zero, as the original authors or others may point to differences in sample, display or procedure, and I did not find a published rejoinder this session. Its importance is that it was part of a growing set: with later failures to replicate the red-performance effect (Gnambs and colleagues, 2020), the picture is that color-priming results in achievement and cognitive contexts tend to shrink under larger samples. The study tests one narrow outcome (anagram solving times) and says nothing about whether colors affect real-world learning tasks; it also does not test the other five experiments in the original.
+
+### Implications for LTF
+
+1. Treat this as the specific citation for why LTF will not use background-color "priming" to nudge learner performance. If a design review proposes red or blue page tints for cognitive effect, point to this paper and Gnambs (2020).
+2. If LTF experiments with themes, copy the replication's discipline: fix stimuli, state the dependent measure in advance, and plan a sample large enough to detect effects of the size the literature originally claimed and also smaller ones.
+3. A short, prominent sentence in the KB's color chapter can read: effects of background hue on cognitive task performance have not replicated; choose backgrounds for legibility and comfort.
+4. Because the failing effect involved anagram solving, which resembles a quick word puzzle, it still says little about checklists or navigation; for those, LTF should test its own tasks.
+
+Confirmed this session: Crossref 10.3758/s13423-013-0548-3 (volume 21, issue 3, pp. 771-776; issued online 2013, print 2014); Europe PMC abstract (PMID 24222366); search summary of the associated poster (participant count, unconfirmed); Elliot (2015) full text (citation of this failure).
+
+## gnambs2020limited
+
+Gnambs (2020), "Limited evidence for the effect of red color on cognitive performance: A meta-analysis", Psychonomic Bulletin & Review 27(6), 1374-1382.
+
+### Core claims
+
+A random-effects meta-analysis of the claim that viewing red (versus a control color) impairs performance on intelligence-type tests. The abstract reports that, although the effect had been shown for different cognitive domains, populations and cultural contexts, recent studies including close replications failed to corroborate it. Across 67 effect sizes from 38 samples, anagram tests and knowledge tests showed no significant difference between colors (d of -0.06 and -0.04) while reasoning tests showed a pooled effect of d = -0.34, 95% CI [-0.61, -0.06]. The cumulative meta-analysis revealed substantially larger effects in the initial studies than in subsequent research, and after correcting for publication bias no evidential value remained. The paper casts doubt on a robust color-priming effect in achievement situations.
+
+### Specifics
+
+Evidence type: meta-analysis, not preregistered (the author says so). Details from the full text (pmc.ncbi.nlm.nih.gov/articles/PMC7704521):
+
+- Inclusion: studies from 2007 onward with random assignment, comparing red with another color (blue, green, black, gray or white), using anagram, reasoning or knowledge tests. 22 publications, 38 samples, 67 effects; sample sizes had a median of 76 (range 16 to 282); about 59 percent of studies were peer reviewed; the search ran in August 2019.
+- Overall pooled effect about -0.13 (95% CI [-0.23, -0.03]) with moderate heterogeneity. Moderators tested (control color, color matching, paper versus screen, cover page versus every page) had no effect.
+- Reasoning tests: early studies showed -0.86 and the effect shrank to -0.34 as more studies were added. Publication-bias tests detected bias for reasoning; adjusted effects were between about 0.03 and 0.17 and not significant. PET/PEESE, selection models and p-uniform* all returned near-zero adjusted effects.
+- Power: with typical samples, power to detect the pooled reasoning effect was about 18 percent.
+- Limitations listed by the author: not preregistered; no open call for unpublished work; results may not generalize to other cognitive domains or high-stakes testing.
+
+### Replication and criticism
+
+This is the main synthesis against the red-performance hypothesis, and it is itself open to caveats: it is limited to the three kinds of tests listed, it relies on published and some repository data, and publication-bias correction methods are sensitive to their assumptions. Its pattern, large early effects shrinking in later and larger studies, is the signature of small-sample studies with selective publication. Related replications found by search include four experiments on processing the word "red" (Gnambs, Kovacs and Stiglbauer, in Collabra: Psychology, 2020) and a null finding in a large British adult sample (Larsson and von Stumm, 2015), both as reported in the meta-analysis and search summaries.
+
+### Implications for LTF
+
+1. Use this paper as the KB's primary reason to reject "red hurts performance" or any claim that a hue changes quiz scores.
+2. It does not follow that red is harmless as a design choice; the argument against red rests on color vision deficiency and on convention, not psychology.
+3. For LTF's analytics, expect that any early positive result from an A/B test of colors on learning is likely to shrink; require sample sizes well beyond the median 76 per sample seen here.
+4. For writers: do not state "red makes people worse at tests" in lessons or in design rationale.
+
+Confirmed this session: Crossref 10.3758/s13423-020-01772-1; Europe PMC abstract; full text at pmc.ncbi.nlm.nih.gov/articles/PMC7704521 (numbers above).

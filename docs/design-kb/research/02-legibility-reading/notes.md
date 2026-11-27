@@ -204,3 +204,40 @@ This is a narrative evidence review of a large literature, not a new experiment,
 5. Set honest expectations in marketing copy: LTF should claim clarity, not speed-reading style gains.
 
 Confirmed this session: Crossref record; abstract read via Europe PMC (PMID 26769745); APS pages psychologicalscience.org/publications/speed_reading.html and psychologicalscience.org/observer/speed-reading-promises-are-too-good-to-be-true-scientists-find-2; Clifton et al. (2016) at clok.uclan.ac.uk/26495 for the Spritz background. Full text (Sage) returned an access block.
+
+## legge2007case
+
+Legge, G. E., Cheung, S.-H., Yu, D., Chung, S. T. L., Lee, H.-W., & Owens, D. P. (2007). The case for the visual span as a sensory bottleneck in reading. *Journal of Vision*, 7(2), article 9. DOI 10.1167/7.2.9.
+
+### Core claims
+
+The paper proposes that reading speed is limited, at the sensory level, by the visual span: the number of letters that can be recognized reliably without moving the eyes. Gordon Legge's Minnesota laboratory had for two decades studied how reading speed varies with print size, contrast, spacing and other text properties. This paper pulls those results together under one hypothesis: when a text property is changed (smaller letters, lower contrast, tighter spacing), the visual span shrinks, and reading speed shrinks in step. The authors call it a bottom-up limit, distinct from attention, eye movement control or language processing.
+
+For design, this is the strongest link between a physical property of text and how fast people can read it. It explains why print size, contrast and letter spacing matter, in terms of the same quantity.
+
+### Specifics
+
+Measurement. The visual span is measured with letter-recognition profiles, in which a letter is shown at different positions to the left and right of fixation and the percentage correct is recorded at each position. The size of the span is the area under the profile in bits, with a letter at 100 per cent accuracy worth 4.7 bits. A sample profile spanning 13 letter slots transmits 50.6 bits.
+
+Reading speed was measured with rapid serial visual presentation (RSVP), one word at a time. In one experiment (contrast) the visual span explained between 96 and 99.6 per cent of the variance in reading speed across conditions; in another (character size) between 80.9 and 95.5 per cent. The paper also reports results from a related study on letter spacing, with average correlations of 0.894 for RSVP and 0.925 for flashcard reading.
+
+The key ratio. Across studies, one more letter of visual span corresponds to about a 39 per cent increase in reading speed (slopes of .024 to .036 log words per minute per bit, mean .030).
+
+Crowding. The authors give Bouma's finding that crowding by neighboring letters reduces the functional visual field by a factor of 4. Applied to an acuity-based upper bound of 36 letters, that gives about 9 letters, close to what is measured under good viewing, and they state that crowding likely has a major influence on span size.
+
+Other numbers the paper cites: RSVP averaged 1,171 words per minute against 303 for static text (Rubin and Turano 1992); in peripheral vision maximum speed fell from about 862 words per minute centrally to 143 at 20 degrees eccentricity (Chung et al. 1998); the critical print size is about 0.2 degrees, roughly three times the acuity limit; and critical contrast is about 5 to 10 per cent. A follow-up by Kwon and Legge (2012) found that visual span accounted for 92 per cent of variance in reading speed in central vision, with correlational methods.
+
+The Legge book *Psychophysics of Reading in Normal and Low Vision* (Lawrence Erlbaum, 2007) is the broader reference. Its chapters are Vision and Reading, Measuring Reading Speed, Visual Mechanisms in Reading, Displaying Text, the MNREAD Acuity Chart, and an appendix on print size definitions (publisher listings), and this paper cites chapter 3 for the three sensory factors limiting the span and for a review saying word shape is less important than letter recognition. I did not read the book itself.
+
+### Replication and criticism
+
+The evidence is experimental, replicated within the Legge lab and by others, but the argument is correlational: manipulations that shrink the span also slow reading, which does not prove the span is the cause. Kwon and Legge say plainly that their results are "consistent with" the span limiting speed, not proof of it. The result also depends on RSVP, where eye movements are removed, and RSVP speeds are far higher than normal reading speeds (1,171 against 303). Rayner and colleagues emphasize that in ordinary reading, language processing, not vision, is the bottleneck (see rayner2016much). The two views are compatible: vision sets a ceiling and language skill often sits below it. Critical-print-size values from older work were also revised later (Kwon and Legge found a lower spatial frequency cutoff than earlier estimates).
+
+### Implications for LTF
+
+1. Letter size, contrast and spacing all feed one quantity, so they trade off. If fly mode has to be small or dim, spacing must increase; a bigger or higher-contrast setting buys span, and span buys speed.
+2. Design for the limit, not the average. Fly mode may be read from further away, in glare or at night, and by older readers. Set a high floor for size and contrast there, not just the minimum that passes an audit.
+3. Sensory span is probably a smaller limit than vocabulary for beginners, so text size alone will not fix hard lessons; combine with plain language (see rayner2016much).
+4. Use RSVP-style, word-at-a-time displays only where it is truly a glance (for example a single changing label), not for instruction.
+
+Confirmed this session: Crossref record (10.1167/7.2.9). Author manuscript read at pmc.ncbi.nlm.nih.gov/articles/PMC2729064 (a small model summarized the first 100,000 characters). Kwon and Legge (2012), PMC3653576, read for the follow-up numbers. Book contents from legge.psych.umn.edu/book and the Routledge listing.

@@ -286,7 +286,7 @@ Clutter has a rigorous definition here: the more difficult it would be to add a 
 Confirmed this session: Crossref record 10.1167/7.2.17; PubMed abstract (PMID 18217832); MIT DSpace record 1721.1/37593 (authors, date, code); web search summaries for the Feature Congestion rationale and the 2009 replication. I did not read the full paper.
 
 ## gibson2015ecological
-Gibson, J. J. (2015; originally 1979). The ecological approach to visual perception. New York: Psychology Press (Houghton Mifflin, 1979, original publisher).
+Gibson, J. J. (2015; originally 1979). The ecological approach to visual perception. Psychology Press (Classic Edition).
 
 ### Core claims
 Gibson argues that vision should be studied as an animal moving through a structured environment, not as a camera-like retinal image that the brain must interpret. Light that has been reflected by surfaces forms an ambient optic array, and the array contains information specifying the layout and the events of the world, so perception can be direct, the pickup of information, with no need for inner representations built up from sensations. The most influential idea is the theory of affordances: what an environment offers the animal. The chapter on affordances (chapter 8, read this session from a course copy) states the radical hypothesis that the composition and layout of surfaces constitute what they afford, and so to perceive them is to perceive what they afford, which implies that the values and meanings of things in the environment can be perceived directly.
@@ -307,7 +307,7 @@ The book matters to LTF in three ways. First, flight is a task of optic flow, ho
 Confirmed this session: Open Library work OL5589051W (title, author, first publish year 1979, Psychology Press and Lawrence Erlbaum listed); Routledge Classic Edition page (contents, pagination, copyright year 2015); full text of chapter 8 from a course PDF (web.eecs.umich.edu); web-search summaries for Norman 1999 and McGrenere and Ho 2000; Karlsen review at hvl.no.
 
 ## marr2010vision
-Marr, D. (2010). Vision: A computational investigation into the human representation and processing of visual information. Cambridge, MA: MIT Press (originally W. H. Freeman, 1982; foreword by Shimon Ullman, afterword by Tomaso Poggio).
+Marr, D. (2010). Vision: A computational investigation into the human representation and processing of visual information. MIT Press (originally W. H. Freeman, 1982; foreword by Shimon Ullman, afterword by Tomaso Poggio).
 
 ### Core claims
 Marr argues that to understand vision, or any information-processing system, one must analyze it at several distinct levels, and that the most neglected and most important is the computational level: what problem the system solves and why the solution it uses is appropriate to the world. He then proposes a specific sequence of representations by which the visual system could turn a two-dimensional retinal array into a description of the three-dimensional world: a primal sketch of edges and regions, a viewer-centred 2.5D sketch of surface layout and depth, and a 3D model representation. The book was written in the late 1970s and published after his death; the 2010 MIT Press edition reissues it.
@@ -327,7 +327,7 @@ Marr's main usefulness for LTF is methodological. The three-level distinction gi
 Confirmed this session: Open Library work OL3657916W (Vision, Marr, 1982, publishers W. H. Freeman and MIT Press) and the 2010 MIT Press edition record listing ISBN 9780262514620; web-account summary of the book's sketches and levels (Wikipedia article on David Marr); Bechtel and Shagrir (2015) PDF read for the levels; web search summary of the Pillow and McClamrock criticisms. I did not read the book itself.
 
 ## ware2008visual
-Ware, C. (2008). Visual thinking for design. Burlington, MA: Morgan Kaufmann (Elsevier). ISBN 9780123708960.
+Ware, C. (2008). Visual thinking for design. Morgan Kaufmann. ISBN 9780123708960.
 
 ### Core claims
 Ware writes for working designers and argues that a display is a cognitive tool, an extension of the viewer's brain in the way a hammer extends the hand (publisher's jacket text, via the Open Library record). The book converts what is known about perception, attention and memory into practical design advice. Its central ideas, as described in a detailed review, are active vision and visual queries: we do not build a full inner model of the scene; the world serves as its own memory and we query it with eye movements as needed. Design therefore means making the information needed by the next query easy to find and easy to read. The book is a short, readable bridge between vision science and design, and it is deliberately lighter than Ware's technical text Information Visualization: Perception for Design.

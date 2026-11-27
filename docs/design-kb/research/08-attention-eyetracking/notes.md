@@ -399,14 +399,14 @@ Findings: "the entire right side above the fold is neglected" for both task type
 Prediction: features were 44 binary HTML element names, three abstract features (DOM tree depth, "logo" in image name, link to the site home page) and 12 rendering features (size, aspect ratio, ten position flags). Element size ranked top for information gain. Linear regression on the top 10 features gave a correlation of 0.50 (10-fold cross validation); a pruned decision tree classifying whether an element got any fixation impact had Kappa 0.59, precision 75 percent and recall 53 percent; the combination of the two gave a correlation of 0.69.
 
 ### Replication and criticism
-This is a conference paper with a modest sample, drawn from one participant pool and a particular browser and screen, with 2009-era pages. Its authors note that the prediction models were purposely simple and fail on pages with unusual layouts, giving Wikipedia, where images often sit at the far right, as an example. It quantifies what NN/g only illustrated: the left-and-top bias and right-side neglect, with timing data and visible task dependence. It criticizes earlier work (for example Pan et al., 2004) for a weak task manipulation and for lacking quantitative analysis (see pan2004determinants).
+This is a conference paper with a modest sample, one browser and screen, and 2009-era pages. Its authors note that the prediction models were purposely simple and fail on pages with unusual layouts, giving Wikipedia, where images often sit at the far right, as an example. It quantifies what NN/g only illustrated: the left-and-top bias and right-side neglect, with timing data and visible task dependence. It criticizes earlier work (for example Pan et al., 2004) for a weak task manipulation and for lacking quantitative analysis (see pan2004determinants).
 
 Methodologically, the paper shows how arbitrary definitions can be: its fixation is 50 pixels and 100 ms, while Djamasbi et al. (2010) define a fixation as a gaze longer than 300 ms (see djamasbi2010generation). Comparisons across eye-tracking studies need those definitions aligned.
 
 ### Implications for LTF
 1. Place the lesson's primary content in the upper-left to center-left of the main page. Assume anything above the fold on the far right will take seconds to be fixated and may be ignored.
 2. Size matters most: big elements are looked at. Make the key diagram or instrument widget the largest element, rather than relying on color alone.
-3. Recognition and finding differ: for a returning learner re-finding a lesson, the top-left carries identity (logo, title), so keep lesson titles and navigation consistent there.
+3. Recognition differs from finding: for a returning learner, the top-left carries identity, so keep titles and navigation consistent there.
 4. Test above-the-fold content in the first seconds. Because the first second is spent on expected locations, put the lesson title and the first instruction where they are expected, not in a novel position.
 5. If LTF measures attention, weight by fixation duration, map to named elements and fix the fixation definition in the protocol.
 

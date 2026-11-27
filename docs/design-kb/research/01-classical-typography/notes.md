@@ -271,7 +271,7 @@ The reader excerpt (Armstrong, *Graphic Design Theory*, pages 35 to 38) gives th
 - Asymmetry is not chaos: "A striving for order can, and must, also be expressed in asymmetrical form." It gives unlimited scope for variation, unlike the single central-axis form.
 - The New Typography "encourages 'standardization' in the construction of units, as in building."
 - Objectivity is not poverty. A letterhead with no ornament and legible type is called "meagerness," and its failure shows "the hollowness of the old principles."
-- A redesign example: a newspaper advertisement criticized for ornaments, seven kinds of type and sizes and centered design is redone with no ornament and five type sizes or faces, "good legibility."
+- A redesign example: a newspaper advertisement criticized for ornaments, seven kinds of type and sizes and centered design is redone with no ornament and "only 5 different types," with "good legibility."
 
 The reader's headnote adds context. Tschichold, then twenty-one, saw the 1923 Bauhaus exhibition at Weimar, advocated the new typography for a decade, and was later imprisoned by the Nazis and escaped to Basel. The headnote says he then "turned back to the classical typography of his early training" and sensed "an element of fascism" in the movement's purifying order.
 
@@ -279,7 +279,7 @@ The reader's headnote adds context. Tschichold, then twenty-one, saw the 1923 Ba
 
 A manifesto and handbook, not an experiment. Its claims about optical effectiveness are assertions. Tschichold himself revised them: a digest of *The Form of the Book* reports that in later essays he said book typography has no "new" rules, only centuries-old principles (tschichold1991form). Another detail from that digest conflicts with Eye's dating of the same essays, so treat essay dates there with caution.
 
-Robin Kinross, via Matthew Carter's review in Eye, calls the chapters on the new typography "the heart of the book," records Tschichold's programme "Standardization, instead of individualism," and corrects a common assumption: "the Bauhaus had no fully fledged typographers" (Tschichold, with Renner and Trump, taught in Munich). Kinross also treats the movement as one tradition among others rather than the only rational one (kinross2004modern). Updike and Morison reached opposite conclusions about sans serif and convention (updike1922printing, morison1936first).
+Robin Kinross, via Matthew Carter's review in Eye, calls the chapters on the new typography "the heart of the book," records Tschichold's programme "Standardization, instead of individualism," and corrects a common assumption: "the Bauhaus had no fully fledged typographers" (Tschichold, with Renner and Trump, taught in Munich). For the opposing craft view, Updike's list of types to avoid includes all sans serif (updike1922printing), and Morison demands near-absolute obedience to convention in book typography (morison1936first).
 
 ### Implications for LTF
 
@@ -287,6 +287,6 @@ Robin Kinross, via Matthew Carter's review in Eye, calls the chapters on the new
 2. App screens, dashboards and widgets resemble the advertising and display work in Tschichold's examples more than book pages. His rules (asymmetry, left alignment, no ornament, few sizes) fit those surfaces better than lesson prose; this is my judgement.
 3. "Standardization" is the rationale for design tokens and shared components.
 4. His warning about meagerness applies to minimal dashboards: removing everything is not clarity.
-5. The excerpt's limit of five sizes in the redesigned advertisement is not a rule for LTF, but the idea of a small, deliberate set of sizes is.
+5. The five-types limit in the redesigned advertisement is not an LTF rule, but a small, deliberate set of sizes is.
 
 Confirmed this session: Reader excerpt text of "The New Typography" read from https://openlab.citytech.cuny.edu/langecomd3504fa2019/files/2018/10/Tschichold_NewTypo.pdf (quotations and headnote). Edition details (McLean translation, Kinross introduction, University of California Press 1995) from a web search of catalogue records; Open Library work OL8063615W lists the 1998 and 2006 printings. Carter review at https://www.eyemagazine.com/blog/post/type-tuesday40; essay digest at https://www.artequalswork.com/posts/form-of-the-book/.

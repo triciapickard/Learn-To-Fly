@@ -505,7 +505,7 @@ Practical offshoots. The same commentary says its author's later research extend
 
 ### Replication and criticism
 
-Strength: a highly cited principle, with a mixed record for its popular corollary, context-dependent memory. A secondary reference article summarizes critiques: Nairne (2002) argues that encoding-retrieval overlap is correlational, and that distinctive cues may matter more; Higham argues forced-report guessing may inflate results; Postman (1975) reported results that failed to support the principle; and context effects are strongest in free recall and weaker when strong retrieval cues are present. The best-known applied example, Godden and Baddeley's 1975 study of divers learning word lists on land or underwater, did not replicate in a 2021 preregistered-style attempt by Murre with 16 divers: the interaction was not significant (F = 1.999, p = 0.163), and the author concluded the original effect was not reproduced (Royal Society Open Science, PMC8568063, read this session). The principle's core claim about cues and encoding is therefore better supported than the claim that changing the physical environment hurts recall.
+Strength: a highly cited principle, with a mixed record for its popular corollary, context-dependent memory. A secondary reference article summarizes critiques: Nairne (2002) argues that encoding-retrieval overlap is correlational, and that distinctive cues may matter more; Higham argues forced-report guessing may inflate results; Postman (1975) reported results that failed to support the principle; and context effects are strongest in free recall and weaker when strong retrieval cues are present. The best-known applied example, Godden and Baddeley's 1975 study of divers learning word lists on land or underwater, did not replicate in a 2021 attempt by Murre with 16 divers: the interaction was not significant (F = 1.999, p = 0.163), and the author concluded the original effect was not reproduced (Royal Society Open Science, PMC8568063, read this session). The principle's core claim about cues and encoding is therefore better supported than the claim that changing the physical environment hurts recall.
 
 ### Implications for LTF
 
@@ -516,3 +516,35 @@ Strength: a highly cited principle, with a mixed record for its popular corollar
 5. Keep terminology consistent between lessons, checklists and the sim UI, so the cue wording matches what was encoded.
 
 Confirmed this session: Crossref 10.1037/h0020071 (title, authors, year, volume, issue, pages); secondary accounts via web search and a Wikipedia article fetch (principle, criticisms); a 1984 Citation Classic PDF at garfield.library.upenn.edu; the diver replication read at PMC8568063. The 1973 paper itself was not read.
+
+## brown2014make
+
+Brown, P. C., Roediger, H. L., III, and McDaniel, M. A. (2014). *Make It Stick: The Science of Successful Learning*. Cambridge, MA: Belknap Press of Harvard University Press. Evidence type: trade book by two researchers and a writer, summarizing the research literature for general readers.
+
+### Core claims
+
+The book argues that many common study habits, such as underlining, highlighting, rereading and cramming, create a feeling of mastery whose gains fade quickly, and that more durable learning comes from self-testing, introducing certain difficulties into practice, delaying restudy until some forgetting has occurred, and interleaving different skills or topics (publisher description, via the Wabash Center listing). It claims that memory underpins complex skills such as applying knowledge to new problems and drawing inferences, and that struggling with obstacles can produce deeper mastery and better retention. It also challenges the idea that teaching should match students' learning styles or make learning feel easy.
+
+### Specifics
+
+Structure. The table of contents, as listed by the Wabash Center page, is: Preface; 1 Learning Is Misunderstood; 2 To Learn, Retrieve; 3 Mix Up Your Practice; 4 Embrace Difficulties; 5 Avoid Illusions of Knowing; 6 Get Beyond Learning Styles; 7 Increase Your Abilities; 8 Make It Stick; Notes, Suggested Reading, Acknowledgments, Index.
+
+Roles. Roediger and McDaniel are cognitive psychologists at Washington University in St. Louis, and Brown is a nonfiction writer and novelist who interviewed people whose stories illustrate the science (WashU news article, April 2014). The same article, from a university press office, lists the practical points: recalling material from memory builds stronger learning than rereading; quizzing on assigned reading beats reviewing it again; mixing different problem types in practice beats mastering one type before moving to the next; attempting a new problem before being taught the solution leads to better learning of that solution; and regular low-stakes or no-stakes quizzes across a term build retention over time, "somewhat like compound interest" (the article's phrasing as summarized by the fetch tool). It reports Roediger's statement that "Active retrieval is critical for long-term retention" and quotes the preface: "This is a book about what people can do for themselves right now in order to learn better and remember longer."
+
+Why the methods are underused. The authors say these methods demand more effort and can feel less productive, so learners often read effortful retrieval as a sign they are doing poorly when it actually signals stronger learning.
+
+Evidence base. The publisher page says the book draws on "recent discoveries" in cognitive psychology and other disciplines and does not itself cite specific studies; the book has notes and suggested reading at the back. I did not read the book this session, so no study-level claims are attributed to it here.
+
+### Replication and criticism
+
+Strength: this is a popular synthesis, and its authority comes from the primary research of its authors and others, not from the book as a source of new evidence. Its main claims line up with the stronger primary sources in this lane: the testing effect (Roediger and Karpicke 2006; Rowland 2014), spacing (Cepeda and colleagues), interleaving (Rohrer and Taylor 2007; Kornell and Bjork 2008), the critique of learning styles (Pashler and colleagues 2008) and the learning versus performance distinction (Soderstrom and Bjork 2015). The strengths of each claim differ, and a trade book smooths over that: for example Dunlosky and colleagues rated interleaving only moderate in 2013 while rating practice testing and spacing high. The book's inclusion of a chapter titled "Increase Your Abilities" is also a place where popular claims about malleable intelligence are contested in the wider literature, which I did not examine this session. Use it as an accessible reference for tone and framing, and cite primary papers for facts.
+
+### Implications for LTF
+
+1. The book is a model of how to explain the science to lay adults: short, concrete, story-driven. LTF's "how to study with this app" page can borrow the approach without borrowing claims.
+2. Its chapter titles give a ready language for learner copy: retrieve instead of rereading, mix up practice, welcome difficulty, and distrust the feeling of knowing.
+3. The "illusions of knowing" idea justifies a confidence-versus-result feature: ask learners to predict how they will do before a quiz, then show the result.
+4. Do not quote or paraphrase specific numbers from the book in LTF materials without checking the primary study.
+5. Low-stakes quizzing across a course ("compound interest") supports short, frequent, ungraded retrieval items at the start of each lesson, not a single end-of-module test.
+
+Confirmed this session: Open Library search (work OL17879515W, Belknap Press of Harvard University Press, 2014, ISBN 0674419375 among editions); Wabash Center listing (authors, publisher, ISBN 9780674729018, table of contents, description) fetched; WashU Source article (April 2014) fetched. The book text was not read.
