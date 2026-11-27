@@ -936,3 +936,95 @@ Change the use of red and amber across the product (SKL-080). The warning color 
 
 Build the three message levels as named treatments in `src/components/` (SKL-079), and use them for anything shown during a flight. Add numeric readouts beside the shape-based widgets (SKL-074). Keep alerting rare and track dismissals once any automatic nudge exists (SKL-083).
 
+## Error as information
+
+### "Pilot error" as a design finding
+
+In 1947 Fitts and Jones collected 460 accounts of errors pilots made in operating aircraft controls and argued that much of what was being written off as "pilot error" was better explained by how the controls were designed, shaped, placed and sequenced [@fitts1947analysis]. A secondary account reports their conclusion that the frequency of these errors, "and therefore the incidence of aircraft accidents, can be reduced substantially by designing and locating controls in accordance with human requirements," and that they rejected the then-usual view that such errors were mainly a matter of selection and training, since pilots of every experience level made them. The memorandum itself could not be read, so the quotation is secondhand. The authors put "pilot error" in quotation marks, which is the point: the phrase is something to investigate, not an explanation.
+
+The method was a collection of interviewed and written accounts, an early form of what became the critical incident technique. Secondary summaries name four categories of control error: operating the wrong control (substitution), failing to adjust a control properly, forgetting to operate a control, and being unable to reach a control when needed. No source gave the share of each category, so none is given here. The best-known illustration is the substitution of one control for another that looks alike, sits nearby and is used in the same phase: controls that look alike, sit close together and are used in sequence invite a predictable slip. Remedies named in the secondary summary are standardization, simplification, sequencing and interlocks. A retrospective case collection cannot give rates, since there is no count of correct operations, and is open to recall and reporting bias; its strength is as a taxonomy and an argument. Applied forty years later to driving and computer use, the taxonomy transferred well to control errors and less well to errors in reading and interpreting instruments.
+
+::: {.rule #SKL-089 grade="B"}
+**Treat a pattern of the same learner error as a design defect to investigate before treating it as a learner deficit.** Errors repeated across operators of every experience level point to the design of controls and displays [@fitts1947analysis; @reason2000human]. Grade B: a founding case collection, a long tradition of system-based analysis and no contrary evidence in the notes.
+
+*In LTF:* log wrong answers per `QuizBlock` item and per widget quiz, and per criterion scored Not met in `DebriefForm`. Review items where many learners fail the same way as content bugs, with the same priority as a broken link.
+:::
+
+::: {.rule #SKL-090 grade="C"}
+**Review every challenge briefing for the four control errors: can the learner pick the wrong control, set it wrongly, forget it, or be unable to find it when needed?** The categories from the 1947 analysis are a ready review checklist [@fitts1947analysis]. Where two easily confused controls are introduced, make their labels, icons and positions on the page clearly different and explain the difference in the same panel.
+
+*In LTF:* "unable to reach" has a web form: a step or briefing that has scrolled off screen in `FlyModePage`, or a checklist behind a link. Run the four questions against `BriefTab` and `FlyPanel` content during `/review-lesson`.
+:::
+
+### Person and system
+
+Reason sets out two ways of thinking about human error [@reason2000human]. The person approach locates the cause of mishaps in forgetfulness, inattention, poor motivation, carelessness and negligence, and answers with poster campaigns, new procedures, discipline, retraining and "naming, blaming, and shaming". It persists because blaming individuals is "emotionally more satisfying than targeting institutions". The system approach starts from the premise that humans are fallible and errors are to be expected "even in the best organisations"; "errors are seen as consequences rather than causes", with origins upstream. Its slogan: "We cannot change the human condition, but we can change the conditions under which humans work." After an adverse event the question becomes "not who blundered, but how and why the defences failed."
+
+The person approach has two shortcomings in Reason's account. Most unsafe acts are not egregious (in aviation maintenance, he cites a finding that about 90 percent of quality lapses were judged blameless), and isolating individuals overlooks that "it is often the best people who make the worst mistakes" and that mishaps follow recurrent patterns whoever is involved. Effective risk management depends on a reporting culture, which depends on trust and on a shared understanding of the line between blameless and blameworthy acts.
+
+The Swiss cheese model describes defences in layers (engineered barriers, people, procedures), each with holes that open, close and shift; an accident happens when holes in several layers momentarily line up. Active failures are unsafe acts by people at the sharp end, with direct and short-lived effects. Latent conditions are "resident pathogens" created by designers, procedure writers and managers: they produce error-provoking conditions such as time pressure and inexperience, and long-lasting holes such as untrustworthy alarms, unworkable procedures and design deficiencies. Unlike active failures, latent conditions can be found and fixed in advance. The article is a short commentary for clinicians distilling the author's industrial and aviation work; the metaphor is a communication model, not a validated predictive one.
+
+::: {.rule #SKL-091 grade="C"}
+**Hunt for latent conditions in the product itself: ambiguous copy, inconsistent checklists, alerts that cry wolf, and any mismatch between the page and the sim.** Latent conditions are created by designers and procedure writers, persist, and can be fixed before they cause harm [@reason2000human]. Grade C: expert synthesis.
+
+*In LTF:* the `verify` callout, the "Draft · unverified" badge and `/review-lesson` already target one latent condition, unverified facts. Add the others to the content review, and treat every "Report a problem" submission from `ReportProblemDialog` as a report of a possible latent condition.
+:::
+
+::: {.rule #SKL-092 grade="C"}
+**Build learning in layers (lesson, briefing, in-flight prompt, debrief) so that no single layer has to carry the whole load.** The system approach relies on multiple overlapping defences rather than one perfect barrier [@reason2000human].
+
+*In LTF:* the lesson, `BriefTab`, `FlyPanel` and `DebriefForm` are these layers. A gap in one (a step missing from the procedure) should be caught by another (a criterion that checks it, a debrief question that asks about it), which content review can check by mapping each criterion to a lesson section and a step.
+:::
+
+### Experts slip too
+
+Dismukes, Berman and Loukopoulos asked how highly experienced, trained and regularly checked airline pilots come to be involved in the errors that figure in so many accidents [@dismukes2007limits]. As a review of the book reports, they reviewed 19 major U.S. air carrier accidents from 1991 to 2000 in which the investigating board found crew error an important causal factor, using a method similar to an earlier board study on which Berman was principal investigator. Their answer is that the naive view is wrong: a pilot who errs, seen in hindsight, "typically does not lack skill, vigilance or conscientiousness" but is behaving expertly in a situation that may involve misinformation, lack of information, ambiguity or other stressors in a possibly unique combination. Experts in all domains make inadvertent errors at tasks they normally perform, from "subtle variations in task demands, incomplete information available to the expert performing the task, and the inherent nature of the cognitive processes that enable skilled performance."
+
+The recurrent themes include inadvertent slips while performing highly practiced tasks under normal conditions; inadequate execution of practiced normal procedures under challenging conditions; inadequate execution of non-normal procedures under challenging conditions; inadequate response to rare situations; judgment in ambiguous situations that hindsight proves wrong; and deviation from explicit guidance. The inputs are accident narratives shaped by hindsight, for one decade and one kind of operation, and the book cannot give causal estimates. Only a review of it was read.
+
+::: {.rule #SKL-093 grade="C"}
+**Keep confirmations for routine steps in later lessons; never let "mastered" remove the check.** Experts slip on highly practiced tasks under normal conditions; fluency does not guarantee reliability [@dismukes2007limits].
+
+*In LTF:* do-verify checklists in `ChecklistRunner` are the right tool for steps the learner now does from memory, and they should remain part of challenges in Modules 4 to 8 rather than being dropped once a learner has passed the module that introduced them.
+:::
+
+::: {.rule #SKL-094 grade="C"}
+**In any review screen, show what the learner could see at the time before showing what went wrong.** Judgments that hindsight proves wrong were often reasonable given the information available [@dismukes2007limits]; a review that starts from the outcome teaches hindsight, not judgment.
+
+*In LTF:* `debriefQuestions` should begin with what the learner saw and expected ("Where did you look most of the time?") before asking what they would change. If LTF later adds a replay or timeline, it should show the state at each moment before the verdict.
+:::
+
+::: {.rule #SKL-095 grade="B"}
+**Describe errors by their conditions (time pressure, an ambiguous cue, an interruption), never by blame words such as careless, mistake or pilot error.** Errors are consequences of conditions, and expert performers err for reasons the person approach misses [@reason2000human; @dismukes2007limits; @fitts1947analysis]. Grade B: three independent lines of work agree.
+
+*In LTF:* `BriefTab` shows `commonMistakes` in a `safety` callout titled "Common mistakes", in the warn color. Retitle it "What tends to go wrong" or similar, move it to a neutral callout, and write each item as a condition and its effect. Keep `ResultView`'s "Not passed yet" phrasing, which names a criterion rather than the learner.
+:::
+
+### Interruptions and recovery
+
+Two findings meet here. Degani and Wiener's guidelines ask for buffers and a way to take up the slack [@degani1990checklists]; Dismukes and colleagues list slips under interruption and distraction among the recurrent vulnerabilities of experts [@dismukes2007limits]. A learner at a desk will be interrupted: the sim pauses, a phone rings, the second screen sleeps. The product should assume interruption and make the return obvious. Reason's high reliability organizations train people to expect and recover from errors [@reason2000human]; the web equivalent is undo, safe retry and a clear "you were here".
+
+::: {.rule #SKL-096 grade="C"}
+**Persist the learner's place in every flight and make it obvious on return, with undo and safe retry everywhere.** Recovery from interruption and error is a design property, not a learner virtue [@degani1990checklists; @reason2000human].
+
+*In LTF:* `FlyPanel` already saves ticks and the start time through `saveFlight` and restores them with `loadFlight`, and debrief drafts survive a refresh. Keep that. Add a visible "You were on step n" line when a flight is restored, and keep the "Keep the screen on while flying" wake-lock option.
+:::
+
+### Non-normal practice
+
+The accident review's themes include non-normal procedures under challenging conditions and inadequate response to rare situations [@dismukes2007limits], and the practice meta-analysis found practice explains least in unpredictable situations [@macnamara2014deliberate]. A course that trains only the normal flow leaves its learners unprepared for the event that does not follow it. LTF's challenges already include an engine-failure exercise (C5.5), a go-around (C4.4) and random events in three challenges.
+
+::: {.rule #SKL-097 grade="B"}
+**Include non-normal practice in each later module, framed as rehearsing recognition and response, with every procedure taken from the aircraft's documents.** Non-normal and rare situations are recurrent vulnerabilities even for experts [@dismukes2007limits], and unpredictable tasks need varied practice [@macnamara2014deliberate; @gopher1994transfer].
+
+*In LTF:* extend `randomEvents` beyond C5.5, C6.5 and C8.1 to at least one challenge per module from Module 4 on, each event verified in the sim, and debrief each with a question about the first cue the learner noticed.
+:::
+
+### What this means for Learn to Fly
+
+Keep the system stance that the product already takes in its honesty features: draft badges, `verify` callouts, "Report a problem" in the footer and the beta banner, and result copy that names criteria rather than people. Keep flight-state persistence in `features/challenges/storage.ts`.
+
+Change the framing of `commonMistakes` in `BriefTab` (SKL-095): the safety callout in red with the title "Common mistakes" tells the learner the errors are theirs and dangerous, when most are ordinary consequences of conditions. Change debrief question order so that what the learner saw comes first (SKL-094).
+
+Build error logging per quiz item, widget quiz and criterion (SKL-089), reviewed as content defects, and a four-question control-error review in `/review-lesson` (SKL-090). Extend non-normal events across later modules (SKL-097). Each of these makes learner errors into information about the course, which is the main lesson of eighty years of aviation human factors.
+

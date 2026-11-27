@@ -360,3 +360,75 @@ LTF's base layer sets `-webkit-font-smoothing: antialiased` on the root. It is a
 
 Keep the weight floor of 400 that the loaded Instrument Sans axis imposes and the absence of light weights anywhere in the type scale (SCR-022). Change the italic situation: either load the italic axis or restyle `em` as semibold upright, and take italic off the radio calls in the `traffic-pattern` widget (SCR-024). Put the `-webkit-font-smoothing` declaration on trial in a side-by-side comparison rather than keeping it by default (SCR-025). Make Fly mode text medium or semibold and never `text-ink-3` (SCR-023). Add a standard-density monitor to the review routine (SCR-026); the people this product serves sit at gaming desks with ordinary monitors, not only at high-density laptops.
 
+## Choosing faces for screens: letters, not outlines
+
+### Readers identify letters
+
+A persistent idea in design writing is that readers recognize words by their outline, the "bouma" or word shape, so that lowercase reads faster because its ascenders and descenders make distinctive silhouettes. Santa Maria's craft book repeats it, with the claims that letters carry more identifying features in their upper halves and that uppercase words form similar blocky rectangles [@santamaria2014web]. The experimental literature rejected this model decades ago.
+
+Larson's review for Microsoft's typography group sets out the case [@larson2005science]. Psychologists moved from word shape to a model in which the letters of a word are recognized in parallel and the letter information is then used to identify the word. Each piece of evidence once offered for word shape has a better explanation. Letters are recognized better in words than alone, but the same advantage appears for pronounceable pseudowords that have no familiar shape, so the cause is regular letter combinations. Lowercase is read 5 to 10 percent faster than uppercase, but speed in uppercase (and even in mirror-reversed text) rises with practice, which points to familiarity. In proofreading, the effect once attributed to word shape came from letter shape when the two were separated: for "than", the misspelling "tnan" (different word shape, similar letter shapes) was missed 19 percent of the time and "tdan" (same word shape, different letter shapes) 8 percent. In moving-window studies, reading with 3 letters visible ran at 207 words per minute, with 9 at 308 and with 15 at 340, as fast as with no window; showing the whole word added nothing beyond the letter count. Larson's conclusion is that word shape is no longer a viable model of word recognition and that a typeface should not be judged by its ability to produce good word shapes. He leaves one door open: in boundary studies, shape together with shared letters still helped a little.
+
+Sheedy and colleagues found the same thing at threshold: individual lowercase letters were 10% to 20% more legible than lowercase words, so words had to be 10% to 20% larger to be identified, which they read as showing that letters play a large role and word shape a small one, if any [@sheedy2005text].
+
+::: myth
+**"People read words by their outline shape, so lowercase and distinctive silhouettes are what make text legible."** Experiments that separate word shape from letter shape find the effect in the letters; pseudowords with no familiar shape show the word advantage; uppercase reading speeds up with practice; and letters are more legible than the words they form at threshold [@larson2005science; @sheedy2005text]. The case against long runs of capitals stands, but for a different reason: readers are less practiced with them and they take more space.
+:::
+
+::: {.rule #SCR-027 grade="A"}
+**Judge a typeface for LTF by the distinctness of its individual letters and figures, and reject arguments from word shape or silhouette.** The word-shape model has been replaced by parallel letter recognition across many experiments, and letters are more legible than words at threshold [@larson2005science; @sheedy2005text]. The underlying findings are replicated, so the rule is graded A.
+
+*In LTF:* a proposal to change `font-sans`, to set labels in all lowercase for "friendlier shapes", or to adopt a display face for headings is reviewed by testing letter and figure confusions at the sizes LTF uses, not by its look in a specimen.
+:::
+
+### Confusable letters and figures
+
+If letters are the unit, the letters most often confused are the weak points. Beier and Larson built three test fonts with several variants of the lowercase letters readers misidentify most often, and compared variants within each font so that nothing else changed [@beier2010design]. Two groups have high error rates: x-height letters built from mixed straight and curved strokes (e, c, a, s, n, u, o) and narrow single-stem letters (i, j, l, t, f). In a short-exposure test (about 43 ms, parafoveal, 41 participants) and a distance test (34 participants), wide versions of narrow letters outperformed narrow ones (the wide j, l and t, and the wide f in one font; the i showed no clear benefit). Extending x-height letters into the ascender or descender zone helped. The single-storey a was less legible than the double-storey a, with many misreadings as o and q. More open apertures on c and e were not confirmed to help, though extremely closed e forms did worse. The authors warn that wide narrow letters create spacing problems that need kerning, and that their participants were young students reading test designs.
+
+Degani's flight-deck review recommends avoiding fonts with look-alike characters [@degani1992typography], and the notes on Sheedy's study draw the aviation consequence: distinct I, l and 1, and O and 0, matter wherever a learner reads an altitude, a frequency or an identifier [@sheedy2005text].
+
+The LTF faces were examined for this Part by reading their outlines from the installed font files. In Instrument Sans, the capital I and the lowercase l are both plain vertical rectangles with no serifs, tails or spurs, of identical height (the l's ascender reaches the 720-unit cap height) and almost identical width (82 and 80 units). They cannot be told apart in isolation. The figure 1 has a flag and is distinct from both. The zero has no inner mark and differs from the capital O only in width (666 against 786 units). JetBrains Mono's zero has a third contour, an inner mark that separates it from the O, and its fixed 600-unit advance gives the I, l and 1 room for distinguishing serifs and tails. LTF already sets ICAO codes, runway values, lesson and challenge codes and V-speed values in `font-mono`, which puts most identifiers in the face with distinct figures. The exposure is wherever an identifier, a letter-digit code or a single letter appears in body text: a lesson paragraph that mentions a runway, a frequency or an airspace class in running text, a glossary term, or a challenge title.
+
+::: {.rule #SCR-028 grade="B"}
+**Test every candidate face, at LTF's smallest sizes and in both themes, for the pairs that matter in flying: I, l and 1; O and 0; 5 and S; and 8 and B.** Misrecognition concentrates in narrow single-stem letters and in similar round forms, and within-font variants differ measurably in legibility [@beier2010design]; operational documents should avoid look-alike characters [@degani1992typography]. One careful study and a review, so B.
+
+*In LTF:* the test applied to Instrument Sans fails for I and l. That does not disqualify the face for prose, where context resolves it, but it decides where the face may not be used (SCR-029).
+:::
+
+::: {.rule #SCR-029 grade="C"}
+**Set every identifier, code, numeric value, frequency and isolated letter in `font-mono`, whose zero, I, l and 1 are distinct, including when it appears inside running prose.** Instrument Sans's I and l are indistinguishable in isolation and its zero has no mark (measured for this Part); the mono face distinguishes all of them. The principle comes from the letter-confusion evidence [@beier2010design; @larson2005science]; the rule is derived, so C.
+
+*In LTF:* give content authors an inline code or readout convention in lesson Markdown for values and identifiers (the existing inline `code` style in `MarkdownContent` works, though its sunken chip may be heavier than a value needs; a lighter `readout` span is better), and apply `font-mono` to the airspace class letters and frequencies in widget labels. Speeds and aircraft numbers already come from `{{vspeed.*}}` and `{{aircraft.*}}` tokens, so the renderer can wrap every token's output in the mono style automatically.
+:::
+
+### Serif, sans and the screen face
+
+Boyarski and colleagues tested Georgia and Verdana, two faces designed for screens, against older faces such as Times New Roman, serif against sans serif, and Verdana against its italic, and found no reliable differences in reading speed [@boyarski1998study]. Their cautious conclusion was that the faces of the time performed about as well as the new screen fonts and that faster reading would need more than a change of font. Arditi and Cho built fonts differing only in serif size and found a small threshold advantage for small serifs, explained mostly by the spacing serifs add, and no effect of serifs on reading speed in serial presentation or continuous reading [@arditi2005serifs]. Wallace and colleagues found no font reliably fastest across 352 readers [@wallace2022towards], and Dyson's review summarizes the typeface literature as showing no clear legibility differences between faces [@dyson2004physical]. Degani's 1992 recommendation that sans serif is "usually more legible" rests on older print studies and has been qualified by the later screen work [@degani1992typography].
+
+The one place face design measurably matters is small size. Sheedy's threshold study found Verdana and Arial the most legible of six fonts and Times New Roman and Franklin the least [@sheedy2005text], and Legge and Bigelow connect this to x-height: Verdana's x-height fraction is about 0.55 and Times New Roman's about 0.45, and a larger x-height gives the lowercase more pixels [@legge2011print]. Arditi's spacing result points the same way: at small sizes, space between letters is the active ingredient [@arditi2005serifs].
+
+::: myth
+**"Sans serif faces are more legible on screens than serif faces."** Controlled comparisons of reading speed found no reliable difference between serif and sans serif faces on screen [@boyarski1998study], fonts differing only in serifs read at the same speed [@arditi2005serifs], and a large online study found no font fastest across readers [@wallace2022towards]. Differences appear at threshold sizes, where x-height and spacing matter more than serifs [@sheedy2005text].
+:::
+
+::: {.rule #SCR-030 grade="A"}
+**Do not choose or defend a text face on serif-versus-sans grounds; choose it for x-height, letter and figure distinctness, numeral features, weight range, language coverage and licensing.** Independent studies with different methods find no reliable reading difference attributable to serifs or to the screen-versus-print origin of a face at ordinary sizes [@boyarski1998study; @arditi2005serifs; @wallace2022towards; @dyson2004physical]. Replicated null results, so A.
+
+*In LTF:* Instrument Sans's x-height (0.51) is at the screen-face mean, it has tabular figures, and its variable weight axis covers 400 to 700. Its weaknesses are the I and l (SCR-028) and its lack of designed alternates for the zero. Those are reasons for the mono convention in SCR-029, not for replacing the face.
+:::
+
+::: {.rule #SCR-031 grade="B"}
+**For text set below about 14 px, including widget labels and badges, prefer a face with a large x-height and open default spacing, and add tracking rather than weight when small text crowds.** Threshold legibility was best for large-x-height faces and improved with stroke width only at the thinnest strokes [@sheedy2005text; @legge2011print], and spacing drives small-size legibility through crowding [@arditi2005serifs]. Threshold studies, not reading studies, so B.
+
+*In LTF:* JetBrains Mono, with an x-height of 0.55 and fixed wide advances, is the better face for widget tick labels and small readouts; Instrument Sans at 10 to 11 SVG units with `font-semibold` is the weaker choice used in several widgets today.
+:::
+
+::: {.rule #SCR-032 grade="C"}
+**Keep lesson text in a conventional, familiar text face and reserve any distinctive face for display sizes and brand marks.** Familiarity and practice explain much of what is attributed to letter and word form [@larson2005science], unusual letterforms that test well in isolation are disliked in running text [@beier2010design], and the craft literature holds that readers read best what they read most [@santamaria2014web]. Graded C.
+
+*In LTF:* if the planned display face of `v1.md` Section 21.3 (a condensed uppercase face) is ever introduced, confine it to `display-*` sizes on the landing page and `PageHeader` titles; never use it for `heading-sm`, body, labels or Fly mode text.
+:::
+
+### What this means for Learn to Fly
+
+Keep Instrument Sans for prose: its x-height is at the screen-face mean, the serif question is not a reason to change it, and nothing in the evidence says another face would be read faster (SCR-030). Keep JetBrains Mono as the face for "everything you measure", which the token comment in `tokens.css` already states; it is also the face with the distinct zero, I, l and 1. Change the convention for identifiers in running text: set them in mono, ideally automatically for every aircraft token the content renderer expands (SCR-029). Move widget tick labels and small readouts to the mono face at semibold (SCR-031). Write the confusable-pair test into the review checklist and run it on any proposed face (SCR-028). Treat a future display face as a brand decision limited to display sizes (SCR-032), which is where Part XX, Brand Identity and Distinctiveness, takes the question further.
+
