@@ -522,7 +522,7 @@ Other facts confirmed from MeasuringU: SUS items 4 and 10 measure learnability a
 
 ### Replication and criticism
 
-Because the data are an archive of the authors' studies of mostly telecommunications and similar products, generalization to other domains is an open question; I did not confirm the composition of the archive. Later benchmark work by Sauro and Lewis uses larger sets and percentile ranks, and the MeasuringU page stresses that SUS scores are not percentages and that a grade should come from percentiles. Lewis and Sauro (2009) examined the two-factor structure. The adjective anchors correlate well with SUS in the 2009 data, but the anchors themselves are English-language and their cut-offs depend on the sample. Treat any single "acceptable if above 70" statement as a convenient benchmark, not a measured threshold.
+Because the data are an archive of the authors' own studies, generalization to other domains is an open question; I did not confirm the archive's composition. A later benchmark (MeasuringU, about 500 studies) uses percentile ranks, and its page stresses that SUS scores are not percentages and that a grade should come from percentiles. Lewis and Sauro (2009) examined the two-factor structure. The adjective anchors correlate well with SUS in the 2009 data, but the anchors themselves are English-language and their cut-offs depend on the sample. Treat any single "acceptable if above 70" statement as a convenient benchmark, not a measured threshold.
 
 ### Implications for LTF
 

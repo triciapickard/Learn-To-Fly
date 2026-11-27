@@ -80,7 +80,7 @@ Limits the authors acknowledge. Most of the data are verbal tasks (paired associ
 
 ### Replication and criticism
 
-Strength: strong. This is the benchmark synthesis for the spacing effect. Its weakness is coverage: long-interval data were thin, which is why the same group ran the large-scale follow-up in 2008 (next section), and the later applied literature suggests the effect is real but smaller in classrooms. A 2025 meta-analysis of applied classroom studies reported a moderate effect favoring distributed over massed practice (d = 0.54, 95% CI 0.31 to 0.77) and noted that lab work often used very short retention (as reported in the search result for this session, see PMC12189222). Kang (2016, this lane) summarizes the classroom evidence. The expanding-interval claim is the part that most often gets over-sold in products, and this paper does not support it as superior.
+Strength: strong. This is the benchmark synthesis for the spacing effect. Its weakness is coverage: long-interval data were thin, which is why the same group ran the large-scale follow-up in 2008 (next section), and the later applied literature suggests the effect is real but smaller in classrooms. A 2025 meta-analysis of applied classroom studies reported a moderate effect favoring distributed over massed practice (d = 0.54, 95% CI 0.31 to 0.77) and noted that lab work often used very short retention (reported in a web search summary this session, not read directly). Kang (2016, this lane) summarizes the classroom evidence. The expanding-interval claim is the part that most often gets over-sold in products, and this paper does not support it as superior.
 
 ### Implications for LTF
 

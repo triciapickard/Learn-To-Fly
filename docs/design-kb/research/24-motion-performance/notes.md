@@ -121,3 +121,37 @@ Where LTF changes one chart or widget state into another (for example, switching
 The benefits were measured in a study task, not in a learner glancing from a sim to a screen. In fly mode there is no case for animated transitions of this kind; show the new state at once. In lesson pages, offer the animation but let the learner replay it or skip it, and pair it with the final static state.
 
 Confirmed this session: Crossref DOI 10.1109/tvcg.2007.70539 (volume 13, issue 6, pages 1240-1247); full text read from https://idl.cs.washington.edu/files/2007-AnimatedTransitions-InfoVis.pdf.
+
+## tversky2002animation
+
+Tversky, B., Morrison, J. B. and Bétrancourt, M. (2002). Animation: can it facilitate? *International Journal of Human-Computer Studies*, 57(4), 247-262.
+
+### Core claims
+
+The review asks whether animated graphics teach or communicate better than static ones. By the authors' Congruence Principle (the structure and content of an external representation should correspond to the desired structure and content of the internal one), animation should be ideal for change over time. Yet the paper finds the research on animation over static graphics "not encouraging". Where animation seems to win, scrutiny shows the animated and static versions were not equivalent: the animation carried more information, or came with interactivity or prediction, which help learning on their own. The authors propose that animation fails because it breaks a second principle, Apprehension: graphics should be accurately perceived and appropriately conceived, whereas animations are often too complex or too fast to perceive and many continuous events are conceived as sequences of discrete steps. They suggest interactivity may overcome both problems, and that animation may do better for real-time reorientation in time and space than for teaching complex systems.
+
+### Specifics
+
+The review is selective and concentrates on animation used to teach complex mechanical, biological, physical and computational systems, comparing animated graphics to informationally equivalent static ones.
+
+- Incomparable content. Examples include studies of speed-distance problems (Baek and Layne 1988), the circulatory system (Large et al. 1996), Newton's laws (Rieber 1990, 1991) and the Pythagorean theorem (Thompson and Riding 1990), where the animated version showed fine-grained steps or pathways the static version left out.
+- Incomparable procedures. Some animation conditions allowed interactivity or prediction and the static ones did not, as in Schnotz and Grzondziel (1999) and Hegarty et al. (1999); a later study by Hegarty and colleagues found no benefit of animation per se for a flushing cistern.
+- Outright failures. Morrison and Tversky (2001) found animated path diagrams gave no benefit beyond individual static diagrams, and graphics helped only low spatial ability participants over text. Rieber's studies of Newton's laws found no effect of graphic condition. Byrne, Catrambone and Stasko (1999) found animation benefits equal to making predictions with static graphics.
+- Teaching software use. Studies of Macintosh, MacDraw and HyperCard instruction found any graphic beat none, but animation did not beat equivalent text or static graphics. In Palmiter and Elkerton's help-system studies, animation users finished the training task faster but the test task more slowly, and after a week the text group improved while the animation group declined.
+- Other points: animations usually take more time; they are not universally preferred; and animated weather maps led novices to attend to perceptually salient but thematically unimportant information (Lowe 1999).
+
+Conditions for success: animations "must be slow and clear enough for observers to perceive movements, changes, and their timing", should lean toward the schematic and away from the realistic, may need annotation (arrows, highlighting) to direct attention, and benefit from learner control (stop, start, replay, zoom, speed). The caveats section says real-time uses such as progress fill bars and reorientation animations have, in their words, perhaps passed the test of time and appear the most promising uses.
+
+### Replication and criticism
+
+This is a narrative review, so its strength depends on the studies it covers, mostly from the 1980s and 1990s, many with small samples. It is also heavily cited as the base for the congruence and apprehension principles used in later visualization work (Heer and Robertson 2007 build their guidelines on them). Later work qualified the pessimism; see the meta-analysis by Höffler and Leutner (2007) in this lane. The review does not claim animation never helps; it claims a burden of proof the early studies did not meet.
+
+### Implications for LTF
+
+This is the main caution in the lane for LTF's explainers. A moving diagram is not evidence of learning. When LTF shows how a control input changes an aircraft attitude or airspeed, test it against the equivalent static annotated sequence, and make sure the animated version does not simply contain more information. Offer step controls (play, pause, step, replay) so the learner can inspect microsteps, and keep a static version with arrows for review.
+
+Animations should be schematic, not realistic: a clean diagram of the horizon line and a wing beats a rendered scene. Use annotation to show where to look. Never present an animation as the only carrier of a key fact, because learners under load tend to notice the salient motion and miss the thematic point.
+
+For fly mode, where the learner glances away from the sim, an animation that plays once and disappears is the worst case. Show states, not processes, and keep any process view in the lesson page where it can be paused.
+
+Confirmed this session: Crossref DOI 10.1006/ijhc.2002.1017 (volume 57, issue 4, pages 247-262); full text read at https://hci.stanford.edu/courses/cs448b/papers/Tversky_AnimationFacilitate_IJHCS02.pdf.

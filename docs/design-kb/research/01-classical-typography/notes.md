@@ -322,3 +322,41 @@ Craft authority, not experiment. Kinross's review is mixed on the edition: the A
 5. Because the essays disagree with his earlier manifesto, write LTF guidance as defaults per content type (prose, UI, display), not as one universal doctrine.
 
 Confirmed this session: Review by Robin Kinross read at https://eyemagazine.com/review/article/high-thoughts-on-a-self-effacing-art (essay titles, edition criticisms). Translator, editor and Birkhäuser 1975 details from web search results quoting library and bookseller records; Open Library work OL1220114W lists the 1991 Hartley & Marks edition (ISBN 0881790346). Canon figures from https://en.wikipedia.org/wiki/Canons_of_page_construction. Essay digest at https://www.artequalswork.com/posts/form-of-the-book/.
+
+## dowding1954finer
+
+Geoffrey Dowding, *Finer Points in the Spacing & Arrangement of Type* (London: Wace & Company, 1954; revised edition Point Roberts, WA / Vancouver: Hartley & Marks, 1995, 96 pages).
+
+### Core claims
+
+Dowding's short book is a catalogue of micro-typographic judgments from the private-press tradition. The Grolier Club's note places it in a line that runs from William Morris's Kelmscott Press through the Doves and Cranach presses, whose compositor J. H. Mason taught Dowding: those presses revived close word spacing, no extra space after punctuation, and leading suited to the typeface and proportional to the line width. Dowding sets out those practices as rules for the printer.
+
+The central claim, as reported in excerpts, is that close word spacing gives a line "color" and keeps it a unit, and that it is preferable to break words rather than let spaces widen. Quoting Tschichold, Dowding says spacing should be "about a middle space or the thickness of an 'i' in the type size used," and that text should be closely spaced "and not en or em quadded."
+
+### Specifics
+
+Details I could confirm from reviews and excerpts, not from the book itself:
+
+- Word spacing: widely spaced lines look grey (Dowding, p. 5, as cited on Wikipedia's "Word spacing"); he calls it "infinitely preferable to have a number of break lines succeeding each other" than widely spaced lines (blog excerpt).
+- Punctuation: omit the space after a full point when the next word starts with A, J, T, V or Y (Mantex review).
+- Marks: "The use of quotation marks never improves a text setting"; where needed, single quotes; at display sizes make them two sizes smaller than the body. Underlining as emphasis in display is "a crude relic of Victorian typography" (blog excerpt).
+- Ampersands are acceptable in text when they improve a line's spacing.
+- Modern (Bodoni-style) faces need generous leading and narrow measures for continuous reading (blog excerpt).
+
+The method, per Roy Johnson's Mantex review of the 1995 revision, is to show a common layout problem, then a corrected version for comparison. Johnson calls it an advanced text, "not a beginner's book."
+
+### Replication and criticism
+
+This is private-press connoisseurship with no experiment; the rules express a sensibility, "color" and evenness of texture, not measured reading performance. Reviews are split. Johnson accepts the book's authority but rejects the full-point rule, which he says is consistent with Dowding's other principles yet may sacrifice legibility for color and so "defeats what he wanted to achieve." Timoni West, a designer, calls it "picky, stodgy, snobbish and inadvertently hilarious" yet entertaining, and notes that many rules are hard to reproduce in digital layout tools and CSS.
+
+The editions are confusing: Open Library lists Wace printings in 1954, 1957 and 1966 (the 1966 one a revised 79-page edition) and a Hartley & Marks edition, and I could not establish which rule appeared in which edition. De Vinne's earlier codification disapproved thin spacing's excesses in a different way (devinne1910practice), so word space is a matter on which authorities have differed for over a century.
+
+### Implications for LTF
+
+1. Treat his rules as a taste for evenness: avoid rivers and loose lines in lesson text by using ragged-right and permitting hyphenation, rather than forcing justified blocks.
+2. Quotation marks often carry meaning for LTF, for example when a learner must see where a spoken phrase begins and ends. Dowding's "never" is a book-setting taste and should not override clarity for beginners; use distinct styling for quoted phrases and test with real content.
+3. Underlining is also a functional signal on the web, where it marks links. His objection concerns display emphasis in print, so LTF should reserve underline for links and use weight or color for emphasis.
+4. Dense numeric labels in widgets are display typography, where these micro rules matter more than in prose: check spacing around units and symbols case by case.
+5. Hard-to-automate rules belong in a writing style guide for human authors, not in CSS.
+
+Confirmed this session: Review by Roy Johnson at https://mantex.co.uk/finer-points-in-the-spacing-and-arrangement-of-type/ (found via https://mantex.co.uk/?p=1038; 1995 revised edition, Hartley & Marks, 96 pages, ISBN 0881791199, the full-point rule and his disagreement). Grolier Club note at https://grolierclub.omeka.net/exhibits/show/100-books-typography/item/1431. Blog excerpts and reaction at https://blog.timoni.org/post/177749327/on-finer-points-in-the-spacing-and-arrangement-of. Dowding citation of Tschichold via https://en.wikipedia.org/wiki/Word_spacing. Editions per Open Library work OL2734851W.

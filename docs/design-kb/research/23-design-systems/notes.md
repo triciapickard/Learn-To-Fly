@@ -78,7 +78,7 @@ Facts confirmed from a fetched reference summary (https://en.wikipedia.org/wiki/
 
 Two design principles are stated as slogans: program to an interface, not an implementation, and favor object composition over class inheritance. The authors call inheritance white-box reuse and composition black-box reuse.
 
-Every pattern is described with a fixed template. Course materials that reproduce it list these headings: intent, also known as, motivation, applicability, structure, participants, collaborations, consequences, implementation, sample code, known uses, and related patterns (for example https://people.cs.pitt.edu/~chang/231/8pattern/PATTERN01/p8.html). Intent states the goal; motivation gives a concrete scenario; consequences state trade-offs. Known uses require that a pattern has been seen in real systems, which is the "rule of three" idea of a pattern being discovered, not invented.
+Every pattern is described with a fixed template. Course materials that reproduce it list these headings: intent, also known as, motivation, applicability, structure, participants, collaborations, consequences, implementation, sample code, known uses, and related patterns (for example https://people.cs.pitt.edu/~chang/231/8pattern/PATTERN01/p8.html). Intent states the goal; motivation gives a concrete scenario; consequences state trade-offs. Known uses lists real systems where the pattern appears.
 
 ### Replication and criticism
 

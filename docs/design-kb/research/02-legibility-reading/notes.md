@@ -273,3 +273,36 @@ This is a review plus survey. The reading-speed evidence for the fluent range co
 4. When shrinking text, add spacing, not only size reduction. Crowding sets the limit, and tracking can protect the span.
 
 Confirmed this session: Crossref record; abstract via Europe PMC (PMC3428264). Full text read at pmc.ncbi.nlm.nih.gov/articles/PMC3428264 via WebFetch summaries (Results and Discussion); the fluent-range figures match the Europe PMC abstract. Acuity-reserve guidance could not be confirmed and is not used.
+
+## pelli2008uncrowded
+
+Pelli, D. G., & Tillman, K. A. (2008). The uncrowded window of object recognition. *Nature Neuroscience*, 11(10), 1129-1135. DOI 10.1038/nn.2187.
+
+### Core claims
+
+The review argues that vision is usually limited by how close objects are to each other, not by how big they are. The visual system recognizes an object by detecting its features and then combining them. "Crowding" happens when objects are too close together, and features from several objects are combined into a jumbled percept. Surveying studies of crowding in grating discrimination, letter and face recognition, visual search, selective attention and reading, the authors find one universal principle, the Bouma law: the critical spacing needed to prevent crowding is the same for all kinds of objects, though the effect is weaker between dissimilar objects. Critical spacing in the visual field is proportional to the object's distance from fixation, and the region where spacing exceeds the critical value is the "uncrowded window". Observers cannot recognize objects outside it, and its size limits the speed of reading and search (all from the abstract).
+
+### Specifics
+
+Definitions. Critical spacing is the center-to-center distance at which a neighbor stops interfering with identifying the target. Bouma (1970) observed that for small letters it is roughly half the eccentricity (distance from the point of fixation). The generalized Bouma law says an object is crowded when the ratio of its spacing to the observer's critical spacing at that location is below one.
+
+Properties. Critical spacing is independent of object size (halving letter size does not change it), the same for letters, gratings, animals and furniture, and varies with position and direction in the visual field. In the primary visual cortex it corresponds to a roughly fixed cortical distance. Crowding is distinguished from ordinary overlap masking: crowding impairs identification, counting and localization but not detection, and never makes the target vanish, while masking by overlapping objects can.
+
+Reading. The authors model reading rate as the fixation rate times the characters taken in per fixation, with fixations about four per second, and propose that the span of characters inside the uncrowded window predicts reading speed for adults and children with no free parameters. Dyslexic readers had smaller spans and read at less than half of their span-predicted speed. Reading speed stays roughly constant across a 6:1 range of text size but drops sharply once letter spacing falls below a critical value in degrees, whatever the letter size. Example spans: 3 characters for "row", 4 for "crow", 5 for "crowd" and 9 for "uncrowded". End letters of words are less crowded than interior letters, giving them a larger uncrowded window.
+
+Typography. Because spacing and not size sets the limit, tracking (adding letter spacing) can preserve legibility as text gets smaller, which typographers do in practice. Foveal acuity is largely unaffected by crowding because critical spacing there is a few minutes of arc.
+
+### Replication and criticism
+
+Crowding has been studied for fifty years, and Bouma's proportion has been repeatedly reproduced, though the exact value varies with direction, task and observer. The review is by principal contributors to the field, so it presents their synthesis. What I could not confirm this session is how rival accounts of crowding mechanism (for example different pooling or substitution models) are treated, and the reading-speed model with a fixed four-per-second rate is a simplification of eye-movement data (see rayner1998eye). Legge et al. (2007) agree that crowding limits the visual span but treat it as one of three sensory factors (see legge2007case). The authors state that the dyslexia result is a correlation between span and speed, not proof of cause. An erratum to the paper exists (Nature Neuroscience, December 2008); I did not read it.
+
+The Bouma word-shape story is relevant here. Larson (2005) points out that Bouma's papers are the source of the "bouma shape" idea in typographic folklore, but they show something else: that interior letters are harder to identify at a distance from fixation than end letters (see larson2005science).
+
+### Implications for LTF
+
+1. Letter spacing matters more than size at small sizes. For small labels and instrument legends, use looser tracking or a wider face rather than only increasing font size, and avoid tight negative tracking in headings.
+2. Dense instrument panels crowd. In a gauge widget, scale numerals, tick labels and needles close to each other can crowd out the number the learner needs. Increase clearance between numerals and neighbors, and between a readout and anything beside it.
+3. Peripheral reading is crowded. Fly mode will often be read out of the corner of the eye, where critical spacing is large. Use sparse layouts, one number per element, large gaps, and avoid strings of similar short items.
+4. Avoid look-alike strings (IDs, frequencies) set tightly in one run; group them with spaces.
+
+Confirmed this session: Crossref record (10.1038/nn.2187; an erratum also appears); abstract via Europe PMC (PMID 18828191); full text at pmc.ncbi.nlm.nih.gov/articles/PMC2772078 read via WebFetch summary. Bouma (1970) was checked only as a bibliographic record (Nature 226, 177-178) and abstract summary at research.tue.nl; the half-eccentricity value is from secondary accounts, including this review.

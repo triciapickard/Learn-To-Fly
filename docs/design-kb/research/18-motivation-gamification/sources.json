@@ -1,0 +1,646 @@
+[
+ {
+  "key": "lepper1973undermining",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Lepper",
+    "given": "Mark R."
+   },
+   {
+    "family": "Greene",
+    "given": "David"
+   },
+   {
+    "family": "Nisbett",
+    "given": "Richard E."
+   }
+  ],
+  "year": 1973,
+  "title": "Undermining children's intrinsic interest with extrinsic reward: A test of the \"overjustification\" hypothesis",
+  "container_title": "Journal of Personality and Social Psychology",
+  "volume": "28",
+  "issue": "1",
+  "pages": "129-137",
+  "publisher": "American Psychological Association (APA)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/h0035519",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic 'Undermining children's intrinsic interest with extrinsic reward Lepper Greene Nisbett 1973' returned DOI 10.1037/h0035519 (JPSP 28(1) 129-137); full text read from a PDF copy.",
+  "kind": "experiment",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "deci1999meta",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Deci",
+    "given": "Edward L."
+   },
+   {
+    "family": "Koestner",
+    "given": "Richard"
+   },
+   {
+    "family": "Ryan",
+    "given": "Richard M."
+   }
+  ],
+  "year": 1999,
+  "title": "A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation",
+  "container_title": "Psychological Bulletin",
+  "volume": "125",
+  "issue": "6",
+  "pages": "627-668",
+  "publisher": "American Psychological Association (APA)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/0033-2909.125.6.627",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1037/0033-2909.125.6.627 (Psychological Bulletin 125(6) 627-668); abstract from Europe PMC (128 studies); full text read from a PDF copy.",
+  "kind": "meta-analysis",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "ryan2000selfdetermination",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Ryan",
+    "given": "Richard M."
+   },
+   {
+    "family": "Deci",
+    "given": "Edward L."
+   }
+  ],
+  "year": 2000,
+  "title": "Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being",
+  "container_title": "American Psychologist",
+  "volume": "55",
+  "issue": "1",
+  "pages": "68-78",
+  "publisher": "American Psychological Association (APA)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/0003-066x.55.1.68",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1037/0003-066x.55.1.68 (American Psychologist 55(1) 68-78); full text read from selfdeterminationtheory.org PDF.",
+  "kind": "theory review",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "deterding2011from",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Deterding",
+    "given": "Sebastian"
+   },
+   {
+    "family": "Dixon",
+    "given": "Dan"
+   },
+   {
+    "family": "Khaled",
+    "given": "Rilla"
+   },
+   {
+    "family": "Nacke",
+    "given": "Lennart"
+   }
+  ],
+  "year": 2011,
+  "title": "From game design elements to gamefulness: Defining \"gamification\"",
+  "container_title": "Proceedings of the 15th International Academic MindTrek Conference: Envisioning Future Media Environments",
+  "volume": "",
+  "issue": "",
+  "pages": "9-15",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/2181037.2181040",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1145/2181037.2181040 (MindTrek 2011, pp. 9-15); abstract confirmed via OpenAlex and gamification-research.org post.",
+  "kind": "definition paper",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "hamari2014gamification",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Hamari",
+    "given": "Juho"
+   },
+   {
+    "family": "Koivisto",
+    "given": "Jonna"
+   },
+   {
+    "family": "Sarsa",
+    "given": "Harri"
+   }
+  ],
+  "year": 2014,
+  "title": "Does gamification work? A literature review of empirical studies on gamification",
+  "container_title": "2014 47th Hawaii International Conference on System Sciences",
+  "volume": "",
+  "issue": "",
+  "pages": "3025-3034",
+  "publisher": "IEEE",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1109/hicss.2014.377",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1109/hicss.2014.377 (HICSS 47, pp. 3025-3034); full text read from a PDF copy.",
+  "kind": "systematic literature review",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "sailer2020gamification",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Sailer",
+    "given": "Michael"
+   },
+   {
+    "family": "Homner",
+    "given": "Lisa"
+   }
+  ],
+  "year": 2020,
+  "title": "The Gamification of Learning: a Meta-analysis",
+  "container_title": "Educational Psychology Review",
+  "volume": "32",
+  "issue": "1",
+  "pages": "77-112",
+  "publisher": "Springer Science and Business Media LLC",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1007/s10648-019-09498-w",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1007/s10648-019-09498-w (Educational Psychology Review 32(1) 77-112); open-access full text read.",
+  "kind": "meta-analysis",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "hanus2015assessing",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Hanus",
+    "given": "Michael D."
+   },
+   {
+    "family": "Fox",
+    "given": "Jesse"
+   }
+  ],
+  "year": 2015,
+  "title": "Assessing the effects of gamification in the classroom: A longitudinal study on intrinsic motivation, social comparison, satisfaction, effort, and academic performance",
+  "container_title": "Computers & Education",
+  "volume": "80",
+  "issue": "",
+  "pages": "152-161",
+  "publisher": "Elsevier BV",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/j.compedu.2014.08.019",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1016/j.compedu.2014.08.019 (Computers & Education 80, 152-161) and a 2018 corrigendum DOI 10.1016/j.compedu.2018.09.019; findings confirmed via web search and two theses that summarize it; full text not retrievable.",
+  "kind": "quasi-experiment",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "locke2002building",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Locke",
+    "given": "Edwin A."
+   },
+   {
+    "family": "Latham",
+    "given": "Gary P."
+   }
+  ],
+  "year": 2002,
+  "title": "Building a practically useful theory of goal setting and task motivation: A 35-year odyssey",
+  "container_title": "American Psychologist",
+  "volume": "57",
+  "issue": "9",
+  "pages": "705-717",
+  "publisher": "American Psychological Association (APA)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/0003-066x.57.9.705",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1037/0003-066x.57.9.705 (American Psychologist 57(9) 705-717); full text read from a PDF copy.",
+  "kind": "theory review",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "bandura1977selfefficacy",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Bandura",
+    "given": "Albert"
+   }
+  ],
+  "year": 1977,
+  "title": "Self-efficacy: Toward a unifying theory of behavioral change",
+  "container_title": "Psychological Review",
+  "volume": "84",
+  "issue": "2",
+  "pages": "191-215",
+  "publisher": "American Psychological Association (APA)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/0033-295x.84.2.191",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1037/0033-295x.84.2.191 (Psychological Review 84(2) 191-215); full text read from a PDF copy.",
+  "kind": "theory paper",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "kluger1996effects",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Kluger",
+    "given": "Avraham N."
+   },
+   {
+    "family": "DeNisi",
+    "given": "Angelo"
+   }
+  ],
+  "year": 1996,
+  "title": "The effects of feedback interventions on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory",
+  "container_title": "Psychological Bulletin",
+  "volume": "119",
+  "issue": "2",
+  "pages": "254-284",
+  "publisher": "American Psychological Association (APA)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/0033-2909.119.2.254",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1037/0033-2909.119.2.254 (Psychological Bulletin 119(2) 254-284); full text read from a PDF copy.",
+  "kind": "meta-analysis",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "hattie2007power",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Hattie",
+    "given": "John"
+   },
+   {
+    "family": "Timperley",
+    "given": "Helen"
+   }
+  ],
+  "year": 2007,
+  "title": "The Power of Feedback",
+  "container_title": "Review of Educational Research",
+  "volume": "77",
+  "issue": "1",
+  "pages": "81-112",
+  "publisher": "American Educational Research Association (AERA)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.3102/003465430298487",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.3102/003465430298487 (Review of Educational Research 77(1) 81-112); full text read from a PDF copy.",
+  "kind": "narrative review and model",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "sisk2018extent",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Sisk",
+    "given": "Victoria F."
+   },
+   {
+    "family": "Burgoyne",
+    "given": "Alexander P."
+   },
+   {
+    "family": "Sun",
+    "given": "Jingze"
+   },
+   {
+    "family": "Butler",
+    "given": "Jennifer L."
+   },
+   {
+    "family": "Macnamara",
+    "given": "Brooke N."
+   }
+  ],
+  "year": 2018,
+  "title": "To What Extent and Under Which Circumstances Are Growth Mind-Sets Important to Academic Achievement? Two Meta-Analyses",
+  "container_title": "Psychological Science",
+  "volume": "29",
+  "issue": "4",
+  "pages": "549-571",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1177/0956797617739704",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1177/0956797617739704 (Psychological Science 29(4) 549-571); abstract from Europe PMC; full text read from a PDF copy.",
+  "kind": "meta-analysis",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "yeager2019national",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Yeager",
+    "given": "David S."
+   },
+   {
+    "family": "Hanselman",
+    "given": "Paul"
+   },
+   {
+    "family": "Walton",
+    "given": "Gregory M."
+   },
+   {
+    "family": "Murray",
+    "given": "Jared S."
+   },
+   {
+    "family": "Crosnoe",
+    "given": "Robert"
+   },
+   {
+    "family": "Muller",
+    "given": "Chandra"
+   },
+   {
+    "family": "Tipton",
+    "given": "Elizabeth"
+   },
+   {
+    "family": "Schneider",
+    "given": "Barbara"
+   },
+   {
+    "family": "Hulleman",
+    "given": "Chris S."
+   },
+   {
+    "family": "Hinojosa",
+    "given": "Cintia P."
+   },
+   {
+    "family": "Paunesku",
+    "given": "David"
+   },
+   {
+    "family": "Romero",
+    "given": "Carissa"
+   },
+   {
+    "family": "Flint",
+    "given": "Kate"
+   },
+   {
+    "family": "Roberts",
+    "given": "Alice"
+   },
+   {
+    "family": "Trott",
+    "given": "Jill"
+   },
+   {
+    "family": "Iachan",
+    "given": "Ronaldo"
+   },
+   {
+    "family": "Buontempo",
+    "given": "Jenny"
+   },
+   {
+    "family": "Yang",
+    "given": "Sophia Man"
+   },
+   {
+    "family": "Carvalho",
+    "given": "Carlos M."
+   },
+   {
+    "family": "Hahn",
+    "given": "P. Richard"
+   },
+   {
+    "family": "Gopalan",
+    "given": "Maithreyi"
+   },
+   {
+    "family": "Mhatre",
+    "given": "Pratik"
+   },
+   {
+    "family": "Ferguson",
+    "given": "Ronald"
+   },
+   {
+    "family": "Duckworth",
+    "given": "Angela L."
+   },
+   {
+    "family": "Dweck",
+    "given": "Carol S."
+   }
+  ],
+  "year": 2019,
+  "title": "A national experiment reveals where a growth mindset improves achievement",
+  "container_title": "Nature",
+  "volume": "573",
+  "issue": "7774",
+  "pages": "364-369",
+  "publisher": "Springer Science and Business Media LLC",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1038/s41586-019-1466-y",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1038/s41586-019-1466-y (Nature 573(7774) 364-369); abstract from Europe PMC; full text read from nature.com PDF.",
+  "kind": "pre-registered randomized trial",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "koivisto2019rise",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Koivisto",
+    "given": "Jonna"
+   },
+   {
+    "family": "Hamari",
+    "given": "Juho"
+   }
+  ],
+  "year": 2019,
+  "title": "The rise of motivational information systems: A review of gamification research",
+  "container_title": "International Journal of Information Management",
+  "volume": "45",
+  "issue": "",
+  "pages": "191-210",
+  "publisher": "Elsevier BV",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/j.ijinfomgt.2018.10.013",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1016/j.ijinfomgt.2018.10.013 (Int. J. Information Management 45, 191-210); accepted manuscript read from trepo.tuni.fi.",
+  "kind": "systematic literature review",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "malone1981toward",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Malone",
+    "given": "Thomas W."
+   }
+  ],
+  "year": 1981,
+  "title": "Toward a Theory of Intrinsically Motivating Instruction",
+  "container_title": "Cognitive Science",
+  "volume": "5",
+  "issue": "4",
+  "pages": "333-369",
+  "publisher": "Wiley",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1207/s15516709cog0504_2",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1207/s15516709cog0504_2 (Cognitive Science 5(4) 333-369); abstract from OpenAlex API.",
+  "kind": "design theory",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "przybylski2010motivational",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Przybylski",
+    "given": "Andrew K."
+   },
+   {
+    "family": "Rigby",
+    "given": "C. Scott"
+   },
+   {
+    "family": "Ryan",
+    "given": "Richard M."
+   }
+  ],
+  "year": 2010,
+  "title": "A Motivational Model of Video Game Engagement",
+  "container_title": "Review of General Psychology",
+  "volume": "14",
+  "issue": "2",
+  "pages": "154-166",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/a0019440",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic returned DOI 10.1037/a0019440 (Review of General Psychology 14(2) 154-166); abstract from University of Essex repository and OpenAlex.",
+  "kind": "theory-driven review",
+  "lane": "18-motivation-gamification"
+ },
+ {
+  "key": "csikszentmihalyi2008flow",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Csikszentmihalyi",
+    "given": "Mihaly"
+   }
+  ],
+  "year": 2008,
+  "original_year": 1990,
+  "title": "Flow: The Psychology of Optimal Experience",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "HarperCollins (Harper Perennial Modern Classics)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780061339202",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'csikszentmihalyi flow psychology of optimal experience' returned work OL278571W, 'Flow', Mihaly Csikszentmihalyi, first published 1990 (Harper & Row among publishers); a bookstore listing returned by web search gives the 2008 HarperCollins Harper Perennial Modern Classics edition, ISBN 9780061339202, 336 pages. The book text itself was not read; content confirmed via a 2020 Frontiers in Psychology review (PMC7033418) and web summaries.",
+  "kind": "book (canonical theory, trade synthesis)",
+  "lane": "18-motivation-gamification"
+ }
+]
