@@ -858,3 +858,184 @@ Keep Fly mode's existing choices: an explicit route, no header or footer, the da
 
 Then check targets: every step row is the tap target for its tick, repeated controls are at least 44 px, and no small controls touch. Fly mode is also the best candidate in the product for a short usability test, because its conditions (divided attention, distance, a busy primary display) differ from anything the published studies covered. A test with a handful of learners flying a real challenge, measuring missed and mistaken ticks, would settle more than any further reading.
 
+## Making and breaking: templates and exceptions
+
+A grid that is never broken produces pages that are correct and interchangeable. A grid that is broken everywhere is no grid. The teaching tradition that followed the Swiss school settled on an order: build the grid properly, then depart from it deliberately, for stated reasons, in a few named places. For a product, the question is where departures help and where they cost the learner the predictability the grid exists to give.
+
+### Make, then break
+
+Timothy Samara's *Making and Breaking the Grid* states the method in its title [@samara2023making]. It teaches the column grid (one or more vertical columns), the modular grid (columns crossed by rows, producing modules) and the compound grid (grids overlaid), how to build each and how to use it, and then a set of named ways to depart from structure: splitting, shifting, working on an axis, and intuitive design. The third edition adds expanded coverage of interactive and interface work and a cross-cultural reexamination of grid history [@samara2023making]. The book is a textbook of practice, and its evidence is its case studies; it is also part of the reconciliation that followed the early-1980s rejection of dogmatic grid use, after which the grid became, in one account, "a useful tool rather than a required starting point" [@samara2023making; @mullerbrockmann1981grid].
+
+Müller-Brockmann's own work shows that breaking was always inside the method. The "musica viva" poster sets the letters of one word "at irregular intervals so that a rhythm is produced," on a grid of 4.5 by 4 fields [@mullerbrockmann1981grid]. The irregularity is measured against the grid; it reads as rhythm because the grid is there. Gerstner's formula says the same thing in programme terms: the maximum of constants with the greatest possible variability [@gerstner2007designing]. Variation is what the constants make legible.
+
+### Where a product may break, and where it may not
+
+A poster is seen once. A product's controls are used hundreds of times, and learners build a spatial memory of where the next-step button, the progress indicator and the navigation live. Samara's techniques were developed for editorial and poster work, and any claim that a broken grid communicates better than a regular one is unproven; in a product, a break that moves navigation or controls makes positions unpredictable and costs usability [@samara2023making]. The workable division is between content presentation, which may break the grid in named ways, and navigation, progress and controls, which never do.
+
+The compound grid is the usual answer for pages that mix kinds of content. A dashboard that holds progress bars, a list of next items, stat tiles and a table of attempts can use a coarse grid for its regions and a finer one nested inside a region for its tiles [@samara2023making]. That is a structure, not a break.
+
+### The generic sequence
+
+LTF's landing page follows a sequence that is common to marketing pages: a hero with headline, subline, two buttons and a media block; a row of four stats; a five-step icon row; a "what you need" row of three icon cards; a two-column FAQ; a final call-to-action band. Each band is competent and each sits on its own grid (`7fr/5fr`, `lg:grid-cols-4`, `lg:grid-cols-5`, `md:grid-cols-3`, `md:grid-cols-2`). What the page lacks is not order but a reason for any band to look different from the equivalent band on another product's page. The grid literature offers one: a rhythm built on the product's own structure. LTF has a structural motif already, the "horizon line" of `LessonPath`, the teal connector between numbered pins, and it appears inside a `Card` in one landing band. Working on an axis, in Samara's vocabulary, would let that line organize the page itself, with bands hung from a single vertical or horizontal axis, rather than appearing as one illustration among stock bands. That is a brand decision for Part XX, Brand Identity and Distinctiveness; the layout point is that a signature break must be one, named, and repeated where it belongs, not a new arrangement per band.
+
+### The templates LTF needs
+
+The chapters before this one point to a short list of templates, each implemented once as a layout component with named areas (GRD-058), each with a stated constant (GRD-021) and a density budget (GRD-039):
+
+| Template | Holds constant | Used by |
+| --- | --- | --- |
+| Reading | the measure | lessons, briefs, `Prose` pages |
+| Collection | page width | challenges, airports, resources |
+| Dashboard | page width, compound grid | dashboard, speeds |
+| Reference | rail and panel | reference hub sections |
+| Fly | the viewport | Fly mode |
+| Form | narrow column | login, signup, account |
+| Landing | page width, one axis | `/` |
+
+::: {.rule #GRD-083 grade="C"}
+**Build each template's grid first, then allow only named, documented exceptions, each with a stated reason.** Samara teaches making before breaking, and Müller-Brockmann's irregular rhythms read as rhythm because a grid stands behind them [@samara2023making; @mullerbrockmann1981grid]. A named exception looks intended; an unnamed one looks like an error.
+
+*In LTF:* list the permitted breaks in the layout key from GRD-006 (for example a full-bleed widget in a lesson, the landing axis, the single large readout on the result card) and treat any other departure in review as a bug.
+:::
+
+::: {.rule #GRD-084 grade="C"}
+**Never break the grid for navigation, progress indicators or controls; break it only in content presentation.** Learners return to the same controls repeatedly, and breaks in product interfaces make positions unpredictable [@samara2023making; @mullerbrockmann1981grid].
+
+*In LTF:* the `Header`, `SectionNav`, `MobileSectionSelect`, the `Tabs` on `ChallengePage`, `PrevNext`, the completion panel and every primary `Button` sit on the template grid at the same place on every page of a template.
+:::
+
+::: {.rule #GRD-085 grade="C"}
+**In design review, describe any departure from the grid with a named technique (split, shift, axis) and its reason.** Samara's vocabulary turns a break into a decision that can be discussed [@samara2023making].
+
+*In LTF:* the PR template's design section asks, for any layout that leaves its template: which technique, which element, and why. "It looked better" is not a reason; "the widget needs the wide width to show its scale" is.
+:::
+
+::: {.rule #GRD-086 grade="C"}
+**Lay out mixed-content pages as a compound grid: a coarse grid for regions and a finer grid nested inside a region for its items.** The compound grid is the standard structure for pages that mix charts, lists and text [@samara2023making]; subgrid and nested grids implement it [@atkins2025css].
+
+*In LTF:* `DashboardPage` uses the `2fr/1fr` split for regions; the stat tiles inside "Stats" and the per-module bars inside "Your progress" each get their own inner grid on token gaps. `SpeedsPage` follows the same structure with its table and the sticky `KeyNumbers` panel.
+:::
+
+::: {.rule #GRD-087 grade="C"}
+**Place recurring lesson elements (objectives, widgets, quizzes, the "Fly it" section, completion) in the same position and order in every lesson.** Consistent placement across a series is the grid's central practical benefit, and learners build spatial memory of where things live [@mullerbrockmann1981grid].
+
+*In LTF:* `LessonPage` already fixes the order of objectives, blocks, `FlyIt`, `GoDeeper`, glossary, completion and `PrevNext`. Keep it fixed in code, and give `WidgetFrame` and `QuizBlock` one width and alignment rule in the reading template, so a widget sits at the same width in lesson 0.1 and lesson 8.4.
+:::
+
+::: {.rule #GRD-088 grade="C"}
+**Give each page template at most one signature break, drawn from the product's own structure, and repeat it consistently rather than inventing a new arrangement per section.** A rhythm against a grid is how the Swiss tradition made order distinctive [@mullerbrockmann1981grid]; a break repeated in its place becomes part of the programme [@gerstner2007designing].
+
+*In LTF:* the candidate is the `LessonPath` horizon line used as a page axis on the landing and curriculum pages, decided with Part XX, Brand Identity and Distinctiveness. Whatever is chosen, the landing bands stop each defining an unrelated grid.
+:::
+
+::: {.rule #GRD-089 grade="C"}
+**Keep a human design review of every new or changed template; no grid, scale or lint rule replaces it.** Le Corbusier wrote that the Modulor "does not confer talent," and Brown that "math is no substitute for an experienced designer's eye" [@lecorbusier1954modulor; @brown2011more].
+
+*In LTF:* the lint rules and screenshot matrix catch off-scale values and broken widths; a reviewer still looks at each template change on a phone and a desktop, in Day and Night, before it merges.
+:::
+
+### What this means for Learn to Fly
+
+Keep the fixed order of the lesson page and the restraint of the reading column; they are already a template in all but name. Build the seven templates in the table as layout components, and move every page onto one. Write down the permitted breaks, and keep navigation, progress and controls out of them.
+
+The landing page is where the generic look is most visible and where a deliberate break would do most. Replace its band-by-band grids with one landing grid and one signature axis drawn from the horizon-line motif, decided together with the brand work. Elsewhere, distinctiveness should come from consistency: the same widths, the same spacing roles, the same card pattern for the same kind of item, page after page. A product looks designed when its pages visibly share a programme.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for LTF
+
+1. **LTF has a short list of named page templates (reading, collection, dashboard, reference, fly, form, landing), each implemented once as a layout component with named grid areas.** GRD-001, GRD-002, GRD-004, GRD-058.
+2. **The layout programme is documented with the code and rendered on a development page.** GRD-006, GRD-017.
+3. **Oversized content has one sanctioned "wide" width in the reading template.** GRD-003, GRD-028.
+4. **The 4 px unit stays; the named spacing scale is reconciled with practice and enforced by lint, with commented exceptions for the horizon-line optical values.** GRD-007, GRD-009, GRD-010.
+5. **Collections and the dashboard span one shared track grid, and collections use `auto-fit` tracks.** GRD-008, GRD-057, GRD-063.
+6. **One type scale serves every page; raw Tailwind sizes are retired; Fly mode gets its own strand, sized by testing at distance.** GRD-011, GRD-012, GRD-014, GRD-075.
+7. **Vertical spacing is assigned by named role, with outer steps at least about one and a half times inner steps.** GRD-013, GRD-029, GRD-030.
+8. **No ratio is justified by the golden section; media use three declared aspect ratios.** GRD-015, GRD-016, GRD-019, GRD-020, GRD-052.
+9. **The reading template holds the measure constant in a character unit; the lesson column no longer changes width at `xl`, and its anchoring matches other reading pages.** GRD-021, GRD-023, GRD-024, GRD-027.
+10. **Phone side margins stay at 16 px minimum as a named token; prose is single-column, flush left.** GRD-022, GRD-025, GRD-026.
+11. **Enclosure is selective: one boxed level per section, boundaries follow meaning and read as surfaces in both themes.** GRD-031, GRD-032, GRD-033, GRD-034.
+12. **Grouping follows task: things used together sit together, safety-relevant groups get a second cue.** GRD-035, GRD-036, GRD-037.
+13. **Each template has a density budget; the reading column carries no unrelated material; status and tier colors appear only when they report something.** GRD-039, GRD-040, GRD-041, GRD-042.
+14. **Widgets stay plain and faithful to real instruments; comparisons use small multiples; progress encodings are linear.** GRD-043, GRD-044, GRD-045, GRD-047.
+15. **The root font size follows the browser; type, spacing and reading widths move to relative units.** GRD-049.
+16. **Components size from their containers, following `KeyNumbers`; breakpoints follow content.** GRD-048, GRD-050, GRD-051.
+17. **Every template is checked in a screenshot matrix of widths and an enlarged text size.** GRD-053, GRD-046.
+18. **Visual order never differs from source order between items.** GRD-059.
+19. **The lesson's first screen has a budget: title, meta, objectives and at most one notice.** GRD-064, GRD-065.
+20. **Fly mode becomes a three-region template (steps, timer, alert) that fits one viewport, uses landscape width, hides the beta banner and keeps positions fixed.** GRD-074, GRD-076, GRD-077, GRD-079, GRD-081, GRD-082.
+21. **Repeated Fly mode controls are at least 44 CSS px, and step rows are the tick targets.** GRD-078.
+22. **Breaks are named, never touch navigation or controls, and the landing gets one signature axis.** GRD-083, GRD-084, GRD-085, GRD-088.
+
+### Review checklist
+
+Run these against a pull request that touches layout, or against any page.
+
+#### Grid and template
+
+- Does the page use one of the named templates, without its own container width? (GRD-001, GRD-058)
+- Does any new block type fit the programme, or use the wide width or the "something else" slot? (GRD-002, GRD-003, GRD-028)
+- Do edges of card rows, rails and columns line up with the template's tracks in the overlay? (GRD-008, GRD-017)
+- Is any departure from the grid named, with a reason, and outside navigation and controls? (GRD-083, GRD-084, GRD-085)
+
+#### Units and scales
+
+- Are all spacing, width and size values on the named scale, with no bracket values except commented exceptions? (GRD-007, GRD-009, GRD-010)
+- Do all font sizes come from the type utilities, with no raw Tailwind sizes? (GRD-011, GRD-012, GRD-014)
+- Is vertical spacing applied by role? (GRD-013, GRD-030)
+- Is any ratio justified by function or test, not by the golden section? (GRD-015, GRD-019, GRD-020)
+
+#### Reading frame
+
+- Is prose capped by a character-based measure, and does the column keep its width across every breakpoint? (GRD-021, GRD-023, GRD-024)
+- Are phone margins at least 16 px, prose single-column and flush left, and the column anchored like other reading pages? (GRD-022, GRD-025, GRD-026, GRD-027)
+
+#### Grouping and density
+
+- Is every gap between groups at least about one and a half times the gaps inside them? (GRD-029)
+- Does each boundary enclose exactly one meaningful group, read as a surface in Day and Night, and avoid nesting? (GRD-031, GRD-032, GRD-033)
+- Do spacing, enclosure, color and type agree on the groups? (GRD-034)
+- Are items used together placed together, labels closer to their content, and safety-relevant groups backed by a second cue? (GRD-035, GRD-036, GRD-037)
+- Has the screen been reviewed for proximity, alignment, repetition and contrast? (GRD-038)
+- Does the page stay within its template's density budget, with nothing unrelated in the reading column and no needless status color? (GRD-039, GRD-040, GRD-041, GRD-042)
+- Are widgets free of decorative ink, comparisons shown as small multiples and progress encoded linearly? (GRD-043, GRD-044, GRD-045, GRD-047)
+
+#### Responsive behavior
+
+- Are content regions fluid tracks rather than fixed widths, and do components size from their containers? (GRD-048, GRD-051)
+- Does the layout hold at an enlarged default text size? (GRD-049, GRD-053)
+- Are breakpoints justified by content, and collections `auto-fit` with no orphan items? (GRD-050, GRD-057, GRD-063)
+- Does every image and widget declare an aspect ratio, so loading does not shift the page? (GRD-016, GRD-052)
+- Is the narrow layout complete, and does core content work without widget code? (GRD-054, GRD-055)
+- Did the screenshot matrix run, and was any clutter flag reviewed by a person? (GRD-046, GRD-053)
+
+#### CSS Grid
+
+- Is grid used for two-dimensional regions and flex for rows? (GRD-056)
+- Does visual order match source order between items, with no `dense` packing? (GRD-059)
+- Are side-by-side cards aligned internally, with a fallback? (GRD-060)
+- Do text tracks have a zero minimum, gaps come from tokens, and no text container have a fixed height? (GRD-061, GRD-062)
+
+#### Attention
+
+- Are the objective, primary action and any safety-relevant item in the first phone screen, within the first-screen budget? (GRD-064, GRD-065)
+- Does the first screen avoid a false floor? (GRD-066)
+- Are sections short and headed, with information-carrying words first? (GRD-067, GRD-068, GRD-069)
+- In scanned lists, is the action at the left, the value in a consistent column, and the row spacing generous? (GRD-070, GRD-071)
+- Is the primary action placed where the task ends? (GRD-073)
+- Are length decisions based on LTF's own section-reach data? (GRD-072)
+
+#### Fly mode
+
+- Does everything for the current step fit in one viewport without scrolling, in fixed positions? (GRD-074, GRD-081)
+- Is the screen free of banners and non-task chrome, divided into a few regions, with a reserved alert region? (GRD-076, GRD-077, GRD-082)
+- Are repeated controls at least 44 CSS px, with step rows as targets? (GRD-078)
+- Does the layout use landscape width, its own type strand, and an explicit entry by intent? (GRD-075, GRD-079, GRD-080)
+
+#### Process
+
+- Has a person reviewed the template change on a phone and a desktop, in Day and Night? (GRD-089)
+- Are recurring lesson elements in their fixed order and width? (GRD-087)
+- Does any mixed-content page use a compound grid? (GRD-086)
+- Do preference tests of layout use neutral, fixed wording and a performance measure? (GRD-018)
+- Does any landing or curriculum change keep to one signature axis? (GRD-088)
