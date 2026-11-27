@@ -82,3 +82,31 @@ Use this chapter as a checklist for sign-up, sign-in, settings and typed answers
 
 Confirmed this session: full chapter text read from https://cdn.intechopen.com/pdfs/10814.pdf (reached via https://doi.org/10.5772/9500); Crossref record 10.5772/9500 (six authors, 2010, publisher InTech, book User Interfaces, ISBN 9789533070841).
 
+## wobbrock2009userdefined
+
+Wobbrock, J. O., Morris, M. R., & Wilson, A. D. (2009). User-defined gestures for surface computing. Proceedings of CHI 2009, 1083-1092. ACM.
+
+### Core claims
+
+Touch gesture sets had mostly been invented by system designers, often with recognizer reliability in mind, and so did not necessarily match what people would do unprompted. The authors propose a guessability, or elicitation, method: show a participant the effect of an action (the referent) and ask them to perform the gesture they think would cause it (the sign). From 1,080 gestures by 20 non-technical participants for 27 commands, with one and two hands, they derive agreement scores, a taxonomy of surface gestures and a consensus gesture set. Their findings: users rarely care how many fingers they use, one hand is preferred to two, desktop idioms strongly shape mental models, and some commands elicit little agreement, which argues for on-screen widgets. The paper's central design stance is that gesture vocabularies should be validated against users' guesses, not only against recognizers.
+
+### Specifics
+
+Method: 20 participants, recruited as people without prior experience with touchscreens such as the iPhone, performed gestures on a Microsoft Surface prototype tabletop with logging software, a think-aloud protocol and video. For each of 27 referents (commands such as move, rotate, delete, zoom, select, task switch, close), they saw an animation of the effect and then performed a gesture, once with one hand and once with two. After each gesture they rated two seven-point statements: that the gesture was a good match for its purpose and that it was easy to perform.
+
+Agreement score: gestures for each referent are grouped into sets of identical gestures, and the score is the sum of squared group-size proportions, averaged over referents. The paper's worked example gives 0.42 for "move a little" (groups of 12, 3, 3 and 2 out of 20). Overall agreement was 0.32 for one-hand and 0.28 for two-hand gestures. Referent complexity correlated inversely with agreement (r = -.52): the more conceptually complex the command, the less people agreed.
+
+Taxonomy: four dimensions, namely form, nature (physical, symbolic, metaphorical, abstract), binding (object-centric, world-dependent, world-independent, mixed) and flow (discrete or continuous). Simple commands usually produced physical gestures; complex ones produced metaphorical or symbolic gestures.
+
+The consensus set was built by taking the largest group for each referent and resolving conflicts in favor of the referent with the larger group. It covers 57.0 percent of all gestures proposed, has 48 gestures across 22 dedicated referents (31 one-handed, 17 two-handed), and deliberately includes aliases, several gestures for one command, which raises guessability. Four referents (insert, maximize, task switch, close) received no dedicated gesture because participants used primitives or imaginary widgets, such as tapping an imaginary close button in the top-right corner. Gestures in larger agreement groups got significantly higher "good match" ratings, which the authors take as validation of the method; gestures planned for longer were rated worse. The three authors designed their own sets beforehand, and each author covered only 43.5 percent of the user-defined gestures.
+
+### Replication and criticism
+
+The authors list limits: participants were non-technical, literate American adults, the setup had no system feedback or recognizer, users could not revise earlier gestures, and a large tabletop is not a phone. Elicitation studies became a widely used method afterward, but later reviews by other researchers raised the issue that agreement scores depend on how the referents are shown and on legacy bias from desktop and phone use. That is anticipated in the paper's own "It's a Windows World" finding. I did not confirm specific later critiques in this session, so treat the later-methodology debate as something to check before relying on it. The finding that finger count is not a reliable discriminator is directly against designer-made sets of the time and is largely consistent with how modern phones treat one-finger versus multi-finger input.
+
+### Implications for LTF
+
+Do not make beginners learn an invented gesture vocabulary. Use only gestures that people already know from their phones: tap, drag, pinch, swipe, and give every gesture a visible equivalent control, because the paper found complex commands elicit no shared gesture and need on-screen widgets. In fly mode, avoid hidden gestures such as multi-finger swipes to change step; use big visible next and back buttons. For any widget that moves (a heading dial, a throttle slider, a pan and zoom chart), support the obvious physical gesture, tolerate a sloppy drag and do not require a precise number of fingers or a diagonal path. Offer more than one way to do the same thing (alias), such as dragging a slider or tapping the plus and minus buttons.
+
+Confirmed this session: full text read from https://microsoft.com/en-us/research/wp-content/uploads/2009/04/SurfaceGestures_CHI2009.pdf (abstract, method, results, discussion); Crossref record 10.1145/1518701.1518866.
+
