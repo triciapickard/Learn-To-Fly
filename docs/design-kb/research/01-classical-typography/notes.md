@@ -105,7 +105,7 @@ The ten-to-twelve-word figure matches Morison's (morison1936first) without citat
 
 ### Implications for LTF
 
-1. Browsers justify poorly without good hyphenation, so lesson text should default to left-aligned, ragged-right. That is the practical descendant of Gill's argument.
+1. Gill's complaint, uneven word spaces from forcing equal lines, is what justified text produces when hyphenation is limited (my inference), so lesson text should default to left-aligned, ragged-right.
 2. Gill supplies a measure budget in words, not characters: roughly 10–12 words per line is a craft target for lesson columns, to be checked against lane 02 and lane 03 evidence before it becomes a rule.
 3. His warning on narrow measures bears on phone layouts and side panels: when the column gets narrow, fewer words per line cuts phrases apart, so allow reflow rather than shrinking the type.
 4. Even spacing matters most in short, high-stakes text such as checklist items and quiz stems; avoid forced justification and stretched spaces there.

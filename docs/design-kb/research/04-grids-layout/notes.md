@@ -458,3 +458,31 @@ Experimental evidence, but of a narrow task. Visual search for a target on a pag
 
 Confirmed this session: Crossref record 10.1016/j.displa.2007.04.003 (authors, Displays 28(2), 60-67, April 2007, Elsevier); Teesside University repository page research.tees.ac.uk/en/publications/the-influence-of-line-spacing-and-text-alignment-on-visual-search/ (abstract summary, citations); the Teesside page for the 2006 line-length paper; web-search summaries (dblp record, Bohrium mirror). The full text was not read.
 
+## rosenholtz2007measuring
+
+Rosenholtz, Ruth; Li, Yuanzhen; Nakano, Lisa (2007). "Measuring visual clutter." *Journal of Vision*, 7(2), article 17, 1-22. doi:10.1167/7.2.17
+
+### Core claims
+
+Visual clutter is a major factor in how hard it is to find something in a display, yet it has had no agreed measure. The paper proposes and tests computable clutter measures, and frames clutter as a stand-in for set size (the number of items competing for attention) in natural scenes, where items are not countable. Two measures, Feature Congestion and Subband Entropy, are the authors' own; the third, Edge Density, is borrowed from earlier work by Mack and Oliva.
+
+### Specifics
+
+Feature Congestion (a new version of an earlier measure by Rosenholtz, Li, Mansfield and Jin, 2005) extracts color, luminance and orientation features, computes their local variability, and combines them into a single value; a later paper describes the method as treating the volume of an ellipsoid built from that local variance as the clutter estimate. Subband Entropy grew from the observation that JPEG compressed file size was highly correlated with Feature Congestion: clutter relates to how much visual information a display contains. Edge Density is the proportion of edges in an image (the later paper describes it as the ratio of edges to image size, computed with Canny edge detection). The authors report that color variability matters for clutter: it is captured by Feature Congestion but not by Edge Density or Subband Entropy. MIT distributed MATLAB code for the first two measures and said Edge Density is only two lines of code.
+
+I read the paper's abstract-level record and secondary descriptions, not the full results section, so I cannot report the experiment details (the stimuli, the number of observers, the search tasks) or the correlations for the 2007 paper. A later paper (Yu, Samaras and Zelinsky, 2014, Journal of Vision 14(7):4) attributes earlier numbers to the 2005 study: on map stimuli, Feature Congestion correlated with search times at r = 0.75 versus 0.83 for edge density, and for targets defined by contrast threshold it reached r = 0.93 versus 0.83 for edge density.
+
+### Replication and criticism
+
+Experimental work with computational models, and generalization is its central challenge. The same 2014 paper reports that Henderson et al. (2009) found Feature Congestion no better than Edge Density at predicting clutter's effect on search, that Neider and Zelinsky (2011) found edge density at least as good, and that in the 2014 comparison on 90 real-world scenes Feature Congestion ranked below edge density and the superpixel-based methods, with the authors suggesting weak generalization from map stimuli to realistic scenes. That 2014 study found its proto-object model correlated with a median human ranking at rho = 0.814, with mean agreement between human observers of rho = 0.692. In other words, clutter is a real, partly measurable construct, but no single computational index is settled, and human judgments of clutter themselves agree only moderately. The measures were validated on photographs, maps and visualizations, not on user interface screens or instrument panels.
+
+### Implications for LTF
+
+1. Treat density as a measurable design variable. LTF can run a cheap edge-density check (a screenshot analysis in CI or design review) to flag screens that become far more cluttered than their siblings, with a human review of anything flagged. Do not set a numerical pass or fail threshold from this paper, which gives none for UI.
+2. Color variability is part of clutter: many saturated hues in one view (for example multiple colored badges and charts) raise it. This supports a restrained palette and using color only for status.
+3. Clutter slows search, so for lesson pages the task of finding "what do I do next" should have few competing items. For the instrument widgets, avoid decorative tick marks and textures that add edges without information.
+4. Dashboards and progress views will always carry more items than lessons; group them (grids and cards) so that clusters, not single items, are what the eye must search.
+5. A flight-simulator context already supplies a very cluttered visual field, so fly mode should be uncluttered by contrast.
+
+Confirmed this session: Crossref record 10.1167/7.2.17 (authors, 7(2), article 17, 16 August 2007); MIT DSpace record dspace.mit.edu/handle/1721.1/37593 (software for the two measures; Journal of Vision 2007); web-search summaries of the paper (the three measures, color variability, set-size framing); Yu, Samaras and Zelinsky (2014), PMC4528410, for comparison numbers and later criticism. The paper's full text (jov.arvojournals.org) returned a 403 error.
+

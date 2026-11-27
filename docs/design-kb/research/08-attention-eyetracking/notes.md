@@ -197,3 +197,31 @@ The result has been qualified since. A web search summary (not read in full) rep
 5. Gaze alone does not reveal the learner's intention, so teach what to look for explicitly and ask.
 
 Confirmed this session: Crossref record for DOI 10.1016/j.visres.2012.03.019; full text and results from PMC3526937 (fetched summary of the paper); the later-work paragraph is from a web search summary only and is flagged as such.
+
+## rensink1997see
+Rensink, R. A., O'Regan, J. K., & Clark, J. J. (1997). To see or not to see: The need for attention to perceive changes in scenes. *Psychological Science, 8*(5), 368-373.
+
+### Core claims
+The paper argues that people do not build a complete, detailed internal copy of a scene, and that noticing a change requires focused attention on the part that changes. When the brief motion signals that normally draw attention to a change are swamped, large and obvious changes in real-world pictures become very hard to find. The abstract's conclusion: "observers never form a complete, detailed representation of their surroundings" and perception of change is "mediated through a narrow attentional bottleneck", with attention drawn to parts of a scene by high-level interest (Crossref abstract). It introduced the flicker paradigm, now the standard demonstration of change blindness.
+
+### Specifics
+I read the scanned paper. In the flicker paradigm an original image A alternates with a modified image A', with a brief blank field between them, until the observer reports the change. In this study each image was shown for 240 ms and each blank for 80 ms, in the order A, A, A', A', with gray fields between images; a trial started with a 3 s gray field, then a 1 s gray field, and the cycle continued for up to 60 s or until the observer responded. All experiments used the same 48 color images of real-world scenes, 27 by 18 degrees. A single change was made to one object or area: a change in color, location, or presence versus absence. Ten naive observers took part in each experiment, were told the possible kinds of change and had six practice trials. They pressed a key at the moment of noticing and then described the change, so lucky guesses did not count. The dependent measure was the average number of alternations needed, taken from correct responses only.
+
+To test the role of interest, changes were sorted by the interest of the changed part. Five naive observers described each scene in words. "Central interest" (CI) parts were objects mentioned by three or more observers; "marginal interest" (MI) parts were mentioned by none. The MI changes were slightly larger on average (22 versus 18 square degrees).
+
+Results, Experiment 1: marginal-interest changes needed an average of 17.1 alternations (10.9 s) before being identified, and for some images observers needed more than 80 alternations (50 s) to find a change that was obvious once seen. Central-interest changes were found after an average of 7.3 alternations (4.7 s). When the blanks were removed, identification took only 1.4 alternations (0.9 s) with no interest difference, which shows the changes were easy to see in the absence of flicker. Later experiments (as summarized in the abstract) showed that a valid verbal cue made identification much faster, ruling out poor visibility, and that important objects were found faster.
+
+### Replication and criticism
+The flicker method was widely adopted, and the phenomenon of change blindness is well established; I did not retrieve later meta-analytic work, so I do not give numbers for replications. Two cautions come from the paper itself. First, the manipulation is artificial: the flicker masks the local motion signals that, in ordinary viewing, attract attention to a change. The authors say that it is only when low-level transients are masked or disregarded that the sparse nature of the scene representation shows. Second, the claim of "no complete representation" is inferential, drawn from slow detection, and different theorists have read it differently (the authors themselves propose a dynamic, attention-mediated representation). The paper is a set of controlled experiments with small samples (10 per experiment) but large effects, which is why the finding has held.
+
+The related inattentional-blindness work of Simons and Chabris (see simons1999gorillas) extends the point from changes to unexpected events.
+
+### Implications for LTF
+1. If a value or state changes on screen, a learner may not notice, especially if the change coincides with a redraw, page transition, loading flash or scroll. Updates that happen during a transient (a re-render, a modal opening) can be missed. In fly mode, keep unchanging chrome truly static so a real change is a visible event.
+2. Use a transient on purpose. A brief, local animation at the changed element restores the motion signal that attracts attention; a silent swap does not. Pair it with an explicit label ("flaps now 10") for state that matters.
+3. Cues work. A verbal or text cue naming what changed makes the change easy to find, so state the change in words next to the widget.
+4. Do not assume "it was on the screen" means "it was seen". For quiz designs that rely on noticing, give the learner time and a prompt.
+5. Interest speeds detection: tie changes to objects the lesson has made important (the airspeed tape in an airspeed lesson). Learners will find changes to what matters faster than changes elsewhere.
+6. Aviation relevance (my inference, not from the paper): if a cockpit display changes mode without a transient, the pilot may not notice; LTF's widgets should model the idea that changes need a visible event.
+
+Confirmed this session: Crossref abstract for DOI 10.1111/j.1467-9280.1997.tb00427.x; full text of the paper from a PDF copy (Experiment 1 numbers and method); no later replication papers read.
