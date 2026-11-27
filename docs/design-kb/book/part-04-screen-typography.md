@@ -662,3 +662,145 @@ The base layer gives `h1` to `h4` `text-wrap: balance`, which evens out the line
 
 Keep the shape of the existing scale (gentle small steps, wider display steps) and the balanced wrapping of headings. Change the way it is used: one set of named roles, used by every page, with raw `text-*xl font-bold` headings removed and a check that keeps them out (SCR-048, SCR-050). Re-derive the scale from the 18 px body (SCR-049), give measured display values a role of their own, cut the eyebrow back to genuine labels (SCR-051), and check each step at its smallest use (SCR-052). Part II, Classical Typography, covers the print tradition of proportional scales, and Part XXI, Design Systems, Process and Craft, covers how tokens are governed.
 
+## Polarity, dark themes and glance reading
+
+### Polarity is mostly luminance
+
+Gould's IBM experiments counted dark characters on a light background among the four image-quality conditions under which screen reading matched paper [@gould1987reading]. Later work explains why. Buchner, Mayr and Brandt manipulated text-background polarity and overall display luminance independently and found no advantage for positive polarity (dark on light) once overall luminance was matched; only luminance mattered, with better performance on brighter displays [@buchner2009advantage]. Their conclusion is that text is more readable when overall luminance is high, as it usually is in positive-polarity displays, and that polarity itself does not affect readability. That is a strong claim from a single experiment whose abstract does not give the sample or measure.
+
+Piepenbrock and colleagues tested whether the positive-polarity advantage holds for older adults, for whom light scatter in the aging eye might have reversed it, and found it in both younger and older groups, recommending dark characters on a light background for all ages [@piepenbrock2013positive]. A follow-up by the same group, described in the notes for that paper, found the advantage in proofreading grew linearly as characters got smaller, across 8 to 14 point sizes (0.22 to 0.34 degrees of vertical angle), and recommended avoiding negative polarity especially with small fonts. Dobres, Chahine and Reimer tested glance-like reading, measuring the display time needed to read a word accurately, with two sizes, two polarities and two ambient light levels [@dobres2017effects]. Thresholds were worst for negative polarity (light on dark) in near-dark surroundings; positive polarity in the dark, and every condition in bright light, did significantly better. They attribute this to pupil contraction under brighter light reducing optical aberrations, a hypothesis consistent with the data rather than directly measured.
+
+Degani's flight-deck review, from print-era sources, recommends black on white for most documents and avoiding white on black in normal operations; where white on black is used, it should carry little text, in large sans serif type [@degani1992typography]. It also warns that sub-optimal conditions combine: white on black, italics, small type and color together hurt more than any one alone.
+
+The evidence comes from one main group plus an independent automotive study, using proofreading, acuity and lexical decision rather than long comfortable reading, and it measured performance, not preference or fatigue. It is moderately strong for a modest effect. It does not say dark themes are unusable; it says a dimmer display costs legibility, most at small sizes and in glances in a dark room.
+
+::: myth
+**"Dark mode is easier to read, especially for older eyes and in a dark room."** Positive polarity was better for both younger and older adults [@piepenbrock2013positive], the difference tracks overall display luminance [@buchner2009advantage], and light text on a dark screen was the worst condition for glance reading in near-dark surroundings [@dobres2017effects]. A dark theme can be chosen for comfort, glare or taste, but not on the grounds that it is more legible.
+:::
+
+### LTF's themes measured
+
+Computed for this Part from `tokens.css` with the WCAG 2.2 relative-luminance and contrast formulas [@w3c2024wcag]: the Day canvas (`#f7f5f3`) has a relative luminance of about 0.92 and the Night canvas (`#141412`) about 0.007, so the Night theme is a dim display in Buchner's sense. Text contrast passes the 4.5:1 Level AA threshold for normal text in most pairings: in Day, `ink` on `canvas` is about 16.6:1, `ink-2` 6.5:1, `ink-3` 5.0:1 and `accent` 5.0:1; in Night, `ink` 15.5:1, `ink-2` 8.6:1, `ink-3` 5.9:1 and `accent` 10.3:1. Two Night pairings fail: `ink-3` on `accent-tint` is about 4.3:1 and on `caution-tint` about 4.4:1. WCAG thresholds are not rounded, so these fail [@w3c2024wcag]. In Day, `ink-2` and `ink-3` are close (6.5 against 5.0), so the third ink level adds little visible distinction.
+
+`FlyModeLayout` sets `data-theme` to dark unless the reader's stored preference is explicitly light; a reader on "System" in a bright room still gets the dark theme. Its stated reason (in the layout's comment, citing the plan's Section 20.7) is the second-screen use beside the sim. That is the setting in which Dobres and colleagues found light-on-dark glance reading worst, if the room is dark, and the plan's dark default is defensible only on glare grounds: Degani's review treats glare as a legibility problem in its own right, although it also recommends against white on black in normal operations [@degani1992typography]. The evidence pulls in two directions here, and the product should let the learner decide with the default set by the room rather than by assumption.
+
+::: {.rule #SCR-053 grade="B"}
+**Keep the light (Day) theme as the default for dense reading (lessons, quizzes, reference tables), and present the dark theme as a preference, not as the better choice for any group.** Positive polarity, or more exactly higher display luminance, gave better reading performance for younger and older adults [@buchner2009advantage; @piepenbrock2013positive]. Several experiments from one group with independent support, graded B.
+
+*In LTF:* the `ThemeToggle` "System" setting follows the operating system, which is correct; do not add copy that recommends Night for comfort or for older eyes.
+:::
+
+::: {.rule #SCR-054 grade="B"}
+**In the Night theme, set small text larger and brighter than in Day: raise the minimum reading size, use `ink` or `ink-2` rather than `ink-3` for anything read, and keep the widget labels at their brightest level.** The penalty of negative polarity grows as characters get smaller [@piepenbrock2013positive] and is luminance-driven [@buchner2009advantage]. Graded B.
+
+*In LTF:* the two failing pairings (`ink-3` on `accent-tint` and `caution-tint` in Night) must change to `ink-2`; more generally, a `[data-theme='dark']` rule can map the meta text role from 14 px to 15 or 16 px. Test the change with the reading measures of SCR-004 rather than by eye.
+:::
+
+::: {.rule #SCR-055 grade="D"}
+**Do not default Fly mode to dark regardless of the room; open it in the theme the reader last chose for Fly mode, offer a one-tap Day and Night switch on the Fly mode page itself, and if dark is used, compensate with larger, brighter text.** Light-on-dark glance reading was worst in near-dark surroundings [@dobres2017effects] and positive polarity is generally better [@piepenbrock2013positive], while glare is itself a recognized legibility problem for flight-deck documents read in poor light [@degani1992typography]. The evidence conflicts for this exact case and no study tested a second screen beside a simulator, so the rule is graded D: it settles who decides, not which theme wins.
+
+*In LTF:* store a separate Fly mode theme preference, apply it in `FlyModeLayout` before first paint, and put a `ThemeToggle` in the Fly mode header next to "Back to challenge". Measure step-reading time in both themes with learners at their sim before choosing a new default.
+:::
+
+::: {.rule #SCR-056 grade="C"}
+**Gate every text and background token pairing at 4.5:1 for normal text and 3:1 for large text in both themes, computed from the final colors without rounding, and check tinted fills as well as plain grounds.** These are WCAG 2.2 Level AA thresholds, with large text defined as 18 point, or 14 point bold [@w3c2024wcag]. A standard, graded C.
+
+*In LTF:* add a unit test that computes every documented text-on-ground pair in `tokens.css` for both themes, including `accent-tint`, `go-tint`, `caution-tint` and `warn-tint` grounds used by `Callout`, the resume bar and the objectives card; it would catch the two Night failures above.
+:::
+
+::: {.rule #SCR-057 grade="C"}
+**Hold Fly mode text and safety-relevant checklist text to 7:1 contrast in both themes.** WCAG's enhanced Level AAA threshold is 7:1 for normal text [@w3c2024wcag], and the notes on that standard recommend it as a target for the most safety-relevant text in Fly mode; the dim-room conditions of a second screen are not addressed by the AA minimum [@dobres2017effects]. Graded C.
+
+*In LTF:* `ink` on `canvas` and `surface` passes 7:1 in both themes; `ink-2` passes in Night but not in Day (about 6.5:1 on `canvas`). Use `ink` for every Fly mode step, alert and goal, and keep `ink-2` to secondary labels there.
+:::
+
+### What this means for Learn to Fly
+
+Keep the Day default, the "System" option and the near-neutral grounds, which pass contrast comfortably for primary text. Change the Night theme's small text (SCR-054) and fix the two failing tinted pairings, with an automated contrast test for every pairing (SCR-056). Change Fly mode's forced dark default into a remembered, switchable choice on the page itself (SCR-055), and hold its text to 7:1 with `ink` (SCR-057). Part VI, Color: Science, Meaning and Access, covers the color tokens and contrast algorithms in full; this chapter covers only what polarity and luminance do to reading.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for LTF
+
+1. **Lessons compensate for the screen.** Number-bearing and procedural lesson sections are followed by an active block; timed reading is short and glanceable; lessons keep a stable spatial frame and print cleanly. (SCR-001, SCR-002, SCR-003, SCR-005)
+2. **Typography is judged by performance.** Changes to the measure, body size or faces are evaluated with quiz accuracy, completion and reading time, not preference. (SCR-004)
+3. **Sizes are set by angle and distance.** Each surface has a recorded viewing distance; desk surfaces aim for an x-height near 0.3 degrees on a standard monitor. (SCR-006)
+4. **The lesson body becomes 18 px.** `MarkdownContent` uses `body-lg` like `Prose`, with 20 px to be tested. (SCR-007, SCR-049)
+5. **Fly mode is an arm's-length surface.** Step and alert text at least `text-3xl`, medium or semibold, `ink`, with its own size control. (SCR-009, SCR-023, SCR-057)
+6. **Small text has a floor.** 14 px only for non-essential meta text; 12 px only for short uppercase labels; `Badge` text moves up. (SCR-011, SCR-052)
+7. **The root is relative.** `html` font size returns to 100%; all type utilities move to rem with unitless line heights. (SCR-012)
+8. **Reading settings exist.** Text size first, line spacing second, a face choice only if testing supports it; applied before first paint; never applied to widgets. (SCR-010, SCR-015)
+9. **One measure token in em.** About 30em (about 66 characters of Instrument Sans), maximum 34em, replacing both `container-measure` (68ch, about 100 characters) and the lesson's `max-w-[800px]` for prose. (SCR-013, SCR-017, SCR-018)
+10. **Single column, moderate leading.** Prose stays in one column at line heights between about 1.25 and 1.7; tight heading line heights stay out of multi-line reading text. (SCR-019, SCR-020, SCR-021)
+11. **Reflow at 320 px.** Only tables, diagrams and widgets may scroll sideways. (SCR-014, SCR-016)
+12. **Rendering-robust type.** No weights below 400; a designed italic or none; italic never for instructions or radio calls; the smoothing override is tested, not assumed; review on a standard-density monitor. (SCR-022, SCR-024, SCR-025, SCR-026)
+13. **Instrument Sans stays for prose; JetBrains Mono for everything measured.** Identifiers, values and isolated letters are mono, including in prose and through token expansion. (SCR-027, SCR-028, SCR-029, SCR-030, SCR-031, SCR-032)
+14. **Fonts load without moving text.** LTF's own `@font-face` rules with `fallback` (app) and `optional` (Fly mode), `font-size-adjust` at 0.51 and 0.55, a fonts-blocked review mode, font bytes counted, CLS and LCP measured in the field. (SCR-033 to SCR-037)
+15. **Four weights by role.** 400, 500, 600 and 700 through utilities only; one rule for measured values; high-level axis properties only. (SCR-038 to SCR-041)
+16. **Numbers are tabular and aligned.** Lining tabular figures for every live or columnar number; numeric columns right-aligned; tables content-width with hairline rows. (SCR-042 to SCR-045, SCR-047)
+17. **Widget labels never shrink below the floor.** A measured-width scale factor in the shared SVG primitives. (SCR-046)
+18. **One scale, one mapping.** Named roles only; no raw `text-*xl font-bold` in pages; each heading level has one role per surface type; eyebrows only for short labels. (SCR-048, SCR-050, SCR-051)
+19. **Day is the reading default; Night compensates.** Larger and brighter small text in Night; every token pairing gated at AA in both themes, including tints. (SCR-053, SCR-054, SCR-056)
+20. **Fly mode theme is the learner's choice on the page.** Remembered separately, switchable in place, measured before any new default. (SCR-055)
+
+### Review checklist
+
+Run these questions against any pull request or page that touches type, layout of reading text, fonts, themes or widgets.
+
+**Reading and lesson structure**
+
+- Is every lesson section that introduces a procedure or a value followed by a quiz or widget block? (SCR-001)
+- Is any paragraph-length text read while a timer runs or in Fly mode? (SCR-002, SCR-021)
+- Do the outline, position indicator and fixed block order survive the change? (SCR-003)
+- Does the page still print cleanly, with navigation and rails hidden? (SCR-005)
+- Was the change judged by task measures rather than opinion? (SCR-004)
+
+**Size, units and reflow**
+
+- For each new or changed text style, what viewing distance is assumed, and what x-height angle does it give on a standard monitor? (SCR-006, SCR-009)
+- Is any reading text below 18 px in lessons, or below 14 px anywhere, or 12 px in mixed case? (SCR-007, SCR-011)
+- Are sizes in rem and line heights unitless, with no pixel root size? (SCR-012)
+- Is the measure in em, and is prose within about 55 to 75 characters? (SCR-013, SCR-017, SCR-018)
+- Does the page reflow at 320 CSS px with sideways scrolling only in tables, diagrams and widgets? (SCR-014)
+- Does fluid sizing apply only to display headings? (SCR-016)
+- Do reading settings apply to prose and leave widgets and readouts unchanged? (SCR-010, SCR-015)
+
+**Measure, spacing and columns**
+
+- Is reading text in a single column? (SCR-019)
+- Is paragraph line height between about 1.25 and 1.7, and are `text-3xl` and larger kept out of multi-line reading text? (SCR-020)
+
+**Faces, rendering and loading**
+
+- Is any text italic, and if so, is a designed italic loaded? Is any instruction or radio call italic? (SCR-024)
+- Is glance text regular to semibold, never light, small or `ink-3`? (SCR-022, SCR-023)
+- Was the change reviewed on a standard-density monitor in both themes, and with the smoothing override in question? (SCR-025, SCR-026)
+- Is every identifier, value, frequency and isolated letter set in mono? (SCR-029, SCR-047)
+- If a face is proposed, was it tested for I, l and 1; O and 0; 5 and S; 8 and B; and was the argument about letters, not word shape or serifs? (SCR-027, SCR-028, SCR-030, SCR-032)
+- Are small labels in a large-x-height face with spacing rather than extra weight? (SCR-031)
+- Does the page remain usable with web fonts blocked, and does a late font change neither size nor line breaks? (SCR-033, SCR-034, SCR-035)
+- Does the change add font files, and are their bytes counted? (SCR-036)
+- Did field CLS or LCP on lesson pages get worse? (SCR-037)
+
+**Weights, numerals and widgets**
+
+- Are weights limited to 400, 500, 600 and 700 and applied through type utilities, with no `font-variation-settings` for registered axes and no weight outside the loaded axis? (SCR-038, SCR-039, SCR-041)
+- Does a new face, if any, have an optical-size axis? (SCR-040)
+- Do live and columnar numbers use tabular lining figures, with no requests for features the faces lack? (SCR-042, SCR-043)
+- Are numeric table columns right-aligned, tables content-width and rows separated by hairlines only? (SCR-044, SCR-045)
+- At a 375 px viewport, does every widget label render at or above the reading floor? (SCR-046)
+
+**Scale and hierarchy**
+
+- Does the change use named type roles only, with no raw heading sizes or weights in page code? (SCR-048)
+- Does each heading level look the same as on other pages of the same kind? (SCR-050)
+- Is the scale still derived from the body size, and was each new step checked at its smallest use? (SCR-049, SCR-052)
+- Is uppercase used only for labels of one to four words? (SCR-051)
+
+**Polarity and contrast**
+
+- Does every text and ground pairing, including tinted grounds, pass 4.5:1 (or 3:1 for large text) in both themes, unrounded? (SCR-056)
+- In Night, is small text larger and brighter, and is `ink-3` kept off anything read? (SCR-054)
+- Does any copy or default present the dark theme as more legible? (SCR-053)
+- In Fly mode, is the theme the learner's own, switchable on the page, and is step text at 7:1? (SCR-055, SCR-057)
+

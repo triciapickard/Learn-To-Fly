@@ -62,7 +62,7 @@ Principles work only if they are specific enough to decide something. "Be clear"
 
 Measured against these definitions, LTF has more of a system than its look suggests, and less than its comments claim. The standards layer exists in fragments. `src/styles/tokens.css` opens with a comment that cites "design system 2026, tokens.json", a README "Color" section and `night-mode.md` for its rules and contrast figures, and none of those files exists in the repository; the dossier also records that neither `CHANGELOG.md` nor the `v1.md` decision log has an entry for this design system, and that decision D-25 describes a different direction (a navy, white and red "Skyhawk livery", a condensed display face) that the code does not implement. The rules that survive are good ones: near-neutral greys, all text in `ink`, `ink-2` or `ink-3`, "one saturated non-status color, the horizon line", status colors always with an icon or word, and fixed instrument and chart colors used only in gauges and charts.
 
-The component layer is real. There are 37 component files in `src/components/`, among them `Button` with five variants and three sizes, `Card` with default, done, current and locked states, `Badge`, `Callout` with nine types, `Tabs`, the form controls on a shared `control-box`, `LessonPath`, `States`, `Toast` and `Stopwatch`. The widget layer has its own primitives in `features/widgets/shared/svg.tsx` (`Gauge`, `Tape`, `Arrow`, `Label`, `Compass`) from which 13 widgets are composed. `/dev/components` renders every component in every state, which is the isolated-testing environment Frost recommends [@frost2016atomic].
+The component layer is real. There are 34 component files (excluding tests) in `src/components/`, among them `Button` with five variants and three sizes, `Card` with default, done, current and locked states, `Badge`, `Callout` with nine types, `Tabs`, the form controls on a shared `control-box`, `LessonPath`, `States`, `Toast` and `Stopwatch`. The widget layer has its own primitives in `features/widgets/shared/svg.tsx` (`Gauge`, `Tape`, `Arrow`, `Label`, `Compass`) from which 13 widgets are composed. `/dev/components` renders every component in every state, which is the isolated-testing environment Frost recommends [@frost2016atomic].
 
 The process layer is the weakest. The repository has strong process for code and content (lint, typecheck, `content:validate`, `/ltf-review`, the Decision Log, the `CHANGELOG.md` rule) and almost none for design: no owner, no contribution criteria, no record of why the tokens are what they are, and evidence of drift that a process would catch. A grep of `src/**/*.tsx` this session found arbitrary text sizes outside the scale (`text-[11px]` 27 times, `text-[12px]` 20, `text-[9px]` 11, `text-[10px]` 9, `text-[13px]` 5), and the hand-inlined card class string `rounded-lg border border-line bg-surface` in 23 files rather than `Card`. The dossier adds the larger drift: two type dialects (`text-2xl font-bold` headings on app pages against the `display-*` and `heading-*` utilities on the landing page and in `PageHeader`) and an unused `body-md`.
 
@@ -169,3 +169,111 @@ The reviewer's complaint about arbitrary chapter colors is a small but exact les
 LTF's recurring surfaces (lesson page, quiz block, challenge brief, Fly mode panel, checklist row, callout, widget frame, lesson path) should each get a pattern entry in the design-system README in a short fixed form: name, the problem stated as learner behavior, the solution, links up and down the scale, consequences, known uses, and an evidence label (SYS-007 to SYS-012). This turns the component list into a language that people and agents can navigate (SYS-010).
 
 Keep composing widgets from the `svg.tsx` primitives (SYS-014) and keep wrapping Radix for interactive primitives (SYS-013). Start an antipattern list with the left-aligned `EmptyState`, inlined cards and the overloaded dashed border (SYS-011, SYS-015). State "go back to a safe place" as an LTF pattern for Fly mode and lessons: one exit, in the same place, that returns to the step the learner left (SYS-009).
+
+## Tokens: design decisions stored as data
+
+### What a token is
+
+The *Design Systems Handbook* calls design tokens the "subatomic" foundation of a system: "name and value pairs stored as data" for colors, spacing, sizing and animation durations, with an example spacing token written as SPACING_MEDIUM: 1rem [@suarez2017design]. The same chapter recommends metrics divisible by or multiples of 4, a modular type scale, and checking color contrast [@suarez2017design]. The point of a token is not the value but the name. A value written into a component (a hex code, a pixel size) is a decision made once in one place; a named token is a decision made once and applied everywhere, so that changing it changes every use and a reviewer can ask whether a given use is the right one.
+
+The Design Tokens Community Group's *Format Module 2025.10* describes tokens as "a methodology for expressing design decisions in a platform-agnostic way" and specifies a JSON format for moving them between tools [@dtcg2025design]. In it a token is an object with a `$value`; the object's key is its name; optional properties are `$type`, `$description`, `$extensions` and `$deprecated`. Objects without `$value` are groups, which can set a default type and inherit from another group with `$extends`. Names are case-sensitive, must not begin with `$`, and must not contain braces or a period. Aliases are written as curly-brace references such as `{group.token}`, and circular references are errors. The simple types are color, dimension, fontFamily, fontWeight, duration, cubicBezier and number; the composite types are strokeStyle, border, transition, shadow and typography, with a gradient type also defined. Tools must not infer a token's type from its value [@dtcg2025design].
+
+The companion *Resolver Module* handles context. It defines sets (collections of tokens merged in order, last declaration wins) and modifiers (sets with a map of named contexts and a default). An input such as `{ "theme": "dark" }` selects a context. Its own theming example has a `theme` modifier with four contexts (light, lightHighContrast, dark, darkHighContrast), defaulting to light and applied after size, typography and animation sets [@dtcg2025design].
+
+::: myth
+**"Design tokens are a W3C standard."** The 2025.10 modules are often described as the W3C token standard. Their status section says they are Final Community Group Reports published by the Design Tokens Community Group and are not W3C Standards nor on the W3C Standards Track; "Candidate Recommendation" in earlier drafts was the group's own label [@dtcg2025design]. The format is stable and useful, but which tools read this exact version has to be checked, not assumed.
+:::
+
+### Roles, not colors
+
+IBM's Carbon documentation makes the case for semantic tokens most concretely. Color is expressed as role-based tokens, never hex values, and a theme is a mapping from roles to values; because roles stay the same across themes and only values change, one component renders in four default themes with no change to its code [@ibm2026carbon]. Carbon's themes are named after their background: White and Gray 10 for light, Gray 90 and Gray 100 for dark. Tokens are named by element group plus role with an optional state suffix, as in `$background-hover`; the groups are Background, Layer, Field, Border, Text, Link, Icon, Support, Focus and Skeleton, plus standalone `$overlay`, `$highlight` and `$interactive`. A token such as `$text-secondary` maps to Gray 70 in one theme and Gray 30 in another. Component tokens (for Button, Tag, Notification) belong to their own component only, and inverse tokens create deliberate high-contrast moments such as a dark header on a light page [@ibm2026carbon].
+
+Carbon is vendor documentation, an authoritative account of one system's practice, not research, and the notes caution that the hex values and token names were reported through a summarizing fetch and should be rechecked before being copied [@ibm2026carbon].
+
+LTF's `tokens.css` already follows the role model. Its color tokens are named by job (`canvas`, `surface`, `surface-raised`, `surface-sunken`, `line`, `line-strong`, `ink`, `ink-2`, `ink-3`, `on-ink`, the accent group, the status groups, the tier group, `focus` and `scrim`), and the Night theme under `[data-theme='dark']` overrides the same properties rather than adding dark variants of components. The theme is a context, in the resolver's sense, selected before first paint by an inline script in `index.html` [@dtcg2025design]. That is the right structure and the most important thing to protect.
+
+::: {.rule #SYS-016 grade="C"}
+**Name every color, space, radius, shadow and type token by its role, and implement each theme only as a different mapping of values to the same roles.** Role-based tokens let one component serve several themes with no code change [@ibm2026carbon], and the token resolver treats theme as a context that selects values [@dtcg2025design]. Specification and vendor practice.
+
+*In LTF:* keep the `[data-theme='dark']` override block as the only place Night is defined. Any `dark:` variant in a component that changes a color is a sign a role is missing; add the role instead.
+:::
+
+::: {.rule #SYS-017 grade="C"}
+**Keep three tiers of tokens: raw palette values, semantic roles that alias them, and component tokens only where one component needs a value no role covers.** Aliases let a semantic name point at a palette value [@dtcg2025design], and component tokens are scoped to their own component [@ibm2026carbon]. Specification and vendor practice.
+
+*In LTF:* the roles alias nothing today; each holds a raw hex. A palette tier (the warm-neutral grey steps and the teal steps) would make the relationships visible, for example that `ink-2` and `ink-3` are two steps of one ramp, and would make a contrast audit a check of a dozen ramp pairs rather than of every role.
+:::
+
+### Close every door to raw values
+
+A token system protects consistency only if values outside it are hard to use. LTF's `tokens.css` resets Tailwind's default palette, radii, shadows and fonts (`color-*`, `radius-*`, `shadow-*` and `font-*` are set to `initial`), so a class such as `bg-blue-500` does not exist. It does not reset text sizes, weights, leading, tracking or breakpoints, so Tailwind's defaults for those remain available beside LTF's own type utilities, and arbitrary bracket values remain available for everything. The drift follows the open doors. The dossier counts raw Tailwind size classes (`text-sm` 204 times, `text-2xl` 36, `text-xs` 29, `text-lg` 25 and others) and `font-bold` in 34 files against token utilities in 29; this session's grep adds bracket sizes below the scale, `text-[11px]`, `text-[12px]`, `text-[10px]` and `text-[9px]`, used 67 times between them, plus `text-[13px]` five times.
+
+Suarez and colleagues' point applies directly: standards are what make a decision critiquable [@suarez2017design], and a `text-[11px]` is a decision nobody can review against anything. Nielsen's edited volume on consistency makes the matching organizational point: tools that generate or check interfaces belong in the process because people forget rules [@nielsen1989coordinating].
+
+::: {.rule #SYS-018 grade="C"}
+**Make the token scale the only scale: reset or restrict Tailwind's default type sizes, weights and tracking, and fail lint on arbitrary bracket values outside an allowlist.** Standards make decisions critiquable [@suarez2017design], and generation and checking tools enforce what people forget [@nielsen1989coordinating]. Organizational practice.
+
+*In LTF:* add a type tier to `tokens.css` (or map Tailwind's `text-*` names onto the `display-*`, `heading-*`, `body-*`, `label`, `eyebrow` and `readout-*` sizes), then add an ESLint or Stylelint rule that rejects `text-[Npx]`, `p-[Npx]` and similar outside widget drawing code. The 9 to 12 px bracket sizes are mostly in widget labels; give widget labels their own tokens rather than allowing brackets everywhere.
+:::
+
+::: {.rule #SYS-019 grade="C"}
+**Keep spacing on the existing 4 px grid and add no spacing value that is not a multiple of 4.** Multiples of 4 are the handbook's recommended default for metrics [@suarez2017design], and a small set of sizes built from one unit stops layouts drifting [@vignelli1970graphics]. Practitioner default and historical case.
+
+*In LTF:* `tokens.css` already defines `space-1` to `space-24` on 4 px and aligns them with Tailwind's spacing scale. Bracket values such as `p-[3px]` (the `ThemeToggle` track) are the exceptions to review; the 3 px horizon-line underline is a deliberate stroke weight and should become a named token (`horizon-stroke`) rather than a repeated literal.
+:::
+
+### Types, descriptions and deprecation
+
+The format module's optional properties are the ones a small team most needs. `$type` stops a tool (or a person) guessing what a value is; `$description` carries the usage note that LTF's comments say lives in a missing `tokens.json`; `$deprecated`, set to true or to an explanatory string, marks a retired token and the group-level flag extends to its children [@dtcg2025design]. Deprecation by marking rather than deletion matches the repository's own rule that slugs and IDs never change once published.
+
+The notes are explicit about the limit: the specification is recent (October 2025), tool support for this exact version was not verified, and the specification cites no evaluation of whether tokens improve consistency or speed [@dtcg2025design]. For one React app, the gain from the format is naming discipline, not interchange.
+
+::: {.rule #SYS-020 grade="C"}
+**Keep LTF tokens structurally compatible with the 2025.10 token format (name, type, value, description, aliases), but keep `tokens.css` as the working source until a second consumer needs a JSON file.** The format separates names, types and values and expresses roles as aliases [@dtcg2025design]; its tool support is unverified and LTF has one consumer. Specification; the adoption decision is a cost judgment.
+
+*In LTF:* the minimum is a usage line per token in the README (what it is for, which contrast pair it was checked against). A generated `tokens.json` becomes worthwhile only if a second consumer appears, such as a Figma library or the share-image renderer.
+:::
+
+::: {.rule #SYS-021 grade="C"}
+**Retire a token by marking it deprecated and naming its replacement for at least one release before removing it.** The format's `$deprecated` property exists for this, with an explanatory string [@dtcg2025design]; gradual deprecation is a governance rule of design systems [@frost2016atomic]. Specification and practitioner practice.
+
+*In LTF:* `body-md` is defined and unused; either use it for lesson body text (which today inherits the same 16/26 from the base style) or mark it deprecated in the README and remove it in the next design-system release.
+:::
+
+### Layers and states
+
+Carbon states its layering rules outright. On light themes successive layers alternate between White and Gray 10; on dark themes each layer steps one shade lighter (on Gray 100 the first layer is Gray 90, the second Gray 80, the third Gray 70), and dark themes should not use components darker than the background outside high-contrast mode [@ibm2026carbon]. Interaction states follow fixed offsets: hover is a half step lighter or darker, active two full steps, selected one full step; focus is usually a 2 px border in the `$focus` token; disabled styling is exempt from contrast requirements. The page states contrast minimums of 4.5:1 for small text below 24 px, 3:1 for large text, 3:1 for graphical elements including data visualizations, and 3:1 for focus states [@ibm2026carbon]. The notes add the necessary caution: these figures are the vendor page's statement, the WCAG standard itself is the authority, and a design system's own claim of compliance should be verified rather than inherited [@ibm2026carbon].
+
+LTF's Night theme is close to Carbon's dark logic: `canvas` 141412, `surface` 1f1e1c, `surface-raised` 2b2a28, each a step lighter, with `surface-sunken` darker for inset wells and elevation expressed as a 1 px line ring (`shadow-1` is `0 0 0 1px` in the `line` color). The Day theme is not layered in the same way: `surface` and `surface-raised` are both ffffff, so a raised element (a toast, a popover) on a card is distinguished only by its shadow.
+
+::: {.rule #SYS-022 grade="C"}
+**Define the surface layers as an explicit ordered list in both themes, with a visible step between each layer and the one beneath it.** Carbon defines layer order and step size per theme family so hierarchy reads without borders [@ibm2026carbon]. Vendor practice.
+
+*In LTF:* write the order in the README: `surface-sunken` below `canvas` below `surface` below `surface-raised`. In Day, either give `surface-raised` its own value or document that raised elements rely on `shadow-2` and must never sit on another white surface without it.
+:::
+
+::: {.rule #SYS-023 grade="C"}
+**Write the interaction state rules once (hover, pressed, selected, focus, disabled) as offsets or tokens, and apply them to every control.** Carbon specifies state offsets and a single focus token for all components [@ibm2026carbon]. Vendor practice.
+
+*In LTF:* the rules exist in practice (`hover:bg-ink-2` on primary, `active:shadow-press`, a global `focus-visible` outline in `focus`, `control-box` focus with a canvas gap, disabled `opacity-45`) but are written per component. List them in the README so a new control (for example a future segmented control in Fly mode) inherits them.
+:::
+
+::: {.rule #SYS-024 grade="C"}
+**Check every text, focus and graphical token pair against WCAG directly and record the measured ratio beside the token, rather than relying on any design system's stated figures.** A design system's accessibility claims should be verified, not inherited, and its stated minimums defer to WCAG [@ibm2026carbon]. Standards practice.
+
+*In LTF:* the `tokens.css` comment says contrast figures are "in each token's usage note in tokens.json", a file that does not exist, and the dossier lists computed contrast ratios as unchecked. Measure `ink-3` on `canvas` and `surface`, `accent` and `accent-line` as focus and link colors on every ground, and the fixed `arc-*` colors on `instrument`, and write the results into the README.
+:::
+
+::: {.rule #SYS-025 grade="C"}
+**Store motion as typed duration and easing tokens, so that reduced motion and Fly mode can swap one set of values.** The format defines duration and cubicBezier types and lets a context select values [@dtcg2025design]. Specification; the application to reduced motion is an inference.
+
+*In LTF:* `ease-out`, `ease-in` and the 200 ms `animate-*` tokens already exist, but `duration-150` and `duration-[400ms]` are written as literals in 20 places. Name them (`duration-quick`, `duration-progress`) so the global reduced-motion rule and any Fly mode setting can change them in one place.
+:::
+
+### What this means for Learn to Fly
+
+Keep the role-named color tokens, the Night override block and the reset of Tailwind's palette, radii, shadows and fonts (SYS-016). These are the strongest parts of LTF's system and match the best documented practice.
+
+Change the open doors. Reset or remap Tailwind's type defaults and lint against bracket values (SYS-018), name the repeated literals (the 3 px horizon stroke, the 150 ms and 400 ms durations) as tokens (SYS-019, SYS-025), add a palette tier under the roles (SYS-017), define the layer order in both themes and fix or document Day's identical `surface` and `surface-raised` (SYS-022), write the state rules once (SYS-023), and measure and record every contrast pair (SYS-024). Resolve `body-md` (SYS-021).
+
+Do not adopt token tooling or a JSON pipeline yet (SYS-020). The fixed `instrument`, `arc-*`, `display-*` and `chart-*` tokens are a correct and distinctive exception: they are not themed because the things they depict do not change with the room's lighting. Record that rule in the README so nobody "fixes" it.
