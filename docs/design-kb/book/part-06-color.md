@@ -746,3 +746,81 @@ The weak point is between marks rather than against the ground: `arc-green` and 
 **Change.** Stop using `accent-line` for meaningful marks on `surface-sunken` in Day (COL-054). Remove the reference to a nonexistent `tokens.json` contrast table from the `tokens.css` comment and replace it with generated numbers (COL-058). Keep `text-ink-3` off tints and raised surfaces unless the pair is checked (COL-053, COL-059).
 
 **Build.** The contrast gate in the token script, run in CI for Day and Night: every text token on every ground and tint it is used on, every non-text indicator on its neighbor, with WCAG thresholds as failures and APCA as information only (COL-057, COL-058). Add the widget marks to it, pairing each fixed mark color with the fixed ground it is drawn on.
+
+## Polarity, Dark Themes and Fly Mode
+
+### Polarity is a luminance question
+
+The question "is dark mode harder to read" has a better experimental record than most theme debates, and the record turns it into a different question: how bright is the display? Buchner and Baumgartner ran a series of proofreading experiments that crossed text-background polarity with ambient illumination (a dark room against typical office light) and with chromaticity (black and white against blue and yellow) [@buchner2007text]. Dark text on a light background, positive polarity, gave better proofreading in every comparison. A final experiment set red text on a green background to test whether a hue difference could stand in for a luminance difference; it could not. The study also measured breathing rate, heart rate, heart rate variability and skin conductance, and asked about mood, fatigue, eyestrain, headache and muscle strain. None varied with the conditions, which the authors read as showing that participants worked equally hard throughout, so the advantage was not an effort trade-off [@buchner2007text]. Sample and effect sizes were not available for this book, so the size of the advantage cannot be stated.
+
+The obvious confound is that a positive-polarity screen is mostly bright background and therefore emits more light. Buchner, Mayr and Brandt manipulated polarity and overall display luminance independently and found no polarity effect at matched luminance, only a main effect of luminance, with brighter displays read better [@buchner2009advantage]. Their conclusion is that polarity per se does not affect readability; overall luminance does. That is a strong claim from one experiment, and it is the claim on which a dark theme's design depends.
+
+Two follow-ups sharpen it. Piepenbrock, Mayr, Mund and Buchner asked whether older adults, whose aging lenses scatter more light, might reverse the effect; the competing prediction was that age-related loss of retinal illuminance would make bright displays help them more. Positive polarity won in both age groups, and the authors recommend it independent of age [@piepenbrock2013positive]. A 2014 follow-up by the same group, reported alongside that paper, crossed polarity with character sizes of 8, 10, 12 and 14 points (0.22 to 0.34 degrees of vertical visual angle) and found the advantage grew linearly as characters got smaller, advising against negative polarity especially with small fonts [@piepenbrock2013positive]. Dobres, Chahine and Reimer then used a lexical decision task with a time threshold, an approximation of a glance, crossing two type sizes, two polarities and two ambient illuminations [@dobres2017effects]. Thresholds were worst for light-on-dark text in near-dark surroundings; positive polarity in the dark, and every condition under bright light, did significantly better. Their proposed mechanism, pupil contraction under brighter light reducing optical aberrations, fits the luminance account but was not measured directly.
+
+The tension with Buchner and Baumgartner, who found no interaction with room light, is resolved by task: extended proofreading in one, glance reading in the other. The limits matter as much as the findings. Almost all of this comes from one group; the tasks are proofreading, acuity and lexical decision; and the luminance manipulation is stylized. Legge and colleagues found normal readers at comfortable sizes very tolerant of contrast loss, with little difference between polarities [@legge1987psychophysics]. So the polarity effect is real and modest, largest for small text, dim displays and glances.
+
+::: {.rule #COL-060 grade="B"}
+**Default dense reading, quizzes and checklists to positive polarity (dark text on a light ground), with a well-built dark theme as a choice.** Positive polarity gave better proofreading in dark and lit rooms and in two chromaticities [@buchner2007text], for younger and older adults [@piepenbrock2013positive], and the advantage grows as text gets smaller. Grade B: consistent results, mostly from one group, on proofreading-type tasks.
+
+*In LTF:* `System` resolves to the operating-system setting on ordinary pages, and Day is the design reference for `LessonPage`, `QuizBlock` and `Prose`. Keep Day the theme in which every new component is first designed and reviewed.
+:::
+
+::: {.rule #COL-061 grade="B"}
+**In a dark theme, make small text larger, heavier or brighter than its light-theme equivalent; never set thin, small gray text on near-black.** The positive-polarity advantage is a luminance effect [@buchner2009advantage] that grows as characters shrink [@piepenbrock2013positive], so the dark theme's penalty falls on exactly the small, dim meta text most designs place there. Grade B.
+
+*In LTF:* Night meta text is `text-sm` (14 px) in `ink-2` (#b2b1af) or `ink-3` (#939290). In Night, use `ink-2` rather than `ink-3` for any meta text that carries information (lesson minutes, challenge counts, timestamps), and consider stepping `eyebrow` (12 px) labels to weight 600 in `ink-2` only.
+:::
+
+::: myth
+**"Dark mode is easier on the eyes, so it is better for reading, especially for older users and in dark rooms."** In controlled proofreading, light-on-dark text was read less accurately in both dark rooms and office light, with no difference in measured strain [@buchner2007text]; older adults showed the same positive-polarity advantage as younger ones [@piepenbrock2013positive]; and at a glance, light-on-dark in a near-dark room was the slowest condition of all [@dobres2017effects]. Dark themes are a legitimate preference and can reduce glare, but readability is not their advantage.
+:::
+
+### Building the dark theme
+
+A dark theme is not an inverted light theme. Carbon's two dark themes, Gray 90 (#262626) and Gray 100 (#161616), step each layer one shade lighter (on Gray 100 the first layer is Gray 90, the next Gray 80), and the guidance says dark themes should not use components darker than the background outside high-contrast mode [@ibm2026carbon]. Elevation, which a light theme shows with shadow, becomes lightness. Focus on dark themes is white in Carbon rather than the light theme's blue.
+
+LTF's Night theme follows this pattern: `canvas` #141412, `surface` #1f1e1c, `surface-raised` #2b2a28, with `shadow-1` replaced by a 1 px `line` ring. `surface-sunken` (#0f0e0d) is darker than `canvas`, which Carbon's guidance would avoid for components; it is used for wells such as code chips and the `ThemeToggle` track, where "sunken" is the intended reading, so it is defensible, but it should not hold interactive cards.
+
+::: {.rule #COL-062 grade="C"}
+**Express elevation in a dark theme by stepping surfaces lighter, one step per layer, and keep raised surfaces distinguishable from the ground without relying on shadow.** Shadows are nearly invisible on dark grounds, and Carbon's layering model makes each layer one shade lighter [@ibm2026carbon]. Grade C: design-system practice.
+
+*In LTF:* the Night ladder steps 0.19, 0.24 and 0.29 in Oklch lightness (`canvas`, `surface`, `surface-raised`), about 0.05 per step. Toasts, popovers and the `Drawer` use `surface-raised`; check that a popover over a `surface` card is still distinguishable, since one 0.05 step plus the line ring is the only cue.
+:::
+
+::: {.rule #COL-063 grade="C"}
+**Keep saturated fills small in a dark theme and prefer thin, mid-tone strokes for highlights.** On a dark ground, large bright fills create the most figure-ground noise [@tufte1990envisioning], and saturated bright fields raise arousal [@wilms2018color]. Grade C.
+
+*In LTF:* in Night the tints (`accent-tint` #023538, `warn-tint` #442321) are dark and low in chroma, and the strong colors appear as text and lines. Keep it so; do not introduce bright filled badges in Night.
+:::
+
+### Fly mode: glance reading in a dim room
+
+Fly mode is the one place in LTF where the reading situation is known in advance: a learner at a simulator, often in a dim room, glancing at a second screen for a step, a time or an alert. `FlyModeLayout` sets `data-theme` to dark unless the reader explicitly chose Day, so a learner on `System` gets Night regardless of the operating-system setting. That puts the default into the condition Dobres and colleagues found slowest for glance reading: light text on a dark display in near-dark surroundings [@dobres2017effects]. The layout compensates with size: a `text-xl` base, `text-2xl` goal, `text-3xl` step headings and `text-5xl` mono stopwatch digits, which fits the finding that the dark penalty is largest for small characters [@piepenbrock2013positive].
+
+The dark choice has a plausible reason the studies did not test: a bright second screen beside a dark simulator view may dazzle or shift adaptation. That is a comfort argument, not a legibility one, and it is exactly the trade-off a measurement should settle.
+
+::: {.rule #COL-064 grade="B"}
+**In Fly mode, use large type, the brightest ink level for key values and steps, and a restrained dark surface, and let the learner switch to Day inside Fly mode.** Light-on-dark text is slowest at a glance in a dark room [@dobres2017effects], and the penalty shrinks as characters grow [@piepenbrock2013positive]; the best polarity depends on room light, which the app cannot sense. Grade B.
+
+*In LTF:* `FlyPanel large` already uses large sizes. Add a compact Day/Night control to `FlyModePage` (the header-less layout currently offers none), keep step text in `ink`, and keep `ink-3` out of Fly mode entirely (see COL-055).
+:::
+
+::: {.rule #COL-065 grade="B"}
+**Decide Fly mode's default theme by measuring glance reading time and step accuracy in both polarities, with display luminance recorded, rather than by assuming dark is better in a dark room.** The studies separate polarity from luminance only when luminance is controlled [@buchner2009advantage], and the glance result is a single lab's [@dobres2017effects]. Grade B.
+
+*In LTF:* a small study with a handful of learners at their own setups (time to read the next step, errors on a checklist, a comfort rating) is enough to choose between the current dark default and following `System`; record it in the decision log.
+:::
+
+::: {.rule #COL-066 grade="C"}
+**Do not justify a dark theme by age or by a dark room alone.** Older adults showed the positive-polarity advantage [@piepenbrock2013positive] and darkness did not remove it in proofreading [@buchner2007text]. Grade C as a review rule built on those findings.
+
+*In LTF:* the Night theme is offered as a preference ("a dimmer page"), not recommended as easier to read.
+:::
+
+### What this means for Learn to Fly
+
+**Keep.** Day as the design reference; a Night theme built by lighter layers rather than shadows; dark, low-chroma tints in Night; Fly mode's large type.
+
+**Change.** In Night, move information-bearing meta text from `ink-3` to `ink-2` (COL-061). Add a theme control inside Fly mode (COL-064). Stop describing Night as easier on the eyes anywhere in copy (COL-066).
+
+**Build.** A glance-reading check for Fly mode in both themes, with results in the decision log (COL-065), and a Night review pass on `/dev/components` that looks specifically at 12 and 14 px text and at popovers over cards (COL-061, COL-062).

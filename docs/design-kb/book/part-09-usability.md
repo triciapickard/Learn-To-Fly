@@ -1024,3 +1024,95 @@ LTF has no measurement program yet, which means it can start with the right habi
 - If SUS is adopted for the beta, administer it as USE-077 describes, track it per task over releases (USE-078) and pair it with one open question.
 - Do not run A/B tests of details at beta traffic (USE-079); report comparisons with effect sizes and intervals (USE-080).
 - The landing page's live stats and the dashboard's "Stats" tiles are product metrics, not usability measures; completion counts say how many finished, not how many struggled.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+1. **Usability goals have a fixed form.** Every goal names users, goal and context, and reports effectiveness, efficiency and satisfaction separately, with a learning measure beside them. LTF keeps three context-of-use records (lesson at a desk, challenge setup, in-flight lookup) and judges Fly mode against its own (USE-001, USE-002, USE-003, USE-005, USE-007).
+2. **Failures belong to the design.** Test logs and triage record use errors against design conditions, and classify them as slips, lapses or mistakes before a fix is chosen (USE-004, USE-037).
+3. **Review vocabulary.** Findings are filed under Nielsen's ten heuristics plus ISO 9241-110's learnability and engagement, extended by LTF domain items for units, altitude references, control names, sim version and verification status. Consistency and recognition are checked first (USE-011, USE-012, USE-013, USE-014).
+4. **Rules are specific and short.** Interface rules are written in enforceable form, grouped by function, owned, enforced by lint and token checks where possible, and revisited when the platform changes (USE-009, USE-010, USE-036).
+5. **Fly mode is a glance interface.** The current step, stopwatch state and finish action are findable at a glance; site-wide notices such as `BetaBanner` leave `FlyModeLayout`; no confirmations or destructive controls sit on `FlyModePage`; wrong ticks are fixed by tapping again (USE-015, USE-043, USE-053).
+6. **Feedback and closure.** Responses scale with the action; procedures close each chunk; rows state the target state; save status is visible; response times are budgeted in three categories without decorating short waits (USE-016, USE-017, USE-018, USE-019, USE-020, USE-021, USE-022).
+7. **One name per control, and what the learner needs stays on screen.** The simulator's label is the name of record; steps never depend on recall from an earlier lesson; new items per step are few; widget mapping follows the sim (USE-023, USE-024, USE-025, USE-028, USE-029).
+8. **Consistency repairs.** Headings go through the `display-*` and `heading-*` utilities, cards through `Card`, the `QuizBlock` left border is reconciled with the no-stripe rule, and state controls stop looking like primary buttons. Deliberate exceptions, such as instrument widgets, are recorded (USE-030, USE-031, USE-032, USE-033, USE-034, USE-035).
+9. **Error handling.** Changed steps are marked; modes are visible; disabled controls say why; every learning action is reversible (including un-marking a lesson complete); resets name their scope; irreversible actions say so and default to cancel; error messages say what failed, what to do and where to go next (USE-038, USE-039, USE-040, USE-041, USE-042, USE-044, USE-045).
+10. **Control and minimalism.** Leaving and returning is normal and loses nothing; exits stay in one place; `FlyPanel` gets `ChecklistRunner`'s keyboard pattern; sequence across lessons stays open; a shared text-size control serves in-flight views; the stack above the first block of `LessonPage` shows only what is relevant to this learner; needed controls are never hidden; verification markers stay visible (USE-046 to USE-052, USE-054).
+11. **Inspection protocol.** At least three independent reviewers (five for Fly mode and the first lesson), working alone from written scenarios and problem criteria, with a mixed panel; severity is rated once on the merged list by task impact; single-reviewer findings are kept; inspection findings are hypotheses for testing (USE-055 to USE-062).
+12. **Testing protocol.** Repeated rounds of about five learners per group with fixes between, in the learner's own setup for challenge and Fly mode flows; tasks, criteria and a stopping rule are written first; deviations and behavioral impact are logged; two people analyze each session; results are reported as samples; open tasks get more learners; every session is read for blockers (USE-063 to USE-072).
+13. **Measurement.** Task performance decides; ratings are reported separately; widget changes are chosen by reading tasks; variants are compared at equal finish; interaction problems are fixed before polish; SUS, if used, is unmodified, task-bound, reported as a percentile with an interval and tracked across releases; no underpowered A/B tests; comparisons are effect sizes with intervals (USE-073 to USE-080).
+
+### Review checklist
+
+Run these questions against a pull request that changes a learner-facing page, component or flow, or against a page in an audit. Each question names the rules it checks.
+
+#### Goals and context
+
+- Does the change state its users, goal and context, and which of effectiveness, efficiency and satisfaction it improves? (USE-001, USE-002)
+- If the page is used during flight, was it judged against the in-flight context record? (USE-003)
+- Is there a testable behavioral goal for the flow, and a learning measure beside the usability one? (USE-005, USE-007)
+- Is any claim that the change "works" based on a test rather than a demo? (USE-006, USE-008)
+
+#### Visibility and feedback
+
+- Can a learner glancing from the sim find the next action and the current state on this screen? (USE-015)
+- Does every action give an in-place response scaled to its weight, without toasts on tick-level actions? (USE-016)
+- Does each lesson, challenge and procedure chunk end with explicit closure? (USE-017)
+- Do step and checklist rows state the target state in the sim's words? (USE-018)
+- Do loading states follow the three response-time categories, and are short waits calm? (USE-019, USE-020)
+- Can the learner see whether what they entered is saved, and where? (USE-021)
+- Does each challenge step say what success looks like in observable cues? (USE-022)
+
+#### Language, recognition and memory
+
+- Does every simulator control, menu and setting use the sim's exact label, the same everywhere? (USE-023)
+- Is everything the learner must act on visible at the moment of action, with no recall from earlier lessons? (USE-024)
+- Does any step introduce many new items, or ask the learner to hold a value while looking at the sim? (USE-025)
+- Is every fork a choice whose labels say where each option leads? (USE-026)
+- Is interface guidance placed beside the control it explains? (USE-027)
+- Do widget controls move and sit as the sim's controls do, and do procedure lists follow panel order with critical items first? (USE-028, USE-029)
+- Are codes such as "C4.3" paired with titles wherever the learner chooses? (USE-023, USE-026)
+
+#### Consistency
+
+- Are headings set with the type utilities and cards with `Card`, not inlined classes? (USE-030, USE-036)
+- Has the change passed the physical, communicational and conceptual passes? (USE-031)
+- Do state controls look different from action buttons? (USE-032)
+- Is any departure from the design system a recorded, task-driven exception? (USE-033)
+- Are views grouped by the learner's task rather than by storage or route structure? (USE-034)
+- Are navigation, forms, quizzes and lists conventional? (USE-035)
+
+#### Errors and recovery
+
+- If a procedure, checklist or rubric changed, is the changed step marked? (USE-038)
+- Is the current mode visible, and do mode-dependent controls say which mode they act in? (USE-039)
+- Does every disabled control say what will enable it? (USE-040)
+- Can the learner reverse the action at the effort it took, and does every reset name its scope? (USE-041, USE-042)
+- Is Fly mode free of confirmations and destructive controls? (USE-043)
+- Are irreversible actions announced beforehand, with focus on the safe choice? (USE-044)
+- Does every error message say what failed, what to do now, and where to go next? (USE-045)
+
+#### Control and minimalism
+
+- Can the learner leave and return without losing state, and is the exit in its usual place? (USE-046, USE-047)
+- Are accelerators offered for repeated actions and stated at the point of use? (USE-048)
+- Can returning learners skip ahead without beginners losing guidance? (USE-049)
+- Are theme and text-size settings remembered and applied before paint? (USE-050)
+- Is every element above the first lesson block relevant to this learner on this visit? (USE-051)
+- Is any control needed for the task hidden to make the screen look cleaner? (USE-052)
+- Are site-wide notices kept out of in-flight views? (USE-053)
+- Is verification status visible wherever an aviation fact is shown? (USE-054)
+
+#### Evaluation and measurement
+
+- Was the change inspected by at least three independent reviewers (five for Fly mode and the first lesson), working alone? (USE-055, USE-056)
+- Were scenarios and problem criteria written first, and was the panel mixed? (USE-057, USE-058)
+- Was severity rated once, on the merged list, by task impact, with single-reviewer findings kept? (USE-059, USE-060, USE-061)
+- Were inspection findings for time-pressured views confirmed by testing? (USE-062)
+- If tested: in context, in rounds with fixes between, with groups recruited separately and a stated stopping rule? (USE-063, USE-064, USE-066, USE-067, USE-069)
+- Is the report framed as a sample, with every session read for blockers and analyzed by two people? (USE-065, USE-068, USE-071)
+- Were deviations and behavioral impact logged against pre-written tasks? (USE-070, USE-072)
+- Does the decision rest on task performance, with ratings reported separately and variants compared at equal finish? (USE-073, USE-074, USE-075)
+- Were interaction problems fixed before visual polish? (USE-076)
+- If SUS or an A/B test was used: standard items, percentile with interval, adequate power, effect size against a preset threshold? (USE-077, USE-078, USE-079, USE-080)
