@@ -187,3 +187,33 @@ This is practitioner opinion with company case examples (Salesforce, Shopify Pol
 5. Plan deprecation: when a widget is redesigned, version it and keep the old one working long enough to migrate lessons, rather than duplicating under a new name.
 
 Confirmed this session: web search (Product Hunt listing and InVision announcement results) for authors, editor, publisher and launch date; text read from the university-hosted PDF at https://streaming.missioncollege.edu/mgarrett/media/gds72/gds72_resources/InVision_DesignSystemsHandbook.pdf (chapters 1 to 4 skimmed for definitions, tokens and versioning). No ISBN or DOI exists that I could confirm.
+
+## dtcg2025design
+
+Design Tokens Community Group (2025). *Design Tokens Format Module 2025.10* and *Design Tokens Resolver Module 2025.10*. Final Community Group Reports, 28 October 2025. https://www.designtokens.org/tr/2025.10/format/
+
+### Core claims
+
+The Format Module is a specification for a file format that lets design tokens move between tools. It describes design tokens as "a methodology for expressing design decisions in a platform-agnostic way" and aims to make tools interoperate (spec text, Introduction). Its companion, the Resolver Module, extends the format to handle several contexts at once, with light and dark themes as the headline example. Both are described as stable, but the status section is explicit that they were published by the Design Tokens Community Group and are not W3C Standards nor on the W3C Standards Track.
+
+### Specifics
+
+Format Module (https://www.designtokens.org/tr/2025.10/format/). Editors listed are Louis Chenais, Kathleen McMahon, Drew Powers, Matthew Strom-Awn and Donna Vitan. A token is a JSON object with a `$value` property; the object's key is the token name. Optional properties are `$type`, `$description`, `$extensions` and `$deprecated`. Objects without `$value` are groups. A group can inherit from another with `$extends` (a deep merge in which local definitions override inherited ones, with no circular chains), can set a default `$type`, and can carry a `$root` token. A token's type comes from its own `$type`, a parent group, or the token it references, and tools must not infer type from the value.
+
+Names must not begin with `$` and must not contain `{`, `}` or a period; names are case-sensitive. Aliases use curly-brace references such as `{group.token}`, and circular references are errors. Simple types are color, dimension, fontFamily, fontWeight, duration, cubicBezier and number; composite types are strokeStyle, border, transition, shadow and typography (a gradient type also appears). Files are JSON, with the preferred media type `application/design-tokens+json` and recommended extensions `.tokens` and `.tokens.json`. Deprecation is expressed with `$deprecated` set to true, false, or an explanatory string, and a group-level flag extends to child tokens unless overridden. Color detail is delegated to a separate Color module (examples use the sRGB color space).
+
+Resolver Module (https://www.designtokens.org/tr/2025.10/resolver/). It defines sets (collections of tokens from inline definitions or referenced JSON files, merged in array order, last declaration wins) and modifiers (sets with a `contexts` map and a `default`). A `resolutionOrder` array lists what to apply, later items overriding earlier ones. An input object such as `{ "theme": "dark" }` selects a context. In the spec's theming example a `theme` modifier has contexts light, lightHighContrast, dark and darkHighContrast, defaulting to light, applied after size, typography and animation sets. Resolution runs in four stages: input validation, ordering, alias resolution, final resolution. Resolver documents use `.resolver.json`, and `version` must be `2025.10`.
+
+### Replication and criticism
+
+This is a standard-like technical specification, not research, and it is young: the stable 2025.10 version follows several years of drafts from a community group. The status wording matters: "Candidate Recommendation" here is the group's own label, not a W3C process stage. I did not verify tool support (which of Style Dictionary, Figma, Tokens Studio and others read this version), so any plan to rely on the format should check the current tool matrix. The earlier-draft format used different structure for theming, which is why the resolver module exists; I did not review that history. No independent evaluation of whether tokens improve consistency or speed is cited in the spec.
+
+### Implications for LTF
+
+1. Keep LTF tokens in a form that could be exported to this format: names, types and values separate, aliases for semantic names (for example a semantic "surface" token aliasing a palette token), and no reliance on tool-specific syntax. The repository's `src/styles/tokens.css` can remain the working source while the structure is kept compatible.
+2. Model light and dark themes as a context, not as duplicated component styles. The resolver's modifier idea (one theme input, default light) matches LTF's requirement that both themes work, and the high-contrast contexts suggest a future path for fly mode in a dim room.
+3. Use `$deprecated`-style marking. When a token is retired, mark it and name the replacement rather than deleting it, which matches the project rule that slugs and IDs never change once published.
+4. Use type-aware tokens for instrument widgets: dimension, duration and cubicBezier for animation timing, so a reduced-motion setting can swap one set of values.
+5. Do not adopt the format before tooling is checked. LTF is a single React app with Tailwind, so the immediate gain is naming discipline, not interchange.
+
+Confirmed this session: both specification pages fetched and read at https://www.designtokens.org/tr/2025.10/format/ (first 100,000 of 114,563 characters, which covered the abstract, status, concepts, naming rules, types) and https://www.designtokens.org/tr/2025.10/resolver/. Facts above come from those fetches (summarized by the fetch tool; quotes are short and from the spec).

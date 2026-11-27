@@ -205,5 +205,31 @@
     "verified_evidence": "Web search 'Design Systems Handbook DesignBetter InVision Marco Suarez Jina Anne Katie Sylor-Miller Diana Mounter Roy Stanfield' returned the InVision announcement and Product Hunt listing (launch 29 November 2017) naming the five authors and editor Nathan Curtis; PDF text read via streaming.missioncollege.edu copy",
     "kind": "practitioner handbook (free online book)",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "dtcg2025design",
+    "type": "report",
+    "authors": [
+      {
+        "literal": "Design Tokens Community Group"
+      }
+    ],
+    "year": 2025,
+    "title": "Design Tokens Format Module 2025.10 (with Design Tokens Resolver Module 2025.10)",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Design Tokens Community Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.designtokens.org/tr/2025.10/format/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://www.designtokens.org/tr/2025.10/format/ and /resolver/: both titled 2025.10, Final Community Group Report dated 28 October 2025, 'not a W3C Standard nor on the W3C Standards Track'",
+    "kind": "technical specification (community group report)",
+    "lane": "23-design-systems"
   }
 ]

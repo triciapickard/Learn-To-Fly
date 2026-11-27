@@ -54,3 +54,31 @@ LTF has few forms: sign-up, sign-in, settings, and short answer or numeric entry
 
 Confirmed this session: full text read from https://research.google.com/pubs/archive/42513.pdf; Crossref record 10.1145/2556288.2557265; abstract via web search of the Google research publication page.
 
+## bargasavila2010simple
+
+Bargas-Avila, J. A., Brenzikofer, O., Roth, S. P., Tuch, A. N., Orsini, S., & Opwis, K. (2010). Simple but crucial user interfaces in the World Wide Web: Introducing 20 guidelines for usable web form design. In R. Mátrai (Ed.), User Interfaces (InTech).
+
+### Core claims
+
+The chapter is a literature review turned into a rule set. The authors argue that web forms are the main contact point between users and site owners, that people never visit a site in order to fill in a form, and that an unusable form is therefore a hurdle where a transaction is lost. They cite a practitioner claim (attributed to Wroblewski, 2008) that a successful redesign of a poor form may raise completion by 10 to 40 percent, and an eBay account of a registration-form redesign. From the empirical and practitioner literature they derive 20 guidelines under five headings: content, layout, input types, error handling and submission. The chapter is a synthesis, not a single experiment, and it mixes controlled studies (including the authors' own) with expert best practice. It is the source list that the CHI 2014 test in this lane (seckler2014designing) later evaluated as a bundle.
+
+### Specifics
+
+The chapter summarizes the evidence behind each group. Content: ask only what is necessary; let users tell required from optional at all times. A study by Pauwels and colleagues, as reported here, found that color-highlighting required fields led to faster completion, fewer errors and higher satisfaction than an asterisk alone. Tullis and Pons found people were fastest when required and optional fields were separated.
+
+Layout: Penzo's eye-tracking comparison (reported by the chapter, and read directly elsewhere in this lane) found left-aligned labels took nearly twice as long as right-aligned ones, and top-aligned labels were fastest, needing one fixation for label plus field. Wroblewski's reading is that left-aligned labels suit unfamiliar data where you want people to slow down. One column, one question per row; match field length to expected answer length. Christian and colleagues found that a month field half the size of the year field produced more answers in the expected format, and Couper and colleagues found more incorrect answers when field size did not fit the expected input.
+
+Input types: radio buttons for two to four options and a drop-down beyond four, on the advice of Miller and Jarrett, but the empirical comparisons are mixed. The chapter reports that Healey found radio buttons faster per question but no difference over the whole questionnaire, Hogg and Masztal found no difference, and Heerwegh and Loosveldt found drop-downs slower in one study that a second study did not replicate. Checkboxes beat list boxes for multiple selection (the authors' own 2009 study). For dates, the authors' comparison of six designs found a drop-down best when format errors must be avoided and a single text field with MM and YYYY symbols fastest; Christian and colleagues reported 92.9 to 95.8 percent correct format when symbols were used, fewer when instructions sat to the right of the year field.
+
+Error handling: stating the format rule in advance, without an extra example, produced significantly fewer errors and submission trials in the authors' study. In the 2007 comparison of six error-message presentations they report, messages embedded next to fields, shown after the send button, led to fewer consecutive errors, while inline validation (message appears as the field is left) led to significantly more errors, because people ignored or dismissed the messages. Never clear completed fields; make errors noticeable at a glance by color, icon and text; disable the submit button after a click; show a confirmation page and e-mail; avoid reset buttons.
+
+### Replication and criticism
+
+The inline validation finding is the most contested. It was reported in 2007 on a single study, and a later well-known practitioner test (wroblewski2009inline in this lane) reported the opposite for certain fields. The most defensible reading is that validation timing matters by field type and wording, not that one policy always wins. The date-entry and error-message results come from the authors' own lab studies with modest samples. The radio-versus-drop-down advice rests on mixed evidence and the chapter itself says so. Required-field coloring should not rely on color alone for accessibility reasons (see WCAG in this lane). As a book chapter, it is not peer-reviewed in the usual sense, but its citations are traceable and later tests (seckler2014designing) found the bundle effective.
+
+### Implications for LTF
+
+Use this chapter as a checklist for sign-up, sign-in, settings and typed answers in challenges: state formats in advance, one column, labels on top, size fields to the expected answer, show errors after submit next to the field with icon and text, never clear typed input, and confirm what happens next. For quiz answers that need units, show the unit beside the input. Treat inline validation as a per-field decision and test it with beginners, not as a blanket rule.
+
+Confirmed this session: full chapter text read from https://cdn.intechopen.com/pdfs/10814.pdf (reached via https://doi.org/10.5772/9500); Crossref record 10.5772/9500 (six authors, 2010, publisher InTech, book User Interfaces, ISBN 9789533070841).
+

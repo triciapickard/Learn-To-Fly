@@ -531,15 +531,15 @@ Confirmed this session: Publisher page https://hyphenpress.co.uk/products/books/
 
 ## unger2018theory
 
-Gerard Unger, *Theory of Type Design*, edited by Christopher Burke, designed by Hansje van Halem (Rotterdam: nai010 publishers, 2018; 240 pages).
+Gerard Unger, *Theory of Type Design*, edited by Christopher Burke, designed by Hansje van Halem (nai010 publishers, 2018; 240 pages).
 
 ### Core claims
 
-Unger, a Dutch type designer, wrote a late-career book of short chapters on how text works as a structure and how type design should respond. It is "theory" in a particular sense. A passage quoted on Underware's site has Unger saying theory should not be merely descriptive, certainly not prescriptive, but "investigative and reflective." Reviewers agree the book offers reflection, not rules. Peter Biľak's review in *Eye* (no. 98, Spring 2019) says it gives no "ready-made theories or methods" for making typefaces more effective, and that Unger believed some questions have no answers, for example that a formula for the ideal balance of positive and negative space cannot be derived. Unger urges designers to pose their own research questions and collaborate with scientists.
+Unger, a type designer, wrote a book of short chapters on how text works as a structure and how type design should respond. It is "theory" in a particular sense. An Underware essay reports Unger saying theory should not be merely descriptive and certainly not prescriptive, but investigative and reflective. Reviewers agree the book offers reflection, not rules. Peter Biľak's review in *Eye* (no. 98, Spring 2019) says it gives no "ready-made theories or methods" for making typefaces more effective, and that Unger believed some questions have no answers, for example that a formula for the ideal balance of positive and negative space cannot be derived. Unger urges designers to pose their own research questions and collaborate with scientists.
 
 ### Specifics
 
-Both Eye and Typotheque count 25 short chapters (nai010's own description speaks of 24, so treat the count as approximate). They treat the components of type design and typography as text structure, pattern, texture, consistency or deliberate inconsistency, coherence and rhythm, with more attention to how text is organized and laid out than to individual letterforms. The Typotheque review says reading is nearly automatic and that typesetting conventions help text flow into the reader's mind, and that on spacing Unger says no formula can produce a perfect relationship between negative and positive forms, because letter shapes are too varied for simple rules.
+Both Eye and Typotheque count 25 short chapters (one catalogue summary says 24, so treat the count as approximate). They treat the components of type design and typography as text structure, pattern, texture, consistency or deliberate inconsistency, coherence and rhythm, with more attention to how text is organized and laid out than to individual letterforms. The Typotheque review says reading is nearly automatic and that typesetting conventions help text flow into the reader's mind, and that on spacing Unger says no formula can produce a perfect relationship between negative and positive forms, because letter shapes are too varied for simple rules.
 
 The legibility chapter, as both reviews describe it, mostly asks questions rather than answering them: whether fine details matter at small sizes, whether a high x-height aids legibility, and whether serif typefaces are more legible than sans serif ones. This is a useful honest position from a practitioner: even an expert who spent a career on legible type treats these as open.
 
