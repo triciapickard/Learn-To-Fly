@@ -1,0 +1,569 @@
+[
+  {
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Oxford University Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0195573560",
+    "url": "",
+    "key": "sharp2010how",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Sharp",
+        "given": "Byron"
+      }
+    ],
+    "year": 2010,
+    "title": "How Brands Grow: What Marketers Don't Know",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'how brands grow sharp' returned work OL17433867W, 'How Big Brands Grow What Marketers Dont Know', Byron Sharp, first published 2010, Oxford University Press, ISBN 0195573560; WebSearch summaries and reviews (winzarh.github.io notes, boringlyeffective.com review) confirm content",
+    "kind": "book, empirical generalizations plus managerial prescription",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Oxford University Press Australia & New Zealand",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0190311506",
+    "url": "",
+    "key": "romaniuk2018building",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Romaniuk",
+        "given": "Jenni"
+      }
+    ],
+    "year": 2018,
+    "title": "Building Distinctive Brand Assets",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL22541773W, Building Distinctive Brand Assets, Jenni Romaniuk, 2018, Oxford University Press Australia & New Zealand, ISBN 0190311506; WebSearch extract of the OUP Australia page oup.com.au/books/higher-education/management-and-marketing/9780190311506-building-distinctive-brand-assets lists chapters on fame, uniqueness and the Grid, published 16 March 2018",
+    "kind": "practitioner method book from the Ehrenberg-Bass Institute",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Australasian Marketing Journal",
+    "volume": "15",
+    "issue": "2",
+    "pages": "42-54",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/s1441-3582(07)70042-3",
+    "isbn": "",
+    "url": "",
+    "key": "romaniuk2007evidence",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Romaniuk",
+        "given": "Jenni"
+      },
+      {
+        "family": "Sharp",
+        "given": "Byron"
+      },
+      {
+        "family": "Ehrenberg",
+        "given": "Andrew"
+      }
+    ],
+    "year": 2007,
+    "title": "Evidence concerning the importance of perceived brand differentiation",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/s1441-3582(07)70042-3 returned title, authors Romaniuk, Sharp, Ehrenberg, 2007, Australasian Marketing Journal 15(2) 42-54, with abstract",
+    "kind": "empirical survey paper and argument",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Journal of Targeting, Measurement and Analysis for Marketing",
+    "volume": "11",
+    "issue": "3",
+    "pages": "218-229",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1057/palgrave.jt.5740079",
+    "isbn": "",
+    "url": "",
+    "key": "romaniuk2003measuring",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Romaniuk",
+        "given": "Jenni"
+      },
+      {
+        "family": "Sharp",
+        "given": "Byron"
+      }
+    ],
+    "year": 2003,
+    "title": "Measuring brand perceptions: Testing quantity and quality",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1057/palgrave.jt.5740079 returned title, authors Romaniuk and Sharp, 2003, volume 11 issue 3 pages 218-229; full text read from link.springer.com/content/pdf/10.1057/palgrave.jt.5740079.pdf",
+    "kind": "empirical survey study in a subscription market",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Journal of Marketing",
+    "volume": "54",
+    "issue": "3",
+    "pages": "82-91",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/002224299005400307",
+    "isbn": "",
+    "url": "",
+    "key": "ehrenberg1990double",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Ehrenberg",
+        "given": "Andrew S. C."
+      },
+      {
+        "family": "Goodhardt",
+        "given": "Gerald J."
+      },
+      {
+        "family": "Barwise",
+        "given": "T. Patrick"
+      }
+    ],
+    "year": 1990,
+    "title": "Double jeopardy revisited",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/002224299005400307 returned title, authors Ehrenberg, Goodhardt, Barwise, 1990, Journal of Marketing 54(3) 82-91, with abstract",
+    "kind": "empirical review of a purchase-behavior regularity",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Journal of Advertising Research",
+    "volume": "42",
+    "issue": "4",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.2501/jar-42-4-7-18",
+    "isbn": "",
+    "url": "https://www.warc.com/content/article/jar/brand-advertising-as-creative-publicity/en-gb/77314",
+    "key": "ehrenberg2002brand",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Ehrenberg",
+        "given": "Andrew"
+      },
+      {
+        "family": "Barnard",
+        "given": "Neil"
+      },
+      {
+        "family": "Kennedy",
+        "given": "Rachel"
+      },
+      {
+        "family": "Bloom",
+        "given": "Helen"
+      }
+    ],
+    "year": 2002,
+    "title": "Brand advertising as creative publicity",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.2501/jar-42-4-7-18 returned title, four authors, 2002, Journal of Advertising Research 42(4) (page field inconsistent with DOI, so pages left blank); abstract text read on the WARC page",
+    "kind": "argumentative review paper",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Journal of Marketing Research",
+    "volume": "34",
+    "issue": "3",
+    "pages": "347-356",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.2307/3151897",
+    "isbn": "",
+    "url": "",
+    "key": "aaker1997dimensions",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Aaker",
+        "given": "Jennifer L."
+      }
+    ],
+    "year": 1997,
+    "title": "Dimensions of brand personality",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.2307/3151897 returned title, author Aaker, 1997, Journal of Marketing Research 34(3) page 347; full text (pp. 347-356) read at gwern.net/doc/economics/1997-aaker.pdf",
+    "kind": "psychometric scale-development study",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Marketing Theory",
+    "volume": "12",
+    "issue": "3",
+    "pages": "333-339",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/1470593112451380",
+    "isbn": "",
+    "url": "",
+    "key": "romaniuk2012brands",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Romaniuk",
+        "given": "Jenni"
+      },
+      {
+        "family": "Ehrenberg",
+        "given": "Andrew"
+      }
+    ],
+    "year": 2012,
+    "title": "Do brands lack personality?",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/1470593112451380 returned title, authors Romaniuk and Ehrenberg, 2012, Marketing Theory 12(3) 333-339, with abstract",
+    "kind": "expert commentary with empirical evidence",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Journal of Marketing",
+    "volume": "57",
+    "issue": "1",
+    "pages": "1-22",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/002224299305700101",
+    "isbn": "",
+    "url": "",
+    "key": "keller1993conceptualizing",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Keller",
+        "given": "Kevin Lane"
+      }
+    ],
+    "year": 1993,
+    "title": "Conceptualizing, measuring, and managing customer-based brand equity",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref bibliographic query returned DOI 10.1177/002224299305700101, Keller, 1993, Journal of Marketing 57(1) 1-22; full text read at people.duke.edu/~moorman/Marketing-Strategy-Seminar-2015/Session%203/Keller.pdf",
+    "kind": "conceptual framework paper",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Journal of Marketing",
+    "volume": "62",
+    "issue": "2",
+    "pages": "14-30",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/002224299806200202",
+    "isbn": "",
+    "url": "",
+    "key": "henderson1998guidelines",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Henderson",
+        "given": "Pamela W."
+      },
+      {
+        "family": "Cote",
+        "given": "Joseph A."
+      }
+    ],
+    "year": 1998,
+    "title": "Guidelines for selecting or modifying logos",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/002224299806200202 returned title, authors Henderson and Cote, 1998, Journal of Marketing 62(2) 14-30, with abstract (195 logos, 13 design characteristics)",
+    "kind": "empirical study of logo design and response",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Marketing Science",
+    "volume": "28",
+    "issue": "5",
+    "pages": "968-985",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1287/mksc.1080.0462",
+    "isbn": "",
+    "url": "",
+    "key": "vanderlans2009cross",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "van der Lans",
+        "given": "Ralf"
+      },
+      {
+        "family": "Cote",
+        "given": "Joseph A."
+      },
+      {
+        "family": "Cole",
+        "given": "Catherine A."
+      },
+      {
+        "family": "Leong",
+        "given": "Siew Meng"
+      },
+      {
+        "family": "Smidts",
+        "given": "Ale"
+      },
+      {
+        "family": "Henderson",
+        "given": "Pamela W."
+      },
+      {
+        "family": "Bluemelhuber",
+        "given": "Christian"
+      },
+      {
+        "family": "Bottomley",
+        "given": "Paul A."
+      },
+      {
+        "family": "Doyle",
+        "given": "John R."
+      },
+      {
+        "family": "Fedorikhin",
+        "given": "Alexander"
+      },
+      {
+        "family": "Moorthy",
+        "given": "Janakiraman"
+      },
+      {
+        "family": "Ramaseshan",
+        "given": "B."
+      },
+      {
+        "family": "Schmitt",
+        "given": "Bernd H."
+      }
+    ],
+    "year": 2009,
+    "title": "Cross-national logo evaluation analysis: An individual-level approach",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1287/mksc.1080.0462 returned title, 13 authors, 2009, Marketing Science 28(5) 968-985, with abstract; full text read at business.columbia.edu/sites/default/files-efs/pubfiles/4563/cross_national_logo.pdf",
+    "kind": "cross-national empirical study (10 countries)",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Journal of Marketing Research",
+    "volume": "56",
+    "issue": "5",
+    "pages": "862-878",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/0022243719845000",
+    "isbn": "",
+    "url": "",
+    "key": "luffarelli2019let",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Luffarelli",
+        "given": "Jonathan"
+      },
+      {
+        "family": "Mukesh",
+        "given": "Mudra"
+      },
+      {
+        "family": "Mahmood",
+        "given": "Ammara"
+      }
+    ],
+    "year": 2019,
+    "title": "Let the logo do the talking: The influence of logo descriptiveness on brand equity",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/0022243719845000 returned title, authors, 2019, Journal of Marketing Research 56(5) 862-878, with abstract; accepted manuscript read at scispace.com/pdf/let-the-logo-do-the-talking-the-influence-of-logo-1neqv33ydv.pdf (Sussex Research Online copy)",
+    "kind": "multi-study experiments, survey and archival data",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Journal of Marketing",
+    "volume": "72",
+    "issue": "3",
+    "pages": "64-81",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1509/jmkg.72.3.064",
+    "isbn": "",
+    "url": "",
+    "key": "orth2008holistic",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Orth",
+        "given": "Ulrich R."
+      },
+      {
+        "family": "Malkewitz",
+        "given": "Keven"
+      }
+    ],
+    "year": 2008,
+    "title": "Holistic package design and consumer brand impressions",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1509/jmkg.72.3.064 returned title, authors Orth and Malkewitz, 2008, Journal of Marketing 72(3) 64-81, with abstract (seven studies, five holistic types)",
+    "kind": "seven-study empirical paper",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "Journal of Consumer Research",
+    "volume": "24",
+    "issue": "4",
+    "pages": "343-353",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1086/209515",
+    "isbn": "",
+    "url": "",
+    "key": "fournier1998consumers",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Fournier",
+        "given": "Susan"
+      }
+    ],
+    "year": 1998,
+    "title": "Consumers and their brands: Developing relationship theory in consumer research",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1086/209515 returned title, author Fournier, 1998, Journal of Consumer Research 24(4) 343-353; WebSearch extract of academic.oup.com/jcr/article-abstract/24/4/343/1797962 and acawiki.org summary give the three-case design",
+    "kind": "qualitative theory-building study",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "paulrand.design (originally published by AIGA, 1991)",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.paulrand.design/writing/articles/1991-logos-flags-and-escutcheons.html",
+    "key": "rand1991logos",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Rand",
+        "given": "Paul"
+      }
+    ],
+    "year": 1991,
+    "title": "Logos, flags, and escutcheons",
+    "verified_via": "websearch",
+    "verified_evidence": "WebSearch for the essay returned paulrand.design/writing/articles/1991-logos-flags-and-escutcheons.html; WebFetch of that page returned a summary of the essay and its AIGA 1991 origin",
+    "kind": "craft essay by an established designer",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "HOW Books",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781440310324",
+    "url": "",
+    "key": "chermayeff2011identify",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Chermayeff",
+        "given": "Ivan"
+      },
+      {
+        "family": "Geismar",
+        "given": "Tom"
+      },
+      {
+        "family": "Haviv",
+        "given": "Sagi"
+      }
+    ],
+    "year": 2011,
+    "title": "Identify: Basic Principles of Identity Design in the Iconic Trademarks of Chermayeff & Geismar",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned works OL22630562W (Identify, Chermayeff & Geismar, Print Publishing, 2011, ISBN 1440310327) and OL26781764W (Geismar, Haviv, Chermayeff, 2011, ISBN 1440320470); Simon & Schuster page simonandschuster.net/books/Identify/Tom-Geismar/9781440310324 gives description and 3 October 2011 date",
+    "kind": "practitioner monograph of identity case studies",
+    "lane": "21-brand-identity"
+  },
+  {
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Wiley",
+    "publisher_place": "",
+    "edition": "4th",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781118099209",
+    "url": "",
+    "key": "wheeler2012designing",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Wheeler",
+        "given": "Alina"
+      }
+    ],
+    "year": 2012,
+    "title": "Designing Brand Identity: An Essential Guide for the Whole Branding Team",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL16654786W, Designing brand identity, Alina Wheeler, 2012, John Wiley & Sons, ISBN 9781118099209; WebSearch confirmed the five phases of the fourth edition",
+    "kind": "practitioner process manual",
+    "lane": "21-brand-identity"
+  }
+]

@@ -185,3 +185,83 @@ USID is a position and method proposal, backed by the authors' case work with ol
 LTF's audience is a complete beginner in a cockpit context, and some will be older learners, some with low vision, hearing loss or motor difficulties, and some using sim peripherals such as yokes and keyboards in unusual ways. Do not stop at the WCAG checklist: recruit a handful of such learners early, watch them use a prototype lesson with the sim running, and write what you observe into design notes. Use scenario walkthroughs that include the real setting (one hand on a yoke, screen viewed at arm's length, glare, a second monitor) instead of abstract personas. Design the first prototype of each widget with the extreme case in mind (a screen reader user reading a gauge, a keyboard-only user adjusting a slider) so adaptation is not an afterthought, and keep such cases in the acceptance criteria for every widget.
 
 Confirmed this session: Crossref query (DOI 10.1007/s10209-010-0203-y, authors Newell, Gregor, Morgan, Pullin, volume 10, issue 3, pages 235 to 243; DOI 10.1145/355460.355470 for the 2000 paper); Dundee repository page https://discovery.dundee.ac.uk/en/publications/user-sensitive-inclusive-design/ (abstract paraphrase, date, citation count); web search summaries (the MIT PDF copy could not be read as text).
+
+## connell1997principles
+
+Connell, B. R., Jones, M., Mace, R., Mueller, J., Mullick, A., Ostroff, E., Sanford, J., Steinfeld, E., Story, M., and Vanderheiden, G. (1997). The Principles of Universal Design, Version 2.0 (1 April 1997). Raleigh, NC: The Center for Universal Design, NC State University.
+
+### Core claims
+
+A working group of architects, product designers, engineers and environmental design researchers, convened around the late Ron Mace, compiled seven principles to evaluate existing designs, guide the design process and educate designers and consumers. The central claim is that products, environments and communications can be usable by the widest range of people without adaptation or specialized design, and that this can be broken into seven checkable principles, each with guidelines (the Center's reprint rules refer to seven principles and 29 guidelines, per search results). The principles address usability only, not other design factors such as cost or culture, and not every guideline applies to every design.
+
+### Specifics
+
+The seven principles, with their one-line definitions and guidelines (fetched from the NC State Center for Universal Design page):
+
+1. Equitable Use: useful and marketable to people with diverse abilities. Provide the same means of use for everyone where possible, equivalent where not; avoid segregating or stigmatizing any users; make privacy, security and safety equally available; make the design appealing to all.
+2. Flexibility in Use: accommodates a wide range of individual preferences and abilities. Offer a choice of methods; support right- and left-handed use; help users achieve accuracy and precision; allow users to set their own pace.
+3. Simple and Intuitive Use: easy to understand regardless of experience, knowledge, language skills or concentration level. Remove unnecessary complexity; align with expectations and intuition; accommodate a wide range of literacy and language skills; arrange information by importance; give effective prompts and feedback during and after tasks.
+4. Perceptible Information: communicates necessary information regardless of ambient conditions or sensory abilities. Present essential information in multiple modes (pictorial, verbal, tactile); provide adequate contrast; maximize legibility; differentiate elements in ways that can be described; be compatible with devices used by people with sensory limitations.
+5. Tolerance for Error: minimizes hazards and adverse consequences of accidental or unintended actions. Arrange elements so the most used are most accessible and hazards are eliminated, isolated or shielded; provide warnings; provide fail-safe features; discourage unconscious actions in tasks that require vigilance.
+6. Low Physical Effort: usable efficiently and comfortably with minimal fatigue. Neutral body position; reasonable operating forces; minimize repetitive actions; minimize sustained physical effort.
+7. Size and Space for Approach and Use: appropriate size and space for approach, reach, manipulation and use regardless of body size, posture or mobility. Clear line of sight; comfortable reach; accommodate variations in hand and grip size; adequate space for assistive devices or personal assistance.
+
+The Center suggests citing the work as its own 1997 publication, and one NC State page says the Center is currently not active because of funding challenges, though the principles remain widely reproduced.
+
+### Replication and criticism
+
+The principles are expert consensus, a craft and policy document from the built-environment and product design world. They have never been presented as a tested model with measured effects, and they were written before the web's current interaction patterns, so some guidelines (neutral body position, operating forces) map only loosely to software. A common critique, made in the user-sensitive inclusive design literature (Newell et al. 2011, also in this lane), is that designing one thing for everyone can fail those with the most extreme needs and can lead to bland compromises. Defenders point to principle 2, which already asks for a choice of methods. A second critique is that the principles are broad enough to be hard to test: two reviewers can disagree on whether a design is "intuitive". Later frameworks (Microsoft's persona spectrum, Holmes' mismatch framing, ability-based design) keep the aspiration but give more concrete methods. Standards such as WCAG are the measurable counterpart; the principles supply the reasoning behind them.
+
+### Implications for LTF
+
+Use the seven principles as a design-review lens that sits above WCAG. Equitable use: the same lesson and challenge content for everyone, with no "accessible version" that is a lesser one. Flexibility: allow keyboard, mouse, touch and (where possible) sim-hardware-adjacent input to operate every widget, let learners set their own pace in lessons and never time a quiz without a way to extend it, and offer text, diagram and (later) audio forms of an explanation. Simple and intuitive: arrange information by importance (the next step first) and give feedback after each action. Perceptible: instrument state must never be conveyed by color alone and should be available as text and as a visual. Tolerance for error: confirm destructive actions such as resetting progress, make quizzes recoverable, and let a learner undo a widget setting. Low effort: minimize repeated clicks in fly mode, where the learner's hands may be on sim controls. Size and space: touch and click targets large enough and spaced, in line with WCAG 2.5.8.
+
+Confirmed this session: fetched https://design.ncsu.edu/research/center-for-universal-design/ (title, date, authors, seven principles and guidelines) and web search summarizing the Center's reprint rules and status. No Crossref or Open Library record applies; the document was verified through the NC State page.
+
+## microsoft2017inclusive
+
+Microsoft Design (2017, as dated by the IxDA listing; the manual's own date was not confirmed). Inclusive: A Microsoft Design Toolkit (manual, activities and videos), and the Inclusive Design site at inclusive.microsoft.design.
+
+### Core claims
+
+Microsoft's inclusive design methodology reframes disability as a mismatch between a person and an experience, not as a personal attribute, and organizes practice around three principles: recognize exclusion, solve for one and extend to many, and learn from diversity. The central argument is that exclusion happens when designers solve problems using their own biases, and that designing for people with permanent disabilities produces results that benefit a broader population because everyone has abilities and limits that vary by context. The toolkit was published under a Creative Commons license so that anyone could download and reuse it, according to the IxDA listing.
+
+### Specifics
+
+Recognize exclusion: the Microsoft Learn training unit traces the shift from the 1980 World Health Organization definition of disability as a personal attribute to the 2001 view that disability is the interaction between features of a person's body and features of the society in which he or she lives. Points of exclusion generate new ideas.
+
+Solve for one, extend to many, and the persona spectrum: exclusion can be permanent, temporary or situational. The manual's table lists touch as one arm (permanent), arm injury (temporary) and new parent (situational). The same unit gives a scale figure, that 26,000 people a year in the United States suffer loss of upper extremities, but that when temporary and situational impairment are included the number is greater than 20 million (figures stated by Microsoft; I did not trace their source). It adds a "persona network" of the family, coworkers and friends who interact with the primary persona. Closed captions are the standard example: made for people who are deaf or hard of hearing, they also help someone watching a webinar in an open office.
+
+Learn from diversity: people are the experts in adapting; the slogan is "nothing about us without us", design with disabled people. The Xbox Adaptive Controller example describes a community concern about stigma if the device looked "medical" or toy-like. The unit warns that simulating impairments with blindfolds and earplugs is misleading and that empathy comes from learning how people adapt.
+
+### Replication and criticism
+
+This is an industry design method, not a validated model; its evidence is case studies from Microsoft products and the IxDA award recognition. The scale figure cited above is a company claim. A 2025 newsletter argues that credit for the methodology is incomplete (it says another designer was omitted from the toolkit's credits); this is one contested account, not established fact. Academic work on persona spectrums is thin, and the "solve for one, extend to many" assertion is a plausible hypothesis (curb cuts and captions are the usual examples) rather than a tested law. It does not guarantee that a solution for one group is optimal for another, a limit the user-sensitive inclusive design literature stresses.
+
+### Implications for LTF
+
+The persona spectrum is a quick way to justify and prioritize access work to a small team. A learner with a permanent low vision condition, one with a temporary eye strain after a long session, and one reading a tablet in bright light in a cockpit-like glare setting share the same need for strong contrast and zoomable text. Use that argument to put captions and transcripts on all sim video, high-contrast themes, keyboard operation, and generous target size in the baseline, not a backlog. Fly mode is a ready situational spectrum: a learner with one hand on a yoke or mouse, attention divided, at arm's length from the screen. Test with disabled learners and not blindfold simulations, and credit the community input in design notes.
+
+Confirmed this session: fetched https://inclusive.microsoft.design/ (three principles), https://learn.microsoft.com/en-us/training/modules/inclusive-design-principles/3-inclusive-design-principles (disability definitions, persona spectrum, figures, Xbox example) and https://ixda.org/video/microsoft-inclusive-toolkit/ (2017 date, contents, CC license); web search results for the manual PDF listing (the PDF exceeded the fetch size limit).
+
+## holmes2018mismatch
+
+Holmes, K. (2018). Mismatch: How Inclusion Shapes Design. Cambridge, MA: MIT Press (Simplicity: Design, Technology, Business, Life series). Open Library work OL20186749W.
+
+### Core claims
+
+Holmes, who led development of Microsoft's inclusive design toolkit, argues that design routinely excludes people through mismatches between a person and the interaction a product demands, and that exclusion is a design outcome that can be designed out. The MIT Press description frames it as: design can lead to exclusion, and inclusive methods can remedy it by designing with rather than for excluded users. Reviewers quote her line that mismatches are the building blocks of exclusion and that designing for inclusion starts with recognizing exclusion. She also argues that inclusion is a business asset and a catalyst for creativity, not charity, because treating it as charity widens the gap between people.
+
+### Specifics
+
+Examples in the publisher and review material: a computer mouse that does not work for left-handed people, and a payment touchscreen that assumes a particular language, eyesight and payment method. The key framework, as described by a reviewer, is the spectrum of permanent, temporary and situational mismatches: a door designed for someone with one arm should also work for someone with a broken arm or someone carrying a baby. Reviews describe the book as under 200 pages, opening with in-group and out-group thinking and following a "Who, What, Why, When, How" structure, with anecdotes, interviews and research in place of a single technical method, and each chapter ending with practical to-dos. The advice reviewers draw out: recognize exclusion first; offer varied ways to participate (a "one size fits one" stance, not one solution for everyone); accept imperfection and keep improving; and design for inclusion early, to avoid costly retrofitting. A section in chapter 4, "We Are All Designers", is a point of review comment.
+
+### Replication and criticism
+
+A trade book, not a study: its authority is craft and case-based. Reviews are mostly favorable. Terence Eden called it "part manifesto, part manual" but "a little short" without much technical detail. One reviewer argues that calling digital inaccessibility a "mismatch" understates its harm and that exclusion from web content is discrimination; another found it repetitive. Jeremy Senko's review worries that the "We Are All Designers" claim could weaken licensing and professional education that protect public safety. The ideas overlap heavily with Microsoft's toolkit (also in this lane) and with the social model of disability, and none of them has controlled evidence that mismatch-based practice improves outcomes.
+
+### Implications for LTF
+
+Adopt "mismatch" as a vocabulary for design reviews: when a learner cannot complete a task, ask what the interaction demanded (fine pointer control, color discrimination, reading speed, memory, two hands) that the learner could not supply, and fix the demand, not the learner. Use permanent, temporary and situational variants in each acceptance review: for a heading-bug slider, a one-handed user, a user with a wrist injury, and a pilot-trainee holding a yoke. Offer more than one way to complete each interaction (drag or type a value, click or key). Design inclusion in at the start of each widget, since retrofitting is costly. And treat inclusion language as part of product copy: avoid "normal user" and "disabled user" as an exceptional category in design docs.
+
+Confirmed this session: Open Library search returned work OL20186749W (Mismatch, Kat Holmes, 2018, MIT Press, ISBNs 0262349620 and 0262349639); web search found the MIT Press description summarized at https://mitpressbookstore.mit.edu/book/9780262539487; reviews fetched at https://timkadlec.com/read/2019-mismatch/, https://shkspr.mobi/blog/2019/12/book-review-mismatch-by-kat-holmes/ and https://spacing.ca/national/2019/06/03/book-review-mismatch-how-inclusion-shapes-design/. The MIT Press page itself returned 403.

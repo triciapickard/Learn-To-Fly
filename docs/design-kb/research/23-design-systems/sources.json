@@ -372,5 +372,63 @@
     "verified_evidence": "Fetched gov.uk/guidance/government-design-principles (first published 3 April 2012, last updated 2 April 2025, eleven principles, publishers GDS and CDDO) and design-system.service.gov.uk/community/ and /community/contribution-criteria/ (criteria Useful, Unique, Usable, Consistent, Versatile)",
     "kind": "government design guidance",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "ibm2026carbon",
+    "type": "webpage",
+    "authors": [
+      {
+        "literal": "IBM"
+      }
+    ],
+    "year": 2026,
+    "title": "Carbon Design System: Color overview and contributing guide",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "IBM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://carbondesignsystem.com/guidelines/color/overview/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched carbondesignsystem.com/guidelines/color/overview/ (four themes White, Gray 10, Gray 90, Gray 100; role-based tokens; contrast minimums) and /contributing/get-started/overview/ (Carbon Labs, contribution methods; last updated Sep 1, 2026)",
+    "kind": "vendor design system documentation",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "nielsen1989coordinating",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      }
+    ],
+    "year": 1989,
+    "title": "Coordinating User Interfaces for Consistency",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Academic Press",
+    "publisher_place": "Boston",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      }
+    ],
+    "doi": "",
+    "isbn": "012518400X",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'coordinating user interfaces for consistency' returned work OL16583253W (Jakob Nielsen, Academic Press, 1989, ISBN 012518400X); Crossref returned chapter DOIs with prefix 10.1016/b978-0-08-050315-8 (1989); contents confirmed at nngroup.com/jakob/constbook.html",
+    "kind": "edited volume (corporate case studies on consistency)",
+    "lane": "23-design-systems"
   }
 ]

@@ -350,11 +350,11 @@ The page now lists eleven principles; the eleventh, minimizing environmental imp
 
 Selected content. "Do the hard work to make it simple": making something look simple is easier than making it simple to use, and "it's always been that way" is not a reason to leave complexity in place. "Iterate": start small, release early, test with real users, move from alpha to beta to live, and be willing to scrap a prototype that is not working. "Be consistent, not uniform": consistency is by shared patterns and language, with explicit permission to deviate where circumstances differ, and teams should explain why they use a pattern.
 
-The Design System community pages describe a contribution process. Proposals for new components or patterns must be Useful (evidence that many teams or services would benefit, such as screenshots or links to versions used in different services) and Unique (not duplicating an existing item, and showing evidence of improvement if it replaces one). Before publication, a contribution must be Usable (tested in user research with a representative sample of users, including people with disabilities, with tested contexts stated), Consistent (reusing existing styles and components, following the GOV.UK style guide and the GOV.UK Frontend coding standards), and Versatile (flexible enough for a range of services and tested across browsers, assistive technologies and devices). The team reviews proposals against these criteria. The community overview also describes an always-on continuous research programme, a monthly catch-up with show-and-tell, workshops where changes affect service teams, and feedback through GitHub discussions.
+The Design System community pages describe a contribution process. Proposals for new components or patterns must be Useful (evidence that many teams or services would benefit, such as screenshots or links to versions used in different services) and Unique (not duplicating an existing item, and showing evidence of improvement if it replaces one). Before publication, a contribution must be Usable (tested in user research with a representative sample of users, including people with disabilities, with tested contexts stated), Consistent (reusing existing styles and components, following the GOV.UK style guide and the GOV.UK Frontend coding standards), and Versatile (flexible enough for a range of services and tested across browsers, assistive technologies and devices). The team reviews proposals against these criteria. The community overview also describes continuous research sessions, a monthly catch-up, and feedback through GitHub discussions.
 
 ### Replication and criticism
 
-These are organizational documents backed by the practice of a large public-sector team, not experiments. They report their method only loosely: the pages say decisions use research and data but do not publish the studies. The stated criteria are checklists applied by reviewers, so their quality depends on the reviewers. A known tension is between "consistent" and "versatile": a component that serves every service may fit none perfectly, which echoes Grudin's argument (see the grudin1989case section) that consistency should serve users' tasks. The principles also reflect the aims of a public service that people are obliged to use, so they do not transfer unchanged to an optional learning product.
+These are organizational documents backed by the practice of a large public-sector team, not experiments. They report their method only loosely: the pages say decisions use research and data but do not publish the studies. The stated criteria are checklists applied by reviewers, so their quality depends on the reviewers. A known tension is between "consistent" and "versatile": a component that serves every service may fit none perfectly, which echoes Grudin's argument (see the grudin1989case section) that consistency should serve users' tasks. They also reflect a public service people must use, so they may not transfer unchanged to an optional learning product.
 
 ### Implications for LTF
 
@@ -362,6 +362,68 @@ These are organizational documents backed by the practice of a large public-sect
 2. Copy the contribution criteria as a gate for new LTF components: Useful (needed by at least two lessons or challenges, with links), Unique (not duplicating an existing one), Usable (checked with at least a few real beginners, plus a keyboard and screen-reader pass), Consistent (uses tokens and existing parts), Versatile (works in light and dark themes and on phone-width screens).
 3. Test across contexts and state them. LTF's contexts are a desktop browser beside the sim, a phone or tablet, and print or offline; record which a component was tested in.
 4. "This is for everyone" and "Understand context" suggest designing fly mode for glanceable reading in poor light, with large type and no reliance on color alone.
-5. Publish decisions and their reasons. The openness principle suggests a short public changelog and a record of design decisions, which suits the repository's Decision Log habit.
+5. Record decisions and their reasons, in the way the repository's Decision Log already does.
 
 Confirmed this session: the principles page (https://www.gov.uk/guidance/government-design-principles; dates, eleven principles, selected sections) and the Design System community and contribution-criteria pages (https://design-system.service.gov.uk/community/ and /community/contribution-criteria/) were fetched this session through a summarizing tool, so wording outside quotation marks is paraphrase.
+
+## ibm2026carbon
+
+IBM (2026). *Carbon Design System*: Color overview guideline and contributing guide. https://carbondesignsystem.com/guidelines/color/overview/ and https://carbondesignsystem.com/contributing/get-started/overview/
+
+### Core claims
+
+Carbon is IBM's open-source design system. Its color documentation makes one point clear and testable: color is expressed as role-based tokens, not hex values, and a theme is a mapping from roles to values. Because roles stay the same across themes and only the values change, the same component can appear in four default themes without any component code changing. The contributing guide frames the system as built by a community in which "Anyone can contribute code, design, and documentation".
+
+### Specifics
+
+Color guideline (read this session). Carbon ships four default themes in two families, named after their background color: light themes White (global background `#ffffff`) and Gray 10 (`#f4f4f4`); dark themes Gray 90 (`#262626`) and Gray 100 (`#161616`). Layering is explicit: on light themes successive layers alternate between White and Gray 10; on dark themes each layer steps one shade lighter (on Gray 100 the first layer is Gray 90, the second Gray 80, the third Gray 70).
+
+Tokens are named by element group plus specific role, with an optional state suffix, for example `$background-hover`. The core groups are Background, Layer, Field, Border, Text, Link, Icon, Support, Focus and Skeleton, with standalone tokens `$overlay`, `$highlight` and `$interactive`. `$text-secondary`, for instance, maps to Gray 70 in one theme and Gray 30 in another. Component tokens (Button, Tag, Notification) are for their own component only. Inverse tokens and inline theming create deliberate high-contrast moments such as a dark header on a light page, and the guide says dark themes should not use components darker than the background outside high-contrast mode.
+
+Interaction states follow stated rules: hover is a half step lighter or darker, active two full steps, selected one full step; focus is usually a 2px border using the `$focus` token (Blue 60 on light themes, white on dark); disabled styling is exempt from WCAG contrast requirements. The page states contrast minimums of 4.5:1 for small text (below 24px), 3:1 for large text, 3:1 for graphical elements including data visualizations, and 3:1 for focus states, without labeling them as a particular WCAG level; the WCAG standard itself is the authority and should be checked separately.
+
+Contributing guide. Net-new experimental components begin in Carbon Labs (its own GitHub repo, Storybook and Figma space, for IBM staff) and must follow a Product Development Lifecycle and complete a component checklist before they count as done. Every component and pattern needs usage, style, code and accessibility guidance on the website, written from markdown templates. Contributors can also improve existing components (enhancements tracked in a backlog), update Figma design kits, fix bugs with a pull request, or add icons and pictograms. The page gives no governance structure, decision process, principles or metrics.
+
+### Replication and criticism
+
+This is vendor documentation: an authoritative description of one system's practice, not research. Its contrast numbers match the general structure of WCAG requirements but come from the page, not from a study, and a design system's own claim of accessibility compliance should be verified rather than inherited. The page gives no decision process, so Carbon is a better model for tokens and theming than for team process, where Frost, Suarez et al. and the GOV.UK criteria say more.
+
+### Implications for LTF
+
+1. Model theming on roles, not colors. LTF's `tokens.css` should name tokens for what they do (surface, surface-raised, text-secondary, border, focus, support-success, support-warning) so light and dark themes only change values. Carbon's grouping is a ready template.
+2. Define layers for dark themes. A lesson card on a page and a callout inside a card need clearly different surface tokens; stepping one shade lighter per layer keeps the hierarchy legible without borders.
+3. Write down state rules once: hover, active, selected, focus and disabled offsets, and a visible focus ring at 3:1 or better. Fly mode, where a learner may use keyboard or switch input beside the sim, depends on focus visibility.
+4. Check contrast numbers against WCAG itself, and apply the graphical-element minimum to instrument widgets.
+5. Use a lab or incubation lane for experiments. New widget ideas can live in a clearly separated area with a checklist before they enter the stable system.
+
+Confirmed this session: Carbon color overview page and contributing overview page fetched through a summarizing tool (https://carbondesignsystem.com/guidelines/color/overview/; https://carbondesignsystem.com/contributing/get-started/overview/, page last updated Sep 1, 2026 per the page). Hex values and token names are as reported by that fetch and should be rechecked before copying into LTF code.
+
+## nielsen1989coordinating
+
+Nielsen, J. (Ed.) (1989). *Coordinating User Interfaces for Consistency*. Boston: Academic Press. (Reprinted 2002 by Morgan Kaufmann, San Francisco, with a new preface.)
+
+### Core claims
+
+This edited volume treats consistency as an organizational problem as much as a design one. In the 2002 preface Nielsen calls it a "meta-design" book: it does not give guidelines for task flows or dialog layouts but covers methods for coordinating designers, including a single designer working over time, so that their output forms a coherent whole and users can carry learning from one element to the next (https://www.nngroup.com/articles/preface-2002-reprint-coordinating-user-interfaces-consistency/). The lessons listed on his book page are that consistency benefits both users and the organizations that build interfaces, that it has several dimensions and several methods, that corporate standards should be judged by costs and benefits, that it carries risks when applied rigidly, and that it is an ongoing process requiring ownership, commitment and political support (https://www.nngroup.com/jakob/constbook.html).
+
+### Specifics
+
+Contents, from Nielsen's book page: an executive summary by Nielsen; "The Dimensions of Consistency" by Wendy Kellogg (IBM Watson Research Center); a cost-benefit analysis for corporate user interface standards by Daniel Rosenberg (Ashton-Tate); a chapter by Gary Perlman on coordinating the consistency of interfaces, code, online help and documentation through a shared specification; "Achieving Consistency for the Macintosh" by Bruce Tognazzini (Apple); "Developing the XUI Style" by Michael Good (Digital Equipment Corporation); "Consistency as Process" by Richard Wolf (Lotus); "New Ways to Consistent Interfaces" by Ianne Koritzinsky (GE Medical Systems); "Tools for Generating Consistent User Interfaces" by Wiecha, Bennett, Boies and Gould (IBM); and a bibliography. Library records describe the 1989 edition as x plus 142 pages (search result, not read in the catalog itself).
+
+The 2002 preface adds three arguments, all Nielsen's own. Usability concerns human capabilities, which change slowly, so the coordination methods still apply (he gives an estimate that average IQ rose by less than 1% between 1989 and 2002). The stakes have grown: websites are built by many people in many departments and users move among thousands of sites, and he claims inconsistent design costs hundreds of billions of dollars a year worldwide, a figure I could not trace to a source. Apple's emphasis on consistency is offered as an example of payoff: Nielsen cites market research finding that Macintosh users bought more software packages than DOS users.
+
+The Dimensions chapter by Kellogg is the book's best-known conceptual piece, but I only confirmed its title and author, not its content, so I do not describe its scheme here.
+
+### Replication and criticism
+
+This is expert opinion and corporate case study (Apple, IBM, Digital, Lotus, GE), not experimental evidence, and it is the counterpart to Grudin's critique, published in the same year (see the grudin1989case section). Where Grudin asks which dimension of consistency matters for the user's task, the Nielsen volume asks how an organization keeps whatever consistency it chooses. The two are compatible: the book itself lists rigid application as a risk. The Macintosh sales comparison and the cost estimate in the preface are assertions I could not verify; the Ozok and Salvendy experiment (see the ozok2000measuring section) found only a partial performance benefit for a web design, so the strong economic claims deserve caution.
+
+### Implications for LTF
+
+1. Treat consistency as a process with an owner. LTF should name who approves new components and who updates the style guide, since the book's central lesson is that consistency is maintained by ownership and commitment, not by writing a document once.
+2. Judge each standard by cost and benefit. Before adding a rule (for instance a fixed place for the "Verify in sim" callout), say what it saves learners and what it costs authors.
+3. Keep code, help and documentation in step. Perlman's chapter title suggests one specification generating interface, help and docs. LTF's token system for V-speeds and aircraft numbers follows this logic: one source in `content/aircraft.yaml` keeps copy and widgets aligned.
+4. Learn from the Macintosh example without copying it. A single platform allowed strong external consistency; LTF will run in a browser beside a simulator, so external consistency means matching the simulator's labels and the real aircraft's, which aviation sources, not design taste, must decide.
+5. Put tooling in the process. The book's chapters on generation tools support using linting and token checks in LTF's CI to enforce what people forget.
+
+Confirmed this session: Crossref returned chapter records for the volume (DOI prefix 10.1016/b978-0-08-050315-8; e.g. 10.1016/b978-0-08-050315-8.50007-9 for the executive summary, 1989, Elsevier); Open Library search returned work OL16583253W (Jakob Nielsen, Academic Press, 1989, ISBN 012518400X); contents and lessons from https://www.nngroup.com/jakob/constbook.html; preface from the NN/g page above. I did not read the book.

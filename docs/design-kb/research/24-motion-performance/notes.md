@@ -399,3 +399,93 @@ The two usable lessons are (1) an honest indicator extends patience, which suppo
 LTF should not quote "2 seconds" as a validated universal rule. When writing performance budgets for the app, use measured field data for the actual audience (see the Core Web Vitals source in this lane) and treat the thresholds in Miller, Card and Nielsen as perceptual categories (instant, flow-preserving, attention-holding) rather than as tolerances.
 
 Confirmed this session: Crossref DOI 10.1080/01449290410001669914 (BIT 23(3), 153-163, author Fiona Fui-Hoon Nah); abstract-level findings from search summaries (publisher page https://www.tandfonline.com/doi/abs/10.1080/01449290410001669914 returned 403 to fetch); the 38, 13, 7 and 3 second figures and the Galletta et al. figures were read in the Galletta et al. full text at https://www.gwern.net/doc/economics/advertising/2004-galletta.pdf.
+
+## miller1968response
+
+Miller, R. B. (1968). Response time in man-computer conversational transactions. *Proceedings of the AFIPS Fall Joint Computer Conference, Part I (AFIPS '68)*, 267-277. San Francisco.
+
+### Core claims
+
+Miller, writing at IBM when time-sharing terminals were new, argues that there is no single acceptable "system response time". The right answer depends on what the user is doing, and he proposes a catalog of response-time categories keyed to the type of exchange. His framing is conversational: a person using a terminal is in a transaction with the system, and each kind of transaction implies a different expectation of how quickly the system should answer. A search summary of the abstract reports that the limits of "system response time" were controversial and that an issue was "Response time to what?". The paper is the origin of the idea that the same two or three second delay can be acceptable for one purpose and disruptive for another.
+
+### Specifics
+
+I could not obtain the paper's text this session (the one hosted copy returned a server error), so the following comes from secondary accounts, and every figure below should be treated as a reader's summary, not as a quotation of Miller.
+
+A third-party summary page reproduces Miller's table of response types, with times in seconds: response to control activation, 0.1 to 0.2; response to "System, are you listening?", 3; to "System, can you do work for me?", 2 for simple and 5 for complex; to "System, do you understand me?", 2 to 4; to identification, 0.4 to 0.5 for feedback and 0.2 for confirmation; to "Here I am; what work should I do next?", 10 to 15; to a simple inquiry of listed information, 2; to a simple inquiry of status, 7 to 10; to a complex inquiry in tabular form, 4; to a request for the next page, 1; to "Now, run my problem", 15; graphic response from a light pen, 0.1; and to a complex inquiry in graphic form, 2 to 10. A separate paper that cites Miller summarizes his advice as: interactions should ideally complete in under four seconds, preferably two, but a new task request can take up to fifteen seconds without being perceived as negative, and that Miller based the figures on his experience as a behavioral psychologist (a point I have only from that secondary citation).
+
+Nielsen (1993, in this lane) and Card, Robertson and Mackinlay (1991, in this lane) both cite Miller as a basis for the familiar 0.1, 1 and 10 second limits. The popular simplification that Miller "found" a 2-second limit therefore collapses a table of about fourteen categories into one number, and also mixes expert judgment with measured data.
+
+### Replication and criticism
+
+Miller's table is expert synthesis from the late 1960s, based on his own experience of computing and not on experiments with web users. The figures belong to an era of terminals, light pens and character output, so applying them to a modern web app is an analogy. Myers (1985, this lane) tried to replicate a related claim from Miller's earlier (1977) work, that constant response time is preferred to variable, and found no significant preference. Later laboratory and field studies of delay (Galletta et al. 2004, in this lane) find non-linear and modest effects of delay on performance and attitudes. The honest reading is that Miller established the principle (match response time to the kind of transaction, and give acknowledgment sooner than results) while the numbers are approximations that later authors reduced to three round values.
+
+### Implications for LTF
+
+Use Miller for the principle, not for the numbers. LTF has several transaction types, and each deserves a separate budget: a press or tap should show feedback near-instantly (his control-activation category); selecting an answer in a quiz should acknowledge within a fraction of a second even if the full explanation takes longer; loading a new lesson page is closer to his "next page" category; and running a heavy check should show progress.
+
+The principle that acknowledgment comes before the result also gives a rule for fly mode, where the learner's eyes are on the sim: each tap on the companion screen needs an immediate, unmistakable response (pressed state, subtle sound or vibration if available) because the learner may look away before the result renders.
+
+Do not cite "Miller says 2 seconds" in the knowledge base without the qualification that his table lists many categories and that the numbers are from 1968.
+
+Confirmed this session: Crossref DOI 10.1145/1476589.1476628 (AFIPS '68 Fall, part I; Crossref lists page 267, other sources 267-277); table values read on https://aakinshin.net/vignettes/system-response-time-standards/ (secondary); search summaries of the abstract; text of the original not read.
+
+## card1991information
+
+Card, S. K., Robertson, G. G. and Mackinlay, J. D. (1991). The information visualizer, an information workspace. *Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '91)*, 181-186.
+
+### Core claims
+
+The paper proposes the "information workspace", a user interface concept that treats the cost structure of information, from secondary storage to immediate use, as the central problem, and describes an experimental system, the Information Visualizer, that implements it. The relevance to this lane is a short passage in which the authors tune the system to three human time constants for perceptual processing, immediate response and unit tasks, and justify the design of interactive animation against them. They argue that interactive animation and 3D graphics allow more information to be packed into a workspace because the user can disambiguate and reveal information by manipulating objects.
+
+### Specifics
+
+The paper's architecture is the Cognitive Coprocessor, a scheduler loop with double-buffered graphics, described as an impedance matcher between the cognitive and perceptual needs of the user and the speed of the machine agents (derived from the idea of supervisory control). It introduces a table of human time constants for tuning the system (Table 3 in the paper), with values and references as follows:
+
+- Perceptual processing, 0.1 seconds. To maintain the illusion of animation the screen must be repainted at least every 0.1 second. The Cognitive Coprocessor has a Governor mechanism that monitors the basic cycle time and, when it gets too high, lets cooperating rendering processes lower the quality of rendering (for example leaving off most of the text during motion) so that cycle speed is increased.
+- Immediate response, 1 second. A person can make an unprepared response to a stimulus within about a second. Beyond a second, either the listener makes a backchannel response ("uh-huh") or the speaker signals they are still thinking ("uh..."). The system therefore has agents provide status feedback at intervals no longer than this constant. Immediate-response animations, for example swinging the branches of a 3D tree into view, are designed to take about a second: if much shorter the user loses object constancy and must reorient, and if much longer the user gets bored waiting.
+- Unit task, 10 seconds. The user should be able to complete an elementary task act within about 10 seconds (the paper says 5 to 30), roughly the pacing of a point-and-click editor. Agents may take longer, but the user always stays active and can start the next request.
+
+The table cites two sources for these values (Card, Moran and Newell's 1983 psychology of human-computer interaction, and Newell's 1990 Unified Theories of Cognition).
+
+### Replication and criticism
+
+These are engineering rules of thumb drawn from cognitive science, not experimental results of this paper. The constants are order-of-magnitude values (a decade apart), not thresholds with confidence intervals; Nielsen later adopted them as 0.1, 1 and 10 seconds. The page range is listed as 181-186 in the proceedings listing found by search and 181-188 elsewhere, so the page range should be double-checked before citing it in print. The hedged use of "about" is important: the paper does not claim that a response at 1.1 seconds breaks anything. The Bederson and Boltman (1999) and Heer and Robertson (2007) experiments, in this lane, test one-second transitions empirically; their results are consistent with the rule that one second is workable, without establishing it as optimal.
+
+### Implications for LTF
+
+The three constants give LTF a vocabulary for budgets. At the 0.1 second scale, anything that responds to a tap or drag (a slider that moves an aircraft model, a widget following a pointer) should update within a frame or two, and under load it should degrade quality (drop labels or shadows) before it drops responsiveness, which is the Governor idea. At the one second scale, transitions that preserve object constancy (a card moving to a new place) should take roughly a second at most, and anything slower than a second needs a status cue. At the ten second scale, a task that takes longer (generating a debrief from a logged flight) needs visible progress and the ability to continue elsewhere.
+
+This is also a design rule for fly mode: because the learner's attention is divided, a response that arrives after more than a second with no cue risks being missed entirely.
+
+Confirmed this session: Crossref DOI 10.1145/108844.108874 (CHI '91, pages 181-186); full text read from https://courses.ischool.berkeley.edu/i213/s99/Readings/p181-card.pdf (OCR text; the Table 3 values and the descriptions above were read there).
+
+## nielsen1993response
+
+Nielsen, J. (1993). Response times: the 3 important limits. Nielsen Norman Group (excerpt from *Usability Engineering*, Academic Press, 1993; updated 2014).
+
+### Core claims
+
+Nielsen distills decades of response-time work into three limits that are rooted in human perception and attention, and that do not change as computers get faster: about 0.1 second (the system feels instantaneous), about 1 second (the user's flow of thought stays uninterrupted) and about 10 seconds (the limit for keeping attention on the dialogue). He says Miller (1968) and Card, Robertson and Mackinlay (1991) are the basis for the guidance. A 2014 update states that web-based applications follow the same limits as other software. This is an expert synthesis published by a respected practitioner, not a new experiment.
+
+### Specifics
+
+From the page fetched this session:
+
+- 0.1 second is "about the limit for having the user feel that the system is reacting instantaneously". Beyond it, the user needs feedback, but no special feedback is needed to display the result.
+- 1.0 second is "about the limit for the user's flow of thought to stay uninterrupted". Between 0.1 and 1.0 seconds users notice the delay and lose the feeling of operating directly on the data, but no special feedback is necessary.
+- 10 seconds is "about the limit for keeping the user's attention focused on the dialogue". Longer waits invite users to switch to other tasks, so they need feedback on when the computer expects to finish.
+
+Guidance on indicators, citing Myers (1985): for waits of more than about 10 seconds use a percent-done indicator, ideally a graphic progress bar, which gives reassurance that the system has not crashed, an estimate so users can do other work, and something to look at. If the total is unknown, show running progress such as the absolute amount completed; a generic busy indicator is a last resort. For operations of about 2 to 10 seconds, a full percent-done indicator can be excessive and cause distracting screen changes, so Nielsen suggests a busy cursor with a small changing counter. He also notes that an interface can be too fast for users to follow, so animations should run on a real-time clock rather than depend on processor speed. The 2014 update adds that for delays over 10 seconds there should also be a clear way for users to interrupt, and that users will need to reorient themselves after the delay.
+
+### Replication and criticism
+
+The numbers are round values that Nielsen and later usability practice extracted from older sources, and a reader should treat them as categories of experience, not sharp cutoffs. Miller's own table has many categories (see the Miller source in this lane), and the Card et al. constants are order-of-magnitude values. The Nielsen formulation is the most-cited version because it is easy to remember. Empirical work finds smooth, non-linear effects of delay on performance and attitude rather than cliffs at 1 or 10 seconds (Galletta et al. 2004, in this lane), and Nah (2004) found patience differs sharply by context. Nielsen Norman Group also published the 2014 update without new data, so the extra guidance on web applications is professional judgment.
+
+### Implications for LTF
+
+This is the most useful single page for writing performance requirements. A sensible set of LTF budgets, expressed in the categories rather than as guarantees: responses to taps and drags should feel instant (the 0.1 second category); navigation between lesson steps should stay within the flow-preserving category of about a second, and any work likely to exceed it needs an immediate placeholder (a skeleton, a progress indicator); anything beyond roughly ten seconds, such as a large download of offline material, needs a percent-done indicator, estimate and cancel.
+
+The 2 to 10 second guidance is a warning against decorating short waits: a full progress bar that flashes on and off for a three second fetch is worse than a calm, small status line. For fly mode, tighten the categories: the learner is dividing attention, so aim for instant response to taps and avoid anything that needs a second look.
+
+Confirmed this session: page content fetched at https://www.nngroup.com/articles/response-times-3-important-limits/ (author Jakob Nielsen, dated January 1, 1993, with a 2014 update); Open Library lists the parent book (work OL3522752W, Academic Press 1993; Morgan Kaufmann edition OL7941012W).

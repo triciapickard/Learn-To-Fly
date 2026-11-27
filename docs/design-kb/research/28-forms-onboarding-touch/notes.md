@@ -206,3 +206,53 @@ On the web, the usual click or tap event already fires on release, so LTF gets l
 
 Confirmed this session: University of Maryland technical report PDF read in full (https://www.cs.umd.edu/users/ben/papers/Sears1991High.pdf); Crossref record 10.1016/0020-7373(91)90037-8 (journal, volume 34, issue 4, pages 593-613, April 1991); Penn State Pure record via web search summary.
 
+## penzo2006label
+
+Penzo, M. (2006, July 12). Label placement in forms. UXmatters.
+
+### Core claims
+
+Penzo reports a small eye-tracking test of four label placements in a plain web form and concludes that labels above their fields are usually best, because the eye does not have to jump sideways between label and field. If labels must sit beside fields, right-aligning them is better than left-aligning them. This short practitioner article became the most cited evidence behind the common "put labels on top" rule, and it is the study that Bargas-Avila's 20 guidelines and Wroblewski's book rely on for label placement. It is a usability test written up for practitioners, not a peer-reviewed experiment, and it reports no statistics.
+
+### Specifics
+
+Method as described on the page: an eye-tracking usability test (fixations, saccades, saccade durations and completion times) of four form layouts built from forms in Luke Wroblewski's earlier article on web application form design, with visual design stripped out so that only label placement varied. Gaze recording ended when the user clicked submit. Each form had four required fields including a drop-down list. The article describes two groups, expert users (mostly designers and programmers, with some usability experts) and novices, but does not state how many people took part and does not name the eye-tracker. The tests were run in March 2006 according to an author comment.
+
+The four forms were: (1) left-aligned labels to the left of the fields; (2) right-aligned labels to the left of the fields; (3) left-aligned labels above the fields; (4) bold labels above the fields. Reported results: in form 1 each label and field pair cost one saccade of about 500 ms, some label-field distances being excessive. In form 2, total fixations fell by nearly half and completion times were nearly halved, with saccade times about 170 ms for experts and 240 ms for novices. In form 3, saccades were about 50 ms (roughly a tenth of form 1), most fixations landed on the input fields, and no experts needed to recheck labels, though some novices did. In form 4, saccade time rose from about 50 to about 80 ms (nearly 60 percent) with no clear benefit, so bold labels did not help. Recommendations: put labels above fields; right-align if beside; keep labels for adjacent fields visually distinct; drop-downs attract attention strongly, so use them for important data or place less important ones lower.
+
+### Replication and criticism
+
+The study has weaknesses the page itself surfaces. The sample size is not stated and no significance tests or variance are given, the forms were deliberately bare, and the author acknowledged the bare pages may have affected the bold-label result. The page includes a 2011 comment by Caroline Jarrett arguing that the conclusions overstate what the experiment showed, noting that later work by Das and colleagues (2008) and by Feichtinger (2010) found no advantage for labels above fields in simple forms, and urging designers to consider mobile devices, localization and form complexity. Das, McEwan and Douglas (NordiCHI 2008, DOI 10.1145/1463160.1463217), as summarized by a web search of the abstract, found results against Wroblewski's recommendation, suggesting right-aligned labels at least for multi-field forms, with a small sample of UK university-educated users; I could not read its full text. So the actual evidence is: labels beside fields cost extra eye movement, left-aligned side labels are the worst, and above-field versus right-aligned is contested for simple forms. Above-field is the safe default for narrow screens regardless, because side labels cannot fit.
+
+### Implications for LTF
+
+Use labels above fields in every LTF form and answer box. This is also the right layout for phones and for large text settings, where side labels run out of room. Keep labels plain weight, short and always visible (not placeholder-only), and give numeric answer fields a visible unit label. For the wider desktop layout of an account page, do not claim that above-label is empirically proven faster than right-aligned labels; choose it for consistency and for responsive reasons. Because drop-downs attract disproportionate attention, avoid putting a drop-down at the top of a short sign-up form unless it matters most. If LTF ever needs a long form with unfamiliar content, the practitioner view (see Wroblewski) is that left-aligned labels can slow people down usefully, but there is no LTF form that calls for that.
+
+Confirmed this session: full article page fetched and read at https://www.uxmatters.com/mt/archives/2006/07/label-placement-in-forms.php (method, four tests, results, comments including the 2011 reply); web search of the Das, McEwan and Douglas abstract and Napier repository record.
+
+## w3c2024web
+
+World Wide Web Consortium. (2024). Web Content Accessibility Guidelines (WCAG) 2.2 (W3C Recommendation, 12 December 2024), with the Understanding documents for success criteria 2.5.5, 2.5.7 and 2.5.8.
+
+### Core claims
+
+WCAG 2.2 is the current W3C Recommendation for web accessibility, edited by Alastair Campbell, Chuck Adams, Rachael Bradley Montgomery, Michael Cooper and Andrew Kirkpatrick. Among its nine new success criteria are 2.5.7 Dragging Movements (Level AA) and 2.5.8 Target Size (Minimum) (Level AA); 4.1.1 Parsing was removed. For this lane the relevant requirements are that pointer targets be large enough, or spaced far enough apart, that people with tremor, limited dexterity or coarse pointing can activate them without hitting a neighbor, and that anything done by dragging can also be done with a simple tap or click. These are normative standards, written by consensus and not experiments, and they define a floor for conformance, not a best-practice size.
+
+### Specifics
+
+SC 2.5.8 Target Size (Minimum), Level AA: the size of the target for pointer inputs is at least 24 by 24 CSS pixels, except when (a) Spacing: undersized targets pass if a 24 CSS pixel circle centered on each target's bounding box does not intersect another target or the circle of another undersized target; (b) Equivalent: the function can be achieved by another control on the same page that meets the criterion; (c) Inline: the target is in a sentence or its size is constrained by the line height of non-target text; (d) User agent control: the size is determined by the browser and not modified by the author; (e) Essential: a particular presentation is essential or legally required. The Understanding document says the aim is that targets can be activated without accidentally activating an adjacent target, and that sufficient spacing can work as effectively as larger size. Its examples include a row of buttons 20 pixels high with 4-pixel margins that passes by spacing, while the same toolbar with no gaps fails.
+
+SC 2.5.5 Target Size (Enhanced), Level AAA, uses 44 by 44 CSS pixels with similar exceptions. The Understanding page does not explain how 44 was derived, and it recommends larger targets for frequently used controls, actions that cannot be easily undone, hard-to-reach or edge-of-screen controls and steps in a sequential task.
+
+SC 2.5.7 Dragging Movements, Level AA: all functionality that uses a dragging movement can be achieved by a single pointer without dragging, unless dragging is essential or determined by the user agent. Examples: a range slider also lets users tap the track; a map also offers directional buttons; a sortable list offers up and down controls.
+
+### Replication and criticism
+
+These are consensus standards, not findings, so replication does not apply. Criticism is that 24 CSS pixels is a deliberately low compromise floor (about 6 mm at a typical 96 CSS pixel inch, though a CSS pixel is not a fixed physical length on phones), well below the millimeter sizes in the touch studies in this lane (for example the 9 to 10 mm Parhi recommendation), and that the spacing exception lets visually tiny controls pass. The AAA 44 pixel figure is not justified in the document. Platform guidelines from Apple and Google specify their own sizes; I did not confirm those numbers this session, so LTF should check current platform documents before quoting them.
+
+### Implications for LTF
+
+Treat 24 by 24 CSS pixels as the absolute floor for any pointer control, and design primary and repeated controls (next step, checklist tick, answer options, fly-mode buttons) at the 44 pixel level or larger because the touch studies and the sim-side use case justify it. Apply the spacing rule between adjacent small controls such as plus and minus steppers. Every drag widget (heading dial, slider, sortable item) needs a tap or button alternative under 2.5.7, which also helps a learner using a mouse beside a keyboard in the sim chair. LTF's own content validation could assert target sizes in component tests.
+
+Confirmed this session: https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html, https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html, https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html, and the front matter of https://www.w3.org/TR/WCAG22/ (title, status, date, editors, list of new criteria).
+
