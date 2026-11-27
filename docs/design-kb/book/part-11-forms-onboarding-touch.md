@@ -6,7 +6,7 @@ moments are small, and they are where products lose people. The Part takes them 
 to decide what to ask, how to lay out a form, how answer spaces prevent errors, when to
 validate and how to word an error, how to let people take a mistake back, how a first run
 should teach, how large and how far apart touch targets must be, which gestures beginners can
-be expected to know, and how to design the fly mode screen that a learner glances at while
+be expected to know, and how to design the Fly mode screen that a learner glances at while
 flying.
 
 The evidence is uneven, and the Part says so rule by rule. Pointing and target size rest on
@@ -291,7 +291,7 @@ patterns: an option chosen before the user acts, in the designer's interest
 
 `LoginForm` sets "Remember me for 30 days" to unchecked, with the hint "Don't tick this on a
 shared computer". That default protects the learner on a shared machine at the cost of an
-extra tick for everyone else, which is the right side to err on. The signup terms checkbox is
+extra tick for everyone else, which is the right side to err on. The sign-up terms checkbox is
 unchecked and must be ticked, which is correct for consent. `QuizBlock` starts with no answer
 selected, which keeps a recommendation out of a recall task.
 
@@ -320,7 +320,7 @@ patterns [@seemanhorwitz2021making]. These are consensus standards, not experime
 
 The auth forms already set `autoComplete` to `email`, `new-password` and `current-password`,
 which lets password managers fill and generate credentials, and `PasswordInput` uses a normal
-input with a "Show" toggle, so paste works. The signup password hint ("At least 12 characters.
+input with a "Show" toggle, so paste works. The sign-up password hint ("At least 12 characters.
 A few random words make a strong, memorable password.") states the format before typing and
 gives a strategy, not a list of character-class rules. There is no "confirm password" field,
 which avoids redundant entry; the visible "Show" toggle covers the mistyping risk that a
@@ -626,7 +626,7 @@ form's primary action visually dominant with secondary actions quiet [@wroblewsk
 guideline set [@bargasavila2010simple]; a reset next to submit invites a costly slip.
 
 *In LTF:* no form has one today. The `ChecklistRunner` and `Stopwatch` resets are controls on
-running tools, not forms, and are covered by the chapters on recovery and fly mode.
+running tools, not forms, and are covered by the chapters on recovery and Fly mode.
 :::
 
 ::: {.rule #FRM-023 grade="C"}
@@ -687,7 +687,7 @@ of the two guidelines with a remarkable effect on first-attempt success
 in a placeholder that vanishes on the first keystroke, or in an error that appears only after
 the learner has guessed wrong.
 
-LTF's signup already does this well. "Shown on your dashboard. 2–40 characters." and "At
+LTF's sign-up already does this well. "Shown on your dashboard. 2–40 characters." and "At
 least 12 characters. A few random words make a strong, memorable password." are hints that
 appear under the label before any typing. The `DebriefForm` planning fields do not: each
 renders only its label, with no hint for unit, precision or where the value comes from.
@@ -834,7 +834,7 @@ comparison, or prefill it and ask the learner to confirm or correct.
 
 ### What this means for Learn to Fly
 
-Keep the signup hints, the `QuizBlock` unit-after-box layout, the short mono numeric box and
+Keep the sign-up hints, the `QuizBlock` unit-after-box layout, the short mono numeric box and
 the `BriefTab` copy buttons. Change the planning fields: give them hints for unit and source
 (FRM-024), short widths (FRM-018), and unit labels that follow the MSL and AGL copy rule
 (FRM-025). Build one tolerant numeric parser in `shared/` with tests, used by quizzes and
@@ -1077,7 +1077,7 @@ icon and text, react-hook-form's revalidate-on-change after a failed submit, the
 button, `PasswordStrengthMeter` as the only positive indicator, and `QuizBlock`'s explicit
 "Check answer". Change the vague fallback message in `applyServerErrors` (FRM-035), show
 `DebriefForm` failures in `ErrorSummary` rather than a safety `Callout` (FRM-034), and start counting first-try error rates
-per quiz question (FRM-039). Add on-leave checks only to the signup password and email if
+per quiz question (FRM-039). Add on-leave checks only to the sign-up password and email if
 testing shows people submit and fail on them (FRM-031). Do not cite the Etre percentages in
 LTF documents.
 
@@ -1233,7 +1233,7 @@ transferable part.
 LTF has modes. `WidgetFrame` has an Explore or "Quiz me" pill toggle that changes what a
 widget's controls do. `ChecklistRunner` labels its mode with a `Badge` reading "Read-do" or
 "Do-verify", which is a word plus a variant color. The challenge page has a Fly tab and a
-separate fly mode screen. None of these is a user-maintained state, and none should be: a
+separate Fly mode screen. None of these is a user-maintained state, and none should be: a
 press-and-hold for a whole flight is impractical. The lesson for LTF is the second half of the
 result: color alone was the weakest signal, so every mode must announce itself in words and
 in the layout.
@@ -1247,7 +1247,7 @@ errors better than system-maintained ones, and a color change was the weakest cu
 
 *In LTF:* the `WidgetFrame` "Quiz me" state adds a heading or banner inside the canvas
 ("Quiz: set the needle to..."), not only a filled pill. `ChecklistRunner` keeps its word
-badge. If LTF ever adds a scored mode to fly mode, it shows "Scored" as text in the title bar,
+badge. If LTF ever adds a scored mode to Fly mode, it shows "Scored" as text in the title bar,
 not as a tint.
 :::
 
@@ -1722,7 +1722,7 @@ any grip, and keep destructive ones out of easy accidental reach.** Grips vary a
 often, the reach maps were withdrawn by their author, and he advised against placing
 dangerous functions where they are hit by accident [@hoober2013how].
 
-*In LTF:* test fly mode and the lesson page with left-handed testers as well as right-handed
+*In LTF:* test Fly mode and the lesson page with left-handed testers as well as right-handed
 ones. Do not mirror layouts by handedness; keep one layout that works for both.
 :::
 
@@ -1731,7 +1731,7 @@ ones. Do not mirror layouts by handedness; keep one layout that works for both.
 buttons.** Error rates were higher in serial than discrete tapping, and the authors recommended
 nothing under 9.6 mm for data entry [@parhi2006target].
 
-*In LTF:* if numeric entry in fly mode ever uses on-screen steppers or a keypad, use `Button`
+*In LTF:* if numeric entry in Fly mode ever uses on-screen steppers or a keypad, use `Button`
 `lg` (48 px) with gaps, not `sm`.
 :::
 
@@ -1896,7 +1896,7 @@ LTF's `FlyModeLayout` already responds to this: dark, `text-xl`, `max-w-3xl`, an
 `border-go bg-go-tint` when ticked, and `text-5xl` stopwatch digits.
 
 ::: {.rule #FRM-070 grade="B"}
-**In fly mode, show few controls, make each large, and keep every one in a fixed position from
+**In Fly mode, show few controls, make each large, and keep every one in a fixed position from
 step to step so it can be hit with a glance.** Having to look at small soft targets carried the
 main performance cost under divided attention [@bragdon2011experimental], and size matters most
 when precision is degraded [@mackenzie1992fitts].
@@ -1928,7 +1928,7 @@ the hand between devices, which a learner pays every time they leave the control
 tablet [@card1980keystroke].
 
 ::: {.rule #FRM-072 grade="B"}
-**Test fly mode with the device flat or propped on a desk, tapped at a low finger angle, and
+**Test Fly mode with the device flat or propped on a desk, tapped at a low finger angle, and
 with an interruption that sends the tester's eyes to the sim between taps.** Touch offsets
 change with finger posture [@holz2011understanding], and interruption reveals mode and state
 confusion [@sellen1992prevention].
@@ -1957,7 +1957,7 @@ not experimentally derived thresholds, and they are a useful budget. For a learn
 the screen, a tick that does not respond at once invites a second tap that undoes it.
 
 ::: {.rule #FRM-074 grade="C"}
-**Show the result of every tap in fly mode within about 0.1 second, locally, before any network
+**Show the result of every tap in Fly mode within about 0.1 second, locally, before any network
 call completes.** That limit is the conventional threshold for feeling that the interface
 responds directly [@nielsen1993response].
 
@@ -1971,12 +1971,12 @@ holding detailed feedback for a natural pause [@shute2008focus]. Bandura notes t
 arousal usually debilitates performance [@bandura1977selfefficacy]. Fly mode has one deliberate
 interruption: a challenge's random events fire an alert with a four-pixel `border-warn`, a
 pulse and a two-tone beep, and the learner dismisses it with "Got it". That is the product
-simulating an in-flight event on purpose, and it works only if nothing else in fly mode looks
-or sounds like it. The `BetaBanner` also appears above fly mode, which spends screen space on a
+simulating an in-flight event on purpose, and it works only if nothing else in Fly mode looks
+or sounds like it. The `BetaBanner` also appears above Fly mode, which spends screen space on a
 message the learner has already read elsewhere.
 
 ::: {.rule #FRM-075 grade="B"}
-**Reserve fly mode's alert style and sound for the challenge's own events, and queue all other
+**Reserve Fly mode's alert style and sound for the challenge's own events, and queue all other
 feedback (sign-up prompts, tips, sync notices) for the debrief.** Interrupting an engaged
 learner is listed among things to avoid in formative feedback [@shute2008focus], and high
 arousal tends to impair performance [@bandura1977selfefficacy].
@@ -1987,7 +1987,7 @@ element on the screen.
 :::
 
 ::: {.rule #FRM-076 grade="C"}
-**Never move content under the learner's finger in fly mode: no layout shift when an alert
+**Never move content under the learner's finger in Fly mode: no layout shift when an alert
 appears, a step is ticked or a banner loads.** Controls and content that do not move
 unexpectedly are a listed cognitive accessibility pattern [@seemanhorwitz2021making], and a
 moved target becomes a description error waiting to happen [@norman1981categorization].
@@ -2013,7 +2013,7 @@ Keep `FlyModeLayout`'s large type and dark surface, the full-width step rows, th
 local save, the wake-lock option, the random-event alert and the "Got it" dismissal. Change
 these: enlarge the stopwatch pills and separate "Reset" (FRM-070, FRM-043), mark the next
 step (FRM-071), add `ChecklistRunner`'s keyboard path to `FlyPanel` (FRM-073), hide banners and
-toasts in fly mode (FRM-075), reserve space for the alert so nothing shifts (FRM-076) and
+toasts in Fly mode (FRM-075), reserve space for the alert so nothing shifts (FRM-076) and
 return focus after it (FRM-077). Test on a desk with interruptions before shipping any fly-mode
 change (FRM-072).
 
@@ -2042,7 +2042,7 @@ change (FRM-072).
    actions announced; resets separated and undoable; modes shown in words (FRM-040 to
    FRM-046).
 10. **Onboarding.** The first lesson is the onboarding; no tour or welcome deck before it;
-    training wheels and fading in content; one coach mark in fly mode; any `/welcome` screen is
+    training wheels and fading in content; one coach mark in Fly mode; any `/welcome` screen is
     skippable and measured, and departures from v1.md Section 20.13 go in the Decision Log
     (FRM-047 to FRM-055).
 11. **Touch.** 24 px absolute floor, 44 px for frequent or touch-first controls, larger in fly
@@ -2117,7 +2117,7 @@ Run these questions against a pull request or a page. Each names the rules it ch
 - Is every first-run step skippable and measured, with critical steps inside the task?
   (FRM-054, FRM-055)
 
-**Touch, gestures and fly mode**
+**Touch, gestures and Fly mode**
 
 - Are frequent controls large and near the hand, sized for degraded precision? (FRM-056,
   FRM-057)
@@ -2131,7 +2131,7 @@ Run these questions against a pull request or a page. Each names the rules it ch
 - Does every action commit on release? (FRM-066)
 - Do drags tolerate wandering and have a non-drag path? (FRM-067, FRM-068)
 - Is the value being set visible outside the finger? (FRM-069)
-- In fly mode, are controls few, large and fixed, with the next step marked? (FRM-070, FRM-071)
+- In Fly mode, are controls few, large and fixed, with the next step marked? (FRM-070, FRM-071)
 - Was it tested flat on a desk with interruptions, and does it offer a keyboard path? (FRM-072,
   FRM-073)
 - Does every tap respond within about 0.1 second locally? (FRM-074)

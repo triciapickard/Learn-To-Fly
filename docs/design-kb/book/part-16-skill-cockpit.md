@@ -84,7 +84,7 @@ The part of the model that survives is the observation, shared with the cognitiv
 
 Keep the lesson-then-challenge sequence that `LessonPage` and `ChallengePage` already embody: it is a direct match to the cognitive-then-associative order, and the "Fly it" challenge cards at the end of a lesson make the transition explicit. Keep the plain, unstaged language of the dashboard. `DashboardPage` currently shows Attempts, Gold results and "Sim time (estimated)"; it does not label anyone a novice or an expert, and it should stay that way (SKL-002).
 
-Change three things. First, the `FlyPanel` step list repeats the full procedure, including every number, on every attempt. That is right for a first attempt and wrong for the fifth (SKL-003). A challenge passed once should offer a version of fly mode in which the steps collapse to their headings and the learner flies from memory. Second, `QuizBlock` items across the lessons should be audited for the ratio of recitation to application (SKL-004); widgets in "Quiz me" mode are the cheapest place to add application items, because the instrument state is already drawn. Third, any trend view added to `HistoryTab` must carry the expectation of a flattening curve (SKL-005), so that a learner is not told by a falling slope that they are failing.
+Change three things. First, the `FlyPanel` step list repeats the full procedure, including every number, on every attempt. That is right for a first attempt and wrong for the fifth (SKL-003). A challenge passed once should offer a version of Fly mode in which the steps collapse to their headings and the learner flies from memory. Second, `QuizBlock` items across the lessons should be audited for the ratio of recitation to application (SKL-004); widgets in "Quiz me" mode are the cheapest place to add application items, because the instrument state is already drawn. Third, any trend view added to `HistoryTab` must carry the expectation of a flattening curve (SKL-005), so that a learner is not told by a falling slope that they are failing.
 
 Build nothing that depends on stage boundaries. A "skill level" badge, a "you are now proficient" message or a Dreyfus-style course ladder on `RoadmapPage` would claim more than the evidence supports. The roadmap's eight rungs describe content versions of the product, which is fine; they should never be reworded into learner stages.
 
@@ -757,7 +757,7 @@ The report's 19 recommendations [@degani1992typography, 31-32] include: sans-ser
 The author is candid about the limits. Very little of the data comes from reading in a cockpit; most experiments used college students at a desk in normal room lighting; the recommendations "are not specifications" but a baseline from "the author's subjective interpretation"; and designers should validate in a simulator with representative users. The sans-serif claim has been qualified by later screen-reading work. Screen typography for LTF as such is the business of Part IV, Typography on Screens, and Part III, Legibility and the Science of Reading; what this report adds is the operational frame.
 
 ::: {.rule #SKL-066 grade="C"}
-**Treat fly mode and every checklist view as an operating document: test its legibility at the distance, lighting and glance length of real use.** Flight-deck documents are displays whose legibility and findability are safety properties, and laboratory figures do not transfer to the operating environment without validation [@degani1992typography].
+**Treat Fly mode and every checklist view as an operating document: test its legibility at the distance, lighting and glance length of real use.** Flight-deck documents are displays whose legibility and findability are safety properties, and laboratory figures do not transfer to the operating environment without validation [@degani1992typography].
 
 *In LTF:* `FlyModeLayout` is dark with `text-xl` and `max-w-3xl`. Test it on a phone and a tablet propped beside a monitor in a dim room, with learners, before treating its sizes as settled. Do not copy the report's paper-era measurements into CSS.
 :::
@@ -771,7 +771,7 @@ The author is candid about the limits. Very little of the data comes from readin
 ::: {.rule #SKL-068 grade="C"}
 **Give every checklist and procedure view a text-size control and a stable, consistent position for each section.** Readers vary in age and visual conditions and designers should be conservative [@degani1992typography]; findability depends on consistent placement [@degani1992typography].
 
-*In LTF:* `ChecklistRunner` has a "Large text" toggle and `ChecklistPage` a "Full screen" control. Add the same large-text control to `FlyPanel` outside fly mode, and keep the order Goal, Steps, Timer fixed across every challenge.
+*In LTF:* `ChecklistRunner` has a "Large text" toggle and `ChecklistPage` a "Full screen" control. Add the same large-text control to `FlyPanel` outside Fly mode, and keep the order Goal, Steps, Timer fixed across every challenge.
 :::
 
 ### What this means for Learn to Fly
@@ -780,7 +780,7 @@ Keep `ChecklistRunner` nearly as it is. It already shows the target state for ea
 
 Change `FlyPanel` to borrow what `ChecklistRunner` does: a current-step highlight, chunking for long procedures with a completion line per chunk (SKL-057, SKL-061), and inline checklists at named pause points rather than links to the reference section (SKL-063).
 
-Build two content checks into `content:validate`: generic actions in checklist items (SKL-056) and control names that are not in the glossary (SKL-060). Run a legibility test of fly mode with learners in real conditions (SKL-066). And when any lesson argues for checklists, give both sides of the surgical evidence (SKL-064).
+Build two content checks into `content:validate`: generic actions in checklist items (SKL-056) and control names that are not in the glossary (SKL-060). Run a legibility test of Fly mode with learners in real conditions (SKL-066). And when any lesson argues for checklists, give both sides of the surgical evidence (SKL-064).
 
 ## Displays, alerts and modes
 
@@ -802,7 +802,7 @@ The principle has a second half, given in secondary summaries, that stops it fro
 *In LTF:* `load-factor`, `wind-triangle` and `pitch-power` draw relationships as shapes. Each should show the key values as `readout` text beside the drawing, so a "read this one number" question does not require reading the shape.
 :::
 
-Color is itself a display-proximity cue: items that share a color are read as belonging together [@wickens1995proximity]. In fly mode the teal accent marks the stopwatch dot and links, and the green `go` tint marks ticked steps, which keeps one meaning per color. Part VI, Color: Science, Meaning and Access, covers the palette; the point here is only that a shared color on `FlyModePage` or `ResultView` makes a claim of relatedness.
+Color is itself a display-proximity cue: items that share a color are read as belonging together [@wickens1995proximity]. In Fly mode the teal accent marks the stopwatch dot and links, and the green `go` tint marks ticked steps, which keeps one meaning per color. Part VI, Color: Science, Meaning and Access, covers the palette; the point here is only that a shared color on `FlyModePage` or `ResultView` makes a claim of relatedness.
 
 ### Situation awareness as a design lens
 
@@ -817,7 +817,7 @@ The construct is contested. Flach argued in the same journal issue that SA is a 
 :::
 
 ::: {.rule #SKL-072 grade="C"}
-**In fly mode, show the current and next step prominently and move completed steps out of the way.** Working memory is the bottleneck in Endsley's account [@endsley1995toward], and a long list of equal-weight steps makes the learner search for their place each time they look back.
+**In Fly mode, show the current and next step prominently and move completed steps out of the way.** Working memory is the bottleneck in Endsley's account [@endsley1995toward], and a long list of equal-weight steps makes the learner search for their place each time they look back.
 
 *In LTF:* the `FlyPanel` list shows every step at the same size, with ticked steps tinted green. In `FlyModePage`, collapse ticked steps to one line and enlarge the current one.
 :::
@@ -884,7 +884,7 @@ Parasuraman and Riley organize the human side of automation in four terms [@para
 
 Sarter and Woods showed how flexibility in automated systems creates a new class of error [@sarter1995world]. Because the supervisor must choose the mode best suited to the situation, he or she "must know more than before about system operations" and must meet new attentional demands "to track which mode the automation is in and what it is doing". When designers "proliferate modes without supporting these new cognitive demands, new mode-related error forms and failure paths can result." Their expanded view of mode error includes failures of mode awareness (not knowing which mode is active and what it will do), not only the slip of acting in the wrong mode. The evidence is studies of pilots in early glass-cockpit airliners, so the display details do not carry over to anything else; the design pattern does. A summary adds that these "automation surprises" occurred mostly in non-normal, time-critical situations.
 
-LTF has modes of its own: lesson, challenge Brief, Fly and Debrief, fly mode on a second screen, widget Explore and Quiz, Day and Night. Most are well signposted. Two weak points are fly mode, which opens in a new tab with "Back to challenge" as its only orientation, and the timer-driven random event, which changes what the screen shows without the learner acting.
+LTF has modes of its own: lesson, challenge Brief, Fly and Debrief, Fly mode on a second screen, widget Explore and Quiz, Day and Night. Most are well signposted. Two weak points are Fly mode, which opens in a new tab with "Back to challenge" as its only orientation, and the timer-driven random event, which changes what the screen shows without the learner acting.
 
 ::: {.rule #SKL-081 grade="C"}
 **Show the current mode and place in words, in the same position on every screen, and never change mode without a visible announcement.** Mode errors and surprises come from many modes with weak support for tracking them [@sarter1995world].
@@ -892,7 +892,7 @@ LTF has modes of its own: lesson, challenge Brief, Fly and Debrief, fly mode on 
 *In LTF:* `FlyModePage` should show a fixed line at the top ("Fly mode · C2.1 · Step 3 of 5") readable at a glance, and the random-event alert, already announced with `role="alert"`, should name itself as an event in the challenge so it is not mistaken for an app error.
 :::
 
-Since the root of the problem is the proliferation of modes [@sarter1995world], fewer modes beat better labels on many. LTF already follows this where it counts: fly mode and the Fly tab are one component, `FlyPanel`, with a `large` prop, rather than two sets of controls that could drift apart. When a lesson covers the sim's autopilot, "which mode is active" should be an explicit item to observe and quiz, with mode names from the aircraft's documents.
+Since the root of the problem is the proliferation of modes [@sarter1995world], fewer modes beat better labels on many. LTF already follows this where it counts: Fly mode and the Fly tab are one component, `FlyPanel`, with a `large` prop, rather than two sets of controls that could drift apart. When a lesson covers the sim's autopilot, "which mode is active" should be an explicit item to observe and quiz, with mode names from the aircraft's documents.
 
 ### Standards as a model for this book
 
@@ -1023,7 +1023,7 @@ Build error logging per quiz item, widget quiz and criterion (SKL-083), reviewed
 
 ### Review checklist
 
-Run these questions against a pull request that touches lessons, challenges, widgets, fly mode, the dashboard or learner-facing copy. A "no" is a finding unless the pull request explains why.
+Run these questions against a pull request that touches lessons, challenges, widgets, Fly mode, the dashboard or learner-facing copy. A "no" is a finding unless the pull request explains why.
 
 #### Lessons and quizzes
 

@@ -2,7 +2,7 @@
 
 Color is the design variable most often decided by taste and defended by folklore. This Part replaces both with what can be shown. It runs from the physics and physiology of color vision (why hue is a coarse signal and lightness a strong one), through the standards that measure color and the perceptual spaces that make token ramps behave, to the context effects that make a correct swatch look wrong on the page. It then tests the popular claims about color meaning against their replications, sets out what is known about color and emotion, preference and learning, and ends with the material that most directly governs the product: color vision deficiency, contrast standards, display polarity in light and dark themes, and color as a signal in alerts, status and data.
 
-The evidence is uneven, and the grades say so. The physiology and colorimetry are among the most secure findings in this book: trichromacy, opponent processing, the non-uniformity of the CIE diagram and simultaneous contrast have been replicated for a century or more. The psychology of color meaning is the weakest: several headline effects (red lowers test scores, blue helps creativity, red wins fights) have shrunk to nothing in larger studies. Contrast thresholds are standards, graded C, with a modest experimental base on polarity and reading behind them. Every chapter applies its findings to Learn to Fly by name, and several of the applications rest on numbers computed this session from the values in `src/styles/tokens.css`: WCAG contrast ratios, Oklch coordinates and simulated color-deficient views of the status pairs. Use the rules as gates in review, and the closing decision list as the summary of what this Part settles for LTF.
+The evidence is uneven, and the grades say so. The physiology and colorimetry are among the most secure findings in this book: trichromacy, opponent processing, the non-uniformity of the CIE diagram and simultaneous contrast have been replicated for a century or more. The psychology of color meaning is the weakest: several headline effects (red lowers test scores, blue helps creativity, red wins fights) have shrunk to nothing in larger studies. Contrast thresholds are standards, graded C, with a modest experimental base on polarity and reading behind them. Every chapter applies its findings to Learn to Fly by name, and several of the applications rest on numbers computed for this book from the values in `src/styles/tokens.css`: WCAG contrast ratios, Oklch coordinates and simulated color-deficient views of the status pairs. Use the rules as gates in review, and the closing decision list as the summary of what this Part settles for LTF.
 
 ## Light, Cones and Opponent Channels
 
@@ -76,7 +76,7 @@ One more consequence of trichromacy is a hard limit on reproduction. Because scr
 
 **Keep.** The token system already separates luminance from hue in the way this chapter requires. The ink ladder (`ink`, `ink-2`, `ink-3`) is near-neutral at Oklch chroma of about 0.003 in both themes, so all ordinary reading text is carried by luminance alone. The single saturated non-status color, `accent`, is dark enough in Day (#00757c, 5.03:1 on `canvas`) and light enough in Night (#56d3da, 10.30:1 on the Night `canvas`) to work as text. The quiz result in `QuizBlock` pairs `text-go` with a `CheckCircle2` icon and the word "Correct!", and `text-warn` with an `XCircle` icon and "Not quite.", so the red-green pair never stands alone.
 
-**Change.** The status pair `go` and `warn` in Day differ almost only in hue: computed this session with the WCAG relative-luminance formula, `go` (#006c43) and `warn` (#b71824) have a luminance ratio of only 1.02 to each other. To the achromatic channel they are the same grey. That is acceptable only because every use carries an icon or a word, so treat the icon and word as mandatory, never optional, in `Badge`, `Callout`, `Toast` and `FormField` errors. The `PasswordStrengthMeter` colors its bar with `bg-warn`, `bg-warn`, `bg-caution`, `bg-go`, `bg-go`, a red-to-green ramp for an ordered quantity; it must show its strength word beside the bar (COL-003, COL-004).
+**Change.** The status pair `go` and `warn` in Day differ almost only in hue: computed for this book with the WCAG relative-luminance formula, `go` (#006c43) and `warn` (#b71824) have a luminance ratio of only 1.02 to each other. To the achromatic channel they are the same grey. That is acceptable only because every use carries an icon or a word, so treat the icon and word as mandatory, never optional, in `Badge`, `Callout`, `Toast` and `FormField` errors. The `PasswordStrengthMeter` colors its bar with `bg-warn`, `bg-warn`, `bg-caution`, `bg-go`, `bg-go`, a red-to-green ramp for an ordered quantity; it must show its strength word beside the bar (COL-003, COL-004).
 
 **Build.** Add a short "Sim vs reality" explainer to Module 0 that tells learners their monitor, room light and own eyes all change what a color looks like, and that the app always names or labels what a color means (COL-001, COL-006). Add an authoring rule to `content/README.md` that lessons never describe cones by color names.
 
@@ -107,7 +107,7 @@ The qualitative result has been replicated by every later study: Brown and MacAd
 ::: {.rule #COL-008 grade="B"}
 **Make any two states that must be told apart at a glance differ by many just-noticeable steps, not one or two.** MacAdam's thresholds were measured with a trained observer matching adjacent fields under laboratory conditions [@macadam1942visual]; a beginner scanning a busy screen beside a simulator is far from that. Wolfe and Horowitz add that efficient color search needs differences much larger than a MacAdam ellipse, and that the efficient region does not even look like a scaled ellipse [@wolfe2004what]. The rule is graded B because the threshold for "at a glance" on LTF's screens has not been measured.
 
-*In LTF:* the Day tier tokens `tier-gold` (#906200), `tier-silver` (#5f6469) and `tier-bronze` (#8c5331) sit within 0.03 of each other in Oklch lightness (0.53, 0.50 and 0.50, computed this session), and gold and bronze are only about 0.06 apart in Oklab. As rings they are near-identical in lightness; the printed tier word and the ring shape carry the distinction, and must continue to.
+*In LTF:* the Day tier tokens `tier-gold` (#906200), `tier-silver` (#5f6469) and `tier-bronze` (#8c5331) sit within 0.03 of each other in Oklch lightness (0.53, 0.50 and 0.50, computed for this book), and gold and bronze are only about 0.06 apart in Oklab. As rings they are near-identical in lightness; the printed tier word and the ring shape carry the distinction, and must continue to.
 :::
 
 ### Color order: hue, value and chroma
@@ -180,7 +180,7 @@ The starting matrix is a cone-like space, which is no accident: every color-matc
 
 ### LTF's tokens in Oklch
 
-The following values were computed this session from the hex values in `src/styles/tokens.css`, using Ottosson's published transform. L is lightness from 0 to 1, C is chroma, h is hue in degrees.
+The following values were computed for this book from the hex values in `src/styles/tokens.css`, using Ottosson's published transform. L is lightness from 0 to 1, C is chroma, h is hue in degrees.
 
 | Token | Day (L, C, h) | Night (L, C, h) | Note |
 | --- | --- | --- | --- |
@@ -592,7 +592,7 @@ Okabe and Ito, as protanopes, add the user's caution: simulators show one approx
 
 ### LTF's status colors under simulation
 
-The following was computed this session by applying the Machado severity 1.0 matrices to linearized sRGB values of LTF tokens (the linear choice is an assumption, for the reason just given), then measuring Euclidean distance in Oklab between the two colors of each pair. Larger distances mean more distinct; the "normal" column is the unsimulated distance.
+The following was computed for this book by applying the Machado severity 1.0 matrices to linearized sRGB values of LTF tokens (the linear choice is an assumption, for the reason just given), then measuring Euclidean distance in Oklab between the two colors of each pair. Larger distances mean more distinct; the "normal" column is the unsimulated distance.
 
 | Pair | Normal | Protan | Deutan |
 | --- | --- | --- | --- |
@@ -688,13 +688,13 @@ The finding cuts against complacency rather than for it. Normal readers at comfo
 ::: {.rule #COL-053 grade="C"}
 **Give all text at least 4.5:1 contrast against its actual background, and large text at least 3:1, computed on the final composited token pair in both themes, without rounding.** This is WCAG 2.2 success criterion 1.4.3 [@w3c2024wcag], whose 4.5:1 level is derived from the contrast-sensitivity loss that accompanies 20/40 acuity. Grade C: a standard, with a rationale from vision research but no experiment that tests the threshold itself.
 
-*In LTF:* computed this session, every declared text token passes on every ground in both themes (Day `ink-3` is the tightest at 4.73:1 on `surface-sunken`; Night `ink-3` at 4.61:1 on `surface-raised`). Tight margins mean that a new ground (a tint, a hover fill) must be checked before `text-ink-3` is used on it.
+*In LTF:* computed for this book, every declared text token passes on every ground in both themes (Day `ink-3` is the tightest at 4.73:1 on `surface-sunken`; Night `ink-3` at 4.61:1 on `surface-raised`). Tight margins mean that a new ground (a tint, a hover fill) must be checked before `text-ink-3` is used on it.
 :::
 
 ::: {.rule #COL-054 grade="C"}
 **Give every boundary or mark needed to identify a control, its state or a meaningful part of a graphic at least 3:1 contrast against its neighbors.** This is WCAG 2.2 success criterion 1.4.11 [@w3c2024wcag]; Carbon applies the same 3:1 to graphical elements, data visualizations and focus states [@ibm2026carbon]. Decorative borders are exempt, which is why the quiet `line` token is acceptable for card edges.
 
-*In LTF:* computed this session, Day `accent-line` (#009ca5) is 3.07:1 on `canvas` and 3.33:1 on `surface`, passing, but 2.88:1 on `surface-sunken`, failing. Where the teal line marks the active tab, the active section in `SectionNav`, the active nav item or the done part of `LessonPath` on a sunken ground, use `accent` (4.72:1 on `surface-sunken`) instead. Input borders use `line-strong` (3.95:1 on `surface` in Day, 4.58:1 in Night), which passes; keep them on that token.
+*In LTF:* computed for this book, Day `accent-line` (#009ca5) is 3.07:1 on `canvas` and 3.33:1 on `surface`, passing, but 2.88:1 on `surface-sunken`, failing. Where the teal line marks the active tab, the active section in `SectionNav`, the active nav item or the done part of `LessonPath` on a sunken ground, use `accent` (4.72:1 on `surface-sunken`) instead. Input borders use `line-strong` (3.95:1 on `surface` in Day, 4.58:1 in Night), which passes; keep them on that token.
 :::
 
 ::: {.rule #COL-055 grade="C"}
@@ -730,12 +730,12 @@ Its status is contested. The documentation itself says APCA is in beta, that WCA
 ::: {.rule #COL-059 grade="C"}
 **Check text on tinted fills as its own pair, never by assuming that a token which passes on `surface` also passes on a tint.** Tints raise the background luminance in Day and lower it in Night, so each text-on-tint combination has its own ratio [@w3c2024wcag]. Grade C.
 
-*In LTF:* computed this session, Day `accent` on `accent-tint` is 4.86:1 (passing with little room) and Day `caution` on `caution-tint` is 4.93:1; Night `warn` on `warn-tint` is 6.02:1. The `Callout` titles and `Badge` labels that use these pairs pass, but a lighter `accent` or a darker tint would break them first.
+*In LTF:* computed for this book, Day `accent` on `accent-tint` is 4.86:1 (passing with little room) and Day `caution` on `caution-tint` is 4.93:1; Night `warn` on `warn-tint` is 6.02:1. The `Callout` titles and `Badge` labels that use these pairs pass, but a lighter `accent` or a darker tint would break them first.
 :::
 
 ### Contrast in instrument drawings
 
-The widgets are graphics, so 1.4.11 governs their meaningful parts, and their fixed colors were computed this session against the fixed `instrument` ground (#100f0e). `arc-white` reaches 17.48:1, `arc-yellow` 12.50:1, `arc-green` 8.40:1, `display-cyan` 10.60:1, `display-magenta` 7.83:1 and `arc-red` 5.09:1, all above 3:1. The `sky` fill (#2563c9) is 3.38:1 and `ground` (#7a4d24) 2.66:1 against `instrument`, but those are areas, not marks; what matters is that marks drawn on them pass. `instrument-text` (#ecebe9) is 4.76:1 on `sky` and 6.05:1 on `ground`, so labels drawn on the attitude fills pass the text minimum. On the sectional chart, `chart-blue` (6.08:1) and `chart-magenta` (6.33:1) on `chart-land` pass comfortably.
+The widgets are graphics, so 1.4.11 governs their meaningful parts, and their fixed colors were computed for this book against the fixed `instrument` ground (#100f0e). `arc-white` reaches 17.48:1, `arc-yellow` 12.50:1, `arc-green` 8.40:1, `display-cyan` 10.60:1, `display-magenta` 7.83:1 and `arc-red` 5.09:1, all above 3:1. The `sky` fill (#2563c9) is 3.38:1 and `ground` (#7a4d24) 2.66:1 against `instrument`, but those are areas, not marks; what matters is that marks drawn on them pass. `instrument-text` (#ecebe9) is 4.76:1 on `sky` and 6.05:1 on `ground`, so labels drawn on the attitude fills pass the text minimum. On the sectional chart, `chart-blue` (6.08:1) and `chart-magenta` (6.33:1) on `chart-land` pass comfortably.
 
 The weak point is between marks rather than against the ground: `arc-green` and `arc-red` are only 1.65:1 against each other, and `arc-yellow` and `arc-green` 1.49:1. Where bands abut, the distinction is carried by hue alone, which is the case COL-045 forbids unless labels or position also carry it. In `AirspeedArcs` they do (worded legend, red line drawn as a different shape), and that redundancy must be preserved in every gauge.
 
@@ -747,7 +747,7 @@ The weak point is between marks rather than against the ground: `arc-green` and 
 
 **Build.** The contrast gate in the token script, run in CI for Day and Night: every text token on every ground and tint it is used on, every non-text indicator on its neighbor, with WCAG thresholds as failures and APCA as information only (COL-057, COL-058). Add the widget marks to it, pairing each fixed mark color with the fixed ground it is drawn on.
 
-## Polarity, Dark Themes and Fly Mode
+## Polarity, Dark Themes and Fly mode
 
 ### Polarity is a luminance question
 

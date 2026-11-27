@@ -74,7 +74,7 @@ Learn to Fly is unusually exposed to these laws because its hardest screen is us
 
 Keep: the code already applies several of the laws without naming them. `ChecklistRunner` uses full-width rows with a 48 px minimum height (64 px in large mode) and keyboard stepping (Space, Backspace, arrow keys), which addresses pointing cost and homing cost together. `useUpdateLessonProgress` in `src/features/progress/api.ts` updates the cache optimistically when a lesson is marked complete, which keeps a control action instant. `QuizBlock` options are whole-label targets at least 44 px tall.
 
-Change: adopt the vocabulary of this Part in reviews (LAW-001), remove any constant borrowed from the literature from comments and documents (LAW-002), and treat fly mode as the reference case for every sizing decision (LAW-003). The remaining chapters give the specific rules.
+Change: adopt the vocabulary of this Part in reviews (LAW-001), remove any constant borrowed from the literature from comments and documents (LAW-002), and treat Fly mode as the reference case for every sizing decision (LAW-003). The remaining chapters give the specific rules.
 
 Build: a small, repeatable test protocol for comparing two layouts on LTF's own learners (LAW-004), described in the next chapter under measurement.
 
@@ -119,7 +119,7 @@ For design, effective width says that the real size of a target, in the sense th
 ::: {.rule #LAW-007 grade="B"}
 **Size targets for the scatter of a distracted user, not for an attentive one.** Effective width, computed from the spread of actual endpoints, is what governs pointing time and errors [@mackenzie1992fitts; @soukoreff2004towards], and divided attention widens that spread (the touch evidence is in Fingers, touch and the divided-attention screen). The specific margin is not established for LTF's setting, so treat it as a direction: when in doubt, larger and more widely spaced.
 
-*In LTF:* in fly mode, step rows, the `Stopwatch` buttons and the alert's "Got it" button are sized at the large end of the component scale (`min-h-control-lg`, 48 px, or more), and adjacent controls have visible gaps of at least 8 px plus padding inside each target.
+*In LTF:* in Fly mode, step rows, the `Stopwatch` buttons and the alert's "Got it" button are sized at the large end of the component scale (`min-h-control-lg`, 48 px, or more), and adjacent controls have visible gaps of at least 8 px plus padding inside each target.
 :::
 
 ::: {.rule #LAW-008 grade="B"}
@@ -158,13 +158,13 @@ That method was designed for mice and similar devices. A thumb on a tablet propp
 
 ### What this means for Learn to Fly
 
-The component scale is sound in principle and misapplied in a few places. `Button` offers `sm` (32 px), `md` (40 px) and `lg` (48 px) through `spacing-control-sm`, `spacing-control-md` and `spacing-control-lg` in `tokens.css`. The `lg` size is used for the right things ("Finish and debrief", "Mark lesson complete", the landing CTAs). The problems are in fly mode and in widgets.
+The component scale is sound in principle and misapplied in a few places. `Button` offers `sm` (32 px), `md` (40 px) and `lg` (48 px) through `spacing-control-sm`, `spacing-control-md` and `spacing-control-lg` in `tokens.css`. The `lg` size is used for the right things ("Finish and debrief", "Mark lesson complete", the landing CTAs). The problems are in Fly mode and in widgets.
 
 Change in `FlyPanel` and `FlyModePage`:
 
 - Make each step row the hit target (LAW-008). Today a learner who taps the padding of a step card misses.
 - The `Stopwatch` `PillButton` is a fixed `h-9` (36 px) even when `large` is set, and its Reset button sits 8 px (`gap-2`) from Pause or Resume with no confirmation. Under LAW-005 and LAW-007 the fly-mode stopwatch buttons should grow with `large`, and Reset should move away from Start and Pause (see the touch chapter on separating destructive actions).
-- The random-event alert's "Got it" uses the default `md` size (40 px). It is the one control the learner must hit quickly, without much of a look, after a beep; make it `lg` or larger in fly mode.
+- The random-event alert's "Got it" uses the default `md` size (40 px). It is the one control the learner must hit quickly, without much of a look, after a beep; make it `lg` or larger in Fly mode.
 
 Change in widgets: `WidgetFrame`'s ghost "Reset" and the `ChecklistRunner` header's "Large text" and "Reset" use `size="sm"` (32 px). These are rare actions, so small is acceptable on the lesson page, but "Reset" in `ChecklistRunner` clears every tick and sits beside "Large text"; it should not be the smaller and nearer of the two (LAW-006).
 
@@ -239,7 +239,7 @@ That is exactly the fly-mode condition. The learner looks at the simulator, glan
 ### Grips, hands and the thumb zone
 
 ::: myth
-**"There is a thumb zone: put primary actions in the bottom arc a right thumb can reach."** The reach diagrams came from Hoober's 2013 field observation of 1,333 people using phones in public, in which one-handed use was 49 percent of touching users, cradling 36 percent and two-handed use 15 percent, and grips changed often, sometimes every few seconds [@hoober2013how]. The article now carries the author's own 2017 comment that the reach drawings and the claim about touch locations were inaccurate and should be ignored. The data support the opposite lesson: grips vary, and no region of the screen is safe for every user.
+**"There is a thumb zone: put primary actions in the bottom arc a right thumb can reach."** The reach diagrams came from Hoober's 2013 field observation of 1,333 people using phones in public, in which one-handed use was 49 percent of touching users, cradling 36 percent and two-handed use 15 percent, and grips changed often, sometimes every few seconds [@hoober2013how]. The full case, with the studies, is made in Part XI, Forms, Onboarding and Touch, and is not repeated here.
 :::
 
 Hoober's conclusions that do hold are modest and useful: do not assume one-handed use, do not put dangerous functions where they are easy to hit by accident, pay attention to left-handed use, and test prototypes by holding them because fingers hide content [@hoober2013how]. Sears and Shneiderman's offset cursor addressed the same occlusion problem: a finger hides what it touches [@sears1991high].
@@ -253,7 +253,7 @@ Hoober's conclusions that do hold are modest and useful: do not assume one-hande
 ::: {.rule #LAW-018 grade="B"}
 **Show the value being set or the item being acted on away from the finger, so the hand does not hide it.** Fingers occlude what they touch, the problem the offset cursor of the lift-off studies solved [@sears1991high], and observers of real grips advise testing by holding the device because fingers obscure content [@hoober2013how].
 
-*In LTF:* `RangeField` already places the value readout (`font-mono text-sm`) above and to the right of the slider track, out from under a finger; keep that position in every widget slider, and in fly mode keep the current step's text above its tick control, not under it.
+*In LTF:* `RangeField` already places the value readout (`font-mono text-sm`) above and to the right of the slider track, out from under a finger; keep that position in every widget slider, and in Fly mode keep the current step's text above its tick control, not under it.
 :::
 
 ### What this means for Learn to Fly
@@ -419,7 +419,7 @@ The first point follows from the shape. A logarithm grows ever more slowly, so e
 
 ### Answer options and checklists
 
-Quiz answers on LTF are labeled text, mapped to a choice: closer to the arbitrary case than to the compatible one. Nothing in the choice-time literature supports adding or removing options to tune difficulty or speed [@proctor2018hicks; @liu2020relevant]; the levers that remain are the wording and the plausibility of the options, which the law does not address. In fly mode the opposite applies: the learner's choice is almost always "the next step", so the number of steps on screen is not the driver of time, and a predictable order matching the cockpit flow removes uncertainty. Degani and Wiener's checklist guidelines, from a NASA field study of airline crews, point the same way: sequence items by the geographical layout of the cockpit, and subdivide long checklists into chunks tied to systems and functions [@degani1990checklists].
+Quiz answers on LTF are labeled text, mapped to a choice: closer to the arbitrary case than to the compatible one. Nothing in the choice-time literature supports adding or removing options to tune difficulty or speed [@proctor2018hicks; @liu2020relevant]; the levers that remain are the wording and the plausibility of the options, which the law does not address. In Fly mode the opposite applies: the learner's choice is almost always "the next step", so the number of steps on screen is not the driver of time, and a predictable order matching the cockpit flow removes uncertainty. Degani and Wiener's checklist guidelines, from a NASA field study of airline crews, point the same way: sequence items by the geographical layout of the cockpit, and subdivide long checklists into chunks tied to systems and functions [@degani1990checklists].
 
 Hyman's probability result also bears on answer order. Randomizing the position of the correct answer raises uncertainty about where it will be, which is the point of a quiz. Keeping a fixed order is right where order carries meaning, as in a procedure the learner is learning to follow.
 
@@ -490,7 +490,7 @@ The menu studies share a caution. Miller and Kiger built every structure from th
 ### Click counts are not a measure
 
 ::: myth
-**"Users give up if they cannot find what they want within three clicks."** Porter analyzed 44 users, 620 tasks and more than 8,000 clicks and found the distribution of click-stream lengths was the same for successful and unsuccessful tasks; users did not give up after three clicks, and they complained about clicks only when they failed [@porter2003testing]. The analysis is observational, so it shows the rule lacks support rather than proving a right number, but it agrees with the menu research: what drives abandonment is whether each step looks right, not how many steps there are.
+**"Users give up if they cannot find what they want within three clicks."** Porter analyzed 44 users, 620 tasks and more than 8,000 clicks and found the distribution of click-stream lengths was the same for successful and unsuccessful tasks; users did not give up after three clicks, and they complained about clicks only when they failed [@porter2003testing]. The full case, with the studies, is made in Part XIII, Information Architecture and Wayfinding, and is not repeated here.
 :::
 
 ::: {.rule #LAW-035 grade="B"}
@@ -499,7 +499,7 @@ The menu studies share a caution. Miller and Kiger built every structure from th
 *In LTF:* a longer path with clear labels (landing, curriculum, module, lesson) is acceptable. Shortcuts such as the landing page's "Continue where you left off" and the dashboard's Continue card are good because they serve the commonest task, not because they reduce a count.
 :::
 
-### Ordered content and fly mode
+### Ordered content and Fly mode
 
 Landauer and Nachbar's result is strongest for content with an evident order, and LTF has a lot of it: lessons in numbered sequence, challenge codes, checklist steps, reference sections numbered 01 to 05. Such lists can be broad and flat because the learner can bisect them by number. Under stress the case for flatness is stronger: Zaphiris reports, from earlier work, that rushed users made 96 percent more errors and took 16 percent longer, a secondary report [@zaphiris2000depth].
 
@@ -579,7 +579,7 @@ Rule 1 of the M heuristics says that when the next operator is fully anticipated
 
 The counts below use the operator letters only. They are illustrations of the method, not timings.
 
-**Ticking a step in fly mode, today.** The learner decides to tick (M), takes a hand off the controller (H), points at the step's small checkbox label on the tablet (P), taps (K) and returns the hand (H): M H P K H. A miss on the row padding (LAW-008) adds P K. With the whole row as the target, the P becomes easier but remains. With a Space key on a keyboard beside the controller, it becomes M H K H if the hand must move, or M K if it rests there. Because the next step is anticipated, the M can shrink with practice.
+**Ticking a step in Fly mode, today.** The learner decides to tick (M), takes a hand off the controller (H), points at the step's small checkbox label on the tablet (P), taps (K) and returns the hand (H): M H P K H. A miss on the row padding (LAW-008) adds P K. With the whole row as the target, the P becomes easier but remains. With a Space key on a keyboard beside the controller, it becomes M H K H if the hand must move, or M K if it rests there. Because the next step is anticipated, the M can shrink with practice.
 
 **Answering a single-choice quiz.** Read the question (not modeled), decide (M), point at an option (P), tap (K), point at "Check answer" (P), tap (K): M P K P K. The second pointing movement exists because the design separates selection from submission, which is right for a learning quiz (it allows the learner to change their mind before checking, and `QuizBlock`'s "Change your answer and check again" depends on it). The count makes the cost visible and shows it is one P K, not a reason to auto-submit.
 
@@ -636,7 +636,7 @@ The figure of four is itself contested. Alvarez and Cavanagh found visual short-
 ::: {.rule #LAW-042 grade="A"}
 **Keep the information a learner is acting on visible; do not make them hold it in memory while they operate the simulator.** The capacity for new, unrelated items in short-term memory is small, around four chunks under conditions that block recoding, and is replicated across many tasks even though its exact value is contested [@cowan2001magical; @miller1956magical]. A beginner has few chunks for flight concepts, so the effective limit is at its lowest.
 
-*In LTF:* `FlyPanel` shows the full procedure and the current step on screen throughout; the "Key numbers" for a challenge (`KeyNumbers`) stay visible in fly mode instead of being shown once in the Brief; the reference `SpeedsPage` keeps the sticky `KeyNumbers large` panel beside the table.
+*In LTF:* `FlyPanel` shows the full procedure and the current step on screen throughout; the "Key numbers" for a challenge (`KeyNumbers`) stay visible in Fly mode instead of being shown once in the Brief; the reference `SpeedsPage` keeps the sticky `KeyNumbers large` panel beside the table.
 :::
 
 ::: {.rule #LAW-043 grade="A"}
@@ -673,7 +673,7 @@ The product already relies more on display than on memory, and that is the right
 
 Keep: the persistent step list in `FlyPanel`, `KeyNumbers` beside tables, glossary `Popover`s that define a term in place, copy buttons in `BriefTab`.
 
-Change: remove "seven plus or minus two" from any design discussion of navigation counts (the myth above); check that `FlyModePage` shows the challenge's key numbers, not only the steps (LAW-042); check that numeric values in fly mode are grouped and large (LAW-045).
+Change: remove "seven plus or minus two" from any design discussion of navigation counts (the myth above); check that `FlyModePage` shows the challenge's key numbers, not only the steps (LAW-042); check that numeric values in Fly mode are grouped and large (LAW-045).
 
 Build: a content review prompt for lesson authors that counts new terms and values per section (LAW-044). The learning-science Part of this book covers the instructional side of load in depth; this chapter only sets the interface rules.
 
@@ -806,7 +806,7 @@ Harrison and colleagues showed that how a bar moves changes perceived duration: 
 Nah's study is often quoted for a "2 second" tolerance, but what it measured was how long people waited when a link did not work [@nah2004study]. In the account given by Galletta and colleagues, people with feedback (a status bar) waited on average 38 seconds after the first broken link before giving up, against 13 seconds without; on later attempts they waited 7 and 3 seconds. Feedback prolongs patience, and patience shrinks with each failure. Galletta's own experiment with 196 students and fixed delays of 0 to 12 seconds found that delay hurt performance, attitudes and intentions, but non-linearly and with small explained variance (about 2, 5 and 7 percent), with declines flattening from about 4 seconds for performance and intentions and about 8 for attitudes [@galletta2004web]. Delay costs something at every length, with diminishing marginal effect; there is no cliff.
 
 ::: myth
-**"Users abandon a page after 2 seconds," and its cousin, "the 400 ms Doherty threshold for productivity."** The 2 second figure comes from patience with broken links, not from waiting for pages that load [@nah2004study], and delay effects in a controlled study were real but modest and non-linear [@galletta2004web]. The 400 ms figure, attributed to a 1982 IBM report, could not be traced to a primary or scholarly source; only vendor and design-blog pages repeat it [@dabrowski2011years]. Neither belongs in an LTF document as a research finding.
+**"Users abandon a page after 2 seconds," and its cousin, "the 400 ms Doherty threshold for productivity."** The 2 second figure comes from patience with broken links, not from waiting for pages that load [@nah2004study], and delay effects in a controlled study were real but modest and non-linear [@galletta2004web]. The full case, with the studies, is made in Part XXII, Motion and Perceived Performance, and is not repeated here.
 :::
 
 ::: {.rule #LAW-057 grade="B"}
@@ -836,9 +836,9 @@ Two of Shneiderman's points bear on learning screens [@shneiderman1984response].
 Google's Core Web Vitals give a field-measured budget: Largest Contentful Paint at 2.5 seconds or less, Interaction to Next Paint at 200 ms or less, Cumulative Layout Shift at 0.1 or less, each at the 75th percentile of page loads, segmented by mobile and desktop [@google2024web]. The threshold article is open that the "good" values reflect what a large share of real sites can reach, not a proven human optimum: research pointed to 100 ms for interaction feedback, and 200 ms was chosen for achievability. The metrics are defined and revised by one vendor.
 
 ::: {.rule #LAW-060 grade="C"}
-**Measure interaction latency, load time and layout shift on real learners' devices, and set a stricter internal interaction target for fly mode than the public threshold.** Field measurement is the stated basis of the vitals and lab tests do not replace it [@google2024web]; response-time research urges measuring real delays rather than relying on laboratory thresholds [@dabrowski2011years]. The thresholds themselves are a vendor's pragmatic choices, hence C.
+**Measure interaction latency, load time and layout shift on real learners' devices, and set a stricter internal interaction target for Fly mode than the public threshold.** Field measurement is the stated basis of the vitals and lab tests do not replace it [@google2024web]; response-time research urges measuring real delays rather than relying on laboratory thresholds [@dabrowski2011years]. The thresholds themselves are a vendor's pragmatic choices, hence C.
 
-*In LTF:* real-user monitoring records INP, LCP and CLS by route; fly mode's internal INP target is closer to the 100 ms research ideal than to the 200 ms "good" line, because the learner's glances are short.
+*In LTF:* real-user monitoring records INP, LCP and CLS by route; Fly mode's internal INP target is closer to the 100 ms research ideal than to the 200 ms "good" line, because the learner's glances are short.
 :::
 
 ### What this means for Learn to Fly

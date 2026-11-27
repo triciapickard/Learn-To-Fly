@@ -806,7 +806,7 @@ announced (and so impossible to miss).
 
 ::: {.rule #INT-031 grade="C"}
 **Separate practice from anything scored or recorded by a different screen or a clearly different
-frame, not by a toggle inside the same frame.** The Raskin-derived implication in the lane notes is
+frame, not by a toggle inside the same frame.** The Raskin-derived implication in the research notes is
 that a widget that is "explore" in a lesson and "scored" in a challenge should be visibly distinct
 and entered by a clearly different path [@raskin2000humane]. Fewer modes is the first defense
 [@sarter1995world].
@@ -1281,7 +1281,7 @@ they are intelligent, avoid the word "Default" in the interface, and communicate
 reversion [@tognazzini2014first]. ISO 9241-110 lists defaults that support the task among the
 recommendations under suitability for the user's tasks [@iso2020ergonomics]. Saffer's chapter on
 rules covers limited options and smart defaults, and his chapter on triggers includes "Bring the
-Data Forward", which the lane notes read as showing the person's relevant data where they act
+Data Forward", which the research notes read as showing the person's relevant data where they act
 [@saffer2013microinteractions]; the book was not read in full, so his own definitions are not
 quoted here. Raskin argued against adaptive interfaces that change on their own, because they
 prevent habituation [@raskin2000humane].
@@ -1298,7 +1298,7 @@ defaults principle [@tognazzini2014first], ISO's task-supporting defaults [@iso2
 Saffer's smart defaults [@saffer2013microinteractions] agree; all are expert or consensus guidance.
 
 *In LTF:* `QuizBlock` restores `lastAnswer` from `quizStore` so a learner returning to a question sees
-what they chose, and `ChecklistRunner` opens in large text when started with `bigText` from fly mode.
+what they chose, and `ChecklistRunner` opens in large text when started with `bigText` from Fly mode.
 `ChallengesPage` keeps its filters in the URL through `useSearchParams`, so the browser's Back
 button returns a learner from a challenge to the list they had filtered; keep that, and keep "Clear
 filters" one tap away.
@@ -1352,7 +1352,7 @@ learner proceed with one tap.
 
 ### What this means for Learn to Fly
 
-LTF's defaults are chosen well and mostly undocumented. Keep them: system theme, dark fly mode
+LTF's defaults are chosen well and mostly undocumented. Keep them: system theme, dark Fly mode
 unless light was chosen, "Remember me" off, timer stopped, quiz and rubric answers empty, last
 answers restored. Document each choice where it is set (INT-049) so that later changes are reviewed
 as decisions. Keep the explicit sentence about unanswered criteria (INT-051), and never pre-select a
@@ -1411,7 +1411,7 @@ its system image [@norman2013design]. Degani and Wiener's checklist guidelines a
 names for controls and displays [@degani1990checklists], and "same thing, same way" was the single
 largest explainer in Nielsen's database, at 23% of all problems [@nielsen1994enhancing].
 
-*In LTF:* the challenge tabs say "Fly" and the page says "fly mode"; the Fly tab's list is "Steps",
+*In LTF:* the challenge tabs say "Fly" and the page says "Fly mode"; the Fly tab's list is "Steps",
 the Brief's section is "Procedure", and the reference has "checklists". These may be three different
 things, but if a Brief "Procedure" and a Fly "Steps" are the same list, give them one name. Keep a
 glossary of interface terms beside `features/reference/glossary.ts` and lint content against it.
@@ -1658,9 +1658,9 @@ and test the second-screen assumption: how many learners actually open `FlyModeP
 
 LTF already does the hardest part of goal-directed design: the first screen leads to the first task,
 with no account, no tour and no settings. Protect that (INT-065). The excise to remove is at the top
-of lesson pages, where up to four notices can precede the content (INT-063), and in fly mode, where
+of lesson pages, where up to four notices can precede the content (INT-063), and in Fly mode, where
 `FlyModeLayout` still renders the `BetaBanner` above the challenge on a screen whose only job is
-the flight. Show the beta notice once per session in fly mode, or fold it into the page footer there.
+the flight. Show the beta notice once per session in Fly mode, or fold it into the page footer there.
 
 Make every lesson contain an attempt (INT-067), place critical setup in the path of the task
 (INT-066), retire first-time help once it has been used (INT-064), and treat the second-screen
@@ -1690,7 +1690,7 @@ to start from the person's need (what, when, how often) and to do as much as pos
 as possible, under an epigraph from Charles Eames that the details "make the design".
 
 The evidence is craft judgment illustrated by products, not research, and the book was known for
-this Part through its contents and one review. A fair limitation, offered by the lane notes rather
+this Part through its contents and one review. A fair limitation, offered by the research notes rather
 than by a published critic, is that almost any interface event can be called a microinteraction, and
 that polish on details can distract from structure. The framework's value is as a specification
 template: it forces four questions to be answered before code is written.
@@ -1849,7 +1849,7 @@ engagement [@hutchins1985direct], and the ready-to-hand tool is the one not noti
 [@dourish2001where].
 
 *In LTF:* `FlyModeLayout` already strips the header and footer. It still renders the `BetaBanner`;
-dismissing it is one more thing to do while flying. Hide it in fly mode after its first showing in
+dismissing it is one more thing to do while flying. Hide it in Fly mode after its first showing in
 the session, and keep any future sign-up prompt, toast or glossary popover off `FlyModePage`.
 :::
 
@@ -1976,7 +1976,7 @@ idea of breakdown as a site of learning are philosophical design rationale [@dou
 evidence of learning gains.
 
 *In LTF:* the Debrief tab, its "Reflect" questions and the criterion-by-criterion `ResultView` are
-this moment. Keep fly mode free of reflection prompts, and keep "Finish and debrief" as the explicit
+this moment. Keep Fly mode free of reflection prompts, and keep "Finish and debrief" as the explicit
 transition on the Fly tab; on `FlyModePage`, which has no such button, add "Done flying? Debrief on
 your main screen".
 :::
@@ -1997,10 +1997,10 @@ returning learner test retention, with the Debrief as the check. The default sta
 `FlyModePage` and `FlyModeLayout` are the product's most distinctive interaction and its most
 demanding. The dark, large-type, headerless layout is right. The changes this chapter asks for are:
 a stable layout in which the random-event alert does not push the steps (INT-075); the beta notice
-shown once and then gone in fly mode (INT-076); the alert kept as the product's only loud signal and
+shown once and then gone in Fly mode (INT-076); the alert kept as the product's only loud signal and
 measured for false alarms (INT-077); procedures grouped with completion lines and critical items
 first (INT-079); step text written as target states (INT-080) in cockpit order (INT-081); and an
-explicit hand-off to the debrief from fly mode (INT-082). Keep every tick a learner action
+explicit hand-off to the debrief from Fly mode (INT-082). Keep every tick a learner action
 (INT-078), and treat a reduced-help mode as an option to test, never a default (INT-083).
 
 ## Decision list and review checklist
@@ -2034,7 +2034,7 @@ learner testing may revise.
 9. **Outcomes persist where the action happened.** Toasts duplicate, never replace, an inline state;
    errors stay until handled. (INT-023, INT-024)
 10. **Modes are few, named in words at a fixed place, and tested with an interruption.** Widget quiz
-    mode gets an in-canvas label; fly mode shows whether the timer is running and events are armed;
+    mode gets an in-canvas label; Fly mode shows whether the timer is running and events are armed;
     the visitor branch of "Mark lesson complete" is labeled for what it does; practice never feeds a
     score. (INT-025, INT-027, INT-028, INT-029, INT-030, INT-031)
 11. **Risky modes are held, not latched.** (INT-026)
@@ -2049,7 +2049,7 @@ learner testing may revise.
     not be a reflex click; the checklist "Reset" gains undo; irreversible submits say so. (INT-041,
     INT-042, INT-043, INT-044, INT-046)
 16. **Learner work survives interruption and the second screen.** Flight state syncs for signed-in
-    learners, and fly mode says where ticks are stored until it does. (INT-045, INT-047)
+    learners, and Fly mode says where ticks are stored until it does. (INT-045, INT-047)
 17. **Consequences are previewed before commitment.** The debrief score preview stays beside submit.
     (INT-048)
 18. **Defaults are deliberate, documented and learner-serving.** Private by default, no pre-selected
@@ -2195,5 +2195,5 @@ Run these questions against a pull request or a page. A "no" is a finding; cite 
 - Are long procedures grouped, critical-first and closed by completion lines? (INT-079)
 - Is each step written as a target state? (INT-080)
 - Are steps in cockpit order unless a critical item must come first? (INT-081)
-- Is reflection kept for the debrief, with an explicit hand-off from fly mode? (INT-082)
+- Is reflection kept for the debrief, with an explicit hand-off from Fly mode? (INT-082)
 - Is any reduced-help mode optional, with full help as the default? (INT-083)

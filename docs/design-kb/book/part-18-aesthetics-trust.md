@@ -556,7 +556,7 @@ The content side is in better shape by construction. The lesson block types allo
 
 The instruments are the strongest case for consistency. The widgets already share primitives and fixed tokens, and the dossier lists the fixed instrument and chart palettes among LTF's distinctive traits. Keeping every instrument drawing on those primitives (AES-036) makes the airspeed indicator in a lesson, on the kneeboard and in a challenge brief the same object, so that each exposure builds on the last. When the learner then meets the instrument in the simulator, the familiarity can carry over; whether a widget should match the sim or caricature it is a separate question, taken up in the chapter on calibrated trust.
 
-Finally, nudges. The beta and signup banners already remember dismissal, which is the right default. Any future nudge (a reminder to continue, a prompt to try a challenge, a notification request) should follow the same rule, and the decline should stick. Part XIX, Decisions, Persuasion and Dark Patterns, treats repeated prompts as an ethical issue; the exposure evidence adds that they also stop working.
+Finally, nudges. The beta and sign-up banners already remember dismissal, which is the right default. Any future nudge (a reminder to continue, a prompt to try a challenge, a notification request) should follow the same rule, and the decline should stick. Part XIX, Decisions, Persuasion and Dark Patterns, treats repeated prompts as an ethical issue; the exposure evidence adds that they also stop working.
 
 ## Emotion in learning materials
 

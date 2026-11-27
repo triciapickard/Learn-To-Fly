@@ -391,7 +391,7 @@ What the identity literature does support is a rule about how a color is used. A
 :::
 
 ::: myth
-**"Blue means trust, red means excitement, so pick the hue that matches the brand."** Rating studies find associations such as competent blue and exciting red [@labrecque2012exciting], and color charts strip them of their conditions. The associations are learned, context dependent and measured as ratings of images, with no shown effect on behavior; the source notes recommend testing with one's own audience instead [@labrecque2012exciting].
+**"Blue means trust, red means excitement, so pick the hue that matches the brand."** Rating studies find associations such as competent blue and exciting red [@labrecque2012exciting], and color charts strip them of their conditions. The associations are learned, context dependent and measured as ratings of images, with no shown effect on behavior; the source notes recommend testing with one's own audience instead [@labrecque2012exciting]. The full case, with the studies, is made in Part VI, Color: Science, Meaning and Access, and is not repeated here.
 :::
 
 ### Shape and geometry

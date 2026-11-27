@@ -146,7 +146,7 @@ Proximity has a second effect that grouping research does not cover. Pelli and T
 
 The region around fixation where spacing exceeds the critical value is the uncrowded window, and its size limits the speed of reading and search. Reading speed stays roughly constant across a sixfold range of text size but drops sharply once letter spacing falls below a critical value [@pelli2008uncrowded]. The proportionality has been reproduced across many studies, though critical spacing varies with direction in the visual field and between observers, and the review is a synthesis by the field's main contributors.
 
-Crowding matters most for LTF in two places. Instrument widgets pack numerals, tick labels and needles close together, which is exactly the condition that crowds the number the learner needs. And fly mode is read in glances, often from the corner of the eye while looking at the sim, where critical spacing is large.
+Crowding matters most for LTF in two places. Instrument widgets pack numerals, tick labels and needles close together, which is exactly the condition that crowds the number the learner needs. And Fly mode is read in glances, often from the corner of the eye while looking at the sim, where critical spacing is large.
 
 ::: {.rule #PER-011 grade="B"}
 **Give scale numerals, tick labels and readouts clearance from their neighbors, and solve small-size legibility with spacing before size.** Crowding is set by center-to-center spacing relative to distance from fixation, not by object size, and it jumbles features of neighboring objects so that a visible number cannot be identified [@pelli2008uncrowded]. The phenomenon is well replicated; its application to gauge faces is an inference.
@@ -155,7 +155,7 @@ Crowding matters most for LTF in two places. Instrument widgets pack numerals, t
 :::
 
 ::: {.rule #PER-012 grade="B"}
-**In fly mode and any view read in glances, show one value per element, separated by large gaps, and avoid strings of similar short items.** Critical spacing grows with distance from fixation, so peripheral reading needs far more space between items than foveal reading [@pelli2008uncrowded]. Similar short items crowd one another more than dissimilar ones. The evidence is laboratory psychophysics; the second-screen application is an inference to test.
+**In Fly mode and any view read in glances, show one value per element, separated by large gaps, and avoid strings of similar short items.** Critical spacing grows with distance from fixation, so peripheral reading needs far more space between items than foveal reading [@pelli2008uncrowded]. Similar short items crowd one another more than dissimilar ones. The evidence is laboratory psychophysics; the second-screen application is an inference to test.
 
 *In LTF:* `FlyPanel large` uses `gap-3` between step rows at `text-xl`. That is fine for reading while looking at the screen, but the steps are glanced at from the sim. Test larger inter-row gaps and drop secondary text (such as the timer explanation) from the large variant.
 :::
@@ -187,7 +187,7 @@ Common region is what designers call a card, a panel, a tray or a box. It is che
 ::: {.rule #PER-014 grade="B"}
 **Make every region read as a surface against its background in both themes, and test that at a glance rather than by inspection.** Common region weakens when the boundary is not perceived as a surface behind the elements [@palmer1992common], and a boundary that fades in one theme removes the cue there. The contrast needed is not established in the sources; treat it as an empirical check on real screens.
 
-*In LTF:* computed this session from `tokens.css`, Day `surface` (#ffffff) on `canvas` (#f7f5f3) is about 1.09:1 and the `line` border (#dfdedc) on `surface` about 1.34:1; Night `surface` (#1f1e1c) on `canvas` (#141412) is about 1.11:1 and the `line` ring (#393836) on `surface` about 1.42:1. The region is carried almost entirely by a faint hairline (plus `shadow-1` in Day). Card outlines are decoration, not controls, so no cited standard fails here; still, check `Card` and the inlined card blocks on a second screen at arm's length in both themes, and raise the ring to `line-strong` where a card must group content in fly mode.
+*In LTF:* computed for this book from `tokens.css`, Day `surface` (#ffffff) on `canvas` (#f7f5f3) is about 1.09:1 and the `line` border (#dfdedc) on `surface` about 1.34:1; Night `surface` (#1f1e1c) on `canvas` (#141412) is about 1.11:1 and the `line` ring (#393836) on `surface` about 1.42:1. The region is carried almost entirely by a faint hairline (plus `shadow-1` in Day). Card outlines are decoration, not controls, so no cited standard fails here; still, check `Card` and the inlined card blocks on a second screen at arm's length in both themes, and raise the ring to `line-strong` where a card must group content in Fly mode.
 :::
 
 ::: {.rule #PER-015 grade="B"}
@@ -250,7 +250,7 @@ Arnheim's corollary is the one designers use: negative spaces must be given enou
 
 Keep `LessonPath`, which is the product's best use of connectedness and of a single highlighted unit on a track; keep the flat token fills in progress and arc displays; keep `WidgetFrame` as the single region for a widget and its explanation.
 
-Change the card habit. The `Card` and its inlined copies are the main grouping device on most pages, and they rest on surfaces that differ from the canvas by very little in either theme. Run the glance test in PER-014 on `LessonPage`, `ChallengesPage`, `DashboardPage` and `FlyModePage`; where a card is doing real grouping work in fly mode, use the `line-strong` ring. Then apply PER-016: convert list-like stacks (resource lists, "Recent attempts", lesson rows inside a module) from cards to spaced rows with a top rule, so that cards are left for objects.
+Change the card habit. The `Card` and its inlined copies are the main grouping device on most pages, and they rest on surfaces that differ from the canvas by very little in either theme. Run the glance test in PER-014 on `LessonPage`, `ChallengesPage`, `DashboardPage` and `FlyModePage`; where a card is doing real grouping work in Fly mode, use the `line-strong` ring. Then apply PER-016: convert list-like stacks (resource lists, "Recent attempts", lesson rows inside a module) from cards to spaced rows with a top rule, so that cards are left for objects.
 
 Simplify the top of `LessonPage` under PER-015. Before the first block, a learner can meet up to four boxed regions (unverified warning, sign-up banner, resume bar, objectives card), two of them accent-tinted. Merge the resume bar and the objectives card into one region when both apply, and keep the sign-up prompt visually lighter than either.
 
@@ -582,7 +582,7 @@ Keep the warn hue's use on instrument limits, error states, the `ErrorSummary` a
 
 Change three uses of loud color. Move the landing play disc off `bg-warn` (PER-044). Rework the `Callout` color map so that status tints mean status (PER-051); this is the single largest source of color variety in lesson pages. Pick one accent focal point for the top of `LessonPage` (PER-045).
 
-Change fly mode: remove or suppress the `BetaBanner` in `FlyModeLayout` (PER-046) and apply the PER-049 question with the alert showing.
+Change Fly mode: remove or suppress the `BetaBanner` in `FlyModeLayout` (PER-046) and apply the PER-049 question with the alert showing.
 
 Build two cheap checks. A conspicuity check in review (PER-048), done by eye or with a saliency tool used only for conspicuity (PER-047). And, optionally, a clutter score on e2e screenshots tracked over time (PER-050). The color Part and the information visualization Part cover the palette and chart encodings; this chapter supplies the attentional cost of each extra salient color.
 
@@ -735,7 +735,7 @@ The numbers come from the submitted author manuscript and student samples in sty
 ::: {.rule #PER-064 grade="B"}
 **Count every promotional or peripheral element beside task content as a cost, even if nobody looks at it, and remove such elements from task-critical screens.** Banners slowed search and raised perceived workload without being fixated [@burke2005highcost]. Peripheral processing taxes the task even when gaze stays on it.
 
-*In LTF:* `FlyModeLayout` shows the `BetaBanner`; `FlyModePage` has no other chrome. Remove the banner from fly mode (also PER-046). On `LessonPage`, the `SignupBanner` and any future announcement ribbon should never sit between the objectives and the first block.
+*In LTF:* `FlyModeLayout` shows the `BetaBanner`; `FlyModePage` has no other chrome. Remove the banner from Fly mode (also PER-046). On `LessonPage`, the `SignupBanner` and any future announcement ribbon should never sit between the objectives and the first block.
 :::
 
 ### The right rail and the edges
@@ -887,7 +887,7 @@ For LTF the important points are that top-down terms dominate (people look where
 :::
 
 ::: {.rule #PER-080 grade="C"}
-**Give fly mode a fixed layout in which each recurring question has one location, and never reflow it during a flight.** Displays are queried by eye movements and the learner's scan becomes routine only if locations stay put; effort rises when the eye must search [@ware2008visual; @wickens2003attentional]. This is synthesis guidance.
+**Give Fly mode a fixed layout in which each recurring question has one location, and never reflow it during a flight.** Displays are queried by eye movements and the learner's scan becomes routine only if locations stay put; effort rises when the eye must search [@ware2008visual; @wickens2003attentional]. This is synthesis guidance.
 
 *In LTF:* as well as reserving space for the alert (PER-068), keep step rows at a fixed height so that ticking one (which changes border and fill) never moves the others, and keep the stopwatch in the same corner across challenges.
 :::
@@ -1017,7 +1017,7 @@ Run these questions against a pull request or a page. Each names the rules that 
 - Does each screen have one primary next action? (PER-075)
 - Is there any countdown or urgency copy that is not the skill being practised? (PER-076)
 - Is persistent chrome calm, with novelty reserved for content? (PER-077)
-- In fly mode: is content ordered by value, one fact or step per glance, with a fixed layout that never reflows? (PER-078, PER-079, PER-080)
+- In Fly mode: is content ordered by value, one fact or step per glance, with a fixed layout that never reflows? (PER-078, PER-079, PER-080)
 - Do review claims about attention rest on task measures with a written method, not on gaze or dwell alone? (PER-081, PER-082, PER-083)
 - Are the page's grouping and accent weight checked in both themes? (PER-006)
 - Do interactive elements have signifiers and read-only displays look read-only? (PER-004)

@@ -1008,11 +1008,7 @@ the browser default set to 20 px and 24 px, and fix any layout that assumed 16.
 :::
 
 ::: myth
-**"A dark theme is easier on older or low vision eyes."** In Piepenbrock and colleagues' experiment,
-dark text on a light background gave better acuity and proofreading for older adults as well as
-younger ones, and the authors recommend positive polarity for all ages; a follow-up found the
-advantage grew as characters got smaller [@piepenbrock2013positive]. A theme choice still serves
-readers who prefer light on dark, but age alone does not justify dark as a default.
+**"A dark theme is easier on older or low vision eyes."** In Piepenbrock and colleagues' experiment, dark text on a light background gave better acuity and proofreading for older adults as well as younger ones, and the authors recommend positive polarity for all ages; a follow-up found the advantage grew as characters got smaller [@piepenbrock2013positive]. The full case, with the studies, is made in Part VI, Color: Science, Meaning and Access, and is not repeated here.
 :::
 
 ### High contrast and forced colors
@@ -1599,7 +1595,7 @@ remembered.** Limiting interruptions is a pattern for helping users focus
 
 *In LTF:* in a preview of a draft lesson, a signed-out learner can see the `BetaBanner`, the
 `UnverifiedWarning`, the `SignupBanner` and the resume bar stacked above the objectives. The beta and
-signup banners are both dismissible and remembered in localStorage, which is right; show the signup
+sign-up banners are both dismissible and remembered in localStorage, which is right; show the sign-up
 prompt only after the first lesson is completed rather than at its top.
 :::
 

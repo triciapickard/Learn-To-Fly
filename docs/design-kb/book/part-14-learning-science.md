@@ -29,7 +29,7 @@ Cowan's 2001 target article is the standard correction [@cowan2001magical]. Its 
 The design consequence is narrower than the folklore. The number that matters is how many new, unfamiliar, interacting pieces a learner must hold at once while reasoning, and it is small. It is not a count of visible things, because what stays on screen does not need to be held.
 
 ::: myth
-**"People can hold seven plus or minus two items, so menus, nav bars and lists should have no more than seven."** Miller's own paper calls the recurring seven a possible coincidence and offers no design rule; his finding concerned memory span and absolute judgment, not items displayed and available for re-reading [@miller1956magical]. The best current estimate of pure capacity is smaller (about four chunks) and appears only under conditions that block chunking [@cowan2001magical]. A visible list is read, not remembered, so its length is a question of scanning and choice (covered in the Part on the quantitative laws of interaction), not of memory span.
+**"People can hold seven plus or minus two items, so menus, nav bars and lists should have no more than seven."** Miller's own paper calls the recurring seven a possible coincidence and offers no design rule; his finding concerned memory span and absolute judgment, not items displayed and available for re-reading [@miller1956magical]. The full case, with the studies, is made in Part VIII, The Quantitative Laws of Interaction, and is not repeated here.
 :::
 
 ::: {.rule #LRN-001 grade="B"}

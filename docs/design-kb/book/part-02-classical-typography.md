@@ -209,7 +209,7 @@ The most persistent typeface argument is whether serifs make text easier to read
 Practitioners who spent careers on legible type treat the question as open. Unger's legibility chapter mostly asks questions, including whether serif faces are more legible than sans serif ones and whether a high x-height aids legibility [@unger2018theory].
 
 ::: myth
-**"Serif type is more legible for body text, so lessons should be set in a serif."** The claim is usually supported by the idea that serifs guide the eye along the line. Tinker found common faces, including a sans serif, read at the same speed [@tinker1963legibility], and Arditi and Cho found no effect of serifs on reading speed when serifs were the only variable [@arditi2005serifs]. Experienced type designers treat it as an open question [@unger2018theory]. A face may be chosen for voice, numerals or language support, but not on this ground.
+**"Serif type is more legible for body text, so lessons should be set in a serif."** The claim is usually supported by the idea that serifs guide the eye along the line. Tinker found common faces, including a sans serif, read at the same speed [@tinker1963legibility], and Arditi and Cho found no effect of serifs on reading speed when serifs were the only variable [@arditi2005serifs]. The full case, with the studies, is made in Part III, Legibility and the Science of Reading, and is not repeated here.
 :::
 
 ::: {.rule #TYP-015 grade="B"}
@@ -517,7 +517,7 @@ The disagreement about cause does not touch the practical rule. Whatever the mec
 :::
 
 ::: myth
-**"Readers recognize words by their outline, so all capitals are hard to read because they destroy word shape."** The word-shape account is old (it goes back to Cattell) and Tinker used it to explain his all-caps results [@tinker1963legibility]. Larson reviews the experiments that tested it: misspellings that kept or changed the outline were caught at rates explained by letter shape, not word shape; capitalizing a word in boundary studies gave the same fixation times as the control; and moving-window studies show reading speed rising with the number of letters visible. His conclusion: "Word shape is no longer a viable model of word recognition" [@larson2005science]. Capitals are slower because readers have less practice with them and because they take more space, not because of their outline. Noordzij's claim that the word image is the primary unit of reading is a craft theory that was not tested in the sources reviewed here [@noordzij2005stroke]. Do not justify a design decision by word shape.
+**"Readers recognize words by their outline, so all capitals are hard to read because they destroy word shape."** The word-shape account is old (it goes back to Cattell) and Tinker used it to explain his all-caps results [@tinker1963legibility]. The full case, with the studies, is made in Part III, Legibility and the Science of Reading, and is not repeated here.
 :::
 
 ### Identifiers and abbreviations
@@ -603,7 +603,7 @@ LTF fails the conformity test across pages. The dossier records that h2 is 24 px
 ::: {.rule #TYP-043 grade="C"}
 **Before styling a page, list its elements in rank order and give adjacent ranks treatments a reader can tell apart at a glance; if two ranks cannot be told apart, merge them.** Tschichold asks the typographer to express "a definite, logical relationship of emphasis and value" [@tschichold1995new]; Updike doubted the need for many near-identical kinds of the same size [@updike1922printing]. Craft method.
 
-*In LTF:* the lesson head stacks a mono accent label ("Lesson 0.1"), the h1, a meta row, the `UnverifiedWarning`, the `SignupBanner`, a resume bar, the objectives `Card` and the mobile section `Select` before the first paragraph. Rank them. The h1 and the first paragraph are first and second; the signup prompt and resume bar are not third and fourth, and their tinted boxes should not outrank the objectives.
+*In LTF:* the lesson head stacks a mono accent label ("Lesson 0.1"), the h1, a meta row, the `UnverifiedWarning`, the `SignupBanner`, a resume bar, the objectives `Card` and the mobile section `Select` before the first paragraph. Rank them. The h1 and the first paragraph are first and second; the sign-up prompt and resume bar are not third and fourth, and their tinted boxes should not outrank the objectives.
 :::
 
 ### How large a heading

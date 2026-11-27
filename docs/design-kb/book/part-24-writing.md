@@ -29,7 +29,7 @@ The same group later published a follow-up whose title calls the pattern misunde
 The data set is large, but it is an industry report; the pages read do not say how pages and tasks were sampled, and it studied general web pages, not learning materials [@nielsen2006f]. Its value for a lesson page is as a diagnostic. If learners read a lesson in an F, the writing has given them no cues to do anything better.
 
 ::: myth
-**"The F-pattern is how people read, so lay pages out in an F."** The pattern is what readers fall back on when a page offers no structure and they are not committed to it. The group that reported it later framed it as a failure state that headings, grouping and front-loaded wording counteract, not as a template to design toward [@nielsen2006f].
+**"The F-pattern is how people read, so lay pages out in an F."** The pattern is what readers fall back on when a page offers no structure and they are not committed to it. The group that reported it later framed it as a failure state that headings, grouping and front-loaded wording counteract, not as a template to design toward [@nielsen2006f]. The full case, with the studies, is made in Part VII, Perception and Attention, and is not repeated here.
 :::
 
 ::: {.rule #WRT-002 grade="B"}
@@ -40,7 +40,7 @@ The data set is large, but it is an industry report; the pages read do not say h
 
 ### Billboards, satisficing and muddling through
 
-Steve Krug's craft book reaches the same place from consulting observation. Its second chapter names three "facts of life": people scan rather than read, satisfice (take the first reasonable option) rather than optimize, and muddle through rather than work out how things work; its third chapter is subtitled "Designing for scanning, not reading" [@krug2014dont]. If readers treat pages like billboards seen at speed, Krug argues, design good billboards: clear visual hierarchy, conventions, and clearly defined areas [@krug2014dont]. The book is expert opinion, and its answer to uncertainty is to test with a few users. It fits the experimental findings, but it was written for web sites where people want to finish and leave, not for learning, where the goal is understanding.
+Steve Krug's craft book reaches the same place from consulting observation. Its second chapter names three "facts of life": people scan rather than read, satisfice (take the first reasonable option) rather than optimize, and muddle through rather than work out how things work; its third chapter is subtitled "Designing for scanning, not reading" [@krug2014dont]. If readers treat pages like billboards seen at speed, Krug argues, design good billboards: clear visual hierarchy, conventions, and clearly defined areas [@krug2014dont]. The book is expert opinion, and its answer to uncertainty is to test with a few users. It fits the experimental findings, but it was written for websites where people want to finish and leave, not for learning, where the goal is understanding.
 
 Satisficing matters for wording more than it first appears. A beginner who takes the first plausible option will act on the first label that seems to fit. That makes ambiguity costly: two buttons whose labels could both mean "go on" will be chosen between by position, not meaning. It also makes defaults a writing problem, because the label on the default action is the one most people will act on without reading the alternatives.
 

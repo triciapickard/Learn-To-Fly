@@ -65,7 +65,7 @@ Santa Maria's craft book offers a distinction that helps in review: legibility i
 ::: {.rule #SCR-005 grade="C"}
 **Provide a print path for every lesson summary and reference checklist, and keep print styles working as part of the definition of done for those pages.** The meta-analysis found paper slightly better for informational text and its authors suggest predictable conditions in which the media are equivalent [@delgado2018dont]; offering paper costs little for learners who study better on it. This is a design inference, graded C.
 
-*In LTF:* the header, footer, beta banner and interactive parts of the reference pages already carry `print:hidden`. Extend the same treatment to `LessonPage` (hide `SectionNav`, the glossary rail, the signup banner and the completion panel when printing) so a lesson prints as clean text.
+*In LTF:* the header, footer, beta banner and interactive parts of the reference pages already carry `print:hidden`. Extend the same treatment to `LessonPage` (hide `SectionNav`, the glossary rail, the sign-up banner and the completion panel when printing) so a lesson prints as clean text.
 :::
 
 ### What this means for Learn to Fly
@@ -371,7 +371,7 @@ Larson's review for Microsoft's typography group sets out the case [@larson2005s
 Sheedy and colleagues found the same thing at threshold: individual lowercase letters were 10% to 20% more legible than lowercase words, so words had to be 10% to 20% larger to be identified, which they read as showing that letters play a large role and word shape a small one, if any [@sheedy2005text].
 
 ::: myth
-**"People read words by their outline shape, so lowercase and distinctive silhouettes are what make text legible."** Experiments that separate word shape from letter shape find the effect in the letters; pseudowords with no familiar shape show the word advantage; uppercase reading speeds up with practice; and letters are more legible than the words they form at threshold [@larson2005science; @sheedy2005text]. The case against long runs of capitals stands, but for a different reason: readers are less practiced with them and they take more space.
+**"People read words by their outline shape, so lowercase and distinctive silhouettes are what make text legible."** Experiments that separate word shape from letter shape find the effect in the letters; pseudowords with no familiar shape show the word advantage; uppercase reading speeds up with practice; and letters are more legible than the words they form at threshold [@larson2005science; @sheedy2005text]. The full case, with the studies, is made in Part III, Legibility and the Science of Reading, and is not repeated here.
 :::
 
 ::: {.rule #SCR-027 grade="A"}
@@ -407,7 +407,7 @@ Boyarski and colleagues tested Georgia and Verdana, two faces designed for scree
 The one place face design measurably matters is small size. Sheedy's threshold study found Verdana and Arial the most legible of six fonts and Times New Roman and Franklin the least [@sheedy2005text], and Legge and Bigelow connect this to x-height: Verdana's x-height fraction is about 0.55 and Times New Roman's about 0.45, and a larger x-height gives the lowercase more pixels [@legge2011print]. Arditi's spacing result points the same way: at small sizes, space between letters is the active ingredient [@arditi2005serifs].
 
 ::: myth
-**"Sans serif faces are more legible on screens than serif faces."** Controlled comparisons of reading speed found no reliable difference between serif and sans serif faces on screen [@boyarski1998study], fonts differing only in serifs read at the same speed [@arditi2005serifs], and a large online study found no font fastest across readers [@wallace2022towards]. Differences appear at threshold sizes, where x-height and spacing matter more than serifs [@sheedy2005text].
+**"Sans serif faces are more legible on screens than serif faces."** Controlled comparisons of reading speed found no reliable difference between serif and sans serif faces on screen [@boyarski1998study], fonts differing only in serifs read at the same speed [@arditi2005serifs], and a large online study found no font fastest across readers [@wallace2022towards]. The full case, with the studies, is made in Part III, Legibility and the Science of Reading, and is not repeated here.
 :::
 
 ::: {.rule #SCR-030 grade="A"}
@@ -675,7 +675,7 @@ Degani's flight-deck review, from print-era sources, recommends black on white f
 The evidence comes from one main group plus an independent automotive study, using proofreading, acuity and lexical decision rather than long comfortable reading, and it measured performance, not preference or fatigue. It is moderately strong for a modest effect. It does not say dark themes are unusable; it says a dimmer display costs legibility, most at small sizes and in glances in a dark room.
 
 ::: myth
-**"Dark mode is easier to read, especially for older eyes and in a dark room."** Positive polarity was better for both younger and older adults [@piepenbrock2013positive], the difference tracks overall display luminance [@buchner2009advantage], and light text on a dark screen was the worst condition for glance reading in near-dark surroundings [@dobres2017effects]. A dark theme can be chosen for comfort, glare or taste, but not on the grounds that it is more legible.
+**"Dark mode is easier to read, especially for older eyes and in a dark room."** Positive polarity was better for both younger and older adults [@piepenbrock2013positive], the difference tracks overall display luminance [@buchner2009advantage], and light text on a dark screen was the worst condition for glance reading in near-dark surroundings [@dobres2017effects]. The full case, with the studies, is made in Part VI, Color: Science, Meaning and Access, and is not repeated here.
 :::
 
 ### LTF's themes measured

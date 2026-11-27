@@ -13,7 +13,7 @@ This book is the source of truth for design decisions on Learn to Fly, the web a
 
 ### What is in it
 
-Twenty-five Parts each take one field, from classical typography to accessibility, and do three things: report what the research and the craft literature say, turn that into numbered rules, and apply the rules to the product. Every chapter ends with a section on what the material means for Learn to Fly, and every Part ends with a decision list and a review checklist. Part XXVI audits the current design against the rules of the first twenty-five Parts and sets out how the product acquires an identity of its own.
+Twenty-five Parts each take one field, from classical typography to accessibility, and do three things: report what the research and the craft literature say, turn that into numbered rules, and apply the rules to the product. Every chapter ends with a section on what the material means for Learn to Fly, and every Part ends with a decision list and a review checklist. Part XXVI audits the current design against the rules of the first twenty-five Parts, rules on the points where Parts pull in different directions, and sets out how the product acquires an identity of its own.
 
 ### Rules and grades
 
@@ -37,6 +37,10 @@ Design folklore is full of confident claims that fail when checked. Where a popu
 The bibliography holds 555 works, from the eighteenth century to 2026. Every one was confirmed to exist during the research for this book, against Crossref, Open Library or a web search, and the research notes record what was actually read for each: full text, an abstract, a publisher's record, or a reliable secondary account. Figures and quotations in the text come from those notes. Where a number could not be confirmed, the finding is stated in words or left out. Each Part ends with the list of sources it cites, and the full bibliography follows Part XXVI.
 
 A few works in the bibliography predate 1776, the starting point set for the survey (Newton's *Opticks* and Hume's essay on taste among them). They are kept because later sources in the same Parts depend on them.
+
+### How the product is named
+
+Pages, components and tokens are named as they are in the code: `LessonPage`, `Callout`, `--color-accent`. Several Parts refer to a color or spacing token by its short name, without the leading `--color-` or `--` (`accent`, `ink-3`, `container-measure`), as the comments in `src/styles/tokens.css` do. Both forms mean the same token. Statements about the product describe the code as it stood in November 2026.
 
 ### What the book does not do
 
