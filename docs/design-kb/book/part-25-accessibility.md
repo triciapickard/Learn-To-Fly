@@ -1974,3 +1974,131 @@ Build a recruiting habit. LTF needs a short list of learners who use screen read
 switches, magnification, and older learners, who can be paid to try new modules before they are
 published (ACC-079, ACC-084). The sessions need not be large; the evidence in this Part says the
 problems they find are the ones no checklist will.
+
+## Testing, triage and the evidence of conformance
+
+### What automated tools find, and what they miss
+
+The WebAIM Million's six most common failures (low contrast text, missing alternative text, missing
+form labels, empty links, empty buttons and missing document language) are all detectable by
+machine [@webaim2026million]. That is their value and their limit. A WebAIM page on the 2019 data
+put the share of possible conformance failures detectable by automated tools at about a quarter,
+and the report states that the absence of detected errors does not mean a page is accessible. The
+scan cannot tell whether alternative text is accurate, whether a heading describes its section,
+whether the focus order makes sense, or whether a widget's announcements are usable.
+
+LTF's automated layer is already substantial. `pages/a11y.test.tsx` and `e2e/a11y.spec.ts` run axe
+and fail on serious violations; the e2e spec visits every main public route (lessons, challenges,
+Fly mode, reference pages, static pages, auth pages and the 404) in Day, then in Night with reduced
+motion emulated, checks that no animation is running, checks that the document does not scroll
+sideways at 320 px, and repeats the scan on the signed-in dashboard and account pages. `jsx-a11y`
+lint is configured.
+
+::: {.rule #ACC-085 grade="B"}
+**Run an automated accessibility scan on every route in both themes on every pull request, fail the
+build on serious violations, and never report a clean scan as evidence that a page is accessible.**
+Automated tools find a minority of failures and their silence proves nothing
+[@webaim2026million], and guideline conformance itself leaves many user problems uncovered
+[@power2012guidelines]. Grade B: a census and a user study agree on the limits.
+
+*In LTF:* keep `e2e/a11y.spec.ts` as it is and add a forced-colors pass (ACC-040). When a new route is
+added in `router.tsx`, add it to `PUBLIC_PAGES` or `SIGNED_IN_PAGES` in the same pull request.
+:::
+
+::: {.rule #ACC-086 grade="C"}
+**Write component tests for the common failures at their source: every `Button` and icon-only
+control has a name, every form control has a label, every widget drawing has a text alternative and
+description, and every text and background token pair meets its contrast threshold.** These are
+the most frequent detectable failures [@webaim2026million], and catching them in the component is
+cheaper than in a page scan. Grade C.
+
+*In LTF:* `Button.test.tsx`, `Form.test.tsx` and `widgets.test.tsx` are the places. A token test can
+read `tokens.css`, pair each text token with each ground it is used on, compute the ratio and fail
+below 4.5:1 or 3:1 without rounding (ACC-007).
+:::
+
+### Manual passes
+
+A keyboard pass and a screen reader pass catch what a scan cannot. The APG recommends treating its
+example pages as a reference: a custom widget that behaves differently from the APG example under
+the same keys needs an explanation or a fix [@w3c2026authoring].
+
+::: {.rule #ACC-087 grade="C"}
+**For every new page and widget, do a manual keyboard pass (reach everything, see focus, operate
+everything, never get trapped, return focus after overlays) and record it in the pull request.**
+Keyboard operation and focus management are the APG's core requirements [@w3c2026authoring].
+Grade C.
+
+*In LTF:* add the five checks as a checklist item in `.github/pull_request_template.md`; the
+`e2e/keyboard.spec.ts` flows automate the ones that can be automated.
+:::
+
+::: {.rule #ACC-088 grade="B"}
+**Test screen reader behavior first with JAWS and Chrome, then NVDA and Chrome, then VoiceOver on
+iOS, and add Edge when a widget behaves differently across browsers.** Those pairings dominate
+current use, with Chrome primary for over half of respondents and iOS VoiceOver the leading mobile
+screen reader [@webaim2026screen], and differences between screen readers are what the APG warns
+about [@w3c2026authoring]. Grade B: a large survey, self-selected.
+
+*In LTF:* record the screen reader, version and browser for each pass in the conformance log
+(ACC-011). Fly mode is likely to be used on an iPad beside the sim, so VoiceOver on iOS is the
+priority for `FlyModePage`.
+:::
+
+### Task sessions with disabled learners
+
+Petrie and Kheir's result that participants agreed with each other on severity but not with
+guideline priorities [@petrie2007relationship] makes user sessions the source of severity ratings.
+Lazar and colleagues recommend involving users with visual disabilities in the design process and
+using the causes of frustration as a to-do list [@lazar2007frustrates]. Their participants usually
+kept trying to solve a problem rather than giving up, which means an observer sees struggle that a
+completion rate alone would hide. Secondary accounts of the study report that participants lost
+about 30% of their time to frustrating situations; the full text could not be checked, so that
+figure is reported here only as a secondary account.
+
+::: {.rule #ACC-089 grade="B"}
+**In each task session, record for every problem: the task, what the learner tried, whether they
+finished, how long the detour took, and the learner's own severity rating; triage from those
+records, not from the criterion the problem maps to.** Participants' severity ratings agree with
+each other and with researchers [@petrie2007relationship], and frustration that does not end a task
+still costs time [@lazar2007frustrates]. Grade B.
+
+*In LTF:* the tasks are the four flows in `v1.md` Section 19.3 (visitor to first lesson, sign up and
+continue, a challenge from brief to debrief, a mid-flight lookup), run with the sim open where the
+flow involves flying. Problems that stop a task are severe (ACC-004); open them as issues tagged for
+accessibility, linked from the conformance log.
+:::
+
+### The problems no guideline covers
+
+Power and colleagues' reviewers listed six problem types they read as uncovered by WCAG 2.0:
+content found where users do not expect it, content not found where they expect it, pages that load
+too slowly, no alternative to formats such as PDF, an over-complex information architecture, and
+broken links [@power2012guidelines]. Three of these can be tested mechanically.
+
+::: {.rule #ACC-090 grade="B"}
+**Check every internal and external link in content and pages in continuous integration, and keep
+Fly mode and reference pages fast enough to open beside a running simulator without a wait.**
+Broken links and slow pages were among the problems blind users met that guidelines did not cover
+[@power2012guidelines]. Grade B.
+
+*In LTF:* a link checker over `content/` and the built routes belongs beside `content:validate`.
+`FlyModePage` and `/reference/checklists/:slug` are lazy-loaded chunks; keep them inside the bundle
+budget that `npm run size` enforces, and do not load widget code into Fly mode unless the challenge
+uses it. Part XXII, Motion and Perceived Performance, sets the timing targets.
+:::
+
+### What this means for Learn to Fly
+
+Keep the automated layer: axe on every route in two themes, reduced motion, reflow at 320 px, the
+keyboard flows and `jsx-a11y`. It is complete for what automation can do, and it gives every pull
+request a floor.
+
+Change how results are recorded. Every scan, keyboard pass and screen reader pass should leave a
+line in the conformance log (ACC-011), with tools, versions and the pages covered, so that a reviewer
+or a future institutional buyer can see what was tested and when.
+
+Build the layers automation cannot provide: component tests for names, labels, descriptions and
+token contrast (ACC-086), a manual keyboard pass in every pull request template (ACC-087), a screen
+reader matrix (ACC-088), a link checker (ACC-090), and task sessions with disabled learners whose
+records drive triage (ACC-089).
