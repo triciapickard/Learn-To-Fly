@@ -22,6 +22,7 @@ def same(a, b):
     ta, tb = norm(a['title']), norm(b['title'])
     r = difflib.SequenceMatcher(None, ta, tb).ratio()
     short = title_key(a['title']) == title_key(b['title']) and len(title_key(a['title'])) > 8
+    if str(a.get('year')) == str(b.get('year')) and len(ta) > 15 and len(tb) > 15 and (ta.startswith(tb) or tb.startswith(ta)): return True
     if a.get('type') != b.get('type') and not {a.get('type'), b.get('type')} <= {'book', 'report', 'webpage', 'standard'}: return False
     if a.get('type') in ('article-journal', 'paper-conference', 'chapter'):
         return r > 0.93 and str(a.get('year')) == str(b.get('year'))

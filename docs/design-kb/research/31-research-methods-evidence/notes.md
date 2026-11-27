@@ -2,7 +2,7 @@
 
 Notes for judging design evidence. Each section reports what the source says, how well it has held up, and what it means for Learn to Fly (LTF). Figures appear only where they were confirmed this session, with the confirming source named.
 
-## osc2015estimating
+## openscience2015estimating
 
 Open Science Collaboration (2015), "Estimating the reproducibility of psychological science", Science 349(6251), aac4716. DOI 10.1126/science.aac4716.
 

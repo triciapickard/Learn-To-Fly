@@ -588,7 +588,7 @@ INP's focus on "the next painted frame shows feedback" fits the Miller and Card 
 
 Confirmed this session: pages fetched at https://web.dev/articles/vitals (published May 4, 2020, updated October 31, 2024), https://web.dev/articles/inp, and https://web.dev/articles/defining-core-web-vitals-thresholds. No Crossref record exists; verified via direct fetch of the pages.
 
-## w3c2024web
+## w3c2024wcag
 
 World Wide Web Consortium. (2024). *Web Content Accessibility Guidelines (WCAG) 2.2*, with the Understanding document for Success Criterion 2.3.3 Animation from Interactions. W3C Recommendation.
 

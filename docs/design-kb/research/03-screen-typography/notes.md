@@ -32,7 +32,7 @@ Treat line length as a range, not a number. The evidence supports neither very s
 
 Confirmed this session: read the full text of the paper (PDF at stu.westga.edu/~ssynan1/literacy/Dyson.pdf) and Crossref record DOI 10.1080/01449290410001715714 (title, author, journal, volume 23, issue 6, pages 377-393, 2004).
 
-## legge2011does
+## legge2011print
 
 Legge, G. E., & Bigelow, C. A. (2011). Does print size matter for reading? A review of findings from vision science and typography. Journal of Vision, 11(5), 8.
 

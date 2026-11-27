@@ -304,7 +304,7 @@ I read the author manuscript (submitted September 2004) and the Crossref abstrac
 
 Confirmed this session: Crossref record and abstract for DOI 10.1145/1121112.1121116; full read of the author manuscript at thoughtcrumbs.com (ToCHI04.pdf, marked "submitted, please do not cite") for Experiment 1 and 2 numbers; the journal PDF itself was not read.
 
-## nielsen2006fshaped
+## nielsen2006f
 Nielsen, J. (2006, April 16). F-shaped pattern for reading web content. Nielsen Norman Group Alertbox. https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/
 
 ### Core claims
@@ -340,7 +340,7 @@ The book reports a multi-year eye-tracking study of how people look at websites 
 ### Specifics
 Scale: the NN/g and Peachpit pages describe a three-year study with about 1.5 million instances of users looking at websites. The NN/g page does not give a participant count. A reviewer (Cennydd Bowles, a practitioner; the review is dated "6 Jan" with no year, around January 2010) and a search summary of an academic citation both give 300 participants, with the latter stating ages 18 to 64; I treat the 300 as secondary. The Peachpit product page gives the copyright year as 2010, publication date 4 December 2009 and ISBN-13 978-0-321-49836-6, and notes the book is no longer in print. Open Library lists a 2010 edition from New Riders with that ISBN.
 
-Coverage, from the publisher descriptions: where users look and what they skip, with chapters on layout, navigation menus, site elements, images and advertising. The related articles by Nielsen (2006) and Pernice (2019) that I read give the book's most-cited patterns (see nielsen2006fshaped) and the NN/g banner blindness article by Pernice (see benway1998banner) covers advertising findings. I did not have the book's text and so do not list its individual guidelines.
+Coverage, from the publisher descriptions: where users look and what they skip, with chapters on layout, navigation menus, site elements, images and advertising. The related articles by Nielsen (2006) and Pernice (2019) that I read give the book's most-cited patterns (see nielsen2006f) and the NN/g banner blindness article by Pernice (see benway1998banner) covers advertising findings. I did not have the book's text and so do not list its individual guidelines.
 
 ### Replication and criticism
 The study is large, but its documentation is thin by academic standards, and the criticisms I found are about method and scope. Bowles's review praises the size, the well-designed test script and a few useful findings (busy layouts dilute attention from key information; "a link is a promise"), and criticizes: generalizing from a 300-person study is limited, as eye tracking needs site-specific tasks; the heat maps date from late 2005 and lab work seems to have finished by mid-2006, years before publication; only informational sites were studied, with web apps excluded because eye tracking struggled with dynamic elements such as Ajax and drop-downs; tests apparently used Internet Explorer 6 with no browser choice, which may change navigation behavior; the book acknowledges little outside research. He concludes that eye tracking mostly confirms long-standing design principles. That is one practitioner's opinion, though a specific one.

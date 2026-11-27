@@ -230,7 +230,7 @@ Use labels above fields in every LTF form and answer box. This is also the right
 
 Confirmed this session: full article page fetched and read at https://www.uxmatters.com/mt/archives/2006/07/label-placement-in-forms.php (method, four tests, results, comments including the 2011 reply); web search of the Das, McEwan and Douglas abstract and Napier repository record.
 
-## w3c2024web
+## w3c2024wcag
 
 World Wide Web Consortium. (2024). Web Content Accessibility Guidelines (WCAG) 2.2 (W3C Recommendation, 12 December 2024), with the Understanding documents for success criteria 2.5.5, 2.5.7 and 2.5.8.
 

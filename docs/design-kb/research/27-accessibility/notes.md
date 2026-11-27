@@ -310,7 +310,7 @@ Use the APG as the spec for every interactive widget LTF builds: tabs for lesson
 
 Confirmed this session: fetched https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/ (all guidance above) and https://www.w3.org/WAI/ARIA/apg/about/ (maintainer, scope, 2026 copyright, change history since 2014), plus https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/.
 
-## w3c2021making
+## seemanhorwitz2021making
 
 W3C Cognitive and Learning Disabilities Accessibility Task Force (2021). Making Content Usable for People with Cognitive and Learning Disabilities. W3C Working Group Note, 29 April 2021. Editors: Seeman-Horwitz, Bradley Montgomery, Lee, Ran.
 
