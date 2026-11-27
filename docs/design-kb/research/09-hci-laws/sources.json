@@ -1,0 +1,646 @@
+[
+  {
+    "key": "fitts1954information",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Fitts",
+        "given": "Paul M."
+      }
+    ],
+    "year": 1954,
+    "title": "The information capacity of the human motor system in controlling the amplitude of movement",
+    "container_title": "Journal of Experimental Psychology",
+    "volume": "47",
+    "issue": "6",
+    "pages": "381-391",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/h0055392",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1037/h0055392 returned title, author Paul M. Fitts, 1954, J. Exp. Psychol. 47(6), 381-391. Full text of the 1992 JEP: General reprint (121(3), 262-269, Crossref 10.1037/0096-3445.121.3.262) read at cs.princeton.edu/courses/archive/fall08/cos436/FittsJEP1954.pdf",
+    "kind": "experimental paper (three motor experiments plus information-theoretic model)",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "mackenzie1992fitts",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "MacKenzie",
+        "given": "I. Scott"
+      }
+    ],
+    "year": 1992,
+    "title": "Fitts' law as a research and design tool in human-computer interaction",
+    "container_title": "Human-Computer Interaction",
+    "volume": "7",
+    "issue": "1",
+    "pages": "91-139",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15327051hci0701_3",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1207/s15327051hci0701_3 (title, author, 1992, HCI 7(1) 91-139). Author's HTML copy read at yorku.ca/mack/hci1992.html (abstract, formulas, criticisms, recommendations).",
+    "kind": "methodological review and reanalysis",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "hick1952rate",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Hick",
+        "given": "W. E."
+      }
+    ],
+    "year": 1952,
+    "title": "On the rate of gain of information",
+    "container_title": "Quarterly Journal of Experimental Psychology",
+    "volume": "4",
+    "issue": "1",
+    "pages": "11-26",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/17470215208416600",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1080/17470215208416600 returned title, author, 1952, QJEP 4(1) 11-26; abstract read via OpenAlex; experiments described in Proctor and Schneider 2018 full text.",
+    "kind": "experimental paper (choice reaction time)",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "hyman1953stimulus",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Hyman",
+        "given": "Ray"
+      }
+    ],
+    "year": 1953,
+    "title": "Stimulus information as a determinant of reaction time",
+    "container_title": "Journal of Experimental Psychology",
+    "volume": "45",
+    "issue": "3",
+    "pages": "188-196",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/h0056940",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1037/h0056940 returned title, author Ray Hyman, 1953, J. Exp. Psychol. 45(3) 188-196; first paragraph via OpenAlex; experiments described in Proctor and Schneider 2018 full text.",
+    "kind": "experimental paper (choice reaction time and information)",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "proctor2018hicks",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Proctor",
+        "given": "Robert W."
+      },
+      {
+        "family": "Schneider",
+        "given": "Darryl W."
+      }
+    ],
+    "year": 2018,
+    "title": "Hick's law for choice reaction time: A review",
+    "container_title": "Quarterly Journal of Experimental Psychology",
+    "volume": "71",
+    "issue": "6",
+    "pages": "1281-1299",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/17470218.2017.1322622",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1080/17470218.2017.1322622 returned title, authors, 2018, QJEP 71(6) 1281-1299; abstract via Europe PMC; full text read at web.ics.purdue.edu/~dws/pubs/ProctorSchneider_2018_QJEP.pdf",
+    "kind": "narrative review",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "liu2020relevant",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Liu",
+        "given": "Wanyu"
+      },
+      {
+        "family": "Gori",
+        "given": "Julien"
+      },
+      {
+        "family": "Rioul",
+        "given": "Olivier"
+      },
+      {
+        "family": "Beaudouin-Lafon",
+        "given": "Michel"
+      },
+      {
+        "family": "Guiard",
+        "given": "Yves"
+      }
+    ],
+    "year": 2020,
+    "title": "How relevant is Hick's law for HCI?",
+    "container_title": "Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems",
+    "volume": "",
+    "issue": "",
+    "pages": "1-11",
+    "publisher": "ACM",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/3313831.3376878",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/3313831.3376878 returned title, five authors, 2020, pp. 1-11; abstract via Semantic Scholar and OpenAlex APIs; record at researchportal.ip-paris.fr/en/publications/how-relevant-is-hicks-law-for-hci/",
+    "kind": "critical review (CHI paper)",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "landauer1985selection",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Landauer",
+        "given": "T. K."
+      },
+      {
+        "family": "Nachbar",
+        "given": "D. W."
+      }
+    ],
+    "year": 1985,
+    "title": "Selection from alphabetic and numeric menu trees using a touch screen: Breadth, depth, and width",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '85)",
+    "volume": "",
+    "issue": "",
+    "pages": "73-78",
+    "publisher": "ACM",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/317456.317470",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1145/317456.317470 (CHI '85, pp. 73-78, authors Landauer and Nachbar); abstract with full title via OpenAlex; experiment details in Proctor and Schneider 2018 full text.",
+    "kind": "experiment (menu trees)",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "accot1997beyond",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Accot",
+        "given": "Johnny"
+      },
+      {
+        "family": "Zhai",
+        "given": "Shumin"
+      }
+    ],
+    "year": 1997,
+    "title": "Beyond Fitts' law: Models for trajectory-based HCI tasks",
+    "container_title": "Proceedings of the ACM SIGCHI Conference on Human Factors in Computing Systems (CHI '97)",
+    "volume": "",
+    "issue": "",
+    "pages": "295-302",
+    "publisher": "ACM",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/258549.258760",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1145/258549.258760 (title, authors, 1997, pp. 295-302); full text read from research.cs.vt.edu/ns/cs5724papers/2.humanperf.fitts.accot.beyondfitts.pdf",
+    "kind": "experiments and model (four studies)",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "soukoreff2004towards",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Soukoreff",
+        "given": "R. William"
+      },
+      {
+        "family": "MacKenzie",
+        "given": "I. Scott"
+      }
+    ],
+    "year": 2004,
+    "title": "Towards a standard for pointing device evaluation, perspectives on 27 years of Fitts' law research in HCI",
+    "container_title": "International Journal of Human-Computer Studies",
+    "volume": "61",
+    "issue": "6",
+    "pages": "751-789",
+    "publisher": "Elsevier BV",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.ijhcs.2004.09.001",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.ijhcs.2004.09.001 returned title, authors, 2004, IJHCS 61(6) 751-789; author's HTML copy read at yorku.ca/mack/ijhcs2004.html",
+    "kind": "systematic literature review and methodological proposal",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "card1978evaluation",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Card",
+        "given": "Stuart K."
+      },
+      {
+        "family": "English",
+        "given": "William K."
+      },
+      {
+        "family": "Burr",
+        "given": "Betty J."
+      }
+    ],
+    "year": 1978,
+    "title": "Evaluation of mouse, rate-controlled isometric joystick, step keys, and text keys for text selection on a CRT",
+    "container_title": "Ergonomics",
+    "volume": "21",
+    "issue": "8",
+    "pages": "601-613",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/00140137808931762",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1080/00140137808931762 (title, three authors, 1978, Ergonomics 21(8) 601-613); abstract via OpenAlex; reanalysis page yorku.ca/mack/chi03a.html",
+    "kind": "experimental device comparison",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "card1980keystroke",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Card",
+        "given": "Stuart K."
+      },
+      {
+        "family": "Moran",
+        "given": "Thomas P."
+      },
+      {
+        "family": "Newell",
+        "given": "Allen"
+      }
+    ],
+    "year": 1980,
+    "title": "The keystroke-level model for user performance time with interactive systems",
+    "container_title": "Communications of the ACM",
+    "volume": "23",
+    "issue": "7",
+    "pages": "396-410",
+    "publisher": "Association for Computing Machinery",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/358886.358895",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1145/358886.358895 (CACM 23(7) 396-410, 1980). The earlier Xerox PARC report version SSL-79-1 (March 1979) was read at iiif.library.cmu.edu/file/Newell_box00072_fld05090_doc0005/Newell_box00072_fld05090_doc0005.pdf (abstract, operator table, M rules).",
+    "kind": "engineering model with empirical validation",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "card1983psychology",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Card",
+        "given": "Stuart K."
+      },
+      {
+        "family": "Moran",
+        "given": "Thomas P."
+      },
+      {
+        "family": "Newell",
+        "given": "Allen"
+      }
+    ],
+    "year": 1983,
+    "title": "The psychology of human-computer interaction",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Lawrence Erlbaum Associates",
+    "publisher_place": "Hillsdale, NJ",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0898592437",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search (title:\"psychology of human-computer interaction\") returned work OL5911100W, Stuart K. Card, first published 1983, Erlbaum, ISBN 0898592437; Routledge page routledge.com/The-Psychology-of-Human-Computer-Interaction/Card-Moran-Newell/p/book/9780898598599 lists authors, 1983, 488 pages, table of contents.",
+    "kind": "research monograph",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "miller1956magical",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Miller",
+        "given": "George A."
+      }
+    ],
+    "year": 1956,
+    "title": "The magical number seven, plus or minus two: Some limits on our capacity for processing information",
+    "container_title": "Psychological Review",
+    "volume": "63",
+    "issue": "2",
+    "pages": "81-97",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/h0043158",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1037/h0043158 (title, author, 1956, Psych. Rev. 63(2) 81-97); text via psychclassics.yorku.ca/Miller/ and closing paragraph via OpenAlex.",
+    "kind": "theoretical review essay",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "cowan2001magical",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Cowan",
+        "given": "Nelson"
+      }
+    ],
+    "year": 2001,
+    "title": "The magical number 4 in short-term memory: A reconsideration of mental storage capacity",
+    "container_title": "Behavioral and Brain Sciences",
+    "volume": "24",
+    "issue": "1",
+    "pages": "87-114",
+    "publisher": "Cambridge University Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1017/s0140525x01003922",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1017/s0140525x01003922 (title, author, 2001, BBS 24(1) 87-114); abstract via OpenAlex.",
+    "kind": "target review article",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "newell1981mechanisms",
+    "type": "chapter",
+    "authors": [
+      {
+        "family": "Newell",
+        "given": "Allen"
+      },
+      {
+        "family": "Rosenbloom",
+        "given": "Paul S."
+      }
+    ],
+    "year": 1981,
+    "title": "Mechanisms of skill acquisition and the law of practice",
+    "container_title": "Cognitive skills and their acquisition",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Lawrence Erlbaum Associates",
+    "publisher_place": "Hillsdale, NJ",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Anderson",
+        "given": "J. R."
+      }
+    ],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "websearch",
+    "verified_evidence": "aitopics.org/doc/classics:7D0BECCD (fetched) lists Newell and Rosenbloom, 1981, in J. R. Anderson (Ed.), Cognitive Skills and their Acquisition, Erlbaum, Hillsdale NJ, pp. 1-55, with abstract; BibBase record lists pp. 1-51 (page range left blank because sources disagree); Crossref 10.4324/9780203728178-6 is the 2013 Psychology Press reprint volume chapter record (pp. 12-66).",
+    "kind": "theoretical and empirical synthesis (chapter)",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "heathcote2000power",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Heathcote",
+        "given": "Andrew"
+      },
+      {
+        "family": "Brown",
+        "given": "Scott"
+      },
+      {
+        "family": "Mewhort",
+        "given": "D. J. K."
+      }
+    ],
+    "year": 2000,
+    "title": "The power law repealed: The case for an exponential law of practice",
+    "container_title": "Psychonomic Bulletin & Review",
+    "volume": "7",
+    "issue": "2",
+    "pages": "185-207",
+    "publisher": "Springer Science and Business Media LLC",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3758/bf03212979",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.3758/bf03212979 (title, authors, 2000, PB&R 7(2) 185-207); full text of the authors' pre-print read at users.cs.northwestern.edu/~paritosh/papers/KIP/power-law-repealed.pdf (abstract: 40 data sets, 7910 learning series, 475 subjects, 24 experiments).",
+    "kind": "quantitative survey and reanalysis",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "stevens1957psychophysical",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Stevens",
+        "given": "S. S."
+      }
+    ],
+    "year": 1957,
+    "title": "On the psychophysical law",
+    "container_title": "Psychological Review",
+    "volume": "64",
+    "issue": "3",
+    "pages": "153-181",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/h0046162",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1037/h0046162 (title, author, 1957, Psych. Rev. 64(3) 153-181); excerpt at terhardt.userweb.mwn.de/ter/ref/Stevens1957a.html; encyclopedic account at encyclopedia.com psychophysics entry.",
+    "kind": "theoretical and empirical synthesis",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "miller1968response",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Miller",
+        "given": "Robert B."
+      }
+    ],
+    "year": 1968,
+    "title": "Response time in man-computer conversational transactions",
+    "container_title": "Proceedings of the December 9-11, 1968, Fall Joint Computer Conference, Part I (AFIPS '68)",
+    "volume": "",
+    "issue": "",
+    "pages": "267-277",
+    "publisher": "ACM",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1476589.1476628",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/1476589.1476628 returned title, author Robert B. Miller, 1968, AFIPS '68 proceedings, first page 267; abstract via OpenAlex; web search result showing the ACM DL record gave pp. 267-277 and affiliation IBM Poughkeepsie.",
+    "kind": "conceptual taxonomy paper",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "shneiderman1984response",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Shneiderman",
+        "given": "Ben"
+      }
+    ],
+    "year": 1984,
+    "title": "Response time and display rate in human performance with computers",
+    "container_title": "ACM Computing Surveys",
+    "volume": "16",
+    "issue": "3",
+    "pages": "265-285",
+    "publisher": "Association for Computing Machinery",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/2514.2517",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1145/2514.2517 (title, author, 1984, ACM Computing Surveys 16(3) 265-285); full text read at cs.umd.edu/users/ben/papers/Shneiderman1984Response.pdf",
+    "kind": "narrative review",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "nielsen1993response",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      }
+    ],
+    "year": 1993,
+    "title": "Response times: The 3 important limits",
+    "container_title": "Nielsen Norman Group",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Nielsen Norman Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.nngroup.com/articles/response-times-3-important-limits/",
+    "verified_via": "websearch",
+    "verified_evidence": "Page fetched at the URL: states the 0.1, 1 and 10 second limits, an excerpt from Usability Engineering (1993) with a 2014 update, citing Miller 1968 and Card et al. 1991. Open Library search for the parent book returned work OL3522752W (Nielsen, 1993, Academic Press, ISBN 0125184050).",
+    "kind": "expert practitioner article",
+    "lane": "09-hci-laws"
+  },
+  {
+    "key": "dabrowski2011years",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Dabrowski",
+        "given": "Jim"
+      },
+      {
+        "family": "Munson",
+        "given": "Ethan V."
+      }
+    ],
+    "year": 2011,
+    "title": "40 years of searching for the best computer system response time",
+    "container_title": "Interacting with Computers",
+    "volume": "23",
+    "issue": "5",
+    "pages": "555-564",
+    "publisher": "Oxford University Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.intcom.2011.05.008",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1016/j.intcom.2011.05.008 (title, authors, 2011, Interacting with Computers 23(5) 555-564); abstract via OpenAlex.",
+    "kind": "literature review",
+    "lane": "09-hci-laws"
+  }
+]

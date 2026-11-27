@@ -292,3 +292,94 @@ This is the main synthesis against the red-performance hypothesis, and it is its
 4. For writers: do not state "red makes people worse at tests" in lessons or in design rationale.
 
 Confirmed this session: Crossref 10.3758/s13423-020-01772-1; Europe PMC abstract; full text at pmc.ncbi.nlm.nih.gov/articles/PMC7704521 (numbers above).
+
+## hill2005red
+
+Hill & Barton (2005), "Red enhances human performance in contests", Nature 435, 293.
+
+### Core claims
+
+A one-page Nature letter that argued from evolutionary biology: red coloration is a sexually selected, testosterone-dependent signal of male quality in a variety of animals, and in some non-human species a male's dominance can be raised by attaching artificial red stimuli. The authors report that a similar effect influences physical contests in humans: across a range of sports, wearing red was consistently associated with a higher probability of winning. They conclude that sexual selection may have influenced the evolution of human responses to colors, and that sportswear color must be taken into account to ensure a level playing field.
+
+### Specifics
+
+Evidence type: observational analysis of competition results, a natural experiment rather than a laboratory one. Details come from the abstract (Europe PMC) and secondary accounts that I read in search results (Nature News coverage and summaries, not the letter itself), so the figures should be checked against the letter before reuse.
+
+- The design used the 2004 Athens Olympic combat sports (boxing, tae kwon do, Greco-Roman and freestyle wrestling), where red or blue outfits or protectors were assigned by the organizers rather than chosen by the athletes.
+- Reports put the overall win rate for red at about 55 percent (one account gives 242 of 441 match-ups), with the effect concentrated in evenly matched bouts (reported above 60 percent), and none when one fighter was clearly better.
+- A side analysis of team sports (association football shirt colors) was also reported.
+- Proposed mechanisms were speculative: intimidation of the opponent or a testosterone-linked signal.
+
+### Replication and criticism
+
+Several lines of follow-up complicate the claim. A referee experiment by Hagemann and colleagues (2008), as summarized in news reports I retrieved, showed 42 experienced taekwondo referees videos of the same sparring in red and blue, and red-clad fighters were awarded about 13 percent more points: this shifts the explanation from the athlete to the judge. A commentary noted possible violations of statistical independence and selection bias in the original allocation. A taekwondo study with electronic scoring found no red advantage, again suggesting judging bias, though I could only read that in a search summary and could not identify its authors. Most decisively, Peperkoorn, Hill, Barton and Pollet (2024; see their entry in this lane) tested 6,589 contests and found no significant red advantage overall, with some support only before 2005. Elliot's 2015 review lists the sport findings among "found, with contrary results" cases (Caldwell and Burger 2011; Garcia-Rubio and colleagues 2011). Treat the original result as a suggestive observation later undermined by larger data.
+
+### Implications for LTF
+
+1. The paper is a good example for the KB of how a catchy single-finding (red wins) can become a design myth. LTF writers must not cite "red is a dominance color" to justify red CTAs or leaderboards.
+2. For competitive features (challenge scoreboards, streaks), do not assign red or blue to learners or to "teams" in the belief that it gives a motivational edge.
+3. If LTF compares learners' scores to a peer group, color is irrelevant to the motivation effect; the research that matters is on feedback and goal setting, covered in other lanes.
+4. Referee/rater bias is a useful warning for LTF's in-sim challenge grading: automated scoring from sim telemetry avoids a class of bias that human judges bring.
+
+Confirmed this session: Crossref 10.1038/435293a (volume 435, issue 7040, p. 293); Europe PMC abstract; search-result summaries of Nature News coverage, the Hagemann referee study and a taekwondo electronic-scoring study (labeled secondary above); Peperkoorn et al. abstract on Europe PMC.
+
+## peperkoorn2024meta
+
+Peperkoorn, Hill, Barton & Pollet (2024), "Meta-analysis of the red advantage in combat sports", Scientific Reports 14, article 30822.
+
+### Core claims
+
+The original proposers of the red advantage (Hill and Barton are co-authors here) tested it across many tournaments. They report 6,589 contest outcomes in boxing, taekwondo and wrestling from seven Summer Olympic Games (1996 to 2020) and nine World Boxing Championships (2005 to 2021). Using meta-analytic techniques they found 50.5 percent wins by red for all data, which was not a statistically significant bias. In close contests the red share was 51.5 percent, also not significantly different from equal proportions. Before 2005, when the red advantage was first reported and before changes in tournament rules, there was some support for a red advantage in close contests, with 56.8 percent of bouts won by red. The authors say it is possible that knowledge of the effect, and rule changes in each sport, reduced a small effect, leading to its disappearance.
+
+### Specifics
+
+Evidence type: meta-analysis of competition outcomes; the numbers above are from the abstract (Europe PMC, DOI 10.1038/s41598-024-81373-3). Features worth keeping:
+
+- It pools several tournaments over 25 years, so it tests whether the original 2004 pattern generalizes.
+- The "close contests" analysis is the one the original authors stressed, because color might matter only when skill is balanced.
+- The authors offer two explanations for the decline: awareness of the effect, and rule or scoring changes. Search-result summaries also mention a shift to technology-assisted scoring, which fits the earlier referee-bias findings, but I did not read that in the paper itself.
+- It does not speak to non-sport settings.
+
+### Replication and criticism
+
+A paper whose authors include the original proponents is an unusually strong signal because there is no motivated opposition behind it. Its limitations: the explanation for the pre-2005 pattern (a true effect that disappeared after being published versus a chance finding in a small dataset) cannot be separated by this design, and the 56.8 percent figure for pre-2005 close contests is itself a small-sample estimate. In the wider literature this follows the pattern seen for other color-priming results (Steele 2014; Gnambs 2020): large early effects, smaller later ones.
+
+### Implications for LTF
+
+1. Use as the KB's final word on "red wins": no reliable effect in large recent data.
+2. For competitive or "streak" UIs in LTF, choose colors for contrast and accessibility, not to engineer dominance.
+3. The "knowledge of the effect makes it vanish" suggestion illustrates a design principle: effects depending on tacit expectations are fragile. LTF should avoid relying on subtle perceptual or social cues to motivate learners and should use explicit, informative feedback instead.
+4. When writing evidence summaries in the KB, include the original claim, the replication result and the date range, as this paper does.
+
+Confirmed this session: Crossref 10.1038/s41598-024-81373-3 (four authors, Scientific Reports 14, 30822, 2024); Europe PMC abstract (all numbers above); search summaries for supporting context (labeled as such).
+
+## brom2018how
+
+Brom, Stárková & D'Mello (2018), "How effective is emotional design? A meta-analysis on facial anthropomorphisms and pleasant colors during multimedia learning", Educational Research Review 25, 100-119.
+
+### Core claims
+
+A meta-analysis of 33 independent samples (N = 2,924) of whether adding anthropomorphic faces to multimedia graphics, or adding pleasant colors, helps learning. It found significant positive random-effects effects for retention (k = 18, d+ = 0.387), comprehension (k = 14, d+ = 0.317) and transfer (k = 27, d+ = 0.327). Affective-motivational effects were weaker: intrinsic motivation (k = 23, d+ = 0.255) was robust, liking/enjoyment (d+ = 0.109) weaker and positive affect (d+ = 0.113) marginal. Perceived learning and perceived effort were unaffected, but perceived difficulty went down (d+ = -0.208). The authors conclude that anthropomorphisms and colors are useful design principles but that the mechanism is unclear.
+
+### Specifics
+
+Evidence type: meta-analysis, read in full (the author-accepted manuscript at artemis.ms.mff.cuni.cz).
+
+- "Pleasant colors" in this literature means predominantly warm, bright, saturated colors, as in the studies of Um and colleagues (2012) and Plass and colleagues (2014); the authors say such colors should add little cognitive load if chosen with good visual design (avoiding gaudy or garish ones).
+- Only 5 of the 33 samples (15.2 percent) were "color only" contrasts; 11 were faces only, 13 combined faces and colors, and 4 pooled different manipulations. The color-only subset is therefore small, and the headline effects mix the two manipulations.
+- Moderation: with one exception, no evidence of moderation by contrast type, dynamicity of the materials, age, language or culture, prior mood, time on task or publication type; provisional evidence that the intrinsic motivation effect was larger for children (only three child samples).
+- Quality checks: no major publication bias, influential cases or outliers (a trim-and-fill analysis for transfer left the estimate at 0.316), but some outcome distributions were insufficiently heterogeneous. Most studies used college students, natural science content and sessions up to about 30 minutes.
+- Example of the manipulation: Münchow and colleagues compared gray-scale hypermedia with a colorful version, coded as color only.
+
+### Replication and criticism
+
+The authors list their own limitations: a relatively small number of samples, "minor" extra manipulations (font, rounded edges, gaze arrows) mixed into some studies, and an inability to separate colors from faces. The sub-analysis of color alone could not be isolated with this evidence. They also say the effects on learning outcomes are small to medium and that the mechanism is not established, with intrinsic motivation a candidate. Note the contrast with the priming literature in this lane: the color here is a design property of the learning material, tested on retention and transfer, and the meta-analysis passes publication-bias checks that the red-performance literature fails.
+
+### Implications for LTF
+
+1. A cautious case exists for a warm, bright, moderately saturated, coherent palette in lessons, as opposed to gray-scale material, but the evidence does not isolate color from faces and illustration style, and the studies were mostly short sessions with college students.
+2. If LTF adds a friendly instructor character, the combined manipulation has the larger sample base here, but that is outside the scope of this lane.
+3. Perceived difficulty fell with emotional design; LTF may legitimately aim for materials that feel approachable to beginners, provided color never replaces legible contrast.
+4. Because the effects came with minimal cognitive load by design, avoid garish or highly saturated colors that compete with diagrams and instrument widgets.
+
+Confirmed this session: Crossref 10.1016/j.edurev.2018.09.004 (volume 25, pp. 100-119); full text of the accepted manuscript downloaded and read (abstract, coding, Table 3, limitations); searches confirming the Plass et al. (2014) citation (Learning and Instruction 29, 128-140; Crossref 10.1016/j.learninstruc.2013.02.006).

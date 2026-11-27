@@ -63,3 +63,35 @@ This is a literature review, so the evidence is the quality of its survey. Its s
 5. Plan for evidence. Because pattern-benefit evidence is scarce, LTF should log which patterns recur in its own usability sessions and keep antipattern notes (for example confusing quiz feedback) alongside the good patterns.
 
 Confirmed this session: Crossref query for the title and authors returned DOI 10.1207/s15327051hci2101_3 (Human-Computer Interaction 21(1) 49-102, 2006); full text read from the accepted manuscript at https://eprints.leedsbeckett.ac.uk/id/eprint/953/1/Patterns_In_HCI.pdf (abstract, sections 1 to 8). Page numbers and dates above come from that manuscript.
+
+## gamma1994design
+
+Gamma, E., Helm, R., Johnson, R., and Vlissides, J. (1994). *Design Patterns: Elements of Reusable Object-Oriented Software*. Reading, MA: Addison-Wesley. (Copyright dated 1995 in some printings.)
+
+### Core claims
+
+The authors, known as the Gang of Four, argue that experienced object-oriented designers reuse solutions they have seen work, and that these solutions can be catalogued so novices can learn them. The book borrows the idea of a pattern from Alexander and applies it to software: each pattern names a recurring design problem, describes a core solution, and states its consequences. The catalog is meant to give teams a shared vocabulary, so that "use an Observer here" conveys a whole design decision in a few words. It is a catalog of 23 patterns, not a language in Alexander's sense with dense links between patterns.
+
+### Specifics
+
+Facts confirmed from a fetched reference summary (https://en.wikipedia.org/wiki/Design_Patterns): published by Addison-Wesley on 21 October 1994 (copyright 1995), 395 pages, ISBN 0-201-63361-2, with a foreword by Grady Booch. Two introductory chapters cover object-oriented capabilities and pitfalls; the rest describe 23 patterns in three groups. Creational (five): Abstract Factory, Builder, Factory Method, Prototype, Singleton. Structural (seven): Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy. Behavioral (eleven): Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor. Examples are in C++ and Smalltalk. The project began at a 1990 OOPSLA birds-of-a-feather session.
+
+Two design principles are stated as slogans: program to an interface, not an implementation, and favor object composition over class inheritance. The authors call inheritance white-box reuse and composition black-box reuse.
+
+Every pattern is described with a fixed template. Course materials that reproduce it list these headings: intent, also known as, motivation, applicability, structure, participants, collaborations, consequences, implementation, sample code, known uses, and related patterns (for example https://people.cs.pitt.edu/~chang/231/8pattern/PATTERN01/p8.html). Intent states the goal; motivation gives a concrete scenario; consequences state trade-offs. Known uses require that a pattern has been seen in real systems, which is the "rule of three" idea of a pattern being discovered, not invented.
+
+### Replication and criticism
+
+This is expert opinion and craft codification, not experiment. The influence is large: the fetched summary reports more than 500,000 copies sold and an ACM SIGPLAN Programming Languages Achievement Award in 2005. Criticism is also substantial. Paul Graham wrote that seeing patterns in his programs was a sign of trouble, meaning patterns can be workarounds for missing language features. Peter Norvig showed that 16 of the 23 patterns are simplified or eliminated by features in Lisp or Dylan, and Hannemann and Kiczales used AspectJ to remove code-level dependencies from 17 of the 23 (all per the same summary). In a 2009 interview Gamma said the authors would recategorize some patterns and add others, and that he wanted to remove Singleton but the authors did not agree. Dearden and Finlay (see the dearden2006pattern section) add that no empirical studies of developers using the patterns in practice had been published by 2006.
+
+A second line of criticism concerns misuse: the template makes it easy to apply a named pattern where a simpler construct would do. The book itself does not claim that more patterns mean better design.
+
+### Implications for LTF
+
+1. Adopt the template idea, not the object-oriented content. For each reusable LTF component (instrument widget, checklist, quiz card), record intent, motivation, applicability, consequences and known uses in the knowledge base. Consequences are the part most often skipped and the most useful for later changes.
+2. Give things names that carry decisions. Names such as "briefing card", "fly-mode strip" and "gauge frame" let content writers and reviewers talk about structure without opening code.
+3. Prefer composition over inheritance in the React widget layer: small components composed into a gauge or a checklist row, with a narrow props interface, match the "program to an interface" principle.
+4. Resist premature patterns. Norvig's and Graham's critiques suggest asking whether the framework (React, Tailwind, TanStack Query) already provides the mechanism before writing a new abstraction.
+5. Keep a known-uses rule: promote something to a shared component only after it has appeared in several lessons, which prevents a design system filled with one-off components.
+
+Confirmed this session: Open Library search by ISBN 0201633612 returned work OL6030812W (Design Patterns, Gamma, Helm, Johnson, Vlissides, first published 1995 in that record); facts and criticisms from the fetched summary at https://en.wikipedia.org/wiki/Design_Patterns; template headings from course pages found by web search (https://people.cs.pitt.edu/~chang/231/8pattern/PATTERN01/p8.html). I did not read the book itself.

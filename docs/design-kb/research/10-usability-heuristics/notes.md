@@ -501,3 +501,31 @@ SUS has been studied heavily by others: Bangor, Kortum and Miller (2008) analyze
 SUS is a candidate satisfaction measure for LTF beta tests, but it must be paired with observation because it is not diagnostic. Administer it after a defined task, not after a casual visit, and report percentiles and a confidence interval, not the raw score alone. Because LTF will have small early samples, do not compare two versions on SUS unless the sample is large enough to show a real difference. Item wording refers to "this system", so name the product (LTF, not the simulator) when asking; the learner might otherwise rate the sim. Do not edit the items without checking, since changed wording makes the benchmarks inapplicable.
 
 Confirmed this session: web search results and the UCL constructDB page (verdi.cs.ucl.ac.uk/constructDB/publications/brooke-susa-1996.html) for format and citation; Routledge book page (Usability Evaluation in Industry, Taylor & Francis/CRC, 1996) and search for pp. 189-194; measuringu.com/sus/ for items, scoring and benchmark statements; Crossref for Lewis and Sauro (2009). Not read: the chapter itself.
+
+## bangor2008empirical
+
+Bangor, A., Kortum, P. T., & Miller, J. T. (2008). An empirical evaluation of the System Usability Scale. International Journal of Human-Computer Interaction, 24(6), 574-594. DOI 10.1080/10447310802205776.
+
+### Core claims
+
+Bangor, Kortum and Miller analyzed nearly ten years of System Usability Scale (SUS) data collected on many products at different stages of the development lifecycle, and concluded that the data support SUS as a quick, robust way to gather a user's subjective rating of a product's usability (as described in the abstract record surfaced by search; the full abstract was blocked). The paper turned SUS from Brooke's informal instrument into one with published norms, and it is the main source of the reading of SUS scores as acceptable or not.
+
+### Specifics
+
+Evidence type: an analysis of a large, opportunistic archive of SUS surveys from the authors' own usability work, not a designed experiment. I could not read the paper or its abstract directly this session, so I report only what I could confirm from secondary descriptions, and I give none of the sample counts or reliability coefficients that I could not confirm.
+
+From secondary sources found in search: a later paper reports that this study found SUS scores sensitive to the type of interface and to changes made to a product, and to user age but not to gender. Another paper cites the acceptability ranges from Figure 13 of this article (page 592); a different citing paper summarizes the authors' view as a score of 85 or higher indicating exceptional usability and a score below 70 unacceptable, but that is a citing author's paraphrase and I could not verify it, so do not quote it. A 2021 arXiv paper lists this article among those showing consistently good reliability of SUS.
+
+The follow-up paper, Bangor, Kortum and Miller (2009), "Determining what individual SUS scores mean: Adding an adjective rating scale", Journal of Usability Studies 4(3), 114-123, is better documented in my search record (abstract-level only). They added a seven-point adjective-anchored item as an eleventh question to nearly 1,000 SUS surveys; the adjective ratings correlated strongly with SUS scores (r = 0.822). They report that the overall mean of about 70 had remained constant for some time, analyzed quartiles over 273 studies, and found fewer than 5% of studies with a mean below 50. The SUS score for the midpoint adjective "OK" is consistent with earlier adjective-scale research, though "OK" may connote acceptable; they suggest a letter-grade scale as an alternative way to read SUS. A current benchmark source (MeasuringU, confirmed this session) gives the average across about 500 studies as 68, which agrees with a mean near 70 (the dataset differs).
+
+Other facts confirmed from MeasuringU: SUS items 4 and 10 measure learnability and the other eight usability; SUS is not diagnostic; its correlation with task performance is modest (about r = .24); a SUS can be administered to as few as two users but small samples give imprecise estimates.
+
+### Replication and criticism
+
+Because the data are an archive of the authors' studies of mostly telecommunications and similar products, generalization to other domains is an open question; I did not confirm the composition of the archive. Later benchmark work by Sauro and Lewis uses larger sets and percentile ranks, and the MeasuringU page stresses that SUS scores are not percentages and that a grade should come from percentiles. Lewis and Sauro (2009) examined the two-factor structure. The adjective anchors correlate well with SUS in the 2009 data, but the anchors themselves are English-language and their cut-offs depend on the sample. Treat any single "acceptable if above 70" statement as a convenient benchmark, not a measured threshold.
+
+### Implications for LTF
+
+If LTF uses SUS, interpret scores against percentile benchmarks, not a fixed pass mark such as 70, and track the same task and population across releases so the changes mean something; the 2008 and 2009 papers say SUS is sensitive to product changes, which makes it suitable for before-and-after checks across design iterations. Expect scores to vary with learner age and experience if confirmed in your sample, and record these. Do not interpret a high SUS as proof of no serious problems: MeasuringU notes users can give high scores while encountering serious problems. Add one open question ("What was the most confusing thing?") to get diagnostic content, since SUS alone cannot tell the team what to change.
+
+Confirmed this session: Crossref DOI 10.1080/10447310802205776 (IJHCI 24(6), 574-594); Semantic Scholar API record (title, authors, year; abstract elided); web search summaries of this paper and of the 2009 follow-up (abstract-level); measuringu.com/sus/. Not read: the 2008 paper itself or its abstract, and the 2009 paper's full text.

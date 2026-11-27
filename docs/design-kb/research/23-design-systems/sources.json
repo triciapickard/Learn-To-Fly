@@ -64,5 +64,44 @@
     "verified_evidence": "Crossref works query.bibliographic 'Pattern Languages in HCI A Critical Review Dearden Finlay' returned DOI 10.1207/s15327051hci2101_3, Human-Computer Interaction 21(1) 49-102, 2006; full text read at eprints.leedsbeckett.ac.uk/id/eprint/953",
     "kind": "critical literature review",
     "lane": "23-design-systems"
+  },
+  {
+    "key": "gamma1994design",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Gamma",
+        "given": "Erich"
+      },
+      {
+        "family": "Helm",
+        "given": "Richard"
+      },
+      {
+        "family": "Johnson",
+        "given": "Ralph"
+      },
+      {
+        "family": "Vlissides",
+        "given": "John"
+      }
+    ],
+    "year": 1994,
+    "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Addison-Wesley",
+    "publisher_place": "Reading, MA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0201633612",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search q=isbn:0201633612 returned work OL6030812W 'Design Patterns' by Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides (Addison-Wesley); publication facts (21 Oct 1994, 395 pages, ISBN 0-201-63361-2) from fetched reference summary",
+    "kind": "expert catalog (software design patterns)",
+    "lane": "23-design-systems"
   }
 ]

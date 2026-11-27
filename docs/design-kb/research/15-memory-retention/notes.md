@@ -361,7 +361,7 @@ Confirmed this session: Crossref 10.3758/mc.36.3.604; abstract via Crossref; ful
 
 ## bjork2009making
 
-Bjork, E. L., and Bjork, R. A. (2009). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. In M. A. Gernsbacher, R. W. Pew, L. M. Hough, and J. R. Pomerantz (Eds.), *Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society*. New York: Worth. (Often cited as 2011.) Evidence type: expert essay summarizing experiments, from the originators of the concept.
+Bjork, E. L., and Bjork, R. A. (2009). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. In M. A. Gernsbacher, Pew, Hough, and J. R. Pomerantz (Eds.), *Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society*. Worth Publishers. (Often cited as 2011.) Evidence type: expert essay summarizing experiments, from the originators of the concept.
 
 ### Core claims
 
@@ -519,7 +519,7 @@ Confirmed this session: Crossref 10.1037/h0020071 (title, authors, year, volume,
 
 ## brown2014make
 
-Brown, P. C., Roediger, H. L., III, and McDaniel, M. A. (2014). *Make It Stick: The Science of Successful Learning*. Cambridge, MA: Belknap Press of Harvard University Press. Evidence type: trade book by two researchers and a writer, summarizing the research literature for general readers.
+Brown, P. C., Roediger, H. L., III, and McDaniel, M. A. (2014). *Make It Stick: The Science of Successful Learning*. Belknap Press of Harvard University Press. Evidence type: trade book by two researchers and a writer, summarizing the research literature for general readers.
 
 ### Core claims
 
