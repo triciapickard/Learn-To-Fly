@@ -1,0 +1,1082 @@
+# Forms, Onboarding and Touch
+
+This Part covers the moments when a learner gives Learn to Fly something: an email address, a
+typed answer, a tick on a checklist step, a tap on a tablet propped beside the simulator. Those
+moments are small, and they are where products lose people. The Part takes them in order: how
+to decide what to ask, how to lay out a form, how answer spaces prevent errors, when to
+validate and how to word an error, how to let people take a mistake back, how a first run
+should teach, how large and how far apart touch targets must be, which gestures beginners can
+be expected to know, and how to design the fly mode screen that a learner glances at while
+flying.
+
+The evidence is uneven, and the Part says so rule by rule. Pointing and target size rest on
+one of the most replicated regularities in human performance and on several independent touch
+studies that agree in shape if not in numbers. Form design rests on a small number of lab
+experiments, a bundle test of 20 guidelines, survey-methodology experiments on answer spaces,
+and a much larger body of practitioner writing, some of which has been repeated so often that
+its weak origins are forgotten. Onboarding rests on a research program at IBM in the 1980s and
+on practitioner analysis since. Validation timing is genuinely contested. Use the grades: an
+**A** or **B** rule should be broken only with evidence; a **C** rule is the agreed craft and
+can be revisited when LTF's own testing says otherwise; a **D** rule records a live dispute and
+the position LTF takes on it.
+
+## Forms as conversations
+
+### Why forms matter more than their size suggests
+
+A form is rarely the reason anyone visits a site. Bargas-Avila and colleagues open their
+review of web form research with exactly that point: forms are the main contact point between
+users and site owners, people never visit a site in order to fill one in, and an unusable form
+is a hurdle at which the transaction is lost [@bargasavila2010simple]. For Learn to Fly the
+"transaction" is not a purchase. It is a learner deciding to keep going: creating an account so
+progress is saved, typing an answer into a quick check, scoring their own flight in a debrief.
+A clumsy field at any of those points costs more than the seconds it wastes, because it lands
+at the exact moment the learner is deciding whether this course is for them.
+
+The best direct evidence that form quality matters comes from Seckler and colleagues, who took
+20 published guidelines, rebuilt three real newspaper registration forms to follow them, and
+compared original and improved versions in an eye-tracking lab study with 65 participants
+[@seckler2014designing]. The original forms broke 9, 9 and 12 of the guidelines. The improved
+versions needed fewer submission attempts in all three cases. Completion time fell by 25
+percent on one form (113 to 85 seconds), 33 percent on another (105 to 70 seconds) and 18
+percent on the third (104 to 85 seconds). The difference was significant for the two weaker
+forms, with effect sizes of d = .93 and 1.00, and not significant for the best one. Three
+features of the result matter for how it is used. First, the gains were largest where the
+original was worst, so benefits shrink as baseline quality rises. Second, a keystroke-level
+model had predicted only a 7 to 23 percent improvement, so counting keystrokes underestimated
+what the redesign did. Third, the study tested the guidelines as a bundle, so it cannot say
+which single guideline did the work; from interviews and error counts the authors inferred
+that format specification and error-message handling mattered most, and that expert severity
+ratings did not track real user impact well.
+
+### Three layers of a form
+
+Jarrett and Gaffney describe a form as a conversation conducted in three layers
+[@jarrett2009forms]. The **relationship** layer is why the person is there and whether they
+trust and understand what is being asked. The **conversation** layer is the questions
+themselves and whether they can be answered. The **appearance** layer is layout and controls.
+A form fails if any layer fails, and work on appearance cannot fix a failure in the other two.
+The model has no experimental test behind it; its value is diagnostic, because it sends each
+problem to the layer where the fix lives.
+
+The model is sharpest when applied to LTF's in-sim challenges. A planning field in a debrief
+asks the learner to record a value from their flight. If they do not know which instrument to
+read, the failure is in the conversation layer: the question cannot be answered as posed. If
+they do not see why the field exists or whether it is scored, the failure is in the
+relationship layer. Only if they know both and still mistype does the appearance layer come
+into play. A redesign that only restyles the input would leave the first two failures in place.
+
+::: {.rule #FRM-001 grade="C"}
+**Before changing how a form looks, name the layer that is failing: relationship,
+conversation or appearance.** Jarrett and Gaffney's three-layer model routes each problem to
+its fix: an unclear reason for asking is a relationship problem, an unanswerable question is a
+conversation problem, and only a field that is understood but mis-entered is an appearance
+problem [@jarrett2009forms]. The model is a framework, not a tested result, so use it as a
+review question rather than a proof.
+
+*In LTF:* every design review of `SignupForm`, `LoginForm`, `DebriefForm` and `QuizBlock`
+states which layer a proposed change addresses. Restyling `control-box` does not count as a
+fix for a planning field the learner cannot answer.
+:::
+
+### Every question has a cost
+
+Wroblewski's account of form design starts from the observation that any question asked
+requires people to parse it, formulate a response and input their answer, so the first
+question about any field is whether it can be removed, postponed or inferred
+[@wroblewski2008web]. That is craft authority, drawn from his work at Yahoo! and eBay and
+from commissioned usability studies, and the book is not peer reviewed. The principle needs no
+experiment to be useful, because it is a discipline of asking rather than a claim about
+effect size. Bargas-Avila's guideline set reaches the same point from the empirical
+literature: ask only what is necessary [@bargasavila2010simple].
+
+::: {.rule #FRM-002 grade="C"}
+**Justify every field by what LTF does with the answer; remove, postpone or infer any field
+that has no use at the moment it is asked.** Each question costs the learner a parse, a
+decision and an entry [@wroblewski2008web], and the guideline literature puts "ask only what
+is necessary" first [@bargasavila2010simple]. Seckler and colleagues deliberately did not test
+the "keep the form short" guideline [@seckler2014designing], so this rule rests on craft
+consensus, not a measured effect.
+
+*In LTF:* the review question for any new field in `SignupForm`, `DebriefForm` or the account
+sections is "what screen uses this value, and is that screen reached before the learner could
+have been asked later?"
+:::
+
+### Counting the work
+
+The keystroke-level model of Card, Moran and Newell predicts how long an expert takes to run a
+routine method by summing standard times for its operations: keystrokes, pointing, homing the
+hands between devices, mental preparation and waiting for the system [@card1980keystroke]. It
+was validated against 28 users on 10 systems over 14 task types, with a root-mean-square error
+of 21 percent for single tasks. Its constants were measured on 1970s editors and should be
+treated as historical. Its structure remains a useful design tool. Mental preparation, the
+operator placed wherever a decision must be made, costs more than any keystroke, and homing is
+paid every time the hand moves between devices. Seckler's result shows the model's limit: it
+predicted a smaller gain than the real redesign achieved, because it ignores errors, rereading
+and uncertainty, which is where most of a novice's time goes [@seckler2014designing].
+
+::: {.rule #FRM-003 grade="B"}
+**Compare two form or flow designs by counting their operations (fields, decisions, pointing
+moves and device switches), and remove decisions first.** The keystroke-level model predicts
+routine expert time from such counts with about 21 percent error on single tasks
+[@card1980keystroke], and it treats each decision as the most expensive step. It
+underestimates novice gains because it ignores errors [@seckler2014designing], so use it to
+rank designs, never to promise timings.
+
+*In LTF:* write the operator count in the pull request when changing a flow such as
+sign-up after "Mark lesson complete", or ticking a step in `FlyPanel`. Do not quote
+millisecond values from the model in design documents.
+:::
+
+::: {.rule #FRM-004 grade="B"}
+**Fix the forms that break the most guidelines first, and expect smaller gains on forms that
+are already good.** In Seckler's bundle test, improvements were significant on the two weaker
+forms and not on the best one, and expert severity ratings did not predict which problems
+hurt users [@seckler2014designing].
+
+*In LTF:* audit the forms against the checklist at the end of this Part and rank them by
+violations. On present evidence the debrief planning fields and the quiz numeric entry need
+more work than `LoginForm`, which already follows most of the guidelines.
+:::
+
+### Testing with the people who will use it
+
+Shneiderman's early work on system messages ended with an acceptance test: run the messages
+past the target user community before release, and collect data on how often each error
+condition occurs [@shneiderman1982designing]. Seckler's finding that expert ratings of
+severity did not track user impact makes the same point from the other direction
+[@seckler2014designing]. Jarrett and Gaffney call testing the best part of making a form
+[@jarrett2009forms]. None of these sources says how many testers are enough for a form; for
+LTF the practical floor is a handful of real beginners per significant form, because the
+people who build LTF already know what every field means.
+
+::: {.rule #FRM-005 grade="B"}
+**Test every new or changed form with a few beginners before release, and do not let expert
+judgment of severity stand in for that test.** Experts' severity ratings did not track actual
+user impact in Seckler's study [@seckler2014designing], and acceptance testing with the
+target users is one of Shneiderman's five recommendations for messages
+[@shneiderman1982designing].
+
+*In LTF:* a challenge with planning fields or a new quiz type is not published until two or
+three people who have never flown have filled it in while someone watches, and the question
+"what would you do next?" has been asked at each error.
+:::
+
+### What this means for Learn to Fly
+
+LTF has few forms, and each sits at a moment of commitment. The inventory, from the code:
+`SignupForm` (display name, email, password with `PasswordStrengthMeter`, a terms checkbox),
+`LoginForm` (email, password, "Remember me for 30 days"), the account sections (profile,
+preferences, security, and the data section with export and a typed-confirmation delete
+dialog), `QuizBlock` (single choice, multiple choice, numeric and ordering questions), the
+challenge `DebriefForm` (a radio rubric per criterion, optional planning fields, optional
+reflections, notes and a "paused the sim" checkbox), the `ReportProblemDialog`, the challenges
+filter of five `Select`s and the reference search field.
+
+Keep the shared plumbing. `FormField` already puts the label above the control, wires
+`aria-describedby` and `aria-invalid`, and renders errors as text with an octagon icon; the
+auth forms already use `ErrorSummary`, which takes focus after a failed submit. That is a sound
+base, and most of the rules in this Part ask for changes at the conversation layer rather than
+new components. Change the review habit: every form change names its layer (FRM-001), justifies
+each field (FRM-002), carries an operator count (FRM-003) and is watched in use by beginners
+(FRM-005). Build a short "forms audit" pass into the `ltf-review` client checklist so that
+FRM-004 is applied to the worst form first rather than the most visible one.
+
+## Asking less, and asking later
+
+### Account walls and the moment of value
+
+The most expensive form in most products is the one that stands between a newcomer and the
+thing they came for. Wroblewski's discussion of registration includes a case study, credited
+to Jared Spool and reported in a review of the book, in which a store replaced a mandatory
+register step before checkout with a continue button and a note that an account was optional
+[@wroblewski2008web]. The review gives a large percentage gain for that change, but the figure
+is secondhand, from Spool's article rather than the book's own research, and it was not
+verified for this Part, so it is not repeated here. The direction is consistent with every
+other source in this Part: people act first and register when registering gives them
+something. Kendrick's analysis of mobile onboarding lists account creation among the few
+situations in which an up-front screen can be justified, and her example is a banking app
+where identity must be confirmed before anything else can happen [@kendrick2020mobileapp]. A
+free course is the opposite case.
+
+LTF already behaves well here. The landing page says "You can start without an account", the
+primary call to action goes straight to Lesson 0.1, and the first prompt to sign up arrives
+when the learner presses "Mark lesson complete" while signed out: a dialog titled "Save your
+progress" explains that an account is needed "to mark lessons complete, save quiz answers and
+track your challenge scores", with "Not now", "Log in" and "Sign up free". That is an account
+request tied to the exact moment it pays off. The open question is what happens next: if the
+learner signs up from that dialog, the lesson they just tried to complete should be marked
+complete on return, or they will have to repeat the action that triggered the request. The
+code reviewed for this Part shows the `returnTo` path but not whether the completion is
+replayed, so this needs checking.
+
+::: {.rule #FRM-006 grade="C"}
+**Let the learner start and finish the first lesson without an account, and ask for one only
+at the moment it gives them something they asked for.** Practitioner analysis treats an
+up-front account step as justified only when the product cannot work without identity
+[@kendrick2020mobileapp], and the form literature's first question is whether a step can be
+postponed [@wroblewski2008web]. The evidence is craft consensus and case reports, not a
+controlled comparison.
+
+*In LTF:* keep the "Mark lesson complete" dialog as the main account prompt. When a learner
+signs up from it, complete the lesson they were finishing before showing the lesson page
+again. Do not add an account step to `/welcome` or to Lesson 0.1.
+:::
+
+### Remove, postpone, infer
+
+Applied to `SignupForm`, the remove-postpone-infer test asks a hard question of each field.
+Email and password are needed to create a credential. The terms checkbox ("I understand this
+is for simulation only and agree to the Terms") records consent to a safety disclaimer that
+the product depends on, so it stays. The display name, with the hint "Shown on your dashboard.
+2–40 characters.", is used only by the dashboard greeting ("Welcome aboard, {name}!"). It could
+be postponed to the account page or to the first dashboard visit, or inferred from the part of
+the email address before the at sign and offered for editing later. Each of those moves takes
+a field and a decision out of the sign-up moment. Whether the saving is worth the loss of a
+personal greeting on first visit is a product choice; the rule is that the choice is made
+explicitly and recorded.
+
+::: {.rule #FRM-007 grade="C"}
+**For every field on a sign-up or setup form, record whether it was removed, postponed,
+inferred or kept, and why.** Asking whether a question can be removed, postponed or inferred
+is the core discipline of form design in the practitioner literature [@wroblewski2008web], and
+asking for as little as possible is one of the W3C's cognitive accessibility patterns for
+preventing mistakes [@seemanhorwitz2021making].
+
+*In LTF:* the `SignupForm` display name is the first candidate. Either postpone it (default it
+from the email and let the learner edit it in `ProfileSection`) or keep it with a recorded
+reason in the pull request that last touches the form.
+:::
+
+### Say why before you ask
+
+The relationship layer is easy to neglect because it rarely shows up as an error. A learner
+who does not know why LTF wants an email address does not make a mistake; they leave. Jarrett
+and Gaffney's model puts this first: before a person answers, they need to know why they are
+being asked and what will happen with the answer [@jarrett2009forms]. Seckler's guideline set
+includes the other end of the exchange: a confirmation page saying what happens next
+[@seckler2014designing].
+
+::: {.rule #FRM-008 grade="C"}
+**State in one plain sentence, before the first field, why LTF is asking and what the learner
+gets; after submit, say what happened and what comes next.** The relationship layer of a form
+is whether the person understands and accepts why they are asked [@jarrett2009forms], and the
+tested guideline bundle included a confirmation that explains next steps
+[@seckler2014designing].
+
+*In LTF:* `SignupPage` already does the first half: its `PageHeader` description reads "A free
+account saves your lesson progress, challenge scores and attempt history." Keep that sentence
+first and keep the beta caveat after it. The second half is missing: after sign-up, return the
+learner to the lesson with a short `Toast` that confirms progress is now saved, so the
+`returnTo` redirect does not land silently.
+:::
+
+### Defaults are decisions
+
+Every preselected control decides for the learner, because most people keep what they are
+given. Johnson and Goldstein's work on organ donation is the best-known demonstration: in an
+online experiment with 161 respondents, where changing the answer took one click, stated
+donation was about twice as high when the default was to donate as when it was not, and the
+opt-out condition did not differ from a neutral forced choice [@johnson2003defaults]. Across
+European countries, effective consent rates in opt-in and opt-out countries differed by nearly
+60 percentage points with no overlap. Jachimowicz and colleagues' later meta-analysis of 58 default studies, reported in
+search-result summaries rather than a full reading, found a pooled effect of d = 0.68
+with wide heterogeneity, larger when defaults signal endorsement. The authors list three
+routes: the default reads as a recommendation, changing it takes effort, and people favor the
+status quo. That makes a default the strongest design lever in a form and the easiest to
+misuse. Gray and colleagues list preselection as a form of interface interference among dark
+patterns: an option chosen before the user acts, in the designer's interest
+[@gray2018dark].
+
+`LoginForm` sets "Remember me for 30 days" to unchecked, with the hint "Don't tick this on a
+shared computer". That default protects the learner on a shared machine at the cost of an
+extra tick for everyone else, which is the right side to err on. The signup terms checkbox is
+unchecked and must be ticked, which is correct for consent. `QuizBlock` starts with no answer
+selected, which keeps a recommendation out of a recall task.
+
+::: {.rule #FRM-009 grade="A"}
+**Preselect only the option a well-informed learner would choose for themselves; never
+preselect consent, data sharing, marketing email or a quiz answer.** Defaults change choices
+substantially even when changing them costs one click [@johnson2003defaults], and preselection
+in the designer's interest is a recognized dark pattern [@gray2018dark]. The size of the
+effect varies widely, but its existence is well replicated.
+
+*In LTF:* keep "Remember me" unchecked, keep the terms box unchecked, and keep `QuizBlock` and
+the `DebriefForm` rubric free of preselected answers. Any future email reminder setting starts
+off, with the benefit stated next to it.
+:::
+
+### Credentials without memory tests
+
+WCAG 2.2 added two criteria that bear directly on sign-up and log-in. Accessible
+Authentication (Minimum), at level AA, forbids a cognitive function test such as remembering a
+password or solving a puzzle as the only way to authenticate, unless the page supports a
+mechanism such as a password manager or paste, or another listed exception applies
+[@w3c2023wcag]. Redundant Entry, at level A, forbids asking for information the user has
+already given in the same process unless it is essential or auto-filled [@w3c2023wcag]. The
+W3C cognitive accessibility guidance lists a login that does not rely on memory among its
+patterns [@seemanhorwitz2021making]. These are consensus standards, not experiments.
+
+The auth forms already set `autoComplete` to `email`, `new-password` and `current-password`,
+which lets password managers fill and generate credentials, and `PasswordInput` uses a normal
+input with a "Show" toggle, so paste works. The signup password hint ("At least 12 characters.
+A few random words make a strong, memorable password.") states the format before typing and
+gives a strategy, not a list of character-class rules. There is no "confirm password" field,
+which avoids redundant entry; the visible "Show" toggle covers the mistyping risk that a
+confirmation field usually addresses.
+
+::: {.rule #FRM-010 grade="C"}
+**Support password managers, paste and autofill on every credential field, and do not add a
+second "confirm" field when a show-password toggle is present.** WCAG 2.2 requires that
+authentication not rest on a memory test without such a mechanism, and forbids asking twice
+for the same information in one process [@w3c2023wcag].
+
+*In LTF:* keep the `autoComplete` attributes on `SignupForm`, `LoginForm` and the delete
+dialog, never block paste in `PasswordInput`, and add a test that asserts the attributes so a
+refactor cannot drop them.
+:::
+
+::: {.rule #FRM-011 grade="C"}
+**Never ask a learner to enter the same information twice in one flow; carry it forward or
+prefill it.** Redundant Entry is a level A requirement in WCAG 2.2 [@w3c2023wcag].
+
+*In LTF:* if the planned onboarding collects controller, panel and theme choices before
+sign-up, those answers are sent with the new account and never asked again on the account
+page. A learner who typed an email on `/login` and then chose "Create a free account" should
+find it already filled in on `/signup`; the current link carries only `returnTo`, so this is
+a change.
+:::
+
+### Friction in the right places
+
+Thaler's term "sludge" names the opposite of a helpful nudge: friction that makes it harder to
+do something in the person's own interest [@thaler2018nudge]. The essay is an opinion piece,
+known for this Part from its abstract and secondary accounts, and the concept has been
+criticized for blurring into protective friction. The useful test is symmetry: compare the
+effort of actions that benefit the learner with the effort of actions that benefit the
+product. Gray and colleagues' taxonomy names the failure modes: obstruction (a task made
+harder than it needs to be, as in the roach motel that is easy to enter and hard to leave),
+nagging (repeated interruptions after a refusal), and forced action (a consent or action
+required to continue that the task does not need) [@gray2018dark].
+
+LTF's delete-account path asks the learner to type "DELETE" and their password in a dialog
+whose description says "Everything will be permanently deleted", next to an "Export my data"
+link. That is friction, but it protects the learner from an irreversible loss, the wording is
+neutral, and export is one click. It passes the symmetry test against a four-field sign-up.
+The `SignupBanner` in lessons ("Sign up (free) to save your progress and challenge scores.")
+is dismissible and remembers the dismissal, so it is not nagging. These are the patterns to
+protect when the product grows a paid tier or email.
+
+::: {.rule #FRM-012 grade="C"}
+**Make leaving (deleting the account, unsubscribing, stopping reminders) take no more steps
+than joining, and add friction only where it protects the learner from an irreversible
+loss.** Excess friction on actions in the person's interest is sludge [@thaler2018nudge], and
+obstruction of exit is a named dark pattern [@gray2018dark].
+
+*In LTF:* keep the typed confirmation on account deletion, keep export next to it, and keep
+any future unsubscribe to one click from the email. Record every deliberate friction and its
+reason in the pull request.
+:::
+
+::: {.rule #FRM-013 grade="C"}
+**Once a learner dismisses a prompt, do not show it again in the same context.** Repeated
+interruption after a refusal is the nagging pattern [@gray2018dark], and limiting
+interruptions is one of the W3C's patterns for helping people focus
+[@seemanhorwitz2021making].
+
+*In LTF:* `SignupBanner` and `BetaBanner` already persist their dismissal in `localStorage`.
+Apply the same rule to any future coach mark or reminder, and do not reopen the "Save your
+progress" dialog on every lesson once the learner has chosen "Not now" in a session.
+:::
+
+### Ask for device permissions in context
+
+Kendrick recommends asking for any permission or setting at the moment it is needed, with a
+sentence saying why [@kendrick2020mobileapp]. `FlyPanel` does this already: the "Keep the
+screen on while flying" checkbox appears only where the Wake Lock API is supported, next to the
+timer, where its purpose is obvious. A notification or sim-connection permission, if LTF adds
+one, belongs in the same place: beside the feature that uses it, at the moment it is used.
+
+::: {.rule #FRM-014 grade="C"}
+**Request a device permission (wake lock, notifications, audio) beside the feature that needs
+it, at the moment it is used, with one line saying why.** Permission requests out of context
+add interaction cost without a reason the person can see [@kendrick2020mobileapp].
+
+*In LTF:* keep the wake-lock checkbox in `FlyPanel`. If random-event beeps ever need an audio
+permission on some devices, ask when the learner starts the timer, with the sentence "So you
+can hear in-flight events while looking at the sim."
+:::
+
+### What this means for Learn to Fly
+
+Keep the account-optional start, the "Save your progress" dialog at "Mark lesson complete",
+the unchecked "Remember me", the unchecked terms box, the autocomplete attributes, the
+single password field with a "Show" toggle, the dismissible banners and the protective but
+neutral delete dialog. Change three things: decide and record the fate of the display name
+field (FRM-007), make sure a learner who signs up from the completion dialog does not have to
+complete the lesson twice (FRM-006), and confirm after sign-up that progress is now being saved
+(FRM-008). Build tests that pin the defaults and autocomplete attributes so they survive
+refactors (FRM-009, FRM-010). If the planned `/welcome` onboarding is built, it inherits
+FRM-011: answers given there are never asked for again.
+
+## Labels, layout and controls
+
+### Where labels go, and how much is known
+
+The most repeated rule in form design is that labels belong above their fields. Its main
+source is a short practitioner article by Penzo, who ran an eye-tracking test of four layouts
+of a plain web form with expert and novice groups [@penzo2006label]. With left-aligned labels
+to the left of the fields, each label and field pair cost one saccade of about 500 ms, and some
+label-to-field distances were excessive. Right-aligning those side labels nearly halved total
+fixations and completion time, with saccades of about 170 ms for experts and 240 ms for
+novices. Labels above the fields cut saccades to about 50 ms, most fixations landed on the
+inputs, and no expert needed to recheck a label, though some novices did. Making the
+above-field labels bold raised saccade time from about 50 to about 80 ms with no visible
+benefit.
+
+The article does not state how many people took part, reports no significance tests or
+variance, and used deliberately bare forms, which the author accepted may have affected the
+bold-label result. A 2011 comment on the article by Caroline Jarrett argues that the
+conclusions overstate the experiment and points to later work by Das and colleagues (2008) and
+by Feichtinger (2010) that found no advantage for labels above fields in simple forms. The Das
+abstract, as summarized by a web search, suggests right-aligned labels at least for multi-field
+forms, with a small sample. What the evidence supports is narrower than the popular rule: side
+labels cost extra eye movement, left-aligned side labels are the worst of the four, and
+above-field against right-aligned is unsettled for simple forms. Bargas-Avila and colleagues'
+guideline set adopts labels above fields on the strength of Penzo's test
+[@bargasavila2010simple], and Wroblewski's slides recommend top-aligned labels for familiar
+data, short completion times, localization and mobile screens, at the cost of vertical space
+[@wroblewski2008web].
+
+::: myth
+**"Eye-tracking proved that labels above fields are fastest."** The claim traces to one
+practitioner test with an unstated sample size and no statistics [@penzo2006label]. Later
+studies cited in the comment thread found no advantage for top labels in simple forms, and one
+suggests right-aligned labels for multi-field forms. Labels above fields are a sound default
+for narrow screens and consistency, not a proven speed winner.
+:::
+
+For LTF the choice is made on other grounds. The auth layout is a 448 px column, lessons are
+read on phones and tablets as well as desktops, and learners may enlarge text. Side labels run
+out of room in all three cases. Above-field labels also put the label in the same reading
+order as the field for a screen reader and keep every form in the product consistent.
+
+::: {.rule #FRM-015 grade="C"}
+**Place labels above their fields, in plain weight, visible at all times.** Side labels cost
+an extra eye movement per field and left-aligned side labels were slowest in Penzo's test,
+while above-field and right-aligned labels have not been reliably separated
+[@penzo2006label]. Top labels suit narrow screens, localization and large text
+[@wroblewski2008web]. Bold labels showed no benefit [@penzo2006label].
+
+*In LTF:* keep `FormField`'s stacked layout (label, control, hint or error with 6 px gaps) and
+its `label` style at 14/20 and weight 500. Do not introduce a horizontal form layout for the
+wider account page; consistency outweighs a contested speed difference.
+:::
+
+### Labels that machines can read
+
+A label that is visible but not programmatically tied to its input fails screen-reader users,
+and a placeholder used as the only label disappears as soon as typing starts. Lazar and
+colleagues' diary study of 100 blind screen-reader users found unlabeled or badly designed
+forms among the five leading causes of frustration [@lazar2007frustrates]. Nearly two decades
+later, the WebAIM Million found missing form input labels on 51 percent of the top million
+home pages in its 2026 scan, the third most common detectable failure after low-contrast text
+and missing alternative text [@webaim2026million]. The audit is automated and counts only what
+a machine can detect, so it is a floor on the problem.
+
+LTF's `FormField` binds the label with `htmlFor` and the input's `id`, and the `useFormField`
+context sets `aria-describedby` for hints and errors and `aria-invalid` on error. `Checkbox`
+makes the whole label the hit target. `RadioGroup` labels the group with `aria-labelledby` on
+a Radix root. The one input outside this system is the numeric answer in `QuizBlock`, which
+has an `sr-only` label ("Your answer in {unit}") and relies on the question legend for sighted
+learners. That is acceptable, because the legend is the question, but the field has no visible
+label of its own and no visible format hint, which matters in the next chapter.
+
+::: {.rule #FRM-016 grade="B"}
+**Give every input a visible label tied to it in code, and never use placeholder text as the
+only label.** Unlabeled forms were a leading frustration for 100 blind users
+[@lazar2007frustrates], and missing labels still appear on about half of top home pages in
+automated scans [@webaim2026million]. The evidence is descriptive, not comparative, but it is
+large and consistent.
+
+*In LTF:* every new input goes through `FormField` or a component that consumes
+`useFormField`. Keep the existing axe checks in `pages/a11y.test.tsx` and `e2e/a11y.spec.ts`,
+and add the `QuizBlock` numeric input and the `DebriefForm` planning fields to the end-to-end
+routes they cover.
+:::
+
+### One column, one question per row
+
+Bargas-Avila's guidelines call for a single column with one question per row
+[@bargasavila2010simple], and the improved forms in Seckler's test followed that rule
+[@seckler2014designing]. The guideline rests on only a few studies, and the chapter's own
+summary of the evidence for it is thin. The practical case is stronger than the experimental
+one: a second column creates an ambiguous reading order (across or down), and on a phone it
+collapses into one column anyway, so the two-column version is the one tested less often.
+
+::: {.rule #FRM-017 grade="C"}
+**Lay out forms in a single column with one question per row.** This is part of the tested
+guideline bundle [@seckler2014designing; @bargasavila2010simple], though the individual rule
+rests on few studies.
+
+*In LTF:* the auth forms and `DebriefForm` already stack. The challenges filter
+(`sm:grid-cols-2 lg:grid-cols-5`) is a filter bar, not a form a learner completes, and is
+exempt; any multi-field form added to the account page is not.
+:::
+
+### Field width is an instruction
+
+People read the size of an answer box as a statement of what belongs in it. Bargas-Avila's
+review reports Christian and colleagues' finding that a month field half the size of the year
+field produced more answers in the expected format, and Couper and colleagues' finding of more
+incorrect answers when field size did not fit the expected input [@bargasavila2010simple;
+@christian2007helping]. Both are survey-methodology results with student or survey samples,
+and their direction agrees.
+
+LTF's `control-box` is full width in its container. That is right for email and password, and
+wrong for a value of known short length. The `DebriefForm` planning fields render a
+full-width `Input` with `maxLength={200}` even when the field is numeric. The `QuizBlock`
+numeric input, by contrast, is `w-32`, which signals a short number.
+
+::: {.rule #FRM-018 grade="B"}
+**Make each field about as wide as its expected answer: short for numbers and codes, full
+width for email and free text.** Field size steers what people enter, and mismatched size
+produces more incorrect answers [@bargasavila2010simple; @christian2007helping].
+
+*In LTF:* give `Input` a width prop (for example `size="short"` at about 8 to 10 characters
+of `font-mono`) and use it for numeric planning fields in `DebriefForm`. Keep email, password
+and reflection fields full width.
+:::
+
+### Radio buttons, selects and checkboxes
+
+The guideline literature recommends radio buttons for up to about four options and a
+drop-down beyond that, on the advice of Miller and Jarrett, but the chapter reporting it is
+candid that the empirical comparisons are mixed [@bargasavila2010simple]. Healey found radio
+buttons faster per question but no difference over a whole questionnaire; Hogg and Masztal
+found no difference; Heerwegh and Loosveldt found drop-downs slower in one study that a second
+study did not replicate. Jarrett and Gaffney give a chapter to choosing between drop-downs and
+other controls, and their specific rules face the same mixed evidence
+[@jarrett2009forms]. The clearer findings are two. For multiple selection, checkboxes beat
+list boxes in the Basel group's own 2009 study [@bargasavila2010simple]. And drop-downs draw
+attention strongly in eye-tracking, so Penzo advises using them for important data or placing
+less important ones lower [@penzo2006label].
+
+The argument for radios that does not depend on speed is visibility: every option is on
+screen, so a learner can compare them without opening anything, and a screen-reader user hears
+the count. That matters most in `QuizBlock` and the `DebriefForm` rubric, which already use
+visible options (bordered labels at `min-h-11` for quiz choices, `RadioGroup` for criteria).
+
+::: {.rule #FRM-019 grade="D"}
+**Show up to about four mutually exclusive options as visible radio buttons, and reserve a
+select for long or familiar lists; do not justify either choice by speed.** The speed evidence
+for radios against drop-downs is mixed and partly unreplicated [@bargasavila2010simple;
+@jarrett2009forms]. Visibility of all options is the stronger reason.
+
+*In LTF:* keep quiz and rubric choices as visible options. Keep `Select` for the challenges
+filters and the mobile lesson section picker, where the list is long and the learner knows
+what they are looking for.
+:::
+
+::: {.rule #FRM-020 grade="B"}
+**Use a set of checkboxes, never a multi-select list box, when the learner may choose more
+than one option.** Checkboxes outperformed list boxes for multiple selection in a controlled
+study reported in the review [@bargasavila2010simple].
+
+*In LTF:* `QuizBlock` multi questions already use checkboxes with "Select all that apply."
+Keep that wording; it is the only cue that distinguishes a multi question from a single one
+before the learner tries.
+:::
+
+### Required, optional and the primary action
+
+Users of the original forms in Seckler's study most often complained about two things:
+missing format specifications and unclear marking of required against optional fields
+[@seckler2014designing]. The guideline set asks that people be able to tell required from
+optional at all times [@bargasavila2010simple]. The review reports a study by Pauwels and
+colleagues in which color-highlighting required fields led to faster completion, fewer errors
+and higher satisfaction than an asterisk alone [@bargasavila2010simple]. Color cannot carry
+the distinction on its own, for the same reason LTF's badges always carry a word: some
+learners will not see it.
+
+`FormField` and `RadioGroup` take a `required` prop that prints "(required)" in `text-ink-2`
+after the label, hidden from screen readers because `aria-required` carries the state. The
+debrief marks reflections as "Optional, up to {n} characters." in the hint. That is the right
+direction: words, not symbols. The rule for which to mark depends on the form: when most
+fields are required, mark the optional ones; when most are optional, mark the required ones.
+
+::: {.rule #FRM-021 grade="C"}
+**Make every field's required or optional status visible in words, and mark whichever kind is
+the minority.** Unclear required and optional marking was among the most frequent complaints
+about the original forms in Seckler's study [@seckler2014designing], and the guideline set
+asks that the distinction be visible at all times [@bargasavila2010simple].
+
+*In LTF:* in the auth forms every field is required, so print nothing on them and mark
+nothing optional. In `DebriefForm`, where most fields are optional, keep the "(required)"
+marker on required rubric criteria and the "Optional" hint on reflections.
+:::
+
+Two further guidelines close the layout list. Avoid reset buttons, which wipe a form with one
+misplaced click and have no use a learner would ask for [@bargasavila2010simple]. And make the
+form's primary action visually dominant with secondary actions quiet [@wroblewski2008web].
+
+::: {.rule #FRM-022 grade="C"}
+**Do not put a reset or clear-all button on a form.** Avoiding reset buttons is part of the
+guideline set [@bargasavila2010simple]; a reset next to submit invites a costly slip.
+
+*In LTF:* no form has one today. The `ChecklistRunner` and `Stopwatch` resets are controls on
+running tools, not forms, and are covered by the chapters on recovery and fly mode.
+:::
+
+::: {.rule #FRM-023 grade="C"}
+**Give each form exactly one visually dominant primary action, placed after the last field,
+with secondary actions as quiet links or secondary buttons.** Wroblewski treats a dominant
+primary action with quiet secondary actions as basic form hierarchy [@wroblewski2008web].
+
+*In LTF:* the auth forms follow this (a `size="lg"` primary "Create account" or "Log in", then
+a text link to the other form). The "Save your progress" dialog has one primary ("Sign up
+free") and two secondaries. Keep that pattern for any new dialog form.
+:::
+
+### What this means for Learn to Fly
+
+Keep `FormField`'s stacked label, plain-weight label style, programmatic wiring and words for
+required and optional. Keep visible options in `QuizBlock` and the rubric, checkboxes for
+multi questions, and one dominant action per form. Change field widths: add a short width
+variant to `Input` and use it for numeric planning fields (FRM-018). Give the quiz numeric
+field a visible format hint alongside its `sr-only` label (FRM-016 and the next chapter). Add
+the quiz and debrief routes to the automated accessibility runs. Do not re-open label
+placement in reviews: the evidence does not settle it, and FRM-015 records why LTF chose top
+labels.
+
+## Formats, units and answer spaces
+
+### Preventing errors is cheaper than reporting them
+
+An error message is a repair. The cheaper design makes the error unlikely in the first place,
+and the strongest evidence in this Part for how to do that comes from survey methodologists
+rather than interface designers. Christian, Dillman and Smyth wanted web respondents to enter
+a date as two digits for the month and four for the year, so that no correction request would
+be needed afterward [@christian2007helping]. Across a series of experiments embedded in web
+surveys of random samples of university students, they changed the size and proximity of the
+answer boxes, replaced verbal instructions with the symbols MM and YYYY, changed the wording of
+the question, and moved the symbolic instruction around the boxes. Use of the desired format
+rose through the series from 45 percent to 96 percent. Their conclusion was that writing
+effective web questions may depend as much or more on the presentation of the answer spaces as
+on the wording of the question.
+
+The details available for this Part come from the publisher's abstract and from the
+Bargas-Avila chapter's account of the study, not from the full paper. The chapter reports that
+92.9 to 95.8 percent of respondents gave the correct format when symbols were used, and that
+placing the instruction to the right of the year field produced fewer correct answers
+[@bargasavila2010simple]. The headline jump came from combined manipulations, so it cannot be
+credited to any single change, and the samples were students answering a low-stakes survey.
+The direction agrees with other groups' work: mismatched field sizes produce wrong answers
+(Couper and colleagues, as reported in the chapter), and format specification was among the
+most influential fixes in Seckler's bundle test [@seckler2014designing].
+
+### State the format before typing
+
+The Basel group's own experiment on format rules found that stating the rule in advance,
+without an extra example, produced significantly fewer errors and fewer submission attempts
+[@bargasavila2010simple]. Seckler's participants most often complained about missing format
+specifications in the original forms, and the authors single out format specification as one
+of the two guidelines with a remarkable effect on first-attempt success
+[@seckler2014designing]. Both results argue against the common pattern of hiding the format
+in a placeholder that vanishes on the first keystroke, or in an error that appears only after
+the learner has guessed wrong.
+
+LTF's signup already does this well. "Shown on your dashboard. 2–40 characters." and "At
+least 12 characters. A few random words make a strong, memorable password." are hints that
+appear under the label before any typing. The `DebriefForm` planning fields do not: each
+renders only its label, with no hint for unit, precision or where the value comes from.
+
+::: {.rule #FRM-024 grade="B"}
+**State any required format, length or unit in the label or hint before the learner types,
+not in a placeholder or an after-the-fact error.** Stating the format rule in advance reduced
+errors and resubmissions in a controlled study [@bargasavila2010simple], and format
+specification was one of the two most effective guidelines in a tested bundle
+[@seckler2014designing].
+
+*In LTF:* extend the challenge content schema so each planning field can carry a hint (unit,
+expected precision, and where in the sim the value is read), and render it through
+`FormField`'s `hint`. Content authors write it with tokens where a number is involved, never a
+literal aircraft value.
+:::
+
+### Let the answer space carry the instruction
+
+The Christian experiments show that the box itself can say what belongs in it: its width tells
+the length, symbols beside or inside it tell the format, and their position matters, with
+instructions placed to the right of the last box doing worse [@christian2007helping;
+@bargasavila2010simple]. For LTF the most common structured answer is a number with a unit:
+an altitude, a heading, a distance, a time. The unit is part of the answer space, and it
+belongs immediately next to the box in the reading direction, as close as the symbols were in
+the survey experiments.
+
+`QuizBlock` places the unit as a `text-ink-2` span after a `w-32` mono input, which is the
+pattern the evidence supports. Two refinements follow from the same evidence. First, the
+unit's position after the box is fine for a short unit such as "ft" or "kt", but a format
+instruction that the learner needs before typing (for example "whole number" or "to the
+nearest ten") should sit above the box in the hint, not after it. Second, the copy rules in
+AGENTS.md require every altitude to say MSL or AGL. That qualifier is part of the unit, and
+leaving it out of the label beside an altitude box asks the learner to guess the reference.
+
+::: {.rule #FRM-025 grade="B"}
+**Make the answer box show what belongs in it: width for length, a unit or symbol immediately
+beside the box, and any format instruction above it rather than to its right.** Changing box
+size, using symbols instead of words and moving the symbols closer raised correct format from
+45 to 96 percent across a series of survey experiments [@christian2007helping], and
+instructions placed to the right of the final box did worse [@bargasavila2010simple].
+
+*In LTF:* keep the `QuizBlock` numeric layout (short mono box, unit after it). Move any
+precision or format note into a visible hint above the box. Every altitude unit reads
+"ft MSL" or "ft AGL", following the copy rules, never a bare "ft".
+:::
+
+::: {.rule #FRM-026 grade="C"}
+**Never require the learner to type a unit; show it fixed beside the box and accept a typed
+unit if they add one anyway.** The unit is part of the answer space
+[@christian2007helping], and the W3C's cognitive accessibility guidance asks forms to accept
+many input formats [@seemanhorwitz2021making]. Requiring a typed unit turns a recall
+question into a formatting test.
+
+*In LTF:* `QuizBlock` numeric answers and numeric planning fields strip a trailing unit the
+learner types after the number (for example a trailing "ft") before checking, and never mark an answer wrong for
+including one.
+:::
+
+### Accept what people actually type
+
+The W3C's guidance on making content usable for people with cognitive and learning
+disabilities lists, under helping users avoid mistakes, a cluster of form patterns: ask for as
+little as possible, mark required fields, accept many input formats, auto-correct only when
+the correction is reliable, use unambiguous formats for dates, and make errors easy to undo
+with a summary before submission [@seemanhorwitz2021making]. The guidance is consensus from a
+task force, not experiment, and it is explicitly beyond WCAG conformance. Its rationale is not
+limited to diagnosed conditions; it names temporary stress and limited technical knowledge
+among the situations it serves, which describes a beginner in a simulator chair.
+
+For a numeric answer, "many formats" means a thousands separator, a leading or trailing
+space, a trailing unit, a decimal comma where the learner's locale uses one, and a leading
+zero on a heading. `QuizBlock` uses `type="number"` with `inputMode="decimal"` and converts
+with `Number()`, which leaves the parsing to the browser; what a given browser accepts in a
+number input varies, and the behaviour has not been checked for this Part. The safer path is a
+text input with `inputMode="decimal"` and LTF's own tolerant parser, with the rules documented
+next to the parser and tested.
+
+::: {.rule #FRM-027 grade="C"}
+**Accept every reasonable way of writing a value (separators, spaces, a typed unit, leading
+zeros) and normalize it before checking; auto-correct only when the correction is certain.**
+Accepting many formats and auto-correcting only when reliable are listed patterns for
+preventing form errors [@seemanhorwitz2021making].
+
+*In LTF:* move numeric parsing for `QuizBlock` and `DebriefForm` into one tested function in
+`shared/` (pure, no DOM), so the client check and any server recomputation agree on what
+counts as the same number.
+:::
+
+### Short structured values: one box or several
+
+For a short value with fixed parts, such as a date or a time, the Basel group compared six
+date-entry designs. A drop-down design was best when format errors must be avoided, and a
+single text field with MM and YYYY symbols was fastest [@bargasavila2010simple]. The
+Christian experiments used two separate boxes, sized to their parts
+[@christian2007helping]. The choice is therefore a trade between speed and error-proofing,
+and it depends on what the value is used for. A time the learner records in a debrief for
+their own notes favors the fast single field; a value the server scores favors the
+error-proof design.
+
+::: {.rule #FRM-028 grade="B"}
+**For a short value with fixed parts, use one text field with visible format symbols when
+speed matters and a constrained control when a format error would be scored; choose by what
+the value is used for.** In a comparison of six date designs, a single field with symbols was
+fastest and a drop-down design best for avoiding format errors [@bargasavila2010simple].
+
+*In LTF:* a planning field for a time or a heading that only feeds the learner's notes uses a
+single short field with a symbol hint (for example "HH:MM"); a value that changes the scored
+tier uses a constrained control or strict validation on leaving the field.
+:::
+
+### Open answers need room and a purpose
+
+A companion study by Smyth, Dillman, Christian and McBride (2009), known here from its
+abstract and read alongside the Christian work, found that enlarging an open-answer box had little effect on early responders but
+substantially improved response quality among late responders, and that any explanation
+making quality and length salient improved answers from both groups
+[@christian2007helping]. The late responders, the less motivated respondents, are the closer
+match for a learner filling in a reflection after a long flight.
+
+`DebriefForm` reflections use a three-row `Textarea` with the hint "Optional, up to {n}
+characters." The hint tells the learner the limit, which is a format statement, and says
+nothing about what a useful answer looks like, which is the part the companion study found
+effective.
+
+::: {.rule #FRM-029 grade="B"}
+**Give open-ended prompts a roomy box and one sentence that says what a useful answer looks
+like.** Making quality and length salient improved open answers from both early and late
+survey responders, while box size alone helped only the late ones [@christian2007helping].
+
+*In LTF:* change the `DebriefForm` reflection hint from a bare character limit to a purpose
+plus the limit, for example "One or two sentences on what you would do differently. Optional,
+up to {n} characters." Keep `rows={3}` as the minimum and let the box grow with content.
+:::
+
+### Copy-paste values from the brief
+
+One LTF-specific way to prevent errors is already in the product. The challenge `BriefTab`
+shows "Sim setup" as a definition list with copy buttons beside values the learner must enter
+into the simulator. That is error prevention at its simplest: the learner never retypes a
+value that the product already holds. The same idea applies inside LTF's own forms. When a
+debrief asks for a value the learner was given in the brief, show it beside the field for
+comparison, or prefill it and ask the learner to confirm or correct.
+
+### What this means for Learn to Fly
+
+Keep the signup hints, the `QuizBlock` unit-after-box layout, the short mono numeric box and
+the `BriefTab` copy buttons. Change the planning fields: give them hints for unit and source
+(FRM-024), short widths (FRM-018), and unit labels that follow the MSL and AGL copy rule
+(FRM-025). Build one tolerant numeric parser in `shared/` with tests, used by quizzes and
+debriefs alike, that accepts a typed unit and common separators (FRM-026, FRM-027). Rewrite
+the reflection hint to say what a good answer looks like (FRM-029). None of this changes an
+aviation value; where a hint needs a number, it uses an `{{aircraft.*}}` or `{{vspeed.*}}`
+token from `content/aircraft.yaml`.
+
+## Validation and error messages
+
+### When to validate a field
+
+The timing of validation is the most contested question in form design. The sources
+disagree, and the pattern of disagreement is more useful than any one headline number.
+
+The earliest result points against inline validation. In a 2007 comparison of six ways of
+presenting error messages, reported by Bargas-Avila and colleagues, messages embedded next to
+the fields and shown after the person pressed send led to fewer consecutive errors. Inline
+validation, where the message appears as the person leaves a field, led to significantly more
+errors, because people ignored or dismissed the messages [@bargasavila2010simple]. The study
+came from the authors' own lab, with a modest sample.
+
+Two years later Wroblewski, working with the London firm Etre, compared a registration form
+that validated only on submit with five inline variants, with 22 users aged 21 to 49 seeing
+all six versions in random order [@wroblewski2009inline]. The best inline variant beat the
+control on success, errors, completion time, satisfaction and eye fixations. Timing mattered:
+"after" (validate when the field is left) was fastest, seven to ten seconds faster than
+"while" and "before and while", and "before and while" produced the highest error rates and
+worst satisfaction because messages appeared before people had finished. Noticing depended on
+difficulty: 30 to 50 percent of participants noticed validation messages on the easy first
+fields (name, email), against 80 to 100 percent on the harder fields (user ID, password).
+Persistent messages outside the field worked best. Fading success messages were missed and
+made some people worry that valid fields had become invalid, and success ticks on simple
+fields left people unsure whether they meant "correct" or merely "valid". The caveats are
+large, and the article states most of them: a small sample, metrics that Etre called
+indicative, errors counted only at submission (which flatters the inline versions, since
+corrections made along the way were not counted), and no screen-reader users.
+
+Baymard's large-scale e-commerce testing adds three implementation details
+[@scott2024inline]. Avoid premature validation: validate on blur, and for fixed-length fields
+validate once the expected length is reached. Remove an error as soon as the field becomes
+valid, rechecking on every keystroke once an error is showing; participants read a fixed but
+still-flagged field, especially a password confirmation, as still wrong. And show positive
+validation on all fields. It also advises keeping a traditional error page, because people
+submit with errors present. The article reports no sample sizes and no statistics, its
+setting (address and card entry at checkout) is far from a learning site, and it contains a
+one-point inconsistency in its own prevalence figure (31 or 32 percent of sites with no inline
+validation).
+
+The conflicts are real. Baymard's positive validation on every field runs against
+Wroblewski's finding that ticks on trivial fields confuse, and nothing reviewed here tests the
+two head to head. The Basel and Etre results are compatible only if timing and message design
+drive the effect, which is Wroblewski's own conclusion. What survives across all three is a
+short list: no message before the person has finished typing; a message on leaving the field
+only where mistakes are likely; errors that disappear the moment they are fixed; and a summary
+at submit.
+
+::: myth
+**"Inline validation raises success rates by 22 percent and cuts completion time by 42
+percent."** These figures come from one study of one registration form with 22 users, in
+which errors were counted only at submission [@wroblewski2009inline]. An earlier controlled
+study found inline messages increased errors [@bargasavila2010simple]. The defensible claim
+is about timing: premature messages hurt, and messages after a field is finished can help on
+hard fields.
+:::
+
+::: {.rule #FRM-030 grade="B"}
+**Never show an error while the learner is still typing a field for the first time; the
+earliest moment is when they leave it, or when a fixed-length value is complete.** Premature
+messages produced the most errors and worst satisfaction in Wroblewski's study
+[@wroblewski2009inline] and frustrated participants in Baymard's testing [@scott2024inline].
+The two sources agree on this point even where they disagree on others.
+
+*In LTF:* keep react-hook-form's default submit-time validation in `SignupForm` and
+`LoginForm`. If a field gains on-blur checking, use `mode: 'onTouched'` for that field only,
+never `onChange` before the first submit.
+:::
+
+::: {.rule #FRM-031 grade="B"}
+**Add on-leave validation only to fields where mistakes are likely, and keep easy fields quiet
+until submit.** Only 30 to 50 percent of participants noticed messages on easy fields against
+80 to 100 percent on hard ones [@wroblewski2009inline], and an earlier study found messages on
+leaving a field were often ignored and raised errors [@bargasavila2010simple].
+
+*In LTF:* the candidates are the password (length rule) and the email format on `/signup`.
+Display name, the login fields and every quiz answer stay submit-only.
+:::
+
+::: {.rule #FRM-032 grade="C"}
+**Once an error is showing, recheck on every change and remove the message the moment the
+input becomes valid.** Participants read a fixed but still-flagged field as still wrong
+[@scott2024inline]. The evidence is observational, without reported samples.
+
+*In LTF:* this is react-hook-form's default `reValidateMode: 'onChange'` after a failed
+submit, which the auth forms already rely on. Keep it, and make the `ErrorSummary` list
+update with the fields, so a corrected field leaves the summary too.
+:::
+
+::: {.rule #FRM-033 grade="D"}
+**Show positive confirmation only on fields that are hard to get right (password strength,
+availability), never a tick on every valid field.** Baymard recommends positive validation on
+all fields [@scott2024inline]; Wroblewski found ticks on trivial fields confused people about
+what they meant [@wroblewski2009inline]. The dispute is untested head to head, and LTF takes
+the cautious side.
+
+*In LTF:* keep `PasswordStrengthMeter`, which updates as the learner types and says
+"Strength: ..." in words with a four-segment bar. Do not add ticks to email or display name.
+The meter's segment colors (`bg-warn`, `bg-caution`, `bg-go`) are backed by the word, which is
+what makes them acceptable.
+:::
+
+### Where errors appear
+
+Bargas-Avila's guidelines, and the improved forms in Seckler's test, show error messages after
+the form is sent, all together, embedded in the form next to the fields concerned, noticeable
+at a glance through color, an icon and text, polite and explaining how to fix the problem
+[@bargasavila2010simple; @seckler2014designing]. The submit-time summary is the safety net
+that every source keeps, Baymard included, because people submit with errors present
+[@scott2024inline].
+
+LTF's `ErrorSummary` is a strong implementation of that net. It appears above the form after a
+failed submit, takes focus so keyboard and screen-reader users land on it, carries
+`role="alert"`, titles itself "There is a problem", and lists each error as a link that jumps
+to its field. Each field repeats its own message beneath the control through `FieldMessage`,
+in `text-warn` with a 14 px octagon icon, so the error is marked by color, shape and words.
+
+::: {.rule #FRM-034 grade="B"}
+**After a failed submit, show a focused summary of all errors at the top, each linking to its
+field, and repeat each message beside its field with an icon and text, never color alone.**
+Embedded messages shown after sending led to fewer consecutive errors in a controlled
+comparison [@bargasavila2010simple], the tested bundle used this design
+[@seckler2014designing], and a submit-time summary catches errors that inline checks miss
+[@scott2024inline].
+
+*In LTF:* every form uses `ErrorSummary` with a `focusKey` that changes on each attempt, and
+`FormField` errors with the octagon icon. `DebriefForm` is the exception today: it disables
+its submit button while required criteria are missing and shows a server failure in a
+`Callout type="safety"` titled "Not saved". Move that failure into `ErrorSummary`, and keep
+the safety callout for aviation safety, where its meaning must stay unambiguous.
+:::
+
+### Writing the message
+
+Shneiderman's short report on system messages is the root of most later advice
+[@shneiderman1982designing]. He describes novices faced with violent, vague or coded messages
+as "shaken, confused, dismayed, and discouraged from continuing", and reports a series of
+small experiments in which revised messages helped. More specific compiler messages produced
+28 percent better repair scores. Text-editor users made 10.7 errors with an editor whose only
+message was a question mark and 6.1 with brief messages. Students corrected 4.1 of 10 faulty
+editor commands with standard messages and 7.5 of 10 with improved ones. With job-control
+messages, students scored 2.9 and 3.8 out of 6 on two commercial systems and 4.8 with improved
+messages. The article gives no sample sizes or statistical tests, and later work on enhanced
+compiler messages for novice programmers is mixed. The guidance it draws has held up as craft:
+messages should be brief, positive, constructive, specific and comprehensible, should not
+blame, and should leave the user in control. Its model rewrite of "ILLEGAL PASSWORD" is "Your
+password did not match the stored password. Please try again."
+
+LTF's messages mostly follow that pattern ("We could not load this. Check your connection and
+try again."). The weak spot is the fallback in `applyServerErrors`, which returns "Something
+went wrong. Please try again." for any error that is not an `ApiError`. That is the vague
+message Shneiderman warns against: it says nothing about what failed or whether trying again
+can help. The quiz feedback ("Not quite." followed by an explanation, and "Change your answer
+and check again.") is closer to the ideal, because it is blameless and says what to do next.
+
+::: {.rule #FRM-035 grade="B"}
+**Write each error message to say what happened in the learner's terms and what to do next,
+without blame, codes or vague phrases.** Specific, constructive messages improved repair and
+correction in several small early experiments [@shneiderman1982designing], and polite messages
+that explain the fix are part of the tested guideline bundle [@seckler2014designing].
+
+*In LTF:* replace the `applyServerErrors` fallback with messages for the cases the client can
+tell apart (offline, server unavailable, session expired), each with its next step. Server
+validation messages in `server/` are written to be shown to the learner as they are.
+:::
+
+::: {.rule #FRM-036 grade="C"}
+**Never clear a field the learner has filled in because of an error elsewhere, and never
+clear the field that has the error.** Keeping completed fields after an error is one of the
+20 guidelines [@bargasavila2010simple], and Baymard observed forms that reset after a
+submit error and forced re-entry [@scott2024inline].
+
+*In LTF:* react-hook-form keeps values on a failed submit; keep it that way. The one
+deliberate clear is the delete-account dialog, which empties its fields when it closes; that
+is correct for a password.
+:::
+
+::: {.rule #FRM-037 grade="C"}
+**Disable the submit control and show progress from the first click until the request
+settles, so a second click cannot send the form twice.** Disabling submit after a click is
+one of the 20 guidelines [@bargasavila2010simple].
+
+*In LTF:* `Button` with `loading` already sets `disabled` and `aria-busy` and shows a spinner.
+Use it on every submitting button, including the `DebriefForm` submit and "Mark lesson
+complete".
+:::
+
+### Quiz answers are not form fields
+
+A quick check in a lesson is a recall task, not data entry, and the validation advice above
+does not transfer to it. Feedback research says feedback should come after the learner has
+attempted a solution, not before, and should be elaborated and focused on the task
+[@shute2008focus]. Checking correctness while a learner types would turn the question into
+trial and error. `QuizBlock` gets this right: "Check answer" is disabled until there is an
+answer, correctness is judged only on that press, the result is announced in a polite live
+region, and changing the answer clears the result so the learner can try again.
+
+::: {.rule #FRM-038 grade="C"}
+**Check quiz and challenge answers for correctness only when the learner presses the check or
+submit control; validate format, never correctness, before that.** Formative feedback works
+best after an attempt [@shute2008focus], and inline correctness would replace recall with
+guessing.
+
+*In LTF:* keep `QuizBlock`'s "Check answer" flow. A numeric quiz may flag an empty or
+unparseable entry on leaving the field (FRM-030), but it never hints at whether the number is
+right.
+:::
+
+### Counting errors as a product metric
+
+Shneiderman's last recommendation is to collect data on how often each error condition
+occurs, and to treat an error rate as a measure of system quality
+[@shneiderman1982designing]. For LTF that applies beyond forms: a quiz that most learners get
+wrong on the first try, or a debrief field that keeps failing validation, is evidence about
+the lesson or the question, not only about the learners.
+
+::: {.rule #FRM-039 grade="C"}
+**Record how often each validation error and each wrong quiz answer occurs, and treat a
+frequent one as a defect in the question or the lesson.** Error frequency as a quality metric
+is one of Shneiderman's five recommendations [@shneiderman1982designing].
+
+*In LTF:* the `onAnswer` callback on `QuizBlock` already reports correctness; aggregate it per
+question without identifying learners, and review any question with a high first-try error
+rate together with its lesson section.
+:::
+
+### What this means for Learn to Fly
+
+Keep submit-time validation, `ErrorSummary` with focus and jump links, `FieldMessage` with
+icon and text, react-hook-form's revalidate-on-change after a failed submit, the `loading`
+button, `PasswordStrengthMeter` as the only positive indicator, and `QuizBlock`'s explicit
+"Check answer". Change the vague fallback message in `applyServerErrors` (FRM-035), show
+`DebriefForm` failures in `ErrorSummary` rather than a safety `Callout` (FRM-034), and start counting first-try error rates
+per quiz question (FRM-039). Add on-leave checks only to the signup password and email if
+testing shows people submit and fail on them (FRM-031). Do not cite the Etre percentages in
+LTF documents.

@@ -1,0 +1,563 @@
+# Classical Typography
+
+This Part collects what the printing tradition, from Bodoni's specimen book of 1818 to Unger's reflections of 2018, says about setting type to be read, and turns it into rules for Learn to Fly. Its sources are treatises, manuals, lectures and histories written by printers, type designers and book typographers: Warde, Morison, Gill, Updike, De Vinne, Johnston, Bodoni, Tschichold (twice, on opposite sides of his own argument), Dowding, Bringhurst, Tracy, Noordzij, Hochuli, Kinross and Unger. Almost none of it is experimental. It is craft authority: the accumulated judgment of people who watched readers use pages for a living. Where the experimental record of Part III, Legibility and the Science of Reading, bears on a craft claim, this Part cites it, says whether it confirms or qualifies the claim, and grades the rule accordingly. Most rules here are grade C. That is an honest description of their evidence, not a judgment of their usefulness: a C rule is a sound default that a stated argument can override.
+
+Use the Part in two ways. When a page or component is designed, read the chapter that covers its problem (the measure, leading, capitals, figures, hierarchy) and apply the rules as defaults. When a design is reviewed, run the checklist in the final chapter. Throughout, the craft numbers (Gill's twelve words, Bringhurst's 66 characters, De Vinne's three-to-em space) are treated as starting points to verify on real learners and devices, which is the position Unger takes and the one this book adopts [@unger2018theory]. Screen rendering, font loading and CSS mechanics are covered in Part IV, Typography on Screens; the page grid in Part V, Grids, Layout and Space. This Part stays with the reading column, the line, the word and the letter.
+
+## The Purpose of Typography
+
+### Service before display
+
+The tradition begins with a definition of purpose, and every later rule in it is a consequence. Morison's 1929 and 1930 essay, which he called an "essay towards a rationale of book-typography," defines the craft this way: "Typography may be defined as the art of rightly disposing printing material in accordance with specific purpose; of so arranging the letters, distributing the space and controlling the type as to aid to the maximum the reader's comprehension of the text" [@morison1936first]. He draws the corollary without softening it. Typography is "the efficient means to an essentially utilitarian and only accidentally aesthetic end," and so "any disposition of printing material which, whatever the intention, has the effect of coming between author and reader is wrong." In books meant to be read, he says, there is "little room for 'bright' typography."
+
+Beatrice Warde made the same argument as a lecture to the British Typographers Guild in October 1930, later collected in *The Crystal Goblet* [@warde1955crystal]. Her image is a choice between two wine goblets, one of solid gold with exquisite ornament and one of thin, clear crystal. The connoisseur picks the crystal because it reveals the wine instead of hiding it. Her one-line version: "Type well used is invisible as type, just as the perfect talking voice is the unnoticed vehicle for the transmission of words, ideas." She adds that the "mental eye focuses through type and not upon it."
+
+Bringhurst compresses the whole position into the first sentence of his manual: "Typography exists to honor content" [@bringhurst2012elements]. Kinross, writing a critical history rather than a manual, gives the same aim a historical frame. Modern typography, in his account, is an attempt to communicate clearly and rationally, not a style, and it includes the traditionalists as well as the avant-garde [@kinross2004modern]. Even Tschichold's 1928 manifesto, which attacked the traditional book, opens with a version of it: "The essence of the New Typography is clarity" [@tschichold1995new].
+
+The agreement matters more than any one statement. Writers who disagreed about nearly everything else (serif against sans serif, symmetry against asymmetry, ornament against none) agreed that type is judged by what it does for the reader. For a product whose reader is a beginner trying to learn a skill with real consequences in the sim, this is the first test of any typographic choice.
+
+::: {.rule #TYP-001 grade="C"}
+**Judge every typographic choice in lesson and reference text by whether it helps the learner understand the text, and reject any choice whose main effect is decorative.** Morison defines typography as arranging letters and space "to aid to the maximum the reader's comprehension," and calls anything that comes between author and reader "wrong" [@morison1936first]. Warde's goblet makes the same point [@warde1955crystal], and Bringhurst's first principle is that typography "exists to honor content" [@bringhurst2012elements]. This is craft consensus across opposed schools [@kinross2004modern; @tschichold1995new], not an experimental result. It applies with full force to sustained reading; display surfaces such as the landing hero have other jobs (see TYP-004).
+
+*In LTF:* the test for a change to `MarkdownContent`, `Callout`, `QuizBlock` or the lesson headings is whether it makes the lesson easier to follow. A new color, weight or face that a reviewer cannot connect to a reading task does not go into `LessonPage`.
+:::
+
+### Readability is not loudness
+
+Warde's lecture contains the tradition's earliest warning against equating visibility with readability. She separates readability from what an optician would call legibility: a page in 14-point bold sans serif is, she says, more "legible" according to laboratory tests than one in 11-point Baskerville, but a speaker who bellows is more audible without being a better speaker [@warde1955crystal]. The research notes for this book could not identify the "laboratory tests" she meant, so treat the comparison as her recollection, not as data.
+
+The experimental record later gave her intuition partial support. Tinker's summary of half a century of Minnesota studies found boldface read at the ordinary rate, but 70 percent of readers preferred ordinary lowercase; italic was read somewhat more slowly, and all capitals greatly retarded reading [@tinker1963legibility]. In other words, heavier type did not make continuous reading faster, and readers did not want it. Tinker's broader conclusion is that most ordinary choices matter little while a few (size, line width with leading, all capitals, italics, contrast) matter a lot, and that bad choices combine into a large loss.
+
+The practical consequence is a split that Warde's distinction makes possible. Sustained reading (a lesson, the disclaimer, a challenge brief) wants ordinary sizes and a calm weight. Glancing (a readout on a second screen beside the sim, a timer, a tier result) is a different task, where large, heavy figures earn their place. That split is an inference from her distinction, not her claim, and the chapter on two traditions returns to it.
+
+::: {.rule #TYP-002 grade="B"}
+**Do not make running text bolder or larger to make it "more readable"; set lesson prose at an ordinary text weight and size and reserve heavy weights for short emphasis and glance readouts.** Warde separates laboratory legibility from readability [@warde1955crystal]. Tinker found bold read at the ordinary rate but not preferred by 70 percent of readers, so weight does not buy speed in continuous text [@tinker1963legibility]. The evidence is old and on paper; Part III covers the size floor on screens.
+
+*In LTF:* lesson prose stays at the regular weight of Instrument Sans. Bold is for a term the learner must notice. The heavy mono figures on `SpeedsPage`, the result card and the `Stopwatch` are glance readouts and are not a model for prose.
+:::
+
+### The transparent page is hard work
+
+Warde insists that invisibility is not the absence of effort: "There is nothing simple or dull in achieving the transparent page" [@warde1955crystal]. Her lecture names concrete failures that break transparency, and they are still the ones a reviewer sees on screens. Setting that invites "doubling" of lines, or that lets three words read as one, keeps the reader subconsciously worried. A running headline "that keeps shouting at us," a line that looks like one long word, and capitals "jammed together without hair spaces" cause "subconscious squinting and loss of mental focus." She compares margins to the long thin stem of a wine glass, which keeps fingerprints off the bowl.
+
+Each of these failures has a modern equivalent. Doubling is the cost of a measure that is too long for its leading (see the chapter on measure). Three words reading as one is word spacing that is too tight or uneven. The shouting running headline is any repeated furniture that competes with the text it frames: a sticky header, a banner that appears on every page, a heavy section label repeated in each card. Jammed capitals are all-caps labels without added letterspacing. Warde gives no measurements, only a typology, but the typology is a usable review vocabulary.
+
+::: {.rule #TYP-003 grade="C"}
+**Keep repeated page furniture visually quieter than the text it frames: headers, banners and labels that recur on every screen must not outweigh the content.** Warde names a running headline "that keeps shouting at us" among the causes of "subconscious squinting and loss of mental focus" [@warde1955crystal]. This is craft observation without measurement.
+
+*In LTF:* the `Header` (sticky, `bg-canvas/95`, `text-sm font-medium` nav) is already quiet. The `BetaBanner` is not: a full-width `bg-caution-tint` strip with a 20 px caution icon above the header on every page, Fly mode included. Once dismissed it stays gone, which helps, but on first visit it is the loudest band on a lesson page. Keep its tint, reduce its height and icon weight, and keep it out of `FlyModeLayout`.
+:::
+
+### The objection: type has a voice
+
+Warde's metaphor has a weakness that its critics have pressed. Text is already invisible as meaning; the reader never sees thought, only marks. Typography therefore cannot be the invisible part. It is the visible form that meaning takes, and that form carries tone the way a speaking voice does. A reassuring voice for an anxious beginner is a typographic decision, not an absence of one. Tschichold's 1928 programme makes the same point from the other side: the function of printed text includes emphasis, which he calls "word value," and the logical sequence of contents, both of which typography must express [@tschichold1995new]. Bringhurst's "honor content" also leaves room for type to add as well as to transmit [@bringhurst2012elements].
+
+The reconciled rule is the one the tradition actually practiced. Type should never cause friction, and it should be chosen deliberately for the voice the product needs. Warde's own lecture allows for this when she describes fine printing as a window of small leaded panes, where the reader is conscious that someone enjoyed building it [@warde1955crystal]. The point is to choose which window each page needs.
+
+::: {.rule #TYP-004 grade="C"}
+**Choose typefaces and display treatments deliberately for the voice the product needs, but only where the type is not being read continuously.** Tschichold counts emphasis ("word value") and sequence among the functions type must express [@tschichold1995new]; Warde allows a visible, crafted window where the purpose is to be looked at [@warde1955crystal]. Voice belongs in display: headlines, the logo, the landing hero, section openers. It does not belong in the lesson body (TYP-001).
+
+*In LTF:* the product has no display face (the planned Big Shoulders Display was never implemented), so the landing hero `display-xl` "Yes, you can fly a plane." and the lesson body speak in the same Instrument Sans voice. If a display face is added, it goes into `display-*` utilities only, never into `MarkdownContent`.
+:::
+
+### Real text, not specimens
+
+Warde records an anecdote about T. M. Cleland, who set a specimen layout in Latin so that the client would not read the text [@warde1955crystal]. The point cuts both ways. A specimen set in an unreadable language turns a page into a picture, to be judged as a picture. That is fine for a picture, and wrong for a page meant to be read, because only real text shows where reading snags: a heading that breaks after its first word, a figure that falls at a line end, a run of capitals that crowds. Noordzij's theory of writing reaches the same practical conclusion from a different direction: legibility depends on rhythm and contrast across a word and a line, so a candidate face is judged by setting real sentences, not by a specimen of single glyphs [@noordzij2005stroke].
+
+::: {.rule #TYP-005 grade="C"}
+**Review every typographic change with real LTF lesson text, real challenge data and real numbers, never with placeholder copy.** Warde's Cleland anecdote shows that unreadable specimen text makes a page into something to look at rather than read [@warde1955crystal]; Noordzij places legibility in the rhythm of real words and lines [@noordzij2005stroke]. Craft consensus.
+
+*In LTF:* `/dev/components` (`DevComponentsPage.tsx`) is the place to review type in every state. Fill it with excerpts from `content/lessons/`, including a paragraph with tokens such as `{{vspeed.*}}` expanded, a long callout title, a checklist line with capital identifiers, and a table with mixed-width numbers.
+:::
+
+### What this means for Learn to Fly
+
+LTF already states its purpose in service terms: the product exists to teach a beginner, and the honesty traits in `product-context.md` (the `DraftBadge`, `verify` callouts, "Last verified" lines) are typography in Morison's sense, arrangements that serve comprehension and trust. Keep that stance and make the type obey it.
+
+Three changes follow. First, separate the surfaces where type should be invisible from those where it may speak. `LessonPage`, `Prose`, `BriefTab`, the `Callout` body and the reference panels are reading surfaces (TYP-001, TYP-002). The landing hero, the `PageHeader` title, the 404 "taxiway" line and the logo lockup are display surfaces (TYP-004). Write that classification into the component comments so it governs future edits. Second, quiet the furniture that repeats on every page: the `BetaBanner` first, and any eyebrow that appears on every card (TYP-003, and the chapter on capitals). Third, change the review habit. A pull request that changes type includes a screenshot of a real lesson section, at phone width and at `xl`, in Day and Night (TYP-005). The rest of this Part supplies the specific settings, and each of them has to pass the test of service set out above.
+
+## Convention and the Conservative Reader
+
+### Obedience to convention
+
+Morison's second principle is about convention, and it is the one most relevant to a product for beginners. Book typography, he argues, rests on the nature of alphabetic writing and on the traditions of the society it serves, and it demands "an obedience to convention which is almost absolute" [@morison1936first]. The wider the audience, the stricter the limit. An experiment suits a 50-copy tract, not a book printed 50,000 times. Hence his most quoted sentence: "Type design moves at the pace of the most conservative reader."
+
+Morison's argument is not that convention is beautiful. It is that a reader who must first learn how a page works has less attention left for what the page says. A reader's familiarity with a convention (where paragraphs begin, what a heading looks like, which way the text runs, what an underline means) is a resource that the typographer spends or saves. A wide audience contains more readers for whom an unfamiliar arrangement costs attention, so a wide audience needs stricter convention.
+
+Updike's history, written a few years earlier, rests on a related idea. He called *Printing Types* "a study in survivals" because it tries to show "not only what types have survived, but what should survive through their fitness for the best typography" [@updike1922printing]. The assumption is that long survival signals fitness.
+
+Both claims need care. The survival argument is weaker than it looks: types survive through habit, cost and the stock a foundry happens to hold, not only through fitness, and the notes for this book flag that Updike's historical attributions should be checked against later scholarship before reuse [@updike1922printing]. Kinross also places Morison inside a "new traditionalism" shaped by the Monotype Corporation [@kinross2004modern], and Warde, who made the goblet argument, worked as Monotype's publicist alongside Morison [@warde1955crystal]. The doctrine of convention came partly from people whose employer sold conventional types. That does not make it wrong, but it means the doctrine needs its reasons stated, not just its authority.
+
+### Familiarity is not clarity
+
+The best qualification of the convention argument comes from inside the craft tradition. Edward Johnston, in a footnote to the preface of his 1906 handbook, wrote: "our personal view of legibility is apt to favour custom and use unduly, for a quite bad, familiar writing may seem to us more readable than one that is far clearer in itself but unfamiliar" [@johnston1906writing]. This cuts against Morison's "familiar design" as a standard. If readers judge legibility by familiarity, then "comfortable size and familiar design" is partly circular: what is familiar seems legible because it is familiar.
+
+The experimental literature explains the mechanism. Larson's review of word-recognition research reports that lowercase is read 5 to 10 percent faster than uppercase, and attributes the difference to practice rather than to any property of lowercase forms; reading speed in uppercase, and even in mirror-reversed text, rises with practice [@larson2005science]. Familiarity is real and measurable, and it is learned. A reader is fast with what the reader has practiced.
+
+Two conclusions follow, and they pull in different directions. For the reading conventions every literate adult shares (lowercase running text, left alignment, paragraphs marked by space or indent, headings larger and bolder than text), familiarity is an asset the product should keep. For conventions only the design team shares (a private icon vocabulary, an eyebrow-over-heading pattern used everywhere, mono codes such as "M0" and "C4.3", the meaning of a teal underline), familiarity is a trap: the team reads them easily because it has practiced them, and the beginner has not. Johnston's footnote is the reason to test with people who have never seen the product.
+
+::: {.rule #TYP-006 grade="C"}
+**Use the reading conventions every adult reader already knows in lesson and reference text: mixed case, left alignment, paragraphs marked by one consistent method, headings that are larger or bolder than text, and underlined links.** Morison demands near-absolute obedience to convention for wide audiences, because "Type design moves at the pace of the most conservative reader" [@morison1936first]. Practice makes familiar forms faster to read [@larson2005science]. Craft doctrine with indirect experimental support for the familiarity mechanism.
+
+*In LTF:* `MarkdownContent` and `Prose` already follow these conventions (left aligned, `my-3` or `my-4` paragraph spacing, underlined accent links). Keep them. Do not introduce centered lesson text, run-in headings, all-caps paragraphs or unmarked links in lesson Markdown.
+:::
+
+::: {.rule #TYP-007 grade="B"}
+**Test the readability of lessons, labels and codes with people who have never used LTF, and do not accept the team's ease of reading as evidence.** Johnston warned that "a quite bad, familiar writing may seem to us more readable" than a clearer unfamiliar one [@johnston1906writing]; Larson reports practice effects large enough to change reading speed by case [@larson2005science]. The mechanism is experimentally supported; its size for LTF's specific labels is unknown.
+
+*In LTF:* the mono codes ("Lesson 0.1", "C4.3", "M0") and eyebrows that open almost every card are read fluently by the team. Watch five beginners find the next lesson on `CurriculumPage` and read a `ChallengePage` header, and note where they pause on a code or label.
+:::
+
+### Where novelty belongs
+
+Morison does not ban experiment. He restricts it by audience and by place. The 50-copy tract may experiment; the book printed in tens of thousands may not [@morison1936first]. His part V answers the charge that conventional typography is monotonous: decoration belongs on the preliminary pages, not in the text, because "the typographer's only purpose is to express, not himself, but his author." The same essay limits the title page: no line larger than twice the text size ("If the book be set in 12-point, the title need be no larger than 24-point").
+
+Translated to a web product, the preliminary pages are the places a reader looks at rather than reads: the landing page, a module opener, the dashboard's course-complete panel, the 404 page, the logo. These are where LTF can be distinctive. The text of a lesson is where it should be conventional. That division answers a real tension in the owner's complaint. The product looks generic, and the remedy is not to make lesson text unusual. It is to make the display surfaces specific to flying and to make the reading surfaces excellent, which is a different thing from unusual.
+
+::: {.rule #TYP-008 grade="C"}
+**Put typographic novelty (a display face, unusual sizes, expressive layout) on surfaces the learner looks at, not on surfaces the learner reads continuously.** Morison confines decoration to the preliminary pages because the text belongs to the author [@morison1936first]. Kinross shows that traditionalists and modernists shared the aim of rational communication and differed about means [@kinross2004modern]. Craft consensus.
+
+*In LTF:* candidates for distinctive display treatment are the landing hero and section heads, module openers on `ModulePage`, the course-complete panel on `DashboardPage`, `NotFoundPage` and the `LessonPath` labels. Candidates for strict convention are `MarkdownContent`, `Callout` bodies, `QuizBlock` prompts and explanations, `BriefTab` and the reference panels.
+:::
+
+### Rules as guides, reasons written down
+
+Johnston's handbook contains a second idea that governs how this book should be used. "Rules are only Guides and ... Methods are suggested by the work itself," he writes, and too much fitting and planning "makes the work lifeless" [@johnston1906writing]. Kinross, in Carter's review, frames the modern version: "typographers need to incorporate critical reflection into their own practice" [@kinross2004modern]. Unger's book refuses to give formulas at all; it treats theory as investigative and reflective, and urges designers to state their own research questions [@unger2018theory].
+
+This is the stance a design knowledge base needs. A rule with its reason written beside it can be overridden knowingly, by someone who can say why the reason does not apply. A rule without a reason is either obeyed blindly or ignored. The grades in this book serve the same purpose: a grade C rule announces that its authority is judgment, and invites a better argument.
+
+The habit has a second use. Updike's verdicts, read a century later, show how quickly craft authority dates. He listed among the types "we ought not to want" practically all types on "standard line," all condensed or expanded types, and all "sans-serif" or (as he says "absurdly miscalled") "gothic" types [@updike1922printing]. Within six years Tschichold argued the opposite [@tschichold1995new], and the later history is largely of sans serif becoming the mainstream [@kinross2004modern]. A rule that records its reason ("sans serif lacks the stroke contrast and serifs the old faces use to guide the eye", say) can be tested and retired. A rule that records only a verdict cannot.
+
+::: {.rule #TYP-009 grade="C"}
+**Write down the reason and the evidence grade for every typographic rule in the design system, and record each deliberate departure with its reason.** Johnston treats rules as guides [@johnston1906writing], Kinross asks for critical reflection in practice [@kinross2004modern], and Unger declines formulas in favor of investigation [@unger2018theory]. Updike's dated verdict against sans serif shows what happens to verdicts kept without reasons [@updike1922printing]. Craft consensus about process.
+
+*In LTF:* comments in `tokens.css` and `index.css` cite design sources (`tokens.json`, a design-system README, `night-mode.md`) that do not exist in the repository. Replace those citations with rule IDs from this book, and when a token departs from a rule, say so in the comment and in the `v1.md` decision log.
+:::
+
+### The audience LTF serves
+
+Morison's audience test asks two questions: how wide is the readership, and how much does a reading idiom cost it? LTF's readership is wide in the sense that matters. Its learner has "never flown," arrives from a search or a video, and may have no habit of technical reading. The learner also reads in an unusual posture: often at a desk beside the sim, with a controller in hand, glancing between a second screen and the simulator. That posture raises the cost of any unfamiliar arrangement, because attention is already divided.
+
+At the same time, the subject matter carries its own conventions, and some of them are unfamiliar to beginners by nature: capital identifiers on checklists, abbreviations such as KIAS and MSL, airport codes in four capitals. These are not the product's to change. They are the language the learner is learning. The typographic job is to present them in a way that makes them learnable: consistent, explained on first use, given room (see the chapter on capitals). The product's own inventions (mono codes for modules and lessons, eyebrows, tier rings) are a different case: they are optional, and each should earn its unfamiliarity.
+
+### What this means for Learn to Fly
+
+Keep the conventional reading surfaces: lesson text that is left aligned, mixed case, in paragraphs, with underlined links (TYP-006). Spend novelty where Morison would have put decoration, on the landing page, module openers and celebration panels, and not inside `MarkdownContent` (TYP-008).
+
+Audit the product's private conventions with beginners (TYP-007). The eyebrow-over-heading pattern appears on landing sections, `PageHeader`, module cards, challenge cards, stat tiles and table headers, so a beginner meets a small uppercase label before nearly every heading. Each eyebrow should carry information the heading does not ("Module 3 · Up next" does; a repeated "Lesson" label above a lesson title does not). The mono codes ("M0", "Lesson 0.1", "C4.3") are useful once learned and opaque before; on first appearance they need a word beside them.
+
+Finally, make the design system argue for itself (TYP-009). The code comments that cite missing documents should cite this book's rule IDs instead, so that a future change can see why the measure is what it is, why eyebrows are tracked, and why lessons use the face they use.
+
+## Choosing and Limiting Typefaces
+
+### The courage to eliminate
+
+Updike's practical purpose in *Printing Types* is to teach printers how to stock a composing room, and his method is subtraction. Studying type forms, he says, teaches "not only how to choose" but gives "courage to eliminate" [@updike1922printing]. The ideal composing room is not built from a list of "standard" faces accepted on others' word, but by printers who study and then add the fonts their study has revealed. His sharpest sentence is a moral one: "There are many ways of being wrong, but only one way of being right," and if we do not judge types rightly, "they will judge us."
+
+Tschichold, arguing from the opposite aesthetic, reaches the same economy. His 1928 handbook redesigns a newspaper advertisement that used ornaments, seven kinds of type and sizes and a centered layout; the corrected version has no ornament, "only 5 different types," and "good legibility" [@tschichold1995new]. The five is an example, not a law, but the direction is clear. Fewer faces and fewer sizes, each with a job.
+
+The two arguments converge on a rule for a product's type stock. Each family earns its place by doing a job no other family in the stock can do. LTF today has two: Instrument Sans for "everything you read" and JetBrains Mono for "everything you measure," as the comment in `tokens.css` puts it. That is already an economical stock, and the division of labor is clear. The open question is the display face the plan called for (Big Shoulders Display, D-25) and the code never loaded. If it comes, it must have a job the other two cannot do (headline voice on display surfaces), and it must stay out of reading surfaces (TYP-008).
+
+::: {.rule #TYP-010 grade="C"}
+**Limit LTF to a named set of at most three type families, one for reading, one for measured values and at most one for display, and write each family's job into the tokens.** Updike's "courage to eliminate" [@updike1922printing] and Tschichold's reduction to a few types [@tschichold1995new] both treat economy as part of clarity. Craft consensus from opposed schools.
+
+*In LTF:* the stock is Instrument Sans (`font-sans`) and JetBrains Mono (`font-mono`), and the job split is documented in `tokens.css`. Keep it. If a display face is added, add a third token with a one-line job statement and limit its use to the `display-*` utilities.
+:::
+
+### Disreputable offspring: synthetic and distorted styles
+
+Updike's list of types "we ought not to want" includes "condensations, distortions, or exaggerations of the original letter," the variants he calls the "disreputable offspring of honest parents" [@updike1922printing]. In metal type the offence was a foundry's carelessly derived variant. On screens the same offence is committed automatically. The CSS Fonts specification states that user agents must not synthesize condensed or expanded faces [@w3c2026cssfonts], which removes one form of distortion, but a page can still request an italic or a weight the loaded files do not contain, and it can still scale type with transforms or squeeze it in an SVG.
+
+LTF has a concrete case. `src/main.tsx` imports `@fontsource-variable/instrument-sans` and `@fontsource-variable/jetbrains-mono` through their default entry points, which declare only upright faces (`font-style: normal`, weights 400 to 700). The packages include italic files, but they are not imported. So any italic the product asks for (Markdown emphasis in a lesson, the `italic` class in the traffic-pattern widget's quoted radio call, the `italic` label in the sectional legend chart) is drawn from no true italic. What the learner sees is a substitute the browser generates, or no change at all, depending on the browser. A true italic of a sans serif is usually more than a slant, and the substitute is exactly Updike's distortion.
+
+::: {.rule #TYP-011 grade="C"}
+**Load every style the interface uses as a real font file, and never rely on browser-synthesized italic or bold.** Updike condemns distorted variants of the original letter [@updike1922printing]; the CSS Fonts specification already forbids synthesized condensed and expanded faces [@w3c2026cssfonts]. Craft consensus, with a standards precedent.
+
+*In LTF:* either import the italic files (`@fontsource-variable/instrument-sans/wght-italic.css`, and the JetBrains Mono italic if code comments need it) or remove italic from the product. Given TYP-045, removing it from lesson emphasis and keeping it only where a true italic is loaded is the simpler path. Check the traffic-pattern radio call and the sectional chart label after the change.
+:::
+
+::: {.rule #TYP-012 grade="C"}
+**Never stretch, squeeze or scale type along one axis to make a label fit; shorten the label, change the size uniformly or choose a narrower style that the font actually contains.** Updike's "condensations, distortions, or exaggerations" [@updike1922printing] and the specification's ban on synthesized widths [@w3c2026cssfonts] rest on the same idea: the proportions of a letter are part of its design. Craft consensus.
+
+*In LTF:* the widget labels in `src/features/widgets/` (gauge numerals, tape values, the `Label` primitive in `shared/svg.tsx`) must keep the face's proportions at every size. If a G1000-style tape label does not fit, change the label or the tape, not the glyph proportions.
+:::
+
+### Contrast between thick and thin
+
+Bodoni's *Manuale tipografico* (1818, completed after his death by his widow and his foreman Luigi Orsi; only 290 copies were struck off) is the tradition's great statement of high-contrast type [@bodoni1818manuale; @updike1922printing]. His preface derives the beauty of type from several heads, of which the research notes could confirm the wording of the first two: regularity, "conformity without ambiguity, variety without dissonance," and "sharpness and definition, neatness and finish." He praises "the beautiful contrast as between light and shade" that a well-cut pen gives [@bodoni1818manuale].
+
+The craft tradition largely rejected that contrast for continuous reading. Morison's first composition principle is that the eye cannot easily read many words with sharply contrasted thicks and thins [@morison1936first]. Updike calls the *Manuale* "the acme of Bodoni's late, chilly, dry manner" and bans "all hair-line types" from the respectable composing room [@updike1922printing]. Dowding, as reported in excerpts, says modern (Bodoni-style) faces need generous leading and narrow measures for continuous reading [@dowding1954finer]. All three are craft opinion, not measurement, and Part III and Part IV hold the experimental and rendering evidence. On screens the risk is plausibly worse than in print, because thin strokes at small sizes depend on rendering and pixel density, but that is a hypothesis to check there, not a finding here.
+
+Bodoni's own preface still contributes something. Regularity as "conformity without ambiguity, variety without dissonance" is a fair description of what a component library is for, and the "sharpness and definition" he demanded of cast type is a rendering requirement for every hairline in LTF's instrument drawings.
+
+::: {.rule #TYP-013 grade="C"}
+**Do not use high-contrast faces with hairline strokes (Didone and similar) for running text or small labels; if used at all, confine them to large display sizes.** Morison says the eye cannot easily read many words with sharply contrasted thicks and thins [@morison1936first]; Updike bans hair-line types [@updike1922printing]; Dowding says modern faces need extra leading and narrow measures [@dowding1954finer]. Craft consensus; the screen evidence is in Part IV.
+
+*In LTF:* neither current face is high contrast. The rule matters when a display face is chosen: a Didone headline face would carry a fashion connotation foreign to the product and would fail at the 12 px `eyebrow` size and in Night. Test any candidate at 12 px and in the `[data-theme='dark']` theme before adopting it.
+:::
+
+::: {.rule #TYP-014 grade="C"}
+**Check that hairlines in instrument drawings (gauge ticks, tape graduations, chart linework) stay sharp at 1x pixel density, in both themes.** Bodoni counts "sharpness and definition, neatness and finish" among the beauties of type [@bodoni1818manuale]. Craft standard applied to drawing.
+
+*In LTF:* the `Gauge`, `Tape` and `Compass` primitives in `src/features/widgets/shared/svg.tsx` and the `sectional-legend/Chart.tsx` linework draw thin strokes over `fill-instrument` and `chart-*` grounds. Review them on a 1x monitor, not only a high-density laptop.
+:::
+
+### Serif or sans serif
+
+The most persistent typeface argument is whether serifs make text easier to read. Updike's 1922 ban on sans serif rests on taste [@updike1922printing]; so does much of the opposite opinion. The experimental record is more useful than either. Tinker's summary found common type faces equally legible, with only a marked difference (Cloister Black against Scotch Roman) showing an effect; a sans serif face (Kabel Light) was read as fast as ordinary type but not preferred [@tinker1963legibility]. Arditi and Cho built fonts differing only in serif size and found that, while serifs at 5 percent of cap height slightly lowered size thresholds, RSVP and continuous reading showed no effect, and their abstract concludes that typefaces differing only in serifs showed no difference in legibility [@arditi2005serifs]. Where serifs help at all, they may do so by adding space between letters. The study is small (four normally sighted and two low-vision observers, one font design), and its authors say subtle effects cannot be excluded.
+
+Practitioners who spent careers on legible type treat the question as open. Unger's legibility chapter mostly asks questions, including whether serif faces are more legible than sans serif ones and whether a high x-height aids legibility [@unger2018theory].
+
+::: myth
+**"Serif type is more legible for body text, so lessons should be set in a serif."** The claim is usually supported by the idea that serifs guide the eye along the line. Tinker found common faces, including a sans serif, read at the same speed [@tinker1963legibility], and Arditi and Cho found no effect of serifs on reading speed when serifs were the only variable [@arditi2005serifs]. Experienced type designers treat it as an open question [@unger2018theory]. A face may be chosen for voice, numerals or language support, but not on this ground.
+:::
+
+::: {.rule #TYP-015 grade="B"}
+**Choose LTF's text face on letter distinctness, spacing, numerals, weight range and voice, not on whether it has serifs.** Common faces read at equal speed [@tinker1963legibility], serifs alone made no difference to reading speed [@arditi2005serifs], and the question remains open among practitioners [@unger2018theory]. Experimental support is real but limited in sample and conditions.
+
+*In LTF:* the choice of Instrument Sans (a sans serif) over the planned Inter is not a legibility problem in itself. The tests that matter for it are TYP-016 and TYP-017.
+:::
+
+### Spacing tests and distinct letters
+
+Tracy, who spent about thirty years at British Linotype designing newspaper faces, is best known for a letterspacing method that doubles as an acceptance test [@tracy1986letters]. As a write-up of the method reports it (a paraphrase, not his wording): in lowercase, n is the control letter and the space between its stems, halved, is the starting point, adjusted by eye in a row of n's; o is the round standard, spaced by inserting it among n's; in capitals, H and O play the same roles. A face whose rows of n, o, H and O look uneven, with dark clumps or holes, has weak spacing. Tracy's career was in faces for mass reading, which is why his view of legibility is a working designer's.
+
+Noordzij's theory puts the same emphasis on white: white space, not the black stroke, is the principal element in perceiving letterforms, and rhythm and contrast across a word matter more than the ideal shape of each character [@noordzij2005stroke]. Spiekermann's review draws the consequence that b, d, p and q are distinguished by their place in a sequence of black and white. The theory is argued, not tested, but its practical instruction is sound: judge a face in lines of real text.
+
+The experimental literature adds the letters most often confused. Beier and Larson found that narrow single-stem letters (i, j, l, t, f) and mixed-stroke x-height letters are misrecognized most, that widening narrow letters helped, and that a single-storey a was less legible than a double-storey a [@beier2010design]. For a flying product the pairs that matter are in identifiers and values: 0 and O, 1 and l and I, 5 and S, 8 and B.
+
+::: {.rule #TYP-016 grade="C"}
+**Before adopting any face, set rows of n and o and of H and O at body size, and a paragraph of real lesson text, and reject the face if its rhythm is visibly uneven.** Tracy's control-letter method [@tracy1986letters] and Noordzij's emphasis on white space and rhythm [@noordzij2005stroke] make spacing the face's responsibility. Craft heuristic requiring judgment.
+
+*In LTF:* run the test for Instrument Sans at 16 px (`MarkdownContent`) and 18 px (`body-lg`), and for any display candidate at `display-md` to `display-xl`. Keep the result in the design-system notes.
+:::
+
+::: {.rule #TYP-017 grade="B"}
+**Check every face for confusable characters (0 and O, 1 and l and I, 5 and S, 8 and B) at the smallest size it is used and in both themes, and use the face that keeps them distinct for identifiers and values.** Beier and Larson found narrow and mixed-stroke letters most often misread and showed that letter design changes recognition [@beier2010design]. Experimental, with young participants and test fonts.
+
+*In LTF:* JetBrains Mono carries ICAO codes, runway values, module and lesson codes and readouts, which is the right assignment; confirm its zero and capital O, and its 1, l and I, at `readout-sm` (14 px) and in Night. Where Instrument Sans sets identifiers in prose (a runway number inside a sentence), check the same pairs at 16 px.
+:::
+
+### What this means for Learn to Fly
+
+LTF's type stock is already economical: one reading face and one measuring face, with their jobs documented (TYP-010). The decisions this chapter settles are mostly about integrity and testing. Load the styles the product uses, starting with italic, or stop using italic (TYP-011). Keep widget labels in true proportions (TYP-012). If the display face is revived, choose it against TYP-013 and TYP-016, at small and large sizes, in Day and Night, and give it a token and a job.
+
+Do not reopen the choice of Instrument Sans on serif-versus-sans grounds (TYP-015). Reopen it, if at all, on its rhythm in real lessons and on its character distinctness (TYP-016, TYP-017), and on voice, which Part XX, Brand Identity and Distinctiveness, treats. A face that is "a close relative in feel" of Inter, as the dossier describes Instrument Sans, contributes to the generic look the owner dislikes; that is a brand argument, not a legibility one, and it should be made as such.
+
+Finally, treat the instrument drawings as type. Their numerals, ticks and hairlines are judged by Bodoni's "sharpness and definition" on a 1x screen (TYP-014), and by the same confusable-pairs test as any readout.
+
+## The Measure
+
+### Where the numbers come from
+
+Two printers writing within a few years of each other gave the same figure for the length of a line. Morison, in his rationale of book typography: "The average line of words which the reader's eye can conveniently seize is between ten and twelve," and his summary formula asks for paragraphs of "ten to twelve consistently spaced words" [@morison1936first]. Gill: "the consensus of opinion favours an average of 10-12 words per line"; at fifteen or more words a compositor can have both equal line length and even spacing, but "the best length for reading is not more than 12 words" [@gill1936essay]. Neither cites a source. The agreement is best read as the workshop consensus of the period, not as two independent measurements. A secondary digest of the later Tschichold's essays gives eight to twelve words [@tschichold1991form].
+
+Gill names the failure at each end, which is more useful than the number. A very wide measure involves too much movement of the eye and head and risks "doubling," reading the same line twice, unless lines are separated by leads. A very narrow measure, narrow in relation to the type, cuts phrases and words apart, because "Practised readers do not read letter by letter or even word by word, but phrase by phrase" [@gill1936essay]. Morison ties the variables together: letter size must relate to line length, and when small type is unavoidable, leads prevent doubling [@morison1936first]. Hochuli, in qualitative terms, says the same: lines should not be so long that the eye gets lost nor so short that the text feels jumpy, and longer lines need looser leading [@hochuli2008detail].
+
+Bringhurst restates the target in characters. For a single-column page set in a serif text face at text size, about 45 to 75 characters per line, with 66 (counting letters and spaces) regarded as ideal, and about 40 to 50 for multi-column work [@bringhurst2012elements]. Words and characters agree roughly: in LTF's own lesson corpus a word plus its following space averages about 5.6 characters (a count made for this book over the lesson Markdown in `content/lessons/`), so ten to twelve words is about 56 to 67 characters. Hochuli adds a language effect that matters for an English product: English words are shorter than German ones, so English lines can be shorter for an even, neutral texture [@hochuli2008detail]. Line-length rules imported from German or long-line book settings should not be copied without testing.
+
+### What the experiments add
+
+The experimental record is weaker than the folklore and more interesting. Tinker's print studies, with samples near 2,000 readers per type size, found 10-point type set solid equally legible from 17 to 27 picas, and with 2-point leading from 14 to 31 picas. Very short lines needed more and longer fixations. A 43-pica line raised regressions by 56.7 percent against a 19-pica line, which he ascribes to trouble finding the next line start [@tinker1963legibility]. That is Gill's "doubling" observed in the laboratory.
+
+On screens, Dyson's review found that most studies report faster reading with longer lines, that readers rated 55 characters per line easiest to read though it was not read fastest, and that one study found better comprehension at 55 than at 100 characters per line. She argues that characters per line, not physical width, is the variable that matters, because saccade size is consistent in characters, and she notes that no upper limit has been identified [@dyson2004physical]. The studies are from the 1980s and 1990s, with 18 to 48 participants, on small, low-resolution screens.
+
+So the craft figure is a comfort and comprehension judgment with partial experimental support, not a speed law. Readers prefer moderate lines, comprehension may favor them, and speed may not. For a training product, comprehension is the outcome that counts. Unger's refusal to give formulas for such questions is the right posture [@unger2018theory]: adopt the range as a default and check it with learners.
+
+::: {.rule #TYP-018 grade="B"}
+**Keep lesson and long-form prose between about 45 and 75 characters per line, aiming near 60 to 66, at every viewport width.** The craft range comes from Morison and Gill (ten to twelve words) [@morison1936first; @gill1936essay] and Bringhurst (45 to 75 characters) [@bringhurst2012elements]. Screen studies found readers rating about 55 characters easiest, and one found better comprehension at 55 than at 100, while longer lines were sometimes read faster [@dyson2004physical]. Long lines raise regressions in print [@tinker1963legibility]. The range is a comprehension and comfort default; it is not a speed optimum.
+
+*In LTF:* `LessonPage` places `MarkdownContent` (16 px) in an `article` capped at `max-w-[800px]`. Measured against the shipped Instrument Sans file (see TYP-019), that column holds about 93 characters at `xl` and up to about 112 between `md` and `lg`, close to 20 words a line. Narrow the lesson text column to the measure token, redefined per TYP-019.
+:::
+
+### The `ch` trap
+
+The web has a unit that looks as though it counts characters and does not. The CSS `ch` unit is the advance width of the zero in the current font. In a monospaced face that is every character's width. In a proportional face the zero is usually one of the wider glyphs, so a line set to a given number of `ch` holds more characters of ordinary text than the number suggests.
+
+LTF's measure token shows the effect. `tokens.css` defines the `container-measure` token as 68ch, used by `Prose` through `max-w-measure`. Inspecting the shipped Instrument Sans file (`instrument-sans-latin-wght-normal.woff2`) for this book gives a zero advance of 0.666 em. The average advance over the lesson corpus, ignoring kerning, is about 0.447 em. A 68ch line therefore holds about 68 × 0.666 ÷ 0.447, or roughly 100 characters of lesson text, in `body-lg` or at any other size, since both quantities scale with the font size. The design system's stated measure is close to Bringhurst's ideal in name and near the top of Dyson's tested range in fact.
+
+The correction is simple arithmetic in the same face. For 66 characters of real text the token should be about 44ch; for the 45 to 75 range, about 30 to 50ch. These figures hold only for Instrument Sans and only for English text with a similar letter mix. A different face, or a fallback font while the web font loads, changes them, which is a reason to verify by counting rather than to trust a unit.
+
+::: {.rule #TYP-019 grade="C"}
+**Define the reading measure by counting characters of real text in the actual face, and do not assume that a width in `ch` equals that many characters.** Dyson identifies characters per line as the variable that matters [@dyson2004physical]; Bringhurst counts letters and spaces [@bringhurst2012elements]. The `ch` unit measures the zero, which in Instrument Sans is about 0.666 em against an average of about 0.447 em for lesson text (measured for this book from the shipped font file). Craft rule applied with a measurement.
+
+*In LTF:* change the `container-measure` token from 68ch to about 44ch and move lesson text onto `max-w-measure`. Add a unit test or a Playwright check that renders a known lesson paragraph and asserts the characters per line fall in the 45 to 75 range at `sm`, `lg` and `xl`. If the face changes, recompute.
+:::
+
+### Narrow measures: phones, rails and cards
+
+Gill's warning about narrow measures is the half of his argument that web designers forget. When a column gets narrow relative to the type, phrases break apart [@gill1936essay]. On a 375 px phone with LTF's `px-4` gutters, the lesson column is about 343 px wide, which at 16 px Instrument Sans holds roughly 48 characters (same estimate). That is inside the range and needs no change. The narrow measures that do fall short are elsewhere: a 280 px glossary rail, a `Callout` set side by side with another in `BriefTab`, a 360 px `Toast`, a challenge card in a three-column grid, a `Card` with `p-5` padding inside an already narrow column.
+
+The cure for a measure that is too narrow is not smaller type. Morison relates letter size to line length [@morison1936first], and shrinking type to fit more words reduces legibility to solve a layout problem. Reflow the layout instead: stack the side-by-side callouts below `lg`, or let the text run under the icon instead of beside it.
+
+::: {.rule #TYP-020 grade="C"}
+**When a text column falls below about 40 characters, change the layout (stack, widen, remove side padding) rather than reducing the type size.** Gill says narrow measures cut phrases apart [@gill1936essay]; Morison ties letter size to line length [@morison1936first]; Bringhurst gives about 40 to 50 characters for multi-column work [@bringhurst2012elements]. Craft consensus.
+
+*In LTF:* the side-by-side `safety` and `tip` `Callout`s in `BriefTab` and any two-column callout layout should stack below `lg`. The `Callout` grid (`grid-cols-[20px_1fr] gap-3`, `px-5`) costs about 64 px of the column; in narrow containers let the title row carry the icon and the body use the full width.
+:::
+
+### One column for prose
+
+The columns study in Dyson's review found a single column of about 80 characters per line, paged, read faster than three columns of about 25 characters, with no difference in comprehension, though the advantage held only for the youngest age group [@dyson2004physical]. Bringhurst's lower range for multi-column work, 40 to 50 characters, exists because columns force short lines [@bringhurst2012elements]. A web page that scrolls has little reason to split prose into columns at all, since the reader cannot see the bottom of the first column and the top of the second together.
+
+::: {.rule #TYP-021 grade="B"}
+**Set lesson and long-form prose in a single column; use multiple columns only for short, independent items such as cards, definitions or FAQ entries.** Short columns were read more slowly than a single moderate column in the study Dyson reviews [@dyson2004physical], and craft practice shortens the measure for columns [@bringhurst2012elements]. One study, with an age-limited effect.
+
+*In LTF:* `MarkdownContent` is single column; keep it. The landing "Questions" `dl` (`md:grid-cols-2`) is acceptable because each item is short and independent. Do not set lesson paragraphs, `Prose` legal text or challenge procedures in CSS columns.
+:::
+
+### Measures for text that is not prose
+
+Bringhurst's range is for continuous prose in a serif text face [@bringhurst2012elements]. Much of LTF is not prose: checklist steps, table cells, labels, readouts, quiz options, step lists in `FlyPanel`. These have different needs. A checklist step is read as a unit and acted on, so its length is set by its content, and a break in the middle of a step is worse than a long line. A table column should be sized to its content, not stretched to the full width of the page; Rutter's treatment of tables, drawing on the tradition, says the same [@rutter2017web]. A quiz option is short and should not wrap at all if it can be avoided.
+
+::: {.rule #TYP-022 grade="C"}
+**Apply the prose measure only to prose: size table columns to their content, keep checklist steps and quiz options on as few lines as their content allows, and never stretch a table to fill the page.** Bringhurst's range is defined for continuous text [@bringhurst2012elements]; Rutter advises sizing columns to content and not stretching tables full width [@rutter2017web]. Craft consensus.
+
+*In LTF:* the `MarkdownContent` table renders `w-full` inside a bordered scroll region; drop `w-full` so short tables take their natural width. The `SpeedsPage` table and `BriefTab` scoring `Table` should keep numeric columns narrow. In `FlyPanel`, a step row at `text-lg` (and larger in `FlyPanel large`) may exceed 75 characters on a wide screen; that is acceptable because each step is one unit.
+:::
+
+### What this means for Learn to Fly
+
+The measure is the single largest classical-typography defect in the product as built. The design system defines a measure, but lessons do not use it, and the measure it defines is wider than its name. Lesson text at `xl` runs about 93 characters and between `md` and `lg` about 112, or close to twenty words, against a craft range of ten to twelve words and an experimental preference near 55 characters (TYP-018).
+
+The fix is three changes. Redefine the `container-measure` token in characters of real text, about 44ch for Instrument Sans (TYP-019). Apply `max-w-measure` to the lesson prose blocks inside `LessonPage`, letting widgets, tables and figures run to the full 800 px article width where they need it, so that the reading line and the figure width are separate decisions. Then reconsider the reading size: with a 44ch measure, the 18 px `body-lg` that `Prose` uses may suit lessons better than the 16 px they inherit, a question Part III, Legibility and the Science of Reading, should settle with its size evidence.
+
+Keep the phone layout, which is already in range, and fix the narrow cases instead: stacked callouts, padded cards and rails (TYP-020). Keep prose single-column (TYP-021), and let non-prose content follow its own logic (TYP-022). Add a measurement test so that the measure cannot drift unseen when a face, a size or a padding changes.
+
+## Leading and Vertical Motion
+
+### The basic unit
+
+Bringhurst opens his treatment of vertical space with a definition and a duty: "This unit is the leading, which is the distance from one baseline to the next," and the designer should choose a basic leading that suits the typeface, the text and the measure (his section 2.2.1) [@bringhurst2012elements]. The three dependencies are the substance of the rule. A face with a large x-height looks tighter at the same leading than one with a small x-height; a dense technical text needs more air than a light narrative; a long line needs more leading than a short one.
+
+The term is a survival from metal type, where strips of lead were inserted between lines. Morison spends a passage defending the practice against purists who preferred solid setting. When small type is unavoidable, he says, leads should be inserted to prevent "doubling," the reading of the same line twice [@morison1936first]. Gill makes leads the remedy for the wide measure: a very wide measure risks doubling "unless" the lines are separated by leads [@gill1936essay]. Hochuli states the relation in his own qualitative terms: longer lines need looser leading [@hochuli2008detail].
+
+The experimental record supports the relation and limits it. Tinker found that 10-point type set solid was equally legible from 17 to 27 picas, and with 2-point leading from 14 to 31 picas [@tinker1963legibility]. Leading, in other words, widened the band of line lengths that read well. He also found leading mattered more for small type than for 12-point, and he published "safety zones" by size, for example 10-point in 19-pica lines with 2 to 4 points of leading. These are print measurements, and their figures do not transfer to screens directly, but the direction does: leading and measure trade against each other.
+
+::: {.rule #TYP-023 grade="B"}
+**Set leading in proportion to the measure: when a column gets longer, increase the line height, and when it gets shorter, the line height may tighten.** Morison and Gill prescribe leads against doubling on long lines [@morison1936first; @gill1936essay], Hochuli says longer lines need looser leading [@hochuli2008detail], and Tinker found leading widened the range of legible line widths [@tinker1963legibility]. Print evidence from large samples; the screen values belong to Part IV.
+
+*In LTF:* lesson text inherits the global 16/26 (1.625) from `index.css`. At the current 93 to 112 characters, that leading is doing the work Gill describes, holding a too-long line together. When the measure is narrowed per TYP-019, keep 1.625 at first and evaluate whether 1.5 to 1.6 reads better at 44ch; do not tighten both at once.
+:::
+
+### Leading is not a cure for small type
+
+Tinker's data contain a finding that limits how far leading can be pushed. Eight-point type with 2-point leading was not read faster than 10-point type set solid [@tinker1963legibility]. Space between lines does not make up for letters that are too small. The craft writers agree in their own way. Morison allows leads for small type to prevent doubling, but his formula asks first for type of "comfortable size and familiar design" [@morison1936first].
+
+The finding matters most in the parts of LTF that use small text densely: `text-sm leading-5` (14/20) metadata rows, `body-sm` (14/20) supporting text, the `eyebrow` (12/16), `Badge` text (`text-xs`), the card meta rows on `ChallengesPage`. These are short strings, not paragraphs, so doubling is not the risk. The risk is a designer making a sentence or a paragraph small and compensating with generous line height. A `text-sm` paragraph of instructions under a field, or a long `Toast` description, is that case.
+
+::: {.rule #TYP-024 grade="B"}
+**Do not set multi-sentence text below the body size and rely on extra leading to make it readable; if it is long enough to need leading, it is long enough to need body size.** Tinker found 8-point type with 2-point leading no faster than 10-point set solid [@tinker1963legibility]; Morison asks for type of "comfortable size" first [@morison1936first]. Print evidence.
+
+*In LTF:* `FormField` hints, `Toast` descriptions, `EmptyState` messages and the hero note under the landing buttons are `text-sm` (14 px). Keep them to a sentence or two. Anything longer, such as the `SignupBanner` copy, the `UnverifiedWarning` body or a long field hint, goes to body size.
+:::
+
+### Unitless leading on the web
+
+Bringhurst's book is a print manual. The web adaptation of it (which keeps his section titles) adds a warning that matters on screens: fixed leading breaks when users enlarge text, and web text often needs more space than print [@bringhurst2012elements]. A line height written in pixels does not grow when a learner sets a larger default font size in the browser. A unitless ratio does. LTF's global line height is already unitless (1.625), and the type utilities in `index.css` set paired pixel values (`display-xl` 64/64, `body-lg` 18/29, `label` 14/20). Those pairs are fixed in pixels, so a learner who enlarges text by changing the browser's default size keeps the 16 px root (`html { font-size: 16px }`) and gets no larger type at all, which is a Part XXV, Accessibility, concern. Within the classical frame the point is narrower: leading belongs to the style as a ratio.
+
+::: {.rule #TYP-025 grade="C"}
+**Express each text style's leading as a unitless ratio of its size, chosen for its face and measure, and keep one leading per style.** Bringhurst defines a basic leading that suits face, text and measure, and the web adaptation warns that fixed leading breaks under text enlargement [@bringhurst2012elements]. Craft consensus.
+
+*In LTF:* rewrite the `index.css` utilities as size plus ratio (for example `body-lg` 18 px at about 1.61, `display-xl` 64 px at 1.0) so that they scale together. Remove raw `leading-5` and `leading-6` from components and let the style carry its leading.
+:::
+
+### Display leading and the clearance test
+
+Headings are set tighter than text. LTF's base rule gives `h1` to `h4` a line height of 1.25 with `text-wrap: balance`, and the display utilities go further: `display-md` 32/36 (1.125), `display-lg` 44/48 (about 1.09), `display-xl` 64/64 (1.0). Tight leading at large sizes is normal practice, because the space between lines grows with the size even at a ratio of 1, and because display lines are few.
+
+Johnston supplies the limit. In his handbook writing lines are usually set about three times the height of the letter o apart, kept "as close together as is compatible with legibility," with descenders clearing the ascenders of the line below [@johnston1906writing]. The rule was written for the pen, and the figure does not transfer to type as a measurement, but the clearance test does. At a line height of 1.0 in a face whose ascenders and descenders together exceed the em, a descender can touch the next line's ascender. The landing h1 "Yes, you can fly a plane." is set `display-xl` in a `max-w-[12ch]` box, so it breaks across two or more lines; its y and p descend toward the ascenders of the line below. Whether they collide depends on the face's vertical metrics and the break, and the test is to look at the rendered heading at each breakpoint.
+
+It is a curious coincidence, worth recording and not worth building on, that Johnston's three o-heights applied to Instrument Sans (x-height 0.51 em in the shipped file) gives a line spacing of about 1.53, close to the body leading LTF uses.
+
+::: {.rule #TYP-026 grade="C"}
+**For any heading or label that can wrap, check at every breakpoint that descenders clear the ascenders of the next line, and loosen the leading of that style if they do not.** Johnston sets lines "as close together as is compatible with legibility," with descenders clearing ascenders [@johnston1906writing]. Craft rule, tested by looking.
+
+*In LTF:* check `display-xl` (64/64) on the landing hero, `display-lg` on the reference hub, and the lesson h1 (`text-3xl` to `text-4xl` at Tailwind's default leading) with the longest real lesson titles. Check the same in dense instrument labels and the `sectional-legend` chart text, where labels stack.
+:::
+
+### Space that scales with the type
+
+Johnston measures spacing with the letters themselves: "The average space between two words is the width of the letter o," and line spacing in o-heights [@johnston1906writing]. Bringhurst calls the em "a sliding measure" [@bringhurst2012elements]. The shared idea is that spacing in text is a property of the type, so it should be expressed in units that move with the type. On the web that means em-based (or ratio-based) spacing for anything that sits inside text: paragraph spacing, list indents, the gap between a heading and its first paragraph, the padding inside an inline code chip.
+
+LTF mixes the two. `Prose` uses `my-4` paragraphs and `mt-10 mb-3` headings (Tailwind spacing in rem, which scales with the root but not with the element's own size); `MarkdownContent` uses `my-3` paragraphs and `mt-12 mb-3` headings; the inline code chip uses `px-1 py-0.5` with `text-[0.9em]`. The values are reasonable, but they are tied to the root size, so text set larger (Fly mode's `text-xl` base, or `FlyPanel large`) keeps the same gaps between its larger lines.
+
+::: {.rule #TYP-027 grade="C"}
+**Express spacing that belongs to text (paragraph gaps, heading spacing, list indents, inline chips) in units relative to the text's own size, so that larger text gets proportionally larger gaps.** Johnston measures word and line spacing in letter widths and heights [@johnston1906writing]; Bringhurst treats the em as a sliding measure [@bringhurst2012elements]. Craft consensus.
+
+*In LTF:* convert the paragraph and heading margins in `MarkdownContent` and `Prose` to `em` values (for example a paragraph gap of about 0.75 em and a heading top margin of about 2 em), and use the same values in `FlyModePage`, so that its 20 px base gets matching air without a separate set of classes.
+:::
+
+### Vertical rhythm between blocks
+
+The leading of a line is one unit of vertical motion; the gaps between blocks are another. Bringhurst's chapter on rhythm treats both as part of one system [@bringhurst2012elements]. A lesson in LTF is a stack of heterogeneous blocks (markdown, heading, callout, image, video, quiz, widget, checklist), and each has its own top and bottom spacing set in its component. When those spacings are unrelated, the page has no rhythm: a callout sits 16 px below one paragraph and 24 px below another, a quiz card sits closer to the heading above it than to the paragraph it tests.
+
+Classical typography offers the principle, not a figure. Spacing between elements should follow from their relation: things that belong together sit closer than things that do not, and the same relation always gets the same space. Part V, Grids, Layout and Space, gives the layout system; here the requirement is that the text column's vertical spacing come from a small set of values tied to the body leading.
+
+::: {.rule #TYP-028 grade="C"}
+**Space lesson blocks from a small set of values derived from the body leading, and give the same relation (paragraph to paragraph, heading to its text, text to callout, text to widget) the same space everywhere.** Bringhurst treats horizontal and vertical motion as one proportional system [@bringhurst2012elements]. Craft consensus.
+
+*In LTF:* define three block gaps in `tokens.css` as multiples of the 26 px body line (for example one line between paragraphs, one and a half above a callout or quiz, two above a block heading) and have `LessonRenderer` apply them, instead of each block component setting its own `my-*`.
+:::
+
+### What this means for Learn to Fly
+
+LTF's leading is mostly sound. The 1.625 body leading suits a long measure, headings are tighter, and display leading is tighter still, which is normal practice. The defects are structural. Leading and spacing are written as fixed pixel pairs and Tailwind steps, so they do not scale with the type (TYP-025, TYP-027); small text is sometimes asked to carry paragraphs (TYP-024); and lesson blocks each set their own spacing, so the page has no shared rhythm (TYP-028).
+
+The order of work matters. First narrow the measure (TYP-019). Then revisit the body leading against the new measure, changing one variable at a time (TYP-023). Then convert the type utilities to ratios and the in-text spacing to em values, and give `LessonRenderer` a shared set of block gaps. Check every multi-line display style for descender clearance with real titles (TYP-026), starting with the landing hero, which is the first thing a visitor reads.
+
+## Word Space, Justification and the Ragged Edge
+
+### The Procrustean bed
+
+Gill's chapter on justification takes its title from the composing stick, "The Procrustean Bed," which forces every line to the same length [@gill1936essay]. His argument is the clearest in the tradition. A ten-to-twelve-word line is short for a compositor, and on a short line equal length and even spacing conflict: to fill the line exactly, the compositor must widen or squeeze the spaces between words. Gill's resolution is to choose even spacing and let the right edge be ragged, compromising only so far as the spacing stays visibly even. Lines of unequal length are not in themselves objectionable; uneven spacing is. He calls equal line length "a laudable appetite" that "has become somewhat of a Superstition," and says a page of equal lines "partakes too much of the ideas of those who regard books as things to be looked at rather than read." The book demonstrates its own argument. Its 1936 edition, hand-set in Gill's own Joanna at 12 point with 3 point leading, sets the first two pages of the justification chapter justified and the rest unjustified [@gill1936essay].
+
+De Vinne, writing as a compositor's teacher, had reached the same priority from the shop floor. Composition is made more pleasing "when the spaces between words seem to be of the same width in all lines on the page," and lines thick-spaced at one side and thin at the other are "a disgrace to the printer" [@devinne1910practice]. He names the result of forced justification "hounds'-teeth," irregular white gaps running across lines, "more offensive to the reader than any strangeness of division." The modern name is rivers.
+
+Hochuli carries the argument into English setting. Because English uses less hyphenation than German, line breaks are less flexible, and his reviewer reports the consequence: "an editorial designer can achieve a better result with ranged text than with justified text" [@hochuli2008detail]. The typefoundry summary of his guidance adds that overly wide word spaces disrupt reading and that letterspacing should not be varied to justify lines.
+
+### Criticism of the ragged case
+
+The ragged-right argument is not unanimous, and its best critic is Gill's own editor. Christopher Skelton's introduction to the reprint grants that the case for close word spacing "has long since been recognised," but observes that Gill's ragged pages need as many word breaks as ordinary setting, "some of them very dubious," and asks whether, "if Gill had used the same treatment with justified setting," any unevenness of word spacing would be noticeable [@gill1936essay]. Skelton also notes Gill's habitual disparagement of the industrial system: his preference for the hand was a moral position as well as a typographic one.
+
+The criticism matters for screens in a specific way. Gill's ideal was a skilled compositor making each line's spacing even by judgment. Browsers justify by distributing space mechanically, and their hyphenation depends on language dictionaries of uneven quality. Hochuli's reviewers note that the guidance on hyphenation and ragged setting depends on language and on the quality of the hyphenation available, which is a different situation from a fixed page [@hochuli2008detail]. The craft verdict for screens is therefore stronger than for print: a skilled hand might make justified English even, but a browser cannot be relied on to. Whether ragged-right is more readable than justified text is an empirical question for Part III and Part IV; this chapter grades the rule on craft grounds.
+
+::: {.rule #TYP-029 grade="C"}
+**Set all lesson, reference and interface text flush left and ragged right; do not justify text anywhere in the product.** Gill chooses even word spacing over equal line length [@gill1936essay], De Vinne calls uneven spacing "a disgrace" and its rivers "more offensive to the reader than any strangeness of division" [@devinne1910practice], and Hochuli's English edition favors ranged text [@hochuli2008detail]. Skelton's objection [@gill1936essay] applies to skilled hand justification, not to a browser. Craft consensus; the experimental question is open.
+
+*In LTF:* no component uses `text-justify` or `text-align: justify` today. Keep it so, and add a lint or stylesheet check that rejects justification in `src/`.
+:::
+
+### How wide a word space
+
+The word space is the oldest unresolved question in the craft, and the sources record the dispute rather than settling it. De Vinne, for hand-set lowercase, gives the three-to-em space as the most used in solid composition and the en quadrat for wide-leaded matter, and disapproves em-quad spaces ("pigeonholing") [@devinne1910practice]. A footnote records that "several eminent disciples of the fifteenth-century school of typography" used only a thin space. Half a century later Dowding, from the private-press line of Morris, the Doves Press and J. H. Mason, argued for close spacing: widely spaced lines look grey, and quoting Tschichold, spacing should be "about a middle space or the thickness of an 'i' in the type size used," text closely spaced "and not en or em quadded" [@dowding1954finer]. The digest of the later Tschichold's essays gives "three-to-em or even more compressed" [@tschichold1991form]. Johnston, from the pen, gave the width of the letter o [@johnston1906writing].
+
+Bringhurst's section 2.1.1 resolves the dispute in the only defensible way: define the word space to suit the size and natural letterfit of the font. "A loosely fitted or bold face will need a larger interval between the words," and tighter letterfit at larger sizes allows tighter word spacing [@bringhurst2012elements]. On the web, the font designer has already chosen the word space for the face's fit; the shipped Instrument Sans file sets its space at 0.2 em, a third of an em, which is De Vinne's three-to-em. Unger's refusal of a formula for the balance of positive and negative space applies here [@unger2018theory]: no number is correct in general, and the font's own choice is the best default available.
+
+There is one exception the sources agree on. Capitals need wider word spaces than lowercase (see the chapter on capitals).
+
+::: {.rule #TYP-030 grade="C"}
+**Use the word space the font designer built into the face for lowercase text, and do not adjust `word-spacing` or `letter-spacing` on running text to change line fit or texture.** Bringhurst ties word space to the face's size and letterfit [@bringhurst2012elements]; the historical figures conflict [@devinne1910practice; @dowding1954finer; @tschichold1991form; @johnston1906writing], and no formula exists [@unger2018theory]. Hochuli advises against varying letterspacing to fit lines [@hochuli2008detail]. Craft consensus.
+
+*In LTF:* lesson text uses Instrument Sans's own 0.2 em space; keep it. Remove `tracking-[0.02em]` from mixed-case `Badge` labels and `tracking-wide` from any mixed-case label; positive tracking belongs only on capitals (TYP-034).
+:::
+
+### One space between sentences
+
+Bringhurst's section 2.1.4 is brief: use a single word space between sentences [@bringhurst2012elements]. Dowding's private-press rules went the other way from any wide sentence space: he would omit the space after a full point altogether when the next word starts with A, J, T, V or Y [@dowding1954finer]. That last rule is a good example of a craft preference that defeats itself. Roy Johnson's review of the 1995 revision accepts the book's authority but rejects the full-point rule, which he says may sacrifice legibility for color and so "defeats what he wanted to achieve" [@dowding1954finer]. In a training product, where the learner must find sentence boundaries in instructions, a missing space after a full stop is an error, not a refinement.
+
+HTML collapses runs of spaces, so a double space typed in Markdown renders as one. LTF's lesson sources contain no double spaces after full stops (a search for this book found none), so the rule costs nothing today and should be protected.
+
+::: {.rule #TYP-031 grade="C"}
+**Use exactly one word space after a sentence, and never remove the space after a full stop for optical reasons.** Bringhurst prescribes a single word space between sentences [@bringhurst2012elements]; Dowding's rule of omitting it before certain capitals is rejected by his own reviewer as defeating legibility [@dowding1954finer]. Craft consensus.
+
+*In LTF:* add a `content:validate` check that flags two or more spaces after sentence punctuation and any full stop followed directly by a capital letter in lesson prose.
+:::
+
+### Hyphenation and the broken word
+
+De Vinne's position on word division is a balance: words "always appear better unbroken, but the breaking of words may not be so unsightly as the breaking up of a general uniformity of the spacing between words" [@devinne1910practice]. He quotes Horace Hart's rule for divisions at Oxford, that the part left at a line end should suggest the part carried over, and he records that American and British houses divide differently ("moth-er" against "mo-ther"). Dowding prefers breaks to wide spaces, calling it "infinitely preferable to have a number of break lines succeeding each other" than widely spaced lines [@dowding1954finer]. Hochuli advises frequent hyphenation where justified text would otherwise space widely [@hochuli2008detail].
+
+All of this is advice for justified text, where hyphenation buys even spacing. In ragged-right setting the trade is different: a ragged line can simply end early, so hyphenation buys only a smoother right edge. For LTF that is a poor trade. Lesson text is full of technical words a beginner is learning (carburetor, magneto, mixture, annunciator), identifiers, and numbers with units. A browser hyphenating "carbu-retor" across a line, or splitting a unit from its value, adds a reading task at the moment the learner is meeting the word. Hart's rule is not something a browser dictionary can apply.
+
+::: {.rule #TYP-032 grade="C"}
+**Leave automatic hyphenation off in ragged-right lesson and interface text, and never let a line break separate a value from its unit, an identifier's parts, or a hyphenated term from its context.** De Vinne and Dowding accept division to preserve even spacing in justified text [@devinne1910practice; @dowding1954finer], a reason that does not apply to ragged setting (TYP-029). Hart's rule that the first part should suggest the second requires judgment a browser lacks [@devinne1910practice]. Craft reasoning.
+
+*In LTF:* keep CSS `hyphens` at its default (manual). In content, join values and units with a no-break space where the line could split them (the `{{vspeed.*}}` and `{{aircraft.*}}` token output is a good place to add it once), and keep runway and frequency identifiers unbroken.
+:::
+
+### Breaking short text by sense
+
+Gill's observation that "Practised readers do not read letter by letter or even word by word, but phrase by phrase" [@gill1936essay] has a corollary for short text. In a heading, a button, a checklist step or a quiz stem, where there are only two or three lines, the place a line breaks is part of the meaning. A heading that breaks after its first word, or a checklist step that leaves a single word on its second line, makes the reader reassemble a phrase the typographer broke. Warde's complaint about a line "that looks like one long word" [@warde1955crystal] is the opposite failure, and both come from treating short text as if it were a paragraph.
+
+LTF already applies `text-wrap: balance` to `h1` through `h4`, which evens the lengths of a wrapped heading's lines. That is a good default for headings. It does not break by sense; it breaks by length. For the shortest, highest-stakes strings (checklist steps in `FlyPanel`, the challenge `Goal`, quiz prompts), authors should check the break at the widths the learner will see.
+
+::: {.rule #TYP-033 grade="C"}
+**Treat line breaks in headings, checklist steps, quiz stems and button labels as part of the copy: balance headings, avoid a single word alone on a last line, and check the breaks at phone and desktop widths.** Gill's phrase-reading argument [@gill1936essay] and Warde's warnings about misleading lines [@warde1955crystal] apply most where text is short. Craft consensus.
+
+*In LTF:* keep `text-wrap: balance` on headings. Add `text-wrap: pretty` (or the equivalent no-orphan treatment) to `QuizBlock` prompts, `FlyPanel` step text and `Callout` titles, and review them in Fly mode at the `text-lg` and `FlyPanel large` sizes.
+:::
+
+### What this means for Learn to Fly
+
+The product already sets everything ragged right and has no justified text, which is the most important decision in this chapter (TYP-029). Keep it, and protect it with a check. The font's own word space is in use, which is correct (TYP-030), but a few mixed-case labels carry tracking that belongs only on capitals; remove it.
+
+The remaining work is in content and in short strings. Make the content validator enforce one space between sentences and catch missing spaces (TYP-031). Keep hyphenation off and bind values to units with no-break spaces, ideally in the token renderer so authors do not have to remember (TYP-032). Extend the heading treatment to the short strings a learner acts on, checklist steps and quiz stems first (TYP-033), and review their breaks at the widths Fly mode uses, since the learner reads those strings in a glance, beside the sim.
+
+## Capitals, Small Capitals and Letterspacing
+
+### Capitals need room
+
+The craft sources are unusually unanimous on one micro-typographic point: strings of capitals need more space than lowercase. De Vinne gives the reason in metal terms. Capitals are about twice as high and wide as round lowercase letters, so they need word spaces "twice as wide" and leads "twice as thick"; the en quadrat is the least permissible word space in capitals [@devinne1910practice]. Bringhurst's section 2.1.6 makes it a rule: letterspace all strings of capitals and small caps, and all long strings of digits [@bringhurst2012elements]. The digest of the later Tschichold says roman capitals are always letterspaced [@tschichold1991form]. Warde, in her list of failures, names capitals "jammed together without hair spaces" as a cause of "subconscious squinting" [@warde1955crystal].
+
+The reason is visible in any face. Lowercase is spaced by its designer for lowercase: the sidebearings that make n, o and e sit evenly in a word are set for the lowercase rhythm. Capitals have larger, more varied internal and external spaces (the open sides of L, T, A, V, the closed rounds of O), and set at the lowercase fit they look cramped and uneven. Tracy's spacing method, as reported, uses H and O as the control letters for capitals precisely because capitals need their own spacing logic [@tracy1986letters].
+
+::: {.rule #TYP-034 grade="C"}
+**Add positive letterspacing to every string set in capitals (labels, badges, eyebrows, uppercase buttons), and never to lowercase or mixed-case text.** De Vinne, Bringhurst, the later Tschichold and Warde all require letterspaced capitals [@devinne1910practice; @bringhurst2012elements; @tschichold1991form; @warde1955crystal]; Tracy treats capital spacing as its own system [@tracy1986letters]. Craft consensus.
+
+*In LTF:* the `eyebrow` utility (12 px, 600, 0.08em, uppercase) and the tier `Badge` pills (0.08em, uppercase) follow this rule; keep them. The mixed-case `Badge` (`tracking-[0.02em]`) and `tracking-wide` on mixed-case labels break it; remove the tracking there.
+:::
+
+::: {.rule #TYP-035 grade="C"}
+**Widen the word space in all-caps strings as well as the letterspacing, so that words in a capital label stay separate.** De Vinne asks for word spaces "twice as wide" in capitals [@devinne1910practice]; Warde warns against setting that lets three words read as one [@warde1955crystal]. Craft consensus.
+
+*In LTF:* letter-spacing adds space after every character, including the word space, so a 0.08em track widens word spaces only slightly. For multi-word eyebrows such as "Free · Public beta · Cessna 172 Skyhawk · MSFS 2024" the middle dots carry the separation; for multi-word all-caps labels without separators, add `word-spacing` of about 0.1 to 0.2 em in the `eyebrow` utility and test it.
+:::
+
+### All capitals in running text
+
+The experimental record on capitals is old, large and consistent. Tinker's summary found that all capitals greatly retarded reading and took at least one-third more space [@tinker1963legibility]. Larson's review reports lowercase read 5 to 10 percent faster than uppercase in two later studies [@larson2005science]. Tinker attributed the cost to the loss of distinctive word shapes; Larson, drawing on later work, rejects word shape and attributes the cost to practice: readers have far more experience with lowercase, and uppercase reading speed rises with practice [@larson2005science].
+
+The disagreement about cause does not touch the practical rule. Whatever the mechanism, a beginner reading a paragraph or a warning in capitals reads it more slowly and needs more space for it. That matters most in LTF where the stakes are highest. Safety notes, `Callout` text, checklist instructions and Fly mode alerts are exactly the places where a designer is tempted to "make it stand out" with capitals.
+
+::: {.rule #TYP-036 grade="A"}
+**Never set sentences, paragraphs, warnings or instructions in all capitals; reserve capitals for short labels and for identifiers that are capitals by nature.** All capitals greatly retarded reading and took at least a third more space in Tinker's studies [@tinker1963legibility], and lowercase was read 5 to 10 percent faster in later studies [@larson2005science]. The effect is replicated; its cause (practice rather than word shape) does not change the rule.
+
+*In LTF:* the `safety` `Callout`, the `UnverifiedWarning`, the `FlyPanel` random-event alert (`border-4 border-warn bg-warn-tint`) and `ErrorSummary` must stay in sentence case. Emphasis there comes from the color, the icon, the border and the title, all of which the components already use.
+:::
+
+::: myth
+**"Readers recognize words by their outline, so all capitals are hard to read because they destroy word shape."** The word-shape account is old (it goes back to Cattell) and Tinker used it to explain his all-caps results [@tinker1963legibility]. Larson reviews the experiments that tested it: misspellings that kept or changed the outline were caught at rates explained by letter shape, not word shape; capitalizing a word in boundary studies gave the same fixation times as the control; and moving-window studies show reading speed rising with the number of letters visible. His conclusion: "Word shape is no longer a viable model of word recognition" [@larson2005science]. Capitals are slower because readers have less practice with them and because they take more space, not because of their outline. Noordzij's claim that the word image is the primary unit of reading is a craft theory that was not tested in the sources reviewed here [@noordzij2005stroke]. Do not justify a design decision by word shape.
+:::
+
+### Identifiers and abbreviations
+
+LTF's subject matter is full of capitals that are not the typographer's choice. Airport identifiers come in four capitals, many terms are abbreviations (MSL, AGL, KIAS, ATIS, CTAF), and sim and panel labels are often printed in capitals. A search of the lesson Markdown for this book found 1,574 words of four or more capital letters, most of them identifiers and abbreviations of this kind. These are part of what the learner is learning to read, and the product must present them as the learner will meet them.
+
+The craft rule still applies to them. Bringhurst's 2.1.6 covers all strings of capitals, which includes abbreviations inside running text [@bringhurst2012elements]. In print the usual treatment is small capitals with slight letterspacing, so that abbreviations do not shout from the page. The shipped Instrument Sans subset has no small-cap feature (its substitution features, inspected for this book, are only `ccmp`, `liga`, `locl`, `pnum` and `tnum`), so true small caps are not available, and synthesized small caps would be another of Updike's distortions (TYP-011). What remains is letterspacing, applied consistently and automatically.
+
+The second requirement is learnability. De Vinne's warning that small capitals of nine point and smaller "are dense and not easily read" for running titles, and that hair-spacing helps [@devinne1910practice], applies to any small capital string. A beginner meets "CTAF" or "KIAS" as four unfamiliar letters, read letter by letter. Those letters need room and a definition on first use.
+
+::: {.rule #TYP-037 grade="C"}
+**Give strings of two or more capitals inside running text a slight letterspacing applied by the renderer, never by authors, and define each abbreviation on first use in a lesson.** Bringhurst letterspaces all strings of capitals [@bringhurst2012elements]; De Vinne finds small capital strings dense without hair-spacing [@devinne1910practice]. Craft consensus; the size of the benefit on screens is untested.
+
+*In LTF:* add a small remark step in `MarkdownContent` that wraps runs of capitals (KIAS, MSL, AGL, ICAO codes) in a span with about 0.03 to 0.05 em of tracking, so authors write plain text. The glossary chips in the right rail already define terms; make sure the first use of each abbreviation in a lesson is either a glossary term or spelled out.
+:::
+
+### The smallest capitals
+
+De Vinne's threshold of nine point and smaller [@devinne1910practice] lands, by coincidence of units, exactly on LTF's most common capital label. CSS defines 1 pt as 4/3 px, so the 12 px `eyebrow` is 9 points. The eyebrow is full capitals, not small capitals, at 600 weight with 0.08em tracking, and capitals at 12 px stand about 8.6 px tall in Instrument Sans (cap height 0.72 em in the shipped file). It is at the edge the craft tradition names as dense. That does not make it wrong. It makes its tracking and its weight necessary, and it means the eyebrow should not go any smaller, or be set lighter, or be used for text longer than a few words.
+
+Use is the other issue. The eyebrow-over-heading pattern is the dossier's most common heading pattern (landing sections, `PageHeader`, module and challenge cards, stat tiles, table headers), and it is one of the traits it lists as generic. A small capital label above every heading is the modern form of Warde's running headline: repeated furniture that competes with what it labels [@warde1955crystal]. Where the eyebrow carries information ("Module 3 · Up next", "Challenge C4.3 · Landing"), it is earning its place. Where it repeats what the heading or the page already says, it is noise.
+
+::: {.rule #TYP-038 grade="C"}
+**Do not set capital labels smaller than 12 px or lighter than semibold, and use an eyebrow only when it says something the heading does not.** De Vinne finds capitals of nine point and smaller dense [@devinne1910practice], and 12 px is 9 points; Warde warns against repeated furniture that shouts [@warde1955crystal]. Craft consensus.
+
+*In LTF:* keep the `eyebrow` at its current 12 px, 600, 0.08em. Audit its uses: the stat labels, table headers and section eyebrows on `LandingPage` and `DashboardPage` are candidates for removal or for sentence-case labels in `label` (14/20, 500), where the eyebrow repeats the heading.
+:::
+
+### Long strings of digits
+
+Bringhurst's 2.1.6 extends letterspacing to long strings of digits [@bringhurst2012elements]. Digits in most proportional faces are designed to sit next to letters, not to each other, and a long run of them (a frequency, a long altitude, a phone number, a date) can clot. LTF handles most numbers that matter by setting them in JetBrains Mono, whose fixed advances (every glyph in the shipped file is 0.6 em wide) space digits evenly by construction. Numbers inside prose, set in Instrument Sans, are the case to watch. They are usually short in lesson text, and for them the better answer is the numeral style discussed in the chapter on figures, not tracking.
+
+::: {.rule #TYP-039 grade="C"}
+**Set long strings of digits that the learner must read or copy (identifiers, frequencies, codes) either in the mono face or with slight letterspacing, never tightly in the text face.** Bringhurst letterspaces long strings of digits [@bringhurst2012elements]. Craft consensus.
+
+*In LTF:* the `readout` utilities already put such values in JetBrains Mono; keep that. In `BriefTab`'s "Sim setup" `dl`, where values have copy buttons, every copyable value should be mono.
+:::
+
+### What this means for Learn to Fly
+
+LTF's eyebrows and tier badges already follow the oldest rule in this chapter (TYP-034): capitals are tracked, lowercase is not, with a few mixed-case exceptions to remove. The product also keeps capitals out of warnings and instructions, and the components carry emphasis by color, icon and border instead; that should become an explicit rule for content authors and reviewers (TYP-036), because content is where capitals creep in.
+
+The new work is in running text and in restraint. Abbreviations and identifiers are the learner's vocabulary; give them light tracking automatically and a definition on first use (TYP-037). Treat the 12 px eyebrow as a floor and use it less (TYP-038): an eyebrow above every heading is one of the generic traits the owner sees, and removing the redundant ones makes the remaining ones informative. Widen word spaces in multi-word capital labels (TYP-035). Leave numbers that must be read exactly in the mono face (TYP-039). And retire word shape from design discussions; it is a myth.
