@@ -448,7 +448,7 @@ Gagné's theory links two things: different kinds of learning outcome require di
 
 ### Specifics
 
-Five categories of learning outcome, as the secondary accounts list them: intellectual skills (knowing how to do something procedurally, which Gagné treats as a hierarchy that builds from discrimination through concepts and rule use to problem solving), verbal information (knowing that something is the case), cognitive strategies (the learner's internal management of attention, learning and thinking), motor skills (coordinated physical movements) and attitudes (internal states that influence choices of action). One account lists the intellectual-skills levels as discrimination, concrete concepts, rule using and problem solving; another description of the hierarchy in the literature includes defined concepts and higher-order rules, so the exact number of levels differs between secondary accounts.
+Five categories of learning outcome, as the secondary accounts list them: intellectual skills (knowing how to do something procedurally, which Gagné treats as a hierarchy that builds from discrimination through concepts and rule use to problem solving), verbal information (knowing that something is the case), cognitive strategies (the learner's internal management of attention, learning and thinking), motor skills (coordinated physical movements) and attitudes (internal states that influence choices of action). One account lists the intellectual-skills levels as discrimination, concrete concepts, rule using and problem solving.
 
 Conditions. Internal conditions include existing memory schemata, information-processing capacity (working memory, attention control) and motivation. External conditions are what the designer controls in the environment.
 
