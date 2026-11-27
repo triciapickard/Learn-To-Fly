@@ -1,0 +1,44 @@
+# Lane 26: Writing for interfaces and learners
+
+## morkes1997concise
+
+Morkes, J. and Nielsen, J. (1997). Concise, SCANNABLE, and Objective: How to Write for the Web. Nielsen Norman Group.
+
+### Core claims
+Web readers scan rather than read, so text written for paper performs poorly on screen. Three writing changes were tested against a deliberately boastful control: cutting the word count in half (concise), reformatting for scanning with lists, headings and bold keywords (scannable), and removing promotional exaggeration (objective). Each helped on its own, and the three combined helped most. The paper is one of the earliest controlled measurements of how writing style, rather than layout or navigation, changes usability.
+
+### Specifics
+The article reports three studies with 81 users in total (11, 19 and 51). Studies 1 and 2 were exploratory. In Study 1, 11 participants (6 end users, 5 technical users) did directed tasks on existing sites, and navigation problems dominated what they said. In Study 2, 19 participants (ages 21 to 59, all with at least five months of web experience) were sent to three of 18 preselected sites and thought aloud. Most of them (15) scanned before reading. They preferred concise, simple, informal writing, summaries and the inverted pyramid.
+
+Study 3 was the measurement study. Fifty-one experienced web users, recruited by Sun, averaged about two years of web experience and ranged from 22 to 69 years old. Web professionals, writers and programmers were excluded so that the sample stood for "normal users". It used a five-condition between-subjects design on a seven-page site called "Travel Nebraska", with identical hypertext structure and essentially the same information in every version. Nebraska was chosen to limit prior knowledge. The versions were promotional (control, "marketese"), concise (about half the control's word count), scannable (bulleted lists, bold keywords, captions, shorter sections, more headings), objective (no exaggeration) and combined.
+
+Measures were task time in seconds, task errors, memory (recognition and recall), time to draw the site map, site map accuracy, and subjective satisfaction on a 1 to 10 scale. Mean task time was 359 seconds for the control and 149 for the combined version. Mean task errors fell from 0.82 to 0.10. Satisfaction rose from 5.7 to 7.0 for the combined version, with the scannable version highest at 7.4. Normalized overall usability, with the control at 100, was 158 for concise, 147 for scannable, 127 for objective and 224 for combined. The authors present these as improvements of 58%, 47%, 27% and 124%. Site map accuracy showed no significant differences, and one hypothesis (about memory) was only partly confirmed. The article also cites a separate project in which rewritten Sun pages scored 159% higher than the originals (all figures from nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/).
+
+### Replication and criticism
+The study is a small-sample, between-subjects usability experiment (about 10 users per cell), reported in an industry venue and not peer reviewed. The "improvement" percentages are composites that Nielsen built by normalizing and averaging heterogeneous measures, so they are better read as direction and rough size than as precise effects. The site was one fictional travel site with fact-finding tasks, so the findings may not carry to explanatory or instructional writing, where a learner needs reasoning and not only a fact. The "objective" condition changed tone and content together, so the effect of tone alone is hard to separate. Later eyetracking work by the same group (see nielsen2006fshaped) and a wider literature on scanning agree on the direction, but there is no formal replication of these exact conditions that I could confirm. Treat the sizes as indicative.
+
+### Implications for LTF
+The study supports a house rule that lesson text should lead with the point and keep paragraphs to one idea. It also tells us what not to infer. LTF is not a fact-finding site, since learners must understand why a procedure works, so "halve the words" should not be applied by cutting explanation. Cut padding, hype and throat-clearing instead. The "objective" result argues against encouraging copy ("You'll be flying in no time!") in lesson and challenge text, and for plain statements of what the learner will do. In fly mode, where the learner glances between the sim and the page, the scannable treatment (short numbered steps, bold action words, one idea per line) is the right default, because that reader is scanning by necessity. For quizzes and challenge briefings, put the task in the first line. Where we want deliberate reading, such as a warning about a real procedure, do not format it as skimmable fragments that the learner will skim past.
+
+Confirmed this session: read the full NN/g article at https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/ (study design, Tables 1 and 2, percentages); cross-checked the 58, 47, 27 and 124 percent figures on https://www.nngroup.com/articles/how-users-read-on-the-web/.
+
+## nielsen1997how
+
+Nielsen, J. (1997). How Users Read on the Web. Nielsen Norman Group, 30 September 1997.
+
+### Core claims
+Nielsen's short alert summarizes the early Sun usability work for practitioners: people do not read web pages word by word, they scan. The article reports that 79% of test users always scanned any new page they encountered and only 16% read word by word. From that, he derives guidelines for writing: highlight keywords, use meaningful subheadings, use bulleted lists, keep one idea per paragraph, use the inverted pyramid, and write half the text or less. He also argues that credibility is something users look for and that promotional language lowers it.
+
+### Specifics
+The page gives the figures 79% scanned and 16% read word by word (nngroup.com/articles/how-users-read-on-the-web/, fetched this session). It cites the improvements that came from the companion measurement study (morkes1997concise): about 58% for concise text, 47% for scannable layout, 27% for objective language and 124% for the combination. It lists eight guidelines: highlight keywords (hypertext links, typeface variations, color); write meaningful subheadings and not clever ones; use bulleted lists; keep one idea per paragraph, because users skip any second idea if the first words of the paragraph do not catch them; use the inverted pyramid, with the conclusion first; use half the word count of conventional writing or less; avoid "marketese"; and support credibility with good writing, graphics and outbound links. It notes that newsletters are read even more abruptly than web pages. The article is a summary, not a paper, and does not describe the sample behind the 79% and 16% figures beyond naming the study it draws on.
+
+The article belongs to a wider discussion about whether reading online is different in kind from reading on paper. Nielsen's position is that it is, because screens are tiring and users are task driven. A reasonable qualification is that scanning is a strategy readers adopt when they have a task and the text is dense, not a fixed trait of web users.
+
+### Replication and criticism
+The 79 and 16 percent figures come from a small usability sample and have been quoted for decades without the sample size attached. The broader finding, that users scan when a page looks dense and they have a goal, is consistent with eyetracking results from the same group (nielsen2006fshaped) and with what Krug reported from observation (krug2014dont). Two limits matter. First, the sample was of mostly experienced web users in 1997, and screens, habits and typography have all changed. Second, scanning is not evidence that people comprehend by scanning. People in a learning situation may read closely precisely the sentences they decide are relevant. A fair summary is: expect scanning, make scanning productive, and do not assume it is the only mode.
+
+### Implications for LTF
+For LTF this is the evidence behind the heading and list conventions in lesson pages. Headings should say what the section tells you ("Raise the nose slowly in the flare"), not tease it. First words of bullets and headings should carry the information, because the eye lands on them first. For fly mode, assume the learner reads in glances: every step starts with the verb, one action per line. For a learner reading a lesson at a desk, the same rules still help but should not stop longer explanatory paragraphs where the logic of a maneuver needs them. Credibility matters for an aviation product: avoid hype, cite sources for facts, and link outward to the real references (FAA handbooks) where appropriate.
+
+Confirmed this session: https://www.nngroup.com/articles/how-users-read-on-the-web/ (title, date, 79% and 16%, eight guidelines).
+

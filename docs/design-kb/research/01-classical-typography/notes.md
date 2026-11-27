@@ -399,3 +399,37 @@ The best-known number, 66 characters, is quoted as the ideal but the line-length
 5. Treat "honor content" as the rule: type decisions must never change or obscure meaning.
 
 Confirmed this session: Wikipedia at https://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style (editions, Zapf, Hoefler and Frere-Jones). Section titles and quotations on https://webtypography.net/toc/ , /2.1.1, /2.1.2, /2.2.1 and /3.1.1. Typographica review at https://typographica.org/?p=10147. First-principle sentence from a web search result citing the book (page 17 via Viget). Open Library work OL854086W lists the Hartley & Marks editions; ISBN 9780881792126 also appears on a Blackwell's listing for this title.
+
+## tracy1986letters
+
+Walter Tracy, *Letters of Credit: A View of Type Design* (London: Gordon Fraser, 1986; Boston: David R. Godine, 1986).
+
+### Core claims
+
+Tracy spent about thirty years at British Linotype and later became a Royal Designer for Industry; his book is a working type designer's account of what makes letterforms good. The publisher-side descriptions say it traces the shift from hot-metal typesetting to photo and computer composition, argues that letterforms keep evolving under the same principles of taste, proportion and clarity, and contends that poorly made typefaces multiplied as production became easier. A library description calls it a "guide to and evaluation of typographic practices and type design." Readers' summaries say it covers measure, legibility, readability and letterforms, and, in a second part, assesses well-known designers and some of their best-known designs.
+
+I could not read the book or a table of contents, so the chapter structure is not confirmed. I describe only what secondary sources report.
+
+### Specifics
+
+Biographical facts that bear on the book's authority, from Wikipedia: Tracy was born in 1914, apprenticed as a compositor at fourteen, joined British Linotype & Machinery in 1947 and 1948, and worked there about thirty years. He designed newspaper faces (Jubilee, 1953; Telegraph Modern, 1969; Times Europa, 1972, made when The Times asked for a replacement for Times New Roman), led Arabic type work, and died on 28 April 1995. His practice was newspaper and text typography, so his view of legibility is that of a designer judging faces for mass reading.
+
+The part of the book most often discussed is his method for letterspacing. A GitHub write-up of the method (a paraphrase, with no page numbers) says: in lowercase, n is the control letter and the space between its stems, halved, is the starting point, adjusted by eye in a row of n's; o is the round standard, spaced by inserting it among n's. In capitals, H and O play the same roles. Other sidebearings derive from these according to whether a glyph's outer edge is straight or round. The same write-up reports that Tracy says a, f, g, s, t and z (and, in capitals, S) must be spaced visually, and calls the method conservative and only a partial basis for automation.
+
+Elsewhere, the Wikipedia article on Univers reports that Tracy judged Univers better proportioned for text than Helvetica; I treat that as weak because I did not see Tracy's own wording.
+
+### Replication and criticism
+
+It is a craft book, so there is no replication. Reader reviews on Goodreads are positive in tone (an average of about four of five on 52 ratings) and describe the book as "insightful and opinionated"; one reviewer calls its spacing method the best in existence, which is enthusiasm, not evidence. The method itself is a heuristic that requires judgment, as the write-up notes. Because the book dates from 1986, it covers the end of hot metal and the start of digital type, not the screen-first practice of today.
+
+Its judgments of other designers' work are one practitioner's craft opinion and should be weighed accordingly.
+
+### Implications for LTF
+
+1. LTF will mostly choose existing typefaces, not design them, but Tracy's spacing tests are a quick acceptance check: set a row of n's and o's and a row of H's and O's in the candidate face at body size. Uneven rhythm or dark clumps mean the face's spacing is weak.
+2. Avoid manual tracking on lowercase body text; let the font's spacing do the work. If a face needs heavy correction to look even, pick another face. This follows from his emphasis on spacing as the face's responsibility (my reading).
+3. Letterspacing capitals is a separate, deliberate choice (compare Bringhurst, Tschichold and De Vinne), appropriate for all-caps labels.
+4. His career in newspaper typefaces is a reminder that text faces for mass reading tolerate wear and compression; for LTF, that suggests testing candidate faces at the smallest sizes and in dark mode on actual devices.
+5. Prefer faces from designers who document their spacing and metrics, so rendering across platforms is predictable.
+
+Confirmed this session: Google Books record (G. Fraser, 1986, 219 pages, ISBN 0860920852; description) at https://books.google.com/books/about/Letters_of_Credit.html?id=FpTgAAAAMAAJ ; Goodreads page at https://www.goodreads.com/en/book/show/445607.Letters_of_Credit ; biography at https://en.wikipedia.org/wiki/Walter_Tracy ; spacing write-up at https://github.com/n8willis/kernall/blob/master/tracy.md. Open Library work OL5262363W lists the Gordon Fraser and Godine editions. The Christian Science Monitor review could not be fetched (403); only its summary appeared in search results.

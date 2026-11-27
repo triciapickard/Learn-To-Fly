@@ -336,3 +336,38 @@ This is an expert essay, not a study. Its strength is that every claim traces to
 4. Because word spaces guide the next saccade (Pollatsek and Rayner 1982, cited here), do not remove spaces or squeeze word gaps in fly mode.
 
 Confirmed this session: WebFetch of the full page text; WebSearch for bibliographic listing; the Microsoft Research listing (microsoft.com/en-us/research/?p=754033) for the author and January 2005 date. Original papers cited by Larson were not read.
+
+## arditi2005serifs
+
+Arditi, A., & Cho, J. (2005). Serifs and font legibility. *Vision Research*, 45(23), 2926-2933. DOI 10.1016/j.visres.2005.06.013.
+
+### Core claims
+
+Do serifs make letters easier to read? The usual answers are opinion: some typographers say serifs help the eye along the line, others that sans serif is cleaner. Arditi and Cho tested it directly by building lowercase fonts that differ only in serif size. Their abstract reports that fonts with serifs at 5 per cent of cap height were slightly more legible than sans serif in size-threshold tests, but that the extra inter-letter spacing that serifs themselves impose predicts more improvement than was observed, and RSVP and continuous reading speeds showed no effect of serifs at all. Overall: "our data exhibited no difference in legibility between typefaces that differ only in the presence or absence of serifs" (abstract). Where serifs help at all, they may do so by adding space between letters when text is small or distant.
+
+### Specifics
+
+Stimuli. Nine fonts were generated with parametric software, varying only serif size (0, 5 or 10 per cent of cap height) and inter-letter spacing (0, 10 or 40 per cent of cap height). Stroke thickness was 10 per cent of cap height and x-height 55 per cent. Spacing was added at the letter edges, so glyph shapes stayed the same across conditions. This avoids the confounds of comparing real fonts, which differ in many ways at once.
+
+Participants. Four normally sighted observers and two with age-related maculopathy (acuity of 1.0 and 0.6 logMAR).
+
+Experiment 1, size thresholds. Random five-letter lowercase strings were shown on a monitor, and a staircase found the letter size at 68.6 per cent correct. Spacing had a strong effect (F[2,8] = 143.9), with thresholds falling as spacing grew, a crowding effect. Serif size had a smaller, systematic effect (F[2,8] = 10.1, p = 0.006), and the 5 per cent serif usually gave the lowest threshold. Vision status was not significant.
+
+Experiment 2, RSVP. Sentences from the MNREAD set (56 characters) were presented word by word using the three fonts with 10 per cent spacing. No systematic serif effect and a non-significant ANOVA.
+
+Experiment 3, continuous reading on paper. Three scrambled passages of about 400 words at roughly ninth-grade difficulty, printed in 18-point type and read aloud (low-vision readers used magnifiers). No systematic serif effect.
+
+The spacing arithmetic. Fourteen of 26 lowercase letters carry baseline serifs, so serifs add on average 2.69 per cent of cap height of spacing for the 5 per cent serif and 5.38 per cent for the 10 per cent serif. Using the measured slope of threshold against spacing, spacing alone would predict threshold reductions of 6.88 and 13.77 arc minutes. The observed reductions were much smaller, so the authors infer that serifs may slightly interfere at small sizes, offsetting part of the spacing benefit.
+
+### Replication and criticism
+
+The study is a careful controlled experiment but small: four normal and two low-vision observers, a single font design and one language. The authors state that subtle effects cannot be excluded, and that the two low-vision observers do not support firm conclusions about low vision. It sits among prior work that was inconclusive in both directions: they cite McLean (1980) arguing sans serif letters look more alike, and Rubinstein (1988) arguing serifs help and reduce fatigue, as opinion, and Morris et al. (2002), who found RSVP slowing with serif type only at very small sizes. Richardson (2022) reviews the wider literature and reaches a similar conclusion, that there is no difference in legibility between serif and sans serif typefaces on paper or screen (see richardson2022legibility). The spacing finding is consistent with crowding research (see pelli2008uncrowded).
+
+### Implications for LTF
+
+1. Do not pick a typeface by claiming serifs or sans serif are "more legible". The best evidence says the difference is negligible at ordinary sizes. Choose for personality, language support, numeral design and weight range, and test the choice.
+2. Spacing is the active ingredient. At small sizes, loosen spacing; a face with built-in generous spacing is a better bet for small gauge labels than adding serifs.
+3. Serifs may matter a little at small or distant sizes. For fly mode text seen at a distance, favor open spacing and test with real viewing distances.
+4. Whatever is chosen, keep it consistent across lessons and fly mode.
+
+Confirmed this session: Crossref record; abstract via Europe PMC (PMID 16099015); full text at pmc.ncbi.nlm.nih.gov/articles/PMC4612630 read via WebFetch (method, statistics and spacing arithmetic from that summary; the article gives speeds in figures only, so no reading-speed numbers are quoted).

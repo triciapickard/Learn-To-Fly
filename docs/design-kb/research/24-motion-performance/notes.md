@@ -189,3 +189,34 @@ The decorational versus representational split gives a simple review rule: if a 
 The sim itself is already the realistic animation: a lesson that asks the learner to watch their own aircraft in the sim while reading is likely better than an LTF animation that imitates the sim. LTF's animations should do what the sim cannot, such as showing hidden causes (forces, airflow) or slowing a quick event.
 
 Confirmed this session: Crossref DOI 10.1016/j.learninstruc.2007.09.013 (volume 17, issue 6, pages 722-738, December 2007); abstract-level numbers read via https://www.leibniz-ipn.de/en/research/publications/instructional-animation-versus-static-pictures-a-meta-analysis and a web search summary. Full text not read; later meta-analyses mentioned only from a search summary.
+
+## bederson1999animation
+
+Bederson, B. B. and Boltman, A. (1999). Does animation help users build mental maps of spatial information? *Proceedings of the IEEE Symposium on Information Visualization (InfoVis '99)*, 28-35.
+
+### Core claims
+
+The authors ask whether animating a viewpoint change (a smooth glide from one place to another) helps users build a mental map of a spatial information space, compared with an instant jump. Their abstract reports that animation improved users' ability to reconstruct the information space, with no penalty on task performance time, and they say the study provides strong evidence for adding animated transitions in applications with fixed spatial data where the user navigates around the data space. The paper is careful to treat animation as a time cost: in the worst case an animation is just an increase in system response time, so a transition that is too fast may not connect old and new states, and one that is too long wastes the user's time.
+
+### Specifics
+
+The study used a Pad++ zoomable interface. Participants navigated family trees, clicking on family members to move around, where each person was shown as a photograph with a name above it. The trees were large relative to the screen, so navigation required moving the viewpoint.
+
+- Animated condition: the viewpoint glided to the destination, showing the places in between. All animations lasted exactly one second at 20 frames per second, with an average speed of 750 pixels per second, using slow-in slow-out (speed increases smoothly, runs at a constant rate in the middle and decreases smoothly at the end). The non-animated condition jumped immediately to the destination.
+- Design: each participant used an animated tree and a non-animated tree, with half given the animated tree first. Tasks were: navigating to learn relationships, answering questions from memory, and reconstructing the tree away from the computer by placing printed photographs. Error scoring for reconstruction counted faces in wrong positions and also weighted errors by distance (weight one for a swap or same-row error, two for one row off, three for two rows off). Subjective satisfaction used a subset of the QUIS questionnaire.
+- Participants: twenty, aged 20 to 44 (mean 27), 55% male, nearly all university students, paid $10 each. Training required 100% accuracy.
+- Results: reconstruction errors were significantly lower with animation, both unweighted (F(1,19) = 16.165, p = .001) and weighted (F(1,19) = 16.816, p = .001); the significance threshold was set at p of 0.01 or lower. There was no significant difference in navigation time or correctness, memory recall questions or satisfaction. There was an ordering effect: when the animated tree came first there was little difference, and when it came second animation was significantly better. 75% of subjects said the animation helped them learn relationships, and 25% said it slowed them down, although subjects did not prefer the animated transitions overall.
+
+The authors explain the pattern as animation helping with spatial relationships but not more complex relationships among data, and they note that their data set is small. They also report in the introduction that in pilot studies and their experience animations of about one second struck a balance, citing others who found one-second animations appropriate.
+
+### Replication and criticism
+
+A single experiment with twenty students and one task domain, so the generalization to "many applications" is the authors' claim, not a demonstrated result. The ordering effect suggests some of the benefit appeared only after practice, which should make a designer cautious about first-time users. The no-effect results for memory and satisfaction are as important as the positive one. Later work extends the question to graph layouts and animated data graphics (Heer and Robertson 2007; Dragicevic et al. 2011, both in this lane), and the review by Tversky et al. (2002) predicted exactly this mixed picture: animation tends to help at the perceptual level of tracking and spatial relationships, and less at conceptual levels. An accessible follow-up in the dynamic graph literature, found in the same search, examines animation and mental map preservation (PubMed record 20498503), which I did not read.
+
+### Implications for LTF
+
+LTF has two places where viewpoint change is real: moving between sections of a long lesson, and zoomed or panned diagrams such as a chart or airport diagram view. When a diagram view changes, a one second eased glide kept learners oriented without slowing them down in this study, so a short glide is preferable to a jump cut for panning or zooming over a fixed spatial layout. Do not extend this to ordinary page navigation, where no continuous space exists to preserve.
+
+The result also sets a ceiling on what to claim: the animation helped rebuild the layout, not learn relationships. A glide on a chart helps a learner remember where things are, but quizzing on the relationships needs other design (retrieval practice, worked examples), covered elsewhere in the knowledge base. Treat any transition longer than about a second with suspicion, since the study's own framing is that transitions are response time. In fly mode, skip the glide: the learner needs the new information immediately.
+
+Confirmed this session: Crossref returned the IEEE proceedings record (DOI 10.1109/infvis.1999.801854, pages 28-35) and a 2003 reprint; the open technical report HCIL TR 98-11 (CS-TR-3964, September 1998) read in full at https://www.cs.umd.edu/projects/hcil/jazz/learn/papers/CS-TR-3964.pdf, with the abstract also found on drum.lib.umd.edu. Numbers above come from that technical report; the conference version may differ in minor details.

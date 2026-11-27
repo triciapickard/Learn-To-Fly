@@ -468,7 +468,7 @@ All of the following was read on the guide page this session:
 
 ### Replication and criticism
 
-There is nothing to replicate in the experimental sense. The palette's usefulness has been tested by use in scientific publishing, and its design principle (vary luminance and hue along axes that dichromats can discriminate) matches the vision science in Brettel et al. and Machado et al. Limits: the palette gives eight categorical colors only, so it does not solve sequential or diverging scales; the page predates dark-theme web UIs, so the contrast of each palette color against a dark background has to be checked separately; and the prevalence figures are the authors' stated estimates for populations, which differ by sex and ancestry. The page's year is given as 2008 by a search summary; the fetched page did not show a date, so the year is the least certain element of the citation.
+There is nothing to replicate in the experimental sense. The palette has been adopted in several figure-preparation guidelines that turned up in search results (not read in detail), and its design principle (vary luminance and hue along axes that dichromats can discriminate) matches the vision science in Brettel et al. and Machado et al. Limits: the palette gives eight categorical colors only, so it does not solve sequential or diverging scales; the guide is written for figures and slides, so the contrast of each palette color against a dark UI background has to be checked separately (my inference); and the prevalence figures are the authors' stated estimates for populations, which differ by sex and ancestry. The page's year is given as 2008 by a search summary; the fetched page did not show a date, so the year is the least certain element of the citation.
 
 ### Implications for LTF
 
@@ -478,3 +478,69 @@ There is nothing to replicate in the experimental sense. The palette's usefulnes
 4. Avoid red text on dark backgrounds, which matters for fly mode, where dark themes and red cautions are both likely.
 
 Confirmed this session: web search result and fetch of jfly.uni-koeln.de/color/ (principles, prevalence figures, rules above); secondary listing of the palette (not used for numbers). No Crossref or Open Library record exists for a web page; verification is by web search and direct fetch.
+
+## w3c2024wcag
+
+World Wide Web Consortium (2024), "Web Content Accessibility Guidelines (WCAG) 2.2", W3C Recommendation (original publication 5 October 2023, republished 12 December 2024), with the "Understanding" document for Success Criterion 1.4.3.
+
+### Core claims
+
+WCAG 2.2 is the current normative web accessibility standard, and its color-related requirements are the rules LTF will be audited against. The contrast criteria express a minimum luminance contrast ratio between text and background; a separate Level A criterion forbids color as the only means of conveying information. Evidence type: a consensus standard written by a standards body, not an experiment, though its numeric thresholds are justified in the "Understanding" document by reference to vision research and earlier standards.
+
+### Specifics
+
+Read this session on w3.org/TR/WCAG22 and w3.org/WAI/WCAG22/Understanding/contrast-minimum.html:
+
+- 1.4.3 Contrast (Minimum), Level AA: text and images of text need a contrast ratio of at least 4.5:1; large-scale text needs at least 3:1. Exceptions cover inactive components, pure decoration, invisible text and logotypes.
+- 1.4.6 Contrast (Enhanced), Level AAA: 7:1 for text, 4.5:1 for large-scale text.
+- 1.4.11 Non-text Contrast, Level AA: visual information needed to identify user-interface components and states, and parts of graphics needed to understand content, need at least 3:1 against adjacent colors.
+- 1.4.1 Use of Color, Level A: color is not the only visual means of conveying information, indicating an action, prompting a response or distinguishing a visual element.
+- Large-scale text is at least 18 point, or 14 point bold.
+- Contrast ratio is (L1 + 0.05) / (L2 + 0.05), where L1 is the relative luminance of the lighter color and L2 of the darker; ratios run from 1:1 to 21:1. Relative luminance for sRGB is 0.2126 R + 0.7152 G + 0.0722 B with each channel linearized. The 0.05 term models typical viewing flare (IEC 61966-2-1).
+- Thresholds are not rounded: 4.499:1 does not meet 4.5:1.
+- Rationale in the Understanding document: 3:1 is the minimum recommended by ISO 9241-3 and ANSI-HFES-100-1988 for standard text; 4.5:1 compensates for the contrast sensitivity loss associated with about 20/40 acuity, estimated at about 1.5 times, citing Arditi and Faye (2004), so 3 times 1.5 gives 4.5; 7:1 relates to about 20/80 vision. The page links 20/40 acuity to typical acuity at about age 80 (Gittings and Fozard, 1986). It states that hue matters less than light-dark difference.
+
+### Replication and criticism
+
+The ratio is widely implemented and testable, and meeting it is the legal and procurement baseline in many jurisdictions (I did not verify the legal specifics this session, so I do not list laws). It is also criticized. The documentation of the Accessible Perceptual Contrast Algorithm (see somers2022apca) argues the ratio has no model of font size and weight, overstates contrast for dark colors, can pass pairs that are hard to read and does not suit dark mode; those are claims by a rival method's developer, not independent validation. The Understanding document itself says the ratios are thresholds with no rounding and that the formula assumes typical flare, which implies they are engineering approximations. The W3C WCAG 3 draft dated 10 September 2026, which I read, states that the contrast algorithm for WCAG 3 is yet to be determined and does not mention APCA, so WCAG 2.x remains the operative standard.
+
+### Implications for LTF
+
+1. Treat 4.5:1 for body text, 3:1 for large text and 3:1 for non-text parts (chart strokes, input borders, focus rings, widget scale marks) as pass/fail gates in CI for both light and dark themes.
+2. Contrast numbers must be computed on the theme tokens from the final composited colors, not on estimates; do not round up.
+3. Never encode correctness, status or instrument zones with color alone (1.4.1). Pair with text, shape or pattern.
+4. For fly mode, a dim environment may call for higher luminance contrast than the minimum, a consideration the standard does not address; test with real use next to a simulator.
+5. Treat AAA 7:1 as a target for the most safety-relevant text such as warnings and checklist steps shown in fly mode.
+
+Confirmed this session: WebFetch of w3.org/TR/WCAG22 (criteria, large text definition, status/date) and of the Understanding contrast-minimum page (formula, rationale and references); WebFetch of w3.org/TR/wcag-3.0 (draft status). The W3C is the author; no DOI exists.
+
+## somers2022apca
+
+Somers (2022), "APCA: the Accessible Perceptual Contrast Algorithm", documentation and reference code (Myndex SAPC-APCA and apca-w3 repositories, algorithm version 0.0.98G-4g, library 0.1.9).
+
+### Core claims
+
+APCA is a proposed replacement for the WCAG 2 contrast ratio, developed by Andrew Somers and Myndex Research as a method for predicting contrast for text and non-text content on self-illuminated displays, derived from the S-LUV model (SAPC). Its pitch is that readability depends on font size, weight, polarity (dark on light versus light on dark) and perceived lightness contrast, which a single luminance ratio cannot represent. Evidence type: a documented algorithm and design argument by its author, with citations to vision science, in public beta. It is not a peer-reviewed study and not a standard.
+
+### Specifics
+
+From the repository documentation (github.com/Myndex/SAPC-APCA, github.com/Myndex/apca-w3 and the WhyAPCA page), read this session:
+
+- Output is Lc (lightness contrast), a signed value roughly from minus 108 to plus 106, where the sign encodes polarity; an Lc 60 is meant to represent the same perceived contrast anywhere in the range.
+- Constants in the published library (algorithm 0.0.98G-4g, February 2021; library 0.1.9, July 2022): main exponent 2.4, text/background exponents 0.56, 0.57, 0.62 and 0.65, sRGB weights 0.2126729, 0.7151522 and 0.0721750, a black threshold of 0.022 and scalers of 1.14.
+- Guidance levels from the author's documentation: roughly Lc 90 preferred and Lc 75 minimum for body text, Lc 60 minimum for content text at larger sizes, Lc 45 for headlines, Lc 30 for placeholder-like text and Lc 15 as the floor for non-text; a lookup table maps font size and weight to a required Lc, and fluent-reading text is held to higher values than sub-fluent spot text.
+- Dark-mode note: the documentation advises keeping contrast below Lc 90 for large fonts.
+- Licensing: the repository states reference code is licensed to W3C working groups with limitations, and the license page describes naming and copyright terms. I read excerpts only, so check the license before reusing the code.
+
+### Replication and criticism
+
+The status is contested. The WCAG 3 working draft (10 September 2026) leaves the contrast algorithm "to be determined" and does not mention APCA; secondary sources reported that the visual contrast section was moved out of the draft in 2023 for further evaluation, which I could not confirm from a primary W3C page this session. Commentators (the search results cite Adrian Roselli's critique, which I could not retrieve) argue that adopting APCA instead of WCAG 2 contrast creates legal risk because only WCAG 2 ratios are in force. The author's documentation itself says that APCA is in beta, that WCAG 2 and perceptual models will give discrepancies and that readers must judge suitability for their region. The strongest published empirical anchors are Legge's work on contrast and reading rates (this lane), but the specific Lc thresholds are not validated in a peer-reviewed study that I could confirm.
+
+### Implications for LTF
+
+1. Do not replace the WCAG ratio checks with APCA: the standard in force is WCAG 2.2, and an APCA-only result will not be accepted by auditors.
+2. It is reasonable to use APCA as a second advisory check for dark-theme text and thin fonts, where the WCAG formula is the one most often criticized. If the two disagree, take the stricter result for body text.
+3. Record in the KB that Lc thresholds are guidance from the algorithm's author, not a standard, and mark any LTF rule derived from them as provisional.
+4. Re-check the status of WCAG 3 every time the color chapter is revised; the contrast algorithm is expected to change.
+
+Confirmed this session: WebFetch of github.com/Myndex/SAPC-APCA, github.com/Myndex/apca-w3 and the WhyAPCA documentation page; WebSearch summaries for status and criticism (secondary, flagged above); WebFetch of w3.org/TR/wcag-3.0 for the 2026 draft status. No Crossref record applies; the year 2022 is that of the library version 0.1.9 and the repository copyright range 2019 to 2022.

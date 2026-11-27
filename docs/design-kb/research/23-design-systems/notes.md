@@ -98,7 +98,7 @@ Confirmed this session: Open Library search by ISBN 0201633612 returned work OL6
 
 ## frost2016atomic
 
-Frost, B. (2016). *Atomic Design*. Pittsburgh: Brad Frost. Free online edition at https://atomicdesign.bradfrost.com/.
+Frost, B. (2016). *Atomic Design*. Brad Frost. Free online edition at https://atomicdesign.bradfrost.com/.
 
 ### Core claims
 
