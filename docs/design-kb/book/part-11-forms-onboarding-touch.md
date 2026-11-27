@@ -1744,3 +1744,129 @@ Keep the 44 px header nav, the `min-h-11` quiz options, the whole-label `Checkbo
 edge controls (FRM-061). Add a component test that measures the rendered hit area of every
 interactive element on `/dev/components` against 24 px, and of the fly-mode controls against
 44 px, so the policy is enforced in CI rather than by review.
+
+## Gestures, dragging and commit on release
+
+### Which gestures people already know
+
+Wobbrock, Morris and Wilson asked 20 participants with no prior touchscreen experience to
+invent gestures for 27 commands on a tabletop, after seeing an animation of each command's
+effect [@wobbrock2009userdefined]. Agreement among participants was modest: an average score
+of 0.32 for one-handed and 0.28 for two-handed gestures, and the more conceptually complex the
+command, the less people agreed (r = -.52). Simple commands produced physical gestures such as
+dragging; complex ones produced metaphorical or symbolic gestures that few people shared. The
+participants rarely cared how many fingers they used, preferred one hand to two, and were
+strongly shaped by desktop idioms. The consensus set covered 57.0 percent of all gestures
+proposed and deliberately included aliases, several gestures for one command. The three
+authors had each designed a set in advance, and each covered only 43.5 percent of what users
+produced. The limits are real: a tabletop is not a phone, there was no recognizer or feedback,
+and later critics have argued that agreement scores depend on how commands are shown and on
+habits carried over from other devices.
+
+The finding that transfers is that a beginner's gesture vocabulary is small and borrowed: tap,
+drag, and the pinch and swipe that phones taught everyone. Anything beyond that must be taught,
+and LTF's learners already have a whole cockpit to learn.
+
+::: {.rule #FRM-064 grade="B"}
+**Use only gestures beginners already know (tap, drag, pinch, swipe), and give every gesture a
+visible control that does the same thing.** Agreement on invented gestures was low and fell
+further for complex commands, which the authors suggest need on-screen widgets
+[@wobbrock2009userdefined].
+
+*In LTF:* no multi-finger or edge gesture moves between steps, lessons or tabs. Any pinch-zoom
+on a chart widget is matched by visible zoom buttons.
+:::
+
+::: {.rule #FRM-065 grade="B"}
+**Offer more than one way to perform an adjustment, such as dragging a slider or tapping
+buttons beside it, and do not require a particular number of fingers or a free-form path.**
+Aliases raised guessability, and finger count did not reliably distinguish users' intentions
+[@wobbrock2009userdefined]. Free-form path gestures were the slowest and least accurate
+techniques in a comparison under distraction, at 81.4 and 83.5 percent accuracy
+[@bragdon2011experimental].
+
+*In LTF:* `RangeField` keeps the native range input, which accepts drag, track taps and arrow
+keys. Where a widget adjusts a value the learner must hit precisely, add minus and plus
+buttons beside the slider.
+:::
+
+### Commit on release
+
+Sears and Shneiderman's lift-off strategy commits a touch selection only when the finger is
+lifted, which lets the person see where they landed and slide to correct or cancel
+[@sears1991high]. That is how the browser's `click` event already behaves on touch, so LTF
+gets the benefit as long as it does not bypass it. The code reviewed for this Part has no
+`onPointerDown` handlers.
+
+::: {.rule #FRM-066 grade="B"}
+**Commit any action on release, never on touch-down or pointer-down, so the learner can slide
+off a control to cancel.** Lift-off selection let touch match mouse accuracy down to very small
+targets where land-on selection did not [@sears1991high].
+
+*In LTF:* use `onClick` for ticking steps, checking answers and submitting. A lint rule or
+review check flags `onPointerDown` and `onTouchStart` handlers that change state.
+:::
+
+### Dragging along a path
+
+Accot and Zhai showed that steering a pointer through a tunnel follows a different law from
+pointing: time rises linearly with the path's length divided by its width, so doubling the
+length or halving the width doubles the time, a steeper penalty than pointing's logarithm
+[@accot1997beyond]. Error rates in their steering tasks were high (about 18 percent in one set
+of narrowing-tunnel conditions), and the law has held in follow-up studies across several
+input devices. A slider track, a drag along a drawn approach path and a diagonal move into a
+cascading menu are all steering tasks.
+
+::: {.rule #FRM-067 grade="B"}
+**Do not make a drag depend on staying inside a narrow corridor; give drag paths wide
+tolerance, and clamp a value at its limit rather than cancelling the drag when the pointer
+wanders.** Steering time grows linearly with length over width, and steering errors are high
+[@accot1997beyond].
+
+*In LTF:* any widget that asks the learner to trace or follow a path (for example on
+`TrafficPattern`) accepts a tolerance band as wide as the teaching point allows, and range
+inputs keep tracking when the pointer leaves the track vertically.
+:::
+
+WCAG 2.2 Dragging Movements, at level AA, requires that anything done by dragging can also be
+done with a single pointer without dragging, unless dragging is essential [@w3c2024wcag]. Its
+examples are a slider that also accepts a tap on the track, a map with directional buttons and
+a sortable list with up and down controls. LTF's ordering quiz already uses up and down
+buttons rather than drag and drop, which satisfies the criterion and is easier for a beginner
+on a tablet.
+
+::: {.rule #FRM-068 grade="C"}
+**Give every drag interaction a single-tap or button alternative.** Dragging Movements is a
+level AA requirement in WCAG 2.2 [@w3c2024wcag].
+
+*In LTF:* keep the up and down buttons in `QuizBlock` ordering questions. Any future
+drag-to-place widget (a dial, a map pin, a sortable checklist) ships with buttons or tap-to-set
+in the same release.
+:::
+
+### Keep the value out from under the finger
+
+Sears and Shneiderman's offset cursor solved a problem that every touch slider still has: the
+finger hides what it is setting [@sears1991high]. Hoober's observations add that fingers
+obscure content in ordinary use, and he advises testing prototypes by holding them
+[@hoober2013how]. `RangeField` puts its value readout above the track at the right, in mono,
+which keeps it visible during a drag from below.
+
+::: {.rule #FRM-069 grade="B"}
+**Show the value being set by a drag in a readout placed where the finger cannot cover it,
+above or beside the control, updating continuously.** The offset cursor let people see what
+they were selecting [@sears1991high], and fingers routinely hide content on touch screens
+[@hoober2013how].
+
+*In LTF:* keep `RangeField`'s readout above the track. For draggable needles or dials in
+widgets, mirror the value in a readout outside the dial face, and never only in a tooltip that
+appears under the finger.
+:::
+
+### What this means for Learn to Fly
+
+Keep the native range inputs, the button-based ordering quiz, `onClick` commits and the
+readout above `RangeField`. Add plus and minus buttons to sliders where precision matters
+(FRM-065), check every drag widget for a non-drag path and a wide tolerance before release
+(FRM-067, FRM-068), and add a check against state changes on pointer-down (FRM-066). Do not
+introduce custom gestures for navigation (FRM-064).
