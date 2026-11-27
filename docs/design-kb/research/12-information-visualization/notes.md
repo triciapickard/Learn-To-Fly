@@ -531,3 +531,33 @@ Use rates rather than raw counts when comparing sessions of different lengths.
 
 Confirmed this session: Open Library search (work OL17664549W, New Riders 2016); publisher page peachpit.com (table of contents, ISBN-13 9780133440539, 400 pages, February 8, 2016); Cornell INFO 3312 course notes on the five qualities (info3312.infosci.cornell.edu/notes/great-viz.html); WebSearch results on the five qualities. The book was not read.
 
+## playfair1786commercial
+
+Playfair, W. (2005). Playfair's Commercial and Political Atlas and Statistical Breviary (H. Wainer & I. Spence, Eds.). Cambridge: Cambridge University Press. (Original works 1786 and 1801.)
+
+### Core claims
+
+William Playfair, a Scottish engineer and political economist, is credited with inventing the main forms of statistical graphics: the line graph for time series and the bar chart in The Commercial and Political Atlas (1786), and the circle diagram, pie chart and Venn-like diagram in The Statistical Breviary (1801). The 2005 Cambridge volume reproduces the 1801 edition of the Atlas and the Breviary in color (per a search summary). Playfair's stated reason for using pictures was that "making an appeal to the eye when proportion and magnitude are concerned, is the best and readiest method of conveying a distinct idea" (Breviary p. 4, as quoted by Spence 2005). In other words, the founding rationale of data graphics is perceptual: the eye grasps proportion faster than a table does. This entry rests on a catalog record, Spence's commentary and secondary accounts, not Playfair's own text.
+
+### Specifics
+
+Inventions and dates (Spence, "No Humble Pie", Journal of Educational and Behavioral Statistics 30(4), 2005, which I read in full): Playfair had devised the bar chart and was first to advocate and popularize the use of the line graph for statistical time series in 1786. The pie chart was his last major invention, first appearing in the 1801 Breviary, where circles with areas proportional to the land areas of states are shown alongside sectors for parts of an empire (the Turkish empire divided into Asiatic, European and African sectors). Spence calls it the first pie chart to display empirical proportions and differentiate the parts by color, and credits the same pair of charts with a Venn-like diagram. Search summaries add that the Atlas had forty-four charts and that a historian (Stigler, via a math society notes page) dates the fully developed pie chart to 1805; the common attribution is 1801.
+
+Sources of ideas. Spence argues the bar chart was inspired by the chronological timeline diagram (Priestley 1765) and the line graph by his brother John's habit of having him chart daily temperatures. Playfair gave no account of the pie's inspiration; Spence speculates it derives from logic diagrams (Llull, Bruno, Leibniz, Euler) known through John Playfair.
+
+Accuracy. Spence notes Playfair's "lack of attention to accuracy was not uncharacteristic": areas in two linked diagrams do not match well, and the slope of a line in one chart depends on circle diameter.
+
+Spence's account of the later pie chart literature, which bears on method: Eells (1926) found proportions estimated faster and more accurately from pies than bars; Cleveland and McGill (1984) predicted pies would be worse because angle judgments are less accurate than length; Simkin and Hastie (1987) pointed out that the Cleveland and McGill task did not match how people read a pie (the segment against the whole) and found pies and bars equivalent when the task was proportion of the whole. Spence and Lewandowsky (1991) found pies and bars comparable for simple proportions, with a pie advantage on compound comparisons, and Hollands and Spence found pies did as well as other charts for a small number of proportions. Spence's view: criticism came from those who wanted the pie to do more than it could; it suits part-whole display of a few categories, not exploration or change over time. He adds that circular dials (airspeed indicators, altimeters) are preferred to linear ones for taking less space at the same or better resolution.
+
+### Replication and criticism
+
+Playfair's work is a primary historical source, not an experiment. Attribution of the pie is contested between 1801 and 1805, and the accuracy of his own charts was loose. The modern empirical debate about pies is unresolved in the way Spence describes: task-dependent. See the Cleveland entry for later work.
+
+### Implications for LTF
+
+Playfair's rationale supports the LTF default of showing a picture beside the numbers when the learner must grasp proportion or trend quickly. Two forms from him are directly useful: a time-series line for progress and a part-whole display for a few categories.
+
+For pies and rings, the evidence suggests restraint, not prohibition: a ring that shows one learner's completion of a lesson (part of a whole) is defensible, since the task is "how much of the whole", and Spence notes circular dials have been preferred in instruments such as airspeed indicators and altimeters for space and resolution. But do not use pies to compare many categories or changes over time. Keep to a few slices and label them directly.
+
+Confirmed this session: Open Library search (work OL3774437W; Cambridge University Press 2005, ISBN 9780521855549); Spence 2005 full text (classes.engineering.wustl.edu/cse557/spring2017/readings/no-humble-pie.pdf); WebSearch summaries; Playfair's text not read.
+

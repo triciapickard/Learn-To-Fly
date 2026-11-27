@@ -411,3 +411,55 @@ Methodologically, the paper shows how arbitrary definitions can be: its fixation
 5. If LTF measures attention, weight by fixation duration, map to named elements and fix the fixation definition in the protocol.
 
 Confirmed this session: Crossref record for DOI 10.1145/1518701.1518705; full text read from a PDF copy (dfki.de), including methods, results and the prediction numbers.
+
+## djamasbi2010generation
+Djamasbi, S., Siegel, M., & Tullis, T. (2010). Generation Y, web design, and eye tracking. *International Journal of Human-Computer Studies, 68*(5), 307-323.
+
+### Core claims
+Using a survey and an eye-tracking study, the authors examined what attracts Generation Y (here, ages 18 to 31) on retail home pages. Their abstract states that pages with "a main large image, images of celebrities, little text, and a search feature" may be preferred. The eye-tracking half supplies evidence about attention: large images and faces were fixated early and heavily, text blocks were not, and the highest-rated pages produced focused hot spots while the lowest-rated pages produced scattered fixation. The paper frames this with visual hierarchy, in which size and position steer where users look first.
+
+### Specifics
+I read the journal version. Study I was an online survey of 98 people (55 male, 43 female) who rated the visual appeal of 50 home pages that had been scored on four characteristics (large main picture, little text, search bar, celebrity images); pages with higher scores were rated as more appealing.
+
+Study II used the three most liked and three least liked pages from Study I. Nineteen employees of a Fortune 100 company, aged 18 to 31, viewed each page for at least 10 seconds on a Tobii 1750 eye tracker and gave an appeal rating; they could scroll and move on with the mouse. Fixation was defined as a gaze longer than 300 ms. Analyses: heat maps of cumulative fixations, areas of interest drawn on them, and time to first fixation in the first five seconds, giving an average viewing order.
+
+Findings: the highest-rated pages had focused, bright hot spots near the center of the page; fixation on the lowest-rated pages was much more scattered, suggesting that nothing immediately drew attention. Fixations on the best pages were on the main large picture and celebrity images. When many images were present, only the first few were fixated. Participants fixated faces within the first two fixations when a face was present. First fixations were mostly at the center and top of the area above the fold, typically on focal points when present; logos and top navigation were viewed within the first four fixations. Blocks of text were not fixated in the first few fixations on most pages. When a large main image was absent, long link lists in the navigation attracted early fixations. The area below the fold received little fixation over the entire viewing time. The authors suggest the early logo fixation is orientation to expected structure.
+
+### Replication and criticism
+Evidence quality is modest. The eye-tracking sample is 19 employees of one company in a narrow age band, viewing six pages chosen for being at the extremes of appeal, with instructions to rate appeal and not content. The authors say the large-image relationship may apply only to younger users. Image size, fame and layout are confounded across brands. Results about early fixation at the top and center and neglect below the fold are consistent with the larger Buscher et al. (2009) data (see buscher2009what), though that study used a different fixation definition (at least 100 ms in a 50 pixel radius) than the 300 ms used here, so numbers cannot be compared directly.
+
+A 2011 paper by the same group ("Visual hierarchy and viewing behavior", LNCS 6761), seen only as a Springer listing, reports more scattered viewing on pages with complex visual hierarchies; I did not read it.
+
+### Implications for LTF
+1. A clear focal point organizes the first seconds. Give each lesson page one dominant element (a large diagram or instrument) so the first fixations land on it and viewing is focused; pages with no dominant element produced scattered fixation.
+2. Faces draw early, heavy attention. If LTF uses people (an instructor, a pilot photo), expect them to compete with the content; place them where they point toward the content or leave them out of instrument pages.
+3. The top-left is a reliable orienting zone (logo, navigation, title). Keep consistent, calm identity there.
+4. Little text above the fold helps the first impression, but LTF's learners come to read; use a large image and a short headline above the fold, then structured text below, and do not hide critical instructions below the fold on first view.
+5. The study measured appeal, not learning. Do not infer that "prettier first impression" produces better comprehension; test comprehension separately.
+
+Confirmed this session: Crossref record for DOI 10.1016/j.ijhcs.2009.12.006; full text of the journal version PDF (WPI author page); the 2011 follow-up as a Springer listing via search only.
+
+## wickens2003attentional
+Wickens, C. D., Goh, J., Helleberg, J., Horrey, W. J., & Talleur, D. A. (2003). Attentional models of multitask pilot performance using advanced display technology. *Human Factors, 45*(3), 360-380.
+
+### Core claims
+Pilots divide their attention among flying, navigation, communication and monitoring for traffic, and the way information is presented (spoken versus on a display) changes how much scanning and workload this takes. The paper reports simulator experiments and then shows that the pattern of pilots' visual scanning can be predicted by an expected-value model of selective attention. The model is the root of what is now called SEEV (salience, effort, expectancy, value). This is the aviation human-factors source in the lane, and its authors' research group is a leading source on pilot attention.
+
+### Specifics
+From the abstract (Crossref): in Part 1, 12 instrument-rated pilots flew a high-fidelity simulation in which air traffic control information about traffic and flight parameters, delivered by voice, was compared with advanced display presentations of equivalent information (a cockpit display of traffic information and a data link display). Redundant combinations were also tested, while pilots flew, monitored for outside traffic and read back messages. The data suggested a modest cost for visual presentation over auditory presentation, a cost mediated by head-down visual scanning, and no benefit for redundant presentation. The effects were modeled by multiple-resource and preemption models of divided attention. In Part 2, visual scanning in all conditions was fit by an expected value model of selective attention derived from a previous experiment, accounting for 94 percent of the variance in the scanning data and 90 percent in a second validation experiment. The abstract names applications: guidance on choosing the modality for in-cockpit information and understanding the task strategies induced by new aviation technology.
+
+The SEEV formulation, as given in a later review of driver attention models (Kotseruba and Tsotsos, 2021, arXiv 2104.05677), which I read: the probability of looking at an area of interest depends on salience (S, the physical properties of events), effort (EF, distance from the previous fixation or demands of concurrent tasks), expectancy (EX, tied to the event rate or bandwidth of information in the area) and value (V, the reward for processing or the cost of missing information), each with a coefficient. A prescriptive version considers only bandwidth, relevance and task priority. Those authors report that expectancy and value were the dominant factors in later driving experiments and that predicted dwell times correlated highly with observed ones (r squared above 0.9 in one set), and that the model was originally proposed for pilots.
+
+### Replication and criticism
+Evidence: controlled simulator experiments with small samples (12 pilots), plus a model fitted to the scan data. The reported 94 and 90 percent variances are for aggregated dwell distributions across areas of interest, which is easier to fit than moment-to-moment scanning. Kotseruba and Tsotsos list limitations: SEEV does not model a visual-processing pipeline or the dynamic switching of gaze, because it computes cumulative gaze per area; in the original work the parameters were set a priori from assumptions about priority and bandwidth, which proved hard to establish in less structured driving settings; and in one lane-change experiment it failed to reproduce a left-right asymmetry. Extensions such as Adaptive Information Expectancy address dynamics. I saw a web search summary that a later study of experienced drivers at intersections found a poor fit, but did not verify it. The finding of "no benefit for redundant presentation" is specific to the tested tasks and displays and should not be generalized to all redundancy.
+
+### Implications for LTF
+1. People look where information changes fast and matters most. Expectancy (how often an instrument changes) and value (the task priority) predict scanning, so LTF's instrument-scan teaching should say which instruments change quickly and which matter for the current task, not merely list instruments.
+2. Effort counts. Information that is far away or behind another task is looked at less. In fly mode, keep the elements the learner needs together and near the simulator's reading line, and avoid separating related readouts.
+3. Salience is a bottom-up term in the model; the top-down terms dominate. Do not rely on color or motion alone to get the learner to look at a value; teach the task reason and place the value where the learner expects it.
+4. Head-down time has a cost. A second-screen coach that requires the learner to look away from the sim should be glanceable and brief; auditory delivery (voice prompts) may reduce head-down scanning for some information, though the modality finding is specific to the paper's tasks.
+5. Use the model as a design check in widgets: list the areas of interest, estimate each one's rate of change and task value, and see that the layout puts high-expectancy, high-value elements where effort to reach them is lowest.
+
+I did not verify any aircraft-specific numbers, and none are asserted here.
+
+Confirmed this session: Crossref record and abstract for DOI 10.1518/hfes.45.3.360.27250; the SEEV formulation and limitations from Kotseruba and Tsotsos (arXiv 2104.05677, downloaded and read); a web search summary for the driving-study caveat. The paper's full text was not read.

@@ -504,30 +504,59 @@ Cowan, N. (2001). The magical number 4 in short-term memory: A reconsideration o
 
 ### Core claims
 
-Cowan's target article is the standard correction to the popular "seven plus or minus two" rule. The abstract says Miller (1956) summarized evidence that people can remember about seven chunks in short-term memory tasks, but that this number "was meant more as a rough estimate and a rhetorical device than as a real capacity limit". Cowan brings together a wide range of data suggesting that a smaller, real limit of three to five chunks exists, and that a single central capacity limit averaging about four chunks is implicated alongside other sources of memory that are not capacity-limited. The article is a target review in a journal that prints open peer commentary, so the full text also contains many replies, some of which disagree. It is a theoretical synthesis of experiments, not a single study, and its strength comes from agreement across many procedures.
+Cowan's target article is the standard correction to the popular "seven plus or minus two" rule. The abstract says Miller (1956) summarized evidence that people can remember about seven chunks in short-term memory tasks, but that this number "was meant more as a rough estimate and a rhetorical device than as a real capacity limit". Cowan brings together a wide range of data suggesting that a smaller, real limit of three to five chunks exists, and that a single central capacity limit averaging about four chunks is implicated alongside other sources of memory that are not capacity-limited. It is a target review in a journal that prints open peer commentary, so the same issue contains replies, some of which disagree. Its strength is agreement across many procedures, not a single study.
 
 ### Specifics
 
-**Chunk, not item.** A chunk is a unit that is familiar and bound together in long-term memory. The limit is in chunks, which is why expertise matters: a pilot who recognizes a traffic-pattern configuration holds one chunk where a beginner holds many pieces. The paper's introduction describes Miller's own emphasis: his central concern was how grouping or "chunking" can increase effective capacity, and Miller suggested the number seven might be a coincidence.
+**Chunk, not item.** The limit is in chunks, not raw items. Long-term memory can combine items into larger chunks of unknown size, which is why the limit shows only when recoding is blocked, and why expertise matters (my illustration: a pilot who recognizes a traffic-pattern configuration holds one chunk where a beginner holds many pieces). The introduction says Miller's central focus was how grouping or "chunking" raises effective capacity, and that he suggested the specific limit of seven probably emerged as a coincidence.
 
 **Four conditions for seeing the pure limit.** Capacity can be observed (1) when information overload limits chunks to individual stimulus items, (2) when steps are taken to block recoding of items into larger chunks (for example, preventing rehearsal), (3) in performance discontinuities caused by the limit, and (4) in various indirect effects. Under these conditions rehearsal and long-term memory cannot combine items into chunks of unknown size.
 
-**Pure versus compound.** The article distinguishes a pure capacity estimate (in chunks) from compound short-term memory estimates, which are higher because strategies, long-term memory and time-limited stores contribute. Miller's seven plus or minus two is described as valid as a commonly observed compound limit for materials that allow some recoding.
+**Pure versus compound.** A pure capacity estimate (in chunks) differs from compound estimates, which are higher because strategies and long-term memory contribute. Miller's seven plus or minus two is called valid as a commonly observed compound limit.
 
-**Numbers.** The conclusion states that the evidence strongly suggests a mean memory capacity in adults of three to five chunks, with individual scores ranging from about two up to about six chunks. The article proposes a capacity limit for the focus of attention.
+**Numbers.** The conclusion says the evidence strongly suggests a mean capacity in adults of three to five chunks, with individual scores from about two to about six. The article proposes a capacity limit for the focus of attention.
 
-**Opposing views.** Cowan lists seven commonly held views against his thesis, including that the true limit is still Miller's 7 plus or minus 2, that memory is limited by elapsed time rather than item count, that there is no separate short-term memory at all, that there are no capacity limits per se but only scheduling constraints on performance, that there are separate limits for different material types, and that limits exist but are entirely task specific. He argues the evidence favors the four-chunk thesis, within boundary conditions.
+**Opposing views.** Cowan lists seven common views against his thesis, among them that the limit is still Miller's 7 plus or minus 2, that memory is limited by elapsed time, that there is no separate short-term memory, that apparent limits are only scheduling constraints, and that limits are entirely task specific. He argues the evidence favors four chunks within boundary conditions.
 
 ### Replication and criticism
 
-The article itself is contested in print. One of the published commentaries argues that the empirical data do not unequivocally support a consistent fixed capacity of four chunks, proposing instead that capacity is limited by the precision of specifying the temporal and spatial context of items, and that short-term memory is continuous with long-term memory. Others in the same issue propose a brain-based account tied to consciousness, and another comments on the difficulty of determining capacity from psychophysical experiments alone. So the status is: the idea that seven plus or minus two is a hard limit is widely regarded as wrong or at least wrongly generalized, a smaller limit of about four is supported by many paradigms, and its exact nature remains debated. The paper also warns that the limit can be observed only in carefully constrained circumstances; in other circumstances strategies increase what is recalled. This is why cognitive load theory (see the 2019 CLT retrospective in this lane, which cites Miller and others) says the limits apply to novel information and effectively vanish for organized knowledge held in long-term memory.
+The article itself is contested in print. One of the published commentaries argues that the empirical data do not unequivocally support a consistent fixed capacity of four chunks, proposing instead that capacity is limited by the precision of specifying the temporal and spatial context of items, and that short-term memory is continuous with long-term memory. Another commentary ties the limit to consciousness. Status: seven plus or minus two as a hard limit is not supported as such, a smaller limit of about four has support across many paradigms, and its nature remains debated. The paper warns that the limit shows only in carefully constrained circumstances. The 2019 CLT retrospective (this lane) likewise says working memory limits apply to novel information, not to organized knowledge in long-term memory.
 
 ### Implications for LTF
 
 - Do not cite "7 plus or minus 2" as a rule for menu length, number of nav items or checklist length. Miller's number was a rough estimate of recall for strings of items, not a design limit for visible lists; the lists a learner can see do not need to be held in memory.
 - The relevant limit for beginners is on how many new, unfamiliar, interacting things they must hold at once while reasoning. That number is small (the paper's three to five chunks is for carefully tested material), so introduce new concepts one or two at a time and let them become chunks before combining them.
-- A memory-aid checklist for use in fly mode should show the current item and perhaps the next, not the whole list in equal weight.
-- Group related readings into chunks that match cockpit layout (for example, power, pitch and trim as one relationship once learned) and teach them as units.
-- Do not turn the 3-to-5 figure into a hard rule in design specs: the paper itself says it depends on controlled conditions and individual scores range from about 2 to about 6.
+- A fly-mode checklist should emphasize the current item and perhaps the next, not the whole list equally.
+- Do not turn 3 to 5 into a hard rule in specs; the paper says it depends on controlled conditions.
 
 Confirmed this session: read the abstract, introduction and conclusion of the target article and the start of several commentaries in a PDF copy from the author's Missouri site (https://memory.psych.missouri.edu/assets/doc/articles/2001/cowan-bbs-2001.pdf), and the Crossref record for DOI 10.1017/S0140525X01003922 (volume 24, issue 1, pages 87-114). The body of the target article between introduction and conclusion was not read in full.
+
+## baddeley1992working
+
+Baddeley, A. (1992). Working memory. *Science*, 255(5044), 556-559.
+
+### Core claims
+
+This short Science article is a compact statement of the multicomponent model of working memory that cognitive load theory and multimedia learning theory both borrow. The abstract says working memory is a brain system that provides temporary storage and manipulation of the information needed for complex tasks such as language comprehension, learning and reasoning. The concept evolved from an earlier idea of a unitary short-term memory. Working memory requires the simultaneous storage and processing of information. It can be divided into three subcomponents: a central executive, assumed to be an attentional-controlling system, and two "slave systems", a visuospatial sketch pad that manipulates visual images and a phonological loop that stores and rehearses speech-based information. The article is a short review by the model's originator.
+
+### Specifics
+
+**Central executive.** The abstract describes it as an attentional-controlling system, important in skills such as chess playing and particularly susceptible to the effects of Alzheimer's disease.
+
+**Visuospatial sketch pad.** Manipulates visual images. In learning research this is the channel taken to carry diagrams, pictures and printed text seen on a screen, according to de Jong's gloss (de Jong 2010, this lane, which says working memory subsystems are one for visuospatial information such as written text and diagrams and one for phonological information such as narration, citing Baddeley and Hitch 1974).
+
+**Phonological loop.** Stores and rehearses speech-based information, and, according to the abstract, is necessary for the acquisition of both native and second-language vocabulary.
+
+**How the lane's sources use it.** Sweller, van Merriënboer and Paas (2019, this lane) cite Baddeley 1992 for the assumption that working memory can be subdivided into partly independent processors, one for verbal material and one for diagrammatic or pictorial material, so that effective capacity can be increased by using both rather than either alone; that assumption is the basis of the modality effect. Mayer and Moreno (2003, this lane) call the dual-channel assumption a central feature of Paivio's dual coding theory and of Baddeley's working memory theory, and add a footnote warning that a verbal channel should not be equated with an auditory channel, since printed words are also verbal. Kalyuga and colleagues (2003, this lane) cite Baddeley (1986) in the same way.
+
+### Replication and criticism
+
+The model is one of the most influential in cognitive psychology, but it has been revised. A search summary I read says Baddeley added an episodic buffer in 2000; I did not read that paper. Within instructional research, the model has been used to justify the modality effect, and that use is challenged. Reinwein (2012, whose abstract I read; discussed in the Ginns notes in this lane) argues the modality effect cannot rest on Baddeley's or Penney's theories and needs a different explanation. Cowan (2001, this lane) notes that some current theories hold the limit in short-term memory is one of duration rather than capacity, citing Baddeley 1986, and argues instead for a capacity limit of about four chunks, so there is open disagreement on what limits working memory. De Jong (this lane) makes the further point that CLT does not say whether load is relative to total capacity when two channels are used.
+
+### Implications for LTF
+
+- Treat the model as a useful map, not a recipe. It says words heard and words read use different components, and pictures use a third, so putting spoken guidance beside a visual task is plausible in principle. It does not by itself prove that any given narration will help.
+- In fly mode the learner's visual attention is on the sim. A design that relies on the same visual channel for reading the instructions as for watching the instruments competes for it. Whether speech would help in practice is a question to test with learners, because the sim already produces audio (engine noise, warnings) that competes for the phonological loop.
+- For widgets that show a changing value plus a text explanation, avoid making the learner hold one in mind while looking for the other; place them together.
+
+Confirmed this session: the abstract through Crossref (DOI 10.1126/science.1736359, volume 255, issue 5044, pages 556-559, published 31 January 1992); and how de Jong 2010, the 2019 CLT retrospective, Mayer and Moreno 2003, Kalyuga and colleagues 2003 and Cowan 2001 (read in full or in part) use the model. The full text of the 1992 article was not read.

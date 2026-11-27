@@ -445,3 +445,59 @@ As a standard it is revised through committee, not tested. Its content converges
 Use the seven principles as the vocabulary for LTF design reviews alongside Nielsen's ten, since they add two things the Nielsen list lacks: learnability as its own principle (discovery, exploration and retention map onto lesson design), and user engagement (motivation, trustworthiness). Trustworthiness matters for a teaching product that touches aviation: the standard's category, with the scope note that safety-critical domains are not covered, is a reason to keep LTF's content verification visible. Use "suitability for the task" to keep widgets tied to what the learner is doing in the sim, not to what is technically easy to render. Use the checklist in Annex A only after obtaining the full standard.
 
 Confirmed this session: read the free preview of ISO 9241-110:2020 (cdn.standards.iteh.ai/samples/75258/83c8cf072187487686645aad04eff40e/ISO-9241-110-2020.pdf, 13 pages as text); web search of ISO and iteh records (second edition, replaces 2006). Not read: clause 5 recommendations in full.
+
+## smith1986guidelines
+
+Smith, S. L., & Mosier, J. N. (1986). Guidelines for designing user interface software (Report ESD-TR-86-278). The MITRE Corporation, Bedford, MA, for the Electronic Systems Division, U.S. Air Force Systems Command.
+
+### Core claims
+
+Smith and Mosier compiled the most comprehensive collection of user interface guidelines of its time: 944 guidelines for software that implements the interface of computer-based information systems, organized into six functional areas. The report revises and extends earlier Air Force guideline compilations and is meant as a practical tool for system analysts, software designers and managers: to set design requirements, to coordinate decisions and to evaluate software. The authors are candid about its limits: guidelines are not rules, many rest on judgment rather than experiment, and they must be tailored into enforceable design rules for each project.
+
+### Specifics
+
+Evidence type: a government-sponsored compilation of guidelines drawn from literature, practice and expert judgment. It is neither an experiment nor a meta-analysis. I read the report's introduction as reproduced on hcibib.org/sam/, and Nielsen's later review of a sample of the guidelines.
+
+Organization: six sections with these guideline counts: data entry 199, data display 298, sequence control 184, user guidance 110, data transmission 83, data protection 70 (these sum to 944, which matches the figure in Nielsen's review). Within each section guidelines are grouped by function. Each has a number, a short title and a single-sentence statement; related guidelines are cross-referenced; examples may be followed by noted exceptions; supplementary comments explain reasoning; reference notes cite sources by author and date. The report excludes hardware design, physical workstation factors, training and documentation.
+
+Intended use, as the introduction describes it: not every guideline applies to every system, so designers must select relevant ones, resolve conflicts and prioritize under budget and schedule. Guidelines should be tailored into specific design rules by a team (analysts, human factors specialists, software designers, managers, possibly users), documented, given an exception process and perhaps weighted. The authors say guidelines should be offered as a resource, not imposed as a contractual standard, because "It is only specifically worded design rules that can be enforced, not guidelines." Task analysis should precede tailoring and prototype testing with users should follow initial design. The introduction also reports a 1986 survey in which respondents applied only about 40 percent of the guidelines from the previous edition.
+
+Nielsen's review (nngroup.com, Alertbox; the URL suggests January 2005): he reviewed a stratified sample of 60 guidelines, 10 from each section (opening the report to the middle of each section and taking the first ten from the upper left page). Of these he annotated 13 and left 47 uncommented, meaning he considered them still correct. Seven were outdated: the guidelines on field markers and automatic justification, on a distinctive label format (now done automatically), on single activation of function keys and on a single key for continuous functions, on display identification, and on redistributing messages (intent kept, advice no longer relevant). Six annotated guidelines still hold with caveats. He notes that the data protection section "remains highly relevant" and that function-key guidance reflects the mainframe era.
+
+### Replication and criticism
+
+The report's weakness is the one its authors name: the evidence behind individual guidelines varies, and citation does not imply supporting data. Nielsen's sample suggests a high survival rate of the underlying principles (53 of 60 by a simple count, with the exceptions tied to obsolete technology) but this is a single expert's judgment on a small, non-random-within-section sample, and it says nothing about the other 884. The 40 percent application figure in the report itself shows that large guideline lists are often ignored. Later work moved from long lists to short heuristic sets (Nielsen and Molich 1990, who cite this report as the source of roughly a thousand rules) for exactly that reason.
+
+### Implications for LTF
+
+LTF does not need a thousand guidelines, but it does need the report's method. Write a short set of LTF-specific design rules in enforceable wording (for example "every altitude states MSL or AGL" and "every control name matches the sim's name"), with a defined exception process, instead of general guidelines that cannot be checked. Group them by function (entry, display, sequence, guidance) so reviewers can find them. Expect to review them as technology changes, as Nielsen found for function keys. Remember the finding that large lists go largely unapplied: keep the LTF rule set short, tied to a checklist used in reviews, and test it with real reviewers.
+
+Confirmed this session: hcibib.org/sam/ (introduction, counts per section, use and caveats); nngroup.com/articles/sixty-guidelines-from-1986-revisited/ (sample of 60, seven outdated, 944 total); search results listing the report number ESD-TR-86-278 and date August 1986. I did not read the guidelines text of individual sections.
+
+## brooke1996sus
+
+Brooke, J. (1996). SUS: A "quick and dirty" usability scale. In P. W. Jordan, B. Thomas, B. A. Weerdmeester, & I. L. McClelland (Eds.), Usability evaluation in industry (pp. 189-194). Taylor & Francis.
+
+### Core claims
+
+Brooke presents the System Usability Scale (SUS), a ten-item questionnaire that gives a single score from 0 to 100 for the perceived usability of any system. It was designed to be "quick and dirty": cheap to administer, usable on small samples, and technology-independent. The UCL summary of the chapter describes it as a reliable, low-cost scale for global assessments of system usability. SUS measures how users feel about a system overall; it does not diagnose what is wrong.
+
+### Specifics
+
+Evidence type: a short practitioner chapter introducing an instrument (the chapter itself is about six pages), later supported by research by other authors. I did not read the chapter. The facts below are from a catalogue summary of it and from an author-run benchmarking page.
+
+Format (UCL construct database summary): ten statements, each answered on a five-point scale from "strongly disagree" to "strongly agree". The standard statements, as listed on the MeasuringU page, alternate positive and negative wording: I think that I would like to use this system frequently; I found the system unnecessarily complex; I thought the system was easy to use; I think that I would need the support of a technical person to be able to use this system; I found the various functions in this system were well integrated; I thought there was too much inconsistency in this system; I would imagine that most people would learn to use this system very quickly; I found the system very cumbersome to use; I felt very confident using the system; I needed to learn a lot of things before I could get going with this system.
+
+Scoring (MeasuringU, the site of Jeff Sauro, co-author of Quantifying the User Experience): for odd items subtract 1 from the response; for even items subtract the response from 5; add the ten converted values and multiply by 2.5, giving 0 to 100. The page cautions that SUS scores are not percentages and should be reported as percentile ranks. It states that the average across about 500 studies is 68, that raw 74 is around the 70th percentile (B minus), that a score above 80.3 is top 10% (A), 68 is a C and below 51 an F. It adds that SUS can be used with as few as two users but small samples give imprecise estimates, so a confidence interval should be reported; that items 4 and 10 measure learnability and the other eight usability; that SUS is not diagnostic; and that its correlation with task performance is modest (about r = .24, around 6% of variance).
+
+Bibliographic notes: the chapter is in Usability Evaluation in Industry (Jordan, Thomas, Weerdmeester and McClelland, eds.; Taylor & Francis; 1996, based on an international seminar), pp. 189-194 per Brooke's own citation. Wikipedia attributes SUS to Digital Equipment Corporation in the mid-1980s, but I did not confirm that from a primary source and treat the 1996 chapter as the publication.
+
+### Replication and criticism
+
+SUS has been studied heavily by others: Bangor, Kortum and Miller (2008) analyzed a large data set; Lewis and Sauro (2009, "The factor structure of the System Usability Scale", Crossref record seen this session) examined whether it has two factors, usability and learnability (items 4 and 10), a finding described in the MeasuringU page. The original chapter reported no pretests, per a database listing. The main criticisms are practical: SUS gives a number without reasons; the 68 benchmark is an average of mixed products, not a pass mark; and the score should not be read as a percentage.
+
+### Implications for LTF
+
+SUS is a candidate satisfaction measure for LTF beta tests, but it must be paired with observation because it is not diagnostic. Administer it after a defined task, not after a casual visit, and report percentiles and a confidence interval, not the raw score alone. Because LTF will have small early samples, do not compare two versions on SUS unless the sample is large enough to show a real difference. Item wording refers to "this system", so name the product (LTF, not the simulator) when asking; the learner might otherwise rate the sim. Do not edit the items without checking, since changed wording makes the benchmarks inapplicable.
+
+Confirmed this session: web search results and the UCL constructDB page (verdi.cs.ucl.ac.uk/constructDB/publications/brooke-susa-1996.html) for format and citation; Routledge book page (Usability Evaluation in Industry, Taylor & Francis/CRC, 1996) and search for pp. 189-194; measuringu.com/sus/ for items, scoring and benchmark statements; Crossref for Lewis and Sauro (2009). Not read: the chapter itself.

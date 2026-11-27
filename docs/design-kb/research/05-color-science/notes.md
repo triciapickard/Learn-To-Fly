@@ -340,7 +340,7 @@ Confirmed this session: Wiley-VCH product page (fetched; edition, table of conte
 
 ## hunt2011measuring
 
-Hunt, R. W. G., and M. R. Pointer. 2011. Measuring Colour, 4th edition. Chichester: Wiley (Wiley-IS&T Series in Imaging Science and Technology). Evidence type: reference textbook by a founder of color appearance research and a long-time collaborator.
+Hunt, R. W. G., and M. R. Pointer. 2011. Measuring Colour, 4th edition. Wiley (Wiley-IS&T Series in Imaging Science and Technology). Evidence type: reference textbook by the researcher after whom the Hunt effect and Hunt model are named, with a collaborator.
 
 ### Core claims
 
@@ -361,3 +361,31 @@ This is a reference work, not an experiment; its authority rests on adopting CIE
 Use Hunt and Pointer as the place to look when the design team needs a defensible number or a definition. Specific chapters map onto LTF questions: chapter 11 (RGB colorimetry) for converting display primaries to a device-independent description; chapter 6 (metamerism and colour constancy) for explaining why a sim-screen color and a web color that match on one monitor may not match on another; chapter 9 (precision and accuracy) before anyone claims a color is "exactly" the sim's color from a screenshot; chapter 8 (colour order systems) for naming conventions. LTF should not copy formulae from memory into design tokens. Where a lesson or component states a color-science fact, cite this book or the CIE standard. For the aviation side, do not use this book for any statement about instrument colors; aviation color conventions are outside this lane and must come from aviation sources.
 
 Confirmed this session: Wiley-VCH product page (fetched; edition, date, description, chapter list, appendices); Open Library search (OL21460407W, OL16652145W); Crossref chapter record (doi 10.1002/9781119975595.ch15); web search on the Hunt effect; Fairchild's table of contents for the Hunt model chapter. The book itself was not read.
+
+## sharma2005ciede2000
+
+Sharma, Gaurav, Wencheng Wu, and Edul N. Dalal. 2005. The CIEDE2000 color-difference formula: Implementation notes, supplementary test data, and mathematical observations. Color Research and Application 30(1), 21-30 (online 2004). Evidence type: numerical analysis of a CIE standard formula, with test data; it does not test perceptual validity.
+
+### Core claims
+
+The CIEDE2000 formula, published by the CIE in 2001 (publication 142-2001), is the standard industrial color-difference measure and is far more sophisticated and computationally involved than CIELAB's delta E*ab and the CIE94 formula. Sharma, Wu and Dalal show that correct implementation is non-trivial. The worked examples in the CIE report are too few to expose mistakes: several implementations circulating on the Internet, including some from reputable sources, agreed with those examples and were still wrong, and some of the authors' own early implementations had the same fault. The paper supplies 34 test pairs designed to exercise the parts of the formula the CIE examples miss, together with spreadsheet and MATLAB code, and it identifies small mathematical discontinuities in the formula. It addresses only computation, not psychophysical evaluation or uniformity.
+
+### Specifics
+
+The formula. After computing G from the mean CIELAB chroma (G = 0.5 times one minus the square root of C^7 over C^7 plus 25^7), the a* axis is rescaled to a-prime, giving modified chroma C-prime and hue h-prime. The difference is the square root of a sum: the lightness, chroma and hue differences, each divided by a weighting S and a parametric factor k (all k set to 1 in the paper), plus a rotation term R_T times the product of the chroma and hue terms. One weight is S_C = 1 + 0.045 C-bar-prime. The rotation term is R_T = minus sin of twice a hue-dependent angle, times a chroma-dependent factor, and it matters mainly in the blue region (around 275 degrees of hue).
+
+Implementation traps the notes identify. (1) Use a four-quadrant arctangent and convert to 0 to 360 degrees. (2) Compute the chroma and hue differences as signed quantities; using absolute values breaks only the cross term, an error that is hard to detect because its impact is localized in the blue region. (3) The mean hue is not defined unambiguously in the CIE report or the Luo, Cui and Rigg article; a verbatim reading can give angles over 360 or negative angles, and most Internet implementations at the time had an error here. (4) The difference is symmetric, so swapping the two colors is a test. They also recommend including a few large differences and comparing to four decimal places.
+
+The test data. Table 1 lists 34 pairs. Pairs 1 to 6 test the signed chroma and hue differences, 7 to 16 the arctangent and mean-hue computation, 17 to 20 large differences, and 25 to 34 reproduce the published CIE data.
+
+The discontinuities. The paper characterizes three. The main one comes from averaging two hue angles that are about 180 degrees apart, which flips the mean hue by 180 degrees. With the chroma of the colors at 0.5, 1.0, 1.5, 2.0 and 2.5, the largest jump in delta E00 (at a reference hue of 143 degrees) is 0.0119, 0.0465, 0.1025, 0.1786 and 0.2734 respectively; the authors call this relatively small but not negligible. A second arises in the hue difference at exactly 180 degrees, and a third, extremely small one at the 0 and 360 degree seam.
+
+### Replication and criticism
+
+The paper is widely used as the de facto validation set for CIEDE2000 code (for example by open-source libraries; the Rochester page and a SkinOptics validation notebook use it). The authors note that the discontinuities are tiny relative to other sources of experimental variation, but they preclude use in Taylor-series analysis and gradient-based optimization, which need continuity. They suggest dropping symmetry and using only the reference sample's hue. Kuehni (2002, "CIEDE2000: milestone or final answer?") and Luo and colleagues (2002) published comments on the formula itself, cited in the paper; I did not read them.
+
+### Implications for LTF
+
+If LTF measures distance between theme colors, status colors or chart series, use a perceptual difference measure and verify the code against these 34 pairs, not against the CIE examples alone. Because CIEDE2000 is designed for small differences, it is less trustworthy for comparing wildly different hues; for those, a simpler uniform space such as Oklab is easier to use and to optimize (see the Oklab entry). Do not run gradient-based palette optimization on it. The data page says the code and data are for personal or research use with citation, are provided as is, and are not an official CIE implementation, so check licensing before copying the code; writing tests from the table is safer.
+
+Confirmed this session: Crossref record doi 10.1002/col.20070; I downloaded and read the full paper (hajim.rochester.edu PDF) and the author's page hajim.rochester.edu/ece/sites/gsharma/ciede2000/ (format of the data, license terms).

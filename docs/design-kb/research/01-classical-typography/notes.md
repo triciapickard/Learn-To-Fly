@@ -290,3 +290,35 @@ Robin Kinross, via Matthew Carter's review in Eye, calls the chapters on the new
 5. The five-types limit in the redesigned advertisement is not an LTF rule, but a small, deliberate set of sizes is.
 
 Confirmed this session: Reader excerpt text of "The New Typography" read from https://openlab.citytech.cuny.edu/langecomd3504fa2019/files/2018/10/Tschichold_NewTypo.pdf (quotations and headnote). Edition details (McLean translation, Kinross introduction, University of California Press 1995) from a web search of catalogue records; Open Library work OL8063615W lists the 1998 and 2006 printings. Carter review at https://www.eyemagazine.com/blog/post/type-tuesday40; essay digest at https://www.artequalswork.com/posts/form-of-the-book/.
+
+## tschichold1991form
+
+Jan Tschichold, *The Form of the Book: Essays on the Morality of Good Design*, translated by Hajo Hadeler, edited with an introduction by Robert Bringhurst (Point Roberts, WA: Hartley & Marks, 1991; UK edition London: Lund Humphries, 1991). German essays first collected in Basel by Birkhäuser, 1975.
+
+### Core claims
+
+The essays record the later Tschichold, who after the New Typography argued for the traditional book. Kinross's review in *Eye* (no. 7, Summer 1992) summarizes the stance: typography is a modest, self-effacing art that serves the reader, and it joins practice, aesthetics, ethics and politics. Book pages should follow "natural" geometric proportions used since the medieval period, not arbitrary formats. Kinross reports that Tschichold treats indenting paragraph openings as essential, because omitting indents sacrifices meaning for superficial neatness.
+
+The contrast with his 1928 programme is the main historical point of the book: the same author who dismissed ornament and symmetry as obsolete (tschichold1995new) here defends convention for continuous reading. He gives no experimental basis for either position.
+
+### Specifics
+
+Essays named in Kinross's review: "Consistent correlation between book page and type area," the major essay, known to British readers since 1936 as "Non-arbitrary proportions of page and type area"; "Typesetting superscript numbers and footnotes"; "Ten common mistakes in the production of books"; and short pieces on quotation marks, dashes and the "consequences of tight typesetting." The editor left out two essays on signature marks and spine titling.
+
+The proportions material is the part most often cited. Kinross says the 2:3 (octavo) and 3:4 (quarto) are the "natural" pair, and the Wikipedia account of page canons states that the Van de Graaf construction gives margins of one-ninth and two-ninths of the page, inner margin half the outer, and for a 2:3 page the proportions 2:3:4:6 for inner, top, outer and bottom. Tschichold is the main popularizer of these canons; the page canons article notes he speculated the method "may be older" than its discovery, that its source article by Van de Graaf (1946) was "not examined" by the writer, that his own medieval framework gives margin proportions of 1:1:2:3, and that the golden-ratio version he called "hardly useful today."
+
+A web digest of the essays, which I treat as a secondary account that disagrees with Eye on essay dates, adds these rules: lines of about eight to twelve words; word spacing "three-to-em or even more compressed"; indented paragraphs, usually one em; roman capitals always letterspaced; legibility and clarity before a smooth page contour; and a printer's stock of old-style roman with italics from 6 to 72 point.
+
+### Replication and criticism
+
+Craft authority, not experiment. Kinross's review is mixed on the edition: the American edition is larger than the 1975 original, uses imitation laid paper, has a square back that contradicts Tschichold's own guidance, and some translations overstate the German (häßlich rendered as "repulsive"). He also finds the collection arbitrary and repetitive, and the editor and translator too attached to "fine writing and fine printing," when Tschichold's own concerns were more ordinary. The page canons article records the historical reservations: that the Van de Graaf canon is a reconstruction of a method that "may have been used," and that a measured Gutenberg page (ratio 0.690) is closer to 2:3 than to the golden ratio. These canons are a craft heritage, not proof that proportions drive readability.
+
+### Implications for LTF
+
+1. Proportion is a rule for page margins in print. On screens the equivalent decision is the reading column's width relative to the viewport and to the type size. LTF can borrow the relational idea (margins derived from one ratio) without borrowing book measurements.
+2. His indent rule has a web counterpart: mark paragraph beginnings clearly by either an indent or paragraph spacing, but not neither. LTF should pick one and apply it everywhere.
+3. Uppercase letterspacing and eight-to-twelve-word lines agree with other lane sources (devinne1910practice, gill1936essay), which strengthens them as defaults, with the caveat that each is craft opinion until lane 02 evidence is checked.
+4. Treat his "morality of good design" as an explicit design value: serve the reader, resist novelty for its own sake. That aligns with a beginner-training product.
+5. Because the essays disagree with his earlier manifesto, write LTF guidance as defaults per content type (prose, UI, display), not as one universal doctrine.
+
+Confirmed this session: Review by Robin Kinross read at https://eyemagazine.com/review/article/high-thoughts-on-a-self-effacing-art (essay titles, edition criticisms). Translator, editor and Birkhäuser 1975 details from a web search of the Folger and Display catalog records; Open Library work OL1220114W lists the 1991 Hartley & Marks edition (ISBN 0881790346). Canon figures from https://en.wikipedia.org/wiki/Canons_of_page_construction. Essay digest at https://www.artequalswork.com/posts/form-of-the-book/.

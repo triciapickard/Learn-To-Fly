@@ -93,3 +93,31 @@ The strongest transferable rule is the purpose test: animation exists to show ho
 The paper's warnings about wackiness map onto the aviation setting: bounce, wiggle and follow through are fine for a small reward cue in lesson reading, but should not appear on instrument widgets where a wiggling needle would look like turbulence or a fault. Anticipation must never mislead; do not animate toward a wrong answer. For fly mode, use only the minimal cues: a quick fade or slide that preserves identity, with no motion that is not triggered by the learner or by a real data change.
 
 Confirmed this session: Crossref DOI 10.1145/168642.168647 (title, authors, UIST proceedings, pages 45-55, 1993); full text read at https://bibliography.selflanguage.org/_static/animation.pdf.
+
+## heer2007animated
+
+Heer, J. and Robertson, G. G. (2007). Animated transitions in statistical data graphics. *IEEE Transactions on Visualization and Computer Graphics*, 13(6), 1240-1247.
+
+### Core claims
+
+The paper asks whether animated transitions between related statistical graphics (bar to pie, stacked to grouped bars, scatter plot time steps) actually improve graphical perception. The authors extend theory of data graphics to cover transitions, propose a taxonomy of transition types and a set of design principles, build a system (DynaVis) that follows them, and run two controlled experiments. Their summary finding is that appropriately designed animated transitions significantly improve graphical perception at both a syntactic level (tracking objects across a change) and a semantic level (estimating how much a value changed). They are careful to say that animation is no guarantee: it adds timing and complexity, and can mislead if the animation violates data semantics.
+
+### Specifics
+
+Design principles are organized under the Congruence and Apprehension principles of Tversky, Morrison and Bétrancourt (2002). Under congruence: keep intermediate states valid data graphics, use consistent mappings from operations to transitions, respect semantic correspondence (do not reuse a mark for a different data point), and avoid ambiguity. Under apprehension: group similar transitions (Gestalt common fate), minimize occlusion, maximize predictability (the authors link this to slow-in slow-out timing), use simple transitions (translation and expansion are easier to understand than rotation), and use staging for complex transitions.
+
+Experiments: 24 subjects (10 female, 14 male, aged 26 to 62) screened for familiarity with data graphics. Experiment 1 was object tracking: follow two highlighted objects across a transition, then click their final locations. The initial graphic stayed for 3 seconds, static transitions were immediate and animated ones lasted 1.25 seconds, and the display was masked 3 seconds after transition onset. The design was 3 (static, direct animation, staged animation) by 2 (size, 8 or 16 elements) within subjects, 288 trials per person, across six transition types. Experiment 2 asked subjects to follow one target and estimate its percentage change, with animations lengthened to 2 seconds to accommodate multi-stage versions, 144 trials each.
+
+Results (from the paper text): animation produced significantly lower error than static transitions in all Experiment 1 conditions; staged animation beat direct animation except for the scatter plot time step, where object tracking error was higher with staging. The authors hypothesize that multiple shorter stages give more chances to lose a target, and they recommend about one second per stage rather than about half a second. In Experiment 2 animation helped significantly for the scatter plot and grouped bars; heavily staged animation in stacked bars and donut charts increased error, so the authors conclude it is preferable to minimize unnecessary motion rather than "do one thing at a time" at any cost. Participants preferred staged animation over animation, and animation over static, and axis rescaling made estimation harder, though animation reduced that cost. Increasing the number of elements increased tracking error.
+
+### Replication and criticism
+
+This is a controlled experiment with a modest, fairly homogeneous sample, tested on one visual setting with a mask that removed the later state, so the authors note better performance in predictable cases may partly reflect better memory transfer. Later work qualifies the optimism: Dragicevic et al. (2011, this lane) test timing distortions on the same task family and find slow-in slow-out helps tracking; Chevalier et al. (2016, this lane) review a decade of results and find the evidence for benefits is narrower than the enthusiasm. Tversky et al. (2002) review the earlier literature and warn that many positive findings were confounded by extra information in the animated condition. Heer and Robertson remain the standard citation for staging and simple transitions in data graphics, and their own statement that staging gains are "not overwhelming" should be kept in view.
+
+### Implications for LTF
+
+Where LTF changes one chart or widget state into another (for example, switching an instrument widget from one configuration to another, or revealing a corrected answer on a diagram), an animated transition of roughly one to two seconds beat an instant swap in these experiments, and keeping marks identifiable across the change matters more than visual flair. Use direct interpolation for simple changes, split complex changes into at most two stages (for example, rescale the axis, then move the points), and avoid multi-stage choreography. Keep scales fixed where possible so the transition does not need an axis rescale. Make sure intermediate states are valid: an airspeed needle sweeping between two readings should never pass through values the aircraft could not show.
+
+The benefits were measured in a study task, not in a learner glancing from a sim to a screen. In fly mode there is no case for animated transitions of this kind; show the new state at once. In lesson pages, offer the animation but let the learner replay it or skip it, and pair it with the final static state.
+
+Confirmed this session: Crossref DOI 10.1109/tvcg.2007.70539 (volume 13, issue 6, pages 1240-1247); full text read from https://idl.cs.washington.edu/files/2007-AnimatedTransitions-InfoVis.pdf.

@@ -1,0 +1,575 @@
+[
+  {
+    "key": "wagemans2012century",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wagemans",
+        "given": "Johan"
+      },
+      {
+        "family": "Elder",
+        "given": "James H."
+      },
+      {
+        "family": "Kubovy",
+        "given": "Michael"
+      },
+      {
+        "family": "Palmer",
+        "given": "Stephen E."
+      },
+      {
+        "family": "Peterson",
+        "given": "Mary A."
+      },
+      {
+        "family": "Singh",
+        "given": "Manish"
+      },
+      {
+        "family": "von der Heydt",
+        "given": "Rüdiger"
+      }
+    ],
+    "year": 2012,
+    "title": "A century of Gestalt psychology in visual perception: I. Perceptual grouping and figure-ground organization",
+    "container_title": "Psychological Bulletin",
+    "volume": "138",
+    "issue": "6",
+    "pages": "1172-1217",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/a0029333",
+    "isbn": "",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3482144",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1037/a0029333, Psychological Bulletin 138(6) 1172-1217, 2012, authors Wagemans, Elder, Kubovy, Palmer et al.; author manuscript text read at PMC3482144",
+    "kind": "review article (journal)",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "wagemans2012conceptual",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wagemans",
+        "given": "Johan"
+      },
+      {
+        "family": "Feldman",
+        "given": "Jacob"
+      },
+      {
+        "family": "Gepshtein",
+        "given": "Sergei"
+      },
+      {
+        "family": "Kimchi",
+        "given": "Ruth"
+      },
+      {
+        "family": "Pomerantz",
+        "given": "James R."
+      },
+      {
+        "family": "van der Helm",
+        "given": "Peter A."
+      },
+      {
+        "family": "van Leeuwen",
+        "given": "Cees"
+      }
+    ],
+    "year": 2012,
+    "title": "A century of Gestalt psychology in visual perception: II. Conceptual and theoretical foundations",
+    "container_title": "Psychological Bulletin",
+    "volume": "138",
+    "issue": "6",
+    "pages": "1218-1252",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/a0029334",
+    "isbn": "",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3728284",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1037/a0029334, Psychological Bulletin 138(6) 1218-1252, 2012; author manuscript text read at PMC3728284 listing the seven authors",
+    "kind": "review article (journal)",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "wertheimer1923untersuchungen",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wertheimer",
+        "given": "Max"
+      }
+    ],
+    "year": 1923,
+    "title": "Untersuchungen zur Lehre von der Gestalt II",
+    "container_title": "Psychologische Forschung",
+    "volume": "4",
+    "issue": "1",
+    "pages": "301-350",
+    "publisher": "Springer",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/bf00410640",
+    "isbn": "",
+    "url": "https://psychclassics.yorku.ca/Wertheimer/Forms/forms.htm",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1007/bf00410640, Psychologische Forschung 4(1) 301-350, 1923, Wertheimer; English translation (Ellis 1938 source book, pp. 71-88) read at psychclassics.yorku.ca",
+    "kind": "founding paper (observational demonstrations)",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "palmer1992common",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Palmer",
+        "given": "Stephen E."
+      }
+    ],
+    "year": 1992,
+    "title": "Common region: A new principle of perceptual grouping",
+    "container_title": "Cognitive Psychology",
+    "volume": "24",
+    "issue": "3",
+    "pages": "436-447",
+    "publisher": "Elsevier",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/0010-0285(92)90014-s",
+    "isbn": "",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/1516361/",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1016/0010-0285(92)90014-s, Cognitive Psychology 24(3) 436-447, 1992; PubMed 1516361 abstract read",
+    "kind": "experimental paper (demonstrations)",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "palmer1994rethinking",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Palmer",
+        "given": "Stephen E."
+      },
+      {
+        "family": "Rock",
+        "given": "I."
+      }
+    ],
+    "year": 1994,
+    "title": "Rethinking perceptual organization: The role of uniform connectedness",
+    "container_title": "Psychonomic Bulletin & Review",
+    "volume": "1",
+    "issue": "1",
+    "pages": "29-55",
+    "publisher": "Springer",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3758/bf03200760",
+    "isbn": "",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24203413/",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.3758/bf03200760, Psychonomic Bulletin & Review 1(1) 29-55, 1994, Palmer and Rock; PubMed 24203413 abstract read",
+    "kind": "theoretical and experimental paper",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "treisman1980feature",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Treisman",
+        "given": "Anne M."
+      },
+      {
+        "family": "Gelade",
+        "given": "Garry"
+      }
+    ],
+    "year": 1980,
+    "title": "A feature-integration theory of attention",
+    "container_title": "Cognitive Psychology",
+    "volume": "12",
+    "issue": "1",
+    "pages": "97-136",
+    "publisher": "Elsevier",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/0010-0285(80)90005-5",
+    "isbn": "",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/7351125/",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1016/0010-0285(80)90005-5, Cognitive Psychology 12(1) 97-136, 1980; PubMed 7351125 record; later accounts read in Wolfe (2021) PMC8965574",
+    "kind": "experimental series (nine experiments)",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "duncan1989visual",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Duncan",
+        "given": "John"
+      },
+      {
+        "family": "Humphreys",
+        "given": "Glyn W."
+      }
+    ],
+    "year": 1989,
+    "title": "Visual search and stimulus similarity",
+    "container_title": "Psychological Review",
+    "volume": "96",
+    "issue": "3",
+    "pages": "433-458",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0033-295x.96.3.433",
+    "isbn": "",
+    "url": "https://www.mrc-cbu.cam.ac.uk/bibliography/articles/2331",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1037/0033-295x.96.3.433, Psychological Review 96(3) 433-458, 1989; PubMed 2756067; abstract read on mrc-cbu.cam.ac.uk bibliography article 2331",
+    "kind": "experiments and theory",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "wolfe2021guided",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wolfe",
+        "given": "Jeremy M."
+      }
+    ],
+    "year": 2021,
+    "title": "Guided Search 6.0: An updated model of visual search",
+    "container_title": "Psychonomic Bulletin & Review",
+    "volume": "28",
+    "issue": "4",
+    "pages": "1060-1092",
+    "publisher": "Springer",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3758/s13423-020-01859-9",
+    "isbn": "",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8965574",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.3758/s13423-020-01859-9, Psychonomic Bulletin & Review 28(4) 1060-1092, 2021; author manuscript text read at PMC8965574",
+    "kind": "computational model and review",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "wolfe2004what",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wolfe",
+        "given": "Jeremy M."
+      },
+      {
+        "family": "Horowitz",
+        "given": "Todd S."
+      }
+    ],
+    "year": 2004,
+    "title": "What attributes guide the deployment of visual attention and how do they do it?",
+    "container_title": "Nature Reviews Neuroscience",
+    "volume": "5",
+    "issue": "6",
+    "pages": "495-501",
+    "publisher": "Springer Nature",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1038/nrn1411",
+    "isbn": "",
+    "url": "https://search.bwh.harvard.edu/new/pubs/WolfeHorowitzNRN04.pdf",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1038/nrn1411, Nature Reviews Neuroscience 5(6) 495-501, 2004; full text read from the author PDF at search.bwh.harvard.edu",
+    "kind": "expert review (opinion article)",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "julesz1981textons",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Julesz",
+        "given": "Béla"
+      }
+    ],
+    "year": 1981,
+    "title": "Textons, the elements of texture perception, and their interactions",
+    "container_title": "Nature",
+    "volume": "290",
+    "issue": "5802",
+    "pages": "91-97",
+    "publisher": "Springer Nature",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1038/290091a0",
+    "isbn": "",
+    "url": "https://www.nature.com/articles/290091a0",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1038/290091a0, Nature 290(5802) 91-97, 1981; PubMed 7207603 abstract read",
+    "kind": "experimental and theoretical paper",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "whitney2018ensemble",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Whitney",
+        "given": "David"
+      },
+      {
+        "family": "Yamanashi Leib",
+        "given": "Allison"
+      }
+    ],
+    "year": 2018,
+    "title": "Ensemble perception",
+    "container_title": "Annual Review of Psychology",
+    "volume": "69",
+    "issue": "",
+    "pages": "105-129",
+    "publisher": "Annual Reviews",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1146/annurev-psych-010416-044232",
+    "isbn": "",
+    "url": "https://whitneylab.berkeley.edu/PDFs/Ensemble_perception_2018.pdf",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1146/annurev-psych-010416-044232, Annual Review of Psychology 69, 105-129, 2018; PubMed 28892638 abstract; full review text read from the lab PDF",
+    "kind": "review article (journal)",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "elder2002ecological",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Elder",
+        "given": "James H."
+      },
+      {
+        "family": "Goldberg",
+        "given": "Richard M."
+      }
+    ],
+    "year": 2002,
+    "title": "Ecological statistics of Gestalt laws for the perceptual organization of contours",
+    "container_title": "Journal of Vision",
+    "volume": "2",
+    "issue": "4",
+    "pages": "324-353",
+    "publisher": "Association for Research in Vision and Ophthalmology",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1167/2.4.5",
+    "isbn": "",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12678582/",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1167/2.4.5, Journal of Vision 2(4) article 5, 2002; PubMed 12678582 gives pages 324-353 and the abstract, which was read",
+    "kind": "empirical measurement study",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "healey2012attention",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Healey",
+        "given": "Christopher G."
+      },
+      {
+        "family": "Enns",
+        "given": "James T."
+      }
+    ],
+    "year": 2012,
+    "title": "Attention and visual memory in visualization and computer graphics",
+    "container_title": "IEEE Transactions on Visualization and Computer Graphics",
+    "volume": "18",
+    "issue": "7",
+    "pages": "1170-1188",
+    "publisher": "IEEE",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1109/tvcg.2011.127",
+    "isbn": "",
+    "url": "https://visionlab-psych.sites.olt.ubc.ca/files/2015/06/140_HealeyEnns_IEEE2011.pdf",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1109/tvcg.2011.127, IEEE TVCG 18(7) 1170-1188, 2012; PubMed 21788672 abstract; full text read from the UBC-hosted PDF",
+    "kind": "survey article",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "rosenholtz2007measuring",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Rosenholtz",
+        "given": "Ruth"
+      },
+      {
+        "family": "Li",
+        "given": "Yuanzhen"
+      },
+      {
+        "family": "Nakano",
+        "given": "Lisa"
+      }
+    ],
+    "year": 2007,
+    "title": "Measuring visual clutter",
+    "container_title": "Journal of Vision",
+    "volume": "7",
+    "issue": "2",
+    "pages": "17",
+    "publisher": "Association for Research in Vision and Ophthalmology",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1167/7.2.17",
+    "isbn": "",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18217832/",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1167/7.2.17, Journal of Vision 7(2) 17, 2007; PubMed 18217832 abstract read; MIT DSpace 1721.1/37593 hosts the code",
+    "kind": "experimental and measurement paper",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "gibson2015ecological",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Gibson",
+        "given": "James J."
+      }
+    ],
+    "year": 2015,
+    "title": "The ecological approach to visual perception",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Psychology Press",
+    "publisher_place": "",
+    "edition": "Classic edition",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781848725782",
+    "url": "https://www.routledge.com/The-Ecological-Approach-to-Visual-Perception-Classic-Edition/Gibson/p/book/9781848725782",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL5589051W 'The ecological approach to visual perception', James Jerome Gibson, first published 1979, publishers Psychology Press and Lawrence Erlbaum, ISBN 9781848725782 among its ISBNs; Routledge Classic Edition page read (346 pages, copyright 2015, contents); chapter 8 read from a course PDF",
+    "kind": "book-length theory",
+    "lane": "07-gestalt-perception",
+    "original_year": 1979
+  },
+  {
+    "key": "marr2010vision",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Marr",
+        "given": "David"
+      }
+    ],
+    "year": 2010,
+    "title": "Vision: A computational investigation into the human representation and processing of visual information",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "MIT Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780262514620",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned works OL3657916W (Vision, Marr, 1982, W. H. Freeman and MIT Press) and OL15568754W (Vision, Marr, 2010, MIT Press, ISBN 9780262514620); Wikipedia article on David Marr confirms the title, 1982 W. H. Freeman publication and 2010 MIT Press reissue",
+    "kind": "book-length theory",
+    "lane": "07-gestalt-perception",
+    "original_year": 1982
+  },
+  {
+    "key": "ware2008visual",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Ware",
+        "given": "Colin"
+      }
+    ],
+    "year": 2008,
+    "title": "Visual thinking for design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Morgan Kaufmann",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780123708960",
+    "url": "https://eagereyes.org/blog/2008/review-visual-thinking",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL16925911W and edition OL25538971M: Visual thinking for design, Colin Ware, Morgan Kaufmann 2008, ISBN 9780123708960, 197 pages, jacket description; chapter-by-chapter review read at eagereyes.org",
+    "kind": "design-oriented synthesis book",
+    "lane": "07-gestalt-perception"
+  },
+  {
+    "key": "arnheim1974art",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Arnheim",
+        "given": "Rudolf"
+      }
+    ],
+    "year": 1974,
+    "title": "Art and visual perception: A psychology of the creative eye",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "University of California Press",
+    "publisher_place": "Berkeley",
+    "edition": "The new version",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780520243835",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL980214W 'Art and visual perception', Rudolf Arnheim, first published 1954, University of California Press, ISBN 9780520243835; full-text scan of the 1974 new version read on archive.org (front matter, contents, chapters)",
+    "kind": "craft and theory treatise",
+    "lane": "07-gestalt-perception",
+    "original_year": 1954
+  }
+]

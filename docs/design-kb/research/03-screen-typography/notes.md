@@ -293,3 +293,55 @@ This is a single randomized study with a fairly small sample, which gave a modes
 The paper's most useful idea for LTF is not the paper-versus-screen contrast itself but the proposed mechanism: readers build a spatial map of a text, and scrolling weakens it. Several practical consequences follow for lesson pages. Give long lessons a visible structure so that the reader can keep an overview: a persistent section outline, stable headings, and a progress marker that shows where the current section sits in the whole lesson. Keep related content close together so that the learner does not have to remember where a number appeared, for example by repeating the key speeds or a checklist in the place where they are used rather than only in a table earlier on the page. Avoid infinite scroll for lesson content, and prefer chunked sections with consistent positions for recurring elements (objective, steps, check-your-understanding). Make look-back easy, since students in this study could look back at the text while answering: quiz questions on a lesson should let a learner see the relevant passage, for instance with a link that scrolls to and highlights it. Consider a print or PDF summary of each lesson for learners who prefer paper. The study used continuous prose, so it says little about interactive widgets, but it supports not hiding key facts behind navigation.
 
 Confirmed this session: Crossref record DOI 10.1016/j.ijer.2012.12.002 (International Journal of Educational Research 58, 61-68, January 2013); read the full text of the paper (educacion.udd.cl PDF copy) including abstract, methods, results and discussion.
+
+## gould1987reading
+
+Gould, J. D., Alfaro, L., Finn, R., Haupt, B., & Minuto, A. (1987). Reading from CRT displays can be as fast as reading from paper. Human Factors, 29(5), 497-517.
+
+### Core claims
+
+By the mid-1980s it was an established finding that people read more slowly from screens than from paper, and many designers took that to be a property of the technology. A team at IBM Research reports six experiments showing that the explanation lies in the image quality of the characters. When a display had paper-like character fonts, dark characters on a light background, anti-aliased (grey-level) characters and relatively high resolution, reading speed equaled that on paper. They say each of these variables probably contributes something, but they could not say how much each contributes. The experiments, together with earlier studies, rule out other general explanations: inherent defects of CRT technology, and personal variables such as age, experience or familiarity with CRTs.
+
+### Specifics
+
+The abstract was confirmed from the Crossref record for the paper (the abstract field returned by api.crossref.org for DOI 10.1177/001872088702900501):
+- Six experiments.
+- The four variables named: character fonts that resemble print rather than dot matrix, polarity of dark characters on a light background, anti-aliasing (the use of grey levels), and relatively high resolution, with 1000 by 800 given as an example of high resolution.
+- Reading rate was the main dependent measure in the earlier work by the same group; the companion conference paper (Why reading was slower from CRT displays than from paper, SIGCHI and Graphics Interface, 1987) summarizes fifteen experiments (from its abstract on graphicsinterface.org).
+
+Other details reach us only through Dyson's 2004 review, which was read in full. She states that Gould and colleagues (1987) found no evidence that eye movements on screen differ from those in print, and that readers tend to sit further from a screen than from a printed page, so that a longer physical line on screen subtends a smaller visual angle. She also describes the earlier Gould and Grischkowsky (1986) experiment, in which 18 experienced computer users proofread magazine excerpts of about 700 words from photographs of screens and print, and found no effect of visual angle over a middle range, with slower reading only at very small and very wide angles.
+
+### Replication and criticism
+
+The paper is a series of laboratory experiments from one group using proofreading tasks and the displays of its day (CRTs with low resolution and dot-matrix style fonts). Its conclusion is that the speed deficit was caused by poor image quality, and later improvements in resolution and rendering are consistent with that account, although direct replication on modern devices is not part of the evidence I read. The limit of the study is that it cannot separate the four variables, which the authors acknowledge. A second limit is the task: proofreading for errors is not comprehension, and the later literature, including the meta-analysis by Delgado and colleagues (2018), found residual differences in comprehension between paper and screens. Dillon's critical review (Ergonomics, 1992), whose abstract I confirmed only in part, concluded that single-variable explanations were not enough, which is a sign that image quality, while important, was not the whole story. Dyson (2004) also cautions that results from 1980s displays have questionable validity for later displays.
+
+### Implications for LTF
+
+Rendering quality was the original cause of the "screens are slower" result, and it is the thing a designer can still affect today in two ways. First, ensure polarity, contrast and sharpness are never the weak link: dark-on-light and light-on-dark themes both need enough contrast that no lesson text relies on thin, faint strokes. Gould's finding (on 1980s CRTs, with dark-on-light as the benchmark polarity, so it does not rank light and dark themes today) that paper-like fonts with anti-aliasing and high resolution reached paper speed suggests that on modern screens the remaining gaps are likelier to come from layout, size and navigation than from the glyphs, which is where LTF should look. Second, the viewing-distance observation matters for fly mode: a screen read from further away needs a larger size to deliver the same visual angle, so design fly-mode text from angular size, as Legge and Bigelow suggest, not from the sizes that worked on a phone. Treat 1980s-era speed numbers as history, not as targets.
+
+Confirmed this session: Crossref record DOI 10.1177/001872088702900501 (Human Factors 29(5), 497-517, October 1987, five authors) including its abstract text; graphicsinterface.org page for the 1987 conference paper; Dyson (2004) full text for the secondhand details.
+
+## boyarski1998study
+
+Boyarski, D., Neuwirth, C., Forlizzi, J., & Regli, S. H. (1998). A study of fonts designed for screen display. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '98), 87-94. ACM Press.
+
+### Core claims
+
+By 1998 two typefaces, Georgia (a serif) and Verdana (a sans serif), had been designed specifically for reading on screens, in contrast with print faces such as Times New Roman. A Carnegie Mellon team asked whether such fonts actually make people read faster than the older fonts. The accounts of the paper agree that the main answer was no: no reliable differences in reading speed appeared between the new screen fonts and the older ones, between serif and sans serif, or between aliased and anti-aliased rendering. The authors drew the cautious conclusion that fonts in use for the past few years perform about as well as the new screen fonts, and that improvements in reading speed would need more than a change of font.
+
+### Specifics
+
+The paper itself could not be fetched, so the details come from two secondary accounts that I fetched and read, and they do not agree on everything.
+- Human Factors International's summary (humanfactors.com/newsletters/screen_fonts) says the participants were faculty, staff and graduate students at Carnegie Mellon University aged roughly 20 to 53, that text was set at 10 points with 13-point leading and an average line length of about 10 words, on a 17-inch screen at 640 by 480 pixels, and that the anti-aliasing comparisons used 16-point text. It says the comparisons were serif versus serif (Georgia and Times New Roman), serif versus sans serif, Verdana versus Verdana Italic, and aliased versus anti-aliased renderings, and that no reliable speed differences appeared in any of them.
+- Wallace and colleagues (2022), whose full text I read, describe the study as having 48 university participants reading four fonts (Georgia, Verdana, Verdana Italic and Times) in a lab, measuring reading speed, comprehension and preference, and report that anti-aliasing did not decrease preference for a font at 10 points. They note that 10 point is rarely studied now because monitors have changed.
+- A search summary reported that readers preferred Georgia and Verdana to Times, while the HFI page reports no preference data. I could not resolve this without the original paper, so no preference claim is made here.
+
+### Replication and criticism
+
+Later work extended rather than overturned the result. Bernard and colleagues ran several studies on font type and size (in one, eight typefaces at 10, 12 and 14 points, per Dyson 2004), and Wallace and colleagues (2022), with 16 fonts and several hundred crowd-sourced participants, found no single font reliably faster across the population. Dyson (2004) summarizes the typeface literature as having no clear evidence of legibility differences between faces. Sheedy and colleagues (2005), using threshold legibility and not reading speed, did find that Verdana and Arial were the most legible at small sizes. These are different tasks: a null on reading speed for passages at 10 points does not contradict a difference at the threshold of legibility. The study's limits are its single viewing condition (a low-resolution 1998 display), a small participant pool of university staff and students.
+
+### Implications for LTF
+
+Do not spend design effort arguing serif versus sans for body text: the best controlled comparisons find no reliable speed difference, so choose for other reasons (distinct letterforms, a good numeral set, availability in the weights and features LTF needs, and licensing). The lasting lesson of this paper is that screen-optimized proportions (a large x-height, open apertures, generous spacing) are about legibility at small sizes and low resolution, and that is where they matter for LTF: small labels in instrument widgets, table text and captions. For lesson body text at comfortable sizes, the choice of face is a second-order decision compared with size, line length, spacing and contrast.
+
+Confirmed this session: Crossref record DOI 10.1145/274644.274658 (CHI '98, pages 87-94, four authors); HFI summary page at humanfactors.com/newsletters/screen_fonts.html; Wallace and colleagues (2022) full text for the related-work description. The original paper's text was not accessible.
