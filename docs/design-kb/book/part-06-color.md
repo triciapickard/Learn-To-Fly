@@ -824,3 +824,156 @@ The dark choice has a plausible reason the studies did not test: a bright second
 **Change.** In Night, move information-bearing meta text from `ink-3` to `ink-2` (COL-061). Add a theme control inside Fly mode (COL-064). Stop describing Night as easier on the eyes anywhere in copy (COL-066).
 
 **Build.** A glance-reading check for Fly mode in both themes, with results in the decision log (COL-065), and a Night review pass on `/dev/components` that looks specifically at 12 and 14 px text and at popovers over cards (COL-061, COL-062).
+
+## Color as Signal: Alerts, Status, Salience and Data
+
+### A color convention written as a rule
+
+Flight-deck alerting is one of the few places where a color convention is written into regulation. The FAA's flightcrew alerting rule for transport-category airplanes, 14 CFR 25.1322, requires alerts to give the crew the information needed to recognize a non-normal condition and decide what to do, to be easy to detect and understand under all foreseeable conditions including multiple alerts, and to be removed when the condition no longer exists [@faa2010flightcrew]. It sets three priority levels: a warning needs immediate awareness and immediate response, a caution immediate awareness and a later response, and an advisory awareness and possibly a later response. Warnings and cautions must use at least two senses (aural, visual or tactile) to get attention. The alerting function must minimize false and nuisance alerts, and if an attention-getting cue is suppressed the crew must get a clear indication that it is [@faa2010flightcrew].
+
+The color paragraph begins "Red for warning alert indications"; caution is amber or yellow; advisory is any color except red or green; and on displays that cannot show these colors, other coding must distinguish the levels [@faa2010flightcrew]. A further paragraph allows red, amber and yellow for non-alerting functions only to a limited extent and without adversely affecting alerting. The rule is a certification floor for one class of airplane, written from consensus and experience rather than experiment, and it says nothing about any particular aircraft's displays or procedures; it is cited here for its display principles only.
+
+### Why a reserved color stays loud
+
+The regulation's limit on non-alerting red has a perceptual basis. Theeuwes found that people searching for a known target could not fully ignore a salient item that differed on another dimension: a uniquely colored item slowed search for a unique shape and the reverse, the interference did not disappear with practice, and it scaled with the distractor's relative discriminability [@theeuwes1992perceptual]. Whether every salient item captures attention in every task is contested (other work finds that capture depends on the searcher's mode and goals), but in the conditions tested, a color singleton costs attention whether or not it is relevant [@theeuwes1992perceptual].
+
+Wolfe and Horowitz's review lists color among the four undoubted attributes that guide attention, with motion, orientation and size [@wolfe2004what]. Two of their findings set palette rules. Efficiency rises with the target-distractor difference and falls with the distractor-distractor difference, and efficient color search needs differences far above a just-noticeable step. And heterogeneity hurts most when distractors flank the target in feature space, so a target hue that can be separated from all the others by a single line in color space (the only warm color among cool ones) is found easily, while one surrounded by neighbors on both sides is not [@wolfe2004what].
+
+::: {.rule #COL-067 grade="B"}
+**Reserve the warning red for conditions that need the learner's immediate attention, and do not use it for decoration, branding or routine controls.** The alerting rule restricts non-alerting uses of red so that they do not dilute alerts [@faa2010flightcrew], and a uniquely colored item draws attention whether or not it is relevant [@theeuwes1992perceptual]. Grade B: a regulatory principle with experimental support for its mechanism.
+
+*In LTF:* `warn` appears in the right places (errors, wrong answers, the unverified warning, the Fly mode random event, the safety callout). It also appears where it should not: the 64 px `bg-warn` play disc on `YouTubeEmbed` in the landing hero, and the `decision` callout type, which uses the same `bg-warn-tint` and `text-warn` as `safety` for a go/no-go prompt. Move the play disc to `ink`, and give `decision` its own neutral or accent treatment.
+:::
+
+::: {.rule #COL-068 grade="B"}
+**Keep status colors for status: do not reuse `go`, `caution` or `warn` to label content types.** Each reuse weakens the convention, as the alerting rule's limit on non-alerting red and amber anticipates [@faa2010flightcrew], and makes the page a field of competing singletons [@theeuwes1992perceptual; @wolfe2004what]. Grade B.
+
+*In LTF:* the `Callout` config assigns `go` to "Pro tip" and `caution` to "Classic panel", so a learner sees a green "success" fill on advice and an amber "caution" fill on a panel note. Retint those types with neutral or accent fills and keep the status hues for safety, decision states and real cautions.
+:::
+
+::: {.rule #COL-069 grade="C"}
+**Give in-app alerts three levels (act now, act soon, note for later), each with its own word, icon shape and color, and use a second sense for the top level.** This mirrors the structure of the alerting rule, including its requirement of two senses for warnings and cautions and other coding where color cannot be shown [@faa2010flightcrew]. Grade C: a regulatory structure applied by analogy to a training app.
+
+*In LTF:* the Fly mode random event already combines a `warn` frame, a pulsing ring, the `BellRing` icon, a label and a beep. Map the product's tones to the three levels explicitly (`warn` with octagon for act now, `caution` with triangle for act soon, ink with info icon for note) and document it beside `Toast` and `Badge`.
+:::
+
+::: {.rule #COL-070 grade="C"}
+**Remove a color-coded alert when its condition clears, and when a cue is muted or dismissed, show that it is.** The alerting rule requires alerts to be removed when conditions end and requires an indication when attention cues are suppressed [@faa2010flightcrew]. Grade C.
+
+*In LTF:* the Fly mode event alert clears when acknowledged; if beeps can be muted, show a "Sound off" state in Fly mode. The `BetaBanner`, dismissible and stored in local storage, is a standing caution-tinted strip and should not be the only place a real caution appears.
+:::
+
+::: {.rule #COL-071 grade="B"}
+**Keep ordinary content in a narrow, quiet color range so that the one exceptional state can be separated from everything else at a glance.** Efficient color search depends on large target-distractor and small distractor-distractor differences, and on the target being separable from all distractors in color space [@wolfe2004what]. Grade B: a well-supported review applied to interface design.
+
+*In LTF:* the neutral ink ladder and the single teal accent achieve this on ordinary pages. On busy pages (the challenge list, the dashboard, the reference hub) count the distinct hues in view; if `accent`, `go`, `caution`, `warn` and the three tier colors all appear together, the warning is no longer separable.
+:::
+
+::: {.rule #COL-072 grade="C"}
+**Let the single accent mean one thing (where you are, and the next step on the path) and do not spend it on general emphasis.** A reserved hue keeps its signal value only if it is not used everywhere [@theeuwes1992perceptual; @tufte1990envisioning]. Grade C.
+
+*In LTF:* `accent` and `accent-line` mark the active nav item, the active tab, the active lesson section, completed `LessonPath` stops, the current module and the `accent` button variant "only for continuing the lesson path". That is coherent. Links are also `text-accent`; keep their underline so that link and "you are here" are told apart by shape.
+:::
+
+### Color for data
+
+When LTF shows quantities, the ColorBrewer taxonomy is the place to start [@harrower2003colorbrewer]. A sequential scheme suits ordered data from low to high, carried mainly by lightness steps. A diverging scheme gives equal weight to a meaningful midpoint and both extremes, with a light middle and dark contrasting hues at the ends. A qualitative scheme suits categories, with hue doing the work and only subtle lightness differences, implying no order. The tool offers 35 schemes with 3 to 12 classes, hand-selected with reference to Munsell, filterable as colorblind safe, print friendly and photocopy safe [@harrower2003colorbrewer]. Its wide adoption is not validation, and the schemes were designed for filled map areas.
+
+Borland and Taylor argued that the rainbow color map confuses the viewer, obscures data and misleads: its hues have no perceptual order, its luminance varies uncontrollably, and it creates boundaries that are not in the data [@borland2007rainbow]. A 2023 reply by Ware, Stone and Szafir, reported with that critique, grants the problems of the classic map but notes that rainbows are often most accurate when values are read with a key, and that redesigned maps such as Turbo mitigate the flaws. Brewer showed earlier that spectral schemes can work as diverging schemes when lightness is controlled, with dark ends and a light middle, and suggested skipping yellow-greens for red-green deficient readers [@brewer1997spectral].
+
+::: {.rule #COL-073 grade="C"}
+**Match every color scale to its data type: sequential (one hue, monotonic lightness) for amounts, diverging for signed deviation from a meaningful midpoint, qualitative for categories.** Mismatching types hides order or invents it [@harrower2003colorbrewer]. Grade C: expert-selected schemes, widely adopted.
+
+*In LTF:* dashboard progress per module is a sequential quantity and should use one hue (the accent) at varying lightness or length, never status colors. A future view of deviation from a target value in a challenge would be diverging around the target.
+:::
+
+::: {.rule #COL-074 grade="B"}
+**Do not use the classic rainbow or jet map for continuous quantities; use a monotonic-lightness ramp, and use a spectral scheme only as a lightness-controlled diverging scale.** The classic rainbow lacks perceptual order and uniform luminance and creates false boundaries [@borland2007rainbow]; spectral colors are defensible only with dark ends and a light middle [@brewer1997spectral]. Grade B: the critique is supported by mixed experiments, and redesigned rainbows narrow it.
+
+*In LTF:* no rainbow exists in the product today. If a heat map is added (time spent per lesson, accuracy by challenge), use a single-hue ramp checked in both themes, since a ramp ending near black vanishes in Night.
+:::
+
+::: {.rule #COL-075 grade="C"}
+**Keep the fixed instrument and chart colors inside drawings and keep page tokens out of drawings.** Mixing the two systems blurs which colors are conventions to learn and which are interface signals; the token rules already draw this line, and the alerting principle of not diluting reserved colors applies to it [@faa2010flightcrew; @ibm2026carbon]. Grade C.
+
+*In LTF:* `arc-red`, `display-magenta` and `chart-*` stay in `AirspeedArcs`, `g1000-pfd`, `sectional-legend` and the `YouTubeEmbed` background; `warn` and `go` stay out of the instrument drawings. A grep for `arc-` and `display-` outside `features/widgets/` and `AirspeedArcs.tsx` is a cheap review check.
+:::
+
+### What this means for Learn to Fly
+
+**Keep.** One accent with one meaning; status colors that travel with icons and words; the Fly mode event alert's combination of frame, ring, icon, word and sound; the separation of instrument and page tokens.
+
+**Change.** Move the landing video's play disc off `warn` (COL-067). Retint the "Pro tip", "Classic panel" and "Decision" callouts so status hues mean status (COL-067, COL-068). Write down the three alert levels and map `Toast`, `Badge` and `Callout` tones to them (COL-069).
+
+**Build.** A hue-count check in review for busy pages (COL-071) and data-scale guidance in the component docs before the first dashboard chart is built (COL-073, COL-074).
+
+## Decision list and review checklist
+
+### Decisions this Part settles for LTF
+
+1. **Luminance carries legibility; hue carries category.** All text and needed marks are separated from their grounds by luminance contrast; hue differences are never relied on for detail (COL-002, COL-003, COL-011).
+2. **Color never stands alone.** Every status, tier, quiz result, widget band and alert carries a word, icon, shape or position as well as color (COL-028, COL-045, COL-047). The Day `caution` and `warn` pair, nearly merged under deutan simulation, depends on its triangle and octagon icons.
+3. **Tokens are specified perceptually.** Each token records its Oklch triplet; ramps are planned in Oklch with per-hue chroma caps and explicit gamut mapping; contrast is gated on the WCAG ratio, never on lightness difference (COL-009, COL-013 to COL-016, COL-019).
+4. **Day `ink-3` is resolved.** Either its lightness gap from `ink-2` is widened or it is folded into `ink-2` in Day (COL-019, COL-061).
+5. **A token script gates color in CI.** It generates the Oklch table, WCAG ratios for every declared pair in both themes, simulated color-deficient distances for must-differ pairs, and an advisory APCA report (COL-010, COL-046, COL-051, COL-057, COL-058).
+6. **Contrast floors.** 4.5:1 text, 3:1 large text and non-text indicators, 7:1 target for Fly mode text; `accent-line` is not used for meaningful marks on `surface-sunken` (COL-053 to COL-055, COL-059).
+7. **No color psychology in rationale or copy.** Colors are justified by role, convention, contrast and color vision, never by priming or mood claims (COL-032 to COL-036).
+8. **Day is the reading default and the design reference; Night compensates.** Night meta text uses `ink-2`; Fly mode gains an in-mode theme control and a measured decision on its default (COL-060, COL-061, COL-064, COL-065).
+9. **Status hues mean status.** `warn` is removed from the landing play disc and the `decision` callout; `go` and `caution` are removed from "Pro tip" and "Classic panel" (COL-067, COL-068).
+10. **Three alert levels with redundant coding,** cleared when the condition ends (COL-069, COL-070).
+11. **Widgets sit on fixed grounds,** use labeled colors in basic English names, and keep instrument colors separate from page tokens (COL-022, COL-027, COL-049, COL-075).
+12. **Data scales follow the data type;** no rainbow; categorical series use a deficiency-aware palette with direct labels (COL-052, COL-073, COL-074).
+13. **No exactness claims.** Copy never says a page color is the sim's color, and never calls the product "colorblind safe" (COL-001, COL-050).
+
+### Review checklist
+
+Run these questions against a pull request or a page.
+
+- Does any text, thin stroke or needed mark rely on hue rather than luminance to stand out from its ground? (COL-002)
+- Is any state or quantity encoded by a small hue difference, or by a neighboring-hue boundary such as cyan against green? (COL-003, COL-031)
+- Is a new binary indicator red against green? If so, does it also differ in shape or label? (COL-004, COL-045)
+- Is there a large saturated flash on a dark full-screen view? (COL-005, COL-063)
+- Does copy promise that a color matches the simulator, describe cones by color names, or teach red, yellow and blue primaries? (COL-001, COL-006, COL-030)
+- Were color differences judged by hex or HSL rather than Oklab or CIEDE2000, and is any difference code validated against the Sharma pairs? (COL-007, COL-010)
+- Do states that must be told apart at a glance differ by many just-noticeable steps? (COL-008)
+- Does every new or changed token record its Oklch triplet and stay within the sRGB gamut by chroma reduction, not clipping? (COL-009, COL-013, COL-014, COL-016)
+- Was contrast checked by the WCAG ratio, not by a lightness difference? (COL-011, COL-015)
+- Are gradients and mixes interpolated in Oklab? (COL-017)
+- Do components reference role tokens only, with instrument and chart colors confined to drawings? (COL-018, COL-075)
+- Are adjacent ramp levels at least about 0.08 apart in Oklch lightness? (COL-019)
+- Was each color reviewed on every surface it appears on, in Day and Night, at low and high brightness? (COL-020, COL-025)
+- Do adjacent saturated colors have a neutral edge or lightness gap? (COL-021)
+- Do widget drawings sit on a fixed neutral ground inside `WidgetFrame`? (COL-022)
+- Are large areas muted and strong color confined to small meaningful elements? (COL-023, COL-040)
+- Are grids, borders and dividers quiet, with `line-strong` kept for control boundaries? (COL-024)
+- Does any quiz ask learners to name a color from a lone swatch? (COL-026)
+- Are color names in copy basic English terms, each paired with a label, icon, position or shape? (COL-027, COL-028)
+- Does any view ask learners to remember more than about six hue meanings? (COL-029)
+- Does any rationale or copy claim a psychological effect of color? (COL-032, COL-034, COL-036)
+- Are error and wrong-answer states justified by convention and redundancy? (COL-033)
+- Is a color experiment preregistered, powered and specified in measured terms? (COL-035, COL-037)
+- Are competitors or groups assigned red or blue for an imagined edge? (COL-038)
+- Is a "calmer" or "friendlier" request expressed in lightness and chroma, then checked for contrast? (COL-039)
+- Do both themes remain first-class choices? (COL-041)
+- Is olive or brown used as an accent? (COL-042)
+- Are widget colors clear and labeled rather than gray or garish? (COL-043)
+- Does a first-contact page add color where it should reduce complexity? (COL-044)
+- Were protan, deutan and tritan simulations at 0.5 and 1.0 checked in both themes, with any merged pair fixed by a second cue? (COL-046, COL-047, COL-051)
+- Is pure red used on dark grounds or on green, or a yellow-green used for meaning? (COL-048)
+- Are colored elements labeled directly rather than through a separate key? (COL-049)
+- Does any text claim the product is colorblind safe? (COL-050)
+- Do categorical chart colors come from a deficiency-aware palette, checked against both theme grounds? (COL-052)
+- Does all text meet 4.5:1 (3:1 large) and every needed indicator 3:1 on its actual ground, including tints, with no rounding? (COL-053, COL-054, COL-059)
+- Does Fly mode text reach 7:1 and avoid `ink-3`? (COL-055)
+- Was low-contrast text accepted because it "looks fine"? (COL-056)
+- Is APCA used only as advice, with the stricter result taken? (COL-057)
+- Does the CI contrast gate cover the change? (COL-058)
+- Is dense reading designed first in Day, and is Night small text larger or brighter? (COL-060, COL-061)
+- Does Night elevation use lighter layers rather than shadow? (COL-062)
+- Can the learner change theme inside Fly mode, and was the Fly mode default measured? (COL-064, COL-065)
+- Is a dark theme justified by age or room darkness alone? (COL-066)
+- Is `warn` used for anything other than act-now conditions, or are status hues used to label content types? (COL-067, COL-068)
+- Does a new alert fit one of three levels with word, icon, color and (for the top level) sound, and does it clear with its condition? (COL-069, COL-070)
+- How many distinct hues are in view, and is the exceptional state still separable? (COL-071)
+- Is the accent used only for position and the next step? (COL-072)
+- Does each color scale match its data type, with no rainbow? (COL-073, COL-074)

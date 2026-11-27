@@ -542,3 +542,67 @@ The tempting fix for thin-looking light text on the Night canvas is a different 
 
 Keep the variable files and the 400 to 700 sans range; they cover every weight the product needs. Change the weight vocabulary: four role-based weights through the type utilities (SCR-039), one decision for measured values instead of the current mix of 500 and 700 mono, and no direct `font-bold` or `font-semibold` on page elements once the utilities exist. Use only high-level axis properties (SCR-038), never weights outside the loaded axis (SCR-041), and weigh optical sizing in any future face choice (SCR-040). Run the Night-theme weight test before adding any theme-dependent weight.
 
+## Numerals, tables and data on screens
+
+### Figure styles and what they are for
+
+Rutter's handbook, applying Bringhurst's rules to the web, distinguishes two figure styles [@rutter2017web]. Lining figures sit on the baseline at one height, like capitals; old-style figures have a varying rhythm, like lowercase. Lining figures draw the eye, so in running text they can feel like shouting, while old-style figures sit comfortably in prose; lining figures suit all-caps settings and places where readers scan, compare or search, such as lists and tables. A second distinction is spacing: proportional figures have widths that suit each digit, while tabular figures share one width so that columns line up and changing values do not jitter. The CSS Fonts specification exposes all of these through `font-variant-numeric`: `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal` and `slashed-zero`, and states that tabular numerals allow columns of numbers to line up [@w3c2026cssfonts]. Each value works only if the font contains the corresponding OpenType feature.
+
+This is craft authority. Rutter's claim that lining figures help scanning is plausible, but the excerpts in the notes cite no experiment for it [@rutter2017web]. The empirical support for careful numeric setting is indirect: Dillon and colleagues found that rendering quality mattered most in tasks that required scanning many rows of a table [@dillon2006visual], which shows that numeric scanning is sensitive to the details of how figures are drawn, and Degani's flight-deck review treats procedures and numbers on cards as displays whose legibility is a safety property [@degani1992typography].
+
+### What LTF's faces contain
+
+Measured from the installed font files for this Part: Instrument Sans's default figures are proportional, with advances from 391 units (the 1) to 666 (the 0) on a 1,000-unit em. The font contains `tnum` and `pnum` features and a tabular zero (`zero.tf`), but no `onum`, `frac` or `zero` (slashed zero) feature, so `oldstyle-nums`, `diagonal-fractions` and `slashed-zero` do nothing in LTF's sans text. JetBrains Mono is monospaced (every glyph 600 units), so its figures are tabular by construction; it contains a `frac` feature, and its default zero already carries an inner mark.
+
+In the code, the `readout`, `readout-sm` and `readout-lg` utilities set JetBrains Mono with `tabular-nums`, and a `tabular` utility exists for sans text, used in two places in the components. Numbers outside the readouts, in sans text, are proportional: durations ("About n minutes"), counts ("Showing n challenges of n"), lesson table cells rendered by `MarkdownContent`, and any value a content author writes in Markdown rather than through a token.
+
+::: {.rule #SCR-042 grade="C"}
+**Set every value that changes, counts, or sits in a column with tabular lining figures, either in the mono face or in the sans face with `tabular-nums`.** Tabular figures keep columns aligned and stop changing values from jittering [@w3c2026cssfonts; @rutter2017web]. Craft and standards, graded C.
+
+*In LTF:* keep the `readout` utilities as they are. Apply `tabular` to the `Stopwatch` (already mono), `ProgressBar` and `ProgressRing` labels, the "Showing n challenges" status line, the dashboard stat tiles, the score preview in `DebriefForm` and every numeric table cell. Any sans number that updates live without `tabular-nums` will shift its neighbors as digits change width, because Instrument Sans's 1 is less than two-thirds as wide as its 0.
+:::
+
+::: {.rule #SCR-043 grade="C"}
+**Use lining figures everywhere in LTF, including prose, and do not ask for old-style or slashed figures that the faces do not contain.** Old-style figures suit prose only in a typeface that has them [@rutter2017web], and `font-variant-numeric` values depend on the font's features [@w3c2026cssfonts]; Instrument Sans has no `onum` or `zero` feature (measured for this Part). Graded C.
+
+*In LTF:* if a distinct zero is needed in sans text, it is a reason to use the mono face for that value (SCR-029), not to add `slashed-zero`.
+:::
+
+### Tables designed to be read
+
+Rutter's chapter on tables ("designed to be read, not looked at") is the most practical source in the lane for LTF's reference pages [@rutter2017web]. Size columns to their content rather than stretching tables to full width. Remove borders, fills and zebra striping and use alignment and white space instead, following Tschichold's objection to tables that look like nets. Left-align text columns and right-align numbers, with headings aligned like their data. When decimal precision varies, align on the decimal point (CSS Text Level 4 allows `text-align` with a string, with patchy support at the time he wrote). Use tabular lining figures, or a monospaced face, for numeric tables. Pad cells with less space above than below and reduce line height inside cells. On small screens, either use a condensed or slightly smaller font (not both) with horizontal scrolling, or linearize the table into stacked blocks. His argument against zebra striping (banding emphasizes alternate rows) is reasoned, not measured, and runs against common practice.
+
+LTF's lesson tables in `MarkdownContent` are `w-full`, left-aligned throughout, with a `border-b-2` header row on a sunken fill and a `border-b` under every row, inside a bordered, rounded, horizontally scrolling region, at `text-sm` on phones and `text-base` from `sm`. The speeds page sets its main `Table` at `text-lg` with 24 px bold mono KIAS cells. The scrolling wrapper is the right answer for phones; the rest is the "net" Rutter argues against.
+
+::: {.rule #SCR-044 grade="C"}
+**Right-align numeric columns (and their headings), align on the decimal point where precision varies, and size tables to their content rather than to the container.** Alignment lets the eye compare magnitudes down a column [@rutter2017web]; scanning tables is a task in which presentation measurably matters [@dillon2006visual]. Craft authority, graded C.
+
+*In LTF:* `MarkdownContent` cannot know which columns are numeric, so give content authors the GitHub-flavored Markdown column alignment syntax (a colon on the right of the separator row) and make the `th` and `td` renderers honor it; remove `w-full` from lesson tables so short tables do not stretch across the 800 px article.
+:::
+
+::: {.rule #SCR-045 grade="C"}
+**Separate table rows with space and at most a hairline rule; no zebra fills, no heavy header borders and no cell borders on reference tables.** Borders, fills and banding compete with the data [@rutter2017web]. Reasoned craft guidance without measurement, graded C.
+
+*In LTF:* in `MarkdownContent`, replace the `border-b-2 border-line bg-surface-sunken` header with a semibold header over a single `border-line` rule, keep the `border-b` hairline rows, and tighten cell line height (the cells currently inherit the 1.625 body leading).
+:::
+
+### Text inside scalable diagrams
+
+LTF's widgets are hand-built SVGs drawn with a `viewBox` and `className="w-full"`, so everything inside, including text, scales with the width at which the widget is drawn. Label sizes are set in SVG user units, typically 10 or 11 (for example `text-[11px]` labels in `AirspaceProfile`, `TurnCoordinator`, `VorCdi` and `TrafficPattern`). A worked case, calculated for this Part from the code: `AirspaceProfile` uses a 720-unit-wide `viewBox`. In the 800 px lesson article, inside `WidgetFrame`'s border and `p-4`, it draws about 766 px wide, so an 11-unit label renders at about 11.7 px. On a 375 px phone, after the page's `px-4` and the frame's padding, it draws about 309 px wide, and the same label renders at about 4.7 px, an x-height of about 2.4 px. That is far below any size discussed in the chapter on size, and below the threshold sizes Sheedy tested [@sheedy2005text]. The `vor-cdi` instrument (240-unit `viewBox`) is less affected but still scales its 10 to 11 unit labels with width.
+
+::: {.rule #SCR-046 grade="B"}
+**Give every widget label a minimum rendered size equal to the reading floor for its surface, and when a diagram is narrower than its design width, enlarge the labels in user units (or switch to a simplified layout) rather than letting them shrink.** Legibility falls sharply below the critical print size [@legge2011print], threshold legibility depends on pixel height and stroke [@sheedy2005text], and the flight-deck review treats small numeric labels as a hazard [@degani1992typography]. The size evidence is strong; the specific mechanism for SVG is an engineering inference, so B.
+
+*In LTF:* in `src/features/widgets/shared/svg.tsx`, add a hook that measures the rendered width of the SVG and returns a scale factor, so `Label` and the widget text can set font size in user units as the desired pixel size divided by that factor. Test `AirspaceProfile` and `VorCdi` at 375 px; until then, allow those two widgets to scroll horizontally at a minimum width on phones (diagrams are excepted from reflow [@w3c2023wcag]).
+:::
+
+::: {.rule #SCR-047 grade="C"}
+**Set every number a learner must read in a widget or a checklist in the mono readout face at weight 500 or more, never in the sans face at small sizes.** The mono face has tabular figures and a distinct zero (measured for this Part), and confusable figures are a known weak point [@beier2010design]. Graded C.
+
+*In LTF:* the `PitchPower` overlay already uses `font-mono text-[11px]`; extend the convention to the airspeed and altitude values in `Tape`, `Gauge` labels and any numeric labels in the `traffic-pattern` widget.
+:::
+
+### What this means for Learn to Fly
+
+Keep the readout utilities, which already pair JetBrains Mono with tabular figures, and keep the scrolling wrapper on lesson tables. Change the numerals outside them: apply `tabular` to every live or columnar sans number (SCR-042) and stay with lining figures, since the sans face has no old-style set (SCR-043). Rebuild the lesson table styling: author-controlled numeric alignment, content-width tables, hairline rows, a lighter header (SCR-044, SCR-045). Fix the widget label scaling, the most serious small-text problem found in the code, with a measured-width scale factor in the shared SVG primitives (SCR-046), and set widget numbers in mono (SCR-047). The visualization side of these widgets is covered in Part XII, Information Visualization.
+
