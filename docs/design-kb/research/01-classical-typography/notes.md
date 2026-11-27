@@ -343,13 +343,13 @@ Details I could confirm from reviews and excerpts, not from the book itself:
 - Ampersands are acceptable in text when they improve a line's spacing.
 - Modern (Bodoni-style) faces need generous leading and narrow measures for continuous reading (blog excerpt).
 
-The method, per Roy Johnson's Mantex review of the 1995 revision, is to show a common layout problem, then a corrected version for comparison. Johnson calls it an advanced text, "not a beginner's book."
+The method, per Roy Johnson's Mantex review of the 1995 revision, is to show a common layout problem, then a corrected version for comparison. Johnson describes it as an advanced text, not a beginner's guide.
 
 ### Replication and criticism
 
 This is private-press connoisseurship with no experiment; the rules express a sensibility, "color" and evenness of texture, not measured reading performance. Reviews are split. Johnson accepts the book's authority but rejects the full-point rule, which he says is consistent with Dowding's other principles yet may sacrifice legibility for color and so "defeats what he wanted to achieve." Timoni West, a designer, calls it "picky, stodgy, snobbish and inadvertently hilarious" yet entertaining, and notes that many rules are hard to reproduce in digital layout tools and CSS.
 
-The editions are confusing: Open Library lists Wace printings in 1954, 1957 and 1966 (the 1966 one a revised 79-page edition) and a Hartley & Marks edition, and I could not establish which rule appeared in which edition. De Vinne's earlier codification disapproved thin spacing's excesses in a different way (devinne1910practice), so word space is a matter on which authorities have differed for over a century.
+The editions are confusing: Open Library lists Wace printings in 1954, 1957 and 1966 (the 1966 one a revised 79-page edition) and a Hartley & Marks edition, and I could not establish which rule appeared in which edition. De Vinne recorded thin-spacing advocates of an earlier revival (devinne1910practice), so word space has been disputed for over a century.
 
 ### Implications for LTF
 

@@ -560,3 +560,41 @@ The model is one of the most influential in cognitive psychology, but it has bee
 - For widgets that show a changing value plus a text explanation, avoid making the learner hold one in mind while looking for the other; place them together.
 
 Confirmed this session: the abstract through Crossref (DOI 10.1126/science.1736359, volume 255, issue 5044, pages 556-559, published 31 January 1992); and how de Jong 2010, the 2019 CLT retrospective, Mayer and Moreno 2003, Kalyuga and colleagues 2003 and Cowan 2001 (read in full or in part) use the model. The full text of the 1992 article was not read.
+
+## paivio1986mental
+
+Paivio, A. (1986). *Mental Representations: A Dual Coding Approach*. New York: Oxford University Press.
+
+### Core claims
+
+Paivio's book is the full statement of dual coding theory, the idea that human cognition runs on two functionally distinct symbolic systems, one specialized for language and one for nonverbal objects and events, with connections between them. Multimedia learning theory takes this as one of its foundations: Mayer and Moreno (2003, this lane) call the dual-channel assumption "a central feature of Paivio's (1986) dual-coding theory". The theory predicts that information coded in both systems is remembered better than information coded in one, because the codes have additive effects. It began as an effort to restore imagery to its place in cognitive psychology, and it is not only a theory of imagery. This book is a scholarly monograph that organizes decades of experiments (Paivio's earlier work dates from the 1960s) and is the original source of the "words plus pictures" argument.
+
+I did not read the book. This entry is built from catalog records and from a 1987 chapter by Clark and Paivio, "A Dual Coding Perspective on Encoding Processes", which reproduces the theory's structure from the 1986 book with Paivio as co-author and which I read in part.
+
+### Specifics
+
+**Two symbolic systems.** The chapter states that the unique features of linguistic and nonlinguistic events are accommodated by separate verbal and nonverbal symbolic systems that operate in fundamentally different ways. The theory postulates verbal and imaginal representations and connections between sensory events and these representations, between verbal and imaginal representations, and within each system.
+
+**Logogens.** Verbal representations, "wordlike entities comprised of visual and phonemic features". Language consists of discrete, categorical and separate units, is sequentially constrained (meaning depends on order, "John hit" versus "hit John"), and words are mostly arbitrary patterns that resemble little of what they stand for.
+
+**Imagens.** Representations that encode modality-specific information about nonverbal, perceptual and sensory-motor experience. Visual-spatial imagens are continuous, analog or holistic, nested (a nose image is nested within a face image), and synchronous or parallel, so a single imagen can represent at once a thought that would need many words to describe. They keep some perceptual properties of what they stand for.
+
+**Three kinds of processing.** Representational (direct activation of verbal or imaginal codes by words or objects, governed by familiarity), referential (one system activating the other, as in imaging to a word or naming a picture) and associative (activation within a system). Referential connections are described as probabilistic.
+
+**Evidence examples in the chapter.** Naming pictures takes longer than reading words (the chapter cites 821 msec for pictures versus 562 msec for words in one study), while pictures are categorized faster, which the authors take as an estimate of referential processing time. Pictures tend to be remembered better than words, and the chapter explains this by saying pictures are more likely than words to activate both verbal and imaginal codes, whose effects on recall are additive. The picture superiority effect disappears when pictures and words are presented at a rate that precludes naming. Imagery instructions have optimal benefits only at slow presentation rates.
+
+**No abstract common code.** The chapter says dual coding theory does not include a level of representation more abstract than logogens and imagens, and calls the abstract representations of propositional theories superfluous. This is a point of disagreement with other theories.
+
+### Replication and criticism
+
+Dual coding has a large experimental literature on concrete versus abstract words and on images in memory, and the multimedia learning literature applies it. Criticisms I can document: the chapter itself says it is correcting a view that the theory is only about imagery, and says its rival propositional theories exist. Mayer and Moreno (2003) add that all theorists do not characterize the subsystems in the same way, and Reinwein's reanalysis (see Ginns in this lane) argues the modality effect cannot rest on Baddeley's or Penney's two-system accounts. The strongest reading is that two coding systems are well supported for memory tasks, but it is not established that adding a picture to words always helps learning of complex material; the Harp and Mayer and redundancy studies in this lane show added pictures and words can hurt. A common misuse is to turn the theory into "visual learners" and "verbal learners". Nothing in the account above assigns people to one type; both systems are present in everyone.
+
+### Implications for LTF
+
+- Pair a concrete visual with a verbal label for new concepts: the airspeed indicator with the words "airspeed", the pitch attitude with its name, a diagram of a traffic pattern with leg names.
+- Concrete, imageable material is easier to remember than abstract. Anchor abstract ideas (energy, stability, angle of attack) in a visible image or animation.
+- The benefit of the second code depends on time to generate it. Allow self-paced viewing; do not flash an image and label for one second.
+- A picture is not automatically helpful when the words already carry the content, so pair deliberately, not decoratively.
+- Avoid "learning styles" language in LTF's UI or copy.
+
+Confirmed this session: Open Library search (Mental Representations, Allan Paivio, Oxford University Press, first published 1986, work OL3779347W); a library catalog summary of publisher and series; the reference-list entry in Clark and Paivio (1987); and the read of that chapter at https://clark.faculty.uwinnipeg.ca/Clark/Publications/1987-Clark&Paivio-EncodingProcesses.pdf. The book's text and a publisher description were not read; no ISBN was confirmed for the 1986 printing.

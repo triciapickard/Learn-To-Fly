@@ -463,3 +463,31 @@ Evidence: simulator experiments with 12 pilots, plus a model fitted to the scan 
 No aircraft-specific numbers are asserted here.
 
 Confirmed this session: Crossref record and abstract for DOI 10.1518/hfes.45.3.360.27250; the SEEV formulation and limitations from Kotseruba and Tsotsos (arXiv 2104.05677, downloaded and read); a web search summary for the driving-study caveat. The paper's full text was not read.
+
+## holmqvist2011eye
+Holmqvist, K., Nyström, M., Andersson, R., Dewhurst, R., Jarodzka, H., & van de Weijer, J. (2011). *Eye Tracking: A Comprehensive Guide to Methods and Measures*. Oxford: Oxford University Press.
+
+### Core claims
+This is a methods textbook, not a study. Its argument is that eye-tracking results depend on choices that are often left unstated, such as hardware, calibration, how raw samples are turned into fixations and saccades, and how measures are defined, and that researchers from different fields often miss useful methods from one another. The Lund University research portal record says the book is aimed at researchers who actively use an eye tracker and covers the technology, signal processing, algorithms, experimental design, stimulus programming, participant instructions and data analysis, stressing practical skills such as camera setup and calibration because poor recordings limit what a study can show. The authors describe it as "the first comprehensive textbook on methodology for new users of eye tracking" (record text).
+
+### Specifics
+Structure (from a catalog record and the portal): Part I presents the technology and skills needed to perform high-quality research with eye trackers; Part II covers the predominant methods applied to the data the trackers record; Part III outlines the measures that can be calculated from the events and representations in Part II. A table-of-contents excerpt lists a chapter on estimating oculomotor events from raw data, with sections on principles and algorithms for event detection and on dispersion-based, velocity and acceleration algorithms. The authors built a taxonomy of eye-movement methods and measures from a review of method sections in journal papers, book chapters, theses and conference proceedings, organized around operational definitions because the same measure often goes by different names. The book is meant to support people evaluating a tracker, planning a study, recording and processing data, or reading eye-movement research.
+
+I have not read the book's chapters, so I do not list its specific thresholds or recommendations. What I can give concretely are methodological variations visible in the other studies of this lane, which show why the book's concerns matter:
+- Fixation definition: Buscher et al. (2009) counted a fixation after gaze stayed within a 50 pixel radius for at least 100 ms; Djamasbi et al. (2010) defined a fixation as a gaze longer than 300 ms. Numbers of fixations, durations and heat maps change with such choices.
+- Accuracy and sampling: Buscher et al. used a 50 Hz tracker with 0.5 degree accuracy; Greene et al. (2012) used 1000 Hz and required calibration error of 1 degree or less, recalibrating every eight images.
+- Scoring: Burke et al. (2005) encoded fixations by watching a video of the gaze overlay, counting each item once even with several saccades within it.
+
+### Replication and criticism
+As a textbook it is not subject to replication, and I found no critique of it. A caution relevant to its authors: a 2022 paper by Holmqvist and colleagues on a minimal reporting guideline (Behavior Research Methods) appeared on PubMed Central marked as retracted, with a retraction notice in 2023; I read only the flagged page and did not use its content. Use the book with that in mind, and for any specific reporting guideline check the current literature.
+
+Broader limits of the method that come from the studies in this lane: gaze shows where the eye points, not what is processed. Burke et al. found that most "remembered" banners had not been directly fixated, and Rensink et al. and Simons and Chabris show that looking does not guarantee seeing. Greene et al. show that task cannot reliably be read from summary gaze statistics. Heat maps aggregate across people and tasks and hide the variation Pan et al. reported.
+
+### Implications for LTF
+1. Write down the method before trusting any gaze result. If LTF ever runs an eye-tracking or webcam study, report the tracker, sampling rate, accuracy, calibration procedure, fixation definition and task, so that numbers can be compared to other work.
+2. Prefer cheap, direct measures first: task success, time on step, errors, and think-aloud with five or so learners. Eye tracking is expensive and most of its answers are about where people look, not whether they understood.
+3. When reading vendor or industry heat maps (including NN/g's), ask which fixation definition, which tasks, which pages and which participants produced them.
+4. Do not use gaze as a proxy for comprehension. The lane's studies show fixation does not equal attention or memory.
+5. If a beginner-friendly "where to look" overlay is built for instrument scanning, label it as a teaching device and not as measured gaze of experts, unless expert data are collected with a documented method.
+
+Confirmed this session: Open Library record OL16360873W (Oxford University Press, 2011, ISBN 9780199697083); Lund University research portal record (portal.research.lu.se) for the description and ISBN; search results for the three-part structure and chapter on event detection; the PMC page flagging the 2022 paper as retracted. The book itself was not read.
