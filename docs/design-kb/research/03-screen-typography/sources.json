@@ -1,0 +1,613 @@
+[
+  {
+    "key": "dyson2004physical",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Dyson",
+        "given": "Mary C."
+      }
+    ],
+    "year": 2004,
+    "title": "How physical text layout affects reading from screen",
+    "container_title": "Behaviour & Information Technology",
+    "volume": "23",
+    "issue": "6",
+    "pages": "377-393",
+    "publisher": "Taylor & Francis",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/01449290410001715714",
+    "isbn": "",
+    "url": "https://doi.org/10.1080/01449290410001715714",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1080/01449290410001715714 returned title 'How physical text layout affects reading from screen', container 'Behaviour &amp; Information Technology', volume 23, issue 6, pages 377-393, issued [2004, 11]. Full text read at stu.westga.edu/~ssynan1/literacy/Dyson.pdf.",
+    "kind": "experimental literature review",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "legge2011print",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Legge",
+        "given": "G. E."
+      },
+      {
+        "family": "Bigelow",
+        "given": "C. A."
+      }
+    ],
+    "year": 2011,
+    "title": "Does print size matter for reading? A review of findings from vision science and typography",
+    "container_title": "Journal of Vision",
+    "volume": "11",
+    "issue": "5",
+    "pages": "8-8",
+    "publisher": "Association for Research in Vision and Ophthalmology",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1167/11.5.8",
+    "isbn": "",
+    "url": "https://doi.org/10.1167/11.5.8",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1167/11.5.8 returned title 'Does print size matter for reading? A review of findings from vision science and typography', container 'Journal of Vision', volume 11, issue 5, pages 8-8, issued [2011, 8, 9]. Full text read at pmc.ncbi.nlm.nih.gov/articles/PMC3428264; Europe PMC abstract record matches.",
+    "kind": "vision-science and typography review",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "gugerty2004effects",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Gugerty",
+        "given": "Leo"
+      },
+      {
+        "family": "Tyrrell",
+        "given": "Richard A."
+      },
+      {
+        "family": "Aten",
+        "given": "Thomas R."
+      },
+      {
+        "family": "Edmonds",
+        "given": "K. Andy"
+      }
+    ],
+    "year": 2004,
+    "title": "The effects of subpixel addressing on users' performance and preferences during reading-related tasks",
+    "container_title": "ACM Transactions on Applied Perception",
+    "volume": "1",
+    "issue": "2",
+    "pages": "81-101",
+    "publisher": "Association for Computing Machinery",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1024083.1024084",
+    "isbn": "",
+    "url": "https://doi.org/10.1145/1024083.1024084",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/1024083.1024084 returned title 'The effects of subpixel addressing on users' performance and preferences during reading-related tasks', container 'ACM Transactions on Applied Perception', volume 1, issue 2, pages 81-101, issued [2004, 10]. Crossref abstract text read; Microsoft font blog posts describing two experiments read.",
+    "kind": "experimental study (four experiments)",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "sheedy2005text",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Sheedy",
+        "given": "James E."
+      },
+      {
+        "family": "Subbaram",
+        "given": "Manoj V."
+      },
+      {
+        "family": "Zimmerman",
+        "given": "Aaron B."
+      },
+      {
+        "family": "Hayes",
+        "given": "John R."
+      }
+    ],
+    "year": 2005,
+    "title": "Text Legibility and the Letter Superiority Effect",
+    "container_title": "Human Factors: The Journal of the Human Factors and Ergonomics Society",
+    "volume": "47",
+    "issue": "4",
+    "pages": "797-815",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1518/001872005775570998",
+    "isbn": "",
+    "url": "https://doi.org/10.1518/001872005775570998",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1518/001872005775570998 returned title 'Text Legibility and the Letter Superiority Effect', container 'Human Factors: The Journal of the Human Factors and Ergonomics Society', volume 47, issue 4, pages 797-815, issued [2005, 12]. Abstract retrieved via Europe PMC search for the title.",
+    "kind": "threshold-legibility experiment",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "dillon2006visual",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Dillon",
+        "given": "Andrew"
+      },
+      {
+        "family": "Kleinman",
+        "given": "Lisa"
+      },
+      {
+        "family": "Choi",
+        "given": "Gil Ok"
+      },
+      {
+        "family": "Bias",
+        "given": "Randolph"
+      }
+    ],
+    "year": 2006,
+    "title": "Visual search and reading tasks using ClearType and regular displays",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '06)",
+    "volume": "",
+    "issue": "",
+    "pages": "503-511",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1124772.1124849",
+    "isbn": "",
+    "url": "https://doi.org/10.1145/1124772.1124849",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/1124772.1124849 returned title 'Visual search and reading tasks using ClearType and regular displays', container 'Proceedings of the SIGCHI Conference on Human Factors in Computing Systems', volume , issue , pages 503-511, issued [2006, 4, 22]. Web searches returned abstract-level findings; Larson blog summary read; full text not accessible.",
+    "kind": "experimental study (two experiments)",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "delgado2018dont",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Delgado",
+        "given": "Pablo"
+      },
+      {
+        "family": "Vargas",
+        "given": "Cristina"
+      },
+      {
+        "family": "Ackerman",
+        "given": "Rakefet"
+      },
+      {
+        "family": "Salmerón",
+        "given": "Ladislao"
+      }
+    ],
+    "year": 2018,
+    "title": "Don't throw away your printed books: A meta-analysis on the effects of reading media on reading comprehension",
+    "container_title": "Educational Research Review",
+    "volume": "25",
+    "issue": "",
+    "pages": "23-38",
+    "publisher": "Elsevier BV",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.edurev.2018.09.003",
+    "isbn": "",
+    "url": "https://doi.org/10.1016/j.edurev.2018.09.003",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.edurev.2018.09.003 returned title 'Don't throw away your printed books: A meta-analysis on the effects of reading media on reading comprehension', container 'Educational Research Review', volume 25, issue , pages 23-38, issued [2018, 11]. Full text of the author manuscript read at uv.es/lasalgon/papers.",
+    "kind": "meta-analysis",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "mangen2013reading",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Mangen",
+        "given": "Anne"
+      },
+      {
+        "family": "Walgermo",
+        "given": "Bente R."
+      },
+      {
+        "family": "Brønnick",
+        "given": "Kolbjørn"
+      }
+    ],
+    "year": 2013,
+    "title": "Reading linear texts on paper versus computer screen: Effects on reading comprehension",
+    "container_title": "International Journal of Educational Research",
+    "volume": "58",
+    "issue": "",
+    "pages": "61-68",
+    "publisher": "Elsevier BV",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.ijer.2012.12.002",
+    "isbn": "",
+    "url": "https://doi.org/10.1016/j.ijer.2012.12.002",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.ijer.2012.12.002 returned title 'Reading linear texts on paper versus computer screen: Effects on reading comprehension', container 'International Journal of Educational Research', volume 58, issue , pages 61-68, issued [2013, 1]. Full text read (PDF copy at educacion.udd.cl).",
+    "kind": "randomized experiment",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "wallace2022towards",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wallace",
+        "given": "Shaun"
+      },
+      {
+        "family": "Bylinskii",
+        "given": "Zoya"
+      },
+      {
+        "family": "Dobres",
+        "given": "Jonathan"
+      },
+      {
+        "family": "Kerr",
+        "given": "Bernard"
+      },
+      {
+        "family": "Berlow",
+        "given": "Sam"
+      },
+      {
+        "family": "Treitman",
+        "given": "Rick"
+      },
+      {
+        "family": "Kumawat",
+        "given": "Nirmal"
+      },
+      {
+        "family": "Arpin",
+        "given": "Kathleen"
+      },
+      {
+        "family": "Miller",
+        "given": "Dave B."
+      },
+      {
+        "family": "Huang",
+        "given": "Jeff"
+      },
+      {
+        "family": "Sawyer",
+        "given": "Ben D."
+      }
+    ],
+    "year": 2022,
+    "title": "Towards Individuated Reading Experiences: Different Fonts Increase Reading Speed for Different Individuals",
+    "container_title": "ACM Transactions on Computer-Human Interaction",
+    "volume": "29",
+    "issue": "4",
+    "pages": "1-56",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/3502222",
+    "isbn": "",
+    "url": "https://doi.org/10.1145/3502222",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/3502222 returned title 'Towards Individuated Reading Experiences: Different Fonts Increase Reading Speed for Different Individuals', container 'ACM Transactions on Computer-Human Interaction', volume 29, issue 4, pages 1-56, issued [2022, 3, 31]. Full text read (jeffhuang.com/papers/Readability_TOCHI22.pdf); author list taken from the paper title page.",
+    "kind": "large remote experiment",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "rello2016make",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Rello",
+        "given": "Luz"
+      },
+      {
+        "family": "Pielot",
+        "given": "Martin"
+      },
+      {
+        "family": "Marcos",
+        "given": "Mari-Carmen"
+      }
+    ],
+    "year": 2016,
+    "title": "Make It Big! The Effect of Font Size and Line Spacing on Online Readability",
+    "container_title": "Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems (CHI '16)",
+    "volume": "",
+    "issue": "",
+    "pages": "3637-3648",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/2858036.2858204",
+    "isbn": "",
+    "url": "https://doi.org/10.1145/2858036.2858204",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/2858036.2858204 returned title 'Make It Big!', container 'Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems', volume , issue , pages 3637-3648, issued [2016, 5, 7]. Full text read (PDF copy at changedyslexia.org); Crossref lists the short title Make It Big!",
+    "kind": "eye-tracking experiment",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "gould1987reading",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Gould",
+        "given": "John D."
+      },
+      {
+        "family": "Alfaro",
+        "given": "Lizette"
+      },
+      {
+        "family": "Finn",
+        "given": "Rich"
+      },
+      {
+        "family": "Haupt",
+        "given": "Brian"
+      },
+      {
+        "family": "Minuto",
+        "given": "Angela"
+      }
+    ],
+    "year": 1987,
+    "title": "Reading from CRT Displays Can Be as Fast as Reading from Paper",
+    "container_title": "Human Factors: The Journal of the Human Factors and Ergonomics Society",
+    "volume": "29",
+    "issue": "5",
+    "pages": "497-517",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/001872088702900501",
+    "isbn": "",
+    "url": "https://doi.org/10.1177/001872088702900501",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/001872088702900501 returned title 'Reading from CRT Displays Can Be as Fast as Reading from Paper', container 'Human Factors: The Journal of the Human Factors and Ergonomics Society', volume 29, issue 5, pages 497-517, issued [1987, 10]. Crossref abstract read.",
+    "kind": "series of six experiments",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "boyarski1998study",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Boyarski",
+        "given": "Dan"
+      },
+      {
+        "family": "Neuwirth",
+        "given": "Christine"
+      },
+      {
+        "family": "Forlizzi",
+        "given": "Jodi"
+      },
+      {
+        "family": "Regli",
+        "given": "Susan Harkness"
+      }
+    ],
+    "year": 1998,
+    "title": "A study of fonts designed for screen display",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '98)",
+    "volume": "",
+    "issue": "",
+    "pages": "87-94",
+    "publisher": "ACM Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/274644.274658",
+    "isbn": "",
+    "url": "https://doi.org/10.1145/274644.274658",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/274644.274658 returned title 'A study of fonts designed for screen display', container 'Proceedings of the SIGCHI conference on Human factors in computing systems - CHI '98', volume , issue , pages 87-94, issued [1998]. Original paper not accessible; HFI summary page and Wallace et al. description read.",
+    "kind": "experimental study",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "bernard2003effects",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Bernard",
+        "given": "Michael L."
+      },
+      {
+        "family": "Fernandez",
+        "given": "Marissa"
+      },
+      {
+        "family": "Hull",
+        "given": "Spring"
+      },
+      {
+        "family": "Chaparro",
+        "given": "Barbara S."
+      }
+    ],
+    "year": 2003,
+    "title": "The Effects of Line Length on Children and Adults' Perceived and Actual Online Reading Performance",
+    "container_title": "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
+    "volume": "47",
+    "issue": "11",
+    "pages": "1375-1379",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/154193120304701112",
+    "isbn": "",
+    "url": "https://doi.org/10.1177/154193120304701112",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1177/154193120304701112 returned title 'The Effects of Line Length on Children and Adults' Perceived and Actual Online Reading Performance', container 'Proceedings of the Human Factors and Ergonomics Society Annual Meeting', volume 47, issue 11, pages 1375-1379, issued [2003, 10]. Publisher page blocked (HTTP 403); HFI summary and Dyson 2004 read.",
+    "kind": "experimental study",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "w3c2026cssfonts",
+    "type": "standard",
+    "authors": [
+      {
+        "literal": "World Wide Web Consortium"
+      }
+    ],
+    "year": 2026,
+    "title": "CSS Fonts Module Level 4 (W3C Working Draft, 12 November 2026)",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "World Wide Web Consortium",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Lilley",
+        "given": "Chris"
+      }
+    ],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.w3.org/TR/css-fonts-4/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://www.w3.org/TR/css-fonts-4/ this session: page header gives W3C Working Draft dated 12 November 2026, editor Chris Lilley; sections 2.1.5, 2.6, 4.5, 4.9, 6.7, 8.1, 8.2 read.",
+    "kind": "technical standard (working draft)",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "rutter2017web",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Rutter",
+        "given": "Richard"
+      }
+    ],
+    "year": 2017,
+    "title": "Web Typography: A handbook for designing beautiful and effective responsive typography",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Ampersand Type",
+    "publisher_place": "Brighton",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780995664203",
+    "url": "https://book.webtypography.net/",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search (title=web typography, author rutter) returned work /works/OL27054557W, Web Typography, Richard Rutter, first published 2017, publisher Ampersand Type, ISBN 9780995664203. Contents page at book.webtypography.net and two A List Apart excerpts read. Publisher place Brighton comes from a typography.guru listing in a web search result.",
+    "kind": "craft handbook",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "santamaria2014web",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Santa Maria",
+        "given": "Jason"
+      }
+    ],
+    "year": 2014,
+    "title": "On Web Typography",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "A Book Apart",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781937557065",
+    "url": "https://abookapart.com/products/on-web-typography",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library isbn/9781937557065.json returned On web typography, publisher A Book Apart, 2014, place New York, 142 pages, work /works/OL32922580W. A List Apart excerpt How We Read (alistapart.com/article/how-we-read/) read.",
+    "kind": "craft book",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "brown2011more",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Brown",
+        "given": "Tim"
+      }
+    ],
+    "year": 2011,
+    "title": "More Meaningful Typography",
+    "container_title": "A List Apart",
+    "volume": "",
+    "issue": "327",
+    "pages": "",
+    "publisher": "A List Apart",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://alistapart.com/article/more-meaningful-typography/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched alistapart.com/article/more-meaningful-typography/ this session: author Tim Brown, A List Apart issue 327, 3 May 2011; modular scale figures and example values read.",
+    "kind": "craft essay",
+    "lane": "03-screen-typography"
+  },
+  {
+    "key": "marcotte2009fluid",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Marcotte",
+        "given": "Ethan"
+      }
+    ],
+    "year": 2009,
+    "title": "Fluid Grids",
+    "container_title": "A List Apart",
+    "volume": "",
+    "issue": "279",
+    "pages": "",
+    "publisher": "A List Apart",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://alistapart.com/article/fluidgrids/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched alistapart.com/article/fluidgrids/ this session: author Ethan Marcotte, A List Apart issue 279, 3 March 2009; formula and example figures read.",
+    "kind": "craft essay",
+    "lane": "03-screen-typography"
+  }
+]

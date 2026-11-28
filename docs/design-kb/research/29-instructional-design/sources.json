@@ -1,0 +1,514 @@
+[
+  {
+    "key": "alfieri2011does",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Alfieri",
+        "given": "Louis"
+      },
+      {
+        "family": "Brooks",
+        "given": "Patricia J."
+      },
+      {
+        "family": "Aldrich",
+        "given": "Naomi J."
+      },
+      {
+        "family": "Tenenbaum",
+        "given": "Harriet R."
+      }
+    ],
+    "year": 2011,
+    "title": "Does discovery-based instruction enhance learning?",
+    "container_title": "Journal of Educational Psychology",
+    "volume": "103",
+    "issue": "1",
+    "pages": "1-18",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/a0021017",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1037/a0021017 returned title, four authors, J. Educ. Psychol. 103(1) 1-18, 2011; full text PDF also read (fisme.science.uu.nl copy) confirming abstract and effect sizes.",
+    "kind": "meta-analysis",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "kirschner2006why",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Kirschner",
+        "given": "Paul A."
+      },
+      {
+        "family": "Sweller",
+        "given": "John"
+      },
+      {
+        "family": "Clark",
+        "given": "Richard E."
+      }
+    ],
+    "year": 2006,
+    "title": "Why minimal guidance during instruction does not work: an analysis of the failure of constructivist, discovery, problem-based, experiential, and inquiry-based teaching",
+    "container_title": "Educational Psychologist",
+    "volume": "41",
+    "issue": "2",
+    "pages": "75-86",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15326985ep4102_1",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1207/s15326985ep4102_1 returned the title, authors, Educational Psychologist 41(2) 75-86, June 2006; the 2007 reply (DOI 10.1080/00461520701263426) was read in full text and web search summarized the abstract.",
+    "kind": "position paper and literature review",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "shute2008focus",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Shute",
+        "given": "Valerie J."
+      }
+    ],
+    "year": 2008,
+    "title": "Focus on formative feedback",
+    "container_title": "Review of Educational Research",
+    "volume": "78",
+    "issue": "1",
+    "pages": "153-189",
+    "publisher": "American Educational Research Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3102/0034654307313795",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.3102/0034654307313795 returned title, author, Rev. Educ. Res. 78(1) 153-189, March 2008; full text PDF read (myweb.fsu.edu/vshute).",
+    "kind": "narrative review with guidelines",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "keller1987development",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Keller",
+        "given": "John M."
+      }
+    ],
+    "year": 1987,
+    "title": "Development and use of the ARCS model of instructional design",
+    "container_title": "Journal of Instructional Development",
+    "volume": "10",
+    "issue": "3",
+    "pages": "2-10",
+    "publisher": "Springer Science and Business Media LLC",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/bf02905780",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query for the title returned DOI 10.1007/bf02905780, J. Instr. Dev. 10(3) 2-10, Sept 1987; full text PDF read (ocw.tudelft.nl copy).",
+    "kind": "design model with field tests",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "wood1976role",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wood",
+        "given": "David"
+      },
+      {
+        "family": "Bruner",
+        "given": "Jerome S."
+      },
+      {
+        "family": "Ross",
+        "given": "Gail"
+      }
+    ],
+    "year": 1976,
+    "title": "The role of tutoring in problem solving",
+    "container_title": "Journal of Child Psychology and Psychiatry",
+    "volume": "17",
+    "issue": "2",
+    "pages": "89-100",
+    "publisher": "Wiley",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1111/j.1469-7610.1976.tb00381.x",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1111/j.1469-7610.1976.tb00381.x, title, three authors, JCPP 17(2) 89-100, April 1976; full text read as PDF (copy at sachafund.wordpress.com).",
+    "kind": "observational study",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "mayer2004should",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Mayer",
+        "given": "Richard E."
+      }
+    ],
+    "year": 2004,
+    "title": "Should there be a three-strikes rule against pure discovery learning? The case for guided methods of instruction",
+    "container_title": "American Psychologist",
+    "volume": "59",
+    "issue": "1",
+    "pages": "14-19",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0003-066x.59.1.14",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1037/0003-066x.59.1.14, Am. Psychol. 59(1) 14-19, 2004; full text read as PDF (csun.edu copy).",
+    "kind": "narrative review",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "merrill2002first",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Merrill",
+        "given": "M. David"
+      }
+    ],
+    "year": 2002,
+    "title": "First principles of instruction",
+    "container_title": "Educational Technology Research and Development",
+    "volume": "50",
+    "issue": "3",
+    "pages": "43-59",
+    "publisher": "Springer Science and Business Media LLC",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/bf02505024",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1007/bf02505024, ETR&D 50(3) 43-59, Sept 2002; Springer page abstract read (five principles). Companion Pebble-in-the-Pond article (Performance Improvement 41(7)) read in full from itgs.ict.usc.edu.",
+    "kind": "expert synthesis of design theories",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "bloom1984sigma",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Bloom",
+        "given": "Benjamin S."
+      }
+    ],
+    "year": 1984,
+    "title": "The 2 sigma problem: the search for methods of group instruction as effective as one-to-one tutoring",
+    "container_title": "Educational Researcher",
+    "volume": "13",
+    "issue": "6",
+    "pages": "4-16",
+    "publisher": "American Educational Research Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3102/0013189x013006004",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.3102/0013189x013006004, Educ. Researcher 13(6) 4-16, June 1984; full text read as PDF (gwern.net copy); critical account by von Hippel (Education Next, 2024) read as PDF.",
+    "kind": "research summary and position paper",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "kulik1990effectiveness",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Kulik",
+        "given": "Chen-Lin C."
+      },
+      {
+        "family": "Kulik",
+        "given": "James A."
+      },
+      {
+        "family": "Bangert-Drowns",
+        "given": "Robert L."
+      }
+    ],
+    "year": 1990,
+    "title": "Effectiveness of mastery learning programs: a meta-analysis",
+    "container_title": "Review of Educational Research",
+    "volume": "60",
+    "issue": "2",
+    "pages": "265-299",
+    "publisher": "American Educational Research Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3102/00346543060002265",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.3102/00346543060002265, Rev. Educ. Res. 60(2) 265-299, 1990; full text read as PDF (typeset.io copy).",
+    "kind": "meta-analysis",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "hattie2009visible",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Hattie",
+        "given": "John"
+      }
+    ],
+    "year": 2009,
+    "title": "Visible learning: a synthesis of over 800 meta-analyses relating to achievement",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Routledge",
+    "publisher_place": "",
+    "edition": "1st",
+    "editors": [],
+    "doi": "10.4324/9780203887332",
+    "isbn": "9780415476188",
+    "url": "https://www.routledge.com/Visible-Learning-A-Synthesis-of-Over-800-Meta-cAnalyses-Relating-to-Achievement/Hattie/p/book/9780415476188",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.4324/9780203887332 (Visible Learning, Hattie, Routledge, online 2008); Routledge product page (ISBN 9780415476188 in URL) gave the title, copyright 2009, 392 pages and description of over 800 meta-analyses. Critique read: Bergeron and Rivard 2017, McGill J. Educ. 52(1), DOI 10.7202/1040816ar.",
+    "kind": "synthesis of meta-analyses (contested)",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "rosenshine2012principles",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Rosenshine",
+        "given": "Barak"
+      }
+    ],
+    "year": 2012,
+    "title": "Principles of instruction: research-based strategies that all teachers should know",
+    "container_title": "American Educator",
+    "volume": "36",
+    "issue": "1",
+    "pages": "12-19",
+    "publisher": "American Federation of Teachers",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.aft.org/sites/default/files/periodicals/Rosenshine.pdf",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search returned the AFT-hosted PDF; the PDF was downloaded and read in full (title, author, American Educator Spring 2012 pp. 12-19, ten principles). Not found in Crossref.",
+    "kind": "practitioner-oriented research synthesis",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "clark1983reconsidering",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Clark",
+        "given": "Richard E."
+      }
+    ],
+    "year": 1983,
+    "title": "Reconsidering research on learning from media",
+    "container_title": "Review of Educational Research",
+    "volume": "53",
+    "issue": "4",
+    "pages": "445-459",
+    "publisher": "American Educational Research Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3102/00346543053004445",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.3102/00346543053004445, Rev. Educ. Res. 53(4) 445-459, Dec 1983; full text read as PDF (typeset.io copy).",
+    "kind": "review and argument",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "kirschner2008ten",
+    "type": "chapter",
+    "authors": [
+      {
+        "family": "Kirschner",
+        "given": "Paul"
+      },
+      {
+        "family": "van Merriënboer",
+        "given": "Jeroen J. G."
+      }
+    ],
+    "year": 2008,
+    "title": "Ten steps to complex learning: a new approach to instruction and instructional design",
+    "container_title": "21st Century Education: A Reference Handbook",
+    "volume": "1",
+    "issue": "",
+    "pages": "244-253",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Good",
+        "given": "Thomas L."
+      }
+    ],
+    "doi": "10.4135/9781412964012.n26",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.4135/9781412964012.n26 (SAGE 2008, authors Kirschner and van Merrienboer); full text of the chapter read as PDF from research.ou.nl, whose citation line gives editor T. L. Good, Vol. 1, pp. 244-253.",
+    "kind": "design model chapter",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "wiggins2005understanding",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Wiggins",
+        "given": "Grant"
+      },
+      {
+        "family": "McTighe",
+        "given": "Jay"
+      }
+    ],
+    "year": 2005,
+    "title": "Understanding by design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Association for Supervision and Curriculum Development",
+    "publisher_place": "Alexandria, VA",
+    "edition": "Expanded 2nd",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781416600350",
+    "url": "https://www.ascd.org/books/understanding-by-design-expanded-2nd-edition",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL1908804W (Understanding by Design, Wiggins and McTighe, ASCD, isbn 9781416600350); ASCD product page confirmed authors, ISBN 978-1-4166-0035-0, 370 pages; full text scan of the expanded 2nd edition read (copyright page: 2005, ASCD).",
+    "kind": "craft framework (book)",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "krathwohl2002revision",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Krathwohl",
+        "given": "David R."
+      }
+    ],
+    "year": 2002,
+    "title": "A revision of Bloom's taxonomy: an overview",
+    "container_title": "Theory Into Practice",
+    "volume": "41",
+    "issue": "4",
+    "pages": "212-218",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15430421tip4104_2",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1207/s15430421tip4104_2, Theory Into Practice 41(4) 212-218, Nov 2002; full text read as PDF (ocw.metu.edu.tr copy); ERIC EJ667155 abstract seen in search results.",
+    "kind": "framework overview by co-author",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "duchastel1972effects",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Duchastel",
+        "given": "Philippe C."
+      },
+      {
+        "family": "Merrill",
+        "given": "Paul F."
+      }
+    ],
+    "year": 1972,
+    "title": "The effects of behavioral objectives on learning: a review of empirical studies",
+    "container_title": "Tech Memo No. 45",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Florida State University, Computer-Assisted Instruction Center",
+    "publisher_place": "Tallahassee, FL",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://files.eric.ed.gov/fulltext/ED066909.pdf",
+    "verified_via": "websearch",
+    "verified_evidence": "ERIC ED066909 full text downloaded and read (abstract, groups of studies, rationales). Crossref lists the revised journal version as DOI 10.2307/1170121, Rev. Educ. Res. 43, 53 (1973); the DOI is not used here because the text read was the 1972 tech memo.",
+    "kind": "narrative review of experiments",
+    "lane": "29-instructional-design"
+  },
+  {
+    "key": "gagne1985conditions",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Gagné",
+        "given": "Robert M."
+      }
+    ],
+    "year": 1985,
+    "title": "The conditions of learning and theory of instruction",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Holt, Rinehart and Winston",
+    "publisher_place": "New York",
+    "edition": "4th",
+    "editors": [],
+    "doi": "",
+    "isbn": "0030636884",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library works/OL11281691W editions: 'The conditions of learning and theory of instruction', 4th ed., 1985, Holt, Rinehart and Winston, New York and London, isbn 0030636884, 361 pages. Content from two open secondary summaries (LibreTexts, Simply Psychology); book not read.",
+    "kind": "theory of instruction (book)",
+    "lane": "29-instructional-design"
+  }
+]

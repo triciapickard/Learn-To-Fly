@@ -1,0 +1,568 @@
+[
+ {
+  "key": "nielsen1990heuristic",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   },
+   {
+    "family": "Molich",
+    "given": "Rolf"
+   }
+  ],
+  "year": 1990,
+  "title": "Heuristic evaluation of user interfaces",
+  "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '90)",
+  "volume": "",
+  "issue": "",
+  "pages": "249-256",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/97243.97281",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1145/97243.97281, 'Heuristic evaluation of user interfaces', Nielsen and Molich, 1990, ACM Press, pp. 249-256; full paper also read as page images from a PDF copy (CHI '90 Proceedings, April 1990)",
+  "kind": "empirical study (four heuristic evaluation experiments) and method paper",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "nielsen1994enhancing",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   }
+  ],
+  "year": 1994,
+  "title": "Enhancing the explanatory power of usability heuristics",
+  "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '94)",
+  "volume": "",
+  "issue": "",
+  "pages": "152-158",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/191666.191729",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1145/191666.191729, same title, Nielsen, 1994, ACM, pp. 152-158; full paper read as page images from a PDF copy (CHI '94, Boston)",
+  "kind": "analysis of a database of 249 usability problems with factor analysis",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "gould1985designing",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Gould",
+    "given": "John D."
+   },
+   {
+    "family": "Lewis",
+    "given": "Clayton"
+   }
+  ],
+  "year": 1985,
+  "title": "Designing for usability: Key principles and what designers think",
+  "container_title": "Communications of the ACM",
+  "volume": "28",
+  "issue": "3",
+  "pages": "300-311",
+  "publisher": "Association for Computing Machinery",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/3166.3170",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1145/3166.3170, Gould and Lewis, 1985, Communications of the ACM 28(3), 300-311; pages 1-4 and 8-9 read as page images from a CMU-hosted PDF copy",
+  "kind": "principles paper with survey of 447 designers and a case study",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "virzi1992refining",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Virzi",
+    "given": "Robert A."
+   }
+  ],
+  "year": 1992,
+  "title": "Refining the test phase of usability evaluation: How many subjects is enough?",
+  "container_title": "Human Factors",
+  "volume": "34",
+  "issue": "4",
+  "pages": "457-468",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1177/001872089203400407",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1177/001872089203400407, Virzi, 1992, Human Factors 34(4), 457-468 (SAGE); content described by Lewis (1994) abstract via Europe PMC and Faulkner (2003) full text; paper itself not read",
+  "kind": "three empirical usability studies with subsampling analysis",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "lewis1994sample",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Lewis",
+    "given": "James R."
+   }
+  ],
+  "year": 1994,
+  "title": "Sample sizes for usability studies: Additional considerations",
+  "container_title": "Human Factors",
+  "volume": "36",
+  "issue": "2",
+  "pages": "368-378",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1177/001872089403600215",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1177/001872089403600215, Lewis, 1994, Human Factors 36(2), 368-378; abstract read via Europe PMC REST (DOI search)",
+  "kind": "empirical usability study with economic simulation",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "faulkner2003beyond",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Faulkner",
+    "given": "Laura"
+   }
+  ],
+  "year": 2003,
+  "title": "Beyond the five-user assumption: Benefits of increased sample sizes in usability testing",
+  "container_title": "Behavior Research Methods, Instruments, & Computers",
+  "volume": "35",
+  "issue": "3",
+  "pages": "379-383",
+  "publisher": "Springer Science and Business Media LLC",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.3758/bf03195514",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.3758/bf03195514, Faulkner, 2003, Behavior Research Methods, Instruments, & Computers 35(3), 379-383; Europe PMC record PMID 14587545 and full text PDF from link.springer.com read",
+  "kind": "experiment (60-user usability test with resampling)",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "nielsen1993mathematical",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   },
+   {
+    "family": "Landauer",
+    "given": "Thomas K."
+   }
+  ],
+  "year": 1993,
+  "title": "A mathematical model of the finding of usability problems",
+  "container_title": "Proceedings of the INTERCHI '93 Conference on Human Factors in Computing Systems (CHI '93)",
+  "volume": "",
+  "issue": "",
+  "pages": "206-213",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/169059.169166",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1145/169059.169166, Nielsen and Landauer, 1993, ACM Press, pp. 206-213; abstract content confirmed via web search; formula and 31% figure confirmed on nngroup.com 'Why you only need to test with 5 users'",
+  "kind": "statistical model fitted to existing project data, with cost-benefit model",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "hertzum2001evaluator",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Hertzum",
+    "given": "Morten"
+   },
+   {
+    "family": "Jacobsen",
+    "given": "Niels Ebbe"
+   }
+  ],
+  "year": 2001,
+  "title": "The evaluator effect: A chilling fact about usability evaluation methods",
+  "container_title": "International Journal of Human-Computer Interaction",
+  "volume": "13",
+  "issue": "4",
+  "pages": "421-443",
+  "publisher": "Informa UK Limited",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1207/s15327590ijhc1304_05",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1207/s15327590ijhc1304_05, Hertzum and Jacobsen, 2001, IJHCI 13(4), 421-443; full preprint read from mortenhertzum.dk/publ/IJHCI2001.pdf",
+  "kind": "review and re-analysis of eleven studies",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "molich2004comparative",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Molich",
+    "given": "Rolf"
+   },
+   {
+    "family": "Ede",
+    "given": "Meghan R."
+   },
+   {
+    "family": "Kaasgaard",
+    "given": "Klaus"
+   },
+   {
+    "family": "Karyukin",
+    "given": "Barbara"
+   }
+  ],
+  "year": 2004,
+  "title": "Comparative usability evaluation",
+  "container_title": "Behaviour & Information Technology",
+  "volume": "23",
+  "issue": "1",
+  "pages": "65-74",
+  "publisher": "Informa UK Limited",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1080/0144929032000173951",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1080/0144929032000173951, Molich, Ede, Kaasgaard and Karyukin, 2004, Behaviour & Information Technology 23(1), 65-74; CUE-2 project page dialogdesign.dk/cue-2 read; paper itself not read",
+  "kind": "comparative field study (nine teams, one web site)",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "spool2001testing",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Spool",
+    "given": "Jared M."
+   },
+   {
+    "family": "Schroeder",
+    "given": "Will"
+   }
+  ],
+  "year": 2001,
+  "title": "Testing web sites: Five users is nowhere near enough",
+  "container_title": "CHI '01 Extended Abstracts on Human Factors in Computing Systems",
+  "volume": "",
+  "issue": "",
+  "pages": "285-286",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/634067.634236",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1145/634067.634236, Spool and Schroeder, 2001, CHI '01 Extended Abstracts, pp. 285-286 (ACM; title given as 'Testing web sites'); full title confirmed by Semantic Scholar API record and Dblp search result",
+  "kind": "industry field study (extended abstract)",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "shneiderman2016designing",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Shneiderman",
+    "given": "Ben"
+   },
+   {
+    "family": "Plaisant",
+    "given": "Catherine"
+   },
+   {
+    "family": "Cohen",
+    "given": "M."
+   },
+   {
+    "family": "Jacobs",
+    "given": "S."
+   },
+   {
+    "family": "Elmqvist",
+    "given": "N."
+   }
+  ],
+  "year": 2016,
+  "title": "Designing the user interface: Strategies for effective human-computer interaction",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Pearson",
+  "publisher_place": "",
+  "edition": "6th",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780134380384",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search (work OL15842384W) and ISBN 9780134380384 edition record: Designing the user interface, Pearson, hardcover, 616 pages, six authors; sixth edition and Section 3.3.4 confirmed on cs.umd.edu/users/ben/goldenrules.html",
+  "kind": "textbook",
+  "lane": "10-usability-heuristics",
+  "original_year": 1987
+ },
+ {
+  "key": "norman2013design",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Norman",
+    "given": "Donald A."
+   }
+  ],
+  "year": 2013,
+  "title": "The design of everyday things",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Basic Books",
+  "publisher_place": "New York",
+  "edition": "Revised and expanded",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780465050659",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search (work OL1879162W, first published 1988 as The Psychology of Everyday Things) and ISBN 9780465050659 edition record: The Design of Everyday Things, Basic Books, 2013, edition name Revised and Expanded Edition; publisher description at jnd.org",
+  "kind": "craft and theory book",
+  "lane": "10-usability-heuristics",
+  "original_year": 1988
+ },
+ {
+  "key": "krug2014dont",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Krug",
+    "given": "Steve"
+   }
+  ],
+  "year": 2014,
+  "title": "Don't make me think, revisited: A common sense approach to web usability",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "New Riders",
+  "publisher_place": "",
+  "edition": "3rd",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780321965516",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search (work OL8578577W) and ISBN 9780321965516 edition record (Pearson Education, 2014, 216 pages, paperback); publisher sample pages read (contents, preface, Chapter 4); informit.com listing: 3rd edition, New Riders",
+  "kind": "practitioner craft book",
+  "lane": "10-usability-heuristics",
+  "original_year": 2000
+ },
+ {
+  "key": "iso2018ergonomics",
+  "type": "standard",
+  "authors": [
+   {
+    "literal": "International Organization for Standardization"
+   }
+  ],
+  "year": 2018,
+  "title": "Ergonomics of human-system interaction, Part 11: Usability: Definitions and concepts (ISO 9241-11:2018)",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "ISO",
+  "publisher_place": "",
+  "edition": "2nd",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.iso.org/standard/63500.html",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search returned ISO catalogue page iso.org/standard/63500.html, AFNOR and BSI records for ISO 9241-11:2018 (replaces 1998 edition, reviewed 2023); definitions confirmed as quoted with clause numbers in the free preview of ISO 9241-110:2020",
+  "kind": "international standard",
+  "lane": "10-usability-heuristics",
+  "original_year": 1998
+ },
+ {
+  "key": "iso2020ergonomics",
+  "type": "standard",
+  "authors": [
+   {
+    "literal": "International Organization for Standardization"
+   }
+  ],
+  "year": 2020,
+  "title": "Ergonomics of human-system interaction, Part 110: Interaction principles (ISO 9241-110:2020)",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "ISO",
+  "publisher_place": "",
+  "edition": "2nd",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.iso.org/standard/75258.html",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search returned ISO catalogue page iso.org/standard/75258.html and iteh.ai records for ISO 9241-110:2020 (second edition, replaces 2006); free 13-page preview read as text (foreword, scope, definitions, clause 4)",
+  "kind": "international standard",
+  "lane": "10-usability-heuristics",
+  "original_year": 2006
+ },
+ {
+  "key": "smith1986guidelines",
+  "type": "report",
+  "authors": [
+   {
+    "family": "Smith",
+    "given": "Sidney L."
+   },
+   {
+    "family": "Mosier",
+    "given": "Jane N."
+   }
+  ],
+  "year": 1986,
+  "title": "Guidelines for designing user interface software",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "The MITRE Corporation",
+  "publisher_place": "Bedford, MA",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://hcibib.org/sam/",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search and hcibib.org/sam/ (introduction read): ESD-TR-86-278, The MITRE Corporation, Bedford, Massachusetts, August 1986, for the Electronic Systems Division, U.S. Air Force Systems Command; 944 guidelines confirmed in nngroup.com review",
+  "kind": "government guideline compilation (report ESD-TR-86-278)",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "brooke1996sus",
+  "type": "chapter",
+  "authors": [
+   {
+    "family": "Brooke",
+    "given": "John"
+   }
+  ],
+  "year": 1996,
+  "title": "SUS: A quick and dirty usability scale",
+  "container_title": "Usability evaluation in industry",
+  "volume": "",
+  "issue": "",
+  "pages": "189-194",
+  "publisher": "Taylor & Francis",
+  "publisher_place": "London",
+  "edition": "",
+  "editors": [
+   {
+    "family": "Jordan",
+    "given": "Patrick W."
+   },
+   {
+    "family": "Thomas",
+    "given": "B."
+   },
+   {
+    "family": "Weerdmeester",
+    "given": "Bernard"
+   },
+   {
+    "family": "McClelland",
+    "given": "Ian Lyall"
+   }
+  ],
+  "doi": "",
+  "isbn": "9780748404605",
+  "url": "https://www.routledge.com/Usability-Evaluation-In-Industry/Jordan-Thomas-McClelland-Weerdmeester/p/book/9780748404605",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search: UCL constructDB record verdi.cs.ucl.ac.uk/constructDB/publications/brooke-susa-1996.html; Routledge page for Usability Evaluation in Industry (Taylor & Francis/CRC, 1996); Brooke's own citation (pp. 189-194, London: Taylor & Francis) in search results; items and scoring on measuringu.com/sus",
+  "kind": "instrument description (practitioner chapter)",
+  "lane": "10-usability-heuristics"
+ },
+ {
+  "key": "bangor2008empirical",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Bangor",
+    "given": "Aaron W."
+   },
+   {
+    "family": "Kortum",
+    "given": "Philip T."
+   },
+   {
+    "family": "Miller",
+    "given": "James T."
+   }
+  ],
+  "year": 2008,
+  "title": "An empirical evaluation of the System Usability Scale",
+  "container_title": "International Journal of Human-Computer Interaction",
+  "volume": "24",
+  "issue": "6",
+  "pages": "574-594",
+  "publisher": "Informa UK Limited",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1080/10447310802205776",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1080/10447310802205776, Bangor, Kortum and Miller, 2008, IJHCI 24(6), 574-594; Semantic Scholar API confirmed title and authors; abstract not retrievable",
+  "kind": "archival analysis of SUS survey data",
+  "lane": "10-usability-heuristics"
+ }
+]

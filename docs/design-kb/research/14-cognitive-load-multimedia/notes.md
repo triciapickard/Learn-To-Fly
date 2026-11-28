@@ -1,0 +1,600 @@
+# Lane 14: Cognitive load theory and multimedia learning
+
+Research notes. One section per source; each section ends with a "Confirmed this session" line.
+
+## dejong2010cognitive
+
+de Jong, T. (2010). Cognitive load theory, educational research, and instructional design: some food for thought. *Instructional Science*, 38(2), 105-134.
+
+### Core claims
+
+De Jong, a learning-technology researcher at the University of Twente, wrote the best-known internal critique of cognitive load theory (CLT). He does not dispute the central idea that working memory is limited and that learning suffers when a task demands more than the learner has. His target is the machinery on top of it: the split into intrinsic, extraneous and germane load is conceptually unstable, the usual load measures cannot support the claims made, and the experimental conditions are too artificial to carry design advice into real teaching. Because every outcome can be explained after the fact, he says the theory is hard or impossible to falsify. It is an expert review, not an experiment, built on the 35 most-cited Web of Science articles with "cognitive load" as a descriptor plus recent papers.
+
+### Specifics
+
+**Intrinsic load.** CLT says intrinsic load comes from the number of interacting elements and the learner's prior knowledge, and that instruction cannot change it. De Jong lists exceptions. Some content is harder than its element count predicts (a Tower of Hanoi variant with the same number of moves was much harder for children). CLT authors themselves recommend simple-to-complex sequencing, which is a way of controlling intrinsic load.
+
+**Extraneous load.** He adds complications to the classic sources (split attention, means-ends problem solving, modality, redundancy). Designs that look extraneous can stimulate deep processing (relating a graph to a formula is redundancy to one camp and learning to another). Extraneous load probably cannot reach zero, because integrating everything into one representation can make it unreadable. And one study found redundant information helped when it was short and placed next to what it referred to.
+
+**Germane load and additivity.** He calls the explanation of the high-variability result "post-hoc": learners reported more load and did better, so the load must have been germane. Intrinsic load describes material and germane load describes processes, so he doubts they simply add. The earliest papers (Sweller 1988; Chandler and Sweller 1991) distinguished only extraneous load from load due to learning processes.
+
+**Measurement.** Many studies infer load from post-test scores, which is circular. The commonest direct measure is Paas's 1992 single-item mental-effort rating (9 points), which later studies used with 5 to 100 points, "effort" or "difficulty" anchors, and one rating or many. One study's best condition scored about 3 on a 7-point scale (43 percent) while another study's worst condition scored 2.5 (36 percent), so a given score means different things in different papers. The original validation reported reliabilities of .90 and .82, but he found no validity evidence. His three main problems: load is only measured relatively, an overall rating cannot separate the three types, and common measures ignore change over time. Overload itself, which the theory is about, is never detected.
+
+**External validity.** Typical studies gave minutes of study time (a 2.5-minute slideshow, 3-minute frame sequences, a 6-minute lesson), used psychology students with no interest in the topic, and prevented note-taking and replay. He argues the modality effect appears mostly under fast system-paced presentation and often disappears when learners control the pace. He adds that CLT clearly applies to demanding, time-critical tasks, naming flying a fighter plane, where learners cannot pause, replay or annotate.
+
+### Replication and criticism
+
+This paper is itself the criticism. Crossref lists a commentary by Moreno in the same issue (pages 135-141), which I did not read. The 2019 update in this lane shows how CLT developed afterward: germane load became the working memory resources devoted to intrinsic load, leaving two basic categories, and the authors accept that an overall rating cannot separate load types. De Jong's point that CLT repackages older instructional design ideas is a judgment of novelty, not a refutation. Evidence: structured expert critique.
+
+### Implications for LTF
+
+1. Treat CLT principles as strong heuristics for novices, then test with real learners.
+2. Do not build a "cognitive load score" into LTF analytics from a single self-rating. Use behavior (time on a step, retries, abandonment) and treat it as relative.
+3. Give narrated or animated widgets play, pause, replay and step controls; system-paced autoplay is where modality benefits look most fragile.
+4. CLT fits time-critical tasks, so fly mode, where the learner cannot pause the sim, needs glanceable briefings and checklists.
+5. Allow offloading (a visible checklist, a place to jot numbers), since real learners do. Short captions beside diagrams are not automatically waste.
+
+Confirmed this session: read the full text (open access PDF at https://ris.utwente.nl/ws/files/6597420/Jong10cognitive.pdf) and the Crossref record for DOI 10.1007/s11251-009-9110-0 (volume 38, issue 2, pages 105-134).
+
+## sweller2019cognitive
+
+Sweller, J., van Merriënboer, J. J. G., & Paas, F. (2019). Cognitive architecture and instructional design: 20 years later. *Educational Psychology Review*, 31(2), 261-292.
+
+### Core claims
+
+The three founders of CLT update their 1998 synthesis. The abstract says CLT began in the 1980s as an instructional design theory built on uncontroversial facts about memory: all novel information is first processed by a working memory limited in capacity and duration and is then stored in a long-term memory that is effectively unlimited. Once information is in long-term memory, the working memory limits "disappear", which transforms what a person can do. The paper reviews 20 years of work in four areas: grounding the theory in evolutionary psychology, extending it to course design through the four-component instructional design model (4C/ID), adding new effects, and new measurement methods. It is a theoretical review by the theory's own authors, so read it as the official position, not an independent test.
+
+### Specifics
+
+**Load categories.** Intrinsic load depends on element interactivity and on the learner's knowledge: a word that is one element to a fluent reader is many interacting elements to a beginner. Extraneous load comes from presentation and what the learner is asked to do, and can be changed by design. The authors say that element interactivity affects extraneous load too, so effective instruction lowers it. Germane load is now defined as the working memory resources devoted to intrinsic rather than extraneous load. Previously it was treated as a load in its own right that could substitute for extraneous load. The authors say that older view could not explain why total load falls when extraneous load is cut.
+
+**Five principles (biologically primary).** Information store (long-term memory), borrowing and reorganizing (most knowledge comes from other people), randomness as genesis (random generate-and-test when no one can be borrowed from), narrow limits of change (working memory is tiny for novel information), and environmental organizing and linking (organized knowledge in long-term memory has no known working memory limit). The authors tie explicit instruction to biologically secondary, domain-specific knowledge such as reading.
+
+**Effects.** Table 1 dates each effect: goal-free (1982), worked example (1985), completion (1987), split attention (1988), redundancy (1991), variability (1994), modality (1995), self-explanation (1998), imagination (2001), isolated elements (2002), expertise reversal (2003), guidance fading (2003), collective working memory (2009), transient information (2011), human movement (2012), self-management (2012). The worked-example text notes there is very strong empirical evidence but constraints: examples are less effective for high-expertise learners and are hard to design well. The transient information effect says spoken or animated information vanishes, so pacing and segmenting help, and Leahy and Sweller found short audiovisual pieces beat visual-only while longer ones did the reverse. The human movement effect says animation can beat static pictures when teaching motor procedures such as knot tying.
+
+**4C/ID.** Courses have learning tasks, supportive information, procedural information and part-task practice. Complex supportive information should be given before the task, not during it, because doing both at once "would almost certainly cause cognitive overload". Procedural how-to information should be given just in time.
+
+**Measurement.** The authors defend Paas's rating scale as sensitive and simple, accept it gives an overall measure, and report that a single rating after the whole task came out higher than the average of ratings after each task.
+
+### Replication and criticism
+
+Many effects were not directly tested against load measures; the authors admit that experiments often used the expected learning outcome as evidence for the theory. Compound effects (expertise reversal, element interactivity, guidance fading) limit the simple ones. De Jong's critique of the three-way split is the obvious comparison point; the paper's own account of the germane redefinition (above) is what the authors now say, and I did not find in it a direct reply to de Jong. The evolutionary-psychology foundation (Geary's primary and secondary knowledge) is a theoretical commitment I could not check against independent evidence this session. Evidence is a mix of many small experiments, mostly short-term, plus theory.
+
+### Implications for LTF
+
+Beginners have little in long-term memory, so lessons should present explicit worked examples first and fade support as skill grows. Put heavy "theory" in lessons before the sim, and short procedural cues beside the sim (fly mode). Order content from isolated elements to integrated tasks. Provide pause and replay for any audio or animation. Do not teach general "learning skills"; teach the aircraft.
+
+Confirmed this session: read the full text of the paper (a PDF copy at leadinglearner.me, matching the Springer paper at DOI 10.1007/s10648-019-09465-5, checked against Crossref: volume 31, issue 2, pages 261-292).
+
+## mayer2003nine
+
+Mayer, R. E., & Moreno, R. (2003). Nine ways to reduce cognitive load in multimedia learning. *Educational Psychologist*, 38(1), 43-52.
+
+### Core claims
+
+Mayer and Moreno, writing in a special issue on cognitive load, merge two traditions. They state three assumptions of the cognitive theory of multimedia learning (CTML): humans have separate channels for verbal and pictorial material (dual channel), each channel has limited capacity, and meaningful learning needs active processing, including building links between words and pictures. Learning can then fail through cognitive overload, "in which the learner's intended cognitive processing exceeds the learner's available cognitive capacity". The paper sorts overload into five scenarios and gives one or two design fixes for each, nine in all, backed by the authors' own experiments. It is a research synthesis from one lab, not an independent meta-analysis.
+
+### Specifics
+
+**Terminology.** Three demands: essential processing (selecting, organizing and integrating words and images), incidental processing (work primed by the design but not needed, such as background music) and representational holding (keeping a representation in working memory). A footnote maps these onto germane, extraneous and, roughly, intrinsic load. Overload occurs when the sum exceeds capacity. All results use problem-solving transfer tests.
+
+**The nine techniques with the effect sizes the paper reports (median effect size, number of experiments).**
+1. Off-loading (move words from on-screen text to narration; the modality effect): 1.17, six experiments.
+2. Segmenting (learner-controlled bite-size segments): 1.36, one experiment. The lightning lesson was split into 16 segments of one or two sentences and roughly 8 to 10 seconds of animation each, with a Continue button. The authors note the segmented group had more study time.
+3. Pretraining (teach component names and behaviors first): 1.00, three experiments, with brake and pump lessons.
+4. Weeding (remove interesting but extraneous material; the coherence effect): 0.90, five experiments, where the extras were background music or irrelevant video clips.
+5. Signaling (cues such as stressed key words, arrows, outlines, headings, a progress map): 0.74, one experiment (an airplane-lift animation).
+6. Aligning (place words next to the part of the graphic they describe; spatial contiguity): 0.48, one experiment.
+7. Eliminating redundancy (do not show on-screen text that duplicates narration over an animation): 0.69, three experiments. The authors use "redundancy" more narrowly than Sweller, and without animation, narration plus text beat narration alone.
+8. Synchronizing (present narration and its animation together, not one after the other; temporal contiguity): 1.30, eight experiments.
+9. Individualizing (match well-designed material to learners with high spatial ability, who benefit more): 1.13, two experiments.
+
+### Replication and criticism
+
+Effect sizes here are medians from a few studies, several of them single experiments (segmenting, signaling and aligning each rest on one), run by the authors in short lessons about lightning, brakes, pumps and the respiratory system. The modality and signaling meta-analyses in this lane are the better guide to sizes, and de Jong argues the modality effect is strongest under fast, system-paced presentation. The mapping to CLT's load types is explicitly only rough, which matters given de Jong's conceptual critique. The segmenting result is confounded with study time by the authors' own note. Evidence is a set of controlled laboratory experiments with transfer tests, which is stronger than opinion but narrower than classroom evidence.
+
+### Implications for LTF
+
+This is the most directly usable checklist in the lane for lesson pages and widgets.
+- Weeding: leave out decorative flight imagery and background audio in lessons and widgets unless it carries an instructional point.
+- Aligning: label instrument parts on the image itself, not in a caption below.
+- Segmenting: give animated explanations Next and Replay controls, and keep each step short.
+- Pretraining: teach the names and jobs of the controls and instruments before a lesson on how they interact.
+- Signaling: use highlights, arrows, headings and a visible progress cue to show the learner what to attend to.
+- Synchronizing: when a narration or text explains an animation, show them together.
+- Redundancy: do not read aloud text that is also on screen word for word; pick one.
+- Off-loading: consider narration over a diagram, with a captions option for accessibility.
+- Fly mode: the learner's eyes are on the sim, so spoken or very short cues may suit better than long text; test this with real learners.
+
+Confirmed this session: read the full text (PDF at https://www.uky.edu/~gmswan3/575/9_ways_to_reduce_CL.pdf) and the Crossref record for DOI 10.1207/s15326985ep3801_6 (volume 38, issue 1, pages 43-52).
+
+## kalyuga2003expertise
+
+Kalyuga, S., Ayres, P., Chandler, P., & Sweller, J. (2003). The expertise reversal effect. *Educational Psychologist*, 38(1), 23-31.
+
+### Core claims
+
+The paper reviews a set of experiments, mostly from the University of New South Wales group, and argues that many cognitive load effects hold only for learners with little experience. Techniques that are "highly effective with inexperienced learners can lose their effectiveness and even have negative consequences when used with more experienced learners" (abstract). With more expertise an effect first disappears and then reverses, so a design that wins for novices can lose for experts. The authors name this the expertise reversal effect and explain it inside cognitive load theory. It is a review by the theory's own proponents, who chose the experiments.
+
+### Specifics
+
+**Mechanism.** Experts hold schemas in long-term memory that let them treat a whole configuration as one element in working memory. Novices lack them, so instructional guidance acts as a substitute. For an expert the same guidance duplicates what their schemas already supply. The two sources of guidance must then be related, which costs working memory, and the paper notes this happens even when the learner knows the material is redundant, because redundant information "is frequently difficult to ignore".
+
+**The studies reviewed.**
+- Split attention to redundancy: inexperienced electrical trainees benefited from text integrated into circuit diagrams and could not understand a diagram alone. More experienced trainees did significantly better with the diagram alone and reported less mental effort for it (Kalyuga, Chandler and Sweller 1998). The integrated text had become redundant.
+- Text coherence: McNamara and colleagues found added coherence helped low-knowledge readers, while high-knowledge readers did better with the original text. The authors reinterpret this as expertise reversal.
+- Modality: in experiments on industrial machinery instructions, novices did best with a diagram plus simultaneous spoken explanation. After more training the audio advantage vanished, and after intensive training the diagram-only condition was clearly better, a reversal of the first result (Kalyuga, Chandler and Sweller 2000).
+- Worked examples: for inexperienced mechanical-trade apprentices, studying worked examples beat solving problems, with lower mental-load ratings. As experience grew the advantage disappeared and then problem solving proved superior (Kalyuga, Chandler, Tuovinen and Sweller 2001). Another experiment compared worked examples with exploration: on simple tasks there were minimal differences, on complex tasks novices did better with examples, and the advantage faded with training.
+- Guidance fading: Renkl and colleagues found gradual fading from examples into problems beat an abrupt switch.
+- Isolated elements: presenting complex material first as isolated elements helped novices and lost its benefit for experienced learners (Pollock, Chandler and Sweller 2002).
+- Imagination: students told to imagine procedures learned more than those told to study worked examples only if they already had the prerequisite schemas. For less knowledgeable students imagining had a negative effect.
+
+**Design consequence.** Provide heavy guidance to inexperienced learners, then reduce it. The authors recommend matching format to the learner's level of expertise.
+
+### Replication and criticism
+
+The effect was found across domains (electrical, mechanical, language, spreadsheets, databases), mostly by the authors' group. A 2007 review by Kalyuga exists (search result only), and the 2019 CLT update in this lane treats expertise reversal as a variant of element interactivity, reporting that effects first shrink, then vanish, then can reverse. De Jong (also in this lane) notes that the effect makes the line between extraneous and germane load depend on the learner. The evidence is experiments with short sessions, many using subjective mental-effort ratings (themselves criticized). Full reversals are rarer than disappearances: the paper says a full reversal was not observed in the isolated-elements studies.
+
+### Implications for LTF
+
+LTF is built for beginners, but its audience will include people who already know parts of the material (pilots in training, long-time sim players, returning learners). Expertise changes the best format.
+- Use heavily guided, worked-through presentations on first exposure to a procedure or instrument, and fade support in later lessons: replace a full walkthrough with a checklist, then with a prompt, then with a task.
+- Offer a "skip the explanation" or collapsible detail path; the paper says redundant text is hard to ignore.
+- Keep diagram labels integrated for new content, but consider removing them from review quizzes.
+- Imagination or mental rehearsal prompts ("picture what you will see on final") should come after the learner has handled the material, not before.
+- A short diagnostic or self-rating at the start of a module can decide which version to show.
+
+Confirmed this session: read the full text (PDF copy at https://typeset.io/pdf/the-expertise-reversal-effect-5y3mqyx7oo.pdf, with the journal header for Educational Psychologist 38(1), 23-31) and the Crossref record for DOI 10.1207/s15326985ep3801_4. The 2007 review is known from a search result only.
+
+## chandler1991cognitive
+
+Chandler, P., & Sweller, J. (1991). Cognitive load theory and the format of instruction. *Cognition and Instruction*, 8(4), 293-332.
+
+### Core claims
+
+This is the paper that turned cognitive load theory into concrete layout advice. The authors argue that instructional material should direct cognitive resources "toward activities that are relevant to learning rather than toward preliminaries to learning" (abstract). When two sources of information refer to each other and neither makes sense alone (a diagram and separate explanatory text), the learner must mentally integrate them before learning can begin, and that search wastes working memory. Physically integrating the sources fixes this. But integration only helps when the sources are unintelligible alone. If a diagram is understandable by itself, adding text that repeats it is not merely useless, it can hurt, even when the text is integrated. These are the split-attention and redundancy effects in their original form.
+
+### Specifics
+
+Six experiments, using electrical engineering and biology (blood circulation) material.
+
+**Experiment 1** compared conventional split-source notes with integrated notes on installation testing, a task that requires reading meter procedures against a diagram. Twenty-eight first-year trade apprentices with no prior formal electrical training were randomly allocated, 14 per group, by the course instructor. The integrated notes carried virtually identical information, with numbered text placed on the diagram. Tests came after a one-week course (written), one week later (practical tests on an electric kettle and a light switch) and about 12 weeks later. Written scores favored the integrated group, with a significant group main effect (F(1, 26) = 8.60), and the pattern held at both test times. The authors note that even after 12 weeks the conventional group's written score had not passed the integrated group's first score. Appliance practical performance also favored integrated notes (F(1, 18) = 33.72), though the second practical test (the light switch) did not differ significantly. The authors note that "there were no direct measures of cognitive load".
+
+**Experiment 2** used lighting-circuit and fluorescent-lamp notes in which the diagram could be understood without the text. Integrated notes were no better than split-source notes (group effect F(1, 26) = 1.76, not significant).
+
+**Experiment 3** (20 apprentices) tested a redundant text. One group was explicitly told to study and relate text and diagram, the other was simply given both. The group that was not told to integrate performed better, read by the authors as learners ignoring the redundant text.
+
+**Experiment 4** (20 apprentices) used three groups: diagram only, conventional text plus diagram, and integrated text plus diagram. The diagram-only group scored significantly higher on the first test problem and spent the least time on the instructions. The conventional group spent notably more time than the others.
+
+**Experiments 5 and 6** used a blood-circulation diagram plus text to replicate the findings with different content. Experiment 6 showed the need for integration returned when the material was organized so that individual units could not be understood alone.
+
+### Replication and criticism
+
+The split-attention and redundancy effects are among the most replicated in CLT, and the 2019 update in this lane gives the redundancy case from this paper as its standard example. Weaknesses: small samples (20 to 28 participants in each of Experiments 1 to 4), apprentices only, technical material, and no direct load measures in Experiment 1. The authors say the experiments "were not designed to test the validity of cognitive load theory" but to test whether it could generate useful instruction. De Jong (this lane) notes load is typically inferred from outcomes. The expertise reversal paper (this lane) shows that what counts as redundant depends on the learner. Mayer and Moreno's contiguity and redundancy principles follow the same logic, with a narrower definition of redundancy.
+
+### Implications for LTF
+
+- Put labels on the diagram, not in a legend or paragraph below it. For a cockpit panel, instrument diagram or traffic-pattern figure, annotate in place (callouts with leader lines).
+- Keep steps that refer to a picture visible with it. On phones, do not push a caption a long scroll away from its figure.
+- If a diagram is self-explanatory to the target learner, do not repeat it in prose. Decide per audience: a novice needs the labels, an expert does not.
+- Do not require learners to cross-reference a checklist in one pane with a diagram in another. Fly mode should integrate the item with its visual cue.
+- Do not instruct learners to reconcile redundant text; in Experiment 3 doing so made them worse.
+
+Confirmed this session: read the full text (University of Wollongong Research Online copy, https://ro.uow.edu.au/edupapers/128, downloaded via a typeset.io mirror) and the Crossref record for DOI 10.1207/s1532690xci0804_2 (volume 8, issue 4, pages 293-332). Table values were garbled in my copy, so only the reported F and t statistics quoted above were used.
+
+## sweller1998cognitive
+
+Sweller, J., van Merriënboer, J. J. G., & Paas, F. G. W. C. (1998). Cognitive architecture and instructional design. *Educational Psychology Review*, 10(3), 251-296.
+
+### Core claims
+
+This is the review that fixed cognitive load theory (CLT) in the form most people know. The abstract (as summarized by the University of Twente repository record) says CLT offers guidelines for presenting information so that learners engage in activities that improve intellectual performance. The theory assumes a limited-capacity working memory with partly independent components for verbal and visual or spatial material, and a very large long-term memory holding schemas that differ in how automated they are. Instruction should reduce working memory load that does not serve learning and encourage schema construction.
+
+I could not obtain the full text of this paper this session (the publisher page and a mirror both returned web pages, not the article). What follows is therefore built from the abstract and from two papers I did read in full that describe it: the authors' own 2019 retrospective and de Jong's 2010 critique, which quotes it with page numbers. Treat the specifics as secondhand.
+
+### Specifics
+
+**Architecture.** According to the 2019 retrospective, the 1998 version stressed the relation between working and long-term memory: working memory is limited when it handles novel information but effectively unlimited when it handles organized information retrieved from long-term memory. The retrospective says it was unusual in giving long-term memory a central role, drawing on De Groot's chess work.
+
+**Three load categories.** Intrinsic load (the complexity of the material, tied to element interactivity), extraneous load (due to how the material is presented) and germane load (load that contributes to learning). De Jong quotes the paper (p. 263) as saying that intrinsic load due to element interactivity and extraneous load due to instructional design "are additive", and (p. 262) that intrinsic load cannot be directly influenced by designers although it needs to be considered. The 2019 retrospective says the 1998 paper treated germane load as able to substitute for extraneous load, a view the authors later revised, and that it assumed element interactivity applied only to intrinsic load.
+
+**Seven effects.** The 2019 paper lists the seven effects presented in 1998 as goal-free, worked example, completion problem, split attention, redundancy, variability and modality. All except variability were attributed to reduced extraneous load; variability was attributed to intrinsic load. The retrospective notes that many of the underlying experiments did not measure load directly: the theory generated instructional techniques, and if they worked as expected the result was taken as support.
+
+**Modality.** De Jong quotes the paper (pp. 281-282) saying that using both visual and auditory processors gives an appreciable increase in effective capacity, though "less than purely additive".
+
+**Measurement.** The paper discussed load measurement and defined mental load as imposed by task demands, including element interactivity, and mental effort as the capacity actually allocated (this wording is quoted in de Jong from page 266).
+
+### Replication and criticism
+
+The paper became highly cited: the 2019 retrospective reports over 5,000 Google Scholar citations, and the Twente repository record shows a Scopus count of 5,076 at the time of its snapshot. Its framework drew sustained criticism. De Jong argues the three load types cannot be cleanly separated or measured, that "germane" was added after the fact, and that the theory is hard to falsify. The authors' reply, in the 2019 paper, was to redefine germane load as working memory resources devoted to intrinsic load and to say only intrinsic and extraneous load are basic categories. The individual effects fare better than the framework (the modality meta-analysis is in this lane). Evidence type: a synthesis by its originators.
+
+### Implications for LTF
+
+- Use it as the map of which design problems to look for: unnecessary problem solving for beginners, split sources, redundant text, and single-channel overload.
+- Use the idea (cut what does not help the learner build the concept) but not the three-type vocabulary in product requirements; it is contested.
+- Beginners benefit from worked examples and completion tasks over unguided problem solving; for LTF this supports showing a full, annotated example of a procedure (a pattern circuit, a stall recovery sequence in the sim) before asking the learner to attempt it.
+- Variability of practice (different airports, winds, aircraft states in challenges) should be introduced after the learner can handle the basic task, since the paper's own interpretation is that added variability raises load.
+
+Confirmed this session: Crossref record for DOI 10.1023/a:1022193728205 (volume 10, issue 3, pages 251-296); the University of Twente repository record at https://research.utwente.nl/en/publications/cognitive-architecture-and-instructional-design/ (abstract in paraphrase, citation counts); and the full texts of the 2019 retrospective and de Jong 2010, which describe and quote the 1998 paper. The 1998 full text itself was not read.
+
+## sweller1988cognitive
+
+Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. *Cognitive Science*, 12(2), 257-285.
+
+### Core claims
+
+The founding paper of cognitive load theory. Its abstract (retrieved via the Crossref record) argues that domain-specific knowledge in the form of schemas is the main factor separating experts from novices in problem solving, and that conventional problem-solving practice is ineffective for acquiring schemas. The proposed reason is that the cognitive processes needed for problem solving and for schema acquisition "overlap insufficiently", and that conventional problem solving by means-ends analysis demands a relatively large amount of processing capacity, which is then unavailable for schema acquisition. A computational model and experimental evidence are said to support this. The practical upshot is that doing many problems is not the same as learning from them, which overturned a common assumption in teaching mathematics and science.
+
+I could not read the full text this session (the publisher and mirror pages were blocked or returned errors). The specifics below come from the abstract and from papers I did read in full that describe the paper: the 2019 retrospective by Sweller and colleagues, Chandler and Sweller 1991, Kalyuga and colleagues 2003 and de Jong 2010. I give no figures from the 1988 experiments.
+
+### Specifics
+
+**Means-ends analysis.** The 2019 retrospective illustrates it with a kinematics problem. A learner who must work toward a stated goal has to hold in working memory the current problem state, the goal state, the differences between them, the operators that could reduce the differences and any sub-goals. That is expensive, and it directs attention to reducing the gap rather than to the structure of the problem. The retrospective calls this exceptionally expensive of working memory capacity and says it bears little relation to knowledge-construction processes. Chandler and Sweller 1991 describe earlier studies by Sweller and colleagues in which subjects "could solve problems, in some cases repeatedly solve problems, and remain oblivious to their essential structure".
+
+**Goal-free problems.** Replacing a specific goal with an open one ("calculate as many variables as you can") removes the goal state, so learners consider each state and apply any applicable operator. The retrospective says this greatly reduces load and focuses attention on states and operators, the combination knowledge construction needs. It dates the goal-free effect to a 1982 paper by Sweller and Levine, and the worked-example effect to Sweller and Cooper in 1985.
+
+**Load categories.** De Jong notes that the 1988 and 1991 papers did not yet separate intrinsic from germane load; they distinguished load that is extraneous from load due to learning processes. He also lists the 1988 paper among the few that used a dual-task measure of load. The 2019 retrospective calls this paper the first full description of the theory.
+
+**Worked examples.** Studying worked solutions directs attention to problem states and the operators used, which is what schema acquisition needs; Kalyuga and colleagues cite the 1988 paper for the point that means-ends search is unrelated to schema construction and cognitively costly.
+
+### Replication and criticism
+
+The conclusions about problem solving have been extended in many experiments (worked examples, goal-free problems, completion problems). They have also been qualified: the expertise reversal paper in this lane shows that for learners who already have schemas, solving problems can beat studying examples. De Jong (this lane) criticizes the inference that low scores show high load, and notes the early experiments used short sessions. The 2019 retrospective accepts that many experiments inferred load from learning outcomes. Evidence quality for the 1988 paper itself cannot be judged here beyond its abstract: the abstract says it combines a computational model with experimental evidence, and a secondary summary I could not confirm mentions equation-chaining problems in kinematics, geometry and trigonometry.
+
+### Implications for LTF
+
+For a beginner, simply being dropped into a sim challenge and told to fly a pattern is a form of unguided problem solving. The paper's lesson is to give the novice something to study before something to solve.
+- Precede each in-sim challenge with a worked demonstration: the sequence of control inputs, the instrument readings that result and why.
+- Where a challenge is open-ended, consider goal-reduced forms for early lessons ("note how the airspeed changes as you pitch") before goal-directed ones ("hold 70 knots").
+- Treat success on a challenge as evidence of performance, not of learning; add a check of understanding afterwards.
+- Avoid long chains of unguided practice flights with the same structure.
+
+Confirmed this session: Crossref record and abstract for DOI 10.1207/s15516709cog1202_4 (Cognitive Science 12(2), 257-285); a PhilArchive and search summary of the abstract; and the full texts of the 2019 retrospective, Chandler and Sweller 1991, Kalyuga and colleagues 2003 and de Jong 2010 for how they describe it. The 1988 article itself was not read.
+
+## mayer2021multimedia
+
+Mayer, R. E. (2021). *Multimedia Learning* (3rd ed.). Cambridge University Press. (First edition 2001, second edition 2009.)
+
+### Core claims
+
+Mayer's book is the standard statement of the cognitive theory of multimedia learning (CTML) and of the design principles that follow from it. Its thesis, in the author's words from the preface, is that "people learn better from words and pictures than from words alone". The book reviews principles of design based on experiments by Mayer and colleagues, supplemented with evidence from elsewhere, and grounds them in a theory of how people learn from words and pictures. The third edition reviews 15 principles drawn from more than 200 experimental studies (publisher description). It is a research synthesis by the field's leading figure, so it reports one program with a strong theoretical commitment.
+
+### Specifics
+
+**Structure (from the published table of contents).** Section 1 introduces the promise of multimedia learning, the science of learning, instruction and assessment, and the multimedia principle (chapter 5). Section 2, "reducing extraneous processing", covers coherence, signaling, redundancy, spatial contiguity and temporal contiguity. Section 3, "managing essential processing", covers segmenting, pre-training and modality. Section 4, "fostering generative processing", covers personalization, voice, image, embodiment, immersion and generative activity. Chapter 20 summarizes the principles.
+
+**Three kinds of processing.** The third edition uses a triarchic model: extraneous processing (does not serve the instructional goal), essential processing (needed to acquire the essential information) and generative processing (aimed at making sense of the material and motivating effort). This extends the earlier extraneous, essential and holding scheme in the 2003 Mayer and Moreno paper in this lane.
+
+**Growth of the evidence base (preface).** The author reports 45 experimental comparisons involving transfer tests in the first edition (2001), 93 in the second (2009) and 201 in the third. The number of principles grew from seven to 12 to 15. Six original principles were kept (coherence, redundancy, spatial contiguity, temporal contiguity, modality, multimedia); six were added in the second edition (signaling, segmenting, pre-training, personalization, voice, image); three in the third (embodiment, immersion, generative activity). One original principle, individual differences, was recast as a boundary condition, "the idea that design principles that are effective for beginners may not be effective for more experienced learners". Transfer-test performance is the main outcome throughout; the third edition adds process measures such as eye-tracking, log files and EEG.
+
+### Replication and criticism
+
+The preface is candid about limits: "most research still focuses on learning in short-term studies with immediate tests in laboratory environments involving college students", with a need for longer-term studies in authentic settings. The base is largely the author's own laboratory, though the book cites a growing number of meta-analyses of individual principles (the modality and signaling analyses are in this lane), and independent work has found smaller or conditional effects (see Ginns 2005 and the Reinwein reanalysis discussed there). De Jong (this lane) argues that results for modality in particular depend on fast, system-paced presentation. De Jong notes that CTML's "essential processing" maps loosely onto CLT's germane load. I have not read the main chapters, only the front matter and preface, so the chapter-level evidence is not summarized here.
+
+### Implications for LTF
+
+This book is the best single source for a design-principles checklist, but LTF should adopt it as a set of defaults to test, not rules.
+- Extraneous processing: cut decoration (coherence), cue what matters (signaling), do not read out on-screen text (redundancy), keep labels beside their referents and pair narration with its visual in time.
+- Essential processing: break animated or multi-step explanations into learner-paced segments, teach the names of parts before explaining systems (pre-training), and use narration with visuals where listening is possible (modality).
+- Generative processing: a conversational tone (personalization) and prompts that ask the learner to explain or summarize (generative activity) are the book's suggestions for motivating effort. For LTF, a "say it back" quiz question after a procedure fits this.
+- The individual differences condition is the book's own version of expertise reversal: guidance that helps beginners may not help experienced learners, so an LTF module for returning pilots may need a lighter version.
+- The preface's note that most evidence is short, immediate and from college students applies to LTF's multi-week audience; LTF should collect its own delayed-test data.
+
+Confirmed this session: read the front matter and preface of the third edition (Cambridge University Press, https://assets.cambridge.org/97813166/38088/frontmatter/9781316638088_frontmatter.pdf, which gives the 2021 copyright, the edition history and ISBNs 9781107187504 hardback and 9781316638088 paperback), and the table of contents (https://assets.cambridge.org/97811071/87504/toc/9781107187504_toc.pdf). Open Library lists the work (OL1837843W for the 2001 first edition; a 2020 edition record carries the same ISBNs). Chapter text was not read.
+
+## harp1998seductive
+
+Harp, S. F., & Mayer, R. E. (1998). How seductive details do their damage: A theory of cognitive interest in science learning. *Journal of Educational Psychology*, 90(3), 414-434.
+
+### Core claims
+
+Textbooks and lessons are often made more engaging by adding interesting but irrelevant material, such as vivid facts or illustrations. Harp and Mayer tested whether this helps. Across four experiments with 357 undergraduates, students who read science passages containing such "seductive details" recalled fewer main ideas and generated fewer problem-solving transfer solutions than students who read the same passages without them. The title's theory is that the damage comes from cognitive rather than emotional interest. The authors argue seductive details interfere "by priming inappropriate schemas around which readers organize the material, rather than by distracting the reader or by disrupting the coherence of the passage" (abstract, as retrieved through OpenAlex). The paper is a set of controlled laboratory experiments, with a competing-hypotheses design.
+
+### Specifics
+
+**Design.** The abstract defines seductive details as interesting but irrelevant adjuncts. In each experiment readers got expository passages with or without them, then were tested on recall of main ideas and on transfer (problem-solving) questions. The ERIC record confirms 357 undergraduate participants across four experiments.
+
+**Three rival explanations.** The paper compares the idea that details distract the reader (attention is drawn away from the main points), the idea that they disrupt coherence (the thread of the argument breaks), and the idea that they prime an inappropriate organizing schema (readers organize the passage around the interesting details). A later review (Rey 2012, in this lane) lists four explanations in the literature: working memory overload, attention distraction, schema interference and coherence disruption.
+
+**Experiments 1 to 3.** The authors revised the passage to include highlighting of the main ideas (Experiment 1), a statement of learning objectives (Experiment 2) or signaling (Experiment 3). None of these reduced the seductive details effect. Cues to the main ideas would be expected to help if distraction or lost coherence were the cause (my inference).
+
+**Experiment 4.** Placing the seductive details at the start of the passage made the effect worse; placing them at the end reduced it. This fits the schema account: details read first can set the frame that organizes the rest, while details read last cannot.
+
+**Interest.** The title frames the theory as one of cognitive interest, as opposed to the emotional interest that vivid details create. I only know this framing from the title and abstract, not the paper's own definitions.
+
+### Replication and criticism
+
+The effect has been heavily studied since. Rey's 2012 meta-analysis (in this lane) pooled 39 experimental effects and reports a significant effect, small to medium for retention and medium for transfer. A 2020 meta-analysis by Sundararajan and Adesope reports mixed findings on the size of the harm, moderated by factors such as delivery format, subject and learner pacing, and concludes seductive details can hinder learning (I read only its abstract, with no effect sizes). A 2021 experiment by Tislar and Steelman with 132 undergraduates on a plate tectonics lesson did not find a consistent detrimental effect on recall and transfer, and the effect appeared only when learning objectives were provided, so it is hard to elicit reliably (abstract via Crossref, DOI 10.1002/brb3.2322). Verdict: the effect is real on average but varies, and schema priming is one of several rival accounts. Most of the base is short laboratory reading by college students.
+
+### Implications for LTF
+
+- Be wary of "fun facts", aviation trivia, historical anecdotes and decorative photographs inside the explanation of a core concept. Put them in an optional sidebar or after the lesson, not before it. Experiment 4 suggests that where trivia appears matters: before the main idea is worse than after.
+- Highlighting and learning objectives did not rescue a page with irrelevant material, so remove clutter rather than signpost around it.
+- A flight-sim audience loves detail, and war stories or aircraft history may pull a beginner's schema the wrong way while they learn basic control relationships.
+- The effect is not uniformly large. Test any engagement feature with an outcome measure (a transfer-style question) before deciding it is harmless or harmful.
+- "Interest" should come from showing how ideas connect (cause and effect between pitch, power and airspeed), not from added color.
+
+Confirmed this session: ERIC record EJ576496 (https://eric.ed.gov/?id=EJ576496) for the bibliographic details and the 357 participants and four experiments; the abstract text via OpenAlex (api.openalex.org, DOI 10.1037/0022-0663.90.3.414); the Crossref record (volume 90, issue 3, pages 414-434). Tislar and Steelman's abstract was read through Crossref and OpenAlex; Sundararajan and Adesope's abstract through the Springer page; Rey's through ERIC EJ986386. The full text of Harp and Mayer was not read.
+
+## mayer2001cognitive
+
+Mayer, R. E., Heiser, J., & Lonn, S. (2001). Cognitive constraints on multimedia learning: When presenting more material results in less understanding. *Journal of Educational Psychology*, 93(1), 187-198.
+
+### Core claims
+
+The paper tests a counterintuitive idea: adding material to a multimedia lesson can lower understanding. In four experiments, college students watched an animation with narration explaining how lightning forms. Adding concurrent on-screen text, whether it summarized or duplicated the narration, made students perform worse on retention and transfer tests. Adding interesting but irrelevant details to the narration, or inserting irrelevant video clips, lowered transfer. The authors call the first result a redundancy effect and the second a coherence effect, and explain both with a dual-channel, limited-capacity theory: extra text can overload the visual channel because learners must split visual attention between two sources, and irrelevant material primes the wrong prior knowledge as an organizing schema. This is controlled laboratory work from the Santa Barbara group.
+
+### Specifics
+
+**Materials.** The opening text of the paper (read via OpenAlex) describes a 140-second multimedia explanation of how lightning storms develop, built from animation plus narration, and says earlier work by the lab showed such explanations can be highly effective in promoting understanding as measured by open-ended transfer questions.
+
+**Redundancy experiments.** In Experiment 1 students also received concurrent on-screen text that summarized the narration. In Experiment 2 the on-screen text duplicated the narration. In both, students did worse on retention and transfer than students who received no on-screen text. The explanation is that the animation and the printed words compete for the visual channel, and the learner tries to reconcile the text with the narration.
+
+**Coherence experiments.** In Experiment 1 the authors added interesting but irrelevant details to the narration. In Experiment 3 they inserted interesting but conceptually irrelevant video clips within the presentation, and in Experiment 4 before it. Transfer was lower in each case. The authors say the result fits a seductive-details hypothesis, in which inserted video and narration prime the activation of inappropriate prior knowledge as the lesson's organizing schema (the same mechanism proposed in the Harp and Mayer paper in this lane).
+
+**How later syntheses use it.** Mayer and Moreno's 2003 paper (this lane) lists this paper among the studies behind the weeding (coherence) result, with a median effect size of 0.90 across five studies, and among the redundancy studies, with a median of 0.69 across three. Kalyuga and colleagues (2003, this lane) cite it for the finding that identical visual and auditory text was less effective than the auditory text alone. De Jong (this lane) cites it as an example of the argument that two representations of the same content, such as a graph and a formula, increase extraneous load.
+
+### Replication and criticism
+
+Both effects have been replicated and meta-analyzed (Rey's 2012 meta-analysis of seductive details and the signaling and modality meta-analyses in this lane bear on the family). The redundancy result is narrow in an important way. Mayer and Moreno note that when no animation is present, learners did better with narration plus on-screen text than with narration alone, because the text does not have to compete with a picture. De Jong's review points to a later finding by Mayer and Johnson that redundant information helped when it was short and placed next to what it referred to. The coherence result depends on what counts as extraneous: the later Tislar and Steelman experiment (see the Harp and Mayer notes) did not find a consistent harm from interesting details in a text lesson. Short lessons and college samples limit generalizing, as de Jong notes.
+
+### Implications for LTF
+
+- If a lesson shows an animation with a voice-over, do not also display the same words on screen. Offer captions as an opt-in setting rather than the default, and note that for deaf and hard-of-hearing learners captions are required; the evidence here concerns hearing learners with a spoken track.
+- A static diagram with printed explanation is different: there is no competition for the visual channel from a moving picture, so text beside an image is fine.
+- Do not insert unrelated "cool" clips, music or flourishes into a lesson explaining a mechanism such as lift or the effect of trim.
+- Keep a lesson's narration restricted to what supports the objective. A funny aside from the instructor is a candidate for removal.
+
+Confirmed this session: the abstract and opening paragraphs of the paper via OpenAlex (api.openalex.org, DOI 10.1037/0022-0663.93.1.187); the Crossref record (volume 93, issue 1, pages 187-198); and how Mayer and Moreno 2003, Kalyuga and colleagues 2003 and de Jong 2010 (all read in full) describe it. The full text was not read.
+
+## rey2012review
+
+Rey, G. D. (2012). A review of research and a meta-analysis of the seductive detail effect. *Educational Research Review*, 7(3), 216-237.
+
+### Core claims
+
+Rey reviews the seductive detail effect and pools the experimental evidence. The abstract (via ERIC) defines seductive details as interesting but irrelevant information that is not needed for the instructional objective, and the seductive detail effect as the finding that people learn more deeply when such details are left out. The review covers 39 experimental effects, drawn from text passages, illustrations and other kinds of seductive details. The meta-analysis finds a significant effect that is small to medium for retention and medium for transfer. The paper also reviews moderating factors and the evidence for and against four proposed explanations, then discusses implications, limitations and future directions. It is a meta-analysis with a narrative review, a stronger form of evidence than any single experiment.
+
+### Specifics
+
+**The four explanations.** The abstract lists working memory overload, attention distraction, schema interference and coherence disruption. They are rival accounts of why irrelevant interesting material harms learning. Overload says the details use up limited capacity (the cognitive load account). Distraction says attention is pulled from the main ideas. Schema interference says the details prime an inappropriate framework around which the reader organizes the lesson (the account favored by Harp and Mayer in this lane). Coherence disruption says the details break the logical thread. Rey weighs evidence for each, and the abstract says there is evidence that both supports and challenges every explanation, so none of them is settled.
+
+**Pooled effects.** The ERIC abstract gives qualitative sizes: small to medium for retention, medium for transfer. Other secondary pages gave numeric values that disagreed with each other (they appear to mix pooled results and the largest single effects), so I report no numbers for this paper and treat any specific figure as unconfirmed until the primary article is read.
+
+**Moderators.** The review examines moderating effects. I could not confirm from a primary source which moderators it reported. The later 2020 meta-analysis by Sundararajan and Adesope, whose abstract I read, lists eight moderators: presence of seductive details, image type used in comparison, delivery format, language, subject, learner pacing, recall question type and manipulation check approach.
+
+### Replication and criticism
+
+The later Sundararajan and Adesope paper (Educational Psychology Review, 2020, DOI 10.1007/s10648-020-09522-4) describes the findings as mixed and says moderators matter, while concluding that including seductive details can hinder learning. A 2021 experiment by Tislar and Steelman (Brain and Behavior, DOI 10.1002/brb3.2322) argues that confounds and methodological problems in the field make the effect hard to elicit: with 132 undergraduates and a plate tectonics lesson, they found no consistent harm, and the effect on recall appeared only when learning objectives were supplied. Together these suggest a real but variable effect whose size depends on how "interesting" and "irrelevant" were defined and matched, which is a measurement problem similar to the ones de Jong raised for CLT (this lane). I did not confirm whether Rey tested for publication bias. Evidence strength: a meta-analysis of mostly short laboratory studies.
+
+### Implications for LTF
+
+- Treat "cut the decorative interesting stuff from core explanations" as a well-supported default, but not as a ban on engaging content. The effect is small to medium on retention and medium on transfer, so it matters most for questions that ask the learner to apply an idea in a new situation, as flight scenarios do.
+- Distinguish seductive detail from relevant interest. A dramatic story about an actual stall accident can be relevant if it illustrates the mechanism being taught and irrelevant if it only entertains. Make that call per item, and check it with a transfer question.
+- Place any entertaining but non-essential material after the core content, in an optional section, because ordering mattered in the Harp and Mayer experiment.
+- Because the causes are unsettled, do not justify a design decision by one mechanism ("it overloads working memory"); justify it by outcome testing.
+- The research measures learning after short sessions, not persistence over weeks; interesting material might keep learners going even if it costs a test point, so LTF should measure both.
+
+Confirmed this session: the ERIC record EJ986386 (https://eric.ed.gov/?id=EJ986386) for the abstract (39 effects, four explanations, effect-size qualifiers) and bibliographic details; the Crossref record for DOI 10.1016/j.edurev.2012.05.003 (volume 7, issue 3, pages 216-237); the Springer page abstract for Sundararajan and Adesope 2020; and Crossref plus OpenAlex for Tislar and Steelman 2021. The full text of Rey 2012 was not read.
+
+## ginns2005meta
+
+Ginns, P. (2005). Meta-analysis of the modality effect. *Learning and Instruction*, 15(4), 313-331.
+
+### Core claims
+
+The modality effect is the finding that people learn better from a diagram or animation with spoken explanation than from the same graphic with the same words printed on screen. Cognitive load theory explains it by saying that splitting words and pictures across the ear and the eye uses two partly independent processors instead of overloading the visual one. Ginns applied meta-analysis to the literature. According to the ERIC abstract he analyzed 43 independent effects (39 from between-subjects designs and 4 from within-subjects designs) and found support for the instructional benefit of presenting information across modalities. Two hypothesized moderators were supported, the level of element interactivity (how many interacting pieces the learner must hold at once) and the pacing of the presentation, and there were differences between fields of study. The author notes a "strong observed modality effect under system-paced conditions" and says that should be weighed against the cost of building audio-visual material.
+
+### Specifics
+
+**Overall size.** The Reinwein 2012 abstract (which I read) reports Ginns's earlier analysis as d = 0.72 across the 43 effects. I did not read Ginns's own results section, so the overall figure is secondhand. Mayer and Moreno's 2003 paper (in this lane) reports a larger median of 1.17 across six of the lab's own experiments.
+
+**Moderators.** Pacing and element interactivity are the two named in the abstract. The abstract's wording about system-paced conditions indicates the effect was strongest when the presentation controlled the timing. A search summary describes smaller effects for self-paced or less complex material, which I could not verify in the paper. De Jong's review (this lane) reaches a compatible view: studies finding the effect used system-paced, often rapid presentation, while several studies that let learners control the pace found no effect or a reverse effect (he lists Tabbers and colleagues, Opfermann and colleagues, and others by name).
+
+**Where it fits in CLT.** The 2019 CLT retrospective (this lane) now treats modality as one of the transient-information effects. Short audiovisual pieces beat visual-only, but longer ones did not, because spoken information disappears and must be held in memory (Leahy and Sweller).
+
+### Replication and criticism
+
+This is the most important qualification in the lane. Reinwein (2012, Journal of Psycholinguistic Research 41, 1-32, DOI 10.1007/s10936-011-9180-4) re-analyzed the literature using 86 independent effects and reports an overall effect of d = 0.38, nearly half of Ginns's, falling to d = 0.20 after a trim-and-fill correction for publication bias (abstract page read this session). He also examined moderators such as pace of presentation, type of visualization and research group, and argues that the effect cannot be explained by Baddeley's working memory model or Penney's separate-streams account, so a different explanation is needed. A 2023 classroom study with fifth graders in a learner-paced setting (Haavisto and colleagues, Computers and Education 199, 104775) found video with narration beat illustrated text on retention, delayed retention and cognitive load, with no statistical difference on transfer, and concluded the benefit may not stem from avoiding cognitive overload. So: the modality effect is real in many studies, its size depends on method and publication bias, it is strongest under fast system-paced presentation, and its usual explanation is contested. Evidence: meta-analysis (Ginns), a re-analysis with bias correction (Reinwein) and a classroom experiment.
+
+### Implications for LTF
+
+- Do not assume narration is better than text for LTF. The stronger evidence is for fast, system-paced animation, which LTF should mostly avoid; for self-paced reading, printed or captioned text with a diagram next to it is a reasonable default and costs less to produce.
+- Where LTF does use an animation (airflow, a traffic pattern being flown), voice-over with a paused-by-default player and a visible step control fits the evidence better than on-screen paragraphs under the animation.
+- Always provide transcripts and captions regardless: this is an accessibility matter, not a learning-effect matter.
+- In fly mode, learners may be unable to read; short audio cues are plausible but unproven by this literature, because these studies did not involve concurrent flight or another demanding task.
+
+Confirmed this session: the ERIC record EJ723937 (https://eric.ed.gov/?id=EJ723937) for the abstract and the counts of effects and designs; the Crossref record for DOI 10.1016/j.learninstruc.2005.07.001 (volume 15, issue 4, pages 313-331); the Springer abstract page for Reinwein 2012 (Crossref: volume 41, issue 1, pages 1-32); and the OpenAlex abstract for Haavisto and colleagues 2023. Ginns's full text was not read.
+
+## schneider2018meta
+
+Schneider, S., Beege, M., Nebel, S., & Rey, G. D. (2018). A meta-analysis of how signaling affects learning with media. *Educational Research Review*, 23, 1-24.
+
+### Core claims
+
+Signaling (also spelled signalling) means adding cues that tell the learner what to attend to and how the material is organized, without adding content: highlighting, arrows, bold or colored key words, outlines and headings, or spoken emphasis. The signaling principle in multimedia learning predicts that cues reduce the search for relevant information and so reduce extraneous load. Schneider and colleagues pooled the experimental literature. Two independent search summaries of the abstract (the LearnTechLib record is the source they quote) give these results: 103 studies with 12,201 participants, using 139 retention measures and 70 transfer measures, with an average effect of g+ = 0.53 (95% CI 0.42 to 0.64) for retention and g+ = 0.33 (95% CI 0.22 to 0.43) for transfer. In plain terms, signaling helps retention moderately and transfer less.
+
+### Specifics
+
+**What was coded.** From the summaries: signaling mode (textual versus graphical cues) was a significant moderator, nine moderators were tested, and cognitive load, motivation, learning time and eye-tracking measures were analyzed as possible explanations.
+
+**Prior knowledge: a conflict I could not resolve.** One search summary said prior knowledge did not moderate the signaling effect, contrary to what expertise reversal would predict. A second said a later paper reads Schneider and colleagues as arguing that learners with prior knowledge are better able to use the additional information in signals. These two statements disagree, and I did not read the paper's results, so I do not state which is right. A review by Alpizar, Adesope and Wong (2020, DOI 10.1007/s11423-020-09748-7) is reported in a search summary as finding the results for prior knowledge, and for dynamic versus static signals, to be inconsistent across meta-analyses, and as finding an overall effect of d = 0.38; I did not read that paper either. A 2016 meta-analysis by Richter and colleagues is reported as finding signaling more helpful for low-prior-knowledge learners. The accounts differ, so I treat the expertise interaction as open.
+
+**Older anchor.** Mayer and Moreno (2003, in this lane) reported one experiment (an airplane-lift narrated animation with stressed key words, red and blue arrows, an outline with headings, and a map showing which part was playing) with an effect size of 0.74. The meta-analysis, with 103 studies, is a far stronger base than that single experiment, and its pooled effect is smaller.
+
+### Replication and criticism
+
+Signaling is among the better-supported multimedia principles in that a large number of studies find a positive average effect, and independent meta-analyses agree on the positive direction but not on moderators. The pooled sizes (moderate for retention, small to moderate for transfer) are well below the single-study figure from 2003, which fits the usual pattern in which early single-lab estimates shrink. Harp and Mayer (1998, in this lane) is an important boundary: highlighting, learning objectives and signaling in the text did not remove the harm caused by irrelevant seductive details, so signaling cannot compensate for clutter. The evidence is meta-analytic but drawn from short laboratory studies, and moderator analyses are exploratory.
+
+### Implications for LTF
+
+- Use signaling as a low-cost default: highlight the key instrument or control while explaining it, bold the key term at first mention, and use consistent colors for the same thing across lessons and widgets (for example, one color for target values and another for current values).
+- Cues must point at what matters. A learner who must watch an airspeed indicator for one thing needs one visible cue, not five.
+- Make signals work in both light and dark themes and not rely on color alone, which also helps color-blind learners.
+- Expect modest transfer gains: signaling will not turn a poorly structured lesson into a good one. Sequence and cut first, then signal.
+- Use headings and a progress indicator in long lessons as organizational signals, and in fly mode keep a single high-contrast cue per step.
+- Because the expertise interaction is unresolved, let experienced learners hide cues (a toggle) and watch whether they use it.
+
+Confirmed this session: the Crossref record for DOI 10.1016/j.edurev.2017.11.001 (volume 23, pages 1-24, authors as above); two separate search results quoting the abstract numbers from the LearnTechLib record (https://www.learntechlib.org/p/204443/, which I could not open directly: 403); a search summary on Alpizar and colleagues and on Richter and colleagues (not read). The full text of Schneider and colleagues was not read, and the publisher abstract was not read directly.
+
+## paas1992training
+
+Paas, F. G. W. C. (1992). Training strategies for attaining transfer of problem-solving skill in statistics: A cognitive-load approach. *Journal of Educational Psychology*, 84(4), 429-434.
+
+### Core claims
+
+This short paper did two jobs that shaped a generation of cognitive load research. First, it compared three ways of practicing statistics problems on a computer and found that studying worked-out problems produced better transfer than solving conventional problems. Second, it introduced the one-item rating of invested mental effort that became the field's default measure of cognitive load. The abstract says the study examined the effect of three computer-based training strategies on training performance, transfer performance and cognitive load. The conventional condition emphasized solving conventional problems, the worked condition the study of worked-out problems, and the completion condition the completion of partly worked-out problems. It was predicted that cognitive load would mediate the link between practice type and transfer, so that conventional practice would need more time and effort during training and give lower, more effortful transfer. With the exception of time and effort during training, the results supported this, and "the completion strategy and, in particular, the worked strategy proved to be superior to the conventional strategy for attaining transfer".
+
+### Specifics
+
+**The rating scale.** De Jong's 2010 review (read in full, this lane) reports that Paas's questionnaire has one item asking learners for their "perceived amount of mental effort" on a 9-point scale (Paas 1992, p. 430), with end labels "very, very low mental effort" and "very very high mental effort". Later work has used the scale with 5, 7, 9, 10 and 100 points, with difficulty rather than effort wording, and once at the end rather than after each problem (de Jong). The 2019 retrospective by Sweller and colleagues (this lane) repeats that the scale has been used in many ways beyond the original and reports that a single rating after the learning phase came out higher than the average of ratings taken after each task.
+
+**What happened to effort.** Time and effort during training were the exceptions to support in the abstract. De Jong quotes Paas as writing that the processes required during the specific instruction apparently demanded the same amount of mental effort in all conditions (p. 433). The strongest result was on transfer, not on effort during learning.
+
+**Reliability.** De Jong reports that a 1994 analysis of the scale gave Cronbach's alpha values of .90 and .82 in two studies, one of them this one. He argues that high consistency is not validity and that no validity evidence was reported.
+
+### Replication and criticism
+
+The worked-example advantage is among the best-replicated findings in CLT. The 2019 retrospective calls the evidence very strong, with the constraints that examples are less effective for high-expertise learners and are hard to design well. The expertise reversal paper (this lane) cites this paper among worked example studies. The measure is more contested than the finding: de Jong says identical scores mean different things across studies and the scale cannot distinguish types of load, and the 2019 authors concede it gives an overall measure. Evidence for the training result: a single controlled experiment from a computer-based course, extended by many later studies.
+
+### Implications for LTF
+
+- Practice ordering: for a new maneuver or procedure, show a complete worked demonstration, then a completion exercise (the learner fills in the missing steps or numbers), then a full attempt. This is the strongest, best-replicated practical rule in the lane for a beginner course.
+- A completion item in LTF could be a partly annotated approach with two blanks (where to start the descent, what power setting to hold) before the learner flies it in the sim.
+- If LTF wants to measure how hard learners find a step, a single quick rating ("how much mental effort did that take?", 1 to 9) after a challenge is cheap, but de Jong's critique means it should be used to compare versions of the same lesson, not to decide absolute difficulty, and not to infer which kind of load it was.
+- Collect a rating after each task rather than only at the end, since the 2019 paper reports different results for the two.
+
+Confirmed this session: the abstract through OpenAlex (api.openalex.org, DOI 10.1037/0022-0663.84.4.429) and the University of Twente repository page (https://research.utwente.nl/en/publications/3e475ae3-2b43-45c7-83e5-7d4da2ef88b8); the Crossref record (volume 84, issue 4, pages 429-434); and the way de Jong 2010 and the 2019 retrospective (read in full) describe the paper and its scale. The full text of Paas 1992 was not read.
+
+## sweller1985use
+
+Sweller, J., & Cooper, G. A. (1985). The use of worked examples as a substitute for problem solving in learning algebra. *Cognition and Instruction*, 2(1), 59-89.
+
+### Core claims
+
+The paper reports the first demonstration of what became known as the worked example effect. The abstract says the researchers studied the knowledge needed to solve algebra manipulation problems, and ways to hasten its acquisition, in a series of five experiments. They hypothesized that, as in other domains, algebra problem-solving skill requires a large number of schemas, and that schema acquisition is retarded by conventional problem-solving search. Worked examples, they proposed, would let novices acquire schemas faster than solving problems would. The 2019 CLT retrospective (this lane) credits this paper with first reporting the worked example effect, in the domain of algebra. The evidence is a series of experiments with students, not a theoretical argument.
+
+### Specifics
+
+**Experiment 1: what expertise looks like.** Year 9 students, Year 11 students and university mathematics students took part. The more experienced students had a better cognitive representation of algebraic equations than the less experienced ones, measured by their ability to recall equations and to distinguish perceptually similar equations on the basis of solution mode.
+
+**Experiments 2 to 5: worked examples.** The abstract reports that worked examples, as expected, required considerably less time to process than conventional problems. Subsequent problems similar to the initial ones were also solved more rapidly, and the decreased solution time was accompanied by a decrease in the number of mathematical errors.
+
+**Boundary stated by the authors.** Both findings (faster and more accurate) were specific to problems identical in structure to the initial ones. The authors concluded that for novice problem solvers, general algebra rules are reflected in only a limited number of schemas, and that abstraction of general rules from schemas may occur only with considerable practice and exposure to a wider range of schemas. This is a statement about near transfer: the benefit covered problems of the same type, not far transfer to different structures.
+
+**Theory.** The reason offered is the one in Sweller's 1988 paper (this lane): conventional problem solving by means-ends search uses working memory on the gap between the current state and the goal, leaving little for noticing the structure of the problem, whereas a worked example directs attention to problem states and solution steps. Chandler and Sweller (1991, this lane) summarize the worked-example results of this paper and a 1987 follow-up as showing more rapid learning than from solving a large number of problems.
+
+### Replication and criticism
+
+The worked example effect is among the best-replicated effects in instructional psychology. In the 2019 retrospective the authors describe the empirical evidence as very strong but with constraints: examples are less effective for high-expertise learners, and the design of good worked examples is difficult (for example, they should not require learners to mentally integrate separate sources). The expertise reversal paper (this lane) reports that, with experience, studying worked examples lost its advantage and solving problems became superior (Kalyuga and colleagues 2001). Paas 1992 (this lane) found worked examples superior for transfer in statistics. The retrospective also reports a reverse effect with low element interactivity material, which limits the effect to complex material. The criticism from this paper's own boundary is about transfer distance: early results concern problems of the same structure, so a plan built only on worked examples may not produce flexible skill.
+
+### Implications for LTF
+
+- For any procedure (a normal takeoff roll, a stabilized approach, a trim sequence), show a full worked example before asking the learner to do it. The result is faster and more accurate performance on similar tasks.
+- Choose examples that vary in surface features (different runways, winds and aircraft weights) over time. The paper's own boundary suggests that abstraction needs exposure to a wider range of cases, so one worked example will not produce a general rule.
+- Pair examples with practice on structurally similar items soon after, since benefits were specific to similar problems.
+- Fade examples as skill grows (see Kalyuga and colleagues 2003 in this lane), moving to completion tasks and then full challenges.
+- Do not drop beginners into open-ended problem solving in the sim on the assumption that struggle teaches. The effect found here is that it teaches less per hour than studying solved problems.
+
+Confirmed this session: the abstract through OpenAlex (api.openalex.org, DOI 10.1207/s1532690xci0201_3); the Crossref record (volume 2, issue 1, pages 59-89); and how the 2019 retrospective, Chandler and Sweller 1991 and Kalyuga and colleagues 2003 (all read in full) describe it. The full text of the 1985 paper was not read.
+
+## cowan2001magical
+
+Cowan, N. (2001). The magical number 4 in short-term memory: A reconsideration of mental storage capacity. *Behavioral and Brain Sciences*, 24(1), 87-114.
+
+### Core claims
+
+Cowan's target article is the standard correction to the popular "seven plus or minus two" rule. The abstract says Miller (1956) summarized evidence that people can remember about seven chunks in short-term memory tasks, but that this number "was meant more as a rough estimate and a rhetorical device than as a real capacity limit". Cowan brings together a wide range of data suggesting that a smaller, real limit of three to five chunks exists, and that a single central capacity limit averaging about four chunks is implicated alongside other sources of memory that are not capacity-limited. It is a target review in a journal that prints open peer commentary, so the same issue contains replies, some of which disagree. Its strength is agreement across many procedures, not a single study.
+
+### Specifics
+
+**Chunk, not item.** The limit is in chunks, not raw items. Long-term memory can combine items into larger chunks of unknown size, which is why the limit shows only when recoding is blocked, and why expertise matters (my illustration: a pilot who recognizes a traffic-pattern configuration holds one chunk where a beginner holds many pieces). The introduction says Miller's central focus was how grouping or "chunking" raises effective capacity, and that he suggested the specific limit of seven probably emerged as a coincidence.
+
+**Four conditions for seeing the pure limit.** Capacity can be observed (1) when information overload limits chunks to individual stimulus items, (2) when steps are taken to block recoding of items into larger chunks (for example, preventing rehearsal), (3) in performance discontinuities caused by the limit, and (4) in various indirect effects. Under these conditions rehearsal and long-term memory cannot combine items into chunks of unknown size.
+
+**Pure versus compound.** A pure capacity estimate (in chunks) differs from compound estimates, which are higher because strategies and long-term memory contribute. Miller's seven plus or minus two is called valid as a commonly observed compound limit.
+
+**Numbers.** The conclusion says the evidence strongly suggests a mean capacity in adults of three to five chunks, with individual scores from about two to about six. The article proposes a capacity limit for the focus of attention.
+
+**Opposing views.** Cowan lists seven common views against his thesis, among them that the limit is still Miller's 7 plus or minus 2, that memory is limited by elapsed time, that there is no separate short-term memory, that apparent limits are only scheduling constraints, and that limits are entirely task specific. He argues the evidence favors four chunks within boundary conditions.
+
+### Replication and criticism
+
+The article itself is contested in print. One of the published commentaries argues that the empirical data do not unequivocally support a consistent fixed capacity of four chunks, proposing instead that capacity is limited by the precision of specifying the temporal and spatial context of items, and that short-term memory is continuous with long-term memory. Another commentary ties the limit to consciousness. Status: seven plus or minus two as a hard limit is not supported as such, a smaller limit of about four has support across many paradigms, and its nature remains debated. The paper warns that the limit shows only in carefully constrained circumstances. The 2019 CLT retrospective (this lane) likewise says working memory limits apply to novel information, not to organized knowledge in long-term memory.
+
+### Implications for LTF
+
+- Do not cite "7 plus or minus 2" as a rule for menu length, number of nav items or checklist length. Miller's number was a rough estimate of recall for strings of items, not a design limit for visible lists; the lists a learner can see do not need to be held in memory.
+- The relevant limit for beginners is on how many new, unfamiliar, interacting things they must hold at once while reasoning. That number is small (the paper's three to five chunks is for carefully tested material), so introduce new concepts one or two at a time and let them become chunks before combining them.
+- A fly-mode checklist should emphasize the current item and perhaps the next, not the whole list equally.
+- Do not turn 3 to 5 into a hard rule in specs; the paper says it depends on controlled conditions.
+
+Confirmed this session: read the abstract, introduction and conclusion of the target article and the start of several commentaries in a PDF copy from the author's Missouri site (https://memory.psych.missouri.edu/assets/doc/articles/2001/cowan-bbs-2001.pdf), and the Crossref record for DOI 10.1017/S0140525X01003922 (volume 24, issue 1, pages 87-114). The body of the target article between introduction and conclusion was not read in full.
+
+## baddeley1992working
+
+Baddeley, A. (1992). Working memory. *Science*, 255(5044), 556-559.
+
+### Core claims
+
+This short Science article is a compact statement of the multicomponent model of working memory that cognitive load theory and multimedia learning theory both borrow. The abstract says working memory is a brain system that provides temporary storage and manipulation of the information needed for complex tasks such as language comprehension, learning and reasoning. The concept evolved from an earlier idea of a unitary short-term memory. Working memory requires the simultaneous storage and processing of information. It can be divided into three subcomponents: a central executive, assumed to be an attentional-controlling system, and two "slave systems", a visuospatial sketch pad that manipulates visual images and a phonological loop that stores and rehearses speech-based information. The article is a short review by the model's originator.
+
+### Specifics
+
+**Central executive.** The abstract describes it as an attentional-controlling system, important in skills such as chess playing and particularly susceptible to the effects of Alzheimer's disease.
+
+**Visuospatial sketch pad.** Manipulates visual images. In learning research this is the channel taken to carry diagrams, pictures and printed text seen on a screen, according to de Jong's gloss (de Jong 2010, this lane, which says working memory subsystems are one for visuospatial information such as written text and diagrams and one for phonological information such as narration, citing Baddeley and Hitch 1974).
+
+**Phonological loop.** Stores and rehearses speech-based information, and, according to the abstract, is necessary for the acquisition of both native and second-language vocabulary.
+
+**How the lane's sources use it.** Sweller, van Merriënboer and Paas (2019, this lane) cite Baddeley 1992 for the assumption that working memory can be subdivided into partly independent processors, one for verbal material and one for diagrammatic or pictorial material, so that effective capacity can be increased by using both rather than either alone; that assumption is the basis of the modality effect. Mayer and Moreno (2003, this lane) call the dual-channel assumption a central feature of Paivio's dual coding theory and of Baddeley's working memory theory, and add a footnote warning that a verbal channel should not be equated with an auditory channel, since printed words are also verbal. Kalyuga and colleagues (2003, this lane) cite Baddeley (1986) in the same way.
+
+### Replication and criticism
+
+The model is one of the most influential in cognitive psychology, but it has been revised. A search summary I read says Baddeley added an episodic buffer in 2000; I did not read that paper. Within instructional research, the model has been used to justify the modality effect, and that use is challenged. Reinwein (2012, whose abstract I read; discussed in the Ginns notes in this lane) argues the modality effect cannot rest on Baddeley's or Penney's theories and needs a different explanation. Cowan (2001, this lane) notes that some current theories hold the limit in short-term memory is one of duration rather than capacity, citing Baddeley 1986, and argues instead for a capacity limit of about four chunks, so there is open disagreement on what limits working memory. De Jong (this lane) makes the further point that CLT does not say whether load is relative to total capacity when two channels are used.
+
+### Implications for LTF
+
+- Treat the model as a useful map, not a recipe. It says words heard and words read use different components, and pictures use a third, so putting spoken guidance beside a visual task is plausible in principle. It does not by itself prove that any given narration will help.
+- In fly mode the learner's visual attention is on the sim. A design that relies on the same visual channel for reading the instructions as for watching the instruments competes for it. Whether speech would help in practice is a question to test with learners, because the sim already produces audio (engine noise, warnings) that competes for the phonological loop.
+- For widgets that show a changing value plus a text explanation, avoid making the learner hold one in mind while looking for the other; place them together.
+
+Confirmed this session: the abstract through Crossref (DOI 10.1126/science.1736359, volume 255, issue 5044, pages 556-559, published 31 January 1992); and how de Jong 2010, the 2019 CLT retrospective, Mayer and Moreno 2003, Kalyuga and colleagues 2003 and Cowan 2001 (read in full or in part) use the model. The full text of the 1992 article was not read.
+
+## paivio1986mental
+
+Paivio, A. (1986). *Mental Representations: A Dual Coding Approach*. New York: Oxford University Press.
+
+### Core claims
+
+Paivio's book is the full statement of dual coding theory, the idea that human cognition runs on two functionally distinct symbolic systems, one specialized for language and one for nonverbal objects and events, with connections between them. Multimedia learning theory takes this as one of its foundations: Mayer and Moreno (2003, this lane) call the dual-channel assumption "a central feature of Paivio's (1986) dual-coding theory". The theory predicts that information coded in both systems is remembered better than information coded in one, because the codes have additive effects. It began as an effort to restore imagery to cognitive psychology but is not only about imagery.
+
+I did not read the book. This entry is built from catalog records and from a 1987 chapter by Clark and Paivio, "A Dual Coding Perspective on Encoding Processes", which reproduces the theory's structure from the 1986 book with Paivio as co-author and which I read in part.
+
+### Specifics
+
+**Two symbolic systems.** The chapter states that the unique features of linguistic and nonlinguistic events are accommodated by separate verbal and nonverbal symbolic systems that operate in fundamentally different ways. The theory postulates verbal and imaginal representations and connections between sensory events and these representations, between verbal and imaginal representations, and within each system.
+
+**Logogens.** Verbal representations, "wordlike entities comprised of visual and phonemic features". Language consists of discrete, categorical and separate units, is sequentially constrained (meaning depends on order, "John hit" versus "hit John"), and words are mostly arbitrary patterns that resemble little of what they stand for.
+
+**Imagens.** Representations that encode modality-specific information about nonverbal, perceptual and sensory-motor experience. Visual-spatial imagens are continuous, analog or holistic, nested (a nose image is nested within a face image), and synchronous or parallel, so a single imagen can represent at once a thought that would need many words to describe. They keep some perceptual properties of what they stand for.
+
+**Three kinds of processing.** Representational (direct activation of verbal or imaginal codes by words or objects, governed by familiarity), referential (one system activating the other, as in imaging to a word or naming a picture) and associative (activation within a system). Referential connections are described as probabilistic.
+
+**Evidence examples in the chapter.** Naming pictures takes longer than reading words (821 msec versus 562 msec in one study cited). Pictures tend to be remembered better than words, explained by saying pictures are more likely to activate both verbal and imaginal codes, whose effects on recall are additive. The picture superiority effect disappears when presentation is too fast to allow naming, and imagery instructions help most at slow presentation rates.
+
+**No abstract common code.** The chapter says the theory has no level more abstract than logogens and imagens, and calls the abstract representations of propositional theories superfluous, a point of disagreement with rival theories.
+
+### Replication and criticism
+
+The chapter cites a large experimental literature on concrete versus abstract words and imagery in memory. Rival propositional theories exist, as the chapter says. Mayer and Moreno (2003) add that all theorists do not characterize the subsystems in the same way, and Reinwein's reanalysis (see Ginns in this lane) argues the modality effect cannot rest on Baddeley's or Penney's two-system accounts. The strongest reading is that two coding systems are well supported for memory tasks, but it is not established that adding a picture to words always helps learning of complex material; the Harp and Mayer and redundancy studies in this lane show added pictures and words can hurt. A common misuse is to turn the theory into "visual learners" and "verbal learners". Nothing in the account above assigns people to one type; both systems are present in everyone.
+
+### Implications for LTF
+
+- Pair a concrete visual with a verbal label for new concepts: the airspeed indicator with the words "airspeed", the pitch attitude with its name, a diagram of a traffic pattern with leg names.
+- Anchor abstract ideas (energy, stability, angle of attack) in a visible image, since concrete, imageable material is remembered better in the experiments cited.
+- The second code needs time to generate, so allow self-paced viewing.
+- A picture is not automatically helpful when the words already carry the content, so pair deliberately, not decoratively.
+- Avoid "learning styles" language in LTF's UI or copy.
+
+Confirmed this session: Open Library search (Mental Representations, Allan Paivio, Oxford University Press, first published 1986, work OL3779347W); a library catalog summary of publisher and series; the reference-list entry in Clark and Paivio (1987); and the read of that chapter at https://clark.faculty.uwinnipeg.ca/Clark/Publications/1987-Clark&Paivio-EncodingProcesses.pdf. The book's text and a publisher description were not read; no ISBN was confirmed for the 1986 printing.

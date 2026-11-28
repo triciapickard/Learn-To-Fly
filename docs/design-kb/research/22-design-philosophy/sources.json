@@ -1,0 +1,415 @@
+[
+ {
+  "key": "rittel1973dilemmas",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Rittel",
+    "given": "Horst W. J."
+   },
+   {
+    "family": "Webber",
+    "given": "Melvin M."
+   }
+  ],
+  "year": 1973,
+  "title": "Dilemmas in a general theory of planning",
+  "container_title": "Policy Sciences",
+  "volume": "4",
+  "issue": "2",
+  "pages": "155-169",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1007/bf01405730",
+  "isbn": "",
+  "url": "https://archive.epa.gov/reg3esd1/data/web/pdf/rittel%2Bwebber%2Bdilemmas%2Bgeneral_theory_of_planning.pdf",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic 'Rittel Webber Dilemmas in a general theory of planning 1973' returned DOI 10.1007/bf01405730, Policy Sciences vol 4 issue 2 pages 155-169, issued June 1973, authors Rittel and Webber. Also read the article pages 160-166 from the EPA-hosted scan.",
+  "kind": "conceptual essay (planning theory), foundational paper on wicked problems",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "buchanan1992wicked",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Buchanan",
+    "given": "Richard"
+   }
+  ],
+  "year": 1992,
+  "title": "Wicked problems in design thinking",
+  "container_title": "Design Issues",
+  "volume": "8",
+  "issue": "2",
+  "pages": "5-21",
+  "publisher": "MIT Press",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.2307/1511637",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref query.bibliographic 'Buchanan Wicked problems in design thinking 1992' returned DOI 10.2307/1511637, Design Issues vol 8 issue 2, 1992. Pages 5-21 and publisher MIT Press confirmed on the JSTOR cover sheet of the PDF I read (pp. 5-16 viewed).",
+  "kind": "conceptual essay (design theory)",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "simon1996sciences",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Simon",
+    "given": "Herbert A."
+   }
+  ],
+  "year": 1996,
+  "original_year": 1969,
+  "title": "The Sciences of the Artificial",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "MIT Press",
+  "publisher_place": "Cambridge, MA",
+  "edition": "3rd",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780262691914",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'The Sciences of the Artificial Simon' returned work OL1205035W; editions list shows OL975566M, 3rd ed., MIT Press, Cambridge Mass, 1996, ISBN 0262691914. Title page of the scanned text I read states 'Third edition ... The MIT Press ... 1996' and ISBN 0-262-69191-4.",
+  "kind": "theory monograph (science of design, bounded rationality)",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "alexander1964notes",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Alexander",
+    "given": "Christopher"
+   }
+  ],
+  "year": 1964,
+  "title": "Notes on the Synthesis of Form",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Harvard University Press",
+  "publisher_place": "Cambridge, MA",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "0674627504",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'Notes on the Synthesis of Form Alexander' returned work OL3923609W; editions list shows OL19301571M, 1964, Harvard University Press, Cambridge (Mass.), ISBN 0674627504, 216 pages. Content confirmed through Gabriel's 2023 essay (arxiv.org/pdf/2302.12087) which quotes the book and the 1971 preface.",
+  "kind": "theory monograph (design methodology)",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "papanek1972design",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Papanek",
+    "given": "Victor"
+   }
+  ],
+  "year": 1972,
+  "original_year": 1971,
+  "title": "Design for the Real World: Human Ecology and Social Change",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Pantheon Books",
+  "publisher_place": "New York",
+  "edition": "1st American",
+  "editors": [],
+  "doi": "",
+  "isbn": "0394470362",
+  "url": "https://archive.org/details/DesignForTheRealWorld-VictorPapanek",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'Design for the Real World Papanek' returned work OL8366020W; editions list shows OL21358854M, Pantheon Books, New York, 1972, 1st American ed., ISBN 0394470362. Text read in the Internet Archive scan designvictor_djvu.txt (Preface and function complex chapter). Metropolis article by Hawthorne (2012) gives 1971 first publication.",
+  "kind": "polemic and design manifesto",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "maeda2006laws",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Maeda",
+    "given": "John"
+   }
+  ],
+  "year": 2006,
+  "title": "The Laws of Simplicity",
+  "container_title": "Simplicity: Design, Technology, Business, Life",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "MIT Press",
+  "publisher_place": "Cambridge, MA",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780262134729",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'The Laws of Simplicity Maeda' returned work OL1954555W; editions list shows OL9356042M, The MIT Press, August 21, 2006, ISBN 9780262134729. Laws and keys confirmed from fs.blog summary; critiques read at users.monash.edu and boxesandarrows.com.",
+  "kind": "craft opinion (short design manifesto)",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "venturi1966complexity",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Venturi",
+    "given": "Robert"
+   }
+  ],
+  "year": 1966,
+  "title": "Complexity and Contradiction in Architecture",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "135",
+  "publisher": "Museum of Modern Art",
+  "publisher_place": "New York",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'Complexity and Contradiction in Architecture Venturi' returned work OL2940044W; editions list shows OL5997443M, 1966, Museum of Modern Art, New York, 135 pages. Content and criticism read in Jencks, Architectural Record (architecturalrecord.com/articles/11630-icomplexity-and-contradictioni-in-architecture-turns-50).",
+  "kind": "architectural manifesto (craft theory)",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "krippendorff2006semantic",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Krippendorff",
+    "given": "Klaus"
+   }
+  ],
+  "year": 2006,
+  "title": "The Semantic Turn: A New Foundation for Design",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "CRC Press / Taylor & Francis",
+  "publisher_place": "Boca Raton",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780415322201",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'The Semantic Turn Krippendorff' returned works OL5282411W and OL16970116W; editions list shows OL25559192M, 2006, CRC/Taylor & Francis, Boca Raton. ISBN 9780415322201 appears in the Routledge product listing (routledge.com/The-Semantic-Turn-A-New-Foundation-for-Design/Krippendorff/p/book/9780415322201) and as 0415322200 in OL3427019M. Structure read in the Wikipedia article on the book.",
+  "kind": "theory monograph (design semantics)",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "hume1757standard",
+  "type": "chapter",
+  "authors": [
+   {
+    "family": "Hume",
+    "given": "David"
+   }
+  ],
+  "year": 1757,
+  "title": "Of the Standard of Taste",
+  "container_title": "Four Dissertations",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://users.rowan.edu/~clowney/aesthetics/philos_artists_onart/hume_standard.htm",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search for the essay returned full-text editions (users.rowan.edu Hume Archives text based on the 1875 Green and Grose edition, which states it appeared in 1757 in Four Dissertations) and the Stanford Encyclopedia entry 'Hume's Aesthetics' (plato.stanford.edu/archives/spr2020/entries/hume-aesthetics/). I fetched and read the Rowan full text and the Stanford entry. Crossref also lists a 2019 De Gruyter reprint chapter (10.1515/9783110585575-003) but that is not the original.",
+  "kind": "philosophical essay",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "ruskin1849seven",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Ruskin",
+    "given": "John"
+   }
+  ],
+  "year": 1849,
+  "title": "The Seven Lamps of Architecture",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Smith, Elder, and Co.",
+  "publisher_place": "London",
+  "edition": "1st",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://archive.org/details/sevenlampsarchi00conggoog",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'The Seven Lamps of Architecture Ruskin' returned work OL88638W. Title page of the Internet Archive scan sevenlampsarchi00conggoog (text layer read) reads 'London: Smith, Elder, and Co., 65 Cornhill. 1849' with contents listing the seven lamps.",
+  "kind": "craft and moral treatise",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "loos1910ornament",
+  "type": "webpage",
+  "authors": [
+   {
+    "family": "Loos",
+    "given": "Adolf"
+   }
+  ],
+  "year": 1910,
+  "original_year": 1910,
+  "title": "Ornament and Crime",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "University of Washington (Vienna documents collection)",
+  "publisher_place": "",
+  "edition": "English translation, translator not named on the page",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://depts.washington.edu/vienna/documents/Loos/Loos_Ornament.htm",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search for 'Loos Ornament and Crime' returned this University of Washington full-text page and the Wikipedia/ArchDaily accounts of the 21 January 1910 lecture; I fetched and read the full translation. Canales and Herscher (Architectural History 48, 2005, DOI 10.1017/S0066622X00003798) abstract page also fetched. Open Library work OL824434W lists the Ariadne Press edition (1997, ISBN 9781572410466).",
+  "kind": "polemical essay (lecture)",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "sullivan1896tall",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Sullivan",
+    "given": "Louis H."
+   }
+  ],
+  "year": 1896,
+  "title": "The tall office building artistically considered",
+  "container_title": "Lippincott's Monthly Magazine",
+  "volume": "",
+  "issue": "March",
+  "pages": "403-409",
+  "publisher": "J. B. Lippincott Company",
+  "publisher_place": "Philadelphia",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://archive.org/details/tallofficebuildi00sull",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search returned the Internet Archive scan tallofficebuildi00sull and a catalog line 'Lippincott's Monthly Magazine (1886-1915); Philadelphia (Mar 1896): 403'. I read the OCR text of the issue: running headers 403-408, contents list showing the essay at 403 and the following article at 409, copyright 1896 J. B. Lippincott Company, Philadelphia. Crossref returned only secondary works, not the original.",
+  "kind": "craft essay (architecture)",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "rams2026ten",
+  "type": "webpage",
+  "authors": [
+   {
+    "family": "Rams",
+    "given": "Dieter"
+   }
+  ],
+  "year": 2026,
+  "title": "Ten principles for good design",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Vitsoe",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.vitsoe.com/gb/about/good-design",
+  "verified_via": "websearch",
+  "verified_evidence": "Fetched and read vitsoe.com/gb/about/good-design on 2026-11-27: lists the ten principles and says they were formulated in the late 1970s. Undated page, so year is the access year. Web search and the Jansen article (jansen.com/scale-en/themen/from-the-small-to-the-large-rules-for-good-design/) give dating 1975-1985. Open Library lists the related book Weniger, aber besser (OL9061379W, 1994, Jo Klatt).",
+  "kind": "designer's statement of values (craft opinion)",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "pye1978nature",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Pye",
+    "given": "David"
+   }
+  ],
+  "year": 1978,
+  "original_year": 1964,
+  "title": "The Nature and Aesthetics of Design",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Barrie and Jenkins",
+  "publisher_place": "London",
+  "edition": "revised",
+  "editors": [],
+  "doi": "",
+  "isbn": "0214203751",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'The Nature of Design Pye' returned works OL6621279W and OL6621278W (The Nature of Design, 1964); editions of OL6621279W list OL4477508M, The nature and aesthetics of design, 1978, Barrie and Jenkins, London, ISBN 0214203751, 159 pages. Content read in Jagger's review (accu.org/journals/overload/11/54/jagger_366/).",
+  "kind": "craft theory by a practitioner",
+  "lane": "22-design-philosophy"
+ },
+ {
+  "key": "jones1856grammar",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Jones",
+    "given": "Owen"
+   }
+  ],
+  "year": 1856,
+  "title": "The Grammar of Ornament",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Day and Son",
+  "publisher_place": "London",
+  "edition": "1st",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://archive.org/details/grammarornament00Jone",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search 'The Grammar of Ornament Owen Jones' returned work OL15836693W; editions list shows OL17246066M, The grammar of ornament, 1856, Day and Son, London. Read the text layer of Internet Archive scan grammarornament00Jone (title page, preface dated December 15, 1856, propositions 1-37).",
+  "kind": "pattern book with design principles (craft theory)",
+  "lane": "22-design-philosophy"
+ }
+]

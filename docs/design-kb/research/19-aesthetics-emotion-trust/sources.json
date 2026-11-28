@@ -1,0 +1,752 @@
+[
+  {
+    "key": "kurosu1995apparent",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Kurosu",
+        "given": "Masaaki"
+      },
+      {
+        "family": "Kashimura",
+        "given": "Kaori"
+      }
+    ],
+    "year": 1995,
+    "title": "Apparent usability vs. inherent usability",
+    "container_title": "Conference companion on Human factors in computing systems - CHI '95",
+    "volume": "",
+    "issue": "",
+    "pages": "292-293",
+    "publisher": "ACM Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/223355.223680",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/223355.223680 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Also fetched CHI '95 short-paper page chi1995.chistatic.hosting.acm.org/proceedings/shortppr/mk_bdy.htm for method and correlations.",
+    "kind": "short experimental report (correlational ratings study)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "tractinsky1997aesthetics",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Tractinsky",
+        "given": "Noam"
+      }
+    ],
+    "year": 1997,
+    "title": "Aesthetics and apparent usability: empirically assessing cultural and methodological issues",
+    "container_title": "Proceedings of the ACM SIGCHI Conference on Human factors in computing systems",
+    "volume": "",
+    "issue": "",
+    "pages": "115-122",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/258549.258626",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/258549.258626 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Fetched CHI 97 page chi1997.acm.org/proceedings/paper/nt.html with abstract, participants and results.",
+    "kind": "experimental replication (three experiments)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "tractinsky2000what",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Tractinsky",
+        "given": "N."
+      },
+      {
+        "family": "Katz",
+        "given": "A.S."
+      },
+      {
+        "family": "Ikar",
+        "given": "D."
+      }
+    ],
+    "year": 2000,
+    "title": "What is beautiful is usable",
+    "container_title": "Interacting with Computers",
+    "volume": "13",
+    "issue": "2",
+    "pages": "127-145",
+    "publisher": "Oxford University Press (OUP)",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/s0953-5438(00)00031-x",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/s0953-5438(00)00031-x (or bibliographic query) returned matching title, authors, year, container, volume, pages. Full text read from ise.bgu.ac.il/faculty/noam/papers/00_nt_ask_di_iwc.pdf.",
+    "kind": "laboratory experiment (3x2 between groups, N=124 analyzed)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "hassenzahl2004interplay",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Hassenzahl",
+        "given": "Marc"
+      }
+    ],
+    "year": 2004,
+    "title": "The interplay of beauty, goodness, and usability in interactive products",
+    "container_title": "Human-Computer Interaction",
+    "volume": "19",
+    "issue": "4",
+    "pages": "319-349",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15327051hci1904_2",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1207/s15327051hci1904_2 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Two-study design (four MP3-player skins) confirmed from web search summaries and from Tuch et al. 2012 full text; paper text not read.",
+    "kind": "two empirical studies plus theoretical model",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "lindgaard2006attention",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Lindgaard",
+        "given": "Gitte"
+      },
+      {
+        "family": "Fernandes",
+        "given": "Gary"
+      },
+      {
+        "family": "Dudek",
+        "given": "Cathy"
+      },
+      {
+        "family": "Brown",
+        "given": "J."
+      }
+    ],
+    "year": 2006,
+    "title": "Attention web designers: You have 50 milliseconds to make a good first impression!",
+    "container_title": "Behaviour & Information Technology",
+    "volume": "25",
+    "issue": "2",
+    "pages": "115-126",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/01449290500330448",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1080/01449290500330448 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Abstract confirmed via web search (tandfonline page); Nature news report fetched; correlations from Tuch et al. 2012 full text.",
+    "kind": "three experiments (brief-exposure ratings)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "hassenzahl2010inference",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Hassenzahl",
+        "given": "Marc"
+      },
+      {
+        "family": "Monk",
+        "given": "Andrew"
+      }
+    ],
+    "year": 2010,
+    "title": "The inference of perceived usability from beauty",
+    "container_title": "Human-Computer Interaction",
+    "volume": "25",
+    "issue": "3",
+    "pages": "235-260",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/07370024.2010.500139",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1080/07370024.2010.500139 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Abstract content (15 papers, 25 correlations, mediation by goodness) from fetched summary page and web search.",
+    "kind": "literature review with new mediation analyses",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "tuch2012beautiful",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Tuch",
+        "given": "Alexandre N."
+      },
+      {
+        "family": "Roth",
+        "given": "Sandra P."
+      },
+      {
+        "family": "Hornbæk",
+        "given": "Kasper"
+      },
+      {
+        "family": "Opwis",
+        "given": "Klaus"
+      },
+      {
+        "family": "Bargas-Avila",
+        "given": "Javier A."
+      }
+    ],
+    "year": 2012,
+    "title": "Is beautiful really usable? Toward understanding the relation between usability, aesthetics, and affect in HCI",
+    "container_title": "Computers in Human Behavior",
+    "volume": "28",
+    "issue": "5",
+    "pages": "1596-1607",
+    "publisher": "Elsevier BV",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.chb.2012.03.024",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.chb.2012.03.024 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Full text read (library copy PDF fetched).",
+    "kind": "laboratory experiment (2x2, N=80)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "tuch2012role",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Tuch",
+        "given": "Alexandre N."
+      },
+      {
+        "family": "Presslaber",
+        "given": "Eva E."
+      },
+      {
+        "family": "Stöcklin",
+        "given": "Markus"
+      },
+      {
+        "family": "Opwis",
+        "given": "Klaus"
+      },
+      {
+        "family": "Bargas-Avila",
+        "given": "Javier A."
+      }
+    ],
+    "year": 2012,
+    "title": "The role of visual complexity and prototypicality regarding first impression of websites: Working towards understanding aesthetic judgments",
+    "container_title": "International Journal of Human-Computer Studies",
+    "volume": "70",
+    "issue": "11",
+    "pages": "794-811",
+    "publisher": "Elsevier BV",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.ijhcs.2012.06.003",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.ijhcs.2012.06.003 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Full text of authors' preprint read (static.googleusercontent.com/media/research.google.com/en//pubs/archive/38315.pdf).",
+    "kind": "two laboratory experiments (brief exposure)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "reinecke2013predicting",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Reinecke",
+        "given": "Katharina"
+      },
+      {
+        "family": "Yeh",
+        "given": "Tom"
+      },
+      {
+        "family": "Miratrix",
+        "given": "Luke"
+      },
+      {
+        "family": "Mardiko",
+        "given": "Rahmatri"
+      },
+      {
+        "family": "Zhao",
+        "given": "Yuechen"
+      },
+      {
+        "family": "Liu",
+        "given": "Jenny"
+      },
+      {
+        "family": "Gajos",
+        "given": "Krzysztof Z."
+      }
+    ],
+    "year": 2013,
+    "title": "Predicting users' first impressions of website aesthetics with a quantification of perceived visual complexity and colorfulness",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+    "volume": "",
+    "issue": "",
+    "pages": "2049-2058",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/2470654.2481281",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/2470654.2481281 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Full paper text read from kgajos.seas.harvard.edu/papers/reinecke13aesthetics.pdf.",
+    "kind": "three online experiments with computational models",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "fogg2003how",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Fogg",
+        "given": "B. J."
+      },
+      {
+        "family": "Soohoo",
+        "given": "Cathy"
+      },
+      {
+        "family": "Danielson",
+        "given": "David R."
+      },
+      {
+        "family": "Marable",
+        "given": "Leslie"
+      },
+      {
+        "family": "Stanford",
+        "given": "Julianne"
+      },
+      {
+        "family": "Tauber",
+        "given": "Ellen R."
+      }
+    ],
+    "year": 2003,
+    "title": "How do users evaluate the credibility of Web sites? A study with over 2,500 participants",
+    "container_title": "Proceedings of the 2003 conference on Designing for user experiences",
+    "volume": "",
+    "issue": "",
+    "pages": "1-15",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/997078.997097",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/997078.997097 returned title (without the subtitle), six authors, 2003, DUX proceedings, pages 1-15. Abstract-level content (2,684 participants, 46.1% design look) from web search summary citing dl.acm.org/doi/10.1145/997078.997097; subtitle taken from search result.",
+    "kind": "large online survey with coded open-ended comments",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "fogg2002stanford",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Fogg",
+        "given": "B. J."
+      }
+    ],
+    "year": 2002,
+    "title": "Stanford guidelines for web credibility: A research summary from the Stanford Persuasive Technology Lab",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Stanford Persuasive Technology Lab",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://credibility.stanford.edu/guidelines",
+    "verified_via": "websearch",
+    "verified_evidence": "WebSearch for Stanford Web Credibility Guidelines returned credibility.stanford.edu/guidelines; WebFetch of that page returned the ten guidelines, byline B.J. Fogg, May 2002 (updated June 2002) and 'three years of research involving over 4,500 people'.",
+    "kind": "research-derived practitioner guidelines",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "robins2008aesthetics",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Robins",
+        "given": "David"
+      },
+      {
+        "family": "Holmes",
+        "given": "Jason"
+      }
+    ],
+    "year": 2008,
+    "title": "Aesthetics and credibility in web site design",
+    "container_title": "Information Processing & Management",
+    "volume": "44",
+    "issue": "1",
+    "pages": "386-399",
+    "publisher": "Elsevier BV",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.ipm.2007.02.003",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.ipm.2007.02.003 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Full text read (makinggood.ac.nz copy of the PDF).",
+    "kind": "laboratory experiment (21 page pairs, 20 subjects)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "norman2004emotional",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Norman",
+        "given": "Donald A."
+      }
+    ],
+    "year": 2004,
+    "title": "Emotional Design: Why We Love (or Hate) Everyday Things",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Basic Books",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780465051359",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search.json (title:emotional design author:norman) returned work /works/OL1879160W 'Emotional Design', subtitle 'Why we Love (or Hate) Everyday Things', author Donald A. Norman, publisher Basic Books, isbn list including 9780465051359; works JSON gave the publisher description. Year 2004 from copyright notice quoted in web search results (Open Library dates 2003/2005 differ).",
+    "kind": "trade book synthesizing research (craft/theory)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "reber2004processing",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Reber",
+        "given": "Rolf"
+      },
+      {
+        "family": "Schwarz",
+        "given": "Norbert"
+      },
+      {
+        "family": "Winkielman",
+        "given": "Piotr"
+      }
+    ],
+    "year": 2004,
+    "title": "Processing fluency and aesthetic pleasure: Is beauty in the perceiver's processing experience?",
+    "container_title": "Personality and Social Psychology Review",
+    "volume": "8",
+    "issue": "4",
+    "pages": "364-382",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15327957pspr0804_3",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1207/s15327957pspr0804_3 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Crossref abstract matches; full text read from pages.ucsd.edu/~pwinkielman/reber-schwarz-winkielman-beauty-PSPR-2004.pdf.",
+    "kind": "theoretical review",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "zajonc1968attitudinal",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Zajonc",
+        "given": "Robert B."
+      }
+    ],
+    "year": 1968,
+    "title": "Attitudinal effects of mere exposure",
+    "container_title": "Journal of Personality and Social Psychology",
+    "volume": "9",
+    "issue": "2, Pt.2",
+    "pages": "1-27",
+    "publisher": "American Psychological Association (APA)",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/h0025848",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1037/h0025848 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Content details from web search summaries and from Berlyne 1970, Reber et al. 2004 and Mrkva & Van Boven 2020 full texts; original PDF not fetched (403).",
+    "kind": "monograph (review plus experiments)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "montoya2017reexamination",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Montoya",
+        "given": "R. Matthew"
+      },
+      {
+        "family": "Horton",
+        "given": "Robert S."
+      },
+      {
+        "family": "Vevea",
+        "given": "Jack L."
+      },
+      {
+        "family": "Citkowicz",
+        "given": "Martyna"
+      },
+      {
+        "family": "Lauber",
+        "given": "Elissa A."
+      }
+    ],
+    "year": 2017,
+    "title": "A re-examination of the mere exposure effect: The influence of repeated exposure on recognition, familiarity, and liking",
+    "container_title": "Psychological Bulletin",
+    "volume": "143",
+    "issue": "5",
+    "pages": "459-498",
+    "publisher": "American Psychological Association (APA)",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/bul0000085",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1037/bul0000085 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Abstract fetched from PubMed via NCBI efetch, PMID 28263645.",
+    "kind": "meta-analysis (268 curve estimates, 81 articles)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "berlyne1970novelty",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Berlyne",
+        "given": "D. E."
+      }
+    ],
+    "year": 1970,
+    "title": "Novelty, complexity, and hedonic value",
+    "container_title": "Perception & Psychophysics",
+    "volume": "8",
+    "issue": "5",
+    "pages": "279-286",
+    "publisher": "Springer Science and Business Media LLC",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3758/bf03212593",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.3758/bf03212593 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Full text PDF fetched from link.springer.com/content/pdf/10.3758/BF03212593.pdf and read (abstract, Experiments I-IV, discussion).",
+    "kind": "five experiments plus theory",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "hekkert2003most",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Hekkert",
+        "given": "Paul"
+      },
+      {
+        "family": "Snelders",
+        "given": "Dirk"
+      },
+      {
+        "family": "Van Wieringen",
+        "given": "Piet C. W."
+      }
+    ],
+    "year": 2003,
+    "title": "'Most advanced, yet acceptable': Typicality and novelty as joint predictors of aesthetic preference in industrial design",
+    "container_title": "British Journal of Psychology",
+    "volume": "94",
+    "issue": "1",
+    "pages": "111-124",
+    "publisher": "Wiley",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1348/000712603762842147",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1348/000712603762842147 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Abstract confirmed in Crossref and PubMed (PMID 12648393, efetch).",
+    "kind": "three experiments",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "lavie2004assessing",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Lavie",
+        "given": "Talia"
+      },
+      {
+        "family": "Tractinsky",
+        "given": "Noam"
+      }
+    ],
+    "year": 2004,
+    "title": "Assessing dimensions of perceived visual aesthetics of web sites",
+    "container_title": "International Journal of Human-Computer Studies",
+    "volume": "60",
+    "issue": "3",
+    "pages": "269-298",
+    "publisher": "Elsevier BV",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.ijhcs.2003.09.002",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.ijhcs.2003.09.002 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Full text read from ise.bgu.ac.il/faculty/noam/papers/04_tl_nt_ijhcs.pdf.",
+    "kind": "scale development (four studies, factor analyses)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "moshagen2010facets",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Moshagen",
+        "given": "Morten"
+      },
+      {
+        "family": "Thielsch",
+        "given": "Meinald T."
+      }
+    ],
+    "year": 2010,
+    "title": "Facets of visual aesthetics",
+    "container_title": "International Journal of Human-Computer Studies",
+    "volume": "68",
+    "issue": "10",
+    "pages": "689-709",
+    "publisher": "Elsevier BV",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.ijhcs.2010.05.006",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.ijhcs.2010.05.006 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Authors' draft read in full (uni-muenster.de/OWMS/uploads/drafts_thielsch/pdf/moshagen_2010.pdf).",
+    "kind": "scale development (seven studies)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "sonderegger2010influence",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Sonderegger",
+        "given": "Andreas"
+      },
+      {
+        "family": "Sauer",
+        "given": "Juergen"
+      }
+    ],
+    "year": 2010,
+    "title": "The influence of design aesthetics in usability testing: Effects on user performance and perceived usability",
+    "container_title": "Applied Ergonomics",
+    "volume": "41",
+    "issue": "3",
+    "pages": "403-410",
+    "publisher": "Elsevier BV",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.apergo.2009.09.002",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.apergo.2009.09.002 (or bibliographic query) returned matching title, authors, year, container, volume, pages. Full text read (sonar.ch copy); PubMed abstract PMID 19892317.",
+    "kind": "laboratory experiment (N=60 adolescents)",
+    "lane": "19-aesthetics-emotion-trust"
+  },
+  {
+    "key": "song2008hard",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Song",
+        "given": "Hyunjin"
+      },
+      {
+        "family": "Schwarz",
+        "given": "Norbert"
+      }
+    ],
+    "year": 2008,
+    "title": "If it's hard to read, it's hard to do: Processing fluency affects effort prediction and motivation",
+    "container_title": "Psychological Science",
+    "volume": "19",
+    "issue": "10",
+    "pages": "986-988",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1111/j.1467-9280.2008.02189.x",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref (title 'If It's Hard to Read, It's Hard to Do', 2008, vol 19 issue 10, pages 986-988) and PubMed efetch PMID 19000208 (full title with subtitle, no abstract). Findings read from the authors' review in The Psychologist (dornsife.usc.edu PDF).",
+    "kind": "short experimental report (two studies)",
+    "lane": "19-aesthetics-emotion-trust"
+  }
+]

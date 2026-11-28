@@ -1,0 +1,614 @@
+[
+  {
+    "key": "ebbinghaus1913memory",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Ebbinghaus",
+        "given": "Hermann"
+      }
+    ],
+    "year": 1913,
+    "original_year": 1885,
+    "title": "Memory: A Contribution to Experimental Psychology",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Teachers College, Columbia University",
+    "publisher_place": "New York",
+    "edition": "Translated by Henry A. Ruger and Clara E. Bussenius",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://psychclassics.yorku.ca/Ebbinghaus/index.htm",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search (title Memory a contribution to experimental psychology, author Ebbinghaus) returned work OL13131146W, first published 1913, publisher Teachers College, Columbia University. Chapters 3, 7 and 8 of the Ruger and Bussenius translation fetched from psychclassics.yorku.ca/Ebbinghaus, whose index lists the translators and Teachers College, Columbia University, New York.",
+    "kind": "foundational experimental monograph (translation)",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "murre2015replication",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Murre",
+        "given": "Jaap M. J."
+      },
+      {
+        "family": "Dros",
+        "given": "Joeri"
+      }
+    ],
+    "year": 2015,
+    "title": "Replication and Analysis of Ebbinghaus' Forgetting Curve",
+    "container_title": "PLOS ONE",
+    "volume": "10",
+    "issue": "7",
+    "pages": "e0120644",
+    "publisher": "Public Library of Science",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1371/journal.pone.0120644",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned 10.1371/journal.pone.0120644 (Murre, Dros, PLOS ONE 10(7) e0120644, 2015); PLOS article page fetched and read for methods and results.",
+    "kind": "single-subject replication experiment",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "cepeda2006distributed",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Cepeda",
+        "given": "Nicholas J."
+      },
+      {
+        "family": "Pashler",
+        "given": "Harold"
+      },
+      {
+        "family": "Vul",
+        "given": "Edward"
+      },
+      {
+        "family": "Wixted",
+        "given": "John T."
+      },
+      {
+        "family": "Rohrer",
+        "given": "Doug"
+      }
+    ],
+    "year": 2006,
+    "title": "Distributed practice in verbal recall tasks: A review and quantitative synthesis",
+    "container_title": "Psychological Bulletin",
+    "volume": "132",
+    "issue": "3",
+    "pages": "354-380",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0033-2909.132.3.354",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref DOI 10.1037/0033-2909.132.3.354 (Psychological Bulletin 132(3) 354-380); abstract via Europe PMC PMID 16719566; full text read from PDF at evullab.org.",
+    "kind": "meta-analysis",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "cepeda2008spacing",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Cepeda",
+        "given": "Nicholas J."
+      },
+      {
+        "family": "Vul",
+        "given": "Edward"
+      },
+      {
+        "family": "Rohrer",
+        "given": "Doug"
+      },
+      {
+        "family": "Wixted",
+        "given": "John T."
+      },
+      {
+        "family": "Pashler",
+        "given": "Harold"
+      }
+    ],
+    "year": 2008,
+    "title": "Spacing effects in learning: A temporal ridgeline of optimal retention",
+    "container_title": "Psychological Science",
+    "volume": "19",
+    "issue": "11",
+    "pages": "1095-1102",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1111/j.1467-9280.2008.02209.x",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1111/j.1467-9280.2008.02209.x (Psychological Science 19(11) 1095-1102); full title and abstract from Europe PMC; full text read from PDF at evullab.org.",
+    "kind": "large web-based experiment",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "roediger2006testenhanced",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Roediger",
+        "given": "Henry L."
+      },
+      {
+        "family": "Karpicke",
+        "given": "Jeffrey D."
+      }
+    ],
+    "year": 2006,
+    "title": "Test-enhanced learning: Taking memory tests improves long-term retention",
+    "container_title": "Psychological Science",
+    "volume": "17",
+    "issue": "3",
+    "pages": "249-255",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1111/j.1467-9280.2006.01693.x",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1111/j.1467-9280.2006.01693.x (Psychological Science 17(3) 249-255); full text read from the Purdue Learning Lab PDF copy.",
+    "kind": "laboratory experiments",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "karpicke2011retrieval",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Karpicke",
+        "given": "Jeffrey D."
+      },
+      {
+        "family": "Blunt",
+        "given": "Janell R."
+      }
+    ],
+    "year": 2011,
+    "title": "Retrieval practice produces more learning than elaborative studying with concept mapping",
+    "container_title": "Science",
+    "volume": "331",
+    "issue": "6018",
+    "pages": "772-775",
+    "publisher": "American Association for the Advancement of Science",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1126/science.1199327",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref DOI 10.1126/science.1199327 (Science 331(6018) 772-775); full text read from the Purdue Learning Lab PDF copy.",
+    "kind": "laboratory experiments",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "rohrer2007shuffling",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Rohrer",
+        "given": "Doug"
+      },
+      {
+        "family": "Taylor",
+        "given": "Kelli"
+      }
+    ],
+    "year": 2007,
+    "title": "The shuffling of mathematics problems improves learning",
+    "container_title": "Instructional Science",
+    "volume": "35",
+    "issue": "6",
+    "pages": "481-498",
+    "publisher": "Springer",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/s11251-007-9015-8",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1007/s11251-007-9015-8 (Instructional Science 35(6) 481-498); full text read from the PDF at gwern.net.",
+    "kind": "laboratory experiments",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "kornell2008learning",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Kornell",
+        "given": "Nate"
+      },
+      {
+        "family": "Bjork",
+        "given": "Robert A."
+      }
+    ],
+    "year": 2008,
+    "title": "Learning concepts and categories: Is spacing the \"enemy of induction\"?",
+    "container_title": "Psychological Science",
+    "volume": "19",
+    "issue": "6",
+    "pages": "585-592",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1111/j.1467-9280.2008.02127.x",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref DOI 10.1111/j.1467-9280.2008.02127.x (Psychological Science 19(6) 585-592); abstract via Europe PMC; full text read from a PDF copy at gwern.net.",
+    "kind": "laboratory experiments",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "dunlosky2013improving",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Dunlosky",
+        "given": "John"
+      },
+      {
+        "family": "Rawson",
+        "given": "Katherine A."
+      },
+      {
+        "family": "Marsh",
+        "given": "Elizabeth J."
+      },
+      {
+        "family": "Nathan",
+        "given": "Mitchell J."
+      },
+      {
+        "family": "Willingham",
+        "given": "Daniel T."
+      }
+    ],
+    "year": 2013,
+    "title": "Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology",
+    "container_title": "Psychological Science in the Public Interest",
+    "volume": "14",
+    "issue": "1",
+    "pages": "4-58",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/1529100612453266",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1177/1529100612453266 (PSPI 14(1) 4-58); full abstract via Europe PMC (PMID 26173288) with the full subtitle; APS news release fetched.",
+    "kind": "structured literature review",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "pashler2008learning",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Pashler",
+        "given": "Harold"
+      },
+      {
+        "family": "McDaniel",
+        "given": "Mark"
+      },
+      {
+        "family": "Rohrer",
+        "given": "Doug"
+      },
+      {
+        "family": "Bjork",
+        "given": "Robert"
+      }
+    ],
+    "year": 2008,
+    "title": "Learning styles: Concepts and evidence",
+    "container_title": "Psychological Science in the Public Interest",
+    "volume": "9",
+    "issue": "3",
+    "pages": "105-119",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1111/j.1539-6053.2009.01038.x",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned 10.1111/j.1539-6053.2009.01038.x (PSPI 9(3) 105-119, Dec 2008) with the full abstract; Europe PMC record gives title Learning Styles: Concepts and Evidence.",
+    "kind": "expert review with methodological criteria",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "rowland2014effect",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Rowland",
+        "given": "Christopher A."
+      }
+    ],
+    "year": 2014,
+    "title": "The effect of testing versus restudy on retention: A meta-analytic review of the testing effect",
+    "container_title": "Psychological Bulletin",
+    "volume": "140",
+    "issue": "6",
+    "pages": "1432-1463",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/a0037559",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1037/a0037559 (Psychological Bulletin 140(6) 1432-1463); abstract via Europe PMC; full text read from an author PDF copy.",
+    "kind": "meta-analysis",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "butler2008feedback",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Butler",
+        "given": "Andrew C."
+      },
+      {
+        "family": "Roediger",
+        "given": "Henry L."
+      }
+    ],
+    "year": 2008,
+    "title": "Feedback enhances the positive effects and reduces the negative effects of multiple-choice testing",
+    "container_title": "Memory & Cognition",
+    "volume": "36",
+    "issue": "3",
+    "pages": "604-616",
+    "publisher": "Springer",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.3758/mc.36.3.604",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.3758/mc.36.3.604 (Memory & Cognition 36(3) 604-616); full text read from the publisher PDF at link.springer.com.",
+    "kind": "laboratory experiment",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "soderstrom2015learning",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Soderstrom",
+        "given": "Nicholas C."
+      },
+      {
+        "family": "Bjork",
+        "given": "Robert A."
+      }
+    ],
+    "year": 2015,
+    "title": "Learning versus performance: An integrative review",
+    "container_title": "Perspectives on Psychological Science",
+    "volume": "10",
+    "issue": "2",
+    "pages": "176-199",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/1745691615569000",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1177/1745691615569000 (Perspectives on Psychological Science 10(2) 176-199) with abstract; full text not obtained, secondary summaries and Bjork and Bjork 2020 text read.",
+    "kind": "integrative literature review",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "craik1972levels",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Craik",
+        "given": "Fergus I.M."
+      },
+      {
+        "family": "Lockhart",
+        "given": "Robert S."
+      }
+    ],
+    "year": 1972,
+    "title": "Levels of processing: A framework for memory research",
+    "container_title": "Journal of Verbal Learning and Verbal Behavior",
+    "volume": "11",
+    "issue": "6",
+    "pages": "671-684",
+    "publisher": "Academic Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/s0022-5371(72)80001-x",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref DOI 10.1016/S0022-5371(72)80001-X (JVLVB 11(6) 671-684); full text read from the PDF at psych205.stanford.edu.",
+    "kind": "theoretical framework paper",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "bahrick1984semantic",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Bahrick",
+        "given": "Harry P."
+      }
+    ],
+    "year": 1984,
+    "title": "Semantic memory content in permastore: Fifty years of memory for Spanish learned in school",
+    "container_title": "Journal of Experimental Psychology: General",
+    "volume": "113",
+    "issue": "1",
+    "pages": "1-29",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0096-3445.113.1.1",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned 10.1037/0096-3445.113.1.1 (JEP: General 113(1) 1-29); full abstract via Europe PMC.",
+    "kind": "field study of long-term retention",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "tulving1973encoding",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Tulving",
+        "given": "Endel"
+      },
+      {
+        "family": "Thomson",
+        "given": "Donald M."
+      }
+    ],
+    "year": 1973,
+    "title": "Encoding specificity and retrieval processes in episodic memory",
+    "container_title": "Psychological Review",
+    "volume": "80",
+    "issue": "5",
+    "pages": "352-373",
+    "publisher": "American Psychological Association",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/h0020071",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref DOI 10.1037/h0020071 (Psychological Review 80(5) 352-373); paper text not obtained, secondary accounts and a 1984 Citation Classic PDF read.",
+    "kind": "laboratory experiments and theory",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "bjork2009making",
+    "type": "chapter",
+    "authors": [
+      {
+        "family": "Bjork",
+        "given": "Elizabeth Ligon"
+      },
+      {
+        "family": "Bjork",
+        "given": "Robert A."
+      }
+    ],
+    "year": 2009,
+    "title": "Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning",
+    "container_title": "Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Worth Publishers",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Gernsbacher",
+        "given": "Morton Ann"
+      },
+      {
+        "family": "Pew",
+        "given": ""
+      },
+      {
+        "family": "Hough",
+        "given": ""
+      },
+      {
+        "family": "Pomerantz",
+        "given": "James R."
+      }
+    ],
+    "doi": "",
+    "isbn": "9781429230438",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL17413396W, Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society, Gernsbacher, Worth Publishers, first published 2009, ISBN 9781429230438. Chapter text read from the PDF (chapter 5, begins p. 56). A web search confirmed the title and found only 2009 and 2015 editions; the chapter is often cited as 2011.",
+    "kind": "expert essay",
+    "lane": "15-memory-retention"
+  },
+  {
+    "key": "brown2014make",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Brown",
+        "given": "Peter C."
+      },
+      {
+        "family": "Roediger",
+        "given": "Henry L."
+      },
+      {
+        "family": "McDaniel",
+        "given": "Mark A."
+      }
+    ],
+    "year": 2014,
+    "title": "Make It Stick: The Science of Successful Learning",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Belknap Press of Harvard University Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780674729018",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search (title Make it stick, authors Brown Roediger McDaniel) returned work OL17879515W, first published 2014, Belknap Press of Harvard University Press, ISBN 0674419375 among editions. Wabash Center listing fetched with authors, publisher, ISBN 9780674729018 and table of contents; WashU Source article of April 2014 fetched.",
+    "kind": "trade book synthesis",
+    "lane": "15-memory-retention"
+  }
+]

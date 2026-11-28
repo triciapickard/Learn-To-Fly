@@ -1,0 +1,447 @@
+# Lane 18: Motivation and gamification evidence
+
+Notes written source by source. Evidence labels: experiment, meta-analysis, review, theory paper, craft essay.
+
+## lepper1973undermining
+
+Lepper, M. R., Greene, D., & Nisbett, R. E. (1973). Undermining children's intrinsic interest with extrinsic reward: A test of the "overjustification" hypothesis. Journal of Personality and Social Psychology, 28(1), 129-137.
+
+### Core claims
+
+This is the founding field experiment on the overjustification effect. The authors start from self-perception theory: people infer their own motives partly from watching their own behavior, so if an external reward is salient and seems sufficient to explain why you did something, you attribute the behavior to the reward and not to your own interest. The prediction was that a child who already enjoys an activity, and who then does it in order to earn a reward, will later show less spontaneous interest in that activity than a child who did the same thing without expecting a reward. The results supported that prediction.
+
+### Specifics
+
+Setting and sample: a nursery school in Stanford, California. Children were first observed unobtrusively in their classrooms during baseline sessions, and only those who showed relatively high initial interest in drawing with felt-tip "magic markers" were selected. Fifty-five children took part, and the final analyzed sample was 51 (18 expected award, 18 unexpected award, 15 no award), after four were lost to absences.
+
+Procedure: each child was taken to a "surprise room" and shown the markers and paper. In the expected-award condition the child was shown a "Good Player Award" card (a card with a star and a ribbon, with the child's name on it) and asked whether they wanted to draw in order to win it. In the unexpected-award condition the child drew with no mention of an award and was given the same award afterward. In the no-award condition the child neither expected nor received one. Each child drew for six minutes. Seven to 14 days later, observers blind to condition recorded how much free-choice classroom time each child spent with the markers.
+
+Results (Table 1 of the paper): the mean percentage of free-choice time spent with the drawing materials was 8.59 for the expected-award group, 16.73 for the no-award group and 18.09 for the unexpected-award group. The planned contrast comparing the expected-award group with the other two was significant (F = 6.19, df = 1/48, p < .025). Within the expected-award group, interest fell significantly from baseline (t = 2.61, p < .02); the other groups rose slightly and nonsignificantly. Three blind judges rated pictures drawn during the session on a 1 to 5 scale, and expected-award pictures averaged 2.18 against 2.85 (unexpected award) and 2.69 (no award), even though the number of pictures drawn was similar across groups.
+
+The unexpected-award group is the key control: it received the identical object, so the harm comes from doing the activity as a means to get it, not from the reward itself.
+
+### Replication and criticism
+
+Evidence type: a single field experiment with a small sample and a naturalistic measure. Deci, Koestner and Ryan (1999) pooled 128 experiments and found that expected tangible rewards reliably undermined free-choice intrinsic motivation (see that entry), which supports the direction of the finding though with smaller effects than a single small study suggests. The literature was contested: Cameron and Pierce (1994) and Eisenberger and Cameron (1996) argued that undermining is small and limited to narrow conditions, and Lepper, Henderlong and Gingras (1999) replied that those analyses collapsed across important moderators. Fair summary: undermining is real under specific conditions (an already interesting activity, and a tangible, expected reward framed as payment), not a general law that all rewards harm. Limits: young children, drawing, one reward type, and a classroom where movement was restricted (the authors flag that restriction).
+
+### Implications for LTF
+
+LTF learners choose to be there, and many already love aviation. That is the population in which overjustification is most plausible. Do not pay learners (points, coins, unlocks) for doing what they came to do. Keep any recognition informational and unexpected where possible, such as a summary after a challenge saying what the learner did well, not a pre-announced prize that makes the lesson a means to an end. Do not announce a badge in the challenge briefing; if badges exist, show them afterward as a record of competence. Quality dropped under expected reward here, so a reward tied to finishing a checklist quickly could degrade careful practice in fly mode. Frame quizzes as checking understanding, not earning something. The paper's own data suggest learners with little initial interest were not harmed (low-interest children in the unexpected-award group rose), so the caution applies most to people who arrive motivated.
+
+Confirmed this session: full text of the 1973 article retrieved and read (typeset.io PDF copy of the JPSP article, located by web search); Crossref record for DOI 10.1037/h0035519 (query.bibliographic search for title and authors).
+
+## deci1999meta
+
+Deci, E. L., Koestner, R., & Ryan, R. M. (1999). A meta-analytic review of experiments examining the effects of extrinsic rewards on intrinsic motivation. Psychological Bulletin, 125(6), 627-668.
+
+### Core claims
+
+The paper pools the experimental literature on rewards and intrinsic motivation, a field in which earlier meta-analyses had disagreed, and argues that the question cannot be answered by a single average. Using cognitive evaluation theory (CET), the authors predict that effects depend on how a reward is contingent and on whether the person experiences it as controlling or as informative about competence. They find that, overall, rewards that are tangible and expected significantly undermine intrinsic motivation, while positive verbal feedback enhances it. The conclusion is that the effect of a reward is a property of its structure (what it is contingent on, how it is delivered) and not of "rewards" in general.
+
+### Specifics
+
+Abstract-level figures (confirmed): a meta-analysis of 128 studies. Engagement-contingent, completion-contingent and performance-contingent rewards significantly undermined free-choice intrinsic motivation (d = -0.40, -0.36 and -0.28), as did all rewards, all tangible rewards and all expected rewards. Engagement-contingent and completion-contingent rewards also undermined self-reported interest (d = -0.15 and -0.17), as did all tangible and all expected rewards. Positive feedback enhanced both free-choice behavior (d = 0.33) and self-reported interest (d = 0.31). Tangible rewards tended to be more detrimental for children than for college students, and verbal rewards tended to be less enhancing for children than for college students.
+
+Definitions from the full text: task-noncontingent rewards are given regardless of what the person does; engagement-contingent rewards are given for doing the task; completion-contingent rewards for finishing it; performance-contingent rewards for reaching a standard or doing well. The authors predict that engagement-contingent rewards are the most clearly controlling, and that performance-contingent rewards depend on whether they carry competence information and on how pressuring the interpersonal climate is. The paper cites two studies in which controlling positive feedback produced less intrinsic motivation than informational feedback.
+
+Method: the primary analyses used interesting tasks (studies with tasks defined as dull were set aside, because undermining concerns interesting activities). Outcomes were free-choice behavior (time on the task when no longer required) and self-reported interest. The authors searched PsycINFO for unpublished dissertations (41 found, 19 used, giving 20 dissertation studies) and compared four earlier meta-analyses (Rummel and Feinberg, Wiersma, Tang and Hall, Cameron and Pierce).
+
+### Replication and criticism
+
+This is a meta-analysis of mostly laboratory experiments, so its strength is breadth, but its weakness is that many studies are short, with student samples. The dispute was live at publication. Cameron and Pierce (1994) and Eisenberger and Cameron (1996) concluded that rewards rarely harm intrinsic motivation and can be used safely; Deci and colleagues argued in this paper that those analyses collapsed across moderators (such as whether the task was interesting and whether rewards were expected), pooled dull and interesting tasks, and defined contingency categories differently. In the same issue Lepper, Henderlong and Gingras (1999) concluded, per a Semantic Scholar summary, that the literature is captured better by Deci et al. and Tang and Hall (1995) than by Cameron and Pierce. Deci, Koestner and Ryan followed up in 2001 in Review of Educational Research, so the debate continued. A reasonable reading for design: the undermining effect is real but moderate in size (the d values above are small to moderate and the self-report effects are smaller than the behavioral ones), strongest for expected, contingent, tangible rewards on tasks people already like, and absent or reversed for informational feedback and unexpected rewards. It should not be read as "all rewards are bad."
+
+### Implications for LTF
+
+The moderators give LTF a usable rulebook. Verbal and informational feedback after a flight attempt (what went well, what the numbers show) is the safe, beneficial category. Tangible, expected, contingent items (coins, XP for just finishing a lesson, unlocks for engagement) fall in the category most likely to undermine interest for people who already like aviation. Performance-contingent recognition is mixed, so if used it should carry competence information (for example "landed within the touchdown zone on the second try") and avoid pressuring language. Avoid controlling wording in challenge feedback ("you must", "keep it up") and prefer neutral, informational statements. Do not treat the d values as predicted effects for LTF; they come from laboratory studies of children and students.
+
+Confirmed this session: full text of the article read (a PDF copy from albimarketing.com located by web search); abstract text also returned by Europe PMC for DOI 10.1037/0033-2909.125.6.627; Crossref record for the paper and for the Lepper, Henderlong and Gingras comment (DOI 10.1037/0033-2909.125.6.669); web search on the 1994 to 1999 debate.
+
+## ryan2000selfdetermination
+
+Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. American Psychologist, 55(1), 68-78.
+
+### Core claims
+
+This is the canonical short statement of self-determination theory (SDT). It argues that human motivation is shaped by the social context, which either supports or thwarts three innate psychological needs: competence, autonomy and relatedness. When these needs are satisfied, people show more intrinsic motivation, better internalization of values and better well-being. When they are thwarted, motivation becomes controlled or lapses. The paper also stresses that motivation is not a single amount: the type (autonomous versus controlled) predicts quality of engagement and outcomes better than the quantity.
+
+### Specifics
+
+The paper presents SDT as an organismic theory with mini-theories. Cognitive evaluation theory (CET), introduced by Deci and Ryan in 1985, explains how events such as rewards, feedback, deadlines and evaluation change intrinsic motivation through their effect on perceived competence and perceived autonomy. Optimal challenges, effectance-promoting feedback and freedom from demeaning evaluations are named as conditions that tend to support intrinsic motivation. The paper reports that tangible rewards, threats, deadlines, directives and pressured evaluations reduce intrinsic motivation because they push toward an external perceived locus of causality. It refers to the Deci, Koestner and Ryan (1999) meta-analysis for the reward effect.
+
+Organismic integration theory (OIT) lays out a continuum of regulation styles, which is the paper's most reusable framework: amotivation (no intention to act), external regulation (acting for rewards or to avoid punishment), introjected regulation (acting to avoid guilt or anxiety or to maintain self-worth, internally driven but still pressured), identified regulation (acting because you value the goal), integrated regulation (the value is fully assimilated with the self), and intrinsic motivation (interest and enjoyment in the activity itself). The paper explains internalization as the process of taking in a value or regulation, and says that supports for autonomy, competence and relatedness promote it. It cites studies in education, health care and other domains in which more internalized motivation went with better outcomes such as persistence and better well-being, and it argues the needs are universal while the ways of satisfying them vary across cultures.
+
+Relatedness is treated as a third need that matters especially for internalization: people are more willing to take on values from those to whom they feel connected, and the paper reports research with young children suggesting security and relatedness bear on exploration and intrinsic motivation.
+
+### Replication and criticism
+
+This is a theory review, not an experiment. The evidence behind it is a large body of experiments and correlational field studies produced largely by the theory's own proponents and collaborators, so independent testing matters. The reward debate described under deci1999meta is the main contested area. The paper argues the needs are universal and cites, for example, Korean and U.S. samples; whether specific goals and expressions of the needs vary across cultures is acknowledged by the authors themselves. Need-satisfaction measures are largely self-report, so the correlational findings share method variance. The theory has been widely applied, including to games (see przybylski2010motivational).
+
+### Implications for LTF
+
+SDT gives LTF a design vocabulary. Autonomy: let the learner choose the next lesson, skip ahead, and control hints, and explain why each step matters (a rationale supports internalization). Competence: calibrate challenges so a beginner can succeed, give specific, informational feedback, and show growth in skill instead of a score against others. Relatedness: this is the hardest need for a solo web app. Options are an optional community, instructor voice and tone, or an explicit note that other learners find this step hard. Avoid controlling language ("you must finish today") and surveillance-style streak pressure, since the paper identifies deadlines and pressured evaluation as undermining. The OIT continuum is useful for copy: aim for identified regulation ("this skill keeps you safe and lets you fly the pattern you want") instead of pure external rewards. For fly mode next to the sim, keep controls minimal and avoid interrupting the learner with unrequested prompts.
+
+Confirmed this session: full text of the article read (PDF copy at selfdeterminationtheory.org); Crossref record DOI 10.1037/0003-066x.55.1.68; web search returned the PubMed record.
+
+## deterding2011from
+
+Deterding, S., Dixon, D., Khaled, R., & Nacke, L. (2011). From game design elements to gamefulness: Defining "gamification". In Proceedings of the 15th International Academic MindTrek Conference (pp. 9-15). ACM.
+
+### Core claims
+
+The paper is a short conceptual contribution that fixed the working definition of gamification: "the use of game design elements in non-game contexts" (the definition as quoted in the authors' abstract and by the Gamification Research Network post by Deterding, 2012). The abstract says the term had spread through mass-market consumer software that takes inspiration from video games, but that it was unclear how it related to serious games, pervasive games, alternate reality games and playful design, whether it named a new phenomenon, and how to define it. The authors examine the term's history and argue that gamified applications reveal novel "gameful" phenomena that complement "playful" ones.
+
+### Specifics
+
+What the paper establishes (from its abstract): it traces the historical origins of the term "gamification" and positions it against precursors and neighbors, namely serious games, pervasive games, alternate reality games and playful design, and it proposes that gamified applications provide insight into novel, gameful phenomena complementary to playful phenomena. The proposed definition has three parts: use (not full games), game design elements (per secondary reports, elements characteristic of games), and non-game contexts (purposes other than entertainment). That separates gamification from a complete game built for a serious purpose and from games made for fun. The paper is a definition paper and does not test whether such elements change behavior. The ACM full text could not be fetched, so further detail from the body is not claimed.
+
+Two later documents from the first author, both read this session, qualify the definition. In an April 2012 post, Deterding wrote that he had grown more sceptical of what a "game design element" could be and wondered whether "using game design in non-game contexts" might suffice, though he thought the paper otherwise held up. In his 2014 chapter "Eudaimonic Design, or: Six Invitations to Rethink Gamification" (Rethinking Gamification, meson press), he argues that it is impossible to clearly identify and distinguish game design elements from other design elements: patterns commonly sold in gamification platforms, such as notification streams, come from social software, while real game design concerns such as interestingly hard challenges and meaningful choices are often missing from standard gamification practice. He calls the game design pattern "deadly traps" in a mobile e-commerce app nonsensical, and says motivational experiences are emergent properties afforded by the relation of actors and their environment, so motivational design should concern whole systems, not elements with presumed fixed effects.
+
+### Replication and criticism
+
+Evidence type: conceptual definition by researchers in human-computer interaction and game studies; there is nothing to replicate. The criticism is mostly definitional. The author's own later position, above, is that "game design element" is hard to pin down. Search results note that no universally accepted definition of gamification exists, and record Ian Bogost's objection that the practice should be called "exploitationware" (a secondary source reports that the Deterding paper describes this proposal as an act of linguistic politics). A competing 2011 definition by Huotari and Hamari frames gamification as a process of enhancing a service with affordances for gameful experiences, which puts the focus on the experience and not on the elements (as reported in the arXiv paper "The Gamification Design Problem"). For research, the practical consequence is that studies labeled "gamification" bundle many different things, which is why effectiveness results (see hamari2014gamification and sailer2020gamification) disagree.
+
+### Implications for LTF
+
+Use the definition to decide what LTF is and is not. A lesson that uses a flight simulator scenario is a serious-game-like or simulation-based activity, whereas adding points and badges to a reading page is gamification. Avoid "gamification" as a design goal in specs; name the actual mechanic (progress bar, streak, challenge scoring, badge) and the need it serves. The 2014 critique is useful for LTF: the in-sim challenges are already games with their own intrinsic challenge, meaningful choices and feedback, so the design effort should go there before adding decoration on web pages. Describe the motivational experience wanted (confidence at the first landing, a sense of progress) and test it, since one element can motivate one learner and demotivate another. Keep a glossary entry: gamification means game design elements in non-game contexts; LTF's in-sim challenges are not gamification in this sense because the sim is itself the activity.
+
+Confirmed this session: Crossref record DOI 10.1145/2181037.2181040 (query.bibliographic for title and authors); abstract and definition text from the Gamification Research Network post at gamification-research.org/2012/04/defining-gamification/; full text of Deterding (2014) read from the Repositorium fur die Medienwissenschaft PDF; web search results on definition and the Bogost and Huotari-Hamari comparisons.
+
+## hamari2014gamification
+
+Hamari, J., Koivisto, J., & Sarsa, H. (2014). Does gamification work? A literature review of empirical studies on gamification. In Proceedings of the 47th Hawaii International Conference on System Sciences (pp. 3025-3034). IEEE.
+
+### Core claims
+
+This was the first widely cited review of peer-reviewed empirical gamification studies. Its abstract states that the review indicates gamification provides positive effects, but that the effects depend greatly on the context in which gamification is implemented and on the users. The paper builds a framework from the definition of gamification and from the concept of motivational affordances, and reviews results, independent variables (which affordances were tested), dependent variables (psychological and behavioral outcomes), contexts and types of study.
+
+### Specifics
+
+Method: searches in Scopus, ScienceDirect, EBSCOHost, Web of Science and further sources, then focused searches, screening with exclusion rules (for example papers where gamification was mentioned only in passing, and short or research-in-progress papers). The result was 24 peer-reviewed empirical papers. The authors coded 10 categories of motivational affordance. Points, leaderboards and achievements/badges were by far the most commonly tested (points in nine papers, leaderboards in ten and achievements or badges in nine, per the paper's Table 2), followed by levels, story or theme, clear goals, feedback, rewards, progress and challenge.
+
+Outcomes: most studies examined behavioral outcomes (use, activity), and the studies of psychological outcomes mostly looked at motivation, attitude and enjoyment, using interviews and questionnaires. Only one study had used validated psychometric measurements.
+
+Results: according to a majority of the reviewed studies gamification produced positive effects, but "only two studies found all of the tests positive"; most reported positive results for some of the affordances studied. Many of the quantitative papers were descriptive only, so they could not infer an effect of gamification itself. Education and learning was the most common context, and in those studies the learning outcomes were mostly positive but the studies also flagged negative outcomes, such as increased competition, difficulty of evaluating tasks and design features. The largest studies in the review suggested gamification might not be effective in a utilitarian service setting. Some studies suggested effects may not be long term and could be due to a novelty effect, and one reported that removing gamification could be harmful for users still engaged by it, possibly through loss aversion at losing earned badges and points.
+
+Methodological limitations the authors list: small samples (around N = 20 in some), no validated psychometric measures, some experiments lacking control groups, lack of controls between affordances (so effects of individual elements could not be isolated), reliance on descriptive statistics, very short timeframes with possible novelty effects, and unclear reporting. They also note that user differences matter: in the IBM Beehive studies some users wanted to be at the top of the leaderboard while others were satisfied merely appearing on it, and some comments showed competition-encouraging features felt as negative.
+
+### Replication and criticism
+
+Evidence type: systematic literature review (not a meta-analysis; no pooled effect sizes). It is outdated in its sample (24 papers) but its caveats have held up: the later review by Koivisto and Hamari (2019) covered far more studies and again found mostly positive but mixed results, and the Sailer and Homner (2020) meta-analysis found small to moderate positive effects with caveats on stability. Two weaknesses limit how far one can lean on it. First, most of the 24 studies are weak designs by the authors' own account. Second, it counts studies reporting "positive" results, which cannot say how large effects are. The authors also note that SDT reasoning suggests extrinsic rewards could undermine the intrinsic motivation gamification wants to afford, linking back to deci1999meta.
+
+### Implications for LTF
+
+Do not assume that points, badges and leaderboards raise learning in LTF; the review says context and user decide. Test any such element in an LTF pilot with a control group, a validated motivation scale and a longer window than a few days, because short windows invite novelty effects. Respect the finding about leaderboards: some learners like rank, others prefer visibility without rank, and some find competition aversive, so make any social comparison opt-in and private by default. The finding that sporadic users may not engage with persistent game layers matters for a hobby audience who may open LTF weekly. Removing a feature after launch may hurt people who came to rely on it, so introduce such elements only if the team is ready to keep them.
+
+Confirmed this session: full text of the paper read (PDF copy at lescahiersdelinnovation.com, found by web search); Crossref record DOI 10.1109/hicss.2014.377; web search for abstract and context.
+
+## sailer2020gamification
+
+Sailer, M., & Homner, L. (2020). The gamification of learning: A meta-analysis. Educational Psychology Review, 32(1), 77-112.
+
+### Core claims
+
+The authors pool experimental and quasi-experimental studies of gamification in learning and report significant, small effects on cognitive, motivational and behavioral outcomes, with cognitive outcomes the most stable. The paper's conclusion is that gamification as currently operationalized is an effective instructional method, but it says plainly that which design factors make it work remains unresolved, and that motivational and behavioral effects were not robust once only high-rigor studies were kept.
+
+### Specifics
+
+Random-effects results (abstract): cognitive g = .49, 95% CI [0.30, 0.69], k = 19, N = 1686; motivational g = .36, 95% CI [0.18, 0.54], k = 16, N = 2246; behavioral g = .25, 95% CI [0.04, 0.46], k = 9, N = 951. Heterogeneity was substantial (for example I2 = 72.21% for cognitive and 75.13% for motivational outcomes), so the authors ran moderator analyses: inclusion of game fiction, social interaction (competitive, collaborative, competitive-collaborative, none), the kind of comparison group (passive, active, mixed instruction), duration, research context, randomization, design and instruments.
+
+Moderator findings: game fiction (a narrative context or fictional world such as stories and avatars) significantly moderated behavioral outcomes (Q(1) = 5.45, p < .05), with studies including fiction showing a significant small effect and those without it not. Social interaction also moderated behavioral outcomes, and the abstract states that game fiction and combining competition with collaboration were particularly effective for fostering behavioral outcomes. The authors define destructive competition (succeeding by tearing others down) and constructive competition (good natured, encouraging mutual support), and argue from SDT that mere competition can thwart relatedness while competition augmented by collaboration can support it. Game fiction did not significantly moderate cognitive or motivational outcomes in the main analysis.
+
+Robustness: the authors checked publication bias (funnel plots, a selection model, fail-safe numbers; a fail-safe N of 316 for motivational outcomes) and found no strong sign of it. They then ran subsplits of only experimental or pre/post quasi-experimental studies. In that rigorous subset the cognitive effect held (g = .42, 95% CI [0.14, 0.68], k = 9, N = 686), but the motivational effect was no longer significant (g = .22, 95% CI [-0.11, 0.56], k = 7) and neither was the behavioral effect (g = .27, 95% CI [-0.16, 0.70], k = 5). The authors note these subsplits were small and probably underpowered. They also report that for motivational and behavioral outcomes quasi-experimental studies found significant effects whereas experimental studies did not.
+
+### Replication and criticism
+
+Evidence type: meta-analysis of a young, uneven literature (the authors themselves describe gamification research as lacking methodological rigor, and say the primary studies were of mixed quality). Hamari, Koivisto and Sarsa (2014) found earlier that many studies were small, short or descriptive, and this paper adds pooled estimates. The authors point out that design details matter and are lost when everything is pooled: they cite work on leaderboards (Landers and colleagues, 2017) and on achievements (Groening and Binnewies, 2019, in which effects depended on the quantity and difficulty of achievements). A reviewer's caution from a search result is that "motivational outcomes" lumped intrinsic motivation, attitudes, engagement, confidence and self-efficacy into one category, so the motivational estimate is not a clean measure of intrinsic motivation. The moderator results are post hoc, which the authors say explicitly, so the game fiction and collaboration findings are hypotheses to test, not established design rules. The authors list the endurance of effects after interventions as an open question and call for more experiments with controls for prior knowledge and motivation.
+
+### Implications for LTF
+
+The cognitive result is the most encouraging for a teaching product: gamified conditions tended to help learning outcomes. But LTF should read the motivation result cautiously and not promise that badges or streaks will raise motivation. Two moderators map onto LTF's strengths. Game fiction fits naturally: scenario framing for challenges ("you are flying the first solo pattern at a small airport") is in the pooled evidence for behavioral outcomes, and the sim supplies a rich fictional world without extra work. Constructive competition combined with collaboration suggests that if LTF adds any social feature, cooperative or team framing is better supported than a pure rank list. Because the effects are mean effects over varied designs, treat the paper as support for a pilot evaluation plan: preregister a comparison (with and without a mechanic), use a validated motivation scale and an objective outcome such as pattern accuracy or quiz retention, and test retention after weeks.
+
+Confirmed this session: full text of the paper read (open access PDF at link.springer.com/content/pdf/10.1007/s10648-019-09498-w.pdf); Crossref record DOI 10.1007/s10648-019-09498-w; web search for abstract and a critique of the motivational category.
+
+## hanus2015assessing
+
+Hanus, M. D., & Fox, J. (2015). Assessing the effects of gamification in the classroom: A longitudinal study on intrinsic motivation, social comparison, satisfaction, effort, and academic performance. Computers & Education, 80, 152-161.
+
+### Core claims
+
+A semester-long quasi-experiment in a real university course in which one section received a gamified version of the curriculum and another received the same curriculum without game elements. The finding that made the paper famous is negative: students in the gamified section showed less intrinsic motivation, satisfaction and empowerment over time than students in the non-gamified section, and scored lower on the final exam, with the effect on exam score running through lower intrinsic motivation. The authors concluded that some care should be taken when applying certain gamification mechanics to educational settings.
+
+### Specifics
+
+Design (from secondary accounts that agree with each other, since the paper's full text could not be fetched): two courses over a 16-week semester, with the gamified section using a leaderboard, badges (and coins, per a dissertation that describes the study) on the course learning management system and the control section receiving the same curriculum without those elements. Measures taken at four time points through the semester covered intrinsic motivation, social comparison, satisfaction, effort, empowerment and academic performance (final exam). Accounts of the sample size differ (71 and 80 appear in different secondary sources), so the number is not asserted here. The mediation result is as reported in several secondary descriptions: the effect of course type on final exam scores was mediated by students' levels of intrinsic motivation.
+
+Interpretation by later authors: a doctoral dissertation hosted by OhioLINK summarizes it as showing that rewarding performance with badges and coins (external rewards), plus encouraging competition and social comparison through a digital leaderboard, harmed intrinsic motivation. Subsequent authors treat badges as resembling performance-contingent rewards, which Deci, Koestner and Ryan (1999) found to be undermining, and several cite Hanus and Fox as an empirical case consistent with that SDT prediction. A correction was later published (Hanus and Fox, 2018, Computers & Education 127, page 298, a corrigendum to the 2015 article); this session could not retrieve what it changed, so readers who rely on exact statistics should read the correction before quoting them.
+
+### Replication and criticism
+
+Evidence type: a single longitudinal quasi-experiment comparing two course sections (the secondary accounts do not describe random assignment), so section differences (instructor, time of day, student mix, how the gamified elements were set up) can contribute to the result. The wider literature is mixed. Mekler and colleagues (2017) found, in an image-annotation task, that points, levels and leaderboards increased the quantity but not the quality of performance and did not significantly change intrinsic motivation, contrary to the undermining prediction (as described in that dissertation, not in Mekler's paper, which was not read). Other studies find positive intrinsic motivation effects (Banfield and Wilkerson, 2014) or neutral ones (Kyewski and Kramer, 2018), per the same dissertation. Hanus and Fox is therefore best used as a cautionary case, not as proof that gamification reduces motivation. The authors' framing is useful: the leaderboard introduces social comparison and the badges were rewards, so the mechanism is plausible, but the design could not separate the elements. Sailer and Homner (2020) later found small positive pooled effects overall but nonrobust motivational effects in high-rigor studies, which sits uneasily with strong claims in either direction.
+
+### Implications for LTF
+
+This is the closest cautionary evidence for an LTF design in which learners see badges and a leaderboard next to a lesson. It argues for three defaults. First, no public leaderboard in v1: a social-comparison board can raise pressure and lower satisfaction among the people who are not near the top, and LTF's learners are adults who may feel exposed. Second, if badges are used, award them unannounced or at the end as informational feedback about demonstrated competence, not as a progress currency. Third, include a motivation measure in any pilot. In a beginner flying course the cost of lowered motivation is that the learner stops practicing in the sim, so lessons must not become a contest. Where a record of progress is wanted, show the learner their own history against their own earlier attempts, which avoids social comparison. Treat the exam-score finding as a warning that a surface "engagement" metric (clicks, time on page) can rise while learning falls.
+
+Confirmed this session: Crossref records DOI 10.1016/j.compedu.2014.08.019 (article) and 10.1016/j.compedu.2018.09.019 (corrigendum); web search results describing the design and findings; a doctoral dissertation (OhioLINK PDF) and a student article (NTNU PDF), both retrieved and read that summarize the study. The publisher page and full text returned HTTP 403 or were unreachable, so numbers beyond those above are not claimed.
+
+## locke2002building
+
+Locke, E. A., & Latham, G. P. (2002). Building a practically useful theory of goal setting and task motivation: A 35-year odyssey. American Psychologist, 57(9), 705-717.
+
+### Core claims
+
+The authors summarize 35 years of laboratory and field research behind goal-setting theory: conscious, specific, difficult goals produce higher performance than easy goals or vague exhortations to "do your best," provided people are committed to the goal, receive feedback on progress, and have the ability and strategies to reach it. They describe four mechanisms through which goals work, three major moderators, and a "motivation hub" of personal goals, commitment and self-efficacy through which external incentives act. The paper is a review by the theory's own authors, a statement of a research programme and not an independent test of it.
+
+### Specifics
+
+Core findings: goal difficulty is positively and linearly related to effort and performance until ability limits are reached or commitment lapses, with meta-analytic effect sizes (d) of .52 to .82; specific difficult goals beat "do your best" with effect sizes of .42 to .80, because do-your-best goals have no external referent and allow a wide range of acceptable performance.
+
+Four mechanisms: directive (attention and effort go toward goal-relevant activity), energizing (higher goals lead to more effort), persistence (hard goals prolong effort when people control their time), and strategy (goals lead to arousal, discovery and use of task-relevant knowledge and strategies). When a task is complex, a performance goal can make people so anxious that they scramble for strategies unsystematically. The authors recommend specific challenging learning goals, such as discovering a certain number of strategies. A footnote defines a performance goal as the score one attains (their example is the proficiency level reached in practice landings) and a learning goal as the number of ideas or strategies acquired. The footnote also names a student pilot landing a plane as an example of a difficult task.
+
+Moderators: goal commitment (strongest when goals are difficult; raised by importance and by self-efficacy; assigned goals work as well as participatively set ones if a rationale is given, but a terse "Do this" without explanation produces significantly lower performance than a participatively set goal); feedback (goals plus summary feedback beat goals alone, because people cannot adjust effort or strategy without knowing progress); and task complexity (effect sizes shrink: d of .48 for the most complex tasks against .67 for the least complex for goal difficulty, and .41 against .77 for specific difficult goals versus do-your-best). In an air traffic controller simulation (Kanfer and Ackerman, cited by the authors) a performance goal interfered with learning the task, while Winters and Latham showed a specific difficult learning goal helped.
+
+Also: self-efficacy is raised by success experiences, role models and persuasive communication; goals are the reference standard for satisfaction, so people with high goals are less satisfied with a given result but produce more; the high-performance cycle runs from high goals to performance, rewards, satisfaction and higher self-efficacy, then higher goals.
+
+### Replication and criticism
+
+Evidence: a large body of laboratory and field experiments plus meta-analyses, summarized by the authors. Qualifications in the paper itself: smaller effects for complex tasks, risk-taking (difficult performance goals increased the riskiness of strategies in a computer game), goal conflict, and impaired learning from performance goals on complex new tasks. A later critique by Ordonez, Schweitzer, Galinsky and Bazerman (2009, Academy of Management Perspectives) argues the benefits of goal setting have been overstated and that systematic harm has been ignored, including narrow focus and unethical behavior, and recommends goals be prescribed selectively with a warning label; a reply followed (details from search summaries, not the papers).
+
+### Implications for LTF
+
+Goal setting maps directly onto challenge design. Give each challenge a specific, difficult but reachable target (for example touch down within a defined window of the aim point) stated in the briefing, rather than "land well." For a beginner, the paper's reasoning supports learning goals first ("find and use the cue that tells you the flare height") and performance goals once strategies are known. Use proximal subgoals within longer flows (stabilized approach, then flare, then rollout), each with immediate feedback. Show progress against the goal after every attempt, since goals plus feedback beat goals alone. Give a rationale for every target, because terse assigned goals underperformed. Let learners adjust goal difficulty, since participatively set goals work and self-efficacy determines whether people raise or lower goals after poor feedback; frame a failed attempt as information plus a next step. Do not use goals to push speed.
+
+Confirmed this session: full text of the article read (PDF copy at med.stanford.edu); abstract and metadata confirmed via Crossref DOI 10.1037/0003-066x.57.9.705; web search on the Ordonez et al. 2009 critique (secondary summaries only).
+
+## bandura1977selfefficacy
+
+Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change. Psychological Review, 84(2), 191-215.
+
+### Core claims
+
+Bandura proposes that psychological and behavioral change, whatever treatment produces it, works by altering a person's sense of self-efficacy: the expectation that one can successfully carry out the behavior needed to produce an outcome. The paper's abstract states that efficacy expectations determine whether coping behavior will be initiated, how much effort will be spent, and how long it will be sustained against obstacles. Persistence in activities that feel threatening but are in fact safe produces experiences of mastery that further raise self-efficacy. The more dependable the experiential source of information, the larger the change in perceived self-efficacy.
+
+### Specifics
+
+Efficacy expectations are separated from outcome expectations (the belief that a behavior will lead to an outcome). Efficacy expectations vary in magnitude (limited to easy tasks, or extending to the most taxing ones), generality (circumscribed or spreading across situations) and strength (weak expectations are easily extinguished by disconfirming experience, while strong ones persist).
+
+Four sources of efficacy information, ranked by how dependable they are: performance accomplishments (personal mastery experiences, the strongest, since successes raise expectations and repeated failures lower them, especially early failures; once strong efficacy is established through repeated success, occasional failures matter less, and failures overcome by determined effort can strengthen persistence); vicarious experience (watching others succeed, which raises efficacy but more weakly and less durably); verbal persuasion (suggestion that you can cope, which the paper says produces weaker expectations than one's own accomplishments because it provides no authentic experiential base, and which is readily extinguished by disconfirming experience); and emotional arousal or physiological states (high arousal in taxing situations can lower efficacy, so reducing it can raise expectations). The abstract names the sources as performance accomplishments, vicarious experience, verbal persuasion and physiological states.
+
+Evidence reported: in an experiment with adult snake phobics (severe enough to affect their lives), participants received participant modeling (guided mastery with a boa constrictor, in progressively more threatening tasks), modeling alone, or no treatment. Participant modeling produced the more generalized increases in efficacy expectations and in behavior change. Efficacy expectations measured at the end of treatment predicted subsequent approach behavior equally well however they had been instated (r = .83 when instated enactively, r = .84 vicariously). Task-by-task congruence between a person's efficacy judgment and actual performance was 89% when efficacy came from performance accomplishments and 86% from vicarious experience alone. Brief exposure to successful models produced limited increases in the level (9%) and strength (5%) of efficacy and little behavior change (10%), while repeated observation raised level by 44%, strength by 38% and performance by 35%.
+
+### Replication and criticism
+
+Evidence type: a theoretical article built on small clinical and laboratory studies (phobias) by the author's group. Locke and Latham (2002) build self-efficacy into goal-setting theory as part of the "motivation hub," reporting that high-efficacy people set higher goals, are more committed to assigned goals and find better strategies. The paper's data are small clinical samples, so the ranking of the four sources rests heavily on later work, which this session did not review. Two cautions from the paper itself: verbal persuasion is weaker than experienced success, and efficacy expectations differ in generality, so confidence on one task does not automatically carry to another. Overconfidence is a separate risk in safety-critical settings, where accurate self-assessment matters; the 1977 paper deals with therapy and does not address it.
+
+### Implications for LTF
+
+This is the main theoretical basis for building confidence through staged mastery. Order the course so each challenge is achievable and each success is clearly noticed. Performance accomplishments are the strongest source, so the highest-value motivational feature of LTF is a first successful flight or landing early in the course, made possible by scaffolding (autopilot assistance, a stable setup, a simpler first target) that is gradually withdrawn. Do not rely on "You can do it!" copy; the paper says suggestion alone is weak. Show a record of what the learner has done, because that is authentic evidence of mastery. Model-based content (a worked example of a good pattern, a replay) supplies vicarious experience; the paper says observers gain more from models who overcome difficulty by determined effort than from facile experts, and from models similar to themselves. Arousal matters: the paper notes high arousal usually debilitates performance, so fly mode should be calm, avoid needless alerts and offer a clear pause. Remember the calibration caution: confidence is a means, not the outcome; challenge feedback should reflect accurate performance, not flattery.
+
+Confirmed this session: full text of the article read (PDF copy at susana.org/downloads, located by web search); Crossref record DOI 10.1037/0033-295x.84.2.191.
+
+## kluger1996effects
+
+Kluger, A. N., & DeNisi, A. (1996). The effects of feedback interventions on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory. Psychological Bulletin, 119(2), 254-284.
+
+### Core claims
+
+The paper overturns the assumption that feedback reliably helps. A meta-analysis of feedback interventions (FIs) found that on average they improved performance (d = .41), but that over one third of the FIs decreased performance, a pattern the authors say cannot be explained by sampling error, feedback sign (positive versus negative) or existing theories. They propose Feedback Intervention Theory (FIT): feedback changes where a person's attention goes within a hierarchy of control, from the details of the task (task learning), through task motivation, up to meta-task processes that involve the self. Feedback helps most when it keeps attention on the task, and its effectiveness falls as attention shifts toward the self.
+
+### Specifics
+
+Meta-analysis (confirmed in the full text): of the papers reviewed, only 131 (5%) met the inclusion criteria. They yielded 607 effect sizes, based on 12,652 participants and 23,663 observations. The mean effect was d = .41 with large variability, and the authors tested for artifacts to show the negative effects were robust.
+
+FIT has five basic arguments (as written in the paper): behavior is regulated by comparing feedback to goals or standards; goals are organized hierarchically; attention is limited, so only feedback-standard gaps that receive attention drive behavior; attention normally sits at a moderate level of the hierarchy; and FIs change the locus of attention and thereby affect behavior. The paper divides the hierarchy into three: meta-task processes (the self, evaluation of what performance means for me), task-motivation processes (effort on the focal task) and task-learning processes (details of how to do the task).
+
+Moderator results (reported as lending reasonable support to FIT, with the caution that propositions are supported only by an overall pattern): praise and FIs designed to discourage, which push attention to the self, attenuated FI effects; verbal feedback and feedback threatening self-esteem attenuated effects; feedback that provides cues supporting task learning, such as a correct solution, and "velocity" feedback (change in performance over time) tended to strengthen effects; and goal setting combined with FI helped. Computerized feedback, likely to focus attention on the task, was marginally related to stronger effects, whereas verbal feedback that makes another person salient was related to lower effects. Task complexity did not clearly moderate as hypothesized. Their summary of when feedback works well: an FI for a familiar task, with cues that support learning, that draws attention to feedback-standard discrepancies at the task level (for example velocity feedback and goal setting), and that is free of cues to the meta-task level such as self-directed praise or criticism, is likely to yield large gains, possibly exceeding one standard deviation. They add that even then it may not be efficient, since effects that depend on continuous feedback can reverse when it is removed.
+
+### Replication and criticism
+
+Evidence type: a meta-analysis plus a theory tested only against moderator patterns in it. The authors list their own limits: many studies lacked control groups, a few studies (those by Mikulincer on learned helplessness) violated independence and changed some moderator estimates when removed, the moderators were correlated with each other, and the time-series studies from the behavior-modification tradition were mostly excluded and tended to show positive effects. FIT is a preliminary theory, and the later literature has qualified it. See hattie2007power for a later model with a related warning about self-directed feedback. The moderators come from coded study features, not experiments that manipulate them, so cause is not established.
+
+### Implications for LTF
+
+This is the strongest argument against a design where every action gets cheerful feedback. In a flight-training app, feedback after a challenge should point at the task, not the learner: "Your touchdown point was 400 ft past the aim point; the flare started late," not "Great job!" or "You are not a natural." Avoid praise or discouragement aimed at the self. Prefer velocity feedback (change over your last attempts, for example approach speed consistency improving from attempt to attempt) and cues that help the learner reject wrong hypotheses ("airspeed was above target at 50 ft; try a little less power earlier").LTF should test its feedback text and measure the next attempt's performance, not just ratings. Keep evaluative feedback out of fly mode while the learner is flying, since pulling attention to read an evaluation is the mechanism the paper warns about; debrief after the flight.
+
+Confirmed this session: full text of the article read (PDF copy at mrbartonmaths.com, located by web search; an unofficial copy, checked against the abstract and Crossref record); Crossref record DOI 10.1037/0033-2909.119.2.254.
+
+## hattie2007power
+
+Hattie, J., & Timperley, H. (2007). The power of feedback. Review of Educational Research, 77(1), 81-112.
+
+### Core claims
+
+Feedback is among the most powerful influences on learning, but its effect can be positive or negative, depending on the type of feedback and how it is given. The authors review the evidence and propose a model in which effective feedback answers three questions for the learner (Where am I going? How am I going? Where to next?, which they call feed up, feed back and feed forward) and operates at one of four levels: task, process, self-regulation, and self. They argue that feedback at the self level (personal praise) is the least effective, and that feedback at the process and self-regulation levels is the most powerful for deep learning.
+
+### Specifics
+
+Evidence base reported in the paper: 12 earlier meta-analyses on classroom feedback, covering 196 studies and 6,972 effect sizes, gave an average effect size of 0.79, about twice the average effect of schooling (0.40, per the paper) and in the top 5 to 10 of influences in Hattie's synthesis. The variability was large: highest effects came from students receiving information about a task and how to do it more effectively, and lower effects from praise, rewards and punishment. A synthesis of 74 meta-analyses (more than 7,000 studies and 13,370 effect sizes) found the most effective forms provided cues or reinforcement, came as video, audio or computer-assisted feedback, and related to goals, while programmed instruction, praise, punishment and extrinsic rewards were the least effective. The paper summarizes Deci, Koestner and Ryan (1999): tangible rewards are contingencies, not feedback, because they carry little task information.
+
+The paper's discussion of Kluger and DeNisi (1996) reports an average effect size of 0.38 with 32% of effects negative, and says 470 effect sizes from 131 studies, whereas the Kluger and DeNisi abstract reports 607 effect sizes and d = .41; the difference should be noted when quoting either (read the original for the figures). It also reports that feedback works better when it gives information on correct responses and builds on changes from previous trials, and has most impact when goals are specific and challenging and task complexity is low.
+
+The four levels with the authors' examples: task (whether work is correct or incorrect, and what more to include), process (how the task was done, for example strategies), self-regulation (monitoring, self-evaluation and confidence to continue), and self (personal evaluation such as "You are a great student"). On timing, the paper cites Kulik and Kulik (1988): at the task level some delay was beneficial (0.36) while at the process level immediate feedback was beneficial (0.28); Clariana and colleagues found delayed-feedback effects of -0.06 for easy items and 1.17 for difficult items. On positive versus negative feedback, the authors argue the level matters more than the sign; positive feedback raises motivation for tasks people want to do and lowers it for tasks they have to do (van Dijk and Kluger).
+
+### Replication and criticism
+
+Evidence type: narrative review plus a conceptual model that draws on meta-analyses, including Hattie's synthesis of meta-analyses (a secondary-of-secondary source). The 0.79 figure averages effect sizes across different outcome measures and designs, and the four levels are proposed in this paper, so the empirical backing for the level distinctions is indirect: the authors infer it from earlier studies and from Kluger and DeNisi's moderators. The paper itself notes that results for timing depend on the level, so no blanket rule about immediate versus delayed feedback follows. Read the model as a well-argued organizing framework with partial empirical support, not as a validated prescription.
+
+### Implications for LTF
+
+The three questions map onto LTF pages. Feed up: every lesson and challenge states its goal and success criteria up front (touch down within the stated tolerance; hold the stated speed band). Feed back: after an attempt, show progress relative to the criteria. Feed forward: end with the next step, such as the one change to make on the next attempt. The four levels give a writing rule for debrief copy: task-level (what happened), process-level (how to do it better: the strategy or cue), self-regulation-level (how to check your own work, such as a self-review checklist before the next attempt), and avoid self-level praise. For a challenge debrief after flight, choose process over task: instead of "Your landing was long," say "You were fast over the fence; use the airspeed cue earlier." Timing depends on level: quiz recall can show answers after a short delay, while feedback on practiced fly-mode steps should be quick and concise. Rewards carry little task information, so badges should not substitute for feedback.
+
+Confirmed this session: full text of the article read (PDF copy hosted at uky.edu); Crossref record DOI 10.3102/003465430298487.
+
+## sisk2018extent
+
+Sisk, V. F., Burgoyne, A. P., Sun, J., Butler, J. L., & Macnamara, B. N. (2018). To what extent and under which circumstances are growth mind-sets important to academic achievement? Two meta-analyses. Psychological Science, 29(4), 549-571.
+
+### Core claims
+
+Growth mindset theory (Dweck) says that believing intelligence can be developed leads to better achievement, and that short interventions teaching the belief should raise achievement. These two meta-analyses test both claims and find them weak. The abstract states that overall effects were weak for both meta-analyses, though some results supported specific tenets of the theory: students with low socioeconomic status or who were academically at risk might benefit from mind-set interventions. The authors conclude that broad claims of large gains from mindset are not supported.
+
+### Specifics
+
+Meta-analysis 1 (confirmed in the abstract and text): k = 273 effect sizes from 162 independent samples, N = 365,915, examining the correlation between mind-set and academic achievement. The average correlation was r = .10, 95% CI [.08, .13], p < .001; correcting for an assumed measurement reliability of .80 raised it to r = .12. Of the 273 effects, 157 (58%) were not significantly different from zero, 6% were significantly negative and 37% were significantly positive. Heterogeneity was very high (I2 = 96.29). The developmental stage moderated the relationship: r = .19 for children, .15 for adolescents and .02 for adults (not significant). Academic risk status was not a significant moderator.
+
+Meta-analysis 2: k = 43 effect sizes, N = 57,155, examining mindset interventions. The average standardized difference was d = 0.08, 95% CI [0.02, 0.14], p = .010. Low socioeconomic status was a significant moderator (Q(1) = 4.76, p = .029): d = 0.34, 95% CI [0.07, 0.62] for low-SES students (7 effect sizes) against d = 0.03 for middle- and upper-class students. Other findings: effects were not significant for adolescents, adults, or typical students; highly at-risk students showed a borderline effect (d = 0.19, 95% CI [0.02, 0.36], p = .031, 8 effect sizes); interventions were effective when students read growth-mindset materials (d = 0.20) and not when integrated into regular classroom activities.
+
+The manipulation-check results are the most striking: of studies that reported manipulation checks, almost half failed (students' mindsets had not changed), and the intervention effect was significant when the manipulation check failed (d = 0.05) but null when the check succeeded (d = 0.02). The authors say this suggests that "successful" interventions may not be attributable to students' mindsets. They also ran three publication-bias analyses, with the funnel plot approximately symmetrical in Meta-Analysis 2 while p-curve analyses were inconclusive because few significant effects were available.
+
+### Replication and criticism
+
+Evidence: two meta-analyses of heterogeneous, mostly correlational (first) and mostly small experimental (second) studies. Responses: Yeager and colleagues' large national experiment (see yeager2019national) found a small average effect with a 0.11 s.d. gain for lower-achieving students, which is directionally in line with the Sisk subgroup finding, and Yeager and colleagues argue that effect heterogeneity and context matter and that 0.20 s.d. is large for scalable educational interventions. The Sisk authors acknowledge few effect sizes in some subgroups, small samples in the low-SES group, and possible suppression by unmeasured factors. They say high-risk students did not differ significantly from non-high-risk students, so even the subgroup results should be treated cautiously. Calling the mindset claim "debunked" overstates it; the defensible reading is a small average effect, plausible benefit for a few groups, large variation and weak evidence for mechanism.
+
+### Implications for LTF
+
+Do not build LTF's motivation strategy on "growth mindset" messaging. A banner reading "Your brain is like a muscle" is cheap but, by this evidence, is unlikely to change outcomes for most adult learners, and the relationship is near zero for adults (r = .02). The finding also warns against loosely worded copy that praises effort in place of giving task information (a point reinforced by Kluger and DeNisi). What can be borrowed is the sound part of the theory: describe skill as learnable through practice, treat errors as information, and show growth over attempts, but as normal helpful language, not as a headline intervention. If LTF pilots any mindset-style content, measure whether the learner's beliefs actually changed (a manipulation check) and test the effect on a behavior such as practice sessions completed, because this literature shows effects can appear without belief change. Finally, learners who arrive discouraged (for example people who fear flying or have failed before) are the group the theory best predicts to benefit, so any such content belongs in the optional onboarding for them, not in every lesson.
+
+Confirmed this session: abstract via Europe PMC (DOI 10.1177/0956797617739704) and Crossref record; full text read (PDF copy hosted at englelab.gatech.edu, found by web search), from which the numbers above were taken.
+
+## yeager2019national
+
+Yeager, D. S., Hanselman, P., Walton, G. M., Murray, J. S., Crosnoe, R., Muller, C., ... Dweck, C. S. (2019). A national experiment reveals where a growth mindset improves achievement. Nature, 573(7774), 364-369.
+
+### Core claims
+
+A pre-registered randomized trial in a nationally representative sample of US public high schools tested a short online growth mindset intervention. The abstract states that the intervention, which takes less than an hour and teaches that intellectual abilities can be developed, improved grades among lower-achieving students and increased overall enrolment in advanced mathematics courses. It also reports that the effect depended on school context: the intervention changed grades when peer norms aligned with its message. The authors say confidence in the conclusions comes from independent data collection and processing, pre-registration of analyses and corroboration by a blinded Bayesian analysis. It is the main counterweight to the skeptical reading of mindset research by Sisk and colleagues (2018).
+
+### Specifics
+
+Design: students in 65 regular public schools were randomly assigned within schools to the intervention or a control condition. The intervention comprised two online sessions, with a median of 21 days between sessions in schools that delivered it in autumn (27 days in spring). The primary outcome was post-intervention grade point average in core subjects (mathematics, science, English or language arts, and social studies) from administrative data, and the pre-registered target was the subgroup of lower-achieving students (n = 6,320 students, k = 65 schools).
+
+Results: the intervention shifted self-reported mindsets (a standardized difference of 0.33 in the manipulation-check measure at the end of the second session). Lower-achieving adolescents earned higher core GPAs at the end of ninth grade when assigned to the intervention: B = 0.10 grade points, 95% CI [0.04, 0.16], standardized mean difference 0.11. The authors discuss this size in context: 0.20 s.d. is a large effect for real-world scalable educational interventions on their benchmarks, and the median effect among the pre-registered US federal i3 trials of promising secondary-school interventions was 0.03 s.d. (the paper says the two largest i3 effects were 0.20 and 0.23 s.d.). They also model that a 5.3% reduction in students off track for graduation would result, a relative risk reduction of 11% (46% to 41%), as an extrapolation to 1.5 million students.
+
+Moderation: the effect on grades varied across schools. It was smaller in the highest-achieving schools than in medium-achieving ones, and it was larger in schools whose peer norms supported challenge-seeking (a behavioral challenge-seeking task administered to students measured the norm; the interaction was B = 0.11, 95% CI [0.01, 0.21], p = .029). Exploratory (not pre-registered) results: the intervention increased tenth-grade enrolment in advanced mathematics by 3 percentage points (33% to 36%, a 9% relative increase) in the full cohort.
+
+### Replication and criticism
+
+Evidence type: pre-registered randomized trial with strong design features; it is the largest, most rigorous test of the intervention. Its limitations as stated by the authors: the school-norm moderation is correlational (norms were measured, not manipulated), the advanced mathematics result is exploratory, and the intervention is specific, so the authors say not all forms of growth mindset interventions can be expected to increase grades. The absolute effect is small (0.11 s.d. for the targeted group). The paper is consistent with the Sisk et al. meta-analysis in showing small average effects and benefits concentrated among lower-achieving students. Disagreement remains about how much weight to give small effects across the population, and the study concerns adolescents in school, not adult learners.
+
+### Implications for LTF
+
+Two lessons. First, the mindset content here was an interactive, carefully developed module delivered inside a supportive school setting, and the authors state that it should not be copied loosely. LTF should not add generic mindset slogans and expect results. Second, the context finding is useful: beliefs about learning only paid off when the social environment supported challenge-seeking. For LTF this suggests the product's tone and structure must make taking on a harder challenge feel normal and safe (for example, retries are unlimited, a missed approach is shown as an ordinary event, and no public ranking punishes trying again). Because the effect was concentrated among lower-achieving students, a course for complete beginners who may doubt their ability is the plausible target group. If LTF ever tests a short mindset module in onboarding, copy the design standards of this study: random assignment, pre-registered outcomes, a manipulation check, and a behavioral outcome (completed lessons or retries). It would also be appropriate to treat any such module as optional.
+
+Confirmed this session: abstract via Europe PMC and Crossref (DOI 10.1038/s41586-019-1466-y); full text of the Nature article read (PDF copy downloaded from nature.com).
+
+## koivisto2019rise
+
+Koivisto, J., & Hamari, J. (2019). The rise of motivational information systems: A review of gamification research. International Journal of Information Management, 45, 191-210.
+
+### Core claims
+
+A large literature review that updates Hamari, Koivisto and Sarsa (2014). The abstract states that, across 819 studies, the results in general lean towards positive findings about the effectiveness of gamification, but the amount of mixed results is remarkable. Education, health and crowdsourcing are the most common contexts, and points, badges and leaderboards are the most common implementations. The field still lacks coherence in research models, variables and theoretical foundations, and the authors close with 15 future research trajectories.
+
+### Specifics
+
+Method: a Scopus search for gamification-related terms (with additional hits from the AISeL database), run in June 2015, which after removing overlaps and false hits gave 819 papers. Of these, 260 were not full papers (for example extended abstracts and research in progress), and the full analysis covered empirical full papers. The authors coded each paper's domain, affordances, theoretical foundations, study type and results. Many papers were published in conference proceedings, which the authors note limits theoretical depth and reporting detail, and the abstract says the research lacks consistency in variables and theoretical foundations.
+
+Results analysis (confirmed in the full text): only the controlled experimental quantitative studies (N = 66) were analyzed for results, to keep to studies where hypotheses were tested. In those 66 studies the median sample size was 74.5, the mean 1,165, and the range 1 to 42,724. Positive findings were reported in 28.7% of the papers, mixed but mainly positive results in 47.0%, and fully negative results in only two studies; a clear majority reported somewhat mixed results. In education and learning (28 studies), 35.7% (10 studies) reported fully positive results and 32.1% (9 studies) mixed but mostly positive. Most studies tested several affordances at once, so effects of specific elements (points, badges, leaderboards) could not be separated. The authors observe that out of 227 quantitative studies (165 quantitative and 62 mixed-method), only 66 were controlled experiments.
+
+Their methodological agenda lists five points: consistent measurement instruments and models, more controlled experiments, controlling for individual affordances, larger samples and longer timeframes to avoid novelty effects, and clear reporting. They conclude that mixed results provide further support for the earlier reviews' conclusion that gamification is not a silver bullet, and they flag possible publication bias because so few studies reported fully negative results.
+
+### Replication and criticism
+
+Evidence type: systematic scoping review (counts of studies and coded results, not a meta-analysis with effect sizes), by authors who are active gamification researchers. Because results are tallied as positive or mixed, the review cannot say how large effects are, and "mixed" can include a study where one outcome improved and another did not. The authors acknowledge that publication bias may inflate the positive share. The search covered literature up to June 2015, so more recent work, including the Sailer and Homner (2020) meta-analysis (which gave pooled effects and moderators) is not covered. The review itself shows improvement in the field since 2014: larger samples, more controls and experiments, as in Hanus and Fox (2015), which it cites as an example of addressing earlier gaps.
+
+### Implications for LTF
+
+Use this as the evidence base for a modest, test-first stance. The effectiveness evidence leans positive, but fewer than a third of controlled experiments were uniformly positive, and the authors call gamification not a silver bullet. LTF should decide which mechanics to ship by hypothesis and test, not by fashion. Since the most studied elements (points, badges, leaderboards) are also the least separable in the data, the evidence for any particular LTF element, such as a streak, is thin. Practical steps: write a one-line hypothesis for each motivational feature (for example "showing a session log increases weekly return visits among learners who finish lesson one"), include a control group using a simple feature flag, use consistent validated measures across tests, and run long enough to see past novelty. Note the domain: education and learning shows a favorable share of positive results, which supports cautious use in lesson pages, but "long-term commitment and perseverance" domains such as health and learning are exactly where novelty fade matters, which suits LTF's multi-week course.
+
+Confirmed this session: abstract and full text of the article read (accepted manuscript PDF at trepo.tuni.fi); Crossref record DOI 10.1016/j.ijinfomgt.2018.10.013.
+
+## csikszentmihalyi2008flow
+
+Csikszentmihalyi, M. (2008). Flow: The psychology of optimal experience (Harper Perennial Modern Classics edition). HarperCollins. Originally published 1990 by Harper & Row.
+
+### Core claims
+
+Csikszentmihalyi argues that the most satisfying moments of life are not passive relaxation but states of deep, effortful involvement in a challenging activity, which he calls flow. Publisher-style descriptions of the book summarize it as the state of total involvement in which a person experiences deep enjoyment and creativity and loses track of time, and the key to reaching it as setting challenges that are neither too difficult nor too simple for one's abilities. The book also develops the idea of the autotelic experience: an activity that is worth doing for its own sake, so that purpose comes from the process and not from external rewards. It argues that flow is available beyond leisure, in work and everyday tasks, if people understand the principles of the experience.
+
+### Specifics
+
+The most reusable content for design is the set of conditions that this research tradition attributes to flow. A 2020 critical review in Frontiers in Psychology (Abuhamdeh, citing Nakamura and Csikszentmihalyi, 2002) describes flow as having six experiential characteristics and three proposed conditions or antecedents: clear goals, immediate feedback, and a balance of challenge and skill. Characteristics that the review names include a merging of action and awareness, a lack of self-consciousness, intense task involvement and, as a question it raises, distortion of time. Web summaries give differing component lists, so no fixed list of eight is treated as canonical. In the quadrant operationalization popularized by Csikszentmihalyi and colleagues (Massimini and Carli, 1988), measured with the experience sampling method (random signals prompting participants to report what they are doing and feeling), flow is any moment in which both perceived challenge and perceived skill are above the person's own average. That is a within-person definition: what counts as "high" challenge depends on the person.
+
+### Replication and criticism
+
+Evidence type: a trade book that synthesizes the author's research programme, mostly based on interviews and experience sampling; it is a canonical but non-experimental account, and it is the book version of an academic theory. Criticism that I confirmed: the 2020 critical review found that across 42 studies from a five-year window, flow was operationalized in 24 distinct ways, with disagreement about whether flow is a discrete state or a continuous quantity, whether it is inherently enjoyable, and whether the conditions are part of the definition or separate from it; the author argues that after more than four decades little is known about flow's latent structure, and notes that two commonly cited features, lack of self-consciousness and merging of action and awareness, load poorly on a higher-order flow factor in factor analyses. A meta-analysis by Fong, Zaleski and Leach (2015, Journal of Positive Psychology), as summarized by the Institute of Coaching, covered 28 studies and found a moderate relationship between challenge-skill balance and flow, smaller for intrinsic motivation, with clear goals and sense of control also contributing; secondary reviews note moderators such as age, culture, domain and how balance is measured. A 2024 Journal of Happiness Studies paper, per a search summary, argues that the exact nature of the balance is unclear and that models measure flow indirectly through high challenge and high skill. The balance is a necessary condition, not a guarantee, of flow.
+
+### Implications for LTF
+
+Flow is the right frame for in-sim challenges, and the three conditions are an actionable checklist: clear goals (state the target before each attempt), immediate feedback (show how the attempt went right away, as short, task-focused information), and challenge matched to skill (adaptive difficulty, such as moving from a calm-weather pattern to a crosswind only after consistent success). For fly mode, avoid anything that interrupts concentration: no pop-ups, no streak reminders and no celebratory animations over the controls; keep the screen quiet because the learner's attention should sit in the sim. Do not promise flow in marketing, since the science of what flow is remains disputed; say "the right level of challenge." Measure with a short self-report after challenges (perceived challenge versus skill) rather than inferring flow from clicks. Because the "autotelic" idea says people persist when the activity itself is rewarding, a design that makes flying itself rewarding (a good landing, a clear sense of getting better) should beat decoration layered on top of lessons, which also connects to the reward evidence in deci1999meta.
+
+Confirmed this session: Open Library search (work OL278571W, "Flow", Mihaly Csikszentmihalyi, first published 1990, Harper & Row listed among publishers); publisher and bookseller listings returned by web search for the 2008 HarperCollins edition (ISBN 9780061339202, Harper Perennial Modern Classics); the full text of the Frontiers in Psychology review (PMC7033418) and web summaries of Fong et al. (2015). The book text itself was not read.
+
+## malone1981toward
+
+Malone, T. W. (1981). Toward a theory of intrinsically motivating instruction. Cognitive Science, 5(4), 333-369.
+
+### Core claims
+
+Malone asks what makes computer games intrinsically fun and whether that can be built into instruction. The abstract says the paper first reviews earlier theories of intrinsic motivation, then describes several studies of highly motivating computer games (studies that focus on what makes the games fun, not on what makes them educational), and then develops a rudimentary theory of intrinsically motivating instruction built on three categories: challenge, fantasy and curiosity. The paper is an early and influential design theory for educational games and one of the roots of the gamification idea that learning can borrow what makes games engaging.
+
+### Specifics
+
+All of the following is from the abstract as returned by OpenAlex for DOI 10.1207/s15516709cog0504_2 (the full text was not read).
+
+Challenge is hypothesized to depend on goals with uncertain outcomes. The paper discusses several ways of making outcomes uncertain: variable difficulty level, multiple level goals, hidden information and randomness. The implied design rule is that a goal is motivating when the person cannot be sure of reaching it, so a game should provide goals, a way to tell whether one is getting closer to them (feedback), and uncertainty about success.
+
+Fantasy is claimed to have both cognitive and emotional advantages in designing instructional environments. The paper distinguishes extrinsic fantasies, which depend only weakly on the skill used in a game (the story is a coating, such as a reward cartoon after correct answers), from intrinsic fantasies, which are intimately related to the use of the skill (the skill itself drives the fiction).
+
+Curiosity is separated into sensory and cognitive components. Cognitive curiosity can be aroused by making learners believe their knowledge structures are incomplete, inconsistent or unparsimonious. In practice that means showing a learner a gap, a contradiction or a case that an existing rule does not explain, so that resolving it becomes interesting.
+
+A search summary says the paper was based on Malone's PhD dissertation.
+
+### Replication and criticism
+
+Evidence type: design theory with exploratory studies of games, not a controlled test of the framework. The paper itself calls its theory rudimentary. Empirical support for particular components arrived later and is mixed. For fantasy, Sailer and Homner (2020) summarize that results on the effectiveness of game fiction in games have been mixed: Bedwell and colleagues (2012) found positive effects of game fiction on knowledge and motivation in a review, but meta-analyses by others such as Wouters and colleagues (2013) found that serious games with narrative elements are no more effective than serious games without them (as reported in the Sailer and Homner text, which I read, not in those papers). In Sailer and Homner's own meta-analysis, inclusion of game fiction moderated behavioral outcomes (a significant small effect with fiction and a nonsignificant result without), but not cognitive or motivational ones. Challenge as goal uncertainty relates to challenge-skill balance in flow research (csikszentmihalyi2008flow) and to goal difficulty (locke2002building), though uncertainty is a distinct idea from difficulty.
+
+### Implications for LTF
+
+The extrinsic versus intrinsic fantasy distinction is the most useful lesson for LTF. The in-sim challenges already have an intrinsic fiction, because flying the pattern is the thing; a story layered on top (a mascot, a score animation, a cartoon for correct answers) would be extrinsic fantasy and is the weaker option. Where LTF uses scenario framing ("Runway 27, light crosswind, you are number two to land"), tie it to the skill being taught so the fiction is the task. For challenge, vary the uncertainty on purpose: variable difficulty (wind, visibility), a goal with multiple levels (stable approach, then on-speed, then within the touchdown zone) and some hidden information in scenarios (the learner must find the cue). Uncertainty should live in scenario content, never in the accuracy of feedback. For curiosity, a quiz or lesson that opens with a case the learner's current model cannot explain ("Why does the plane balloon in the flare if you flare too fast?") arouses cognitive curiosity better than a plain heading. This is a design theory with limited direct evidence; test the ideas it generates.
+
+Confirmed this session: Crossref records for DOI 10.1016/s0364-0213(81)80017-1 and 10.1207/s15516709cog0504_2 (volume 5, issue 4, pages 333-369); abstract returned by OpenAlex API for the DOI; web search results for secondary summaries; Sailer and Homner (2020) text read. The article full text was not accessible.
+
+## przybylski2010motivational
+
+Przybylski, A. K., Rigby, C. S., & Ryan, R. M. (2010). A motivational model of video game engagement. Review of General Psychology, 14(2), 154-166.
+
+### Core claims
+
+The authors propose a motivational model of why video games are engaging and how play affects well-being, rooted in self-determination theory. Their abstract says that both the appeal and the well-being effects of video games are based in their potential to satisfy the basic psychological needs for competence, autonomy and relatedness. They review evidence on need satisfaction in games and short-term well-being, the motivational appeal of violent game content, motivational sources of postplay aggression, antecedents and consequences of disordered patterns of game engagement, and the determinants and effects of immersion, and they discuss implications for research on game motivation and for using video games in interventions.
+
+### Specifics
+
+The article is a review, and the detail comes from the research programme it summarizes. The earlier paper by Ryan, Rigby and Przybylski (2006, Motivation and Emotion 30, 347-363), which I read in full, reports four studies on which the 2010 model draws. Its abstract states that Studies 1 to 3 examined individuals playing one, two and four games and showed that perceived in-game autonomy and competence are associated with game enjoyment, preferences and changes in well-being from before to after play. Competence and autonomy were also related to the intuitive nature of game controls and to the sense of presence or immersion. Study 4 surveyed an online community with multiplayer experience and found that autonomy, competence and relatedness independently predicted enjoyment and future game play. Study 1 had 88 participants in a lab, playing a platform game, and used a behavioral measure of continued play (a choice of whether to keep playing).
+
+Constructs the group developed: the Player Experience of Need Satisfaction (PENS) scales covering in-game autonomy, in-game competence, presence (physical, emotional and narrative presence items), and intuitive controls. The model proposes that intuitive, readily mastered controls help competence and autonomy, and that autonomy and competence in turn predict presence, enjoyment and wanting to play again. The 2006 paper links presence to flow and describes competence as supported by optimal challenges and positive feedback.
+
+The 2006 paper states its own limitations: studies 1 to 3 were largely experimental, with participants assigned to play games, whereas outside the laboratory play is self-selected and voluntary; the PENS and presence measures were new and needed further validation; and more work was needed beyond the games and genres sampled.
+
+### Replication and criticism
+
+Evidence type: a theory-driven review by the SDT group (one author listed an industry affiliation, Immersyve Inc., on the 2006 paper), plus mostly self-report and short experimental data. The main claim, that need satisfaction predicts enjoyment and continued play, has an internal consistency across the studies the 2006 paper reports, but it has been developed mostly by the same research group, so independent replication matters. The scope of the 2010 paper is games, not learning, and games are voluntary entertainment; the transfer to education and training is an inference. Hanus and Fox (2015) show that adding game elements to a course can lower motivation, so game-like appeal does not automatically carry over. The authors' own caution is that the experimental setting artificially induces play, so it may not reveal what keeps people in games on their own time. This session I read only the abstract of the 2010 paper, not its text.
+
+### Implications for LTF
+
+This is the evidence for a design hypothesis worth testing: LTF's strongest motivational asset is that the sim itself satisfies the needs. Intuitive controls and quick mastery support competence, free choice of flights and settings support autonomy, and (if added) co-flying or a community supports relatedness. Concretely: reduce friction before the first success, because the model says unintuitive controls hurt competence and presence, so LTF's fly-mode companion should not demand extra interface learning, and lessons should give a plain control map for the learner's actual hardware (keyboard, mouse, yoke). Offer choices (which airport, which weather, which lesson order) to support autonomy. Keep the web app from pulling the learner out of presence in the sim: no needless alerts while flying. Use a short need-satisfaction questionnaire (competence, autonomy, relatedness items) in pilots in place of a generic satisfaction score, and look at whether an LTF change moves them. Because the research concerns entertainment games, do not assume game-motivation findings about enjoyment will translate into learning outcomes without a test.
+
+Confirmed this session: Crossref record DOI 10.1037/a0019440; abstract from the University of Essex repository record (repository.essex.ac.uk/7228) and OpenAlex; full text of the companion 2006 paper by Ryan, Rigby and Przybylski read (PDF at rochester.edu). The 2010 article body was not read.

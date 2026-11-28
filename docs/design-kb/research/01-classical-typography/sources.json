@@ -1,0 +1,454 @@
+[
+  {
+    "key": "warde1955crystal",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Warde",
+        "given": "Beatrice"
+      }
+    ],
+    "year": 1955,
+    "title": "The Crystal Goblet: Sixteen Essays on Typography",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Sylvan Press",
+    "publisher_place": "London",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://openlibrary.org/works/OL10413653W",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search title=crystal goblet author=warde returned work OL10413653W 'The crystal goblet', Beatrice Warde, Sylvan Press, 1955. Web search for the essay found the October 1930 lecture to the British Typographers Guild; full text of the essay read as reprinted in the Armstrong reader Graphic Design Theory (openlab.citytech.cuny.edu Warde_CrystalGoblet.pdf).",
+    "kind": "craft essay (lecture text)",
+    "lane": "01-classical-typography",
+    "original_year": 1930
+  },
+  {
+    "key": "morison1936first",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Morison",
+        "given": "Stanley"
+      }
+    ],
+    "year": 1936,
+    "title": "First Principles of Typography",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Cambridge University Press",
+    "publisher_place": "Cambridge",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://openlibrary.org/works/OL2203812W",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search title=first principles of typography author=morison returned work OL2203812W with Cambridge University Press 1936 and Macmillan (New York) 1936 editions. Full text of the essay (1951 Cambridge reprint, with the author's note on the 1929 Britannica and 1930 Fleuron origins) read in Project Gutenberg ebook 63730, Books and Printing, ed. Paul A. Bennett.",
+    "kind": "craft essay / doctrine",
+    "lane": "01-classical-typography",
+    "original_year": 1929
+  },
+  {
+    "key": "gill1936essay",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Gill",
+        "given": "Eric"
+      }
+    ],
+    "year": 1936,
+    "title": "An Essay on Typography",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Sheed & Ward",
+    "publisher_place": "London",
+    "edition": "2nd ed. (re-set 1936); read in the David R. Godine photo-lithographic reprint with introduction by Christopher Skelton",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://archive.org/details/an-essay-on-typography-1993-eric-gill",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL1178647W 'An essay on typography', Eric Gill (J.M. Dent 1954; D.R. Godine Boston 1988). Text read at archive.org item an-essay-on-typography-1993-eric-gill, a photo-lithographic copy of the 1936 Sheed & Ward edition with an introduction by Christopher Skelton and a 'Publishing History' page.",
+    "kind": "craft essay",
+    "lane": "01-classical-typography",
+    "original_year": 1931
+  },
+  {
+    "key": "updike1922printing",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Updike",
+        "given": "Daniel Berkeley"
+      }
+    ],
+    "year": 1922,
+    "title": "Printing Types: Their History, Forms, and Use. A Study in Survivals",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Harvard University Press",
+    "publisher_place": "Cambridge, MA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://archive.org/details/PrintingTypes",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL135223W 'Printing types', D. B. Updike, Harvard University Press 1922 (editions 1922, 1937, 1962, 1980, 2001). OCR text of the 1922 edition read at archive.org item PrintingTypes (title page: copyright 1922 Harvard University Press, The Merrymount Press, Boston).",
+    "kind": "craft history and treatise",
+    "lane": "01-classical-typography"
+  },
+  {
+    "key": "devinne1910practice",
+    "type": "book",
+    "authors": [
+      {
+        "family": "De Vinne",
+        "given": "Theodore Low"
+      }
+    ],
+    "year": 1910,
+    "title": "The Practice of Typography: Correct Composition",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "The Century Co.",
+    "publisher_place": "New York",
+    "edition": "3rd ed.",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://archive.org/details/typogr00devipracticeofrich",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL5150673W 'The practice of typography' (Century Co.) and edition OL34122483W 'Practice of Typography' 1901. Full text of the third edition (Century Co., 1910, copyright 1901) read at archive.org item typogr00devipracticeofrich; title page reads 'Correct Composition ... The Practice of Typography ... Third edition'.",
+    "kind": "craft treatise / printers' manual",
+    "lane": "01-classical-typography",
+    "original_year": 1901
+  },
+  {
+    "key": "johnston1906writing",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Johnston",
+        "given": "Edward"
+      }
+    ],
+    "year": 1906,
+    "title": "Writing & Illuminating, & Lettering",
+    "container_title": "The Artistic Crafts Series of Technical Handbooks",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Macmillan",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://archive.org/details/writingilluminat00johnrich",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL2200371W 'Writing & illuminating, & lettering', Edward Johnston, with a 1906 Macmillan (New York) edition. Full text of the 1906 edition (New York, The Macmillan Company; London, John Hogg; The Artistic Crafts Series, ed. W. R. Lethaby) read at archive.org item writingilluminat00johnrich; archive metadata gives Johnston, Edward, 1872-1944.",
+    "kind": "craft handbook",
+    "lane": "01-classical-typography"
+  },
+  {
+    "key": "bodoni1818manuale",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Bodoni",
+        "given": "Giambattista"
+      }
+    ],
+    "year": 1818,
+    "title": "Manuale tipografico",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Presso la Vedova",
+    "publisher_place": "Parma",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://openlibrary.org/works/OL4189010W",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL4189010W 'Manuale tipografico', Bodoni, with a 1818 Parma edition (Presso la Vedova). Updike's Printing Types (archive.org item PrintingTypes) describes the 1818 two-volume quarto second edition. Preface wording read only as quoted at alexanderslawsonarchive.com; Marrot translation (Elkin Mathews, 1925) listed as OL4189009W. The book itself was not read.",
+    "kind": "type specimen book with preface (craft manifesto)",
+    "lane": "01-classical-typography"
+  },
+  {
+    "key": "tschichold1995new",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Tschichold",
+        "given": "Jan"
+      }
+    ],
+    "year": 1995,
+    "title": "The New Typography: A Handbook for Modern Designers",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "University of California Press",
+    "publisher_place": "Berkeley",
+    "edition": "English translation by Ruari McLean, introduction by Robin Kinross",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://openlibrary.org/works/OL8063615W",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search of University of California Press and library catalog records listed Jan Tschichold, The New Typography, translated by Ruari McLean with an introduction by Robin Kinross (1995; later printings 1998 and 2006 in the Weimar and Now series). Open Library work OL8063615W lists the 1998 and 2006 printings. Text of the 1928 programmatic excerpt read in the Armstrong reader (openlab.citytech.cuny.edu Tschichold_NewTypo.pdf).",
+    "kind": "manifesto and handbook",
+    "lane": "01-classical-typography",
+    "original_year": 1928
+  },
+  {
+    "key": "tschichold1991form",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Tschichold",
+        "given": "Jan"
+      }
+    ],
+    "year": 1991,
+    "title": "The Form of the Book: Essays on the Morality of Good Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Hartley & Marks",
+    "publisher_place": "Point Roberts, WA",
+    "edition": "Translated by Hajo Hadeler",
+    "editors": [
+      {
+        "family": "Bringhurst",
+        "given": "Robert"
+      }
+    ],
+    "doi": "",
+    "isbn": "9780881790344",
+    "url": "https://eyemagazine.com/review/article/high-thoughts-on-a-self-effacing-art",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL1220114W lists The form of the book, Hartley & Marks, Point Roberts, Wash., 1991, ISBN 0881790346. Robin Kinross's review in Eye no. 7 (Summer 1992) at eyemagazine.com/review/article/high-thoughts-on-a-self-effacing-art confirms the essays and the Lund Humphries edition; web search results confirm translation by Hajo Hadeler, edited with introduction by Robert Bringhurst, Birkhauser Basel 1975 original.",
+    "kind": "collected craft essays",
+    "lane": "01-classical-typography",
+    "original_year": 1975
+  },
+  {
+    "key": "dowding1954finer",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Dowding",
+        "given": "Geoffrey"
+      }
+    ],
+    "year": 1954,
+    "title": "Finer Points in the Spacing & Arrangement of Type",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Wace & Company",
+    "publisher_place": "London",
+    "edition": "First edition 1954; revised edition Hartley & Marks, 1995 (ISBN 0881791199) also consulted via review",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://grolierclub.omeka.net/exhibits/show/100-books-typography/item/1431",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL2734851W lists Finer points in the spacing and arrangement of type, Wace, London, 1954, with later Wace printings (1957, 1966) and a Hartley & Marks edition. Roy Johnson's Mantex review (mantex.co.uk/finer-points-in-the-spacing-and-arrangement-of-type/) describes the revised Hartley & Marks 1995 edition, 96 pages, ISBN 0881791199. Grolier Club item 1431 lists Wace & Company 1954.",
+    "kind": "craft manual",
+    "lane": "01-classical-typography"
+  },
+  {
+    "key": "bringhurst2012elements",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Bringhurst",
+        "given": "Robert"
+      }
+    ],
+    "year": 2012,
+    "title": "The Elements of Typographic Style",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Hartley & Marks",
+    "publisher_place": "Point Roberts, WA",
+    "edition": "4th ed. (version 4.0)",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780881792126",
+    "url": "https://typographica.org/?p=10147",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL854086W lists The Elements of Typographic Style, Hartley & Marks, editions 1992 to 2015 (ISBN 9780881792126 in the latest). Wikipedia lists the fourth edition (version 4.0) as 2012; Maurice Meilleur's Typographica review (8 February 2013) reviews Version 4.0 from Hartley & Marks; a Blackwell's listing gives ISBN 9780881792126.",
+    "kind": "craft reference",
+    "lane": "01-classical-typography",
+    "original_year": 1992
+  },
+  {
+    "key": "tracy1986letters",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Tracy",
+        "given": "Walter"
+      }
+    ],
+    "year": 1986,
+    "title": "Letters of Credit: A View of Type Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Gordon Fraser",
+    "publisher_place": "London",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0860920852",
+    "url": "https://books.google.com/books/about/Letters_of_Credit.html?id=FpTgAAAAMAAJ",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL5262363W lists Letters of Credit, G. Fraser, London, 1986, ISBN 0860920852, 219 pages, and D. R. Godine, Boston, 1986. Google Books record (books.google.com id FpTgAAAAMAAJ) gives G. Fraser, 1986, 219 pages, ISBN 0860920852.",
+    "kind": "craft treatise by a type designer",
+    "lane": "01-classical-typography"
+  },
+  {
+    "key": "noordzij2005stroke",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Noordzij",
+        "given": "Gerrit"
+      }
+    ],
+    "year": 2005,
+    "title": "The Stroke: Theory of Writing",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Hyphen Press",
+    "publisher_place": "London",
+    "edition": "Translated by Peter Enneson",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780907259305",
+    "url": "https://www.hyphenpress.co.uk/products/books/978-0-907259-30-5",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Hyphen Press product page (hyphenpress.co.uk/products/books/978-0-907259-30-5) gives title, translator Peter Enneson, Dutch original 1985, ISBN 978-0-907259-30-5, 88 pages and contents. Open Library work OL4869181W lists the Hyphen edition (listed as 2006). Owen Williams's Amphora review gives Hyphen, 2005, 15 pounds.",
+    "kind": "theory by a type designer and teacher",
+    "lane": "01-classical-typography",
+    "original_year": 1985
+  },
+  {
+    "key": "hochuli2008detail",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Hochuli",
+        "given": "Jost"
+      }
+    ],
+    "year": 2008,
+    "title": "Detail in Typography: Letters, Letterspacing, Words, Wordspacing, Lines, Linespacing, Columns",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Hyphen Press",
+    "publisher_place": "London",
+    "edition": "English edition translated by Charles Whitehouse",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780907259343",
+    "url": "https://eyemagazine.com/review/article/on-a-clear-day-you-can-read-between-the-lines",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL3067489W lists Detail in typography, Hyphen Press, London, 2008, ISBN 9780907259343, 61 pages, and the 1987 Compugraphic edition. Hyphen Press news pages (found by web search) confirm the 2008 English edition and 2009 reprint; Eye no. 69 review by Micha Weidmann confirms the Hyphen Press English edition translated by Charles Whitehouse.",
+    "kind": "craft guide",
+    "lane": "01-classical-typography",
+    "original_year": 1987
+  },
+  {
+    "key": "kinross2004modern",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Kinross",
+        "given": "Robin"
+      }
+    ],
+    "year": 2004,
+    "title": "Modern Typography: An Essay in Critical History",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Hyphen Press",
+    "publisher_place": "London",
+    "edition": "2nd ed.",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780907259183",
+    "url": "https://hyphenpress.co.uk/products/books/978-0-907259-18-3",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL8656922W lists Modern Typography, Hyphen, February 2004, ISBN 9780907259183, 272 pages. Hyphen Press product page (hyphenpress.co.uk/products/books/978-0-907259-18-3) gives description, contents and 272 pages; Matthew Carter's review in Eye no. 7 (1992) read at eyemagazine.com/blog/post/type-tuesday40.",
+    "kind": "critical history",
+    "lane": "01-classical-typography",
+    "original_year": 1992
+  },
+  {
+    "key": "unger2018theory",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Unger",
+        "given": "Gerard"
+      }
+    ],
+    "year": 2018,
+    "title": "Theory of Type Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "nai010 publishers",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Burke",
+        "given": "Christopher"
+      }
+    ],
+    "doi": "",
+    "isbn": "9789462084407",
+    "url": "https://www.eyemagazine.com/review/article/rules-of-engagement",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL21362087W lists Theory of Type Design, nai010 publishers, 2018, ISBN 9789462084407, 240 pages. Peter Bilak's review in Eye no. 98 (Spring 2019, eyemagazine.com/review/article/rules-of-engagement) and Typotheque's review (typotheque.com/articles/theory-of-type-design-a-book-review) confirm the book, editor Christopher Burke and designer Hansje van Halem.",
+    "kind": "reflective practitioner's essays",
+    "lane": "01-classical-typography"
+  }
+]

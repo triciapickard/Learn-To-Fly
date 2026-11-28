@@ -1,0 +1,553 @@
+[
+  {
+    "key": "dejong2010cognitive",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "de Jong",
+        "given": "Ton"
+      }
+    ],
+    "year": 2010,
+    "title": "Cognitive load theory, educational research, and instructional design: some food for thought",
+    "container_title": "Instructional Science",
+    "volume": "38",
+    "issue": "2",
+    "pages": "105-134",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/s11251-009-9110-0",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1007/s11251-009-9110-0 returned Instructional Science 38(2):105-134, author de Jong; full text read from open-access PDF at ris.utwente.nl/ws/files/6597420/Jong10cognitive.pdf",
+    "kind": "review-critique",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "sweller2019cognitive",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Sweller",
+        "given": "John"
+      },
+      {
+        "family": "van Merriënboer",
+        "given": "Jeroen J. G."
+      },
+      {
+        "family": "Paas",
+        "given": "Fred"
+      }
+    ],
+    "year": 2019,
+    "title": "Cognitive Architecture and Instructional Design: 20 Years Later",
+    "container_title": "Educational Psychology Review",
+    "volume": "31",
+    "issue": "2",
+    "pages": "261-292",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/s10648-019-09465-5",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1007/s10648-019-09465-5 returned Educational Psychology Review 31(2):261-292 with these authors; full text read from a PDF copy; abstract also seen on information-for-practice.org page",
+    "kind": "theoretical review by the theory's authors",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "sweller1998cognitive",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Sweller",
+        "given": "John"
+      },
+      {
+        "family": "van Merriënboer",
+        "given": "Jeroen J. G."
+      },
+      {
+        "family": "Paas",
+        "given": "Fred G. W. C."
+      }
+    ],
+    "year": 1998,
+    "title": "Cognitive Architecture and Instructional Design",
+    "container_title": "Educational Psychology Review",
+    "volume": "10",
+    "issue": "3",
+    "pages": "251-296",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1023/a:1022193728205",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1023/a:1022193728205 returned Educational Psychology Review 10(3):251-296; University of Twente repository record research.utwente.nl/en/publications/cognitive-architecture-and-instructional-design/ gives the abstract and details",
+    "kind": "theoretical review by the theory's authors",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "sweller1988cognitive",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Sweller",
+        "given": "John"
+      }
+    ],
+    "year": 1988,
+    "title": "Cognitive Load During Problem Solving: Effects on Learning",
+    "container_title": "Cognitive Science",
+    "volume": "12",
+    "issue": "2",
+    "pages": "257-285",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15516709cog1202_4",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1207/s15516709cog1202_4 returned Cognitive Science 12(2):257-285, author Sweller, with abstract",
+    "kind": "foundational theory paper with experiments",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "mayer2003nine",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Mayer",
+        "given": "Richard E."
+      },
+      {
+        "family": "Moreno",
+        "given": "Roxana"
+      }
+    ],
+    "year": 2003,
+    "title": "Nine Ways to Reduce Cognitive Load in Multimedia Learning",
+    "container_title": "Educational Psychologist",
+    "volume": "38",
+    "issue": "1",
+    "pages": "43-52",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15326985ep3801_6",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1207/s15326985ep3801_6, Educational Psychologist 38(1):43-52; full text read from PDF at uky.edu/~gmswan3/575/9_ways_to_reduce_CL.pdf",
+    "kind": "research synthesis",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "kalyuga2003expertise",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Kalyuga",
+        "given": "Slava"
+      },
+      {
+        "family": "Ayres",
+        "given": "Paul"
+      },
+      {
+        "family": "Chandler",
+        "given": "Paul"
+      },
+      {
+        "family": "Sweller",
+        "given": "John"
+      }
+    ],
+    "year": 2003,
+    "title": "The Expertise Reversal Effect",
+    "container_title": "Educational Psychologist",
+    "volume": "38",
+    "issue": "1",
+    "pages": "23-31",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15326985ep3801_4",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1207/s15326985ep3801_4, Educational Psychologist 38(1):23-31; full text read from a PDF copy at typeset.io",
+    "kind": "research review",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "chandler1991cognitive",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Chandler",
+        "given": "Paul"
+      },
+      {
+        "family": "Sweller",
+        "given": "John"
+      }
+    ],
+    "year": 1991,
+    "title": "Cognitive Load Theory and the Format of Instruction",
+    "container_title": "Cognition and Instruction",
+    "volume": "8",
+    "issue": "4",
+    "pages": "293-332",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s1532690xci0804_2",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1207/s1532690xci0804_2, Cognition and Instruction 8(4):293-332; full text read from a Wollongong Research Online copy",
+    "kind": "experimental paper (six experiments)",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "harp1998seductive",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Harp",
+        "given": "Shannon F."
+      },
+      {
+        "family": "Mayer",
+        "given": "Richard E."
+      }
+    ],
+    "year": 1998,
+    "title": "How seductive details do their damage: A theory of cognitive interest in science learning.",
+    "container_title": "Journal of Educational Psychology",
+    "volume": "90",
+    "issue": "3",
+    "pages": "414-434",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0022-0663.90.3.414",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1037/0022-0663.90.3.414, Journal of Educational Psychology 90(3):414-434; abstract read via OpenAlex and ERIC record EJ576496",
+    "kind": "experimental paper (four experiments)",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "mayer2001cognitive",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Mayer",
+        "given": "Richard E."
+      },
+      {
+        "family": "Heiser",
+        "given": "Julie"
+      },
+      {
+        "family": "Lonn",
+        "given": "Steve"
+      }
+    ],
+    "year": 2001,
+    "title": "Cognitive constraints on multimedia learning: When presenting more material results in less understanding.",
+    "container_title": "Journal of Educational Psychology",
+    "volume": "93",
+    "issue": "1",
+    "pages": "187-198",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0022-0663.93.1.187",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1037/0022-0663.93.1.187, Journal of Educational Psychology 93(1):187-198; abstract read via OpenAlex",
+    "kind": "experimental paper (four experiments)",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "rey2012review",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Rey",
+        "given": "Günter Daniel"
+      }
+    ],
+    "year": 2012,
+    "title": "A review of research and a meta-analysis of the seductive detail effect",
+    "container_title": "Educational Research Review",
+    "volume": "7",
+    "issue": "3",
+    "pages": "216-237",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.edurev.2012.05.003",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1016/j.edurev.2012.05.003, Educational Research Review 7(3):216-237; abstract read at ERIC record EJ986386",
+    "kind": "meta-analysis and review",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "ginns2005meta",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Ginns",
+        "given": "Paul"
+      }
+    ],
+    "year": 2005,
+    "title": "Meta-analysis of the modality effect",
+    "container_title": "Learning and Instruction",
+    "volume": "15",
+    "issue": "4",
+    "pages": "313-331",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.learninstruc.2005.07.001",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1016/j.learninstruc.2005.07.001, Learning and Instruction 15(4):313-331; abstract read at ERIC record EJ723937",
+    "kind": "meta-analysis",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "schneider2018meta",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Schneider",
+        "given": "Sascha"
+      },
+      {
+        "family": "Beege",
+        "given": "Maik"
+      },
+      {
+        "family": "Nebel",
+        "given": "Steve"
+      },
+      {
+        "family": "Rey",
+        "given": "Günter Daniel"
+      }
+    ],
+    "year": 2018,
+    "title": "A meta-analysis of how signaling affects learning with media",
+    "container_title": "Educational Research Review",
+    "volume": "23",
+    "issue": "",
+    "pages": "1-24",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.edurev.2017.11.001",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1016/j.edurev.2017.11.001, Educational Research Review 23:1-24; effect sizes seen only in two web-search summaries quoting the LearnTechLib abstract (learntechlib.org/p/204443/, not directly accessible)",
+    "kind": "meta-analysis",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "paas1992training",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Paas",
+        "given": "Fred G. W. C."
+      }
+    ],
+    "year": 1992,
+    "title": "Training strategies for attaining transfer of problem-solving skill in statistics: A cognitive-load approach.",
+    "container_title": "Journal of Educational Psychology",
+    "volume": "84",
+    "issue": "4",
+    "pages": "429-434",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1037/0022-0663.84.4.429",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1037/0022-0663.84.4.429, Journal of Educational Psychology 84(4):429-434; abstract read via OpenAlex and research.utwente.nl record",
+    "kind": "experimental paper",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "sweller1985use",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Sweller",
+        "given": "John"
+      },
+      {
+        "family": "Cooper",
+        "given": "Graham A."
+      }
+    ],
+    "year": 1985,
+    "title": "The Use of Worked Examples as a Substitute for Problem Solving in Learning Algebra",
+    "container_title": "Cognition and Instruction",
+    "volume": "2",
+    "issue": "1",
+    "pages": "59-89",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s1532690xci0201_3",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1207/s1532690xci0201_3, Cognition and Instruction 2(1):59-89; abstract read via OpenAlex",
+    "kind": "experimental paper (five experiments)",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "cowan2001magical",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Cowan",
+        "given": "Nelson"
+      }
+    ],
+    "year": 2001,
+    "title": "The magical number 4 in short-term memory: A reconsideration of mental storage capacity",
+    "container_title": "Behavioral and Brain Sciences",
+    "volume": "24",
+    "issue": "1",
+    "pages": "87-114",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1017/S0140525X01003922",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1017/S0140525X01003922 returned Behavioral and Brain Sciences 24(1):87-114, author Cowan; text read from PDF at memory.psych.missouri.edu",
+    "kind": "target review with open peer commentary",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "baddeley1992working",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Baddeley",
+        "given": "Alan"
+      }
+    ],
+    "year": 1992,
+    "title": "Working Memory",
+    "container_title": "Science",
+    "volume": "255",
+    "issue": "5044",
+    "pages": "556-559",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1126/science.1736359",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1126/science.1736359 returned Science 255(5044):556-559, author Baddeley, 31 January 1992, with abstract",
+    "kind": "short review by the model's originator",
+    "lane": "14-cognitive-load-multimedia"
+  },
+  {
+    "key": "mayer2021multimedia",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Mayer",
+        "given": "Richard E."
+      }
+    ],
+    "year": 2021,
+    "title": "Multimedia Learning",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Cambridge University Press",
+    "publisher_place": "Cambridge",
+    "edition": "3",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781316638088",
+    "url": "https://www.cambridge.org/9781316638088",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search q=Multimedia Learning Mayer returned works OL1837843W (2001), OL25675033W (2009) and OL21685712W (2020, ISBNs 1107187508 and 1316638081, Cambridge University Press); the Cambridge front matter PDF at assets.cambridge.org/97813166/38088/frontmatter/9781316638088_frontmatter.pdf states Third edition 2021, second edition 2009, first edition 2001, ISBN 9781316638088 paperback and 9781107187504 hardback, and the table of contents with 20 chapters",
+    "kind": "book-length research synthesis",
+    "lane": "14-cognitive-load-multimedia",
+    "original_year": 2001
+  },
+  {
+    "key": "paivio1986mental",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Paivio",
+        "given": "Allan"
+      }
+    ],
+    "year": 1986,
+    "title": "Mental Representations: A Dual Coding Approach",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Oxford University Press",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search q=Mental Representations a dual coding approach Paivio returned work OL3779347W, Mental Representations, Allan Paivio, first published 1986, Oxford University Press; the reference list of Clark and Paivio (1987), read this session, gives Paivio, A. (1986). Mental representations: A dual-coding approach. New York: Oxford University Press",
+    "kind": "book-length theory (read via a co-authored summary chapter, not the book)",
+    "lane": "14-cognitive-load-multimedia"
+  }
+]

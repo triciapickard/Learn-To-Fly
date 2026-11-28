@@ -1,0 +1,750 @@
+[
+ {
+  "key": "elliot2007color",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Elliot",
+    "given": "Andrew J."
+   },
+   {
+    "family": "Maier",
+    "given": "Markus A."
+   },
+   {
+    "family": "Moller",
+    "given": "Arlen C."
+   },
+   {
+    "family": "Friedman",
+    "given": "Ron"
+   },
+   {
+    "family": "Meinhardt",
+    "given": "Jörg"
+   }
+  ],
+  "year": 2007,
+  "title": "Color and psychological functioning: The effect of red on performance attainment.",
+  "container_title": "Journal of Experimental Psychology: General",
+  "volume": "136",
+  "issue": "1",
+  "pages": "154-168",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/0096-3445.136.1.154",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1037/0096-3445.136.1.154 returned the title, five authors and JEP: General 136(1) 154-168; Europe PMC returned the abstract",
+  "kind": "experiments (red and performance), later contested",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "elliot2014color",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Elliot",
+    "given": "Andrew J."
+   },
+   {
+    "family": "Maier",
+    "given": "Markus A."
+   }
+  ],
+  "year": 2014,
+  "title": "Color Psychology: Effects of Perceiving Color on Psychological Functioning in Humans",
+  "container_title": "Annual Review of Psychology",
+  "volume": "65",
+  "issue": "1",
+  "pages": "95-120",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1146/annurev-psych-010213-115035",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1146/annurev-psych-010213-115035 returned matching title, authors, journal, volume, issue and pages",
+  "kind": "narrative review by field leaders",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "palmer2010ecological",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Palmer",
+    "given": "Stephen E."
+   },
+   {
+    "family": "Schloss",
+    "given": "Karen B."
+   }
+  ],
+  "year": 2010,
+  "title": "An ecological valence theory of human color preference",
+  "container_title": "Proceedings of the National Academy of Sciences",
+  "volume": "107",
+  "issue": "19",
+  "pages": "8877-8882",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1073/pnas.0906172107",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1073/pnas.0906172107 (PNAS 107(19) 8877-8882); full text read at PMC2889342",
+  "kind": "correlational study, theory paper",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "valdez1994effects",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Valdez",
+    "given": "Patricia"
+   },
+   {
+    "family": "Mehrabian",
+    "given": "Albert"
+   }
+  ],
+  "year": 1994,
+  "title": "Effects of color on emotions.",
+  "container_title": "Journal of Experimental Psychology: General",
+  "volume": "123",
+  "issue": "4",
+  "pages": "394-409",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/0096-3445.123.4.394",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1037/0096-3445.123.4.394 returned matching title, authors, journal, volume, issue and pages",
+  "kind": "laboratory rating study with Munsell chips",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "whitfield1990color",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Whitfield",
+    "given": "T. W."
+   },
+   {
+    "family": "Wiltshire",
+    "given": "T. J."
+   }
+  ],
+  "year": 1990,
+  "title": "Color psychology: a critical review",
+  "container_title": "Genetic, Social, and General Psychology Monographs",
+  "volume": "116",
+  "issue": "4",
+  "pages": "385-411",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "",
+  "verified_via": "websearch",
+  "verified_evidence": "WebSearch and PubMed record pubmed.ncbi.nlm.nih.gov/2289687 (Genetic, Social, and General Psychology Monographs 116(4):385-411, 1990); Europe PMC record for PMID 2289687 returned authors Whitfield TW, Wiltshire TJ and the abstract. Crossref did not return the item.",
+  "kind": "critical narrative review",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "wilms2018color",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Wilms",
+    "given": "Lisa"
+   },
+   {
+    "family": "Oberfeld",
+    "given": "Daniel"
+   }
+  ],
+  "year": 2018,
+  "title": "Color and emotion: effects of hue, saturation, and brightness",
+  "container_title": "Psychological Research",
+  "volume": "82",
+  "issue": "5",
+  "pages": "896-914",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1007/s00426-017-0880-8",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1007/s00426-017-0880-8 returned matching title, authors, journal, volume, issue and pages",
+  "kind": "laboratory experiment with physiology",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "labrecque2012exciting",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Labrecque",
+    "given": "Lauren I."
+   },
+   {
+    "family": "Milne",
+    "given": "George R."
+   }
+  ],
+  "year": 2012,
+  "title": "Exciting red and competent blue: the importance of color in marketing",
+  "container_title": "Journal of the Academy of Marketing Science",
+  "volume": "40",
+  "issue": "5",
+  "pages": "711-727",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1007/s11747-010-0245-y",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1007/s11747-010-0245-y (J. Acad. Mark. Sci. 40(5) 711-727; Crossref issued 2011 online, print 2012); abstract summary read at colab.ws",
+  "kind": "consumer research experiments",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "mehta2009blue",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Mehta",
+    "given": "Ravi"
+   },
+   {
+    "family": "Zhu",
+    "given": "Rui (Juliet)"
+   }
+  ],
+  "year": 2009,
+  "title": "Blue or Red? Exploring the Effect of Color on Cognitive Task Performances",
+  "container_title": "Science",
+  "volume": "323",
+  "issue": "5918",
+  "pages": "1226-1229",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1126/science.1169144",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1126/science.1169144 returned matching title, authors, journal, volume, issue and pages",
+  "kind": "experiments (six studies), partly failed to replicate",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "steele2014failure",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Steele",
+    "given": "Kenneth M."
+   }
+  ],
+  "year": 2014,
+  "title": "Failure to replicate the Mehta and Zhu (2009) color-priming effect on anagram solution times",
+  "container_title": "Psychonomic Bulletin & Review",
+  "volume": "21",
+  "issue": "3",
+  "pages": "771-776",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.3758/s13423-013-0548-3",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.3758/s13423-013-0548-3 returned matching title, authors, journal, volume, issue and pages",
+  "kind": "direct replication",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "gnambs2020limited",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Gnambs",
+    "given": "Timo"
+   }
+  ],
+  "year": 2020,
+  "title": "Limited evidence for the effect of red color on cognitive performance: A meta-analysis",
+  "container_title": "Psychonomic Bulletin & Review",
+  "volume": "27",
+  "issue": "6",
+  "pages": "1374-1382",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.3758/s13423-020-01772-1",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.3758/s13423-020-01772-1 returned matching title, authors, journal, volume, issue and pages",
+  "kind": "meta-analysis",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "hill2005red",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Hill",
+    "given": "Russell A."
+   },
+   {
+    "family": "Barton",
+    "given": "Robert A."
+   }
+  ],
+  "year": 2005,
+  "title": "Red enhances human performance in contests",
+  "container_title": "Nature",
+  "volume": "435",
+  "issue": "7040",
+  "pages": "293",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1038/435293a",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1038/435293a returned matching title, authors, journal, volume, issue and pages",
+  "kind": "observational analysis of sports results (letter)",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "peperkoorn2024meta",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Peperkoorn",
+    "given": "Leonard S."
+   },
+   {
+    "family": "Hill",
+    "given": "Russell A."
+   },
+   {
+    "family": "Barton",
+    "given": "Robert A."
+   },
+   {
+    "family": "Pollet",
+    "given": "Thomas V."
+   }
+  ],
+  "year": 2024,
+  "title": "Meta-analysis of the red advantage in combat sports",
+  "container_title": "Scientific Reports",
+  "volume": "14",
+  "issue": "1",
+  "pages": "30822",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1038/s41598-024-81373-3",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1038/s41598-024-81373-3 returned matching title, authors, journal, volume, issue and pages",
+  "kind": "meta-analysis of competition outcomes",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "brom2018how",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Brom",
+    "given": "Cyril"
+   },
+   {
+    "family": "Stárková",
+    "given": "Tereza"
+   },
+   {
+    "family": "D'Mello",
+    "given": "Sidney K."
+   }
+  ],
+  "year": 2018,
+  "title": "How effective is emotional design? A meta-analysis on facial anthropomorphisms and pleasant colors during multimedia learning",
+  "container_title": "Educational Research Review",
+  "volume": "25",
+  "issue": "",
+  "pages": "100-119",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/j.edurev.2018.09.004",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1016/j.edurev.2018.09.004 returned matching title, authors, journal, volume, issue and pages",
+  "kind": "meta-analysis in education",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "brettel1997computerized",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Brettel",
+    "given": "Hans"
+   },
+   {
+    "family": "Viénot",
+    "given": "Françoise"
+   },
+   {
+    "family": "Mollon",
+    "given": "John D."
+   }
+  ],
+  "year": 1997,
+  "title": "Computerized simulation of color appearance for dichromats",
+  "container_title": "Journal of the Optical Society of America A",
+  "volume": "14",
+  "issue": "10",
+  "pages": "2647-2655",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1364/josaa.14.002647",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1364/josaa.14.002647 (JOSA A 14(10) 2647); Europe PMC record gave pages 2647-2655 and the abstract",
+  "kind": "computational method with matching validation",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "machado2009physiologically",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Machado",
+    "given": "G.M."
+   },
+   {
+    "family": "Oliveira",
+    "given": "M.M."
+   },
+   {
+    "family": "Fernandes",
+    "given": "L."
+   }
+  ],
+  "year": 2009,
+  "title": "A Physiologically-based Model for Simulation of Color Vision Deficiency",
+  "container_title": "IEEE Transactions on Visualization and Computer Graphics",
+  "volume": "15",
+  "issue": "6",
+  "pages": "1291-1298",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1109/tvcg.2009.113",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1109/tvcg.2009.113 returned matching title, authors, journal, volume, issue and pages",
+  "kind": "computational model with validation",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "okabe2008color",
+  "type": "webpage",
+  "authors": [
+   {
+    "family": "Okabe",
+    "given": "Masataka"
+   },
+   {
+    "family": "Ito",
+    "given": "Kei"
+   }
+  ],
+  "year": 2008,
+  "title": "Color Universal Design (CUD): How to make figures and presentations that are friendly to colorblind people",
+  "container_title": "Jfly",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://jfly.uni-koeln.de/color/",
+  "verified_via": "websearch",
+  "verified_evidence": "WebSearch returned the Jfly page naming Masataka Okabe and Kei Ito with a 2008 date; WebFetch of jfly.uni-koeln.de/color/ returned the principles, prevalence figures and rules. The fetched text showed no date, so 2008 rests on the search summary.",
+  "kind": "practitioner guide (craft authority)",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "w3c2024wcag",
+  "type": "standard",
+  "authors": [
+   {
+    "literal": "World Wide Web Consortium"
+   }
+  ],
+  "year": 2024,
+  "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "World Wide Web Consortium",
+  "publisher_place": "",
+  "edition": "2.2",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.w3.org/TR/WCAG22/",
+  "verified_via": "websearch",
+  "verified_evidence": "WebFetch of www.w3.org/TR/WCAG22 returned success criteria 1.4.1, 1.4.3, 1.4.6, 1.4.11, large text definition and the Recommendation status (original 5 Oct 2023, republished 12 Dec 2024); WebFetch of the Understanding SC 1.4.3 page returned the formula and rationale",
+  "kind": "standard",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "somers2022apca",
+  "type": "webpage",
+  "authors": [
+   {
+    "family": "Somers",
+    "given": "Andrew"
+   }
+  ],
+  "year": 2022,
+  "title": "APCA: the Accessible Perceptual Contrast Algorithm (SAPC-APCA and apca-w3 documentation)",
+  "container_title": "GitHub (Myndex)",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Myndex Research",
+  "publisher_place": "",
+  "edition": "algorithm 0.0.98G-4g, library 0.1.9",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://github.com/Myndex/SAPC-APCA",
+  "verified_via": "websearch",
+  "verified_evidence": "WebSearch listed github.com/Myndex/SAPC-APCA and apca-w3; WebFetch of github.com/Myndex/apca-w3 returned version 0.1.9 (July 2022), constants and guidance; WebFetch of the WhyAPCA page returned the criticisms and Lc levels; WebFetch of w3.org/TR/wcag-3.0 returned the 10 September 2026 draft with the contrast algorithm still to be determined",
+  "kind": "algorithm documentation (author advocacy, public beta)",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "legge1987psychophysics",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Legge",
+    "given": "Gordon E."
+   },
+   {
+    "family": "Rubin",
+    "given": "Gary S."
+   },
+   {
+    "family": "Luebker",
+    "given": "Andrew"
+   }
+  ],
+  "year": 1987,
+  "title": "Psychophysics of reading—V. The role of contrast in normal vision",
+  "container_title": "Vision Research",
+  "volume": "27",
+  "issue": "7",
+  "pages": "1165-1177",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/0042-6989(87)90028-9",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1016/0042-6989(87)90028-9 (Vision Research 27(7) 1165-1177); Europe PMC abstract returned the reading-rate figures",
+  "kind": "psychophysical experiment",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "buchner2007text",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Buchner",
+    "given": "A."
+   },
+   {
+    "family": "Baumgartner",
+    "given": "N."
+   }
+  ],
+  "year": 2007,
+  "title": "Text – background polarity affects performance irrespective of ambient illumination and colour contrast",
+  "container_title": "Ergonomics",
+  "volume": "50",
+  "issue": "7",
+  "pages": "1036-1063",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1080/00140130701306413",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1080/00140130701306413 (Ergonomics 50(7) 1036-1063); Europe PMC abstract",
+  "kind": "human factors experiments",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "buchner2009advantage",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Buchner",
+    "given": "Axel"
+   },
+   {
+    "family": "Mayr",
+    "given": "Susanne"
+   },
+   {
+    "family": "Brandt",
+    "given": "Martin"
+   }
+  ],
+  "year": 2009,
+  "title": "The advantage of positive text-background polarity is due to high display luminance",
+  "container_title": "Ergonomics",
+  "volume": "52",
+  "issue": "7",
+  "pages": "882-886",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1080/00140130802641635",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1080/00140130802641635 (Ergonomics 52(7) 882-886); Europe PMC abstract",
+  "kind": "human factors experiment",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "piepenbrock2013positive",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Piepenbrock",
+    "given": "Cosima"
+   },
+   {
+    "family": "Mayr",
+    "given": "Susanne"
+   },
+   {
+    "family": "Mund",
+    "given": "Iris"
+   },
+   {
+    "family": "Buchner",
+    "given": "Axel"
+   }
+  ],
+  "year": 2013,
+  "title": "Positive display polarity is advantageous for both younger and older adults",
+  "container_title": "Ergonomics",
+  "volume": "56",
+  "issue": "7",
+  "pages": "1116-1124",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1080/00140139.2013.790485",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1080/00140139.2013.790485 (Ergonomics 56(7) 1116-1124); Europe PMC abstract",
+  "kind": "human factors experiment",
+  "lane": "06-color-psych-accessibility"
+ },
+ {
+  "key": "dobres2017effects",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Dobres",
+    "given": "Jonathan"
+   },
+   {
+    "family": "Chahine",
+    "given": "Nadine"
+   },
+   {
+    "family": "Reimer",
+    "given": "Bryan"
+   }
+  ],
+  "year": 2017,
+  "title": "Effects of ambient illumination, contrast polarity, and letter size on text legibility under glance-like reading",
+  "container_title": "Applied Ergonomics",
+  "volume": "60",
+  "issue": "",
+  "pages": "68-73",
+  "publisher": "",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/j.apergo.2016.11.001",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1016/j.apergo.2016.11.001 (Applied Ergonomics 60, 68-73); Europe PMC abstract",
+  "kind": "human factors experiment",
+  "lane": "06-color-psych-accessibility"
+ }
+]

@@ -1,0 +1,568 @@
+[
+ {
+  "key": "openscience2015estimating",
+  "type": "article-journal",
+  "authors": [
+   {
+    "literal": "Open Science Collaboration"
+   }
+  ],
+  "year": 2015,
+  "title": "Estimating the reproducibility of psychological science",
+  "container_title": "Science",
+  "volume": "349",
+  "issue": "6251",
+  "pages": "aac4716",
+  "publisher": "American Association for the Advancement of Science",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1126/science.aac4716",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1126/science.aac4716 returned this title, Science 349(6251), issued 2015-08-28; Europe PMC record for the DOI returned the abstract (100 studies, replication effects half the original magnitude, 97% vs 36% significant).",
+  "kind": "large-scale replication project",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "ioannidis2005why",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Ioannidis",
+    "given": "John P. A."
+   }
+  ],
+  "year": 2005,
+  "title": "Why most published research findings are false",
+  "container_title": "PLoS Medicine",
+  "volume": "2",
+  "issue": "8",
+  "pages": "e124",
+  "publisher": "Public Library of Science",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1371/journal.pmed.0020124",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1371/journal.pmed.0020124 returned title, author Ioannidis, PLoS Medicine 2(8) e124, issued 2005-08-30; PLoS article page fetched for abstract, PPV formulas and six corollaries.",
+  "kind": "theoretical essay with simulations",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "simmons2011false",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Simmons",
+    "given": "Joseph P."
+   },
+   {
+    "family": "Nelson",
+    "given": "Leif D."
+   },
+   {
+    "family": "Simonsohn",
+    "given": "Uri"
+   }
+  ],
+  "year": 2011,
+  "title": "False-positive psychology: undisclosed flexibility in data collection and analysis allows presenting anything as significant",
+  "container_title": "Psychological Science",
+  "volume": "22",
+  "issue": "11",
+  "pages": "1359-1366",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1177/0956797611417632",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1177/0956797611417632 returned 'False-Positive Psychology' by Simmons, Nelson, Simonsohn, Psychological Science 22(11) 1359-1366, 2011; Europe PMC abstract fetched; APS column summarizing simulations and the music experiment fetched. The same Crossref record gives the subtitle 'Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant'.",
+  "kind": "simulation and demonstration experiments",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "cohen1994earth",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Cohen",
+    "given": "Jacob"
+   }
+  ],
+  "year": 1994,
+  "title": "The earth is round (p < .05)",
+  "container_title": "American Psychologist",
+  "volume": "49",
+  "issue": "12",
+  "pages": "997-1003",
+  "publisher": "American Psychological Association",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1037/0003-066X.49.12.997",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1037/0003-066X.49.12.997 returned the title, Cohen, American Psychologist 49(12) 997-1003, Dec 1994; full text PDF (stat.cmu.edu copy) downloaded and read.",
+  "kind": "methodological critique essay",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "cumming2014new",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Cumming",
+    "given": "Geoff"
+   }
+  ],
+  "year": 2014,
+  "title": "The new statistics: why and how",
+  "container_title": "Psychological Science",
+  "volume": "25",
+  "issue": "1",
+  "pages": "7-29",
+  "publisher": "SAGE Publications",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1177/0956797613504966",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1177/0956797613504966 returned 'The New Statistics', Cumming, Psychological Science 25(1) 7-29 (online 2013-11-12); Europe PMC abstract fetched; PubMed title 'The new statistics: why and how' (pubmed.ncbi.nlm.nih.gov/24220629) appeared in search.",
+  "kind": "methodological tutorial",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "kohavi2009controlled",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Kohavi",
+    "given": "Ron"
+   },
+   {
+    "family": "Longbotham",
+    "given": "Roger"
+   },
+   {
+    "family": "Sommerfield",
+    "given": "Dan"
+   },
+   {
+    "family": "Henne",
+    "given": "Randal M."
+   }
+  ],
+  "year": 2009,
+  "title": "Controlled experiments on the web: survey and practical guide",
+  "container_title": "Data Mining and Knowledge Discovery",
+  "volume": "18",
+  "issue": "1",
+  "pages": "140-181",
+  "publisher": "Springer",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1007/s10618-008-0114-1",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1007/s10618-008-0114-1 returned this title, four authors, DMKD 18(1) 140-181 (online 2008-07-30); full text PDF from ai.stanford.edu/~ronnyk downloaded and read; its header gives (2009) 18:140-181.",
+  "kind": "practitioner survey and guide",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "greenberg2008usability",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Greenberg",
+    "given": "Saul"
+   },
+   {
+    "family": "Buxton",
+    "given": "Bill"
+   }
+  ],
+  "year": 2008,
+  "title": "Usability evaluation considered harmful (some of the time)",
+  "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '08)",
+  "volume": "",
+  "issue": "",
+  "pages": "111-120",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/1357054.1357074",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/1357054.1357074 returned title, Greenberg and Buxton, pages 111-120, issued 2008-04-06; authors' PDF (billbuxton.com/usabilityHarmful.pdf) downloaded and read.",
+  "kind": "opinion essay",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "henrich2010weirdest",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Henrich",
+    "given": "Joseph"
+   },
+   {
+    "family": "Heine",
+    "given": "Steven J."
+   },
+   {
+    "family": "Norenzayan",
+    "given": "Ara"
+   }
+  ],
+  "year": 2010,
+  "title": "The weirdest people in the world?",
+  "container_title": "Behavioral and Brain Sciences",
+  "volume": "33",
+  "issue": "2-3",
+  "pages": "61-83",
+  "publisher": "Cambridge University Press",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1017/S0140525X0999152X",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1017/S0140525X0999152X returned title, three authors, BBS 33(2-3) 61-83, June 2010; Europe PMC abstract fetched; author preprint PDF (www2.psych.ubc.ca/~henrich) downloaded and read.",
+  "kind": "cross-disciplinary review",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "cockburn2020threats",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Cockburn",
+    "given": "Andy"
+   },
+   {
+    "family": "Dragicevic",
+    "given": "Pierre"
+   },
+   {
+    "family": "Besançon",
+    "given": "Lonni"
+   },
+   {
+    "family": "Gutwin",
+    "given": "Carl"
+   }
+  ],
+  "year": 2020,
+  "title": "Threats of a replication crisis in empirical computer science",
+  "container_title": "Communications of the ACM",
+  "volume": "63",
+  "issue": "8",
+  "pages": "70-79",
+  "publisher": "Association for Computing Machinery",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/3360311",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works query returned DOI 10.1145/3360311, four authors, CACM 63(8) 70-79, issued 2020-07-22; authors' version PDF from hal.science/hal-02907143 downloaded and read.",
+  "kind": "review and survey",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "kaptein2012rethinking",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Kaptein",
+    "given": "Maurits"
+   },
+   {
+    "family": "Robertson",
+    "given": "Judy"
+   }
+  ],
+  "year": 2012,
+  "title": "Rethinking statistical analysis methods for CHI",
+  "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '12)",
+  "volume": "",
+  "issue": "",
+  "pages": "1105-1114",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/2207676.2208557",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/2207676.2208557 returned title, Kaptein and Robertson, pages 1105-1114, issued 2012-05-05; University of Edinburgh Research Explorer page fetched for the abstract.",
+  "kind": "methodological critique",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "lazar2017research",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Lazar",
+    "given": "Jonathan"
+   },
+   {
+    "family": "Feng",
+    "given": "Jinjuan Heidi"
+   },
+   {
+    "family": "Hochheiser",
+    "given": "Harry"
+   }
+  ],
+  "year": 2017,
+  "title": "Research Methods in Human-Computer Interaction",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Morgan Kaufmann",
+  "publisher_place": "",
+  "edition": "2",
+  "editors": [],
+  "doi": "",
+  "isbn": "9780128053904",
+  "url": "",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search returned elsevier.com/books/catalog/isbn/9780128053904 (second edition, Morgan Kaufmann, 19 April 2017, paperback ISBN 978-0-12-805390-4); Open Library search returned the work OL15452046W 'Research methods in human-computer interaction' by Lazar; O'Reilly record 9780128093436 and library catalog records also returned.",
+  "kind": "textbook",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "glaser1967discovery",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Glaser",
+    "given": "Barney G."
+   },
+   {
+    "family": "Strauss",
+    "given": "Anselm L."
+   }
+  ],
+  "year": 1967,
+  "title": "The Discovery of Grounded Theory: Strategies for Qualitative Research",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Aldine",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search returned work OL3623883W 'The discovery of grounded theory', Barney G. Glaser, first published 1967, publisher Aldine Pub. Co.; web search returned the citation Glaser and Strauss (1967) Aldine and a PMC overview (PMC6318722) describing the book.",
+  "kind": "foundational methodological book",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "beyer1998contextual",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Beyer",
+    "given": "Hugh"
+   },
+   {
+    "family": "Holtzblatt",
+    "given": "Karen"
+   }
+  ],
+  "year": 1998,
+  "title": "Contextual Design: Defining Customer-Centered Systems",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Morgan Kaufmann",
+  "publisher_place": "San Francisco",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "9781558604117",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search returned work OL2716486W 'Contextual design', Hugh Beyer, 1998, Morgan Kaufmann, ISBN 1558604111 / 9781558604117; Weber State library catalog (libcat.weber.edu/bib/1054605) listed San Francisco, Morgan Kaufmann, 1998, 472 pages.",
+  "kind": "practitioner method book",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "campbell1966experimental",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Campbell",
+    "given": "Donald T."
+   },
+   {
+    "family": "Stanley",
+    "given": "Julian C."
+   }
+  ],
+  "year": 1966,
+  "title": "Experimental and Quasi-Experimental Designs for Research",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Houghton Mifflin",
+  "publisher_place": "Boston",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "0395307872",
+  "url": "",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library search returned work OL68797W (1966, Houghton Mifflin, ISBN 0395307872) and OL10558330W (Campbell and Stanley, 1963, Rand McNally); full text PDF (jameslindlibrary.org copy) downloaded and read, its preface states first appearance in the Handbook of Research on Teaching (Rand McNally, 1963).",
+  "kind": "canonical methods monograph",
+  "lane": "31-research-methods-evidence",
+  "original_year": 1963
+ },
+ {
+  "key": "gelman2006difference",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Gelman",
+    "given": "Andrew"
+   },
+   {
+    "family": "Stern",
+    "given": "Hal"
+   }
+  ],
+  "year": 2006,
+  "title": "The difference between \"significant\" and \"not significant\" is not itself statistically significant",
+  "container_title": "The American Statistician",
+  "volume": "60",
+  "issue": "4",
+  "pages": "328-331",
+  "publisher": "Taylor & Francis",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1198/000313006X152649",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1198/000313006X152649 returned title, Gelman and Stern, The American Statistician 60(4) 328-331, Nov 2006; full text PDF (sites.stat.columbia.edu) downloaded and read.",
+  "kind": "statistical teaching article",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "wobbrock2016research",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Wobbrock",
+    "given": "Jacob O."
+   },
+   {
+    "family": "Kientz",
+    "given": "Julie A."
+   }
+  ],
+  "year": 2016,
+  "title": "Research contributions in human-computer interaction",
+  "container_title": "Interactions",
+  "volume": "23",
+  "issue": "3",
+  "pages": "38-44",
+  "publisher": "Association for Computing Machinery",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/2907069",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/2907069 returned title, Wobbrock and Kientz, Interactions 23(3) 38-44, 2016; author PDF (faculty.washington.edu/wobbrock/pubs/interactions-16.pdf) downloaded and read.",
+  "kind": "field-defining overview",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "dragicevic2016fair",
+  "type": "chapter",
+  "authors": [
+   {
+    "family": "Dragicevic",
+    "given": "Pierre"
+   }
+  ],
+  "year": 2016,
+  "title": "Fair statistical communication in HCI",
+  "container_title": "Modern Statistical Methods for HCI",
+  "volume": "",
+  "issue": "",
+  "pages": "291-330",
+  "publisher": "Springer International Publishing",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1007/978-3-319-26633-6_13",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1007/978-3-319-26633-6_13 returned title, Dragicevic, Human-Computer Interaction Series, pages 291-330, 2016; HAL open copy (hal-01377894) downloaded and read; its citation line gives Modern Statistical Methods for HCI, Springer, pp. 291-330.",
+  "kind": "methodological chapter",
+  "lane": "31-research-methods-evidence"
+ },
+ {
+  "key": "wasserstein2016asa",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Wasserstein",
+    "given": "Ronald L."
+   },
+   {
+    "family": "Lazar",
+    "given": "Nicole A."
+   }
+  ],
+  "year": 2016,
+  "title": "The ASA's statement on p-values: context, process, and purpose",
+  "container_title": "The American Statistician",
+  "volume": "70",
+  "issue": "2",
+  "pages": "129-133",
+  "publisher": "Taylor & Francis",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1080/00031305.2016.1154108",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1080/00031305.2016.1154108 returned the title, Wasserstein and Lazar, The American Statistician 70(2) 129-133, 2016; full text PDF (stat.berkeley.edu copy) downloaded and read.",
+  "kind": "professional-body statement",
+  "lane": "31-research-methods-evidence"
+ }
+]

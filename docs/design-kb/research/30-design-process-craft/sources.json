@@ -1,0 +1,479 @@
+[
+  {
+    "key": "schon1983reflective",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Schön",
+        "given": "Donald A."
+      }
+    ],
+    "year": 1983,
+    "title": "The Reflective Practitioner: How Professionals Think in Action",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Basic Books",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780465068746",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search q=reflective practitioner schon returned work OL3466056W 'The reflective practitioner', Donald A. Schön, first published 1983, publisher Basic Books, ISBN 9780465068746. Stanford HCI interview page and ARDETH article fetched for content.",
+    "kind": "professional-practice theory book (qualitative case analysis)",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "cross1982designerly",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Cross",
+        "given": "Nigel"
+      }
+    ],
+    "year": 1982,
+    "title": "Designerly ways of knowing",
+    "container_title": "Design Studies",
+    "volume": "3",
+    "issue": "4",
+    "pages": "221-227",
+    "publisher": "Elsevier",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/0142-694X(82)90040-0",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic 'Designerly ways of knowing Cross 1982' returned DOI 10.1016/0142-694x(82)90040-0, Design Studies 3(4) 221-227, Elsevier, issued 1982-10. Full text PDF also read.",
+    "kind": "position paper with observational evidence",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "lawson2005how",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Lawson",
+        "given": "Bryan"
+      }
+    ],
+    "year": 2005,
+    "title": "How Designers Think: The Design Process Demystified",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Architectural Press (Elsevier)",
+    "publisher_place": "",
+    "edition": "4",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.routledge.com/How-Designers-Think-The-Design-Process-Demystified/Lawson/p/book/9780750660778",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search q=how designers think lawson returned work OL2084632W 'How designers think', Bryan Lawson, first published 1980. Routledge publisher page fetched: 4th edition, copyright 2005, with table of contents; fourth-edition title page (Elsevier, Architectural Press) seen in KTH-hosted PDF excerpt.",
+    "kind": "synthesis of observational studies and interviews",
+    "lane": "30-design-process-craft",
+    "original_year": 1980
+  },
+  {
+    "key": "buxton2007sketching",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Buxton",
+        "given": "Bill"
+      }
+    ],
+    "year": 2007,
+    "title": "Sketching User Experiences: Getting the Design Right and the Right Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Morgan Kaufmann",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780123740373",
+    "url": "https://shop.elsevier.com/books/sketching-user-experiences-getting-the-design-right-and-the-right-design/buxton/978-0-12-374037-3",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL7940434W 'Sketching User Experiences', Bill Buxton, 2007, Morgan Kaufmann/Elsevier, ISBN 9780123740373. Elsevier shop page fetched: publisher description and full table of contents.",
+    "kind": "practitioner book (craft argument and methods)",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "brooks2010design",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Brooks",
+        "given": "Frederick P."
+      }
+    ],
+    "year": 2010,
+    "title": "The Design of Design: Essays from a Computer Scientist",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Addison-Wesley Professional",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780321702067",
+    "url": "https://www.informit.com/store/design-of-design-essays-from-a-computer-scientist-9780321702067",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL15452584W 'The Design of Design', Frederick P. Brooks, 2010, Addison-Wesley, ISBN 9780321702067. InformIT publisher page fetched: 448 pages, 22 March 2010, full table of contents.",
+    "kind": "expert essays and case studies",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "dow2010parallel",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Dow",
+        "given": "Steven P."
+      },
+      {
+        "family": "Glassco",
+        "given": "Alana"
+      },
+      {
+        "family": "Kass",
+        "given": "Jonathan"
+      },
+      {
+        "family": "Schwarz",
+        "given": "Melissa"
+      },
+      {
+        "family": "Schwartz",
+        "given": "Daniel L."
+      },
+      {
+        "family": "Klemmer",
+        "given": "Scott R."
+      }
+    ],
+    "year": 2010,
+    "title": "Parallel prototyping leads to better design results, more divergence, and increased self-efficacy",
+    "container_title": "ACM Transactions on Computer-Human Interaction",
+    "volume": "17",
+    "issue": "4",
+    "pages": "1-24",
+    "publisher": "Association for Computing Machinery",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1879831.1879836",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1145/1879831.1879836, ACM TOCHI 17(4) 1-24, issued 2010-12, first authors Dow, Glassco, Kass. Author list and all results read from the Stanford HCI manuscript PDF (hci.stanford.edu/publications/2010/parallel-prototyping/).",
+    "kind": "between-subjects experiment (n=33) with field outcome measure",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "kocienda2018creative",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Kocienda",
+        "given": "Ken"
+      }
+    ],
+    "year": 2018,
+    "title": "Creative Selection: Inside Apple's Design Process During the Golden Age of Steve Jobs",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "St. Martin's Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL19754856W 'Creative Selection', Ken Kocienda, 2018. MacStories review and jarango.com reader summary fetched for content; web search results give St. Martin's Press, 2018.",
+    "kind": "practitioner memoir",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "sennett2008craftsman",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Sennett",
+        "given": "Richard"
+      }
+    ],
+    "year": 2008,
+    "title": "The Craftsman",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Yale University Press",
+    "publisher_place": "New Haven",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780300119091",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL1870880W 'The Craftsman', Richard Sennett, 2008, Yale University Press, ISBN 0300119097. Web search returned Blackwell's record ISBN 9780300119091 and catalog record with Yale University Press, New Haven and London, 2008. BU and Times Higher Education reviews fetched.",
+    "kind": "sociological and philosophical treatise",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "jones1970design",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Jones",
+        "given": "J. Christopher"
+      }
+    ],
+    "year": 1970,
+    "title": "Design Methods: Seeds of Human Futures",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Wiley-Interscience",
+    "publisher_place": "London",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search q=design methods seeds of human futures returned work OL4279596W 'Design methods', J. Christopher Jones, 1970, Van Nostrand Reinhold / Wiley-Interscience. Web search found a library record 'London Wiley-Interscience 1970' and a Marginalian page on the book.",
+    "kind": "methods compendium (design methods movement)",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "norman2014incremental",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Norman",
+        "given": "Donald A."
+      },
+      {
+        "family": "Verganti",
+        "given": "Roberto"
+      }
+    ],
+    "year": 2014,
+    "title": "Incremental and Radical Innovation: Design Research vs. Technology and Meaning Change",
+    "container_title": "Design Issues",
+    "volume": "30",
+    "issue": "1",
+    "pages": "78-96",
+    "publisher": "MIT Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1162/DESI_a_00250",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1162/desi_a_00250, Design Issues 30(1) 78-96, Norman and Verganti, issued 2014-01. Full text read from the eScholarship PDF (escholarship.org/uc/item/0mr972w6).",
+    "kind": "conceptual framework with illustrative cases",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "rittel1973dilemmas",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Rittel",
+        "given": "Horst W. J."
+      },
+      {
+        "family": "Webber",
+        "given": "Melvin M."
+      }
+    ],
+    "year": 1973,
+    "title": "Dilemmas in a general theory of planning",
+    "container_title": "Policy Sciences",
+    "volume": "4",
+    "issue": "2",
+    "pages": "155-169",
+    "publisher": "Springer",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/BF01405730",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1007/bf01405730, Policy Sciences 4(2) 155-169, issued 1973-06. Full text read from an EPA-hosted PDF (archive.epa.gov).",
+    "kind": "theoretical essay",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "dorst2001creativity",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Dorst",
+        "given": "Kees"
+      },
+      {
+        "family": "Cross",
+        "given": "Nigel"
+      }
+    ],
+    "year": 2001,
+    "title": "Creativity in the design process: co-evolution of problem-solution",
+    "container_title": "Design Studies",
+    "volume": "22",
+    "issue": "5",
+    "pages": "425-437",
+    "publisher": "Elsevier",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/S0142-694X(01)00009-6",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1016/s0142-694x(01)00009-6, Design Studies 22(5) 425-437, issued 2001-09. Abstract read on the Eindhoven research portal (research.tue.nl): protocol studies of nine experienced industrial designers.",
+    "kind": "protocol study (n=9 professionals)",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "pye1968nature",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Pye",
+        "given": "David"
+      }
+    ],
+    "year": 1968,
+    "title": "The Nature and Art of Workmanship",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Cambridge University Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work OL6520988W 'The nature and art of workmanship', David Pye, first published 1968, Cambridge University Press. Wikipedia page on Pye and Mortise and Tenon article fetched for content.",
+    "kind": "craft treatise",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "rams2026good",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Rams",
+        "given": "Dieter"
+      }
+    ],
+    "year": 2026,
+    "title": "Good design",
+    "container_title": "Vitsœ",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Vitsœ",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.vitsoe.com/gb/about/good-design",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search 'Dieter Rams ten principles of good design Vitsoe' returned vitsoe.com/gb/about/good-design; page fetched and read: introduction, ten principle headings with descriptions, licence statement (CC-BY-NC-ND 4.0). Year is the year the page was read; the principles date from decades earlier.",
+    "kind": "practitioner credo (primary source hosted by a licensee)",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "vignelli2010canon",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Vignelli",
+        "given": "Massimo"
+      }
+    ],
+    "year": 2010,
+    "title": "The Vignelli Canon",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Lars Müller Publishers",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9783037782255",
+    "url": "https://www.rit.edu/vignellicenter/sites/rit.edu.vignellicenter/files/documents/The%20Vignelli%20Canon.pdf",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search q=vignelli canon returned work OL16963936W 'The Vignelli Canon', Massimo Vignelli, 2010, Lars Müller Publishers, ISBN 9783037782255. Full text of the free RIT PDF read.",
+    "kind": "practitioner craft guide",
+    "lane": "30-design-process-craft"
+  },
+  {
+    "key": "tohidi2006getting",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Tohidi",
+        "given": "Maryam"
+      },
+      {
+        "family": "Buxton",
+        "given": "William"
+      },
+      {
+        "family": "Baecker",
+        "given": "Ronald"
+      },
+      {
+        "family": "Sellen",
+        "given": "Abigail"
+      }
+    ],
+    "year": 2006,
+    "title": "Getting the right design and the design right",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2006)",
+    "volume": "",
+    "issue": "",
+    "pages": "1243-1252",
+    "publisher": "ACM",
+    "publisher_place": "Montreal",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1124772.1124960",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query.bibliographic returned DOI 10.1145/1124772.1124960, Tohidi, Buxton, Baecker (Sellen fourth author per paper), ACM, issued 2006-04-22, pages 1243-1252. Full text read from billbuxton.com/rightDesign.pdf.",
+    "kind": "between-subjects experiment (n=48)",
+    "lane": "30-design-process-craft"
+  }
+]

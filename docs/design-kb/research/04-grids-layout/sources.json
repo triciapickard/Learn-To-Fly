@@ -1,0 +1,657 @@
+[
+  {
+    "key": "mullerbrockmann1981grid",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Müller-Brockmann",
+        "given": "Josef"
+      }
+    ],
+    "year": 1981,
+    "title": "Grid Systems in Graphic Design: A Visual Communication Manual for Graphic Designers, Typographers and Three Dimensional Designers (Raster Systeme für die visuelle Gestaltung)",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "176",
+    "publisher": "Verlag Arthur Niggli",
+    "publisher_place": "Niederteufen",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9783721201451",
+    "url": "https://openlibrary.org/works/OL3106695W",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search for 'grid systems in graphic design brockmann' returned work OL3106695W; editions list shows Verlag Arthur Niggli, Niederteufen, 1981, 176 pages, with Hastings House, New York. Slanted.de/?p=792761 lists Niggli, 1981, 176 pages, ISBN 978-3-7212-0145-1, 8 to 32 fields.",
+    "kind": "craft treatise",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "gerstner2007designing",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Gerstner",
+        "given": "Karl"
+      }
+    ],
+    "year": 2007,
+    "title": "Designing Programmes",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "128",
+    "publisher": "Lars Müller Publishers",
+    "publisher_place": "Baden",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9783037780930",
+    "url": "https://openlibrary.org/works/OL3554793W",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL3554793W lists Designing programmes, Lars Müller, Baden, 2007, 128 pages, ISBN 9783037780930. Publisher page lars-mueller-publishers.com/designing-programmes-0 says four essays, first published 1964, re-designed 2007. Wikipedia Karl Gerstner lists Programme entwerfen (1964), English 1968, revised 2007.",
+    "kind": "craft treatise",
+    "lane": "04-grids-layout",
+    "original_year": 1964
+  },
+  {
+    "key": "lecorbusier1954modulor",
+    "type": "book",
+    "authors": [
+      {
+        "literal": "Le Corbusier"
+      }
+    ],
+    "year": 1954,
+    "title": "The Modulor: A Harmonious Measure to the Human Scale Universally Applicable to Architecture and Mechanics",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "243",
+    "publisher": "Faber and Faber",
+    "publisher_place": "London",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://openlibrary.org/works/OL15210192W",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL15210192W lists The modulor, Faber and Faber, London, 1954, 243 pages. Ostwald's review in Nexus Network Journal 3(1) (emis.univie.ac.at/journals/NNJ/reviews_v3n1-Ostwald.html) describes the 2000 Birkhäuser facsimile of the 1954 Faber and Faber English edition.",
+    "kind": "craft treatise",
+    "lane": "04-grids-layout",
+    "original_year": 1948
+  },
+  {
+    "key": "tschichold1991form",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Tschichold",
+        "given": "Jan"
+      }
+    ],
+    "year": 1991,
+    "title": "The Form of the Book: Essays on the Morality of Good Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "180",
+    "publisher": "Hartley & Marks",
+    "publisher_place": "Point Roberts, WA",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Bringhurst",
+        "given": "Robert"
+      }
+    ],
+    "doi": "",
+    "isbn": "",
+    "url": "https://openlibrary.org/works/OL1220114W",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL1220114W lists The form of the book, Hartley & Marks, Point Roberts, WA, 1991, 180 pages. Web search of catalog records: translated by Hajo Hadeler, edited with introduction by Robert Bringhurst, German original Birkhäuser 1975. Review at mantex.co.uk/?p=3481.",
+    "kind": "craft treatise (essay collection)",
+    "lane": "04-grids-layout",
+    "original_year": 1975
+  },
+  {
+    "key": "vignelli2010canon",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Vignelli",
+        "given": "Massimo"
+      }
+    ],
+    "year": 2010,
+    "title": "The Vignelli Canon",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "112",
+    "publisher": "Lars Müller Publishers",
+    "publisher_place": "Baden",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9783037782255",
+    "url": "https://www.lars-mueller-publishers.com/vignelli-canon",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL16963936W lists The Vignelli Canon, Lars Müller Publishers, 2010, 112 pages, ISBN 9783037782255. Publisher page lars-mueller-publishers.com/vignelli-canon: 2010, 112 pages, 142 illustrations. Full text read from the RIT Vignelli Center PDF.",
+    "kind": "craft treatise",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "elam2001geometry",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Elam",
+        "given": "Kimberly"
+      }
+    ],
+    "year": 2001,
+    "title": "Geometry of Design: Studies in Proportion and Composition",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Princeton Architectural Press",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781568982496",
+    "url": "https://openlibrary.org/works/OL4783463W",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL4783463W lists Geometry of Design, Princeton Architectural Press, October 2001, ISBN 9781568982496. Behrens review at leonardo.info/reviews_archive/mar2003/GEOMETRY_behrens.html: Princeton Architectural Press, New York, 2001, 108 pages, ISBN 1-56898-249-6.",
+    "kind": "craft handbook",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "samara2023making",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Samara",
+        "given": "Timothy"
+      }
+    ],
+    "year": 2023,
+    "title": "Making and Breaking the Grid: A Graphic Design Layout Workshop",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "256",
+    "publisher": "Rockport Publishers",
+    "publisher_place": "",
+    "edition": "3",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780760381939",
+    "url": "https://www.quarto.com/books/9780760381939/making-and-breaking-the-grid-third-edition",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL29310895W lists Making and Breaking the Grid, Third Edition, Rockport Publishers, 2023, ISBN 9780760381939; first edition work OL5703561W (Rockport, 2002). Publisher page quarto.com/books/9780760381939: 256 pages, published 6 June 2023.",
+    "kind": "craft handbook",
+    "lane": "04-grids-layout",
+    "original_year": 2002
+  },
+  {
+    "key": "ruder1967typography",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Ruder",
+        "given": "Emil"
+      }
+    ],
+    "year": 1967,
+    "title": "Typography: A Manual of Design (Typographie: Ein Gestaltungslehrbuch)",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Arthur Niggli",
+    "publisher_place": "Teufen",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9783721200430",
+    "url": "https://openlibrary.org/works/OL4926591W",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL4926591W lists Typography, a manual of design, Arthur Niggli, Teufen AR, 1967, with Tiranti, London, 1967, and Hastings House 1981. Niggli listing slanted.de/?p=792946: first published 1967, 274 pages, ISBN 978-3-7212-0043-0.",
+    "kind": "craft treatise",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "williams2014nondesigners",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Williams",
+        "given": "Robin"
+      }
+    ],
+    "year": 2014,
+    "title": "The Non-Designer's Design Book",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Peachpit Press",
+    "publisher_place": "Berkeley, CA",
+    "edition": "4",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780133966152",
+    "url": "https://www.pearson.com/en-us/subject-catalog/p/non-designer-s-design-book-the/P200000000691",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL3502196W lists The non-designer's design book, Peachpit Press, Berkeley, 1994. Pearson catalog page pearson.com/en-us/subject-catalog/p/non-designer-s-design-book-the/P200000000691 lists the fourth edition, Peachpit Press, 20 November 2014, copyright 2015, print ISBN 9780133966152, with table of contents.",
+    "kind": "popular craft guide",
+    "lane": "04-grids-layout",
+    "original_year": 1994
+  },
+  {
+    "key": "marcotte2009fluid",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Marcotte",
+        "given": "Ethan"
+      }
+    ],
+    "year": 2009,
+    "title": "Fluid Grids",
+    "container_title": "A List Apart",
+    "volume": "",
+    "issue": "279",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://alistapart.com/article/fluidgrids/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched alistapart.com/article/fluidgrids/: A List Apart issue 279, 3 March 2009, by Ethan Marcotte; full article text read.",
+    "kind": "expert essay (web craft)",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "marcotte2010responsive",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Marcotte",
+        "given": "Ethan"
+      }
+    ],
+    "year": 2010,
+    "title": "Responsive Web Design",
+    "container_title": "A List Apart",
+    "volume": "",
+    "issue": "306",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://alistapart.com/article/responsive-web-design/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched alistapart.com/article/responsive-web-design/: A List Apart issue 306, 25 May 2010, by Ethan Marcotte; full article text read. Open Library work OL15692545W lists the 2011 A Book Apart book.",
+    "kind": "expert essay (web craft)",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "atkins2025css",
+    "type": "standard",
+    "authors": [
+      {
+        "family": "Atkins Jr.",
+        "given": "Tab"
+      },
+      {
+        "family": "Etemad",
+        "given": "Elika J."
+      },
+      {
+        "family": "Atanassov",
+        "given": "Rossen"
+      },
+      {
+        "family": "Brufau",
+        "given": "Oriol"
+      }
+    ],
+    "year": 2025,
+    "title": "CSS Grid Layout Module Level 1",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "World Wide Web Consortium",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.w3.org/TR/css-grid-1/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched w3.org/TR/css-grid-1/: W3C Candidate Recommendation Draft dated 26 March 2025, editors as listed, abstract and sections read; w3.org/TR/css-grid-2/ read for the subgrid abstract.",
+    "kind": "W3C technical specification (Candidate Recommendation Draft)",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "brown2011more",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Brown",
+        "given": "Tim"
+      }
+    ],
+    "year": 2011,
+    "title": "More Meaningful Typography",
+    "container_title": "A List Apart",
+    "volume": "",
+    "issue": "327",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://alistapart.com/article/more-meaningful-typography/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched alistapart.com/article/more-meaningful-typography: A List Apart issue 327, 2011, by Tim Brown; full article text read.",
+    "kind": "expert essay (web craft)",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "chaparro2004reading",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Chaparro",
+        "given": "Barbara S."
+      },
+      {
+        "family": "Baker",
+        "given": "J. Ryan"
+      },
+      {
+        "family": "Shaikh",
+        "given": "A. Dawn"
+      },
+      {
+        "family": "Hull",
+        "given": "Spring"
+      },
+      {
+        "family": "Brady",
+        "given": "Laurie"
+      }
+    ],
+    "year": 2004,
+    "title": "Reading Online Text: A Comparison of Four White Space Layouts",
+    "container_title": "Usability News",
+    "volume": "6",
+    "issue": "",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://portfolio.erau.edu/en/publications/reading-online-text-a-comparison-of-four-white-space-layouts/",
+    "verified_via": "websearch",
+    "verified_evidence": "Embry-Riddle portfolio record portfolio.erau.edu/en/publications/reading-online-text-a-comparison-of-four-white-space-layouts/ lists the authors, Usability News volume 6, July 2004, and the abstract on margins and leading.",
+    "kind": "experiment (usability lab, abstract only read)",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "mcmullin2002effects",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "McMullin",
+        "given": "Jess"
+      },
+      {
+        "family": "Varnhagen",
+        "given": "Connie K."
+      },
+      {
+        "family": "Heng",
+        "given": "Pheng"
+      },
+      {
+        "family": "Apedoe",
+        "given": "Xornam"
+      }
+    ],
+    "year": 2002,
+    "title": "Effects of Surrounding Information and Line Length on Text Comprehension from the Web",
+    "container_title": "Canadian Journal of Learning and Technology",
+    "volume": "28",
+    "issue": "1",
+    "pages": "",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.21432/t27607",
+    "isbn": "",
+    "url": "https://doi.org/10.21432/t27607",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.21432/T27607 returned the title, four authors, Canadian Journal of Learning and Technology 28(1), 15 February 2002, University of Alberta Libraries. Abstract page cjlt.ca/index.php/cjlt/article/view/26584 read.",
+    "kind": "experiment (abstract only read)",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "ling2007influence",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Ling",
+        "given": "Jonathan"
+      },
+      {
+        "family": "van Schaik",
+        "given": "Paul"
+      }
+    ],
+    "year": 2007,
+    "title": "The influence of line spacing and text alignment on visual search of web pages",
+    "container_title": "Displays",
+    "volume": "28",
+    "issue": "2",
+    "pages": "60-67",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/j.displa.2007.04.003",
+    "isbn": "",
+    "url": "https://doi.org/10.1016/j.displa.2007.04.003",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/j.displa.2007.04.003 returned the title, authors Ling and van Schaik, Displays 28(2), 60-67, April 2007, Elsevier. Teesside repository abstract page read.",
+    "kind": "experiment (abstract only read)",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "rosenholtz2007measuring",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Rosenholtz",
+        "given": "Ruth"
+      },
+      {
+        "family": "Li",
+        "given": "Yuanzhen"
+      },
+      {
+        "family": "Nakano",
+        "given": "Lisa"
+      }
+    ],
+    "year": 2007,
+    "title": "Measuring visual clutter",
+    "container_title": "Journal of Vision",
+    "volume": "7",
+    "issue": "2",
+    "pages": "17",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1167/7.2.17",
+    "isbn": "",
+    "url": "https://doi.org/10.1167/7.2.17",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1167/7.2.17 returned Measuring visual clutter, Rosenholtz, Li, Nakano, Journal of Vision 7(2), article 17, 16 August 2007, ARVO. MIT DSpace record 1721.1/37593 confirms the software for the measures.",
+    "kind": "experiment and computational model",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "tufte1983visual",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Tufte",
+        "given": "Edward R."
+      }
+    ],
+    "year": 1983,
+    "title": "The Visual Display of Quantitative Information",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "197",
+    "publisher": "Graphics Press",
+    "publisher_place": "Cheshire, CT",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780961392147",
+    "url": "https://www.edwardtufte.com/book/the-visual-display-of-quantitative-information/",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL2824012W lists the Visual Display of Quantitative Information, Graphics Press, Cheshire, CT, 1983, 197 pages, ISBN 9780961392147; second edition 2001. Author page edwardtufte.com/book/the-visual-display-of-quantitative-information/ confirms the second edition (2001) and 197 pages.",
+    "kind": "expert treatise",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "markowsky1992misconceptions",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Markowsky",
+        "given": "George"
+      }
+    ],
+    "year": 1992,
+    "title": "Misconceptions about the Golden Ratio",
+    "container_title": "The College Mathematics Journal",
+    "volume": "23",
+    "issue": "1",
+    "pages": "2-19",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/07468342.1992.11973428",
+    "isbn": "",
+    "url": "https://doi.org/10.1080/07468342.1992.11973428",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1080/07468342.1992.11973428 returned the title, author George Markowsky, The College Mathematics Journal 23(1), 2-19, January 1992.",
+    "kind": "mathematical and historical critique",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "hoge1995fechner",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Höge",
+        "given": "Holger"
+      }
+    ],
+    "year": 1995,
+    "title": "Fechner's Experimental Aesthetics and the Golden Section Hypothesis Today",
+    "container_title": "Empirical Studies of the Arts",
+    "volume": "13",
+    "issue": "2",
+    "pages": "131-148",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.2190/uhtq-cfvd-cau2-wy1c",
+    "isbn": "",
+    "url": "https://doi.org/10.2190/uhtq-cfvd-cau2-wy1c",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.2190/uhtq-cfvd-cau2-wy1c returned the title, author Höge, Empirical Studies of the Arts 13(2), 131-148, July 1995, SAGE. Abstract summary from Scilit record.",
+    "kind": "experiment (abstract only read)",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "fessenden2018scrolling",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Fessenden",
+        "given": "Therese"
+      }
+    ],
+    "year": 2018,
+    "title": "Scrolling and Attention",
+    "container_title": "Nielsen Norman Group",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Nielsen Norman Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.nngroup.com/articles/scrolling-and-attention/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched nngroup.com/articles/scrolling-and-attention/: Nielsen Norman Group, Therese Fessenden, 15 April 2018; method and percentages read.",
+    "kind": "industry eyetracking report",
+    "lane": "04-grids-layout"
+  },
+  {
+    "key": "nielsen2006f",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      }
+    ],
+    "year": 2006,
+    "title": "F-Shaped Pattern For Reading Web Content (Original Study)",
+    "container_title": "Nielsen Norman Group",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Nielsen Norman Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched nngroup.com/articles/f-shaped-pattern-reading-web-content-discovered/: Nielsen Norman Group, Jakob Nielsen, 16 April 2006; 232 users; full article read.",
+    "kind": "industry eyetracking report",
+    "lane": "04-grids-layout"
+  }
+]

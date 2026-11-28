@@ -2,7 +2,6 @@
 name: ship
 description: Take the current Learn to Fly change from working tree to an open pull request - run every check, run /ltf-review, fix blockers, sync the plan, commit, push and open a PR with the template filled in.
 argument-hint: '[short task description or plan step, e.g. "12.14 onboarding sim screen"]'
-disable-model-invocation: true
 ---
 
 # Ship

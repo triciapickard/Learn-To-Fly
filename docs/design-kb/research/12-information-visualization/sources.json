@@ -1,0 +1,603 @@
+[
+  {
+    "key": "cleveland1984graphical",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Cleveland",
+        "given": "William S."
+      },
+      {
+        "family": "McGill",
+        "given": "Robert"
+      }
+    ],
+    "year": 1984,
+    "title": "Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods",
+    "container_title": "Journal of the American Statistical Association",
+    "volume": "79",
+    "issue": "387",
+    "pages": "531-554",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/01621459.1984.10478080",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query returned DOI 10.1080/01621459.1984.10478080: Cleveland, McGill, JASA 79(387), 531-554, issued 1984-09. Abstract wording seen in WebSearch snippets of the abstract page; authors' 1986 follow-up (IJMMS 25, 491-500) read in full and describes the 1984 experiments.",
+    "kind": "experimental paper (graphical perception theory and experiments)",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "heer2010crowdsourcing",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Heer",
+        "given": "Jeffrey"
+      },
+      {
+        "family": "Bostock",
+        "given": "Michael"
+      }
+    ],
+    "year": 2010,
+    "title": "Crowdsourcing Graphical Perception: Using Mechanical Turk to Assess Visualization Design",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '10)",
+    "volume": "",
+    "issue": "",
+    "pages": "203-212",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1753326.1753357",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1145/1753326.1753357 'Crowdsourcing graphical perception', Heer and Bostock, CHI 2010, pages 203-212, ACM. Full text PDF read (homes.cs.washington.edu/~jheer/files/2010-MTurk-CHI.pdf); full title from the PDF.",
+    "kind": "experimental paper (replication and extension of graphical perception studies)",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "bateman2010useful",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Bateman",
+        "given": "Scott"
+      },
+      {
+        "family": "Mandryk",
+        "given": "Regan L."
+      },
+      {
+        "family": "Gutwin",
+        "given": "Carl"
+      },
+      {
+        "family": "Genest",
+        "given": "Aaron"
+      },
+      {
+        "family": "McDine",
+        "given": "David"
+      },
+      {
+        "family": "Brooks",
+        "given": "Christopher"
+      }
+    ],
+    "year": 2010,
+    "title": "Useful Junk? The Effects of Visual Embellishment on Comprehension and Memorability of Charts",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '10)",
+    "volume": "",
+    "issue": "",
+    "pages": "2573-2582",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1753326.1753716",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1145/1753326.1753716 'Useful junk?', Bateman, Mandryk, Gutwin, Genest, CHI 2010 pages 2573-2582. Full text read (vis.csail.mit.edu/classes/6.859/readings/pdfs/Bateman-UsefulJunk.pdf) for full title and all six authors.",
+    "kind": "experimental paper (n=20, chart embellishment)",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "borkin2013what",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Borkin",
+        "given": "Michelle A."
+      },
+      {
+        "family": "Vo",
+        "given": "Azalea A."
+      },
+      {
+        "family": "Bylinskii",
+        "given": "Zoya"
+      },
+      {
+        "family": "Isola",
+        "given": "Phillip"
+      },
+      {
+        "family": "Sunkavalli",
+        "given": "Shashank"
+      },
+      {
+        "family": "Oliva",
+        "given": "Aude"
+      },
+      {
+        "family": "Pfister",
+        "given": "Hanspeter"
+      }
+    ],
+    "year": 2013,
+    "title": "What Makes a Visualization Memorable?",
+    "container_title": "IEEE Transactions on Visualization and Computer Graphics",
+    "volume": "19",
+    "issue": "12",
+    "pages": "2306-2315",
+    "publisher": "IEEE",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1109/tvcg.2013.234",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1109/tvcg.2013.234, TVCG 19(12), 2306-2315, 2013-12 (authors Borkin, Vo, Bylinskii, Isola listed first). Full author list from vcg.seas.harvard.edu publication page via WebSearch/WebFetch.",
+    "kind": "large crowdsourced correlational study",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "tufte1983visual",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Tufte",
+        "given": "Edward R."
+      }
+    ],
+    "year": 1983,
+    "title": "The Visual Display of Quantitative Information",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Graphics Press",
+    "publisher_place": "Cheshire, Connecticut",
+    "edition": "First edition (1983); second edition (2001) text was read",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780961392147",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL2824012W; edition OL23782293M lists Graphics Press, 1983, ISBN 9780961392147, 197 pages. Publisher page edwardtufte.com/book/the-visual-display-of-quantitative-information confirms second edition 2001, 197 pages. Second-edition full text (archive.org copy) read; its imprint reads Graphics Press, Cheshire, Connecticut.",
+    "kind": "craft treatise",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "munzner2014visualization",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Munzner",
+        "given": "Tamara"
+      }
+    ],
+    "year": 2014,
+    "title": "Visualization Analysis and Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "A K Peters/CRC Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781466508910",
+    "url": "https://www.cs.ubc.ca/~tmm/vadbook/",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL21546112W (Tamara Munzner, Visualization Analysis and Design, 2014, CRC Press / A K Peters). Author page cs.ubc.ca/~tmm/vadbook lists the 15 chapters, A K Peters Visualization Series, CRC Press, 2014, and ISBN 9781466508910 in its links.",
+    "kind": "textbook and expert synthesis",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "mackinlay1986automating",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Mackinlay",
+        "given": "Jock"
+      }
+    ],
+    "year": 1986,
+    "title": "Automating the Design of Graphical Presentations of Relational Information",
+    "container_title": "ACM Transactions on Graphics",
+    "volume": "5",
+    "issue": "2",
+    "pages": "110-141",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/22949.22950",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1145/22949.22950, Mackinlay, ACM TOG 5(2), 110-141, 1986-04. Full text read from courses.ischool.berkeley.edu/i247/f05/readings/Mackinlay_APT_TOG86.pdf.",
+    "kind": "theory and systems paper",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "shneiderman1996eyes",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Shneiderman",
+        "given": "Ben"
+      }
+    ],
+    "year": 1996,
+    "title": "The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations",
+    "container_title": "Proceedings 1996 IEEE Symposium on Visual Languages",
+    "volume": "",
+    "issue": "",
+    "pages": "336-343",
+    "publisher": "IEEE Comput. Soc. Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1109/vl.1996.545307",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1109/vl.1996.545307, Shneiderman, Proceedings 1996 IEEE Symposium on Visual Languages, pages 336-343. Full text read from cs.umd.edu/~ben/papers/Shneiderman1996eyes.pdf.",
+    "kind": "expert synthesis and taxonomy",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "franconeri2021science",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Franconeri",
+        "given": "Steven L."
+      },
+      {
+        "family": "Padilla",
+        "given": "Lace M."
+      },
+      {
+        "family": "Shah",
+        "given": "Priti"
+      },
+      {
+        "family": "Zacks",
+        "given": "Jeffrey M."
+      },
+      {
+        "family": "Hullman",
+        "given": "Jessica"
+      }
+    ],
+    "year": 2021,
+    "title": "The Science of Visual Data Communication: What Works",
+    "container_title": "Psychological Science in the Public Interest",
+    "volume": "22",
+    "issue": "3",
+    "pages": "110-161",
+    "publisher": "SAGE Publications",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1177/15291006211051956",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1177/15291006211051956, PSPI 22(3), 110-161, 2021-12, authors Franconeri, Padilla, Shah, Zacks. A corrigendum record 10.1177/15291006221099494 also returned. Full text PDF read (data.europa.eu course copy).",
+    "kind": "narrative evidence review",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "hullman2019pursuit",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Hullman",
+        "given": "Jessica"
+      },
+      {
+        "family": "Qiao",
+        "given": "Xiaoli"
+      },
+      {
+        "family": "Correll",
+        "given": "Michael"
+      },
+      {
+        "family": "Kale",
+        "given": "Alex"
+      },
+      {
+        "family": "Kay",
+        "given": "Matthew"
+      }
+    ],
+    "year": 2019,
+    "title": "In Pursuit of Error: A Survey of Uncertainty Visualization Evaluation",
+    "container_title": "IEEE Transactions on Visualization and Computer Graphics",
+    "volume": "25",
+    "issue": "1",
+    "pages": "903-913",
+    "publisher": "IEEE",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1109/tvcg.2018.2864889",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1109/tvcg.2018.2864889, TVCG 25(1), 903-913, issued 2019-01 (presented InfoVis 2018). Full text PDF read (tableau.com research copy); author list from the paper.",
+    "kind": "systematic survey of 86 studies",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "hullman2015hypothetical",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Hullman",
+        "given": "Jessica"
+      },
+      {
+        "family": "Resnick",
+        "given": "Paul"
+      },
+      {
+        "family": "Adar",
+        "given": "Eytan"
+      }
+    ],
+    "year": 2015,
+    "title": "Hypothetical Outcome Plots Outperform Error Bars and Violin Plots for Inferences about Reliability of Variable Ordering",
+    "container_title": "PLOS ONE",
+    "volume": "10",
+    "issue": "11",
+    "pages": "e0142444",
+    "publisher": "Public Library of Science",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1371/journal.pone.0142444",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1371/journal.pone.0142444, PLOS ONE 10(11) e0142444, 2015-11-16, Hullman, Resnick, Adar. Abstract and results read via WebFetch of journals.plos.org article page.",
+    "kind": "experimental paper (n=288)",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "borland2007rainbow",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Borland",
+        "given": "David"
+      },
+      {
+        "family": "Taylor",
+        "given": "Russell M., II"
+      }
+    ],
+    "year": 2007,
+    "title": "Rainbow Color Map (Still) Considered Harmful",
+    "container_title": "IEEE Computer Graphics and Applications",
+    "volume": "27",
+    "issue": "2",
+    "pages": "14-17",
+    "publisher": "IEEE",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1109/mcg.2007.323435",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1109/mcg.2007.323435, IEEE CG&A 27(2), 14-17, 2007-03, authors Borland and Taylor II. Abstract content via WebSearch summaries; the 2023 rebuttal (Ware, Stone, Szafir, 10.1109/MCG.2023.3246111) read in full and quotes the 2007 paper.",
+    "kind": "viewpoint article",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "wainer1984display",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Wainer",
+        "given": "Howard"
+      }
+    ],
+    "year": 1984,
+    "title": "How to Display Data Badly",
+    "container_title": "The American Statistician",
+    "volume": "38",
+    "issue": "2",
+    "pages": "137-147",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/00031305.1984.10483186",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1080/00031305.1984.10483186, The American Statistician 38(2), 137-147, 1984-05, Wainer. Full text (scanned, OCR) read from sites.stat.columbia.edu/gelman/communication/Wainer1984.pdf. Reprint 10.1007/978-1-4612-2282-8_2 also in Crossref.",
+    "kind": "craft essay (satirical taxonomy)",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "few2006information",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Few",
+        "given": "Stephen"
+      }
+    ],
+    "year": 2006,
+    "title": "Information Dashboard Design: The Effective Visual Communication of Data",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "O'Reilly Media",
+    "publisher_place": "",
+    "edition": "First edition",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780596100162",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL8167542W; edition OL7581253M: Information Dashboard Design: The Effective Visual Communication of Data, O'Reilly Media, January 24, 2006, ISBN 9780596100162, 223 pages. Few's 2006 Perceptual Edge white paper previewing the book (13 pitfalls) was read in full.",
+    "kind": "practitioner craft book",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "cairo2016truthful",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Cairo",
+        "given": "Alberto"
+      }
+    ],
+    "year": 2016,
+    "title": "The Truthful Art: Data, Charts, and Maps for Communication",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "New Riders",
+    "publisher_place": "",
+    "edition": "First edition",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780133440539",
+    "url": "",
+    "verified_via": "websearch",
+    "verified_evidence": "Publisher page peachpit.com/store/truthful-art-data-charts-and-maps-for-communication-9780133440539 (New Riders, Feb 8 2016, 400 pages, ISBN-13 978-0-13-344053-9, full table of contents). Open Library work OL17664549W (The Truthful Art, Alberto Cairo, 2016, New Riders) also returned.",
+    "kind": "practitioner craft book",
+    "lane": "12-information-visualization"
+  },
+  {
+    "key": "playfair2005commercial",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Playfair",
+        "given": "William"
+      }
+    ],
+    "year": 2005,
+    "title": "Playfair's Commercial and Political Atlas and Statistical Breviary",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Cambridge University Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Wainer",
+        "given": "Howard"
+      },
+      {
+        "family": "Spence",
+        "given": "Ian"
+      }
+    ],
+    "doi": "",
+    "isbn": "9780521855549",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library works OL3774437W and OL3774427W: Playfair's Commercial and Political Atlas and Statistical Breviary, Cambridge University Press, 2005, ISBN 9780521855549; OL13659624W names Howard Wainer as editor; WebSearch result names Wainer and Spence as editors and the 1786 Atlas and 1801 Breviary as contents. Spence 2005 (J. Educ. Behav. Stat. 30(4)) read in full.",
+    "kind": "primary historical source (reissue)",
+    "lane": "12-information-visualization",
+    "original_year": 1786
+  },
+  {
+    "key": "bertin2010semiology",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Bertin",
+        "given": "Jacques"
+      }
+    ],
+    "year": 2010,
+    "title": "Semiology of Graphics: Diagrams, Networks, Maps",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Esri Press",
+    "publisher_place": "",
+    "edition": "English translation by William J. Berg of the 1967 French original; first English edition University of Wisconsin Press, 1983",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781589482616",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library work OL4520539W; edition OL24524277M: Semiology of Graphics, ESRI Press, 2010, ISBN 9781589482616, 456 pages; edition OL20717376M University of Wisconsin Press 1983; French Semiologie graphique, Mouton 1967 (OL17464755M). Esri Press table of contents and sample chapter PDFs read.",
+    "kind": "craft and theory treatise",
+    "lane": "12-information-visualization",
+    "original_year": 1967
+  },
+  {
+    "key": "correll2020truncating",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Correll",
+        "given": "Michael"
+      },
+      {
+        "family": "Bertini",
+        "given": "Enrico"
+      },
+      {
+        "family": "Franconeri",
+        "given": "Steven"
+      }
+    ],
+    "year": 2020,
+    "title": "Truncating the Y-Axis: Threat or Menace?",
+    "container_title": "Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems",
+    "volume": "",
+    "issue": "",
+    "pages": "1-12",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/3313831.3376222",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1145/3313831.3376222, Correll, Bertini, Franconeri, CHI 2020, pages 1-12, issued 2020-04-21. arXiv 1907.02035 abstract read; experiment details from a WebFetch summary of ar5iv.",
+    "kind": "experimental paper (three crowdsourced experiments)",
+    "lane": "12-information-visualization"
+  }
+]

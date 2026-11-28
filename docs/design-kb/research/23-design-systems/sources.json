@@ -1,0 +1,466 @@
+[
+  {
+    "key": "alexander1977pattern",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Alexander",
+        "given": "Christopher"
+      },
+      {
+        "family": "Ishikawa",
+        "given": "Sara"
+      },
+      {
+        "family": "Silverstein",
+        "given": "Murray"
+      }
+    ],
+    "year": 1977,
+    "title": "A Pattern Language: Towns, Buildings, Construction",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Oxford University Press",
+    "publisher_place": "New York",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0195019199",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'a pattern language alexander' returned work OL3923600W (Christopher Alexander, Sara Ishikawa, Murray Silverstein and others, first published 1977) and edition OL5059163M (Oxford University Press, 1977, ISBN 0195019199)",
+    "kind": "craft treatise and pattern catalogue (architecture)",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "dearden2006pattern",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Dearden",
+        "given": "Andy"
+      },
+      {
+        "family": "Finlay",
+        "given": "Janet"
+      }
+    ],
+    "year": 2006,
+    "title": "Pattern languages in HCI: A critical review",
+    "container_title": "Human-Computer Interaction",
+    "volume": "21",
+    "issue": "1",
+    "pages": "49-102",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1207/s15327051hci2101_3",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query.bibliographic 'Pattern Languages in HCI A Critical Review Dearden Finlay' returned DOI 10.1207/s15327051hci2101_3, Human-Computer Interaction 21(1) 49-102, 2006; full text read at eprints.leedsbeckett.ac.uk/id/eprint/953",
+    "kind": "critical literature review",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "gamma1994design",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Gamma",
+        "given": "Erich"
+      },
+      {
+        "family": "Helm",
+        "given": "Richard"
+      },
+      {
+        "family": "Johnson",
+        "given": "Ralph"
+      },
+      {
+        "family": "Vlissides",
+        "given": "John"
+      }
+    ],
+    "year": 1994,
+    "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Addison-Wesley",
+    "publisher_place": "Reading, MA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0201633612",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search q=isbn:0201633612 returned work OL6030812W 'Design Patterns' by Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides (Addison-Wesley); publication facts (21 Oct 1994, 395 pages, ISBN 0-201-63361-2) from fetched reference summary",
+    "kind": "expert catalog (software design patterns)",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "frost2016atomic",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Frost",
+        "given": "Brad"
+      }
+    ],
+    "year": 2016,
+    "title": "Atomic Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Brad Frost",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780998296609",
+    "url": "https://atomicdesign.bradfrost.com/",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'atomic design brad frost' returned work OL22297494W, Atomic Design, Brad Frost, 2016, ISBN 9780998296609; online edition chapters 1, 2, 5 and table of contents read at atomicdesign.bradfrost.com",
+    "kind": "practitioner book (design systems method)",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "kholmatova2017design",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Kholmatova",
+        "given": "Alla"
+      }
+    ],
+    "year": 2017,
+    "title": "Design Systems",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Smashing Media AG",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9783945749586",
+    "url": "https://www.smashingmagazine.com/design-systems-book/",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'design systems kholmatova' returned work OL38056351W, Design Systems (eBook), Alla Kholmatova, 2017, Smashing Media AG, ISBN 9783945749586; publisher page smashingmagazine.com/design-systems-book/ read (288 pages, contents, case studies)",
+    "kind": "practitioner book based on interviews",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "suarez2017design",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Suarez",
+        "given": "Marco"
+      },
+      {
+        "family": "Anne",
+        "given": "Jina"
+      },
+      {
+        "family": "Sylor-Miller",
+        "given": "Katie"
+      },
+      {
+        "family": "Mounter",
+        "given": "Diana"
+      },
+      {
+        "family": "Stanfield",
+        "given": "Roy"
+      }
+    ],
+    "year": 2017,
+    "title": "Design Systems Handbook",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "DesignBetter.Co (InVision)",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Curtis",
+        "given": "Nathan"
+      }
+    ],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search 'Design Systems Handbook DesignBetter InVision Marco Suarez Jina Anne Katie Sylor-Miller Diana Mounter Roy Stanfield' returned the InVision announcement and Product Hunt listing (launch 29 November 2017) naming the five authors and editor Nathan Curtis; PDF text read via streaming.missioncollege.edu copy",
+    "kind": "practitioner handbook (free online book)",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "dtcg2025design",
+    "type": "report",
+    "authors": [
+      {
+        "literal": "Design Tokens Community Group"
+      }
+    ],
+    "year": 2025,
+    "title": "Design Tokens Format Module 2025.10 (with Design Tokens Resolver Module 2025.10)",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Design Tokens Community Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.designtokens.org/tr/2025.10/format/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://www.designtokens.org/tr/2025.10/format/ and /resolver/: both titled 2025.10, Final Community Group Report dated 28 October 2025, 'not a W3C Standard nor on the W3C Standards Track'",
+    "kind": "technical specification (community group report)",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "grudin1989case",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Grudin",
+        "given": "Jonathan"
+      }
+    ],
+    "year": 1989,
+    "title": "The case against user interface consistency",
+    "container_title": "Communications of the ACM",
+    "volume": "32",
+    "issue": "10",
+    "pages": "1164-1173",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/67933.67934",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query 'case against user interface consistency Grudin 1989' returned DOI 10.1145/67933.67934, CACM 32(10) 1164-1173, Oct 1989; full text read from Microsoft Research PDF",
+    "kind": "argued essay with worked examples",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "ozok2000measuring",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Ozok",
+        "given": "A. Ant"
+      },
+      {
+        "family": "Salvendy",
+        "given": "Gavriel"
+      }
+    ],
+    "year": 2000,
+    "title": "Measuring consistency of web page design and its effects on performance and satisfaction",
+    "container_title": "Ergonomics",
+    "volume": "43",
+    "issue": "4",
+    "pages": "443-460",
+    "publisher": "Informa UK Limited",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/001401300184332",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works query 'Measuring consistency of web page design ... Ozok Salvendy' returned DOI 10.1080/001401300184332, Ergonomics 43(4) 443-460, 2000; abstract summary read at pure.johnshopkins.edu record (four groups of 10 participants, error rate partly supported)",
+    "kind": "small between-subjects experiment",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "tidwell2005designing",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Tidwell",
+        "given": "Jenifer"
+      }
+    ],
+    "year": 2005,
+    "title": "Designing Interfaces: Patterns for Effective Interaction Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "O'Reilly Media",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0596008031",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'designing interfaces tidwell' returned work OL8167456W, Designing interfaces, Jenifer Tidwell, 2005, O'Reilly Media, ISBN 0596008031; chapter structure confirmed from UXmatters review by Leo Frishberg (Nov 2006)",
+    "kind": "expert pattern catalog (interaction design)",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "brand1994buildings",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Brand",
+        "given": "Stewart"
+      }
+    ],
+    "year": 1994,
+    "title": "How Buildings Learn: What Happens After They're Built",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Viking",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "0670835153",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'how buildings learn stewart brand' returned work OL823146W, How Buildings Learn, Stewart Brand, 1994, ISBNs including 0670835153; Wikipedia summary gives Viking Press 1994, ISBN 978-0-670-83515-7",
+    "kind": "craft and observation book (architecture)",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "govuk2025design",
+    "type": "webpage",
+    "authors": [
+      {
+        "literal": "Government Digital Service"
+      },
+      {
+        "literal": "Central Digital and Data Office"
+      }
+    ],
+    "year": 2025,
+    "title": "Government design principles (with GOV.UK Design System contribution criteria)",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "GOV.UK",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.gov.uk/guidance/government-design-principles",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched gov.uk/guidance/government-design-principles (first published 3 April 2012, last updated 2 April 2025, eleven principles, publishers GDS and CDDO) and design-system.service.gov.uk/community/ and /community/contribution-criteria/ (criteria Useful, Unique, Usable, Consistent, Versatile)",
+    "kind": "government design guidance",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "ibm2026carbon",
+    "type": "webpage",
+    "authors": [
+      {
+        "literal": "IBM"
+      }
+    ],
+    "year": 2026,
+    "title": "Carbon Design System: Color overview and contributing guide",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "IBM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://carbondesignsystem.com/guidelines/color/overview/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched carbondesignsystem.com/guidelines/color/overview/ (four themes White, Gray 10, Gray 90, Gray 100; role-based tokens; contrast minimums) and /contributing/get-started/overview/ (Carbon Labs, contribution methods; last updated Sep 1, 2026)",
+    "kind": "vendor design system documentation",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "nielsen1989coordinating",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      }
+    ],
+    "year": 1989,
+    "title": "Coordinating User Interfaces for Consistency",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Academic Press",
+    "publisher_place": "Boston",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Nielsen",
+        "given": "Jakob"
+      }
+    ],
+    "doi": "",
+    "isbn": "012518400X",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search 'coordinating user interfaces for consistency' returned work OL16583253W (Jakob Nielsen, Academic Press, 1989, ISBN 012518400X); Crossref returned chapter DOIs with prefix 10.1016/b978-0-08-050315-8 (1989); contents confirmed at nngroup.com/jakob/constbook.html",
+    "kind": "edited volume (corporate case studies on consistency)",
+    "lane": "23-design-systems"
+  },
+  {
+    "key": "vignelli1970graphics",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Vignelli",
+        "given": "Massimo"
+      },
+      {
+        "family": "Noorda",
+        "given": "Bob"
+      }
+    ],
+    "year": 2014,
+    "title": "New York City Transit Authority Graphics Standards Manual",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Standards Manual, LLC",
+    "publisher_place": "Brooklyn, NY",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://standardsmanual.com/products/nycta-graphics-standards-manual-full-size-edition",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search and fetch of standardsmanual.com (2014 reissue of the 1970 manual by Vignelli and Noorda of Unimark, 356 pages on publisher page), Core77 and Untapped New York articles (Unimark hired 1966 and 1968, manual issued 1970)",
+    "kind": "corporate graphics standards manual (reissue)",
+    "lane": "23-design-systems",
+    "original_year": 1970
+  }
+]

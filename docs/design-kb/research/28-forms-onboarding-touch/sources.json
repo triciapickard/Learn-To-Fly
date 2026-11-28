@@ -1,0 +1,624 @@
+[
+  {
+    "key": "parhi2006target",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Parhi",
+        "given": "Pekka"
+      },
+      {
+        "family": "Karlson",
+        "given": "Amy K."
+      },
+      {
+        "family": "Bederson",
+        "given": "Benjamin B."
+      }
+    ],
+    "year": 2006,
+    "title": "Target size study for one-handed thumb use on small touchscreen devices",
+    "container_title": "Proceedings of the 8th Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2006)",
+    "volume": "",
+    "issue": "",
+    "pages": "203-210",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1152215.1152260",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/1152215.1152260 returned title, authors Parhi, Karlson, Bederson, 2006, pages 203-210, publisher ACM. Full text read from author-hosted PDF (telerik.com/docs/default-source/blogs-docs/parhi-mobilehci06-pdf).",
+    "kind": "experiment (two-phase lab study, n=20)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "seckler2014designing",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Seckler",
+        "given": "Mirjam"
+      },
+      {
+        "family": "Heinz",
+        "given": "Silvia"
+      },
+      {
+        "family": "Bargas-Avila",
+        "given": "Javier A."
+      },
+      {
+        "family": "Opwis",
+        "given": "Klaus"
+      },
+      {
+        "family": "Tuch",
+        "given": "Alexandre N."
+      }
+    ],
+    "year": 2014,
+    "title": "Designing usable web forms: Empirical evaluation of web form improvement guidelines",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2014)",
+    "volume": "",
+    "issue": "",
+    "pages": "1275-1284",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/2556288.2557265",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/2556288.2557265 returned authors Seckler, Heinz, Bargas-Avila, Opwis, Tuch, 2014, pages 1275-1284. Full text PDF read at research.google.com/pubs/archive/42513.pdf; abstract matched Google Research publication page.",
+    "kind": "experiment (eye-tracking lab study, n=65)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "bargasavila2010simple",
+    "type": "chapter",
+    "authors": [
+      {
+        "family": "Bargas-Avila",
+        "given": "J. A."
+      },
+      {
+        "family": "Brenzikofer",
+        "given": "O."
+      },
+      {
+        "family": "Roth",
+        "given": "S. P."
+      },
+      {
+        "family": "Tuch",
+        "given": "A. N."
+      },
+      {
+        "family": "Orsini",
+        "given": "S."
+      },
+      {
+        "family": "Opwis",
+        "given": "K."
+      }
+    ],
+    "year": 2010,
+    "title": "Simple but crucial user interfaces in the World Wide Web: Introducing 20 guidelines for usable web form design",
+    "container_title": "User Interfaces",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "InTech",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Mátrai",
+        "given": "Rita"
+      }
+    ],
+    "doi": "10.5772/9500",
+    "isbn": "9789533070841",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.5772/9500 returned six authors, 2010, container User Interfaces, InTech, ISBN 9789533070841. Full chapter text read at cdn.intechopen.com/pdfs/10814.pdf (resolved from doi.org/10.5772/9500); editor Rita Mátrai per the chapter's source line.",
+    "kind": "literature review and guideline set",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "wobbrock2009userdefined",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Wobbrock",
+        "given": "Jacob O."
+      },
+      {
+        "family": "Morris",
+        "given": "Meredith Ringel"
+      },
+      {
+        "family": "Wilson",
+        "given": "Andrew D."
+      }
+    ],
+    "year": 2009,
+    "title": "User-defined gestures for surface computing",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2009)",
+    "volume": "",
+    "issue": "",
+    "pages": "1083-1092",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1518701.1518866",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/1518701.1518866 returned title, three authors, 2009, pages 1083-1092. Full text PDF read at microsoft.com/en-us/research/wp-content/uploads/2009/04/SurfaceGestures_CHI2009.pdf.",
+    "kind": "elicitation experiment (20 participants)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "holz2011understanding",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Holz",
+        "given": "Christian"
+      },
+      {
+        "family": "Baudisch",
+        "given": "Patrick"
+      }
+    ],
+    "year": 2011,
+    "title": "Understanding touch",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2011)",
+    "volume": "",
+    "issue": "",
+    "pages": "2501-2510",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1978942.1979308",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/1978942.1979308 returned Understanding touch, Holz and Baudisch, 2011, pages 2501-2510. Full text PDF read at static.siplab.org/papers/chi2011-understanding_touch.pdf.",
+    "kind": "experiments (three lab studies)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "henze2011100",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Henze",
+        "given": "Niels"
+      },
+      {
+        "family": "Rukzio",
+        "given": "Enrico"
+      },
+      {
+        "family": "Boll",
+        "given": "Susanne"
+      }
+    ],
+    "year": 2011,
+    "title": "100,000,000 taps: Analysis and improvement of touch performance in the large",
+    "container_title": "Proceedings of the 13th International Conference on Human Computer Interaction with Mobile Devices and Services (MobileHCI 2011)",
+    "volume": "",
+    "issue": "",
+    "pages": "133-142",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/2037373.2037395",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/2037373.2037395 returned title 100,000,000 taps with subtitle analysis and improvement of touch performance in the large, three authors, 2011, pages 133-142. Full paper text read from typeset.io mirror PDF; abstract matched Lancaster University portal record.",
+    "kind": "large-scale field study (app-store game)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "bragdon2011experimental",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Bragdon",
+        "given": "Andrew"
+      },
+      {
+        "family": "Nelson",
+        "given": "Eugene"
+      },
+      {
+        "family": "Li",
+        "given": "Yang"
+      },
+      {
+        "family": "Hinckley",
+        "given": "Ken"
+      }
+    ],
+    "year": 2011,
+    "title": "Experimental analysis of touch-screen gesture designs in mobile environments",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2011)",
+    "volume": "",
+    "issue": "",
+    "pages": "403-412",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1978942.1979000",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/1978942.1979000 returned title, four authors, 2011, pages 403-412. Full text PDF read at research.google.com/pubs/archive/37157.pdf.",
+    "kind": "experiment (within-subjects lab study, n=15)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "sears1991high",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Sears",
+        "given": "Andrew"
+      },
+      {
+        "family": "Shneiderman",
+        "given": "Ben"
+      }
+    ],
+    "year": 1991,
+    "title": "High precision touchscreens: Design strategies and comparisons with a mouse",
+    "container_title": "International Journal of Man-Machine Studies",
+    "volume": "34",
+    "issue": "4",
+    "pages": "593-613",
+    "publisher": "Elsevier",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1016/0020-7373(91)90037-8",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1016/0020-7373(91)90037-8 returned title, Sears and Shneiderman, April 1991, vol 34 issue 4 pages 593-613. Read the University of Maryland technical report version (1989, same title) at cs.umd.edu/users/ben/papers/Sears1991High.pdf; Penn State Pure record matched.",
+    "kind": "experiments (three lab studies); numbers read from the 1989 technical report version",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "penzo2006label",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Penzo",
+        "given": "Matteo"
+      }
+    ],
+    "year": 2006,
+    "title": "Label placement in forms",
+    "container_title": "UXmatters",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "UXmatters",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.uxmatters.com/mt/archives/2006/07/label-placement-in-forms.php",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched the article page on uxmatters.com (author Matteo Penzo, dated July 12, 2006); read method, four test forms, results and the 2011 comment by Caroline Jarrett. Das, McEwan and Douglas 2008 follow-up confirmed via Crossref 10.1145/1463160.1463217 and web search.",
+    "kind": "practitioner eye-tracking test (sample size not stated)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "w3c2024wcag",
+    "type": "standard",
+    "authors": [
+      {
+        "literal": "World Wide Web Consortium"
+      }
+    ],
+    "year": 2024,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "World Wide Web Consortium",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched w3.org/TR/WCAG22/ (W3C Recommendation, 12 December 2024, editors Campbell, Adams, Bradley Montgomery, Cooper, Kirkpatrick) and the Understanding documents for 2.5.8, 2.5.5 and 2.5.7 at w3.org/WAI/WCAG22/Understanding/.",
+    "kind": "standard",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "wroblewski2009inline",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Wroblewski",
+        "given": "Luke"
+      }
+    ],
+    "year": 2009,
+    "title": "Inline validation in web forms",
+    "container_title": "A List Apart",
+    "volume": "",
+    "issue": "291",
+    "pages": "",
+    "publisher": "A List Apart",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://alistapart.com/article/inline-validation-in-web-forms/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched the article on alistapart.com (Issue 291, September 1, 2009, with Etre, 22 users, six form versions); web search returned the same page; author's MIX10 slides at static.lukew.com repeat the figures.",
+    "kind": "practitioner usability study (n=22) with published comments",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "scott2024inline",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Scott",
+        "given": "Edward"
+      }
+    ],
+    "year": 2024,
+    "title": "Inline form validation",
+    "container_title": "Baymard Institute research articles",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Baymard Institute",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://baymard.com/research-articles/inline-form-validation",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched the article on baymard.com (author Edward Scott, research lead, published January 9, 2024); read findings and three implementation details. Exact headline wording was not confirmed, so the title is the URL slug form.",
+    "kind": "industry usability research (method summary only)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "christian2007helping",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Christian",
+        "given": "Leah Melani"
+      },
+      {
+        "family": "Dillman",
+        "given": "Don A."
+      },
+      {
+        "family": "Smyth",
+        "given": "Jolene D."
+      }
+    ],
+    "year": 2007,
+    "title": "Helping respondents get it right the first time: The influence of words, symbols, and graphics in web surveys",
+    "container_title": "Public Opinion Quarterly",
+    "volume": "71",
+    "issue": "1",
+    "pages": "113-125",
+    "publisher": "Oxford University Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1093/poq/nfl039",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1093/poq/nfl039 returned title, three authors, 2007, vol 71 issue 1 pages 113-125. Abstract read on academic.oup.com/poq/article-abstract/71/1/113/1885521. Full text not retrievable.",
+    "kind": "survey experiments (abstract only)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "carroll1987paradox",
+    "type": "chapter",
+    "authors": [
+      {
+        "family": "Carroll",
+        "given": "John M."
+      },
+      {
+        "family": "Rosson",
+        "given": "Mary Beth"
+      }
+    ],
+    "year": 1987,
+    "title": "The paradox of the active user",
+    "container_title": "Interfacing Thought: Cognitive Aspects of Human-Computer Interaction",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "MIT Press",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Carroll",
+        "given": "John M."
+      }
+    ],
+    "doi": "",
+    "isbn": "9780262031257",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library data API (api/books?bibkeys=ISBN:0262031256) returned Interfacing thought, John M. Carroll, MIT Press, 1987 (work OL18262599W). Chapter attribution confirmed by NN/g article nngroup.com/articles/paradox-of-the-active-user/ and a university lecture note. Chapter text and pages not read.",
+    "kind": "theoretical chapter (read via secondary accounts)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "carroll1984training",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Carroll",
+        "given": "John M."
+      },
+      {
+        "family": "Carrithers",
+        "given": "Caroline"
+      }
+    ],
+    "year": 1984,
+    "title": "Training wheels in a user interface",
+    "container_title": "Communications of the ACM",
+    "volume": "27",
+    "issue": "8",
+    "pages": "800-806",
+    "publisher": "Association for Computing Machinery",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/358198.358218",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref works/10.1145/358198.358218 returned title, Carroll and Carrithers, August 1984, vol 27 issue 8 pages 800-806, with the abstract. Companion Human Factors paper 10.1177/001872088402600402 abstract read at pure.psu.edu. Full text not read.",
+    "kind": "experiment (abstract only)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "kendrick2020mobileapp",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Kendrick",
+        "given": "Alita"
+      }
+    ],
+    "year": 2020,
+    "title": "Mobile-app onboarding: An analysis of components and techniques",
+    "container_title": "Nielsen Norman Group",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Nielsen Norman Group",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.nngroup.com/articles/mobile-app-onboarding/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched nngroup.com/articles/mobile-app-onboarding/ (author Alita Kendrick, June 21, 2020); read components, recommendations and noted it reports no study numbers.",
+    "kind": "practitioner analysis by a research firm",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "hoober2013how",
+    "type": "webpage",
+    "authors": [
+      {
+        "family": "Hoober",
+        "given": "Steven"
+      }
+    ],
+    "year": 2013,
+    "title": "How do users really hold mobile devices?",
+    "container_title": "UXmatters",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "UXmatters",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched the article on uxmatters.com (Steven Hoober, February 18, 2013); read method (1,333 observations), results, limitations, editor's note and the 2017 author comment retracting the reach drawings.",
+    "kind": "field observation (public places) with author's later correction",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "wroblewski2008web",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Wroblewski",
+        "given": "Luke"
+      }
+    ],
+    "year": 2008,
+    "title": "Web form design: Filling in the blanks",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Rosenfeld Media",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781933820248",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library data API (api/books?bibkeys=ISBN:9781933820248) returned Web form design, Luke Wroblewski, Rosenfeld Media, 2008; search API lists work OL8508572W. Publisher description at lukew.com/resources/web_form_design.asp; review at designersreviewofbooks.com. Book text not read.",
+    "kind": "practitioner book (read via description, review and author's slides)",
+    "lane": "28-forms-onboarding-touch"
+  },
+  {
+    "key": "jarrett2009forms",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Jarrett",
+        "given": "Caroline"
+      },
+      {
+        "family": "Gaffney",
+        "given": "Gerry"
+      }
+    ],
+    "year": 2009,
+    "title": "Forms that work: Designing web forms for usability",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Morgan Kaufmann",
+    "publisher_place": "Amsterdam",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781558607101",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library isbn/9781558607101.json returned Forms that work, subtitle designing web forms for usability, Elsevier and Morgan Kaufmann, 1558607102, xvii 199 p, contributor Gaffney, Gerry; Elsevier product page shop.elsevier.com/books/forms-that-work/jarrett/978-1-55860-710-1 lists authors Jarrett and Gaffney, three-layer model and table of contents. Book text not read.",
+    "kind": "practitioner book (read via publisher description)",
+    "lane": "28-forms-onboarding-touch"
+  }
+]

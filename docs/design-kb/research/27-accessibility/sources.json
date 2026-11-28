@@ -1,0 +1,720 @@
+[
+  {
+    "key": "w3c2023wcag",
+    "type": "standard",
+    "authors": [
+      {
+        "family": "Campbell",
+        "given": "Alastair"
+      },
+      {
+        "family": "Adams",
+        "given": "Chuck"
+      },
+      {
+        "family": "Bradley Montgomery",
+        "given": "Rachael"
+      },
+      {
+        "family": "Cooper",
+        "given": "Michael"
+      },
+      {
+        "family": "Kirkpatrick",
+        "given": "Andrew"
+      }
+    ],
+    "year": 2024,
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "W3C",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://www.w3.org/TR/WCAG22/ (W3C Recommendation page dated 12 December 2024, editors listed) and W3C news pages found by web search giving the original Recommendation date of 5 October 2023",
+    "kind": "technical standard",
+    "lane": "27-accessibility",
+    "original_year": 2023
+  },
+  {
+    "key": "w3c2023aria",
+    "type": "standard",
+    "authors": [
+      {
+        "family": "Diggs",
+        "given": "Joanmarie"
+      },
+      {
+        "family": "Nurthen",
+        "given": "James"
+      },
+      {
+        "family": "Cooper",
+        "given": "Michael"
+      },
+      {
+        "family": "MacLeod",
+        "given": "Carolyn"
+      }
+    ],
+    "year": 2023,
+    "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.2",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "W3C",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.w3.org/TR/wai-aria-1.2/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://www.w3.org/TR/wai-aria-1.2/ showing W3C Recommendation of 6 June 2023 with these editors; also fetched https://www.w3.org/TR/using-aria/ and the APG read-me-first page",
+    "kind": "technical standard",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "w3c2026authoring",
+    "type": "webpage",
+    "authors": [
+      {
+        "literal": "W3C WAI ARIA Authoring Practices Task Force"
+      }
+    ],
+    "year": 2026,
+    "title": "ARIA Authoring Practices Guide (APG)",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "W3C",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.w3.org/WAI/ARIA/apg/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://www.w3.org/WAI/ARIA/apg/about/ (maintainer, scope, 2026 copyright, change history since 2014) and https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/",
+    "kind": "living practice guide",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "seemanhorwitz2021making",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Seeman-Horwitz",
+        "given": "Lisa"
+      },
+      {
+        "family": "Bradley Montgomery",
+        "given": "Rachael"
+      },
+      {
+        "family": "Lee",
+        "given": "Steve"
+      },
+      {
+        "family": "Ran",
+        "given": "Ruoxi"
+      }
+    ],
+    "year": 2021,
+    "title": "Making Content Usable for People with Cognitive and Learning Disabilities",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "W3C",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.w3.org/TR/coga-usable/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://www.w3.org/TR/coga-usable/ showing W3C Working Group Note of 29 April 2021 with these editors, eight objectives and patterns",
+    "kind": "W3C Working Group Note (supplemental guidance)",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "etsi2021en301549",
+    "type": "standard",
+    "authors": [
+      {
+        "literal": "ETSI, CEN and CENELEC"
+      }
+    ],
+    "year": 2021,
+    "title": "EN 301 549 V3.2.1 (2021-03): Accessibility requirements for ICT products and services",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "ETSI",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.etsi.org/human-factors-accessibility/en-301-549-v3-the-harmonized-european-standard-for-ict-accessibility",
+    "verified_via": "websearch",
+    "verified_evidence": "Web search (ETSI, CEN-CENELEC, ANSI webstore listings) and fetched https://interoperable-europe.ec.europa.eu/collection/rolling-plan-ict-standardisation/accessibility-ict-products-and-services-rp2024 confirming V3.2.1 (2021-03), Decision 2021/1339 and WCAG 2.1 incorporation",
+    "kind": "European harmonised standard",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "accessboard2017ict",
+    "type": "standard",
+    "authors": [
+      {
+        "literal": "U.S. Access Board"
+      }
+    ],
+    "year": 2017,
+    "title": "Information and Communication Technology (ICT) Standards and Guidelines (Section 508 Standards and Section 255 Guidelines)",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "U.S. Access Board",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://www.access-board.gov/ict/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://www.access-board.gov/ict/ confirming final rule of 18 January 2017, 18 January 2018 reference date and WCAG 2.0 A and AA incorporation",
+    "kind": "US federal regulation",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "connell1997principles",
+    "type": "report",
+    "authors": [
+      {
+        "family": "Connell",
+        "given": "Bettye Rose"
+      },
+      {
+        "family": "Jones",
+        "given": "Mike"
+      },
+      {
+        "family": "Mace",
+        "given": "Ron"
+      },
+      {
+        "family": "Mueller",
+        "given": "Jim"
+      },
+      {
+        "family": "Mullick",
+        "given": "Abir"
+      },
+      {
+        "family": "Ostroff",
+        "given": "Elaine"
+      },
+      {
+        "family": "Sanford",
+        "given": "Jon"
+      },
+      {
+        "family": "Steinfeld",
+        "given": "Ed"
+      },
+      {
+        "family": "Story",
+        "given": "Molly"
+      },
+      {
+        "family": "Vanderheiden",
+        "given": "Gregg"
+      }
+    ],
+    "year": 1997,
+    "title": "The Principles of Universal Design, Version 2.0",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "The Center for Universal Design, NC State University",
+    "publisher_place": "Raleigh, NC",
+    "edition": "Version 2.0",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://design.ncsu.edu/research/center-for-universal-design/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://design.ncsu.edu/research/center-for-universal-design/ showing Principles of Universal Design Version 2.0 dated 1 April 1997, NC State Center for Universal Design, the ten authors and seven principles; web search confirmed the same",
+    "kind": "principles document (expert consensus)",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "microsoft2017inclusive",
+    "type": "webpage",
+    "authors": [
+      {
+        "literal": "Microsoft Design"
+      }
+    ],
+    "year": 2017,
+    "title": "Inclusive: A Microsoft Design Toolkit",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Microsoft",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://inclusive.microsoft.design/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://inclusive.microsoft.design/, https://learn.microsoft.com/en-us/training/modules/inclusive-design-principles/3-inclusive-design-principles and https://ixda.org/video/microsoft-inclusive-toolkit/ (page dated 8 February 2017, manual, activities and videos under a Creative Commons license); the manual PDF's own date was not confirmed",
+    "kind": "industry design toolkit",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "holmes2018mismatch",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Holmes",
+        "given": "Kat"
+      }
+    ],
+    "year": 2018,
+    "title": "Mismatch: How Inclusion Shapes Design",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "MIT Press",
+    "publisher_place": "Cambridge, MA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780262539487",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work /works/OL20186749W Mismatch by Kat Holmes, first published 2018, MIT Press, ISBNs 0262349620 and 0262349639; web search found the MIT Press description (ISBN 9780262539487 paperback)",
+    "kind": "trade book on inclusive design",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "lazar2015ensuring",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Lazar",
+        "given": "Jonathan"
+      },
+      {
+        "family": "Goldstein",
+        "given": "Daniel F."
+      },
+      {
+        "family": "Taylor",
+        "given": "Anne"
+      }
+    ],
+    "year": 2015,
+    "title": "Ensuring Digital Accessibility through Process and Policy",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Morgan Kaufmann",
+    "publisher_place": "Waltham, MA",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "9780128006467",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work /works/OL21096584W by Jonathan Lazar, Daniel Goldstein, Anne Taylor, 2015, Elsevier, ISBNs 0128006463 and 9780128007105; web search found the British Library contents record and publisher blurb",
+    "kind": "textbook on accessibility process and law",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "horton2013web",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Horton",
+        "given": "Sarah"
+      },
+      {
+        "family": "Quesenbery",
+        "given": "Whitney"
+      }
+    ],
+    "year": 2014,
+    "title": "A Web for Everyone: Designing Accessible User Experiences",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Rosenfeld Media",
+    "publisher_place": "Brooklyn, NY",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work /works/OL16857506W A Web for Everyone by Sarah Horton and Whitney Quesenbery, Rosenfeld Media, first publish year 2013, ISBNs 1306799503 and 1933820977; review at mkltesthead.com (Feb 2014) read for structure",
+    "kind": "practitioner book",
+    "lane": "27-accessibility",
+    "original_year": 2013
+  },
+  {
+    "key": "clarkson2003inclusive",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Clarkson",
+        "given": "John"
+      },
+      {
+        "family": "Keates",
+        "given": "Simeon"
+      },
+      {
+        "family": "Coleman",
+        "given": "Roger"
+      },
+      {
+        "family": "Lebbon",
+        "given": "Cherie"
+      }
+    ],
+    "year": 2003,
+    "title": "Inclusive Design: Design for the Whole Population",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "Springer",
+    "publisher_place": "London",
+    "edition": "",
+    "editors": [
+      {
+        "family": "Clarkson",
+        "given": "John"
+      },
+      {
+        "family": "Keates",
+        "given": "Simeon"
+      },
+      {
+        "family": "Coleman",
+        "given": "Roger"
+      },
+      {
+        "family": "Lebbon",
+        "given": "Cherie"
+      }
+    ],
+    "doi": "10.1007/978-1-4471-0001-0",
+    "isbn": "9781852337001",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref https://api.crossref.org/works/10.1007/978-1-4471-0001-0 returned title Inclusive Design, editors Clarkson, Keates, Coleman, Lebbon, 2003, Springer London, type book, ISBN 9781852337001 and 9781447100010; Open Library work /works/OL12631391W also matches",
+    "kind": "edited volume",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "fisk2009designing",
+    "type": "book",
+    "authors": [
+      {
+        "family": "Fisk",
+        "given": "Arthur D."
+      },
+      {
+        "family": "Rogers",
+        "given": "Wendy A."
+      },
+      {
+        "family": "Charness",
+        "given": "Neil"
+      },
+      {
+        "family": "Czaja",
+        "given": "Sara J."
+      },
+      {
+        "family": "Sharit",
+        "given": "Joseph"
+      }
+    ],
+    "year": 2009,
+    "title": "Designing for Older Adults: Principles and Creative Human Factors Approaches",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "CRC Press",
+    "publisher_place": "Boca Raton, FL",
+    "edition": "2nd",
+    "editors": [],
+    "doi": "",
+    "isbn": "9781420080551",
+    "url": "",
+    "verified_via": "openlibrary",
+    "verified_evidence": "Open Library search returned work /works/OL19490713W Designing for older adults by Fisk, Rogers, Charness, Czaja, Sharit (first published 2004, CRC Press); University of Illinois record experts.illinois.edu lists the second edition, 2009, CRC Press; second-edition title page and contents read from the scanned TOC PDF at library.mpib-berlin.mpg.de",
+    "kind": "human factors textbook",
+    "lane": "27-accessibility",
+    "original_year": 2004
+  },
+  {
+    "key": "lazar2007frustrates",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Lazar",
+        "given": "Jonathan"
+      },
+      {
+        "family": "Allen",
+        "given": "Aaron"
+      },
+      {
+        "family": "Kleinman",
+        "given": "Jason"
+      },
+      {
+        "family": "Malarkey",
+        "given": "Chris"
+      }
+    ],
+    "year": 2007,
+    "title": "What Frustrates Screen Reader Users on the Web: A Study of 100 Blind Users",
+    "container_title": "International Journal of Human-Computer Interaction",
+    "volume": "22",
+    "issue": "3",
+    "pages": "247-269",
+    "publisher": "",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1080/10447310709336964",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref query returned DOI 10.1080/10447310709336964, International Journal of Human-Computer Interaction 22(3) pp. 247-269, 2007, authors Lazar, Allen, Kleinman, Malarkey",
+    "kind": "diary study",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "petrie2007relationship",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Petrie",
+        "given": "Helen"
+      },
+      {
+        "family": "Kheir",
+        "given": "Omar"
+      }
+    ],
+    "year": 2007,
+    "title": "The relationship between accessibility and usability of websites",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2007)",
+    "volume": "",
+    "issue": "",
+    "pages": "397-406",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1240624.1240688",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1145/1240624.1240688, Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, ACM, 2007-04-29, pages 397-406; White Rose record eprints.whiterose.ac.uk/id/eprint/7394/ gives the abstract",
+    "kind": "user study with expert comparison",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "power2012guidelines",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Power",
+        "given": "Christopher"
+      },
+      {
+        "family": "Freire",
+        "given": "Andre Pimenta"
+      },
+      {
+        "family": "Petrie",
+        "given": "Helen"
+      },
+      {
+        "family": "Swallow",
+        "given": "David"
+      }
+    ],
+    "year": 2012,
+    "title": "Guidelines are only half of the story: accessibility problems encountered by blind users on the web",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2012)",
+    "volume": "",
+    "issue": "",
+    "pages": "433-442",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/2207676.2207736",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1145/2207676.2207736, authors Power, Freire, Petrie, Swallow, CHI proceedings, ACM, 2012-05-05, pages 433-442; web search summaries of the abstract (32 blind users, 16 sites, 1,383 problems, 50.4% covered)",
+    "kind": "task-based user study",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "newell2011user",
+    "type": "article-journal",
+    "authors": [
+      {
+        "family": "Newell",
+        "given": "Alan F."
+      },
+      {
+        "family": "Gregor",
+        "given": "Peter"
+      },
+      {
+        "family": "Morgan",
+        "given": "Maggie"
+      },
+      {
+        "family": "Pullin",
+        "given": "Graham"
+      },
+      {
+        "family": "Macaulay",
+        "given": "Catriona"
+      }
+    ],
+    "year": 2011,
+    "title": "User-Sensitive Inclusive Design",
+    "container_title": "Universal Access in the Information Society",
+    "volume": "10",
+    "issue": "3",
+    "pages": "235-243",
+    "publisher": "Springer",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1007/s10209-010-0203-y",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref https://api.crossref.org/works/10.1007/s10209-010-0203-y returned Universal Access in the Information Society 10(3) pp. 235-243, print date 2011-08, online 2010-07-11, authors Newell, Gregor, Morgan, Pullin, Macaulay; Dundee repository page confirms abstract",
+    "kind": "position paper with practice case work",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "shinohara2011shadow",
+    "type": "paper-conference",
+    "authors": [
+      {
+        "family": "Shinohara",
+        "given": "Kristen"
+      },
+      {
+        "family": "Wobbrock",
+        "given": "Jacob O."
+      }
+    ],
+    "year": 2011,
+    "title": "In the shadow of misperception: assistive technology use and social interactions",
+    "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2011)",
+    "volume": "",
+    "issue": "",
+    "pages": "705-714",
+    "publisher": "ACM",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "10.1145/1978942.1979044",
+    "isbn": "",
+    "url": "",
+    "verified_via": "crossref",
+    "verified_evidence": "Crossref returned DOI 10.1145/1978942.1979044, Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, ACM, 2011-05-07, pages 705-714; full text read from faculty.washington.edu/wobbrock/pubs/chi-11.03.pdf",
+    "kind": "interview study (n=20)",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "webaim2026million",
+    "type": "report",
+    "authors": [
+      {
+        "literal": "WebAIM"
+      }
+    ],
+    "year": 2026,
+    "title": "The WebAIM Million: An accessibility analysis of the top 1,000,000 home pages",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "WebAIM, Utah State University",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://webaim.org/projects/million/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://webaim.org/projects/million/ (2026 report, February 2026 scan, 95.9% of pages with failures) and https://webaim.org/projects/million/2019 (February 2019 data)",
+    "kind": "annual automated census",
+    "lane": "27-accessibility"
+  },
+  {
+    "key": "webaim2026screen",
+    "type": "report",
+    "authors": [
+      {
+        "literal": "WebAIM"
+      }
+    ],
+    "year": 2026,
+    "title": "Screen Reader User Survey #11",
+    "container_title": "",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "publisher": "WebAIM, Utah State University",
+    "publisher_place": "",
+    "edition": "",
+    "editors": [],
+    "doi": "",
+    "isbn": "",
+    "url": "https://webaim.org/projects/screenreadersurvey11/",
+    "verified_via": "websearch",
+    "verified_evidence": "Fetched https://webaim.org/projects/screenreadersurvey11/ (July to August 2026, 1,780 valid responses) and https://webaim.org/projects/screenreadersurvey10/ (December 2023 to January 2024, 1,539 responses)",
+    "kind": "self-selected survey",
+    "lane": "27-accessibility"
+  }
+]

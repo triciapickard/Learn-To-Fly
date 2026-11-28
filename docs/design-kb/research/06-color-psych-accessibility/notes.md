@@ -1,0 +1,707 @@
+# Lane 06: color psychology, color vision deficiency, contrast and polarity
+
+Evidence notes for the Learn to Fly Design Knowledge Base. Sections are ordered from the claims about color meaning (and their weakness) through color in learning, color vision deficiency, contrast models and display polarity.
+
+## elliot2007color
+
+Elliot, Maier, Moller, Friedman & Meinhardt (2007), "Color and psychological functioning: The effect of red on performance attainment", Journal of Experimental Psychology: General 136(1), 154-168.
+
+### Core claims
+
+The paper is the founding experiment of the modern "red impairs performance" literature. It proposes that red is learned to signal danger and failure in achievement settings, and that merely perceiving red therefore evokes avoidance motivation, which in turn lowers performance on tasks that matter to the person. The abstract reports four experiments in which the brief perception of red before an important test, with an IQ test given as the example, impaired performance, and states that the effect appears to take place outside participants' conscious awareness. Two further experiments tested the proposed mechanism: a behavioral measure (task choice) and a psychophysiological measure (cortical activation) were used to link red to avoidance motivation. The authors conclude that care must be taken in how red is used in achievement contexts and that color can act as a subtle environmental cue with real influence on behavior.
+
+### Specifics
+
+Evidence type: a set of between-participants laboratory experiments with students, published in a top general-psychology journal. The independent variable was the color of a small stimulus (for example a test cover or booklet) viewed briefly before the task; the comparison colors were green and gray or other achromatic controls (Elliot's 2015 review lists the study as showing worse intelligence-test performance after viewing red versus green or gray, and as showing greater right than left frontal cortical activation after viewing red before an ostensible intelligence test, which the review reads as increased caution and avoidance; frontiersin.org/articles/10.3389/fpsyg.2015.00368). The theoretical frame is the approach-avoidance motivation tradition: red is hypothesized to work as an implicit avoidance cue, not as an arousing stimulus that merely distracts. The companion article by Elliot and Maier in Current Directions in Psychological Science (2007) describes the same program: a general model of color and psychological functioning, a hypothesis about red in achievement contexts, and a series of experiments in which a brief glimpse of red evoked avoidance motivation and undermined intellectual performance without awareness or intention.
+
+I could not retrieve participant numbers per experiment, the exact cover story or effect sizes this session, so none are given here. The meta-analysis by Gnambs (2020) notes that the effect appeared clearly among adolescents in the original work, which matters for how far the finding was ever expected to generalize to adult learners.
+
+### Replication and criticism
+
+This is one of the most heavily tested color-psychology findings, and the verdict has turned negative. Gnambs' random-effects meta-analysis of 38 samples found that anagram and knowledge tests showed no significant effect of red, that reasoning tests showed a pooled effect that shrank dramatically from the early studies to later ones, and that after correcting for publication bias there was no evidential value for an effect of red on intellectual performance. Direct and close replications failed to corroborate the original pattern, and Elliot's own 2015 review calls the whole field nascent and urges large samples, preregistration and spectral color control. Elliot's 2015 review lists weaknesses common to this research area (underpowered samples, uncontrolled viewing conditions, color specified at the device level rather than spectrally), and the original paper was an early, small-sample demonstration in that tradition. Treat the 2007 paper as a historically important hypothesis that did not survive replication, not as a design rule.
+
+### Implications for LTF
+
+1. Do not justify any LTF color choice by "red lowers test performance" or "blue helps thinking". Quiz and checkride-style screens may use red for errors on the ground of ordinary signal conventions (see Okabe and Ito, WCAG notes), but not on the ground of a priming effect.
+2. If LTF shows a red incorrect-answer state, the reason to be careful is color vision deficiency and redundancy (icon plus text), not an assumed anxiety effect on learners.
+3. Learner-facing copy must never claim "color X improves memory or calm". This is the kind of claim the KB's evidence rules treat as contested.
+4. Any future A/B test of colors on quiz outcomes should be preregistered and powered well above the typical sample in this literature, because the original-sized effects did not hold.
+
+Confirmed this session: Crossref record 10.1037/0096-3445.136.1.154 (title, five authors, JEP: General 136(1) 154-168); Europe PMC abstract for the same DOI; Crossref abstract of the companion Elliot and Maier 2007 CDPS paper (10.1111/j.1467-8721.2007.00514.x); Elliot (2015) full text at pmc.ncbi.nlm.nih.gov/articles/PMC4383146 and frontiersin.org (Table 1 description); Gnambs (2020) full text at pmc.ncbi.nlm.nih.gov/articles/PMC7704521.
+
+## elliot2014color
+
+Elliot & Maier (2014), "Color psychology: Effects of perceiving color on psychological functioning in humans", Annual Review of Psychology 65, 95-120.
+
+### Core claims
+
+This is the authors' own state-of-the-field review, written by the two researchers most associated with the modern revival of color psychology. The abstract frames it as a review of work that looks beyond color aesthetics to the link between color and psychological functioning. The authors set a historical context and highlight the methodological problems that hampered earlier empirical work, then overview theoretical and methodological advances of the preceding decade and review emerging empirical findings. The review concentrates on color in achievement and in affiliation and attraction contexts, and also covers consumer behavior and food and beverage evaluation and consumption. The headline conclusion has two halves. First, color can carry important meaning and can affect affect, cognition and behavior. Second, the literature "remains at a nascent stage of development", and considerable work on boundary conditions, moderators and real-world generalizability is needed before strong conceptual statements and recommendations for application are warranted.
+
+### Specifics
+
+Evidence type: narrative review by principal investigators of the work reviewed (so a source with a stake in the field, but one that is notably cautious). The abstract does not give numbers. The same authors' 2015 follow-up (Elliot, Frontiers in Psychology 6:368, read in full this session) spells out the methodological checklist that the 2014 review argues for, and it is the better place to find concrete rules:
+
+- Color has three basic properties, hue, lightness and chroma. Most theory has focused on hue (especially red); chroma has been almost entirely overlooked.
+- Many studies control color at the device level or not at all, rather than at the spectral level, so focal and non-focal color properties are confounded.
+- Viewing distance, viewing angle, ambient light and background colors are often uncontrolled; web-based studies often cannot control them.
+- Research back to the late nineteenth century often lacked experimenter blindness, did not identify and exclude color-deficient participants, did not standardize exposure time and used underpowered samples.
+- Elliot's 2015 Table 1 limits itself to findings supported by at least five independent labs and lists examples such as faster visual search for desaturated red targets, blue light and alertness, and the contested red-performance and red-in-sport findings.
+- Color-in-context theory (Elliot and Maier, 2012) holds that color meaning comes from biological predispositions combined with learning, and is therefore context dependent: the example given is that blue on a ribbon signals first place while blue on meat signals rot.
+
+### Replication and criticism
+
+The review predates the 2020 meta-analysis and most of the large failed replications, so read it together with Steele (2014), Gnambs (2020) and Peperkoorn et al. (2024) in this lane. Its own caution proved justified. A logical caution is mine, not a cited criticism: a theory that says effects depend on culture, task, age and color variant is hard to falsify with any single failed replication, so the claim needs preregistered tests of the moderators. Elliot's 2015 piece itself notes that moderators such as culture, gender, age, task type and color variant may explain inconsistent results, and also that initial demonstrations were often underpowered.
+
+### Implications for LTF
+
+1. Use this review as the KB's licence for a modest stance: color has meaning, but meaning depends on context. In LTF, red on an engine gauge means something because of aviation convention (which the lessons teach), not because of a universal reaction.
+2. Specify LTF's palette in measured terms (lightness, chroma, hue in a perceptual space) and test it on real screens, which is the discipline the review asks of research.
+3. When a stakeholder asks for "psychologically proven" colors, answer from this review: the field is nascent, and effects are small and context bound.
+4. For learners with unknown color vision and unknown screens, redundancy beats any hue-based persuasion.
+
+Confirmed this session: Crossref 10.1146/annurev-psych-010213-115035 (volume 65, issue 1, pp. 95-120, two authors); Europe PMC abstract for the same DOI; Elliot (2015) full text at pmc.ncbi.nlm.nih.gov/articles/PMC4383146 and frontiersin.org/articles/10.3389/fpsyg.2015.00368 (Crossref 10.3389/fpsyg.2015.00368, Frontiers in Psychology 6).
+
+## palmer2010ecological
+
+Palmer & Schloss (2010), "An ecological valence theory of human color preference", Proceedings of the National Academy of Sciences 107(19), 8877-8882.
+
+### Core claims
+
+The paper asks why people in general like some colors more than others, and answers with the ecological valence theory (EVT): average color preferences arise from people's average affective responses to the objects associated with those colors. People like colors strongly associated with objects they like (blues with clear skies and clean water) and dislike colors strongly associated with objects they dislike (browns with feces and rotten food). The authors argue that EVT fits the data better than the main alternatives (a biological-adaptation account based on cone contrasts, and a color-emotion account) while using fewer free parameters, and that it supplies a more plausible causal story.
+
+### Specifics
+
+Evidence type: a correlational study with several small convenience samples, plus some preliminary follow-ups. All numbers below come from the open full text (pmc.ncbi.nlm.nih.gov/articles/PMC2889342).
+
+- Stimuli were 32 chromatic colors from the Berkeley Color Project: eight hues (four unique, four binary) crossed with four saturation-lightness "cuts" (saturated, light, muted, dark).
+- Color preference was rated by 48 participants. Separate groups listed objects for each color (74 undergraduates, yielding 3,874 descriptions sorted into 222 object categories), rated how much they liked each object (98 undergraduates) and rated how well each object's color matched each screen color (31 participants).
+- The weighted affective valence estimate (WAVE) combines those three tasks with no free parameters. It correlated with average preference at r = +0.893, accounting for 80 percent of the variance with a single predictor.
+- Alternatives explained less: a color-appearance model 60 percent, a color-emotion model 55 percent, and a cone-contrast model 37 percent (it had explained 70 percent in its original authors' data but fell on the wider gamut used here).
+- Hue pattern: preference peaks at blue and dips at chartreuse; saturated colors were preferred to light and muted ones; dark orange (brown) and dark yellow (olive) were disliked while dark red and dark green were liked. WAVE under-predicted the dislike of dark orange and liking of dark red.
+- Preliminary extensions: within clusters of similar-preference people the WAVE correlations (0.77, 0.83) beat between-cluster ones (0.47, 0.64); American WAVEs predicted American preferences better than Japanese ones and vice versa; school-spirit colors shifted preferences between Berkeley and Stanford students; priming with liked red or green objects raised preference for those colors, while the reverse effect for disliked objects was not reliable.
+
+### Replication and criticism
+
+The authors state the main evidence is correlational, that they consider reverse causation implausible, and that whether associations are innate or learned remains open. The sample is modern Americans from the Bay Area, mostly undergraduates; the cross-cultural and priming results are explicitly preliminary. A critical observation from the Wilms and Oberfeld paper in this lane is that preference ("I like this color") is not the same as emotional effect ("this color makes me feel good"), so EVT should not be stretched to predict how colors change mood or performance. The theory has been influential in color science and has been extended by its authors, but I did not retrieve independent replications this session, so treat the effect sizes as one lab's.
+
+### Implications for LTF
+
+1. Preference for a hue is learned and cultural to a real degree, and a "default best color" does not exist. Blue-leaning accents are on safe ground for average appeal, but this is a weak consideration compared with legibility.
+2. Do not assume a muted palette is "calming" for nervous first-time flyers; the paper gives no support for mood effects.
+3. If LTF ever personalizes themes, the within-group versus between-group pattern suggests that preference differs across people, so a theme picker is better than one chosen palette.
+4. Avoid brown and olive as brand accents for headline UI states, since dark yellows and oranges were the least liked cuts in this sample (a mild consideration only).
+
+Confirmed this session: Crossref 10.1073/pnas.0906172107 (volume 107, issue 19, pp. 8877-8882); Europe PMC abstract; full text at pmc.ncbi.nlm.nih.gov/articles/PMC2889342 (sample sizes, r values, variance table).
+
+## valdez1994effects
+
+Valdez & Mehrabian (1994), "Effects of color on emotions", Journal of Experimental Psychology: General 123(4), 394-409.
+
+### Core claims
+
+The paper is the standard citation for the claim that saturation and brightness matter more than hue in emotional reactions to color. It investigated emotional reactions to color hue, saturation and brightness using Munsell color chips and the Pleasure-Arousal-Dominance (PAD) emotion model. The abstract reports that saturation and brightness had strong and consistent effects, that brightness effects were nearly the same for chromatic and achromatic colors. Hue also mattered (see below), but the strong, consistent effects were those of saturation and brightness. This reframed the older "red excites, blue calms" folklore as mostly a lightness and chroma story.
+
+### Specifics
+
+Evidence type: laboratory rating study with color chips, from the PAD tradition of Mehrabian and Russell. From the abstract, the standardized regression equations were Pleasure = .69B + .22S, Arousal = -.31B + .60S and Dominance = -.76B + .32S (B for brightness, S for saturation). Read plainly: brighter colors feel more pleasant, less arousing and less dominance-inducing, whereas more saturated colors feel more arousing, somewhat more pleasant and somewhat more dominance-inducing. Hue results: blue, blue-green, green, red-purple, purple and purple-blue were the most pleasant hues, whereas yellow and green-yellow were the least pleasant. Green-yellow, blue-green and green were the most arousing, and purple-blue and yellow-red the least arousing; green-yellow induced greater dominance than red-purple. Note what this does to common belief: in these data red was not singled out as the most arousing hue.
+
+The full text and exact sample size were not retrievable this session, so sample details are omitted. A later paper (Wilms and Oberfeld, 2018, read in full) reports that Valdez and Mehrabian presented chromatic colors with Munsell brightness values between 10 and 60 (and achromatic between 5 and 80) under light of about 5000 K, and found a U-shaped relation between brightness and arousal.
+
+### Replication and criticism
+
+Wilms and Oberfeld (2018) identify two limits. Valdez and Mehrabian did not report colorimetric measurements nor exact Munsell values, so their stimuli cannot be compared with other work, and it is unlikely brightness and saturation were varied independently, so the brightness effect on arousal may be confounded with saturation. They also point out that the task was a rating of a color, not of one's own emotional state while viewing it. Wilms and Oberfeld largely agree on the strong role of saturation and brightness but find red the most arousing hue once saturation and brightness are controlled, contrary to the green-yellow peak here. So the broad point (all three dimensions matter, saturation and brightness do a lot of work) has support, while the specific hue ranking does not replicate cleanly.
+
+### Implications for LTF
+
+1. When picking accent and state colors, adjust lightness and chroma deliberately; a "calm blue" at high chroma is not calm in any tested sense.
+2. Desaturating non-critical UI (cards, charts, progress fills) and reserving saturation for the one thing the learner should act on is consistent with the arousal findings and with plain visual hierarchy.
+3. Do not cite this paper for "yellow is cheerful" or "red is exciting" copy. It reports yellow among the least pleasant hues in this sample.
+4. For fly mode, high-chroma large areas next to a dim simulator cockpit are the most arousing and least advisable choice, though this is an inference from the arousal results, not a tested outcome.
+
+Confirmed this session: Crossref 10.1037/0096-3445.123.4.394; Europe PMC abstract including the regression equations; Wilms and Oberfeld (2018) full text (its discussion of the Valdez and Mehrabian stimuli).
+
+## whitfield1990color
+
+Whitfield & Wiltshire (1990), "Color psychology: A critical review", Genetic, Social, and General Psychology Monographs 116(4), 385-411.
+
+### Core claims
+
+This monograph review is the standard "warning label" on the older color-psychology literature. Its abstract says that reviewing color psychology poses organizational problems because of the size and diversity of the literature, the range of issues and the differing degrees of experimental rigor. The authors therefore chose a selective approach, focusing on laboratory studies involving an evaluative response to color patches or chips, which they describe as numerically the main body of work in color psychology and in experimental aesthetics generally. The critical stance is in the title: the point of the review is to judge how much the evidence can bear.
+
+### Specifics
+
+Evidence type: narrative critical review (1990). I could confirm only the abstract and citation details this session (PubMed record 2289687, Europe PMC), and not the body of the monograph, so the specifics here are deliberately limited to what is documented in the abstract and in later papers that cite it.
+
+- Scope: laboratory preference and evaluation studies using patches or chips.
+- Later citing work reads the review as a source on interpretive ambiguity and uncontrolled stimuli. Elliot's 2015 review cites Whitfield and Wiltshire for the ambiguity of interpretation of uncontrolled research, in its argument that failing to specify and control color at the spectral level makes confounding of focal and non-focal color properties inevitable (pmc.ncbi.nlm.nih.gov/articles/PMC4383146).
+- Wilms and Oberfeld (2018) cite the review (cf.) when arguing that rating the connotation of a color on semantic differentials (warm-cool and similar scales) is not direct information about emotional effects of color on the viewer.
+
+I did not confirm any statistics, section structure or the specific recommendations in the monograph, and I will not reconstruct them. Anyone who needs them should read the monograph itself.
+
+### Replication and criticism
+
+As a review the work cannot be replicated, but its main thrust has been borne out by what followed: tightly controlled studies that vary hue, saturation and brightness separately (Wilms and Oberfeld) show that the older confounded designs could not separate the dimensions, and large replications of headline "color effects" (Steele; Gnambs; Peperkoorn et al.) have shrunk or erased them. The review is also a reminder that the older literature is mostly about preference ratings of patches and that preference is not performance. Its limitation is its date: it predates calibrated displays in common use, the modern color-appearance models and the post-2010 replication movement.
+
+### Implications for LTF
+
+1. Treat older "color means X" claims in any source, including design blogs that cite psychology, as unverified unless they come with controlled stimuli. This monograph is the citation to give when a team member brings in a color-meaning chart.
+2. Do not build lesson copy that tells learners a color "feels" a certain way. State only conventions (for example, how instruments mark ranges) and cite the aviation source for those.
+3. When LTF itself tests palettes, use measured stimuli and ask for task outcomes (error rates, time to read a gauge), not liking alone.
+4. Record in the KB that preference ratings of patches are weak evidence for design decisions about information display.
+
+Confirmed this session: PubMed record (pubmed.ncbi.nlm.nih.gov/2289687) and Europe PMC record (Whitfield TW, Wiltshire TJ; Genetic, Social, and General Psychology Monographs, 1990, pp. 385-411, volume 116 issue 4); abstract text; citing passages in Elliot (2015) and Wilms and Oberfeld (2018). Crossref did not return this item, so verification is by web search and Europe PMC.
+
+## wilms2018color
+
+Wilms & Oberfeld (2018), "Color and emotion: effects of hue, saturation, and brightness", Psychological Research 82(5), 896-914.
+
+### Core claims
+
+This is a tightly controlled modern test of how color dimensions affect emotional state. Previous studies often failed to control all three perceptual dimensions of color (hue, saturation, brightness). Here the three were varied independently in a factorial design, and participants rated their current emotional state (valence and arousal) while skin conductance and heart rate were recorded. The abstract concludes that color stimuli do affect the emotional state of the observer, but that effects are not determined by hue alone, as often assumed: all three dimensions and their interactions matter.
+
+### Specifics
+
+Evidence type: single laboratory experiment with physiological measures, N = 62 (read from the abstract and the full text PDF).
+
+- Stimuli: 27 chromatic colors (hue blue, green, red; saturation low, medium, high; brightness dark, medium, bright) plus 3 brightness-matched achromatic colors, shown on an LED panel in a darkened shielded cabin at a 1.5 m viewing distance, subtending about 18 degrees. Colors were specified in CIE L*a*b* terms with measured luminance; the maximum panel luminance was 223 cd/m2 and a neutral gray adapting field preceded each stimulus. Each color was viewed for 30 s.
+- Ratings: saturated and bright colors were associated with higher arousal. Hue also had a significant effect on arousal, increasing from blue and green to red (with saturation and brightness controlled, red the most arousing, then green, then blue). Valence ratings were highest for saturated and bright colors and also depended on hue; blue got higher valence than other hues, but only at high saturation, and the pattern reversed at low saturation.
+- Physiology: saturated and bright colors caused larger skin conductance responses; achromatic colors produced a short-term heart rate deceleration while chromatic colors caused an acceleration. Effects on physiology were weaker than on ratings, and 12 of 62 participants produced no skin conductance responses.
+- Interactions: hue and brightness affected arousal only for relatively saturated colors.
+
+### Replication and criticism
+
+The study is a deliberate improvement on Valdez and Mehrabian (1994), whose stimuli were not colorimetrically specified. The authors note that their results broadly agree with that earlier work on saturation and brightness but differ on details, such as the highest-arousal hue (green-yellow before, red here) and the shape of the saturation-valence relation (monotonic before, peaking at medium saturation here). Limits: a single sample of 62 adults, large patches viewed alone in a dark room (not the mixed, small-area color of a screen UI), self-report plus weak physiological signals, no behavioral outcome, and a 30 s exposure. Effects were of mood-rating size, not performance. It is a single study and I did not find replications this session.
+
+### Implications for LTF
+
+1. Color and mood effects are real in controlled settings but depend on saturation and brightness as much as hue; LTF should tune chroma and lightness, not pick "a calm hue".
+2. The finding that saturated large areas raise arousal supports restraint with fully saturated large surfaces, especially in a dark fly-mode context where the viewer's eyes are adapted to a dim room.
+3. The interaction (blue is most pleasant only at high saturation) is a reminder that a hue name in a design token is not a design decision; ship tokens as measured lightness/chroma/hue triplets in a perceptual space.
+4. Since the experiment was in the dark with 1.5 m viewing, extrapolating to a laptop used next to a bright monitor is speculative. Any LTF claim about emotional effect should be labeled as such.
+
+Confirmed this session: Crossref 10.1007/s00426-017-0880-8 (volume 82, issue 5, pp. 896-914, published online 2017, print 2018); Europe PMC abstract; full text PDF downloaded and read (apparatus, stimuli, results and discussion).
+
+## labrecque2012exciting
+
+Labrecque & Milne (2012), "Exciting red and competent blue: the importance of color in marketing", Journal of the Academy of Marketing Science 40(5), 711-727 (online 2011).
+
+### Core claims
+
+The paper argues that color is an under-studied lever in marketing and that hue, saturation and value shape how consumers perceive a brand. Per the abstract as summarized by the publisher-indexed page, the authors drew on aesthetics, color psychology and associative learning, and report four studies. The central finding that circulated widely is that red logos are rated as more "exciting" and blue logos as more "competent" on Aaker's brand personality scale, which the paper presents as evidence that colors communicate brand meaning.
+
+### Specifics
+
+Evidence type: consumer-research experiments reported in a marketing journal (sample details not confirmed this session), not a perception or psychophysics study. From the abstract (colab.ws/articles/10.1007/s11747-010-0245-y): Study 1 maps hues onto brand personality dimensions; Study 2 examines how saturation and value strengthen those personality traits; Study 3 shows marketers can use color strategically to alter brand personality and purchase intent; Study 4 finds that color affects how likable and familiar a brand seems. Secondary descriptions (a business-school thesis that tested red and blue logos, read via the search results) report the same mapping of blue to Competence and red to Excitement, and a partial relationship of bright colors such as yellow and orange to excitement in logos. I was unable to retrieve the full text, so sample sizes, the exact set of colors, effect sizes and the statistical tests are not given here, and nothing below should be quoted as a number.
+
+The paper's framing is of association and fit: brand personality is rated against the color of a stimulus logo, and the authors emphasize the congruence of color with intended brand meaning.
+
+### Replication and criticism
+
+This is a perception-of-brands study, so it measures ratings of imagery, not behavior or performance. It uses color as an independent variable with limited control over spectral properties and display conditions, a general weakness Elliot (2015) lists for the field. My own caution, not a cited finding: findings like this are easily stretched into blanket rules such as "blue means trust". I did not find, in the sources I retrieved, either a preregistered replication or a contradicting study, so its status is "plausible association in rating studies, not tested for behavioral consequences". The related finding that color associations are learned and context dependent (Elliot and Maier's color-in-context theory; Palmer and Schloss on ecological valence) implies that a logo-color-personality mapping should vary across cultures and categories, so the original US-based mapping is not a universal law.
+
+### Implications for LTF
+
+1. If LTF builds a brand identity, a blue-leaning palette can be defended as appearing "competent" to US adults in rating studies. The case is weak, so do not use it to override legibility or accessibility constraints.
+2. Do not copy "brand color psychology charts" into the KB as rules. Such charts descend from papers like this one but strip the context.
+3. For in-lesson UI, brand-personality arguments are irrelevant; what matters is whether the state color is discriminable and legible (see the CVD and contrast sources).
+4. If the team wants evidence about trust in a flight-training product, the right test is an A/B comparison with LTF's own audience, not a citation.
+
+Confirmed this session: Crossref 10.1007/s11747-010-0245-y (volume 40, issue 5, pp. 711-727, print year 2012; Crossref lists the online date as 2011); abstract summary and study list from colab.ws/articles/10.1007/s11747-010-0245-y; secondary descriptions from search results (thesis summaries). Full text was not accessible, so details beyond the abstract are marked unconfirmed.
+
+## mehta2009blue
+
+Mehta & Zhu (2009), "Blue or red? Exploring the effect of color on cognitive task performances", Science 323(5918), 1226-1229.
+
+### Core claims
+
+The paper tries to reconcile an inconsistent literature in which some studies found that blue or green yields better cognitive performance than red and others found the opposite. The authors propose that the answer depends on the task: red induces avoidance motivation and so improves performance on detail-oriented tasks, whereas blue induces approach motivation and so improves performance on creative tasks. They also report a process account, that activation of these alternative motivations mediates the color effect.
+
+### Specifics
+
+Evidence type: six reported experiments, all with small to moderate samples, published in a high-profile general science journal. From the abstract: Study 1 (n = 69) showed that red versus blue induced avoidance versus approach motivation; Studies 2 and 3 (n = 208 and n = 118) showed that red enhanced a detail-oriented task while blue enhanced a creative task; the results were replicated in product design (Study 4, n = 42) and persuasive message evaluation (Study 5, n = 161); Study 6 (n = 68) indicated that the effects occur outside individuals' consciousness; and process evidence suggested the motivations mediate the effect.
+
+Notice a tension with Elliot et al. (2007): that line found red harmful to a test performance, whereas Mehta and Zhu found it helpful for detail-oriented tasks. The two are reconciled by task type, but the reconciliation itself is a flexible theory, a point that matters when judging replication (see below).
+
+### Replication and criticism
+
+Steele (2014) ran a direct replication of one anagram experiment, using the same anagrams, instructions and colors, with more than three times as many participants, and found no color-priming effect even though the power was sufficient (Europe PMC abstract). Elliot's 2015 review cites that failure as non-supportive evidence. Gnambs (2020) reviews the related red-performance literature and finds limited evidence. Beyond the replications, the general critique of this body of work (Elliot, 2015) applies: small samples, uncontrolled viewing conditions and device-level color specification. I did not find a replication of the creativity (blue) arm this session, so its status is "not independently confirmed here". The safest reading is that this paper is a hypothesis-generating study whose headline claim has at least one clear failed direct replication.
+
+### Implications for LTF
+
+1. Do not select a background color for lesson pages on the grounds that "blue helps creativity" or "red improves attention to detail". For checklists and procedural drills in LTF, the detail-orientation claim would be the tempting one, and it has no reliable support.
+2. Do not recolor error or caution states to "boost accuracy". Use conventional signal colors with redundancy (icons, text, position).
+3. If LTF wants to test whether a calm versus a high-alert tinted background affects checklist accuracy, run a properly powered preregistered experiment, and treat the original effect sizes with suspicion because they shrank on replication.
+4. Keep the KB entry as a "debunk-or-unsettled" marker so future writers do not cite it as settled.
+
+Confirmed this session: Crossref 10.1126/science.1169144 (volume 323, issue 5918, pp. 1226-1229); Europe PMC abstract with study sample sizes; Steele (2014) abstract on Europe PMC (PMID 24222366) and Elliot (2015) full text for the replication context.
+
+## steele2014failure
+
+Steele (2014), "Failure to replicate the Mehta and Zhu (2009) color-priming effect on anagram solution times", Psychonomic Bulletin & Review 21(3), 771-776.
+
+### Core claims
+
+A single-author brief report that directly replicates one of the experiments in Mehta and Zhu (2009). The original reported that anagrams of avoidance-motivation words were solved faster on red backgrounds and approach-motivation anagrams faster on blue backgrounds. The replication used the same anagrams, instructions and colors, with more than triple the number of participants, and the results did not show the color-priming effects, even though statistical power was sufficient to detect them. The abstract concludes that the results call into question the existence of the color-priming effect on anagram solution.
+
+### Specifics
+
+Evidence type: a close (direct) replication of a single experiment. What is confirmed from the abstract: it is a direct replication of one experiment, not of all six; the materials were matched to the original; the sample was more than three times larger; the power was described as sufficient to detect the original effect. A search result describing a poster from the same lab reports 263 participants against the original's 69, but I read that only in a search summary, so treat the exact count as unconfirmed. The article was published online in 2013 and in print volume 21, issue 3, in 2014 (Crossref lists both dates).
+
+The paper is useful as a template of how a replication should be reported in this field: same stimuli, same dependent variable, larger N, and a statement of power. Elliot's 2015 review cites it among the non-supportive findings when discussing the red-blue approach-avoidance literature.
+
+### Replication and criticism
+
+By its nature this paper is itself a replication. A single failed replication cannot show that the original effect is zero, as the original authors or others may point to differences in sample, display or procedure, and I did not find a published rejoinder this session. Its importance is that it was part of a growing set: with later failures to replicate the red-performance effect (Gnambs and colleagues, 2020), the picture is that color-priming results in achievement and cognitive contexts tend to shrink under larger samples. The study tests one narrow outcome (anagram solving times) and says nothing about whether colors affect real-world learning tasks; it also does not test the other five experiments in the original.
+
+### Implications for LTF
+
+1. Treat this as the specific citation for why LTF will not use background-color "priming" to nudge learner performance. If a design review proposes red or blue page tints for cognitive effect, point to this paper and Gnambs (2020).
+2. If LTF experiments with themes, copy the replication's discipline: fix stimuli, state the dependent measure in advance, and plan a sample large enough to detect effects of the size the literature originally claimed and also smaller ones.
+3. A short, prominent sentence in the KB's color chapter can read: effects of background hue on cognitive task performance have not replicated; choose backgrounds for legibility and comfort.
+4. Because the failing effect involved anagram solving, which resembles a quick word puzzle, it still says little about checklists or navigation; for those, LTF should test its own tasks.
+
+Confirmed this session: Crossref 10.3758/s13423-013-0548-3 (volume 21, issue 3, pp. 771-776; issued online 2013, print 2014); Europe PMC abstract (PMID 24222366); search summary of the associated poster (participant count, unconfirmed); Elliot (2015) full text (citation of this failure).
+
+## gnambs2020limited
+
+Gnambs (2020), "Limited evidence for the effect of red color on cognitive performance: A meta-analysis", Psychonomic Bulletin & Review 27(6), 1374-1382.
+
+### Core claims
+
+A random-effects meta-analysis of the claim that viewing red (versus a control color) impairs performance on intelligence-type tests. The abstract reports that, although the effect had been shown for different cognitive domains, populations and cultural contexts, recent studies including close replications failed to corroborate it. Across 67 effect sizes from 38 samples, anagram tests and knowledge tests showed no significant difference between colors (d of -0.06 and -0.04) while reasoning tests showed a pooled effect of d = -0.34, 95% CI [-0.61, -0.06]. The cumulative meta-analysis revealed substantially larger effects in the initial studies than in subsequent research, and after correcting for publication bias no evidential value remained. The paper casts doubt on a robust color-priming effect in achievement situations.
+
+### Specifics
+
+Evidence type: meta-analysis, not preregistered (the author says so). Details from the full text (pmc.ncbi.nlm.nih.gov/articles/PMC7704521):
+
+- Inclusion: studies from 2007 onward with random assignment, comparing red with another color (blue, green, black, gray or white), using anagram, reasoning or knowledge tests. 22 publications, 38 samples, 67 effects; sample sizes had a median of 76 (range 16 to 282); about 59 percent of studies were peer reviewed; the search ran in August 2019.
+- Overall pooled effect about -0.13 (95% CI [-0.23, -0.03]) with moderate heterogeneity. Moderators tested (control color, color matching, paper versus screen, cover page versus every page) had no effect.
+- Reasoning tests: early studies showed -0.86 and the effect shrank to -0.34 as more studies were added. Publication-bias tests detected bias for reasoning; adjusted effects were between about 0.03 and 0.17 and not significant. PET/PEESE, selection models and p-uniform* all returned near-zero adjusted effects.
+- Power: with typical samples, power to detect the pooled reasoning effect was about 18 percent.
+- Limitations listed by the author: not preregistered; no open call for unpublished work; results may not generalize to other cognitive domains or high-stakes testing.
+
+### Replication and criticism
+
+This is the main synthesis against the red-performance hypothesis, and it is itself open to caveats: it is limited to the three kinds of tests listed, it relies on published and some repository data, and publication-bias correction methods are sensitive to their assumptions. Its pattern, large early effects shrinking in later and larger studies, is the signature of small-sample studies with selective publication. Related replications found by search include four experiments on processing the word "red" (Gnambs, Kovacs and Stiglbauer, in Collabra: Psychology, 2020) and a null finding in a large British adult sample (Larsson and von Stumm, 2015), both as reported in the meta-analysis and search summaries.
+
+### Implications for LTF
+
+1. Use this paper as the KB's primary reason to reject "red hurts performance" or any claim that a hue changes quiz scores.
+2. It does not follow that red is harmless as a design choice; the argument against red rests on color vision deficiency and on convention, not psychology.
+3. For LTF's analytics, expect that any early positive result from an A/B test of colors on learning is likely to shrink; require sample sizes well beyond the median 76 per sample seen here.
+4. For writers: do not state "red makes people worse at tests" in lessons or in design rationale.
+
+Confirmed this session: Crossref 10.3758/s13423-020-01772-1; Europe PMC abstract; full text at pmc.ncbi.nlm.nih.gov/articles/PMC7704521 (numbers above).
+
+## hill2005red
+
+Hill & Barton (2005), "Red enhances human performance in contests", Nature 435, 293.
+
+### Core claims
+
+A one-page Nature letter that argued from evolutionary biology: red coloration is a sexually selected, testosterone-dependent signal of male quality in a variety of animals, and in some non-human species a male's dominance can be raised by attaching artificial red stimuli. The authors report that a similar effect influences physical contests in humans: across a range of sports, wearing red was consistently associated with a higher probability of winning. They conclude that sexual selection may have influenced the evolution of human responses to colors, and that sportswear color must be taken into account to ensure a level playing field.
+
+### Specifics
+
+Evidence type: observational analysis of competition results, a natural experiment rather than a laboratory one. Details come from the abstract (Europe PMC) and secondary accounts that I read in search results (Nature News coverage and summaries, not the letter itself), so the figures should be checked against the letter before reuse.
+
+- The design used the 2004 Athens Olympic combat sports (boxing, tae kwon do, Greco-Roman and freestyle wrestling), where red or blue outfits or protectors were assigned by the organizers rather than chosen by the athletes.
+- Reports put the overall win rate for red at about 55 percent (one account gives 242 of 441 match-ups), with the effect concentrated in evenly matched bouts (reported above 60 percent), and none when one fighter was clearly better.
+- A smaller side analysis of team sports with red shirts was also reported.
+- Proposed mechanisms were speculative: intimidation of the opponent or a testosterone-linked signal.
+
+### Replication and criticism
+
+Several lines of follow-up complicate the claim. A referee experiment by Hagemann and colleagues (2008), as summarized in news reports I retrieved, showed 42 experienced taekwondo referees videos of the same sparring in red and blue, and red-clad fighters were awarded about 13 percent more points: this shifts the explanation from the athlete to the judge. A later commentary (found in search results, not read in full) noted possible violations of statistical independence and selection bias in the original allocation. A taekwondo study with electronic scoring found no red advantage, again suggesting judging bias, though I could only read that in a search summary and could not identify its authors. Most decisively, Peperkoorn, Hill, Barton and Pollet (2024; see their entry in this lane) tested 6,589 contests and found no significant red advantage overall, with some support only before 2005. Elliot's 2015 review cites Caldwell and Burger (2011) and Garcia-Rubio and colleagues (2011) as non-supportive findings in sport. Treat the original result as a suggestive observation later undermined by larger data.
+
+### Implications for LTF
+
+1. The paper is a good example for the KB of how a catchy single-finding (red wins) can become a design myth. LTF writers must not cite "red is a dominance color" to justify red CTAs or leaderboards.
+2. For competitive features (challenge scoreboards, streaks), do not assign red or blue to learners or to "teams" in the belief that it gives a motivational edge.
+3. If LTF compares learners' scores to a peer group, color is irrelevant to the motivation effect; the research that matters is on feedback and goal setting, covered in other lanes.
+4. Referee/rater bias is a useful warning for LTF's in-sim challenge grading: automated scoring from sim telemetry avoids a class of bias that human judges bring.
+
+Confirmed this session: Crossref 10.1038/435293a (volume 435, issue 7040, p. 293); Europe PMC abstract; search-result summaries of Nature News coverage, the Hagemann referee study and a taekwondo electronic-scoring study (labeled secondary above); Peperkoorn et al. abstract on Europe PMC.
+
+## peperkoorn2024meta
+
+Peperkoorn, Hill, Barton & Pollet (2024), "Meta-analysis of the red advantage in combat sports", Scientific Reports 14, article 30822.
+
+### Core claims
+
+The original proposers of the red advantage (Hill and Barton are co-authors here) tested it across many tournaments. They report 6,589 contest outcomes in boxing, taekwondo and wrestling from seven Summer Olympic Games (1996 to 2020) and nine World Boxing Championships (2005 to 2021). Using meta-analytic techniques they found 50.5 percent wins by red for all data, which was not a statistically significant bias. In close contests the red share was 51.5 percent, also not significantly different from equal proportions. Before 2005, when the red advantage was first reported and before changes in tournament rules, there was some support for a red advantage in close contests, with 56.8 percent of bouts won by red. The authors say it is possible that knowledge of the effect, and rule changes in each sport, reduced a small effect, leading to its disappearance.
+
+### Specifics
+
+Evidence type: meta-analysis of competition outcomes; the numbers above are from the abstract (Europe PMC, DOI 10.1038/s41598-024-81373-3). Features worth keeping:
+
+- It pools several tournaments over 25 years, so it tests whether the original 2004 pattern generalizes.
+- The "close contests" analysis is the one the original authors stressed, because color might matter only when skill is balanced.
+- The authors offer two explanations for the decline: awareness of the effect, and rule or scoring changes. Search-result summaries also mention a shift to technology-assisted scoring, which fits the earlier referee-bias findings, but I did not read that in the paper itself.
+- It does not speak to non-sport settings.
+
+### Replication and criticism
+
+A paper whose authors include the original proponents is an unusually strong signal because there is no motivated opposition behind it. Its limitations: the explanation for the pre-2005 pattern (a true effect that disappeared after being published versus a chance finding in a small dataset) cannot be separated by this design, and the 56.8 percent figure for pre-2005 close contests is itself a small-sample estimate. In the wider literature this follows the pattern seen for other color-priming results (Steele 2014; Gnambs 2020): large early effects, smaller later ones.
+
+### Implications for LTF
+
+1. Use as the KB's final word on "red wins": no reliable effect in large recent data.
+2. For competitive or "streak" UIs in LTF, choose colors for contrast and accessibility, not to engineer dominance.
+3. The "knowledge of the effect makes it vanish" suggestion illustrates a design principle: effects depending on tacit expectations are fragile. LTF should avoid relying on subtle perceptual or social cues to motivate learners and should use explicit, informative feedback instead.
+4. When writing evidence summaries in the KB, include the original claim, the replication result and the date range, as this paper does.
+
+Confirmed this session: Crossref 10.1038/s41598-024-81373-3 (four authors, Scientific Reports 14, 30822, 2024); Europe PMC abstract (all numbers above); search summaries for supporting context (labeled as such).
+
+## brom2018how
+
+Brom, Stárková & D'Mello (2018), "How effective is emotional design? A meta-analysis on facial anthropomorphisms and pleasant colors during multimedia learning", Educational Research Review 25, 100-119.
+
+### Core claims
+
+A meta-analysis of 33 independent samples (N = 2,924) of whether adding anthropomorphic faces to multimedia graphics, or adding pleasant colors, helps learning. It found significant positive random-effects effects for retention (k = 18, d+ = 0.387), comprehension (k = 14, d+ = 0.317) and transfer (k = 27, d+ = 0.327). Affective-motivational effects were weaker: intrinsic motivation (k = 23, d+ = 0.255) was robust, liking/enjoyment (d+ = 0.109) weaker and positive affect (d+ = 0.113) marginal. Perceived learning and perceived effort were unaffected, but perceived difficulty went down (d+ = -0.208). The authors conclude that anthropomorphisms and colors are useful design principles but that the mechanism is unclear.
+
+### Specifics
+
+Evidence type: meta-analysis, read in full (the author-accepted manuscript at artemis.ms.mff.cuni.cz).
+
+- "Pleasant colors" in this literature means predominantly warm, bright, saturated colors, as in the studies of Um and colleagues (2012) and Plass and colleagues (2014); the authors say such colors should add little cognitive load if chosen with good visual design (avoiding gaudy or garish ones).
+- Only 5 of the 33 samples (15.2 percent) were "color only" contrasts; 11 were faces only, 13 combined faces and colors, and 4 pooled different manipulations. The color-only subset is therefore small, and the headline effects mix the two manipulations.
+- Moderation: with one exception, no evidence of moderation by contrast type, dynamicity of the materials, age, language or culture, prior mood, time on task or publication type; provisional evidence that the intrinsic motivation effect was larger for children (only three child samples).
+- Quality checks: no major publication bias, influential cases or outliers (a trim-and-fill analysis for transfer left the estimate at 0.316), but some outcome distributions were insufficiently heterogeneous. Most studies used college students, natural science content and sessions up to about 30 minutes.
+- Example of the manipulation: Münchow and colleagues compared gray-scale hypermedia with a colorful version, coded as color only.
+
+### Replication and criticism
+
+The authors list their own limitations: a relatively small number of samples, "minor" extra manipulations (font, rounded edges, gaze arrows) mixed into some studies, and an inability to separate colors from faces. The sub-analysis of color alone could not be isolated with this evidence. They also say the effects on learning outcomes are small to medium and that the mechanism is not established, with intrinsic motivation a candidate. Note the contrast with the priming literature in this lane: the color here is a design property of the learning material, tested on retention and transfer, and the meta-analysis passes publication-bias checks that the red-performance literature fails.
+
+### Implications for LTF
+
+1. A cautious case exists for a warm, bright, moderately saturated, coherent palette in lessons, as opposed to gray-scale material, but the evidence does not isolate color from faces and illustration style, and the studies were mostly short sessions with college students.
+2. If LTF adds a friendly instructor character, the combined manipulation has the larger sample base here, but that is outside the scope of this lane.
+3. Perceived difficulty fell with emotional design; LTF may legitimately aim for materials that feel approachable to beginners, provided color never replaces legible contrast.
+4. Because the effects came with minimal cognitive load by design, avoid garish or highly saturated colors that compete with diagrams and instrument widgets.
+
+Confirmed this session: Crossref 10.1016/j.edurev.2018.09.004 (volume 25, pp. 100-119); full text of the accepted manuscript downloaded and read (abstract, coding, Table 3, limitations); searches confirming the Plass et al. (2014) citation (Learning and Instruction 29, 128-140; Crossref 10.1016/j.learninstruc.2013.02.006).
+
+## brettel1997computerized
+
+Brettel, Viénot & Mollon (1997), "Computerized simulation of color appearance for dichromats", Journal of the Optical Society of America A 14(10), 2647-2655.
+
+### Core claims
+
+The paper proposes an algorithm that transforms a digital color image so that people with normal color vision can see approximately what it looks like to a dichromat (a person with protanopia, deuteranopia or tritanopia). The dichromat's color confusions are deduced from colorimetry, and the residual hues in the transformed image are derived from reports of unilateral dichromats (people with one normal eye and one dichromatic eye) in the literature. The authors state the result provides a means of quantifying and illustrating the residual color information available to dichromats in any digitized image, while noting that one can never be certain of another person's sensations.
+
+### Specifics
+
+Evidence type: a computational method paper from vision science, validated by matching tests with two dichromats. The abstract gives these details:
+
+- Colors are represented as vectors in a three-dimensional LMS (long, medium, short wavelength cone) space, and the simulation is a set of transformations of this space.
+- Each stimulus is replaced by its projection onto a reduced stimulus surface. That surface is defined by a neutral axis and by the LMS locations of monochromatic stimuli that normal trichromats and a given type of dichromat perceive as the same hue.
+- Anchor wavelengths: a yellow of 575 nm and a blue of 475 nm for the protan and deutan simulations, and a red of 660 nm and a blue-green of 485 nm for the tritan simulation.
+- Validation: the operation was demonstrated with a mosaic of square color patches. A protanope and a deuteranope accepted the match between the original and the appropriately transformed image, which the authors take to confirm that the reduction is colorimetrically accurate.
+
+In practice this is the algorithm that many "color blindness simulators" and browser developer-tools emulations build on, though I did not confirm in this session which specific tools implement it, so that statement is general background rather than a verified claim.
+
+### Replication and criticism
+
+The method is accepted as the standard dichromat simulation and was extended by later work, including the unified anomalous-trichromacy model of Machado and colleagues (2009; this lane). Its limits are built into the method: it simulates complete dichromacy only, whereas many people have anomalous trichromacy of varying severity; it relies on the reports of a small number of unilateral dichromats for the residual hues; and the validation involved two observers. Okabe and Ito (this lane), who are themselves protanopes, caution that simulations show only one approximation, that many color-blind people distinguish more colors than the simulation suggests, and that simulations should not be used to judge a person's abilities.
+
+### Implications for LTF
+
+1. Use simulation as a check, not as a design source: run every LTF palette (state colors, chart series, instrument widget markings, checklist statuses) through a protan, deutan and tritan simulation and look for pairs that merge.
+2. Because the simulation approximates complete dichromacy, do not conclude "passes" means safe for anomalous trichromats; also test with the severity-based model of Machado et al., and with a real color-vision-deficient reviewer where possible.
+3. Aviation-style colors are a particular risk. Red-green status pairs, amber and green or red and magenta markings on instrument widgets must carry redundancy (labels, shapes, position, patterns). Do not state in LTF content what actual aircraft displays use; cite aviation sources for that.
+4. Add simulated-vision screenshots to design review of each new widget, and keep the check in a design checklist rather than relying on memory.
+
+Confirmed this session: Crossref 10.1364/josaa.14.002647 (JOSA A volume 14, issue 10, p. 2647 start; Europe PMC gives pages 2647-2655); Europe PMC abstract (method, wavelengths, validation).
+
+## machado2009physiologically
+
+Machado, Oliveira & Fernandes (2009), "A physiologically-based model for simulation of color vision deficiency", IEEE Transactions on Visualization and Computer Graphics 15(6), 1291-1298.
+
+### Core claims
+
+The paper presents a model for simulating color vision deficiency (CVD) based on the stage theory of human color vision, derived from data in electrophysiological studies. Its distinctive claim is that it is the first model to handle normal color vision, anomalous trichromacy and dichromacy consistently in one framework. The abstract motivates the work with the statement that CVD affects approximately 200 million people worldwide, which compromises the ability to perform color and visualization tasks, and says the model was validated through an experimental evaluation involving groups of color-vision-deficient and normal-vision individuals. Applications named are feedback on how to improve visualization for people with CVD and a framework for testing hypotheses about retinal photoreceptors in CVD.
+
+### Specifics
+
+Evidence type: computational model with an experimental validation (details of group sizes were not retrievable). From the authors' tutorial page (inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html), read this session:
+
+- Severity runs from 0.0 (no deficiency) to 1.0 (the most severe, equivalent to dichromacy).
+- Simulation is a single 3-by-3 matrix multiplication applied to the RGB color, so it is cheap enough to run per pixel in a shader or per color in a stylesheet pipeline.
+- Precomputed matrices are given for protanomaly, deuteranomaly and tritanomaly in steps of 0.1 from 0.0 to 1.0; intermediate severities can be interpolated between the two nearest matrices or computed from the paper.
+- The page warns of a typesetting error in two equations of an earlier conference version, with a corrected full paper linked, and says the image examples are labeled in nanometres of spectral shift, which does not match the 0 to 1 scale; it does not explain the discrepancy.
+- A Crossref correction notice exists for the paper (IEEE TVCG 16(2), 352, 2010), so anyone implementing it should use the corrected matrices from the authors' page, not a transcription from the original article.
+
+### Replication and criticism
+
+I did not find, in the sources read this session, an independent replication of the validation; the model has nevertheless been widely implemented (for instance in open-source color libraries, whose documentation describes the severity parameter) and is a common choice for simulating anomalous trichromacy. Known limitations: a simulation of one person's physiology cannot capture the variation among individuals with the same diagnosis; the validation sample is not reported in the abstract; and the model approximates cone-level and opponent-level processing, not cortical adaptation or learned color naming. As with Brettel et al. (1997), it depicts an approximation, which Okabe and Ito warn against over-trusting.
+
+### Implications for LTF
+
+1. Use the severity-based matrices for design-time checks and for an optional "simulate color vision" developer panel in storybook-style tooling, testing at several severities (for example 0.5 and 1.0) so that anomalous trichromats, who are common, are covered along with dichromats.
+2. The one-matrix form makes it practical to include a check in automated tests that flags palette pairs whose simulated contrast collapses; the thresholds for that test need to be decided in the KB's color chapter, not copied from this paper.
+3. Do not ship any simulation to learners as a feature without validation; it could mislead a color-vision-deficient pilot candidate. It is a design tool.
+4. Note for the KB's aviation context: color vision requirements for pilot certification are regulatory matters outside this lane; LTF content should refer learners to official sources and not infer them from this paper.
+
+Confirmed this session: Crossref 10.1109/tvcg.2009.113 (volume 15, issue 6, pp. 1291-1298) and the Crossref correction record 10.1109/tvcg.2010.10; Europe PMC abstract; authors' tutorial page (matrix and severity details).
+
+## okabe2008color
+
+Okabe & Ito (2008), "Color Universal Design (CUD): How to make figures and presentations that are friendly to colorblind people", web guide on the Jfly site (jfly.uni-koeln.de/color/).
+
+### Core claims
+
+A practical guide, written by two scientists who are themselves strong protanopes, on making figures, slides and products readable by people with color vision deficiency. It is craft and lived-experience authority backed by color-vision knowledge, not a controlled study. The site states three principles plus one: choose color schemes that are easy to identify for all types of color vision; do not rely on color alone; state color names clearly where communication depends on them; and (+1) aim for visually friendly, attractive design. It is the origin of the widely used Okabe-Ito qualitative palette.
+
+### Specifics
+
+All of the following was read on the guide page this session:
+
+- Prevalence stated on the page: red-green color blindness affects roughly 8 percent of Caucasian males, 5 percent of Asian males and 4 percent of African males; tritanopia (blue-yellow) is very rare. The guide's example is that a room of 250 people should include more than ten colorblind attendees.
+- Types: trichromacy; dichromacy (protanopia, deuteranopia, tritanopia); anomalous trichromacy (a shifted cone spectrum with varying severity); total color blindness (rarer, often with severe vision loss).
+- Color rules: avoid pure red on green or on dark backgrounds (dark red can look black to protanopes); use vermilion or a light red instead of pure red; avoid low-contrast hue-only pairs; use strong differences in brightness or saturation when pairing two warm or two cool colors; avoid colors between yellow and green; use reddish purple in place of purple.
+- Redundant coding: combine color with line style, symbols (circles, triangles, squares) and hatching; label directly on a graph instead of a separate color key; thicken lines and enlarge symbols; use bold sans-serif for colored text; refer to objects by shape or position, not color name alone.
+- Tools and cautions: simulators show only one approximation of dichromat vision, many colorblind people distinguish more colors than a simulation shows, simulations must not be used to judge a person's abilities, and a colorblind reviewer is recommended.
+- The page names a palette (vermilion, bluish green, reddish purple, sky blue, blue, yellow, orange). The page text I fetched did not give hex values for the full palette; a search result listed the commonly quoted eight hex codes, but that listing is secondary and is not reproduced here.
+
+### Replication and criticism
+
+There is nothing to replicate in the experimental sense. The palette has been adopted in several figure-preparation guidelines that turned up in search results (not read in detail), and its design principle (vary luminance and hue along axes that dichromats can discriminate) matches the vision science in Brettel et al. and Machado et al. Limits: the palette gives eight categorical colors only, so it does not solve sequential or diverging scales; the guide is written for figures and slides, so the contrast of each palette color against a dark UI background has to be checked separately (my inference); and the prevalence figures are the authors' stated estimates for populations, which differ by sex and ancestry. The page's year is given as 2008 by a search summary; the fetched page did not show a date, so the year is the least certain element of the citation.
+
+### Implications for LTF
+
+1. Adopt "do not rely on color alone" as a hard rule for every status in LTF (correct and wrong answers, checklist states, instrument widget ranges). It is also WCAG 1.4.1, Level A.
+2. Use a CUD-style palette for any LTF chart with categories, and test it in both themes.
+3. Direct labels beat legends: adopt for any chart in dashboards and progress views.
+4. Avoid red text on dark backgrounds, which matters for fly mode, where dark themes and red cautions are both likely.
+
+Confirmed this session: web search result and fetch of jfly.uni-koeln.de/color/ (principles, prevalence figures, rules above); secondary listing of the palette (not used for numbers). No Crossref or Open Library record exists for a web page; verification is by web search and direct fetch.
+
+## w3c2024wcag
+
+World Wide Web Consortium (2024), "Web Content Accessibility Guidelines (WCAG) 2.2", W3C Recommendation (original publication 5 October 2023, republished 12 December 2024), with the "Understanding" document for Success Criterion 1.4.3.
+
+### Core claims
+
+WCAG 2.2 is the current normative web accessibility standard, and its color-related requirements are the rules LTF will be audited against. The contrast criteria express a minimum luminance contrast ratio between text and background; a separate Level A criterion forbids color as the only means of conveying information. Evidence type: a consensus standard written by a standards body, not an experiment, though its numeric thresholds are justified in the "Understanding" document by reference to vision research and earlier standards.
+
+### Specifics
+
+Read this session on w3.org/TR/WCAG22 and w3.org/WAI/WCAG22/Understanding/contrast-minimum.html:
+
+- 1.4.3 Contrast (Minimum), Level AA: text and images of text need a contrast ratio of at least 4.5:1; large-scale text needs at least 3:1. Exceptions cover inactive components, pure decoration, invisible text and logotypes.
+- 1.4.6 Contrast (Enhanced), Level AAA: 7:1 for text, 4.5:1 for large-scale text.
+- 1.4.11 Non-text Contrast, Level AA: visual information needed to identify user-interface components and states, and parts of graphics needed to understand content, need at least 3:1 against adjacent colors.
+- 1.4.1 Use of Color, Level A: color is not the only visual means of conveying information, indicating an action, prompting a response or distinguishing a visual element.
+- Large-scale text is at least 18 point, or 14 point bold.
+- Contrast ratio is (L1 + 0.05) / (L2 + 0.05), where L1 is the relative luminance of the lighter color and L2 of the darker; ratios run from 1:1 to 21:1. Relative luminance for sRGB is 0.2126 R + 0.7152 G + 0.0722 B with each channel linearized. The 0.05 term models typical viewing flare (IEC 61966-2-1).
+- Thresholds are not rounded: 4.499:1 does not meet 4.5:1.
+- Rationale in the Understanding document: 3:1 is the minimum recommended by ISO 9241-3 and ANSI-HFES-100-1988 for standard text; 4.5:1 compensates for the contrast sensitivity loss associated with about 20/40 acuity, estimated at about 1.5 times, citing Arditi and Faye (2004), so 3 times 1.5 gives 4.5; 7:1 relates to about 20/80 vision. The page links 20/40 acuity to typical acuity at about age 80 (Gittings and Fozard, 1986). It states that hue matters less than light-dark difference.
+
+### Replication and criticism
+
+The ratio is simple to implement and test, and it is the contrast measure in the current Recommendation (legal uptake is not verified here and no laws are named). It is also criticized. The documentation of the Accessible Perceptual Contrast Algorithm (see somers2022apca) argues the ratio has no model of font size and weight, overstates contrast for dark colors, can pass pairs that are hard to read and does not suit dark mode; those are claims by a rival method's developer, not independent validation. The Understanding document itself says the ratios are thresholds with no rounding and that the formula assumes typical flare, which implies they are engineering approximations. The W3C WCAG 3 draft dated 10 September 2026, which I read, states that the contrast algorithm for WCAG 3 is yet to be determined and does not mention APCA, so WCAG 2.x remains the operative standard.
+
+### Implications for LTF
+
+1. Treat 4.5:1 for body text, 3:1 for large text and 3:1 for non-text parts (chart strokes, input borders, focus rings, widget scale marks) as pass/fail gates in CI for both light and dark themes.
+2. Contrast numbers must be computed on the theme tokens from the final composited colors, not on estimates; do not round up.
+3. Never encode correctness, status or instrument zones with color alone (1.4.1). Pair with text, shape or pattern.
+4. For fly mode, a dim environment may call for higher luminance contrast than the minimum, a consideration the standard does not address; test with real use next to a simulator.
+5. Treat AAA 7:1 as a target for the most safety-relevant text such as warnings and checklist steps shown in fly mode.
+
+Confirmed this session: WebFetch of w3.org/TR/WCAG22 (criteria, large text definition, status/date) and of the Understanding contrast-minimum page (formula, rationale and references); WebFetch of w3.org/TR/wcag-3.0 (draft status). The W3C is the author; no DOI exists.
+
+## somers2022apca
+
+Somers (2022), "APCA: the Accessible Perceptual Contrast Algorithm", documentation and reference code (Myndex SAPC-APCA and apca-w3 repositories, algorithm version 0.0.98G-4g, library 0.1.9).
+
+### Core claims
+
+APCA is a proposed replacement for the WCAG 2 contrast ratio, developed by Andrew Somers and Myndex Research as a method for predicting contrast for text and non-text content on self-illuminated displays, derived from the S-LUV model (SAPC). Its pitch is that readability depends on font size, weight, polarity (dark on light versus light on dark) and perceived lightness contrast, which a single luminance ratio cannot represent. Evidence type: a documented algorithm and design argument by its author, with citations to vision science, in public beta. It is not a peer-reviewed study and not a standard.
+
+### Specifics
+
+From the repository documentation (github.com/Myndex/SAPC-APCA, github.com/Myndex/apca-w3 and the WhyAPCA page), read this session:
+
+- Output is Lc (lightness contrast), a signed value roughly from minus 108 to plus 106, where the sign encodes polarity; an Lc 60 is meant to represent the same perceived contrast anywhere in the range.
+- Constants in the published library (algorithm 0.0.98G-4g, February 2021; library 0.1.9, July 2022): main exponent 2.4, text/background exponents 0.56, 0.57, 0.62 and 0.65, sRGB weights 0.2126729, 0.7151522 and 0.0721750, a black threshold of 0.022 and scalers of 1.14.
+- Guidance levels from the author's documentation: roughly Lc 90 preferred and Lc 75 minimum for body text, Lc 60 minimum for content text at larger sizes, Lc 45 for headlines, Lc 30 for placeholder-like text and Lc 15 as the floor for non-text; a lookup table maps font size and weight to a required Lc, and fluent-reading text is held to higher values than sub-fluent spot text.
+- Dark-mode note: the documentation advises keeping contrast below Lc 90 for large fonts.
+- Licensing: the repository states reference code is licensed to W3C working groups with limitations, and the license page describes naming and copyright terms. I read excerpts only, so check the license before reusing the code.
+
+### Replication and criticism
+
+The status is contested. The WCAG 3 working draft (10 September 2026) leaves the contrast algorithm "to be determined" and does not mention APCA; secondary sources reported that the visual contrast section was moved out of the draft in 2023 for further evaluation, which I could not confirm from a primary W3C page this session. Commentators (the search results cite Adrian Roselli's critique, which I could not retrieve) argue that adopting APCA instead of WCAG 2 contrast creates legal risk because only WCAG 2 ratios are in force. The author's documentation itself says that APCA is in beta, that WCAG 2 and perceptual models will give discrepancies and that readers must judge suitability for their region. The strongest published empirical anchors are Legge's work on contrast and reading rates (this lane), but the specific Lc thresholds are not validated in a peer-reviewed study that I could confirm.
+
+### Implications for LTF
+
+1. Do not replace the WCAG ratio checks with APCA: the standard in force is WCAG 2.2, and an APCA-only result will not be accepted by auditors.
+2. It is reasonable to use APCA as a second advisory check for dark-theme text and thin fonts, where the WCAG formula is the one most often criticized. If the two disagree, take the stricter result for body text.
+3. Record in the KB that Lc thresholds are guidance from the algorithm's author, not a standard, and mark any LTF rule derived from them as provisional.
+4. Re-check the status of WCAG 3 every time the color chapter is revised; the contrast algorithm is expected to change.
+
+Confirmed this session: WebFetch of github.com/Myndex/SAPC-APCA, github.com/Myndex/apca-w3 and the WhyAPCA documentation page; WebSearch summaries for status and criticism (secondary, flagged above); WebFetch of w3.org/TR/wcag-3.0 for the 2026 draft status. No Crossref record applies; the year 2022 is that of the library version 0.1.9 and the repository copyright range 2019 to 2022.
+
+## legge1987psychophysics
+
+Legge, Rubin & Luebker (1987), "Psychophysics of reading, V. The role of contrast in normal vision", Vision Research 27(7), 1165-1177.
+
+### Core claims
+
+The paper asks how contrast affects reading rate and what role contrast sensitivity plays. Measuring reading rate as a function of the contrast and character size of text in people with normal vision, the authors found that reading rates were highest, at about 350 words per minute, for letters from 0.25 to 2 degrees in size, and that within this range reading was very tolerant to contrast reduction. For 1-degree letters, reading rate decreased by less than a factor of two for a tenfold reduction in contrast. The results were very similar for white-on-black and black-on-white text. Reading declined more rapidly for very small (under 0.25 degree) and very large (over 2 degrees) letters. Because people with low vision usually need large characters, high contrast is especially important for them. Taking 35 words per minute as a threshold for reading, the authors built a contrast-sensitivity function for reading and related its shape to that of sine-wave grating contrast sensitivity.
+
+### Specifics
+
+Evidence type: psychophysical laboratory experiment measuring reading rate (the abstract does not describe the presentation method or the number of subjects, so I do not). Specific numbers confirmed from the abstract:
+
+- Peak reading rate about 350 words per minute.
+- Range of letter sizes with best performance: 0.25 to 2 degrees.
+- Contrast tolerance: for 1-degree letters, a tenfold reduction in contrast cut reading rate by less than a factor of two.
+- No major difference between white-on-black and black-on-white.
+- Threshold criterion for the reading CSF: 35 words per minute.
+- Rapid decline outside the 0.25 to 2 degree range.
+
+A companion paper in the series, "Psychophysics of reading, VI. The role of contrast in low vision" (Rubin and Legge, 1989, Vision Research 29(1), 79-91; Crossref record confirmed, abstract not read), extends the question to low vision, and the abstract of this paper itself says high contrast is particularly important for people with low vision.
+
+### Replication and criticism
+
+This is an early psychophysics result, and I found no replication or critique of it in this session's searches. It reports a reading contrast-sensitivity function and the tolerance of normal vision to reduced contrast. From the abstract alone, it does not test glare, ambient light, small sizes at the edge of acuity, or reading while attending to another task. The claim that polarity made little difference is for the conditions tested and has to be set beside the later display-polarity studies in this lane (Buchner and Baumgartner, Piepenbrock et al., Dobres et al.), which find a positive-polarity advantage for proofreading and brief reading at small sizes.
+
+### Implications for LTF
+
+1. Normal-sighted learners reading comfortably sized text are tolerant of moderate contrast reductions, so a 4.5:1 minimum is not a matter of aesthetics; it is a protection for low-vision learners and for difficult viewing conditions. This is a reason to hold the WCAG floor and not to treat "slightly low contrast" as harmless.
+2. Letter size matters at both ends: very small and very large text read slower. Large display of key numbers (for example in fly mode) should remain within a moderate size range, which the abstract states in degrees of visual angle (0.25 to 2 degrees); LTF must convert to CSS pixels using an assumed viewing distance, a calculation that belongs in the typography lane.
+3. For any reading task in dim light, do not extrapolate from this paper, whose tests used polarity and display conditions different from a sim cockpit; use the display-polarity studies instead.
+4. Use "reading rate drops sharply below a size threshold" as a justification for a minimum font size token in all widgets.
+
+Confirmed this session: Crossref 10.1016/0042-6989(87)90028-9 (volume 27, issue 7, pp. 1165-1177) and the Crossref record of the companion paper 10.1016/0042-6989(89)90175-2; Europe PMC abstract (all numbers).
+
+## buchner2007text
+
+Buchner & Baumgartner (2007), "Text-background polarity affects performance irrespective of ambient illumination and colour contrast", Ergonomics 50(7), 1036-1063.
+
+### Core claims
+
+A series of experiments tested whether dark text on a light background (positive polarity) or light text on a dark background (negative polarity) produces better proofreading performance. Proofreading was consistently better with positive polarity. The advantage was independent of ambient lighting (darkness versus typical office illumination) and of chromaticity (black and white versus blue and yellow). A final experiment showed that color contrast (red text on a green background) could not compensate for a lack of luminance contrast. Physiological measures of effort and strain (breathing rate, heart rate, heart rate variability, skin conductance) and self-reported mood, fatigue, arousal, eyestrain, headache, muscle strain and back pain did not vary with the independent variables, which the authors read as showing that participants worked equally hard in all conditions, so the performance difference is not an effort trade-off.
+
+### Specifics
+
+Evidence type: a multi-experiment human-factors laboratory study. From the abstract:
+
+- Task: proofreading, a performance measure sensitive to legibility under sustained attention.
+- Manipulations: polarity (dark on light versus light on dark), ambient illumination (dark room versus office lighting), chromaticity (achromatic versus blue and yellow) and, in the final experiment, color contrast versus luminance contrast (red on green).
+- Outcome: positive polarity better in every test; red-green color contrast without luminance contrast did not rescue performance.
+- Controls: physiological and subjective strain measures flat across conditions, ruling out a hidden effort cost.
+
+Sample sizes and effect sizes were not available to me this session, so I cannot state them.
+
+### Replication and criticism
+
+The result has been replicated and refined by the same Düsseldorf group, and in a refined form by others. Buchner, Mayr and Brandt (2009; this lane) tested whether the advantage is caused by polarity or by the higher overall display luminance of positive displays, and found that at equal luminance the polarity advantage vanished, suggesting luminance rather than polarity itself. Piepenbrock et al. (2013, 2014; this lane) showed the advantage in younger and older adults and with smaller characters, and Dobres et al. (2017; this lane) found that dark ambient illumination interacts with polarity at glance-like reading. So the practical finding (positive polarity helps proofreading) is robust in these experiments, while the mechanism is the question later papers address. The paper's own result that ambient illumination did not interact with polarity is qualified by the later glance-reading work. The tests used proofreading, which is a demanding visual task and not the casual reading of lesson text.
+
+### Implications for LTF
+
+1. Dark mode is not intrinsically less legible per se, but the evidence says light-on-dark text is read less accurately in sustained proofreading-like tasks, so LTF's default theme for long-form lesson text should lean to dark text on a light background, with a high-quality dark theme as an option.
+2. The red-on-green result is a direct warning: equal-luminance color pairs are not a substitute for luminance contrast. Do not use hue alone to separate text and background in any widget.
+3. Nothing in this paper suggests dark rooms demand dark themes; its darkness condition did not remove the positive polarity advantage.
+4. If LTF ever tests dark mode with its own users, use a proofreading-style or checklist-accuracy measure and equate luminance, following the later studies.
+
+Confirmed this session: Crossref 10.1080/00140130701306413 (volume 50, issue 7, pp. 1036-1063); Europe PMC abstract; abstracts of Buchner et al. 2009, Piepenbrock et al. 2013 and 2014, and Dobres et al. 2017 for the follow-up claims.
+
+## buchner2009advantage
+
+Buchner, Mayr & Brandt (2009), "The advantage of positive text-background polarity is due to high display luminance", Ergonomics 52(7), 882-886.
+
+### Core claims
+
+This short paper tests an explanation for the positive polarity advantage found earlier (reading dark letters on a light background is better than light on dark). The hypothesis is that the advantage arises because overall display luminance is typically higher for positive-polarity displays. The authors manipulated text-background polarity and overall display luminance independently. They report no positive polarity advantage when overall display luminance was equivalent for positive and negative polarity displays; there was only an effect of display luminance, with better performance for higher-luminance displays. The abstract's practical conclusion is that readability of text on computer screens is better when overall luminance is high, as in positive-polarity displays, and that display polarity per se does not affect readability.
+
+### Specifics
+
+Evidence type: a single factorial laboratory experiment (the abstract does not give the sample size or the performance measure, so I do not state them).
+
+- Design: polarity (positive or negative) manipulated independently of overall display luminance, so that a negative-polarity display could be as bright overall as a positive one.
+- Result: only the main effect of luminance; no polarity effect at matched luminance.
+- Reasoning: higher overall luminance implies a brighter display, which (in the group's later work) the authors link to pupil constriction and sharper retinal images. A dissertation summary from the same group, found in search results, describes pupil sizes smaller and proofreading better with positive polarity, but I did not read that source in detail.
+
+### Replication and criticism
+
+The follow-up by Piepenbrock, Mayr and Buchner (2014; abstract confirmed) tested the display-luminance hypothesis by crossing polarity with character size (8, 10, 12 and 14 pt, equal to 0.22, 0.25, 0.31 and 0.34 degrees of vertical visual angle) and found a positive polarity advantage that increased linearly as characters got smaller, consistent with luminance improving perception of detail; it recommends avoiding negative polarity with small fonts. Dobres et al. (2017) explain their result in terms of pupillary contraction under bright light reducing optical aberrations. A criticism that applies to this literature: tests used proofreading or lexical decision tasks, with dark-adapted or office-lit participants, and a stylized luminance manipulation, so generalizing to a dark cockpit with a monitor beside the learner is an inference. Also, the abstract claims polarity per se has no effect, which is a strong claim from one experiment.
+
+### Implications for LTF
+
+1. The finding turns the polarity question into a luminance question: a dark theme with a brighter, higher-contrast text layer is not penalized in principle, but the usual dark theme (dimmer overall) is.
+2. For a dark theme, raise the weight, size and luminance of small text, and avoid thin small gray text on near-black, rather than switching to a light theme.
+3. A fly-mode theme can be dark for glare and comfort reasons, but its text should be larger and brighter than a daylight equivalent, since the small-size penalty is the best-supported risk.
+4. A/B test any dark theme against a light theme on checklist accuracy and reading speed, equating overall luminance to separate polarity from brightness.
+
+Confirmed this session: Crossref 10.1080/00140130802641635 (volume 52, issue 7, pp. 882-886); Europe PMC abstracts of this paper and of Piepenbrock, Mayr and Buchner (2014; 10.1177/0018720813515509); search summary of the Düsseldorf dissertation (not used for numbers).
+
+## piepenbrock2013positive
+
+Piepenbrock, Mayr, Mund & Buchner (2013), "Positive display polarity is advantageous for both younger and older adults", Ergonomics 56(7), 1116-1124.
+
+### Core claims
+
+The study asks whether the positive polarity advantage (dark characters on a light background beating light on dark) holds for older adults. An advantage was expected for younger adults, but the effect on older adults was ambiguous in advance. Light scatter from residues in the aging lens and vitreous humour could reverse the typical advantage of positive polarity, but age-related declines in retinal illuminance could mean brighter positive displays help compensate and lead to better performance than darker negative displays. Participants did a visual acuity test (black optotypes on white or white optotypes on black) and a proofreading task in the same polarity. A positive polarity advantage was found for both age groups, and the authors recommend positive polarity for all ages.
+
+### Specifics
+
+Evidence type: laboratory experiment with two age groups, using two tasks (visual acuity and proofreading). Confirmed from the abstract and its practitioner summary:
+
+- Manipulation: polarity, black-on-white versus white-on-black, with the same polarity used for the acuity test and the proofreading task.
+- Two hypotheses stated up front for older adults, with opposite predictions: scatter harming positive polarity versus reduced retinal illuminance favoring it.
+- Result: positive polarity better in both younger and older groups.
+- Practitioner summary: in an aging society age-related vision changes should be considered in digital displays, and dark characters on a light background lead to better legibility and are strongly recommended independent of an observer's age.
+
+Group sizes, age ranges and effect sizes are not in the abstract and I did not retrieve the full text, so they are not given.
+
+A follow-up by Piepenbrock, Mayr and Buchner (Human Factors 56(5), 942-951, 2014; Crossref 10.1177/0018720813515509) found that the positive polarity advantage in proofreading increased linearly with decreasing character size, for sizes of 8, 10, 12 and 14 points (0.22, 0.25, 0.31 and 0.34 degrees of vertical visual angle), and concluded that negative polarity should be avoided especially with small fonts, supporting the luminance explanation.
+
+### Replication and criticism
+
+Part of a consistent line of work from one group, with independent support from Dobres et al. (2017) on glance-like reading. A caveat from the group's own paper of 2009 (Buchner et al.) is that the polarity effect disappears when overall luminance is matched, so "positive polarity" may be shorthand for "brighter display". Another is that tasks were proofreading and acuity, not prolonged comfortable reading, and the studies measured performance, not preference or visual fatigue; the 2007 study found no differences in strain measures. A small group and lab context mean the findings are best treated as moderately strong evidence for a modest effect, not as a law.
+
+### Implications for LTF
+
+1. Older adult learners (a real share of people who take up flying later in life) show the same direction of effect as younger ones; a light theme is the safe default for dense text, quizzes and checklists.
+2. If LTF supports dark mode, keep small text larger and brighter in dark mode, because the penalty grows with smaller sizes. Set a minimum text size token for dark themes higher than for light.
+3. Do not assume "older users prefer dark mode for glare", which this study does not support.
+4. For fly mode, where text is read at a glance and sometimes small, prefer larger sizes in dark mode and test both polarities with representative users rather than assuming dark is better in a dark room.
+
+Confirmed this session: Crossref 10.1080/00140139.2013.790485 (volume 56, issue 7, pp. 1116-1124, four authors); Europe PMC abstract and practitioner summary; Europe PMC abstract of the 2014 Human Factors paper.
+
+## dobres2017effects
+
+Dobres, Chahine & Reimer (2017), "Effects of ambient illumination, contrast polarity, and letter size on text legibility under glance-like reading", Applied Ergonomics 60, 68-73.
+
+### Core claims
+
+The paper tests the positive polarity advantage under glance-like reading, motivated by automotive displays and other interfaces that must work under varying ambient light. Prior research suggested the advantage stems from the brighter illumination emitted by positive-polarity displays and not from the darker background of negative displays. The authors measured legibility thresholds using a lexical decision paradigm with two type sizes, two display polarities and two ambient illuminations (near-dark and daylight-like). Legibility thresholds, quantified as the time needed to read a word accurately, were highest (worse) for negative polarity under dark ambient illumination. Positive polarity in the dark, and all conditions under bright illumination, showed significantly lower thresholds (better legibility). The authors read this as consistent with the idea that brighter illumination causes pupillary contraction, which reduces optical aberrations as light enters the eye.
+
+### Specifics
+
+Evidence type: laboratory experiment with a lexical decision task (is this letter string a word?) and a threshold measure in time, a design that approximates a glance. Confirmed details from the abstract:
+
+- Factors: type size (two sizes), polarity (positive, negative), ambient illumination (near-dark, daylight-like).
+- Measure: the display time needed to read a word accurately (legibility threshold); lower is better.
+- Key interaction: negative polarity was disadvantaged specifically in dark ambient conditions; all conditions under bright illumination showed significantly reduced thresholds, so the polarity penalty was specific to the dark condition.
+- Mechanism proposed: pupillary contraction under brighter light limits optical aberrations.
+
+The abstract does not give the number of participants, the sizes in points or the thresholds in milliseconds; I do not state them.
+
+### Replication and criticism
+
+This study refines the picture from Buchner and Baumgartner (2007), who found the positive polarity advantage independent of ambient illumination for proofreading: here, for glance-like reading, the disadvantage of negative polarity is concentrated in the dark. The two are not contradictory, as the tasks differ (glance versus extended proofreading) and the mechanism proposed is the same (luminance and pupil size). It is a single-lab result, and the authors' application field is automotive glance reading; I did not find independent replications this session. The mechanism (pupil contraction) is a hypothesis consistent with the data, not directly measured in the abstract.
+
+### Implications for LTF
+
+1. It is the most relevant study in the lane for fly mode: a learner glancing at a second screen from a simulator in a dim room is a glance-reading situation under near-dark conditions. The result says light-on-dark text with a dim display is the worst combination for fast reading.
+2. In fly mode, avoid small, dim light-on-dark text; use large type, higher luminance for key values and a restrained dark surface.
+3. If a dark fly-mode theme is chosen to avoid dazzle, compensate with larger sizes and brighter text, and test the actual reading time of a checklist step at a glance, not just subjective comfort.
+4. Provide a user-controlled brightness or theme toggle inside fly mode, because the best choice depends on room light, which the app cannot sense reliably.
+
+Confirmed this session: Crossref 10.1016/j.apergo.2016.11.001 (Applied Ergonomics 60, pp. 68-73, three authors); Europe PMC abstract.

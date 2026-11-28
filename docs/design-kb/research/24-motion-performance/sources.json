@@ -1,0 +1,723 @@
+[
+ {
+  "key": "thomas1981illusion",
+  "type": "book",
+  "authors": [
+   {
+    "family": "Thomas",
+    "given": "Frank"
+   },
+   {
+    "family": "Johnston",
+    "given": "Ollie"
+   }
+  ],
+  "year": 1981,
+  "title": "Disney Animation: The Illusion of Life",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Abbeville Press",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "0896592332",
+  "url": "https://openlibrary.org/works/OL2924612W",
+  "verified_via": "openlibrary",
+  "verified_evidence": "Open Library work OL2924612W lists Disney animation, Frank Thomas and Ollie Johnston, first published 1981 by Abbeville Press, with a June 1981 collector hardcover edition ISBN 0896592332; Wikipedia pages \"Disney Animation: The Illusion of Life\" and \"Twelve basic principles of animation\" agree on authors, 1981, Abbeville Press, ISBN 0-89659-233-2. A 1995 revised edition from Hyperion has the inverted title. Crossref has no record.",
+  "kind": "craft treatise by practitioners (expert opinion)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "lasseter1987principles",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Lasseter",
+    "given": "John"
+   }
+  ],
+  "year": 1987,
+  "title": "Principles of traditional animation applied to 3D computer animation",
+  "container_title": "ACM SIGGRAPH Computer Graphics",
+  "volume": "21",
+  "issue": "4",
+  "pages": "35-44",
+  "publisher": "Association for Computing Machinery (ACM)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/37402.37407",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/37402.37407 returned title 'Principles of traditional animation applied to 3D computer animation', authors Lasseter, issued 1987; container 'ACM SIGGRAPH Computer Graphics'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "craft/practitioner paper (expert opinion with worked examples)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "chang1993animation",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Chang",
+    "given": "Bay-Wei"
+   },
+   {
+    "family": "Ungar",
+    "given": "David"
+   }
+  ],
+  "year": 1993,
+  "title": "Animation: from cartoons to the user interface",
+  "container_title": "Proceedings of the 6th Annual ACM Symposium on User Interface Software and Technology (UIST '93)",
+  "volume": "",
+  "issue": "",
+  "pages": "45-55",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/168642.168647",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/168642.168647 returned title 'Animation: from cartoons to the user interface', authors Chang, Ungar, issued 1993; container 'Proceedings of the 6th annual ACM symposium on User interface software and technology'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "design-research paper describing one system, no controlled experiment",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "heer2007animated",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Heer",
+    "given": "Jeffrey"
+   },
+   {
+    "family": "Robertson",
+    "given": "George G."
+   }
+  ],
+  "year": 2007,
+  "title": "Animated Transitions in Statistical Data Graphics",
+  "container_title": "IEEE Transactions on Visualization and Computer Graphics",
+  "volume": "13",
+  "issue": "6",
+  "pages": "1240-1247",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1109/tvcg.2007.70539",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1109/tvcg.2007.70539 returned title 'Animated Transitions in Statistical Data Graphics', authors Heer, Robertson, issued 2007; container 'IEEE Transactions on Visualization and Computer Graphics'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "two controlled experiments (24 participants) plus design principles",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "tversky2002animation",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Tversky",
+    "given": "Barbara"
+   },
+   {
+    "family": "Morrison",
+    "given": "Julie Bauer"
+   },
+   {
+    "family": "Bétrancourt",
+    "given": "Mireille"
+   }
+  ],
+  "year": 2002,
+  "title": "Animation: can it facilitate?",
+  "container_title": "International Journal of Human-Computer Studies",
+  "volume": "57",
+  "issue": "4",
+  "pages": "247-262",
+  "publisher": "Elsevier BV",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1006/ijhc.2002.1017",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1006/ijhc.2002.1017 returned title 'Animation: can it facilitate?', authors TVERSKY, MORRISON, BETRANCOURT, issued 2002; container 'International Journal of Human-Computer Studies'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "narrative literature review",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "hoffler2007instructional",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Höffler",
+    "given": "Tim N."
+   },
+   {
+    "family": "Leutner",
+    "given": "Detlev"
+   }
+  ],
+  "year": 2007,
+  "title": "Instructional animation versus static pictures: A meta-analysis",
+  "container_title": "Learning and Instruction",
+  "volume": "17",
+  "issue": "6",
+  "pages": "722-738",
+  "publisher": "Elsevier BV",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1016/j.learninstruc.2007.09.013",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1016/j.learninstruc.2007.09.013 returned title 'Instructional animation versus static pictures: A meta-analysis', authors Höffler, Leutner, issued 2007; container 'Learning and Instruction'. Full or abstract-level text also read this session (see notes.md). Abstract-level numbers read on the Leibniz-IPN publication listing.",
+  "kind": "meta-analysis (26 studies, 76 comparisons)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "bederson1999animation",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Bederson",
+    "given": "Benjamin B."
+   },
+   {
+    "family": "Boltman",
+    "given": "Angela"
+   }
+  ],
+  "year": 1999,
+  "title": "Does animation help users build mental maps of spatial information?",
+  "container_title": "Proceedings of the IEEE Symposium on Information Visualization (InfoVis '99)",
+  "volume": "",
+  "issue": "",
+  "pages": "28-35",
+  "publisher": "IEEE Comput. Soc",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1109/infvis.1999.801854",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1109/infvis.1999.801854 returned the InfoVis'99 record (title 'Does animation help users build mental maps of spatial information?', pages 28-35, no issued date in the record, authors Bederson and Boltman). Year 1999 from the proceedings name and listings (INFOVIS 1999) returned by web search; the open technical report HCIL TR 98-11 / CS-TR-3964 (September 1998) was read in full.",
+  "kind": "controlled experiment (20 participants)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "dragicevic2011temporal",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Dragicevic",
+    "given": "Pierre"
+   },
+   {
+    "family": "Bezerianos",
+    "given": "Anastasia"
+   },
+   {
+    "family": "Javed",
+    "given": "Waqas"
+   },
+   {
+    "family": "Elmqvist",
+    "given": "Niklas"
+   },
+   {
+    "family": "Fekete",
+    "given": "Jean-Daniel"
+   }
+  ],
+  "year": 2011,
+  "title": "Temporal distortion for animated transitions",
+  "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '11)",
+  "volume": "",
+  "issue": "",
+  "pages": "2009-2018",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/1978942.1979233",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/1978942.1979233 returned title 'Temporal distortion for animated transitions', authors Dragicevic, Bezerianos, Javed, Elmqvist, Fekete, issued 2011; container 'Proceedings of the SIGCHI Conference on Human Factors in Computing Systems'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "controlled experiment (12 participants)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "chevalier2016animations",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Chevalier",
+    "given": "Fanny"
+   },
+   {
+    "family": "Henry Riche",
+    "given": "Nathalie"
+   },
+   {
+    "family": "Plaisant",
+    "given": "Catherine"
+   },
+   {
+    "family": "Chalbi",
+    "given": "Amira"
+   },
+   {
+    "family": "Hurter",
+    "given": "Christophe"
+   }
+  ],
+  "year": 2016,
+  "title": "Animations 25 Years Later",
+  "container_title": "Proceedings of the International Working Conference on Advanced Visual Interfaces (AVI '16)",
+  "volume": "",
+  "issue": "",
+  "pages": "280-287",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/2909132.2909255",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/2909132.2909255 returned title 'Animations 25 Years Later', authors Chevalier, Riche, Plaisant, Chalbi, Hurter, issued 2016; container 'Proceedings of the International Working Conference on Advanced Visual Interfaces'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "taxonomy based on literature review and 20 interviews",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "myers1985importance",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Myers",
+    "given": "Brad A."
+   }
+  ],
+  "year": 1985,
+  "title": "The importance of percent-done progress indicators for computer-human interfaces",
+  "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '85)",
+  "volume": "",
+  "issue": "",
+  "pages": "11-17",
+  "publisher": "ACM Press",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/317456.317459",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/317456.317459 returned title 'The importance of percent-done progress indicators for computer-human interfaces', authors Myers, issued 1985; container 'Proceedings of the SIGCHI conference on Human factors in computing systems  - CHI '85'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "controlled experiment (48 participants) plus design argument",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "harrison2007rethinking",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Harrison",
+    "given": "Chris"
+   },
+   {
+    "family": "Amento",
+    "given": "Brian"
+   },
+   {
+    "family": "Kuznetsov",
+    "given": "Stacey"
+   },
+   {
+    "family": "Bell",
+    "given": "Robert"
+   }
+  ],
+  "year": 2007,
+  "title": "Rethinking the progress bar",
+  "container_title": "Proceedings of the 20th Annual ACM Symposium on User Interface Software and Technology (UIST '07)",
+  "volume": "",
+  "issue": "",
+  "pages": "115-118",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/1294211.1294231",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/1294211.1294231 returned title 'Rethinking the progress bar', authors Harrison, Amento, Kuznetsov, Bell, issued 2007; container 'Proceedings of the 20th annual ACM symposium on User interface software and technology'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "controlled experiment (22 participants)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "harrison2010faster",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Harrison",
+    "given": "Chris"
+   },
+   {
+    "family": "Yeo",
+    "given": "Zhiquan"
+   },
+   {
+    "family": "Hudson",
+    "given": "Scott E."
+   }
+  ],
+  "year": 2010,
+  "title": "Faster progress bars",
+  "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '10)",
+  "volume": "",
+  "issue": "",
+  "pages": "1545-1548",
+  "publisher": "ACM",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/1753326.1753556",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/1753326.1753556 returned title 'Faster progress bars', authors Harrison, Yeo, Hudson, issued 2010; container 'Proceedings of the SIGCHI Conference on Human Factors in Computing Systems'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "series of four small controlled experiments (CHI note)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "nah2004study",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Nah",
+    "given": "Fiona Fui-Hoon"
+   }
+  ],
+  "year": 2004,
+  "title": "A study on tolerable waiting time: how long are Web users willing to wait?",
+  "container_title": "Behaviour & Information Technology",
+  "volume": "23",
+  "issue": "3",
+  "pages": "153-163",
+  "publisher": "Informa UK Limited",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1080/01449290410001669914",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1080/01449290410001669914 returned title 'A study on tolerable waiting time: how long are Web users willing to wait?', authors Nah, issued 2004; container 'Behaviour & Information Technology'. Full or abstract-level text also read this session (see notes.md). Abstract-level findings from web search summaries; publisher page refused fetch.",
+  "kind": "controlled experiment (full text not read)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "miller1968response",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Miller",
+    "given": "Robert B."
+   }
+  ],
+  "year": 1968,
+  "title": "Response time in man-computer conversational transactions",
+  "container_title": "Proceedings of the AFIPS Fall Joint Computer Conference, Part I (AFIPS '68)",
+  "volume": "",
+  "issue": "",
+  "pages": "267-277",
+  "publisher": "ACM Press",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/1476589.1476628",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/1476589.1476628 returned title 'Response time in man-computer conversational transactions', authors Miller, issued 1968; container 'Proceedings of the December 9-11, 1968, fall joint computer conference, part I on - AFIPS '68 (Fall, part I)'. Full or abstract-level text also read this session (see notes.md). Pages 267-277 from dblp/web search and Nielsen's citation (Crossref lists page 267 only). Original text not read; table values via a secondary summary.",
+  "kind": "expert synthesis of response-time categories (read via secondary accounts)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "card1991information",
+  "type": "paper-conference",
+  "authors": [
+   {
+    "family": "Card",
+    "given": "Stuart K."
+   },
+   {
+    "family": "Robertson",
+    "given": "George G."
+   },
+   {
+    "family": "Mackinlay",
+    "given": "Jock D."
+   }
+  ],
+  "year": 1991,
+  "title": "The information visualizer, an information workspace",
+  "container_title": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '91)",
+  "volume": "",
+  "issue": "",
+  "pages": "181-186",
+  "publisher": "ACM Press",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1145/108844.108874",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1145/108844.108874 returned title 'The information visualizer, an information workspace', authors Card, Robertson, Mackinlay, issued 1991; container 'Proceedings of the SIGCHI conference on Human factors in computing systems Reaching through technology - CHI '91'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "system paper with engineering time constants drawn from cognitive science",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "nielsen1993response",
+  "type": "webpage",
+  "authors": [
+   {
+    "family": "Nielsen",
+    "given": "Jakob"
+   }
+  ],
+  "year": 1993,
+  "title": "Response times: the 3 important limits",
+  "container_title": "Nielsen Norman Group",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Nielsen Norman Group",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.nngroup.com/articles/response-times-3-important-limits/",
+  "verified_via": "websearch",
+  "verified_evidence": "Page fetched at the URL: title \"Response Times: The 3 Important Limits\", author Jakob Nielsen, dated January 1, 1993, excerpt from Usability Engineering with a 2014 update; cites Miller 1968, Card et al. 1991 and Myers 1985. Parent book confirmed in Open Library (OL3522752W, Academic Press 1993).",
+  "kind": "expert synthesis by a respected practitioner (not a new experiment)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "maister1985psychology",
+  "type": "chapter",
+  "authors": [
+   {
+    "family": "Maister",
+    "given": "David H."
+   }
+  ],
+  "year": 1985,
+  "title": "The psychology of waiting lines",
+  "container_title": "The Service Encounter: Managing Employee/Customer Interaction in Service Businesses",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Lexington Books (D. C. Heath)",
+  "publisher_place": "Lexington, MA",
+  "edition": "",
+  "editors": [
+   {
+    "family": "Czepiel",
+    "given": "John A."
+   },
+   {
+    "family": "Solomon",
+    "given": "Michael R."
+   },
+   {
+    "family": "Surprenant",
+    "given": "Carol F."
+   }
+  ],
+  "doi": "",
+  "isbn": "",
+  "url": "https://davidmaister.com/articles/the-psychology-of-waiting-lines/",
+  "verified_via": "websearch",
+  "verified_evidence": "Web search returned the citation (Maister 1985, in Czepiel, Solomon and Surprenant (Eds.), The Service Encounter, Lexington, MA: Lexington Books / D. C. Heath, 1985) and the author site davidmaister.com, whose page was fetched and shows the full essay with eight proposition sections. Page range not confirmed so left empty; Open Library lookup failed (connection error).",
+  "kind": "practitioner essay (craft authority, no experiment)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "galletta2004web",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Galletta",
+    "given": "Dennis"
+   },
+   {
+    "family": "Henry",
+    "given": "Raymond"
+   },
+   {
+    "family": "McCoy",
+    "given": "Scott"
+   },
+   {
+    "family": "Polak",
+    "given": "Peter"
+   }
+  ],
+  "year": 2004,
+  "title": "Web Site Delays: How Tolerant are Users?",
+  "container_title": "Journal of the Association for Information Systems",
+  "volume": "5",
+  "issue": "1",
+  "pages": "1-28",
+  "publisher": "Association for Information Systems",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.17705/1jais.00044",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.17705/1jais.00044 returned title 'Web Site Delays: How Tolerant are Users?', authors Galletta, Henry, McCoy, Polak, issued 2004; container 'Journal of the Association for Information Systems'. Full or abstract-level text also read this session (see notes.md).",
+  "kind": "controlled experiment (196 participants)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "google2024web",
+  "type": "webpage",
+  "authors": [
+   {
+    "literal": "Google"
+   }
+  ],
+  "year": 2024,
+  "title": "Web Vitals (Core Web Vitals) and Defining the Core Web Vitals metrics thresholds",
+  "container_title": "web.dev",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "Google LLC",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://web.dev/articles/vitals",
+  "verified_via": "websearch",
+  "verified_evidence": "Fetched https://web.dev/articles/vitals (published May 4, 2020, last updated October 31, 2024), https://web.dev/articles/inp and https://web.dev/articles/defining-core-web-vitals-thresholds; thresholds LCP 2.5 s, INP 200 ms, CLS 0.1 at the 75th percentile read there.",
+  "kind": "industry standard documentation (vendor, not peer reviewed; describes its method)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "w3c2024wcag",
+  "type": "standard",
+  "authors": [
+   {
+    "literal": "World Wide Web Consortium"
+   }
+  ],
+  "year": 2024,
+  "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+  "container_title": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "World Wide Web Consortium",
+  "publisher_place": "",
+  "edition": "2.2",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://www.w3.org/TR/WCAG22/",
+  "verified_via": "websearch",
+  "verified_evidence": "Fetched https://www.w3.org/TR/WCAG22/ (W3C Recommendation, publication date shown 12 December 2024; SC 2.2.2 and 2.3.1 text read) and https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html (SC 2.3.3 Level AAA text and definitions read).",
+  "kind": "technical standard (consensus expert judgment)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "head2015designing",
+  "type": "webpage",
+  "authors": [
+   {
+    "family": "Head",
+    "given": "Val"
+   }
+  ],
+  "year": 2015,
+  "title": "Designing safer web animation for motion sensitivity",
+  "container_title": "A List Apart",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "publisher": "A Book Apart / A List Apart",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "",
+  "isbn": "",
+  "url": "https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/",
+  "verified_via": "websearch",
+  "verified_evidence": "Fetched the article: author Val Head, published September 8, 2015 (page shows update April 30, 2020), A List Apart; content and interviews read.",
+  "kind": "practitioner essay with interviews (expert opinion, lived-experience testimony)",
+  "lane": "24-motion-performance"
+ },
+ {
+  "key": "agrawal2009disorders",
+  "type": "article-journal",
+  "authors": [
+   {
+    "family": "Agrawal",
+    "given": "Yuri"
+   },
+   {
+    "family": "Carey",
+    "given": "John P."
+   },
+   {
+    "family": "Della Santina",
+    "given": "Charles C."
+   },
+   {
+    "family": "Schubert",
+    "given": "Michael C."
+   },
+   {
+    "family": "Minor",
+    "given": "Lloyd B."
+   }
+  ],
+  "year": 2009,
+  "title": "Disorders of Balance and Vestibular Function in US Adults",
+  "container_title": "Archives of Internal Medicine",
+  "volume": "169",
+  "issue": "10",
+  "pages": "938-944",
+  "publisher": "American Medical Association (AMA)",
+  "publisher_place": "",
+  "edition": "",
+  "editors": [],
+  "doi": "10.1001/archinternmed.2009.66",
+  "isbn": "",
+  "url": "",
+  "verified_via": "crossref",
+  "verified_evidence": "Crossref works/10.1001/archinternmed.2009.66 returned title 'Disorders of Balance and Vestibular Function in US Adults', authors Agrawal, Carey, Della Santina, Schubert, Minor, issued 2009; container 'Archives of Internal Medicine'. Full or abstract-level text also read this session (see notes.md). Page range 938-944 from citation lines in web search results (Crossref lists 938).",
+  "kind": "national cross-sectional survey (NHANES 2001-2004)",
+  "lane": "24-motion-performance"
+ }
+]
