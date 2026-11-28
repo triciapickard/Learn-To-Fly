@@ -516,7 +516,7 @@ The mechanism explains both ends. Short lines cut the characters available per f
 ::: {.rule #LEG-035 grade="B"}
 **Set lesson prose to a measure of about 45 to 75 characters per line, and never wider than about 80.** Readers prefer moderate lines, one study found better comprehension at 55 than at 100 characters, print tradition sits around 52 to 70, and long print lines raise regressions [@dyson2004physical; @tinker1963legibility; @bernard2003effects]. This is a preference and comprehension judgment, not a speed optimum: on screens, longer lines were often read as fast or faster [@dyson2004physical]. Hence B.
 
-*In LTF:* the lesson `article` is capped at `max-w-[800px]`, which the dossier estimates at roughly 90 to 100 characters of 16 px Instrument Sans (not measured). `Prose` already uses `max-w-measure`, the `container-measure` token at 68ch. Apply `max-w-measure` to lesson paragraphs, lists and `Callout` bodies; let `WidgetFrame`, tables and images use the full 800 px column.
+*In LTF:* the lesson `article` is capped at `max-w-[800px]`, which measurement of the shipped font over the lesson text puts at about 111 characters of 16 px Instrument Sans (Part XXVI, The Audit and the Identity Playbook, reports the measurement). `Prose` already uses `max-w-measure`, the `container-measure` token at 68ch. Apply `max-w-measure` to lesson paragraphs, lists and `Callout` bodies; let `WidgetFrame`, tables and images use the full 800 px column.
 :::
 
 ::: {.rule #LEG-036 grade="B"}
@@ -753,7 +753,7 @@ Wallace and colleagues' argument that "one font does not fit all" [@wallace2022t
 ::: {.rule #LEG-056 grade="C"}
 **Support decoding of aviation vocabulary directly: give pronunciations for difficult terms, break long call signs and codes into readable groups, and keep definitions in plain words.** Dyslexia is primarily a phonological difficulty, so visual changes to letters miss the main problem [@wery2017effect]; vocabulary is the main lever on reading [@rayner2016much]. Grade C: a reasoned recommendation without a direct test in this context.
 
-*In LTF:* glossary entries in `glossary.ts` can carry a pronunciation hint for terms like ones from the phonetic alphabet; radio-call examples group characters with spaces. Verify every aviation term and phrase against the content sources before adding it.
+*In LTF:* glossary entries in `glossary.ts` can carry a pronunciation hint for difficult terms, and examples of codes and call signs group their characters with spaces. Verify every aviation term and phrase against the content sources before adding it.
 :::
 
 ### Individual differences in testing
@@ -775,3 +775,132 @@ Every study in this Part found large differences between readers, and several fo
 ### What this means for Learn to Fly
 
 The evidence closes one door and opens another. Do not add a dyslexia font (LEG-052). Do add a modest reading-comfort setting for size, line spacing and letter and word spacing that reaches lessons, reference and Fly mode, described as a comfort option (LEG-053, LEG-054), and keep any font choice secondary (LEG-055). Support decoding with pronunciations, grouped codes and plain definitions (LEG-056), checking every aviation term against the sources. And when the team tests a type or layout change, design the test so practice, size and spacing cannot fake a result (LEG-057, LEG-058); the `QuizBlock` gives every lesson a ready comprehension check.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+The decisions below follow from the rules above. Each names what to keep, change or build, and the rules that justify it.
+
+**Lesson reading surface**
+
+1. Lesson body text moves from the inherited 16/26 to `body-lg` (18/29) in `MarkdownContent`, `Callout` bodies and `QuizBlock` explanations, matching `Prose` (LEG-019).
+2. Lesson paragraphs, lists and Callouts are capped at a character-based measure; widgets, tables and images keep the 800 px column (LEG-035, LEG-036). The existing `max-w-measure` token is 68ch, and because the `ch` unit is the width of the zero, which is wide in Instrument Sans, 68ch holds about 100 average characters. The token's value therefore has to come down before it is applied to lessons; Part XXVI, The Audit and the Identity Playbook, measures this and gives the ruling.
+3. Line heights stay in the 1.3 to 1.7 band; `text-sm leading-5` is not used for paragraphs (LEG-037).
+4. Lesson text stays single-column and ragged right (LEG-004, LEG-038).
+5. Sentences are written for one forward pass, with terms defined at first use and glossary `Popover`s reachable from quizzes and Fly mode (LEG-002, LEG-048).
+6. Every lesson is structured for return visits: objectives, descriptive headings, steps and values set apart from prose (LEG-049).
+
+**Words and names**
+
+7. One canonical name per thing, taken from `glossary.ts`, used in lessons, widgets, reference and Fly mode (LEG-006).
+8. Headings, `SectionNav` items, tab labels and checklist rows put the distinguishing word first (LEG-003).
+9. Safety-critical negations are not carried by a short word alone; bold is used for the one critical word (LEG-005, LEG-032).
+10. Lesson checklists shown for learning carry a reason or sequence cue; reference and Fly mode checklists keep the bare verified wording (LEG-007).
+
+**Case, style and emphasis**
+
+11. No running text in capitals; capitals only for labels of one to three words, with tracking (LEG-010, LEG-011).
+12. No italic for instructions, warnings or radio calls; the traffic-pattern widget's italic radio calls become roman; Markdown emphasis uses bold (LEG-031).
+13. Emphasis inside running text is bold only; status is a word plus icon, never color alone (LEG-033).
+14. No element combines two of: small size, light weight, italic, reversal, low contrast, tight spacing (LEG-034).
+
+**Size, distance and spacing**
+
+15. Each reading surface has a stated design distance; rendered x-height is checked against the 0.2-degree floor and the 0.24-degree target (LEG-017, LEG-018).
+16. Fly mode, fullscreen checklists and the kneeboard are sized for their greater distance and read in a short measure of large type, one item per row (LEG-016, LEG-020, LEG-040).
+17. Negative tracking only on `display-*` and `heading-lg`; never on body, label, readout or widget text (LEG-013).
+18. Small widget labels buy legibility back with spacing and full contrast; numerals get clearance from ticks, arcs and needles (LEG-012, LEG-015).
+19. Type comparisons and fallback fonts are matched at x-height, not `font-size` (LEG-021).
+
+**Faces and characters**
+
+20. The Instrument Sans plus JetBrains Mono division stays; it is kept or changed for brand and character reasons, not for a serif-or-sans legibility claim (LEG-028, LEG-029).
+21. Both faces get a recorded confusion-pair test at the smallest sizes in both themes; a, l, I and 1 forms are confirmed (LEG-022, LEG-024, LEG-027).
+22. Codes and numbers use mono with tabular lining figures and a zero distinct from O (LEG-026).
+23. No condensed face for small text, and no unusual letterforms in procedure text (LEG-023, LEG-025).
+
+**Contrast and themes**
+
+24. Text token pairs are tested against 4.5:1 in CI for both themes; Night `ink-3` on `accent-tint` is forbidden or the tokens adjusted (LEG-041).
+25. Action-bearing text uses `ink` or `ink-2`, not `ink-3` (LEG-042).
+26. Night and Fly mode reading text is `text-sm` or larger, weight 400 or heavier, `ink` or `ink-2` (LEG-043).
+27. Fly mode stays dark by default with no large bright areas (LEG-044).
+28. Floors are set for readers over 50 (LEG-045).
+
+**Features**
+
+29. No speed-reading, word-at-a-time, auto-scrolling or reading-timer features (LEG-008, LEG-046).
+30. Text being acted on stays visible: inline quizzes, persistent ticked steps, the Brief reachable from the Fly tab (LEG-039, LEG-047).
+31. No dyslexia font; a "Reading comfort" setting for size, line spacing and letter and word spacing is built for lessons, reference and Fly mode, described as a comfort option; any font choice is secondary (LEG-052, LEG-053, LEG-054, LEG-055).
+32. Decoding support for aviation vocabulary (pronunciation hints, grouped codes, plain definitions), with every term checked against the content sources (LEG-056).
+33. Marketing copy promises clarity, not speed (LEG-050).
+
+**Evidence and testing**
+
+34. Type and layout decisions cite the study or test behind them, and word-shape arguments are not accepted (LEG-001, LEG-009).
+35. Type choices are not made by preference poll (LEG-030).
+36. Reading tests counterbalance order, repeat a condition, match x-height and spacing, check comprehension with the lesson's `QuizBlock`, include older learners, and report average differences rather than best-minus-worst gaps (LEG-051, LEG-057, LEG-058).
+
+### Review checklist
+
+Run these questions against a pull request or a page. A "no" to any question is a finding, with the rule ID as its reference.
+
+**Text and words**
+
+- Can each lesson sentence be understood in one pass, with new terms defined where they first appear? (LEG-002, LEG-048)
+- Is each instrument, control and procedure called by its one glossary name, the same in the lesson, the widget title, the reference page and Fly mode? (LEG-006)
+- Does every heading, nav item, tab, list row and checklist row start with the word that distinguishes it? (LEG-003)
+- Is any safety-critical negation carried only by a short word such as "not" or "no"? (LEG-005)
+- Do learning checklists give a reason or order, and do reference and Fly mode checklists keep the verified wording? (LEG-007)
+- Is any reading timed, auto-advanced or shown one word or line at a time? (LEG-008, LEG-039, LEG-046)
+- Does the copy promise faster reading or learning? (LEG-050)
+
+**Case, style and emphasis**
+
+- Is any sentence, instruction or warning set in all capitals, or any capital label longer than three words or untracked? (LEG-010, LEG-011)
+- Is any instruction, warning, procedure or radio call set in italic? (LEG-031)
+- Is emphasis in running text limited to bold, and does every status carry a word, not color alone? (LEG-032, LEG-033)
+- Does any element combine two or more of small size, light weight, italic, reversal, low contrast and tight spacing? (LEG-034)
+
+**Size, measure and spacing**
+
+- Is lesson body text at `body-lg` or larger? (LEG-019)
+- Is the rendered x-height of every text a learner must read at or above 0.2 degrees at the surface's design distance, with running text near 0.24 degrees? (LEG-017, LEG-018)
+- Are Fly mode and other glance surfaces sized for their distance and set one item per row with wide gaps? (LEG-016, LEG-020, LEG-040)
+- Is lesson prose between about 45 and 75 characters per line, and is the measure specified in `ch`? (LEG-035, LEG-036)
+- Is running text line height between about 1.3 and 1.7? (LEG-037)
+- Is running text in a single column and ragged right, with word spaces intact? (LEG-004, LEG-038)
+- Is negative tracking used below display sizes, or is small text tight? (LEG-013, LEG-014)
+- Do widget numerals and labels have clearance from ticks, arcs and needles, and do small labels compensate with spacing and contrast? (LEG-012, LEG-015)
+
+**Faces and characters**
+
+- Does the change justify a face, case or spacing decision by word shape, or by a serif-or-sans legibility claim? (LEG-009, LEG-028)
+- Has a new or changed face been tested for 0/O, 1/l/I, 5/S, 8/B, 2/Z and rn/m at the smallest size in both themes, and checked in words and readouts? (LEG-022, LEG-024, LEG-027)
+- Are codes, frequencies, speeds and scores in mono with tabular lining figures and a distinct zero? (LEG-026)
+- Is a condensed face or an unusual letterform used for small or procedural text? (LEG-023, LEG-025)
+- Were faces compared at matched x-height? (LEG-021)
+- Is a typeface change being proposed to fix a problem that size, measure, spacing or contrast would fix? (LEG-029)
+
+**Contrast and themes**
+
+- Does every text and ground pair reach 4.5:1 (3:1 for large text) in Day and Night, computed on final colors? (LEG-041)
+- Is any text a learner must act on set in `ink-3`? (LEG-042)
+- In Night and Fly mode, is any reading text below `text-sm`, below weight 400, or in `ink-3`? (LEG-043)
+- Does Fly mode contain a large bright area? (LEG-044)
+- Were floors chosen with readers over 50 in mind? (LEG-045)
+
+**Features and settings**
+
+- Does the text a learner is answering or acting on stay visible and re-readable? (LEG-047)
+- Are exact steps and values set apart from prose for return visits? (LEG-049)
+- Does the change add or advertise a dyslexia font, or describe a reading setting as a clinical aid? (LEG-052, LEG-054)
+- Do reading settings change size and spacing first, with any font choice secondary? (LEG-053, LEG-055)
+- Are difficult terms and codes given decoding support, checked against the sources? (LEG-056)
+
+**Evidence and testing**
+
+- Does every claim that a change "reads better" cite a study or an LTF test? (LEG-001)
+- Was any type decision made by preference vote? (LEG-030)
+- Did any reading test counterbalance order, repeat a condition, match x-height and spacing, include older learners and check comprehension, and does its report give average differences rather than best-minus-worst gaps? (LEG-051, LEG-057, LEG-058)

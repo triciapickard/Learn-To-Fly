@@ -13,6 +13,12 @@ local function typ(inlines) return trim(pandoc.write(pandoc.Pandoc({ pandoc.Plai
 local function typb(blocks) return trim(pandoc.write(pandoc.Pandoc(blocks), 'typst')) end
 local function raw(s) return pandoc.RawBlock('typst', s) end
 local function q(s) return '"' .. s:gsub('\\', '\\\\'):gsub('"', '\\"') .. '"' end
+local function short(inlines, n)
+  local t = pandoc.utils.stringify(inlines)
+  if utf8.len(t) <= n then return t end
+  local cut = t:sub(1, utf8.offset(t, n + 1) - 1):gsub('%s+%S*$', '')
+  return cut .. '\u{2026}'
+end
 local function warn(s) io.stderr:write('[kb] ' .. s .. '\n') end
 
 function Pandoc(doc)
@@ -93,7 +99,7 @@ function Pandoc(doc)
         part = { num = roman(part_n), title = title, cites = {} }
         local lbl = 'part-' .. part_n
         if part_n == 1 then out[#out + 1] = raw('#set page(numbering: "1")\n#counter(page).update(1)') end
-        out[#out + 1] = raw('#ltf-part(' .. q(part.num) .. ', [' .. title .. '], ' .. q(lbl) .. ')')
+        out[#out + 1] = raw('#ltf-part(' .. q(part.num) .. ', [' .. title .. '], ' .. q(lbl) .. ', ' .. q(short(b.content, 30)) .. ')')
         toc[#toc + 1] = '(kind: "part", num: ' .. q(part.num) .. ', title: [' .. title .. '], label: ' .. q(lbl) .. ')'
       end
     elseif b.t == 'Header' and b.level == 2 then
@@ -108,7 +114,7 @@ function Pandoc(doc)
       else
         chap_n = chap_n + 1; sec_n = 0
         local lbl = 'ch-' .. chap_n
-        out[#out + 1] = raw('#ltf-chapter(' .. q(tostring(chap_n)) .. ', [' .. title .. '], ' .. q(lbl) .. ')')
+        out[#out + 1] = raw('#ltf-chapter(' .. q(tostring(chap_n)) .. ', [' .. title .. '], ' .. q(lbl) .. ', ' .. q(short(b.content, 38)) .. ')')
         toc[#toc + 1] = '(kind: "chapter", num: ' .. q(tostring(chap_n)) .. ', title: [' .. title .. '], label: ' .. q(lbl) .. ')'
       end
     elseif b.t == 'Header' and b.level == 3 then

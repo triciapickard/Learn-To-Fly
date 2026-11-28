@@ -2,7 +2,7 @@
 
 Color is the design variable most often decided by taste and defended by folklore. This Part replaces both with what can be shown. It runs from the physics and physiology of color vision (why hue is a coarse signal and lightness a strong one), through the standards that measure color and the perceptual spaces that make token ramps behave, to the context effects that make a correct swatch look wrong on the page. It then tests the popular claims about color meaning against their replications, sets out what is known about color and emotion, preference and learning, and ends with the material that most directly governs the product: color vision deficiency, contrast standards, display polarity in light and dark themes, and color as a signal in alerts, status and data.
 
-The evidence is uneven, and the grades say so. The physiology and colorimetry are among the most secure findings in this book: trichromacy, opponent processing, the non-uniformity of the CIE diagram and simultaneous contrast have been replicated for a century or more. The psychology of color meaning is the weakest: several headline effects (red lowers test scores, blue helps creativity, red wins fights) have shrunk to nothing in larger studies. Contrast thresholds are standards, graded C, with a modest experimental base on polarity and reading behind them. Every chapter applies its findings to Learn to Fly by name, and several of the applications rest on numbers computed this session from the values in `src/styles/tokens.css`: WCAG contrast ratios, Oklch coordinates and simulated color-deficient views of the status pairs. Use the rules as gates in review, and the closing decision list as the summary of what this Part settles for LTF.
+The evidence is uneven, and the grades say so. The physiology and colorimetry are among the most secure findings in this book: trichromacy, opponent processing, the non-uniformity of the CIE diagram and simultaneous contrast have been replicated for a century or more. The psychology of color meaning is the weakest: several headline effects (red lowers test scores, blue helps creativity, red wins fights) have shrunk to nothing in larger studies. Contrast thresholds are standards, graded C, with a modest experimental base on polarity and reading behind them. Every chapter applies its findings to Learn to Fly by name, and several of the applications rest on numbers computed for this book from the values in `src/styles/tokens.css`: WCAG contrast ratios, Oklch coordinates and simulated color-deficient views of the status pairs. Use the rules as gates in review, and the closing decision list as the summary of what this Part settles for LTF.
 
 ## Light, Cones and Opponent Channels
 
@@ -76,7 +76,7 @@ One more consequence of trichromacy is a hard limit on reproduction. Because scr
 
 **Keep.** The token system already separates luminance from hue in the way this chapter requires. The ink ladder (`ink`, `ink-2`, `ink-3`) is near-neutral at Oklch chroma of about 0.003 in both themes, so all ordinary reading text is carried by luminance alone. The single saturated non-status color, `accent`, is dark enough in Day (#00757c, 5.03:1 on `canvas`) and light enough in Night (#56d3da, 10.30:1 on the Night `canvas`) to work as text. The quiz result in `QuizBlock` pairs `text-go` with a `CheckCircle2` icon and the word "Correct!", and `text-warn` with an `XCircle` icon and "Not quite.", so the red-green pair never stands alone.
 
-**Change.** The status pair `go` and `warn` in Day differ almost only in hue: computed this session with the WCAG relative-luminance formula, `go` (#006c43) and `warn` (#b71824) have a luminance ratio of only 1.02 to each other. To the achromatic channel they are the same grey. That is acceptable only because every use carries an icon or a word, so treat the icon and word as mandatory, never optional, in `Badge`, `Callout`, `Toast` and `FormField` errors. The `PasswordStrengthMeter` colors its bar with `bg-warn`, `bg-warn`, `bg-caution`, `bg-go`, `bg-go`, a red-to-green ramp for an ordered quantity; it must show its strength word beside the bar (COL-003, COL-004).
+**Change.** The status pair `go` and `warn` in Day differ almost only in hue: computed for this book with the WCAG relative-luminance formula, `go` (#006c43) and `warn` (#b71824) have a luminance ratio of only 1.02 to each other. To the achromatic channel they are the same grey. That is acceptable only because every use carries an icon or a word, so treat the icon and word as mandatory, never optional, in `Badge`, `Callout`, `Toast` and `FormField` errors. The `PasswordStrengthMeter` colors its bar with `bg-warn`, `bg-warn`, `bg-caution`, `bg-go`, `bg-go`, a red-to-green ramp for an ordered quantity; it must show its strength word beside the bar (COL-003, COL-004).
 
 **Build.** Add a short "Sim vs reality" explainer to Module 0 that tells learners their monitor, room light and own eyes all change what a color looks like, and that the app always names or labels what a color means (COL-001, COL-006). Add an authoring rule to `content/README.md` that lessons never describe cones by color names.
 
@@ -107,7 +107,7 @@ The qualitative result has been replicated by every later study: Brown and MacAd
 ::: {.rule #COL-008 grade="B"}
 **Make any two states that must be told apart at a glance differ by many just-noticeable steps, not one or two.** MacAdam's thresholds were measured with a trained observer matching adjacent fields under laboratory conditions [@macadam1942visual]; a beginner scanning a busy screen beside a simulator is far from that. Wolfe and Horowitz add that efficient color search needs differences much larger than a MacAdam ellipse, and that the efficient region does not even look like a scaled ellipse [@wolfe2004what]. The rule is graded B because the threshold for "at a glance" on LTF's screens has not been measured.
 
-*In LTF:* the Day tier tokens `tier-gold` (#906200), `tier-silver` (#5f6469) and `tier-bronze` (#8c5331) sit within 0.03 of each other in Oklch lightness (0.53, 0.50 and 0.50, computed this session), and gold and bronze are only about 0.06 apart in Oklab. As rings they are near-identical in lightness; the printed tier word and the ring shape carry the distinction, and must continue to.
+*In LTF:* the Day tier tokens `tier-gold` (#906200), `tier-silver` (#5f6469) and `tier-bronze` (#8c5331) sit within 0.03 of each other in Oklch lightness (0.53, 0.50 and 0.50, computed for this book), and gold and bronze are only about 0.06 apart in Oklab. As rings they are near-identical in lightness; the printed tier word and the ring shape carry the distinction, and must continue to.
 :::
 
 ### Color order: hue, value and chroma
@@ -180,7 +180,7 @@ The starting matrix is a cone-like space, which is no accident: every color-matc
 
 ### LTF's tokens in Oklch
 
-The following values were computed this session from the hex values in `src/styles/tokens.css`, using Ottosson's published transform. L is lightness from 0 to 1, C is chroma, h is hue in degrees.
+The following values were computed for this book from the hex values in `src/styles/tokens.css`, using Ottosson's published transform. L is lightness from 0 to 1, C is chroma, h is hue in degrees.
 
 | Token | Day (L, C, h) | Night (L, C, h) | Note |
 | --- | --- | --- | --- |
@@ -592,7 +592,7 @@ Okabe and Ito, as protanopes, add the user's caution: simulators show one approx
 
 ### LTF's status colors under simulation
 
-The following was computed this session by applying the Machado severity 1.0 matrices to linearized sRGB values of LTF tokens (the linear choice is an assumption, for the reason just given), then measuring Euclidean distance in Oklab between the two colors of each pair. Larger distances mean more distinct; the "normal" column is the unsimulated distance.
+The following was computed for this book by applying the Machado severity 1.0 matrices to linearized sRGB values of LTF tokens (the linear choice is an assumption, for the reason just given), then measuring Euclidean distance in Oklab between the two colors of each pair. Larger distances mean more distinct; the "normal" column is the unsimulated distance.
 
 | Pair | Normal | Protan | Deutan |
 | --- | --- | --- | --- |
@@ -659,3 +659,321 @@ Two results stand out. Under the deutan simulation, Day `caution` (#945a00) and 
 **Change.** The Day `caution` and `warn` pair is the most fragile in the product: nearly equal in luminance (1.17:1) and nearly merged in the deutan simulation. Since the two states mean different things (act soon against act now), keep their icons distinct in every component, and do not use the two tokens as adjacent fills without words (for example in the `PasswordStrengthMeter`) (COL-045, COL-047). In the G1000 widget, separate magenta and cyan elements by line style or label (COL-047, COL-031).
 
 **Build.** Add simulated-view screenshots (protan, deutan and tritan at severity 0.5 and 1.0) to the e2e visual checks for `/dev/components` and `/dev/widgets`, and a token-pair simulation check to the token script (COL-046, COL-051). This check is additive to the axe runs in `e2e/a11y.spec.ts`, not a replacement for them.
+
+## Contrast: Standards, Models and Reading
+
+### The WCAG ratio
+
+The Web Content Accessibility Guidelines are the standard LTF will be audited against, and version 2.2 (first published October 2023, republished December 2024) is the current Recommendation [@w3c2024wcag]. Its color requirements are four success criteria:
+
+| Criterion | Level | Requirement |
+| --- | --- | --- |
+| 1.4.3 Contrast (Minimum) | AA | 4.5:1 for text, 3:1 for large text |
+| 1.4.6 Contrast (Enhanced) | AAA | 7:1 for text, 4.5:1 for large text |
+| 1.4.11 Non-text Contrast | AA | 3:1 for UI components, states and needed graphics |
+| 1.4.1 Use of Color | A | color not the only visual means |
+
+Large-scale text is at least 18 point, or 14 point bold [@w3c2024wcag]; Carbon's documentation states the same split in pixels, treating text below 24 px as small [@ibm2026carbon]. The ratio is (L1 + 0.05) / (L2 + 0.05), where L1 is the relative luminance of the lighter color and L2 of the darker, so ratios run from 1:1 to 21:1. Relative luminance for sRGB is 0.2126 R + 0.7152 G + 0.0722 B on linearized channels, and the 0.05 term models typical viewing flare [@w3c2024wcag]. The thresholds are not rounded: 4.499:1 fails 4.5:1. Exceptions cover inactive components, pure decoration, invisible text and logotypes.
+
+The Understanding document gives the rationale. A ratio of 3:1 is the minimum recommended for standard text by ISO 9241-3 and ANSI-HFES-100-1988. The 4.5:1 level compensates for the loss of contrast sensitivity that accompanies acuity of about 20/40, estimated at about 1.5 times, so 3 times 1.5 gives 4.5; 7:1 relates to about 20/80 vision [@w3c2024wcag]. The document links 20/40 acuity to typical acuity at about age 80, and states that hue matters less than light-dark difference.
+
+The ratio is a threshold built on approximations: a fixed flare term, a single luminance model, no account of size beyond the large-text split, and no account of weight or polarity. Those are the openings its critics use.
+
+### What reading tolerates, and who needs the margin
+
+Legge, Rubin and Luebker measured reading rate as a function of contrast and character size in normal vision [@legge1987psychophysics]. Reading was fastest, at about 350 words per minute, for letters between 0.25 and 2 degrees, and within that range it was very tolerant of contrast loss: for 1-degree letters, a tenfold reduction in contrast reduced reading rate by less than a factor of two. Results were very similar for white-on-black and black-on-white text. Reading declined faster for letters smaller than 0.25 or larger than 2 degrees, and because people with low vision usually need large characters, high contrast is especially important for them; the authors took 35 words per minute as a reading threshold to build a contrast-sensitivity function for reading [@legge1987psychophysics].
+
+The finding cuts against complacency rather than for it. Normal readers at comfortable sizes cope with low contrast, which is why low-contrast grey text often passes informal review. The people the 4.5:1 floor protects are the ones whose contrast sensitivity is reduced: older readers, readers with low vision, and anyone reading on a dim screen or in glare.
+
+::: {.rule #COL-053 grade="C"}
+**Give all text at least 4.5:1 contrast against its actual background, and large text at least 3:1, computed on the final composited token pair in both themes, without rounding.** This is WCAG 2.2 success criterion 1.4.3 [@w3c2024wcag], whose 4.5:1 level is derived from the contrast-sensitivity loss that accompanies 20/40 acuity. Grade C: a standard, with a rationale from vision research but no experiment that tests the threshold itself.
+
+*In LTF:* computed for this book, every declared text token passes on every ground in both themes (Day `ink-3` is the tightest at 4.73:1 on `surface-sunken`; Night `ink-3` at 4.61:1 on `surface-raised`). Tight margins mean that a new ground (a tint, a hover fill) must be checked before `text-ink-3` is used on it.
+:::
+
+::: {.rule #COL-054 grade="C"}
+**Give every boundary or mark needed to identify a control, its state or a meaningful part of a graphic at least 3:1 contrast against its neighbors.** This is WCAG 2.2 success criterion 1.4.11 [@w3c2024wcag]; Carbon applies the same 3:1 to graphical elements, data visualizations and focus states [@ibm2026carbon]. Decorative borders are exempt, which is why the quiet `line` token is acceptable for card edges.
+
+*In LTF:* computed for this book, Day `accent-line` (#009ca5) is 3.07:1 on `canvas` and 3.33:1 on `surface`, passing, but 2.88:1 on `surface-sunken`, failing. Where the teal line marks the active tab, the active section in `SectionNav`, the active nav item or the done part of `LessonPath` on a sunken ground, use `accent` (4.72:1 on `surface-sunken`) instead. Input borders use `line-strong` (3.95:1 on `surface` in Day, 4.58:1 in Night), which passes; keep them on that token.
+:::
+
+::: {.rule #COL-055 grade="C"}
+**Aim for 7:1 for safety-relevant text that a learner reads at a glance, such as Fly mode steps, alert labels and checklist items.** WCAG's enhanced level of 7:1 corresponds to roughly 20/80 vision [@w3c2024wcag], and glance reading in dim surroundings is where light-on-dark text performs worst [@dobres2017effects]. The standard does not address dim-room viewing, so this is a target set for LTF's use, graded C.
+
+*In LTF:* in the Night theme that `FlyModeLayout` applies by default, `ink` (#ecebe9) on `canvas` is 15.48:1 and `warn` is 7.98:1, both above 7:1; `ink-2` is 8.61:1 and `ink-3` 5.93:1. Fly mode text therefore uses `ink` or `ink-2`, never `ink-3`.
+:::
+
+::: {.rule #COL-056 grade="B"}
+**Treat contrast near the minimum as a risk for low-vision and older readers, not as harmless because the text looks readable.** Normal readers at comfortable sizes tolerate large contrast reductions [@legge1987psychophysics], so a designer's own impression is a poor test; the floor exists for readers whose contrast sensitivity is reduced [@w3c2024wcag]. Grade B: the reading-rate tolerance is measured, and the protective purpose follows from the standard's rationale.
+
+*In LTF:* do not lower `ink-2` or `ink-3` contrast for a "softer" look. The most common color class in the product is `text-ink-2` (266 uses), so its contrast governs most supporting text on every page.
+:::
+
+### APCA: a proposed successor
+
+The Accessible Perceptual Contrast Algorithm, developed by Andrew Somers and Myndex Research, is proposed as a replacement for the WCAG 2 ratio [@somers2022apca]. Its premise is that readability depends on font size and weight, on polarity (dark on light against light on dark) and on perceived lightness contrast, which one luminance ratio cannot represent. Its output is a signed lightness contrast, Lc, from roughly −108 to +106, the sign encoding polarity, intended so that the same Lc represents the same perceived contrast anywhere in the range. The published library (algorithm 0.0.98G-4g, library 0.1.9, July 2022) uses an exponent of 2.4, separate text and background exponents, sRGB weights, a black threshold and scalers [@somers2022apca]. The author's guidance levels are roughly Lc 90 preferred and Lc 75 minimum for body text, Lc 60 for content text at larger sizes, Lc 45 for headlines, Lc 30 for placeholder-like text and Lc 15 as a floor for non-text, with a lookup table from size and weight to required Lc; for dark mode the documentation advises staying below Lc 90 for large fonts.
+
+Its status is contested. The documentation itself says APCA is in beta, that WCAG 2 and perceptual models will disagree, and that readers must judge suitability for their region [@somers2022apca]. The WCAG 3 working draft dated 10 September 2026 states that its contrast algorithm is yet to be determined and does not mention APCA [@w3c2024wcag]. Commentators argue that adopting APCA instead of WCAG 2 creates legal risk because only the WCAG 2 ratios are in force; the specific Lc thresholds are not validated in a peer-reviewed study that the research for this book could confirm. The criticisms of the WCAG ratio that APCA's documentation makes (no model of size and weight, overstated contrast for dark colors, unsuitability for dark mode) come from a rival method's developer.
+
+::: {.rule #COL-057 grade="D"}
+**Use APCA only as an advisory second check on dark-theme and thin or small text, and when it disagrees with WCAG 2.2, take the stricter result.** The WCAG 2 ratio is the standard in force, and APCA is an unvalidated beta whose thresholds are its author's guidance [@w3c2024wcag; @somers2022apca]. The rule is graded D because whether APCA predicts readability better than the ratio is contested and untested in the sources found.
+
+*In LTF:* the token script may report Lc for Night text pairs and for `text-sm` meta text as information, with no gate on it. Re-check the WCAG 3 status whenever this Part is revised.
+:::
+
+::: {.rule #COL-058 grade="C"}
+**Compute contrast automatically from the token files for every declared text and ground pair in both themes, and fail the build on a miss.** Contrast must be computed on the actual values, without rounding, and a theme change can silently break a pair [@w3c2024wcag]; a design system's own claims of compliance should be verified rather than inherited [@ibm2026carbon]. Grade C.
+
+*In LTF:* the token comments say contrast figures for every pair live in `tokens.json`, which does not exist in the repository. Replace that promise with a generated table from `tokens.css` and a test that fails when any declared pair drops below its threshold.
+:::
+
+::: {.rule #COL-059 grade="C"}
+**Check text on tinted fills as its own pair, never by assuming that a token which passes on `surface` also passes on a tint.** Tints raise the background luminance in Day and lower it in Night, so each text-on-tint combination has its own ratio [@w3c2024wcag]. Grade C.
+
+*In LTF:* computed for this book, Day `accent` on `accent-tint` is 4.86:1 (passing with little room) and Day `caution` on `caution-tint` is 4.93:1; Night `warn` on `warn-tint` is 6.02:1. The `Callout` titles and `Badge` labels that use these pairs pass, but a lighter `accent` or a darker tint would break them first.
+:::
+
+### Contrast in instrument drawings
+
+The widgets are graphics, so 1.4.11 governs their meaningful parts, and their fixed colors were computed for this book against the fixed `instrument` ground (#100f0e). `arc-white` reaches 17.48:1, `arc-yellow` 12.50:1, `arc-green` 8.40:1, `display-cyan` 10.60:1, `display-magenta` 7.83:1 and `arc-red` 5.09:1, all above 3:1. The `sky` fill (#2563c9) is 3.38:1 and `ground` (#7a4d24) 2.66:1 against `instrument`, but those are areas, not marks; what matters is that marks drawn on them pass. `instrument-text` (#ecebe9) is 4.76:1 on `sky` and 6.05:1 on `ground`, so labels drawn on the attitude fills pass the text minimum. On the sectional chart, `chart-blue` (6.08:1) and `chart-magenta` (6.33:1) on `chart-land` pass comfortably.
+
+The weak point is between marks rather than against the ground: `arc-green` and `arc-red` are only 1.65:1 against each other, and `arc-yellow` and `arc-green` 1.49:1. Where bands abut, the distinction is carried by hue alone, which is the case COL-045 forbids unless labels or position also carry it. In `AirspeedArcs` they do (worded legend, red line drawn as a different shape), and that redundancy must be preserved in every gauge.
+
+### What this means for Learn to Fly
+
+**Keep.** The ink ladder and status tokens, which pass on every declared ground in both themes; the focus ring, which uses `accent` (5.03:1 on Day `canvas`, 10.30:1 on Night `canvas`) and so exceeds the 3:1 that focus indicators need; input borders on `line-strong`.
+
+**Change.** Stop using `accent-line` for meaningful marks on `surface-sunken` in Day (COL-054). Remove the reference to a nonexistent `tokens.json` contrast table from the `tokens.css` comment and replace it with generated numbers (COL-058). Keep `text-ink-3` off tints and raised surfaces unless the pair is checked (COL-053, COL-059).
+
+**Build.** The contrast gate in the token script, run in CI for Day and Night: every text token on every ground and tint it is used on, every non-text indicator on its neighbor, with WCAG thresholds as failures and APCA as information only (COL-057, COL-058). Add the widget marks to it, pairing each fixed mark color with the fixed ground it is drawn on.
+
+## Polarity, Dark Themes and Fly mode
+
+### Polarity is a luminance question
+
+The question "is dark mode harder to read" has a better experimental record than most theme debates, and the record turns it into a different question: how bright is the display? Buchner and Baumgartner ran a series of proofreading experiments that crossed text-background polarity with ambient illumination (a dark room against typical office light) and with chromaticity (black and white against blue and yellow) [@buchner2007text]. Dark text on a light background, positive polarity, gave better proofreading in every comparison. A final experiment set red text on a green background to test whether a hue difference could stand in for a luminance difference; it could not. The study also measured breathing rate, heart rate, heart rate variability and skin conductance, and asked about mood, fatigue, eyestrain, headache and muscle strain. None varied with the conditions, which the authors read as showing that participants worked equally hard throughout, so the advantage was not an effort trade-off [@buchner2007text]. Sample and effect sizes were not available for this book, so the size of the advantage cannot be stated.
+
+The obvious confound is that a positive-polarity screen is mostly bright background and therefore emits more light. Buchner, Mayr and Brandt manipulated polarity and overall display luminance independently and found no polarity effect at matched luminance, only a main effect of luminance, with brighter displays read better [@buchner2009advantage]. Their conclusion is that polarity per se does not affect readability; overall luminance does. That is a strong claim from one experiment, and it is the claim on which a dark theme's design depends.
+
+Two follow-ups sharpen it. Piepenbrock, Mayr, Mund and Buchner asked whether older adults, whose aging lenses scatter more light, might reverse the effect; the competing prediction was that age-related loss of retinal illuminance would make bright displays help them more. Positive polarity won in both age groups, and the authors recommend it independent of age [@piepenbrock2013positive]. A 2014 follow-up by the same group, reported alongside that paper, crossed polarity with character sizes of 8, 10, 12 and 14 points (0.22 to 0.34 degrees of vertical visual angle) and found the advantage grew linearly as characters got smaller, advising against negative polarity especially with small fonts [@piepenbrock2013positive]. Dobres, Chahine and Reimer then used a lexical decision task with a time threshold, an approximation of a glance, crossing two type sizes, two polarities and two ambient illuminations [@dobres2017effects]. Thresholds were worst for light-on-dark text in near-dark surroundings; positive polarity in the dark, and every condition under bright light, did significantly better. Their proposed mechanism, pupil contraction under brighter light reducing optical aberrations, fits the luminance account but was not measured directly.
+
+The tension with Buchner and Baumgartner, who found no interaction with room light, is resolved by task: extended proofreading in one, glance reading in the other. The limits matter as much as the findings. Almost all of this comes from one group; the tasks are proofreading, acuity and lexical decision; and the luminance manipulation is stylized. Legge and colleagues found normal readers at comfortable sizes very tolerant of contrast loss, with little difference between polarities [@legge1987psychophysics]. So the polarity effect is real and modest, largest for small text, dim displays and glances.
+
+::: {.rule #COL-060 grade="B"}
+**Default dense reading, quizzes and checklists to positive polarity (dark text on a light ground), with a well-built dark theme as a choice.** Positive polarity gave better proofreading in dark and lit rooms and in two chromaticities [@buchner2007text], for younger and older adults [@piepenbrock2013positive], and the advantage grows as text gets smaller. Grade B: consistent results, mostly from one group, on proofreading-type tasks.
+
+*In LTF:* `System` resolves to the operating-system setting on ordinary pages, and Day is the design reference for `LessonPage`, `QuizBlock` and `Prose`. Keep Day the theme in which every new component is first designed and reviewed.
+:::
+
+::: {.rule #COL-061 grade="B"}
+**In a dark theme, make small text larger, heavier or brighter than its light-theme equivalent; never set thin, small gray text on near-black.** The positive-polarity advantage is a luminance effect [@buchner2009advantage] that grows as characters shrink [@piepenbrock2013positive], so the dark theme's penalty falls on exactly the small, dim meta text most designs place there. Grade B.
+
+*In LTF:* Night meta text is `text-sm` (14 px) in `ink-2` (#b2b1af) or `ink-3` (#939290). In Night, use `ink-2` rather than `ink-3` for any meta text that carries information (lesson minutes, challenge counts, timestamps), and consider stepping `eyebrow` (12 px) labels to weight 600 in `ink-2` only.
+:::
+
+::: myth
+**"Dark mode is easier on the eyes, so it is better for reading, especially for older users and in dark rooms."** In controlled proofreading, light-on-dark text was read less accurately in both dark rooms and office light, with no difference in measured strain [@buchner2007text]; older adults showed the same positive-polarity advantage as younger ones [@piepenbrock2013positive]; and at a glance, light-on-dark in a near-dark room was the slowest condition of all [@dobres2017effects]. Dark themes are a legitimate preference and can reduce glare, but readability is not their advantage.
+:::
+
+### Building the dark theme
+
+A dark theme is not an inverted light theme. Carbon's two dark themes, Gray 90 (#262626) and Gray 100 (#161616), step each layer one shade lighter (on Gray 100 the first layer is Gray 90, the next Gray 80), and the guidance says dark themes should not use components darker than the background outside high-contrast mode [@ibm2026carbon]. Elevation, which a light theme shows with shadow, becomes lightness. Focus on dark themes is white in Carbon rather than the light theme's blue.
+
+LTF's Night theme follows this pattern: `canvas` #141412, `surface` #1f1e1c, `surface-raised` #2b2a28, with `shadow-1` replaced by a 1 px `line` ring. `surface-sunken` (#0f0e0d) is darker than `canvas`, which Carbon's guidance would avoid for components; it is used for wells such as code chips and the `ThemeToggle` track, where "sunken" is the intended reading, so it is defensible, but it should not hold interactive cards.
+
+::: {.rule #COL-062 grade="C"}
+**Express elevation in a dark theme by stepping surfaces lighter, one step per layer, and keep raised surfaces distinguishable from the ground without relying on shadow.** Shadows are nearly invisible on dark grounds, and Carbon's layering model makes each layer one shade lighter [@ibm2026carbon]. Grade C: design-system practice.
+
+*In LTF:* the Night ladder steps 0.19, 0.24 and 0.29 in Oklch lightness (`canvas`, `surface`, `surface-raised`), about 0.05 per step. Toasts, popovers and the `Drawer` use `surface-raised`; check that a popover over a `surface` card is still distinguishable, since one 0.05 step plus the line ring is the only cue.
+:::
+
+::: {.rule #COL-063 grade="C"}
+**Keep saturated fills small in a dark theme and prefer thin, mid-tone strokes for highlights.** On a dark ground, large bright fills create the most figure-ground noise [@tufte1990envisioning], and saturated bright fields raise arousal [@wilms2018color]. Grade C.
+
+*In LTF:* in Night the tints (`accent-tint` #023538, `warn-tint` #442321) are dark and low in chroma, and the strong colors appear as text and lines. Keep it so; do not introduce bright filled badges in Night.
+:::
+
+### Fly mode: glance reading in a dim room
+
+Fly mode is the one place in LTF where the reading situation is known in advance: a learner at a simulator, often in a dim room, glancing at a second screen for a step, a time or an alert. `FlyModeLayout` sets `data-theme` to dark unless the reader explicitly chose Day, so a learner on `System` gets Night regardless of the operating-system setting. That puts the default into the condition Dobres and colleagues found slowest for glance reading: light text on a dark display in near-dark surroundings [@dobres2017effects]. The layout compensates with size: a `text-xl` base, `text-2xl` goal, `text-3xl` step headings and `text-5xl` mono stopwatch digits, which fits the finding that the dark penalty is largest for small characters [@piepenbrock2013positive].
+
+The dark choice has a plausible reason the studies did not test: a bright second screen beside a dark simulator view may dazzle or shift adaptation. That is a comfort argument, not a legibility one, and it is exactly the trade-off a measurement should settle.
+
+::: {.rule #COL-064 grade="B"}
+**In Fly mode, use large type, the brightest ink level for key values and steps, and a restrained dark surface, and let the learner switch to Day inside Fly mode.** Light-on-dark text is slowest at a glance in a dark room [@dobres2017effects], and the penalty shrinks as characters grow [@piepenbrock2013positive]; the best polarity depends on room light, which the app cannot sense. Grade B.
+
+*In LTF:* `FlyPanel large` already uses large sizes. Add a compact Day/Night control to `FlyModePage` (the header-less layout currently offers none), keep step text in `ink`, and keep `ink-3` out of Fly mode entirely (see COL-055).
+:::
+
+::: {.rule #COL-065 grade="B"}
+**Decide Fly mode's default theme by measuring glance reading time and step accuracy in both polarities, with display luminance recorded, rather than by assuming dark is better in a dark room.** The studies separate polarity from luminance only when luminance is controlled [@buchner2009advantage], and the glance result is a single lab's [@dobres2017effects]. Grade B.
+
+*In LTF:* a small study with a handful of learners at their own setups (time to read the next step, errors on a checklist, a comfort rating) is enough to choose between the current dark default and following `System`; record it in the decision log.
+:::
+
+::: {.rule #COL-066 grade="C"}
+**Do not justify a dark theme by age or by a dark room alone.** Older adults showed the positive-polarity advantage [@piepenbrock2013positive] and darkness did not remove it in proofreading [@buchner2007text]. Grade C as a review rule built on those findings.
+
+*In LTF:* the Night theme is offered as a preference ("a dimmer page"), not recommended as easier to read.
+:::
+
+### What this means for Learn to Fly
+
+**Keep.** Day as the design reference; a Night theme built by lighter layers rather than shadows; dark, low-chroma tints in Night; Fly mode's large type.
+
+**Change.** In Night, move information-bearing meta text from `ink-3` to `ink-2` (COL-061). Add a theme control inside Fly mode (COL-064). Stop describing Night as easier on the eyes anywhere in copy (COL-066).
+
+**Build.** A glance-reading check for Fly mode in both themes, with results in the decision log (COL-065), and a Night review pass on `/dev/components` that looks specifically at 12 and 14 px text and at popovers over cards (COL-061, COL-062).
+
+## Color as Signal: Alerts, Status, Salience and Data
+
+### A color convention written as a rule
+
+Flight-deck alerting is one of the few places where a color convention is written into regulation. The FAA's flightcrew alerting rule for transport-category airplanes, 14 CFR 25.1322, requires alerts to give the crew the information needed to recognize a non-normal condition and decide what to do, to be easy to detect and understand under all foreseeable conditions including multiple alerts, and to be removed when the condition no longer exists [@faa2010flightcrew]. It sets three priority levels: a warning needs immediate awareness and immediate response, a caution immediate awareness and a later response, and an advisory awareness and possibly a later response. Warnings and cautions must use at least two senses (aural, visual or tactile) to get attention. The alerting function must minimize false and nuisance alerts, and if an attention-getting cue is suppressed the crew must get a clear indication that it is [@faa2010flightcrew].
+
+The color paragraph begins "Red for warning alert indications"; caution is amber or yellow; advisory is any color except red or green; and on displays that cannot show these colors, other coding must distinguish the levels [@faa2010flightcrew]. A further paragraph allows red, amber and yellow for non-alerting functions only to a limited extent and without adversely affecting alerting. The rule is a certification floor for one class of airplane, written from consensus and experience rather than experiment, and it says nothing about any particular aircraft's displays or procedures; it is cited here for its display principles only.
+
+### Why a reserved color stays loud
+
+The regulation's limit on non-alerting red has a perceptual basis. Theeuwes found that people searching for a known target could not fully ignore a salient item that differed on another dimension: a uniquely colored item slowed search for a unique shape and the reverse, the interference did not disappear with practice, and it scaled with the distractor's relative discriminability [@theeuwes1992perceptual]. Whether every salient item captures attention in every task is contested (other work finds that capture depends on the searcher's mode and goals), but in the conditions tested, a color singleton costs attention whether or not it is relevant [@theeuwes1992perceptual].
+
+Wolfe and Horowitz's review lists color among the four undoubted attributes that guide attention, with motion, orientation and size [@wolfe2004what]. Two of their findings set palette rules. Efficiency rises with the target-distractor difference and falls with the distractor-distractor difference, and efficient color search needs differences far above a just-noticeable step. And heterogeneity hurts most when distractors flank the target in feature space, so a target hue that can be separated from all the others by a single line in color space (the only warm color among cool ones) is found easily, while one surrounded by neighbors on both sides is not [@wolfe2004what].
+
+::: {.rule #COL-067 grade="B"}
+**Reserve the warning red for conditions that need the learner's immediate attention, and do not use it for decoration, branding or routine controls.** The alerting rule restricts non-alerting uses of red so that they do not dilute alerts [@faa2010flightcrew], and a uniquely colored item draws attention whether or not it is relevant [@theeuwes1992perceptual]. Grade B: a regulatory principle with experimental support for its mechanism.
+
+*In LTF:* `warn` appears in the right places (errors, wrong answers, the unverified warning, the Fly mode random event, the safety callout). It also appears where it should not: the 64 px `bg-warn` play disc on `YouTubeEmbed` in the landing hero, and the `decision` callout type, which uses the same `bg-warn-tint` and `text-warn` as `safety` for a go/no-go prompt. Move the play disc to `ink`, and give `decision` its own neutral or accent treatment.
+:::
+
+::: {.rule #COL-068 grade="B"}
+**Keep status colors for status: do not reuse `go`, `caution` or `warn` to label content types.** Each reuse weakens the convention, as the alerting rule's limit on non-alerting red and amber anticipates [@faa2010flightcrew], and makes the page a field of competing singletons [@theeuwes1992perceptual; @wolfe2004what]. Grade B.
+
+*In LTF:* the `Callout` config assigns `go` to "Pro tip" and `caution` to "Classic panel", so a learner sees a green "success" fill on advice and an amber "caution" fill on a panel note. Retint those types with neutral or accent fills and keep the status hues for safety, decision states and real cautions.
+:::
+
+::: {.rule #COL-069 grade="C"}
+**Give in-app alerts three levels (act now, act soon, note for later), each with its own word, icon shape and color, and use a second sense for the top level.** This mirrors the structure of the alerting rule, including its requirement of two senses for warnings and cautions and other coding where color cannot be shown [@faa2010flightcrew]. Grade C: a regulatory structure applied by analogy to a training app.
+
+*In LTF:* the Fly mode random event already combines a `warn` frame, a pulsing ring, the `BellRing` icon, a label and a beep. Map the product's tones to the three levels explicitly (`warn` with octagon for act now, `caution` with triangle for act soon, ink with info icon for note) and document it beside `Toast` and `Badge`.
+:::
+
+::: {.rule #COL-070 grade="C"}
+**Remove a color-coded alert when its condition clears, and when a cue is muted or dismissed, show that it is.** The alerting rule requires alerts to be removed when conditions end and requires an indication when attention cues are suppressed [@faa2010flightcrew]. Grade C.
+
+*In LTF:* the Fly mode event alert clears when acknowledged; if beeps can be muted, show a "Sound off" state in Fly mode. The `BetaBanner`, dismissible and stored in local storage, is a standing caution-tinted strip and should not be the only place a real caution appears.
+:::
+
+::: {.rule #COL-071 grade="B"}
+**Keep ordinary content in a narrow, quiet color range so that the one exceptional state can be separated from everything else at a glance.** Efficient color search depends on large target-distractor and small distractor-distractor differences, and on the target being separable from all distractors in color space [@wolfe2004what]. Grade B: a well-supported review applied to interface design.
+
+*In LTF:* the neutral ink ladder and the single teal accent achieve this on ordinary pages. On busy pages (the challenge list, the dashboard, the reference hub) count the distinct hues in view; if `accent`, `go`, `caution`, `warn` and the three tier colors all appear together, the warning is no longer separable.
+:::
+
+::: {.rule #COL-072 grade="C"}
+**Let the single accent mean one thing (where you are, and the next step on the path) and do not spend it on general emphasis.** A reserved hue keeps its signal value only if it is not used everywhere [@theeuwes1992perceptual; @tufte1990envisioning]. Grade C.
+
+*In LTF:* `accent` and `accent-line` mark the active nav item, the active tab, the active lesson section, completed `LessonPath` stops, the current module and the `accent` button variant "only for continuing the lesson path". That is coherent. Links are also `text-accent`; keep their underline so that link and "you are here" are told apart by shape.
+:::
+
+### Color for data
+
+When LTF shows quantities, the ColorBrewer taxonomy is the place to start [@harrower2003colorbrewer]. A sequential scheme suits ordered data from low to high, carried mainly by lightness steps. A diverging scheme gives equal weight to a meaningful midpoint and both extremes, with a light middle and dark contrasting hues at the ends. A qualitative scheme suits categories, with hue doing the work and only subtle lightness differences, implying no order. The tool offers 35 schemes with 3 to 12 classes, hand-selected with reference to Munsell, filterable as colorblind safe, print friendly and photocopy safe [@harrower2003colorbrewer]. Its wide adoption is not validation, and the schemes were designed for filled map areas.
+
+Borland and Taylor argued that the rainbow color map confuses the viewer, obscures data and misleads: its hues have no perceptual order, its luminance varies uncontrollably, and it creates boundaries that are not in the data [@borland2007rainbow]. A 2023 reply by Ware, Stone and Szafir, reported with that critique, grants the problems of the classic map but notes that rainbows are often most accurate when values are read with a key, and that redesigned maps such as Turbo mitigate the flaws. Brewer showed earlier that spectral schemes can work as diverging schemes when lightness is controlled, with dark ends and a light middle, and suggested skipping yellow-greens for red-green deficient readers [@brewer1997spectral].
+
+::: {.rule #COL-073 grade="C"}
+**Match every color scale to its data type: sequential (one hue, monotonic lightness) for amounts, diverging for signed deviation from a meaningful midpoint, qualitative for categories.** Mismatching types hides order or invents it [@harrower2003colorbrewer]. Grade C: expert-selected schemes, widely adopted.
+
+*In LTF:* dashboard progress per module is a sequential quantity and should use one hue (the accent) at varying lightness or length, never status colors. A future view of deviation from a target value in a challenge would be diverging around the target.
+:::
+
+::: {.rule #COL-074 grade="B"}
+**Do not use the classic rainbow or jet map for continuous quantities; use a monotonic-lightness ramp, and use a spectral scheme only as a lightness-controlled diverging scale.** The classic rainbow lacks perceptual order and uniform luminance and creates false boundaries [@borland2007rainbow]; spectral colors are defensible only with dark ends and a light middle [@brewer1997spectral]. Grade B: the critique is supported by mixed experiments, and redesigned rainbows narrow it.
+
+*In LTF:* no rainbow exists in the product today. If a heat map is added (time spent per lesson, accuracy by challenge), use a single-hue ramp checked in both themes, since a ramp ending near black vanishes in Night.
+:::
+
+::: {.rule #COL-075 grade="C"}
+**Keep the fixed instrument and chart colors inside drawings and keep page tokens out of drawings.** Mixing the two systems blurs which colors are conventions to learn and which are interface signals; the token rules already draw this line, and the alerting principle of not diluting reserved colors applies to it [@faa2010flightcrew; @ibm2026carbon]. Grade C.
+
+*In LTF:* `arc-red`, `display-magenta` and `chart-*` stay in `AirspeedArcs`, `g1000-pfd`, `sectional-legend` and the `YouTubeEmbed` background; `warn` and `go` stay out of the instrument drawings. A grep for `arc-` and `display-` outside `features/widgets/` and `AirspeedArcs.tsx` is a cheap review check.
+:::
+
+### What this means for Learn to Fly
+
+**Keep.** One accent with one meaning; status colors that travel with icons and words; the Fly mode event alert's combination of frame, ring, icon, word and sound; the separation of instrument and page tokens.
+
+**Change.** Move the landing video's play disc off `warn` (COL-067). Retint the "Pro tip", "Classic panel" and "Decision" callouts so status hues mean status (COL-067, COL-068). Write down the three alert levels and map `Toast`, `Badge` and `Callout` tones to them (COL-069).
+
+**Build.** A hue-count check in review for busy pages (COL-071) and data-scale guidance in the component docs before the first dashboard chart is built (COL-073, COL-074).
+
+## Decision list and review checklist
+
+### Decisions this Part settles for LTF
+
+1. **Luminance carries legibility; hue carries category.** All text and needed marks are separated from their grounds by luminance contrast; hue differences are never relied on for detail (COL-002, COL-003, COL-011).
+2. **Color never stands alone.** Every status, tier, quiz result, widget band and alert carries a word, icon, shape or position as well as color (COL-028, COL-045, COL-047). The Day `caution` and `warn` pair, nearly merged under deutan simulation, depends on its triangle and octagon icons.
+3. **Tokens are specified perceptually.** Each token records its Oklch triplet; ramps are planned in Oklch with per-hue chroma caps and explicit gamut mapping; contrast is gated on the WCAG ratio, never on lightness difference (COL-009, COL-013 to COL-016, COL-019).
+4. **Day `ink-3` is resolved.** Either its lightness gap from `ink-2` is widened or it is folded into `ink-2` in Day (COL-019, COL-061).
+5. **A token script gates color in CI.** It generates the Oklch table, WCAG ratios for every declared pair in both themes, simulated color-deficient distances for must-differ pairs, and an advisory APCA report (COL-010, COL-046, COL-051, COL-057, COL-058).
+6. **Contrast floors.** 4.5:1 text, 3:1 large text and non-text indicators, 7:1 target for Fly mode text; `accent-line` is not used for meaningful marks on `surface-sunken` (COL-053 to COL-055, COL-059).
+7. **No color psychology in rationale or copy.** Colors are justified by role, convention, contrast and color vision, never by priming or mood claims (COL-032 to COL-036).
+8. **Day is the reading default and the design reference; Night compensates.** Night meta text uses `ink-2`; Fly mode gains an in-mode theme control and a measured decision on its default (COL-060, COL-061, COL-064, COL-065).
+9. **Status hues mean status.** `warn` is removed from the landing play disc and the `decision` callout; `go` and `caution` are removed from "Pro tip" and "Classic panel" (COL-067, COL-068).
+10. **Three alert levels with redundant coding,** cleared when the condition ends (COL-069, COL-070).
+11. **Widgets sit on fixed grounds,** use labeled colors in basic English names, and keep instrument colors separate from page tokens (COL-022, COL-027, COL-049, COL-075).
+12. **Data scales follow the data type;** no rainbow; categorical series use a deficiency-aware palette with direct labels (COL-052, COL-073, COL-074).
+13. **No exactness claims.** Copy never says a page color is the sim's color, and never calls the product "colorblind safe" (COL-001, COL-050).
+
+### Review checklist
+
+Run these questions against a pull request or a page.
+
+- Does any text, thin stroke or needed mark rely on hue rather than luminance to stand out from its ground? (COL-002)
+- Is any state or quantity encoded by a small hue difference, or by a neighboring-hue boundary such as cyan against green? (COL-003, COL-031)
+- Is a new binary indicator red against green? If so, does it also differ in shape or label? (COL-004, COL-045)
+- Is there a large saturated flash on a dark full-screen view? (COL-005, COL-063)
+- Does copy promise that a color matches the simulator, describe cones by color names, or teach red, yellow and blue primaries? (COL-001, COL-006, COL-030)
+- Were color differences judged by hex or HSL rather than Oklab or CIEDE2000, and is any difference code validated against the Sharma pairs? (COL-007, COL-010)
+- Do states that must be told apart at a glance differ by many just-noticeable steps? (COL-008)
+- Does every new or changed token record its Oklch triplet and stay within the sRGB gamut by chroma reduction, not clipping? (COL-009, COL-013, COL-014, COL-016)
+- Was contrast checked by the WCAG ratio, not by a lightness difference? (COL-011, COL-015)
+- Are gradients and mixes interpolated in Oklab? (COL-017)
+- Do components reference role tokens only, with instrument and chart colors confined to drawings? (COL-018, COL-075)
+- Are adjacent ramp levels at least about 0.08 apart in Oklch lightness? (COL-019)
+- Was each color reviewed on every surface it appears on, in Day and Night, at low and high brightness? (COL-020, COL-025)
+- Do adjacent saturated colors have a neutral edge or lightness gap? (COL-021)
+- Do widget drawings sit on a fixed neutral ground inside `WidgetFrame`? (COL-022)
+- Are large areas muted and strong color confined to small meaningful elements? (COL-023, COL-040)
+- Are grids, borders and dividers quiet, with `line-strong` kept for control boundaries? (COL-024)
+- Does any quiz ask learners to name a color from a lone swatch? (COL-026)
+- Are color names in copy basic English terms, each paired with a label, icon, position or shape? (COL-027, COL-028)
+- Does any view ask learners to remember more than about six hue meanings? (COL-029)
+- Does any rationale or copy claim a psychological effect of color? (COL-032, COL-034, COL-036)
+- Are error and wrong-answer states justified by convention and redundancy? (COL-033)
+- Is a color experiment preregistered, powered and specified in measured terms? (COL-035, COL-037)
+- Are competitors or groups assigned red or blue for an imagined edge? (COL-038)
+- Is a "calmer" or "friendlier" request expressed in lightness and chroma, then checked for contrast? (COL-039)
+- Do both themes remain first-class choices? (COL-041)
+- Is olive or brown used as an accent? (COL-042)
+- Are widget colors clear and labeled rather than gray or garish? (COL-043)
+- Does a first-contact page add color where it should reduce complexity? (COL-044)
+- Were protan, deutan and tritan simulations at 0.5 and 1.0 checked in both themes, with any merged pair fixed by a second cue? (COL-046, COL-047, COL-051)
+- Is pure red used on dark grounds or on green, or a yellow-green used for meaning? (COL-048)
+- Are colored elements labeled directly rather than through a separate key? (COL-049)
+- Does any text claim the product is colorblind safe? (COL-050)
+- Do categorical chart colors come from a deficiency-aware palette, checked against both theme grounds? (COL-052)
+- Does all text meet 4.5:1 (3:1 large) and every needed indicator 3:1 on its actual ground, including tints, with no rounding? (COL-053, COL-054, COL-059)
+- Does Fly mode text reach 7:1 and avoid `ink-3`? (COL-055)
+- Was low-contrast text accepted because it "looks fine"? (COL-056)
+- Is APCA used only as advice, with the stricter result taken? (COL-057)
+- Does the CI contrast gate cover the change? (COL-058)
+- Is dense reading designed first in Day, and is Night small text larger or brighter? (COL-060, COL-061)
+- Does Night elevation use lighter layers rather than shadow? (COL-062)
+- Can the learner change theme inside Fly mode, and was the Fly mode default measured? (COL-064, COL-065)
+- Is a dark theme justified by age or room darkness alone? (COL-066)
+- Is `warn` used for anything other than act-now conditions, or are status hues used to label content types? (COL-067, COL-068)
+- Does a new alert fit one of three levels with word, icon, color and (for the top level) sound, and does it clear with its condition? (COL-069, COL-070)
+- How many distinct hues are in view, and is the exceptional state still separable? (COL-071)
+- Is the accent used only for position and the next step? (COL-072)
+- Does each color scale match its data type, with no rainbow? (COL-073, COL-074)

@@ -806,7 +806,7 @@ announced (and so impossible to miss).
 
 ::: {.rule #INT-031 grade="C"}
 **Separate practice from anything scored or recorded by a different screen or a clearly different
-frame, not by a toggle inside the same frame.** The Raskin-derived implication in the lane notes is
+frame, not by a toggle inside the same frame.** The Raskin-derived implication in the research notes is
 that a widget that is "explore" in a lesson and "scored" in a challenge should be visibly distinct
 and entered by a clearly different path [@raskin2000humane]. Fewer modes is the first defense
 [@sarter1995world].
@@ -1281,7 +1281,7 @@ they are intelligent, avoid the word "Default" in the interface, and communicate
 reversion [@tognazzini2014first]. ISO 9241-110 lists defaults that support the task among the
 recommendations under suitability for the user's tasks [@iso2020ergonomics]. Saffer's chapter on
 rules covers limited options and smart defaults, and his chapter on triggers includes "Bring the
-Data Forward", which the lane notes read as showing the person's relevant data where they act
+Data Forward", which the research notes read as showing the person's relevant data where they act
 [@saffer2013microinteractions]; the book was not read in full, so his own definitions are not
 quoted here. Raskin argued against adaptive interfaces that change on their own, because they
 prevent habituation [@raskin2000humane].
@@ -1298,7 +1298,7 @@ defaults principle [@tognazzini2014first], ISO's task-supporting defaults [@iso2
 Saffer's smart defaults [@saffer2013microinteractions] agree; all are expert or consensus guidance.
 
 *In LTF:* `QuizBlock` restores `lastAnswer` from `quizStore` so a learner returning to a question sees
-what they chose, and `ChecklistRunner` opens in large text when started with `bigText` from fly mode.
+what they chose, and `ChecklistRunner` opens in large text when started with `bigText` from Fly mode.
 `ChallengesPage` keeps its filters in the URL through `useSearchParams`, so the browser's Back
 button returns a learner from a challenge to the list they had filtered; keep that, and keep "Clear
 filters" one tap away.
@@ -1352,7 +1352,7 @@ learner proceed with one tap.
 
 ### What this means for Learn to Fly
 
-LTF's defaults are chosen well and mostly undocumented. Keep them: system theme, dark fly mode
+LTF's defaults are chosen well and mostly undocumented. Keep them: system theme, dark Fly mode
 unless light was chosen, "Remember me" off, timer stopped, quiz and rubric answers empty, last
 answers restored. Document each choice where it is set (INT-049) so that later changes are reviewed
 as decisions. Keep the explicit sentence about unanswered criteria (INT-051), and never pre-select a
@@ -1411,7 +1411,7 @@ its system image [@norman2013design]. Degani and Wiener's checklist guidelines a
 names for controls and displays [@degani1990checklists], and "same thing, same way" was the single
 largest explainer in Nielsen's database, at 23% of all problems [@nielsen1994enhancing].
 
-*In LTF:* the challenge tabs say "Fly" and the page says "fly mode"; the Fly tab's list is "Steps",
+*In LTF:* the challenge tabs say "Fly" and the page says "Fly mode"; the Fly tab's list is "Steps",
 the Brief's section is "Procedure", and the reference has "checklists". These may be three different
 things, but if a Brief "Procedure" and a Fly "Steps" are the same list, give them one name. Keep a
 glossary of interface terms beside `features/reference/glossary.ts` and lint content against it.
@@ -1658,9 +1658,9 @@ and test the second-screen assumption: how many learners actually open `FlyModeP
 
 LTF already does the hardest part of goal-directed design: the first screen leads to the first task,
 with no account, no tour and no settings. Protect that (INT-065). The excise to remove is at the top
-of lesson pages, where up to four notices can precede the content (INT-063), and in fly mode, where
+of lesson pages, where up to four notices can precede the content (INT-063), and in Fly mode, where
 `FlyModeLayout` still renders the `BetaBanner` above the challenge on a screen whose only job is
-the flight. Show the beta notice once per session in fly mode, or fold it into the page footer there.
+the flight. Show the beta notice once per session in Fly mode, or fold it into the page footer there.
 
 Make every lesson contain an attempt (INT-067), place critical setup in the path of the task
 (INT-066), retire first-time help once it has been used (INT-064), and treat the second-screen
@@ -1690,7 +1690,7 @@ to start from the person's need (what, when, how often) and to do as much as pos
 as possible, under an epigraph from Charles Eames that the details "make the design".
 
 The evidence is craft judgment illustrated by products, not research, and the book was known for
-this Part through its contents and one review. A fair limitation, offered by the lane notes rather
+this Part through its contents and one review. A fair limitation, offered by the research notes rather
 than by a published critic, is that almost any interface event can be called a microinteraction, and
 that polish on details can distract from structure. The framework's value is as a specification
 template: it forces four questions to be answered before code is written.
@@ -1802,3 +1802,398 @@ Fix three specific gaps: the copy button's silent failure (INT-070), the random-
 missing trigger line (INT-072), and the silent discarding of a debrief draft after a rubric update
 (INT-073). Add previous per-criterion results to the Debrief tab as read-only context (INT-071).
 Keep celebration for the one rare event that earns it (INT-074).
+
+## Attention and the Companion Screen
+
+### One thing at a time
+
+Raskin built his account of interface design on the locus of attention: attention works like a
+spotlight that lights one thing at a time, and stimuli outside it are mostly ignored
+[@raskin2000humane]. With repetition, actions become habits performed without conscious attention.
+For most software that is a theory of efficiency. For LTF it is a description of the use case. The
+learner's locus of attention during a challenge is the sim; the companion screen is outside it,
+consulted in glances. Everything on that screen must be readable in a glance, stable between glances
+and silent unless something matters.
+
+Hutchins, Hollan and Norman list an unobtrusive interface among the conditions for direct
+engagement: an interface that is noticed puts the user in a third-person relation to the task
+[@hutchins1985direct]. Dourish draws the same line with Heidegger's distinction between a tool that
+is ready-to-hand (used so fluently that attention is on the task, as with a hammer) and one that is
+present-at-hand (the tool itself becomes the object of attention) [@dourish2001where]. His book is a
+philosophical synthesis, read here through a review that criticizes it for focusing almost entirely
+on the ready-to-hand mode and neglecting how people move between the two. That gap is exactly LTF's
+design problem: the companion screen should be ready-to-hand during the flight and become
+present-at-hand, deliberately, when the learner stops to reflect.
+
+Endsley's model names attention and working memory as the bottlenecks on situation awareness
+[@endsley1995toward]. Whatever the debates about the construct, the practical inference is
+uncontroversial: keep what the learner must hold in mind on screen, and keep the screen from
+competing with the sim.
+
+::: {.rule #INT-075 grade="C"}
+**On the companion screen, keep one stable layout: the current and next step always in the same
+place, completed items out of the way, and nothing that moves or reflows between glances.** The
+locus of attention [@raskin2000humane] and working-memory limits [@endsley1995toward] are the basis;
+both are theory and expert argument.
+
+*In LTF:* `FlyModePage` renders the challenge header, then `FlyPanel large` with an alert slot at the
+top, steps, then the timer. When a random event fires, the alert is inserted above "Steps" and
+pushes the whole list down. Reserve the alert's space (or overlay it at a fixed position) so the
+steps do not move, and keep a ticked step in place, dimmed, rather than reflowing the list.
+:::
+
+::: {.rule #INT-076 grade="C"}
+**Allow no dialogs, popovers or overlays on the companion screen during a flight, except one rare
+alert that the challenge itself defines.** An interface that draws attention to itself breaks
+engagement [@hutchins1985direct], and the ready-to-hand tool is the one not noticed
+[@dourish2001where].
+
+*In LTF:* `FlyModeLayout` already strips the header and footer. It still renders the `BetaBanner`;
+dismissing it is one more thing to do while flying. Hide it in Fly mode after its first showing in
+the session, and keep any future sign-up prompt, toast or glossary popover off `FlyModePage`.
+:::
+
+### Alerts that keep their meaning
+
+Parasuraman and Riley organize the human side of automation under use, misuse, disuse and abuse
+[@parasuraman1997humans]. Disuse, the neglect of automation, is "commonly caused by alarms that
+activate falsely", and it occurs because the base rate of the condition is not considered when the
+trade-off between false alarms and misses is set. Misuse is over-reliance, which produces failures
+of monitoring. Abuse is automating functions without regard for the consequences for human
+performance, which can reduce the operator to a by-product of the automation. Among the factors that
+affect monitoring, the paper names the saliency of automation state indicators. It is an integrative
+review of empirical work; the body was not read, and its findings are reported here at the level of
+the abstract. A later review by Lee found it a pivotal paper and concluded that automation "requires
+more, not less, attention to training, interface design, and interaction design".
+
+Sellen and colleagues add the sensory side: sound and touch can carry state when vision is busy,
+and Monk's mode-contingent sound cut mode errors by a third [@sellen1992prevention]. A sound is a
+strong signal because it reaches a person whose eyes are elsewhere, which is also why it wears out
+fastest when it fires for nothing.
+
+::: {.rule #INT-077 grade="B"}
+**Fire an alert only for an event that requires the learner to act, keep every alert rare, and
+retire any prompt that learners routinely dismiss without acting.** False alarms produce disuse
+[@parasuraman1997humans]; the review integrates many studies, though the mechanism is reported here
+from its abstract. A sound or a pulse is worth something only while it means something.
+
+*In LTF:* `FlyPanel`'s random event (red `border-4 border-warn`, `warning-pulse`, a two-tone beep,
+`role="alert"`) is the only loud signal in the product and should stay the only one. If the product
+records dismissals, log "Got it" taps with time-to-dismiss; an event dismissed in under a second
+without a change in the learner's flight is a candidate for review.
+:::
+
+::: {.rule #INT-078 grade="C"}
+**Do not automate the checks the learner is meant to perform: no auto-ticking, auto-advancing or
+auto-scoring of what happens in the sim.** Over-reliance on automation degrades monitoring, and
+automating without regard for human performance reduces the person to pressing "next"
+[@parasuraman1997humans]. Since LTF cannot see the sim [@suchman1987plans], any automatic tick would
+also be false.
+
+*In LTF:* steps in `FlyPanel` and items in `ChecklistRunner` are ticked only by the learner, and the
+debrief is self-scored; keep it so. A future sim-data integration should confirm what the learner
+reports, not replace the report.
+:::
+
+### Checklist design on the second screen
+
+Degani and Wiener's NASA report on flight-deck checklists is the strongest source on how procedures
+should be laid out for a person whose attention is divided [@degani1990checklists]. They observed 42
+crews over 72 flights and about 140 flight hours at one carrier, interviewed pilots from seven
+carriers, and reviewed incident and accident reports. They found the checklist to be "a generator and
+coordinator of many cockpit tasks", and the printed page "only the outer shell of the problem". Their
+16 proposed guidelines are, in their words, "not specifications" and may conflict. The most
+transferable: standardize names for controls and displays; responses should state the desired
+status or value, not only "checked" or "set"; touch the controls while running the checklist; make
+the completion call the last item; subdivide a long checklist into smaller task-related chunks;
+sequence items by the physical layout of the cockpit, with a pictorial flow for training; put the
+most critical items as near the beginning as possible so they are done before an interruption, which
+takes precedence over layout order where the two conflict; and do not couple checklists tightly to
+other tasks, leaving buffers to recover. The report is a mixed-method technical report from one
+carrier, and the guidelines are proposals.
+
+These are human-factors guidelines for how a list is structured, not aviation procedures. The items
+themselves, and their order in a real aircraft, come from the aircraft's documents and LTF's
+verified content.
+
+::: {.rule #INT-079 grade="C"}
+**Break any procedure longer than a screen into task-sized groups, end each group with a visible
+completion line, and put the most consequential items first.** These are Degani and Wiener's
+guidelines on chunking, completion calls and critical-first ordering [@degani1990checklists];
+critical-first outranks neat grouping when they conflict.
+
+*In LTF:* `FlyPanel` renders `challenge.procedure` as one flat numbered list. Allow procedure content
+to carry group headings, show "Group complete" at the end of each, and give content authors the
+critical-first rule in `content/README.md`.
+:::
+
+::: {.rule #INT-080 grade="C"}
+**Write each checklist response as the state the learner should see, not as "checked" or "done".**
+Degani and Wiener's guideline that responses portray the desired status or value
+[@degani1990checklists] turns a tick from a memory aid into a check. A bare checkbox should not stand
+in for the check itself.
+
+*In LTF:* `ChecklistRunner` items and Fly-tab steps should read as item plus state (the form of
+"Control, position"), with the state text coming from verified content. The `Checkbox` records that
+the learner confirmed the state; the words carry what the state is.
+:::
+
+::: {.rule #INT-081 grade="C"}
+**Order on-screen steps the way the learner's eyes and hands move through the sim's cockpit, unless a
+critical item must come earlier.** Degani and Wiener recommend sequencing by the cockpit's physical
+layout, with a pictorial flow for training [@degani1990checklists]. Matching the order of the page
+to the order of the panel removes a translation the learner would otherwise do in working memory.
+
+*In LTF:* a checklist-runner lesson can pair the list with a panel diagram that lights the region of
+the current item, using the `g1000-pfd` or a panel widget; the order itself is content and must be
+verified against the aircraft documents.
+:::
+
+### Coupling, reflection and help
+
+Dourish's design principles include that users, not designers, manage coupling (how closely the
+system is bound to their activity), and that embodied interaction turns action into meaning
+[@dourish2001where]. The review that reports them also notes Dourish gives principles rather than
+rules, which some designers find disappointing. The application for LTF is in two parts. During a
+flight the learner should control how closely the app tracks them (a timer they choose to start,
+ticks they choose to make). After a flight the app should become an object of attention on purpose:
+breakdowns, in the phenomenological account, are where a tool becomes visible, and the debrief is
+the planned breakdown.
+
+How much help to give during practice is the one place in this Part where the evidence is genuinely
+contested. Salmoni, Schmidt and Walter separated the temporary effect of feedback on performance
+from its lasting effect on learning, and proposed the guidance hypothesis: feedback on every trial
+helps performance during practice but can create dependence that hurts retention when feedback is
+removed [@salmoni1984knowledge]. Later work was mixed. Wulf and Shea found that for complex skills,
+learners given full concurrent feedback learned at least as well as those given less, so the
+hypothesis holds best for simple tasks and does not justify withholding feedback from beginners on
+complex ones.
+
+::: {.rule #INT-082 grade="C"}
+**Make the debrief the moment the app asks for full attention: after the flight, not during it, with
+the questions that turn the flight into something learned.** Dourish's present-at-hand mode and the
+idea of breakdown as a site of learning are philosophical design rationale [@dourish2001where], not
+evidence of learning gains.
+
+*In LTF:* the Debrief tab, its "Reflect" questions and the criterion-by-criterion `ResultView` are
+this moment. Keep Fly mode free of reflection prompts, and keep "Finish and debrief" as the explicit
+transition on the Fly tab; on `FlyModePage`, which has no such button, add "Done flying? Debrief on
+your main screen".
+:::
+
+::: {.rule #INT-083 grade="D"}
+**Offer an optional reduced-help mode for learners who want to test themselves, but do not reduce
+feedback by default for beginners on complex maneuvers.** The guidance hypothesis predicts that
+constant feedback can create dependence [@salmoni1984knowledge], but replication is mixed and the
+strongest qualification, for complex skills, points the other way. Do not claim any number of
+attempts or feedback frequency is optimal without testing.
+
+*In LTF:* a "Fly without steps" option on `FlyModePage` (steps collapsed, timer only) would let a
+returning learner test retention, with the Debrief as the check. The default stays full steps.
+:::
+
+### What this means for Learn to Fly
+
+`FlyModePage` and `FlyModeLayout` are the product's most distinctive interaction and its most
+demanding. The dark, large-type, headerless layout is right. The changes this chapter asks for are:
+a stable layout in which the random-event alert does not push the steps (INT-075); the beta notice
+shown once and then gone in Fly mode (INT-076); the alert kept as the product's only loud signal and
+measured for false alarms (INT-077); procedures grouped with completion lines and critical items
+first (INT-079); step text written as target states (INT-080) in cockpit order (INT-081); and an
+explicit hand-off to the debrief from Fly mode (INT-082). Keep every tick a learner action
+(INT-078), and treat a reduced-help mode as an option to test, never a default (INT-083).
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+The decisions below are stated as settled policy for LTF. Each names the rules that carry its
+evidence and grade; where a decision rests mostly on grade C rules, it is a reasoned default that
+learner testing may revise.
+
+1. **Widgets are direct-manipulation worlds.** The object is always visible, the control sits on or
+   beside what it moves, every change is immediate and reversible, and "Reset" returns to the start.
+   Each widget shows the quantity the learner judges and is framed by lesson text saying what to
+   notice. (INT-001, INT-003, INT-004, INT-005, INT-007)
+2. **Tables and lists stay tables and lists.** Lookup and comparison content is not turned into
+   icons or cards. (INT-002)
+3. **Results are reported, not praised.** Copy states the measured outcome; "Nice work!" and similar
+   verdicts are removed. (INT-006, INT-017)
+4. **Interactive and static surfaces look different.** Interactive cards are links built from
+   `Card interactive` with a hover change and an arrow or chevron; static cards have none of these.
+   Hand-inlined card markup is replaced by `Card`. (INT-008, INT-009, INT-014)
+5. **Conventions stay; cockpit styling stays inside widget drawings.** Underlined links, labeled
+   icons, chevrons and tab underlines are kept; instrument tokens never style page controls; hidden
+   horizontal scroll gets a visible cue. (INT-011, INT-012, INT-013)
+6. **Locked and disabled controls always say why.** (INT-016, INT-040)
+7. **Every action gets local feedback within about a tenth of a second, and every sequence ends
+   visibly.** Response-time budgets are measured in tests. The Fly tab and the checklist runner gain
+   visible end states. (INT-018, INT-019, INT-020)
+8. **Progress indicators are honest.** Determinate only when the fraction is known, never stalled
+   near the end, never shaped to deceive. (INT-021, INT-022)
+9. **Outcomes persist where the action happened.** Toasts duplicate, never replace, an inline state;
+   errors stay until handled. (INT-023, INT-024)
+10. **Modes are few, named in words at a fixed place, and tested with an interruption.** Widget quiz
+    mode gets an in-canvas label; Fly mode shows whether the timer is running and events are armed;
+    the visitor branch of "Mark lesson complete" is labeled for what it does; practice never feeds a
+    score. (INT-025, INT-027, INT-028, INT-029, INT-030, INT-031)
+11. **Risky modes are held, not latched.** (INT-026)
+12. **Learner errors are content defects until shown otherwise.** First-try accuracy is reported per
+    quiz item and widget quiz and reviewed; copy never blames; quizzes distinguish slips from
+    mistakes; changed steps in practiced procedures are marked. (INT-033, INT-034, INT-035, INT-037)
+13. **The challenge keeps independent layers of defense.** Brief, Fly and Debrief each stand alone.
+    (INT-036)
+14. **Errors say what happened, what to do and whether it may be bigger; validation happens on blur;
+    quiz answers are checked on request.** (INT-038, INT-039)
+15. **Undo replaces "Are you sure?".** Confirmation is kept only for irreversible actions and must
+    not be a reflex click; the checklist "Reset" gains undo; irreversible submits say so. (INT-041,
+    INT-042, INT-043, INT-044, INT-046)
+16. **Learner work survives interruption and the second screen.** Flight state syncs for signed-in
+    learners, and Fly mode says where ticks are stored until it does. (INT-045, INT-047)
+17. **Consequences are previewed before commitment.** The debrief score preview stays beside submit.
+    (INT-048)
+18. **Defaults are deliberate, documented and learner-serving.** Private by default, no pre-selected
+    answers, blanks explained, recommendations labeled, layout never adapts by usage, no settings
+    tour before the first lesson. (INT-049, INT-050, INT-051, INT-052, INT-053, INT-054, INT-055)
+19. **One interface vocabulary, in the learner's terms.** An interface glossary is kept beside the
+    aviation glossary and content is checked against it. (INT-057, INT-058)
+20. **The app designs for its own blindness.** Steps say what the learner should see, give a way back
+    in, are tickable in any order, and every score says it is self-assessed. (INT-056, INT-059,
+    INT-060, INT-061, INT-062)
+21. **Excise is removed and the first task comes first.** Lesson-top notices collapse into one line;
+    first-time help retires after use; critical setup lives in the path of the task; each lesson has
+    at least one attempt between objectives and completion. (INT-063, INT-064, INT-065, INT-066,
+    INT-067)
+22. **Personas are hypotheses.** The second-screen learner is measured, not assumed. (INT-068)
+23. **Every new interactive component carries a trigger, rules, feedback and loop comment.** The copy
+    button reports failure, system-triggered alerts name their trigger, discarded drafts are
+    announced, previous results are shown read-only beside new choices, and celebration is reserved
+    for rare events. (INT-069, INT-070, INT-071, INT-072, INT-073, INT-074)
+24. **Fly mode is ready-to-hand.** Stable layout, no overlays except the challenge's own alert, the
+    alert kept rare and measured, no automated ticks, grouped critical-first procedures written as
+    target states in cockpit order, and a hand-off to the debrief. (INT-075 to INT-082)
+25. **Reduced help is an option, not a default.** (INT-083)
+26. **Aviation content in any of the above comes from verified content tokens.** No rule here
+    supplies a number, a mode name or a procedure. (INT-032, INT-080, INT-081)
+
+### Review checklist
+
+Run these questions against a pull request or a page. A "no" is a finding; cite the rule ID.
+
+#### Direct manipulation and signifiers
+
+- Does each widget show its object continuously, respond to every input at once, and return to its
+  start with "Reset"? (INT-001)
+- Is information that people compare or look up still a table or list? (INT-002)
+- Does the widget display the quantity the learner is asked to judge, such as a rate or a relation?
+  (INT-003)
+- Is the control on, or directly beside, the output it changes? (INT-004)
+- Is the widget framed by text that says what to try and what to notice? (INT-005)
+- Does result copy report a measurement rather than a verdict? (INT-006)
+- Does a complex widget open with a reduced first layer? (INT-007)
+- Does every possible action have a visible cue on its element? (INT-008)
+- Does any non-interactive element have a hover state, pointer cursor, chevron or pill shape?
+  (INT-009)
+- Does a grabbed control show its range and stops? (INT-010)
+- Are icons labeled with words where a beginner must find them? (INT-011)
+- Does the change follow web conventions, and does any sideways scroll have a visible cue? (INT-012)
+- Is cockpit styling confined to widget drawings? (INT-013)
+- Do controls with different effects differ in shape and position, and do same-effect controls look
+  the same? (INT-014)
+- Is any sound reserved for rare events, and backed by a visible state? (INT-015)
+- Does every locked or disabled control say why and when it opens? (INT-016)
+
+#### Feedback and time
+
+- Is the feedback proportionate to the action? (INT-017)
+- Does every multi-step sequence end in a visible completion state? (INT-018)
+- Does the pressed control change state locally within about 0.1 s, before any server reply?
+  (INT-019)
+- Does each event type meet its time budget, and is that measured? (INT-020)
+- Is any progress indicator determinate only when the fraction is known? (INT-021)
+- Does any bar stall near its end or misrepresent real work? (INT-022)
+- Is every success shown persistently where the action happened, not only in a toast? (INT-023)
+- Do errors stay visible beside what failed until handled? (INT-024)
+
+#### Modes
+
+- Has every mode on the page been listed, and could any be removed? (INT-025)
+- Is a costly mode held rather than latched? (INT-026)
+- Is any mode marked by color alone? (INT-027)
+- Is the current mode named in words at a fixed place? (INT-028)
+- Does anything change mode as a side effect without saying so? (INT-029)
+- Was the mode tested with a switch to the sim and back, with resume time noted? (INT-030)
+- Is practice kept in a different frame from anything scored? (INT-031)
+- Does content about sim modes ask the learner which mode is active, with verified names? (INT-032)
+
+#### Error
+
+- Does feedback offer a correction for slips and an explanation for mistakes? (INT-033)
+- Are changed steps in practiced procedures marked? (INT-034)
+- Is there a path for clustered wrong answers to become content review tickets? (INT-035)
+- Does each layer of the challenge flow stand alone? (INT-036)
+- Is learner-facing copy free of blame words? (INT-037)
+- Does each error message say what happened, what to do and whether it may be bigger, and keep the
+  learner's input? (INT-038)
+- Is validation on blur, with persistent messages, and are quiz answers checked only on request?
+  (INT-039)
+- Are serious errors prevented by design, with the reason shown beside any disabled action? (INT-040)
+
+#### Undo and work
+
+- For each reversible control, are its unit and what it restores clear on screen? (INT-041)
+- Is the effort to undo no greater than the effort to do? (INT-042)
+- Is a confirmation dialog used where undo would serve? (INT-043)
+- Does every irreversible action say so beside its button? (INT-044)
+- Does learner input survive a refresh, sign-in, closed tab and device change, or does the screen say
+  where it is kept? (INT-045)
+- Does every reset name its scope? (INT-046)
+- Can a learner on the companion screen recover in one action? (INT-047)
+- Is a consequence previewed before commitment? (INT-048)
+
+#### Defaults
+
+- Is every pre-set value a documented decision? (INT-049)
+- Does any default serve the product at the learner's expense? (INT-050)
+- Is any quiz, rubric or self-assessment answer pre-selected, and is the treatment of blanks stated?
+  (INT-051)
+- Is each default the learner's most likely value, easy to replace and not labeled "Default"?
+  (INT-052)
+- Does any layout rearrange itself by usage? (INT-053)
+- Is a recommended value worded as a recommendation? (INT-054)
+- Does the change ask for a choice that a default could have handled? (INT-055)
+
+#### Models and goals
+
+- Does each challenge step say what the learner will see and how they know it went well? (INT-056)
+- Is each control, procedure and state named the same everywhere? (INT-057)
+- Is the copy in the learner's terms, not the system's? (INT-058)
+- Does any instruction assume the previous step succeeded in the sim? (INT-059)
+- Can the learner enter a procedure at any step? (INT-060)
+- Does every score or result say what the app can and cannot check? (INT-061)
+- Is guidance ordered as look, means, next, without claims about measuring awareness? (INT-062)
+- Can every required step be tied to a flying goal? (INT-063)
+- Is first-time guidance dismissible and retired once used? (INT-064)
+- Is the first real task on the first screen, with explanation at the point of need? (INT-065)
+- Is anything critical placed only in a "read first" block? (INT-066)
+- Does each lesson have an attempt between its goal and its end? (INT-067)
+- Is any persona or scenario labeled as a hypothesis with its evidence? (INT-068)
+
+#### Microinteractions and the companion screen
+
+- Does the new component document its trigger, rules, feedback and loop? (INT-069)
+- Does each trigger's label change with its state, and does it report failure? (INT-070)
+- Is the learner's relevant data shown where they act, without pre-selecting? (INT-071)
+- Does each system-triggered event say what triggered it? (INT-072)
+- Is the state's behavior across refresh, session, sign-in and content update decided and
+  communicated? (INT-073)
+- Has any "delight" detail been tested, and does it stay out of the sim's way? (INT-074)
+- Does the fly-mode layout stay still between glances? (INT-075)
+- Does any dialog, banner, toast or popover appear on the companion screen during a flight? (INT-076)
+- Is every alert rare, actionable and measured for dismissals? (INT-077)
+- Does the app tick, advance or score anything the learner should check? (INT-078)
+- Are long procedures grouped, critical-first and closed by completion lines? (INT-079)
+- Is each step written as a target state? (INT-080)
+- Are steps in cockpit order unless a critical item must come first? (INT-081)
+- Is reflection kept for the debrief, with an explicit hand-off from Fly mode? (INT-082)
+- Is any reduced-help mode optional, with full help as the default? (INT-083)

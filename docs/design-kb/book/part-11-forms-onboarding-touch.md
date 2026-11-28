@@ -6,7 +6,7 @@ moments are small, and they are where products lose people. The Part takes them 
 to decide what to ask, how to lay out a form, how answer spaces prevent errors, when to
 validate and how to word an error, how to let people take a mistake back, how a first run
 should teach, how large and how far apart touch targets must be, which gestures beginners can
-be expected to know, and how to design the fly mode screen that a learner glances at while
+be expected to know, and how to design the Fly mode screen that a learner glances at while
 flying.
 
 The evidence is uneven, and the Part says so rule by rule. Pointing and target size rest on
@@ -291,7 +291,7 @@ patterns: an option chosen before the user acts, in the designer's interest
 
 `LoginForm` sets "Remember me for 30 days" to unchecked, with the hint "Don't tick this on a
 shared computer". That default protects the learner on a shared machine at the cost of an
-extra tick for everyone else, which is the right side to err on. The signup terms checkbox is
+extra tick for everyone else, which is the right side to err on. The sign-up terms checkbox is
 unchecked and must be ticked, which is correct for consent. `QuizBlock` starts with no answer
 selected, which keeps a recommendation out of a recall task.
 
@@ -320,7 +320,7 @@ patterns [@seemanhorwitz2021making]. These are consensus standards, not experime
 
 The auth forms already set `autoComplete` to `email`, `new-password` and `current-password`,
 which lets password managers fill and generate credentials, and `PasswordInput` uses a normal
-input with a "Show" toggle, so paste works. The signup password hint ("At least 12 characters.
+input with a "Show" toggle, so paste works. The sign-up password hint ("At least 12 characters.
 A few random words make a strong, memorable password.") states the format before typing and
 gives a strategy, not a list of character-class rules. There is no "confirm password" field,
 which avoids redundant entry; the visible "Show" toggle covers the mistyping risk that a
@@ -626,7 +626,7 @@ form's primary action visually dominant with secondary actions quiet [@wroblewsk
 guideline set [@bargasavila2010simple]; a reset next to submit invites a costly slip.
 
 *In LTF:* no form has one today. The `ChecklistRunner` and `Stopwatch` resets are controls on
-running tools, not forms, and are covered by the chapters on recovery and fly mode.
+running tools, not forms, and are covered by the chapters on recovery and Fly mode.
 :::
 
 ::: {.rule #FRM-023 grade="C"}
@@ -687,7 +687,7 @@ of the two guidelines with a remarkable effect on first-attempt success
 in a placeholder that vanishes on the first keystroke, or in an error that appears only after
 the learner has guessed wrong.
 
-LTF's signup already does this well. "Shown on your dashboard. 2–40 characters." and "At
+LTF's sign-up already does this well. "Shown on your dashboard. 2–40 characters." and "At
 least 12 characters. A few random words make a strong, memorable password." are hints that
 appear under the label before any typing. The `DebriefForm` planning fields do not: each
 renders only its label, with no hint for unit, precision or where the value comes from.
@@ -834,7 +834,7 @@ comparison, or prefill it and ask the learner to confirm or correct.
 
 ### What this means for Learn to Fly
 
-Keep the signup hints, the `QuizBlock` unit-after-box layout, the short mono numeric box and
+Keep the sign-up hints, the `QuizBlock` unit-after-box layout, the short mono numeric box and
 the `BriefTab` copy buttons. Change the planning fields: give them hints for unit and source
 (FRM-024), short widths (FRM-018), and unit labels that follow the MSL and AGL copy rule
 (FRM-025). Build one tolerant numeric parser in `shared/` with tests, used by quizzes and
@@ -1077,7 +1077,7 @@ icon and text, react-hook-form's revalidate-on-change after a failed submit, the
 button, `PasswordStrengthMeter` as the only positive indicator, and `QuizBlock`'s explicit
 "Check answer". Change the vague fallback message in `applyServerErrors` (FRM-035), show
 `DebriefForm` failures in `ErrorSummary` rather than a safety `Callout` (FRM-034), and start counting first-try error rates
-per quiz question (FRM-039). Add on-leave checks only to the signup password and email if
+per quiz question (FRM-039). Add on-leave checks only to the sign-up password and email if
 testing shows people submit and fail on them (FRM-031). Do not cite the Etre percentages in
 LTF documents.
 
@@ -1233,7 +1233,7 @@ transferable part.
 LTF has modes. `WidgetFrame` has an Explore or "Quiz me" pill toggle that changes what a
 widget's controls do. `ChecklistRunner` labels its mode with a `Badge` reading "Read-do" or
 "Do-verify", which is a word plus a variant color. The challenge page has a Fly tab and a
-separate fly mode screen. None of these is a user-maintained state, and none should be: a
+separate Fly mode screen. None of these is a user-maintained state, and none should be: a
 press-and-hold for a whole flight is impractical. The lesson for LTF is the second half of the
 result: color alone was the weakest signal, so every mode must announce itself in words and
 in the layout.
@@ -1247,7 +1247,7 @@ errors better than system-maintained ones, and a color change was the weakest cu
 
 *In LTF:* the `WidgetFrame` "Quiz me" state adds a heading or banner inside the canvas
 ("Quiz: set the needle to..."), not only a filled pill. `ChecklistRunner` keeps its word
-badge. If LTF ever adds a scored mode to fly mode, it shows "Scored" as text in the title bar,
+badge. If LTF ever adds a scored mode to Fly mode, it shows "Scored" as text in the title bar,
 not as a tint.
 :::
 
@@ -1272,3 +1272,868 @@ and `Stopwatch`, and give both an undo `Toast` rather than a dialog (FRM-042, FR
 the `WidgetFrame` quiz state announce itself in words inside the canvas (FRM-045). Build the
 "Changed" step badge for procedures a learner has practiced (FRM-044). Add an interruption
 step to every usability session that involves a mode (FRM-046).
+
+## Onboarding: the active user and training wheels
+
+### The paradox of the active user
+
+Carroll and Rosson, working from user studies at IBM's User Interface Institute in the early
+1980s, described a pattern that every onboarding designer meets: new users do not read the
+manual or finish setup first; they start using the system at once to get their task done
+[@carroll1987paradox]. The paradox is that a little time spent learning up front would save
+time later, and people still do not spend it, because their motivation is the task, not the
+system. The chapter's lesson for designers is to stop designing for an idealized learner who
+studies first and to design for an active user who, in the words of one account of the
+argument, "acts on the system with limited knowledge of it". The chapter itself was not
+available for this Part; it is known from Nielsen's column on it and a lecture note, and
+Nielsen's account says later studies confirmed the pattern without citing them in the text.
+Taken literally, "users never read" is an overstatement: people do consult help once stuck,
+especially when it is short and sits at the point of need.
+
+LTF's learners are active users in the strongest sense. They have a simulator open, a
+controller in hand and a reason to be there, and many will try the airplane before finishing a
+lesson. The product's current entry already respects this: the landing page's primary action,
+"Start lesson 0.1", goes straight to the first lesson, and the hero note says Lesson 0.1 takes
+five minutes.
+
+### What the Minimal Manual showed
+
+The design response from the same research program is the best experimental evidence in this
+Part for how to teach a new system. Carroll and colleagues built a "minimal manual" for a word
+processor around four principles: focus on real tasks from the start, slash the verbiage,
+support recognizing and recovering from errors, and guide exploration
+[@carroll1987minimal]. They cut a commercial training manual to 45 pages, less than a quarter
+of its length, by removing repetition, previews, reviews, practice exercises, the index, the
+welcome introduction and the troubleshooting appendix. A learner quoted in the paper wanted
+"to do something, not learn how to do everything".
+
+In the first experiment, with 19 novices, the minimal-manual group needed 40 percent less
+learning time and completed 2.7 times as many performance subtasks as the group using the
+standard self-instruction manual. In the second, with 32 office workers who had little
+computer experience, minimal-manual learners completed 58 percent more subtasks and achieved
+93 percent more per unit time on the first three tasks. They also made 20 percent fewer
+errors, spent 10 percent less time recovering and used the recommended recovery methods 60
+percent more often, though those error differences were not statistically significant. The
+samples were small, the system was a 1980s word processor, and the two manuals differed in
+many ways at once, so the paper cannot say which feature produced the gain. Carroll has said
+there is no deductive theory of minimalist instruction, which puts the weight on testing.
+
+::: {.rule #FRM-047 grade="B"}
+**Make the first screen of a first run a real task, with explanation attached to the action
+rather than placed before it.** Task-first, low-verbiage instruction cut learning time and
+raised task completion in two experiments with novices [@carroll1987minimal], and new users
+act before they read [@carroll1987paradox]. The samples were small and the manipulation
+bundled, so the evidence supports the approach, not any one feature of it.
+
+*In LTF:* keep "Start lesson 0.1" as the landing page's primary action, and keep Lesson 0.1
+built around a first action in the sim within its first minutes. Do not add a welcome
+introduction, a "how to use this course" section or a preview of the curriculum before that
+action.
+:::
+
+::: {.rule #FRM-048 grade="B"}
+**Give every procedure step its checkpoint (what the learner should now see) and its recovery
+(what to do if they do not).** Explicit support for error recognition and recovery is one of
+the four minimalist principles, and it is how a learner coordinates the instructions with the
+system in front of them [@carroll1987minimal].
+
+*In LTF:* add optional `expect` and `ifNot` fields to challenge `procedure` steps in the
+content schema, rendered under each step in `FlyPanel` and `BriefTab` in `text-ink-2`. Their
+content follows the aviation-facts rules: sourced, tokenized, and marked with a `verify`
+callout until checked in the sim.
+:::
+
+### Training wheels
+
+Carroll and Carrithers tested a different response to novice errors: instead of explaining
+the system, make the troublesome parts of it unreachable [@carroll1984training]. Their
+training-wheels word processor blocked typical and troublesome error states. Learners using it
+learned faster, achieved more and did better on a comprehension post-test than learners on
+the full system, and the control group spent almost a quarter of its time recovering from the
+error states the training interface had blocked. A companion paper in Human Factors reported
+two further experiments, one on learning by doing and one on learning from the manual, in
+which the restricted version again improved learning efficiency. Only the abstracts were
+available for this Part, so secondary figures that circulate about the study (sample size,
+speed advantage, number of blocked errors) are left out. The design risk follows from the idea
+itself: blocking a function frustrates someone who needs it, so the interface must show what
+is unavailable and why. No controlled study of that cost was found.
+
+LTF already has the vocabulary for this. `LessonPath` and `Card` have a `locked` state (a
+dashed ring on the path). `WidgetFrame` carries a "Simplified model" badge, which tells the
+learner that the widget is a reduced version of the real thing. What the product does not yet
+do is restrict a widget's controls in early lessons and say when they open.
+
+::: {.rule #FRM-049 grade="B"}
+**In early lessons, show only the controls the current step needs, and label anything held
+back with what unlocks it.** Blocking common error states made novices learn faster and
+better, and the control group lost almost a quarter of its time to the errors that were
+blocked [@carroll1984training]. The evidence is strong for the principle and weak for any
+particular implementation.
+
+*In LTF:* widgets used in Module 0 and Module 1 accept a `controls` prop that limits which
+inputs are live; held-back inputs render disabled with `aria-disabled` and a one-line reason
+("Opens in Lesson 1.3"). The `locked` state on `LessonPath` always says what unlocks it.
+:::
+
+### When guidance turns into noise
+
+Guidance that helps a beginner can hurt someone who already knows the material. Kalyuga,
+Ayres, Chandler and Sweller reviewed experiments showing that techniques "highly effective with
+inexperienced learners can lose their effectiveness and even have negative consequences when
+used with more experienced learners" [@kalyuga2003expertise]. Integrated text that novices
+needed became redundant for more experienced trainees, who did better with the diagram alone;
+worked examples that beat problem solving for novices lost their advantage and then reversed as
+experience grew; gradual fading from examples into problems beat an abrupt switch. The
+mechanism they propose is that experts must reconcile the guidance with what they already know,
+and redundant information "is frequently difficult to ignore". The review comes from the
+theory's own proponents, many studies use subjective effort ratings, and full reversals are
+rarer than simple disappearance of the benefit.
+
+LTF's audience includes long-time sim players, student pilots and returning learners
+alongside true beginners. For them, a mandatory walkthrough is not neutral: it costs time and
+attention that the evidence says may make learning worse.
+
+::: {.rule #FRM-050 grade="B"}
+**Fade guidance as the learner progresses, and give experienced learners a way to skip or
+collapse it.** Novice-oriented guidance loses its benefit and can reverse for more
+experienced learners, and redundant explanation is hard to ignore [@kalyuga2003expertise].
+
+*In LTF:* any first-run help, coach mark or setup screen has a visible skip. Callouts that
+repeat material from an earlier lesson collapse to their title after the learner has completed
+that lesson. Later checklists in `ChecklistRunner` show items without the explanatory hints
+that the first exposure carried.
+:::
+
+### What practitioner analysis says about tours and coach marks
+
+Kendrick's Nielsen Norman Group analysis of mobile onboarding argues that onboarding adds
+interaction cost and strains memory, and that teams should avoid creating it whenever possible
+and fix the usability problems instead [@kendrick2020mobileapp]. It sorts first-run help into
+three components. Deck-of-cards tutorials (a carousel of explanatory screens) did not improve
+task performance in earlier NN/g research that the article cites; if one is used it needs a
+highly visible skip, few cards and one concept per card. Interactive walkthroughs are worth it
+only when the workflow is new or unfamiliar. Coach marks (overlays pointing at controls) are
+often nice to have rather than needed, and should be timely and unobtrusive; one weather app
+is criticized for highlighting every interaction on a single screen. The article reports no
+study numbers or sample sizes and the earlier research method was not read, so its
+recommendations are expert judgment. They agree with the older experimental line from
+Carroll.
+
+::: myth
+**"New users need a product tour before they start."** The experimental evidence points the
+other way: novices learned faster from task-first material with the preview and welcome
+sections removed [@carroll1987minimal], new users skip up-front material anyway
+[@carroll1987paradox], and carousel tutorials did not improve task performance in the testing
+that practitioner analysis cites [@kendrick2020mobileapp].
+:::
+
+::: {.rule #FRM-051 grade="C"}
+**Do not put a carousel tutorial or a tour of the site's sections in front of the first
+task.** Deck-of-cards tutorials did not help task performance in the research cited by
+practitioner analysis, and walkthroughs are justified only for unfamiliar workflows
+[@kendrick2020mobileapp].
+
+*In LTF:* the planned onboarding screen "Your flight bag" (v1.md Section 20.13, a card per
+site area with "Next" moving a highlight) is a tour of this kind and should not be built
+before the first lesson. The same information belongs where each area is first used: the
+"Fly it" challenge card in a lesson, the Reference link from a lesson glossary chip.
+:::
+
+::: {.rule #FRM-052 grade="C"}
+**Use at most one coach mark per screen, on first use only, attached to the one control that
+is not self-explanatory, and never show it again once dismissed.** Coach marks should be
+timely and unobtrusive, and highlighting every interaction on a screen is the named failure
+[@kendrick2020mobileapp]; repeating a dismissed prompt is nagging [@gray2018dark].
+
+*In LTF:* the one candidate is `FlyModePage` on its first open: a single dismissible tip on
+the step checkboxes ("Tap a step when it's done. Tap again to undo."). Store the dismissal
+like `ltf-beta-banner`.
+:::
+
+### Confidence comes from doing
+
+Bandura's account of self-efficacy ranks its sources by dependability: performance
+accomplishments (the person's own successes) first, then watching others succeed, then verbal
+persuasion, then physiological state [@bandura1977selfefficacy]. Persuasion produces weaker
+expectations than success because it provides no experience to rest on, and it is easily
+undone by a failure. The evidence comes from small clinical studies of phobia treatment, and
+the ranking rests partly on later work not reviewed here, but the direction is consistent with
+the minimal-manual results: people who do real tasks early finish more of them.
+
+For onboarding this means the goal of a first run is a first real success, as early as the
+course allows, and not reassurance. LTF's landing headline ("Yes, you can fly a plane.") is a
+persuasion line, which is fine as a promise on a marketing page; the product's job is to make
+it true within the first lesson.
+
+::: {.rule #FRM-053 grade="B"}
+**Design the first run to end in a real, noticeable success the learner achieved, and do not
+substitute encouragement copy for it.** Mastery experiences are the most dependable source of
+self-efficacy and persuasion the weakest [@bandura1977selfefficacy].
+
+*In LTF:* the first completion of a Module 0 lesson or challenge shows what the learner did
+(the steps ticked, the time flown) in the completion panel, not a generic "Great job!". Keep
+encouragement in the landing hero, where it is a promise, and out of result screens, where it
+should be a record.
+:::
+
+### The planned onboarding, measured against the evidence
+
+The plan describes a five-screen `/welcome` flow (v1.md Section 20.13, decision D-27) that is
+not in the code: a welcome screen with an illustration; Learn to Fly settings (controller,
+panel, theme); an optional sim setup that repeats Lesson 0.2; the "Your flight bag" tour; and
+an account offer for signed-out visitors. Several of its features match the evidence well. It
+is never forced, deep links bypass it, every screen can be skipped to Lesson 0.1 with
+defaults, choices are saved and carried into a new account, and it can be run again from the
+account page. Those choices answer FRM-011, FRM-050 and FRM-054.
+
+Three parts conflict with the evidence in this chapter. The welcome screen and the tour are
+the up-front explanation that the minimal manual removed and that practitioner analysis
+advises against (FRM-047, FRM-051). The account offer on screen 5 asks before the learner has
+anything to save, which FRM-006 places at "Mark lesson complete" instead. The settings screen
+is the strongest part, because the panel choice changes lesson content, but it could equally
+be asked the first time a lesson depends on it, with the default stated. Changing the plan is
+the owner's decision, so any of these departures needs a Decision Log entry in `v1.md`.
+
+::: {.rule #FRM-054 grade="C"}
+**Make every first-run step skippable straight to the first lesson with sensible defaults,
+and measure how many learners skip it before keeping it.** Practitioner analysis recommends a
+visible skip and measuring use of first-run help [@kendrick2020mobileapp], and active users
+will skip it regardless [@carroll1987paradox].
+
+*In LTF:* if any `/welcome` screen is built, log skip and completion per screen (without
+identifying learners) and review after the first month of beta. A screen that most learners
+skip is removed or moved into the lesson where its content is needed.
+:::
+
+::: {.rule #FRM-055 grade="C"}
+**Put any step that is critical to safety or to the simulator setup inside the task that
+needs it, never only in a "read me first" screen.** Learners skip up-front material to get to
+the task [@carroll1987paradox], so anything placed there will be missed by the people who need
+it.
+
+*In LTF:* the sim assistance settings that Module 0 depends on live in Lesson 0.2, where the
+plan already puts them, and the planned onboarding screen 3 links to that lesson rather than
+holding its own copy. A challenge whose setup matters shows it in the `BriefTab` "Sim setup"
+list before "I'm set up, start flying".
+:::
+
+### What this means for Learn to Fly
+
+Keep the direct "Start lesson 0.1" entry, the account-optional first lesson, the `locked`
+state on `LessonPath` and the "Simplified model" badge on `WidgetFrame`. Change the content
+model so procedure steps carry a checkpoint and a recovery line (FRM-048), and so early
+widgets can hold back controls with a stated unlock (FRM-049). Collapse repeated callouts for
+learners who have passed the lesson that introduced them (FRM-050). Add one first-use tip to
+`FlyModePage` and nothing else (FRM-052). Before building `/welcome`, record a decision on the
+welcome screen, the tour and the position of the account offer (FRM-051, FRM-006), and
+instrument whatever is built (FRM-054).
+
+## Touch targets: size, spacing and position
+
+### Distance and size: the law underneath
+
+Fitts showed in 1954 that the time to make an aimed movement grows with the distance to the
+target and shrinks with its width, with both inside a logarithm, across stylus tapping, disc
+transfer and pin transfer tasks [@fitts1954information]. The regularity is among the most
+replicated results in human movement science; its information-theory interpretation is much
+weaker than the regularity itself. MacKenzie's review moved the law into HCI and refined it,
+recommending the Shannon form of the index of difficulty, log2(A/W + 1), and an "effective
+width" computed from where people actually land rather than from the drawn size of the target
+[@mackenzie1992fitts]. Two of his observations matter for design. Reducing a target's width
+costs more time than an equal increase in distance, which breaks the model's neat symmetry.
+And throughput figures varied so widely between studies (about 1.1 to 13.7 bits per second
+across six device comparisons) that the law is a tool for comparing layouts within one study,
+not a source of absolute numbers.
+
+Effective width is the idea to carry into LTF. It says that the target a person can reliably
+hit is defined by their scatter, and scatter grows when attention is divided, when the hand is
+cold or tired, or when the device sits at an awkward angle. A learner tapping a tablet beside
+the simulator is in all three conditions at once.
+
+::: {.rule #FRM-056 grade="A"}
+**Make the controls a learner uses most often both large and close to where their hand or
+pointer already is, and size them for degraded precision, not best-case aim.** Movement time
+rises with distance over width, and shrinking a target costs more than lengthening the move
+[@fitts1954information; @mackenzie1992fitts]. Use the law qualitatively; its absolute
+constants are unstable across studies.
+
+*In LTF:* in `FlyPanel`, the step list and "Finish and debrief" are the frequent targets; keep
+them in one column under the thumb or cursor rather than spread across the width of
+`max-w-3xl`. Do not quote bits-per-second figures in design documents.
+:::
+
+### What the touch studies found
+
+Several independent touch studies agree on the shape of the size and error relationship,
+though not on its numbers.
+
+Parhi, Karlson and Bederson tested one-handed thumb use on a small device with 20 right-handed
+participants, most of whom rarely used touchscreens [@parhi2006target]. For discrete targets
+(a button, radio or checkbox) at five sizes from 3.8 to 11.5 mm, surrounded by distractors with
+zero spacing, task time fell with every size step, while error rates stopped improving
+between 9.6 and 11.5 mm. A box of 9.1 by 8.9 mm enclosed 95 percent of hits on a 9.6 mm
+target anywhere on screen. For serial entry on a numeric keypad, errors were higher at 5.8 mm
+than at 9.6 mm and above. The authors concluded that 9.2 mm suffices for discrete targets and
+9.6 mm for serial ones, and that error rates were higher in serial tasks. The sample was small,
+young and mostly male, the device a 2005-era PDA used standing.
+
+Henze, Rukzio and Boll published a tapping game and analyzed over 120 million touch events from
+more than 91,000 installations [@henze2011100]. Error rose sharply as targets shrank: below
+about 15 mm error climbed steeply, and it exceeded 40 percent for targets under 8 mm. For
+targets under 12 mm, error at the screen border was much higher than in the center (31.68
+against 17.59 percent on one phone), about the same as making the target 3 mm smaller. Touches
+were systematically offset, toward the lower right on the phones analyzed, and a correction
+function cut errors by 7.79 percent in a live test. The authors compare their figures with
+Parhi's and attribute their higher error rates to time pressure and an animated game, so the
+absolute numbers do not transfer; the shape of the curve and the border effect do.
+
+Holz and Baudisch showed why touch is imprecise [@holz2011understanding]. People aim by
+aligning visual features on top of the finger, such as the nail, with the target, while the
+screen senses the contact patch underneath. A model based on that projected view cut error
+offsets to 1.6 mm from 4 mm for the contact-area model, and supported 4.9 mm targets for 95
+percent reliability against 7.9 mm. Those figures describe a lab touchpad with an overhead
+camera, not a phone as sold. The transferable finding is that touch error depends on finger
+angle and is systematic, not random.
+
+Sears and Shneiderman, working on 1980s hardware, showed that much of touch's poor reputation
+came from committing a selection at the instant the finger lands [@sears1991high]. With
+stabilized input and selection on lift-off, people matched the mouse for targets down to a few
+pixels. Even so, selection was fastest and least error-prone for the largest targets, and the
+authors proposed "gravity", enlarging the selectable area around a target, as future work.
+
+::: {.rule #FRM-057 grade="A"}
+**Treat touch target size as a steep curve: errors rise quickly as targets shrink, so lean
+toward the large end for anything tapped often.** Lab studies of thumb tapping
+[@parhi2006target], a field study of over 120 million taps [@henze2011100] and studies of
+finger posture [@holz2011understanding] and selection strategy [@sears1991high] agree that
+larger targets cut errors, though their absolute thresholds differ with task and device.
+
+*In LTF:* the frequent touch targets are fly-mode steps, quiz options, rubric choices and the
+`Stopwatch` controls. Size them from the 44 px floor in FRM-058 upward, not down to it.
+:::
+
+### The standards: a floor, not a target
+
+WCAG 2.2 sets Target Size (Minimum), level AA, at 24 by 24 CSS pixels, with exceptions for
+undersized targets spaced so that a 24 px circle centered on each does not touch another
+target, for functions available through another conforming control, for links inside a
+sentence, for browser-drawn controls and for essential presentations [@w3c2024wcag]. The
+Understanding document says sufficient spacing can work as well as larger size, and gives a row
+of 20 px buttons with 4 px margins as a pass and the same row with no gaps as a fail. Target
+Size (Enhanced), level AAA, asks for 44 by 44 CSS pixels and recommends larger targets for
+frequent controls, actions that are hard to undo, edge-of-screen controls and steps in a
+sequence. The document does not explain how 44 was derived. A CSS pixel is not a fixed
+physical length on phones, so 24 px is only roughly 6 mm, well below the 9 to 10 mm the thumb
+study found.
+
+::: myth
+**"44 pixels is the scientifically established minimum touch target."** WCAG's AAA figure of
+44 CSS pixels comes with no stated derivation [@w3c2024wcag], CSS pixels vary in physical size
+across devices, and the empirical studies report thresholds in millimeters that depend on task,
+grip and time pressure [@parhi2006target; @henze2011100]. Use 44 px as a practical house
+standard, not as a measured boundary.
+:::
+
+::: {.rule #FRM-058 grade="B"}
+**Never ship a pointer target smaller than 24 by 24 CSS pixels unless it meets WCAG's spacing
+or inline exception, and make every frequently used or touch-first control at least 44 by
+44.** The 24 px floor is the AA requirement [@w3c2024wcag]; the larger figure is supported in
+direction by the touch studies [@parhi2006target; @henze2011100], though its exact value is a
+convention.
+
+*In LTF:* `Button` `sm` is 32 px and is used for the header "Log in" and "Sign up", the
+`SignupBanner` dismiss, `ChecklistRunner` "Large text" and "Reset", and the `QuizBlock`
+ordering arrows. It passes AA; on touch layouts these uses move to `md` with a 44 px
+`min-h-11` hit area, as the header nav links and quiz option labels already have. The
+`PasswordInput` "Show" toggle (32 px) and the `ThemeToggle` segments (32 px) get the same
+treatment on touch.
+:::
+
+### Hit area larger than the drawing
+
+Because aim is offset and scatter grows under divided attention, the clickable area can be
+larger than what is drawn, which is Sears and Shneiderman's "gravity" idea
+[@sears1991high] and the practical consequence of Holz and Baudisch's offsets
+[@holz2011understanding]. LTF already uses this in `Checkbox`, whose whole label is the hit
+target around a 20 px box, and in `QuizBlock`, whose option labels are `min-h-11` bordered
+rows.
+
+::: {.rule #FRM-059 grade="B"}
+**Where a control must look small, make its hit area larger than its drawing, extending into
+its label or padding.** An enlarged selectable area was proposed as a fix for touch
+imprecision [@sears1991high], and systematic aim offsets make the drawn edge an unreliable
+boundary [@holz2011understanding].
+
+*In LTF:* keep the whole-label hit target in `Checkbox` and `RadioGroup`. Give icon-only ghost
+buttons (dismiss X, ordering arrows) a transparent padding that brings the hit area to 44 px
+without enlarging the icon.
+:::
+
+### Space between targets
+
+Parhi's discrete targets were packed with zero spacing between neighbors, a deliberate choice
+to resemble real layouts, and errors still improved only at the larger sizes
+[@parhi2006target]. WCAG's spacing exception rests on the same logic: what matters is whether
+the touch lands on a neighbor [@w3c2024wcag].
+
+::: {.rule #FRM-060 grade="B"}
+**Leave visible space between adjacent tap targets, and never place two actions edge to edge
+when either one is destructive.** Errors were measured with zero spacing between targets
+[@parhi2006target], and spacing can substitute for size under WCAG 2.2 [@w3c2024wcag].
+
+*In LTF:* the ordering arrows in `QuizBlock` sit side by side at `sm`; separate them by at least
+8 px, or stack them vertically. `Stopwatch` pills keep a gap at least equal to their height.
+:::
+
+### Edges and grips
+
+Henze found that edge targets are harder to hit [@henze2011100]. Parhi found a right-leaning
+hit bias in the rightmost column and recommended that targets on that edge, for right-handed
+users, extend to the screen edge [@parhi2006target]. The two agree once the target is allowed
+to grow: a control at an edge either runs to the edge, so a stray touch still lands on it, or
+moves inward.
+
+Grip assumptions are where touch design most often goes wrong. Hoober's field observation of
+1,333 people using phones in public found grips split 49 percent one-handed, 36 percent cradled
+and 15 percent two-handed among people touching the screen, with frequent switching between
+grips [@hoober2013how]. The article became the origin of the popular "thumb zone" reach
+diagrams, and its page now carries the author's 2017 comment saying those reach drawings and
+the claim about touch locations were inaccurate and should be ignored.
+
+::: myth
+**"Put primary actions in the thumb zone."** The reach diagrams came from rough informal
+sampling, and their author later said they were inaccurate and should be ignored
+[@hoober2013how]. His own data show grips vary and change every few seconds, so there is no
+safe region of the screen for one hand.
+:::
+
+::: {.rule #FRM-061 grade="B"}
+**At a screen edge, either let the target run to the edge or move it inward; never put a
+small target near the border.** Error rates are higher at the border [@henze2011100], and
+right-edge targets benefit from extending to the edge [@parhi2006target].
+
+*In LTF:* the `Toast` dismiss X at the bottom right and the `Drawer` close control are the
+edge targets; give both a 44 px hit area and at least 8 px inset.
+:::
+
+::: {.rule #FRM-062 grade="C"}
+**Do not design for a one-handed thumb zone; place controls so they work with either hand and
+any grip, and keep destructive ones out of easy accidental reach.** Grips vary and change
+often, the reach maps were withdrawn by their author, and he advised against placing
+dangerous functions where they are hit by accident [@hoober2013how].
+
+*In LTF:* test Fly mode and the lesson page with left-handed testers as well as right-handed
+ones. Do not mirror layouts by handedness; keep one layout that works for both.
+:::
+
+::: {.rule #FRM-063 grade="B"}
+**Make keys for serial entry (keypads, steppers pressed repeatedly) larger than one-off
+buttons.** Error rates were higher in serial than discrete tapping, and the authors recommended
+nothing under 9.6 mm for data entry [@parhi2006target].
+
+*In LTF:* if numeric entry in Fly mode ever uses on-screen steppers or a keypad, use `Button`
+`lg` (48 px) with gaps, not `sm`.
+:::
+
+### What this means for Learn to Fly
+
+Keep the 44 px header nav, the `min-h-11` quiz options, the whole-label `Checkbox` hit area, the
+`h-11` `RangeField` track and the 48 px `lg` buttons. Change the touch-facing uses of `Button`
+`sm`, the 32 px `PasswordInput` toggle and the 32 px `ThemeToggle` segments to 44 px hit areas
+(FRM-058, FRM-059). Separate the quiz ordering arrows and the stopwatch pills (FRM-060). Inset
+edge controls (FRM-061). Add a component test that measures the rendered hit area of every
+interactive element on `/dev/components` against 24 px, and of the fly-mode controls against
+44 px, so the policy is enforced in CI rather than by review.
+
+## Gestures, dragging and commit on release
+
+### Which gestures people already know
+
+Wobbrock, Morris and Wilson asked 20 participants with no prior touchscreen experience to
+invent gestures for 27 commands on a tabletop, after seeing an animation of each command's
+effect [@wobbrock2009userdefined]. Agreement among participants was modest: an average score
+of 0.32 for one-handed and 0.28 for two-handed gestures, and the more conceptually complex the
+command, the less people agreed (r = -.52). Simple commands produced physical gestures such as
+dragging; complex ones produced metaphorical or symbolic gestures that few people shared. The
+participants rarely cared how many fingers they used, preferred one hand to two, and were
+strongly shaped by desktop idioms. The consensus set covered 57.0 percent of all gestures
+proposed and deliberately included aliases, several gestures for one command. The three
+authors had each designed a set in advance, and each covered only 43.5 percent of what users
+produced. The limits are real: a tabletop is not a phone, there was no recognizer or feedback,
+and later critics have argued that agreement scores depend on how commands are shown and on
+habits carried over from other devices.
+
+The finding that transfers is that a beginner's gesture vocabulary is small and borrowed: tap,
+drag, and the pinch and swipe that phones taught everyone. Anything beyond that must be taught,
+and LTF's learners already have a whole cockpit to learn.
+
+::: {.rule #FRM-064 grade="B"}
+**Use only gestures beginners already know (tap, drag, pinch, swipe), and give every gesture a
+visible control that does the same thing.** Agreement on invented gestures was low and fell
+further for complex commands, which the authors suggest need on-screen widgets
+[@wobbrock2009userdefined].
+
+*In LTF:* no multi-finger or edge gesture moves between steps, lessons or tabs. Any pinch-zoom
+on a chart widget is matched by visible zoom buttons.
+:::
+
+::: {.rule #FRM-065 grade="B"}
+**Offer more than one way to perform an adjustment, such as dragging a slider or tapping
+buttons beside it, and do not require a particular number of fingers or a free-form path.**
+Aliases raised guessability, and finger count did not reliably distinguish users' intentions
+[@wobbrock2009userdefined]. Free-form path gestures were the slowest and least accurate
+techniques in a comparison under distraction, at 81.4 and 83.5 percent accuracy
+[@bragdon2011experimental].
+
+*In LTF:* `RangeField` keeps the native range input, which accepts drag, track taps and arrow
+keys. Where a widget adjusts a value the learner must hit precisely, add minus and plus
+buttons beside the slider.
+:::
+
+### Commit on release
+
+Sears and Shneiderman's lift-off strategy commits a touch selection only when the finger is
+lifted, which lets the person see where they landed and slide to correct or cancel
+[@sears1991high]. That is how the browser's `click` event already behaves on touch, so LTF
+gets the benefit as long as it does not bypass it. The code reviewed for this Part has no
+`onPointerDown` handlers.
+
+::: {.rule #FRM-066 grade="B"}
+**Commit any action on release, never on touch-down or pointer-down, so the learner can slide
+off a control to cancel.** Lift-off selection let touch match mouse accuracy down to very small
+targets where land-on selection did not [@sears1991high].
+
+*In LTF:* use `onClick` for ticking steps, checking answers and submitting. A lint rule or
+review check flags `onPointerDown` and `onTouchStart` handlers that change state.
+:::
+
+### Dragging along a path
+
+Accot and Zhai showed that steering a pointer through a tunnel follows a different law from
+pointing: time rises linearly with the path's length divided by its width, so doubling the
+length or halving the width doubles the time, a steeper penalty than pointing's logarithm
+[@accot1997beyond]. Error rates in their steering tasks were high (about 18 percent in one set
+of narrowing-tunnel conditions), and the law has held in follow-up studies across several
+input devices. A slider track, a drag along a drawn approach path and a diagonal move into a
+cascading menu are all steering tasks.
+
+::: {.rule #FRM-067 grade="B"}
+**Do not make a drag depend on staying inside a narrow corridor; give drag paths wide
+tolerance, and clamp a value at its limit rather than cancelling the drag when the pointer
+wanders.** Steering time grows linearly with length over width, and steering errors are high
+[@accot1997beyond].
+
+*In LTF:* any widget that asks the learner to trace or follow a path (for example on
+`TrafficPattern`) accepts a tolerance band as wide as the teaching point allows, and range
+inputs keep tracking when the pointer leaves the track vertically.
+:::
+
+WCAG 2.2 Dragging Movements, at level AA, requires that anything done by dragging can also be
+done with a single pointer without dragging, unless dragging is essential [@w3c2024wcag]. Its
+examples are a slider that also accepts a tap on the track, a map with directional buttons and
+a sortable list with up and down controls. LTF's ordering quiz already uses up and down
+buttons rather than drag and drop, which satisfies the criterion and is easier for a beginner
+on a tablet.
+
+::: {.rule #FRM-068 grade="C"}
+**Give every drag interaction a single-tap or button alternative.** Dragging Movements is a
+level AA requirement in WCAG 2.2 [@w3c2024wcag].
+
+*In LTF:* keep the up and down buttons in `QuizBlock` ordering questions. Any future
+drag-to-place widget (a dial, a map pin, a sortable checklist) ships with buttons or tap-to-set
+in the same release.
+:::
+
+### Keep the value out from under the finger
+
+Sears and Shneiderman's offset cursor solved a problem that every touch slider still has: the
+finger hides what it is setting [@sears1991high]. Hoober's observations add that fingers
+obscure content in ordinary use, and he advises testing prototypes by holding them
+[@hoober2013how]. `RangeField` puts its value readout above the track at the right, in mono,
+which keeps it visible during a drag from below.
+
+::: {.rule #FRM-069 grade="B"}
+**Show the value being set by a drag in a readout placed where the finger cannot cover it,
+above or beside the control, updating continuously.** The offset cursor let people see what
+they were selecting [@sears1991high], and fingers routinely hide content on touch screens
+[@hoober2013how].
+
+*In LTF:* keep `RangeField`'s readout above the track. For draggable needles or dials in
+widgets, mirror the value in a readout outside the dial face, and never only in a tooltip that
+appears under the finger.
+:::
+
+### What this means for Learn to Fly
+
+Keep the native range inputs, the button-based ordering quiz, `onClick` commits and the
+readout above `RangeField`. Add plus and minus buttons to sliders where precision matters
+(FRM-065), check every drag widget for a non-drag path and a wide tolerance before release
+(FRM-067, FRM-068), and add a check against state changes on pointer-down (FRM-066). Do not
+introduce custom gestures for navigation (FRM-064).
+
+## Fly mode: designing for divided attention
+
+### Looking is the cost
+
+Fly mode is used while the learner's eyes are on the simulator. The closest empirical match in
+the reviewed research is Bragdon, Nelson, Li and Hinckley's comparison of soft buttons and
+gestures on a phone under four conditions: seated with no distraction, seated with a
+situational-awareness task on a monitor, walking on a treadmill with that task, and seated with
+an attention-saturating tracking task [@bragdon2011experimental]. Fifteen participants took
+part. Soft-button completion time rose by 15.84 percent from the undistracted condition to the
+monitor-task condition and then stayed fairly flat, which suggests the largest cost was simply
+not being able to look at the phone all the time. Eye tracking showed that soft buttons needed
+the eyes on the phone 98.8 percent of the time against 3.5 percent for gestures. In the three
+distracted conditions no participant preferred soft buttons, and 13 of 15 wanted more than one
+technique. The study was small, the distractors were simulated, and its best gestures started
+from the phone's physical bezel, which a web page cannot use. The robust finding is the
+attention cost of having to look at a small target; it does not show that a particular swipe
+would suit LTF. The paper also cites Kane and colleagues' finding that larger buttons help
+when walking.
+
+LTF's `FlyModeLayout` already responds to this: dark, `text-xl`, `max-w-3xl`, an `h1` at
+`text-4xl`, a `text-2xl` goal, `FlyPanel large` with `text-xl` steps in bordered rows that turn
+`border-go bg-go-tint` when ticked, and `text-5xl` stopwatch digits.
+
+::: {.rule #FRM-070 grade="B"}
+**In Fly mode, show few controls, make each large, and keep every one in a fixed position from
+step to step so it can be hit with a glance.** Having to look at small soft targets carried the
+main performance cost under divided attention [@bragdon2011experimental], and size matters most
+when precision is degraded [@mackenzie1992fitts].
+
+*In LTF:* keep the step rows full width and the "Finish and debrief" button at `lg`. Raise the
+`Stopwatch` pills from 36 px to at least 48 px in `large` mode, and keep steps in a fixed order
+that never reflows when one is ticked.
+:::
+
+::: {.rule #FRM-071 grade="B"}
+**Make the current step and state readable in a single glance on return from the sim.**
+Learners will glance away and back, and the cost of soft controls was in the looking
+[@bragdon2011experimental]; resume time after an interruption exposes confusion about state
+[@sellen1992prevention].
+
+*In LTF:* `FlyPanel` marks ticked steps but not the next one. Give the first unticked step a
+distinct treatment (an ink border and `aria-current="step"`, as `ChecklistRunner` already
+does) so the eye lands on it.
+:::
+
+### The device on the desk
+
+Fly mode will often run on a tablet or phone lying flat or propped beside a keyboard, touched
+by a finger at a low angle. Holz and Baudisch found that touch error offsets depend on finger
+posture [@holz2011understanding], and Henze found systematic offsets in ordinary phone use
+[@henze2011100]. Hoober's grip data are about handheld phones in public and do not describe a
+device on a desk [@hoober2013how]. The keystroke-level model adds the cost of homing, moving
+the hand between devices, which a learner pays every time they leave the controller to tap the
+tablet [@card1980keystroke].
+
+::: {.rule #FRM-072 grade="B"}
+**Test Fly mode with the device flat or propped on a desk, tapped at a low finger angle, and
+with an interruption that sends the tester's eyes to the sim between taps.** Touch offsets
+change with finger posture [@holz2011understanding], and interruption reveals mode and state
+confusion [@sellen1992prevention].
+
+*In LTF:* add these two conditions to the fly-mode usability script and to the manual test
+list for any `FlyPanel` change.
+:::
+
+::: {.rule #FRM-073 grade="C"}
+**Do not require more than one tap on the second screen per procedure step, and offer a
+keyboard path so a learner at a desk need not switch devices.** Each move between devices is a
+homing cost paid on every step [@card1980keystroke]. Keyboard shortcuts must supplement, not
+replace, standard controls, be documented, and avoid browser and screen-reader keys
+[@w3c2026authoring].
+
+*In LTF:* bring `ChecklistRunner`'s documented keys (Space ticks, Backspace unticks the last
+item) to `FlyPanel`, and show them in one line under the steps as the runner does.
+:::
+
+### Feedback without interruption
+
+Nielsen's widely used response-time limits put the feeling of direct manipulation at about 0.1
+second, an uninterrupted flow of thought at about 1 second and the limit of focused attention
+at about 10 seconds [@nielsen1993response]. They are a convention with an expert's authority,
+not experimentally derived thresholds, and they are a useful budget. For a learner glancing at
+the screen, a tick that does not respond at once invites a second tap that undoes it.
+
+::: {.rule #FRM-074 grade="C"}
+**Show the result of every tap in Fly mode within about 0.1 second, locally, before any network
+call completes.** That limit is the conventional threshold for feeling that the interface
+responds directly [@nielsen1993response].
+
+*In LTF:* `FlyPanel` already updates its state and saves to storage synchronously on each
+tick. Keep any future server sync of ticks optimistic, with a quiet persistent "Saved" or
+"Waiting to sync" line that does not move other content.
+:::
+
+Feedback research warns against interrupting a learner who is actively engaged, and favors
+holding detailed feedback for a natural pause [@shute2008focus]. Bandura notes that high
+arousal usually debilitates performance [@bandura1977selfefficacy]. Fly mode has one deliberate
+interruption: a challenge's random events fire an alert with a four-pixel `border-warn`, a
+pulse and a two-tone beep, and the learner dismisses it with "Got it". That is the product
+simulating an in-flight event on purpose, and it works only if nothing else in Fly mode looks
+or sounds like it. The `BetaBanner` also appears above Fly mode, which spends screen space on a
+message the learner has already read elsewhere.
+
+::: {.rule #FRM-075 grade="B"}
+**Reserve Fly mode's alert style and sound for the challenge's own events, and queue all other
+feedback (sign-up prompts, tips, sync notices) for the debrief.** Interrupting an engaged
+learner is listed among things to avoid in formative feedback [@shute2008focus], and high
+arousal tends to impair performance [@bandura1977selfefficacy].
+
+*In LTF:* hide `BetaBanner` and the `SignupBanner` inside `FlyModeLayout`; show no `Toast` in fly
+mode except a failure to save. Keep the random-event alert as the only `border-warn`
+element on the screen.
+:::
+
+::: {.rule #FRM-076 grade="C"}
+**Never move content under the learner's finger in Fly mode: no layout shift when an alert
+appears, a step is ticked or a banner loads.** Controls and content that do not move
+unexpectedly are a listed cognitive accessibility pattern [@seemanhorwitz2021making], and a
+moved target becomes a description error waiting to happen [@norman1981categorization].
+
+*In LTF:* render the random-event alert in a reserved slot or as an overlay that does not push
+the step list down, and keep the `Stopwatch` width fixed as digits change (its tabular mono
+digits already help).
+:::
+
+::: {.rule #FRM-077 grade="C"}
+**Keep the focused control visible under sticky bars and alerts, and return focus to a logical
+place when an alert is dismissed.** WCAG 2.2 Focus Not Obscured requires that a focused
+component not be entirely hidden by author content [@w3c2023wcag], and focus should never fall
+back to the page body after a dialog or alert closes [@w3c2026authoring].
+
+*In LTF:* after "Got it" on a random-event alert, move focus to the current step, not to the
+top of the page.
+:::
+
+### What this means for Learn to Fly
+
+Keep `FlyModeLayout`'s large type and dark surface, the full-width step rows, the synchronous
+local save, the wake-lock option, the random-event alert and the "Got it" dismissal. Change
+these: enlarge the stopwatch pills and separate "Reset" (FRM-070, FRM-043), mark the next
+step (FRM-071), add `ChecklistRunner`'s keyboard path to `FlyPanel` (FRM-073), hide banners and
+toasts in Fly mode (FRM-075), reserve space for the alert so nothing shifts (FRM-076) and
+return focus after it (FRM-077). Test on a desk with interruptions before shipping any fly-mode
+change (FRM-072).
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+1. **Account later.** The first lesson needs no account; the account request stays at "Mark
+   lesson complete" and completes the action after sign-up (FRM-006, FRM-008).
+2. **Ask less.** Every sign-up field has a recorded remove, postpone, infer or keep decision;
+   the display name is the first to decide (FRM-002, FRM-007).
+3. **Protective defaults.** No preselected consent, marketing or quiz answer; "Remember me"
+   stays off (FRM-009).
+4. **Credentials.** Autocomplete, paste and password managers always work; no confirm-password
+   field while "Show" exists (FRM-010, FRM-011).
+5. **Symmetric friction.** Leaving is no harder than joining; dismissed prompts stay dismissed
+   (FRM-012, FRM-013, FRM-014).
+6. **Layout.** Top labels in plain weight, one column, widths that fit the answer, words for
+   required and optional, one primary action, no reset (FRM-015 to FRM-023).
+7. **Answer spaces.** Formats and units stated before typing, units fixed beside the box,
+   tolerant parsing in one `shared/` function, purposeful reflection hints (FRM-024 to FRM-029).
+8. **Validation.** Submit-time by default, on-leave only for hard fields, never while typing,
+   errors cleared on fix, focused summary plus field messages, quiz correctness only on check
+   (FRM-030 to FRM-039).
+9. **Recovery.** Every frequent action reversible at equal effort; drafts saved; one-way
+   actions announced; resets separated and undoable; modes shown in words (FRM-040 to
+   FRM-046).
+10. **Onboarding.** The first lesson is the onboarding; no tour or welcome deck before it;
+    training wheels and fading in content; one coach mark in Fly mode; any `/welcome` screen is
+    skippable and measured, and departures from v1.md Section 20.13 go in the Decision Log
+    (FRM-047 to FRM-055).
+11. **Touch.** 24 px absolute floor, 44 px for frequent or touch-first controls, larger in fly
+    mode; hit areas beyond drawings; space between targets; no thumb-zone layouts
+    (FRM-056 to FRM-063).
+12. **Gestures.** Known gestures only, with visible equivalents; commit on release; wide drag
+    tolerance; non-drag alternatives; readouts clear of the finger (FRM-064 to FRM-069).
+13. **Fly mode.** Few, large, fixed controls; the next step marked; keyboard path; instant local
+    feedback; no interruptions but the challenge's own; no layout shift (FRM-070 to FRM-077).
+
+### Review checklist
+
+Run these questions against a pull request or a page. Each names the rules it checks.
+
+**Forms and fields**
+
+- Does the change say which layer (relationship, conversation, appearance) it fixes? (FRM-001)
+- Is every new field justified by a screen that uses it, with a remove, postpone or infer
+  decision recorded? (FRM-002, FRM-007)
+- Has the flow's operation count been compared with the old one? (FRM-003)
+- Has a beginner filled in the new or changed form while someone watched? (FRM-004, FRM-005)
+- Is an account asked for only at a moment of value, with the reason stated and a confirmation
+  after? (FRM-006, FRM-008)
+- Are all defaults ones the learner would choose, with no preselected consent or answers?
+  (FRM-009)
+- Do credential fields keep autocomplete and paste, and is no information asked twice?
+  (FRM-010, FRM-011)
+- Is leaving as easy as joining, and does a dismissed prompt stay dismissed? (FRM-012, FRM-013)
+- Are permissions requested in context with a reason? (FRM-014)
+- Are labels above fields, visible, plain weight and tied in code? (FRM-015, FRM-016)
+- Is the form one column, with fields sized to their answers? (FRM-017, FRM-018)
+- Are options visible radios or checkboxes where there are few, with no multi-select list box?
+  (FRM-019, FRM-020)
+- Is required or optional status shown in words, with one primary action and no reset?
+  (FRM-021, FRM-022, FRM-023)
+
+**Formats and validation**
+
+- Is every format, length and unit stated before typing, and does the box show its expected
+  size and unit? (FRM-024, FRM-025)
+- Can the learner type a unit or separator without being marked wrong? (FRM-026, FRM-027)
+- Is the structured-value control chosen by what the value is used for? (FRM-028)
+- Do open prompts say what a useful answer looks like? (FRM-029)
+- Does any message appear while the learner is still typing? It must not. (FRM-030)
+- Is on-leave validation limited to hard fields, and do errors clear on fix? (FRM-031, FRM-032)
+- Are positive ticks limited to hard fields? (FRM-033)
+- Is there a focused error summary with links, plus field messages with icon and text?
+  (FRM-034)
+- Does each message say what happened and what to do, without blame? (FRM-035)
+- Is typed input kept after an error, and is double submission prevented? (FRM-036, FRM-037)
+- Is quiz correctness checked only on "Check answer"? (FRM-038)
+- Are error and first-try failure rates being recorded? (FRM-039)
+
+**Recovery and modes**
+
+- Can each frequent action be reversed with the same effort? (FRM-040)
+- Does input survive a refresh, a lost connection and a sign-in detour? (FRM-041)
+- Are one-way actions announced, with dialogs only for rare destructive ones? (FRM-042)
+- Are reset and destructive controls apart from frequent ones? (FRM-043)
+- Are changed procedure steps marked for learners who practiced the old version? (FRM-044)
+- Is every mode named in words, and was it tested with an interruption? (FRM-045, FRM-046)
+
+**Onboarding**
+
+- Is the first screen a real task, with steps that carry a checkpoint and a recovery? (FRM-047,
+  FRM-048)
+- Are early controls limited, with locked items saying what unlocks them? (FRM-049)
+- Can experienced learners skip or collapse guidance? (FRM-050)
+- Is there no tour or carousel before the first task, and at most one coach mark? (FRM-051,
+  FRM-052)
+- Does the first run end in a recorded success rather than encouragement copy? (FRM-053)
+- Is every first-run step skippable and measured, with critical steps inside the task?
+  (FRM-054, FRM-055)
+
+**Touch, gestures and Fly mode**
+
+- Are frequent controls large and near the hand, sized for degraded precision? (FRM-056,
+  FRM-057)
+- Is every target at least 24 px, and every frequent or touch-first one at least 44 px?
+  (FRM-058)
+- Do small-looking controls have larger hit areas and space between them? (FRM-059, FRM-060)
+- Are edge targets inset or extended, with no thumb-zone assumption? (FRM-061, FRM-062)
+- Are serial-entry keys larger than one-off buttons? (FRM-063)
+- Are only familiar gestures used, each with a visible control and an alternative way?
+  (FRM-064, FRM-065)
+- Does every action commit on release? (FRM-066)
+- Do drags tolerate wandering and have a non-drag path? (FRM-067, FRM-068)
+- Is the value being set visible outside the finger? (FRM-069)
+- In Fly mode, are controls few, large and fixed, with the next step marked? (FRM-070, FRM-071)
+- Was it tested flat on a desk with interruptions, and does it offer a keyboard path? (FRM-072,
+  FRM-073)
+- Does every tap respond within about 0.1 second locally? (FRM-074)
+- Are interruptions limited to the challenge's events, with no layout shift and focus returned
+  after alerts? (FRM-075, FRM-076, FRM-077)

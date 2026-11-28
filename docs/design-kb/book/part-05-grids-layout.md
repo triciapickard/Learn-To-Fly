@@ -106,7 +106,7 @@ Vignelli states the same discipline for type sizes: steps should be modular, "fr
 
 ### The LTF scale as it stands
 
-The spacing unit in `tokens.css` is 4 px, with named steps `space-1` to `space-24` at 4, 8, 12, 16, 20, 24, 32, 48, 64 and 96 px; Tailwind's own spacing scale uses the same 4 px base, so `p-4` is `space-4`. A grep of `src/**/*.tsx` this session shows the scale is mostly obeyed: `gap-2`, `gap-3`, `mt-4`, `mt-3` and `gap-4` are the commonest spacing classes. It also shows the leaks. Half-steps that the named scale does not contain appear repeatedly: `gap-1.5` (6 px, 24 uses), `mt-0.5` (2 px, 14 uses), `py-2.5` and `gap-2.5` (10 px), `py-3.5` (14 px). Steps between the named ones appear too: `mt-10`, `gap-10` and `py-10` (40 px) sit between `space-8` and `space-12`. Bracketed pixel values (`mt-[3px]`, `p-[3px]`, `w-[72px]`) add more. Each is a small decision; together they mean the named scale documents intent rather than constrains output.
+The spacing unit in `tokens.css` is 4 px, with named steps `space-1` to `space-24` at 4, 8, 12, 16, 20, 24, 32, 48, 64 and 96 px; Tailwind's own spacing scale uses the same 4 px base, so `p-4` is `space-4`. A grep of `src/**/*.tsx` for this book shows the scale is mostly obeyed: `gap-2`, `gap-3`, `mt-4`, `mt-3` and `gap-4` are the commonest spacing classes. It also shows the leaks. Half-steps that the named scale does not contain appear repeatedly: `gap-1.5` (6 px, 24 uses), `mt-0.5` (2 px, 14 uses), `py-2.5` and `gap-2.5` (10 px), `py-3.5` (14 px). Steps between the named ones appear too: `mt-10`, `gap-10` and `py-10` (40 px) sit between `space-8` and `space-12`. Bracketed pixel values (`mt-[3px]`, `p-[3px]`, `w-[72px]`) add more. Each is a small decision; together they mean the named scale documents intent rather than constrains output.
 
 The type scale has the same two-dialect problem described in Part IV, Typography on Screens. The `index.css` utilities run 12, 14, 16, 18, 20, 24, 32, 44 and 64 px, whose step ratios rise from about 1.1 at the small end to about 1.45 at the top; that is not a modular scale but it is a deliberate one. Alongside it, raw Tailwind sizes (`text-2xl`, `text-3xl`, `text-4xl`, `text-5xl`, `text-6xl`) put 30, 36, 48 and 60 px headings on the lesson, dashboard, challenge, Fly mode and error pages, which are sizes the utilities do not contain.
 
@@ -422,7 +422,7 @@ The lesson page's block headings are already well grouped by space: `MarkdownCon
 
 Keep the lesson block heading spacing (`mt-12 mb-3`), the tight eyebrow-to-title binding in `PageHeader`, and `Card`'s stated rule that state is carried by badge, eyebrow and fill rather than a colored left border. Change the relationship between inner padding and outer gaps wherever they are equal, starting with the challenge card grid. Assign named spacing roles and use them in every component.
 
-The bigger change is to make enclosure selective. A lesson page today can stack an `UnverifiedWarning`, a `SignupBanner`, a resume bar, an objectives `Card`, quiz cards, widget frames, `FlyIt` challenge cards, `GoDeeper` resource cards, a completion panel and prev/next cards, each a bordered or tinted region. Decide which of these are groups a learner needs to see as units (quiz, widget, objectives) and render the rest (resource links, prev/next, the signup prompt) with space, dividers and type instead of boxes. The landing page and curriculum have the same issue at a larger scale. Fewer boxes will make the boxes that remain mean something, and will remove one of the clearest signs that the interface was assembled from a component kit.
+The bigger change is to make enclosure selective. A lesson page today can stack an `UnverifiedWarning`, a `SignupBanner`, a resume bar, an objectives `Card`, quiz cards, widget frames, `FlyIt` challenge cards, `GoDeeper` resource cards, a completion panel and prev/next cards, each a bordered or tinted region. Decide which of these are groups a learner needs to see as units (quiz, widget, objectives) and render the rest (resource links, prev/next, the sign-up prompt) with space, dividers and type instead of boxes. The landing page and curriculum have the same issue at a larger scale. Fewer boxes will make the boxes that remain mean something, and will remove one of the clearest signs that the interface was assembled from a component kit.
 
 ## Density and clutter
 
@@ -432,7 +432,7 @@ How much should a screen hold? Two traditions give opposite answers. Tufte argue
 
 Rosenholtz, Li and Nakano treated visual clutter as a stand-in for set size, the number of items competing for attention, in displays where items cannot be counted [@rosenholtz2007measuring]. They proposed and tested computable measures. Feature Congestion extracts color, luminance and orientation features and combines their local variability into one value; Subband Entropy grew from the observation that compressed file size correlated highly with Feature Congestion, so clutter relates to how much visual information a display contains; Edge Density, borrowed from earlier work, is the proportion of edges in the image. The authors report that color variability matters for clutter, and that it is captured by Feature Congestion but not by the other two measures [@rosenholtz2007measuring].
 
-The measures generalize imperfectly. A 2014 comparison by Yu, Samaras and Zelinsky, known here through the lane notes on this paper, attributes to the earlier 2005 study correlations with search time on map stimuli of r = 0.75 for Feature Congestion against 0.83 for edge density, and for targets defined by contrast threshold 0.93 against 0.83 [@rosenholtz2007measuring]. Later studies found Feature Congestion no better than edge density, and on 90 real-world scenes it ranked below edge density and newer proto-object methods; the best of those correlated with a median human ranking at rho = 0.814, while human observers agreed with each other at only rho = 0.692 [@rosenholtz2007measuring]. Clutter is a real and partly measurable construct, no single index is settled, and none was validated on user interfaces or instrument panels. A clutter score can flag a screen that is far busier than its siblings. It cannot say whether a screen passes.
+The measures generalize imperfectly. A 2014 comparison by Yu, Samaras and Zelinsky, known here through the research notes on this paper, attributes to the earlier 2005 study correlations with search time on map stimuli of r = 0.75 for Feature Congestion against 0.83 for edge density, and for targets defined by contrast threshold 0.93 against 0.83 [@rosenholtz2007measuring]. Later studies found Feature Congestion no better than edge density, and on 90 real-world scenes it ranked below edge density and newer proto-object methods; the best of those correlated with a median human ranking at rho = 0.814, while human observers agreed with each other at only rho = 0.692 [@rosenholtz2007measuring]. Clutter is a real and partly measurable construct, no single index is settled, and none was validated on user interfaces or instrument panels. A clutter score can flag a screen that is far busier than its siblings. It cannot say whether a screen passes.
 
 ### Clutter near text
 
@@ -508,7 +508,7 @@ The two traditions reconcile once the task is named. Reading a lesson is continu
 
 ### What this means for Learn to Fly
 
-LTF's palette rules (near-neutral greys, one accent, status colors) are already a clutter control, and the reading column contains no unrelated widgets. Keep both. The density risk lies in three places. Lessons accumulate boxed elements above the first teaching block (warnings, signup prompt, resume bar, objectives, section select), which is clutter near the start of the text even if every item is relevant. Challenge cards in the three-up grid can carry many small colored signals at once. And the dashboard, which should be the densest page, is at risk of becoming a set of loose tiles rather than clusters.
+LTF's palette rules (near-neutral greys, one accent, status colors) are already a clutter control, and the reading column contains no unrelated widgets. Keep both. The density risk lies in three places. Lessons accumulate boxed elements above the first teaching block (warnings, sign-up prompt, resume bar, objectives, section select), which is clutter near the start of the text even if every item is relevant. Challenge cards in the three-up grid can carry many small colored signals at once. And the dashboard, which should be the densest page, is at risk of becoming a set of loose tiles rather than clusters.
 
 Write a one-line density budget into each template's documentation, keep tier and status colors off cards that have nothing to report, and build the small-multiples pattern for instrument lessons from the existing `KeyNumbers` container-query grid. The screenshot-based clutter flag is optional and cheap; if it is built, it informs review and never gates a merge.
 
@@ -538,7 +538,7 @@ LTF's root rule fixes the base: `index.css` sets `html { font-size: 16px; }`, an
 
 ### Breakpoints and containers in LTF
 
-LTF uses Tailwind's default breakpoints (640, 768, 1024, 1280 and 1536 px). A grep this session counts `sm:` 73 times, `md:` 47, `lg:` 41, `xl:` 3 and `2xl:` none, so most adaptation happens at the small end, which suits a mobile-first build. The `xl` uses are the lesson page's third column and glossary placement; nothing changes above 1536 px, which is acceptable because the containers stop growing at 1200 or 1280 px. Container queries appear once, in `KeyNumbers`, which uses `@container` with a `repeat(auto-fit, minmax(...))` grid whose minimum track width comes from a `key-col` custom property so its tiles adapt to whatever width the panel is given, whether in the narrow `SpeedsPage` side column or a lesson. That component is the clearest example in the code of Marcotte's "redefine our context": it sizes itself from its container, not the viewport.
+LTF uses Tailwind's default breakpoints (640, 768, 1024, 1280 and 1536 px). A grep of the code for this book counts `sm:` 73 times, `md:` 47, `lg:` 41, `xl:` 3 and `2xl:` none, so most adaptation happens at the small end, which suits a mobile-first build. The `xl` uses are the lesson page's third column and glossary placement; nothing changes above 1536 px, which is acceptable because the containers stop growing at 1200 or 1280 px. Container queries appear once, in `KeyNumbers`, which uses `@container` with a `repeat(auto-fit, minmax(...))` grid whose minimum track width comes from a `key-col` custom property so its tiles adapt to whatever width the panel is given, whether in the narrow `SpeedsPage` side column or a lesson. That component is the clearest example in the code of Marcotte's "redefine our context": it sizes itself from its container, not the viewport.
 
 Elsewhere components assume the viewport. `ChallengesPage` switches from one to two to three cards at `sm` and `lg` regardless of whether the list has a sidebar; a challenge card placed inside a lesson's `FlyIt` section at a narrower width would use the same viewport breakpoints. Widgets inside `WidgetFrame` render in a `p-4` canvas whose width depends on the lesson column, which itself varies as described in the chapter on margins and measure.
 
@@ -691,7 +691,7 @@ Nielsen's 2006 study tracked 232 users viewing thousands of pages and found a do
 The article itself qualifies the F. It is a rough general shape, not a uniform pattern: some users read a third horizontal band (an E) or only one (an inverted L), and the distance between bars varies with the page, as when a product image lowered the second bar [@nielsen2006f]. The pattern describes uncommitted scanning of text-heavy pages. It is a description of poor-case behavior to design against, not a template to design toward.
 
 ::: myth
-**"Design the page in an F shape."** The F-pattern describes how people scan text they have not committed to read; the study's own recommendations are to front-load words and structure text so that a scanner still gets the point, not to arrange content along an F [@nielsen2006f]. The pattern varies with page design and task, so a layout built to it fits one observed case.
+**"Design the page in an F shape."** The F-pattern describes how people scan text they have not committed to read; the study's own recommendations are to front-load words and structure text so that a scanner still gets the point, not to arrange content along an F [@nielsen2006f]. The full case, with the studies, is made in Part VII, Perception and Attention, and is not repeated here.
 :::
 
 ### Line spacing for scanning
@@ -700,7 +700,7 @@ Ling and van Schaik studied visual search of web pages and found that greater li
 
 ### The top of the lesson page
 
-Applied to LTF, the attention data raise a concrete question: what does a learner see in the first screenful of a lesson on a phone? By the code, above the first lesson block sit the `BetaBanner` (a multi-line notice on a narrow screen), the 64 px sticky `Header`, breadcrumbs (reduced to the parent on phones), the mono lesson code, the h1, the meta row, then, depending on state, the `UnverifiedWarning` for drafts, the `SignupBanner` for signed-out visitors, the resume bar, the objectives `Card`, and the sticky `MobileSectionSelect`, followed by a `mt-6` gap. Each is relevant. Together, for a signed-out learner on a draft lesson, they are likely to fill the first screen before the first sentence of teaching appears; this has not been measured and should be. The objectives box is the one element in the stack that belongs at the top by Fessenden's recommendation; the signup prompt and the resume bar compete with it.
+Applied to LTF, the attention data raise a concrete question: what does a learner see in the first screenful of a lesson on a phone? By the code, above the first lesson block sit the `BetaBanner` (a multi-line notice on a narrow screen), the 64 px sticky `Header`, breadcrumbs (reduced to the parent on phones), the mono lesson code, the h1, the meta row, then, depending on state, the `UnverifiedWarning` for drafts, the `SignupBanner` for signed-out visitors, the resume bar, the objectives `Card`, and the sticky `MobileSectionSelect`, followed by a `mt-6` gap. Each is relevant. Together, for a signed-out learner on a draft lesson, they are likely to fill the first screen before the first sentence of teaching appears; this has not been measured and should be. The objectives box is the one element in the stack that belongs at the top by Fessenden's recommendation; the sign-up prompt and the resume bar compete with it.
 
 The challenge brief has the reverse problem. `BriefTab` places Goal, "Sim setup", "Recommended lessons", Procedure, "How you'll be scored" and the safety and tip `Callout`s before the large "I'm set up, start flying" button. That order follows the task, and a committed learner will scroll; but the safety callout sits near the end of a long tab, where attention is thinnest.
 
@@ -731,7 +731,7 @@ The challenge brief has the reverse problem. `BriefTab` places Goal, "Sim setup"
 ::: {.rule #GRD-068 grade="B"}
 **Start every heading, step, list item and button label with the word that carries its information.** The left edge is noticed most, and words beyond the first two on a line are read much less often [@nielsen2006f]. The observation is well documented, though unpublished in peer-reviewed form, so B.
 
-*In LTF:* write step labels as action first ("Set the parking brake", as a copy example only, not a procedure); write card titles and curriculum rows with the distinguishing word first. Part XXIV, Writing and Microcopy covers wording; this rule is the layout reason for it.
+*In LTF:* write step labels as action first ("Close the dialog", not "Now you should close the dialog"); write card titles and curriculum rows with the distinguishing word first. Part XXIV, Writing and Microcopy covers wording; this rule is the layout reason for it.
 :::
 
 ::: {.rule #GRD-069 grade="C"}
@@ -770,3 +770,272 @@ The lesson's single column, front-loaded section headings and `SectionNav` alrea
 
 In the challenge brief, move a one-line safety summary to the top when a challenge has a `safety` callout, leaving the full callout in place below. In lists, keep the left edge for action words and a consistent column for values, and keep row spacing generous. Finally, instrument section reach using the scroll-spy data the lesson page already computes, so future decisions about lesson length rest on LTF's learners, not on casual browsers.
 
+## Layout beside the simulator
+
+Fly mode is the one LTF screen that is not read the way web pages are read. It sits on a phone, tablet or second monitor beside a running simulator, it is glanced at between moments of attention to the sim, and it may be read from arm's length or further. None of the studies in this Part tested that situation. What they offer is a set of mechanisms (attention falls away with scrolling, clutter slows search, bounded regions group, close display proximity supports integration, small targets cause errors) whose consequences are sharper here than anywhere else in the product.
+
+### The context
+
+The simulator supplies a dense, cluttered visual field. The clutter research treats clutter as the effective number of items competing for attention [@rosenholtz2007measuring], and the second screen adds to that count every time the learner looks at it. The design goal is a second screen that is quiet by contrast: few items, few colors, large type, and nothing that changes position. Comprehension was better when text was surrounded by space rather than unrelated material [@mcmullin2002effects]; in Fly mode, anything not needed for the current step is unrelated material.
+
+Scrolling is a poor fit for glances. The scroll data show attention concentrating on the first screen and dropping sharply after it, for people who are looking at nothing else [@fessenden2018scrolling]. A learner whose eyes return to the second screen for a moment needs to find the current step where it was last time, without scrolling to it.
+
+Reading distance changes the human scale. Le Corbusier's idea of a measure tied to the body [@lecorbusier1954modulor] becomes, for a screen at arm's length beside a monitor, a type and control scale larger than the phone scale used in lessons. Brown's advice to choose the base from the conditions of reading [@brown2011more] applies: the Fly mode base should be chosen by testing legibility at the real distance, not by enlarging the lesson layout.
+
+### Regions and proximity
+
+Common region is the cheapest way to make a glance land in the right place [@palmer1992common]. A few clearly bounded regions, one per task (the current step, the timer, an alert), let the eye go to a region rather than search a field of text. The proximity compatibility principle adds the rule for what goes in each region: items used together in one judgment belong together; items read on their own stand apart, because bundling costs focused attention [@wickens1995proximity]. A step and its checkbox are one judgment; the stopwatch is its own reading.
+
+The left-edge and front-loading findings apply with more force when reading time is short: the step's action word goes first, and the most important reading sits top left in its region [@nielsen2006f]. Generous row spacing helps search accuracy [@ling2007influence], and a learner looking for the next unticked step is searching.
+
+### Targets
+
+Fly mode is operated by touch or a mouse while attention is divided. WCAG 2.2 sets a minimum target of 24 by 24 CSS pixels at Level AA, with exceptions where spacing keeps a 24 px circle around each target clear of its neighbors, and an enhanced 44 by 44 CSS pixel target at Level AAA; the Understanding document recommends larger targets for frequently used controls, actions that cannot easily be undone and steps in a sequential task [@w3c2024wcag]. The 24 px floor is a deliberately low compromise. The best-known empirical anchor, Parhi and colleagues' study of one-handed thumb use, found that error rates stopped improving at about 9.2 mm for discrete targets and 9.6 mm for serial ones, in a sample of 20 young, mostly inexperienced participants on a 2005-era device [@parhi2006target]. The two sources agree on direction: controls tapped repeatedly in a sequential task, which is what a checklist tick and a "next step" button are, should be well above the floor.
+
+### Fly mode as built
+
+`FlyModeLayout` drops the header and footer, defaults to the dark theme unless the learner chose light, and sets `text-xl` on a `max-w-3xl` (768 px) column with `px-4 py-6`. `FlyModePage` stacks a "Back to challenge" link, the mono challenge code, an `text-4xl` h1, the goal at `text-2xl`, then `FlyPanel large`: an h2 at `text-3xl`, the step rows with `Checkbox` and large copy, the `text-5xl` mono stopwatch in an ink pill, the random-event alert (`border-4 border-warn bg-warn-tint`, a pulse and a beep), "Keep the screen on while flying" and "Finish and debrief". The `BetaBanner` appears above all of it, as on every page.
+
+The direction is right: one column, large type, dark ground, no navigation chrome. Four layout problems follow from the evidence. The column is a single 768 px stack, so on a landscape tablet or a monitor the title, goal and stopwatch push the step list down and the screen's width goes unused; the current step can leave the viewport as steps are ticked. The `BetaBanner` is non-task material at the top of the most attention-constrained screen. The random-event alert appears in the flow of the panel, so its arrival can move the content around it. And `Checkbox` is a 20 px control; whether the whole step row is the target is not stated in the dossier and should be checked, because the row, not the box, has to carry the 44 px target.
+
+::: {.rule #GRD-074 grade="C"}
+**Fit everything Fly mode needs for the current step (the step, its control, the timer and any alert) in one viewport at every supported device size, with no scrolling required.** Attention falls sharply below the first screen even for undivided readers [@fessenden2018scrolling]; a glance from the sim cannot include scrolling. The application to a divided-attention screen is an inference, so C.
+
+*In LTF:* in `FlyModePage`, keep the current step in view by design: show the current and next steps prominently, collapse completed steps to a one-line summary, and keep the stopwatch in a fixed region rather than above the list.
+:::
+
+::: {.rule #GRD-075 grade="C"}
+**Give Fly mode its own type and spacing base, chosen by testing legibility at the real reading distance beside a simulator, not by scaling up the lesson layout.** A scale's base should come from the conditions of reading [@brown2011more], and the human scale for a screen at arm's length differs from a phone's [@lecorbusier1954modulor].
+
+*In LTF:* define the `fly-*` strand from GRD-014 with its base set by a test at the distance learners actually use, then replace `text-xl`, `text-2xl`, `text-3xl`, `text-4xl` and `text-5xl` in `FlyModeLayout`, `FlyModePage` and `FlyPanel large` with it.
+:::
+
+::: {.rule #GRD-076 grade="B"}
+**Show nothing in Fly mode that the current task does not need: no banners, no promotional or account elements, and no navigation beyond the way back.** Clutter near content harms comprehension and slows search [@mcmullin2002effects; @rosenholtz2007measuring], and the simulator already fills the learner's visual field. Two independent lines of evidence, applied by inference, so B.
+
+*In LTF:* hide `BetaBanner` in `FlyModeLayout` (the beta notice is shown on the challenge page the learner came from), keep the "Back to challenge" link small and at the top edge, and keep "Keep the screen on while flying" as a one-time note, not a persistent row.
+:::
+
+::: {.rule #GRD-077 grade="B"}
+**Divide Fly mode into a few clearly bounded regions, one per task, and put in each region only what is used together.** Bounded regions group strongly [@palmer1992common], and close display proximity supports integration while separation supports focused reading [@wickens1995proximity].
+
+*In LTF:* three regions: the step list (step text and its tick together), the timer (read on its own), and a reserved alert region. Each is a surface that reads clearly against the Night `canvas` (GRD-032). The challenge code and title shrink to a single header line.
+:::
+
+::: {.rule #GRD-078 grade="B"}
+**Make every repeatedly used Fly mode control at least 44 by 44 CSS pixels, with clear space between adjacent controls, and never smaller than 24 by 24.** WCAG 2.2 sets 24 px as the AA minimum and 44 px as the AAA target, recommending larger targets for frequent and sequential actions [@w3c2024wcag]; a thumb-use experiment found errors stopped improving at about 9.2 to 9.6 mm [@parhi2006target]. A standard plus one small experiment, so B.
+
+*In LTF:* make each `FlyPanel` step row the tap target for its `Checkbox` (the 20 px box alone is below the floor), keep "Finish and debrief" at the `lg` 48 px control size, and space adjacent stopwatch controls so their targets do not touch. Part XI, Forms, Onboarding and Touch covers target sizing in general.
+:::
+
+::: {.rule #GRD-079 grade="C"}
+**Use the width of a landscape screen for Fly mode by placing its regions side by side, rather than centering a narrow column.** Responsive layouts adapt structure to the viewing context, not only width [@marcotte2010responsive]; a single stack wastes the space that would keep every region in view.
+
+*In LTF:* replace the `max-w-3xl` stack with a Fly template that is one column on portrait phones and two regions (steps beside timer and alert) when the viewport is wider than tall, chosen with an orientation or container condition.
+:::
+
+::: {.rule #GRD-080 grade="C"}
+**Select the glanceable layout by the learner's stated intent, not by screen width alone.** Marcotte treats different viewing contexts as the thing a layout responds to [@marcotte2010responsive]; a laptop beside the sim and a laptop at a desk have the same width and different needs.
+
+*In LTF:* keep Fly mode as an explicit route (`/challenges/:slug/fly`) entered by a deliberate action; do not switch a lesson or brief into the Fly layout automatically at some width.
+:::
+
+::: {.rule #GRD-081 grade="C"}
+**Keep every Fly mode element in a fixed position for the whole session; content changes, positions do not.** Predictable placement is the grid's core benefit [@mullerbrockmann1981grid], and breaking it in a product interface harms usability where learners return to the same control repeatedly [@samara2023making].
+
+*In LTF:* the current step, the tick, the stopwatch and "Finish and debrief" stay where they are as steps are ticked; ticked steps collapse above without moving the current step's region.
+:::
+
+::: {.rule #GRD-082 grade="C"}
+**Reserve a fixed region for alerts so that an alert's arrival never moves other content.** Content that shifts under a divided-attention user breaks the predictable positions that layout exists to provide [@samara2023making; @mullerbrockmann1981grid].
+
+*In LTF:* render the random-event alert (`border-4 border-warn bg-warn-tint`) in a reserved region of the Fly template, empty and quiet when no event is active, so the step list does not jump when it appears. Its motion and sound are covered in Part XXII, Motion and Perceived Performance.
+:::
+
+### What this means for Learn to Fly
+
+Keep Fly mode's existing choices: an explicit route, no header or footer, the dark default, large mono stopwatch digits, a single action to finish. Change its layout from a centered narrow stack into a template with three fixed regions (steps, timer, alert), side by side on landscape screens and stacked on portrait phones, with the current step always in view and completed steps collapsing. Remove the `BetaBanner` from `FlyModeLayout`. Give Fly mode its own type and spacing strand, and set its base by testing at real distance beside a running sim.
+
+Then check targets: every step row is the tap target for its tick, repeated controls are at least 44 px, and no small controls touch. Fly mode is also the best candidate in the product for a short usability test, because its conditions (divided attention, distance, a busy primary display) differ from anything the published studies covered. A test with a handful of learners flying a real challenge, measuring missed and mistaken ticks, would settle more than any further reading.
+
+## Making and breaking: templates and exceptions
+
+A grid that is never broken produces pages that are correct and interchangeable. A grid that is broken everywhere is no grid. The teaching tradition that followed the Swiss school settled on an order: build the grid properly, then depart from it deliberately, for stated reasons, in a few named places. For a product, the question is where departures help and where they cost the learner the predictability the grid exists to give.
+
+### Make, then break
+
+Timothy Samara's *Making and Breaking the Grid* states the method in its title [@samara2023making]. It teaches the column grid (one or more vertical columns), the modular grid (columns crossed by rows, producing modules) and the compound grid (grids overlaid), how to build each and how to use it, and then a set of named ways to depart from structure: splitting, shifting, working on an axis, and intuitive design. The third edition adds expanded coverage of interactive and interface work and a cross-cultural reexamination of grid history [@samara2023making]. The book is a textbook of practice, and its evidence is its case studies; it is also part of the reconciliation that followed the early-1980s rejection of dogmatic grid use, after which the grid became, in one account, "a useful tool rather than a required starting point" [@samara2023making; @mullerbrockmann1981grid].
+
+Müller-Brockmann's own work shows that breaking was always inside the method. The "musica viva" poster sets the letters of one word "at irregular intervals so that a rhythm is produced," on a grid of 4.5 by 4 fields [@mullerbrockmann1981grid]. The irregularity is measured against the grid; it reads as rhythm because the grid is there. Gerstner's formula says the same thing in programme terms: the maximum of constants with the greatest possible variability [@gerstner2007designing]. Variation is what the constants make legible.
+
+### Where a product may break, and where it may not
+
+A poster is seen once. A product's controls are used hundreds of times, and learners build a spatial memory of where the next-step button, the progress indicator and the navigation live. Samara's techniques were developed for editorial and poster work, and any claim that a broken grid communicates better than a regular one is unproven; in a product, a break that moves navigation or controls makes positions unpredictable and costs usability [@samara2023making]. The workable division is between content presentation, which may break the grid in named ways, and navigation, progress and controls, which never do.
+
+The compound grid is the usual answer for pages that mix kinds of content. A dashboard that holds progress bars, a list of next items, stat tiles and a table of attempts can use a coarse grid for its regions and a finer one nested inside a region for its tiles [@samara2023making]. That is a structure, not a break.
+
+### The generic sequence
+
+LTF's landing page follows a sequence that is common to marketing pages: a hero with headline, subline, two buttons and a media block; a row of four stats; a five-step icon row; a "what you need" row of three icon cards; a two-column FAQ; a final call-to-action band. Each band is competent and each sits on its own grid (`7fr/5fr`, `lg:grid-cols-4`, `lg:grid-cols-5`, `md:grid-cols-3`, `md:grid-cols-2`). What the page lacks is not order but a reason for any band to look different from the equivalent band on another product's page. The grid literature offers one: a rhythm built on the product's own structure. LTF has a structural motif already, the "horizon line" of `LessonPath`, the teal connector between numbered pins, and it appears inside a `Card` in one landing band. Working on an axis, in Samara's vocabulary, would let that line organize the page itself, with bands hung from a single vertical or horizontal axis, rather than appearing as one illustration among stock bands. That is a brand decision for Part XX, Brand Identity and Distinctiveness; the layout point is that a signature break must be one, named, and repeated where it belongs, not a new arrangement per band.
+
+### The templates LTF needs
+
+The chapters before this one point to a short list of templates, each implemented once as a layout component with named areas (GRD-058), each with a stated constant (GRD-021) and a density budget (GRD-039):
+
+| Template | Holds constant | Used by |
+| --- | --- | --- |
+| Reading | the measure | lessons, briefs, `Prose` pages |
+| Collection | page width | challenges, airports, resources |
+| Dashboard | page width, compound grid | dashboard, speeds |
+| Reference | rail and panel | reference hub sections |
+| Fly | the viewport | Fly mode |
+| Form | narrow column | login, sign-up, account |
+| Landing | page width, one axis | `/` |
+
+::: {.rule #GRD-083 grade="C"}
+**Build each template's grid first, then allow only named, documented exceptions, each with a stated reason.** Samara teaches making before breaking, and Müller-Brockmann's irregular rhythms read as rhythm because a grid stands behind them [@samara2023making; @mullerbrockmann1981grid]. A named exception looks intended; an unnamed one looks like an error.
+
+*In LTF:* list the permitted breaks in the layout key from GRD-006 (for example a full-bleed widget in a lesson, the landing axis, the single large readout on the result card) and treat any other departure in review as a bug.
+:::
+
+::: {.rule #GRD-084 grade="C"}
+**Never break the grid for navigation, progress indicators or controls; break it only in content presentation.** Learners return to the same controls repeatedly, and breaks in product interfaces make positions unpredictable [@samara2023making; @mullerbrockmann1981grid].
+
+*In LTF:* the `Header`, `SectionNav`, `MobileSectionSelect`, the `Tabs` on `ChallengePage`, `PrevNext`, the completion panel and every primary `Button` sit on the template grid at the same place on every page of a template.
+:::
+
+::: {.rule #GRD-085 grade="C"}
+**In design review, describe any departure from the grid with a named technique (split, shift, axis) and its reason.** Samara's vocabulary turns a break into a decision that can be discussed [@samara2023making].
+
+*In LTF:* the PR template's design section asks, for any layout that leaves its template: which technique, which element, and why. "It looked better" is not a reason; "the widget needs the wide width to show its scale" is.
+:::
+
+::: {.rule #GRD-086 grade="C"}
+**Lay out mixed-content pages as a compound grid: a coarse grid for regions and a finer grid nested inside a region for its items.** The compound grid is the standard structure for pages that mix charts, lists and text [@samara2023making]; subgrid and nested grids implement it [@atkins2025css].
+
+*In LTF:* `DashboardPage` uses the `2fr/1fr` split for regions; the stat tiles inside "Stats" and the per-module bars inside "Your progress" each get their own inner grid on token gaps. `SpeedsPage` follows the same structure with its table and the sticky `KeyNumbers` panel.
+:::
+
+::: {.rule #GRD-087 grade="C"}
+**Place recurring lesson elements (objectives, widgets, quizzes, the "Fly it" section, completion) in the same position and order in every lesson.** Consistent placement across a series is the grid's central practical benefit, and learners build spatial memory of where things live [@mullerbrockmann1981grid].
+
+*In LTF:* `LessonPage` already fixes the order of objectives, blocks, `FlyIt`, `GoDeeper`, glossary, completion and `PrevNext`. Keep it fixed in code, and give `WidgetFrame` and `QuizBlock` one width and alignment rule in the reading template, so a widget sits at the same width in lesson 0.1 and lesson 8.4.
+:::
+
+::: {.rule #GRD-088 grade="C"}
+**Give each page template at most one signature break, drawn from the product's own structure, and repeat it consistently rather than inventing a new arrangement per section.** A rhythm against a grid is how the Swiss tradition made order distinctive [@mullerbrockmann1981grid]; a break repeated in its place becomes part of the programme [@gerstner2007designing].
+
+*In LTF:* the candidate is the `LessonPath` horizon line used as a page axis on the landing and curriculum pages, decided with Part XX, Brand Identity and Distinctiveness. Whatever is chosen, the landing bands stop each defining an unrelated grid.
+:::
+
+::: {.rule #GRD-089 grade="C"}
+**Keep a human design review of every new or changed template; no grid, scale or lint rule replaces it.** Le Corbusier wrote that the Modulor "does not confer talent," and Brown that "math is no substitute for an experienced designer's eye" [@lecorbusier1954modulor; @brown2011more].
+
+*In LTF:* the lint rules and screenshot matrix catch off-scale values and broken widths; a reviewer still looks at each template change on a phone and a desktop, in Day and Night, before it merges.
+:::
+
+### What this means for Learn to Fly
+
+Keep the fixed order of the lesson page and the restraint of the reading column; they are already a template in all but name. Build the seven templates in the table as layout components, and move every page onto one. Write down the permitted breaks, and keep navigation, progress and controls out of them.
+
+The landing page is where the generic look is most visible and where a deliberate break would do most. Replace its band-by-band grids with one landing grid and one signature axis drawn from the horizon-line motif, decided together with the brand work. Elsewhere, distinctiveness should come from consistency: the same widths, the same spacing roles, the same card pattern for the same kind of item, page after page. A product looks designed when its pages visibly share a programme.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for LTF
+
+1. **LTF has a short list of named page templates (reading, collection, dashboard, reference, fly, form, landing), each implemented once as a layout component with named grid areas.** GRD-001, GRD-002, GRD-004, GRD-058.
+2. **The layout programme is documented with the code and rendered on a development page.** GRD-006, GRD-017.
+3. **Oversized content has one sanctioned "wide" width in the reading template.** GRD-003, GRD-028.
+4. **The 4 px unit stays; the named spacing scale is reconciled with practice and enforced by lint, with commented exceptions for the horizon-line optical values.** GRD-007, GRD-009, GRD-010.
+5. **Collections and the dashboard span one shared track grid, and collections use `auto-fit` tracks.** GRD-008, GRD-057, GRD-063.
+6. **One type scale serves every page; raw Tailwind sizes are retired; Fly mode gets its own strand, sized by testing at distance.** GRD-011, GRD-012, GRD-014, GRD-075.
+7. **Vertical spacing is assigned by named role, with outer steps at least about one and a half times inner steps.** GRD-013, GRD-029, GRD-030.
+8. **No ratio is justified by the golden section; media use three declared aspect ratios.** GRD-015, GRD-016, GRD-019, GRD-020, GRD-052.
+9. **The reading template holds the measure constant in a character unit; the lesson column no longer changes width at `xl`, and its anchoring matches other reading pages.** GRD-021, GRD-023, GRD-024, GRD-027.
+10. **Phone side margins stay at 16 px minimum as a named token; prose is single-column, flush left.** GRD-022, GRD-025, GRD-026.
+11. **Enclosure is selective: one boxed level per section, boundaries follow meaning and read as surfaces in both themes.** GRD-031, GRD-032, GRD-033, GRD-034.
+12. **Grouping follows task: things used together sit together, safety-relevant groups get a second cue.** GRD-035, GRD-036, GRD-037.
+13. **Each template has a density budget; the reading column carries no unrelated material; status and tier colors appear only when they report something.** GRD-039, GRD-040, GRD-041, GRD-042.
+14. **Widgets stay plain and faithful to real instruments; comparisons use small multiples; progress encodings are linear.** GRD-043, GRD-044, GRD-045, GRD-047.
+15. **The root font size follows the browser; type, spacing and reading widths move to relative units.** GRD-049.
+16. **Components size from their containers, following `KeyNumbers`; breakpoints follow content.** GRD-048, GRD-050, GRD-051.
+17. **Every template is checked in a screenshot matrix of widths and an enlarged text size.** GRD-053, GRD-046.
+18. **Visual order never differs from source order between items.** GRD-059.
+19. **The lesson's first screen has a budget: title, meta, objectives and at most one notice.** GRD-064, GRD-065.
+20. **Fly mode becomes a three-region template (steps, timer, alert) that fits one viewport, uses landscape width, hides the beta banner and keeps positions fixed.** GRD-074, GRD-076, GRD-077, GRD-079, GRD-081, GRD-082.
+21. **Repeated Fly mode controls are at least 44 CSS px, and step rows are the tick targets.** GRD-078.
+22. **Breaks are named, never touch navigation or controls, and the landing gets one signature axis.** GRD-083, GRD-084, GRD-085, GRD-088.
+
+### Review checklist
+
+Run these against a pull request that touches layout, or against any page.
+
+#### Grid and template
+
+- Does the page use one of the named templates, without its own container width? (GRD-001, GRD-058)
+- Does any new block type fit the programme, or use the wide width or the "something else" slot? (GRD-002, GRD-003, GRD-028)
+- Do edges of card rows, rails and columns line up with the template's tracks in the overlay? (GRD-008, GRD-017)
+- Is any departure from the grid named, with a reason, and outside navigation and controls? (GRD-083, GRD-084, GRD-085)
+
+#### Units and scales
+
+- Are all spacing, width and size values on the named scale, with no bracket values except commented exceptions? (GRD-007, GRD-009, GRD-010)
+- Do all font sizes come from the type utilities, with no raw Tailwind sizes? (GRD-011, GRD-012, GRD-014)
+- Is vertical spacing applied by role? (GRD-013, GRD-030)
+- Is any ratio justified by function or test, not by the golden section? (GRD-015, GRD-019, GRD-020)
+
+#### Reading frame
+
+- Is prose capped by a character-based measure, and does the column keep its width across every breakpoint? (GRD-021, GRD-023, GRD-024)
+- Are phone margins at least 16 px, prose single-column and flush left, and the column anchored like other reading pages? (GRD-022, GRD-025, GRD-026, GRD-027)
+
+#### Grouping and density
+
+- Is every gap between groups at least about one and a half times the gaps inside them? (GRD-029)
+- Does each boundary enclose exactly one meaningful group, read as a surface in Day and Night, and avoid nesting? (GRD-031, GRD-032, GRD-033)
+- Do spacing, enclosure, color and type agree on the groups? (GRD-034)
+- Are items used together placed together, labels closer to their content, and safety-relevant groups backed by a second cue? (GRD-035, GRD-036, GRD-037)
+- Has the screen been reviewed for proximity, alignment, repetition and contrast? (GRD-038)
+- Does the page stay within its template's density budget, with nothing unrelated in the reading column and no needless status color? (GRD-039, GRD-040, GRD-041, GRD-042)
+- Are widgets free of decorative ink, comparisons shown as small multiples and progress encoded linearly? (GRD-043, GRD-044, GRD-045, GRD-047)
+
+#### Responsive behavior
+
+- Are content regions fluid tracks rather than fixed widths, and do components size from their containers? (GRD-048, GRD-051)
+- Does the layout hold at an enlarged default text size? (GRD-049, GRD-053)
+- Are breakpoints justified by content, and collections `auto-fit` with no orphan items? (GRD-050, GRD-057, GRD-063)
+- Does every image and widget declare an aspect ratio, so loading does not shift the page? (GRD-016, GRD-052)
+- Is the narrow layout complete, and does core content work without widget code? (GRD-054, GRD-055)
+- Did the screenshot matrix run, and was any clutter flag reviewed by a person? (GRD-046, GRD-053)
+
+#### CSS Grid
+
+- Is grid used for two-dimensional regions and flex for rows? (GRD-056)
+- Does visual order match source order between items, with no `dense` packing? (GRD-059)
+- Are side-by-side cards aligned internally, with a fallback? (GRD-060)
+- Do text tracks have a zero minimum, gaps come from tokens, and no text container have a fixed height? (GRD-061, GRD-062)
+
+#### Attention
+
+- Are the objective, primary action and any safety-relevant item in the first phone screen, within the first-screen budget? (GRD-064, GRD-065)
+- Does the first screen avoid a false floor? (GRD-066)
+- Are sections short and headed, with information-carrying words first? (GRD-067, GRD-068, GRD-069)
+- In scanned lists, is the action at the left, the value in a consistent column, and the row spacing generous? (GRD-070, GRD-071)
+- Is the primary action placed where the task ends? (GRD-073)
+- Are length decisions based on LTF's own section-reach data? (GRD-072)
+
+#### Fly mode
+
+- Does everything for the current step fit in one viewport without scrolling, in fixed positions? (GRD-074, GRD-081)
+- Is the screen free of banners and non-task chrome, divided into a few regions, with a reserved alert region? (GRD-076, GRD-077, GRD-082)
+- Are repeated controls at least 44 CSS px, with step rows as targets? (GRD-078)
+- Does the layout use landscape width, its own type strand, and an explicit entry by intent? (GRD-075, GRD-079, GRD-080)
+
+#### Process
+
+- Has a person reviewed the template change on a phone and a desktop, in Day and Night? (GRD-089)
+- Are recurring lesson elements in their fixed order and width? (GRD-087)
+- Does any mixed-content page use a compound grid? (GRD-086)
+- Do preference tests of layout use neutral, fixed wording and a performance measure? (GRD-018)
+- Does any landing or curriculum change keep to one signature axis? (GRD-088)

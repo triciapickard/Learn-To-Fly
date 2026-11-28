@@ -1,0 +1,1943 @@
+# Rule index (generated)
+
+Every rule in Parts I to XXV: ID, grade, statement. Use these exact IDs in Part XXVI.
+
+
+## Evidence and Ideas: How to Know What Works (part-01-evidence-philosophy.md)
+
+- EVD-001 [C] Label every source by its kind of contribution before weighing it, and judge it by the criteria for that kind.
+- EVD-002 [C] Grade a rule by the strongest evidence that bears directly on its specific claim, for a population and task close to the product's, not by the reputation of the source.
+- EVD-003 [C] Write each rule at the scope its evidence supports, and state the conditions and limits inside the rule.
+- EVD-004 [C] For every study a rule relies on, record the sample, the effect size with its uncertainty, whether it has been replicated, what was read, and what the effect means in the product's own units.
+- EVD-005 [C] Treat a grade as a statement about evidence, never about importance or obligation.
+- EVD-006 [C] Change a grade only by citing the new evidence, and change the rule here before changing the product.
+- EVD-007 [A] Treat a single significant study as a lead, not a rule, and assume its reported effect is an upper bound.
+- EVD-008 [C] Screen every cited study against six flags before it supports a rule: small sample, small effect, many outcomes tested, flexible analysis, an interest in the result, and a crowded topic.
+- EVD-009 [B] Before looking at any data from a test, write down the outcome measure, the sample or stopping rule, the comparison and the analysis, and keep the note with the result.
+- EVD-010 [C] Report every variant, measure and subgroup that was examined, not only the one that moved.
+- EVD-011 [C] Never present a pattern found while exploring data as if it had been predicted; label it exploratory and test it fresh.
+- EVD-012 [C] Give more weight to a mechanism replicated across many tasks than to a single comparison of two designs, and hold lone, recent, surprising design findings loosely.
+- EVD-013 [C] Never read a p value as the probability that a design change works, or as the chance the result will replicate; weigh it against how often ideas of that kind succeed.
+- EVD-014 [C] Report every comparison as an effect size with an interval, in units the product cares about, and show it as a chart where possible.
+- EVD-015 [C] When an interval is wide, call the result a tie and decide on cost, clarity, accessibility and consistency; never read a wide interval that includes zero as "no effect".
+- EVD-016 [C] Never conclude from a non-significant result that a change is harmless or makes no difference.
+- EVD-017 [C] To claim that a design works for one group and not another, estimate the difference between the groups' effects directly; never infer it from one result being significant and the other not.
+- EVD-018 [C] Decide the smallest effect worth acting on before collecting data, and judge the result against it rather than against a significance threshold.
+- EVD-019 [C] Before accepting a before-and-after improvement as caused by a redesign, rule out history, maturation, testing, instrumentation, regression, selection and attrition; prefer a randomized comparison, or at least a time series with a comparison group.
+- EVD-020 [C] Treat a pretest as part of the treatment, and do not assume an effect measured after a pretest will appear without one.
+- EVD-021 [B] Before applying a finding, compare the studied participants with the product's learners on age, prior experience, language, device and motivation, and lower the rule's grade when they differ.
+- EVD-022 [B] Compare instructional designs on the method they deliver, with the content and method held constant, and never justify a choice by medium alone ("video is more engaging", "interactive is better").
+- EVD-023 [B] Judge a new interactive or animated feature after repeated use, not in the first sessions, and expect early gains to shrink.
+- EVD-024 [C] Do not cite a league-table effect size, or a benchmark cutoff such as a "hinge point", as the authority for a design decision; cite the primary experiments or meta-analyses on a comparable task.
+- EVD-025 [C] Evaluate designs meant for use beside the simulator in that setting, with the simulator running and the learner's hands on its controls, not at a desk with the page alone.
+- EVD-026 [A] Never treat one reviewer's problem list or severity ratings as complete; have at least two people find problems independently against agreed criteria, merge the lists, and rate severity from the merged list.
+- EVD-027 [B] Write the task scenarios, including the high-risk ones, and the definition of a usability problem before any evaluation begins.
+- EVD-028 [B] Run usability testing as small repeated rounds (about five learners per distinct learner group, fix, repeat), and end a round on a stopping rule such as two consecutive sessions with no new serious problem, not on a fixed count.
+- EVD-029 [B] Scan every session for severe failures; never assume the serious problems will have appeared in the first few.
+- EVD-030 [C] In early design, compare several rough alternatives as sketches before usability testing any one of them, and do not let the bugs of a first prototype decide the concept.
+- EVD-031 [C] Pair every usability measure with a measure of usefulness, for a course meaning whether the learner learned: a delayed quiz, a challenge result or a stated value.
+- EVD-032 [B] Treat expert inspection results as candidate problems to be checked with learners, not as findings.
+- EVD-033 [D] Do not count on attractive design to raise learners' judgments of how easy the product is; if you rely on a first-impression effect at all, expect it to fade with use.
+- EVD-034 [B] Never use satisfaction or preference ratings of an attractive prototype as evidence that a flow is usable; measure time, errors and abandonment on the task.
+- EVD-035 [B] Keep navigation, form controls and common interface patterns conventional, and spend visual novelty on content and identity elements.
+- EVD-036 [A] Treat what users and designers prefer, and what they perform best with, as separate measurements, and measure the second on a real task before trusting the first.
+- EVD-037 [B] For teaching, prefer simplified, caricatured instrument and panel diagrams that emphasize what is being taught over photorealistic or 3-D renders, and test the choice; use real sim screenshots for orientation to where things are.
+- EVD-038 [B] To help a learner notice what has changed in a configuration or a sequence, give an explicit list of the changes rather than a replay or a realistic animation.
+- EVD-039 [C] When a design rule is justified by a mechanism ("people read word shapes", "visual learners need diagrams"), check the mechanism against experiments before accepting the rule, and keep the rule only if it survives on other grounds.
+- EVD-040 [A] Do not offer learning-style tracks, quizzes or settings; adapt, where at all, to what the learner got wrong.
+- EVD-041 [C] Before running a comparative test, compute the sample needed to detect the smallest worthwhile difference; if it is out of reach, do not run the test, and decide from principles, qualitative sessions and accessibility instead.
+- EVD-042 [C] When a comparative test is feasible, agree one overall success measure in advance, validate randomization and logging with an A/A run, run in whole weeks, and repeat the analysis on new users to check for novelty.
+- EVD-043 [C] Measure load time and interaction delay for every variant, and check that a losing variant is not merely slower.
+- EVD-044 [C] Choose the research method from the question being asked, and state the question before choosing.
+- EVD-045 [C] Observe beginners at home with the simulator running before designing surfaces used beside it, noting where the screens, keyboard and controller are, what they glance at, and what interrupts them.
+- EVD-046 [C] Analyze open-ended learner material (interviews, support questions, session notes) by constant comparison, sample further where a category is thin, and present the result as categories and hypotheses, not as counts of how many learners struggle.
+- EVD-047 [C] Write a one-paragraph plan for every study with learners before it starts (question, measure, participants, stopping rule, analysis, and the result that would change the decision), record all measures collected, and keep anonymized raw data where the team can recheck the analysis.
+- EVD-048 [C] Treat stored progress data and session replays as convenience samples that show what happened and not why; never generalize from error-triggered replays to typical use, and handle any research use of them under the product's privacy terms.
+- EVD-049 [C] Separate every craft source's statements of value, its empirical claims and its mechanism stories, and weigh each differently: argue with values, test empirical claims, and distrust mechanism stories until checked.
+- EVD-050 [C] Accept a craft rule as the default where no relevant experiment exists, and overrule it on a specific effect only when an experiment on a comparable task and population contradicts it; where craft authorities disagree, grade the rule D and argue from the product's context.
+- EVD-051 [C] Give design review weight to reviewers who show Hume's five marks for this product: they know the domain, have watched beginners use it, have compared it with alternatives, are not defending their own work, and notice small defects.
+- EVD-052 [C] When a reviewer says something feels wrong, find the fact that makes it wrong (a contrast ratio, a misaligned baseline, a mislabeled axis, an inconsistent token, a target too small) before acting, and record it.
+- EVD-053 [C] Do not spend review time debating preferences that are blameless variations of taste within a legible, accessible, consistent system; decide once, record the decision, and move on.
+- EVD-054 [C] Automate every check that can be made certain, and spend human review on the qualities that depend on judgment.
+- EVD-055 [C] Borrow principles from admired products, not their surfaces; for every element taken from an exemplar, state the principle it serves in this product.
+- EVD-056 [C] For each new component or page, write the outer environment it must fit (who uses it, on what screen, at what distance, with what in their hands, while doing what) before designing the inner one.
+- EVD-057 [C] For choices that do not affect safety, learning or access, write the criteria first, take the first option that meets them, and record why.
+- EVD-058 [C] Generate at least two or three alternatives for any significant layout or component, test each against the same written requirements, and record why one was chosen.
+- EVD-059 [C] Build the course and the interface from small, independently complete and independently verified units, so that a failure or change in one does not unravel the rest.
+- EVD-060 [C] Sort each design question as tame (it has a checkable answer) or wicked (it has none); close tame questions with tests and sources, and for wicked ones write down the stopping point and when to revisit.
+- EVD-061 [C] Do not use the wickedness of a design question as a reason to leave a tame question open; facts, values from tokens and accessibility thresholds are checked, not argued.
+- EVD-062 [C] When explaining a problem such as drop-off, write down at least two rival explanations before choosing a fix, and do not let a single metric choose for you.
+- EVD-063 [C] When a design problem stalls, reposition it: treat a signage problem as an action problem, a component problem as a system problem, and look for the fix in the new placement.
+- EVD-064 [C] State the goals of a page or component as a list of specific, named misfits between it and its users, and design to remove them.
+- EVD-065 [C] Test fixes for interacting misfits together, because removing one can create another.
+- EVD-066 [C] Set aside deliberate time to question the product's frame, separate from iterative improvement, and judge an early radical prototype against its potential rather than against the polished current design.
+- EVD-067 [C] Write down the practical conditions a component must meet before drawing it, and treat them as constraints on form, not as a derivation of it.
+- EVD-068 [C] Give elements with the same function the same form everywhere, and elements with different functions forms that can be told apart.
+- EVD-069 [C] Count the feeling a page gives a nervous beginner as part of its function, and write it into the brief.
+- EVD-070 [C] Before publishing a lesson, widget or challenge, review it against Papanek's six aspects: honest method, use, real need, fit to its context, the right associations, and aesthetics as part of function.
+- EVD-071 [C] Before launch, ask beginners what they think an unfamiliar element does or means, and treat mismatches as design defects.
+- EVD-072 [C] Organize content depth in explicit layers (what to do, why, and the reference and source behind it), each designed for a different level of competence.
+- EVD-073 [C] Never let a visual element present itself as something it is not: label simplified models as models, keep screenshots real, and avoid surface treatments that imitate physical instruments the learner cannot use.
+- EVD-074 [C] Treat detail errors as design defects: a wrong digit, a misaligned label or an inconsistent token repeated across pages is a failure of the design, not of proofreading.
+- EVD-075 [C] Keep the surfaces learners work on (the lesson body, Fly mode, checklists, the debrief) plain and durable, adding no decoration that costs reading attention or will date.
+- EVD-076 [C] When proposing to simplify a page or component, state where the removed complexity goes (a link, a later lesson, a reference entry, the system itself) and check that the learner can still reach it.
+- EVD-077 [C] Never simplify a checklist, limit, procedure or warning by dropping a required item; reduce presentation, not content.
+- EVD-078 [C] Break large learning tasks into visible sub-goals rather than presenting them as one formidable challenge.
+- EVD-079 [D] Allow richness, texture and identity on orientation surfaces (landing, curriculum, dashboard, reference hub) while keeping working surfaces plain, and test whether the richness helps or distracts.
+- EVD-080 [C] Design any page that shows many parts (progress, a full panel, a module overview) so that it still reads as one coherent picture, with a clear primary structure that the parts hang from.
+- EVD-081 [C] Let one element serve two purposes only when both are real, and never let the doubling blur the distinction between a safety instruction and anything else.
+- EVD-082 [C] Draw the product's ornament and identity from its own structure and subject (the horizon line, instrument forms, chart conventions, the lesson path) and add none that is unrelated to them.
+
+## Classical Typography (part-02-classical-typography.md)
+
+- TYP-001 [C] Judge every typographic choice in lesson and reference text by whether it helps the learner understand the text, and reject any choice whose main effect is decorative.
+- TYP-002 [B] Do not make running text bolder or larger to make it "more readable"; set lesson prose at an ordinary text weight and size and reserve heavy weights for short emphasis and glance readouts.
+- TYP-003 [C] Keep repeated page furniture visually quieter than the text it frames: headers, banners and labels that recur on every screen must not outweigh the content.
+- TYP-004 [C] Choose typefaces and display treatments deliberately for the voice the product needs, but only where the type is not being read continuously.
+- TYP-005 [C] Review every typographic change with real LTF lesson text, real challenge data and real numbers, never with placeholder copy.
+- TYP-006 [C] Use the reading conventions every adult reader already knows in lesson and reference text: mixed case, left alignment, paragraphs marked by one consistent method, headings that are larger or bolder than text, and underlined links.
+- TYP-007 [B] Test the readability of lessons, labels and codes with people who have never used LTF, and do not accept the team's ease of reading as evidence.
+- TYP-008 [C] Put typographic novelty (a display face, unusual sizes, expressive layout) on surfaces the learner looks at, not on surfaces the learner reads continuously.
+- TYP-009 [C] Write down the reason and the evidence grade for every typographic rule in the design system, and record each deliberate departure with its reason.
+- TYP-010 [C] Limit LTF to a named set of at most three type families, one for reading, one for measured values and at most one for display, and write each family's job into the tokens.
+- TYP-011 [C] Load every style the interface uses as a real font file, and never rely on browser-synthesized italic or bold.
+- TYP-012 [C] Never stretch, squeeze or scale type along one axis to make a label fit; shorten the label, change the size uniformly or choose a narrower style that the font actually contains.
+- TYP-013 [C] Do not use high-contrast faces with hairline strokes (Didone and similar) for running text or small labels; if used at all, confine them to large display sizes.
+- TYP-014 [C] Check that hairlines in instrument drawings (gauge ticks, tape graduations, chart linework) stay sharp at 1x pixel density, in both themes.
+- TYP-015 [B] Choose LTF's text face on letter distinctness, spacing, numerals, weight range and voice, not on whether it has serifs.
+- TYP-016 [C] Before adopting any face, set rows of n and o and of H and O at body size, and a paragraph of real lesson text, and reject the face if its rhythm is visibly uneven.
+- TYP-017 [B] Check every face for confusable characters (0 and O, 1 and l and I, 5 and S, 8 and B) at the smallest size it is used and in both themes, and use the face that keeps them distinct for identifiers and values.
+- TYP-018 [B] Keep lesson and long-form prose between about 45 and 75 characters per line, aiming near 60 to 66, at every viewport width.
+- TYP-019 [C] Define the reading measure by counting characters of real text in the actual face, and do not assume that a width in `ch` equals that many characters.
+- TYP-020 [C] When a text column falls below about 40 characters, change the layout (stack, widen, remove side padding) rather than reducing the type size.
+- TYP-021 [B] Set lesson and long-form prose in a single column; use multiple columns only for short, independent items such as cards, definitions or FAQ entries.
+- TYP-022 [C] Apply the prose measure only to prose: size table columns to their content, keep checklist steps and quiz options on as few lines as their content allows, and never stretch a table to fill the page.
+- TYP-023 [B] Set leading in proportion to the measure: when a column gets longer, increase the line height, and when it gets shorter, the line height may tighten.
+- TYP-024 [B] Do not set multi-sentence text below the body size and rely on extra leading to make it readable; if it is long enough to need leading, it is long enough to need body size.
+- TYP-025 [C] Express each text style's leading as a unitless ratio of its size, chosen for its face and measure, and keep one leading per style.
+- TYP-026 [C] For any heading or label that can wrap, check at every breakpoint that descenders clear the ascenders of the next line, and loosen the leading of that style if they do not.
+- TYP-027 [C] Express spacing that belongs to text (paragraph gaps, heading spacing, list indents, inline chips) in units relative to the text's own size, so that larger text gets proportionally larger gaps.
+- TYP-028 [C] Space lesson blocks from a small set of values derived from the body leading, and give the same relation (paragraph to paragraph, heading to its text, text to callout, text to widget) the same space everywhere.
+- TYP-029 [C] Set all lesson, reference and interface text flush left and ragged right; do not justify text anywhere in the product.
+- TYP-030 [C] Use the word space the font designer built into the face for lowercase text, and do not adjust `word-spacing` or `letter-spacing` on running text to change line fit or texture.
+- TYP-031 [C] Use exactly one word space after a sentence, and never remove the space after a full stop for optical reasons.
+- TYP-032 [C] Leave automatic hyphenation off in ragged-right lesson and interface text, and never let a line break separate a value from its unit, an identifier's parts, or a hyphenated term from its context.
+- TYP-033 [C] Treat line breaks in headings, checklist steps, quiz stems and button labels as part of the copy: balance headings, avoid a single word alone on a last line, and check the breaks at phone and desktop widths.
+- TYP-034 [C] Add positive letterspacing to every string set in capitals (labels, badges, eyebrows, uppercase buttons), and never to lowercase or mixed-case text.
+- TYP-035 [C] Widen the word space in all-caps strings as well as the letterspacing, so that words in a capital label stay separate.
+- TYP-036 [A] Never set sentences, paragraphs, warnings or instructions in all capitals; reserve capitals for short labels and for identifiers that are capitals by nature.
+- TYP-037 [C] Give strings of two or more capitals inside running text a slight letterspacing applied by the renderer, never by authors, and define each abbreviation on first use in a lesson.
+- TYP-038 [C] Do not set capital labels smaller than 12 px or lighter than semibold, and use an eyebrow only when it says something the heading does not.
+- TYP-039 [C] Set long strings of digits that the learner must read or copy (identifiers, frequencies, codes) either in the mono face or with slight letterspacing, never tightly in the text face.
+- TYP-040 [C] Draw every text size in the product from a named type token; do not use raw size classes (`text-sm`, `text-2xl`, bracket sizes) in components or pages.
+- TYP-041 [C] Build the type scale from the body size and one gentle ratio, with any exception named and justified in the token file.
+- TYP-042 [C] Give each heading level one style per surface class (reading, interface, display), and use that style on every page of the class.
+- TYP-043 [C] Before styling a page, list its elements in rank order and give adjacent ranks treatments a reader can tell apart at a glance; if two ranks cannot be told apart, merge them.
+- TYP-044 [C] On reading surfaces, keep the largest heading within about twice to two and a half times the body size; larger display sizes belong to display surfaces.
+- TYP-045 [B] Emphasize words in running text with semibold weight; do not use underline (reserved for links), capitals or color alone for emphasis, and use italic only for titles and defined terms in a loaded italic face.
+- TYP-046 [C] Do not mistake an absence of ornament for clarity: every page must show at least three distinguishable ranks of text, and secondary styling must be used for secondary content only.
+- TYP-047 [C] Set every number that is compared, aligned or updated in place (table values, readouts, scores, timers, slider values, stat tiles) in tabular figures, either in the mono face or with `tabular-nums`.
+- TYP-048 [C] In running prose, set ordinary numbers in the text face, and switch to the mono face only for identifiers and values the learner must read exactly or copy.
+- TYP-049 [C] Right-align numeric columns and their headers, align on the decimal point where precision varies, left-align text columns, and give readouts one weight per size from the tokens.
+- TYP-050 [C] Use the true glyph for each symbol (× for dimensions and multiplication, − for negative values, – for ranges, ° for degrees) and never a lookalike letter or hyphen.
+- TYP-051 [C] Render typographic (curly) quotation marks and apostrophes in all learner-facing text automatically, so authors can type straight quotes.
+- TYP-052 [C] Mark quoted speech, such as radio calls, and labels quoted from the panel in one consistent way across all content, and do not drop quotation marks where they mark the boundary of words the learner must say or find.
+- TYP-053 [C] Keep one written style card for numbers, units, symbols, abbreviations, capitalization and quotation, and enforce every rule on it that a machine can check in `content:validate`.
+- TYP-054 [C] Decide the reading column (its width in characters, its position and what may sit beside it) before choosing type size and leading for a reading page, and record the column as a token.
+- TYP-055 [C] On screens, keep a clear gutter on both sides of every text column at every width; on printed pages (kneeboard, checklists), derive the margins from one stated ratio and leave the bottom and outer margins largest.
+- TYP-056 [C] Mark every paragraph start by one method, space between paragraphs in LTF, using one value tied to the body leading in every reading surface; never use both an indent and a space, and never neither.
+- TYP-057 [C] Keep promotional and account prompts out of the reading column before the text begins; place them after the text or in the page furniture, and let only what the learner needs to read the lesson (title, honesty warnings, objectives) come before the first paragraph.
+- TYP-058 [C] Classify every text surface as reading, interface, display or instrument, record the class in the component, and apply that class's defaults; do not apply book rules to instrument readouts or interface rules to lesson prose.
+- TYP-059 [C] Align interface and reading text to a left edge; center only short display lines (a title, a single number, a one-line message), never text of two or more lines that the learner must read.
+- TYP-060 [C] Build every repeated text treatment as a shared component or token, and make every deliberate exception (alerts, celebrations, instrument readouts) a named variant rather than a page-level override.
+- TYP-061 [B] Set light-on-dark text at generous size and weight, and verify the Night theme and Fly mode with learners rather than assuming they read as well as Day.
+- TYP-062 [C] When a typographic question can be settled by watching learners (numeral style in Fly mode, the lesson measure, eyebrow removal), run a small test instead of debating it, and record the result next to the rule it changes.
+
+## Legibility and the Science of Reading (part-03-legibility-reading.md)
+
+- LEG-001 [C] Trace any claim about reading or type to the study that made it before using it to justify a design decision.
+- LEG-002 [A] Write lesson sentences so that each can be understood in one forward pass: one idea per sentence, with the subject and verb early.
+- LEG-003 [B] Put the word that distinguishes an item first in every heading, label, list row and checklist line.
+- LEG-004 [B] Never squeeze, remove or justify away word spaces in running text or labels.
+- LEG-005 [B] Do not let a short word carry a safety-critical meaning on its own; restate the negation in a longer word or move it into view.
+- LEG-006 [A] Use exactly one name for each instrument, control, procedure and screen, and use it everywhere: lessons, widgets, reference pages and Fly mode.
+- LEG-007 [B] Give list items in lessons a connecting reason or order rather than presenting bare fragments.
+- LEG-008 [B] Do not put a time limit on a learner's first reading of a lesson, brief or question.
+- LEG-009 [A] Justify letterform, case and spacing decisions by letter recognition and practice, never by word shape.
+- LEG-010 [A] Set sentences, instructions and warnings in sentence case, never in all capitals.
+- LEG-011 [B] Reserve capitals for short labels of one to three words and give them extra letter spacing.
+- LEG-012 [B] Treat print size, contrast and letter spacing as one budget: when one of them must drop, raise another.
+- LEG-013 [A] Never tighten letter spacing in text below display sizes; when text must be small, keep or add tracking rather than only reducing size.
+- LEG-014 [B] Add letter spacing in moderate steps and do not expect very wide spacing to help further.
+- LEG-015 [B] Give every numeral and readout in a widget clear space on all sides, at least as wide as the gaps between its own characters, and keep needles and labels from crossing it.
+- LEG-016 [B] On any surface read in glances, show one item per line or tile, separate items with gaps larger than the line spacing, and avoid strings of similar short items side by side.
+- LEG-017 [B] Specify and check text size as angular x-height at the real viewing distance, not as a pixel or point value.
+- LEG-018 [B] Keep every piece of text a learner must read at or above 0.2 degrees of x-height at the design distance, and set running text near the 0.24-degree mean of printed books.
+- LEG-019 [B] Set lesson body text no smaller than the long-form size LTF already defines for prose (`body-lg`, 18/29), and never shrink lesson text to fit more on the screen.
+- LEG-020 [B] Size Fly mode and other glance surfaces for their greater viewing distance, so that their x-height in degrees at that distance at least matches lesson text at a desk.
+- LEG-021 [B] Compare typefaces, and set fallback fonts, at matched x-height rather than matched font-size.
+- LEG-022 [B] Test every candidate text, interface or numeral face for the character pairs that matter in LTF content (0 and O, 1, l and I, 5 and S, 8 and B, 2 and Z, rn and m) at the smallest size used and in both themes.
+- LEG-023 [B] Do not use condensed faces or narrow widths for small text that must be identified letter by letter.
+- LEG-024 [B] Use a text face with a double-storey a and with clearly distinguished l, I and 1.
+- LEG-025 [B] Do not adopt unusual letterforms for brand character in text that learners must read quickly.
+- LEG-026 [C] Set every code, frequency, speed, altitude, heading and score in a face whose zero is visibly different from capital O, with tabular lining numerals.
+- LEG-027 [B] Check any letterform or typeface change in words, running text and real readouts, not only on a specimen of isolated characters.
+- LEG-028 [A] Choose LTF's typefaces for character distinctness, numerals, weight range, language coverage, rendering and tone, not for a claimed legibility advantage of serif or sans.
+- LEG-029 [A] Do not expect a change of typeface to fix a legibility problem; fix size, measure, spacing and contrast first.
+- LEG-030 [A] Never choose a typeface, size or layout by stakeholder or learner preference alone; measure reading with comprehension checked.
+- LEG-031 [B] Do not set instructions, warnings, procedures, radio calls or any sentence a learner must act on in italic.
+- LEG-032 [B] Use bold (LTF's `font-semibold`) to emphasize the critical word in an instruction, and normal weight for running text.
+- LEG-033 [C] Limit emphasis in running text to bold, and give status meaning by a word plus, optionally, an icon and color; never by color alone.
+- LEG-034 [B] Never combine two or more of these in one text element: small size, light weight, italic, reversed polarity, low contrast, tight spacing.
+- LEG-035 [B] Set lesson prose to a measure of about 45 to 75 characters per line, and never wider than about 80.
+- LEG-036 [B] Specify every text measure in characters (`ch` units or a token built on them), never in pixels or fixed rem, so that it holds when the text size changes.
+- LEG-037 [B] Keep running text line height between about 1.3 and 1.7 times the font size, never tighter than 1.2, and give longer lines and smaller sizes the upper end.
+- LEG-038 [B] Set running text in a single column on every screen size; never flow lesson prose into multiple columns.
+- LEG-039 [B] Show several lines or steps at once on reading surfaces; do not reduce a procedure or a passage to one line at a time.
+- LEG-040 [B] On glance surfaces (Fly mode, checklists in fullscreen, the kneeboard), prefer a short measure of large text over a long measure of small text.
+- LEG-041 [C] Hold every text color and ground pair to WCAG 2.2 contrast (4.5:1 for text, 3:1 for large text) in both themes, computed from the final composited colors and never rounded up.
+- LEG-042 [B] Give small text, and any text read at a distance or in a glance, contrast well above the minimum: use `ink` or `ink-2`, not `ink-3`, for anything a learner needs to act on.
+- LEG-043 [B] In the Night theme and Fly mode, compensate for reversed polarity with size and weight: keep reading text at `text-sm` or larger, weight 400 or heavier, and in `ink` or `ink-2`.
+- LEG-044 [C] Keep Fly mode dark by default and avoid large bright areas on it, including banners and images.
+- LEG-045 [B] Treat readers over 50 as a normal case when setting size, contrast and spacing floors, not as an edge case.
+- LEG-046 [A] Do not build speed-reading, word-at-a-time, auto-scrolling or other paced-text features for lessons, briefs or checklists.
+- LEG-047 [B] Keep the text a learner is answering or acting on visible and re-readable: quizzes do not hide the lesson, steps do not disappear when ticked, and briefs stay one tap away during a challenge.
+- LEG-048 [B] Define every aviation term where it first appears in a lesson, keep its definition one tap away on every later page, and introduce few new terms per section.
+- LEG-049 [B] Structure every lesson for return visits: descriptive section headings, a short objective list, key terms marked, and exact steps and values set apart from the prose rather than embedded in it.
+- LEG-050 [C] Promise clarity, not speed, in LTF's copy about its lessons.
+- LEG-051 [B] When testing any change to lesson typography or layout, measure comprehension (for example the lesson's own quiz) as well as reading time, and treat a speed gain with a comprehension loss as a failure.
+- LEG-052 [A] Do not ship, offer or advertise a dyslexia-specific font.
+- LEG-053 [B] Offer a reading-comfort setting with text size, line spacing, and letter-plus-word spacing as its controls, applied to lessons, reference pages and Fly mode.
+- LEG-054 [C] Describe reading settings as comfort options, never as clinical aids.
+- LEG-055 [B] If a choice of font family is ever offered, make it secondary to size and spacing, and offer only conventional, well-made faces.
+- LEG-056 [C] Support decoding of aviation vocabulary directly: give pronunciations for difficult terms, break long call signs and codes into readable groups, and keep definitions in plain words.
+- LEG-057 [B] Run any LTF reading test with counterbalanced order, a repeated condition, matched x-height and spacing, a comprehension check, and as many learners as can be recruited, including older ones.
+- LEG-058 [C] Do not report the gap between each reader's best and worst condition as the effect of a design change.
+
+## Typography on Screens (part-04-screen-typography.md)
+
+- SCR-001 [A] Do not rely on on-screen reading alone for facts a learner must retain; pair every lesson section that carries a procedure or a number with an active task.
+- SCR-002 [B] Keep sustained reading out of timed conditions; text that must be read while the clock runs is written and set as short, separately scannable units.
+- SCR-003 [C] Give every long lesson a stable spatial frame: a persistent outline, a visible position within the whole, and recurring elements in the same place in every lesson.
+- SCR-004 [B] Decide typographic defaults by measured task performance (reading time, quiz accuracy, error counts), and treat stated preference as a separate, secondary signal.
+- SCR-005 [C] Provide a print path for every lesson summary and reference checklist, and keep print styles working as part of the definition of done for those pages.
+- SCR-006 [A] Specify the size of reading text by the x-height angle it must deliver at the farthest expected viewing distance, and keep that angle well above 0.2 degrees, aiming toward 0.3.
+- SCR-007 [B] Set lesson body text larger than the 16 px browser default, and never shrink reading text to fit more on a screen.
+- SCR-008 [B] Compare candidate typefaces, and set fallback sizes, by x-height, not by nominal font size.
+- SCR-009 [B] Size Fly mode and any other second-screen surface for the distance it is read from: design it for arm's length or more, and scale type up accordingly rather than reusing desk sizes.
+- SCR-010 [B] Choose default sizes for an adult population that includes readers over 50, not for the young laboratory participant, and treat text size as a setting, not a constant.
+- SCR-011 [C] Reserve 14 px for short meta text that is not needed to complete a task, and set nothing a learner must read below it; 12 px is allowed only for short uppercase labels.
+- SCR-012 [C] Leave the root font size to the browser and express every type size in rem (and component-internal spacing in em), so that one reader setting scales the whole scale together.
+- SCR-013 [C] Express the measure of reading text in a unit tied to that text's own size (em, or ch calibrated to the face), never in fixed pixels.
+- SCR-014 [C] Make every page of reading text reflow to a single column at 320 CSS pixels with no horizontal scrolling, keeping horizontal scrolling only for data tables, diagrams and widgets.
+- SCR-015 [B] Offer a small set of persistent reading settings (text size, line spacing and, at most, a choice among two or three vetted text faces) and apply them to lesson and reference prose, not to instrument widgets.
+- SCR-016 [C] Use fluid, viewport-dependent sizing only for display headings, and give body and label text a fixed floor that no viewport can push below.
+- SCR-017 [B] Set continuous lesson prose to a moderate measure of about 55 to 75 characters per line, and do not let it stretch with the window.
+- SCR-018 [C] Before using `ch` for a measure, calibrate it against the face's average character width, or express the measure in em instead.
+- SCR-019 [B] Keep lesson and reference prose in a single column; use side columns only for navigation, glossary and summary material that is not read continuously.
+- SCR-020 [B] Keep the line height of reading text between about 1.25 and 1.7 of the font size; never set paragraph text tighter than 1.2 or looser than about 1.8.
+- SCR-021 [C] On glance surfaces (Fly mode, the challenge Fly tab, printed checklists), use a shorter measure than lesson prose and keep one instruction per line where possible.
+- SCR-022 [B] Choose sizes and weights that read well under aliased, grayscale and subpixel rendering alike; never depend on one rendering mode to make thin or small text acceptable.
+- SCR-023 [B] Use regular or medium weights at generous sizes for any text read at a glance, and keep light weights, small sizes and italics out of it.
+- SCR-024 [C] Load a designed italic for every face that sets italic text, or remove italic from the styles; never let the browser slant an upright face, and never set an instruction or a radio call in italic.
+- SCR-025 [C] Do not override the platform's text smoothing for reading text unless a side-by-side test on that platform, in both themes, shows the override reads at least as well.
+- SCR-026 [C] Review type on the lowest-quality display LTF supports, a standard-density desktop monitor at normal distance, as well as on high-density laptops and phones.
+- SCR-027 [A] Judge a typeface for LTF by the distinctness of its individual letters and figures, and reject arguments from word shape or silhouette.
+- SCR-028 [B] Test every candidate face, at LTF's smallest sizes and in both themes, for the pairs that matter in flying: I, l and 1; O and 0; 5 and S; and 8 and B.
+- SCR-029 [C] Set every identifier, code, numeric value, frequency and isolated letter in `font-mono`, whose zero, I, l and 1 are distinct, including when it appears inside running prose.
+- SCR-030 [A] Do not choose or defend a text face on serif-versus-sans grounds; choose it for x-height, letter and figure distinctness, numeral features, weight range, language coverage and licensing.
+- SCR-031 [B] For text set below about 14 px, including widget labels and badges, prefer a face with a large x-height and open default spacing, and add tracking rather than weight when small text crowds.
+- SCR-032 [C] Keep lesson text in a conventional, familiar text face and reserve any distinctive face for display sizes and brand marks.
+- SCR-033 [C] Load body faces with `font-display: fallback`, and use `optional` on surfaces opened in the middle of a task, so that text never changes face after the reader has started reading it.
+- SCR-034 [C] Match the fallback face's metrics to the web font (with `font-size-adjust` or equivalent metric overrides) so that the swap, if it happens, changes neither apparent size nor line breaks.
+- SCR-035 [C] Design and review every page in its fallback fonts as well as its web fonts; the page must be fully usable, with hierarchy intact and nothing clipped, if the web fonts never load.
+- SCR-036 [C] Load only the styles, axes and character subsets the product uses, and count font bytes in the performance budget.
+- SCR-037 [C] Measure layout shift and largest-paint time on lesson pages in the field, at the 75th percentile, separately for mobile and desktop, and treat a font-caused shift above the good threshold as a defect.
+- SCR-038 [C] Control font axes through the high-level properties (`font-weight`, `font-style`, `font-width`, `font-optical-sizing`) and use `font-variation-settings` only for an unregistered axis.
+- SCR-039 [C] Use a fixed set of four weights (400 body, 500 labels and readouts, 600 headings and emphasis, 700 display and alerts), each tied to a role in the type tokens, and do not apply weight classes directly in pages.
+- SCR-040 [C] When a face is chosen or replaced, prefer one with an optical-size axis if small labels and large display type must share it, and leave `font-optical-sizing` at `auto`.
+- SCR-041 [C] Never use a weight the loaded font does not contain; load the axis range the styles need so that the browser does not synthesize bold or italic.
+- SCR-042 [C] Set every value that changes, counts, or sits in a column with tabular lining figures, either in the mono face or in the sans face with `tabular-nums`.
+- SCR-043 [C] Use lining figures everywhere in LTF, including prose, and do not ask for old-style or slashed figures that the faces do not contain.
+- SCR-044 [C] Right-align numeric columns (and their headings), align on the decimal point where precision varies, and size tables to their content rather than to the container.
+- SCR-045 [C] Separate table rows with space and at most a hairline rule; no zebra fills, no heavy header borders and no cell borders on reference tables.
+- SCR-046 [B] Give every widget label a minimum rendered size equal to the reading floor for its surface, and when a diagram is narrower than its design width, enlarge the labels in user units (or switch to a simplified layout) rather than letting them shrink.
+- SCR-047 [C] Set every number a learner must read in a widget or a checklist in the mono readout face at weight 500 or more, never in the sans face at small sizes.
+- SCR-048 [C] Define one type scale of named roles and make it the only way pages set type; no raw size or weight classes for headings or reading text in page code.
+- SCR-049 [C] Derive the scale from the body size, which is set by the legibility evidence, and keep the small-end steps gentle (ratios near 1.1 to 1.2) and the display steps wider.
+- SCR-050 [C] Tie each document level to exactly one role per surface type (app page, marketing page, Fly mode), so that an h2 looks the same everywhere it appears on that kind of page.
+- SCR-051 [C] Use uppercase tracked text only for labels of one to four words, never for sentences, headings or instructions, and do not stack an eyebrow above every heading.
+- SCR-052 [C] Review every derived size at its smallest rendered use on its farthest surface before adding it to the scale.
+- SCR-053 [B] Keep the light (Day) theme as the default for dense reading (lessons, quizzes, reference tables), and present the dark theme as a preference, not as the better choice for any group.
+- SCR-054 [B] In the Night theme, set small text larger and brighter than in Day: raise the minimum reading size, use `ink` or `ink-2` rather than `ink-3` for anything read, and keep the widget labels at their brightest level.
+- SCR-055 [D] Do not default Fly mode to dark regardless of the room; open it in the theme the reader last chose for Fly mode, offer a one-tap Day and Night switch on the Fly mode page itself, and if dark is used, compensate with larger, brighter text.
+- SCR-056 [C] Gate every text and background token pairing at 4.5:1 for normal text and 3:1 for large text in both themes, computed from the final colors without rounding, and check tinted fills as well as plain grounds.
+- SCR-057 [C] Hold Fly mode text and safety-relevant checklist text to 7:1 contrast in both themes.
+
+## Grids, Layout and Space (part-05-grids-layout.md)
+
+- GRD-001 [C] Build every page from one of a small, named set of page grids, each with a fixed column structure.
+- GRD-002 [C] Write the layout system down as a programme: list its constants and the variables it must accept.
+- GRD-003 [C] Give every content template an explicit slot for content that fits none of the planned categories.
+- GRD-004 [C] Start with a coarse column grid and add finer modules only when a real layout needs them.
+- GRD-005 [C] When the grid and legibility conflict, legibility wins.
+- GRD-006 [C] Document the key to the grid where contributors will read it, with worked examples.
+- GRD-007 [C] Build every width, gap, padding and margin from one base unit, and use only its named steps.
+- GRD-008 [C] Define multi-column layouts as spans of one shared track grid, so two-, three- and four-up rows share edges.
+- GRD-009 [C] Enforce the spacing and size scales with a lint rule that flags off-scale and bracketed values.
+- GRD-010 [C] Record every deliberate departure from the scale in a comment that gives the reason.
+- GRD-011 [C] Choose the type scale's base for legibility first, then choose its ratio for steps that are visibly distinct at the smallest sizes, and test both.
+- GRD-012 [C] Draw every font size on every page from the one type scale; never use framework default sizes alongside it.
+- GRD-013 [C] Space blocks vertically in a few steps related to the body line, applied by role, rather than forcing a strict baseline grid.
+- GRD-014 [C] If one strand of sizes is not enough, add a second strand that shares the base, rather than adding loose values.
+- GRD-015 [B] Never justify a layout ratio, scale or size by the golden section or any claim of inherent beauty; state the functional reason or the test result.
+- GRD-016 [C] Use a small, fixed set of media aspect ratios, each chosen from the content it holds, and apply them consistently across lessons.
+- GRD-017 [C] Use geometric overlays of the layout grid in design review to check alignment and repeated proportion, not as evidence that a layout is good.
+- GRD-018 [B] In any preference test of a layout, keep the question's wording neutral and fixed, and pair it with a performance measure.
+- GRD-019 [C] When a claim says a design follows a proportion, state the measured value and the tolerance allowed.
+- GRD-020 [C] Take from the classical page canons their method (margins, type area and measure set as one relationship), not their ratios.
+- GRD-021 [C] For each template, decide the column width, the margins and the measure as one relationship, and state which value is held constant as the window changes.
+- GRD-022 [B] Keep a side margin of at least 16 px on phones, and on wider screens cap the content and let the margins grow rather than the text column.
+- GRD-023 [B] Cap every prose column with a character-based measure token, never a pixel width.
+- GRD-024 [C] Keep the reading column's width the same when side rails appear or disappear; rails take space from the margins, not the measure.
+- GRD-025 [B] Set prose in a single column at every width; reserve multiple columns for collections of separate items.
+- GRD-026 [B] Set all body text flush left and ragged right; do not justify text and do not offer justification as an option.
+- GRD-027 [C] Anchor the reading column the same way on every reading page: either centered in the free space or aligned to a fixed left line shared with the header.
+- GRD-028 [C] Allow tables, widgets and figures to exceed the prose measure only up to one defined "wide" width, and never let prose run at that width.
+- GRD-029 [A] Make the gap between groups visibly larger than any gap inside them: at least about one and a half times, and preferably double.
+- GRD-030 [C] Give each spacing step a named role (inside a control, inside a group, between groups, between sections) and use the role, not the number, in components.
+- GRD-031 [B] Draw a boundary (card, panel or tinted region) only around things that belong together, and never let a boundary split a group or join unrelated items.
+- GRD-032 [B] Make every boundary that carries grouping meaning read as a surface in both themes.
+- GRD-033 [C] Use at most one level of enclosure inside a page section; group items within a card by space and type, not by another box.
+- GRD-034 [C] Make proximity, enclosure, color and type style agree about what belongs together; never let two cues disagree.
+- GRD-035 [B] Place information that must be used together in one place, and separate information that must be read on its own.
+- GRD-036 [C] Place each prompt, label or heading closer to the content it governs than to anything else.
+- GRD-037 [C] Back any grouping that carries safety-relevant meaning with a second cue beyond spacing.
+- GRD-038 [C] Review any new screen with the four named principles (proximity, alignment, repetition, contrast) before it ships.
+- GRD-039 [C] Set a density budget for each page template (number of groups, items per group, accent and status colors in view) and review pages against it.
+- GRD-040 [B] Keep the reading column free of material unrelated to the text being read; put persistent and promotional elements at the edges or between sections, never between paragraphs.
+- GRD-041 [B] Limit the number of distinct saturated hues in one view, and reserve them for status and the single accent.
+- GRD-042 [C] On dense pages, organize items into a few labeled clusters so that the eye searches clusters, not items.
+- GRD-043 [C] In instrument widgets, erase decoration that carries no information, but keep the conventions of the real instrument that a learner must learn to recognize.
+- GRD-044 [C] To compare states of one display, show them as small multiples with identical scales and alignment.
+- GRD-045 [C] Scale every progress bar, ring and bar chart linearly with the quantity it shows; never encode a quantity by area.
+- GRD-046 [B] Use an automated clutter measure only to flag screens much busier than their siblings for human review; never set a pass mark from it.
+- GRD-047 [D] Do not ban topic-relevant illustration from teaching graphics that learners should remember, but keep displays read under workload plain.
+- GRD-048 [C] Express layouts as proportions and flexible tracks (`fr`, `minmax()`, percentages of the container), never as fixed pixel widths for regions that hold content.
+- GRD-049 [C] Let the reader's default text size set the base: do not fix the root font size in pixels, and size type, measure and reading containers in `rem`, `em` or `ch`.
+- GRD-050 [C] Place breakpoints where the content stops fitting, keep them few, and prefer intrinsic sizing that needs no breakpoint.
+- GRD-051 [C] Size every reusable component from its container, not from the viewport.
+- GRD-052 [C] Make every image and media element scale within its container with a declared aspect ratio, so it never overflows and never shifts the page as it loads.
+- GRD-053 [C] Check every template at intermediate widths and at enlarged text sizes, not only at the widths it was designed at.
+- GRD-054 [C] Design and build each template from the narrowest layout up; wider layouts add structure to a complete narrow page.
+- GRD-055 [C] Make the core lesson text, checklists and challenge steps readable and usable before, and without, any widget or enhancement code.
+- GRD-056 [C] Use CSS Grid for two-dimensional regions and flexbox for single-axis rows.
+- GRD-057 [C] Lay out collections of like items with `repeat(auto-fit, minmax(<minimum card width>, 1fr))` instead of fixed column counts per breakpoint.
+- GRD-058 [C] Implement each named page template as one grid with named areas, in one layout component.
+- GRD-059 [C] Never use grid placement, `order` or `dense` packing to make visual order differ from source order between items; allow reordering only inside a single item where neither order changes the meaning.
+- GRD-060 [C] Use subgrid to align the internal rows (title, meta, body, action) of cards that sit side by side, with a fallback that still reads correctly.
+- GRD-061 [C] Set gaps with spacing tokens and let text size its own tracks; never give a text container a fixed height.
+- GRD-062 [C] Give every track that holds text a zero minimum (`minmax(0, …)` or `min-width: 0` on the item).
+- GRD-063 [C] Choose a collection's minimum item width so that the number of items never leaves a single orphan in the last row at common widths, or let the orphan span the row.
+- GRD-064 [B] Put each page's objective, its primary next action and any safety-relevant item within the first screenful at the smallest supported width.
+- GRD-065 [C] Set a first-screen budget for each reading template (what may sit between the page title and the first content block) and test it on a phone.
+- GRD-066 [B] Never let a gap, a full-width band or a closed panel at the bottom of the first screen look like the end of the page; show the start of what follows.
+- GRD-067 [B] Break long pages into short sections, each opening with a heading and a sentence that states its point.
+- GRD-068 [B] Start every heading, step, list item and button label with the word that carries its information.
+- GRD-069 [C] Do not arrange page content to fit the F-pattern or any other gaze template; structure the text so a scanning reader still gets the point.
+- GRD-070 [C] In lists and tables that learners scan, put the item name or action at the left edge and the value or response at one consistent position to its right.
+- GRD-071 [B] Give scanned lists more line and row spacing than running prose.
+- GRD-072 [C] Treat published scroll-depth and gaze figures as starting assumptions, and measure scroll depth and section reach on LTF's own pages before setting page lengths.
+- GRD-073 [C] Put a page's primary action where its task ends, and repeat it at the top only when the task can be done without reading the page.
+- GRD-074 [C] Fit everything Fly mode needs for the current step (the step, its control, the timer and any alert) in one viewport at every supported device size, with no scrolling required.
+- GRD-075 [C] Give Fly mode its own type and spacing base, chosen by testing legibility at the real reading distance beside a simulator, not by scaling up the lesson layout.
+- GRD-076 [B] Show nothing in Fly mode that the current task does not need: no banners, no promotional or account elements, and no navigation beyond the way back.
+- GRD-077 [B] Divide Fly mode into a few clearly bounded regions, one per task, and put in each region only what is used together.
+- GRD-078 [B] Make every repeatedly used Fly mode control at least 44 by 44 CSS pixels, with clear space between adjacent controls, and never smaller than 24 by 24.
+- GRD-079 [C] Use the width of a landscape screen for Fly mode by placing its regions side by side, rather than centering a narrow column.
+- GRD-080 [C] Select the glanceable layout by the learner's stated intent, not by screen width alone.
+- GRD-081 [C] Keep every Fly mode element in a fixed position for the whole session; content changes, positions do not.
+- GRD-082 [C] Reserve a fixed region for alerts so that an alert's arrival never moves other content.
+- GRD-083 [C] Build each template's grid first, then allow only named, documented exceptions, each with a stated reason.
+- GRD-084 [C] Never break the grid for navigation, progress indicators or controls; break it only in content presentation.
+- GRD-085 [C] In design review, describe any departure from the grid with a named technique (split, shift, axis) and its reason.
+- GRD-086 [C] Lay out mixed-content pages as a compound grid: a coarse grid for regions and a finer grid nested inside a region for its items.
+- GRD-087 [C] Place recurring lesson elements (objectives, widgets, quizzes, the "Fly it" section, completion) in the same position and order in every lesson.
+- GRD-088 [C] Give each page template at most one signature break, drawn from the product's own structure, and repeat it consistently rather than inventing a new arrangement per section.
+- GRD-089 [C] Keep a human design review of every new or changed template; no grid, scale or lint rule replaces it.
+
+## Color: Science, Meaning and Access (part-06-color.md)
+
+- COL-001 [B] Do not promise that a color on an LTF page matches the color a learner sees in the simulator.
+- COL-002 [B] Separate text, thin strokes and any must-see mark from its background by luminance contrast, never by hue difference alone.
+- COL-003 [B] Do not encode a quantity or a state in small hue differences; make hue steps large or add a second channel.
+- COL-004 [B] When a two-way distinction must rest partly on hue, prefer the blue and yellow axis to the red and green axis, and still add a non-color cue.
+- COL-005 [C] Keep large, saturated, high-luminance flashes out of dark full-screen views.
+- COL-006 [C] In learner-facing copy about vision, call the cones long-, middle- and short-wavelength cones, and describe color as made by the eye and brain, not as a property of light.
+- COL-007 [A] Never judge how different two colors look by their distance in RGB, hex, HSL or CIE xy; use a perceptual difference measure.
+- COL-008 [B] Make any two states that must be told apart at a glance differ by many just-noticeable steps, not one or two.
+- COL-009 [C] Specify every design color by three perceptual coordinates (lightness, chroma and hue), and decide each one deliberately.
+- COL-010 [C] Verify any color-difference code against Sharma, Wu and Dalal's 34 test pairs before trusting its output, and do not optimize palettes by gradient descent on CIEDE2000.
+- COL-011 [C] Base every contrast and legibility calculation on relative luminance (CIE Y, linearized), never on lightness coordinates, saturation or perceived brightness.
+- COL-012 [C] Cite a color-science source for any color-science fact stated in a lesson or component note, and never copy formulas into tokens from memory.
+- COL-013 [C] Author theme ramps in Oklch: hold hue constant within a ramp, step lightness in planned increments, and set chroma by role.
+- COL-014 [B] Cap chroma separately for each hue rather than applying one saturation value across a palette.
+- COL-015 [C] Never use a difference in Oklab or CIELAB lightness as a substitute for the WCAG contrast ratio.
+- COL-016 [C] Map out-of-gamut colors by reducing chroma at constant hue and lightness, never by clipping channels.
+- COL-017 [C] Interpolate gradients and color transitions in Oklab, not in sRGB.
+- COL-018 [C] Name tokens by role and let each theme map roles to values; never let components reference raw values.
+- COL-019 [C] Keep adjacent levels of a text or surface ramp at least about 0.08 apart in Oklch lightness, or merge them.
+- COL-020 [A] Never approve a color in isolation: judge every token on each surface it will appear on, next to its real neighbors, in both themes.
+- COL-021 [B] Separate adjacent saturated colors with a neutral edge or a clear lightness gap.
+- COL-022 [B] Present every reproduction of a cockpit display or chart on a neutral, constant field.
+- COL-023 [B] Keep large areas muted and near-neutral, and spend saturated color only on small elements that carry meaning.
+- COL-024 [C] Mute grid lines, borders and rules relative to the data or text they organize.
+- COL-025 [B] Review palettes at both high and low display brightness, and in a dim room, before accepting them.
+- COL-026 [C] Never ask a learner to identify a color by name from a single swatch on a variable background; show labeled choices side by side.
+- COL-027 [C] When lesson or interface text must name a color, use a basic English color term (red, green, yellow, blue, orange, purple, pink, brown, gray, black, white) and never a designer's name for it.
+- COL-028 [C] Whenever a color name carries meaning, pair it with a label, an icon, a position or a shape that carries the same meaning.
+- COL-029 [C] Limit any set of colors that learners must name or remember to about six hues, plus black, white and gray.
+- COL-030 [B] Do not teach a painter's color wheel or red, yellow and blue primaries in any lesson or design rationale; if complements are needed, use pairs that mix to neutral as lights.
+- COL-031 [B] Do not make a learner judge a category boundary between neighboring hues (orange against yellow, cyan against green, magenta against purple) without a second cue.
+- COL-032 [A] Never justify an LTF color choice by a claimed priming effect on performance, motivation or mood.
+- COL-033 [C] Choose the color of error, warning and incorrect-answer states by signal convention and redundancy, not by psychology.
+- COL-034 [B] Never write learner-facing copy that claims a color improves memory, calm, focus or performance.
+- COL-035 [B] If LTF tests a color change against a learning or performance outcome, preregister it and power it for effects much smaller than those first reported.
+- COL-036 [C] Treat brand-personality color associations as weak, culture-bound preferences that never override legibility, contrast or convention.
+- COL-037 [C] When LTF studies color, specify stimuli in measured terms and control the viewing conditions that can be controlled.
+- COL-038 [B] Do not assign red or blue to learners or groups in competitive features in the belief that the color gives an edge, and prefer automated scoring to human judgment where bias is possible.
+- COL-039 [B] Set the emotional tone of a surface through its lightness and chroma, not by picking a "calm" or "energetic" hue.
+- COL-040 [B] Reserve high chroma for small elements the learner should act on, and keep large surfaces low in chroma.
+- COL-041 [B] Offer a theme choice instead of assuming one palette suits everyone, and never present a palette as universally preferred.
+- COL-042 [C] Avoid dark yellow (olive) and dark orange (brown) as accents for headline states.
+- COL-043 [B] Give lesson diagrams and widgets a coherent, moderately warm and clear palette rather than grayscale, without garish saturation and never at the cost of contrast.
+- COL-044 [B] On first-contact pages, reduce visual complexity first and keep colorfulness moderate; do not try to win a first impression with more color.
+- COL-045 [C] Never use color as the only visual means of conveying information, indicating an action, prompting a response or distinguishing an element.
+- COL-046 [C] Check every screen and widget that uses color to carry meaning under protan, deutan and tritan simulation, at full and at partial severity, in both themes.
+- COL-047 [C] Fix a pair that merges under simulation by adding a second cue (shape, label, position, line style or pattern), not by retuning hue alone.
+- COL-048 [C] Avoid pure red on dark backgrounds and on green, avoid colors between yellow and green, and use strong lightness or saturation differences when pairing two warm or two cool colors.
+- COL-049 [C] Label colored elements directly where they are drawn instead of relying on a separate color key.
+- COL-050 [C] Do not describe LTF as "colorblind safe"; say that it was checked with simulation and does not depend on color alone, and include a color-deficient reviewer when one is available.
+- COL-051 [C] Implement simulation from the corrected published matrices, record the input encoding chosen, and test the code against known outputs.
+- COL-052 [C] For categorical colors in charts, use a palette designed for color vision deficiency, such as the Okabe-Ito set, and test each color against the theme grounds.
+- COL-053 [C] Give all text at least 4.5:1 contrast against its actual background, and large text at least 3:1, computed on the final composited token pair in both themes, without rounding.
+- COL-054 [C] Give every boundary or mark needed to identify a control, its state or a meaningful part of a graphic at least 3:1 contrast against its neighbors.
+- COL-055 [C] Aim for 7:1 for safety-relevant text that a learner reads at a glance, such as Fly mode steps, alert labels and checklist items.
+- COL-056 [B] Treat contrast near the minimum as a risk for low-vision and older readers, not as harmless because the text looks readable.
+- COL-057 [D] Use APCA only as an advisory second check on dark-theme and thin or small text, and when it disagrees with WCAG 2.2, take the stricter result.
+- COL-058 [C] Compute contrast automatically from the token files for every declared text and ground pair in both themes, and fail the build on a miss.
+- COL-059 [C] Check text on tinted fills as its own pair, never by assuming that a token which passes on `surface` also passes on a tint.
+- COL-060 [B] Default dense reading, quizzes and checklists to positive polarity (dark text on a light ground), with a well-built dark theme as a choice.
+- COL-061 [B] In a dark theme, make small text larger, heavier or brighter than its light-theme equivalent; never set thin, small gray text on near-black.
+- COL-062 [C] Express elevation in a dark theme by stepping surfaces lighter, one step per layer, and keep raised surfaces distinguishable from the ground without relying on shadow.
+- COL-063 [C] Keep saturated fills small in a dark theme and prefer thin, mid-tone strokes for highlights.
+- COL-064 [B] In Fly mode, use large type, the brightest ink level for key values and steps, and a restrained dark surface, and let the learner switch to Day inside Fly mode.
+- COL-065 [B] Decide Fly mode's default theme by measuring glance reading time and step accuracy in both polarities, with display luminance recorded, rather than by assuming dark is better in a dark room.
+- COL-066 [C] Do not justify a dark theme by age or by a dark room alone.
+- COL-067 [B] Reserve the warning red for conditions that need the learner's immediate attention, and do not use it for decoration, branding or routine controls.
+- COL-068 [B] Keep status colors for status: do not reuse `go`, `caution` or `warn` to label content types.
+- COL-069 [C] Give in-app alerts three levels (act now, act soon, note for later), each with its own word, icon shape and color, and use a second sense for the top level.
+- COL-070 [C] Remove a color-coded alert when its condition clears, and when a cue is muted or dismissed, show that it is.
+- COL-071 [B] Keep ordinary content in a narrow, quiet color range so that the one exceptional state can be separated from everything else at a glance.
+- COL-072 [C] Let the single accent mean one thing (where you are, and the next step on the path) and do not spend it on general emphasis.
+- COL-073 [C] Match every color scale to its data type: sequential (one hue, monotonic lightness) for amounts, diverging for signed deviation from a meaningful midpoint, qualitative for categories.
+- COL-074 [B] Do not use the classic rainbow or jet map for continuous quantities; use a monotonic-lightness ramp, and use a spectral scheme only as a lightness-controlled diverging scale.
+- COL-075 [C] Keep the fixed instrument and chart colors inside drawings and keep page tokens out of drawings.
+
+## Perception and Attention (part-07-perception-attention.md)
+
+- PER-001 [B] Make every grouping cue on a component say the same thing.
+- PER-002 [C] Remove decorative marks that create alignments, shapes or symmetries a learner could read as meaningful.
+- PER-003 [C] Before drawing a widget or diagram, write one sentence stating what the learner must conclude from it and why.
+- PER-004 [C] Give every interactive element a visible signifier of its action, and make read-only displays look unmistakably read-only.
+- PER-005 [C] When a lesson introduces a visual concept, show the display and ask what the learner sees before naming the principle.
+- PER-006 [C] Review page balance in both themes, and rebalance accent use when the theme changes.
+- PER-007 [B] Make the gap between groups at least 1.5 times the gap within them, and in text-heavy layouts aim well above that.
+- PER-008 [B] Place every label measurably closer to the thing it names than to any neighbor, whatever its styling.
+- PER-009 [B] Define spacing as a small set of ratios between inner and outer gaps, and keep those ratios when components scale.
+- PER-010 [B] Put more space above a heading than below it, so the heading groups with the text it introduces.
+- PER-011 [B] Give scale numerals, tick labels and readouts clearance from their neighbors, and solve small-size legibility with spacing before size.
+- PER-012 [B] In fly mode and any view read in glances, show one value per element, separated by large gaps, and avoid strings of similar short items.
+- PER-013 [B] Draw region boundaries around meaning: everything inside a card belongs to one task or object, and nothing that belongs to it sits outside.
+- PER-014 [B] Make every region read as a surface against its background in both themes, and test that at a glance rather than by inspection.
+- PER-015 [B] Nest regions at most two deep, and put the most specific grouping in the innermost region.
+- PER-016 [C] Reserve enclosure for groups that need it; do not give every element its own box.
+- PER-017 [B] Bind labels to parts of a diagram, and steps to a sequence, with explicit connectors rather than nearness alone.
+- PER-018 [B] Check every line, underline and border for accidental connections between unrelated items.
+- PER-019 [B] Use genuinely uniform fills for anything that must read as one object; keep gradients, noise and texture out of data fills.
+- PER-020 [B] When an element must stand out as the figure, give it several figure cues at once (surroundedness, contrast, a boundary and a label), not convexity or symmetry alone.
+- PER-021 [C] Design margins, gutters and the gaps between figures as deliberately as the figures.
+- PER-022 [B] Style elements of the same kind identically across the product, and make elements of different kinds differ clearly, never slightly.
+- PER-023 [B] Spend the strongest visual channel on the most important attribute, and never let hue vary for decoration on a display that encodes magnitude by size or position.
+- PER-024 [B] Do not carry a critical difference by texture arrangement; if two patterned regions must be told apart at a glance, make their elements differ in orientation, size or line ends, and add a label or color.
+- PER-025 [C] Use flat fills for panels and surfaces, and reserve pattern for a few purposeful encodings.
+- PER-026 [B] When a set of values answers an overall question, draw them as similar marks on one scale so the ensemble carries the answer.
+- PER-027 [B] Mark a critical outlier explicitly, with a second cue, rather than trusting it to stand out from a row of similar marks.
+- PER-028 [B] Smooth or steady any live value that the learner is meant to read as a trend.
+- PER-029 [B] Build widgets so that the answer to the learner's question is an emergent feature of the display: an alignment, a closure, a straight line or a symmetry.
+- PER-030 [B] Frame glance questions topologically (inside the band or outside it, touching or separate) rather than metrically (how close to a number).
+- PER-031 [D] Do not rely on the learner taking in a page's overall structure before its details; give both a whole-level summary and labeled parts.
+- PER-032 [B] Put information that must be compared or combined in one step close together and in one region; separate information that must be read on its own.
+- PER-033 [B] Pair every object-style or integrated display with a plain numeric or text readout for focused reading.
+- PER-034 [C] For each widget, list the questions a learner will ask of it and make each answerable by looking at one place.
+- PER-035 [C] Keep widgets flat unless depth is the subject; avoid tilt, perspective and 3D effects added for appearance.
+- PER-036 [A] Make each item a learner must find differ from its neighbors in one strong guiding feature (color, size, orientation or motion), not in a combination of weaker ones.
+- PER-037 [A] Keep ordinary items visually uniform and spend one visual channel on the exceptions.
+- PER-038 [B] Make state differences categorical: different hue families rather than shades, and orientation differences well beyond 15 degrees, plus a second cue.
+- PER-039 [B] Choose exception colors that are separable from all ordinary colors in color space, not flanked by them.
+- PER-040 [B] Do not rely on an icon's meaning, a face or a word to make something pop out.
+- PER-041 [A] Give rare but important states a louder, redundant signal than common ones, and never let a rare error look like a routine row.
+- PER-042 [B] Put the item a learner most needs in a glance exactly where the glance lands, and keep it in that place every time.
+- PER-043 [C] Test whether an item that should pop actually does, by timing a search for it on the real screen with more and fewer surrounding items.
+- PER-044 [B] Reserve the warn hue, and the loudest treatment generally, for genuine warnings; never use it for decoration, branding or ordinary controls.
+- PER-045 [B] Give each screen region one visual focal point, and keep everything else calm.
+- PER-046 [B] Remove a distracting element rather than telling learners to ignore it.
+- PER-047 [A] Do not use saliency-map or "attention prediction" tools as evidence of where learners will look; test with learners doing the real task.
+- PER-048 [B] Make the intended focal point the most conspicuous item on first view, and check that no decoration outcompetes it in color, brightness or orientation contrast.
+- PER-049 [B] Judge clutter by one question: if a warning appeared here now, would it stand out?
+- PER-050 [C] Track a computed clutter score on key screenshots as a regression signal, not as a pass or fail gate.
+- PER-051 [C] Map status tokens only to status meanings, and never reuse go, caution or warn tints for content categories.
+- PER-052 [B] State the task before showing the display it applies to.
+- PER-053 [B] Place information where the learner's next action will happen, not where it is convenient to render it.
+- PER-054 [B] Put the page's first instruction and its primary content in the upper-left to center-left of the main column, within the first screen.
+- PER-055 [B] Make the key diagram or instrument the largest element of its lesson section, and give each first screen one dominant element.
+- PER-056 [B] Keep orientation elements (logo, page title, primary navigation) in the same expected place on every page.
+- PER-057 [B] Use pictures of faces only where they direct attention toward the content, and keep them off instrument pages.
+- PER-058 [B] Write headings that carry the content of their section, and start paragraphs and list items with the key term, so learners can scan by headings.
+- PER-059 [B] Put each lesson section's objective and any safety-relevant step at the start of the section, and keep the first screen of every page for what the learner came to do.
+- PER-060 [B] Never put essential, instructional or safety content in a banner-shaped strip, a promotional-looking box, or a right rail.
+- PER-061 [B] Keep primary calls to action inside the flow of the main content and close to related links, not above or beside it.
+- PER-062 [B] Never use blinking or flashing text, and put no looping animation next to content the learner must read or find.
+- PER-063 [B] Do not animate content to make it memorable; repeat it as static text in the reading line and check recall.
+- PER-064 [B] Count every promotional or peripheral element beside task content as a cost, even if nobody looks at it, and remove such elements from task-critical screens.
+- PER-065 [B] Use the right rail only for reference material a learner goes looking for, and duplicate anything needed for the lesson in the main column.
+- PER-066 [B] Show errors and outcomes of the learner's action next to the control that caused them, and use corner toasts only as a second channel.
+- PER-067 [A] Mark every state change that matters with a brief local transient at the changed element, followed by a persistent marker and a word.
+- PER-068 [B] Never change important content at the same moment as a page transition, re-render, scroll jump or dialog opening.
+- PER-069 [B] Say in words what changed, beside the place where it changed.
+- PER-070 [B] Assume a learner busy with a demanding task will miss an unexpected notice, however large; make critical alerts redundant across senses and require an acknowledgment.
+- PER-071 [B] Style a notice the learner must see like the content they are attending to, and place it in the line of that content, not in the chrome.
+- PER-072 [A] Keep every attention cue valid: remove a highlight the moment its step is done, and never leave emphasis on something that no longer matters.
+- PER-073 [B] Use an onset or flash at the target location for alerts that must be seen at once, and symbolic cues (arrows, words) for guided reading; let the cue come before the thing it points to.
+- PER-074 [B] Do not equate "was on screen" with "was attended": when a point matters, ask the learner for a response.
+- PER-075 [B] Give each screen one primary next action and state it plainly; make every other action visibly secondary.
+- PER-076 [B] Use no countdowns, urgency copy or ticking timers unless time pressure is the skill being practised.
+- PER-077 [C] Keep persistent page chrome calm and unchanging, and reserve novelty for the content that matters.
+- PER-078 [B] Place the information a learner checks most often and most needs where reaching it takes the least effort, and keep items used together side by side.
+- PER-079 [B] Make every glance at the second screen short: one fact or one step per look, in large type, with nothing to read past.
+- PER-080 [C] Give fly mode a fixed layout in which each recurring question has one location, and never reflow it during a flight.
+- PER-081 [C] Before trusting any gaze or attention result, write down the tracker, sampling rate, accuracy, calibration, fixation definition, tasks and participants; prefer task success, time on step and errors as primary measures.
+- PER-082 [B] Do not treat gaze, dwell time or "time on page" as evidence of understanding; ask for a response when understanding matters.
+- PER-083 [C] Label any "where to look" overlay in an instrument lesson as a teaching device unless it comes from documented expert gaze data.
+
+## The Quantitative Laws of Interaction (part-08-hci-laws.md)
+
+- LAW-001 [C] Name the specific effect and its conditions, not the law, when a design decision rests on one of these laws.
+- LAW-002 [B] Use a law's shape and its relative predictions; never write one of its constants into a specification.
+- LAW-003 [B] Design for degraded performance: assume a novice, divided attention and an imprecise hand, not the laboratory best case.
+- LAW-004 [C] When a decision depends on how large an effect is, measure it on LTF's own learners instead of borrowing a number.
+- LAW-005 [A] Make frequently used and time-critical controls large and close to where the hand or pointer already is.
+- LAW-006 [B] When space is short, shorten or lengthen the reach before you shrink a frequent control.
+- LAW-007 [B] Size targets for the scatter of a distracted user, not for an attentive one.
+- LAW-008 [B] Make the whole visible control the hit target, so nominal and visual size are the same.
+- LAW-009 [B] Do not compare throughput or movement-time figures across studies, devices or populations.
+- LAW-010 [C] If LTF tests control sizes or layouts, run the comparison within one study, across a range of sizes and distances, with errors recorded.
+- LAW-011 [C] Give every pointer target at least 24 by 24 CSS pixels (or the spacing equivalent), and give primary, repeated and sequential controls at least 44 by 44.
+- LAW-012 [B] Make controls that are tapped repeatedly under divided attention well above the standard's minimum, toward the physical size of a fingertip and beyond.
+- LAW-013 [B] Leave real space between adjacent touch targets, and keep the responsive area larger than the drawn control where neighbors allow.
+- LAW-014 [B] Keep critical touch targets away from the extreme edges of the screen, or make edge targets larger.
+- LAW-015 [B] Commit selections on release, never on touch-down or pointer-down, and let the user slide off a control to cancel.
+- LAW-016 [B] On screens used beside the simulator, keep controls few, large and in fixed positions so they can be hit with a brief glance, and offer a keyboard path.
+- LAW-017 [B] Separate destructive or progress-losing actions from frequent ones by distance, and protect them with confirmation or undo.
+- LAW-018 [B] Show the value being set or the item being acted on away from the finger, so the hand does not hide it.
+- LAW-019 [B] Do not require the pointer to stay inside a long or narrow corridor; if a path is unavoidable, make it short and wide.
+- LAW-020 [B] When the pointer wanders off a drag control, clamp or keep tracking; never cancel the drag.
+- LAW-021 [C] Give every drag interaction a single-pointer alternative that needs no dragging: a tap on the track, step buttons, or keyboard keys.
+- LAW-022 [B] Where the learner needs speed or will repeat a setting, prefer tap-to-set or tap-to-step controls over a drag.
+- LAW-023 [B] Avoid cascading submenus and hover-opened flyouts; open nested content on click, in place.
+- LAW-024 [B] Do not put any steering or drag task on a screen meant to be used while flying.
+- LAW-025 [A] Map controls compatibly: put each control where its effect is, so that choosing it needs no lookup.
+- LAW-026 [A] Keep the order and position of options stable across visits so that practice can flatten choice time.
+- LAW-027 [B] Make the expected action visually primary and keep rare actions available but quiet.
+- LAW-028 [B] Do not remove useful options or split a list across screens to speed decisions; make the list easy to scan instead.
+- LAW-029 [C] Judge a list, menu or answer set by the processes it actually demands (searching, reading, deciding) and test it with learners, rather than by counting its items.
+- LAW-030 [C] Do not tune quiz difficulty or speed by the number of answer options; tune the wording and the plausibility of the distractors.
+- LAW-031 [A] Do not add a level of navigation to reduce the number of items on a page; keep core content within two levels.
+- LAW-032 [B] Let a broad level hold up to a few dozen well-labeled items, grouped visibly, rather than splitting it; treat around 16 to 32 as an upper range, not a target.
+- LAW-033 [B] Test the labels of a navigation level with learners before changing its shape.
+- LAW-034 [B] Measure navigation by task success and lostness, and collect preference separately; do not choose a structure by preference alone.
+- LAW-035 [B] Do not set or enforce a click budget; make each step cheap and obviously correct instead.
+- LAW-036 [B] Present ordered content flat, on one screen, with visible numbers; reserve hierarchy for content without a natural order.
+- LAW-037 [B] Compare alternative methods for a frequent task by counting their operators (pointing movements, key presses, hand moves between devices, and decisions), and remove decisions first.
+- LAW-038 [B] Design fly-mode actions so the learner can complete a step without changing device, and offer a single-key path for the commonest action.
+- LAW-039 [B] Preselect the next item, default the likely answer, and keep the next action in the same place, so that the learner does not have to decide what to do next.
+- LAW-040 [C] Treat any operator-count estimate as a lower bound for LTF learners, never as an expected time.
+- LAW-041 [C] Give each recurring task one method that works the same way on every page where it appears.
+- LAW-042 [A] Keep the information a learner is acting on visible; do not make them hold it in memory while they operate the simulator.
+- LAW-043 [A] Group material into named units the learner can reuse, and teach the names.
+- LAW-044 [B] Introduce only a few new terms or values in one step, roughly three or four, then use them before adding more.
+- LAW-045 [B] Show any string of digits the learner must read and act on in groups of two to four, and keep it on screen.
+- LAW-046 [B] Do not ask the learner to hold one thing in memory while doing another unrelated task on the page.
+- LAW-047 [A] Expect and design for the largest gains in a learner's first few repetitions of a skill, with improvement slowing after that.
+- LAW-048 [D] Do not fit, display or schedule from a power-law model of an individual learner's progress.
+- LAW-049 [B] Show each learner their own attempts, as they happened, rather than a smoothed or averaged curve, and make the display robust to plateaus and jumps.
+- LAW-050 [B] Present plateaus and early difficulty as normal, not as failure, in copy and in progress displays.
+- LAW-051 [C] In LTF's own user research, report individual learners' trajectories alongside any mean.
+- LAW-052 [C] Do not claim to detect a learner's skill stage or attach hours to stages; show consistency across attempts instead.
+- LAW-053 [C] Classify each interaction as control or conversational, and keep every control interaction local and immediate, with no network round trip between input and visible feedback.
+- LAW-054 [C] Show a visible response to every tap, click and key press within about a tenth of a second, even when the full result takes longer.
+- LAW-055 [C] Keep page and step transitions within about a second, and show a loading state that preserves layout whenever they may take longer.
+- LAW-056 [B] For any operation that may take more than a few seconds, show honest progress (a percent-done bar only when the fraction is real) and a way to cancel or carry on elsewhere.
+- LAW-057 [B] When a load or save fails or hangs, switch quickly from a spinner to a plain statement of what happened and a retry or a way to continue without it.
+- LAW-058 [C] Do not auto-advance a learner immediately after feedback; let them read the result and move on themselves.
+- LAW-059 [D] Prefer consistent response times to ones that are sometimes instant and sometimes slow, but do not slow fast paths to achieve it.
+- LAW-060 [C] Measure interaction latency, load time and layout shift on real learners' devices, and set a stricter internal interaction target for fly mode than the public threshold.
+- LAW-061 [B] Encode any quantity the learner must compare by position or length, not by brightness, area or color intensity.
+- LAW-062 [B] Make a warning or threshold state a large relative change in more than one channel (hue, shape, word), not a slightly brighter or darker version of the normal state.
+- LAW-063 [C] Check tonal steps in the Day and Night themes by perceived difference, not by equal numeric steps.
+- LAW-064 [C] When a widget animates a number or a needle, move it at a rate proportional to the change in the quantity, and keep the exact value in text.
+- LAW-065 [C] Do not cite a specific psychophysical exponent or Weber fraction in LTF design documents.
+
+## Usability Principles and Evaluation (part-09-usability.md)
+
+- USE-001 [C] State every usability goal or claim with its specified users, goals and context of use.
+- USE-002 [C] Measure effectiveness, efficiency and satisfaction separately, and never let one stand in for another.
+- USE-003 [C] Keep a written context-of-use record for each distinct use situation, and set separate targets for Fly mode.
+- USE-004 [C] Record failures in reviews and analytics as use errors attributed to the design, not as learner mistakes.
+- USE-005 [C] Set a testable behavioral goal for each lesson, challenge and tool before it is built or redesigned.
+- USE-006 [C] Keep demonstrations and reviews separate from tests, and do not count a demo as evidence.
+- USE-007 [C] Pair every usability measure of a lesson or challenge with a learning or outcome measure.
+- USE-008 [C] Evaluate early concepts as sketches compared side by side, and test working prototypes only once a direction is chosen.
+- USE-009 [C] Turn general principles into specifically worded LTF design rules that a reviewer can check, each with a stated exception process.
+- USE-010 [C] Keep the LTF review rule set short, grouped by function, and revisit it when the platform changes.
+- USE-011 [C] Use Nielsen's ten heuristics as the shared vocabulary for LTF design reviews, and file each finding under one of them.
+- USE-012 [B] Spend the most review effort on consistency and on recognition rather than recall, the two principles that explain the most problems.
+- USE-013 [C] Add ISO 9241-110's learnability and user engagement to the review vocabulary, since Nielsen's ten have no heading for them.
+- USE-014 [C] Extend the general heuristics with LTF-specific review items for units, altitude references, control names, simulator version and verification status.
+- USE-015 [B] Make the next action and the current state identifiable at a glance on every screen used during flight.
+- USE-016 [C] Give every learner action a visible response in place, scaled to the weight of the action.
+- USE-017 [C] End every lesson, challenge and procedure chunk with an explicit closure that states what was completed.
+- USE-018 [C] Write procedure and checklist rows so that the row states the target state, and treat the checkbox as a record, not the check itself.
+- USE-019 [C] Budget response times in three categories: an immediate change of control state for every input, under about a second for moving between lesson parts, and a percent-done indicator with a cancel control for anything that can exceed about ten seconds.
+- USE-020 [C] Do not decorate short waits: for waits of a few seconds use a small, calm indicator in place rather than a full progress display.
+- USE-021 [C] Show learners whether what they have entered is saved, where, and for how long.
+- USE-022 [C] For each challenge step, state what the learner will see when it has gone right, in observable cues from the sim or the instruments.
+- USE-023 [C] Name every simulator control, menu and setting exactly as the simulator labels it, and use that one name everywhere.
+- USE-024 [B] Keep on screen everything the learner must act on or compare, at the moment they act, rather than relying on what an earlier lesson said.
+- USE-025 [B] Introduce only a few new terms or values in one step, and never require the learner to hold a value in memory while looking away to the sim.
+- USE-026 [C] Make every fork a choice the learner can make without deliberation, by giving each option a label that says where it leads.
+- USE-027 [C] Put guidance at the point of need, in one or two lines, where the learner cannot miss it, instead of on a separate help page.
+- USE-028 [C] Make every widget control move in the same direction, and sit in the same relative place, as the simulator control it depicts.
+- USE-029 [C] Order procedure steps by where the learner looks in the sim, except that the most consequential steps come first.
+- USE-030 [B] Render the same kind of thing with the same component, the same wording and the same behavior everywhere it appears.
+- USE-031 [C] Run consistency reviews in three passes: physical (look), communicational (wording and feedback) and conceptual (what each term means), and log findings under each.
+- USE-032 [C] Give state-showing controls (toggles, segmented controls, tabs) a different visual treatment from action buttons.
+- USE-033 [C] When internal consistency conflicts with the learner's task or with the simulator's conventions, follow the task or the simulator, and record the exception and its reason.
+- USE-034 [C] Never let the data model or file structure decide how screens are grouped or what a command does.
+- USE-035 [B] Use familiar, conventional patterns for navigation, forms, quizzes and lists, and spend novelty on the course content and the instruments.
+- USE-036 [C] Give the design system an owner who approves new components, and enforce consistency with lint and token checks rather than memory.
+- USE-037 [C] Classify each observed error as a slip, a lapse or a mistake before choosing a fix, and match the fix to the class.
+- USE-038 [C] When a procedure, checklist or rubric changes after learners have practiced it, mark the changed step visibly rather than relying on the learner to notice.
+- USE-039 [C] Keep modes few, show the current mode at all times in the area the learner is acting on, and make mode-dependent controls say which mode they act in.
+- USE-040 [C] Prevent invalid actions with constraints, and whenever a control is disabled, say beside it what is needed to enable it.
+- USE-041 [C] Make every learning action reversible at the same effort it took to do it: answers can be changed, ticks untoggled, widgets reset, lessons revisited.
+- USE-042 [C] Label every reset and clear control with its scope, so the learner knows what it will erase before pressing it.
+- USE-043 [C] In Fly mode, prefer forward recovery: a wrong tick is fixed by tapping again, never by navigating a history or confirming a dialog.
+- USE-044 [C] State irreversibility before any action that cannot be undone, make the safe choice the default focus, and do not use confirmation dialogs for reversible actions.
+- USE-045 [C] Write every error message to say what failed, what the learner can do now, and where to go if that does not work.
+- USE-046 [C] Let the learner leave any lesson, challenge or Fly mode screen at any point and return to exactly where they were.
+- USE-047 [C] Give every focused or full-screen view one clearly marked exit, in the same place each time.
+- USE-048 [C] Provide accelerators for actions that returning learners repeat, keep them invisible to beginners until relevant, and state them at the point of use.
+- USE-049 [C] Let returning learners skip what they already know, without hiding it from beginners.
+- USE-050 [C] Offer individualization for the settings that differ by context of use (theme, text size), remember them, and apply them before first paint.
+- USE-051 [C] Show each element above the first content block only when it is relevant to this learner on this visit, and cap the number of tinted or bordered boxes above the lesson.
+- USE-052 [C] Never hide a control that is needed to succeed at the current task in order to make a screen look cleaner; use progressive revelation for what is optional.
+- USE-053 [C] Keep site-wide notices out of views used during flight, and show them instead on the page that leads into the flight.
+- USE-054 [C] Keep verification status visible wherever an aviation fact is shown, as part of the interface's trustworthiness.
+- USE-055 [A] Never accept one reviewer's inspection as the list of a page's usability problems; use at least three independent reviewers, and five for the screens that matter most.
+- USE-056 [C] Have each reviewer inspect and write findings alone, and merge only after every list is written.
+- USE-057 [B] Before an inspection, write the task scenarios and the problem criteria, and give the same set to every reviewer.
+- USE-058 [C] Mix reviewers: include at least one who has flown the simulator and at least one who has not, and assign the beginner's scenario to the latter.
+- USE-059 [A] Do not let one person's severity rating decide priority: have severity rated by someone who sees the merged list, and check it against observed impact.
+- USE-060 [B] Rate severity by behavioral impact on the task, and treat any problem that blocks a learner with a disability from finishing a task as severe whatever its guideline level.
+- USE-061 [B] Do not discard a finding because only one reviewer or one session produced it; judge it by its severity.
+- USE-062 [C] Treat inspection findings as hypotheses to confirm in a usability test, and rely on testing over inspection for views used under time pressure.
+- USE-063 [C] Test challenge and Fly mode flows with beginners at their own setup, with the simulator running, not only at a desk with the page alone.
+- USE-064 [A] Test in repeated small rounds, about five learners each, and fix the problems found between rounds.
+- USE-065 [A] Never report a small test round as having found most of a page's problems; report it as a sample with its likely spread.
+- USE-066 [B] Size each test round from an estimate of how likely each learner is to hit each problem, and expect open-ended tasks to need many more learners than scripted ones.
+- USE-067 [C] Stop a round when new sessions stop producing new serious problems, using a stated rule, not at a fixed count.
+- USE-068 [D] Do not assume that the first few sessions have surfaced the severe problems; review every session for blockers.
+- USE-069 [B] Recruit each distinct learner group separately, three or four learners per group per round.
+- USE-070 [C] Record each session as task success, time, and a tally of deviations from the intended path, with each deviation classed by behavioral impact.
+- USE-071 [B] Have at least two people analyze each test session independently before problems are listed.
+- USE-072 [C] Write tasks, success criteria and the problem definition before the first session, and narrow each round to one flow.
+- USE-073 [B] Judge usability from task performance (success, errors, time, deviations), and treat ratings as a separate measure of satisfaction, never as evidence that a flow works.
+- USE-074 [B] Choose between alternative diagrams and widgets by measuring reading accuracy and time on a real task, then ask for opinions.
+- USE-075 [D] When comparing two design variants in a test, give them the same level of visual finish, or the comparison measures polish as well as design.
+- USE-076 [B] Fix interaction problems before polishing, and do not expect visual refinement to compensate for a frustrating flow.
+- USE-077 [C] If LTF uses SUS, give the standard ten items unchanged, after a defined task, naming Learn to Fly as the system, and report a percentile with a confidence interval rather than a raw score.
+- USE-078 [B] Use SUS to compare the same task and the same learner group across releases, not to compare LTF with other products or to certify a design.
+- USE-079 [B] Before running an A/B test on LTF, compute the sample needed to detect the smallest effect worth acting on, and if LTF's traffic cannot supply it, decide from principles and qualitative testing instead.
+- USE-080 [C] Report every quantitative comparison as a difference with an interval in units LTF cares about, against a smallest effect worth acting on set in advance, and never report "no difference" from an underpowered study.
+
+## Interaction Design (part-10-interaction-design.md)
+
+- INT-001 [C] Build every interactive diagram as a small world the learner acts on: the object is always visible, the action is physical, and each change is small, immediate and reversible.
+- INT-002 [C] Use a picture only where it beats words for the person and task at hand; keep lists, tables and labels where the learner must compare or look things up.
+- INT-003 [C] Show the quantity the learner is trying to judge, not only the raw value it is computed from.
+- INT-004 [C] Put the control on the thing it changes: let the learner drag the needle, the vector or the marker itself, and when a separate control is unavoidable, place it beside the output it moves.
+- INT-005 [C] Do not let a smooth widget stand in for the concept: pair every interactive diagram with the words that say what to notice.
+- INT-006 [C] Report the learner's own measured result in neutral terms, and leave the verdict to the learner or to an explicit rubric.
+- INT-007 [C] Give every widget a first state with one or two controls that already teach something, and reveal further controls only after that first relation is clear.
+- INT-008 [C] Give every action a visible cue on the element that performs it; an action with no cue is treated as missing.
+- INT-009 [C] Do not give a non-interactive element the look of a control: no hover change, pointer cursor, raised shadow, pill shape or chevron on anything that does nothing.
+- INT-010 [C] When one action leads to another, let the first reveal the second: grabbing a control should show its range, its stops and where it will snap.
+- INT-011 [C] Label icons with words wherever space allows, and never rely on an icon alone for an action a beginner must find.
+- INT-012 [C] Follow established web conventions for links, buttons, tabs and disclosure; spend novelty only where the content needs it.
+- INT-013 [C] Treat skeuomorphic instrument faces as content, not as metaphor: draw an instrument the way the real one looks because the learner must read the real one, and keep page controls conventional.
+- INT-014 [B] Make controls that do different things look different in shape, position and label, and make controls that do the same thing look the same everywhere.
+- INT-015 [C] Where the learner's eyes are elsewhere, back up a visual state change with a second channel: a short sound, a haptic pulse where supported, or a change in a large stable region.
+- INT-016 [B] When you block an action to protect a beginner, show the blocked control as inert and say in a few words why and when it becomes available.
+- INT-017 [C] Make the size of the feedback match the weight of the action: a small state change for a frequent minor action, a clear confirmation for a rare or consequential one.
+- INT-018 [C] End every multi-step sequence with an explicit, visible end state that says what is now done.
+- INT-019 [C] Change the pressed control's own state within about a tenth of a second of every tap, click or key press, locally, before any server reply.
+- INT-020 [C] Give each kind of event its own time budget: control actions respond at once, conversational steps (open a lesson, check an answer against the server, submit) acknowledge within about a second, and anything that can run longer shows progress and a way out.
+- INT-021 [B] Show a determinate progress indicator for any wait that can pass several seconds when the fraction done is known, an indeterminate one when it is not, and never a percentage the system does not have.
+- INT-022 [B] Map any progress bar to real work, put slow or variable stages first, and never hold a bar near its end.
+- INT-023 [B] Show the result of an action in a persistent, modeless form in the place where the action was taken; use a transient toast only as a duplicate, never as the only record.
+- INT-024 [C] Keep errors visible until the learner deals with them, and put them next to the thing that failed.
+- INT-025 [C] List every mode on a screen (every state in which the same gesture produces a different result) and remove any that the learner's task does not need.
+- INT-026 [B] Where an action changes meaning by mode and a wrong guess is costly, make the mode last only while the learner holds it (press and hold, a held key), rather than a toggle that latches.
+- INT-027 [B] Never mark a mode by color alone; give every persistent mode a word, a fixed position and a shape change as well.
+- INT-028 [C] Show the current mode in words, always in the same place, so that a learner who looks away and back can read it in one glance.
+- INT-029 [C] Do not change a page's mode as a side effect of a timer, route change or unrelated control; when a mode must change, say on screen what changed and why.
+- INT-030 [B] Test every mode with an interruption: have the learner switch to the sim, do something there, and return, and measure both errors and the time to their first correct action.
+- INT-031 [C] Separate practice from anything scored or recorded by a different screen or a clearly different frame, not by a toggle inside the same frame.
+- INT-032 [C] When a lesson involves a sim function that has modes, make "which mode is it in now" an explicit thing to observe and to check, using the sim's own names for the modes.
+- INT-033 [C] Write feedback that distinguishes a slip from a mistake, and give each its own remedy: a slip gets an easy correction, a mistake gets an explanation.
+- INT-034 [B] When a lesson changes one step in a sequence the learner has already practiced, mark the changed step where it appears, every time it appears, until the learner has used the new version.
+- INT-035 [C] Treat a cluster of wrong answers or failed criteria as a defect in the content or the interface until shown otherwise, and review it as one.
+- INT-036 [C] Design learning flows as several independent layers of defense (instruction, a check before acting, a prompt during the action, a debrief after), so no single layer must catch everything.
+- INT-037 [C] Never use blame words (careless, wrong, failed, mistake) about the learner in interface copy; describe what happened and what to do next.
+- INT-038 [C] Make an error message say what happened, what the learner can do now, and whether the problem might be bigger than this page, and leave the learner's input in place.
+- INT-039 [B] Validate a field when the learner leaves it, never while they are still typing, keep the message next to the field until it is fixed, and check quiz answers only when the learner asks.
+- INT-040 [C] Prevent a serious error by making it impossible where you can, and when you disable an action, say beside it what is missing.
+- INT-041 [C] For every control whose effect can be reversed, write down the unit it acts on, what reversing it restores, and how the learner sees that it was restored, and make the interface answer those questions on screen.
+- INT-042 [C] Make the effort to undo no greater than the effort to do: an action that takes one tap must be reversible in one tap, and an action that destroys several minutes of work must not be a single tap.
+- INT-043 [C] Use undo, not a confirmation dialog, for any action that can be reversed; keep confirmation for the few actions that cannot, and make that confirmation require something other than a reflexive click.
+- INT-044 [C] Before an action that cannot be undone, say plainly that it cannot, in the same view as the button.
+- INT-045 [C] Save every learner input as it is made, and restore it after a refresh, a sign-in detour, a closed tab or a change of device wherever the product can.
+- INT-046 [C] Label every reset with its scope, and show the scope in the control or right beside it.
+- INT-047 [C] On the companion screen, prefer forward recovery that takes one action (tap again, jump to the current step) over any history or navigation.
+- INT-048 [C] Let learners see the consequence of a choice before committing to it, as a live preview that changes with their input.
+- INT-049 [A] Choose every pre-set value as if most learners will keep it, because most will.
+- INT-050 [C] Never set a default that benefits the product at the learner's expense; when privacy, data sharing or messages are at stake, default to the more private, quieter option.
+- INT-051 [C] Never pre-select an answer in a quiz, a rubric or any self-assessment; start every such choice empty, and say how a blank is treated.
+- INT-052 [C] Default each field to the value the learner most likely wants in this context (often their own last value for the same task), make it easy to replace, and never label it "Default".
+- INT-053 [C] Do not let the interface rearrange itself based on usage; keep controls in fixed places and let learner choices change values, not layout.
+- INT-054 [C] When a pre-set value is a recommendation, say so in words; when it is merely a starting point, make that clear too.
+- INT-055 [C] Ask the learner to choose only when the choice changes what they do next; otherwise pick a good default and let them change it later where it applies.
+- INT-056 [C] Audit each challenge step through the seven stages, and fill the evaluation side explicitly: say what the learner will see in the sim, what it means, and how they will know it went well.
+- INT-057 [C] Use one name for each control, instrument, procedure and state everywhere in the product: lessons, widgets, challenges, checklists, reference and copy.
+- INT-058 [C] Describe states and actions in the learner's terms, not the system's: "saved on this device", not "stored in session storage"; "your result", not "attempt record".
+- INT-059 [C] Never write an instruction that assumes the previous step succeeded; give the learner a way to check the sim's state at each step, and a way to say they are not where the page expects.
+- INT-060 [C] Treat a procedure as a resource the learner can enter at any step, not a script that must be run from the top.
+- INT-061 [C] State plainly what the app can check and what only the learner can, wherever a result or score is shown.
+- INT-062 [C] Order guidance for each moment of a flight as what to look at, what it means, and what will happen next.
+- INT-063 [C] For every step a learner must take, name the flying goal it serves; remove or merge any step that serves none.
+- INT-064 [C] Design for the returning learner who knows the basics: show first-time guidance once, make it dismissible, and never repeat an explanation the learner has already dismissed.
+- INT-065 [B] Put the first real task on the first screen, and attach explanation to the action, at the moment it is needed, rather than before it.
+- INT-066 [C] Put anything the learner must not miss in the path of the task, not in a panel they are expected to read first.
+- INT-067 [C] Give each lesson and challenge a visible arc: a stated goal at the start, a point where the learner tries something that may not work, and an end that confirms what was achieved.
+- INT-068 [C] Write any persona or scenario as a labeled hypothesis tied to real evidence, and revise it when evidence arrives.
+- INT-069 [C] Specify every small interactive moment by its trigger, its rules, its feedback and its loop before building it, and write the four answers where reviewers can see them.
+- INT-070 [C] Let a trigger's label and look change with the state it controls, so the control itself always says what pressing it will do now.
+- INT-071 [C] Show the learner's relevant data at the point where they act: their last result next to the retry, their best tier on the card that starts the challenge.
+- INT-072 [C] When the system triggers a microinteraction, say what triggered it in the same message.
+- INT-073 [C] Decide, and state in the code, what each microinteraction's state does across a refresh, a new session, a sign-in and a content update.
+- INT-074 [C] Test any decorative or "delight" detail with real learners before making it a pattern, and drop it if it slows the task or distracts from the sim.
+- INT-075 [C] On the companion screen, keep one stable layout: the current and next step always in the same place, completed items out of the way, and nothing that moves or reflows between glances.
+- INT-076 [C] Allow no dialogs, popovers or overlays on the companion screen during a flight, except one rare alert that the challenge itself defines.
+- INT-077 [B] Fire an alert only for an event that requires the learner to act, keep every alert rare, and retire any prompt that learners routinely dismiss without acting.
+- INT-078 [C] Do not automate the checks the learner is meant to perform: no auto-ticking, auto-advancing or auto-scoring of what happens in the sim.
+- INT-079 [C] Break any procedure longer than a screen into task-sized groups, end each group with a visible completion line, and put the most consequential items first.
+- INT-080 [C] Write each checklist response as the state the learner should see, not as "checked" or "done".
+- INT-081 [C] Order on-screen steps the way the learner's eyes and hands move through the sim's cockpit, unless a critical item must come earlier.
+- INT-082 [C] Make the debrief the moment the app asks for full attention: after the flight, not during it, with the questions that turn the flight into something learned.
+- INT-083 [D] Offer an optional reduced-help mode for learners who want to test themselves, but do not reduce feedback by default for beginners on complex maneuvers.
+
+## Forms, Onboarding and Touch (part-11-forms-onboarding-touch.md)
+
+- FRM-001 [C] Before changing how a form looks, name the layer that is failing: relationship, conversation or appearance.
+- FRM-002 [C] Justify every field by what LTF does with the answer; remove, postpone or infer any field that has no use at the moment it is asked.
+- FRM-003 [B] Compare two form or flow designs by counting their operations (fields, decisions, pointing moves and device switches), and remove decisions first.
+- FRM-004 [B] Fix the forms that break the most guidelines first, and expect smaller gains on forms that are already good.
+- FRM-005 [B] Test every new or changed form with a few beginners before release, and do not let expert judgment of severity stand in for that test.
+- FRM-006 [C] Let the learner start and finish the first lesson without an account, and ask for one only at the moment it gives them something they asked for.
+- FRM-007 [C] For every field on a sign-up or setup form, record whether it was removed, postponed, inferred or kept, and why.
+- FRM-008 [C] State in one plain sentence, before the first field, why LTF is asking and what the learner gets; after submit, say what happened and what comes next.
+- FRM-009 [A] Preselect only the option a well-informed learner would choose for themselves; never preselect consent, data sharing, marketing email or a quiz answer.
+- FRM-010 [C] Support password managers, paste and autofill on every credential field, and do not add a second "confirm" field when a show-password toggle is present.
+- FRM-011 [C] Never ask a learner to enter the same information twice in one flow; carry it forward or prefill it.
+- FRM-012 [C] Make leaving (deleting the account, unsubscribing, stopping reminders) take no more steps than joining, and add friction only where it protects the learner from an irreversible loss.
+- FRM-013 [C] Once a learner dismisses a prompt, do not show it again in the same context.
+- FRM-014 [C] Request a device permission (wake lock, notifications, audio) beside the feature that needs it, at the moment it is used, with one line saying why.
+- FRM-015 [C] Place labels above their fields, in plain weight, visible at all times.
+- FRM-016 [B] Give every input a visible label tied to it in code, and never use placeholder text as the only label.
+- FRM-017 [C] Lay out forms in a single column with one question per row.
+- FRM-018 [B] Make each field about as wide as its expected answer: short for numbers and codes, full width for email and free text.
+- FRM-019 [D] Show up to about four mutually exclusive options as visible radio buttons, and reserve a select for long or familiar lists; do not justify either choice by speed.
+- FRM-020 [B] Use a set of checkboxes, never a multi-select list box, when the learner may choose more than one option.
+- FRM-021 [C] Make every field's required or optional status visible in words, and mark whichever kind is the minority.
+- FRM-022 [C] Do not put a reset or clear-all button on a form.
+- FRM-023 [C] Give each form exactly one visually dominant primary action, placed after the last field, with secondary actions as quiet links or secondary buttons.
+- FRM-024 [B] State any required format, length or unit in the label or hint before the learner types, not in a placeholder or an after-the-fact error.
+- FRM-025 [B] Make the answer box show what belongs in it: width for length, a unit or symbol immediately beside the box, and any format instruction above it rather than to its right.
+- FRM-026 [C] Never require the learner to type a unit; show it fixed beside the box and accept a typed unit if they add one anyway.
+- FRM-027 [C] Accept every reasonable way of writing a value (separators, spaces, a typed unit, leading zeros) and normalize it before checking; auto-correct only when the correction is certain.
+- FRM-028 [B] For a short value with fixed parts, use one text field with visible format symbols when speed matters and a constrained control when a format error would be scored; choose by what the value is used for.
+- FRM-029 [B] Give open-ended prompts a roomy box and one sentence that says what a useful answer looks like.
+- FRM-030 [B] Never show an error while the learner is still typing a field for the first time; the earliest moment is when they leave it, or when a fixed-length value is complete.
+- FRM-031 [B] Add on-leave validation only to fields where mistakes are likely, and keep easy fields quiet until submit.
+- FRM-032 [C] Once an error is showing, recheck on every change and remove the message the moment the input becomes valid.
+- FRM-033 [D] Show positive confirmation only on fields that are hard to get right (password strength, availability), never a tick on every valid field.
+- FRM-034 [B] After a failed submit, show a focused summary of all errors at the top, each linking to its field, and repeat each message beside its field with an icon and text, never color alone.
+- FRM-035 [B] Write each error message to say what happened in the learner's terms and what to do next, without blame, codes or vague phrases.
+- FRM-036 [C] Never clear a field the learner has filled in because of an error elsewhere, and never clear the field that has the error.
+- FRM-037 [C] Disable the submit control and show progress from the first click until the request settles, so a second click cannot send the form twice.
+- FRM-038 [C] Check quiz and challenge answers for correctness only when the learner presses the check or submit control; validate format, never correctness, before that.
+- FRM-039 [C] Record how often each validation error and each wrong quiz answer occurs, and treat a frequent one as a defect in the question or the lesson.
+- FRM-040 [C] Make every frequent action reversible with the same effort it took: a second tap unticks, the opposite button reverses a move, a changed answer clears its old result.
+- FRM-041 [C] Save what the learner enters as they enter it, so that a refresh, a lost connection, a sign-in detour or a closed tab never costs them their work; clear the draft only when the server has accepted it.
+- FRM-042 [C] State before any one-way action what will be permanent, and use a confirmation dialog only for rare, destructive actions; for frequent ones, offer a short undo after the fact instead.
+- FRM-043 [C] Keep destructive or resetting controls physically apart from frequent ones, and make them look different in shape or label, not only in color.
+- FRM-044 [C] When a procedure a learner has already practiced changes, mark the changed step visibly the next time they see it.
+- FRM-045 [B] Show every mode with a word and a change in layout or shape, never by a color change alone; reserve hold-to-act controls for brief, risky modes.
+- FRM-046 [B] Test any screen with a mode by interrupting the tester (switch to the simulator, then back) and measuring how long they take to act correctly on return.
+- FRM-047 [B] Make the first screen of a first run a real task, with explanation attached to the action rather than placed before it.
+- FRM-048 [B] Give every procedure step its checkpoint (what the learner should now see) and its recovery (what to do if they do not).
+- FRM-049 [B] In early lessons, show only the controls the current step needs, and label anything held back with what unlocks it.
+- FRM-050 [B] Fade guidance as the learner progresses, and give experienced learners a way to skip or collapse it.
+- FRM-051 [C] Do not put a carousel tutorial or a tour of the site's sections in front of the first task.
+- FRM-052 [C] Use at most one coach mark per screen, on first use only, attached to the one control that is not self-explanatory, and never show it again once dismissed.
+- FRM-053 [B] Design the first run to end in a real, noticeable success the learner achieved, and do not substitute encouragement copy for it.
+- FRM-054 [C] Make every first-run step skippable straight to the first lesson with sensible defaults, and measure how many learners skip it before keeping it.
+- FRM-055 [C] Put any step that is critical to safety or to the simulator setup inside the task that needs it, never only in a "read me first" screen.
+- FRM-056 [A] Make the controls a learner uses most often both large and close to where their hand or pointer already is, and size them for degraded precision, not best-case aim.
+- FRM-057 [A] Treat touch target size as a steep curve: errors rise quickly as targets shrink, so lean toward the large end for anything tapped often.
+- FRM-058 [B] Never ship a pointer target smaller than 24 by 24 CSS pixels unless it meets WCAG's spacing or inline exception, and make every frequently used or touch-first control at least 44 by 44.
+- FRM-059 [B] Where a control must look small, make its hit area larger than its drawing, extending into its label or padding.
+- FRM-060 [B] Leave visible space between adjacent tap targets, and never place two actions edge to edge when either one is destructive.
+- FRM-061 [B] At a screen edge, either let the target run to the edge or move it inward; never put a small target near the border.
+- FRM-062 [C] Do not design for a one-handed thumb zone; place controls so they work with either hand and any grip, and keep destructive ones out of easy accidental reach.
+- FRM-063 [B] Make keys for serial entry (keypads, steppers pressed repeatedly) larger than one-off buttons.
+- FRM-064 [B] Use only gestures beginners already know (tap, drag, pinch, swipe), and give every gesture a visible control that does the same thing.
+- FRM-065 [B] Offer more than one way to perform an adjustment, such as dragging a slider or tapping buttons beside it, and do not require a particular number of fingers or a free-form path.
+- FRM-066 [B] Commit any action on release, never on touch-down or pointer-down, so the learner can slide off a control to cancel.
+- FRM-067 [B] Do not make a drag depend on staying inside a narrow corridor; give drag paths wide tolerance, and clamp a value at its limit rather than cancelling the drag when the pointer wanders.
+- FRM-068 [C] Give every drag interaction a single-tap or button alternative.
+- FRM-069 [B] Show the value being set by a drag in a readout placed where the finger cannot cover it, above or beside the control, updating continuously.
+- FRM-070 [B] In fly mode, show few controls, make each large, and keep every one in a fixed position from step to step so it can be hit with a glance.
+- FRM-071 [B] Make the current step and state readable in a single glance on return from the sim.
+- FRM-072 [B] Test fly mode with the device flat or propped on a desk, tapped at a low finger angle, and with an interruption that sends the tester's eyes to the sim between taps.
+- FRM-073 [C] Do not require more than one tap on the second screen per procedure step, and offer a keyboard path so a learner at a desk need not switch devices.
+- FRM-074 [C] Show the result of every tap in fly mode within about 0.1 second, locally, before any network call completes.
+- FRM-075 [B] Reserve fly mode's alert style and sound for the challenge's own events, and queue all other feedback (sign-up prompts, tips, sync notices) for the debrief.
+- FRM-076 [C] Never move content under the learner's finger in fly mode: no layout shift when an alert appears, a step is ticked or a banner loads.
+- FRM-077 [C] Keep the focused control visible under sticky bars and alerts, and return focus to a logical place when an alert is dismissed.
+
+## Information Visualization (part-12-information-visualization.md)
+
+- VIZ-001 [B] Design each graphic around one named comparison, and make that comparison the one the eye reaches first.
+- VIZ-002 [B] Mark critical outliers explicitly; never rely on the viewer's averaged impression to reveal them.
+- VIZ-003 [C] Write the invariant, the components and the task in one sentence before choosing any chart form.
+- VIZ-004 [C] Get the encoding right before styling it.
+- VIZ-005 [C] Treat truthfulness as a gate, not a weight: a chart that cannot be defended as honest does not ship.
+- VIZ-006 [C] Design the debrief for spontaneous insight and the progress view for knowledge-building insight.
+- VIZ-007 [A] Put the quantity the learner must read or compare precisely on position along a common scale.
+- VIZ-008 [B] Do not use area, angle or shade to carry a quantity that must be compared precisely.
+- VIZ-009 [B] When area must encode a quantity, avoid comparing near-square rectangles and print the values.
+- VIZ-010 [B] Use magnitude channels for quantities and identity channels for categories; never use hue to show how much.
+- VIZ-011 [B] Spend the strongest channel on the most important variable, and keep secondary variation from interfering with it.
+- VIZ-012 [B] Use a ring or pie only to show one part of one whole, or a few labeled parts.
+- VIZ-013 [C] Draw an instrument widget in the instrument's own form, and keep analytic charts in chart forms.
+- VIZ-014 [C] Test multi-mark charts with learners rather than deferring to the channel ranking.
+- VIZ-015 [C] Reject any chart that implies a fact the data lack: no lines through discrete events, no ordering of unordered categories.
+- VIZ-016 [C] Give each component a visual variable whose level of organization is at least that of the data: ordered variables for ordered data, quantitative variables for quantities.
+- VIZ-017 [C] Show peer categories with equal visual weight; make one stand out only when it is the subject.
+- VIZ-018 [C] Use a table, not a chart, for a small set of values the reader must look up or memorize exactly.
+- VIZ-019 [B] Show many states of the same thing as small multiples on identical axes, not as an animation or a set of independently scaled charts.
+- VIZ-020 [B] Put the values most often compared next to each other on one shared baseline.
+- VIZ-021 [C] Draw quantities in 2D; use 3D only when perceiving a shape in space is the task.
+- VIZ-022 [B] Place together what the learner must combine in one mental step, and separate what they must read alone.
+- VIZ-023 [C] Make every mark's size proportional to its value, and audit any scaled picture by computing its lie factor.
+- VIZ-024 [B] Map values to the area of a circle or square, never to its diameter or side.
+- VIZ-025 [B] Start every length-encoded display (bars, columns, fills, stacked areas) at zero, with no break marks.
+- VIZ-026 [C] Let a position-encoded display (line, dot plot, centered deviation gauge) start away from zero only when the axis is labeled with units and the meaningful band is drawn on it.
+- VIZ-027 [C] Keep every scale continuous and every compared series on one baseline.
+- VIZ-028 [C] Show a value with the context that makes it meaningful (a target, a previous best or a history), and choose the time window before looking at the result.
+- VIZ-029 [C] Compare rates, not raw totals, when the things compared differ in size or duration.
+- VIZ-030 [C] Where values are read under workload, strip non-data ink: thin light gridlines, no frames, no gradients, no backgrounds behind the marks.
+- VIZ-031 [C] Never use hatching, op-art fills or a decorative overall shape to carry data.
+- VIZ-032 [B] Add no decoration that is unrelated to the data or to the point the graphic makes.
+- VIZ-033 [D] Consider one restrained, topic-related pictorial element on a recap graphic meant to be remembered for weeks, and keep exact values in plain labeled marks.
+- VIZ-034 [B] Never justify density, color or pictures in a data display by memorability alone; judge it by whether learners read and use it correctly.
+- VIZ-035 [C] Use one encoding for one quantity everywhere in the product.
+- VIZ-036 [D] Give a concept that must be remembered (a pattern, a profile, a sequence) a distinctive diagram of its own rather than a stock chart.
+- VIZ-037 [C] Classify every color scale as sequential, diverging or qualitative before choosing a single color.
+- VIZ-038 [B] Do not use a classic rainbow or jet gradient for a continuous quantity; use a single-hue ramp with monotonic lightness or a perceptually designed multi-hue map.
+- VIZ-039 [C] Encode ordered ratings with ordered lightness, not with a set of different hues.
+- VIZ-040 [C] Never let color alone carry a status, a category or a value; pair it with a word, a shape, a position or a line style.
+- VIZ-041 [C] Pair opposites as red and blue (or vermilion and blue), not red and green, and avoid pure red on dark grounds.
+- VIZ-042 [C] Give every data mark at least 3:1 contrast against what it sits on, in both themes, and check ramps at their dark and light ends.
+- VIZ-043 [B] Keep a chart neutral and give saturated color only to the mark the caption is about.
+- VIZ-044 [B] Do not encode a value as a shade placed on a background that itself varies in shade.
+- VIZ-045 [B] Label series and reference lines directly on the chart; use a separate legend only when direct labels cannot fit.
+- VIZ-046 [B] Annotate the one comparison the chart exists for, in words, on or beside the chart.
+- VIZ-047 [C] Title every chart with what it shows and in what units, and make every axis carry its unit.
+- VIZ-048 [B] Draw gridlines light and sparse, starting near the equivalent of 20 percent opacity, and tune them separately for the dark theme.
+- VIZ-049 [B] Make a chart tall enough that each data unit gets about a pixel, and no taller for accuracy's sake.
+- VIZ-050 [B] Keep gridlines at least about 8 pixels apart at the smallest rendered size.
+- VIZ-051 [C] Round every displayed number to the precision the learner can use.
+- VIZ-052 [B] Introduce each chart format with one line on how to read it the first time a learner meets it.
+- VIZ-053 [C] Fit any display meant for monitoring onto one screen without scrolling.
+- VIZ-054 [C] Show each monitored measure with its context and as a direct deviation from target, not as two numbers to subtract.
+- VIZ-055 [C] Put the item that needs action in the most prominent position and subdue everything else, including navigation and brand.
+- VIZ-056 [C] Keep instrument simulators and analytic displays apart, and never style an analytic display as an instrument panel.
+- VIZ-057 [C] Order analytic views as overview, then filter, then details on demand, and treat that order as a starting checklist to test, not a proven law.
+- VIZ-058 [B] Signal a state change that may happen while the learner looks away with both a brief transient and a lasting visible marker.
+- VIZ-059 [B] Show states, not processes, on any display read in glances; keep animated explanations in the lesson where they can be paused.
+- VIZ-060 [B] Stabilize any live value meant to show a level or trend, and show the exact value separately.
+- VIZ-061 [C] Make every animated instrument move in the same direction and against the same reference as the instrument in the simulator.
+- VIZ-062 [B] Show a learner's variability as their individual results, not as an error bar, interval or violin.
+- VIZ-063 [B] State chances and rates as frequencies with a fixed denominator ("Gold in 3 of your last 10 attempts"), not as percentages or relative changes.
+- VIZ-064 [C] Say in words, beside any display of spread, what the spread means for the learner's next decision.
+- VIZ-065 [B] Use animated or ensemble outcome displays to compare two or three uncertain quantities, never to estimate one mean, and always provide a static version.
+- VIZ-066 [C] Evaluate any uncertainty display by the decisions learners make with it, against a baseline with no uncertainty shown.
+- VIZ-067 [C] Do not treat a learner's self-rated confidence as calibrated, and never display it as if it measured skill.
+- VIZ-068 [C] Update a diagram within about a tenth of a second of the slider or control that drives it, and make every such change reversible.
+- VIZ-069 [C] Give any view that takes longer than about a second to appear a visible loading state that holds its final shape.
+- VIZ-070 [C] Give every explorable graphic a one-step way back to its starting state, and keep filter state in the URL so it can be shared and restored.
+- VIZ-071 [C] Make every detail that appears on hover also appear on tap and on keyboard focus.
+- VIZ-072 [B] Animate a change between two states of the same chart only as a simple, valid transition of about one second per stage, with at most two stages.
+- VIZ-073 [B] Give every explanatory animation play, pause, step and replay controls, keep it schematic, and leave a static annotated final state on the page.
+- VIZ-074 [B] Give every chart and diagram a text alternative that states what it shows and what it says, including the current value and any reference line.
+
+## Information Architecture and Wayfinding (part-13-ia-wayfinding.md)
+
+- NAV-001 [C] Give the course one main path whose order does not change, and show it as a line the learner can see.
+- NAV-002 [C] Make each kind of place recognizable at a glance, so a learner arriving from a link knows which district they are in.
+- NAV-003 [B] Make every page usable with route knowledge alone: the next step must be clear without consulting the course map.
+- NAV-004 [C] Keep a few landmarks on every page, always in the same place, and keep them rare enough to stay distinctive.
+- NAV-005 [C] Pair every spatial or visual cue for location with a text label that says the same thing.
+- NAV-006 [C] Mark every edge between kinds of activity with a visible change of frame and a labeled way back.
+- NAV-007 [C] Put the information each decision needs on the same screen as the decision, next to the control that acts on it.
+- NAV-008 [C] Design every page for a first-time visitor who knows none of the product's or aviation's vocabulary.
+- NAV-009 [C] Give each decision point one primary next action, and make every other option visibly secondary.
+- NAV-010 [C] Present a fixed procedure as a strictly ordered list with the current step marked, and present open choices as a set of labeled options with a recommendation.
+- NAV-011 [B] On any screen used while flying, reduce the choices to the one the procedure needs next, and remove navigation that is not an exit.
+- NAV-012 [B] Make one overview page the most connected place in each district, and route newcomers to it.
+- NAV-013 [C] Review the content structure and the interface labels together, as one system, in the same pull request.
+- NAV-014 [B] Write every link, button and card title so that a first-time learner can predict the destination from its words alone.
+- NAV-015 [B] Put the recommended next step first and make it visually distinct, because learners take the first option that looks good enough.
+- NAV-016 [B] Treat the end of every patch as the place learners are most likely to leave, and give it the strongest scent on the page.
+- NAV-017 [C] Never give a link more scent than its destination can deliver; a link to a page that is not ready must say so or not be a link.
+- NAV-018 [C] Show the size of every patch before entry and the learner's position inside it during the visit.
+- NAV-019 [C] Order items within a list by how likely they are to serve the learner's current goal, where the order is not already fixed by the course sequence.
+- NAV-020 [B] When testing navigation, separate the effect of a label's wording from the effect of its position.
+- NAV-021 [C] On screens used beside the simulator, give each glance one high-confidence cue in a fixed position, and never require reading a list of options to find it.
+- NAV-022 [A] Keep every lesson within two levels of the curriculum overview: overview, then module, then lesson, and no level above or between.
+- NAV-023 [B] Prefer a broad level of up to about 16 to 32 well-labeled items over adding a level, provided the page can be scanned without scrolling past the group.
+- NAV-024 [B] When a list grows long, group it visibly on the same page instead of moving part of it one level down.
+- NAV-025 [B] Use a short top level of a few large groups over a longer, well-grouped second level, rather than equal breadth at each level.
+- NAV-026 [B] Do not choose a navigation structure on stated preference; measure task success and time alongside it.
+- NAV-027 [C] In a navigation audit, count the levels between the hub and every destination, not only the items per page.
+- NAV-028 [B] Never use a click budget as a design rule or an acceptance test; judge a navigation path by task success, time and whether the learner knew where they were.
+- NAV-029 [C] Prefer a longer path of obvious choices to a shorter path that makes the learner stop and think at any step.
+- NAV-030 [C] Make each navigation step cheap: expand in place where possible, keep route changes fast, and show where loading content will appear.
+- NAV-031 [B] Treat backtracking and revisits, not path length, as the evidence of a navigation problem, and measure them in tests.
+- NAV-032 [C] Surface the few most common tasks directly on the hub pages, so the learner does not have to navigate to them at all.
+- NAV-033 [B] Index every lesson, glossary term and checklist under several names: the pilot's term, the simulator's term and a plain-language description.
+- NAV-034 [B] Never settle a navigation label on the team's judgment alone; test it with people from the target audience before it ships.
+- NAV-035 [B] Call each page and section by exactly one name, and use that name in the header link, the page title, the `h1`, the breadcrumb and any search result.
+- NAV-036 [C] Start every label with its most distinctive word, and make sibling labels differ in their first words.
+- NAV-037 [C] Keep invented terms and unexplained abbreviations out of navigation labels; where an aviation term is the right name, show its plain meaning beside it the first time.
+- NAV-038 [C] Write link text that makes sense out of context, naming the destination, never "click here" or "read more."
+- NAV-039 [C] Log searches that return nothing and treat the list as a backlog of missing aliases and missing content.
+- NAV-040 [C] Organize the course by learning sequence, and organize reference material by an exact scheme the learner can predict without knowing the course: alphabetical, phase of flight or identifier.
+- NAV-041 [C] Tag every lesson, challenge and reference item with a small fixed set of facets, and generate cross-links and filters from the tags rather than writing them by hand.
+- NAV-042 [C] Give every lesson exactly one home in the course, and allow multiple parents only for reference items.
+- NAV-043 [C] For a collection that has no fixed order, provide facet filters named in the learner's words, show the result count, keep the filter state in the URL and offer one way to clear everything.
+- NAV-044 [C] Provide search where learners look up known items, and make it cover every item of that kind; do not rely on search to find the course path.
+- NAV-045 [C] Keep a content inventory and a site map that are generated from the content files, and review them whenever a module or route is added.
+- NAV-046 [C] Run the trunk test on every page template: from the page alone, a reviewer must be able to point to the site, the page name, the section, the page's place within the section, and the way back to the section hub.
+- NAV-047 [C] Mark the current location at every visible level of navigation, with a treatment that does not rely on color alone.
+- NAV-048 [C] Show breadcrumbs on every page below a hub, mirroring the real structure, with the current page last and not linked.
+- NAV-049 [B] Give every page one `h1` that names it and a descending heading outline that mirrors its sections, with no skipped levels and no decorative headings.
+- NAV-050 [C] Offset every in-page jump and every scroll-to-focus by the full height of all sticky bars, so that nothing a learner jumps or tabs to lands underneath them.
+- NAV-051 [C] Give every page a unique document title that leads with the page name and ends with the site name.
+- NAV-052 [C] Make the signed-in learner's home (the dashboard) reachable from a visible, labeled item on every page, not only from inside an account menu.
+- NAV-053 [C] Give every lesson at least four independent ways in: the course map, the continue path, search, and cross-links from related content.
+- NAV-054 [C] Link backward to what a page assumes and forward to what builds on it, in both directions, generated from the same data.
+- NAV-055 [C] On every item page, show its neighbors in the same group, so a learner can scan sideways without returning to the list.
+- NAV-056 [C] Design lookup surfaces to answer a known-item question in one step, and design learning surfaces for overview and browsing; do not mix the two on one screen.
+- NAV-057 [C] When an outcome reveals a gap, route the learner to the specific section that fills it, not only to a retry.
+- NAV-058 [C] Do not judge learning pages by time to answer; judge them by understanding, quiz results and returns.
+- NAV-059 [C] On a second-screen flying view, offer lookup only, and make each lookup one step to the item the current task needs, without leaving the view.
+- NAV-060 [C] Keep the global bar to the product's districts plus account controls, and add an item only when a new district is created, never for a content type inside one.
+- NAV-061 [C] Show a section's contents on its hub page rather than in a dropdown or mega menu, until the product has more top-level destinations than a hub page can show.
+- NAV-062 [C] Never make navigation depend on hover; open any panel on click or tap, and if hover opening is added for pointers, follow the published delay and dwell values.
+- NAV-063 [C] Keep the search entry point visible, never inside a menu, and once search covers lessons, reach it from every page.
+- NAV-064 [C] On small screens, keep the same navigation items in the same order and with the same labels as on large screens, and keep the current-location marker visible in the collapsed menu.
+- NAV-065 [C] Make every navigation target at least 24 by 24 CSS pixels, and size primary navigation for touch beside the simulator at 44 pixels high.
+- NAV-066 [C] Use the footer as a compact site index: repeat the hubs and the most used destinations inside them, below the legal and project links.
+- NAV-067 [C] Before naming or regrouping modules, run an open card sort with beginners using one card per lesson, written in plain language that does not give away the grouping.
+- NAV-068 [C] Use sort results to set labels and groupings, never the order of the course.
+- NAV-069 [B] Plan about 15 participants for a card sort that will set structure, and treat a sort of 5 as a pilot that finds gross problems only.
+- NAV-070 [C] Recruit people who match the audience's knowledge: for LTF, adults who have never flown, not instructors, pilots or experienced simulator users.
+- NAV-071 [C] After any restructuring, confirm it with task-based tests of findability (a tree test or first-click test, then a usability test of the real pages), measuring success, time and lostness.
+- NAV-072 [C] Read what participants say about their groupings and choices, not only the numbers.
+- NAV-073 [B] Learn how learners navigate by observing them on tasks, not by asking them how they navigate.
+- NAV-074 [B] Have three to five reviewers walk each new page's navigation independently against this Part's checklist, and merge their findings only after each has written them down.
+
+## The Science of Learning: Load and Memory (part-14-learning-science.md)
+
+- LRN-001 [B] Introduce no more than one or two new, interacting concepts before the learner has worked with them.
+- LRN-002 [B] Do not cite "seven plus or minus two" to cap the number of nav items, cards, tabs or answer options.
+- LRN-003 [B] Keep every number the learner needs while flying visible on screen; never make them hold it.
+- LRN-004 [B] Name the recurring groups of a procedure and reuse the names everywhere, so the learner can build each group into one chunk.
+- LRN-005 [B] Pair each new concrete concept with a picture of it and its name, shown together.
+- LRN-006 [C] Give image-and-word pairings time: let the learner control the pace of any sequence that introduces new pictures.
+- LRN-007 [D] Write design requirements in terms of the concrete problem (split sources, redundant text, unguided search), not in terms of intrinsic, extraneous or germane load.
+- LRN-008 [B] Do not build a "cognitive load score" from self-ratings; read difficulty from behavior and compare versions, never absolute values.
+- LRN-009 [B] If you ask learners how hard something was, ask after each task, with the same wording and scale every time, and use the answers only to compare versions of the same material.
+- LRN-010 [C] Design every in-flight surface for a learner who cannot pause, replay or annotate.
+- LRN-011 [B] Order material from isolated elements to integrated tasks, and treat that order as the main lever on how hard the content is.
+- LRN-012 [C] Let learners offload: keep reference material visible and give them somewhere to note numbers.
+- LRN-013 [A] Before any challenge that asks a beginner to perform a procedure, show a complete worked example of it: the inputs, the resulting indications and the reason for each step.
+- LRN-014 [B] Insert a completion exercise between the worked example and the full attempt: the same procedure with some steps or values left for the learner to supply.
+- LRN-015 [B] Fade guidance across a module in visible steps: full walkthrough, then checklist, then a prompt, then the bare task.
+- LRN-016 [B] Use several worked examples that differ in surface features before expecting a general skill.
+- LRN-017 [B] Ask for mental rehearsal ("picture what you will see next") only after the learner has studied and practiced the material.
+- LRN-018 [C] Put supportive explanation before the task and procedural cues at the moment of use; never ask the learner to absorb new theory while performing.
+- LRN-019 [B] Give learners who already know the material a shorter path: let them skip or collapse the walkthrough and go to the task.
+- LRN-020 [B] In the first challenges of a skill, set a goal that asks the learner to observe a relationship before a goal that asks them to hit a target.
+- LRN-021 [A] Label the parts of a diagram on the diagram, at the part, not in a legend, caption or paragraph elsewhere.
+- LRN-022 [B] Keep a step and the figure it refers to on screen together at every breakpoint, including phones.
+- LRN-023 [B] When a diagram is self-explanatory to the intended learner, do not restate it in prose.
+- LRN-024 [B] Never instruct learners to cross-check two sources that say the same thing.
+- LRN-025 [B] Do not show on-screen text that duplicates or summarizes the narration of an animation by default; make captions a control that is always offered.
+- LRN-026 [B] Short labels and one-line captions placed beside a static picture are fine; redundancy harms mainly when long text competes with a moving image or restates a self-sufficient picture.
+- LRN-027 [B] When text explains a value that changes, show the explanation at the moment and the place the value changes.
+- LRN-028 [C] Remove scaffolding labels from diagrams in later reviews and quizzes once the learner has met them.
+- LRN-029 [B] Keep decorative imagery, background audio, trivia and anecdotes out of the explanation of a core concept.
+- LRN-030 [B] Put engaging but non-essential material after the core content, in a section the learner can skip.
+- LRN-031 [B] Cut irrelevant material instead of adding cues around it.
+- LRN-032 [A] Signal structure and focus: a heading per idea, the key term in bold at first use, and a visible highlight on the element being discussed.
+- LRN-033 [C] Give each moment one cue: one highlighted element per step, not several competing emphases.
+- LRN-034 [C] Give each signal color one meaning across every lesson and widget, and never rely on color alone.
+- LRN-035 [C] Judge each story, image or aside by whether it illustrates the mechanism being taught; keep it only if it does.
+- LRN-036 [C] Before adding an engagement feature to a lesson, test it against a transfer question, and measure return visits as well as scores.
+- LRN-037 [B] Break every animated or multi-step explanation into short segments the learner advances, with Back and Replay.
+- LRN-038 [B] Teach the names and functions of the parts before the lesson that explains how they interact.
+- LRN-039 [D] For self-paced lessons, default to short printed text placed beside the diagram; do not assume narration beats text.
+- LRN-040 [B] Keep any spoken passage paired with a visual short, and split long ones into segments.
+- LRN-041 [B] Show movement as movement when the thing being learned is a movement; use still diagrams for structure.
+- LRN-042 [C] Treat spoken cues in Fly mode as an experiment, not a default.
+- LRN-043 [B] Never autoplay instructional audio or animation; start paused and let the learner start it.
+- LRN-044 [A] Bring every item a learner must keep back in later sessions; never let a single pass be the only exposure.
+- LRN-045 [A] Time reviews relative to when the learner needs the knowledge, not with one fixed gap for everyone.
+- LRN-046 [B] Do not describe expanding review intervals as proven best; fixed or growing gaps are both justified.
+- LRN-047 [B] Never show learners a forgetting percentage, a memory half-life or a precise "memory strength" meter.
+- LRN-048 [B] Greet a returning learner with a quick check of what they learned before, then a targeted refresher; never force a restart.
+- LRN-049 [B] Teach core knowledge to a performance criterion across several sessions, not in one sitting.
+- LRN-050 [C] Let the learner's own review accuracy override the default schedule.
+- LRN-051 [B] Schedule the first review soon after learning, at the start of the next session or the next day.
+- LRN-052 [A] After each lesson section, ask the learner to retrieve the key point before they can re-read it.
+- LRN-053 [B] Use recall formats (type the term, give the number, put the steps in order from memory) for facts the learner must produce later; keep multiple choice for judgment between situations.
+- LRN-054 [B] Follow every answer, right or wrong, with the correct answer and a one-sentence reason.
+- LRN-055 [B] Write distractors that reflect real misconceptions, and make the feedback name why the chosen distractor is wrong.
+- LRN-056 [B] Keep retrieval items achievable: a learner who has read the section should usually get them right on the first try.
+- LRN-057 [B] Mix direct recall items with inference items that ask the learner to apply or connect ideas.
+- LRN-058 [B] Spread short, ungraded retrieval items through every lesson and across the course instead of relying on an end-of-module test.
+- LRN-059 [B] Use a retrieve, check, retrieve cycle for procedures: recall, compare against the source, recall again.
+- LRN-060 [C] Place recall prompts at the briefing and the debrief, never during a flight.
+- LRN-061 [B] Once each type of problem has been taught, mix types in practice sets and challenge sequences instead of stacking several of one kind.
+- LRN-062 [B] When learners must tell similar things apart, present the examples interleaved, not one category at a time.
+- LRN-063 [A] Never choose an instructional format by learners' stated preference or by their accuracy during practice.
+- LRN-064 [C] Tell learners once, in plain words, that mixed and recall practice feels harder and works better, then do not repeat it.
+- LRN-065 [B] Vary the conditions of repeated practice: change the airport, runway, weather or starting state between attempts at the same skill.
+- LRN-066 [B] Add difficulty only after a first explained pass, and only of a kind the learner can respond to.
+- LRN-067 [B] Do not reward streaks or within-session accuracy as signs of progress.
+- LRN-068 [B] For each procedure step, ask the learner why it is there and what would happen if it were skipped.
+- LRN-069 [C] Write explanations around what an indication means for the airplane, not around what it looks like.
+- LRN-070 [B] Practice retrieval with the cues the learner will meet in the sim: an indication, a scene, a sound, a phrase.
+- LRN-071 [C] Use the same words for the same thing in lessons, checklists, quizzes, Fly mode and, where possible, the sim's own labels.
+- LRN-072 [B] Do not tell learners that studying beside the sim or in a particular setting will lock in memory.
+- LRN-073 [A] Do not offer learning-style assessments, "visual" or "auditory" tracks, or copy that describes learners by style.
+- LRN-074 [B] Do not present highlighting, rereading or copying summaries as ways to study.
+- LRN-075 [C] Do not treat a well-explained lesson as a substitute for later retrieval.
+- LRN-076 [A] Measure learning with delayed checks, and report them separately from in-lesson results.
+- LRN-077 [B] Treat a challenge pass as evidence of performance on that day, and follow it with a check of understanding.
+- LRN-078 [B] Decide between two versions of a lesson, widget or practice set by delayed and transfer results, not by immediate scores or preference.
+- LRN-079 [C] Offer learners a prediction before a review set and show it beside the result.
+- LRN-080 [B] Make no quantitative claims about learning gains, retention or memory in product or marketing copy.
+- LRN-081 [C] Keep each learner's first attempt at every review item, with its date, as the primary learning record.
+
+## Instructional Design (part-15-instructional-design.md)
+
+- INS-001 [A] Teach every new procedure explicitly; never leave a beginner to discover it unassisted.
+- INS-002 [A] When a learner explores, give the exploration rails: a stated goal, a pointer to the cue that matters, feedback, and a prompt to explain what happened.
+- INS-003 [B] Make every interactive element demand a cognitive act (predict, explain, choose, connect), not only a physical one.
+- INS-004 [B] Put free, hands-on practice after the basics have been taught, not before.
+- INS-005 [B] Fade guidance as the learner gains expertise, and give learners who already know the material a way past supports built for novices.
+- INS-006 [B] Do not judge a lesson by how fast learners finish it.
+- INS-007 [A] Show a complete worked example of each new procedure, with the expected state at every step, before asking the learner to perform it.
+- INS-008 [B] Vary the surface features across worked examples of the same procedure.
+- INS-009 [B] Demonstrate procedures rather than only describing them.
+- INS-010 [B] Ask learners to recognize a correct state before asking them to produce it.
+- INS-011 [B] Fade from worked example to completion task to independent task in steps, not in one jump.
+- INS-012 [B] Annotate the reason for each step in a worked example, not only the action.
+- INS-013 [B] Use mental rehearsal ("picture what you will see") only after the learner has handled the material.
+- INS-014 [B] In a learner's first attempt at a skill, fix every variable the learner is not yet meant to control, and release them one at a time in later attempts.
+- INS-015 [C] Keep the goal of the current task visible throughout the performance.
+- INS-016 [B] Mark the one cue that matters, and show the gap between the learner's result and the target.
+- INS-017 [C] Make failure cheap: a proportionate message, the reason, and a one-step retry.
+- INS-018 [B] Plan the removal of every scaffold at the moment you add it, and remove it when the learner's performance is stable.
+- INS-019 [C] Use checklists and cue cards as scaffolds during performance, and say that they are aids to be outgrown where the real-world practice is to keep using them.
+- INS-020 [B] Build each module around whole flight tasks, grouped into classes from easy to hard, with the learner moving up a class on meeting a stated standard.
+- INS-021 [B] Within each class of tasks, step support down from a demonstrated case to a supported attempt to an unsupported attempt, and treat the unsupported attempt as the assessment.
+- INS-022 [B] Vary the conditions across tasks in a class (airport, runway, wind, time of day, start state) instead of repeating one scenario until it is perfect.
+- INS-023 [C] Keep supportive information (why it works, how the parts relate) separate from procedural information (what to do now), and place each where it is needed.
+- INS-024 [A] Do not split sub-skills that must be done at the same time into separate drills; practice the whole task and shift the emphasis between parts.
+- INS-025 [B] Use part-task drills only for routine sub-skills performed in sequence, and only after the learner has met the sub-skill inside a whole task.
+- INS-026 [B] Specify the whole task a module teaches before writing its component objectives.
+- INS-027 [C] For each module, write the transfer goal and the culminating challenge that proves it before writing or revising its lessons.
+- INS-028 [C] Cut or move any lesson content that does not prepare the learner for an assessed performance.
+- INS-029 [C] Show the learner the criteria for a performance before they attempt it.
+- INS-030 [C] Write every authoring objective with a performance, its conditions and a criterion, and take the criterion's values only from a cited source.
+- INS-031 [B] Keep the learner-facing list of objectives short, phrased as what the learner will be able to do, and visibly connected to the checks that follow.
+- INS-032 [C] Replace vague verbs (know, understand, learn about, be familiar with) with observable actions (identify, set, predict, fly, explain).
+- INS-033 [C] Classify each objective by knowledge type and cognitive process, and make each check item test the same cell as the objective it serves.
+- INS-034 [C] Audit each module for an excess of Remember-level checks and add items at Understand, Apply and Evaluate.
+- INS-035 [C] Use the shared lesson sequence (prepare, show, practice with feedback, apply, review) as a review checklist, and let a short lesson omit steps deliberately.
+- INS-036 [B] Open each lesson after the first with a short retrieval check on the previous lesson's key points.
+- INS-037 [B] Present new material in small steps and put a check (a question, a prediction, a widget task) after each step.
+- INS-038 [B] Ask process questions ("why", "what would happen if", "which would you choose") as well as fact questions.
+- INS-039 [C] Activate the learner's relevant prior experience with a concrete prompt before presenting new content.
+- INS-040 [C] End each procedural lesson with an integration step that sends the learner to apply the skill in a varied setting.
+- INS-041 [B] Make independent practice use the same kind of task as the guided practice that preceded it, and treat a need for long help during independent practice as a sign of missing guided practice.
+- INS-042 [B] Make feedback say what happened, why, and what to change next time; a bare right or wrong is not enough.
+- INS-043 [B] Point feedback at the task and the next attempt, never at the learner's ability, and use praise sparingly.
+- INS-044 [B] Do not let a score lead the feedback; put the comment first and the score second.
+- INS-045 [B] Never rank learners against each other in feedback or progress views.
+- INS-046 [B] Give rich, frequent feedback to beginners on difficult tasks, and move toward summary feedback over several attempts as their performance stabilizes.
+- INS-047 [B] Give feedback after the learner has committed to an answer or an attempt, never before.
+- INS-048 [B] Follow every quiz item with feedback that gives the correct answer and the reason, and write distractors that are plausible but clearly wrong once the feedback is read.
+- INS-049 [C] Do not interrupt a learner in the middle of a maneuver with feedback or prompts; hold feedback for a pause or the debrief, unless safety of the simulated flight is the point.
+- INS-050 [C] Break debriefs into short units, one criterion or question per unit, and phrase in-flight cues as the effect to look for, not the body movement.
+- INS-051 [A] Gate progress on a demonstrated standard, and set the standard high.
+- INS-052 [B] After a failed check, run the corrective loop: identify the specific gap, send the learner to the material for that gap, then retest with a parallel task.
+- INS-053 [B] Allow unlimited retries, with a correction step between attempts, and never penalize a learner for the number of attempts.
+- INS-054 [B] Give a self-paced course explicit structure: a suggested next step, visible pacing, and a path out of a stall.
+- INS-055 [C] Tune quizzes and challenges so that learners succeed on most attempts but not all, and treat a success rate near 80% as a heuristic to check against real data.
+- INS-056 [A] Raise difficulty adaptively, from each learner's results, rather than by a fixed ladder that every learner climbs at the same rate.
+- INS-057 [B] Include checks in novel conditions, because in-course tests overstate transfer.
+- INS-058 [C] Show progress as mastery of named skills, not as one percentage of content completed.
+- INS-059 [C] Diagnose the motivational problem for a specific audience and stage before adding any motivational device, and add none where learners are already motivated.
+- INS-060 [C] Reject any motivational device that takes noticeable instruction time, distracts from the objective, or does not fit the delivery context.
+- INS-061 [C] State the relevance of each lesson in one concrete sentence tied to the learner's next flight.
+- INS-062 [C] Build confidence by stating criteria before the attempt, ordering tasks so each is conquerable, and teaching new skills at low risk before practicing them under realistic conditions.
+- INS-063 [C] Attribute improvement to practice and specific technique, where that is true, in feedback and progress copy.
+- INS-064 [C] Let the learner use each new skill in the sim soon after learning it.
+- INS-065 [C] Where the learner can evaluate their own work, let them do so first, then show the measured or recomputed result beside their rating.
+- INS-066 [B] Justify every format choice (widget, video, diagram, text) by the instructional method it enables, never by the medium itself.
+- INS-067 [B] When LTF compares two designs, hold the method constant and change one thing.
+- INS-068 [B] Judge a new interactive feature only after its novelty has had time to wear off.
+- INS-069 [B] Never cite a league-table effect size or the 0.40 hinge point as the reason for an LTF design decision; cite a primary study or meta-analysis of the specific method.
+- INS-070 [B] Never promise tutor-level or multiplied learning gains in product copy or rationales.
+- INS-071 [A] Measure whether LTF teaches with delayed, unaided checks in new conditions, not with in-session performance.
+- INS-072 [C] State the evidence grade and source type next to any instructional claim in a design rationale.
+
+## Skill, Simulation and the Cockpit (part-16-skill-cockpit.md)
+
+- SKL-001 [C] Design each lesson and challenge for a named phase of the component it teaches, not for a phase of the learner.
+- SKL-002 [C] Never label a learner with a skill stage, and never put hours on a stage in learner-facing copy.
+- SKL-003 [B] Put facts in the lesson and require their use, unseen, in the challenge.
+- SKL-004 [B] Write quiz items that ask for application of a fact, not recitation of it.
+- SKL-005 [B] Present progress so that a flattening curve after early gains reads as normal, not as failure.
+- SKL-006 [C] Tie every early procedure to the situation it serves, and show that situation before asking the learner to memorize the steps.
+- SKL-007 [B] Make each challenge attempt a targeted attempt at named criteria, with feedback on those criteria afterward.
+- SKL-008 [C] Ask the learner for one goal before a fly-mode session and show the result against it at the end.
+- SKL-009 [B] Use varied scenarios, not repetition of one, for decision skills and rare events.
+- SKL-010 [B] Build practice totals from logged sessions, never from self-report or content estimates.
+- SKL-011 [B] Do not headline hours or attempt counts; headline improvement on named skills.
+- SKL-012 [B] Never promise that effort alone guarantees mastery, and never use the 10,000-hour idea in copy.
+- SKL-013 [C] Write every challenge as a complete designed practice activity: goal, criteria, likely errors, a coaching tip, a reflection prompt and a route back to the lesson.
+- SKL-014 [A] Judge whether a lesson or challenge teaches by a delayed, unaided test, never by how smoothly learners perform inside it.
+- SKL-015 [B] Never treat learner preference or satisfaction as evidence that a practice design works.
+- SKL-016 [B] Introduce a new maneuver in a block, then mix it with earlier maneuvers once the learner can complete it.
+- SKL-017 [A] Bring earlier material back at spaced intervals, interleaved with new work, rather than in one review block.
+- SKL-018 [B] Once a learner can complete a challenge in its base setup, vary the setup across attempts.
+- SKL-019 [B] Add difficulty only when it makes the learner retrieve or reconstruct what the real task needs; remove difficulty that does not.
+- SKL-020 [B] Make the final check of each module a challenge flown in the unaided condition the learner will face, with prompts removed.
+- SKL-021 [B] Give beginners on complex maneuvers frequent, specific feedback, and thin it as their attempts become consistent.
+- SKL-022 [B] Offer a summary across several attempts, not only a verdict per attempt.
+- SKL-023 [B] Give one feedback focus per attempt rather than switching what the feedback is about every time.
+- SKL-024 [C] Provide a no-help mode that the learner can choose, labeled in plain words.
+- SKL-025 [B] Show a demonstration of the maneuver before the learner's first attempt at a complex challenge.
+- SKL-026 [B] Word control instructions by their effect on the airplane or the display, not by the body movement.
+- SKL-027 [C] Keep fly-mode instruction short enough that attention stays on the sim, not on the page.
+- SKL-028 [B] Before importing a practice principle, check whether its evidence comes from simple or complex tasks, and treat simple-task results as untested for flying.
+- SKL-029 [B] Give each challenge levels of difficulty, start every learner at the lowest and move up only after a pattern of success.
+- SKL-030 [A] Raise difficulty in response to each learner's results, never on a fixed schedule by lesson number.
+- SKL-031 [B] Offer learners with prior experience a diagnostic challenge or a skip-ahead, and do not force them through supports meant for novices.
+- SKL-032 [B] Start each new maneuver in calm, steady conditions with one thing to control, and add disturbances only after the learner is stable.
+- SKL-033 [C] When a learner fails repeatedly, show a route to an easier version, not a failure screen.
+- SKL-034 [C] Make difficulty levels change the skill demanded (conditions, tolerance, prompts), never only a timer or a score.
+- SKL-035 [A] Segment procedures by time and chain them; do not fractionate components the learner must perform together.
+- SKL-036 [A] After any lesson or widget that isolates one concurrent component, follow it with whole-task practice in which the emphasis moves between components.
+- SKL-037 [B] Follow every single-instrument widget with practice that uses that instrument inside the whole scan, in the sim.
+- SKL-038 [C] Build at least one widget mode that trains moving attention between instruments, not reading one.
+- SKL-039 [C] Report part-skill results and whole-task results separately, so that passing the parts never reads as mastery of the whole.
+- SKL-040 [C] Use the sim's own settings for simplification, and tell the learner which simplification is on.
+- SKL-041 [B] Advance learners on a demonstrated standard, not on pages completed.
+- SKL-042 [C] Present simulator practice as a complement to instruction in an aircraft, never as a replacement for it, and recommend an instructor for real flight.
+- SKL-043 [B] Place each challenge immediately after the lesson that introduces its maneuver, because simulator practice pays most on new tasks.
+- SKL-044 [B] Keep review practice short and tie it to a gap in time, not to repetition of something just mastered.
+- SKL-045 [B] Never state an hours saving, cost saving or percentage benefit for LTF.
+- SKL-046 [B] Do not reward grinding one challenge: after consistent success, say so and offer the next skill.
+- SKL-047 [B] Build practice exercises from an analysis of what flying demands, pair them with explicit strategy instruction, and say what each one trains.
+- SKL-048 [C] Wrap every sim session in instruction: an objective and briefing before, specific feedback after, and a plan for the next attempt.
+- SKL-049 [B] For every widget and challenge, record separately what it reproduces physically and what it reproduces functionally, and design for the functional match first.
+- SKL-050 [C] Do not spend design effort on photorealistic art or replica cockpit chrome that serves no learning goal.
+- SKL-051 [C] Rest progress claims on checks, not on how real the practice felt.
+- SKL-052 [B] Use pictorial rather than symbolic displays when a beginner first meets a flight concept.
+- SKL-053 [B] Use augmented cues (a target band, a predicted path) in early practice and plan their removal before the final check.
+- SKL-054 [C] Make every animated instrument widget move the same element, in the same direction, as the instrument the learner will see in the sim.
+- SKL-055 [C] Open challenges with a short, plausible scenario, and never let the page contradict what the sim shows.
+- SKL-056 [C] State the target state for every checklist item; never let a bare tick stand in for the check.
+- SKL-057 [C] Subdivide any checklist longer than a short screen into named chunks tied to a system or task, each ending in an explicit completion line.
+- SKL-058 [C] Put the most consequential items first, even when that breaks a tidy grouping.
+- SKL-059 [C] Order checklist items by where the learner looks in the sim, and use the panel layout as the diagram in training.
+- SKL-060 [C] Use one name for each control and display across lessons, challenges, checklists and the glossary.
+- SKL-061 [C] Give every procedure a visible "resume here" point and a way to recover from falling behind.
+- SKL-062 [C] Label every checklist as read-do or do-confirm, and tell the learner how to use that kind.
+- SKL-063 [C] Tie each checklist to a named pause point, and show that pause point on the page when it arrives.
+- SKL-064 [B] Design each checklist for real use beside the sim (short, at a defined moment, readable at a glance) and do not claim safety outcomes for it.
+- SKL-065 [C] Let learners add their own reminder to a challenge or checklist, kept separate from the verified items.
+- SKL-066 [C] Treat fly mode and every checklist view as an operating document: test its legibility at the distance, lighting and glance length of real use.
+- SKL-067 [B] Never stack small type, italics, color-only distinctions and low contrast in one fly-mode panel.
+- SKL-068 [C] Give every checklist and procedure view a text-size control and a stable, consistent position for each section.
+- SKL-069 [B] Place values the learner must compare or combine in one step together, and separate values the learner must read alone.
+- SKL-070 [B] Put a plain numeric readout beside any widget that encodes values in a shape.
+- SKL-071 [C] Structure every briefing and fly-mode view in three questions: what to look at, what it means, what happens next.
+- SKL-072 [C] In fly mode, show the current and next step prominently and move completed steps out of the way.
+- SKL-073 [C] Never claim to measure a learner's situation awareness, and never tell a learner they "lost situation awareness".
+- SKL-074 [C] Use three levels for in-app messages during a challenge (act now, act soon, note for later), each with its own treatment, place and word.
+- SKL-075 [C] Reserve the warning red for must-act-now states, and audit every other use of it.
+- SKL-076 [C] Signal every act-now alert through at least two channels, make it acknowledgeable, and never through color alone.
+- SKL-077 [C] Remove an alert or nudge as soon as its condition clears, and say on the page when a type of nudge is switched off.
+- SKL-078 [B] Make nudges and warnings rare enough to mean something, and retire any that learners routinely dismiss.
+- SKL-079 [B] Make challenges require reading the sim; let the page confirm, never supply, what the sim shows.
+- SKL-080 [C] Do not automate the learner's part of a procedure: no auto-ticking, no auto-advancing steps.
+- SKL-081 [C] Show the current mode and place in words, in the same position on every screen, and never change mode without a visible announcement.
+- SKL-082 [C] Look numeric human-factors criteria up in the standard and quote them with their section, never from memory, and record the trade-offs when criteria conflict.
+- SKL-083 [B] Treat a pattern of the same learner error as a design defect to investigate before treating it as a learner deficit.
+- SKL-084 [C] Review every challenge briefing for the four control errors: can the learner pick the wrong control, set it wrongly, forget it, or be unable to find it when needed?
+- SKL-085 [C] Hunt for latent conditions in the product itself: ambiguous copy, inconsistent checklists, alerts that cry wolf, and any mismatch between the page and the sim.
+- SKL-086 [C] Keep confirmations for routine steps in later lessons; never let "mastered" remove the check.
+- SKL-087 [C] In any review screen, show what the learner could see at the time before showing what went wrong.
+- SKL-088 [B] Describe errors by their conditions (time pressure, an ambiguous cue, an interruption), never by blame words such as careless, mistake or pilot error.
+- SKL-089 [C] Persist the learner's place in every flight and make it obvious on return, with undo and safe retry everywhere.
+- SKL-090 [B] Include non-normal practice in each later module, framed as rehearsing recognition and response, with every procedure taken from the aircraft's documents.
+
+## Motivation and Gamification (part-17-motivation.md)
+
+- MOT-001 [B] Before shipping any motivational device, name which of competence, autonomy and relatedness it supports and check that it does not work through pressure, payment or surveillance.
+- MOT-002 [B] Write motivational copy at the identified level: give the reason a step matters for the learner's own flying, never a reward to earn or a loss to avoid.
+- MOT-003 [B] Give a one-sentence rationale wherever the product asks the learner to do something they did not choose.
+- MOT-004 [C] Offer real choices about what to fly next, whether to take a hint and whether to retry, and do not lock content to force a sequence the learner could safely skip.
+- MOT-005 [C] Meet the relatedness need through an instructor's voice and honest normalizing statements before considering any social feature.
+- MOT-006 [A] Do not give points, currency, unlocks or other tangible rewards for opening, doing or finishing a lesson.
+- MOT-007 [B] Never announce a badge, tier or award as the reason to do a lesson or challenge; describe the skill, and let recognition arrive after the attempt.
+- MOT-008 [B] Make every performance tier say which criterion it reflects, and report it after the flight in neutral language.
+- MOT-009 [C] Avoid controlling language around results: no "must", "don't stop now" or "keep it up" in result, dashboard or reminder copy.
+- MOT-010 [B] Never reward speed or volume of practice; reward nothing that a learner could improve by being less careful.
+- MOT-011 [B] Treat the in-sim challenges and widgets as the surfaces where extrinsic devices are most likely to backfire, and keep them free of any reward layer.
+- MOT-012 [C] Never write "gamification" as a goal in a spec; name the mechanic (tier, progress ring, streak, badge) and the need it serves.
+- MOT-013 [C] Put motivational design effort into the in-sim challenges, which are already a game, before decorating web pages.
+- MOT-014 [A] Do not justify a feature by "gamification raises motivation"; any motivational mechanic needs its own hypothesis and its own test in LTF.
+- MOT-015 [B] Judge any motivational feature on data collected after at least several weeks of use, not on its launch week.
+- MOT-016 [B] Do not launch a game layer you are not prepared to keep; removing earned points, badges or streaks can harm the people who valued them.
+- MOT-017 [C] Keep the reference pages entirely free of game elements.
+- MOT-018 [B] Do not show a public leaderboard or any ranking of learners against each other.
+- MOT-019 [D] If a social feature is ever added, frame it as cooperation (shared goals, helping) rather than rank, and make it opt-in and private by default.
+- MOT-020 [C] Make every form of social visibility opt-in, with private as the default.
+- MOT-021 [B] Keep badges few, hard to earn and tied to a demonstrated skill; never award a badge for visiting, streaking or finishing a single page.
+- MOT-022 [C] Present Bronze as a pass and every tier as a level of a stated standard, never as a rank among learners or a grade of the person.
+- MOT-023 [B] Show progress as skills demonstrated, not only as items completed.
+- MOT-024 [C] Replace trophy counts with information: show best result and change over attempts per challenge, not totals of golds.
+- MOT-025 [A] State every challenge goal as specific criteria with defined levels, never as "fly well" or "do your best".
+- MOT-026 [B] For a learner's first attempts at a complex maneuver, set a learning goal (find and use a named cue) before a performance goal (hit a tolerance).
+- MOT-027 [B] Let the learner choose the target level for an attempt, and explain why each criterion matters.
+- MOT-028 [B] Break long challenges into stages that each have their own criterion, so the learner gets feedback per stage.
+- MOT-029 [B] Make safety criteria required and binary, so no tier can be reached by trading safety for score, and never set a goal on time taken.
+- MOT-030 [C] Give every challenge brief four parts in a fixed order: the scenario, why it matters, how it is scored, and what to do if it goes wrong.
+- MOT-031 [C] Keep motivational framing in a brief to a sentence or two; do not let story, encouragement or decoration delay the criteria.
+- MOT-032 [A] Point every piece of result feedback at the flight, not the flyer: no praise or criticism of the person.
+- MOT-033 [B] End every result with one feed-forward step: the single change to try on the next attempt, linked to where it is taught.
+- MOT-034 [B] Add a self-regulation prompt to the debrief: tell the learner how to check their own flight before scoring it.
+- MOT-035 [B] Show change against the learner's own previous attempts on the result screen and in history, criterion by criterion.
+- MOT-036 [B] Lead the result screen with what happened and what to change; keep the overall tier and percentage visible but secondary.
+- MOT-037 [B] Give rich, frequent feedback in a learner's first attempts at a challenge and thin it as their attempts become consistent.
+- MOT-038 [B] Show no evaluative feedback, praise or scoring in Fly mode while the learner is flying; keep all evaluation for the debrief.
+- MOT-039 [C] Follow every quiz verdict with an explanation of why, for right and wrong answers alike.
+- MOT-040 [B] Design the opening of the course so the learner has a genuine, noticed success in the sim early, using scaffolding that is later withdrawn.
+- MOT-041 [B] Make each success visible as evidence: what the learner did, in their own record, not a congratulation.
+- MOT-042 [B] Pair every encouraging claim with an immediate, small, real task that can confirm it; never rely on encouragement copy alone.
+- MOT-043 [B] When showing a worked example of a maneuver, prefer a model who makes and corrects a beginner's mistakes over a flawless expert run.
+- MOT-044 [C] Keep Fly mode calm by default: reserve alarming sound and motion for challenges whose stated goal is handling an event, and never use them for reminders or encouragement.
+- MOT-045 [B] Treat accurate self-assessment as a goal of the debrief, and never reward a high self-score in a way that tempts inflation.
+- MOT-046 [A] Do not add growth-mindset slogans to lessons or results; instead make retrying normal through structure (unlimited retries, no penalty, a visible history of improvement).
+- MOT-047 [B] Give every in-sim challenge the three flow conditions: a goal stated before the attempt, feedback right after it, and a difficulty matched to the learner's current skill.
+- MOT-048 [C] Create challenge through uncertainty in the scenario (conditions, hidden cues, levels of the goal), never through uncertainty in the scoring or the instructions.
+- MOT-049 [B] Raise challenge difficulty adaptively from each learner's results, not in fixed steps set by lesson number.
+- MOT-050 [B] After repeated failure, offer an easier path without hiding the original challenge or marking the learner as failed.
+- MOT-051 [B] Let learners with prior experience skip ahead or take a diagnostic challenge rather than repeat novice supports.
+- MOT-052 [B] Vary the conditions of challenges across attempts and modules, and say once, plainly, that harder mixed practice is meant to feel harder.
+- MOT-053 [B] Show nothing in Fly mode that the flight does not need: no pop-ups, celebratory animations, reminders, sign-up prompts or upsells.
+- MOT-054 [B] Reduce friction before the first success: give a plain, hardware-specific control map and setup, so the learner's first sim minutes are spent flying, not configuring.
+- MOT-055 [C] Use scenario framing that is the task itself (where you are, what the conditions are, what you are trying to do), and never add a story, mascot or character that does not depend on the skill.
+- MOT-056 [A] Keep interesting but non-essential material (history, trivia, anecdotes, decorative imagery) out of the core explanation, and place any such material after it, marked optional.
+- MOT-057 [C] Open lesson sections with a question or case the learner's current understanding cannot yet explain, rather than with a fact or a decoration.
+- MOT-058 [B] Justify a widget or simulation feature by the method it enables (prediction, feedback, practice), not by being interactive or engaging.
+- MOT-059 [C] When learners stall, check ability and prompt before motivation: make the next session small, obvious and ready to start.
+- MOT-060 [B] Do not rely on social-norm or reminder messages to raise return visits; spend the effort on simpler steps and clearer next actions.
+- MOT-061 [B] If a streak is shown, present it as a gain record (days practiced, best run) with no warning of loss, no reset alarm and no penalty, and never make it the most prominent element on a page.
+- MOT-062 [C] Count practice in weeks rather than days for a course used around simulator sessions.
+- MOT-063 [C] Ask for any reminder or notification permission once, in context, with a decline that is as easy as accepting, and never ask again after a decline unless the learner opens the setting.
+- MOT-064 [B] Never use confirmshaming, false urgency, fake activity counts or guilt in any prompt to sign up, return or continue.
+- MOT-065 [C] Review every motivational or retention feature against the five dark-pattern strategies (nagging, obstruction, sneaking, interface interference, forced action) and require a written reason for any match.
+- MOT-066 [C] Describe progress as what is done and what is next, never as what is left to lose or still owed.
+- MOT-067 [B] Write a one-line hypothesis and a success metric for every motivational feature before building it, and make the metric a learning or persistence outcome, not raw activity.
+- MOT-068 [C] Test only large differences, run tests for whole weeks and past the novelty window, and decide small copy and styling questions from principle rather than from underpowered experiments.
+- MOT-069 [B] When LTF measures motivation, use short need-satisfaction items (competence, autonomy, and challenge against skill) and a behavioral persistence measure, not a generic satisfaction rating.
+- MOT-070 [B] For any feature built on a motivational theory, measure the mechanism (for example perceived competence) as well as the outcome, and pre-register both.
+- MOT-071 [B] Show practice totals only from logged activity, labeled as estimates where they are estimates.
+- MOT-072 [C] Record every motivational experiment's result, including nulls and negatives, and remove features that fail their pre-registered test (subject to MOT-016).
+
+## Aesthetics, Emotion and Trust (part-18-aesthetics-trust.md)
+
+- AES-001 [B] Treat a beginner's first judgment of how hard LTF is to use as a reading of its looks and its familiarity, not of its usability.
+- AES-002 [B] Use the familiar form for every control, list and procedure a beginner operates, and spend novelty elsewhere.
+- AES-003 [B] Never accept learner satisfaction with an attractive build as evidence that its flow is usable.
+- AES-004 [B] Separate beauty from goodness in every review: judge identity and appeal on entry surfaces, and judge usefulness on surfaces people return to.
+- AES-005 [B] Expect early ratings from new learners to be generous, and re-measure after several sessions before drawing conclusions.
+- AES-006 [B] Fix task failures before investing in visual refinement on any surface a learner operates under load.
+- AES-007 [B] Ask about appearance and ease as separate questions, and ask them after a task, not from a screenshot.
+- AES-008 [B] When comparing two design variants, make them differ in one quality only, or state which difference is larger.
+- AES-009 [B] Use task measures (completion, time, errors, abandonment) as the primary evidence for any usability claim, and treat ratings as a separate signal.
+- AES-010 [C] Treat frustration as the mechanism to design against on surfaces used beside the simulator.
+- AES-011 [A] Reduce visual complexity on first-contact pages: fewer text groups, fewer image areas, fewer competing regions.
+- AES-012 [B] Run a brief-exposure impression test on every first-contact page before and after a redesign.
+- AES-013 [C] Do not decide lesson structure, widget design or procedure layout from snap-judgment tests.
+- AES-014 [B] Do not design toward award-winning or admired examples; test with the learners you actually have.
+- AES-015 [B] Weight low complexity more, not less, for an audience that includes older adults.
+- AES-016 [C] Never let the first impression promise more than the page behind it delivers.
+- AES-017 [B] Keep the page skeleton of every LTF page typical for a learning product: recognizable page order, standard navigation, conventional reading direction and control behavior.
+- AES-018 [B] Spend novelty on a small number of signature elements, each of which still reads at a glance as the kind of thing it is.
+- AES-019 [C] Choose every surface property (type, color, radius, icon style, elevation) deliberately; never inherit it from a framework default.
+- AES-020 [B] Test a novel component against a typical one with typicality held constant, not against an arbitrary baseline.
+- AES-021 [C] Confine high-complexity displays to places where complexity is the content, and introduce them after a simple frame has been established.
+- AES-022 [B] Lead with classical aesthetics (order, clarity, cleanliness, symmetry) on every surface where learners study or operate.
+- AES-023 [C] Confine expressive aesthetics (originality, special effects, convention-breaking) to moments that are about identity or celebration, never to moments that are about learning or operating.
+- AES-024 [B] Review pages against the four VisAWI facets (Simplicity, Diversity, Colors, Craftsmanship) rather than against "does it look good".
+- AES-025 [C] Treat craftsmanship as a testable property: the same component must look and behave the same everywhere, in both themes and every state.
+- AES-026 [B] When collecting learner ratings of appearance, use a validated multi-item instrument (VisAWI-S or the Lavie and Tractinsky items), and read the result as perception, not usability.
+- AES-027 [C] Translate abstract aesthetic feedback ("looks cheap", "feels generic", "pleasant") into a facet and a specific property before acting on it.
+- AES-028 [B] Maximize perceptual fluency for everything a learner reads under time pressure or divided attention: high figure-ground contrast, clear type, aligned and predictable layout.
+- AES-029 [B] Set procedures, checklists and challenge briefings in plain, highly legible type so they look exactly as hard as they are.
+- AES-030 [B] Write lessons and interface copy in plain words; never add complexity to sound authoritative.
+- AES-031 [B] Remove extraneous sources of reading difficulty that a learner could not attribute to their real cause.
+- AES-032 [C] Use fluency to remove avoidable friction, not to remove content or richness the learner needs.
+- AES-033 [A] Keep LTF's visual vocabulary consistent across every page so that repeated exposure builds familiarity and liking.
+- AES-034 [B] Within a stable frame, vary the format and rhythm of lesson content so that no long run of identical material occurs.
+- AES-035 [B] Do not repeat the same prompt, decoration or celebration identically and indefinitely.
+- AES-036 [C] Keep instrument drawings consistent across lessons, challenges, reference pages and Fly mode, and consistent with what the learner will see in the simulator where the teaching goal allows.
+- AES-037 [B] Measure reactions to a visual change after several sessions, not only on first view.
+- AES-038 [C] Never treat liking produced by familiarity as evidence of learning.
+- AES-039 [C] Review every LTF surface at the visceral, behavioral and reflective levels, and decide which level dominates it before deciding how it should look.
+- AES-040 [C] Never use desire ("I'd use this", "I love it") as the test of a design.
+- AES-041 [B] Prefer a warm, coherent, moderately saturated palette in learning graphics over grayscale, provided legible contrast is kept and no color is garish.
+- AES-042 [A] Keep interesting but irrelevant material out of core explanations; if it stays, put it after the core idea, in clearly optional form.
+- AES-043 [B] Allow pictorial decoration in a learning graphic only when it is tied to the message, and never in a display read for values under workload.
+- AES-044 [B] Aim for material that feels approachable to beginners, and check that it is not merely feeling easy.
+- AES-045 [C] Keep celebration brief, earned and specific to what was achieved.
+- AES-046 [B] Treat visual consistency and finish on lesson and reference pages as a credibility requirement, not a cosmetic one.
+- AES-047 [C] Make every fact on a lesson or reference page verifiable from the page: show its sources, the date it was last verified, and the simulator version it was checked against.
+- AES-048 [C] Show who writes and checks the content, and how to reach them, in a place a learner will find.
+- AES-049 [C] Allow no small errors on learner-facing pages: no typos, broken links, placeholder text, broken states or mismatched themes.
+- AES-050 [C] Keep promotional content out of the reading path of a lesson.
+- AES-051 [C] Match the look of each page to its purpose: plain and exact for procedures, warmer for invitation, never corporate and never toy-like.
+- AES-052 [C] Make each credibility cue prominent enough to be noticed at the moment it matters.
+- AES-053 [C] Never let visual polish signal a level of verification that has not happened: unverified content must look visibly and consistently different from verified content.
+- AES-054 [C] Make every honesty statement the product makes consistent with every other.
+- AES-055 [C] Keep warnings rare enough to mean something, and retire any warning or nudge that learners routinely dismiss.
+- AES-056 [C] State the limits of the app's own checks wherever the app scores, confirms or advises.
+- AES-057 [B] Teach with simplified, caricatured instrument and cockpit drawings, and use real simulator screenshots for orientation (where to look), not for explanation.
+- AES-058 [B] Do not accept "this looks great" or "this looks just like the real thing" as evidence that a display teaches.
+- AES-059 [C] Label every simplification as a simplification, at the place the learner meets it.
+- AES-060 [C] Never use visual emphasis, hierarchy or polish to steer a learner against their own interest.
+- AES-061 [C] Make every badge, tier and celebration say what it is and, where a learner could misread it, what it is not.
+- AES-062 [B] Recruit test participants from the intended audience, including older adults and people who have never flown, not only from experienced simmers or the team.
+- AES-063 [B] Never use a single-item "how good does this look" or "how easy does this look" rating as evidence for a design decision.
+- AES-064 [C] Run every appeal, credibility and complexity check in both themes and at phone and desktop widths.
+- AES-065 [B] Use a computed complexity or clutter count to flag pages for review, and never as a pass or fail threshold.
+- AES-066 [C] Keep a baseline: record each first-contact page's glance rating, facet scores and task results before a redesign, and compare after.
+- AES-067 [C] Ask credibility questions with an open "why", and treat the reasons as data about which cues were noticed.
+
+## Decisions, Persuasion and Dark Patterns (part-19-decisions-dark-patterns.md)
+
+- DEC-001 [C] Give every lesson and challenge a visible standard for "good enough" before the learner starts.
+- DEC-002 [C] Where the learner must decide what to do next, show one recommended action and a short list of alternatives, not the whole catalog.
+- DEC-003 [B] Teach decisions as a few cues in order of importance with an explicit stopping point, not as a long list of factors to weigh.
+- DEC-004 [C] Do not merge qualities that share no unit (time, difficulty, topic, interest) into a single score; show each dimension.
+- DEC-005 [C] Prefer plain counts to composite indices on progress screens.
+- DEC-006 [C] State what a simplification leaves out wherever the product simplifies.
+- DEC-007 [B] Show only numbers that bear on the decision at hand, and put the decision-relevant number first.
+- DEC-008 [B] In quizzes, never place an unrelated or misleading number in the question stem, and order numeric answer options ascending.
+- DEC-009 [C] Show benchmarks and typical results as ranges, not single points.
+- DEC-010 [B] Pair every vivid incident example in a lesson with context on how often it happens, from a source, or a plain statement that the frequency is not known.
+- DEC-011 [D] Do not build any feature whose value depends on behavioral priming.
+- DEC-012 [C] When a quiz distractor is a common intuitive error, the feedback must say why it is attractive and what the intuition misses.
+- DEC-013 [C] Test whether showing the score preview only after every required criterion is rated changes self-ratings, and keep the preview hidden during rating if it does.
+- DEC-014 [B] Choose the frame that matches the true message, and keep it consistent across a lesson or flow; never pick a frame because it moves a metric.
+- DEC-015 [C] Do not use loss frames ("you'll lose your progress", "don't break your streak") to drive return visits or sign-ups.
+- DEC-016 [C] Keep quiz polarity constant within a set: do not mix "which is correct" and "which is NOT correct" items about the same fact.
+- DEC-017 [B] When a lesson describes a risk or an outcome rate, state it as a count with its base ("n of N"), not only as a saved or lost share.
+- DEC-018 [C] Present the whole cost of a task in one account: time estimates include the sim time and setup the task requires, and any future price includes every mandatory fee.
+- DEC-019 [C] Review any copy that borrows real-world credentials or examinations so that its net impression stays inside the simulator.
+- DEC-020 [A] Set every default to the option a well-informed learner would choose for themselves, and set privacy, sharing and contact defaults to the more private option.
+- DEC-021 [B] Never preselect an answer in a quiz or a rating in a self-assessment.
+- DEC-022 [B] When a default is a recommendation, say so in the interface and say why.
+- DEC-023 [C] Make every default changeable with one action at the place where the default applies.
+- DEC-024 [C] Ask for consent with an unticked box or a separate button the learner must actively choose, never with a pre-ticked box or a bundled clause.
+- DEC-025 [C] Start every setup screen from settings that have been tested for the beginner's situation, because most learners will keep them.
+- DEC-026 [B] Do not forecast a large effect from a new default; plan for the smaller, variable effect the meta-analytic evidence shows.
+- DEC-027 [B] Do not cap the length of a list by a rule of thumb; decide each list's length from what the learner is doing on that screen.
+- DEC-028 [D] Where several overload moderators stack (unfamiliar options, a hard or timed decision, a learner unsure what they want, a final choice), reduce the set and lead with one recommendation.
+- DEC-029 [C] When options must be compared, describe them on the same few attributes in the same order.
+- DEC-030 [C] Give a learner who does not yet know what they want a "not sure yet" route that does not force a final choice.
+- DEC-031 [C] Give every long list a filter or grouping by purpose, and show how many items the current filter leaves.
+- DEC-032 [C] At the end of a lesson, make exactly one next action primary and present the others as secondary.
+- DEC-033 [C] Before cutting or splitting any list, check LTF's own completion and drop-off data for that list.
+- DEC-034 [C] Offer no menus or settings choices during a flight on `FlyModePage`; every choice is made before the learner starts flying.
+- DEC-035 [B] Do not plan or justify a design on a forecast lift from a nudge; expect a small effect or none, and test if the decision matters.
+- DEC-036 [B] Do not rely on information-only nudges such as "most learners finish this module" or "join 2,000 pilots" to change behavior.
+- DEC-037 [B] Spend design effort on making the next step easier and clearer before spending it on messages meant to motivate.
+- DEC-038 [C] Ship a nudge only if it removes no option, is as easy to avoid as to follow, and can be explained to the learner in one sentence they would agree with.
+- DEC-039 [C] Where a prompt supports a safety habit, justify it by the value of the habit, not by a claimed percentage improvement.
+- DEC-040 [C] Define every engagement metric in terms of the learner's goal, and drop any nudge whose only effect is on a metric the learner does not care about.
+- DEC-041 [C] Make every exit at least as easy as the matching entry: deleting an account, exporting data, unsubscribing and cancelling take no more steps, and no other medium, than signing up.
+- DEC-042 [C] Put no retention offers, surveys, "are you sure?" chains or guilt copy between a learner and leaving.
+- DEC-043 [C] Add friction only where it protects the learner from an irreversible mistake, word it neutrally, let the learner proceed, and record the reason in the pull request.
+- DEC-044 [C] Collect only the data a lesson or feature needs, and say on the form what each field is for.
+- DEC-045 [C] Preserve the learner's place and work across every detour the product imposes (sign-up, log-in, errors, reloads).
+- DEC-046 [C] Allow no step in Fly mode that does not serve the flight in progress.
+- DEC-047 [C] Keep a ledger of every deliberate friction in the product, and audit it in each release for entries that sit on exits or serve a metric.
+- DEC-048 [C] Review every new or changed flow against the five strategies (nagging, obstruction, sneaking, interface interference, forced action), and require a written reason for any design that falls under one.
+- DEC-049 [C] Test every new control with five questions (is it asymmetric, covert, deceptive, information-hiding, restrictive?) and require a written reason for any yes.
+- DEC-050 [B] Write decline options as plain, neutral words on a control of the same size and form as the accept option; never shame the learner for declining.
+- DEC-051 [B] Show no countdown, deadline, scarcity or "others are viewing" message unless it is literally true and its basis is stated.
+- DEC-052 [C] Use social proof only from real, current counts, and label any fallback figure so it is never presented as live.
+- DEC-053 [C] Audit every third-party script, embed or widget for built-in dark patterns before it ships, and again when it updates.
+- DEC-054 [C] Once a learner declines or dismisses a prompt, do not show it again unprompted; show it again only in response to an action that needs it.
+- DEC-055 [B] Never use hidden information, obstruction or trick-question wording on any consent, account, data or payment screen.
+- DEC-056 [B] Treat a large lift from a variant that hides terms, adds steps to declining or uses loaded wording as evidence of manipulation, not as a win.
+- DEC-057 [B] Test persuasive and consent copy with the least experienced readers in the audience, not only with the team.
+- DEC-058 [C] Judge every page by its net impression: what a beginner would believe after reading it, not whether each sentence is literally true.
+- DEC-059 [C] Make every disclosure as legible as the content around it: at least body contrast, in the reading path, visible without scrolling past the action it qualifies, in both Day and Night themes.
+- DEC-060 [C] If LTF ever charges for anything, disclose the price, billing frequency and trial end before asking for payment details, include all mandatory fees in the first price shown, require an affirmative click to consent, and offer cancellation in the same place and number of steps as sign-up.
+- DEC-061 [C] Keep honesty signals (draft and unverified badges, verification dates, the beta banner, disclaimers) visible and specific, and never trade one away for a conversion gain.
+- DEC-062 [C] When learners stall at a step, diagnose motivation, ability and prompt in that order of questions, and fix ability first: make the step smaller, give a tool, or make the next action obvious.
+- DEC-063 [C] Never prompt a learner at a moment when their ability is low, and above all never while they are flying the sim.
+- DEC-064 [C] To build a habit, start from a very small, easy behavior, and measure whether it holds rather than assuming the model predicts it.
+- DEC-065 [B] Make feedback on attempts informational (what went well, what the numbers show, what to try next) and never controlling ("you must", "keep it up or lose it").
+- DEC-066 [B] Award tiers and badges for demonstrated competence, with the competence named, and never as a currency for engagement or for simply finishing.
+- DEC-067 [B] Show no public leaderboard; compare each learner only with their own earlier attempts.
+- DEC-068 [B] Use no streaks, deadlines or guilt messages to bring learners back.
+- DEC-069 [B] Give the reason a step matters wherever the product asks the learner to do something effortful.
+- DEC-070 [C] Before shipping any design meant to change what learners do, write one sentence telling the learner what it does to their decision, and ship it only if a learner reading that sentence would agree it serves them.
+- DEC-071 [A] Treat any published behavioral effect as an upper bound, and plan for an effect about half its reported size or smaller.
+- DEC-072 [C] Record the evidence type behind every behavioral claim used in a design decision: single study, replicated, meta-analysis, field trial or regulatory guidance.
+- DEC-073 [B] Before any LTF experiment starts, write down the single success metric, the sample size rule, the stopping date and the variants, and store that note with the result.
+- DEC-074 [B] Compute the sample needed to detect a plausible effect before testing; if LTF cannot reach it, decide from principles and learner sessions instead of running the test.
+- DEC-075 [B] Report every variant and metric tried, and report null results with the same prominence as wins.
+- DEC-076 [B] Measure learning and the learner's goal, not only engagement, in any test of a persuasive feature.
+- DEC-077 [C] Hold LTF's own claims to learners about what the product achieves to the same standard: no promised outcome, percentage or comparison without LTF's own data behind it.
+
+## Brand Identity and Distinctiveness (part-20-brand-identity.md)
+
+- BRD-001 [B] Spend identity effort on being recognizable, not on claiming superiority.
+- BRD-002 [B] Keep page structure typical and put novelty in identity layers: mark, type voice, color use, drawings and language.
+- BRD-003 [C] Audit every default the product inherits and decide, one by one, whether it serves structure or should carry identity.
+- BRD-004 [C] Record every change of identity direction as a decision, and finish or reverse it everywhere.
+- BRD-005 [C] Design separate cues for recall (name and phrase) and for recognition (mark, color, type), and check each where it is used.
+- BRD-006 [C] Write down LTF's intended associations in Keller's categories and mark which are unique to LTF.
+- BRD-007 [B] Sign every lesson, challenge and reference page so that the learner always knows which product taught them, instead of searching for one perfect brand promise.
+- BRD-008 [A] Do not read low return rates in a small product as proof that the identity or the lessons have failed.
+- BRD-009 [C] Make every outward-facing surface attributable to LTF before any of its text is read.
+- BRD-010 [C] Name lessons, reference sections and share titles after the situations in which a beginner needs them.
+- BRD-011 [C] Treat an identity element as a brand asset only once learners link it to LTF without being prompted; until then treat it as a candidate.
+- BRD-012 [C] Choose candidate assets that could be unique in aviation education, and reject elements already shared with many flight sites.
+- BRD-013 [C] Give the horizon line a written usage rule and keep it: one teal line that marks where you are and what is done, nowhere else.
+- BRD-014 [C] Never borrow a status color to carry brand or decoration.
+- BRD-015 [C] Keep a written register of candidate assets with their exact specification, and add or retire entries only by recorded decision.
+- BRD-016 [C] Show the mark beside the name wherever space allows, because a descriptive name alone does not identify LTF.
+- BRD-017 [B] Make LTF's mark natural (a depicted, familiar object), harmonious and moderately elaborate.
+- BRD-018 [B] Check a harmonious, simple mark for false recognition against competitors' marks before committing to it.
+- BRD-019 [B] Keep the mark descriptive of flying while LTF is unknown, and simplify only after learners recognize it.
+- BRD-020 [B] Keep negative flying imagery out of the mark, the favicon, the share card and the first screen.
+- BRD-021 [C] Require the mark to work in one color, at 16 pixels, and on both Day and Night grounds without redrawing.
+- BRD-022 [C] Do not load the mark with claims; let lessons earn its meaning.
+- BRD-023 [C] Draw the mark once and generate every size and file from that one drawing.
+- BRD-024 [C] Specify LTF's perceptual patterns (type voice, color use, shape vocabulary, drawing style, icon style, voice) as a separate, named layer from its components.
+- BRD-025 [C] Review key screens as whole compositions, asking which holistic type they read as, not only whether each token is correct.
+- BRD-026 [D] Aim LTF's compositions at a calm, refined ("delicate" and "natural") register suited to competence and sincerity, and test that learners read it that way.
+- BRD-027 [C] Give LTF one type voice that appears only in brand moments (display headings, the landing h1, share cards, result screens), and keep body text in a legible workhorse face.
+- BRD-028 [C] Use one heading system everywhere so the type voice repeats identically.
+- BRD-029 [C] Choose and defend LTF's brand color by its role and its distinctness from competitors, not by color-psychology charts.
+- BRD-030 [C] Derive LTF's shape vocabulary (radii, stroke weights, the diagonal) from the mark and the instruments, and apply it to components, icons and widgets alike.
+- BRD-031 [A] Repeat LTF's small signature cues identically on every surface: mark, horizon line, title format and readout numerals.
+- BRD-032 [B] Vary the large, repeated content structures across a course so that repetition does not turn into monotony.
+- BRD-033 [C] Hold the brand's signature constant and let each surface's layout follow its task.
+- BRD-034 [C] Never change an aviation convention to make the interface more distinctive.
+- BRD-035 [C] Name a custodian for the identity and put its rules where every contributor, human or agent, will read them.
+- BRD-036 [C] Assign every identity element to a pace layer and change slow layers only by recorded decision.
+- BRD-037 [C] Build LTF's recurring surfaces from a small kit of sizes derived from one unit, so that layouts cannot drift.
+- BRD-038 [C] Specify the small details that make text recognizable and glanceable: line lengths, heading lengths, items per list, label case.
+- BRD-039 [C] Test identity rules in the conditions of use and revise them when they fail there.
+- BRD-040 [C] Draw identity ideas from the subject's own artifacts (checklists, handbooks, charts, panels, kneeboards, liveries) before borrowing from other software.
+- BRD-041 [C] Pass every new identity surface through three questions: what it means to a beginner pilot, whether it uses the shared structure, and whether a first-time learner understands it unaided.
+- BRD-042 [C] Complete the missing identity phases in order: a recorded competitor audit, a one-page identity strategy, then touchpoint and asset management.
+- BRD-043 [C] Treat LTF's construction rules (how pages, instruments and lesson paths are built) as the main identity, with the mark as one element of it.
+- BRD-044 [D] Use a brand personality only as an internal tool for consistent voice and register, not as a promise to learners or a predictor of sign-ups.
+- BRD-045 [C] Treat honesty about verification and limits as a signature of the LTF brand, and give it a consistent visual form.
+- BRD-046 [C] Write a short voice guide of concrete rules instead of a personality description.
+- BRD-047 [C] Keep the default register calm and competent, and reserve celebratory energy for earned results.
+- BRD-048 [C] Do not add a mascot or character to inject personality.
+- BRD-049 [C] Assign each touchpoint an explicit identity job, and design brand expression to the attention it gets.
+- BRD-050 [B] Put one unmistakably LTF element in the first view of the landing page, inside a simple, typical layout.
+- BRD-051 [C] In Fly mode and lesson bodies, limit brand expression to a quiet signature: the horizon line, the type voice and the readout numerals.
+- BRD-052 [C] Design the result card and course completion as LTF's signature compositions, and make them shareable with the brand intact.
+- BRD-053 [C] Give empty, error and not-found states the LTF voice and at least one LTF-specific visual cue.
+- BRD-054 [B] Do not accept a team's or a panel's preference as evidence that an identity works; measure recognition and attribution.
+- BRD-055 [C] Test candidate assets with open, unprompted questions and the name hidden, and record competitor mentions as well as LTF mentions.
+- BRD-056 [B] Measure the mark's true and false recognition with brief exposures and aviation distracters before treating it as final.
+- BRD-057 [B] Run a brief-exposure test of key screens against competitors, and ask which screens look alike as well as which look appealing.
+- BRD-058 [C] After a first session, ask new learners to describe LTF in their own words, and check whether the description could apply to any other course.
+- BRD-059 [B] Measure reactions to a new identity after several sessions, not only at first view, and compare behavior with LTF's own history.
+
+## Design Systems, Process and Craft (part-21-systems-process.md)
+
+- SYS-001 [C] Define the LTF design system as three things kept together: written standards, shared components, and a named process for changing them.
+- SYS-002 [C] Record functional patterns (what a part does) separately from perceptual patterns (how the product looks and feels), and change each layer on its own.
+- SYS-003 [C] Use the atom, molecule, organism, template and page levels as shared vocabulary for scale, and do not reorganize folders or hold reviews around which label a part deserves.
+- SYS-004 [C] Treat no page template as done until it has been rendered with real LTF content at its extremes, in both Day and Night themes, at phone width and at the desktop width used beside the sim.
+- SYS-005 [C] Write five to eight LTF design principles, each specific enough to settle a real dispute, and cite them in design decisions and pull requests.
+- SYS-006 [C] Keep one design-system README in the repository that states the principles, every token's role and usage, and the contribution process, and make every code comment that cites a design source point to it.
+- SYS-007 [C] Write each recurring LTF pattern in a fixed form: name, context, problem, solution, links to the patterns that contain it and that it contains, and a confidence label.
+- SYS-008 [C] Label every LTF design rule and pattern with its evidence level (experiment, standard, craft opinion, or untested LTF hypothesis) and revisit the label when learner data arrives.
+- SYS-009 [C] State LTF patterns as human behavior and perceivable result ("the learner can always return to the step they were on"), not as a component name, so that a pattern outlives any one implementation.
+- SYS-010 [C] Check the LTF pattern collection against four tests: a reader can find a pattern, find its neighbors, see it from another standpoint (learner, author, engineer), and extend it to a new case.
+- SYS-011 [C] Keep antipatterns beside patterns: record each recurring LTF failure (for example quiz feedback a learner misread) with the context in which it appeared.
+- SYS-012 [C] For every shared LTF component, record its intent, when to use it, when not to, its consequences (what it costs and constrains), and its known uses in the product.
+- SYS-013 [C] Before writing a new abstraction, check whether React, Tailwind, Radix or TanStack Query already provides the mechanism.
+- SYS-014 [C] Compose widgets from small primitives with narrow props rather than extending one large widget with flags.
+- SYS-015 [C] Give every visual code in LTF (a color, an icon, a border style, a badge) one documented meaning, and remove any code that means nothing.
+- SYS-016 [C] Name every color, space, radius, shadow and type token by its role, and implement each theme only as a different mapping of values to the same roles.
+- SYS-017 [C] Keep three tiers of tokens: raw palette values, semantic roles that alias them, and component tokens only where one component needs a value no role covers.
+- SYS-018 [C] Make the token scale the only scale: reset or restrict Tailwind's default type sizes, weights and tracking, and fail lint on arbitrary bracket values outside an allowlist.
+- SYS-019 [C] Keep spacing on the existing 4 px grid and add no spacing value that is not a multiple of 4.
+- SYS-020 [C] Keep LTF tokens structurally compatible with the 2025.10 token format (name, type, value, description, aliases), but keep `tokens.css` as the working source until a second consumer needs a JSON file.
+- SYS-021 [C] Retire a token by marking it deprecated and naming its replacement for at least one release before removing it.
+- SYS-022 [C] Define the surface layers as an explicit ordered list in both themes, with a visible step between each layer and the one beneath it.
+- SYS-023 [C] Write the interaction state rules once (hover, pressed, selected, focus, disabled) as offsets or tokens, and apply them to every control.
+- SYS-024 [C] Check every text, focus and graphical token pair against WCAG directly and record the measured ratio beside the token, rather than relying on any design system's stated figures.
+- SYS-025 [C] Store motion as typed duration and easing tokens, so that reduced motion and Fly mode can swap one set of values.
+- SYS-026 [C] Justify every LTF pattern and every consistency rule by the learner task it serves, and write that task into the pattern entry.
+- SYS-027 [B] Spend consistency effort first where an error costs the learner most: checklist rows, quiz answer controls, rubric scoring and Fly mode controls.
+- SYS-028 [B] Fix one name for each LTF concept and control (lesson, challenge, module, step, Brief, Fly, Debrief, each callout type) and use only that name in interface copy, content and code.
+- SYS-029 [C] Where LTF's internal style conflicts with how the simulator or the real aircraft presents something, follow the simulator or aircraft, as confirmed by a cited aviation source, and record the exception.
+- SYS-030 [C] Allow any page or component to depart from an LTF pattern when its task differs, on condition that the reason is written next to the departure (in the pattern entry and in a code comment).
+- SYS-031 [C] Before adding a design standard, state in one line what it saves learners and what it costs authors and engineers, and drop standards whose cost exceeds their saving.
+- SYS-032 [C] Run an interface inventory of every distinct heading style, card, button, badge, icon size and stroke, radius and text color in use, and record a keep, merge or remove decision for each variant before adding any new component.
+- SYS-033 [C] Assign every design decision to a layer (principles and tokens, components and templates, content and copy) and change the slow layers only through a Decision Log entry, never to suit one lesson.
+- SYS-034 [C] Let content reach presentation only through a small, stable set of block types, so that a redesign of the shell never requires editing lessons.
+- SYS-035 [C] Keep simulator-specific wording and aircraft values in the thinnest layer available (tokens and data files), so that a simulator update changes one file rather than many lessons.
+- SYS-036 [C] Promote a part to `src/components/` only when a second, different page needs it; until then keep it in its feature folder.
+- SYS-037 [C] Admit a new shared component, block type or token group only if it passes five checks: Useful (two or more real uses, linked), Unique (no existing part does the job), Usable (tried by at least a few beginners plus a keyboard and screen-reader pass), Consistent (built from existing tokens and parts), Versatile (works in Day and Night, at phone width, beside the sim and in print where relevant).
+- SYS-038 [C] Build experimental components and widgets in a separate incubation area and move them into the stable system only after they pass the contribution checks.
+- SYS-039 [C] Give every shared component four short pieces of guidance (usage, visual style, code example, accessibility notes) and keep them next to its live states on `/dev/components`.
+- SYS-040 [C] Record every design-system change (a token value, a component's appearance or API, a retired pattern) as a `CHANGELOG.md` line, and mark changes that alter existing pages as breaking.
+- SYS-041 [C] Name one person accountable for the LTF design system, and one for each major surface (lesson page, challenge and Fly mode, reference, landing), with authority to accept or reject changes for coherence.
+- SYS-042 [C] Write the system's rules so that someone who is not a designer, including a Claude agent, can apply them correctly without asking, and wire the checkable ones into `/ltf-review` and lint.
+- SYS-043 [C] Improve the LTF interface by continuous, recorded steps on a live system, and do not plan a wholesale redesign that replaces it.
+- SYS-044 [C] Give every LTF design effort an explicit, external stopping rule (a release, a lesson count, a behavioral target) and record when the result is accepted as good enough.
+- SYS-045 [C] Before designing a remedy for a learner error, write down which explanation of the error you have chosen and why, since a different explanation would lead to a different fix.
+- SYS-046 [C] Treat publishing aviation content as the one irreversible step in LTF's process and gate it with verification, while treating screens and layouts as cheap to try and revise.
+- SYS-047 [B] Draft an early solution before the requirements are complete, and use it to find out what the problem is.
+- SYS-048 [C] Keep a one-paragraph problem statement at the top of every design brief and lesson draft, and rewrite it whenever the draft changes what the problem is.
+- SYS-049 [C] Choose one organizing idea (a primary generator) for each major surface early, and judge later decisions by whether they serve it.
+- SYS-050 [C] Open every design brief with its constraints and its scarcest resource, and budget the design against that resource.
+- SYS-051 [C] State the target learner concretely in every brief, even if the description might be wrong, rather than describing a vague "user".
+- SYS-052 [B] Make at least three genuinely different directions for any new LTF surface or widget, and get critique on the set before refining any one of them.
+- SYS-053 [B] When testing a new LTF design with learners, show two or three stylistically different versions in the same session, and treat ratings of a single version as an upper bound.
+- SYS-054 [B] Ask test participants to find problems and choose between versions, and leave the fixes to the designer.
+- SYS-055 [C] Build the alternatives in a comparison to the same rough fidelity, so that polish does not decide between them.
+- SYS-056 [C] Run idea generation and evaluation as separate sessions: no critique while options are being generated, and no new options while choosing, with the choosing criteria written before the options are seen.
+- SYS-057 [C] Turn every promising direction into a runnable demo within days, and show it to the people who will use it, recording what happens rather than asking for approval.
+- SYS-058 [C] Keep "right design" work (diverging and choosing) and "design right" work (accessibility, copy, edge cases, performance) as separate stages in the plan, and do not polish before the direction is chosen.
+- SYS-059 [C] Test flows that depend on simulator state with a person playing the simulator's part before building any integration.
+- SYS-060 [B] Give critique on sets of alternatives where possible, and keep it descriptive and tied to the brief's stated goals rather than to the author.
+- SYS-061 [C] Have someone other than the author of a design name what it does wrong before it ships, and make that a standing step, not an occasional favor.
+- SYS-062 [A] Never treat one reviewer's list as the problems of a page or component: collect independent lists from several reviewers against written tasks and problem criteria, then merge.
+- SYS-063 [C] Decide between design options by writing the criteria and then a short reasoned judgment, not by a weighted score.
+- SYS-064 [C] For every design requirement that is easy to measure, name the harder quality it stands in for and check that quality directly.
+- SYS-065 [B] Judge a design change by at least one behavioral measure (task completion, error, hesitation, time to find a control) alongside expert or owner judgment, and investigate when they disagree.
+- SYS-066 [C] Show progress and readiness at the precision the evidence supports, and prefer coarse, labeled bands to percentages that imply false accuracy.
+- SYS-067 [C] When a reviewer judges that something "feels wrong", find and write down the reason as a checkable rule, and add it to the design-system README.
+- SYS-068 [C] Choose a short list of exemplars specific to LTF's job (well-made checklists, instrument displays, printed flight manuals, charts, field guides) and study them closely, instead of collecting many web products in the same category.
+- SYS-069 [C] Make the workmanship of certainty cover every error that would mislead or endanger a learner: typed content schemas, tokens for aircraft values, shared components for callouts and checklists, and automatic validation.
+- SYS-070 [C] For every part of a page that no rule can check (wording, pacing, the choice and drawing of a diagram, the glance target in Fly mode), write the attention step into the process: who checks it, how, and at what size.
+- SYS-071 [C] Set, in each design brief, the point at which polish stops, and spend remaining effort on the surfaces learners use most.
+- SYS-072 [C] Review each major LTF surface against Rams's principles translated into concrete questions (does every element help the learner act now; can a first-time learner tell what a control does; does the interface recede while the sim is flying; does anything overstate; is every detail deliberate; what could be removed), and record answers, not scores.
+- SYS-073 [C] Never let LTF's interface overstate what the product is or what the learner has achieved, and keep honesty markers (beta, draft, unverified, not a pilot certificate) as designed elements rather than small print.
+- SYS-074 [C] Limit LTF to a small, named set of type styles and let differences in size, weight, space and alignment carry meaning; every additional style needs a job no existing one does.
+- SYS-075 [C] Separate the inherent complexity of flying, which lessons must teach, from complications the interface adds, and remove the complications.
+- SYS-076 [C] Design and review the empty, error, loading and first-use states of every LTF page with the same care as its main state, and give each state wording and form specific to its page.
+- SYS-077 [C] Keep a short, living list of LTF detail checks (units on every number, MSL or AGL on every altitude, no placeholder text, tokens for every aircraft value, simulator names spelled as the simulator spells them, no em dashes in learner copy) and run it on every content and page change.
+- SYS-078 [C] Run LTF's routine design work as hill climbing (observe, prototype, test, refine), and schedule a separate, deliberate review of the frame at each phase boundary of the plan.
+- SYS-079 [C] Look for LTF's frame changes in new technology (live simulator data, the second screen) and new meaning (what a lesson is for a beginner beside the sim), not in tests of the current layout.
+- SYS-080 [C] Judge an early prototype of a new frame against its potential and against what would make it work, not against the polished version of the current frame.
+- SYS-081 [C] Require any proposed novelty in LTF to name the learner problem it solves; reject novelty whose only purpose is to look different.
+- SYS-082 [C] Before merging a local design fix, ask what larger problem the symptom belongs to, and if the fix entrenches it, record the larger problem as an issue instead of only patching.
+- SYS-083 [C] Keep a written record of design decisions and their rationale, including rejected options, so that later changes can see what was traded away.
+
+## Motion and Perceived Performance (part-22-motion-performance.md)
+
+- MOV-001 [C] Give every animation a stated purpose: showing how an old state became a new one, showing that work is in progress, or depicting the thing being taught.
+- MOV-002 [C] Name the role a motion plays from the Chevalier taxonomy, and treat engagement and persuasion roles as needing a stronger case than orientation, tracking, progress and teaching roles.
+- MOV-003 [B] Before animating a process, check that learners can perceive it at the chosen speed and that its motion matches how they think of the process, usually as a few discrete steps.
+- MOV-004 [B] Never make motion the only carrier of a fact; the end state must show everything the motion showed.
+- MOV-005 [C] Animate one thing at a time on a given screen, and keep everything else still while it moves.
+- MOV-006 [C] Spend motion character only on moments of achievement and on instrument-like widgets; keep all other interface motion short, quiet and uniform.
+- MOV-007 [C] Make user-started changes fast, and give system-started changes a cue before or as they happen.
+- MOV-008 [C] Do not use squash and stretch, follow-through wobble, bounce or exaggeration on instruments, checklists, scores or any element that represents a real quantity or procedure.
+- MOV-009 [C] Move mechanical things mechanically: rotate needles about their pivot, translate tapes in straight lines, and follow the geometry of the instrument being drawn.
+- MOV-010 [C] During a drag, keep the dragged element under the pointer on every frame, and drop rendering detail before dropping frames.
+- MOV-011 [C] Never block input while an interface animation runs; a click or key press during a transition cancels or completes it at once.
+- MOV-012 [B] For a transition of about a second in which the learner must follow an element from one place to another, use slow-in/slow-out (ease-in-out) pacing.
+- MOV-013 [C] Use the `ease-out` token for entrances and the `ease-in` token for exits, at no more than about 200 ms, and never use them for movement the learner must track.
+- MOV-014 [B] Give a transition that rearranges or relocates content the learner must keep track of about one second, and about one second per stage if it is staged.
+- MOV-015 [C] Drive every script animation from elapsed time, never from a frame count.
+- MOV-016 [C] Never use an easing curve that overshoots on any element whose position, angle or size encodes a value.
+- MOV-017 [C] Keep hover and focus color transitions at about 150 ms, and show pressed and checked states with no transition delay.
+- MOV-018 [B] When a view pans or zooms over a fixed spatial layout, glide to the new view with an eased transition of about a second instead of jumping.
+- MOV-019 [B] Animate a change between two related diagram or chart states rather than swapping instantly, when the learner needs to follow specific marks through the change.
+- MOV-020 [B] Keep each mark's identity across a transition: the element that represents a thing in the old state must be the one that moves to represent it in the new state.
+- MOV-021 [B] Prefer translation and expansion to rotation in transitions, move related marks together, and split a complex change into at most two stages of about a second each.
+- MOV-022 [C] Open overlays and disclosures from the element that triggered them, with a short, small movement that shows where the content came from.
+- MOV-023 [C] Smooth-scroll only over short distances; jump directly when the target is more than about a screen away, and always jump under reduced motion.
+- MOV-024 [A] Use animation or video to teach procedural and motor content, such as where to look and how inputs change over a maneuver, and default to annotated static diagrams for abstract relationships.
+- MOV-025 [B] Cut any lesson motion that does not depict the thing being taught.
+- MOV-026 [B] Give every teaching animation play, pause, step and replay controls, and annotate where the learner should look.
+- MOV-027 [B] Ask the learner to predict before a demonstration plays.
+- MOV-028 [C] Animate what the simulator cannot show (forces, hidden causes, a slowed or isolated variable), and send the learner to the sim for realistic motion.
+- MOV-029 [C] Play a widget's demonstration or affordance hint on the learner's first encounter only, then replace it with a static hint.
+- MOV-030 [C] Ease an instrument only between two set states; when it shows a continuously modeled value, map the value to the needle directly on every frame.
+- MOV-031 [C] Interpolate instrument values in the instrument's own units and geometry, taking the short way round on any circular scale.
+- MOV-032 [C] When the learner drags a control that drives an instrument, start the instrument's motion on the same frame and keep the eased catch-up short, about a third of a second.
+- MOV-033 [C] Keep static instrument detail (ticks, arcs, labels) out of the per-frame render path, and if a widget cannot hold its frame rate, simplify what it draws during motion.
+- MOV-034 [C] Under reduced motion, jump instruments to each new value instead of easing, and replace continuous playback with stepped playback rather than removing it.
+- MOV-035 [C] Set a separate response budget for each kind of exchange (control feedback, answer checking, next page, long operation), and acknowledge every input sooner than you deliver its result.
+- MOV-036 [C] Treat 0.1, 1 and 10 seconds as categories of experience (feels instant, keeps the flow of thought, holds attention), not as pass-fail cutoffs.
+- MOV-037 [C] For any operation that can take longer than about a second, show a status cue at once; for any that can take longer than about ten seconds, show progress, an estimate and a way to cancel.
+- MOV-038 [B] Aim to be reliably fast in the common case and to remove long-tail delays, rather than to clear a single threshold.
+- MOV-039 [B] After a failed or stalled request, switch quickly from a loading state to a plain error with a retry, and do not leave a spinner running.
+- MOV-040 [B] Paint a visible response to every click, tap and key press within about 100 ms, even when the result takes longer.
+- MOV-041 [B] Show a determinate progress indicator when the fraction of work done is known, and an indeterminate one, which claims no percentage, when it is not.
+- MOV-042 [B] Map a progress bar to real work, order variable stages first, and never let it stall near the end.
+- MOV-043 [B] Treat perceptual tricks for waits as polish worth about a tenth of perceived duration, used only after the wait itself has been shortened, and never to disguise a stalled process.
+- MOV-044 [C] Tell the learner what is loading, and show useful content at once while the rest arrives.
+- MOV-045 [C] Make confirmation of a saved result unmistakable, because an uncertain learner experiences the wait as longer and may repeat the action.
+- MOV-046 [C] Delay a loading indicator by a few hundred milliseconds so that fast responses show only the result, and keep any indicator that does appear on screen long enough not to flicker.
+- MOV-047 [C] Give every indeterminate indicator a text label that survives reduced motion, so that a frozen spinner never reads as a crash.
+- MOV-048 [C] Adopt LCP, INP and CLS as LTF's field performance budget, measured from real users at the 75th percentile, separately for mobile and desktop, and cite the current definitions with their date.
+- MOV-049 [C] Collect LCP, INP and CLS from real sessions, tagged with route and device class, and review the 75th percentile and the worst routes regularly.
+- MOV-050 [C] Set LTF's internal INP target at 100 ms for lesson and challenge interactions, stricter than the public 200 ms threshold, and treat 200 ms as the line that must never be crossed at the 75th percentile.
+- MOV-051 [C] Reserve the final size of every late-loading element (widgets, images, embeds) so that nothing the learner is reading moves when it arrives.
+- MOV-052 [C] Render the lesson's title, objectives and first paragraph before any widget or below-the-fold media, and preload the next lesson's data and route chunk when the learner reaches the end of the current one.
+- MOV-053 [C] Keep interface motion small relative to the viewport, matched in direction and speed to what the learner is doing, and short in perceived distance; never use parallax, scrolljacking or scroll-triggered motion.
+- MOV-054 [C] Meet WCAG 2.3.3 even though it is Level AAA: every non-essential motion animation stops or becomes a non-motion change when reduced motion is requested.
+- MOV-055 [C] Replace a removed motion with an instant change or a fade, which WCAG does not count as motion, rather than with nothing.
+- MOV-056 [C] Stop any looping animation after about five seconds unless the learner can pause it, and stop it at once under reduced motion.
+- MOV-057 [C] Offer a persistent in-app "Reduce motion" setting that defaults to the operating system preference and can override it.
+- MOV-058 [C] In Fly mode, show every change as an immediate new state, with no transition the learner must watch to understand.
+- MOV-059 [C] On the Fly mode screen, confirm every tap on the next frame with a large, persistent change of state that can be read at a glance.
+- MOV-060 [C] Reserve motion on the Fly mode screen for alerts that need the learner's attention, always pair it with sound and a static visual marker, and stop it once it has done its job.
+- MOV-061 [C] Load everything Fly mode needs before the flight starts, and use a still, labeled indicator for any wait that remains.
+- MOV-062 [C] Keep the Fly mode screen awake while a flight is in progress, with the learner's consent, and say plainly when the device does not support it.
+
+## Icons, Maps, Ornament and Editorial Design (part-23-icons-maps-editorial.md)
+
+- ICO-001 [B] Assume a new icon is not understood until a test with beginners shows it is.
+- ICO-002 [B] Choose an icon's picture for how closely it points at the function, not for how realistic it is.
+- ICO-003 [B] Introduce an icon for a flight concept with, or after, the lesson that teaches the word it stands for.
+- ICO-004 [B] Once an icon has been introduced, never redraw it, resize its key features or reuse it for another meaning.
+- ICO-005 [B] Set icon detail by the task: minimal detail for icons that are searched for among many, more detail allowed for icons looked at one at a time to learn a meaning.
+- ICO-006 [B] Review icons as a set, side by side, and make neighbors differ in both meaning and shape.
+- ICO-007 [C] Classify every icon as similar, example, symbolic or arbitrary, and give every arbitrary or symbolic icon a permanent text label.
+- ICO-008 [B] Give every icon a beginner meets a visible text label; treat icon plus label as the default, not the upgrade.
+- ICO-009 [B] Never make a learner decode an unlabeled icon in a challenge briefing or in Fly mode.
+- ICO-010 [C] Use an icon only where it does a job a word alone does less well: speeding search in repeated rows, distinguishing a small set of recurring types, showing a spatial or visual idea, or saving space for an already-learned meaning.
+- ICO-011 [C] Write and keep a short icon policy that states where LTF uses icons with labels, where it uses text only, and where an icon may stand alone.
+- ICO-012 [C] Allow an icon to stand alone only for an everyday software convention, and give it an accessible name and a tooltip.
+- ICO-013 [B] Make marks that must be read in a glance simple and high in contrast, and treat contrast and simplicity as separate levers.
+- ICO-014 [C] Give every icon stroke or fill that carries meaning at least 3:1 contrast against its ground, in both themes.
+- ICO-015 [C] Make every icon-only control a pointer target of at least 24 by 24 CSS pixels, and 44 by 44 for controls used beside the simulator.
+- ICO-016 [C] Write the icon vocabulary and grammar down before drawing the set: the base shapes, and the rules for how badges, arrows, frames and strikes modify them.
+- ICO-017 [C] Use one primary level of detail and one stroke and corner style across every icon in the product, with stroke width set by icon size in a single table.
+- ICO-018 [C] Give each pictogram one meaning across the whole product, and never reuse a picture for a second meaning.
+- ICO-019 [C] Show a count by repeating a unit, not by enlarging or filling a picture.
+- ICO-020 [C] Before drawing a new symbol, look for an established one, and take aviation symbols from an authoritative reference, never from memory.
+- ICO-021 [C] Keep an icon register: for every icon, its intended meaning in one sentence, its label, its class (similar, example, symbolic, arbitrary), its source, where it appears, and any comprehension evidence.
+- ICO-022 [C] Never let the brand mark stand for an action, a state or a content type.
+- ICO-023 [C] Keep the number of arbitrary symbols small, list them, and pair each with a word.
+- ICO-024 [C] Before testing an icon, write its intended message as one sentence that a correct answer must match.
+- ICO-025 [C] Test each candidate icon open-ended and without its label: one icon per screen, a fresh random order per person, the question "what does this mean, and what would you do?", and a poor and a good example answer shown first.
+- ICO-026 [C] Compare an old and a new version of an icon between groups of people, never by showing both versions to the same person.
+- ICO-027 [C] Fix the pass threshold and the consequence of failing before running the test, using 85 percent correct with no more than 5 percent critical (opposite or dangerous) confusions as the bar for anything that affects what a learner does in the sim.
+- ICO-028 [C] Expect icons for unfamiliar flight concepts to score low, and design their labels from the start rather than treating the score as a surprise.
+- ICO-029 [B] Never accept preference ratings or expert taste as evidence that an icon, chart or diagram works; measure task time and errors first, then ask for opinions.
+- ICO-030 [C] Record every test in the icon register with the date, the sample (size and who), the format (open-ended or choice, isolated or in context), the score and the main confusions.
+- ICO-031 [B] Make every lesson illustration explanative: it must show how something works, what changes when the learner acts, or where something is, not only what a thing looks like.
+- ICO-032 [B] Design explanative diagrams for the learner with no prior knowledge, and let the learner collapse or simplify them in review.
+- ICO-033 [C] Make the quiz test the understanding the picture teaches, not recall of the picture's labels.
+- ICO-034 [B] Before adding any picture to a lesson, name its function (representational, organizational, interpretational or transformational) and cut it if the only honest answer is decorational.
+- ICO-035 [B] Keep interesting but irrelevant pictures, anecdotes and decorative media out of lesson explanations, and above all out of a lesson's opening.
+- ICO-036 [B] Do not rely on highlighting, headings or other cues to rescue a lesson that contains distracting material; remove the material instead.
+- ICO-037 [A] Signal the part of a picture the text is talking about: highlight it, point to it with an arrow, or give it the same color as the key term in the text.
+- ICO-038 [B] Put each picture directly beside the sentence it explains, with a short caption in the same plain words the text uses.
+- ICO-039 [C] Let the content expert decide what a picture must show, let the designer decide how it shows it, and let beginners check what it appears to show.
+- ICO-040 [B] Do not use dramatic or frightening imagery to teach safety content.
+- ICO-041 [B] Teach with simplified, caricatured drawings of the cockpit and instruments, and use realistic sim screenshots only to show where to look in the sim.
+- ICO-042 [B] When a learner must notice what changed, list the changes explicitly rather than relying on them to see the change or replay it.
+- ICO-043 [C] Draw sequences, procedure flows and the structure of a flight as schematics: simple line trajectories, one line weight, regular spacing and consistent junction symbols, with geography left out unless the task needs it.
+- ICO-044 [B] When a schematic distorts real geometry, show its link to the real layout once, and never distort so far that a learner would choose wrongly from it.
+- ICO-045 [C] Give the visual language a named custodian and written rules, so it can grow without drifting.
+- ICO-046 [B] Explain a change over time with a short sequence of static frames and arrows by default, and animate only where the timing or manner of the change is itself the lesson.
+- ICO-047 [B] Wherever a diagram animates, give the learner control: pause, replay, step, slow speed, and a side-by-side before and after.
+- ICO-048 [B] When testing whether an animated or static version teaches better, make the two carry exactly the same information and the same interactivity.
+- ICO-049 [C] Before drawing a diagram, list the components the learner must read and give each its own visual variable; never encode two components in one variable.
+- ICO-050 [C] Do not ask a learner to find a target by its shape alone among many similar marks; make the target differ in value or hue.
+- ICO-051 [C] Reserve size and value (lightness) for importance and order, because they dominate the image.
+- ICO-052 [C] Use hue and shape only for categories, value or saturation for ordered levels, and position or length for quantities the learner must compare.
+- ICO-053 [C] Show uncertain or estimated values with reduced crispness or transparency, and say in text that they are estimates.
+- ICO-054 [C] Choose a color scheme by data type first (sequential for how much, diverging for above and below a true midpoint, qualitative for unordered groups), then by number of classes, then by medium, and check it separately in each theme.
+- ICO-055 [D] Do not use a rainbow ramp for ordered data; a multi-hue spectral scheme is acceptable only as a diverging scheme with a meaningful midpoint, controlled lightness and no yellow-green confusion pair.
+- ICO-056 [C] Make every color encoding also differ in lightness, and put a legend or direct label beside the colored marks.
+- ICO-057 [C] Keep large areas of any diagram or page in muted, low-saturation tones, and spend strong color only on small areas the learner must act on.
+- ICO-058 [C] Give every label in a diagram a clear plane of its own: a halo or knockout behind the text, and no line running through it.
+- ICO-059 [C] Set the minimum rendered size of diagram labels by the smallest frame they will be shown in, not by the drawing's own coordinates.
+- ICO-060 [C] Subtract before adding: mute grids, ticks, rules and borders relative to the data, and add a border, shadow or tint only when it separates something the learner needs separated.
+- ICO-061 [B] Give every diagram an element budget, and remove or move to a separate view any element the current question does not need.
+- ICO-062 [B] Give extra design attention and deliberate testing to information that is subtle or that violates expectations, not only to information that is dense.
+- ICO-063 [C] Use a simple clutter measure, such as an edge-density score on screenshots, to flag screens far busier than their siblings, and send flagged screens to human review rather than failing them automatically.
+- ICO-064 [C] Label every simplified diagram as simplified, and mark "not to scale" wherever a learner could mistake its geometry for the real thing.
+- ICO-065 [C] Name on the page what a diagram leaves out when the omission matters to the learner's decision.
+- ICO-066 [C] Make the visual prominence of each element match its importance to what the learner must do next.
+- ICO-067 [C] Review every chart-like diagram against a stated reading task, and check its lettering, its structure (what sits above what) and its color separately.
+- ICO-068 [C] Teach what goes wrong with constructed examples, not by ridiculing a real chart, a real product or a real pilot.
+- ICO-069 [C] Attach ornament only to an element that already exists for a structural reason; never add an element in order to decorate it.
+- ICO-070 [C] Test every decorative element by removing it: if the page loses nothing a learner needs or recognizes, leave it out.
+- ICO-071 [C] Separate any patterned or tinted ground from text and symbols with a quiet edge or zone.
+- ICO-072 [C] Take principles from historical and admired work, never its results: do not copy another product's motifs, livery or ornament.
+- ICO-073 [C] Keep the base state of every screen calm (broad, quiet forms and few strong contrasts) and reserve sharp, high-contrast, angular treatment for warnings.
+- ICO-074 [C] Do not imitate a material the interface is not made of; draw bezels, metal and depth only where a real instrument is being depicted.
+- ICO-075 [C] Give every ornament one of three jobs (framing a field, filling it, or linking elements) and remove any that has none.
+- ICO-076 [C] Keep the base layout regular (aligned grid, consistent spacing, one card style) so that a warning or a current state can break the pattern and be seen.
+- ICO-077 [C] Do not repeat a decorative motif or badge on every item in a sequence; mark only the items that differ.
+- ICO-078 [D] Use embellishment that is tied to the content only where memory of the gist matters more than speed (recaps, share cards, the landing page), and never in explanations or Fly mode.
+- ICO-079 [C] Write one brief per lesson, shared by the writer and the designer, that names the one thing the learner must take from the page and what they will see first.
+- ICO-080 [C] Ask of every visual element on a lesson page "what does this clarify?", and remove it if the answer is nothing.
+- ICO-081 [C] Keep the lesson template fixed (the order of header, objectives, section rail, blocks and completion panel) and vary only the sequence of content blocks inside it.
+- ICO-082 [C] Build each lesson page in three levels: structure readable at a glance, sections readable in a scan, and detail that rewards close reading.
+- ICO-083 [C] Show a comparison of states as small multiples: the same diagram, at the same size and scale, repeated side by side with only the compared variable changing.
+- ICO-084 [C] Decide the order of every list and table by the story the learner needs from it, and state the order when it is not obvious.
+- ICO-085 [C] Assign each product area a mood and an ornament budget, and keep Fly mode the plainest screen in the product.
+- ICO-086 [C] Never borrow authority with official-looking decoration (seals, certificate borders, chart-like frames); earn it with visible verification marks tied to a real check.
+- ICO-087 [B] Write each figure caption as a pointer to what the learner should notice, in the lesson's words, not as a title for the picture.
+
+## Writing and Microcopy (part-24-writing.md)
+
+- WRT-001 [B] Assume a reader with a task will scan first, and write so that scanning finds the point.
+- WRT-002 [B] Start every heading, list item, step and paragraph with the words that carry its information.
+- WRT-003 [C] Write every label so that the first plausible reading is the right one.
+- WRT-004 [C] Use scanning formats for lookup and action, and continuous prose for explanation.
+- WRT-005 [C] Do not format a warning as a skimmable fragment.
+- WRT-006 [B] Cut promotional exaggeration from every surface a learner reads to learn.
+- WRT-007 [C] Judge every learner-facing text by one question: is it clear, concise, well organized and right for a beginner learning this subject?
+- WRT-008 [B] Get clarity from structure and selection first, and from word choice second.
+- WRT-009 [B] Write plainly for experts as well as beginners; plainness is not simplification.
+- WRT-010 [B] Move exceptions, edge cases and rare configurations out of the main line of a lesson.
+- WRT-011 [C] Never let plainness erase a technical distinction; keep the exact term, define it once in plain words, then use it consistently.
+- WRT-012 [C] Keep required wording exactly as the source gives it, even when a plainer version exists.
+- WRT-013 [B] Use the short familiar word unless a longer one is the precise or required term.
+- WRT-014 [B] Do not mistake dense phrasing for rigor when adapting an authoritative source.
+- WRT-015 [C] Put the action in a verb, and keep subject, verb and object close together.
+- WRT-016 [C] Use the active voice for instructions and messages, and choose the passive only when the actor is unknown or beside the point.
+- WRT-017 [C] Say what to do before what not to do, and the main case before its exceptions.
+- WRT-018 [C] Reserve "must" for what a cited source makes mandatory, and use "should" for recommended technique and "can" for options.
+- WRT-019 [D] Use positive contractions freely, and spell out "not" in warnings, limits and prohibitions.
+- WRT-020 [B] Use one name for each thing across lessons, challenges, checklists, widgets and the interface, and never use a slash between alternatives.
+- WRT-021 [A] Write headings that state what the section tells or teaches, and use them as signals in every lesson.
+- WRT-022 [C] On lookup surfaces, write headings and labels as the question or task the reader arrives with; in lessons, raise the questions the learner does not yet know to ask.
+- WRT-023 [C] Give each paragraph one topic and state it in the first sentence.
+- WRT-024 [C] Number steps that must be done in order, bullet items that need not be, give every list a lead-in line, and write its items in parallel form.
+- WRT-025 [B] Open every lesson, section and page with the first thing the learner needs, not a welcome, a preview or an anecdote.
+- WRT-026 [C] Keep lesson objectives to a short list of observable actions and do not restate them as a prose preview.
+- WRT-027 [B] Put a one- or two-sentence summary of the point at the top of every long page.
+- WRT-028 [B] Put every instruction a learner needs at the point where they need it, not in an introduction they will skip.
+- WRT-029 [B] Put the learner on a real task early and attach explanation to the task, not before it.
+- WRT-030 [C] Give each step one action, start it with either the action or the control name, and use the same pattern for every step in the list.
+- WRT-031 [B] After any step whose result the learner must confirm in the sim, say what they should see, and give the recovery when they do not see it.
+- WRT-032 [C] Chunk long procedures, end each chunk with a completion line, and place the most consequential steps early.
+- WRT-033 [C] If a control needs instructions to be used, fix the control or its label before writing the instructions.
+- WRT-034 [C] Write Fly mode text to be read in one glance: one short line per step, the information in the first words, no paragraphs.
+- WRT-035 [B] Make every error message say what happened in the learner's terms and what to do next, without blame, codes or alarm.
+- WRT-036 [B] State the accepted values or the allowed actions instead of saying an input is invalid.
+- WRT-037 [D] Show form messages next to the field they concern, after the learner has finished with it, and keep them until the problem is fixed; never while the learner is still typing.
+- WRT-038 [B] Follow every quiz answer, right or wrong, with the correct answer and a one-sentence reason.
+- WRT-039 [C] Write the verdict in a quiz as a calm statement, without exclamation or praise inflation.
+- WRT-040 [C] Make every empty state say why it is empty and what fills it, and every confirmation say what will happen and whether it can be undone.
+- WRT-041 [C] Keep in-flight messages to one short line and one action.
+- WRT-042 [C] Log how often each error, empty state and failed quiz item is shown, and treat a frequent one as a design defect.
+- WRT-043 [B] Give every control a visible text label; let icons accompany labels, not replace them, for anything a beginner must get right.
+- WRT-044 [C] Label every button with a verb and its object, in words that match exactly what pressing it does.
+- WRT-045 [B] Use one label for each action across the product, and record it in the vocabulary list.
+- WRT-046 [C] Write "select" for choosing things in LTF's interface, and reserve physical verbs for controls in the sim.
+- WRT-047 [C] Make every link's text name its destination, so that it makes sense read alone.
+- WRT-048 [C] Use sentence case for every heading, button, label and title, and reserve capitals for proper nouns, abbreviations and quoted cockpit labels.
+- WRT-049 [C] Write page titles as the specific page name first and the product name last, in one format everywhere.
+- WRT-050 [C] Write the voice down as a chart of principles against concepts, vocabulary, verbosity, grammar and punctuation, and review copy against it.
+- WRT-051 [C] Keep one voice everywhere and vary only the tone, naming in the chart which moments may carry more warmth or more firmness.
+- WRT-052 [C] Encourage by stating what the learner did and what to do next, and never call a task easy.
+- WRT-053 [C] Reserve exclamation marks for genuine achievements, and never use them in instructions, errors or routine feedback.
+- WRT-054 [C] Use aviation's real names freely, keep jokes and metaphors to headings with a literal body beneath them, and replace stock training phrases with the concrete observation.
+- WRT-055 [C] State every limit of the product plainly, in one pattern: what is not yet true or not covered, then what it means for the learner.
+- WRT-056 [C] Apply the W3C clear-content patterns to all learner-facing text: clear words, simple tense and voice, literal language, succinct text, one instruction per step and a summary for long content.
+- WRT-057 [B] Show the numbers, names and settings a task depends on at the task, and never make the learner recall them from an earlier page.
+- WRT-058 [C] Keep every aviation number, written through its token with its unit, and add a plain statement of what it means for the learner where that meaning is sourced.
+- WRT-059 [C] Spell out every abbreviation at its first use on each page, not once per course.
+- WRT-060 [C] Write about people without gendered defaults, stereotypes or pity, and record in the style guide which sourced terms are exempt.
+- WRT-061 [B] Use readability scores only as a report to authors that flags outlier passages, never as a pass or fail gate and never shown to learners.
+- WRT-062 [C] Paraphrase-test every high-stakes explanation with a handful of non-pilots before publishing, and treat each misunderstanding as a defect in the text.
+- WRT-063 [C] Before releasing a challenge, give its Brief, steps and failure messages to two or three beginners and ask what they would do next.
+- WRT-064 [C] Use cloze tests on key explanatory passages as a cheap check of whether non-pilots can follow them.
+- WRT-065 [C] Judge copy changes by whether learners understood and completed the task, using quiz, challenge and message data, not by clicks.
+
+## Accessibility (part-25-accessibility.md)
+
+- ACC-001 [C] Describe every accessibility defect as a mismatch between a demand the interface makes and a capability some learners lack, and fix the demand.
+- ACC-002 [C] For every new interaction, write down its demands on seeing, hearing, reading, fine pointer control, two-handed use, memory and timing, and provide an alternative for each demand that is not essential to the task.
+- ACC-003 [B] Run two checks on every page and widget, a conformance check against WCAG 2.2 AA and a task check with disabled people, and call it accessible only when both pass.
+- ACC-004 [B] Rank accessibility defects by observed task failure and its consequence, not by the WCAG level of the criterion they map to.
+- ACC-005 [C] Put the hardest case (a screen reader user reading a gauge, a keyboard-only user setting a value, a learner with low vision reading a label) into the first prototype of every widget and page, not into a later adaptation.
+- ACC-006 [C] Adopt WCAG 2.2 Level AA as the minimum for every page, component and content block, and record that target in project policy.
+- ACC-007 [C] Apply every numeric threshold as written, without rounding, and compute it on the real rendered values.
+- ACC-008 [C] Test the WCAG 2.2 additions by name in every audit: focus not obscured, dragging movements, target size, consistent help, redundant entry and accessible authentication.
+- ACC-009 [C] Adopt named AAA criteria where LTF's use matches their rationale (enhanced target size in Fly mode, animation from interactions everywhere, enhanced contrast for Fly mode steps), and list them in the policy beside the AA target.
+- ACC-010 [C] Never write "accessible", "WCAG compliant", "Section 508 compliant" or "conforms to EN 301 549" in learner-facing or marketing copy unless a dated, documented evaluation supports the exact claim.
+- ACC-011 [C] Keep a conformance log from now on: date, pages, tools, assistive technology and browser pairs, results and open issues, plus a public accessibility statement with a contact route and a list of known issues.
+- ACC-012 [C] Put accessibility acceptance criteria in the pull request template and the definition of done (a keyboard path, names and labels, contrast in both themes, reduced motion, screen reader text for any graphic) instead of saving accessibility for a final audit.
+- ACC-013 [B] Publish every checklist, briefing, procedure and kneeboard as an HTML page first; offer a PDF or print version only as a copy of an accessible page, never as the only form.
+- ACC-014 [B] Give every page exactly one `h1` and a heading outline that descends without skipping levels, where each heading names the content beneath it rather than decorating it.
+- ACC-015 [B] Mark up one `main`, a labelled `nav` for each navigation block and a skip link as the first focusable element, and stop there unless a region has a clear purpose of its own.
+- ACC-016 [C] Use the native HTML element whenever one exists with the semantics and behavior needed (button, link, input, select, fieldset and legend, details and summary, lists, tables), and add ARIA only where HTML cannot express the role or state.
+- ACC-017 [C] Never put `aria-hidden="true"` or `role="presentation"` on an element that can take focus, or on a container of one; remove hidden controls from the tab order with the `hidden` attribute or `display: none`.
+- ACC-018 [C] Treat every ARIA role as a promise: before shipping a custom widget, implement the keyboard behavior, states and name that the APG pattern for that role specifies, and confirm them with a screen reader.
+- ACC-019 [B] Give every link, button and form control an accessible name that says what it does; an icon-only control gets an `aria-label` or visually hidden text, and its icon is hidden from assistive technology.
+- ACC-020 [B] Write link text that makes sense when read alone, naming the destination ("Read the traffic pattern lesson"), never "click here", "read more" or a bare URL.
+- ACC-021 [C] On every client-side route change, move focus to the new page's `h1` and announce the page title politely; on the first load, leave the browser's own behavior alone.
+- ACC-022 [B] Make the source order match the visual reading order, so that a screen reader reads a page in the order a sighted learner would.
+- ACC-023 [C] Use live regions only for changes the learner needs to hear: polite for results, counts and progress, assertive only for errors and events that need immediate action, and never for continuous animation.
+- ACC-024 [C] Declare the document language, and block automatic translation only on the specific strings that must not change (radio phraseology, callsigns, code values), not on the whole document.
+- ACC-025 [C] Make every function on every page operable from the keyboard alone, with Tab and Shift+Tab moving between components and arrow keys moving within composite widgets.
+- ACC-026 [C] Give each composite widget exactly one tab stop and move within it by arrow keys, using roving tabindex unless there is a reason to prefer `aria-activedescendant`.
+- ACC-027 [C] Make selection and focus look different, so that a learner can tell "this is chosen" from "this is where I am".
+- ACC-028 [C] Never remove the focus indicator; draw it as an outline or ring with at least 3:1 contrast against every background it can appear on, in both themes, and make it survive forced-colors modes.
+- ACC-029 [C] Reserve the height of every sticky layer as scroll padding on the scrolling container, so that no focused element can scroll underneath a sticky header, toolbar, banner or section picker.
+- ACC-030 [C] When a dialog, drawer, popover or menu closes, return focus to the control that opened it; when an item is removed, move focus to the next item or its container; never let focus fall to the body.
+- ACC-031 [C] Never use a positive `tabindex`; get the focus order from the source order, and move focus programmatically only after a user action or a route change.
+- ACC-032 [C] Use `aria-disabled` with an explanation for a control that a learner needs to discover (a submit button that waits for a required answer, a locked lesson), and native `disabled` only where the control's absence from the tab order costs nothing.
+- ACC-033 [C] If LTF adds keyboard shortcuts (for example to tick the next Fly mode step), make each one a supplement to a normal control, avoid single keys and combinations that screen readers and browsers use, document them on the page, and offer a setting to turn them off.
+- ACC-034 [C] Meet 4.5:1 for text and 3:1 for large text on every text and background pair in both themes, computed from the tokens, and hold the line even where a sighted designer finds the text readable.
+- ACC-035 [C] Give every mark a learner must see to read an instrument or operate a control (needles, tick marks, arc boundaries, slider thumbs and tracks, input borders, checkbox outlines, focus rings, tier rings) at least 3:1 against the colors next to it.
+- ACC-036 [C] Carry every status, result, tier, range and state in text or shape as well as color, and make that text available to assistive technology.
+- ACC-037 [C] In lesson and challenge copy, never identify something only by its color or position ("press the teal button", "the gauge on the right"); name it by its label and, where useful, add the color as a second cue.
+- ACC-038 [C] Make every page reflow to 320 CSS pixels wide without sideways scrolling, and use the two-dimensional exception only for diagrams, instrument drawings and data tables, each in its own scrollable, keyboard-focusable region.
+- ACC-039 [C] Set the root font size in relative units (100%, or leave it unset) so that a learner's browser default text size carries through, and size type and spacing in `rem` from there.
+- ACC-040 [C] Check every page in a forced-colors emulation and make sure focus, selection, checked states, progress and instrument readings remain visible; where a state is drawn only with fill or shadow, add a border, outline or text that survives.
+- ACC-041 [C] Make every pointer target at least 24 by 24 CSS pixels, or space undersized targets so that a 24-pixel circle centered on each touches no other target.
+- ACC-042 [B] Size controls that are used often, in sequence, under divided attention or that are hard to undo at 44 by 44 CSS pixels or more, with visible gaps between neighbors; in Fly mode, use the `lg` button size or larger for every control.
+- ACC-043 [B] On phones and tablets, make primary actions in Fly mode and the debrief span the full width of their column, so they are reachable by either thumb and extend to both screen edges.
+- ACC-044 [C] Give every drag (dial, tape, needle, heading bug, map pan, sortable list) a single-tap alternative on the same screen: stepper buttons, a tap on the track, or a typed value.
+- ACC-045 [C] For any numeric value a learner sets in a widget, offer arrow-key steps and, where a precise value matters, a typed entry field, so that no task depends on pointer precision.
+- ACC-046 [C] Keep Fly mode to one action per step: one tap to tick a step, no confirmation for anything that can be undone, and no control that must be held down.
+- ACC-047 [C] Make the visible label of every control the start of its accessible name, so that a learner using voice control can say what they see, and never rely on hover alone to reveal a control or its label.
+- ACC-048 [C] Honor `prefers-reduced-motion: reduce` for every non-essential animation, and also offer an in-app motion setting that persists, for learners who have not set the operating system preference.
+- ACC-049 [C] Judge every proposed animation by its size relative to the viewport, its match to the learner's own movement, and the distance it appears to travel; do not use parallax, scrolljacking, scroll-linked motion or full-screen transitions anywhere.
+- ACC-050 [C] Give any animation that starts by itself and runs longer than five seconds beside other content a visible pause control, and give every lesson demonstration a static equivalent.
+- ACC-051 [C] Never flash anything more than three times in a second, and signal urgency with a slow change of size, border or color rather than a blink.
+- ACC-052 [C] In instrument widgets, treat the value as essential and the motion between values as decoration: under reduced motion, move needles, tapes and pointers straight to the new value.
+- ACC-053 [C] Pair every sound with visible text and an announcement to assistive technology, and never make a sound the only sign that something happened.
+- ACC-054 [C] Caption every video with speaker identification and the non-speech sounds that matter (engine, warning tones, radio), and publish a text transcript beside it.
+- ACC-055 [C] Never put a time limit on a lesson, quiz, challenge or form; where timing is part of practice, make the timer optional, visible and learner-controlled.
+- ACC-056 [C] Never let an auto-dismissing message be the only record of an outcome; anything a learner may need to read later stays on the page or in a place they can return to.
+- ACC-057 [C] Define every aviation term and abbreviation at its first use in each lesson, and make its definition reachable in one action from anywhere it appears.
+- ACC-058 [C] Write lesson prose in present tense, active voice and second person, with literal wording, paragraphs of about 50 words or fewer on one topic each, and no double negatives in quiz stems or answers.
+- ACC-059 [C] Put each procedure step in its own numbered item, one action per item, and present conditional steps as if/then rows rather than as branching sentences.
+- ACC-060 [C] Pair every number a learner must interpret with a plain statement of what it means in the situation, next to the number.
+- ACC-061 [C] Save a learner's work as they go (quiz answers, Fly mode ticks, debrief choices, form drafts), so that a refresh, a lost connection or a step back never discards it.
+- ACC-062 [C] Confirm only destructive or irreversible actions, say exactly what will be lost in the confirmation, and make every other action reversible instead.
+- ACC-063 [C] Never move content or controls the learner did not ask to move: no layout shift as data loads, no auto-advancing steps, and no focus changes the learner did not trigger.
+- ACC-064 [B] Keep sign-in and sign-up free of CAPTCHA and puzzles, allow paste and password managers in every password field, and never require a learner to transcribe a code from one place to another.
+- ACC-065 [C] Never ask a learner to enter the same information twice in one process; prefill or offer to reuse what they already gave.
+- ACC-066 [C] Put the way to get help in the same place on every page, including Fly mode, and keep it reachable after banners are dismissed.
+- ACC-067 [C] Show at most one dismissible interruption above lesson content at a time, and keep dismissals remembered.
+- ACC-068 [B] Give every lesson the same predictable order of parts, and keep the course navigation shallow, with the learner's location always shown.
+- ACC-069 [B] Give every instrument drawing a text alternative that states its current reading and what the reading means in the lesson, generated from the same state that draws it and updated whenever it changes.
+- ACC-070 [C] Give every diagram an authored long description that explains what the diagram teaches, not only what it shows, and make it available on the page beside the diagram.
+- ACC-071 [C] Hide purely decorative graphics from assistive technology (`alt=""` or `aria-hidden` on the SVG), and never hide a graphic that carries information.
+- ACC-072 [C] Let the focused control speak its own value through `aria-valuetext`, and use a polite live region only for consequences elsewhere on the widget (a band change, a quiz result), announced once the value settles.
+- ACC-073 [C] Use the native range input for every continuous value, styled as needed; build a custom slider, knob or bug only when the native element cannot express the interaction, and then implement the APG slider pattern in full and test it with a screen reader before it ships.
+- ACC-074 [B] Where a custom widget behaves differently in a screen reader than its native equivalent, replace it with the native control rather than adding ARIA to compensate.
+- ACC-075 [C] Make every widget quiz answerable by keyboard and screen reader through the same state the drawing shows, and state the question and result in text.
+- ACC-076 [C] Write each widget's acceptance criteria as tasks for three people: a screen reader user who reads the value and its meaning, a keyboard-only user who sets a value and completes the quiz, and a learner with low vision who reads every label at 200% zoom.
+- ACC-077 [C] When a widget is too wide for the screen, scale the drawing or let only the drawing scroll inside a focusable region, and keep its controls, labels, readings and description in the normal reflowing flow.
+- ACC-078 [C] Review every new flow against a persona spectrum of three: a permanent limitation, a temporary one and a situational one, chosen for that flow.
+- ACC-079 [C] Test with disabled learners, and use personas and scenario walkthroughs only to prepare for and interpret those sessions, never as a substitute for them.
+- ACC-080 [C] Run walkthroughs in the real setting: the simulator running, a controller or yoke in one hand, the second screen at arm's length, room light as the learner has it.
+- ACC-081 [B] Never build a separate "accessible version" or mode with different content, fewer features or a different look; put every access feature into the one product every learner uses.
+- ACC-082 [B] Name access settings by what they change (Display, Text size, Motion, Sound), never by a disability or as "accessibility mode", and place them with the other preferences.
+- ACC-083 [C] In copy and design documents, never imply that assistive technology removes every barrier or that a disabled learner is helpless without it, and do not describe disabled learners as a special category of "user".
+- ACC-084 [C] Recruit older adults as a standing part of every usability session, and treat their difficulties as findings about the design rather than about age.
+- ACC-085 [B] Run an automated accessibility scan on every route in both themes on every pull request, fail the build on serious violations, and never report a clean scan as evidence that a page is accessible.
+- ACC-086 [C] Write component tests for the common failures at their source: every `Button` and icon-only control has a name, every form control has a label, every widget drawing has a text alternative and description, and every text and background token pair meets its contrast threshold.
+- ACC-087 [C] For every new page and widget, do a manual keyboard pass (reach everything, see focus, operate everything, never get trapped, return focus after overlays) and record it in the pull request.
+- ACC-088 [B] Test screen reader behavior first with JAWS and Chrome, then NVDA and Chrome, then VoiceOver on iOS, and add Edge when a widget behaves differently across browsers.
+- ACC-089 [B] In each task session, record for every problem: the task, what the learner tried, whether they finished, how long the detour took, and the learner's own severity rating; triage from those records, not from the criterion the problem maps to.
+- ACC-090 [B] Check every internal and external link in content and pages in continuous integration, and keep Fly mode and reference pages fast enough to open beside a running simulator without a wait.

@@ -209,7 +209,7 @@ The most persistent typeface argument is whether serifs make text easier to read
 Practitioners who spent careers on legible type treat the question as open. Unger's legibility chapter mostly asks questions, including whether serif faces are more legible than sans serif ones and whether a high x-height aids legibility [@unger2018theory].
 
 ::: myth
-**"Serif type is more legible for body text, so lessons should be set in a serif."** The claim is usually supported by the idea that serifs guide the eye along the line. Tinker found common faces, including a sans serif, read at the same speed [@tinker1963legibility], and Arditi and Cho found no effect of serifs on reading speed when serifs were the only variable [@arditi2005serifs]. Experienced type designers treat it as an open question [@unger2018theory]. A face may be chosen for voice, numerals or language support, but not on this ground.
+**"Serif type is more legible for body text, so lessons should be set in a serif."** The claim is usually supported by the idea that serifs guide the eye along the line. Tinker found common faces, including a sans serif, read at the same speed [@tinker1963legibility], and Arditi and Cho found no effect of serifs on reading speed when serifs were the only variable [@arditi2005serifs]. The full case, with the studies, is made in Part III, Legibility and the Science of Reading, and is not repeated here.
 :::
 
 ::: {.rule #TYP-015 grade="B"}
@@ -480,7 +480,7 @@ LTF already applies `text-wrap: balance` to `h1` through `h4`, which evens the l
 
 ### What this means for Learn to Fly
 
-The product already sets everything ragged right and has no justified text, which is the most important decision in this chapter (TYP-029). Keep it, and protect it with a check. The font's own word space is in use, which is correct (TYP-030), but a few mixed-case labels carry tracking that belongs only on capitals; remove it.
+The product already sets everything ragged right and has no justified text, which is the most important decision about word space and alignment (TYP-029). Keep it, and protect it with a check. The font's own word space is in use, which is correct (TYP-030), but a few mixed-case labels carry tracking that belongs only on capitals; remove it.
 
 The remaining work is in content and in short strings. Make the content validator enforce one space between sentences and catch missing spaces (TYP-031). Keep hyphenation off and bind values to units with no-break spaces, ideally in the token renderer so authors do not have to remember (TYP-032). Extend the heading treatment to the short strings a learner acts on, checklist steps and quiz stems first (TYP-033), and review their breaks at the widths Fly mode uses, since the learner reads those strings in a glance, beside the sim.
 
@@ -517,7 +517,7 @@ The disagreement about cause does not touch the practical rule. Whatever the mec
 :::
 
 ::: myth
-**"Readers recognize words by their outline, so all capitals are hard to read because they destroy word shape."** The word-shape account is old (it goes back to Cattell) and Tinker used it to explain his all-caps results [@tinker1963legibility]. Larson reviews the experiments that tested it: misspellings that kept or changed the outline were caught at rates explained by letter shape, not word shape; capitalizing a word in boundary studies gave the same fixation times as the control; and moving-window studies show reading speed rising with the number of letters visible. His conclusion: "Word shape is no longer a viable model of word recognition" [@larson2005science]. Capitals are slower because readers have less practice with them and because they take more space, not because of their outline. Noordzij's claim that the word image is the primary unit of reading is a craft theory that was not tested in the sources reviewed here [@noordzij2005stroke]. Do not justify a design decision by word shape.
+**"Readers recognize words by their outline, so all capitals are hard to read because they destroy word shape."** The word-shape account is old (it goes back to Cattell) and Tinker used it to explain his all-caps results [@tinker1963legibility]. The full case, with the studies, is made in Part III, Legibility and the Science of Reading, and is not repeated here.
 :::
 
 ### Identifiers and abbreviations
@@ -558,7 +558,7 @@ Bringhurst's 2.1.6 extends letterspacing to long strings of digits [@bringhurst2
 
 ### What this means for Learn to Fly
 
-LTF's eyebrows and tier badges already follow the oldest rule in this chapter (TYP-034): capitals are tracked, lowercase is not, with a few mixed-case exceptions to remove. The product also keeps capitals out of warnings and instructions, and the components carry emphasis by color, icon and border instead; that should become an explicit rule for content authors and reviewers (TYP-036), because content is where capitals creep in.
+LTF's eyebrows and tier badges already follow the oldest rule about capitals (TYP-034): capitals are tracked, lowercase is not, with a few mixed-case exceptions to remove. The product also keeps capitals out of warnings and instructions, and the components carry emphasis by color, icon and border instead; that should become an explicit rule for content authors and reviewers (TYP-036), because content is where capitals creep in.
 
 The new work is in running text and in restraint. Abbreviations and identifiers are the learner's vocabulary; give them light tracking automatically and a definition on first use (TYP-037). Treat the 12 px eyebrow as a floor and use it less (TYP-038): an eyebrow above every heading is one of the generic traits the owner sees, and removing the redundant ones makes the remaining ones informative. Widen word spaces in multi-word capital labels (TYP-035). Leave numbers that must be read exactly in the mono face (TYP-039). And retire word shape from design discussions; it is a myth.
 
@@ -603,7 +603,7 @@ LTF fails the conformity test across pages. The dossier records that h2 is 24 px
 ::: {.rule #TYP-043 grade="C"}
 **Before styling a page, list its elements in rank order and give adjacent ranks treatments a reader can tell apart at a glance; if two ranks cannot be told apart, merge them.** Tschichold asks the typographer to express "a definite, logical relationship of emphasis and value" [@tschichold1995new]; Updike doubted the need for many near-identical kinds of the same size [@updike1922printing]. Craft method.
 
-*In LTF:* the lesson head stacks a mono accent label ("Lesson 0.1"), the h1, a meta row, the `UnverifiedWarning`, the `SignupBanner`, a resume bar, the objectives `Card` and the mobile section `Select` before the first paragraph. Rank them. The h1 and the first paragraph are first and second; the signup prompt and resume bar are not third and fourth, and their tinted boxes should not outrank the objectives.
+*In LTF:* the lesson head stacks a mono accent label ("Lesson 0.1"), the h1, a meta row, the `UnverifiedWarning`, the `SignupBanner`, a resume bar, the objectives `Card` and the mobile section `Select` before the first paragraph. Rank them. The h1 and the first paragraph are first and second; the sign-up prompt and resume bar are not third and fourth, and their tinted boxes should not outrank the objectives.
 :::
 
 ### How large a heading
@@ -615,7 +615,7 @@ LTF's lesson h1 is `text-4xl` from `sm`, 36 px against a 16 px body, 2.25 times.
 ::: {.rule #TYP-044 grade="C"}
 **On reading surfaces, keep the largest heading within about twice to two and a half times the body size; larger display sizes belong to display surfaces.** Morison limits the title to twice the text size in books [@morison1936first]. Craft rule adapted from print; no experiment.
 
-*In LTF:* the lesson, challenge and reference pages should use `display-md` (32 px) as the page title, which is 2 times an 16 px body and 1.8 times an 18 px body. Keep `display-lg` and `display-xl` for the landing page, the reference hub title and celebration panels.
+*In LTF:* the lesson, challenge and reference pages should use `display-md` (32 px) as the page title, which is 2 times a 16 px body and 1.8 times an 18 px body. Keep `display-lg` and `display-xl` for the landing page, the reference hub title and celebration panels.
 :::
 
 ### Emphasis inside the text
@@ -647,3 +647,334 @@ This bears on the generic look the owner dislikes. A neutral, restrained interfa
 The type scale is where LTF's classical typography most visibly falls short, and the defect is consistency, not taste. The product has a defined set of utilities and a parallel set of raw Tailwind sizes; a learner meets different heading systems on different pages. Fixing it is mechanical and worth doing early, because every later typographic decision assumes a single scale.
 
 The decisions: rebuild the scale from the reading size with one gentle ratio and named display exceptions (TYP-041); require every size to come from a token and enforce it by lint (TYP-040); give each heading level one style per surface class (TYP-042), with `display-md` as the page title on reading and interface pages (TYP-044); rank each page's elements before styling, starting with the lesson head stack (TYP-043); use semibold for emphasis and keep underline for links (TYP-045). Then check that pages show real hierarchy, not a uniform grey (TYP-046). When the scale is rebuilt, update `/dev/components` to show every type token with real text, so the scale can be reviewed as a whole.
+
+## Figures, Symbols and the House Style Card
+
+### Two kinds of figures
+
+Bringhurst's section 3.2.1 sets the classical rule for numerals: "Use titling figures with full caps, and text figures in all other circumstances" [@bringhurst2012elements]. Titling (lining) figures stand on the baseline at cap height; text (old-style) figures have ascenders and descenders like lowercase and sit in a line of prose without standing out. The rule was written for books, where numbers are mostly dates and page references inside sentences.
+
+Rutter's web handbook, which grew out of a project to apply Bringhurst to the web, adapts the rule for data. Lining figures draw the eye, so in running text they can feel like shouting, while old-style figures sit comfortably in prose; lining figures suit all-caps headings and places where readers scan, compare or search for data, such as lists and tables [@rutter2017web]. The CSS Fonts specification supplies the controls (`lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `slashed-zero` and others in `font-variant-numeric`) and states that tabular numerals allow columns of numbers to line up [@w3c2026cssfonts]. None of this is experimental: the claim that lining figures help scanning is plausible craft reasoning without a cited test.
+
+The second distinction is width. Proportional figures have widths fitted to their shapes (a 1 narrower than a 0); tabular figures share one width, so digits in successive rows line up and a changing value does not shift sideways. A readout that changes in place, such as a timer, a live score preview or a slider value, jitters if its figures are proportional, because each new digit has a different width.
+
+LTF's faces settle some of these choices by what they contain. Inspection of the shipped Instrument Sans file for this book found only `pnum` and `tnum` among its figure features, with default figure widths varying from 0.391 em (the 1) to 0.666 em (the 0), so Instrument Sans figures are proportional unless the `tabular` utility is applied, and the face offers no alternative old-style figures to switch to. JetBrains Mono sets every glyph at 0.6 em, so its figures are tabular by construction. The product's split, "Instrument Sans for everything you read, JetBrains Mono for everything you measure," therefore already gives tabular figures to the values it puts in mono.
+
+::: {.rule #TYP-047 grade="C"}
+**Set every number that is compared, aligned or updated in place (table values, readouts, scores, timers, slider values, stat tiles) in tabular figures, either in the mono face or with `tabular-nums`.** Rutter assigns lining figures to data and tables [@rutter2017web]; the CSS Fonts specification states that tabular numerals let columns line up [@w3c2026cssfonts]; Bringhurst's titling-figure rule is the print precedent [@bringhurst2012elements]. Craft consensus and a standards fact.
+
+*In LTF:* the `readout-*` utilities already apply `tabular-nums` in JetBrains Mono, and `Stopwatch` digits are mono. Check the values that are not: `ProgressBar` and `ProgressRing` labels, the `DebriefForm` live score preview, widget slider values and `KeyNumbers`, and apply `readout` or the `tabular` utility where they are Instrument Sans.
+:::
+
+::: {.rule #TYP-048 grade="C"}
+**In running prose, set ordinary numbers in the text face, and switch to the mono face only for identifiers and values the learner must read exactly or copy.** Bringhurst keeps text figures for "all other circumstances" than capitals [@bringhurst2012elements], and Rutter notes that data-style figures stand out in prose [@rutter2017web]. Changing face mid-sentence makes a number louder than its sentence. Craft consensus.
+
+*In LTF:* lesson Markdown uses `code` (`bg-surface-sunken font-mono`) for inline code; keep that for genuine code and for values a learner types into the sim. Ordinary numbers in a sentence ("three checks", "the second turn") stay in Instrument Sans. Speeds rendered from `{{vspeed.*}}` tokens are values a learner must read exactly and may reasonably render in `readout` style; decide once, in the token renderer, and apply it everywhere.
+:::
+
+### Weight and alignment of numbers
+
+The dossier records that bold mono is common in pages (Dashboard stat tiles, `SpeedsPage` KIAS cells at `font-mono text-2xl font-bold`, the result card at `font-mono text-5xl font-bold`) although the `readout` utilities are weight 500. That is the same two-dialect problem as the headings, at the scale of figures. A reader who sees speeds bold on one page and medium on another will wonder whether the difference means something. De Vinne's observation that readers notice inconsistency faster than they notice errors of substance applies with special force to numbers [@devinne1910practice].
+
+Rutter's table rules give the alignment: left-align text columns and right-align numbers, with headings matching their data, and align on the decimal point when precision varies [@rutter2017web]. Right alignment lets the reader compare magnitudes by the position of the leftmost digit.
+
+::: {.rule #TYP-049 grade="C"}
+**Right-align numeric columns and their headers, align on the decimal point where precision varies, left-align text columns, and give readouts one weight per size from the tokens.** Rutter's table guidance [@rutter2017web]; De Vinne on consistency [@devinne1910practice]. Craft consensus.
+
+*In LTF:* the `MarkdownContent` table sets `text-left` on the whole table; add a right-aligned numeric column option (GFM already supports right alignment with a trailing colon in the delimiter row of the source table). Replace `font-mono text-2xl font-bold` and `font-mono text-5xl font-bold` with sized `readout` tokens (adding a `readout-xl` if needed) at one weight.
+:::
+
+### The right symbol
+
+Hochuli's English edition was criticized by one reviewer on a single point: a suggestion to use the letter x as a multiplication sign. The reviewer argued that a font should supply a proper multiplication sign [@hochuli2008detail]. The notes for this book turn that into a general rule: use a real multiplication sign or minus where the font has them, do not substitute lookalike letters in numeric content, and let the font provide the glyphs. LTF's fonts do have them. The shipped Instrument Sans and JetBrains Mono files both contain the multiplication sign (U+00D7), the minus sign (U+2212), the en dash (U+2013) and the degree sign (U+00B0), as inspected for this book.
+
+LTF's content uses them inconsistently. A search of the lesson Markdown found the multiplication sign 50 times and a letter x between numbers 3 times, in runway dimensions, written as a number, a letter x and a number. The project rule already requires an en dash for ranges.
+
+::: {.rule #TYP-050 grade="C"}
+**Use the true glyph for each symbol (× for dimensions and multiplication, − for negative values, – for ranges, ° for degrees) and never a lookalike letter or hyphen.** Hochuli's reviewer argues that a font should supply a proper multiplication sign rather than an x [@hochuli2008detail]. Craft consensus; both LTF faces contain these glyphs.
+
+*In LTF:* replace the three "x" dimensions in lesson content with ×, and add `content:validate` checks for a letter x between digits, for a hyphen-minus before a digit where a minus is meant, and for a hyphen in numeric ranges.
+:::
+
+### Quotation marks
+
+The lesson Markdown in LTF uses straight typewriter quotes throughout: a search for this book found about 4,256 straight double quotes and 677 straight apostrophes inside words, and no curly quotes. The renderer (`react-markdown` with `remark-gfm`) does not convert them, so learners see typewriter marks. In a product whose identity depends on care, typewriter quotes are a small but constant sign of carelessness, the kind of drift De Vinne says the modern reader notices [@devinne1910practice].
+
+Dowding goes further than form. "The use of quotation marks never improves a text setting," he writes; where they are needed, use single quotes, and at display sizes make them two sizes smaller than the body [@dowding1954finer]. That is a book-setting taste, and for LTF it would be wrong. Quotation marks carry meaning in flight training: they show where a spoken radio call begins and ends, and where a label is quoted exactly as it appears on the panel. A beginner needs to see those boundaries. The craft sensibility survives in a narrower form: use the marks where they carry meaning, render them properly, and keep one convention.
+
+::: {.rule #TYP-051 grade="C"}
+**Render typographic (curly) quotation marks and apostrophes in all learner-facing text automatically, so authors can type straight quotes.** De Vinne records that readers have become critics of style in typesetting [@devinne1910practice]; Dowding treats quotation marks as a matter of careful setting [@dowding1954finer]. Craft consensus.
+
+*In LTF:* add a smart-quotes step to the content pipeline (in `scripts/lib/parseLesson.ts` or as a remark plugin in `MarkdownContent`) that converts straight quotes outside code spans, and apply the same conversion to YAML-sourced strings such as checklist and glossary text.
+:::
+
+::: {.rule #TYP-052 grade="C"}
+**Mark quoted speech, such as radio calls, and labels quoted from the panel in one consistent way across all content, and do not drop quotation marks where they mark the boundary of words the learner must say or find.** Dowding's rule against quotation marks is a book-setting taste [@dowding1954finer]; in instruction, the boundary of a quoted phrase is content. Craft reasoning against a craft authority.
+
+*In LTF:* the traffic-pattern widget sets its radio call as an italic paragraph inside quotes, and lessons quote calls in plain text. Choose one treatment for radio calls (for example, curly double quotes in the text face, no italic) and one for panel labels (for example, the label in the case the sim shows, without quotes), write them into the style card, and apply them in lessons, challenges and widgets.
+:::
+
+### The style card
+
+De Vinne's *Correct Composition* is, at bottom, an argument for a written house code. "There is no book of generally accepted authority that lays down a full code of explicit rules for orderly printing," he says, so each printing house that strives for consistency must make its own, the "style-card," to guide new compositors and maintain uniformity [@devinne1910practice]. Printing that passed a tolerant inspection in 1850 "does not pass now," and "the reader of to-day is more or less a critic of style in type-setting." His book publishes such a code for others, while allowing that different houses and kinds of work need different rules (English printers divide "mo-ther," American printers "moth-er").
+
+Hochuli's advice points the same way from the other end. Hard-to-automate rules belong in a writing style guide for human authors, not in CSS, and a short guide is more likely to be adopted than a long one [@hochuli2008detail]. Dowding's micro rules, which his reviewers found hard to reproduce in digital layout tools [@dowding1954finer], are the cautionary case: a rule that only a specialist can apply by hand will not survive many authors.
+
+LTF already has the beginning of a style card. AGENTS.md requires US English, second person, no em dashes in learner-facing text, an en dash in ranges, knots, feet, nautical miles and inHg, and MSL or AGL on every altitude; aircraft numbers come from `{{vspeed.*}}` and `{{aircraft.*}}` tokens in `content/aircraft.yaml`. That is exactly De Vinne's kind of code. What it lacks is coverage of the typographic details above, and enforcement for those details.
+
+::: {.rule #TYP-053 grade="C"}
+**Keep one written style card for numbers, units, symbols, abbreviations, capitalization and quotation, and enforce every rule on it that a machine can check in `content:validate`.** De Vinne's "style-card" is the historical model for keeping uniformity across many compositors [@devinne1910practice]; Hochuli argues for short guides and leaving hand rules to authors [@hochuli2008detail]; Dowding's hard-to-automate rules show what happens otherwise [@dowding1954finer]. Craft consensus.
+
+*In LTF:* extend `content/README.md` with a typographic section covering: × for dimensions, − for negatives, en dash for ranges, a no-break space between value and unit, one form for each unit abbreviation, curly quotes (rendered), the radio-call and panel-label treatments, abbreviation definitions on first use, and capitalization of headings. Add validator checks for each machine-checkable item, starting with those in TYP-031 and TYP-050.
+:::
+
+### What this means for Learn to Fly
+
+LTF's numerals are in better shape than its headings. The decision to put measured values in JetBrains Mono gives them tabular figures and clear identity, and the `readout` utilities exist. The remaining figure work is to apply tabular figures to the Instrument Sans values that change or align (TYP-047), to keep ordinary prose numbers in the text face (TYP-048), to align numeric columns and settle one weight per readout size (TYP-049).
+
+The symbol and quotation work is in content, and it is where the product looks most careless at close range: typewriter quotes in every lesson and a few lookalike multiplication signs. Fix the quotes in the pipeline, not by hand (TYP-051), give radio calls and panel labels one treatment each (TYP-052), and use the true glyphs the fonts already contain (TYP-050). Then write it all down, short, in `content/README.md`, and let the validator enforce it (TYP-053). That is the cheapest way to make many authors' lessons look like one hand set them.
+
+## The Paragraph and the Text Block
+
+### Imposition before composition
+
+Morison ranks the decisions of book typography, and the ranking surprises readers who think of typography as the choice of a typeface. Imposition, the placing of the text block on the page, is "the most important element in typography" [@morison1936first]. Margins should be proportionate to the text area, with "decent space for thumbs and fingers." The vertical oblong is the normal page because a horizontal oblong drives lines to an impossible length. Only after the page, the text block and the margins are settled do the details of composition (type size, leading, spacing) follow.
+
+The order transfers to screens as a working sequence, not as a set of proportions. The page width of a screen is set by the device, not the designer, so the first decision is the reading column: how wide it is relative to the type, where it sits, and what surrounds it. The measure and leading chapters above are the composition that follows. A team that chooses a face and a size first and then fits them into whatever column the layout grid left over has reversed Morison's order, which is how LTF's lessons came to be set at 16 px across an 800 px article: the article width was a layout decision, and the type inherited it.
+
+::: {.rule #TYP-054 grade="C"}
+**Decide the reading column (its width in characters, its position and what may sit beside it) before choosing type size and leading for a reading page, and record the column as a token.** Morison calls imposition "the most important element in typography" and puts it before composition [@morison1936first]. Craft consensus.
+
+*In LTF:* for `LessonPage`, settle the prose column first (TYP-019), then the width that widgets, tables and images may break out to (the 800 px article), then the rails beside it. Express both widths as tokens beside `container-page`, so that `PageContainer narrow` (768 px) and the lesson article stop being separate, unrelated numbers.
+:::
+
+### Margins as the stem of the glass
+
+Warde's image for margins is the long thin stem of a wine glass, which keeps fingerprints off the bowl; margins keep fingers off the type page [@warde1955crystal]. Morison asks for "decent space for thumbs and fingers" [@morison1936first]. Both were writing about books held in the hand. On a screen, the corresponding space is the gutter between the text and the edge of the viewport, and the space between the text column and the furniture beside it (rails, sticky headers, a floating section `Select`).
+
+The page canons that Tschichold popularized belong to print. Kinross's review of *The Form of the Book* reports the 2:3 and 3:4 page as the "natural" pair, and the account of page canons in the research notes gives the Van de Graaf construction: margins of one-ninth and two-ninths of the page, inner margin half the outer, and for a 2:3 page the proportions 2:3:4:6 for inner, top, outer and bottom [@tschichold1991form]. The same account records the reservations: the canon is a reconstruction of a method that "may have been used," Tschichold did not examine Van de Graaf's source article, and a measured Gutenberg page is closer to 2:3 than to the golden ratio. These canons are a craft heritage, not proof that proportions drive readability. On screen LTF can borrow the relational idea (margins derived from one ratio) without borrowing book measurements. In print, LTF can use the canon directly, because the kneeboard and checklists are printed.
+
+::: {.rule #TYP-055 grade="C"}
+**On screens, keep a clear gutter on both sides of every text column at every width; on printed pages (kneeboard, checklists), derive the margins from one stated ratio and leave the bottom and outer margins largest.** Warde and Morison treat margins as the space that protects the text from the hand [@warde1955crystal; @morison1936first]; the page canons give one historical ratio, with stated reservations [@tschichold1991form]. Craft heritage; no readability evidence.
+
+*In LTF:* the `px-4` (16 px) gutter on phones is the minimum; keep it and do not let `Card` or `Callout` content run closer to the screen edge. For the print styles of `/reference/checklists/:slug` and the kneeboard, set page margins from one ratio (for example the 2:3:4:6 relation for a portrait sheet) in the print stylesheet, with room at the bottom for a thumb on a kneeboard clip.
+:::
+
+### Marking the paragraph
+
+Morison is firm that every paragraph after the first should be indented, by a space "sufficient to be noticeable," and that abolishing indention is "plainly an undesirable practice" [@morison1936first]. Kinross reports that the later Tschichold treats indenting paragraph openings as essential, because omitting indents sacrifices meaning for superficial neatness [@tschichold1991form]; the digest of his essays gives one em as the usual indent. Gill, in the 1936 *Essay*, used paragraph marks instead of indents [@gill1936essay]. What they share is the requirement that the start of a paragraph be visible. The paragraph is a unit of thought, and a reader skimming for the next idea looks for its start.
+
+On the web, the common convention is a space between paragraphs rather than an indent. That is a legitimate method of marking the paragraph, and it has an advantage on screens: the gap survives at any width and in any block type, including lists and callouts. The rule the tradition supports is therefore to choose one method and apply it everywhere, not to use both (which marks the paragraph twice) or neither (which makes text into a wall).
+
+LTF uses spacing, but two values: `MarkdownContent` sets paragraphs at `my-3` (12 px), `Prose` at `my-4` (16 px). A learner reading the disclaimer and then a lesson sees two paragraph rhythms. Neither is wrong; having both is.
+
+::: {.rule #TYP-056 grade="C"}
+**Mark every paragraph start by one method, space between paragraphs in LTF, using one value tied to the body leading in every reading surface; never use both an indent and a space, and never neither.** Morison and the later Tschichold require the paragraph start to be visible [@morison1936first; @tschichold1991form]; Gill shows another method doing the same job [@gill1936essay]. Craft consensus.
+
+*In LTF:* set the paragraph gap once (about 0.75 em at a 1.625 leading, or one blank half-line) and use it in `MarkdownContent`, `Prose`, `Callout` bodies and the `QuizBlock` explanation. Remove `my-3` and `my-4` from the components in favor of the shared value (TYP-028).
+:::
+
+### Keeping the text free of interruption
+
+Morison's part V answers the charge that conventional typography is monotonous by putting decoration on the preliminary pages, not in the text [@morison1936first]. He also describes how publishers "drive out" a book to make it look longer, with wide spaces, blank pages and big initials. Both observations concern what may interrupt the reading column. The tradition's answer is that the text runs continuously, and that matter which is not the author's text goes before or after it.
+
+A lesson in LTF is not a novel; its widgets, quizzes and callouts are part of the teaching, and Part XV, Instructional Design, decides where they go. But a good deal of what sits in the reading column is not teaching. The lesson head stacks a `SignupBanner` ("Sign up (free) to save your progress and challenge scores."), a resume bar, and, on drafts, an `UnverifiedWarning` before the objectives and the first paragraph. Each is reasonable alone. Together they push the start of the text down and put a promotion, in a tinted box, ahead of the author. Morison would have put the promotion at the end, with the completion panel, where it can be read when the reader has a reason to save progress.
+
+::: {.rule #TYP-057 grade="C"}
+**Keep promotional and account prompts out of the reading column before the text begins; place them after the text or in the page furniture, and let only what the learner needs to read the lesson (title, honesty warnings, objectives) come before the first paragraph.** Morison confines decoration to the preliminary pages and criticizes padding a book to look substantial [@morison1936first]. Craft consensus.
+
+*In LTF:* move the `SignupBanner` from the top of `LessonPage` to the completion panel ("Finished reading and trying the questions?"), where saving progress is the natural next act. Keep the `UnverifiedWarning` at the top, because it changes how the learner should read what follows, and keep the resume bar, but make it a single line, not a tinted box.
+:::
+
+### What this means for Learn to Fly
+
+The paragraph-level work is small and the page-level work is a matter of order. Decide the lesson's reading column first and make it a token, separate from the width that figures may use (TYP-054); then the measure and leading rules have something to apply to. Keep gutters on every side at every width, and use a real page ratio in the print stylesheets for the kneeboard and checklists, which are the one place LTF prints and where the book canon applies without translation (TYP-055).
+
+Mark paragraphs one way, with one value, in every reading surface (TYP-056), and keep the text free of prompts that belong elsewhere (TYP-057). The lesson head is the clearest case: a learner who opens lesson 0.1 should meet the title, the objectives and the first sentence, and meet the sign-up offer when the lesson is done.
+
+## Two Traditions: Book Typography and Interface Typography
+
+### The New Typography
+
+Tschichold's *Die neue Typographie* of 1928 is the founding statement of the other tradition. "The essence of the New Typography is clarity," it begins, and the clarity is set against an old typography whose aim was "beauty" [@tschichold1995new]. The justification is the volume of print competing for attention: the "extraordinary amount of print" demands "the greatest economy of expression." Form is to be developed "out of the functions of the text," as in technology and nature, and the functions of printed text are communication, emphasis ("word value") and the logical sequence of contents.
+
+Two rules follow. Reject the central axis, an "artificial, invisible backbone" imposed from outside and illogical because readers start at one side of a line. And prefer asymmetry: "Asymmetry is the rhythmic expression of functional design," more logical and "far more optically effective than symmetry." Asymmetry is not chaos: "A striving for order can, and must, also be expressed in asymmetrical form." Ornament is "an ignorant tendency that our century must repress." And the New Typography "encourages 'standardization' in the construction of units, as in building," which Kinross's history summarizes as Tschichold's programme "Standardization, instead of individualism" [@kinross2004modern]. Kinross also corrects a common assumption about where this came from: "the Bauhaus had no fully fledged typographers"; Tschichold, with Renner and Trump, taught in Munich.
+
+The claims about optical effectiveness are assertions, not measurements. They are also the first statement of rules most interface designers now follow by habit: left alignment, a few sizes, hierarchy by size and weight and position, components built to standard units.
+
+### The reversal
+
+Tschichold then changed sides. The headnote to the reader that reprints his manifesto records that he was imprisoned by the Nazis, escaped to Basel, "turned back to the classical typography of his early training," and sensed "an element of fascism" in the movement's purifying order [@tschichold1995new]. The later essays collected in *The Form of the Book* defend the traditional book: typography as a modest, self-effacing art serving the reader, pages in "natural" proportions, indented paragraphs [@tschichold1991form]. A digest of them reports his view that book typography has no "new" rules, only centuries-old principles. Neither position rests on experiment.
+
+The reversal is usually told as a conversion. Kinross's history suggests a more useful reading. Modern typography, in his account, is the attempt to communicate clearly and rationally, and it includes the traditionalists as well as the avant-garde [@kinross2004modern]. The craft tradition and the modernist tradition share the aim of serving the reader and differ about means. Tschichold's two books can then be read as answers to two different problems: continuous reading of a book, where convention serves the reader best (Morison's argument [@morison1936first]), and display, advertising and information work, where the reader scans, compares and acts, and where function-derived asymmetric order serves better. That reading is this book's interpretation, but it fits the material, and it gives LTF a way to use both.
+
+### Four kinds of surface
+
+LTF has at least four kinds of text surface, and the traditions apply to them differently.
+
+| Surface | Examples in LTF | Governing tradition |
+| --- | --- | --- |
+| Reading | lessons, `Prose` pages, `BriefTab` | Morison, Warde, Gill |
+| Interface | curriculum, dashboard, challenge lists, forms | Tschichold 1928 |
+| Display | landing hero, module openers, 404 | voice, within limits |
+| Instrument | widgets, readouts, Fly mode | glance, tested |
+
+On reading surfaces the book tradition governs: a calm text face at a comfortable size, a moderate measure, ragged right, paragraphs marked, conventions kept. On interface surfaces Tschichold's 1928 rules fit better: alignment to a left edge, few sizes, hierarchy from function, standardized units. Display surfaces may carry voice (TYP-004) inside the limits of the scale. Instrument surfaces (the widgets, the `readout` values, `FlyModePage`) are glance typography, which neither tradition addressed directly and which needs testing rather than doctrine.
+
+The notes for this book record the same split from different directions: Warde's distinction between legibility and readability supports book-face discipline for lessons and large, heavy figures for a glance beside the sim [@warde1955crystal]; Updike's verdict against sans serif should not bind instrument faces chosen for glanceability [@updike1922printing]; Tschichold's later essays disagreeing with his earlier manifesto are the reason to write guidance as defaults per content type, not as one doctrine [@tschichold1991form].
+
+::: {.rule #TYP-058 grade="C"}
+**Classify every text surface as reading, interface, display or instrument, record the class in the component, and apply that class's defaults; do not apply book rules to instrument readouts or interface rules to lesson prose.** Tschichold's two positions answer different problems [@tschichold1995new; @tschichold1991form], and Kinross shows both traditions serve the reader by different means [@kinross2004modern]. Craft interpretation.
+
+*In LTF:* add the class to the top comment of each page and layout (`LessonPage` reading, `CurriculumPage` interface, `LandingPage` display, `FlyModePage` instrument), and organize the type tokens the same way, so that a `readout` cannot be used for lesson prose by accident.
+:::
+
+### The central axis
+
+Tschichold's case against the central axis is that readers start at one side of a line, so centering imposes a form that reading does not follow [@tschichold1995new]. For a short title on a display surface, centering is a legitimate choice. For anything a reader must read line by line, a ragged left edge makes every line start in a new place. LTF centers a few blocks of that kind: the `EmptyState` and `ErrorState` messages (`text-center` in a 420 px box), the reference hub header, and the debrief result card.
+
+::: {.rule #TYP-059 grade="C"}
+**Align interface and reading text to a left edge; center only short display lines (a title, a single number, a one-line message), never text of two or more lines that the learner must read.** Tschichold rejects the central axis because readers start at one side [@tschichold1995new]. Craft argument.
+
+*In LTF:* `States.tsx` centers the `EmptyState` and `ErrorState` title, message and action. The title and action may stay centered; left-align the message if it can run to two lines, or keep messages to one line. Keep the debrief result card's centered tier and percent, which are single display values, and left-align its "Criterion by criterion" rows.
+:::
+
+### Standardization and deliberate inconsistency
+
+Tschichold's "standardization in the construction of units, as in building" [@tschichold1995new] is the historical rationale for design tokens and shared components. Kinross's summary, "Standardization, instead of individualism" [@kinross2004modern], is also a warning about what happens without it: every page becomes an individual. The dossier's finding that many pages skip `Card` and hand-inline `rounded-lg border border-line bg-surface p-4 shadow-1`, and that sizes and weights are hand-picked per page, is individualism in Tschichold's sense.
+
+Unger supplies the counterweight. His book treats consistency or deliberate inconsistency as a component of typography, and declines to give formulas [@unger2018theory]. A system is not good because it is uniform. It is good when its uniformity and its exceptions are both chosen. A safety alert in Fly mode should look different from lesson prose, on purpose, and the difference should be designed once and reused, not improvised.
+
+::: {.rule #TYP-060 grade="C"}
+**Build every repeated text treatment as a shared component or token, and make every deliberate exception (alerts, celebrations, instrument readouts) a named variant rather than a page-level override.** Tschichold's standardization of units [@tschichold1995new; @kinross2004modern] and Unger's "deliberate inconsistency" [@unger2018theory]. Craft consensus.
+
+*In LTF:* replace the hand-inlined card classes on lesson, challenge, dashboard and reference pages with `Card`, and replace page-level type overrides (`text-2xl font-bold` headings, `font-mono text-5xl font-bold` results) with named variants. The `FlyPanel` random-event alert is a good example of a deliberate exception; make it a named `Callout`-family variant so its treatment is documented.
+:::
+
+### Glance typography and the reversed page
+
+Fly mode and the Night theme are where the classical sources say least and the risk is greatest. Tinker found black on white much more legible than white on black, because reversed print needed more fixations; three-quarters of readers preferred black on white; and reversal cost the serif face at every size, while the sans serif face lost little at 10 and 14 points but did lose at 6 [@tinker1963legibility]. The evidence is on paper, from the period, and screens differ. But its direction matches the craft caution about hairlines (TYP-013): reversed text is harder at small sizes and with thin strokes.
+
+`FlyModeLayout` is dark, sets a `text-xl` base, uses `text-4xl` titles, `text-2xl` goals and 5xl mono stopwatch digits: large, heavy figures for a glance, which is the right direction for an instrument surface. Night mode applies the same type sizes as Day across the whole product. Unger's process recommendation is the right one for both: where a design question can be tested with learners, test it [@unger2018theory].
+
+::: {.rule #TYP-061 grade="B"}
+**Set light-on-dark text at generous size and weight, and verify the Night theme and Fly mode with learners rather than assuming they read as well as Day.** Tinker found reversed print less legible, especially at small sizes [@tinker1963legibility]; Unger recommends testing design questions with readers [@unger2018theory]. Print evidence; screen evidence is in Part IV.
+
+*In LTF:* keep Fly mode's large type. In Night, check `text-sm` and `text-xs` text in `ink-2` and `ink-3`, where reversal and small size combine, and consider a slightly heavier weight for small Night text through the variable `wght` axis, as a hypothesis to test, not a settled rule.
+:::
+
+::: {.rule #TYP-062 grade="C"}
+**When a typographic question can be settled by watching learners (numeral style in Fly mode, the lesson measure, eyebrow removal), run a small test instead of debating it, and record the result next to the rule it changes.** Unger urges designers to pose research questions and collaborate with scientists [@unger2018theory]; Johnston treats rules as guides [@johnston1906writing]. Craft process.
+
+*In LTF:* the first three tests are the narrowed lesson measure (TYP-019), the Fly mode step text at its large sizes (TYP-033), and recognition of codes and abbreviations by beginners (TYP-007, TYP-037).
+:::
+
+### What this means for Learn to Fly
+
+The two traditions are not a choice LTF has to make once. They are tools for different surfaces. Classify the surfaces and organize the tokens to match (TYP-058). Apply the book tradition to lessons: the measure, leading, ragged right and paragraph rules of the preceding chapters. Apply Tschichold's 1928 rules to the interface: left alignment (TYP-059), standardized components and named exceptions (TYP-060). Treat Fly mode and Night as instrument and reversed surfaces whose rules are tested, not assumed (TYP-061, TYP-062).
+
+This also bears on the owner's complaint. A product that applies one generic style to every surface looks generic. A product whose lessons read like a well-set book, whose interface is ordered like a good timetable, and whose instruments read like instruments has three distinct, purposeful typographic characters, all drawn from one type stock. That is a more durable source of identity than a new display face, though Part XX, Brand Identity and Distinctiveness, may add one.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for LTF
+
+1. **Purpose.** Lesson and reference typography is judged by comprehension; decoration is vetoed on reading surfaces (TYP-001, TYP-002). Voice and novelty go to display surfaces only (TYP-004, TYP-008).
+2. **Furniture.** The `BetaBanner` is quieted and removed from `FlyModeLayout`; repeated labels are cut back (TYP-003, TYP-038).
+3. **Review practice.** Type changes are reviewed with real lesson text, at phone and `xl` widths, in Day and Night, and with beginners where codes and labels are concerned (TYP-005, TYP-007, TYP-062).
+4. **Reasons on record.** Token and utility comments cite rule IDs from this book instead of missing documents (TYP-009).
+5. **Type stock.** At most three families with written jobs: Instrument Sans for reading, JetBrains Mono for measured values, and an optional display face confined to `display-*` (TYP-010, TYP-013). The text face is not reopened on serif grounds (TYP-015); it is tested for rhythm and distinct characters (TYP-016, TYP-017).
+6. **True styles.** Italic files are imported or italic is dropped; no synthesized styles, no distorted labels; instrument hairlines checked at 1x (TYP-011, TYP-012, TYP-014, TYP-045).
+7. **Measure.** The `container-measure` token becomes about 44ch (about 66 characters of Instrument Sans text); lesson prose moves onto it, while figures may use the full article width; a test asserts 45 to 75 characters per line (TYP-018, TYP-019, TYP-054). Narrow containers reflow instead of shrinking type; prose stays single column; tables size to content (TYP-020, TYP-021, TYP-022).
+8. **Leading and spacing.** Leading is a ratio per style, reviewed against the new measure; small text never carries paragraphs; in-text spacing is em-based; lesson blocks share a small set of gaps; multi-line headings pass the clearance check (TYP-023 to TYP-028).
+9. **Alignment and spacing of words.** Ragged right everywhere, never justified; the font's word space; one space between sentences; no automatic hyphenation; values bound to units; short strings broken by sense (TYP-029 to TYP-033).
+10. **Capitals.** Capitals are tracked, lowercase is not; capital labels get wider word spaces; no sentences in capitals; abbreviations tracked by the renderer and defined on first use; eyebrows no smaller than 12 px and only where informative; long digit strings in mono (TYP-034 to TYP-039).
+11. **Scale and hierarchy.** One scale from the reading size and a gentle ratio; no raw size classes; one style per heading level per surface class, `display-md` as the page title on reading and interface pages; ranks set before styling; semibold for emphasis; three visible ranks per page (TYP-040 to TYP-046).
+12. **Figures and symbols.** Tabular figures for data and changing values; prose numbers in the text face; numeric columns right-aligned; one weight per readout size; true symbols; curly quotes rendered by the pipeline; one treatment for radio calls and panel labels; a typographic style card enforced by `content:validate` (TYP-047 to TYP-053).
+13. **Page and paragraph.** The reading column is decided first and tokenized; gutters at every width and a stated ratio for printed margins; one paragraph-marking value; the `SignupBanner` moves to the completion panel (TYP-054 to TYP-057).
+14. **Surface classes.** Every page declares reading, interface, display or instrument; interface text is left aligned; repeated treatments are components with named exceptions; Night and Fly mode are tested (TYP-058 to TYP-062).
+
+### Review checklist
+
+Run these questions against a pull request or a page. A "no" needs a fix or a recorded reason.
+
+**Purpose and practice**
+
+- Does every typographic change on a reading surface help the learner understand the text, with nothing purely decorative added? (TYP-001)
+- Is running text at an ordinary weight, with heavy weights kept to short emphasis and glance readouts? (TYP-002)
+- Is repeated furniture (headers, banners, eyebrows) quieter than the content? (TYP-003)
+- Is any display voice confined to display surfaces? (TYP-004, TYP-008)
+- Was the change reviewed with real LTF text and numbers, at phone and `xl` widths, in Day and Night? (TYP-005)
+- Does lesson text keep mixed case, left alignment, marked paragraphs and underlined links? (TYP-006)
+- Have new codes, labels or abbreviations been tried on someone who has not used LTF? (TYP-007)
+- Does every new or changed token carry its reason or rule ID? (TYP-009)
+
+**Faces**
+
+- Does the change use only the named families, each for its stated job? (TYP-010)
+- Is every style used (italic, weights) loaded as a real font file? (TYP-011)
+- Are labels free of one-axis scaling or squeezing? (TYP-012)
+- Is any high-contrast face confined to large display sizes? (TYP-013)
+- Are hairlines in drawings sharp at 1x in both themes? (TYP-014)
+- Was any face choice argued on letter distinctness, spacing, numerals and voice rather than serifs? (TYP-015)
+- Has a new face passed the n/o and H/O rows and a real-text setting? (TYP-016)
+- Are 0 and O, 1, l and I, 5 and S, 8 and B distinct at the smallest size used, in both themes? (TYP-017)
+
+**Measure, leading and spacing**
+
+- Does prose fall between 45 and 75 characters per line at every width, counted in real text? (TYP-018, TYP-019)
+- Do narrow containers reflow rather than shrink type? (TYP-020)
+- Is prose in a single column? (TYP-021)
+- Are tables sized to content, and checklist steps and quiz options kept as units? (TYP-022)
+- Does the leading suit the measure, changed one variable at a time? (TYP-023)
+- Is multi-sentence text at body size? (TYP-024)
+- Is leading a ratio set in the type token, with no raw `leading-*` in components? (TYP-025)
+- Do wrapped headings and stacked labels keep descenders clear of ascenders? (TYP-026)
+- Is spacing inside text in em units, and are block gaps taken from the shared set? (TYP-027, TYP-028)
+
+**Words and lines**
+
+- Is all text ragged right, with no justification? (TYP-029)
+- Is lowercase text free of added `letter-spacing` and `word-spacing`? (TYP-030)
+- Is there exactly one space after each sentence? (TYP-031)
+- Is hyphenation off, with values bound to units and identifiers unbroken? (TYP-032)
+- Do headings, checklist steps, quiz stems and buttons break by sense, with no single word stranded? (TYP-033)
+
+**Capitals**
+
+- Are all-caps strings letterspaced, with wider word spaces, and is mixed-case text untracked? (TYP-034, TYP-035)
+- Are sentences, warnings and instructions in sentence case? (TYP-036)
+- Are capital abbreviations in prose tracked by the renderer and defined on first use? (TYP-037)
+- Are capital labels at least 12 px and semibold, and does each eyebrow say something the heading does not? (TYP-038)
+- Are long digit strings the learner must copy set in mono? (TYP-039)
+
+**Scale and hierarchy**
+
+- Does every size come from a type token, with no raw size classes? (TYP-040)
+- Does the scale follow one ratio, with named exceptions only? (TYP-041)
+- Does each heading level match the style used for that level elsewhere in its surface class? (TYP-042)
+- Can adjacent ranks be told apart at a glance? (TYP-043)
+- Is the largest heading on a reading page within about two to two and a half times the body? (TYP-044)
+- Is emphasis semibold, with underline only on links and italic only in a loaded face? (TYP-045)
+- Does the page show at least three distinguishable ranks, with `ink-2` only for secondary content? (TYP-046)
+
+**Figures, symbols and style**
+
+- Are compared, aligned and changing numbers in tabular figures? (TYP-047)
+- Are ordinary prose numbers in the text face? (TYP-048)
+- Are numeric columns right-aligned and readout weights taken from tokens? (TYP-049)
+- Are ×, −, – and ° used instead of lookalikes? (TYP-050)
+- Are quotation marks and apostrophes rendered curly? (TYP-051)
+- Do radio calls and panel labels follow the single style-card treatment? (TYP-052)
+- Is every machine-checkable style-card rule enforced in `content:validate`? (TYP-053)
+
+**Page and surface**
+
+- Was the reading column set as a token before type details? (TYP-054)
+- Do text columns keep their gutters, and do print styles use a stated margin ratio? (TYP-055)
+- Are paragraphs marked by the single shared spacing value? (TYP-056)
+- Is the reading column free of promotion before the first paragraph? (TYP-057)
+- Does the page declare its surface class and follow that class's defaults? (TYP-058)
+- Is text of two or more lines left aligned? (TYP-059)
+- Are repeated treatments components, with exceptions as named variants? (TYP-060)
+- Were Night and Fly mode text checked at their real sizes, and were testable questions tested? (TYP-061, TYP-062)

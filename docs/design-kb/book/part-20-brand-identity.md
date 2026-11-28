@@ -351,7 +351,7 @@ Two consequences follow for review. First, a page cannot be judged distinctive o
 ::: {.rule #BRD-025 grade="C"}
 **Review key screens as whole compositions, asking which holistic type they read as, not only whether each token is correct.** Holistic design types predicted brand impressions better than single elements in package research [@orth2008holistic], and first impressions of websites form from overall complexity and typicality before details are read [@tuch2012role]. The typology comes from packaging and static images, so use it as a review vocabulary.
 
-*In LTF:* review `LandingPage`, `LessonPage`, `ChallengePage`, `FlyModePage` and the result card in `DebriefForm` at thumbnail size, side by side with three competitor pages. If a screen reads as "nondescript", the fix is compositional (scale contrast, a drawn element, a type voice), not another token tweak.
+*In LTF:* review `LandingPage`, `LessonPage`, `ChallengePage`, `FlyModePage` and the result card (`ResultView`) at thumbnail size, side by side with three competitor pages. If a screen reads as "nondescript", the fix is compositional (scale contrast, a drawn element, a type voice), not another token tweak.
 :::
 
 ::: {.rule #BRD-026 grade="D"}
@@ -391,7 +391,7 @@ What the identity literature does support is a rule about how a color is used. A
 :::
 
 ::: myth
-**"Blue means trust, red means excitement, so pick the hue that matches the brand."** Rating studies find associations such as competent blue and exciting red [@labrecque2012exciting], and color charts strip them of their conditions. The associations are learned, context dependent and measured as ratings of images, with no shown effect on behavior; the source notes recommend testing with one's own audience instead [@labrecque2012exciting].
+**"Blue means trust, red means excitement, so pick the hue that matches the brand."** Rating studies find associations such as competent blue and exciting red [@labrecque2012exciting], and color charts strip them of their conditions. The associations are learned, context dependent and measured as ratings of images, with no shown effect on behavior; the source notes recommend testing with one's own audience instead [@labrecque2012exciting]. The full case, with the studies, is made in Part VI, Color: Science, Meaning and Access, and is not repeated here.
 :::
 
 ### Shape and geometry
@@ -665,7 +665,7 @@ The table follows from evidence already given. Exposure builds familiarity [@mon
 ::: {.rule #BRD-049 grade="C"}
 **Assign each touchpoint an explicit identity job, and design brand expression to the attention it gets.** Identity work extends to every touchpoint as a distinct phase [@wheeler2012designing]; exposure builds familiarity [@montoya2017reexamination] while brief first encounters set expectations [@lindgaard2006attention]. A practitioner framework combined with experimental findings.
 
-*In LTF:* adopt the table above as the touchpoint map in the identity strategy. Each row names its components (`Logo`, `PageHeader`, `FlyModeLayout`, `DebriefForm` result card, `NotFoundPage`, the reference print styles) and the cues each must carry.
+*In LTF:* adopt the table above as the touchpoint map in the identity strategy. Each row names its components (`Logo`, `PageHeader`, `FlyModeLayout`, `ResultView` result card, `NotFoundPage`, the reference print styles) and the cues each must carry.
 :::
 
 ### The first glance
@@ -703,7 +703,7 @@ Some moments deserve more brand than others because they are rare, earned and re
 ::: {.rule #BRD-052 grade="C"}
 **Design the result card and course completion as LTF's signature compositions, and make them shareable with the brand intact.** With a calm default register (BRD-047), rare and earned moments are where an exciting, contrasting register can appear without changing the brand's overall impression [@orth2008holistic; @aaker1997dimensions], and shared images act as publicity that maintains salience [@ehrenberg2002brand]. Inference from rating studies and an argued position.
 
-*In LTF:* the result card in `DebriefForm` and the course-complete panel on `DashboardPage` should use the type voice, the fin and the horizon line, and offer a share image generated from the same template as `og-image.png`. Keep the honest line that the badge is not a pilot certificate on every shared version.
+*In LTF:* the result card (`ResultView`) and the course-complete panel on `DashboardPage` should use the type voice, the fin and the horizon line, and offer a share image generated from the same template as `og-image.png`. Keep the honest line that the badge is not a pilot certificate on every shared version.
 :::
 
 ### Small surfaces where care shows

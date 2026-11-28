@@ -374,7 +374,7 @@ Goals plus summary feedback beat goals alone, because people cannot adjust effor
 
 ### When goals do harm
 
-Goal setting has costs that its authors acknowledge and a critic emphasizes. The paper itself reports smaller effects on complex tasks, increased risk-taking (difficult performance goals raised the riskiness of strategies in a computer game), goal conflict, and impaired learning from performance goals on complex new tasks [@locke2002building]. Ordonez, Schweitzer, Galinsky and Bazerman (2009) argued that the benefits have been overstated and the harms ignored, including narrow focus and unethical behavior, and recommended that goals be prescribed selectively with a warning label; a reply followed (both known to this book only through summaries cited in the lane notes for this paper [@locke2002building]).
+Goal setting has costs that its authors acknowledge and a critic emphasizes. The paper itself reports smaller effects on complex tasks, increased risk-taking (difficult performance goals raised the riskiness of strategies in a computer game), goal conflict, and impaired learning from performance goals on complex new tasks [@locke2002building]. Ordonez, Schweitzer, Galinsky and Bazerman (2009) argued that the benefits have been overstated and the harms ignored, including narrow focus and unethical behavior, and recommended that goals be prescribed selectively with a warning label; a reply followed (both known to this book only through summaries cited in the research notes for this paper [@locke2002building]).
 
 In a flight-training product the risk-taking finding is the serious one. A goal that rewards hitting a number can teach a learner to chase the number by an unsafe route. The defense is to make safety criteria required, so no tier can be earned without them, and to never set goals on speed.
 
@@ -899,3 +899,121 @@ The publication-bias reanalysis of nudging and the gamification reviews' worry t
 ### What this means for Learn to Fly
 
 LTF's analytics should be designed around the outcomes this Part cares about: whether learners pass challenges after earlier failures, whether they retry, whether they return after a gap, and whether they can still pass a challenge they passed weeks ago. Raw visits and "lessons completed" are context, not success. Every motivational feature arrives with a written hypothesis and metric (MOT-067), is tested only where traffic allows (MOT-068), measures the needs and persistence rather than satisfaction (MOT-069), checks the mechanism (MOT-070), and records its result whatever it is (MOT-072). The plan already gives LTF a place for this: the v2 admin "learning signals" stats page. Its first tables should be retries after failure and repeat passes after a delay, because those are closer to learning than anything a session counter shows.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+1. **The simulator is the game; the web pages are not gamified.** Motivational design effort goes first to the in-sim challenges (scenario, criteria, debrief), and the word "gamification" is not used as a goal in specs. Rules: MOT-012, MOT-013, MOT-014.
+2. **No points, currency, XP, unlocks or rewards for lessons, page visits or quiz answers.** "Mark lesson complete" records progress and nothing else. Rules: MOT-006, MOT-010, MOT-011.
+3. **No leaderboard and no ranking of learners against each other.** All comparison is with the learner's own earlier attempts. Social features stay out of v1 and v2; any later one is cooperative, opt-in and private by default. Rules: MOT-018, MOT-019, MOT-020, MOT-035.
+4. **Gold, Silver and Bronze stay, as levels of a stated standard.** Each tier names its criterion, is reported after the flight, Bronze reads as a pass, and the tier is never promised as a prize in a brief or on the landing page. Rules: MOT-007, MOT-008, MOT-009, MOT-022.
+5. **The `CourseBadge` is the only badge in v1.** Any later badge is earned by a passed challenge, describes the skill and carries the not-a-certificate wording where needed. Earned records are permanent. Rules: MOT-016, MOT-021.
+6. **Progress is shown as skills demonstrated and improvement over attempts.** The dashboard adds a per-skill view of passed challenges and replaces the "Gold results" count with a measure of improvement. Rules: MOT-023, MOT-024, MOT-041.
+7. **Every challenge brief states specific criteria with levels, a one-line reason, and safety criteria that gate the pass.** First challenges for a complex maneuver use learning-goal criteria before tolerance criteria. Criteria follow flight phases. Rules: MOT-003, MOT-025, MOT-026, MOT-028, MOT-029, MOT-030, MOT-031.
+8. **Result feedback is task-level and leads with the next step.** No praise or criticism of the person, a "Next attempt" line, per-criterion change since last time, and the tier and percentage made secondary to criterion rows. Rules: MOT-032, MOT-033, MOT-035, MOT-036, MOT-037.
+9. **The self-scored debrief is a calibration exercise.** It keeps the replay prompt and adds per-criterion replay checks. Rules: MOT-034, MOT-045.
+10. **Fly mode is calm and free of evaluation, prompts and decoration.** Alarming events appear only in challenges that declare them, and the `BetaBanner` is hidden there. Rules: MOT-038, MOT-044, MOT-053.
+11. **The course opens with an early, near-certain first success in the sim, and encouragement copy is always paired with a real task.** Rules: MOT-040, MOT-042, MOT-054.
+12. **Difficulty adapts to the learner's results, with an easier path after repeated failure, varied conditions within modules, and no gates for experienced learners.** Rules: MOT-047, MOT-048, MOT-049, MOT-050, MOT-051, MOT-052.
+13. **Scenario framing is the task itself; no mascots, story arcs or reward cartoons; trivia sits after the core explanation.** Rules: MOT-055, MOT-056, MOT-057, MOT-058.
+14. **No growth-mindset slogans; unlimited, cost-free retries and a visible history do that work.** Rules: MOT-046.
+15. **Return visits come from a small, obvious next step, not from nudges.** The v2 streak is a gain record on a weekly window with no loss warning; reminders are asked once and declined easily. Rules: MOT-059, MOT-060, MOT-061, MOT-062, MOT-063.
+16. **No dark patterns in any motivational or retention flow.** No confirmshaming, false urgency, fake activity counts or guilt, and every such feature is screened against the five strategies. Rules: MOT-064, MOT-065, MOT-066.
+17. **Copy gives identified reasons and avoids controlling language.** Rules: MOT-001, MOT-002, MOT-004, MOT-005, MOT-009.
+18. **Every motivational feature is a hypothesis with a pre-agreed learning or persistence metric, tested over weeks where traffic allows, with mechanism measures and recorded results.** Practice totals come only from logs. Rules: MOT-015, MOT-017, MOT-039, MOT-043, MOT-067, MOT-068, MOT-069, MOT-070, MOT-071, MOT-072.
+
+### Review checklist
+
+Run these questions against a pull request, a page or a proposed feature. A "no" is a finding unless the pull request gives a written reason.
+
+#### Purpose and framing
+
+- Does the change name which need (competence, autonomy, relatedness) it serves, and avoid working through payment, pressure or surveillance? (MOT-001)
+- Does motivational copy give an identified reason rather than a reward or a guilt-based reason? (MOT-002)
+- Where the learner is asked to do something they did not choose, is there a one-line rationale? (MOT-003)
+- Are choices about what to fly, hints and retries left open, and is any lock justified by a real prerequisite? (MOT-004)
+- Is relatedness served by voice and honest statements rather than a new social mechanic? (MOT-005)
+- Is the feature described by its mechanic and need, not as "gamification"? (MOT-012)
+- Would the same effort spent on the in-sim challenge experience do more? (MOT-013)
+
+#### Rewards and game elements
+
+- Does anything give points, currency, unlocks or other rewards for doing or finishing a lesson, a quiz or a visit? (MOT-006)
+- Is any tier, badge or award announced as the reason to do something? (MOT-007)
+- Does every tier name the criterion it reflects and appear after the flight? (MOT-008)
+- Is result, dashboard or reminder copy free of "must", "don't stop now" and similar controlling phrases? (MOT-009)
+- Could a learner improve any reward by being faster or less careful? (MOT-010)
+- Are widgets, `FlyPanel` and Fly mode free of any reward layer? (MOT-011)
+- Is a motivational claim backed by a feature-specific hypothesis rather than "gamification works"? (MOT-014)
+- Is the evaluation window long enough to see past novelty? (MOT-015)
+- If a game element is added, is the team ready to keep it, and are earned records permanent? (MOT-016)
+- Are reference pages free of progress, tiers, badges and counters? (MOT-017)
+- Is any learner ranked against others, publicly or privately? (MOT-018)
+- If a social feature is proposed, is it cooperative, opt-in and private by default? (MOT-019, MOT-020)
+- Is a proposed badge rare, hard, tied to a skill and honest about what it is? (MOT-021)
+- Does Bronze read as a pass, with every tier described as a level of a standard? (MOT-022)
+- Is progress shown as skills demonstrated, and are trophy totals replaced by improvement? (MOT-023, MOT-024)
+
+#### Goals and briefs
+
+- Does the brief state specific criteria with levels, never "fly well"? (MOT-025)
+- For a first attempt at a complex maneuver, is there a learning-goal criterion before tolerance criteria? (MOT-026)
+- Can the learner choose a target level, and does each criterion say why it matters? (MOT-027)
+- Do criteria follow the phases of the flight? (MOT-028)
+- Do required safety criteria gate the pass, and is no goal set on time taken? (MOT-029)
+- Does the brief have scenario, why it matters, scoring, and what to do if it goes wrong, in that order? (MOT-030)
+- Is motivational framing in the brief kept to a sentence or two? (MOT-031)
+
+#### Feedback and results
+
+- Is all feedback about the flight rather than the person? (MOT-032)
+- Does the result end with one feed-forward step linked to where it is taught? (MOT-033)
+- Does the debrief tell the learner how to check their own flight? (MOT-034)
+- Does the result show change against the learner's own previous attempts? (MOT-035)
+- Does criterion-level information lead, with the tier and percentage secondary? (MOT-036)
+- Is feedback richer in early attempts and thinner once attempts are consistent? (MOT-037)
+- Is Fly mode free of evaluation and praise while flying? (MOT-038)
+- Does every quiz verdict come with an explanation? (MOT-039)
+
+#### Confidence and difficulty
+
+- Does the opening of the course lead to an early, likely success in the sim? (MOT-040)
+- Is success shown as the learner's own record rather than a congratulation? (MOT-041)
+- Is every encouraging line paired with a real task? (MOT-042)
+- Do worked examples include a coping model, not only a flawless run? (MOT-043)
+- Are alarming sounds and motion limited to challenges that declare events? (MOT-044)
+- Does the debrief support accurate self-assessment and avoid tempting inflation? (MOT-045)
+- Is the change free of growth-mindset slogans? (MOT-046)
+- Does each challenge have a stated goal, feedback after the attempt and matched difficulty? (MOT-047)
+- Is uncertainty in the scenario rather than in scoring or instructions? (MOT-048)
+- Does difficulty adapt to results, with an easier path after repeated failure and no gate for experienced learners? (MOT-049, MOT-050, MOT-051)
+- Do conditions vary across attempts and modules, with one plain note that this is meant to feel harder? (MOT-052)
+- Does Fly mode show only what the flight needs? (MOT-053)
+
+#### Fiction, interest and friction
+
+- Is setup friction before the first success minimized, with a control map one click away? (MOT-054)
+- Is any scenario framing the task itself, with no mascot or detached story? (MOT-055)
+- Is non-essential interesting material placed after the core explanation and marked optional? (MOT-056)
+- Do sections open with a question or case rather than a decoration? (MOT-057)
+- Is a widget justified by the method it carries? (MOT-058)
+
+#### Habits and persuasion
+
+- When stalling is the problem, has the change addressed ability and prompt first? (MOT-059)
+- Does the change avoid relying on social-norm counters or reminder messages? (MOT-060)
+- If a streak appears, is it a gain record with no loss warning, on a weekly window, and not the most prominent element? (MOT-061, MOT-062)
+- Is a reminder or permission asked once, in context, with an equally easy decline? (MOT-063)
+- Is the change free of confirmshaming, false urgency, fake counts and guilt? (MOT-064)
+- Has the change been screened against nagging, obstruction, sneaking, interface interference and forced action? (MOT-065)
+- Is progress described as done and next, not as owed or at risk? (MOT-066)
+
+#### Measurement
+
+- Does the pull request state a hypothesis and a learning or persistence metric agreed before shipping? (MOT-067)
+- Is the test large enough and long enough to mean something, and if not, is the decision made from principle and recorded? (MOT-068)
+- Are need-satisfaction items and a behavioral persistence measure used, rather than a satisfaction rating? (MOT-069)
+- Is the mechanism measured as well as the outcome, and both pre-registered? (MOT-070)
+- Are practice totals computed from logs and labeled as estimates? (MOT-071)
+- Will the result be recorded whether positive, null or negative? (MOT-072)

@@ -29,7 +29,7 @@ Cowan's 2001 target article is the standard correction [@cowan2001magical]. Its 
 The design consequence is narrower than the folklore. The number that matters is how many new, unfamiliar, interacting pieces a learner must hold at once while reasoning, and it is small. It is not a count of visible things, because what stays on screen does not need to be held.
 
 ::: myth
-**"People can hold seven plus or minus two items, so menus, nav bars and lists should have no more than seven."** Miller's own paper calls the recurring seven a possible coincidence and offers no design rule; his finding concerned memory span and absolute judgment, not items displayed and available for re-reading [@miller1956magical]. The best current estimate of pure capacity is smaller (about four chunks) and appears only under conditions that block chunking [@cowan2001magical]. A visible list is read, not remembered, so its length is a question of scanning and choice (covered in the Part on the quantitative laws of interaction), not of memory span.
+**"People can hold seven plus or minus two items, so menus, nav bars and lists should have no more than seven."** Miller's own paper calls the recurring seven a possible coincidence and offers no design rule; his finding concerned memory span and absolute judgment, not items displayed and available for re-reading [@miller1956magical]. The full case, with the studies, is made in Part VIII, The Quantitative Laws of Interaction, and is not repeated here.
 :::
 
 ::: {.rule #LRN-001 grade="B"}
@@ -415,7 +415,7 @@ The boundary that matters most comes from the seductive-details work. Highlighti
 ::: {.rule #LRN-032 grade="A"}
 **Signal structure and focus: a heading per idea, the key term in bold at first use, and a visible highlight on the element being discussed.** Across 103 studies, signaling improved retention (g+ = 0.53) and transfer (g+ = 0.33) [@schneider2018meta]. The direction is consistent across meta-analyses; moderators, including prior knowledge, are not.
 
-*In LTF:* lesson headings, the `SectionNav` rail and the mobile section `Select` ("Section i of n") are organizational signals; keep them. In widgets, highlight the instrument or control the current sentence is about using `--color-accent` or `--color-accent-line`, and bold the term in `MarkdownContent` at first use.
+*In LTF:* lesson headings, the `SectionNav` rail and the mobile section `Select` ("Section i of n") are organizational signals; keep them. In widgets, highlight the instrument or control the current sentence is about using the `accent` or `accent-line` color tokens, and bold the term in `MarkdownContent` at first use.
 :::
 
 ::: {.rule #LRN-033 grade="C"}
@@ -817,7 +817,7 @@ The principle's core claim about cues is better supported than its popular corol
 For a product, the robust version of the principle is about the cues, not the room. A learner who has only ever met a checklist item as a line of text in a lesson may not retrieve it when the cue is an indication on a sim panel. Practice should use the cues the learner will actually meet.
 
 ::: myth
-**"Study in the same place you will be tested and the setting will bring the memories back."** The classic underwater-and-on-land diver study did not replicate in a 2021 attempt, and context effects shrink when good retrieval cues are present (see the evidence summarized with @tulving1973encoding). What transfers is the match between the cues present at learning and at recall, not the physical surroundings.
+**"Study in the same place you will be tested and the setting will bring the memories back."** The classic underwater-and-on-land diver study did not replicate in a 2021 attempt, and context effects shrink when good retrieval cues are present [@tulving1973encoding]. What transfers is the match between the cues present at learning and at recall, not the physical surroundings.
 :::
 
 ### Learning styles
@@ -891,3 +891,188 @@ Add "why" to procedures (LRN-068). Challenge `procedure` steps and checklists st
 Make cues look like the sim (LRN-070). The widgets can render the indications a learner will see; quiz prompts built on them practice retrieval with the right cue. Fly mode copy should describe what the learner sees, in the sim's terms.
 
 Keep study advice evidence-based (LRN-074). If LTF writes a page on how to use the course, it should say: recall instead of rereading, come back after a few days, mix topics. Make It Stick shows how to say it plainly; quote no numbers from it.
+
+## Measuring learning, not performance
+
+### Why the obvious measures mislead
+
+Every chapter in the memory half of this Part ends at the same warning. An immediate test favored rereading over retrieval, while a test two days later reversed it [@roediger2006testenhanced]. Blocked practice scored 89 percent during practice and 20 percent a week later, against 60 and 63 percent for mixed practice [@rohrer2007shuffling]. Massed presentation felt as good or better to learners who did worse with it [@kornell2008learning]. Soderstrom and Bjork's review generalizes the point: the primary goal of instruction is "relatively permanent changes in comprehension, understanding, and skills", and performance during instruction "is often an unreliable index" of whether those changes have occurred [@soderstrom2015learning]. The Bjorks, in a 2020 commentary that cites this review, put it as a rule of measurement: learning "can only be measured at a delay".
+
+The research base itself shares the weakness. Mayer's preface to the third edition of *Multimedia Learning* says that "most research still focuses on learning in short-term studies with immediate tests in laboratory environments involving college students" and calls for longer studies in authentic settings [@mayer2021multimedia]. De Jong makes the same point about cognitive load studies with minutes of study time and no replay [@dejong2010cognitive]. LTF's learners study over weeks, beside a simulator, with full control of pace. The laboratory defaults in this Part are the best available starting point; LTF's own delayed data is the only way to know whether they hold.
+
+### What a learning product can observe
+
+LTF can see several kinds of evidence, and they are not equal.
+
+Immediate performance is what a learner does in the lesson or flight that taught it: the first `QuizBlock` answer in a section, the `QuizPanel` score, a challenge attempt right after its lesson. It reflects retrieval strength and is inflated by recency, blocking and repetition [@bjork2009making]. It is useful for finding confusing content, not for judging learning.
+
+Delayed performance is the same knowledge or skill tested after a gap, ideally in a later session: a recall item from Lesson 2.2 asked at the start of Lesson 2.4, or the first attempt at a challenge revisited after a week. This is the measure the testing and spacing literatures use [@roediger2006testenhanced; @cepeda2008spacing].
+
+Transfer performance is the knowledge applied in a new situation: a scenario question that was not asked before, a challenge at a different airport or with a random event. Seductive details harm transfer more than retention [@rey2012review], signaling helps transfer less than retention [@schneider2018meta], and the original worked-example effect was limited to problems of the same structure [@sweller1985use]. Transfer is where design differences show most and where many effects are smallest; it is the measure that matters for flying.
+
+Self-report covers ratings of effort, confidence or preference. Effort ratings are relative at best [@dejong2010cognitive], and confidence and preference point the wrong way in several studies [@roediger2006testenhanced; @karpicke2011retrieval; @kornell2008learning]. Self-reports are useful as data about the learner's beliefs, which can themselves be a target for feedback.
+
+### Comparing versions
+
+The heterogeneity in this literature is large. Rowland's testing-effect meta-analysis found that 18 percent of effects favored restudy [@rowland2014effect]; seductive-detail harm varies with format and pacing [@rey2012review]; the modality effect shrinks with learner pacing [@dejong2010cognitive]. An average effect is a reason to adopt a default, not a guarantee for a particular lesson. When LTF has a choice that matters (a mixed review set or a blocked one, a narrated widget or a printed one, an anecdote in a lesson or not), the useful question is which version produces better delayed and transfer results for LTF's learners.
+
+That requires two things the product mostly lacks today. The first is a delayed item to measure with: a recall question placed in a later lesson, or a revisited challenge. The second is persistent data: `quizStore.ts` keeps answers in `sessionStorage`, with signed-in answers recorded on the server per its comment, and `v1.md` Section 17.3 records first answers for analytics. Those first answers are the right raw material if they are kept across sessions and linked to the item.
+
+### Showing learners the gap between feeling and knowing
+
+Because learners misjudge their own learning, the measurement can be turned toward them. Make It Stick's "avoid illusions of knowing" theme supports a simple feature: ask the learner to predict how they will do before a set, then show the result beside the prediction [@brown2014make]. Roediger and Karpicke's repeated-study group predicted the best one-week recall and had the worst [@roediger2006testenhanced]; showing a learner that gap once is a direct way to make the case for retrieval. No study in the sources behind this Part tests the feature itself, so it is a candidate, not a proven method.
+
+### Honest claims
+
+Several of the sources warn against the claims learning products like to make. The testing effect is moderate and varies widely, so "learn x percent faster" is not supportable [@rowland2014effect]. Bahrick's permastore result is specific to school-learned language, so "you will never forget" is not either [@bahrick1984semantic]. Expanding intervals are not established as best [@cepeda2006distributed]. And desirable difficulty is a claim to measure, not a slogan: a product that says it "optimizes difficulty" should show the delayed data [@bjork2009making].
+
+::: {.rule #LRN-076 grade="A"}
+**Measure learning with delayed checks, and report them separately from in-lesson results.** Immediate performance and delayed retention dissociate and can reverse [@roediger2006testenhanced; @rohrer2007shuffling; @soderstrom2015learning]; learning can only be inferred at a delay.
+
+*In LTF:* the `DashboardPage` "Your progress" section can keep completion bars, and add a separate, plainly labeled line such as "Remembered after a week" built from delayed review items. Never merge the two into one number.
+:::
+
+::: {.rule #LRN-077 grade="B"}
+**Treat a challenge pass as evidence of performance on that day, and follow it with a check of understanding.** Problems can be solved, even repeatedly, without learning their structure [@chandler1991cognitive; @sweller1988cognitive], and performance during practice is an unreliable index of learning [@soderstrom2015learning].
+
+*In LTF:* after a passed challenge, the `DebriefForm` or `ResultView` can ask one question about why the procedure works. The tier badge stays a record of the flight, not of learning.
+:::
+
+::: {.rule #LRN-078 grade="B"}
+**Decide between two versions of a lesson, widget or practice set by delayed and transfer results, not by immediate scores or preference.** Effects in this literature vary widely between studies [@rowland2014effect; @rey2012review], and immediate measures and preferences point the wrong way [@kornell2008learning; @karpicke2011retrieval].
+
+*In LTF:* any experiment on lesson design uses a recall or scenario item in a later lesson as its outcome. Completion rate is a secondary measure to watch, not the deciding one.
+:::
+
+::: {.rule #LRN-079 grade="C"}
+**Offer learners a prediction before a review set and show it beside the result.** Learners overestimate what rereading and massing do for them [@roediger2006testenhanced; @kornell2008learning]; showing the gap is a direct counter [@brown2014make]. Graded C: the feature itself is untested here.
+
+*In LTF:* an optional "How many do you think you will get?" before a mixed review, with the result shown as "You predicted 3, you got 2", never as a grade.
+:::
+
+::: {.rule #LRN-080 grade="B"}
+**Make no quantitative claims about learning gains, retention or memory in product or marketing copy.** The underlying effects are moderate, variable and mostly measured in short laboratory studies [@rowland2014effect; @mayer2021multimedia]; long-retention findings are specific to their material [@bahrick1984semantic].
+
+*In LTF:* the landing page's stats row counts modules, lessons and challenges; keep it to counts of things that exist. Copy may say "spaced review helps you remember" and no more.
+:::
+
+::: {.rule #LRN-081 grade="C"}
+**Keep each learner's first attempt at every review item, with its date, as the primary learning record.** The first retrieval attempt is the learning event and the measurement [@roediger2006testenhanced]; later attempts after feedback measure re-exposure [@rowland2014effect]. Graded C: a data-design inference.
+
+*In LTF:* extend the `StoredAnswer` shape in `quizStore.ts` (which already has `firstAnswer` and `correctFirstTry`) with a timestamp, and persist it on the server for signed-in learners, so delayed checks can be compared with first exposure.
+:::
+
+### What this means for Learn to Fly
+
+LTF's progress model today is about completion and flight results: lessons marked complete, `ProgressBar` and `ProgressRing` by module, challenge tiers and percentages, attempts and "Gold results" in the dashboard stats. None of these measures whether something is remembered later. That is acceptable as long as nothing in the interface says otherwise. Keep completion as completion and tiers as flight records (LRN-077), and add a separate delayed measure when spaced review exists (LRN-076).
+
+Build the data before the feature (LRN-081). Persisting first answers with dates for signed-in learners turns every existing `QuizBlock` into a potential delayed check, as soon as items are reused in later lessons.
+
+Use delayed and transfer items to settle design arguments (LRN-078). Many choices in this Part are graded B, C or D because the evidence is short-term or contested. LTF can resolve some of them for its own learners at low cost.
+
+Keep claims modest (LRN-080). The beta banner, the "Draft · unverified" badges and the "not a pilot certificate" line show that honesty is already a trait of the product. Apply the same standard to claims about learning.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+The decisions below follow from the rules above. Each names the rules that carry it. Where a rule is graded C or D, the decision is a default that LTF should check against its own delayed data (LRN-078).
+
+#### Lesson pages
+
+1. Each lesson section introduces one new concept, counted as new interacting elements, not headings, and every part is named and shown before the section that makes parts interact (LRN-001, LRN-011, LRN-038).
+2. Every procedure the learner will fly is first shown as a complete worked example with inputs, resulting indications and reasons, followed by a completion exercise (an `order` or `numeric` `QuizBlock` with gaps) before the challenge (LRN-013, LRN-014).
+3. Labels sit on drawings, at the part. Explanatory sentences sit beside the figure they refer to at every breakpoint, and prose that repeats what a widget already labels is cut (LRN-021, LRN-022, LRN-023, LRN-024).
+4. No decorative imagery, sound, trivia or opening anecdote in core explanations. Stories that only entertain go to "Go deeper" or after the completion panel (LRN-029, LRN-030, LRN-031, LRN-035).
+5. Headings, the `SectionNav` spine, bold terms at first use and one highlighted element per step are the signaling system. Each signal color has one meaning in both themes and never stands alone (LRN-032, LRN-033, LRN-034).
+6. Experienced learners get a visible way to skip a walkthrough and prove what they know through the section's check (LRN-019).
+7. Review vocabulary names concrete problems (split source, redundant prose, unguided search), not load types, and drops "seven plus or minus two" (LRN-002, LRN-007).
+
+#### Widgets
+
+8. `WidgetFrame` gains Next, Back and Replay controls with a step count for widgets that tell a sequence. Nothing auto-advances or autoplays (LRN-006, LRN-037, LRN-043).
+9. Explanations of a changing value appear beside the readout as it changes (LRN-027).
+10. Quiz mode hides scaffolding labels, mixes categories in discrimination widgets, and shows the correct target and the reason after a wrong answer in `QuizPanel` (LRN-028, LRN-054, LRN-062).
+11. Motion is used for movement (`control-surfaces`); still labeled diagrams for structure (LRN-041).
+
+#### Quizzes and review
+
+12. Retrieval follows each section, worded to ask for recall rather than recognition of visible text. A short-answer or cloze recall format joins the four existing `QuizBlock` types (LRN-052, LRN-053).
+13. Every answer, right or wrong, gets the correct answer and a reason that addresses the most common wrong option (LRN-054, LRN-055).
+14. Items most learners miss on the first try are rewritten, using `correctFirstTry` (LRN-056). Each lesson's set includes at least one inference item (LRN-057).
+15. Each lesson revisits one or two items from earlier lessons, and the first screen of a new session offers items from the last one (LRN-044, LRN-051).
+16. The v2 practice hub schedules around the learner's horizon where known, lets accuracy override self-ratings, shows due dates rather than strength meters, and does not claim its intervals are optimal (LRN-045, LRN-046, LRN-047, LRN-050).
+17. After first exposure, practice sets and challenge suggestions mix topics, and learners are told once why mixed practice feels harder (LRN-061, LRN-064, LRN-066).
+
+#### Challenges and Fly mode
+
+18. Fly mode carries procedural cues only: short steps with their values inline, no paragraphs, no questions. Theory stays in the lesson and the Brief tab (LRN-003, LRN-010, LRN-018, LRN-060).
+19. Guidance fades across a module from full procedure to goal and scoring alone (LRN-015). Early challenges of a skill ask the learner to observe before they ask them to hit a target (LRN-020).
+20. Variation (airports, presets, random events) arrives after the first pass, and retries of passed challenges offer a varied setup (LRN-016, LRN-065, LRN-066).
+21. Briefings open with recall of the procedure; mental rehearsal prompts appear only once the learner has studied it (LRN-017, LRN-060).
+22. Spoken cues in Fly mode are an experiment, off by default (LRN-042). A scratch field for numbers is a candidate (LRN-012).
+23. Procedure groups carry the same names in lessons, checklists, `checklist-runner`, `FlyPanel` and the glossary, and cues describe indications as the sim shows them (LRN-004, LRN-070, LRN-071).
+
+#### Progress, data and claims
+
+24. Completion, tiers and in-session scores remain records of what was done. Learning is reported separately from delayed checks (LRN-067, LRN-076, LRN-077).
+25. First attempts on every item are kept with a date and persisted for signed-in learners (LRN-081). Difficulty is read from behavior, and no load score is built from self-ratings (LRN-008, LRN-009).
+26. Design choices that matter are settled by delayed and transfer items, never by preference or immediate scores (LRN-063, LRN-078, LRN-036). A prediction-against-result feature is a candidate (LRN-079).
+27. Returning learners get a check before the next lesson, never a forced restart (LRN-048), and core items count as mastered only after correct retrieval on more than one day (LRN-049).
+28. No learning-style tracks or quizzes, no context-dependent memory claims, no highlighting or rereading presented as study methods, and no quantitative learning claims in copy (LRN-072, LRN-073, LRN-074, LRN-075, LRN-080).
+29. Captions are always available but not forced on narrated animation; short labels and captions on static pictures stay (LRN-025, LRN-026, LRN-039, LRN-040). Each new concrete concept is shown with its picture and name together (LRN-005).
+
+### Review checklist
+
+Run these questions against a pull request that touches lessons, challenges, widgets, quizzes or progress, or against a page in review. A "no" needs a reason in the pull request.
+
+#### Lesson content
+
+- Does each section introduce at most one or two new interacting ideas, and is each part named and shown before it is used? (LRN-001, LRN-011, LRN-038)
+- Before the first challenge on a procedure, is there a complete worked example and a completion exercise? (LRN-013, LRN-014)
+- Is every label on the drawing rather than in a legend or paragraph, and is each figure's key sentence beside it on a phone-width screen? (LRN-021, LRN-022)
+- Does any paragraph restate what a diagram already shows, or ask the learner to compare two sources that say the same thing? (LRN-023, LRN-024)
+- Is there decoration, trivia, sound or an opening anecdote inside a core explanation? Does each callout change what the learner will do or expect? (LRN-029, LRN-030, LRN-031, LRN-035)
+- Is there one highlighted element per step, and does each signal color keep its meaning in Day and Night, with a non-color cue? (LRN-032, LRN-033, LRN-034)
+- Can an experienced learner skip the walkthrough? (LRN-019)
+- Does the review use concrete wording rather than load-type labels or "seven plus or minus two"? (LRN-002, LRN-007)
+- Is each new concrete concept shown with its picture and its name together? (LRN-005)
+- Do explanations say what an indication means, and do procedures say why each step is there? (LRN-068, LRN-069)
+- Are terms identical to the glossary, checklists and Fly mode? (LRN-004, LRN-071)
+
+#### Widgets and media
+
+- Can the learner step forward, back and replay any sequence, and does nothing autoplay or auto-advance? (LRN-006, LRN-037, LRN-043)
+- Is the explanation of a changing value shown beside the readout as it changes? (LRN-027)
+- Does quiz mode remove scaffolding labels, mix categories, and explain wrong answers? (LRN-028, LRN-054, LRN-062)
+- Is narration optional, short and captioned on request, with no on-screen text duplicating it over animation? (LRN-025, LRN-039, LRN-040)
+- Is motion used only where the content is a movement? (LRN-041)
+
+#### Quizzes and review
+
+- Does each prompt ask for recall rather than recognition of visible text, and are values and sequences tested with recall formats? (LRN-052, LRN-053)
+- Does every answer show the correct answer and a reason that addresses the likely wrong option? (LRN-054, LRN-055)
+- Do most learners answer first try correctly, judged from `correctFirstTry`? Is there an inference item? (LRN-056, LRN-057)
+- Are quizzes ungraded and spread through the lesson, kept out of tiers and dashboard stats? (LRN-058, LRN-067)
+- Does the lesson revisit earlier items, and does a new session start with a short review? (LRN-044, LRN-051)
+- Does any scheduling change take the horizon into account, let accuracy override ratings, avoid strength meters and avoid claims of optimal intervals? (LRN-045, LRN-046, LRN-047, LRN-050)
+- After first exposure, is practice mixed, with one plain note on why? (LRN-061, LRN-064, LRN-066)
+- Does a procedure have a retrieve, check, retrieve option? (LRN-059)
+
+#### Challenges and Fly mode
+
+- Does Fly mode show only short steps with values inline, with no paragraphs and no questions? (LRN-003, LRN-010, LRN-018, LRN-060)
+- Does the amount of procedure shown fall across the module, and do early challenges observe before they score a target? (LRN-015, LRN-020)
+- Is variation introduced only after a first pass, and do retries offer a varied setup? (LRN-016, LRN-065, LRN-066)
+- Do rehearsal prompts appear only after the learner has studied the procedure? (LRN-017)
+- If audio cues or a scratch field are added, are they optional and measured? (LRN-012, LRN-042)
+- Do cues describe indications as the sim shows them? (LRN-070)
+
+#### Progress, data and copy
+
+- Is anything labeled as learning that is really completion, an in-session score or a tier? (LRN-076, LRN-077)
+- Are first attempts kept with dates, and is difficulty read from behavior rather than a load score? (LRN-008, LRN-009, LRN-081)
+- Is a design choice justified by delayed or transfer data rather than preference or immediate scores? (LRN-036, LRN-063, LRN-078, LRN-079)
+- Does a returning learner get a check rather than a restart, and does mastery require correct retrieval on more than one day? (LRN-048, LRN-049)
+- Does any copy mention learning styles, context-dependent memory, highlighting or rereading as study methods, or quantitative learning gains? (LRN-072, LRN-073, LRN-074, LRN-075, LRN-080)
+- Are captions available on narrated media, and short labels kept on static pictures? (LRN-025, LRN-026)

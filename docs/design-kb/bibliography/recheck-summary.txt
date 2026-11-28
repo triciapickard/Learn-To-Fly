@@ -1,0 +1,8 @@
+recheck 525 555
+recheck 550 555
+raw 582 -> unique 555; years 1704 to 2026
+Counter({('crossref', 'match'): 343, ('openlibrary', 'found'): 138, ('none', 'agent-only'): 69, ('openlibrary', 'not-found'): 4, ('openlibrary', 'error'): 1})
+  CHECK bertin2010semiology 12-information-visualization {'via': 'openlibrary', 'result': 'not-found'} | Semiology of Graphics: Diagrams, Networks, Maps
+  CHECK norman2013design 10-usability-heuristics {'via': 'openlibrary', 'result': 'not-found'} | The design of everyday things
+  CHECK suarez2017design 23-design-systems {'via': 'openlibrary', 'result': 'not-found'} | Design Systems Handbook
+  CHECK tschichold1995new 01-classical-typography {'via': 'openlibrary', 'result': 'not-found'} | The New Typography: A Handbook for Modern Designers

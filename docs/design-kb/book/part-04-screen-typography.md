@@ -65,7 +65,7 @@ Santa Maria's craft book offers a distinction that helps in review: legibility i
 ::: {.rule #SCR-005 grade="C"}
 **Provide a print path for every lesson summary and reference checklist, and keep print styles working as part of the definition of done for those pages.** The meta-analysis found paper slightly better for informational text and its authors suggest predictable conditions in which the media are equivalent [@delgado2018dont]; offering paper costs little for learners who study better on it. This is a design inference, graded C.
 
-*In LTF:* the header, footer, beta banner and interactive parts of the reference pages already carry `print:hidden`. Extend the same treatment to `LessonPage` (hide `SectionNav`, the glossary rail, the signup banner and the completion panel when printing) so a lesson prints as clean text.
+*In LTF:* the header, footer, beta banner and interactive parts of the reference pages already carry `print:hidden`. Extend the same treatment to `LessonPage` (hide `SectionNav`, the glossary rail, the sign-up banner and the completion panel when printing) so a lesson prints as clean text.
 :::
 
 ### What this means for Learn to Fly
@@ -371,7 +371,7 @@ Larson's review for Microsoft's typography group sets out the case [@larson2005s
 Sheedy and colleagues found the same thing at threshold: individual lowercase letters were 10% to 20% more legible than lowercase words, so words had to be 10% to 20% larger to be identified, which they read as showing that letters play a large role and word shape a small one, if any [@sheedy2005text].
 
 ::: myth
-**"People read words by their outline shape, so lowercase and distinctive silhouettes are what make text legible."** Experiments that separate word shape from letter shape find the effect in the letters; pseudowords with no familiar shape show the word advantage; uppercase reading speeds up with practice; and letters are more legible than the words they form at threshold [@larson2005science; @sheedy2005text]. The case against long runs of capitals stands, but for a different reason: readers are less practiced with them and they take more space.
+**"People read words by their outline shape, so lowercase and distinctive silhouettes are what make text legible."** Experiments that separate word shape from letter shape find the effect in the letters; pseudowords with no familiar shape show the word advantage; uppercase reading speeds up with practice; and letters are more legible than the words they form at threshold [@larson2005science; @sheedy2005text]. The full case, with the studies, is made in Part III, Legibility and the Science of Reading, and is not repeated here.
 :::
 
 ::: {.rule #SCR-027 grade="A"}
@@ -407,7 +407,7 @@ Boyarski and colleagues tested Georgia and Verdana, two faces designed for scree
 The one place face design measurably matters is small size. Sheedy's threshold study found Verdana and Arial the most legible of six fonts and Times New Roman and Franklin the least [@sheedy2005text], and Legge and Bigelow connect this to x-height: Verdana's x-height fraction is about 0.55 and Times New Roman's about 0.45, and a larger x-height gives the lowercase more pixels [@legge2011print]. Arditi's spacing result points the same way: at small sizes, space between letters is the active ingredient [@arditi2005serifs].
 
 ::: myth
-**"Sans serif faces are more legible on screens than serif faces."** Controlled comparisons of reading speed found no reliable difference between serif and sans serif faces on screen [@boyarski1998study], fonts differing only in serifs read at the same speed [@arditi2005serifs], and a large online study found no font fastest across readers [@wallace2022towards]. Differences appear at threshold sizes, where x-height and spacing matter more than serifs [@sheedy2005text].
+**"Sans serif faces are more legible on screens than serif faces."** Controlled comparisons of reading speed found no reliable difference between serif and sans serif faces on screen [@boyarski1998study], fonts differing only in serifs read at the same speed [@arditi2005serifs], and a large online study found no font fastest across readers [@wallace2022towards]. The full case, with the studies, is made in Part III, Legibility and the Science of Reading, and is not repeated here.
 :::
 
 ::: {.rule #SCR-030 grade="A"}
@@ -431,4 +431,376 @@ The one place face design measurably matters is small size. Sheedy's threshold s
 ### What this means for Learn to Fly
 
 Keep Instrument Sans for prose: its x-height is at the screen-face mean, the serif question is not a reason to change it, and nothing in the evidence says another face would be read faster (SCR-030). Keep JetBrains Mono as the face for "everything you measure", which the token comment in `tokens.css` already states; it is also the face with the distinct zero, I, l and 1. Change the convention for identifiers in running text: set them in mono, ideally automatically for every aircraft token the content renderer expands (SCR-029). Move widget tick labels and small readouts to the mono face at semibold (SCR-031). Write the confusable-pair test into the review checklist and run it on any proposed face (SCR-028). Treat a future display face as a brand decision limited to display sizes (SCR-032), which is where Part XX, Brand Identity and Distinctiveness, takes the question further.
+
+## Web fonts: loading, fallback and metrics
+
+### What the browser does while a font loads
+
+A web font is a resource the page must fetch before it can draw text in that face. Until it arrives, the browser either hides the text, draws it in a fallback face, or does some of each. The CSS Fonts Module Level 4 defines the policy through the `font-display` descriptor, and the Working Draft of 12 November 2026 gives five values [@w3c2026cssfonts]:
+
+- `auto` lets the browser decide.
+- `block` has a short block period (about 3 seconds is recommended), during which text is invisible, then an indefinite swap period.
+- `swap` has a very short block period (100 ms or less recommended) and an indefinite swap period: fallback text appears almost at once, and the web font replaces it whenever it arrives, however late.
+- `fallback` has a very short block period and a short swap period (about 3 seconds); if the font has not arrived by then, the fallback stays for the life of the page. The specification describes it as suited to body text.
+- `optional` uses the web font only if it is available in time for first paint, and the page must not shift when it arrives.
+
+These durations are recommendations to browsers and authors, not measured human thresholds, and a Working Draft can change, although the features described are widely implemented [@w3c2026cssfonts]. The design consequence is a choice between two failures: invisible text (`block`) or text that changes face, and possibly size and line breaks, while the reader is reading (`swap`). `fallback` and `optional` bound the second failure in time.
+
+The cost of a late swap is measured by the Core Web Vitals, which Google defines as the field metrics for loading, interactivity and visual stability [@google2024web]. Cumulative Layout Shift (CLS) is "good" at 0.1 or less; Largest Contentful Paint (LCP) at 2.5 seconds or less; Interaction to Next Paint at 200 ms or less; a page passes when it meets all three at the 75th percentile of page loads, separately for mobile and desktop. The thresholds mix research on perception with achievability: the threshold article chose 2.5 seconds for LCP because faster values were not consistently achievable across real sites. A font swap that changes line breaks in a paragraph the learner has begun to read moves everything below it, which is layout shift in the most literal sense, and a heading drawn in a late web font can be the largest contentful element whose paint time LCP records.
+
+### Fallback metrics
+
+Fallback faces have different proportions. X-height fractions vary by a factor of two across roman faces [@legge2011print], so the same `font-size` in the fallback and the web font can produce visibly different sizes and line lengths. The CSS Fonts specification provides `font-size-adjust`, which takes an aspect value (an x-height-to-size ratio) and scales the used size of whichever face is drawing so that a fallback with a different x-height keeps the same apparent size; it affects the used size and the `ex` and `ch` units, not the computed size or `em` [@w3c2026cssfonts]. Brown's essay on modular scales gives the craft version of the same warning: the whole system of measurements depends on the chosen typeface being available, fallback fonts take over when the web font fails, and the designer should start from baseline fonts and enhance from there [@brown2011more].
+
+### What LTF does now
+
+LTF self-hosts both faces through the `@fontsource-variable` packages imported in `src/main.tsx`, with no Google Fonts link and no preconnect, and `vite.config.ts` forbids inlining fonts as data URLs so the content security policy can keep `font-src 'self'`. The installed package CSS declares `font-display: swap` for every face. Instrument Sans is split by `unicode-range` into a latin and a latin-ext face; JetBrains Mono into six subsets (latin, latin-ext, cyrillic, cyrillic-ext, greek and vietnamese), of which a browser fetches only those whose ranges the page's text uses [@w3c2026cssfonts]. The latin upright files are about 30 KB (Instrument Sans) and 40 KB (JetBrains Mono) as woff2 in the installed packages. The project's size check, `scripts/check-bundle-size.ts`, budgets initial JavaScript at 250 KB gzipped and does not count fonts.
+
+The fallback stacks are `system-ui, -apple-system, 'Segoe UI', sans-serif` for `font-sans` and `ui-monospace, SFMono-Regular, Menlo, monospace` for `font-mono`. The specification notes that `system-ui` is one of the universal generic families and that `ui-monospace` and the other `ui-*` families may not exist on every platform [@w3c2026cssfonts]. No `font-size-adjust` or metric override is declared, so the fallback draws at its own x-height and widths, which differ by platform. Under `swap`, a learner on a slow connection reads the opening of a lesson in the system face and sees it reflow into Instrument Sans whenever the file arrives.
+
+::: {.rule #SCR-033 grade="C"}
+**Load body faces with `font-display: fallback`, and use `optional` on surfaces opened in the middle of a task, so that text never changes face after the reader has started reading it.** The specification describes `fallback` as suited to body text and defines `optional` as the policy under which the page must not shift [@w3c2026cssfonts]; late swaps produce layout shift [@google2024web]. A standards-based policy, graded C.
+
+*In LTF:* the packages' CSS hard-codes `swap`, so LTF must declare its own `@font-face` rules (pointing at the same self-hosted files) or override the descriptor, with `fallback` for the main app and `optional` for `FlyModeLayout`, which a learner opens on a second screen mid-flight and which must never reflow under a glance.
+:::
+
+::: {.rule #SCR-034 grade="C"}
+**Match the fallback face's metrics to the web font (with `font-size-adjust` or equivalent metric overrides) so that the swap, if it happens, changes neither apparent size nor line breaks.** Fallbacks differ in x-height [@legge2011print]; `font-size-adjust` holds apparent size constant across faces [@w3c2026cssfonts]; unbounded swaps that move text count against the visual stability metric [@google2024web]. Graded C.
+
+*In LTF:* Instrument Sans's aspect value is 0.51 (its x-height on a 1,000-unit em, measured for this Part) and JetBrains Mono's 0.55. Declaring `font-size-adjust: 0.51` on the root sans text and `0.55` on mono text keeps fallback text at the same apparent size. Note that `font-size-adjust` also rescales the `ch` unit, which is one more reason to set the measure in em (SCR-018).
+:::
+
+::: {.rule #SCR-035 grade="C"}
+**Design and review every page in its fallback fonts as well as its web fonts; the page must be fully usable, with hierarchy intact and nothing clipped, if the web fonts never load.** The design system should depend on the fallback first and the web font as an enhancement [@brown2011more], and the generic families are the only faces the specification guarantees [@w3c2026cssfonts]. Craft authority, graded C.
+
+*In LTF:* add a development toggle (or a test project in Playwright) that blocks the two font files, and review `LessonPage`, `FlyModePage`, `SpeedsPage` and the landing hero with it. Check in particular that `readout` values in the `ui-monospace` fallback still align (fallback monospace faces are fixed-width, so tabular alignment survives) and that `display-xl` headings in `system-ui` do not overflow their `max-w-[12ch]`.
+:::
+
+::: {.rule #SCR-036 grade="C"}
+**Load only the styles, axes and character subsets the product uses, and count font bytes in the performance budget.** `unicode-range` limits each face to the characters in its range so unused subsets are never fetched [@w3c2026cssfonts], and font bytes compete with the content whose paint time LCP measures [@google2024web]. Graded C.
+
+*In LTF:* the current imports are already lean (upright weight axes, unicode-range subsets). Adding the italic axis for SCR-024 adds one file per subset; extend `scripts/check-bundle-size.ts` or a separate check to report total woff2 bytes for the latin subsets, so the cost of a new style or face is visible in review.
+:::
+
+::: {.rule #SCR-037 grade="C"}
+**Measure layout shift and largest-paint time on lesson pages in the field, at the 75th percentile, separately for mobile and desktop, and treat a font-caused shift above the good threshold as a defect.** Core Web Vitals define "good" as CLS at or below 0.1 and LCP at or below 2.5 seconds at the 75th percentile [@google2024web]. The thresholds are partly pragmatic, chosen so that enough real sites can meet them, and are not proven optima for learning, so C.
+
+*In LTF:* the lesson h1 (`text-3xl font-bold sm:text-4xl`) is a likely largest element at the top of `LessonPage`; with `swap`, its paint and the first paragraph's line breaks both depend on the font arriving. Instrument the page with real-user measurement before and after SCR-033 and SCR-034.
+:::
+
+### Text that must not wait
+
+Two parts of LTF have stricter needs than the average page. Fly mode is opened during a flight, and its content is a list of steps and a stopwatch; a reflow there moves the checkbox a learner is about to tap. And the theme script in `index.html` already shows the project's own pattern for avoiding a flash: it sets `data-theme` before first paint from local storage and the operating-system setting. Typography should follow the same principle. Anything that changes how text is drawn (theme, text-size preference from SCR-015, face choice) is applied before first paint, and anything that cannot be known before first paint (a font that has not arrived) is allowed to change nothing that the reader can see.
+
+### What this means for Learn to Fly
+
+Keep self-hosting, the `font-src 'self'` policy and the unicode-range subsets. Change the loading policy from the packages' `swap` to `fallback` for the app and `optional` for Fly mode by declaring LTF's own `@font-face` rules (SCR-033). Add `font-size-adjust` with the measured aspect values 0.51 and 0.55 so that a fallback draws at the same apparent size (SCR-034). Add a fonts-blocked review mode and put it in the review checklist (SCR-035). Count font bytes alongside the JavaScript budget (SCR-036), and add real-user CLS and LCP measurement to lesson pages (SCR-037), which also serves Part XXII, Motion and Perceived Performance. Apply any text-size preference with the same early script that applies the theme.
+
+## Variable axes, weights and optical size
+
+### What a variable font offers
+
+A variable font stores a continuous design space instead of a set of separate files. The CSS Fonts specification maps its registered axes to ordinary properties: `wght` to `font-weight`, `wdth` to `font-width`, `slnt` or `ital` to `font-style`, and `opsz` to `font-optical-sizing` [@w3c2026cssfonts]. Weights run from 1 to 1000, with 400 as normal and 700 as bold, and fractional weights are valid for variable fonts. `font-variation-settings` gives low-level access to any axis by its four-letter tag, and the specification recommends the higher-level properties wherever they exist. Under `font-optical-sizing: auto`, the default, the browser may set the `opsz` axis to a value close to the used font size, so small text gets sturdier, more open letterforms and large text finer ones; synthesized optical sizing is not allowed. User agents must not synthesize condensed or expanded faces.
+
+The specification states what fonts can do, not what is good for readers, and it contains no legibility evidence [@w3c2026cssfonts]. The notes for this lane say the same about the most tempting use of a weight axis, tuning weight per theme so that light text on a dark ground looks as heavy as dark text on light: it is a design hypothesis to test, not something the specification or the lane's evidence establishes. The reading evidence on weight is narrow. Sheedy and colleagues found that increased stroke width improved threshold legibility, but only at the thinnest width tested [@sheedy2005text], so more weight is not generally better; it rescues text that is already too thin.
+
+### What LTF loads and uses
+
+Read from the installed packages for this Part: the Instrument Sans file LTF imports has a single axis, `wght`, from 400 to 700. The package also ships a width-axis file that LTF does not import. There is no `opsz` axis, so `font-optical-sizing` has no effect on LTF's sans text, and the same outlines are used from the 12 px `eyebrow` to the 64 px `display-xl`. The JetBrains Mono file has a `wght` axis from 100 to 800.
+
+The code uses weights through two routes. The project utilities fix weight per role: 700 for `display-xl` and `display-lg`, 600 for `display-md` and the `heading-*` styles, 500 for `label` and all `readout-*` styles, 400 for body. Pages also apply `font-semibold` (about 163 uses) and `font-bold` (about 94) directly, and bold mono is common on pages (the KIAS cells on `SpeedsPage` are `font-mono text-2xl font-bold`, the result percentage `font-mono text-5xl font-bold`, dashboard stats `font-mono text-2xl font-bold`), although the `readout` utilities are weight 500. The same kind of value, a measured number, is therefore drawn at 500 in some places and 700 in others, with no rule for which.
+
+::: {.rule #SCR-038 grade="C"}
+**Control font axes through the high-level properties (`font-weight`, `font-style`, `font-width`, `font-optical-sizing`) and use `font-variation-settings` only for an unregistered axis.** The specification recommends the high-level properties where they exist [@w3c2026cssfonts]. A standards recommendation, graded C.
+
+*In LTF:* no `font-variation-settings` appears in `src/styles/index.css` today; keep it that way, and if a width axis is ever imported for condensed labels, set it with `font-width`.
+:::
+
+::: {.rule #SCR-039 grade="C"}
+**Use a fixed set of four weights (400 body, 500 labels and readouts, 600 headings and emphasis, 700 display and alerts), each tied to a role in the type tokens, and do not apply weight classes directly in pages.** Fractional and arbitrary weights are available in a variable font [@w3c2026cssfonts], but more weight helps legibility only where strokes are too thin [@sheedy2005text], so extra weights add inconsistency without a reading benefit. Graded C.
+
+*In LTF:* decide one weight for measured values. The evidence offers no reason to prefer 500 or 700 for legibility at 24 px and above, so choose by hierarchy: a `readout-display` utility at 700 for the hero values (KIAS cells, result percentage, stopwatch), and `readout` at 500 everywhere else. Replace page-level `font-mono ... font-bold` with those utilities.
+:::
+
+::: {.rule #SCR-040 grade="C"}
+**When a face is chosen or replaced, prefer one with an optical-size axis if small labels and large display type must share it, and leave `font-optical-sizing` at `auto`.** Under `auto` the browser matches the `opsz` axis to the used size, giving small text sturdier forms [@w3c2026cssfonts]; whether that improves reading has not been tested in this lane, so the rule is a selection preference, graded C.
+
+*In LTF:* Instrument Sans has no `opsz` axis, so its small sizes are compensated only by weight and tracking (the `eyebrow` style at 600 and 0.08em). This is not a reason to change face (SCR-030) but it is a criterion for any future face, including a display face.
+:::
+
+::: {.rule #SCR-041 grade="C"}
+**Never use a weight the loaded font does not contain; load the axis range the styles need so that the browser does not synthesize bold or italic.** A synthesized style is drawn from outlines designed for another style, as LTF's italics already are (see the chapter on rendering); the weight scale itself (1 to 1000, with 400 normal and 700 bold) says nothing about which weights a given file contains [@w3c2026cssfonts]. Graded C.
+
+*In LTF:* Instrument Sans covers 400 to 700 and JetBrains Mono 100 to 800, so the four weights of SCR-039 are all real; a `font-extrabold` (800) on sans text, or any `font-light`, would fall outside the sans axis and should fail review.
+:::
+
+### Weight, polarity and the dark theme
+
+The tempting fix for thin-looking light text on the Night canvas is a different weight in Night than in Day. The polarity research in the next-to-last chapter of this Part supports larger and brighter small text in dark themes [@buchner2009advantage; @piepenbrock2013positive], but it does not test weight shifts. A per-theme weight adjustment is cheap to build with a variable `wght` axis and should be treated as an experiment: compare reading time and quiz accuracy for the 14 px meta text and the widget labels in Night with and without a small weight increase, rather than adjusting by eye.
+
+### What this means for Learn to Fly
+
+Keep the variable files and the 400 to 700 sans range; they cover every weight the product needs. Change the weight vocabulary: four role-based weights through the type utilities (SCR-039), one decision for measured values instead of the current mix of 500 and 700 mono, and no direct `font-bold` or `font-semibold` on page elements once the utilities exist. Use only high-level axis properties (SCR-038), never weights outside the loaded axis (SCR-041), and weigh optical sizing in any future face choice (SCR-040). Run the Night-theme weight test before adding any theme-dependent weight.
+
+## Numerals, tables and data on screens
+
+### Figure styles and what they are for
+
+Rutter's handbook, applying Bringhurst's rules to the web, distinguishes two figure styles [@rutter2017web]. Lining figures sit on the baseline at one height, like capitals; old-style figures have a varying rhythm, like lowercase. Lining figures draw the eye, so in running text they can feel like shouting, while old-style figures sit comfortably in prose; lining figures suit all-caps settings and places where readers scan, compare or search, such as lists and tables. A second distinction is spacing: proportional figures have widths that suit each digit, while tabular figures share one width so that columns line up and changing values do not jitter. The CSS Fonts specification exposes all of these through `font-variant-numeric`: `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal` and `slashed-zero`, and states that tabular numerals allow columns of numbers to line up [@w3c2026cssfonts]. Each value works only if the font contains the corresponding OpenType feature.
+
+This is craft authority. Rutter's claim that lining figures help scanning is plausible, but the excerpts in the notes cite no experiment for it [@rutter2017web]. The empirical support for careful numeric setting is indirect: Dillon and colleagues found that rendering quality mattered most in tasks that required scanning many rows of a table [@dillon2006visual], which shows that numeric scanning is sensitive to the details of how figures are drawn, and Degani's flight-deck review treats procedures and numbers on cards as displays whose legibility is a safety property [@degani1992typography].
+
+### What LTF's faces contain
+
+Measured from the installed font files for this Part: Instrument Sans's default figures are proportional, with advances from 391 units (the 1) to 666 (the 0) on a 1,000-unit em. The font contains `tnum` and `pnum` features and a tabular zero (`zero.tf`), but no `onum`, `frac` or `zero` (slashed zero) feature, so `oldstyle-nums`, `diagonal-fractions` and `slashed-zero` do nothing in LTF's sans text. JetBrains Mono is monospaced (every glyph 600 units), so its figures are tabular by construction; it contains a `frac` feature, and its default zero already carries an inner mark.
+
+In the code, the `readout`, `readout-sm` and `readout-lg` utilities set JetBrains Mono with `tabular-nums`, and a `tabular` utility exists for sans text, used in two places in the components. Numbers outside the readouts, in sans text, are proportional: durations ("About n minutes"), counts ("Showing n challenges of n"), lesson table cells rendered by `MarkdownContent`, and any value a content author writes in Markdown rather than through a token.
+
+::: {.rule #SCR-042 grade="C"}
+**Set every value that changes, counts, or sits in a column with tabular lining figures, either in the mono face or in the sans face with `tabular-nums`.** Tabular figures keep columns aligned and stop changing values from jittering [@w3c2026cssfonts; @rutter2017web]. Craft and standards, graded C.
+
+*In LTF:* keep the `readout` utilities as they are. Apply `tabular` to the `Stopwatch` (already mono), `ProgressBar` and `ProgressRing` labels, the "Showing n challenges" status line, the dashboard stat tiles, the score preview in `DebriefForm` and every numeric table cell. Any sans number that updates live without `tabular-nums` will shift its neighbors as digits change width, because Instrument Sans's 1 is less than two-thirds as wide as its 0.
+:::
+
+::: {.rule #SCR-043 grade="C"}
+**Use lining figures everywhere in LTF, including prose, and do not ask for old-style or slashed figures that the faces do not contain.** Old-style figures suit prose only in a typeface that has them [@rutter2017web], and `font-variant-numeric` values depend on the font's features [@w3c2026cssfonts]; Instrument Sans has no `onum` or `zero` feature (measured for this Part). Graded C.
+
+*In LTF:* if a distinct zero is needed in sans text, it is a reason to use the mono face for that value (SCR-029), not to add `slashed-zero`.
+:::
+
+### Tables designed to be read
+
+Rutter's chapter on tables ("designed to be read, not looked at") is the most practical source in the lane for LTF's reference pages [@rutter2017web]. Size columns to their content rather than stretching tables to full width. Remove borders, fills and zebra striping and use alignment and white space instead, following Tschichold's objection to tables that look like nets. Left-align text columns and right-align numbers, with headings aligned like their data. When decimal precision varies, align on the decimal point (CSS Text Level 4 allows `text-align` with a string, with patchy support at the time he wrote). Use tabular lining figures, or a monospaced face, for numeric tables. Pad cells with less space above than below and reduce line height inside cells. On small screens, either use a condensed or slightly smaller font (not both) with horizontal scrolling, or linearize the table into stacked blocks. His argument against zebra striping (banding emphasizes alternate rows) is reasoned, not measured, and runs against common practice.
+
+LTF's lesson tables in `MarkdownContent` are `w-full`, left-aligned throughout, with a `border-b-2` header row on a sunken fill and a `border-b` under every row, inside a bordered, rounded, horizontally scrolling region, at `text-sm` on phones and `text-base` from `sm`. The speeds page sets its main `Table` at `text-lg` with 24 px bold mono KIAS cells. The scrolling wrapper is the right answer for phones; the rest is the "net" Rutter argues against.
+
+::: {.rule #SCR-044 grade="C"}
+**Right-align numeric columns (and their headings), align on the decimal point where precision varies, and size tables to their content rather than to the container.** Alignment lets the eye compare magnitudes down a column [@rutter2017web]; scanning tables is a task in which presentation measurably matters [@dillon2006visual]. Craft authority, graded C.
+
+*In LTF:* `MarkdownContent` cannot know which columns are numeric, so give content authors the GitHub-flavored Markdown column alignment syntax (a colon on the right of the separator row) and make the `th` and `td` renderers honor it; remove `w-full` from lesson tables so short tables do not stretch across the 800 px article.
+:::
+
+::: {.rule #SCR-045 grade="C"}
+**Separate table rows with space and at most a hairline rule; no zebra fills, no heavy header borders and no cell borders on reference tables.** Borders, fills and banding compete with the data [@rutter2017web]. Reasoned craft guidance without measurement, graded C.
+
+*In LTF:* in `MarkdownContent`, replace the `border-b-2 border-line bg-surface-sunken` header with a semibold header over a single `border-line` rule, keep the `border-b` hairline rows, and tighten cell line height (the cells currently inherit the 1.625 body leading).
+:::
+
+### Text inside scalable diagrams
+
+LTF's widgets are hand-built SVGs drawn with a `viewBox` and `className="w-full"`, so everything inside, including text, scales with the width at which the widget is drawn. Label sizes are set in SVG user units, typically 10 or 11 (for example `text-[11px]` labels in `AirspaceProfile`, `TurnCoordinator`, `VorCdi` and `TrafficPattern`). A worked case, calculated for this Part from the code: `AirspaceProfile` uses a 720-unit-wide `viewBox`. In the 800 px lesson article, inside `WidgetFrame`'s border and `p-4`, it draws about 766 px wide, so an 11-unit label renders at about 11.7 px. On a 375 px phone, after the page's `px-4` and the frame's padding, it draws about 309 px wide, and the same label renders at about 4.7 px, an x-height of about 2.4 px. That is far below any size discussed in the chapter on size, and below the threshold sizes Sheedy tested [@sheedy2005text]. The `vor-cdi` instrument (240-unit `viewBox`) is less affected but still scales its 10 to 11 unit labels with width.
+
+::: {.rule #SCR-046 grade="B"}
+**Give every widget label a minimum rendered size equal to the reading floor for its surface, and when a diagram is narrower than its design width, enlarge the labels in user units (or switch to a simplified layout) rather than letting them shrink.** Legibility falls sharply below the critical print size [@legge2011print], threshold legibility depends on pixel height and stroke [@sheedy2005text], and the flight-deck review treats small numeric labels as a hazard [@degani1992typography]. The size evidence is strong; the specific mechanism for SVG is an engineering inference, so B.
+
+*In LTF:* in `src/features/widgets/shared/svg.tsx`, add a hook that measures the rendered width of the SVG and returns a scale factor, so `Label` and the widget text can set font size in user units as the desired pixel size divided by that factor. Test `AirspaceProfile` and `VorCdi` at 375 px; until then, allow those two widgets to scroll horizontally at a minimum width on phones (diagrams are excepted from reflow [@w3c2023wcag]).
+:::
+
+::: {.rule #SCR-047 grade="C"}
+**Set every number a learner must read in a widget or a checklist in the mono readout face at weight 500 or more, never in the sans face at small sizes.** The mono face has tabular figures and a distinct zero (measured for this Part), and confusable figures are a known weak point [@beier2010design]. Graded C.
+
+*In LTF:* the `PitchPower` overlay already uses `font-mono text-[11px]`; extend the convention to the airspeed and altitude values in `Tape`, `Gauge` labels and any numeric labels in the `traffic-pattern` widget.
+:::
+
+### What this means for Learn to Fly
+
+Keep the readout utilities, which already pair JetBrains Mono with tabular figures, and keep the scrolling wrapper on lesson tables. Change the numerals outside them: apply `tabular` to every live or columnar sans number (SCR-042) and stay with lining figures, since the sans face has no old-style set (SCR-043). Rebuild the lesson table styling: author-controlled numeric alignment, content-width tables, hairline rows, a lighter header (SCR-044, SCR-045). Fix the widget label scaling, the most serious small-text problem found in the code, with a measured-width scale factor in the shared SVG primitives (SCR-046), and set widget numbers in mono (SCR-047). The visualization side of these widgets is covered in Part XII, Information Visualization.
+
+## Type scales and hierarchy on screens
+
+### The modular scale and its limits
+
+Brown argues that web layouts should be built from the type outward, with measurements derived from a harmonious system tied to the typeface rather than from arbitrary or easily divisible pixel numbers [@brown2011more]. His tool is the modular scale: a sequence made by multiplying and dividing a starting number by a ratio. With the golden mean (1:1.618) and a start of 10, multiplying gives 16.180, 26.179 and 42.358, and dividing gives 6.180, 3.819 and 2.360. A double-stranded scale combines two starting values or two ratios to give more usable steps. His worked example sets body text at 18 px in Minion Pro, a measure of 497.406 px with a line height of 1.54, a 29.124 px h1, a 190 px h2 at line height 1, and a 21.178 px intro derived by subtracting scale values; a 15 px sidebar text is an improvised value outside the scale. He advises starting with the body size and the typeface and deriving the rest, calls the scale a source of educated suggestions rather than strict rules, and warns that it depends on the typeface being available.
+
+There is no empirical test of the claim that modular-scale type is more readable or more pleasing. Its justification is the craft tradition of proportional systems and the practical value of a limited set of related sizes. The notes add a criticism: ratios as steep as the golden mean produce extreme jumps at both ends (the example's 190 px heading sits far from its 18 px body) and real interfaces need sizes the scale does not generate, which is why Brown improvises. The reading evidence adds a constraint no ratio supplies: the lower end of any scale must stay above the legibility floor [@legge2011print; @rello2016make].
+
+### LTF's scale as built
+
+The project utilities define nine sizes: 12, 14, 16, 18, 20, 24, 32, 44 and 64 px. The ratios between neighbors, computed for this Part, are about 1.17, 1.14, 1.13, 1.11, 1.2, 1.33, 1.38 and 1.45: gentle and nearly even at the small end, accelerating at the display end. That shape is defensible for an interface (fine steps where labels and body text sit close together, larger jumps where display headings need contrast), even though it is not a single-ratio modular scale. The problem is not the scale; it is that the code does not use it consistently.
+
+Pages set headings with raw Tailwind sizes that sit between the utility steps: `text-3xl` (30 px) for the lesson h1 and the 404 and error h1s, `text-4xl` (36 px) for the lesson h1 from `sm` and the Fly mode h1, `text-5xl` (48 px) and `text-6xl` (60 px) for result and 404 numerals, and `text-2xl font-bold` (24 px, 700) for the section h2s on the module, challenge, dashboard and lesson block headings, where the scale's 24 px step (`heading-lg`) is weight 600. Counted together, reading and heading text in the product uses at least thirteen sizes (12, 14, 16, 18, 20, 24, 30, 32, 36, 44, 48, 60 and 64 px), before the 10 and 11 unit widget labels. `body-md` exists and is unused. The result, described in the product dossier, is that an h2 is 24 px at 700 on app pages, 32 to 44 px on the landing page and 20 px on the reference hub: the same level of the document has three appearances.
+
+::: {.rule #SCR-048 grade="C"}
+**Define one type scale of named roles and make it the only way pages set type; no raw size or weight classes for headings or reading text in page code.** A limited set of related sizes yields consistency, the practical core of the modular-scale argument [@brown2011more], and it supports the project rule that visual values come from tokens. Craft authority, graded C.
+
+*In LTF:* map every raw use to a role: lesson h1 to `display-md` (or a new `display-sm` if 32 px proves too large beside the article), section h2s to `heading-lg`, the Fly mode h1 to a Fly-specific role, result numerals to a `readout-display` role. Then add a lint rule or a review check that rejects `text-2xl` to `text-6xl` combined with `font-bold` in `src/pages` and `src/features`.
+:::
+
+::: {.rule #SCR-049 grade="C"}
+**Derive the scale from the body size, which is set by the legibility evidence, and keep the small-end steps gentle (ratios near 1.1 to 1.2) and the display steps wider.** Brown starts from the body and derives the rest [@brown2011more]; the base must clear the size floor established by the reading studies [@legge2011print; @rello2016make]; steep ratios push the small end too small. Graded C.
+
+*In LTF:* if the lesson body moves to 18 px (SCR-007), re-derive the scale from 18: the existing 14, 16, 20 and 24 px steps still work as caption, small, subhead and heading, and the 12 px step should be reserved for uppercase labels (SCR-011).
+:::
+
+::: {.rule #SCR-050 grade="C"}
+**Tie each document level to exactly one role per surface type (app page, marketing page, Fly mode), so that an h2 looks the same everywhere it appears on that kind of page.** A scale is a means of consistency [@brown2011more]; inconsistent hierarchy defeats the stable spatial frame that long screen reading needs [@mangen2013reading]. Graded C.
+
+*In LTF:* app pages (`PageHeader`, lesson, module, challenge, dashboard, reference): h1 `display-md`, h2 `heading-lg`, h3 `heading-md`. Landing page: h1 `display-lg`/`display-xl`, h2 `display-md`/`display-lg`. Fly mode: its own enlarged set (SCR-009). Write the mapping into `PageHeader` and the `MarkdownContent` heading renderers, where `h2` is currently rendered as `h3` with `text-xl font-semibold`.
+:::
+
+### Uppercase labels and tracking
+
+The `eyebrow` style (12 px, 600, uppercase, 0.08em tracking) is used above almost every section heading, table header and stat, which the dossier counts among the template-like traits of the product. On reading grounds, the case against long runs of capitals rests on practice and space, not word shape [@larson2005science], and the craft advice is to use capitals only for short labels where speed over a few characters matters more than continuous reading [@santamaria2014web]. The eyebrows are short, so they are acceptable as labels; the risk is repetition and the 12 px size, discussed in the chapter on size.
+
+::: {.rule #SCR-051 grade="C"}
+**Use uppercase tracked text only for labels of one to four words, never for sentences, headings or instructions, and do not stack an eyebrow above every heading.** Long capital runs are slower because readers are less practiced with them [@larson2005science], and capitals suit short labels [@santamaria2014web]. Graded C.
+
+*In LTF:* keep `eyebrow` for category labels ("Module 2", "Challenge C4.3") and table headers; remove it where it repeats the heading below it, and never apply `uppercase` to callout bodies, button text or Fly mode steps.
+:::
+
+::: {.rule #SCR-052 grade="C"}
+**Review every derived size at its smallest rendered use on its farthest surface before adding it to the scale.** The scale is not a proof of legibility; each step must be checked where it is used smallest [@brown2011more; @legge2011print]. Graded C.
+
+*In LTF:* the smallest uses are widget labels on phones, `Badge` text, `eyebrow` labels and `text-sm` meta text on a monitor beside the sim; check each against the angle table in the chapter on size.
+:::
+
+### Headings that wrap
+
+The base layer gives `h1` to `h4` `text-wrap: balance`, which evens out the lines of a wrapping heading so that a short last word does not hang alone. This is a sensible default for the short headings LTF writes ("Yes, you can fly a plane.", "Read a little. Try it on the page. Fly it in the sim."). The specification evidence in the notes does not cover text wrapping, so this is recorded only as a practice to keep, with the line-height caution from the chapter on the measure: the tight display line heights are acceptable only because balanced display headings are short.
+
+### What this means for Learn to Fly
+
+Keep the shape of the existing scale (gentle small steps, wider display steps) and the balanced wrapping of headings. Change the way it is used: one set of named roles, used by every page, with raw `text-*xl font-bold` headings removed and a check that keeps them out (SCR-048, SCR-050). Re-derive the scale from the 18 px body (SCR-049), give measured display values a role of their own, cut the eyebrow back to genuine labels (SCR-051), and check each step at its smallest use (SCR-052). Part II, Classical Typography, covers the print tradition of proportional scales, and Part XXI, Design Systems, Process and Craft, covers how tokens are governed.
+
+## Polarity, dark themes and glance reading
+
+### Polarity is mostly luminance
+
+Gould's IBM experiments counted dark characters on a light background among the four image-quality conditions under which screen reading matched paper [@gould1987reading]. Later work explains why. Buchner, Mayr and Brandt manipulated text-background polarity and overall display luminance independently and found no advantage for positive polarity (dark on light) once overall luminance was matched; only luminance mattered, with better performance on brighter displays [@buchner2009advantage]. Their conclusion is that text is more readable when overall luminance is high, as it usually is in positive-polarity displays, and that polarity itself does not affect readability. That is a strong claim from a single experiment whose abstract does not give the sample or measure.
+
+Piepenbrock and colleagues tested whether the positive-polarity advantage holds for older adults, for whom light scatter in the aging eye might have reversed it, and found it in both younger and older groups, recommending dark characters on a light background for all ages [@piepenbrock2013positive]. A follow-up by the same group, described in the notes for that paper, found the advantage in proofreading grew linearly as characters got smaller, across 8 to 14 point sizes (0.22 to 0.34 degrees of vertical angle), and recommended avoiding negative polarity especially with small fonts. Dobres, Chahine and Reimer tested glance-like reading, measuring the display time needed to read a word accurately, with two sizes, two polarities and two ambient light levels [@dobres2017effects]. Thresholds were worst for negative polarity (light on dark) in near-dark surroundings; positive polarity in the dark, and every condition in bright light, did significantly better. They attribute this to pupil contraction under brighter light reducing optical aberrations, a hypothesis consistent with the data rather than directly measured.
+
+Degani's flight-deck review, from print-era sources, recommends black on white for most documents and avoiding white on black in normal operations; where white on black is used, it should carry little text, in large sans serif type [@degani1992typography]. It also warns that sub-optimal conditions combine: white on black, italics, small type and color together hurt more than any one alone.
+
+The evidence comes from one main group plus an independent automotive study, using proofreading, acuity and lexical decision rather than long comfortable reading, and it measured performance, not preference or fatigue. It is moderately strong for a modest effect. It does not say dark themes are unusable; it says a dimmer display costs legibility, most at small sizes and in glances in a dark room.
+
+::: myth
+**"Dark mode is easier to read, especially for older eyes and in a dark room."** Positive polarity was better for both younger and older adults [@piepenbrock2013positive], the difference tracks overall display luminance [@buchner2009advantage], and light text on a dark screen was the worst condition for glance reading in near-dark surroundings [@dobres2017effects]. The full case, with the studies, is made in Part VI, Color: Science, Meaning and Access, and is not repeated here.
+:::
+
+### LTF's themes measured
+
+Computed for this Part from `tokens.css` with the WCAG 2.2 relative-luminance and contrast formulas [@w3c2024wcag]: the Day canvas (`#f7f5f3`) has a relative luminance of about 0.92 and the Night canvas (`#141412`) about 0.007, so the Night theme is a dim display in Buchner's sense. Text contrast passes the 4.5:1 Level AA threshold for normal text in most pairings: in Day, `ink` on `canvas` is about 16.6:1, `ink-2` 6.5:1, `ink-3` 5.0:1 and `accent` 5.0:1; in Night, `ink` 15.5:1, `ink-2` 8.6:1, `ink-3` 5.9:1 and `accent` 10.3:1. Two Night pairings fail: `ink-3` on `accent-tint` is about 4.3:1 and on `caution-tint` about 4.4:1. WCAG thresholds are not rounded, so these fail [@w3c2024wcag]. In Day, `ink-2` and `ink-3` are close (6.5 against 5.0), so the third ink level adds little visible distinction.
+
+`FlyModeLayout` sets `data-theme` to dark unless the reader's stored preference is explicitly light; a reader on "System" in a bright room still gets the dark theme. Its stated reason (in the layout's comment, citing the plan's Section 20.7) is the second-screen use beside the sim. That is the setting in which Dobres and colleagues found light-on-dark glance reading worst, if the room is dark, and the plan's dark default is defensible only on glare grounds: Degani's review treats glare as a legibility problem in its own right, although it also recommends against white on black in normal operations [@degani1992typography]. The evidence pulls in two directions here, and the product should let the learner decide with the default set by the room rather than by assumption.
+
+::: {.rule #SCR-053 grade="B"}
+**Keep the light (Day) theme as the default for dense reading (lessons, quizzes, reference tables), and present the dark theme as a preference, not as the better choice for any group.** Positive polarity, or more exactly higher display luminance, gave better reading performance for younger and older adults [@buchner2009advantage; @piepenbrock2013positive]. Several experiments from one group with independent support, graded B.
+
+*In LTF:* the `ThemeToggle` "System" setting follows the operating system, which is correct; do not add copy that recommends Night for comfort or for older eyes.
+:::
+
+::: {.rule #SCR-054 grade="B"}
+**In the Night theme, set small text larger and brighter than in Day: raise the minimum reading size, use `ink` or `ink-2` rather than `ink-3` for anything read, and keep the widget labels at their brightest level.** The penalty of negative polarity grows as characters get smaller [@piepenbrock2013positive] and is luminance-driven [@buchner2009advantage]. Graded B.
+
+*In LTF:* the two failing pairings (`ink-3` on `accent-tint` and `caution-tint` in Night) must change to `ink-2`; more generally, a `[data-theme='dark']` rule can map the meta text role from 14 px to 15 or 16 px. Test the change with the reading measures of SCR-004 rather than by eye.
+:::
+
+::: {.rule #SCR-055 grade="D"}
+**Do not default Fly mode to dark regardless of the room; open it in the theme the reader last chose for Fly mode, offer a one-tap Day and Night switch on the Fly mode page itself, and if dark is used, compensate with larger, brighter text.** Light-on-dark glance reading was worst in near-dark surroundings [@dobres2017effects] and positive polarity is generally better [@piepenbrock2013positive], while glare is itself a recognized legibility problem for flight-deck documents read in poor light [@degani1992typography]. The evidence conflicts for this exact case and no study tested a second screen beside a simulator, so the rule is graded D: it settles who decides, not which theme wins.
+
+*In LTF:* store a separate Fly mode theme preference, apply it in `FlyModeLayout` before first paint, and put a `ThemeToggle` in the Fly mode header next to "Back to challenge". Measure step-reading time in both themes with learners at their sim before choosing a new default.
+:::
+
+::: {.rule #SCR-056 grade="C"}
+**Gate every text and background token pairing at 4.5:1 for normal text and 3:1 for large text in both themes, computed from the final colors without rounding, and check tinted fills as well as plain grounds.** These are WCAG 2.2 Level AA thresholds, with large text defined as 18 point, or 14 point bold [@w3c2024wcag]. A standard, graded C.
+
+*In LTF:* add a unit test that computes every documented text-on-ground pair in `tokens.css` for both themes, including `accent-tint`, `go-tint`, `caution-tint` and `warn-tint` grounds used by `Callout`, the resume bar and the objectives card; it would catch the two Night failures above.
+:::
+
+::: {.rule #SCR-057 grade="C"}
+**Hold Fly mode text and safety-relevant checklist text to 7:1 contrast in both themes.** WCAG's enhanced Level AAA threshold is 7:1 for normal text [@w3c2024wcag], and the notes on that standard recommend it as a target for the most safety-relevant text in Fly mode; the dim-room conditions of a second screen are not addressed by the AA minimum [@dobres2017effects]. Graded C.
+
+*In LTF:* `ink` on `canvas` and `surface` passes 7:1 in both themes; `ink-2` passes in Night but not in Day (about 6.5:1 on `canvas`). Use `ink` for every Fly mode step, alert and goal, and keep `ink-2` to secondary labels there.
+:::
+
+### What this means for Learn to Fly
+
+Keep the Day default, the "System" option and the near-neutral grounds, which pass contrast comfortably for primary text. Change the Night theme's small text (SCR-054) and fix the two failing tinted pairings, with an automated contrast test for every pairing (SCR-056). Change Fly mode's forced dark default into a remembered, switchable choice on the page itself (SCR-055), and hold its text to 7:1 with `ink` (SCR-057). Part VI, Color: Science, Meaning and Access, covers the color tokens and contrast algorithms in full; this chapter covers only what polarity and luminance do to reading.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for LTF
+
+1. **Lessons compensate for the screen.** Number-bearing and procedural lesson sections are followed by an active block; timed reading is short and glanceable; lessons keep a stable spatial frame and print cleanly. (SCR-001, SCR-002, SCR-003, SCR-005)
+2. **Typography is judged by performance.** Changes to the measure, body size or faces are evaluated with quiz accuracy, completion and reading time, not preference. (SCR-004)
+3. **Sizes are set by angle and distance.** Each surface has a recorded viewing distance; desk surfaces aim for an x-height near 0.3 degrees on a standard monitor. (SCR-006)
+4. **The lesson body becomes 18 px.** `MarkdownContent` uses `body-lg` like `Prose`, with 20 px to be tested. (SCR-007, SCR-049)
+5. **Fly mode is an arm's-length surface.** Step and alert text at least `text-3xl`, medium or semibold, `ink`, with its own size control. (SCR-009, SCR-023, SCR-057)
+6. **Small text has a floor.** 14 px only for non-essential meta text; 12 px only for short uppercase labels; `Badge` text moves up. (SCR-011, SCR-052)
+7. **The root is relative.** `html` font size returns to 100%; all type utilities move to rem with unitless line heights. (SCR-012)
+8. **Reading settings exist.** Text size first, line spacing second, a face choice only if testing supports it; applied before first paint; never applied to widgets. (SCR-010, SCR-015)
+9. **One measure token in em.** About 30em (about 66 characters of Instrument Sans), maximum 34em, replacing both `container-measure` (68ch, about 100 characters) and the lesson's `max-w-[800px]` for prose. (SCR-013, SCR-017, SCR-018)
+10. **Single column, moderate leading.** Prose stays in one column at line heights between about 1.25 and 1.7; tight heading line heights stay out of multi-line reading text. (SCR-019, SCR-020, SCR-021)
+11. **Reflow at 320 px.** Only tables, diagrams and widgets may scroll sideways. (SCR-014, SCR-016)
+12. **Rendering-robust type.** No weights below 400; a designed italic or none; italic never for instructions or radio calls; the smoothing override is tested, not assumed; review on a standard-density monitor. (SCR-022, SCR-024, SCR-025, SCR-026)
+13. **Instrument Sans stays for prose; JetBrains Mono for everything measured.** Identifiers, values and isolated letters are mono, including in prose and through token expansion. (SCR-027, SCR-028, SCR-029, SCR-030, SCR-031, SCR-032)
+14. **Fonts load without moving text.** LTF's own `@font-face` rules with `fallback` (app) and `optional` (Fly mode), `font-size-adjust` at 0.51 and 0.55, a fonts-blocked review mode, font bytes counted, CLS and LCP measured in the field. (SCR-033 to SCR-037)
+15. **Four weights by role.** 400, 500, 600 and 700 through utilities only; one rule for measured values; high-level axis properties only. (SCR-038 to SCR-041)
+16. **Numbers are tabular and aligned.** Lining tabular figures for every live or columnar number; numeric columns right-aligned; tables content-width with hairline rows. (SCR-042 to SCR-045, SCR-047)
+17. **Widget labels never shrink below the floor.** A measured-width scale factor in the shared SVG primitives. (SCR-046)
+18. **One scale, one mapping.** Named roles only; no raw `text-*xl font-bold` in pages; each heading level has one role per surface type; eyebrows only for short labels. (SCR-048, SCR-050, SCR-051)
+19. **Day is the reading default; Night compensates.** Larger and brighter small text in Night; every token pairing gated at AA in both themes, including tints. (SCR-053, SCR-054, SCR-056)
+20. **Fly mode theme is the learner's choice on the page.** Remembered separately, switchable in place, measured before any new default. (SCR-055)
+
+### Review checklist
+
+Run these questions against any pull request or page that touches type, layout of reading text, fonts, themes or widgets.
+
+**Reading and lesson structure**
+
+- Is every lesson section that introduces a procedure or a value followed by a quiz or widget block? (SCR-001)
+- Is any paragraph-length text read while a timer runs or in Fly mode? (SCR-002, SCR-021)
+- Do the outline, position indicator and fixed block order survive the change? (SCR-003)
+- Does the page still print cleanly, with navigation and rails hidden? (SCR-005)
+- Was the change judged by task measures rather than opinion? (SCR-004)
+
+**Size, units and reflow**
+
+- For each new or changed text style, what viewing distance is assumed, and what x-height angle does it give on a standard monitor? (SCR-006, SCR-009)
+- Is any reading text below 18 px in lessons, or below 14 px anywhere, or 12 px in mixed case? (SCR-007, SCR-011)
+- Are sizes in rem and line heights unitless, with no pixel root size? (SCR-012)
+- Is the measure in em, and is prose within about 55 to 75 characters? (SCR-013, SCR-017, SCR-018)
+- Does the page reflow at 320 CSS px with sideways scrolling only in tables, diagrams and widgets? (SCR-014)
+- Does fluid sizing apply only to display headings? (SCR-016)
+- Do reading settings apply to prose and leave widgets and readouts unchanged? (SCR-010, SCR-015)
+
+**Measure, spacing and columns**
+
+- Is reading text in a single column? (SCR-019)
+- Is paragraph line height between about 1.25 and 1.7, and are `text-3xl` and larger kept out of multi-line reading text? (SCR-020)
+
+**Faces, rendering and loading**
+
+- Is any text italic, and if so, is a designed italic loaded? Is any instruction or radio call italic? (SCR-024)
+- Is glance text regular to semibold, never light, small or `ink-3`? (SCR-022, SCR-023)
+- Was the change reviewed on a standard-density monitor in both themes, and with the smoothing override in question? (SCR-025, SCR-026)
+- Is every identifier, value, frequency and isolated letter set in mono? (SCR-029, SCR-047)
+- If a face is proposed, was it tested for I, l and 1; O and 0; 5 and S; 8 and B; and was the argument about letters, not word shape or serifs? (SCR-027, SCR-028, SCR-030, SCR-032)
+- Are small labels in a large-x-height face with spacing rather than extra weight? (SCR-031)
+- Does the page remain usable with web fonts blocked, and does a late font change neither size nor line breaks? (SCR-033, SCR-034, SCR-035)
+- Does the change add font files, and are their bytes counted? (SCR-036)
+- Did field CLS or LCP on lesson pages get worse? (SCR-037)
+
+**Weights, numerals and widgets**
+
+- Are weights limited to 400, 500, 600 and 700 and applied through type utilities, with no `font-variation-settings` for registered axes and no weight outside the loaded axis? (SCR-038, SCR-039, SCR-041)
+- Does a new face, if any, have an optical-size axis? (SCR-040)
+- Do live and columnar numbers use tabular lining figures, with no requests for features the faces lack? (SCR-042, SCR-043)
+- Are numeric table columns right-aligned, tables content-width and rows separated by hairlines only? (SCR-044, SCR-045)
+- At a 375 px viewport, does every widget label render at or above the reading floor? (SCR-046)
+
+**Scale and hierarchy**
+
+- Does the change use named type roles only, with no raw heading sizes or weights in page code? (SCR-048)
+- Does each heading level look the same as on other pages of the same kind? (SCR-050)
+- Is the scale still derived from the body size, and was each new step checked at its smallest use? (SCR-049, SCR-052)
+- Is uppercase used only for labels of one to four words? (SCR-051)
+
+**Polarity and contrast**
+
+- Does every text and ground pairing, including tinted grounds, pass 4.5:1 (or 3:1 for large text) in both themes, unrounded? (SCR-056)
+- In Night, is small text larger and brighter, and is `ink-3` kept off anything read? (SCR-054)
+- Does any copy or default present the dark theme as more legible? (SCR-053)
+- In Fly mode, is the theme the learner's own, switchable on the page, and is step text at 7:1? (SCR-055, SCR-057)
 

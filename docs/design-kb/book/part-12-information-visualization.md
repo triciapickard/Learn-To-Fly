@@ -594,7 +594,7 @@ Familiarity is the other. Franconeri and colleagues advise preferring formats fa
 
 ### What this means for Learn to Fly
 
-The lesson widgets already follow most of this chapter. The load-factor graph has unit-bearing axis titles, mono tick labels in `fill-ink-2`, faint 1 px `stroke-line` gridlines and a directly labeled limit line; `AirspeedArcs` labels its flags in place and backs its colored segments with a worded legend; the `Label` primitive draws text with a `--color-surface` halo (`paint-order: stroke`) so annotations stay legible over marks. `WidgetFrame`'s "Describe this diagram" panel is a text alternative and a how-to-read in one.
+The lesson widgets already follow most of this chapter. The load-factor graph has unit-bearing axis titles, mono tick labels in `fill-ink-2`, faint 1 px `stroke-line` gridlines and a directly labeled limit line; `AirspeedArcs` labels its flags in place and backs its colored segments with a worded legend; the `Label` primitive draws text with a halo in the `surface` color (`paint-order: stroke`) so annotations stay legible over marks. `WidgetFrame`'s "Describe this diagram" panel is a text alternative and a how-to-read in one.
 
 What to add is mostly discipline for charts not yet built. Every chart gets a title that names the invariant and units (VIZ-047), direct labels (VIZ-045) and one annotated finding (VIZ-046). Gridlines use `line`, never `line-strong` (VIZ-048). Plot areas for 0–100 scores sit around 80 to 160 px tall (VIZ-049). Put these defaults into the shared chart primitive proposed in the chapter on choosing the form, so that individual pages cannot drift.
 
@@ -815,7 +815,7 @@ Tversky, Morrison and Bétrancourt reviewed animation for teaching and found the
 ::: {.rule #VIZ-073 grade="B"}
 **Give every explanatory animation play, pause, step and replay controls, keep it schematic, and leave a static annotated final state on the page.** Tversky and colleagues find animation rarely beats equivalent static graphics and set slowness, schematic form, annotation and learner control as conditions for success [@tversky2002animation]; Franconeri and colleagues report animation typically confuses [@franconeri2021science]. WCAG 2.2 requires a pause, stop or hide control for automatic motion lasting more than five seconds beside other content [@w3c2023wcag].
 
-*In LTF:* `traffic-pattern` and `vor-cdi` run `requestAnimationFrame` loops; each needs a visible pause, and the paused or reduced-motion state must still show the whole pattern or needle position with labels. Never let an animation be the only carrier of a fact the quiz will ask about.
+*In LTF:* `traffic-pattern` and `vor-cdi` already do most of this: each runs its `requestAnimationFrame` loop only after a Play button, offers Pause and a step control (`SkipForward`), and under `useReducedMotion` advances in discrete steps instead of continuous motion. Keep that pattern for every new animated widget, and check that the paused state still shows the whole pattern or needle position with labels. Never let an animation be the only carrier of a fact the quiz will ask about.
 :::
 
 ### Text alternatives that state the finding
@@ -834,4 +834,118 @@ WCAG 2.2's reflow criterion excepts maps, diagrams and data tables from the ban 
 
 The widget layer already implements most of this chapter's interaction rules: synchronous slider updates through `RangeField` (VIZ-068), a `Reset` on every `WidgetFrame` (VIZ-070), click-opened `Popover`s rather than hover tooltips for glossary detail (VIZ-071), `motion-safe:` on every transition plus a global reduced-motion rule (VIZ-072), and authored `aria-label`s and "Describe this diagram" panels (VIZ-074). `AirspeedArcs` uses the reflow exception properly: it keeps an 880 px minimum width and scrolls sideways on a phone, and its `aria-label` carries every arc and flag.
 
-Two gaps remain. The continuously animated widgets (`traffic-pattern`, `vor-cdi`) need visible pause controls and a meaningful paused state (VIZ-073). And the attempt history that several chapters of this Part call for should be built with tap- and keyboard-reachable dots, a skeleton of its own height while loading, and a text alternative that states the best and the latest result (VIZ-069, VIZ-071, VIZ-074).
+The animated widgets (`traffic-pattern`, `vor-cdi`) already start on Play, offer Pause and step controls, and switch to stepwise motion under reduced motion, which is VIZ-073 in practice; make that the documented contract for any new animated widget. The remaining gap is the attempt history that several chapters of this Part call for should be built with tap- and keyboard-reachable dots, a skeleton of its own height while loading, and a text alternative that states the best and the latest result (VIZ-069, VIZ-071, VIZ-074).
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+1. **Every new chart or widget starts from a written sentence** naming the invariant, the components and the task, kept in the component's doc comment (VIZ-003, VIZ-004, VIZ-001).
+2. **Position on a common scale is the default encoding** for any value a learner reads or compares; area, angle and shade never carry a precise comparison (VIZ-007, VIZ-008, VIZ-009, VIZ-020).
+3. **Module progress has one encoding.** `ProgressBar` in an aligned column is the encoding for comparing modules; `ProgressRing` survives only as a single-card glyph with its value printed (VIZ-012, VIZ-035).
+4. **Instrument widgets keep instrument forms and instrument tokens; analytic displays never borrow them** (VIZ-013, VIZ-056, VIZ-061).
+5. **A shared attempt-history primitive will be built** (working name `AttemptStrip`, beside `ProgressBar`): one dot per attempt on a labeled 0–100 axis, the current attempt in `accent`, the best as a labeled `line-strong` reference line, a change printed as a number, a frequency sentence below, tap and keyboard detail, a text alternative stating best and latest. It is used by `HistoryTab`, the dashboard and any account page (VIZ-006, VIZ-015, VIZ-019, VIZ-025, VIZ-028, VIZ-043, VIZ-045, VIZ-046, VIZ-049, VIZ-062, VIZ-063, VIZ-064, VIZ-071, VIZ-074).
+6. **Bars and fills start at zero with no break marks; position displays may use a tighter range only with units and a drawn band** (VIZ-023, VIZ-025, VIZ-026, VIZ-027).
+7. **Dashboard stat tiles gain their context.** "Gold results" and similar counts show their denominator (VIZ-028, VIZ-029, VIZ-054).
+8. **Small sets of exact values stay tables.** `SpeedsPage`, `KeyNumbers` and the `BriefTab` scoring table are not to be turned into charts (VIZ-018).
+9. **Data-scale color tokens will be defined before the first multi-series chart:** a sequential lightness ramp on the accent hue, a diverging pair separable by red-green dichromats, and a short qualitative set, each at 3:1 against `surface` in both themes. No rainbow scales (VIZ-037, VIZ-038, VIZ-039, VIZ-041, VIZ-042).
+10. **The Day `ProgressBar` fill is strengthened** to clear 3:1 against its track (VIZ-042).
+11. **Color is never alone, and tier words are never dropped** (VIZ-010, VIZ-016, VIZ-040).
+12. **Reading surfaces carry no decoration; remembering surfaces may test one related picture** with a delayed-recall check before it is kept (VIZ-030, VIZ-031, VIZ-032, VIZ-033, VIZ-034, VIZ-036).
+13. **Chart defaults live in the shared primitive:** direct labels, a title with units, one annotated finding, `line` gridlines, a plot height of roughly 80 to 160 px for 0–100 scales, whole-number rounding (VIZ-045, VIZ-047, VIZ-048, VIZ-049, VIZ-050, VIZ-051, VIZ-052).
+14. **Fly mode is a monitoring display:** one screen, the current step most prominent, the beta banner quieted, no transitions, transient plus lasting cues for changes (VIZ-053, VIZ-055, VIZ-058, VIZ-059).
+15. **Uncertainty is shown as individual outcomes and frequencies, never error bars or confidence sliders;** animated outcome displays appear only in lessons, with a static default (VIZ-062, VIZ-065, VIZ-066, VIZ-067).
+16. **Interaction contract for widgets:** synchronous updates near 0.1 s, a Reset, filter state in the URL, Play, Pause and step for anything that moves on its own, at most two-stage transitions behind `motion-safe:` (VIZ-057, VIZ-060, VIZ-068, VIZ-069, VIZ-070, VIZ-072, VIZ-073).
+17. **Truthfulness is a gate** that a motivating chart cannot buy its way past, and multi-mark charts are tested with beginners before shipping (VIZ-002, VIZ-005, VIZ-011, VIZ-014, VIZ-017, VIZ-021, VIZ-022, VIZ-024, VIZ-044).
+
+### Review checklist
+
+Run these questions against any pull request that adds or changes a chart, a progress or score display, a stat tile or a widget. Integrity questions come first because they are a gate.
+
+#### Integrity (gate)
+
+- Is every mark's length, area or arc proportional to its value, and would a computed lie factor be close to one? (VIZ-023, VIZ-024)
+- Do all bars and fills start at zero, with no broken-axis mark? (VIZ-025)
+- If a line, dot plot or gauge does not start at zero, does it label its units and draw the meaningful band? (VIZ-026)
+- Are scales continuous and compared series on one baseline? (VIZ-027)
+- Is each value shown with a target, best or history, and was the time window chosen before seeing the result? (VIZ-028)
+- Are rates or "n of n" used where the compared things differ in size? (VIZ-029)
+- Would the chart make the learner look better than the data show? (VIZ-005)
+
+#### Form and encoding
+
+- Is the invariant-components-task sentence in the doc comment? (VIZ-003)
+- Was the encoding reviewed in a neutral draft before styling? (VIZ-004)
+- Does the chart serve one named comparison that the eye reaches first? (VIZ-001)
+- Is the most important quantity on position along a common scale? (VIZ-007, VIZ-011)
+- Is any quantity carried by area, angle or shade alone? (VIZ-008, VIZ-009)
+- Is a ring or pie used only for one part of one whole, with its value printed? (VIZ-012)
+- Does the graphic imply anything the data lack, such as a line through discrete attempts or an order among unordered categories? (VIZ-015)
+- Does each visual variable match the level of its data, and do peer categories carry equal weight? (VIZ-016, VIZ-017)
+- Would a table serve better for this small set of exact values? (VIZ-018)
+- Are many states shown as identical small multiples or one shared axis, with the most compared values adjacent? (VIZ-019, VIZ-020)
+- Is there any unjustified 3D? (VIZ-021)
+- Are things combined in one mental step placed together, and single readings separated? (VIZ-022)
+- Is an instrument drawn in its instrument form, and is no analytic display styled as an instrument? (VIZ-013, VIZ-056)
+- Does the same quantity use the same encoding as elsewhere in the product? (VIZ-035)
+- For a chart with many marks, has it been tried with at least two beginners? (VIZ-014)
+- Are critical outliers marked with their own cue? (VIZ-002)
+
+#### Ink and ornament
+
+- On reading surfaces, has non-data ink (frames, gradients, backgrounds) been removed while keeping axes? (VIZ-030)
+- Is there any hatching, op-art fill or decorative overall shape? (VIZ-031)
+- Is any decoration unrelated to the data? (VIZ-032)
+- If a recap carries a picture, is it related to the content, kept off reading surfaces, and backed by a delayed-recall check? (VIZ-033, VIZ-036)
+- Is memorability being used as the only justification for color or density? (VIZ-034)
+
+#### Color
+
+- Is each color scale classified as sequential, diverging or qualitative? (VIZ-037)
+- Is there any rainbow or jet scale? (VIZ-038)
+- Are ordered values shown by lightness, not by a set of hues? (VIZ-039)
+- Does every color-coded status, series or category also carry a word, shape, position or line style? (VIZ-010, VIZ-040)
+- Are opposites paired red and blue rather than red and green, and is pure red avoided on dark grounds? (VIZ-041)
+- Do data marks reach 3:1 against their ground in Day and Night, including the ends of ramps? (VIZ-042)
+- Is saturated color reserved for the one mark the caption is about? (VIZ-043)
+- Is any shaded value placed on a varying shaded background? (VIZ-044)
+
+#### Labels and size
+
+- Are series and reference lines labeled directly? (VIZ-045)
+- Does a sentence on or beside the chart state the finding? (VIZ-046)
+- Do the title and axes name what is shown and its units, with MSL or AGL on altitudes? (VIZ-047)
+- Are gridlines faint (`line`, never `line-strong`) and checked in Night? (VIZ-048)
+- Is the plot height near pixel-data resolution, and are gridlines at least about 8 px apart at phone width? (VIZ-049, VIZ-050)
+- Are numbers rounded to usable precision? (VIZ-051)
+- Does a new format come with a one-line "how to read this"? (VIZ-052)
+
+#### Glanceable displays
+
+- Does a monitoring display fit one screen without scrolling? (VIZ-053)
+- Is each monitored measure shown as a deviation with context? (VIZ-054)
+- Is the item needing action the most prominent, with chrome subdued? (VIZ-055)
+- Does an analytic view follow overview, filter, details on demand, and does Fly mode avoid requiring interaction? (VIZ-057)
+- Do changes that may happen during a glance away have a transient and a lasting cue? (VIZ-058)
+- Does Fly mode show states with no transitions? (VIZ-059)
+- Are live values stabilized, with the exact value printed? (VIZ-060)
+- Does every animated instrument move as the sim's instrument does, checked in the sim? (VIZ-061)
+
+#### Uncertainty
+
+- Is variability shown as individual results rather than error bars or intervals? (VIZ-062)
+- Are chances stated as frequencies with a fixed denominator? (VIZ-063)
+- Does a sentence say what the spread means, without inventing instructional advice? (VIZ-064)
+- Is an outcome animation used only to compare two or three quantities, with a static default, outside Fly mode? (VIZ-065)
+- Was the display tested on decisions against a no-uncertainty baseline? (VIZ-066)
+- Is any self-rated confidence shown as if it measured skill? (VIZ-067)
+
+#### Interaction and access
+
+- Do controlled diagrams update within about 0.1 s and reversibly? (VIZ-068)
+- Does a slow view show a skeleton of its final size? (VIZ-069)
+- Is there a Reset, and is filter state in the URL? (VIZ-070)
+- Is every hover detail also reachable by tap and keyboard? (VIZ-071)
+- Are transitions simple, valid, about a second per stage, at most two stages, and behind `motion-safe:`? (VIZ-072)
+- Does every self-running animation have Play, Pause and step, a schematic form and a labeled static state? (VIZ-073)
+- Does the text alternative state the finding, the current value and any reference line? (VIZ-074)

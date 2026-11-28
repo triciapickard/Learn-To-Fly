@@ -330,7 +330,7 @@ For a beginner beside a simulator the burden is acute. Any value the learner nee
 Shneiderman's explanation of the memory rule cites the familiar "seven plus or minus two" chunks [@shneiderman2016designing]. The number should not be used as a design limit.
 
 ::: myth
-**"People can hold seven plus or minus two items in mind, so menus and lists should have no more than seven entries."** Miller's 1956 number was, in Cowan's words, "more of a rough estimate and a rhetorical device than a real capacity limit" [@cowan2001magical]. Cowan's review of a wide range of data concludes that a central capacity limit averages about four chunks, and that it can be observed only under carefully stated conditions, when people cannot rehearse or regroup items. Later work found visual capacity varying with the kind of item, from about 1.6 to 4.4 objects across five stimulus classes (Alvarez and Cavanagh, 2004), and resource models question any fixed count (Ma, Husain and Bays, 2014). A menu that stays on screen does not load memory at all, so the rule misapplies the finding as well as misquoting it.
+**"People can hold seven plus or minus two items in mind, so menus and lists should have no more than seven entries."** Miller's 1956 number was, in Cowan's words, "more of a rough estimate and a rhetorical device than a real capacity limit" [@cowan2001magical]. The full case, with the studies, is made in Part VIII, The Quantitative Laws of Interaction, and is not repeated here.
 :::
 
 What survives is the direction. A beginner has no chunks yet for flight concepts, so each new term or value costs a full slot. The practical rule is about what the learner must hold while doing something else, not about the length of a visible list.
@@ -346,7 +346,7 @@ What survives is the direction. A beginner has no chunks yet for flight concepts
 Krug's first law is the book's title: a page should not make the user think [@krug2014dont]. His second law concerns navigation: it does not matter how many times the user has to click, as long as each click is a mindless, unambiguous choice. He argues that rules stipulating a maximum number of clicks are a poor metric, and that what counts is the thought each click requires and the uncertainty about whether the choice is right. He offers, with the hedge "might be something like", an exchange rate of three mindless clicks for one that requires thought, with exceptions where users repeat a path often or pages load slowly [@krug2014dont]. The book is craft authority from consulting and testing experience, not research; its scent-of-information idea is credited to Pirolli and Card's information foraging work.
 
 ::: myth
-**"Every page must be reachable within three clicks."** The rule is popular in site specifications. Krug argues against it directly: the difficulty of each choice matters more than the number of choices, and his own exchange rate between easy and hard clicks is offered as a rough guess, not a measurement [@krug2014dont]. No study in this lane supports a fixed click limit. Test whether each step is self-evident instead.
+**"Every page must be reachable within three clicks."** The rule is popular in site specifications. Krug argues against it directly: the difficulty of each choice matters more than the number of choices, and his own exchange rate between easy and hard clicks is offered as a rough guess, not a measurement [@krug2014dont]. The full case, with the studies, is made in Part XIII, Information Architecture and Wayfinding, and is not repeated here.
 :::
 
 ::: {.rule #USE-026 grade="C"}
@@ -778,7 +778,7 @@ Severity ratings are where the evaluator effect does most damage, because they d
 
 ### Many teams, one product
 
-The comparative usability evaluation (CUE) studies asked several professional teams to evaluate the same product. In CUE-2, nine teams evaluated the Hotmail web site in late 1998 [@molich2004comparative]. The authors' project page states that the study confirmed an earlier round: teams used very different methods and effort and reported very different problems, no single method reliably found all problems, and the total number of problems exceeded what one or a few tests can find. Figures relayed from an interview with Molich (secondary, not from the paper) are that the teams reported 310 different problems, 232 of them (75%) only once, and only six by more than half the teams. Earlier comparisons summarized by Hertzum and Jacobsen found 129 of 141, and 147 of 186, problems reported by only one laboratory [@hertzum2001evaluator]. In these studies more than the evaluator varied (procedure and test users too), so they measure the reliability of whole evaluations, not of evaluators alone.
+The comparative usability evaluation (CUE) studies asked several professional teams to evaluate the same product. In CUE-2, nine teams evaluated the Hotmail website in late 1998 [@molich2004comparative]. The authors' project page states that the study confirmed an earlier round: teams used very different methods and effort and reported very different problems, no single method reliably found all problems, and the total number of problems exceeded what one or a few tests can find. Figures relayed from an interview with Molich (secondary, not from the paper) are that the teams reported 310 different problems, 232 of them (75%) only once, and only six by more than half the teams. Earlier comparisons summarized by Hertzum and Jacobsen found 129 of 141, and 147 of 186, problems reported by only one laboratory [@hertzum2001evaluator]. In these studies more than the evaluator varied (procedure and test users too), so they measure the reliability of whole evaluations, not of evaluators alone.
 
 A unique finding is therefore the normal case, not a sign that a finding is spurious. Nielsen and Molich found false positives rare and noted that a team can challenge a lone evaluator's false positive [@nielsen1990heuristic].
 
@@ -844,7 +844,7 @@ Faulkner ran a structured test with 60 users of a web-based time-sheet applicati
 
 The mean for five users matches Nielsen's prediction closely. The spread is the point: the standard deviation at five users was 9.3 points, the 95% interval was plus or minus 18.5 points for five users against plus or minus 6.4 for ten, and some sets of five found 99% while one found 55% [@faulkner2003beyond]. Relying on any one set of five risks missing nearly half the problems. Faulkner's result is consistent with the binomial model, which predicts this variance; what it refutes is the practitioner's reading of an average as a guarantee.
 
-Spool and Schroeder's field study, reported as a two-page extended abstract, had 49 users perform the same task on four production web sites and concluded that these sites would need considerably more than five users to find 85% of their problems [@spool2001testing]. As Faulkner reports it, the first five users revealed only 35% of the problems, and the 13th and 15th users each revealed at least one new severe problem [@faulkner2003beyond]. The tasks were open-ended and goal-oriented, the kind where each user sees only a small slice of a large space of possible problems, so detection probability per user is low and the curve rises slowly.
+Spool and Schroeder's field study, reported as a two-page extended abstract, had 49 users perform the same task on four production websites and concluded that these sites would need considerably more than five users to find 85% of their problems [@spool2001testing]. As Faulkner reports it, the first five users revealed only 35% of the problems, and the 13th and 15th users each revealed at least one new severe problem [@faulkner2003beyond]. The tasks were open-ended and goal-oriented, the kind where each user sees only a small slice of a large space of possible problems, so detection probability per user is low and the curve rises slowly.
 
 ::: myth
 **"Five users find 85% of usability problems."** The figure comes from a model with a typical detection probability of 31% [@nielsen1993mathematical]. It holds on average when per-user detection is around 0.32 to 0.42 [@lewis1994sample]; individual five-user samples found anywhere from 55% to 99% in a 60-user resampling study [@faulkner2003beyond]; and on open-ended tasks on live sites the first five users found about 35% [@spool2001testing; @faulkner2003beyond]. Nielsen's own advice was several small rounds with fixes in between, not one round of five. Five is a reasonable size for a round, not a measure of coverage.
@@ -934,3 +934,185 @@ The plan has no usability testing step. The protocol below fits a small team and
 - Write tasks, criteria and the stopping rule first (USE-072, USE-067); log deviations and behavioral impact (USE-070); have two people analyze each session (USE-071).
 - Report results as samples (USE-065), size open tasks larger (USE-066), and read every session for blockers (USE-068).
 - The beta's `ReportProblemDialog` reports are a useful supplement but not a test: they come from learners who chose to report, about problems they recognized as problems.
+
+## Measuring Usability: Tasks, Questionnaires and Their Limits
+
+### Ratings and performance come apart
+
+The three components of usability are measured differently, and the evidence that they must be measured separately is strong. In three experiments on schematic metro maps, Roberts, Gray and Lesnik found that how usable people said a map was could differ from how well they used it [@roberts2017preference]. In the first, 80 participants planned journeys on the official octolinear Paris Metro map and on a curvilinear alternative. The curvilinear map was faster (63 of 80 had a faster mean time with it; mean planning times were 42.4 and 37.9 seconds for the curvilinear map, depending on order, against 51.7 and 48.4 for the official one), yet preference was unrelated to performance: 38 preferred the official map, 34 the curvilinear, 8 were undecided, and aggregate ratings did not differ. In the third, three Berlin maps gave equal journey times but different usability ratings. Ratings, the authors conclude, reflect expectations and prejudices about what effective design looks like [@roberts2017preference].
+
+The aesthetics literature points the same way from another side. Tractinsky, Katz and Ikar had 124 students use one of several simulated cash machines in which aesthetics and real usability were manipulated independently [@tractinsky2000what]. The usability manipulation worked (23.5 seconds per task against 37.5 in the poor condition), and aesthetics did not affect completion time or errors; yet after use, only the aesthetics manipulation affected perceived usability. Under high aesthetics, ratings did not drop even when real usability was poor. Hassenzahl and Monk reanalyzed the beauty-usability link across four datasets and argued it has been overplayed: with little experience, people infer usability from an overall judgment of goodness that beauty colors, and the effect is indirect [@hassenzahl2010inference]. Tuch and colleagues manipulated both factors independently with 80 participants on an online shop, using a strong usability manipulation, and found the reverse: aesthetics did not affect perceived usability before or after use, while poor usability lowered perceived beauty [@tuch2012beautiful].
+
+The direction of the aesthetics effect is contested and depends on how strong each manipulation is. What is not contested is the practical conclusion: a rating of how usable something feels is not a measure of how usable it is.
+
+::: {.rule #USE-073 grade="B"}
+**Judge usability from task performance (success, errors, time, deviations), and treat ratings as a separate measure of satisfaction, never as evidence that a flow works.** Ratings and performance dissociated in three map experiments [@roberts2017preference], and perceived usability followed aesthetics rather than real usability in a cash-machine experiment [@tractinsky2000what].
+
+*In LTF:* a learner saying "this is clear" about a `FlyPanel` layout or a lesson page is recorded, but the decision rests on whether they completed the task and how often they deviated.
+:::
+
+::: {.rule #USE-074 grade="B"}
+**Choose between alternative diagrams and widgets by measuring reading accuracy and time on a real task, then ask for opinions.** Preference for a familiar or handsome design can coexist with slower use [@roberts2017preference].
+
+*In LTF:* before changing an instrument widget (the airspeed dial and tape, the G1000 PFD, the VOR CDI), give beginners a reading task with both versions, timed, and count misreadings; for Fly mode, use a brief glance and recall format.
+:::
+
+### Polish as a confound
+
+If aesthetics can bias ratings, it can bias tests. Sonderegger and Sauer gave 60 adolescents functionally identical simulations of a mobile phone that differed only in visual design [@sonderegger2010influence]. The appealing version was rated more usable (6.14 against 5.32) and was also used faster (147.7 against 198.5 seconds) with fewer errors per trial (2.0 against 4.8). The sample was adolescents with a simulated phone, and a related study by the same authors is reported to have found longer completion times with the more attractive product, so the direction of performance effects is not settled. Tuch and colleagues' results run the other way for ratings [@tuch2012beautiful]. The finding to act on is narrow: when two variants differ in finish, finish may drive the result.
+
+::: {.rule #USE-075 grade="D"}
+**When comparing two design variants in a test, give them the same level of visual finish, or the comparison measures polish as well as design.** An appealing but functionally identical prototype was rated more usable and used faster in one experiment [@sonderegger2010influence], while another found no aesthetics effect on perceived usability [@tuch2012beautiful]; the evidence conflicts, and equal finish removes the question.
+
+*In LTF:* test a rough sketch against a rough sketch, and a polished build against a polished build; never a new mockup against the shipped `LessonPage`.
+:::
+
+::: {.rule #USE-076 grade="B"}
+**Fix interaction problems before polishing, and do not expect visual refinement to compensate for a frustrating flow.** With a strong usability manipulation, poor usability lowered perceived beauty and aesthetics did not raise perceived usability [@tuch2012beautiful]; where aesthetics did lift ratings, it did not change errors or time [@tractinsky2000what].
+
+*In LTF:* the identity work in other Parts of this book (type, color, the horizon line) follows, not replaces, fixing the problems this Part's reviews and tests find on `LessonPage`, `ChallengePage` and `FlyModePage`.
+:::
+
+### The System Usability Scale
+
+Brooke's System Usability Scale (SUS) is a ten-item questionnaire that gives a single score from 0 to 100 for the perceived usability of a system [@brooke1996sus]. It was designed to be "quick and dirty": cheap, usable on small samples, and independent of technology. Each statement is answered on a five-point scale from strongly disagree to strongly agree, and the statements alternate positive and negative wording, from "I think that I would like to use this system frequently" to "I needed to learn a lot of things before I could get going with this system". Scoring subtracts 1 from each odd item's response and subtracts each even item's response from 5, sums the ten converted values and multiplies by 2.5 [@brooke1996sus].
+
+The benchmark data come from later work. A current benchmark across about 500 studies gives the average score as 68, places a raw 74 near the 70th percentile and a score above 80.3 in the top 10%, and treats below 51 as failing [@brooke1996sus]. Bangor, Kortum and Miller analyzed nearly ten years of SUS data from many products at different development stages and concluded that SUS is a quick, robust measure; later papers report that their data showed SUS sensitive to interface type and to changes made to a product [@bangor2008empirical]. Their 2009 follow-up added an adjective rating to nearly 1,000 SUS surveys and found it correlated strongly with the SUS score (r = 0.822), with a long-run mean near 70 [@bangor2008empirical]. Items 4 and 10 measure learnability and the other eight usability; SUS can be given to as few as two users, but small samples give imprecise estimates [@brooke1996sus].
+
+Three limits matter most. SUS is not diagnostic: it gives a number without reasons. Its correlation with task performance is modest (about r = .24, around 6% of variance) [@brooke1996sus]. And users can give high scores while meeting serious problems [@bangor2008empirical].
+
+::: myth
+**"A SUS score of 68 means the system is 68% usable, and anything above 70 passes."** SUS scores are not percentages; the benchmark source stresses that they should be read as percentile ranks [@brooke1996sus]. The 68 average is the mean of a mixed set of about 500 studies, not a pass mark, and fixed cut-offs such as 70 are citing authors' conveniences that the benchmark data do not establish as thresholds [@bangor2008empirical].
+:::
+
+::: {.rule #USE-077 grade="C"}
+**If LTF uses SUS, give the standard ten items unchanged, after a defined task, naming Learn to Fly as the system, and report a percentile with a confidence interval rather than a raw score.** Changed wording voids the benchmarks, scores are not percentages, and small samples are imprecise [@brooke1996sus; @bangor2008empirical].
+
+*In LTF:* in a beta test, "this system" is replaced by "Learn to Fly" in the instructions, so learners do not rate the simulator. With five learners, report the interval, which will be wide.
+:::
+
+::: {.rule #USE-078 grade="B"}
+**Use SUS to compare the same task and the same learner group across releases, not to compare LTF with other products or to certify a design.** SUS is sensitive to changes made to a product [@bangor2008empirical], but it explains little of task performance and carries no diagnosis [@brooke1996sus].
+
+*In LTF:* track SUS for "complete Lesson 0.1" and "fly and debrief the first challenge" across releases, and pair each administration with one open question ("What was the most confusing thing?") to get the reasons SUS cannot give.
+:::
+
+### Experiments at LTF's scale
+
+Randomized controlled experiments on live traffic (A/B tests) are the strongest design for establishing that a change causes a difference in behavior, and Kohavi and colleagues' guide distills practice at very large sites [@kohavi2009controlled]. They advise agreeing a single overall evaluation criterion in advance, validating the system with an A/A test, running in whole weeks, and splitting traffic evenly for power. Their rule of thumb for sample size, n = 16σ²/Δ² per variant for 80% power, implies very large numbers for small effects: their example of detecting a 5% change in revenue needs over 409,000 users. They warn that underpowered tests are a common mistake and that "no significant difference" does not prove no difference.
+
+Kaptein and Robertson's critique of statistical practice in HCI names three problems: confusing the probability of the data given the null hypothesis with the probability of the null given the data, neglecting statistical power, and not interpreting effect sizes [@kaptein2012rethinking]. They argue findings should be judged by the size and practical importance of effects, not by significance alone.
+
+::: {.rule #USE-079 grade="B"}
+**Before running an A/B test on LTF, compute the sample needed to detect the smallest effect worth acting on, and if LTF's traffic cannot supply it, decide from principles and qualitative testing instead.** Small effects need very large samples, and underpowered tests are a common, misleading mistake [@kohavi2009controlled].
+
+*In LTF:* button wording, colors and small layout changes on the landing page or `LessonPage` are decided by the rules in this book and by test sessions, not by an underpowered split test. If a test is run, it compares large differences (a new lesson structure against the old), with one agreed success measure.
+:::
+
+::: {.rule #USE-080 grade="C"}
+**Report every quantitative comparison as a difference with an interval in units LTF cares about, against a smallest effect worth acting on set in advance, and never report "no difference" from an underpowered study.** Significance alone says little about practical importance [@kaptein2012rethinking], and a null result from an underpowered test is not evidence of no effect [@kohavi2009controlled].
+
+*In LTF:* "Two more of ten learners finished the first challenge brief unaided (interval wide; below the threshold of three we set)" is a usable result; "not significant" is not.
+:::
+
+### What this means for Learn to Fly
+
+LTF has no measurement program yet, which means it can start with the right habits rather than unlearn the wrong ones.
+
+- Make task performance the primary measure for every flow (USE-073), and measure diagram and widget changes with reading tasks (USE-074).
+- Compare variants at equal finish (USE-075) and fix interaction problems before polish (USE-076). This orders the work between this Part and the identity Parts.
+- If SUS is adopted for the beta, administer it as USE-077 describes, track it per task over releases (USE-078) and pair it with one open question.
+- Do not run A/B tests of details at beta traffic (USE-079); report comparisons with effect sizes and intervals (USE-080).
+- The landing page's live stats and the dashboard's "Stats" tiles are product metrics, not usability measures; completion counts say how many finished, not how many struggled.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for Learn to Fly
+
+1. **Usability goals have a fixed form.** Every goal names users, goal and context, and reports effectiveness, efficiency and satisfaction separately, with a learning measure beside them. LTF keeps three context-of-use records (lesson at a desk, challenge setup, in-flight lookup) and judges Fly mode against its own (USE-001, USE-002, USE-003, USE-005, USE-007).
+2. **Failures belong to the design.** Test logs and triage record use errors against design conditions, and classify them as slips, lapses or mistakes before a fix is chosen (USE-004, USE-037).
+3. **Review vocabulary.** Findings are filed under Nielsen's ten heuristics plus ISO 9241-110's learnability and engagement, extended by LTF domain items for units, altitude references, control names, sim version and verification status. Consistency and recognition are checked first (USE-011, USE-012, USE-013, USE-014).
+4. **Rules are specific and short.** Interface rules are written in enforceable form, grouped by function, owned, enforced by lint and token checks where possible, and revisited when the platform changes (USE-009, USE-010, USE-036).
+5. **Fly mode is a glance interface.** The current step, stopwatch state and finish action are findable at a glance; site-wide notices such as `BetaBanner` leave `FlyModeLayout`; no confirmations or destructive controls sit on `FlyModePage`; wrong ticks are fixed by tapping again (USE-015, USE-043, USE-053).
+6. **Feedback and closure.** Responses scale with the action; procedures close each chunk; rows state the target state; save status is visible; response times are budgeted in three categories without decorating short waits (USE-016, USE-017, USE-018, USE-019, USE-020, USE-021, USE-022).
+7. **One name per control, and what the learner needs stays on screen.** The simulator's label is the name of record; steps never depend on recall from an earlier lesson; new items per step are few; widget mapping follows the sim (USE-023, USE-024, USE-025, USE-028, USE-029).
+8. **Consistency repairs.** Headings go through the `display-*` and `heading-*` utilities, cards through `Card`, the `QuizBlock` left border is reconciled with the no-stripe rule, and state controls stop looking like primary buttons. Deliberate exceptions, such as instrument widgets, are recorded (USE-030, USE-031, USE-032, USE-033, USE-034, USE-035).
+9. **Error handling.** Changed steps are marked; modes are visible; disabled controls say why; every learning action is reversible (including un-marking a lesson complete); resets name their scope; irreversible actions say so and default to cancel; error messages say what failed, what to do and where to go next (USE-038, USE-039, USE-040, USE-041, USE-042, USE-044, USE-045).
+10. **Control and minimalism.** Leaving and returning is normal and loses nothing; exits stay in one place; `FlyPanel` gets `ChecklistRunner`'s keyboard pattern; sequence across lessons stays open; a shared text-size control serves in-flight views; the stack above the first block of `LessonPage` shows only what is relevant to this learner; needed controls are never hidden; verification markers stay visible (USE-046 to USE-052, USE-054).
+11. **Inspection protocol.** At least three independent reviewers (five for Fly mode and the first lesson), working alone from written scenarios and problem criteria, with a mixed panel; severity is rated once on the merged list by task impact; single-reviewer findings are kept; inspection findings are hypotheses for testing (USE-055 to USE-062).
+12. **Testing protocol.** Repeated rounds of about five learners per group with fixes between, in the learner's own setup for challenge and Fly mode flows; tasks, criteria and a stopping rule are written first; deviations and behavioral impact are logged; two people analyze each session; results are reported as samples; open tasks get more learners; every session is read for blockers (USE-063 to USE-072).
+13. **Measurement.** Task performance decides; ratings are reported separately; widget changes are chosen by reading tasks; variants are compared at equal finish; interaction problems are fixed before polish; SUS, if used, is unmodified, task-bound, reported as a percentile with an interval and tracked across releases; no underpowered A/B tests; comparisons are effect sizes with intervals (USE-073 to USE-080).
+
+### Review checklist
+
+Run these questions against a pull request that changes a learner-facing page, component or flow, or against a page in an audit. Each question names the rules it checks.
+
+#### Goals and context
+
+- Does the change state its users, goal and context, and which of effectiveness, efficiency and satisfaction it improves? (USE-001, USE-002)
+- If the page is used during flight, was it judged against the in-flight context record? (USE-003)
+- Is there a testable behavioral goal for the flow, and a learning measure beside the usability one? (USE-005, USE-007)
+- Is any claim that the change "works" based on a test rather than a demo? (USE-006, USE-008)
+
+#### Visibility and feedback
+
+- Can a learner glancing from the sim find the next action and the current state on this screen? (USE-015)
+- Does every action give an in-place response scaled to its weight, without toasts on tick-level actions? (USE-016)
+- Does each lesson, challenge and procedure chunk end with explicit closure? (USE-017)
+- Do step and checklist rows state the target state in the sim's words? (USE-018)
+- Do loading states follow the three response-time categories, and are short waits calm? (USE-019, USE-020)
+- Can the learner see whether what they entered is saved, and where? (USE-021)
+- Does each challenge step say what success looks like in observable cues? (USE-022)
+
+#### Language, recognition and memory
+
+- Does every simulator control, menu and setting use the sim's exact label, the same everywhere? (USE-023)
+- Is everything the learner must act on visible at the moment of action, with no recall from earlier lessons? (USE-024)
+- Does any step introduce many new items, or ask the learner to hold a value while looking at the sim? (USE-025)
+- Is every fork a choice whose labels say where each option leads? (USE-026)
+- Is interface guidance placed beside the control it explains? (USE-027)
+- Do widget controls move and sit as the sim's controls do, and do procedure lists follow panel order with critical items first? (USE-028, USE-029)
+- Are codes such as "C4.3" paired with titles wherever the learner chooses? (USE-023, USE-026)
+
+#### Consistency
+
+- Are headings set with the type utilities and cards with `Card`, not inlined classes? (USE-030, USE-036)
+- Has the change passed the physical, communicational and conceptual passes? (USE-031)
+- Do state controls look different from action buttons? (USE-032)
+- Is any departure from the design system a recorded, task-driven exception? (USE-033)
+- Are views grouped by the learner's task rather than by storage or route structure? (USE-034)
+- Are navigation, forms, quizzes and lists conventional? (USE-035)
+
+#### Errors and recovery
+
+- If a procedure, checklist or rubric changed, is the changed step marked? (USE-038)
+- Is the current mode visible, and do mode-dependent controls say which mode they act in? (USE-039)
+- Does every disabled control say what will enable it? (USE-040)
+- Can the learner reverse the action at the effort it took, and does every reset name its scope? (USE-041, USE-042)
+- Is Fly mode free of confirmations and destructive controls? (USE-043)
+- Are irreversible actions announced beforehand, with focus on the safe choice? (USE-044)
+- Does every error message say what failed, what to do now, and where to go next? (USE-045)
+
+#### Control and minimalism
+
+- Can the learner leave and return without losing state, and is the exit in its usual place? (USE-046, USE-047)
+- Are accelerators offered for repeated actions and stated at the point of use? (USE-048)
+- Can returning learners skip ahead without beginners losing guidance? (USE-049)
+- Are theme and text-size settings remembered and applied before paint? (USE-050)
+- Is every element above the first lesson block relevant to this learner on this visit? (USE-051)
+- Is any control needed for the task hidden to make the screen look cleaner? (USE-052)
+- Are site-wide notices kept out of in-flight views? (USE-053)
+- Is verification status visible wherever an aviation fact is shown? (USE-054)
+
+#### Evaluation and measurement
+
+- Was the change inspected by at least three independent reviewers (five for Fly mode and the first lesson), working alone? (USE-055, USE-056)
+- Were scenarios and problem criteria written first, and was the panel mixed? (USE-057, USE-058)
+- Was severity rated once, on the merged list, by task impact, with single-reviewer findings kept? (USE-059, USE-060, USE-061)
+- Were inspection findings for time-pressured views confirmed by testing? (USE-062)
+- If tested: in context, in rounds with fixes between, with groups recruited separately and a stated stopping rule? (USE-063, USE-064, USE-066, USE-067, USE-069)
+- Is the report framed as a sample, with every session read for blockers and analyzed by two people? (USE-065, USE-068, USE-071)
+- Were deviations and behavioral impact logged against pre-written tasks? (USE-070, USE-072)
+- Does the decision rest on task performance, with ratings reported separately and variants compared at equal finish? (USE-073, USE-074, USE-075)
+- Were interaction problems fixed before visual polish? (USE-076)
+- If SUS or an A/B test was used: standard items, percentile with interval, adequate power, effect size against a preset threshold? (USE-077, USE-078, USE-079, USE-080)

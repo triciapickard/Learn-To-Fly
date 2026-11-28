@@ -26,6 +26,14 @@
   ends.last().location().page() < p
 }
 
+#let short-title(h) = {
+  if h.has("label") {
+    let m = query(label("s-" + str(h.label)))
+    if m.len() > 0 { return m.first().value }
+  }
+  h.body
+}
+
 #let running-head = context {
   let p = here().page()
   let h1s = query(heading.where(level: 1))
@@ -40,12 +48,12 @@
   set text(size: 8pt, font: serif-caption, fill: ink2, number-type: "lining")
   if calc.even(p) {
     let label = if part == none { book-title } else if part.supplement != [] and part.supplement != none and part.supplement != auto {
-      [Part #part.supplement #h(0.6em) #part.body]
+      [Part #part.supplement #h(0.6em) #short-title(part)]
     } else { part.body }
     [#text(fill: ink, num) #h(1.2em) #caps(label)]
   } else {
     let label = if chap != none {
-      if chap.supplement != [] and chap.supplement != none and chap.supplement != auto { [#chap.supplement #h(0.6em) #chap.body] } else { chap.body }
+      if chap.supplement != [] and chap.supplement != none and chap.supplement != auto { [#chap.supplement #h(0.6em) #short-title(chap)] } else { chap.body }
     } else if part != none { part.body } else { book-title }
     align(right)[#caps(label) #h(1.2em) #text(fill: ink, num)]
   }
@@ -61,17 +69,19 @@
 }
 
 // ---------- headings (numbers are computed by the Lua filter) ----------
-#let ltf-part(num, title, lbl) = {
+#let ltf-part(num, title, lbl, short) = {
   pagebreak(to: "odd", weak: true)
   [#heading(level: 1, supplement: [#num])[#title] #label(lbl)]
+  [#metadata(short) #label("s-" + lbl)]
 }
 #let ltf-backmatter(title, lbl) = {
   pagebreak(to: "odd", weak: true)
   [#heading(level: 1, supplement: [])[#title] #label(lbl)]
 }
-#let ltf-chapter(num, title, lbl) = {
+#let ltf-chapter(num, title, lbl, short) = {
   pagebreak(weak: true)
   [#heading(level: 2, supplement: [#num])[#title] #label(lbl)]
+  [#metadata(short) #label("s-" + lbl)]
 }
 #let ltf-plain-chapter(title, lbl) = {
   pagebreak(weak: true)

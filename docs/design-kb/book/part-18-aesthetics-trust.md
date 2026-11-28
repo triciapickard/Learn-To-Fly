@@ -556,7 +556,7 @@ The content side is in better shape by construction. The lesson block types allo
 
 The instruments are the strongest case for consistency. The widgets already share primitives and fixed tokens, and the dossier lists the fixed instrument and chart palettes among LTF's distinctive traits. Keeping every instrument drawing on those primitives (AES-036) makes the airspeed indicator in a lesson, on the kneeboard and in a challenge brief the same object, so that each exposure builds on the last. When the learner then meets the instrument in the simulator, the familiarity can carry over; whether a widget should match the sim or caricature it is a separate question, taken up in the chapter on calibrated trust.
 
-Finally, nudges. The beta and signup banners already remember dismissal, which is the right default. Any future nudge (a reminder to continue, a prompt to try a challenge, a notification request) should follow the same rule, and the decline should stick. Part XIX, Decisions, Persuasion and Dark Patterns, treats repeated prompts as an ethical issue; the exposure evidence adds that they also stop working.
+Finally, nudges. The beta and sign-up banners already remember dismissal, which is the right default. Any future nudge (a reminder to continue, a prompt to try a challenge, a notification request) should follow the same rule, and the decline should stick. Part XIX, Decisions, Persuasion and Dark Patterns, treats repeated prompts as an ethical issue; the exposure evidence adds that they also stop working.
 
 ## Emotion in learning materials
 
@@ -852,7 +852,7 @@ When two variants are compared, the evidence asks for three controls. Equalize f
 
 ### Measuring complexity directly
 
-Reinecke's complexity model counted text groups, image areas and the area of text and non-text in a screenshot [@reinecke2013predicting]. A team can make a crude version of that count by hand or with a script, and use it to compare a page with its previous version or with sibling pages. Rosenholtz and colleagues' clutter measures (Feature Congestion, Subband Entropy and Edge Density) are computable from an image and capture different aspects of clutter; Feature Congestion includes color variability, which the other two do not [@rosenholtz2007measuring]. Later comparisons found no single clutter index settled, and human judgments of clutter themselves agree only moderately, and the measures were validated on photographs, maps and visualizations rather than interface screens [@rosenholtz2007measuring]. Use them to flag outliers for human review, never as a pass or fail threshold.
+Reinecke's complexity model counted text groups, image areas and the area of text and non-text in a screenshot [@reinecke2013predicting]. A team can make a crude version of that count by hand or with a script, and use it to compare a page with its previous version or with sibling pages. Rosenholtz and colleagues' clutter measures (Feature Congestion, Subband Entropy and Edge Density) are computable from an image and capture different aspects of clutter; Feature Congestion includes color variability, which the other two do not [@rosenholtz2007measuring]. The measures were validated on photographs, maps and visualizations rather than interface screens [@rosenholtz2007measuring], so whether any of them tracks clutter on an interface is untested. Use them to flag outliers for human review, never as a pass or fail threshold.
 
 ::: {.rule #AES-062 grade="B"}
 **Recruit test participants from the intended audience, including older adults and people who have never flown, not only from experienced simmers or the team.** First impressions varied with age and education [@reinecke2013predicting], the beauty-usability link varied across cultures [@tractinsky1997aesthetics], and the age of the sample may change how much appearance matters [@sonderegger2010influence].
@@ -873,7 +873,7 @@ Reinecke's complexity model counted text groups, image areas and the area of tex
 :::
 
 ::: {.rule #AES-065 grade="B"}
-**Use a computed complexity or clutter count to flag pages for review, and never as a pass or fail threshold.** Counts of text groups and image areas predicted perceived complexity well in one model [@reinecke2013predicting], and computable clutter measures capture real properties of displays, but no single index is settled and none was validated on interface screens [@rosenholtz2007measuring].
+**Use a computed complexity or clutter count to flag pages for review, and never as a pass or fail threshold.** Counts of text groups and image areas predicted perceived complexity well in one model [@reinecke2013predicting], and computable clutter measures capture real properties of displays, but those measures were validated on photographs, maps and visualizations, not on interface screens [@rosenholtz2007measuring].
 
 *In LTF:* a script that screenshots each route and computes an edge-density or text-group count can run in design review; a page whose count jumps relative to its siblings or its previous version is looked at by a person.
 :::
@@ -902,3 +902,95 @@ LTF does not need a research lab to apply this chapter. It needs a protocol, a s
 The protocol fits the project's existing practice. LTF already keeps in-sim verification records under `docs/verification/` and requires a sim verification list in pull requests that change facts; a design baseline beside them gives visual and interaction changes the same kind of evidence trail. The `/dev/components` page, which renders every component in every state, is the natural place to capture the craftsmanship screenshots in both themes.
 
 What the protocol cannot do is tell LTF what its identity should be. It can tell whether a direction is simpler, more typical in its skeleton, more trusted and easier to use than the current one, and whether a novel element is still recognized. The choice of direction belongs to the brand and identity work in Part XX, Brand Identity and Distinctiveness, and Part XXVI, The Audit and the Identity Playbook; this Part supplies the tests that direction has to pass.
+
+## Decision list and review checklist
+
+### Decisions this Part settles for LTF
+
+The decisions below are the ones the evidence in this Part supports strongly enough to act on now. Each names the rules that justify it.
+
+1. **Task quality before polish on operated surfaces.** On `FlyModePage`, `FlyPanel`, `QuizBlock`, `DebriefForm` and `ChecklistPage`, known usability defects are fixed before visual refinement in the same area, and frustration points are tracked as defects (AES-006, AES-010, AES-022, AES-039).
+2. **Evidence standard for design changes.** A redesign of anything a learner operates is accepted on task measures (completion, time, errors, abandonment) from beginners, with appearance and ease rated separately after a task, using validated multi-item instruments; ratings never substitute for tasks, and desire never closes a usability issue (AES-003, AES-007, AES-009, AES-026, AES-040, AES-058, AES-063).
+3. **Fair comparisons.** Variants are compared at equal finish, or the difference in finish is stated; novel variants are checked for recognizability before preference is tested (AES-008, AES-020).
+4. **Generous early ratings are expected.** Feedback is recorded with the respondent's number of completed lessons, and visual changes are evaluated after several sessions as well as on first view (AES-005, AES-037).
+5. **First-contact pages are simplified and tested at a glance.** The landing page, `CurriculumPage`, Lesson 0.1, `SignupPage` and the reference hub are reviewed for complexity (text groups and image areas), with the landing hero first, and tested with 500 ms glance tests in Day and Night against a stored baseline; glance tests are not used for lesson or widget design (AES-011, AES-012, AES-013, AES-015, AES-064, AES-066).
+6. **No designing toward admired examples without testing.** Directions are accepted after testing with intended learners, including older adults and people who have never flown (AES-014, AES-062).
+7. **Marketing matches the product.** Landing samples and "How a lesson works" copy match the real `LessonPage` and `ChallengePage` (AES-016).
+8. **Typical skeleton, chosen surface, concentrated signature.** Page structure and control behavior stay conventional; every surface property is chosen rather than inherited from a framework default; novelty is concentrated in a named signature set (`LessonPath`, the instrument widgets, the logo, the reference rail and kneeboard, `FlyModePage`, future custom challenge-type icons) (AES-002, AES-017, AES-018, AES-019, AES-021).
+9. **Classical aesthetics for learning, expression for identity and celebration.** The lesson article, challenge tabs, Fly mode and reference stay orderly and plain; the landing hero, result card, course-complete panel, 404 and roadmap may be more expressive (AES-004, AES-022, AES-023).
+10. **Craftsmanship consolidation.** One heading scale through the token utilities (retiring raw `text-2xl font-bold` and `text-3xl font-bold` headings), `Card` instead of inlined card boxes, every component in one form checked in `/dev/components` in both themes (AES-024, AES-025, AES-027, AES-033, AES-046).
+11. **Fluent operational text.** Fly mode, steps, checklists and briefings use high-contrast ink pairs and the body face at body size or larger; no display or stylized face for steps; plain words everywhere (AES-028, AES-029, AES-030).
+12. **No silent rendering faults.** Lessons and widgets are checked in Day and Night, with visible scroll cues on tables and proper skeleton and error states in widgets (AES-031, AES-049, AES-064).
+13. **Stable frame, varied content.** Lessons alternate block types and avoid long runs of paragraphs; nudges and celebrations do not repeat identically or escalate; instruments are drawn only with the shared widget primitives and fixed tokens (AES-034, AES-035, AES-036).
+14. **Emotional design in its place.** Learning graphics keep warm, coherent instrument and chart palettes rather than grayscale; trivia and anecdotes go after the core idea or in "Go deeper"; decoration appears only in recap graphics and only when tied to the message (AES-041, AES-042, AES-043, AES-044, AES-045).
+15. **Visible verification on lessons.** `LessonPage` shows `lastVerifiedAt`, the sim version and its sources in the meta row; a "How we check lessons" explanation names who verifies and how, linked from lessons (AES-047, AES-048, AES-052).
+16. **Promotion out of the reading path.** `SignupBanner` moves below the first content block or to the completion panel and stays dismissible (AES-050, AES-035).
+17. **Purpose-appropriate look.** Aviation-literate structure and copy (Brief, Fly, Debrief; POH rail; readouts) are kept; gamified treatments are not adopted (AES-051).
+18. **Calibrated trust.** Unverified content always looks different from verified content; honesty statements agree with each other (the `BetaBanner` and `AboutPage` accounts are reconciled); the result card says the tier is self-assessed; warnings stay rare; simplifications are labeled; badges and tier copy do not imply real-world qualification (AES-053, AES-054, AES-055, AES-056, AES-059, AES-061).
+19. **Caricature over realism for teaching.** Widgets stay simplified drawings; sim screenshots are for orientation; "looks like the real thing" is not evidence (AES-057, AES-058).
+20. **No aesthetic manipulation.** Decline and secondary actions are honest secondary buttons, never low-contrast text; destructive actions stay behind confirmation (AES-060).
+21. **A standing test protocol and baseline.** The glance test, the beginner task session, post-task instruments with an open credibility question, and a complexity flagging script, with results stored under `docs/` beside the verification records (AES-012, AES-062, AES-065, AES-066, AES-067).
+22. **Liking is not learning.** Satisfaction and outcomes are reported separately; rising satisfaction is never cited as evidence that a module teaches (AES-038, AES-044).
+
+### Review checklist
+
+Run these questions against a pull request that changes a page or component, or against a live page. Each question names the rules it checks. A "no" is a finding; the reviewer records the rule ID with it.
+
+#### Evidence and method
+
+- Is any claim that the change improves usability backed by task measures from beginners, not only by ratings or a screenshot review? (AES-003, AES-009)
+- Were appearance and ease asked as separate questions, after a task, with a multi-item instrument where a decision depends on it? (AES-007, AES-026, AES-063)
+- If two variants were compared, were they at equal finish, or is the difference stated? Was the novel variant recognized in a naming check first? (AES-008, AES-020)
+- Did the test sample include people who have never flown and some older adults? (AES-062)
+- Is any "I love it" or "looks just like the real thing" feedback being used to close an issue? If so, it should not be. (AES-040, AES-058)
+- Are early ratings labeled with how much the respondent had used the product? (AES-005, AES-037)
+- Is satisfaction being reported as evidence of learning? If so, it should not be. (AES-038)
+
+#### First contact
+
+- If the page is first-contact, has a glance test been run in Day and Night against the stored baseline? (AES-012, AES-064, AES-066)
+- Has the number of text groups and image areas gone down, or at least not up, in each viewport? Did the complexity script flag it? (AES-011, AES-015, AES-065)
+- Do landing samples and marketing copy still match the real lesson and challenge pages? (AES-016)
+- Is the direction justified by testing with learners, not by resemblance to admired sites? (AES-014)
+
+#### Structure, novelty and surface
+
+- Does the page skeleton stay conventional (layout order, navigation, reading direction, control behavior)? (AES-002, AES-017)
+- Is any novel element one of the named signature set, and does a beginner still recognize what it is? (AES-018, AES-020)
+- Is every surface property (radius, elevation, icon, type, color) a chosen token or component, not a framework default or a hand-inlined one-off? (AES-019, AES-025)
+- Are complex displays (PFD, sectional, arcs) inside a `WidgetFrame` in lesson or reference content, not on a first-contact view? (AES-021)
+- Is the surface classical if learners study or operate here, and is any expressive treatment confined to identity or celebration moments? (AES-022, AES-023)
+
+#### Facets and craftsmanship
+
+- Simplicity: is the page orderly and easy to grasp? Diversity: does a long page vary its rhythm, or is it monotonous? Colors: is color chosen and harmonious? Craftsmanship: is every element aligned, spaced and styled consistently? (AES-024, AES-027)
+- Are headings set with the token utilities, cards rendered with `Card`, and components used in their single shared form? (AES-025, AES-033)
+- Has every new or changed component been checked in `/dev/components` in Day and Night, in every state? (AES-025, AES-064)
+
+#### Fluency and content
+
+- Is operational text (Fly mode, steps, checklists, briefings, key numbers) in a high-contrast pair and in the body face at body size or larger? (AES-028, AES-029)
+- Is the copy plain, without padding meant to sound authoritative? (AES-030)
+- Could any rendering fault (clipped table, partial widget, unthemed state) be mistaken for an author error? (AES-031, AES-049)
+- Has fluency work removed content the learner needs? (AES-032)
+- Does the lesson alternate block types rather than run long stretches of paragraphs? (AES-034)
+- Is any trivia, anecdote or comparison callout placed after the core idea and tied to the lesson's objectives? (AES-042)
+- Is any decoration in a graphic tied to its message, and absent from any display read for values? (AES-043)
+- Do learning graphics use the fixed instrument and chart palettes rather than grayscale or garish color? (AES-041, AES-044)
+- Are instruments drawn only with the shared widget primitives and fixed tokens? (AES-036)
+
+#### Credibility and trust
+
+- Does the page meet the craftsmanship checks that make correct content believed? (AES-046)
+- Does a lesson or reference page show its last-verified date, sim version and sources, prominently enough to be noticed? (AES-047, AES-052)
+- Is it clear who checks the content and how to reach them? (AES-048)
+- Is there any typo, broken link, placeholder or em dash in learner-facing text? (AES-049)
+- Is any promotional prompt in the reading path of a lesson? (AES-050)
+- Does the look match the purpose, without gamified or corporate treatments? (AES-051)
+- Does unverified content look different from verified content in every view, including previews and screenshots? (AES-053)
+- Does every honesty statement on the page agree with the others and with `AboutPage` and `BetaBanner`? (AES-054)
+- Is any new warning, alert or nudge rare, meaningful and retirable? Does a dismissal stick? (AES-035, AES-055)
+- Wherever the app scores or confirms, does it say what it cannot check (it cannot see the sim; tiers are self-assessed)? (AES-056)
+- Is every simplified drawing or annotated screenshot labeled as such? Are widgets caricatures rather than photoreal panels? (AES-057, AES-059)
+- Is any decline, secondary or destructive action visually honest? (AES-060)
+- Does every badge, tier and celebration say what it is, and what it is not where it could be misread? Is it brief and non-escalating? (AES-045, AES-061)
